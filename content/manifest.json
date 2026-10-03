@@ -8,7 +8,7 @@
     "publisherAr": "وزارة الأوقاف والشؤون الإسلامية — المملكة المغربية",
     "publisherFr": "Ministère des Habous et des Affaires islamiques — Royaume du Maroc",
     "goalBooks": 55,
-    "goalDocs": 817
+    "goalDocs": 852
   },
   "levels": [
     {
@@ -163,15 +163,7 @@
       "titleFr": "Droit successoral",
       "translit": "",
       "icon": "BookOpenText",
-      "booksCount": 1
-    },
-    {
-      "id": "faraid",
-      "labelAr": "الفرائِض",
-      "titleFr": "Droit successoral",
-      "translit": "",
-      "icon": "BookOpenText",
-      "booksCount": 1
+      "booksCount": 2
     },
     {
       "id": "usul-fiqh",
@@ -187,15 +179,7 @@
       "titleFr": "Logique",
       "translit": "",
       "icon": "BookOpenText",
-      "booksCount": 1
-    },
-    {
-      "id": "mantiq",
-      "labelAr": "المنطِق",
-      "titleFr": "Logique",
-      "translit": "",
-      "icon": "BookOpenText",
-      "booksCount": 1
+      "booksCount": 2
     },
     {
       "id": "ulum-hadith",
@@ -211,15 +195,7 @@
       "titleFr": "Sciences coraniques",
       "translit": "",
       "icon": "BookOpenText",
-      "booksCount": 3
-    },
-    {
-      "id": "ulum-quran",
-      "labelAr": "علوم-القرآن",
-      "titleFr": "Sciences coraniques",
-      "translit": "",
-      "icon": "BookOpenText",
-      "booksCount": 3
+      "booksCount": 6
     },
     {
       "id": "qiraat",
@@ -265,14 +241,6 @@
       "id": "nahu",
       "labelAr": "النحو-والصرف",
       "titleFr": "Grammaire et morphologie",
-      "translit": "",
-      "icon": "BookOpenText",
-      "booksCount": 0
-    },
-    {
-      "id": "nahu",
-      "labelAr": "النحو",
-      "titleFr": "Grammaire",
       "translit": "",
       "icon": "BookOpenText",
       "booksCount": 0
@@ -736,5 +704,5 @@
       "order": 55
     }
   ],
-  "goalDocs": 817
+  "goalDocs": 852
 }
