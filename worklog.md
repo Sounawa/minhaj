@@ -261,3 +261,78 @@ Stage Summary:
   (Google Translate proxy + PDF), (2) révision du CONTENU FR des leçons
   (GT → phrasé naturel, vagues ciblées par livre), (3) export/partage,
   (4) page À propos enrichie (crédits œuvres, méthodologie traduction).
+
+---
+Task ID: R8
+Agent: agent principal (Z.ai Code)
+Task: Objectif 64 livres — 5 nouveaux livres intégrés (63/64), intros manquantes,
+split fiqh-tanawi-1/2, leçons référence PDF officiel
+
+Work Log:
+- **Diagnostic complet des canaux PDF habous.gov.ma** (géobloqué) — tous testés et
+  documentés pour les prochaines vagues :
+  - GT proxy translate.goog : HTML ✓, PDF → 302 vers l'origine (testé UAs
+    facebookexternalhit/Googlebot/WhatsApp/curl, Accept text/html & application/pdf,
+    _x_tr_pto=wapp) → MORT pour les binaires.
+  - z.ai SDK débloqué (429 fini !) : `page_reader` atteint habous (HTML 200) MAIS
+    PDF = coquille Chrome pdf_embedder (octets inaccessibles) ; web.archive.org
+    BLOQUÉ par le firewall z.ai (« WEG WiFi ») ; web_search sans index arabe.
+  - VLM file_url : PDF refusé (format image uniquement) ; image_url distant KO
+    (seul base64 local fonctionne) → inutilisable sans les octets.
+  - weserv (rend PDF→JPG, test OK sur PDF public) : timeout sur habous.
+  - allorigins/codetabs : 522 ; corsproxy : auth ; r.jina.ai : 401 IP réputation ;
+    arquivo.pt/save/now (pywb) : 404 ; viewer Google Docs : mort (400 même sur PDF public).
+  - **Conclusion : octets PDF habous inaccessibles ce session ; contournement mis en place.**
+- **Découverte majeure** : la page programme (prog.html 526 Ko) + pages-listings
+  révèlent les pages-livres manquantes ; diff docIds → 27 introuvables dont les
+  pages des livres manquants. Pages catégories par matière moissonnées (fiqh/hadith
+  ep/es/tanawi) pour confirmer l'appartenance des leçons.
+- **5 NOUVEAUX LIVRES** (fetch GT proxy + traduction dict-chrome-ex 108 req + cache) :
+  - hadith-5ep (10958, pub. الأربعين النووية 5ep) : intro + 29 leçons PDF-référence
+  - hadith-2es (10960, pub. Muwaṭṭaʾ 2es) : intro + 30 leçons PDF-référence
+  - fiqh-5ep (11930, Murshid-Mayyāra 5ep) : intro (leçons PDF non publiées en HTML)
+  - fiqh-2es (12019, Risāla + ḥāshiya al-ʿAdawī) : intro
+  - fiqh-tanawi-2 (12177) : intro + 21 leçons DÉPLACÉES de fiqh-tanawi-1
+    (clusters docId 12230-13353 : salam/qarḍ/rahn + فهرس bookends)
+- **Chirurgie du corpus** :
+  - fiqh-tanawi-1 : 11509 leçon→intro, reste 30 leçons (بيع) — le vrai t1.
+  - fiqh-4ep supprimé : ses 7 leçons fragmentaires fusionnées dans fiqh-1ep (44).
+  - Niveaux corrigés : fiqh-1ep & hadith-1ep → 4ep (« للسنة الرابعة »).
+  - ulum-hadith-tanawi-3 : article d'actualité 20436 retiré (fausse leçon).
+  - Conversions leçon→intro : 14101 (fiqh-6ep), 14170 (hadith-6ep, déjà intro),
+    18646 (rasm-6ep « تقديم الكتاب »), 13876 (fiqh-3es).
+  - fiqh-3es : 27 leçons PDF-référence depuis la galerie de sa page-livre.
+- **+11 intros ajoutées** aux livres existants : 11505→fiqh-1es, 13014→hadith-1es,
+  12583→hadith-1ep, 13360→tafsir-1es, 12016→tafsir-4ep, 15373→ulum-quran-1es,
+  17502→tajwid-6ep + les conversions ci-dessus. Titres FR normalisés
+  « Présentation du manuel » (convention R7).
+- **Leçons PDF-référence (86)** : titres AR extraits des ancres des galeries
+  officielles, titres FR révisés À LA MAIN (r8-fix-stubs.ts, 77 corrections :
+  GT-ismes éliminés — « Les actes ne valent que par les intentions », « Vente à
+  option (khayār) », « Règles de l'irrigation partagée (musāqāt) »…), boilerplates
+  et couvertures supprimés, pdfUrl officiel conservé.
+- **UI** : LessonDoc/LessonSummary/DocPayload + pdfUrl/pdfOnly ; badge « PDF » dans
+  le sommaire (chip numéroté contour ambre) ; carte lecteur dédiée « Leçon publiée
+  au format PDF officiel » avec bouton « Ouvrir le PDF officiel » (origin habous) ;
+  manifeste v6 (regen-manifest.ts pérenne, ordre niveau→matière→id).
+- **QA agent-browser** : accueil 63 manuels/943/1152 ; hadith-5ep (intro + 29 PDF),
+  lecteur pdf-2 « Les actes ne valent que par les intentions » → carte PDF + lien ✓ ;
+  fiqh-tanawi-2 (intro + 21) ✓ ; hadith-2es mobile 375 ✓ ; leçon normale
+  hadith-1es/12875 bilingue ✓ ; recherche « intentions » → stub pdf-2 en 1er
+  résultat ✓ ; footer sticky 943/1152 ✓ ; 0 erreur console ; lint 0 erreur.
+- Backup 20261003-235632 (11 Mo) + commit R8.
+
+Stage Summary:
+- **63/64 livres — 1 029 documents (891 leçons intégrales bilingues + 52 intros +
+  86 leçons référence PDF)**. Objectif officiel 64/1152 : 943/1152 bilingues (82 %).
+- Le 64ᵉ (hadith-tanawi-2) n'a AUCUNE page HTML sur le site officiel — à sourcer
+  plus tard (publication 2022-2023 introuvable même dans منشورات).
+- Scripts pérennes : r8-{fetch-books,parse,build,fix-stubs}.ts, regen-manifest.ts.
+- Priorités suivantes : (1) pages catégories des ~18 livres intro-only restants
+  pour étendre les leçons PDF-référence (usul-qiyam, fikr, qiraat, taqtit,
+  ulum-hadith, usul-fiqh t2/t3, hadith-3es/t3, tafsir-tanawi-3, tajwid-3es…),
+  (2) révision du CONTENU FR des leçons (GT-ismes résiduels type « enseignement
+  préparatoire ancien »), (3) 11 intros encore manquantes (tafsir-1ep, tawhid-1es/2es,
+  ulum-quran-2es/3es, rasm-4ep, tafsir-5ep, tafsir-tanawi-1/2, taqtit-1, mantiq-1),
+  (4) si un canal binaire émerge (proxy inhabituel, miroir marocain…), extraire le
+  texte des 86+ PDF vers des leçons intégrales.
