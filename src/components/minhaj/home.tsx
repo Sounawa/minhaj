@@ -6,6 +6,7 @@ import {
   ArrowRight,
   BookMarked,
   CloudDownload,
+  History,
   Layers,
   Library as LibraryIcon,
   Loader2,
@@ -21,7 +22,7 @@ import { Progress } from "@/components/ui/progress";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
-import { navigate, useLibrary } from "./hooks";
+import { navigate, useLastDoc, useLibrary } from "./hooks";
 import { SubjectTile } from "./subject-icon";
 import { CYCLES, type CycleId } from "./types";
 
@@ -40,6 +41,7 @@ function Hero({
   booksDownloaded: number;
   booksTotal: number;
 }) {
+  const lastDoc = useLastDoc();
   return (
     <section className="pattern-islamic relative overflow-hidden border-b border-amber-800/15">
       <div className="hero-glow absolute inset-0" aria-hidden="true" />
@@ -88,6 +90,33 @@ function Hero({
               Ouvrir un exemple bilingue
             </Button>
           </div>
+          {lastDoc && (
+            <motion.button
+              type="button"
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.3 }}
+              onClick={() => navigate(`/livre/${lastDoc.bookId}/${lastDoc.docId}`)}
+              className="group mt-5 flex max-w-2xl items-center gap-3 rounded-2xl border border-amber-800/20 bg-card/60 px-4 py-3 text-left shadow-sm backdrop-blur-sm transition hover:border-amber-700/35 hover:bg-card/85 hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+            >
+              <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-amber-600/15 to-orange-800/15 text-primary">
+                <History className="size-5" aria-hidden="true" />
+              </span>
+              <span className="min-w-0 flex-1">
+                <span className="block text-[11px] font-medium uppercase tracking-[0.14em] text-muted-foreground">
+                  Reprendre la lecture
+                </span>
+                <span className="mt-0.5 block truncate font-serif text-[15px] font-semibold text-amber-950 dark:text-amber-50">
+                  {lastDoc.titleFr || lastDoc.titleAr}
+                </span>
+                <span className="block truncate text-xs text-muted-foreground">{lastDoc.bookTitleFr}</span>
+              </span>
+              <ArrowRight
+                className="size-4.5 shrink-0 text-primary transition-transform group-hover:translate-x-1"
+                aria-hidden="true"
+              />
+            </motion.button>
+          )}
         </motion.div>
 
         <motion.dl

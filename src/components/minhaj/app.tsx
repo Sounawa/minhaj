@@ -9,6 +9,7 @@ import {
   Info,
   Leaf,
   Moon,
+  Search,
   Sun,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -21,10 +22,12 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Separator } from "@/components/ui/separator";
-import { navigate, useHashRoute } from "./hooks";
+import { navigate, useFavorites, useHashRoute } from "./hooks";
 import { Home } from "./home";
 import { BookPage } from "./book-page";
 import { Reader } from "./reader";
+import { SearchDialog } from "./search-dialog";
+import { FavoritesDialog } from "./favorites-dialog";
 
 const emptySubscribe = () => () => {};
 
@@ -97,7 +100,14 @@ function AboutDialog() {
   );
 }
 
-function Header() {
+function Header({
+  onSearch,
+  onFavorites,
+}: {
+  onSearch: () => void;
+  onFavorites: () => void;
+}) {
+  const { favorites } = useFavorites();
   return (
     <header className="no-print sticky top-0 z-40 border-b border-amber-800/15 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center gap-3 px-4 sm:px-6 lg:px-8">
@@ -128,6 +138,32 @@ function Header() {
           </span>
         </button>
         <div className="ms-auto flex items-center gap-2">
+          <Button
+            variant="outline"
+            onClick={onSearch}
+            aria-label="Rechercher dans le corpus (Ctrl+K)"
+            className="h-10 gap-2.5 border-amber-800/20 bg-card/60 text-amber-900 hover:bg-amber-100/70 dark:text-amber-100 dark:hover:bg-amber-900/40"
+          >
+            <Search className="size-4" aria-hidden="true" />
+            <span className="hidden text-sm md:inline">Rechercher…</span>
+            <kbd className="hidden rounded border border-amber-800/20 bg-amber-100/50 px-1.5 py-0.5 font-mono text-[10px] font-medium text-muted-foreground lg:inline-block dark:bg-amber-900/40">
+              Ctrl K
+            </kbd>
+          </Button>
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={onFavorites}
+            aria-label={`Mes favoris${favorites.length ? ` (${favorites.length})` : ""}`}
+            className="relative size-10 border-amber-800/20 bg-card/60 text-amber-900 hover:bg-amber-100/70 dark:text-amber-100 dark:hover:bg-amber-900/40"
+          >
+            <Heart className={favorites.length ? "size-4.5 fill-rose-500 text-rose-500" : "size-4.5"} aria-hidden="true" />
+            {favorites.length > 0 && (
+              <span className="absolute -end-1 -top-1 flex size-4.5 min-w-4.5 items-center justify-center rounded-full bg-rose-600 px-1 text-[10px] font-bold text-white">
+                {favorites.length > 9 ? "9+" : favorites.length}
+              </span>
+            )}
+          </Button>
           <AboutDialog />
           <ThemeToggle />
         </div>
@@ -173,6 +209,20 @@ export function MinhajApp() {
   const [footerStats, setFooterStats] = useState<{ docsFr: number; docsTotal: number } | null>(
     null
   );
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [favOpen, setFavOpen] = useState(false);
+
+  // Raccourci clavier global : Ctrl+K / ⌘K → recherche
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        setSearchOpen(true);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
 
   useEffect(() => {
     window.scrollTo({ top: 0 });
@@ -201,7 +251,9 @@ export function MinhajApp() {
       >
         Aller au contenu
       </a>
-      <Header />
+      <Header onSearch={() => setSearchOpen(true)} onFavorites={() => setFavOpen(true)} />
+      {searchOpen && <SearchDialog open={searchOpen} onOpenChange={setSearchOpen} />}
+      {favOpen && <FavoritesDialog open={favOpen} onOpenChange={setFavOpen} />}
       <main id="contenu" className="flex-1">
         {route.view === "home" && <Home />}
         {route.view === "book" && <BookPage key={route.bookId} bookId={route.bookId} />}

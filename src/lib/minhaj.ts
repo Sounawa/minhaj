@@ -263,6 +263,196 @@ export async function getBookDetail(bookId: string): Promise<BookDetailPayload |
   return { program: manifest.program, book, level, subject, intro, lessons };
 }
 
+// ———————————————————————————————————————— Recherche globale
+
+export interface SearchHit {
+  bookId: string;
+  bookTitleFr: string;
+  bookTitleAr: string;
+  levelShortFr: string;
+  docId: string;
+  isIntro: boolean;
+  titleAr: string;
+  titleFr: string;
+  snippet: string;
+  score: number;
+  lang: "fr" | "ar" | "both";
+}
+export interface SearchPayload {
+  query: string;
+  total: number;
+  truncated: boolean;
+  hits: SearchHit[];
+}
+
+/** Retire les balises HTML, décode les entités usuelles, compacte les blancs. */
+function stripHtml(html: string): string {
+  return html
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;|&rsquo;/g, "'")
+    .replace(/&laquo;/g, "«")
+    .replace(/&raquo;/g, "»")
+    .replace(/&#(\d+);/g, (_, d: string) => String.fromCodePoint(Number(d)))
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+/** Pliage des accents français (é→e, œ→oe…). */
+function foldFr(s: string): string {
+  return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/œ/g, "oe").replace(/æ/g, "ae").toLowerCase();
+}
+
+/** Normalisation arabe : suppression du tashkīl, unification des alifs/taʾ marbūṭa. */
+function normAr(s: string): string {
+  return s
+    .replace(/[\u064B-\u065F\u0670\u06D6-\u06ED]/g, "") // tashkīl + signes coraniques
+    .replace(/[أإآٱ]/g, "ا")
+    .replace(/ى/g, "ي")
+    .replace(/ة/g, "ه")
+    .replace(/ـ/g, "") // tatwīl
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function normAll(s: string): string {
+  return normAr(foldFr(s));
+}
+
+interface IndexEntry {
+  bookId: string;
+  bookTitleFr: string;
+  bookTitleAr: string;
+  levelShortFr: string;
+  docId: string;
+  isIntro: boolean;
+  titleAr: string;
+  titleFr: string;
+  /** Titres + texte FR normalisés pour la recherche. */
+  nTitleFr: string;
+  nTitleAr: string;
+  nTextFr: string;
+  nTextAr: string;
+  /** Texte brut pour l'extrait. */
+  plainFr: string;
+  plainAr: string;
+}
+
+let indexPromise: Promise<IndexEntry[]> | null = null;
+
+async function getSearchIndex(): Promise<IndexEntry[]> {
+  if (!indexPromise) {
+    indexPromise = (async () => {
+      const manifest = await getManifest();
+      if (!manifest) return [] as IndexEntry[];
+      const entries: IndexEntry[] = [];
+      for (const bookDef of manifest.books) {
+        const file = await getBookFile(bookDef.id);
+        if (!file) continue;
+        const level = manifest.levels.find((l) => l.id === bookDef.level);
+        const base = {
+          bookId: bookDef.id,
+          bookTitleFr: (file.titleFr && file.titleFr.trim()) || bookDef.titleFr,
+          bookTitleAr: bookDef.textbookAr || bookDef.titleAr,
+          levelShortFr: level?.shortFr ?? "",
+        };
+        const docs: Array<{ docId: string; titleAr: string; titleFr?: string; html?: string; htmlFr?: string; isIntro: boolean }> = [];
+        if (file.intro) docs.push({ ...file.intro, isIntro: true });
+        for (const l of file.lessons ?? []) docs.push({ ...l, isIntro: false });
+        for (const d of docs) {
+          const plainFr = stripHtml(d.htmlFr || "");
+          const plainAr = stripHtml(d.html || "");
+          entries.push({
+            ...base,
+            docId: d.docId,
+            isIntro: d.isIntro,
+            titleAr: d.titleAr,
+            titleFr: d.titleFr || "",
+            nTitleFr: normAll(d.titleFr || ""),
+            nTitleAr: normAr(d.titleAr || ""),
+            nTextFr: normAll(plainFr),
+            nTextAr: normAr(plainAr),
+            plainFr,
+            plainAr,
+          });
+        }
+      }
+      return entries;
+    })();
+    // En cas d'échec : on relancera à la prochaine recherche.
+    indexPromise.catch(() => {
+      indexPromise = null;
+    });
+  }
+  return indexPromise;
+}
+
+function makeSnippet(plain: string, nText: string, query: string, max = 160): string {
+  const i = nText.indexOf(query);
+  if (i === -1) return plain.slice(0, max).trim();
+  const start = Math.max(0, i - Math.floor(max / 3));
+  const end = Math.min(plain.length, start + max);
+  let snippet = plain.slice(start, end).trim();
+  if (start > 0) snippet = "… " + snippet;
+  if (end < plain.length) snippet = snippet + " …";
+  return snippet;
+}
+
+export async function searchCorpus(rawQuery: string, limit = 25): Promise<SearchPayload> {
+  const query = normAll(rawQuery.trim().replace(/\s+/g, " "));
+  if (query.length < 2) return { query: rawQuery, total: 0, truncated: false, hits: [] };
+  const index = await getSearchIndex();
+  const hits: SearchHit[] = [];
+  for (const e of index) {
+    let score = 0;
+    let lang: SearchHit["lang"] = "fr";
+    const inTitleFr = e.nTitleFr.includes(query);
+    const inTitleAr = e.nTitleAr.includes(query);
+    const inTextFr = e.nTextFr.includes(query);
+    const inTextAr = e.nTextAr.includes(query);
+    if (inTitleFr) score += 60;
+    if (inTitleAr) score += 60;
+    if (inTextFr) score += 6;
+    if (inTextAr) score += 4;
+    if (!score) continue;
+    if ((inTitleFr || inTextFr) && (inTitleAr || inTextAr)) lang = "both";
+    else if (inTitleAr || inTextAr) lang = "ar";
+    // Bonus si le titre commence par la requête (motif fort).
+    if (e.nTitleFr.startsWith(query) || e.nTitleAr.startsWith(query)) score += 20;
+    const snippet =
+      inTextFr || inTitleFr
+        ? makeSnippet(e.plainFr, e.nTextFr, query)
+        : makeSnippet(e.plainAr, e.nTextAr, query);
+    hits.push({
+      bookId: e.bookId,
+      bookTitleFr: e.bookTitleFr,
+      bookTitleAr: e.bookTitleAr,
+      levelShortFr: e.levelShortFr,
+      docId: e.docId,
+      isIntro: e.isIntro,
+      titleAr: e.titleAr,
+      titleFr: e.titleFr || e.titleAr,
+      snippet,
+      score,
+      lang,
+    });
+  }
+  hits.sort((a, b) => b.score - a.score || a.titleFr.localeCompare(b.titleFr));
+  const total = hits.length;
+  return {
+    query: rawQuery,
+    total,
+    truncated: total > limit,
+    hits: hits.slice(0, limit),
+  };
+}
+
 export async function getDoc(bookId: string, docId: string): Promise<DocPayload | null> {
   const manifest = await getManifest();
   if (!manifest) return null;
@@ -289,7 +479,7 @@ export async function getDoc(bookId: string, docId: string): Promise<DocPayload 
   return {
     bookId,
     bookTitleAr: bookDef.textbookAr || bookDef.titleAr,
-    bookTitleFr: bookDef.titleFr,
+    bookTitleFr: (file.titleFr && file.titleFr.trim()) || bookDef.titleFr,
     level,
     subject,
     docId: cur.doc.docId,

@@ -1,15 +1,28 @@
 "use client";
 
-import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight, Columns2, FileQuestion, Hourglass, Languages, Loader2 } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ArrowLeft, ArrowRight, BookmarkCheck, ChevronLeft, ChevronRight, Columns2, FileQuestion, Heart, Hourglass, Languages, Loader2, Printer } from "lucide-react";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
-import { navigate, useDoc, useLocalState } from "./hooks";
+import { navigate, setLastDoc, useDoc, useFavorites, useLocalState } from "./hooks";
 import type { DocPayload } from "./types";
 
 type ViewMode = "both" | "fr" | "ar";
+type TextSize = "normal" | "large" | "xlarge";
+
+const TEXT_SIZE_CLASS: Record<TextSize, string> = {
+  normal: "text-[15.5px]",
+  large: "text-[17px]",
+  xlarge: "text-[18.5px] leading-relaxed",
+};
+const TEXT_SIZE_AR_CLASS: Record<TextSize, string> = {
+  normal: "text-[17px]",
+  large: "text-[18.5px]",
+  xlarge: "text-[20px] leading-loose",
+};
 
 function ColumnChip({ lang, label }: { lang: "fr" | "ar"; label: string }) {
   return (
@@ -110,6 +123,26 @@ function ViewModeToggle({ mode, onChange }: { mode: ViewMode; onChange: (m: View
   );
 }
 
+function TextSizeControl({ size, onChange }: { size: TextSize; onChange: (s: TextSize) => void }) {
+  const cycle: TextSize[] = ["normal", "large", "xlarge"];
+  const next = () => onChange(cycle[(cycle.indexOf(size) + 1) % cycle.length]);
+  const label = size === "normal" ? "normale" : size === "large" ? "grande" : "très grande";
+  return (
+    <Button
+      variant="outline"
+      size="icon"
+      aria-label={`Taille du texte : ${label} — toucher pour agrandir`}
+      title="Taille du texte"
+      className="size-10 border-amber-800/15 bg-card/70 text-amber-900 hover:bg-amber-100/60 dark:text-amber-100 dark:hover:bg-amber-900/40"
+      onClick={next}
+    >
+      <span className="font-serif text-[15px] font-bold" aria-hidden="true">
+        A<span className="align-super text-[10px]">+</span>
+      </span>
+    </Button>
+  );
+}
+
 function MissingFr() {
   return (
     <div className="reader-col" dir="ltr" lang="fr">
@@ -185,6 +218,22 @@ function DocNav({ doc }: { doc: DocPayload }) {
 export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
   const { data, error, loading } = useDoc(bookId, docId);
   const [mode, setMode] = useLocalState<ViewMode>("minhaj.viewMode", "both");
+  const [textSize, setTextSize] = useLocalState<TextSize>("minhaj.textSize", "normal");
+  const { toggle, has } = useFavorites();
+  const [justToggled, setJustToggled] = useState(false);
+
+  // Mémoriser la dernière lecture (reprise depuis l'accueil)
+  useEffect(() => {
+    if (data?.docId) {
+      setLastDoc({
+        bookId,
+        docId,
+        titleFr: data.titleFr || data.titleAr,
+        titleAr: data.titleAr,
+        bookTitleFr: data.bookTitleFr,
+      });
+    }
+  }, [data?.docId, data?.titleFr, data?.titleAr, data?.bookTitleFr, bookId, docId]);
 
   if (loading) {
     return (
@@ -223,6 +272,7 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
   const showFr = mode !== "ar";
   const showAr = mode !== "fr";
   const singleCol = mode !== "both";
+  const isFav = has(bookId, docId);
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
@@ -249,10 +299,51 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
 
       <div className="flex flex-wrap items-start justify-between gap-4">
         <DocHeader doc={data} />
-        <div className="no-print mt-1 shrink-0">
+        <div className="no-print mt-1 flex shrink-0 flex-wrap items-center justify-end gap-2">
           <ViewModeToggle mode={mode} onChange={setMode} />
+          <TextSizeControl size={textSize} onChange={setTextSize} />
+          <Button
+            variant="outline"
+            size="icon"
+            aria-label={isFav ? "Retirer des favoris" : "Ajouter aux favoris"}
+            title={isFav ? "Retirer des favoris" : "Ajouter aux favoris"}
+            className={cn(
+              "size-10 border-amber-800/15 bg-card/70 hover:bg-amber-100/60 dark:hover:bg-amber-900/40",
+              isFav ? "text-rose-600 dark:text-rose-400" : "text-amber-900 hover:text-rose-600 dark:text-amber-100 dark:hover:text-rose-400"
+            )}
+            onClick={() => {
+              toggle({
+                bookId,
+                docId,
+                titleFr: data.titleFr || data.titleAr,
+                titleAr: data.titleAr,
+                bookTitleFr: data.bookTitleFr,
+              });
+              setJustToggled(true);
+              setTimeout(() => setJustToggled(false), 1200);
+            }}
+          >
+            <Heart className={cn("size-4.5 transition-transform", isFav && "fill-current", justToggled && "scale-125")} aria-hidden="true" />
+          </Button>
+          <Button
+            variant="outline"
+            size="icon"
+            aria-label="Imprimer cette leçon"
+            title="Imprimer"
+            className="size-10 border-amber-800/15 bg-card/70 text-amber-900 hover:bg-amber-100/60 dark:text-amber-100 dark:hover:bg-amber-900/40"
+            onClick={() => window.print()}
+          >
+            <Printer className="size-4.5" aria-hidden="true" />
+          </Button>
         </div>
       </div>
+
+      {justToggled && (
+        <p className="no-print mt-2 flex items-center gap-1.5 text-xs text-muted-foreground" role="status">
+          <BookmarkCheck className="size-3.5 text-rose-500" aria-hidden="true" />
+          {isFav ? "Leçon ajoutée à vos favoris — accessible depuis l'en-tête" : "Leçon retirée des favoris"}
+        </p>
+      )}
 
       <motion.div
         key={`${docId}-${mode}`}
@@ -266,7 +357,7 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
             <article className="reader-col" dir="ltr" lang="fr">
               <ColumnChip lang="fr" label="Français — traduction" />
               <div
-                className="lesson-content text-[15.5px] text-foreground/90"
+                className={cn("lesson-content text-foreground/90", TEXT_SIZE_CLASS[textSize])}
                 dangerouslySetInnerHTML={{ __html: data.htmlFr }}
               />
             </article>
@@ -277,7 +368,7 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
           <article className="reader-col" dir="rtl" lang="ar">
             <ColumnChip lang="ar" label="العربية — الأصل" />
             <div
-              className="lesson-content text-foreground"
+              className={cn("lesson-content text-foreground", TEXT_SIZE_AR_CLASS[textSize])}
               dangerouslySetInnerHTML={{ __html: data.html }}
             />
           </article>

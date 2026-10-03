@@ -206,3 +206,111 @@ export function useLocalState<T extends string>(key: string, initial: T) {
   );
   return [value, setValue] as const;
 }
+
+// ————————————————————————————————— Favoris & reprise de lecture
+
+export interface FavoriteDoc {
+  bookId: string;
+  docId: string;
+  titleFr: string;
+  titleAr: string;
+  bookTitleFr: string;
+  ts: number;
+}
+export type LastDoc = FavoriteDoc;
+
+const FAVS_KEY = "minhaj.favorites";
+const LAST_KEY = "minhaj.lastDoc";
+
+function readJsonList<T>(key: string): T[] {
+  try {
+    const raw = localStorage.getItem(key);
+    if (!raw) return [];
+    const v = JSON.parse(raw);
+    return Array.isArray(v) ? (v as T[]) : [];
+  } catch {
+    return [];
+  }
+}
+
+function writeJsonList(key: string, list: unknown[]) {
+  try {
+    localStorage.setItem(key, JSON.stringify(list));
+    notifyLs();
+  } catch {
+    /* ignore */
+  }
+}
+
+const favsCache: { raw: string | null; list: FavoriteDoc[] } = { raw: null, list: [] };
+/** Snapshot serveur stable (jamais de nouveau objet à chaque appel). */
+const EMPTY_FAVS: FavoriteDoc[] = [];
+const NO_LAST_DOC: LastDoc | null = null;
+
+export function getFavorites(): FavoriteDoc[] {
+  if (typeof window === "undefined") return [];
+  const raw = localStorage.getItem(FAVS_KEY);
+  if (raw !== favsCache.raw) {
+    favsCache.raw = raw;
+    favsCache.list = readJsonList<FavoriteDoc>(FAVS_KEY);
+  }
+  return favsCache.list;
+}
+
+export function useFavorites() {
+  const favorites = useSyncExternalStore(subscribeLs, getFavorites, () => EMPTY_FAVS);
+  const toggle = useCallback((fav: Omit<FavoriteDoc, "ts">) => {
+    const list = getFavorites();
+    const i = list.findIndex((f) => f.bookId === fav.bookId && f.docId === fav.docId);
+    if (i >= 0) list.splice(i, 1);
+    else list.unshift({ ...fav, ts: Date.now() });
+    writeJsonList(FAVS_KEY, list);
+  }, []);
+  const remove = useCallback((bookId: string, docId: string) => {
+    const list = getFavorites().filter((f) => !(f.bookId === bookId && f.docId === docId));
+    writeJsonList(FAVS_KEY, list);
+  }, []);
+  const has = useCallback(
+    (bookId: string, docId: string) => favorites.some((f) => f.bookId === bookId && f.docId === docId),
+    [favorites]
+  );
+  return { favorites, toggle, remove, has };
+}
+
+const lastCache: { raw: string | null; doc: LastDoc | null } = { raw: null, doc: null };
+
+export function getLastDoc(): LastDoc | null {
+  if (typeof window === "undefined") return null;
+  const raw = localStorage.getItem(LAST_KEY);
+  if (raw !== lastCache.raw) {
+    lastCache.raw = raw;
+    const list = readJsonList<LastDoc>(LAST_KEY);
+    lastCache.doc = list[0] ?? null;
+  }
+  return lastCache.doc;
+}
+
+export function setLastDoc(doc: Omit<LastDoc, "ts">) {
+  try {
+    localStorage.setItem(LAST_KEY, JSON.stringify([{ ...doc, ts: Date.now() }]));
+    notifyLs();
+  } catch {
+    /* ignore */
+  }
+}
+
+export function useLastDoc() {
+  return useSyncExternalStore(subscribeLs, getLastDoc, () => NO_LAST_DOC);
+}
+
+// ————————————————————————————————— Divers
+
+/** Valeur retardée (recherche « pendant que je tape »). */
+export function useDebouncedValue<T>(value: T, delay = 220): T {
+  const [debounced, setDebounced] = useState(value);
+  useEffect(() => {
+    const t = setTimeout(() => setDebounced(value), delay);
+    return () => clearTimeout(t);
+  }, [value, delay]);
+  return debounced;
+}

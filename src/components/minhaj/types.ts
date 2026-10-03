@@ -91,7 +91,7 @@ export interface DocPayload {
 export type CycleId = "all" | "ep" | "es" | "tanawi";
 
 export const CYCLES: { id: CycleId; label: string; desc: string }[] = [
-  { id: "all", label: "Tous les cycles", desc: "Les 64 manuels" },
+  { id: "all", label: "Tous les cycles", desc: "Toutes les matières" },
   { id: "ep", label: "Primaire", desc: "الابتدائي العتيق — 6 niveaux" },
   { id: "es", label: "Collège", desc: "الإعدادي العتيق — 3 niveaux" },
   { id: "tanawi", label: "Lycée", desc: "التأهيلي العتيق — 3 niveaux" },

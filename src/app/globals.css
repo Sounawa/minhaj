@@ -284,4 +284,45 @@
   body {
     background: white !important;
   }
+  @page {
+    margin: 14mm 12mm;
+  }
+  /* Impression : colonnes côte à côte, sans décor */
+  .reader-col {
+    break-inside: auto;
+  }
+  .lesson-content {
+    font-size: 11pt !important;
+    line-height: 1.55 !important;
+  }
+  .lesson-content h1,
+  .lesson-content h2,
+  .lesson-content h3,
+  .lesson-content h4 {
+    break-after: avoid;
+  }
+  .lesson-content p,
+  .lesson-content li,
+  .lesson-content table {
+    break-inside: avoid;
+  }
+  .lesson-content a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+  /* En-tête de leçon sobre */
+  h1 {
+    font-size: 17pt !important;
+  }
+  main {
+    padding: 0 !important;
+  }
+  /* Masquer les puces décoratives des colonnes en impression */
+  .reader-col > .sticky {
+    position: static !important;
+    border: none !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-print-color-adjust: exact;
+  }
 }

@@ -268,7 +268,7 @@
       "subject": "fiqh",
       "level": "1ep",
       "titleAr": "الكتاب",
-      "titleFr": "",
+      "titleFr": "Jurisprudence du texte d'Al-Akhdari, expliquée par Al-Abi Al-Azhari, pour la quatrième année de l'enseignement primaire ancien",
       "order": 1
     },
     {
@@ -276,7 +276,7 @@
       "subject": "hadith",
       "level": "1ep",
       "titleAr": "الحديث من رياض الصالحين للإمام النووي بشرح روضة المتقين للسنة الرابعة من التعليم الابتدائي العتيق",
-      "titleFr": "",
+      "titleFr": "Hadith de Riyad al-Saliheen de l'Imam al-Nawawi expliquant Rawdat al-Muttaqin pour la quatrième année de l'enseignement primaire ancien",
       "order": 2
     },
     {
@@ -284,7 +284,7 @@
       "subject": "tafsir",
       "level": "1ep",
       "titleAr": "Exégèse coranique — ابتدائي",
-      "titleFr": "",
+      "titleFr": "Exégèse coranique — primaire",
       "order": 3
     },
     {
@@ -292,7 +292,7 @@
       "subject": "fiqh",
       "level": "4ep",
       "titleAr": "الفقه من متن الأخضري بشرح الآبي الأزهري للسنة الرابعة من التعليم الابتدائي العتيق",
-      "titleFr": "",
+      "titleFr": "Jurisprudence du texte d'Al-Akhdari, expliquée par Al-Abi Al-Azhari, pour la quatrième année de l'enseignement primaire ancien",
       "order": 4
     },
     {
@@ -300,7 +300,7 @@
       "subject": "rasm-wa-dabt",
       "level": "4ep",
       "titleAr": "Graphie et vocalisation — الرسم والضبط الابتدائي الرابع",
-      "titleFr": "",
+      "titleFr": "Graphie et vocalisation — quatrième dessin primaire et accordage",
       "order": 5
     },
     {
@@ -308,7 +308,7 @@
       "subject": "tafsir",
       "level": "4ep",
       "titleAr": "التفسير من خلال تفسير الجلالين للسنة الرابعة من التعليم الابتدائي العتيق",
-      "titleFr": "",
+      "titleFr": "Interprétation à travers Tafsir Al-Jalalayn pour la quatrième année de l'enseignement primaire ancien",
       "order": 6
     },
     {
@@ -316,7 +316,7 @@
       "subject": "usul-qiyam",
       "level": "4ep",
       "titleAr": "أصول القيم في القرآن والسنة للسنة الرابعة ابتدائي عتيق",
-      "titleFr": "",
+      "titleFr": "Fondements des valeurs du Coran et de la Sunna pour la quatrième année du primaire, Atiq",
       "order": 7
     },
     {
@@ -324,7 +324,7 @@
       "subject": "rasm-wa-dabt",
       "level": "5ep",
       "titleAr": "المقدمة",
-      "titleFr": "",
+      "titleFr": "Dessin et contrôle à travers Arjouza Umdat Al-Bayan d'Idris Al-Wadghiri, expliquant la joie de voir et de voir par Muhammad bin Al-Arabi Al-Masari pour la cinquième année de l'enseignement primaire ancien.",
       "order": 8
     },
     {
@@ -332,7 +332,7 @@
       "subject": "tajwid",
       "level": "5ep",
       "titleAr": "المقدمة",
-      "titleFr": "",
+      "titleFr": "Applications Tajweed sur les systèmes Tuhfat al-Atfal par Al-Jamzouri 2",
       "order": 9
     },
     {
@@ -340,7 +340,7 @@
       "subject": "usul-qiyam",
       "level": "5ep",
       "titleAr": "أصول القيم في القرآن والسنة للسنة الخامسة ابتدائي عتيق",
-      "titleFr": "",
+      "titleFr": "Fondements des valeurs du Coran et de la Sunna pour la cinquième année du primaire, Atiq",
       "order": 10
     },
     {
@@ -348,7 +348,7 @@
       "subject": "fiqh",
       "level": "6ep",
       "titleAr": "Droit rituel — الفقه الابتدائي السادس",
-      "titleFr": "",
+      "titleFr": "Droit rituel — Sixième jurisprudence primaire",
       "order": 11
     },
     {
@@ -356,7 +356,7 @@
       "subject": "hadith",
       "level": "6ep",
       "titleAr": "المقدمة",
-      "titleFr": "",
+      "titleFr": "Hadith du livre Al-Arba'in Al-Nawawi, expliqué par Ibn Daqiq Al-Eid",
       "order": 12
     },
     {
@@ -364,7 +364,7 @@
       "subject": "tafsir",
       "level": "6ep",
       "titleAr": "محتويات كتاب&nbsp;التفسير من خلال تفسير الجلالين",
-      "titleFr": "",
+      "titleFr": "Contenu du livre Interprétation à travers Tafsir Al-Jalalayn",
       "order": 13
     },
     {
@@ -372,7 +372,7 @@
       "subject": "tajwid",
       "level": "6ep",
       "titleAr": "Psalmodie coranique — التجويد السادسة ابتدائي عتيق",
-      "titleFr": "",
+      "titleFr": "Psalmodie coranique — Tajweed, sixième primaire, ancien",
       "order": 14
     },
     {
@@ -380,7 +380,7 @@
       "subject": "usul-qiyam",
       "level": "6ep",
       "titleAr": "أصول القيم في القرآن والسنة للسنة السادسة ابتدائي عتيق",
-      "titleFr": "",
+      "titleFr": "Fondements des valeurs du Coran et de la Sunna pour la sixième année primaire, Atiq",
       "order": 15
     },
     {
@@ -388,7 +388,7 @@
       "subject": "fiqh",
       "level": "1es",
       "titleAr": "Droit rituel — الإعدادي",
-      "titleFr": "",
+      "titleFr": "Droit rituel — préparatoire",
       "order": 16
     },
     {
@@ -396,7 +396,7 @@
       "subject": "hadith",
       "level": "1es",
       "titleAr": "الحديث من موطأ الإمام مالك بشرح الزرقاني",
-      "titleFr": "",
+      "titleFr": "Hadith de Muwatta de l'Imam Malik, expliqué par Al-Zarqani",
       "order": 17
     },
     {
@@ -404,7 +404,7 @@
       "subject": "sira",
       "level": "1es",
       "titleAr": "فهرست الموضوعات",
-      "titleFr": "",
+      "titleFr": "Index des sujets",
       "order": 18
     },
     {
@@ -412,7 +412,7 @@
       "subject": "tafsir",
       "level": "1es",
       "titleAr": "Exégèse coranique — إعدادي",
-      "titleFr": "",
+      "titleFr": "Exégèse coranique — préparatoire",
       "order": 19
     },
     {
@@ -420,7 +420,7 @@
       "subject": "tawhid",
       "level": "1es",
       "titleAr": "Monothéisme — التوحيد الإعدادي الأول",
-      "titleFr": "",
+      "titleFr": "Monothéisme - premier monothéisme préparatoire",
       "order": 20
     },
     {
@@ -428,7 +428,7 @@
       "subject": "ulum-quran",
       "level": "1es",
       "titleAr": "علوم القرآن السنة أولى إعدادي عتيق",
-      "titleFr": "",
+      "titleFr": "Sciences coraniques, Sunna, Première école préparatoire, Atiq",
       "order": 21
     },
     {
@@ -436,7 +436,7 @@
       "subject": "sira",
       "level": "2es",
       "titleAr": "محتوى كتاب السيرة النبوية",
-      "titleFr": "",
+      "titleFr": "Contenu du livre Biographie du Prophète",
       "order": 22
     },
     {
@@ -444,7 +444,7 @@
       "subject": "tafsir",
       "level": "2es",
       "titleAr": "المقدمة",
-      "titleFr": "",
+      "titleFr": "Tafsir al-Tashil li Ulum al-Tanzeel d'Ibn Jazi al-Gharnati al-Maliki pour les élèves de deuxième année de l'école préparatoire, Atiq",
       "order": 23
     },
     {
@@ -452,7 +452,7 @@
       "subject": "tajwid",
       "level": "2es",
       "titleAr": "فهرس كتاب التجويد من نظم الدرر اللوامع للإمام ابن بري بشرح النجوم الطوالع لإبراهيم المارغني للسنة الثانية من التعليم الإعدادي العتيق",
-      "titleFr": "",
+      "titleFr": "Index du livre Tajweed de Nazm al-Durar al-Lawaima de l'Imam Ibn Bari, avec une explication des étoiles montantes d'Ibrahim al-Marghani pour la deuxième année de l'enseignement préparatoire ancien.",
       "order": 24
     },
     {
@@ -460,7 +460,7 @@
       "subject": "tawhid",
       "level": "2es",
       "titleAr": "التوحيد من منظومة المرشد المعين على الضروري من علوم الدين لعبد الواحد بن عاشر بشرح مختصر الدر الثمين لمحمد بن أحمد ميارة للسنة الثانية من التعليم الإعدادي العتيق",
-      "titleFr": "",
+      "titleFr": "Monothéisme du système du guide nommé aux sciences nécessaires de la religion par Abd al-Wahid bin Ashir, avec une explication de Mukhtasar al-Durr al-Thameen par Muhammad bin Ahmed Mayara pour la deuxième année de l'enseignement préparatoire ancien",
       "order": 25
     },
     {
@@ -468,7 +468,7 @@
       "subject": "ulum-quran",
       "level": "2es",
       "titleAr": "Sciences coraniques — السنة الثانية إعدادي عتيق",
-      "titleFr": "",
+      "titleFr": "Sciences coraniques - deuxième année d'école préparatoire, Atiq",
       "order": 26
     },
     {
@@ -476,7 +476,7 @@
       "subject": "fiqh",
       "level": "3es",
       "titleAr": "الفقه من متن الرسالة لابن أبي زيد القيرواني بشرح كفاية الطالب الرباني لأبي الحسن بحاشية العدوي للسنة الثالثة من الطور الإعدادي العتيق",
-      "titleFr": "",
+      "titleFr": "Jurisprudence du texte du message d'Ibn Abi Zaid al-Qayrawani avec une explication du Kifayat al-Talib al-Rabbani d'Abu al-Hasan à Hashiyat al-Adawi pour la troisième année de l'ancienne étape préparatoire",
       "order": 27
     },
     {
@@ -484,7 +484,7 @@
       "subject": "hadith",
       "level": "3es",
       "titleAr": "المقدمة",
-      "titleFr": "",
+      "titleFr": "Le hadith de Muwatta de l'Imam Malik, expliqué par Al-Zarqani, pour la troisième année de l'enseignement préparatoire ancien",
       "order": 28
     },
     {
@@ -492,7 +492,7 @@
       "subject": "sira",
       "level": "3es",
       "titleAr": "المقدمة",
-      "titleFr": "",
+      "titleFr": "Biographie du Prophète",
       "order": 29
     },
     {
@@ -500,7 +500,7 @@
       "subject": "tafsir",
       "level": "3es",
       "titleAr": "المقدمة",
-      "titleFr": "",
+      "titleFr": "Interprétation à travers le Tas'heel des Sciences de la Révélation par Ibn Jazi pour la troisième année de l'enseignement préparatoire ancien",
       "order": 30
     },
     {
@@ -508,7 +508,7 @@
       "subject": "tajwid",
       "level": "3es",
       "titleAr": "فهرس الموضوعات",
-      "titleFr": "",
+      "titleFr": "Index des sujets",
       "order": 31
     },
     {
@@ -516,7 +516,7 @@
       "subject": "ulum-quran",
       "level": "3es",
       "titleAr": "Sciences coraniques — السنة الثالثة إعدادي عتيق",
-      "titleFr": "",
+      "titleFr": "Sciences coraniques - troisième année d'école préparatoire, Atiq",
       "order": 32
     },
     {
@@ -524,7 +524,7 @@
       "subject": "faraid",
       "level": "tanawi-3",
       "titleAr": "مقدمة الكتاب",
-      "titleFr": "",
+      "titleFr": "Introduction au livre",
       "order": 33
     },
     {
@@ -532,7 +532,7 @@
       "subject": "fikr-islami",
       "level": "tanawi-1",
       "titleAr": "فهرس الموضوعات",
-      "titleFr": "",
+      "titleFr": "Index des sujets",
       "order": 34
     },
     {
@@ -540,7 +540,7 @@
       "subject": "fikr-islami",
       "level": "tanawi-3",
       "titleAr": "مادة الفكر الإسلامي (التصوف الإسلامي) للسنة الثالثة من التعليم الثانوي العتيق",
-      "titleFr": "",
+      "titleFr": "Le sujet de la pensée islamique (soufisme islamique) pour la troisième année de l'enseignement secondaire ancien",
       "order": 35
     },
     {
@@ -548,7 +548,7 @@
       "subject": "fikr-islami",
       "level": "tanawi-2",
       "titleAr": "الفكر الإسلامي (الفلسفة الإسلامية) للسنة الثانية من التعليم الثانوي العتيق",
-      "titleFr": "",
+      "titleFr": "Pensée islamique (philosophie islamique) pour la deuxième année de l'enseignement secondaire ancien",
       "order": 36
     },
     {
@@ -556,7 +556,7 @@
       "subject": "fiqh",
       "level": "tanawi-1",
       "titleAr": "مقدمة الكتاب",
-      "titleFr": "",
+      "titleFr": "Introduction au livre",
       "order": 37
     },
     {
@@ -564,7 +564,7 @@
       "subject": "fiqh",
       "level": "tanawi-3",
       "titleAr": "الفهرس",
-      "titleFr": "",
+      "titleFr": "Indice",
       "order": 38
     },
     {
@@ -572,7 +572,7 @@
       "subject": "hadith",
       "level": "tanawi-1",
       "titleAr": "مـقدمـة",
-      "titleFr": "",
+      "titleFr": "Hadith de Muwatta de l'Imam Malik, expliqué par Al-Zarqani pour la première année de l'enseignement secondaire ancien",
       "order": 39
     },
     {
@@ -580,7 +580,7 @@
       "subject": "hadith",
       "level": "tanawi-3",
       "titleAr": "كتاب الحديث من موطأ الإمام مالك بشرح الزرقاني س 3 ثا",
-      "titleFr": "",
+      "titleFr": "Livre de Hadith du Muwatta de l'Imam Malik, expliqué par Al-Zarqani, Partie 3",
       "order": 40
     },
     {
@@ -588,7 +588,7 @@
       "subject": "mantiq",
       "level": "tanawi-1",
       "titleAr": "Logique — السنة أولى ثانوي عتيق",
-      "titleFr": "",
+      "titleFr": "Logique - première année du lycée",
       "order": 41
     },
     {
@@ -596,7 +596,7 @@
       "subject": "qiraat",
       "level": "tanawi-1",
       "titleAr": "المقدمة",
-      "titleFr": "",
+      "titleFr": "Lectures du texte de « Hazr Al-Amani » et félicitations à Abu Al-Qasim Al-Shatibi pour la première année de l'enseignement secondaire ancien 2",
       "order": 42
     },
     {
@@ -604,7 +604,7 @@
       "subject": "qiraat",
       "level": "tanawi-2",
       "titleAr": "فهرس الموضوعات",
-      "titleFr": "",
+      "titleFr": "Index des sujets",
       "order": 43
     },
     {
@@ -612,7 +612,7 @@
       "subject": "qiraat",
       "level": "tanawi-3",
       "titleAr": "فهرس الموضوعات",
-      "titleFr": "",
+      "titleFr": "Index des sujets",
       "order": 44
     },
     {
@@ -620,7 +620,7 @@
       "subject": "tafsir",
       "level": "tanawi-2",
       "titleAr": "Exégèse coranique — التفسير الثانوي الثاني",
-      "titleFr": "",
+      "titleFr": "Exégèse coranique — la deuxième interprétation secondaire",
       "order": 45
     },
     {
@@ -628,7 +628,7 @@
       "subject": "tafsir",
       "level": "tanawi-1",
       "titleAr": "Exégèse coranique — ثانوي",
-      "titleFr": "",
+      "titleFr": "Exégèse coranique — secondaire",
       "order": 46
     },
     {
@@ -636,7 +636,7 @@
       "subject": "tafsir",
       "level": "tanawi-3",
       "titleAr": "المقدمة",
-      "titleFr": "",
+      "titleFr": "Interprétation à travers le bref éditeur dans l'interprétation du cher livre pour la troisième année de l'enseignement secondaire ancien",
       "order": 47
     },
     {
@@ -644,7 +644,7 @@
       "subject": "taqtit",
       "level": "tanawi-1",
       "titleAr": "Découpage temporel — الأولى ثانوي عتيق",
-      "titleFr": "",
+      "titleFr": "Découpage temporel — première antiquité secondaire",
       "order": 48
     },
     {
@@ -652,7 +652,7 @@
       "subject": "taqtit",
       "level": "tanawi-2",
       "titleAr": "مقدمة الكتاب",
-      "titleFr": "",
+      "titleFr": "Introduction au livre",
       "order": 49
     },
     {
@@ -660,7 +660,7 @@
       "subject": "taqtit",
       "level": "tanawi-3",
       "titleAr": "فهرس المحتويات",
-      "titleFr": "",
+      "titleFr": "Table des matières",
       "order": 50
     },
     {
@@ -668,7 +668,7 @@
       "subject": "ulum-hadith",
       "level": "tanawi-1",
       "titleAr": "مقدمة الكتاب",
-      "titleFr": "",
+      "titleFr": "Introduction au livre",
       "order": 51
     },
     {
@@ -676,7 +676,7 @@
       "subject": "ulum-hadith",
       "level": "tanawi-2",
       "titleAr": "مقدمة الكتاب",
-      "titleFr": "",
+      "titleFr": "Introduction au livre",
       "order": 52
     },
     {
@@ -684,7 +684,7 @@
       "subject": "ulum-hadith",
       "level": "tanawi-3",
       "titleAr": "مقدمة الكتاب",
-      "titleFr": "",
+      "titleFr": "Introduction au livre",
       "order": 53
     },
     {
@@ -692,7 +692,7 @@
       "subject": "usul-fiqh",
       "level": "tanawi-2",
       "titleAr": "مقدمة الكتاب",
-      "titleFr": "",
+      "titleFr": "Introduction au livre",
       "order": 54
     },
     {
@@ -700,7 +700,7 @@
       "subject": "usul-fiqh",
       "level": "tanawi-3",
       "titleAr": "مقدمة الكتاب",
-      "titleFr": "",
+      "titleFr": "Introduction au livre",
       "order": 55
     },
     {
@@ -708,7 +708,7 @@
       "subject": "usul-fiqh",
       "level": "tanawi-2",
       "titleAr": "كتاب أصول الفقه من ورقات إمام الحرمين بشرح الحطاب الرعيني",
-      "titleFr": "",
+      "titleFr": "Le livre des principes de jurisprudence tirés des papiers de l'Imam des Deux Saintes Mosquées, expliqué par Al-Hattab Al-Ra'ini",
       "order": 56
     },
     {
@@ -716,7 +716,7 @@
       "subject": "usul-fiqh",
       "level": "tanawi-1",
       "titleAr": "أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول",
-      "titleFr": "",
+      "titleFr": "Les principes de la jurisprudence du système pour atteindre les principes nécessaires",
       "order": 57
     },
     {
@@ -724,7 +724,7 @@
       "subject": "tafsir",
       "level": "5ep",
       "titleAr": "التفسير من خلال تفسير الجلالين للسنة الخامسة من التعليم الابتدائي العتيق",
-      "titleFr": "",
+      "titleFr": "Interprétation à travers Tafsir Al-Jalalayn pour la cinquième année de l'enseignement primaire ancien",
       "order": 58
     },
     {
@@ -732,7 +732,7 @@
       "subject": "rasm-wa-dabt",
       "level": "6ep",
       "titleAr": "الرسم والضبط من أرجوزة عمدة البيان لإدريس الودغيري",
-      "titleFr": "",
+      "titleFr": "Dessin et décor d'Arjouza Umdat al-Bayan par Idris Al-Wadghiri",
       "order": 59
     }
   ],
