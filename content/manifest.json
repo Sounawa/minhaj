@@ -1,7 +1,7 @@
 {
   "version": 4,
   "provisional": false,
-  "note": "Corpus Taʿlīm ʿatīq — 59 livres, 927 documents bilingues (source : site officiel via proxy).",
+  "note": "Corpus Taʿlīm ʿatīq — 59 livres, 934 documents bilingues (source : site officiel via proxy).",
   "program": {
     "nameAr": "المنهاج النموذجي للتعليم العتيق",
     "nameFr": "Programme modèle de l'enseignement traditionnel (Taʿlīm ʿatīq)",
@@ -736,5 +736,5 @@
       "order": 59
     }
   ],
-  "goalDocs": 927
+  "goalDocs": 934
 }

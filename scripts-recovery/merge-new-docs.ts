@@ -94,8 +94,7 @@ function mapDoc(docId: string, pathAr: string, titleAr: string): { bookId: strin
   if (subj === "القراءات" && ((n >= 18640 && n <= 18660) || (n >= 19000 && n <= 19210))) return { bookId: "qiraat-tanawi-1", role: "lesson" };
 
   // Ulum Quran 1es (السنة أولى إعدادي) : 15381, 15396-15887
-  if ((subj === "علوم-القُرآن" || subj === "علوم-القرآن" || p.startsWith("15381")) &&
-      (["15381", "15396", "15402", "15423", "15653", "15752", "15765", "15841", "15855", "15875", "15887"].includes(docId)))
+  if (["15381", "15396", "15402", "15423", "15653", "15752", "15765", "15841", "15855", "15875", "15887"].includes(docId))
     return { bookId: "ulum-quran-1es", role: "lesson" };
   // Ulum Quran 2es : 19261 (التفسير الفقهي — السنة الثانية إعدادي)
   if (docId === "19261") return { bookId: "ulum-quran-2es", role: "lesson" };
