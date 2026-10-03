@@ -98,3 +98,33 @@ Stage Summary:
 - Site Minhāj pleinement opérationnel : 55 livres, 852 docs bilingues (100 %), SSR OK.
 - Prochaine vague suggérée : leçons PDF-only (~9 livres), révision fine des traductions GT,
   fonctionnalités (recherche globale, favoris, impression, liens PDF).
+
+---
+Task ID: R4
+Agent: agent principal (Z.ai Code)
+Task: Reprise de session — diagnostic, QA reprise, sauvegarde v2 (leçon des resets), cron
+
+Work Log:
+- Message utilisateur « tu as fait quoi ? » → état des lieux complet puis poursuite.
+- Diagnostic : /home/z/.minhaj-backup/ (3 snapshots R2) ET /home/z/tr-src/ (900 docs bruts)
+  ont été EFFACÉS par une nouvelle réinitialisation partielle du home ;
+  /home/z/my-project a SURVÉCU (content/ 42 Mo + .git 15 Mo + 4 commits intacts).
+  → Leçon : AUCUN emplacement hors my-project n'est fiable.
+- git status : 165 fichiers « M » = simples changements de mode (644→755), contenu intact.
+  Normalisés puis commités.
+- QA reprise via agent-browser : accueil OK (« 55 manuels / 852 leçons bilingues »),
+  clic carte « Index des sujets — 1ᵉʳ collège » → #/livre/sira-1es (29 leçons) →
+  leçon 13 « Biographie du Prophète » → lecteur bilingue AR+FR (1 373 mots arabe,
+  26 057 car.), 0 erreur console. API /api/books 200.
+- backup.sh réécrit (v2) : snapshot principal DANS /home/z/my-project/backups/
+  (10 Mo) + copie secondaire best-effort dans /home/z/.minhaj-backup.
+  /backups/ ajouté au .gitignore ; .zscripts/dev.pid détracké.
+- Exécution : snapshot 20261003-212719 (10 Mo) créé + commit 08cd6a8 « R4 ».
+- Cron 15 min recréé : job 434132 (webDevReview, Europe/Paris, expr « 0 */15 * * * ? »).
+
+Stage Summary:
+- Site Minhāj 100 % opérationnel à la reprise : 55 livres, 852 docs bilingues, 0 erreur.
+- Sauvegarde pérennisée au bon endroit (dans le projet + git) ; règle utilisateur respectée.
+- Priorités suivantes : (1) leçons PDF-only (~9 livres pour atteindre 64),
+  (2) révision des traductions GT (GT-ismes des titres), (3) nouvelles
+  fonctionnalités : recherche globale, favoris, impression, liens PDF officiels.
