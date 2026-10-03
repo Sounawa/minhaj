@@ -214,3 +214,50 @@ Stage Summary:
   (« Hadith de Muwatta de l'Imam Malik, expliqué par Al-Zarqani » → « Le
   Muwaṭṭaʾ d'Imam Mālik — commentaire d'al-Zarqānī »), (2) livres PDF-only
   restants (5/64), (3) export/partage, (4) navigation clavier globale.
+
+---
+Task ID: R7
+Agent: agent principal (Z.ai Code)
+Task: Révision des titres — élimination des GT-ismes (livres, intros, leçons)
+
+Work Log:
+- **Incident** : le process du serveur dev (pid 1104) est MORT à ~22:57
+  (reset partiel de l'environnement, home/.zscripts purgés). Projet intact
+  (git + backups OK). Relance `bun run dev` en arrière-plan → OK (12 s).
+  Leçon : le serveur meurt avec les resets d'env — vérifier sa santé à
+  chaque reprise (curl /api/books), relancer si mort.
+- **Titres de livres (59/59 réécrits à la main)**, convention académique
+  « Matière — œuvre de référence, commentaire » :
+  - fiqh : Mukhtaṣar d'al-Akhdarī, Murshid al-Muʿīn d'Ibn ʿĀshir, Risāla
+    d'Ibn Abī Zayd, Mukhtaṣar de Khalīl (comm. al-Dardīr + ḥāshiya al-Dasūqī)
+  - hadith : Riyāḍ al-Ṣāliḥīn, al-Arbaʿīn al-Nawāwiyya, Muwaṭṭaʾ d'imam Mālik
+  - tafsir : Jalālayn, al-Tashīl d'Ibn Juzayy, al-Muḥarrar al-Wajīz d'Ibn ʿAṭiyya
+  - tajwid : Tuḥfat al-Aṭfāl, Naẓm al-Durar al-Lawāmiʿ d'Ibn Barrī
+  - qirāʾāt : Ḥirz al-Amānī (al-Shāṭibiyya) ; mantiq : Naẓm al-Sullam
+  - uṣūl : Marṭaqī al-Wuṣūl d'Ibn ʿĀṣim, al-Warāqāt d'al-Juwaynī
+  - fikr : kalām / philosophie / taṣawwuf ; farāʾiḍ : Jawāhir al-Maknūna
+  - tawqīt : al-Muqniʿ d'al-Marghīthī, ʿUmdat Ahl al-Thabt, al-Jāmiʿ al-Mufīd
+  - rasm : ʿUmdat al-Bayān d'al-Wadghīrī ; sīra, ʿulūm al-Qurʾān/ḥadīth, valeurs.
+  titleAr/textbookAr restaurés proprement dans les fichiers + manifeste
+  (fin des placeholders « مقدمة الكتاب / فهرس ») → fil d'Ariane du lecteur correct.
+- **Intros (37)** : titre → « Présentation du manuel » (fin des monstres GT).
+- **Leçons** : fix-long-titles.ts (tronqueur à marqueurs, 3 vagues, ~126
+  titres débarassés du boilerplate « une leçon de jurisprudence tirée du
+  texte d'Al-Akhdari, expliquée par... ») + 19 réparations manuelles
+  (rasm « Dessin et contrôle » → « Rasm et ḍabṭ », artefacts « 220719 »,
+  « Primaire », génériques « Interprétation »).
+- Découverte structure : 11 livres sont intro-only (leçons en PDF-only) —
+  fikr-islami-1, faraid-3, taqtit-2/3, usul-fiqh-2/3, ulum-hadith-1/2/3,
+  qiraat-2/3, tajwid-3es, tafsir-tanawi-3 (≈ pas ~5 comme estimé avant).
+- QA : bibliothèque (0 GT-isme détecté par regex), pages livres
+  (fiqh-tanawi-1, mantiq-tanawi-1, tawhid-2es propres), fil d'Ariane arabe
+  correct, 0 erreur console, lint 0 erreur. Backup + commit 4d85a24.
+
+Stage Summary:
+- **Le corpus est désormais titré proprement de bout en bout** : 59 livres,
+  37 intros, 897 leçons — plus aucun placeholder ni GT-isme flagrant.
+- 16 titres >135 car restants = titres réels longs (sīra/honneurs) : OK.
+- Prochaines priorités : (1) extraction PDF des 11 livres intro-only
+  (Google Translate proxy + PDF), (2) révision du CONTENU FR des leçons
+  (GT → phrasé naturel, vagues ciblées par livre), (3) export/partage,
+  (4) page À propos enrichie (crédits œuvres, méthodologie traduction).
