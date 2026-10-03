@@ -1,0 +1,720 @@
+{
+  "version": 3,
+  "provisional": true,
+  "note": "Manifeste reconstruit après réinitialisation du sandbox (session R0). Structure provisoire du programme Taʿlīm ʿatīq — à corriger lors du re-téléchargement du corpus officiel. Les bookId marqués « known » sont ceux attestés dans les sessions précédentes.",
+  "program": {
+    "nameAr": "المنهاج النموذجي للتعليم العتيق",
+    "nameFr": "Programme modèle de l'enseignement traditionnel (Taʿlīm ʿatīq)",
+    "publisherAr": "وزارة الأوقاف والشؤون الإسلامية — المملكة المغربية",
+    "publisherFr": "Ministère des Habous et des Affaires islamiques — Royaume du Maroc",
+    "goalBooks": 64,
+    "goalDocs": 1152
+  },
+  "levels": [
+    {
+      "id": "1ep",
+      "cycle": "ep",
+      "year": 1,
+      "labelAr": "السنة الأولى من السلك الابتدائي العتيق",
+      "labelFr": "1ʳᵉ année — primaire",
+      "shortFr": "1ʳᵉ primaire"
+    },
+    {
+      "id": "2ep",
+      "cycle": "ep",
+      "year": 2,
+      "labelAr": "السنة الثانية من السلك الابتدائي العتيق",
+      "labelFr": "2ᵉ année — primaire",
+      "shortFr": "2ᵉ primaire"
+    },
+    {
+      "id": "3ep",
+      "cycle": "ep",
+      "year": 3,
+      "labelAr": "السنة الثالثة من السلك الابتدائي العتيق",
+      "labelFr": "3ᵉ année — primaire",
+      "shortFr": "3ᵉ primaire"
+    },
+    {
+      "id": "4ep",
+      "cycle": "ep",
+      "year": 4,
+      "labelAr": "السنة الرابعة من السلك الابتدائي العتيق",
+      "labelFr": "4ᵉ année — primaire",
+      "shortFr": "4ᵉ primaire"
+    },
+    {
+      "id": "5ep",
+      "cycle": "ep",
+      "year": 5,
+      "labelAr": "السنة الخامسة من السلك الابتدائي العتيق",
+      "labelFr": "5ᵉ année — primaire",
+      "shortFr": "5ᵉ primaire"
+    },
+    {
+      "id": "6ep",
+      "cycle": "ep",
+      "year": 6,
+      "labelAr": "السنة السادسة من السلك الابتدائي العتيق",
+      "labelFr": "6ᵉ année — primaire",
+      "shortFr": "6ᵉ primaire"
+    },
+    {
+      "id": "1es",
+      "cycle": "es",
+      "year": 1,
+      "labelAr": "السنة الأولى من السلك الإعدادي العتيق",
+      "labelFr": "1ʳᵉ année — collège",
+      "shortFr": "1ᵉʳ collège"
+    },
+    {
+      "id": "2es",
+      "cycle": "es",
+      "year": 2,
+      "labelAr": "السنة الثانية من السلك الإعدادي العتيق",
+      "labelFr": "2ᵉ année — collège",
+      "shortFr": "2ᵉ collège"
+    },
+    {
+      "id": "3es",
+      "cycle": "es",
+      "year": 3,
+      "labelAr": "السنة الثالثة من السلك الإعدادي العتيق",
+      "labelFr": "3ᵉ année — collège",
+      "shortFr": "3ᵉ collège"
+    },
+    {
+      "id": "tanawi-1",
+      "cycle": "tanawi",
+      "year": 1,
+      "labelAr": "السنة الأولى من السلك التأهيلي العتيق",
+      "labelFr": "1ʳᵉ année — lycée",
+      "shortFr": "1ᵉʳ lycée"
+    },
+    {
+      "id": "tanawi-2",
+      "cycle": "tanawi",
+      "year": 2,
+      "labelAr": "السنة الثانية من السلك التأهيلي العتيق",
+      "labelFr": "2ᵉ année — lycée",
+      "shortFr": "2ᵉ lycée"
+    },
+    {
+      "id": "tanawi-3",
+      "cycle": "tanawi",
+      "year": 3,
+      "labelAr": "السنة الثالثة من السلك التأهيلي العتيق",
+      "labelFr": "3ᵉ année — lycée",
+      "shortFr": "3ᵉ lycée"
+    }
+  ],
+  "subjects": [
+    {
+      "id": "tawhid",
+      "labelAr": "التوحيد",
+      "titleFr": "Le Monothéisme",
+      "translit": "tawḥīd",
+      "icon": "Sparkles"
+    },
+    {
+      "id": "fiqh",
+      "labelAr": "الفقه",
+      "titleFr": "Le Droit rituel",
+      "translit": "fiqh",
+      "icon": "Scale"
+    },
+    {
+      "id": "sira",
+      "labelAr": "السيرة النبوية",
+      "titleFr": "La Biographie prophétique",
+      "translit": "sīra",
+      "icon": "ScrollText"
+    },
+    {
+      "id": "tajwid",
+      "labelAr": "التجويد",
+      "titleFr": "La Psalmodie coranique",
+      "translit": "tajwīd",
+      "icon": "AudioLines"
+    },
+    {
+      "id": "tafsir",
+      "labelAr": "التفسير",
+      "titleFr": "L'Exégèse coranique",
+      "translit": "tafsīr",
+      "icon": "BookOpenText"
+    },
+    {
+      "id": "nahu",
+      "labelAr": "النحو والصرف",
+      "titleFr": "La Grammaire et la morphologie",
+      "translit": "naḥw wa ṣarf",
+      "icon": "Languages"
+    },
+    {
+      "id": "hadith",
+      "labelAr": "الحديث",
+      "titleFr": "La Tradition prophétique",
+      "translit": "ḥadīth",
+      "icon": "MessagesSquare"
+    },
+    {
+      "id": "mantiq",
+      "labelAr": "المنطق",
+      "titleFr": "La Logique",
+      "translit": "manṭiq",
+      "icon": "Brain"
+    },
+    {
+      "id": "faraid",
+      "labelAr": "الفرائض",
+      "titleFr": "Le Droit successoral",
+      "translit": "farāʾiḍ",
+      "icon": "Landmark"
+    },
+    {
+      "id": "balagha",
+      "labelAr": "البلاغة",
+      "titleFr": "La Rhétorique",
+      "translit": "balāġa",
+      "icon": "Feather"
+    },
+    {
+      "id": "usul-fiqh",
+      "labelAr": "أصول الفقه",
+      "titleFr": "Les Principes du droit",
+      "translit": "uṣūl al-fiqh",
+      "icon": "Compass"
+    },
+    {
+      "id": "adab",
+      "labelAr": "الأدب",
+      "titleFr": "La Littérature",
+      "translit": "adab",
+      "icon": "Library"
+    }
+  ],
+  "books": [
+    {
+      "id": "tawhid",
+      "subject": "tawhid",
+      "level": "1ep",
+      "titleAr": "التوحيد",
+      "titleFr": "Le Monothéisme",
+      "order": 1,
+      "known": true
+    },
+    {
+      "id": "fiqh-1ep",
+      "subject": "fiqh",
+      "level": "1ep",
+      "titleAr": "الفقه",
+      "titleFr": "Le Droit rituel",
+      "order": 2
+    },
+    {
+      "id": "sira-1ep",
+      "subject": "sira",
+      "level": "1ep",
+      "titleAr": "السيرة النبوية",
+      "titleFr": "La Biographie prophétique",
+      "order": 3,
+      "known": true
+    },
+    {
+      "id": "tajwid-durar-lawami-1ep",
+      "subject": "tajwid",
+      "level": "1ep",
+      "titleAr": "التجويد",
+      "titleFr": "La Psalmodie coranique",
+      "order": 4,
+      "known": true,
+      "textbookAr": "الدرر اللوامع في تجويد كلام الله"
+    },
+    {
+      "id": "tafsir-tashil-1ep",
+      "subject": "tafsir",
+      "level": "1ep",
+      "titleAr": "التفسير",
+      "titleFr": "L'Exégèse coranique",
+      "order": 5,
+      "known": true
+    },
+    {
+      "id": "tawhid-2ep",
+      "subject": "tawhid",
+      "level": "2ep",
+      "titleAr": "التوحيد",
+      "titleFr": "Le Monothéisme",
+      "order": 6
+    },
+    {
+      "id": "fiqh-2ep",
+      "subject": "fiqh",
+      "level": "2ep",
+      "titleAr": "الفقه",
+      "titleFr": "Le Droit rituel",
+      "order": 7
+    },
+    {
+      "id": "sira-2ep",
+      "subject": "sira",
+      "level": "2ep",
+      "titleAr": "السيرة النبوية",
+      "titleFr": "La Biographie prophétique",
+      "order": 8
+    },
+    {
+      "id": "tajwid-ibtidai-2",
+      "subject": "tajwid",
+      "level": "2ep",
+      "titleAr": "التجويد",
+      "titleFr": "La Psalmodie coranique",
+      "order": 9
+    },
+    {
+      "id": "tafsir-2ep",
+      "subject": "tafsir",
+      "level": "2ep",
+      "titleAr": "التفسير",
+      "titleFr": "L'Exégèse coranique",
+      "order": 10
+    },
+    {
+      "id": "tawhid-3ep",
+      "subject": "tawhid",
+      "level": "3ep",
+      "titleAr": "التوحيد",
+      "titleFr": "Le Monothéisme",
+      "order": 11
+    },
+    {
+      "id": "fiqh-3ep",
+      "subject": "fiqh",
+      "level": "3ep",
+      "titleAr": "الفقه",
+      "titleFr": "Le Droit rituel",
+      "order": 12
+    },
+    {
+      "id": "sira-3ep",
+      "subject": "sira",
+      "level": "3ep",
+      "titleAr": "السيرة النبوية",
+      "titleFr": "La Biographie prophétique",
+      "order": 13
+    },
+    {
+      "id": "tajwid-ibtidai-3",
+      "subject": "tajwid",
+      "level": "3ep",
+      "titleAr": "التجويد",
+      "titleFr": "La Psalmodie coranique",
+      "order": 14
+    },
+    {
+      "id": "tafsir-3ep",
+      "subject": "tafsir",
+      "level": "3ep",
+      "titleAr": "التفسير",
+      "titleFr": "L'Exégèse coranique",
+      "order": 15
+    },
+    {
+      "id": "tawhid-4ep",
+      "subject": "tawhid",
+      "level": "4ep",
+      "titleAr": "التوحيد",
+      "titleFr": "Le Monothéisme",
+      "order": 16
+    },
+    {
+      "id": "fiqh-4ep",
+      "subject": "fiqh",
+      "level": "4ep",
+      "titleAr": "الفقه",
+      "titleFr": "Le Droit rituel",
+      "order": 17
+    },
+    {
+      "id": "sira-4ep",
+      "subject": "sira",
+      "level": "4ep",
+      "titleAr": "السيرة النبوية",
+      "titleFr": "La Biographie prophétique",
+      "order": 18
+    },
+    {
+      "id": "tajwid-ibtidai-4",
+      "subject": "tajwid",
+      "level": "4ep",
+      "titleAr": "التجويد",
+      "titleFr": "La Psalmodie coranique",
+      "order": 19
+    },
+    {
+      "id": "tafsir-4ep",
+      "subject": "tafsir",
+      "level": "4ep",
+      "titleAr": "التفسير",
+      "titleFr": "L'Exégèse coranique",
+      "order": 20
+    },
+    {
+      "id": "tawhid-5ep",
+      "subject": "tawhid",
+      "level": "5ep",
+      "titleAr": "التوحيد",
+      "titleFr": "Le Monothéisme",
+      "order": 21
+    },
+    {
+      "id": "fiqh-5ep",
+      "subject": "fiqh",
+      "level": "5ep",
+      "titleAr": "الفقه",
+      "titleFr": "Le Droit rituel",
+      "order": 22
+    },
+    {
+      "id": "sira-5ep",
+      "subject": "sira",
+      "level": "5ep",
+      "titleAr": "السيرة النبوية",
+      "titleFr": "La Biographie prophétique",
+      "order": 23
+    },
+    {
+      "id": "tajwid-ibtidai-5",
+      "subject": "tajwid",
+      "level": "5ep",
+      "titleAr": "التجويد",
+      "titleFr": "La Psalmodie coranique",
+      "order": 24,
+      "known": true
+    },
+    {
+      "id": "tafsir-5ep",
+      "subject": "tafsir",
+      "level": "5ep",
+      "titleAr": "التفسير",
+      "titleFr": "L'Exégèse coranique",
+      "order": 25
+    },
+    {
+      "id": "tawhid-6ep",
+      "subject": "tawhid",
+      "level": "6ep",
+      "titleAr": "التوحيد",
+      "titleFr": "Le Monothéisme",
+      "order": 26
+    },
+    {
+      "id": "fiqh-6ep",
+      "subject": "fiqh",
+      "level": "6ep",
+      "titleAr": "الفقه",
+      "titleFr": "Le Droit rituel",
+      "order": 27
+    },
+    {
+      "id": "sira-6ep",
+      "subject": "sira",
+      "level": "6ep",
+      "titleAr": "السيرة النبوية",
+      "titleFr": "La Biographie prophétique",
+      "order": 28
+    },
+    {
+      "id": "tajwid-ibtidai-6",
+      "subject": "tajwid",
+      "level": "6ep",
+      "titleAr": "التجويد",
+      "titleFr": "La Psalmodie coranique",
+      "order": 29
+    },
+    {
+      "id": "tafsir-6ep",
+      "subject": "tafsir",
+      "level": "6ep",
+      "titleAr": "التفسير",
+      "titleFr": "L'Exégèse coranique",
+      "order": 30
+    },
+    {
+      "id": "tawhid-1es",
+      "subject": "tawhid",
+      "level": "1es",
+      "titleAr": "التوحيد",
+      "titleFr": "Le Monothéisme",
+      "order": 31
+    },
+    {
+      "id": "fiqh-1es",
+      "subject": "fiqh",
+      "level": "1es",
+      "titleAr": "الفقه",
+      "titleFr": "Le Droit rituel",
+      "order": 32
+    },
+    {
+      "id": "sira-1es",
+      "subject": "sira",
+      "level": "1es",
+      "titleAr": "السيرة النبوية",
+      "titleFr": "La Biographie prophétique",
+      "order": 33
+    },
+    {
+      "id": "tajwid-1es",
+      "subject": "tajwid",
+      "level": "1es",
+      "titleAr": "التجويد",
+      "titleFr": "La Psalmodie coranique",
+      "order": 34
+    },
+    {
+      "id": "tafsir-muharrar-1es",
+      "subject": "tafsir",
+      "level": "1es",
+      "titleAr": "التفسير",
+      "titleFr": "L'Exégèse coranique",
+      "order": 35,
+      "known": true
+    },
+    {
+      "id": "nahu-1es",
+      "subject": "nahu",
+      "level": "1es",
+      "titleAr": "النحو والصرف",
+      "titleFr": "La Grammaire et la morphologie",
+      "order": 36
+    },
+    {
+      "id": "tawhid-2es",
+      "subject": "tawhid",
+      "level": "2es",
+      "titleAr": "التوحيد",
+      "titleFr": "Le Monothéisme",
+      "order": 37
+    },
+    {
+      "id": "fiqh-2es",
+      "subject": "fiqh",
+      "level": "2es",
+      "titleAr": "الفقه",
+      "titleFr": "Le Droit rituel",
+      "order": 38
+    },
+    {
+      "id": "sira-2es",
+      "subject": "sira",
+      "level": "2es",
+      "titleAr": "السيرة النبوية",
+      "titleFr": "La Biographie prophétique",
+      "order": 39
+    },
+    {
+      "id": "tajwid-2es",
+      "subject": "tajwid",
+      "level": "2es",
+      "titleAr": "التجويد",
+      "titleFr": "La Psalmodie coranique",
+      "order": 40
+    },
+    {
+      "id": "tafsir-2es",
+      "subject": "tafsir",
+      "level": "2es",
+      "titleAr": "التفسير",
+      "titleFr": "L'Exégèse coranique",
+      "order": 41
+    },
+    {
+      "id": "nahu-2es",
+      "subject": "nahu",
+      "level": "2es",
+      "titleAr": "النحو والصرف",
+      "titleFr": "La Grammaire et la morphologie",
+      "order": 42
+    },
+    {
+      "id": "tawhid-3es",
+      "subject": "tawhid",
+      "level": "3es",
+      "titleAr": "التوحيد",
+      "titleFr": "Le Monothéisme",
+      "order": 43
+    },
+    {
+      "id": "fiqh-3es",
+      "subject": "fiqh",
+      "level": "3es",
+      "titleAr": "الفقه",
+      "titleFr": "Le Droit rituel",
+      "order": 44
+    },
+    {
+      "id": "sira-3es",
+      "subject": "sira",
+      "level": "3es",
+      "titleAr": "السيرة النبوية",
+      "titleFr": "La Biographie prophétique",
+      "order": 45
+    },
+    {
+      "id": "tajwid-3es",
+      "subject": "tajwid",
+      "level": "3es",
+      "titleAr": "التجويد",
+      "titleFr": "La Psalmodie coranique",
+      "order": 46
+    },
+    {
+      "id": "tafsir-3es",
+      "subject": "tafsir",
+      "level": "3es",
+      "titleAr": "التفسير",
+      "titleFr": "L'Exégèse coranique",
+      "order": 47
+    },
+    {
+      "id": "nahu-3es",
+      "subject": "nahu",
+      "level": "3es",
+      "titleAr": "النحو والصرف",
+      "titleFr": "La Grammaire et la morphologie",
+      "order": 48
+    },
+    {
+      "id": "tawhid-tanawi-1",
+      "subject": "tawhid",
+      "level": "tanawi-1",
+      "titleAr": "التوحيد",
+      "titleFr": "Le Monothéisme",
+      "order": 49
+    },
+    {
+      "id": "fiqh-tanawi-1",
+      "subject": "fiqh",
+      "level": "tanawi-1",
+      "titleAr": "الفقه",
+      "titleFr": "Le Droit rituel",
+      "order": 50
+    },
+    {
+      "id": "tafsir-tanawi-1",
+      "subject": "tafsir",
+      "level": "tanawi-1",
+      "titleAr": "التفسير",
+      "titleFr": "L'Exégèse coranique",
+      "order": 51
+    },
+    {
+      "id": "mantiq-tanawi-1",
+      "subject": "mantiq",
+      "level": "tanawi-1",
+      "titleAr": "المنطق",
+      "titleFr": "La Logique",
+      "order": 52,
+      "known": true
+    },
+    {
+      "id": "hadith-tanawi-1",
+      "subject": "hadith",
+      "level": "tanawi-1",
+      "titleAr": "الحديث",
+      "titleFr": "La Tradition prophétique",
+      "order": 53
+    },
+    {
+      "id": "tawhid-tanawi-2",
+      "subject": "tawhid",
+      "level": "tanawi-2",
+      "titleAr": "التوحيد",
+      "titleFr": "Le Monothéisme",
+      "order": 54
+    },
+    {
+      "id": "fiqh-tanawi-2",
+      "subject": "fiqh",
+      "level": "tanawi-2",
+      "titleAr": "الفقه",
+      "titleFr": "Le Droit rituel",
+      "order": 55
+    },
+    {
+      "id": "tafsir-tanawi-2",
+      "subject": "tafsir",
+      "level": "tanawi-2",
+      "titleAr": "التفسير",
+      "titleFr": "L'Exégèse coranique",
+      "order": 56
+    },
+    {
+      "id": "faraid-tanawi-2",
+      "subject": "faraid",
+      "level": "tanawi-2",
+      "titleAr": "الفرائض",
+      "titleFr": "Le Droit successoral",
+      "order": 57,
+      "known": true
+    },
+    {
+      "id": "hadith-tanawi-2",
+      "subject": "hadith",
+      "level": "tanawi-2",
+      "titleAr": "الحديث",
+      "titleFr": "La Tradition prophétique",
+      "order": 58
+    },
+    {
+      "id": "tawhid-tanawi-3",
+      "subject": "tawhid",
+      "level": "tanawi-3",
+      "titleAr": "التوحيد",
+      "titleFr": "Le Monothéisme",
+      "order": 59
+    },
+    {
+      "id": "fiqh-tanawi-3",
+      "subject": "fiqh",
+      "level": "tanawi-3",
+      "titleAr": "الفقه",
+      "titleFr": "Le Droit rituel",
+      "order": 60
+    },
+    {
+      "id": "tafsir-tanawi-3",
+      "subject": "tafsir",
+      "level": "tanawi-3",
+      "titleAr": "التفسير",
+      "titleFr": "L'Exégèse coranique",
+      "order": 61
+    },
+    {
+      "id": "faraid-tanawi-3",
+      "subject": "faraid",
+      "level": "tanawi-3",
+      "titleAr": "الفرائض",
+      "titleFr": "Le Droit successoral",
+      "order": 62
+    },
+    {
+      "id": "usul-fiqh-tanawi-3",
+      "subject": "usul-fiqh",
+      "level": "tanawi-3",
+      "titleAr": "أصول الفقه",
+      "titleFr": "Les Principes du droit",
+      "order": 63
+    },
+    {
+      "id": "adab-tanawi-3",
+      "subject": "adab",
+      "level": "tanawi-3",
+      "titleAr": "الأدب",
+      "titleFr": "La Littérature",
+      "order": 64
+    }
+  ]
+}
