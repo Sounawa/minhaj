@@ -1,7 +1,7 @@
 {
   "version": 4,
   "provisional": false,
-  "note": "Structure reconstruite depuis le site officiel (habous.gov.ma via proxy Google Translate), session R2. Les titres FR et traductions sont ajoutés progressivement.",
+  "note": "Corpus Taʿlīm ʿatīq — 59 livres, 927 documents bilingues (source : site officiel via proxy).",
   "program": {
     "nameAr": "المنهاج النموذجي للتعليم العتيق",
     "nameFr": "Programme modèle de l'enseignement traditionnel (Taʿlīm ʿatīq)",
@@ -147,7 +147,7 @@
       "titleFr": "Exégèse coranique",
       "translit": "",
       "icon": "BookOpenText",
-      "booksCount": 9
+      "booksCount": 10
     },
     {
       "id": "hadith",
@@ -163,7 +163,7 @@
       "titleFr": "Droit successoral",
       "translit": "",
       "icon": "BookOpenText",
-      "booksCount": 2
+      "booksCount": 1
     },
     {
       "id": "usul-fiqh",
@@ -171,7 +171,7 @@
       "titleFr": "Principes du droit",
       "translit": "",
       "icon": "BookOpenText",
-      "booksCount": 2
+      "booksCount": 4
     },
     {
       "id": "mantiq",
@@ -179,7 +179,7 @@
       "titleFr": "Logique",
       "translit": "",
       "icon": "BookOpenText",
-      "booksCount": 2
+      "booksCount": 1
     },
     {
       "id": "ulum-hadith",
@@ -195,7 +195,7 @@
       "titleFr": "Sciences coraniques",
       "translit": "",
       "icon": "BookOpenText",
-      "booksCount": 6
+      "booksCount": 3
     },
     {
       "id": "qiraat",
@@ -211,7 +211,7 @@
       "titleFr": "Graphie et vocalisation",
       "translit": "",
       "icon": "BookOpenText",
-      "booksCount": 2
+      "booksCount": 3
     },
     {
       "id": "taqtit",
@@ -702,7 +702,39 @@
       "titleAr": "مقدمة الكتاب",
       "titleFr": "",
       "order": 55
+    },
+    {
+      "id": "usul-fiqh-waraqat",
+      "subject": "usul-fiqh",
+      "level": "tanawi-2",
+      "titleAr": "كتاب أصول الفقه من ورقات إمام الحرمين بشرح الحطاب الرعيني",
+      "titleFr": "",
+      "order": 56
+    },
+    {
+      "id": "usul-fiqh-tanawi-1",
+      "subject": "usul-fiqh",
+      "level": "tanawi-1",
+      "titleAr": "أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول",
+      "titleFr": "",
+      "order": 57
+    },
+    {
+      "id": "tafsir-5ep",
+      "subject": "tafsir",
+      "level": "5ep",
+      "titleAr": "التفسير من خلال تفسير الجلالين للسنة الخامسة من التعليم الابتدائي العتيق",
+      "titleFr": "",
+      "order": 58
+    },
+    {
+      "id": "rasm-wa-dabt-6ep",
+      "subject": "rasm-wa-dabt",
+      "level": "6ep",
+      "titleAr": "الرسم والضبط من أرجوزة عمدة البيان لإدريس الودغيري",
+      "titleFr": "",
+      "order": 59
     }
   ],
-  "goalDocs": 852
+  "goalDocs": 927
 }
