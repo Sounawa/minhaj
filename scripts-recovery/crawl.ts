@@ -125,7 +125,7 @@ if (!seen["main"]) {
 } else {
   // Rescan : extraire les liens de toutes les pages déjà en cache disque
   // (les pages .html sont lues depuis le cache — aucun coût réseau).
-  const files = require("fs").readdirSync(RAW) as string[];
+  const files = readdirSync(RAW);
   let rescanned = 0;
   for (const f of files) {
     if (!f.endsWith(".html")) continue;

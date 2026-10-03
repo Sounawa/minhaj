@@ -77,3 +77,24 @@ Stage Summary:
   («première antiquité secondaire» = GT-ismes), restauration des ~9 livres PDF-only.
 - Scripts pérennes : scripts-recovery/{crawl,gap-fill,build-corpus,translate-corpus,fix-titles}.ts
   + scripts-recovery/backup.sh (à lancer à CHAQUE vague — règle utilisateur).
+
+---
+Task ID: R3
+Agent: agent principal (Z.ai Code)
+Task: Fix SSR/hydratation (window/localStorage) + QA finale complète
+
+Work Log:
+- Bug : `GET / → 500` (ReferenceError: window is not defined) — useState initializers
+  (parseHash(window), localStorage) exécutés au rendu serveur.
+- Fix : useHashRoute et useLocalState réécrits avec useSyncExternalStore
+  (getServerSnapshot fourni ; getSnapshot memoïsé — un objet neuf à chaque appel
+  déclenche la boucle infinie détectée par React).
+- QA agent-browser finale : accueil 55 cartes ; lecteur hadith-1ep/12788 « La vertu de lire
+  le Saint Coran » (FR 15 576 car. | AR 11 062 car., 2 colonnes) ; mode FR seul (1 colonne,
+  arabe masqué) ; retour sommaire 31 leçons ; **0 erreur console** ; lint propre.
+- Cron 15 min recréé (job 433624, webDevReview, Europe/Paris) ; anciens jobs supprimés.
+
+Stage Summary:
+- Site Minhāj pleinement opérationnel : 55 livres, 852 docs bilingues (100 %), SSR OK.
+- Prochaine vague suggérée : leçons PDF-only (~9 livres), révision fine des traductions GT,
+  fonctionnalités (recherche globale, favoris, impression, liens PDF).

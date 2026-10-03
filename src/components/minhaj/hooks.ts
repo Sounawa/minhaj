@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState, useSyncExternalStore } from "react";
 import type { BookDetailPayload, DocPayload, LibraryPayload } from "./types";
 
 // ————————————————————————————————— Routage par hash (#/livre/{bookId}/{docId})
@@ -27,14 +27,33 @@ export function navigate(hash: string) {
   window.location.hash = target;
 }
 
+const HOME_ROUTE: Route = { view: "home" };
+
+function subscribeHash(onChange: () => void) {
+  window.addEventListener("hashchange", onChange);
+  return () => window.removeEventListener("hashchange", onChange);
+}
+
+// getSnapshot DOIT retourner une valeur stable (memoïsée par hash brut).
+let hashCacheRaw: string | null = null;
+let hashCacheRoute: Route = HOME_ROUTE;
+
+function getHashSnapshot(): Route {
+  const raw = window.location.hash;
+  if (raw !== hashCacheRaw) {
+    hashCacheRaw = raw;
+    hashCacheRoute = parseHash(raw);
+  }
+  return hashCacheRoute;
+}
+
+/** Routage par hash, SSR-safe via useSyncExternalStore. */
 export function useHashRoute(): Route {
-  const [route, setRoute] = useState<Route>(() => parseHash(window.location.hash));
-  useEffect(() => {
-    const onChange = () => setRoute(parseHash(window.location.hash));
-    window.addEventListener("hashchange", onChange);
-    return () => window.removeEventListener("hashchange", onChange);
-  }, []);
-  return route;
+  return useSyncExternalStore(
+    subscribeHash,
+    getHashSnapshot,
+    () => HOME_ROUTE
+  );
 }
 
 // ————————————————————————————————— Data fetching (avec mini-cache mémoire)
@@ -145,22 +164,45 @@ export function useDoc(bookId: string | null, docId: string | null) {
   return state;
 }
 
-// ————————————————————————————————— Préférences persistées
+// ————————————————————————————————— Préférences persistées (SSR-safe)
+
+const lsListeners = new Set<() => void>();
+
+function subscribeLs(onChange: () => void) {
+  lsListeners.add(onChange);
+  window.addEventListener("storage", onChange);
+  return () => {
+    lsListeners.delete(onChange);
+    window.removeEventListener("storage", onChange);
+  };
+}
+
+function notifyLs() {
+  for (const cb of lsListeners) cb();
+}
 
 export function useLocalState<T extends string>(key: string, initial: T) {
-  const [value, setValue] = useState<T>(() => {
-    try {
-      return (localStorage.getItem(key) as T) || initial;
-    } catch {
-      return initial;
-    }
-  });
-  useEffect(() => {
-    try {
-      localStorage.setItem(key, value);
-    } catch {
-      /* ignore */
-    }
-  }, [key, value]);
+  const value = useSyncExternalStore(
+    subscribeLs,
+    () => {
+      try {
+        return (localStorage.getItem(key) as T | null) ?? initial;
+      } catch {
+        return initial;
+      }
+    },
+    () => initial
+  );
+  const setValue = useCallback(
+    (v: T) => {
+      try {
+        localStorage.setItem(key, v);
+        notifyLs();
+      } catch {
+        /* ignore */
+      }
+    },
+    [key]
+  );
   return [value, setValue] as const;
 }
