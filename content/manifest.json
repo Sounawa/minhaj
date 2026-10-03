@@ -1,7 +1,7 @@
 {
-  "version": 5,
+  "version": 6,
   "provisional": false,
-  "note": "Corpus Taʿlīm ʿatīq — 59 livres, 934 documents bilingues (897 leçons + 37 introductions, 100 % du HTML disponible). Les 5 livres restants du programme (64/1152) n’existent qu’en PDF sur le site officiel.",
+  "note": "Corpus Taʿlīm ʿatīq — 63 livres, 1029 documents (891 leçons bilingues intégrales, 52 introductions, 86 leçons référence PDF officiel). 63/64 livres du programme officiel ; hadith-tanawi-2 reste à sourcer (leçons PDF non publiées en HTML sur le site officiel).",
   "program": {
     "nameAr": "المنهاج النموذجي للتعليم العتيق",
     "nameFr": "Programme modèle de l'enseignement traditionnel (Taʿlīm ʿatīq)",
@@ -264,146 +264,199 @@
   ],
   "books": [
     {
-      "id": "fiqh-1ep",
-      "subject": "fiqh",
-      "level": "1ep",
-      "titleAr": "الكتاب",
-      "titleFr": "Fiqh — le Mukhtaṣar d'al-Akhdarī, comm. d'al-Ābī al-Azharī",
-      "order": 1
-    },
-    {
-      "id": "hadith-1ep",
-      "subject": "hadith",
-      "level": "1ep",
-      "titleAr": "الحديث من رياض الصالحين للإمام النووي بشرح روضة المتقين للسنة الرابعة من التعليم الابتدائي العتيق",
-      "titleFr": "Ḥadīth — Riyāḍ al-Ṣāliḥīn d'al-Nawawī, comm. Rawḍat al-Muttaqīn",
-      "order": 2,
-      "textbookAr": "الحديث من رياض الصالحين للإمام النووي بشرح روضة المتقين"
-    },
-    {
       "id": "tafsir-1ep",
       "subject": "tafsir",
       "level": "1ep",
-      "titleAr": "Exégèse coranique — ابتدائي",
+      "titleAr": "التفسير من خلال تفسير الجلالين",
       "titleFr": "Tafsīr — le Tafsīr al-Jalālayn",
-      "order": 3,
+      "order": 1,
       "textbookAr": "التفسير من خلال تفسير الجلالين"
     },
     {
-      "id": "fiqh-4ep",
+      "id": "fiqh-1ep",
       "subject": "fiqh",
       "level": "4ep",
       "titleAr": "الفقه من متن الأخضري بشرح الآبي الأزهري للسنة الرابعة من التعليم الابتدائي العتيق",
       "titleFr": "Fiqh — le Mukhtaṣar d'al-Akhdarī, comm. d'al-Ābī al-Azharī",
-      "order": 4
-    },
-    {
-      "id": "rasm-wa-dabt-4ep",
-      "subject": "rasm-wa-dabt",
-      "level": "4ep",
-      "titleAr": "Graphie et vocalisation — الرسم والضبط الابتدائي الرابع",
-      "titleFr": "Rasm et ḍabṭ — graphie et vocalisation coraniques",
-      "order": 5,
-      "textbookAr": "الرسم والضبط"
+      "order": 2
     },
     {
       "id": "tafsir-4ep",
       "subject": "tafsir",
       "level": "4ep",
-      "titleAr": "التفسير من خلال تفسير الجلالين للسنة الرابعة من التعليم الابتدائي العتيق",
+      "titleAr": "التفسير من خلال تفسير الجلالين",
       "titleFr": "Tafsīr — le Tafsīr al-Jalālayn",
-      "order": 6,
+      "order": 3,
       "textbookAr": "التفسير من خلال تفسير الجلالين"
+    },
+    {
+      "id": "hadith-1ep",
+      "subject": "hadith",
+      "level": "4ep",
+      "titleAr": "الحديث من رياض الصالحين للإمام النووي بشرح روضة المتقين",
+      "titleFr": "Ḥadīth — Riyāḍ al-Ṣāliḥīn d'al-Nawawī, comm. Rawḍat al-Muttaqīn",
+      "order": 4,
+      "textbookAr": "الحديث من رياض الصالحين للإمام النووي بشرح روضة المتقين"
+    },
+    {
+      "id": "rasm-wa-dabt-4ep",
+      "subject": "rasm-wa-dabt",
+      "level": "4ep",
+      "titleAr": "الرسم والضبط",
+      "titleFr": "Rasm et ḍabṭ — graphie et vocalisation coraniques",
+      "order": 5,
+      "textbookAr": "الرسم والضبط"
     },
     {
       "id": "usul-qiyam-4ep",
       "subject": "usul-qiyam",
       "level": "4ep",
-      "titleAr": "أصول القيم في القرآن والسنة للسنة الرابعة ابتدائي عتيق",
+      "titleAr": "أصول القيم في القرآن والسنة",
       "titleFr": "Fondements des valeurs dans le Coran et la Sunna",
-      "order": 7,
+      "order": 6,
       "textbookAr": "أصول القيم في القرآن والسنة"
     },
     {
-      "id": "rasm-wa-dabt-5ep",
-      "subject": "rasm-wa-dabt",
+      "id": "fiqh-5ep",
+      "subject": "fiqh",
       "level": "5ep",
-      "titleAr": "المقدمة",
-      "titleFr": "Rasm et ḍabṭ — ʿUmdat al-Bayān d'al-Wadghīrī",
-      "order": 8,
-      "textbookAr": "الرسم والضبط من أرجوزة عمدة البيان لإدريس الودغيري"
+      "titleAr": "الفقه من منظومة المرشد المعين لابن عاشر بشرح ميارة الفاسي للسنة الخامسة من التعليم الابتدائي العتيق",
+      "titleFr": "Fiqh — le Murshid al-Muʿīn d'Ibn ʿĀshir, comm. de Mayyāra al-Fāsī (5ᵉ primaire)",
+      "order": 7
     },
     {
       "id": "tajwid-5ep",
       "subject": "tajwid",
       "level": "5ep",
-      "titleAr": "المقدمة",
+      "titleAr": "التجويد: تطبيقات على نظم تحفة الأطفال للجمزوري",
       "titleFr": "Tajwīd — applications de la Tuḥfat al-Aṭfāl d'al-Jamzūrī",
-      "order": 9,
+      "order": 8,
       "textbookAr": "التجويد: تطبيقات على نظم تحفة الأطفال للجمزوري"
+    },
+    {
+      "id": "tafsir-5ep",
+      "subject": "tafsir",
+      "level": "5ep",
+      "titleAr": "التفسير من خلال تفسير الجلالين",
+      "titleFr": "Tafsīr — le Tafsīr al-Jalālayn",
+      "order": 9,
+      "textbookAr": "التفسير من خلال تفسير الجلالين"
+    },
+    {
+      "id": "hadith-5ep",
+      "subject": "hadith",
+      "level": "5ep",
+      "titleAr": "الحديث من كتاب الأربعين النووية للإمام النووي بشرح ابن دقيق العيد للسنة الخامسة من التعليم الابتدائي العتيق",
+      "titleFr": "Ḥadīth — les Quarante hadiths d'al-Nawawī, comm. d'Ibn Daqīq al-ʿĪd (5ᵉ primaire)",
+      "order": 10
+    },
+    {
+      "id": "rasm-wa-dabt-5ep",
+      "subject": "rasm-wa-dabt",
+      "level": "5ep",
+      "titleAr": "الرسم والضبط من أرجوزة عمدة البيان لإدريس الودغيري",
+      "titleFr": "Rasm et ḍabṭ — ʿUmdat al-Bayān d'al-Wadghīrī",
+      "order": 11,
+      "textbookAr": "الرسم والضبط من أرجوزة عمدة البيان لإدريس الودغيري"
     },
     {
       "id": "usul-qiyam-5ep",
       "subject": "usul-qiyam",
       "level": "5ep",
-      "titleAr": "أصول القيم في القرآن والسنة للسنة الخامسة ابتدائي عتيق",
+      "titleAr": "أصول القيم في القرآن والسنة",
       "titleFr": "Fondements des valeurs dans le Coran et la Sunna (5ᵉ)",
-      "order": 10,
+      "order": 12,
       "textbookAr": "أصول القيم في القرآن والسنة"
     },
     {
       "id": "fiqh-6ep",
       "subject": "fiqh",
       "level": "6ep",
-      "titleAr": "Droit rituel — الفقه الابتدائي السادس",
+      "titleAr": "الفقه من منظومة المرشد المعين لابن عاشر بشرح ميارة",
       "titleFr": "Fiqh — le Murshid al-Muʿīn d'Ibn ʿĀshir, comm. de Mayyāra",
-      "order": 11,
-      "textbookAr": "الفقه من منظومة المرشد المعين لابن عاشر بشرح ميارة"
-    },
-    {
-      "id": "hadith-6ep",
-      "subject": "hadith",
-      "level": "6ep",
-      "titleAr": "المقدمة",
-      "titleFr": "Ḥadīth — les Quarante hadiths d'al-Nawawī, comm. d'Ibn Daqīq al-ʿĪd",
-      "order": 12,
-      "textbookAr": "الحديث من كتاب الأربعين النووية بشرح ابن دقيق العيد"
-    },
-    {
-      "id": "tafsir-6ep",
-      "subject": "tafsir",
-      "level": "6ep",
-      "titleAr": "محتويات كتاب&nbsp;التفسير من خلال تفسير الجلالين",
-      "titleFr": "Tafsīr — le Tafsīr al-Jalālayn",
       "order": 13,
-      "textbookAr": "التفسير من خلال تفسير الجلالين"
+      "textbookAr": "الفقه من منظومة المرشد المعين لابن عاشر بشرح ميارة"
     },
     {
       "id": "tajwid-6ep",
       "subject": "tajwid",
       "level": "6ep",
-      "titleAr": "Psalmodie coranique — التجويد السادسة ابتدائي عتيق",
+      "titleAr": "التجويد من نظم الدرر اللوامع للإمام ابن بري",
       "titleFr": "Tajwīd — Naẓm al-Durar al-Lawāmiʿ d'Ibn Barrī",
       "order": 14,
       "textbookAr": "التجويد من نظم الدرر اللوامع للإمام ابن بري"
     },
     {
+      "id": "tafsir-6ep",
+      "subject": "tafsir",
+      "level": "6ep",
+      "titleAr": "التفسير من خلال تفسير الجلالين",
+      "titleFr": "Tafsīr — le Tafsīr al-Jalālayn",
+      "order": 15,
+      "textbookAr": "التفسير من خلال تفسير الجلالين"
+    },
+    {
+      "id": "hadith-6ep",
+      "subject": "hadith",
+      "level": "6ep",
+      "titleAr": "الحديث من كتاب الأربعين النووية بشرح ابن دقيق العيد",
+      "titleFr": "Ḥadīth — les Quarante hadiths d'al-Nawawī, comm. d'Ibn Daqīq al-ʿĪd",
+      "order": 16,
+      "textbookAr": "الحديث من كتاب الأربعين النووية بشرح ابن دقيق العيد"
+    },
+    {
+      "id": "rasm-wa-dabt-6ep",
+      "subject": "rasm-wa-dabt",
+      "level": "6ep",
+      "titleAr": "الرسم والضبط من أرجوزة عمدة البيان لإدريس الودغيري",
+      "titleFr": "Rasm et ḍabṭ — ʿUmdat al-Bayān d'al-Wadghīrī (fin)",
+      "order": 17,
+      "textbookAr": "الرسم والضبط من أرجوزة عمدة البيان لإدريس الودغيري"
+    },
+    {
       "id": "usul-qiyam-6ep",
       "subject": "usul-qiyam",
       "level": "6ep",
-      "titleAr": "أصول القيم في القرآن والسنة للسنة السادسة ابتدائي عتيق",
+      "titleAr": "أصول القيم في القرآن والسنة",
       "titleFr": "Fondements des valeurs dans le Coran et la Sunna (6ᵉ)",
-      "order": 15,
+      "order": 18,
       "textbookAr": "أصول القيم في القرآن والسنة"
+    },
+    {
+      "id": "tawhid-1es",
+      "subject": "tawhid",
+      "level": "1es",
+      "titleAr": "التوحيد من متن الرسالة لابن أبي زيد القيرواني",
+      "titleFr": "Tawḥīd — la Risāla d'Ibn Abī Zayd al-Qayrawānī",
+      "order": 19,
+      "textbookAr": "التوحيد من متن الرسالة لابن أبي زيد القيرواني"
     },
     {
       "id": "fiqh-1es",
       "subject": "fiqh",
       "level": "1es",
-      "titleAr": "Droit rituel — الإعدادي",
+      "titleAr": "الفقه من متن الرسالة لابن أبي زيد القيرواني بشرح كفاية الطالب الرباني",
       "titleFr": "Fiqh — la Risāla d'Ibn Abī Zayd al-Qayrawānī",
-      "order": 16,
+      "order": 20,
       "textbookAr": "الفقه من متن الرسالة لابن أبي زيد القيرواني بشرح كفاية الطالب الرباني"
+    },
+    {
+      "id": "sira-1es",
+      "subject": "sira",
+      "level": "1es",
+      "titleAr": "السيرة النبوية",
+      "titleFr": "Sīra — la biographie du Prophète ﷺ",
+      "order": 21,
+      "textbookAr": "السيرة النبوية"
+    },
+    {
+      "id": "tafsir-1es",
+      "subject": "tafsir",
+      "level": "1es",
+      "titleAr": "التفسير من خلال التسهيل لعلوم التنزيل لابن جزي",
+      "titleFr": "Tafsīr — al-Tashīl li-ʿUlūm al-Tanzīl d'Ibn Juzayy",
+      "order": 22,
+      "textbookAr": "التفسير من خلال التسهيل لعلوم التنزيل لابن جزي"
     },
     {
       "id": "hadith-1es",
@@ -411,349 +464,238 @@
       "level": "1es",
       "titleAr": "الحديث من موطأ الإمام مالك بشرح الزرقاني",
       "titleFr": "Ḥadīth — le Muwaṭṭaʾ de l'imam Mālik, comm. d'al-Zarqānī",
-      "order": 17,
+      "order": 23,
       "textbookAr": "الحديث من موطأ الإمام مالك بشرح الزرقاني"
-    },
-    {
-      "id": "sira-1es",
-      "subject": "sira",
-      "level": "1es",
-      "titleAr": "فهرست الموضوعات",
-      "titleFr": "Sīra — la biographie du Prophète ﷺ",
-      "order": 18,
-      "textbookAr": "السيرة النبوية"
-    },
-    {
-      "id": "tafsir-1es",
-      "subject": "tafsir",
-      "level": "1es",
-      "titleAr": "Exégèse coranique — إعدادي",
-      "titleFr": "Tafsīr — al-Tashīl li-ʿUlūm al-Tanzīl d'Ibn Juzayy",
-      "order": 19,
-      "textbookAr": "التفسير من خلال التسهيل لعلوم التنزيل لابن جزي"
-    },
-    {
-      "id": "tawhid-1es",
-      "subject": "tawhid",
-      "level": "1es",
-      "titleAr": "Monothéisme — التوحيد الإعدادي الأول",
-      "titleFr": "Tawḥīd — la Risāla d'Ibn Abī Zayd al-Qayrawānī",
-      "order": 20,
-      "textbookAr": "التوحيد من متن الرسالة لابن أبي زيد القيرواني"
     },
     {
       "id": "ulum-quran-1es",
       "subject": "ulum-quran",
       "level": "1es",
-      "titleAr": "علوم القرآن السنة أولى إعدادي عتيق",
+      "titleAr": "علوم القرآن",
       "titleFr": "Sciences du Coran — ʿulūm al-Qurʾān",
-      "order": 21,
-      "textbookAr": "علوم القرآن"
-    },
-    {
-      "id": "sira-2es",
-      "subject": "sira",
-      "level": "2es",
-      "titleAr": "محتوى كتاب السيرة النبوية",
-      "titleFr": "Sīra — la biographie du Prophète ﷺ (2ᵉ collège)",
-      "order": 22,
-      "textbookAr": "السيرة النبوية"
-    },
-    {
-      "id": "tafsir-2es",
-      "subject": "tafsir",
-      "level": "2es",
-      "titleAr": "المقدمة",
-      "titleFr": "Tafsīr — al-Tashīl li-ʿUlūm al-Tanzīl d'Ibn Juzayy (suite)",
-      "order": 23,
-      "textbookAr": "التفسير من خلال التسهيل لعلوم التنزيل لابن جزي"
-    },
-    {
-      "id": "tajwid-2es",
-      "subject": "tajwid",
-      "level": "2es",
-      "titleAr": "فهرس كتاب التجويد من نظم الدرر اللوامع للإمام ابن بري بشرح النجوم الطوالع لإبراهيم المارغني للسنة الثانية من التعليم الإعدادي العتيق",
-      "titleFr": "Tajwīd — al-Durar al-Lawāmiʿ d'Ibn Barrī, comm. al-Nujūm al-Ṭawāliʿ",
       "order": 24,
-      "textbookAr": "التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لإبراهيم المارغني"
+      "textbookAr": "علوم القرآن"
     },
     {
       "id": "tawhid-2es",
       "subject": "tawhid",
       "level": "2es",
-      "titleAr": "التوحيد من منظومة المرشد المعين على الضروري من علوم الدين لعبد الواحد بن عاشر بشرح مختصر الدر الثمين لمحمد بن أحمد ميارة للسنة الثانية من التعليم الإعدادي العتيق",
+      "titleAr": "التوحيد من منظومة المرشد المعين على الضروري من علوم الدين لعبد الواحد بن عاشر",
       "titleFr": "Tawḥīd — le Murshid al-Muʿīn d'Ibn ʿĀshir",
       "order": 25,
       "textbookAr": "التوحيد من منظومة المرشد المعين على الضروري من علوم الدين لعبد الواحد بن عاشر"
     },
     {
+      "id": "fiqh-2es",
+      "subject": "fiqh",
+      "level": "2es",
+      "titleAr": "الفقه من رسالة ابن أبي زيد القيرواني بشرح كفاية الطالب الرباني بحاشية العدوي للسنة الثانية من التعليم الإعدادي العتيق",
+      "titleFr": "Fiqh — la Risāla d'Ibn Abī Zayd, comm. al-Kifāya + ḥāshiya al-ʿAdawī (2ᵉ collège)",
+      "order": 26
+    },
+    {
+      "id": "sira-2es",
+      "subject": "sira",
+      "level": "2es",
+      "titleAr": "السيرة النبوية",
+      "titleFr": "Sīra — la biographie du Prophète ﷺ (2ᵉ collège)",
+      "order": 27,
+      "textbookAr": "السيرة النبوية"
+    },
+    {
+      "id": "tajwid-2es",
+      "subject": "tajwid",
+      "level": "2es",
+      "titleAr": "التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لإبراهيم المارغني",
+      "titleFr": "Tajwīd — al-Durar al-Lawāmiʿ d'Ibn Barrī, comm. al-Nujūm al-Ṭawāliʿ",
+      "order": 28,
+      "textbookAr": "التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لإبراهيم المارغني"
+    },
+    {
+      "id": "tafsir-2es",
+      "subject": "tafsir",
+      "level": "2es",
+      "titleAr": "التفسير من خلال التسهيل لعلوم التنزيل لابن جزي",
+      "titleFr": "Tafsīr — al-Tashīl li-ʿUlūm al-Tanzīl d'Ibn Juzayy (suite)",
+      "order": 29,
+      "textbookAr": "التفسير من خلال التسهيل لعلوم التنزيل لابن جزي"
+    },
+    {
+      "id": "hadith-2es",
+      "subject": "hadith",
+      "level": "2es",
+      "titleAr": "الحديث من موطأ الإمام مالك بشرح الزرقاني للسنة الثانية من التعليم الإعدادي العتيق",
+      "titleFr": "Ḥadīth — le Muwaṭṭaʾ de l'imam Mālik, comm. d'al-Zarqānī (2ᵉ collège)",
+      "order": 30
+    },
+    {
       "id": "ulum-quran-2es",
       "subject": "ulum-quran",
       "level": "2es",
-      "titleAr": "Sciences coraniques — السنة الثانية إعدادي عتيق",
+      "titleAr": "علوم القرآن",
       "titleFr": "Sciences du Coran — ʿulūm al-Qurʾān (2ᵉ collège)",
-      "order": 26,
+      "order": 31,
       "textbookAr": "علوم القرآن"
     },
     {
       "id": "fiqh-3es",
       "subject": "fiqh",
       "level": "3es",
-      "titleAr": "الفقه من متن الرسالة لابن أبي زيد القيرواني بشرح كفاية الطالب الرباني لأبي الحسن بحاشية العدوي للسنة الثالثة من الطور الإعدادي العتيق",
+      "titleAr": "الفقه من متن الرسالة لابن أبي زيد القيرواني بشرح كفاية الطالب الرباني بحاشية العدوي",
       "titleFr": "Fiqh — la Risāla d'Ibn Abī Zayd al-Qayrawānī (suite)",
-      "order": 27,
+      "order": 32,
       "textbookAr": "الفقه من متن الرسالة لابن أبي زيد القيرواني بشرح كفاية الطالب الرباني بحاشية العدوي"
-    },
-    {
-      "id": "hadith-3es",
-      "subject": "hadith",
-      "level": "3es",
-      "titleAr": "المقدمة",
-      "titleFr": "Ḥadīth — le Muwaṭṭaʾ de l'imam Mālik (suite)",
-      "order": 28,
-      "textbookAr": "الحديث من موطأ الإمام مالك بشرح الزرقاني"
     },
     {
       "id": "sira-3es",
       "subject": "sira",
       "level": "3es",
-      "titleAr": "المقدمة",
+      "titleAr": "السيرة النبوية",
       "titleFr": "Sīra — la biographie du Prophète ﷺ (3ᵉ collège)",
-      "order": 29,
+      "order": 33,
       "textbookAr": "السيرة النبوية"
-    },
-    {
-      "id": "tafsir-3es",
-      "subject": "tafsir",
-      "level": "3es",
-      "titleAr": "المقدمة",
-      "titleFr": "Tafsīr — al-Tashīl li-ʿUlūm al-Tanzīl d'Ibn Juzayy (fin)",
-      "order": 30,
-      "textbookAr": "التفسير من خلال التسهيل لعلوم التنزيل لابن جزي"
     },
     {
       "id": "tajwid-3es",
       "subject": "tajwid",
       "level": "3es",
-      "titleAr": "فهرس الموضوعات",
+      "titleAr": "التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لإبراهيم المارغني",
       "titleFr": "Tajwīd — al-Durar al-Lawāmiʿ d'Ibn Barrī (suite)",
-      "order": 31,
+      "order": 34,
       "textbookAr": "التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لإبراهيم المارغني"
+    },
+    {
+      "id": "tafsir-3es",
+      "subject": "tafsir",
+      "level": "3es",
+      "titleAr": "التفسير من خلال التسهيل لعلوم التنزيل لابن جزي",
+      "titleFr": "Tafsīr — al-Tashīl li-ʿUlūm al-Tanzīl d'Ibn Juzayy (fin)",
+      "order": 35,
+      "textbookAr": "التفسير من خلال التسهيل لعلوم التنزيل لابن جزي"
+    },
+    {
+      "id": "hadith-3es",
+      "subject": "hadith",
+      "level": "3es",
+      "titleAr": "الحديث من موطأ الإمام مالك بشرح الزرقاني",
+      "titleFr": "Ḥadīth — le Muwaṭṭaʾ de l'imam Mālik (suite)",
+      "order": 36,
+      "textbookAr": "الحديث من موطأ الإمام مالك بشرح الزرقاني"
     },
     {
       "id": "ulum-quran-3es",
       "subject": "ulum-quran",
       "level": "3es",
-      "titleAr": "Sciences coraniques — السنة الثالثة إعدادي عتيق",
+      "titleAr": "علوم القرآن",
       "titleFr": "Sciences du Coran — ʿulūm al-Qurʾān (3ᵉ collège)",
-      "order": 32,
+      "order": 37,
       "textbookAr": "علوم القرآن"
-    },
-    {
-      "id": "faraid-tanawi-3",
-      "subject": "faraid",
-      "level": "tanawi-3",
-      "titleAr": "مقدمة الكتاب",
-      "titleFr": "Farāʾiḍ — la Manẓūma al-Jawāhir al-Maknūna (successions)",
-      "order": 33,
-      "textbookAr": "الفرائض من منظومة الجواهر المكنونة في صدف الفرائض المسنونة"
-    },
-    {
-      "id": "fikr-islami-tanawi-1",
-      "subject": "fikr-islami",
-      "level": "tanawi-1",
-      "titleAr": "فهرس الموضوعات",
-      "titleFr": "Pensée islamique — questions kalāmiques",
-      "order": 34,
-      "textbookAr": "الفكر الإسلامي: قضايا كلامية"
-    },
-    {
-      "id": "fikr-islami-tanawi-3",
-      "subject": "fikr-islami",
-      "level": "tanawi-3",
-      "titleAr": "مادة الفكر الإسلامي (التصوف الإسلامي) للسنة الثالثة من التعليم الثانوي العتيق",
-      "titleFr": "Pensée islamique — le soufisme (taṣawwuf)",
-      "order": 35,
-      "textbookAr": "الفكر الإسلامي: التصوف الإسلامي"
-    },
-    {
-      "id": "fikr-islami-tanawi-2",
-      "subject": "fikr-islami",
-      "level": "tanawi-2",
-      "titleAr": "الفكر الإسلامي (الفلسفة الإسلامية) للسنة الثانية من التعليم الثانوي العتيق",
-      "titleFr": "Pensée islamique — la philosophie musulmane",
-      "order": 36,
-      "textbookAr": "الفكر الإسلامي: الفلسفة الإسلامية"
     },
     {
       "id": "fiqh-tanawi-1",
       "subject": "fiqh",
       "level": "tanawi-1",
-      "titleAr": "مقدمة الكتاب",
-      "titleFr": "Fiqh — le Mukhtaṣar de Khalīl, comm. d'al-Dardīr et ḥāshiya d'al-Dasūqī",
-      "order": 37,
-      "textbookAr": "الفقه من متن مختصر الشيخ خليل بشرح الدردير وحاشية الدسوقي"
-    },
-    {
-      "id": "fiqh-tanawi-3",
-      "subject": "fiqh",
-      "level": "tanawi-3",
-      "titleAr": "الفهرس",
-      "titleFr": "Fiqh — le Mukhtaṣar de Khalīl (suite du programme)",
+      "titleAr": "الفقه من متن مختصر الشيخ خليل بشرح الدردير وحاشية الدسوقي",
+      "titleFr": "Fiqh — le Mukhtaṣar de Khalīl, comm. d'al-Dardīr et ḥāshiya al-Dasūqī (1ᵉʳ lycée)",
       "order": 38,
       "textbookAr": "الفقه من متن مختصر الشيخ خليل بشرح الدردير وحاشية الدسوقي"
-    },
-    {
-      "id": "hadith-tanawi-1",
-      "subject": "hadith",
-      "level": "tanawi-1",
-      "titleAr": "مـقدمـة",
-      "titleFr": "Ḥadīth — le Muwaṭṭaʾ de l'imam Mālik (lycée)",
-      "order": 39,
-      "textbookAr": "الحديث من موطأ الإمام مالك بشرح الزرقاني"
-    },
-    {
-      "id": "hadith-tanawi-3",
-      "subject": "hadith",
-      "level": "tanawi-3",
-      "titleAr": "كتاب الحديث من موطأ الإمام مالك بشرح الزرقاني س 3 ثا",
-      "titleFr": "Ḥadīth — le Muwaṭṭaʾ de l'imam Mālik (3ᵉ lycée)",
-      "order": 40,
-      "textbookAr": "كتاب الحديث من موطأ الإمام مالك بشرح الزرقاني"
-    },
-    {
-      "id": "mantiq-tanawi-1",
-      "subject": "mantiq",
-      "level": "tanawi-1",
-      "titleAr": "Logique — السنة أولى ثانوي عتيق",
-      "titleFr": "Mantiq — Naẓm al-Sullam d'al-Akhdarī, comm. d'al-Qawasnī",
-      "order": 41,
-      "textbookAr": "المنطق من نظم السلم المنورق لعبد الرحمان الأخضري بشرح حسن القويسني"
-    },
-    {
-      "id": "qiraat-tanawi-1",
-      "subject": "qiraat",
-      "level": "tanawi-1",
-      "titleAr": "المقدمة",
-      "titleFr": "Qirāʾāt — Ḥirz al-Amānī (al-Shāṭibiyya) d'al-Shāṭibī",
-      "order": 42,
-      "textbookAr": "القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي"
-    },
-    {
-      "id": "qiraat-tanawi-2",
-      "subject": "qiraat",
-      "level": "tanawi-2",
-      "titleAr": "فهرس الموضوعات",
-      "titleFr": "Qirāʾāt — Ḥirz al-Amānī (al-Shāṭibiyya, suite)",
-      "order": 43,
-      "textbookAr": "القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي"
-    },
-    {
-      "id": "qiraat-tanawi-3",
-      "subject": "qiraat",
-      "level": "tanawi-3",
-      "titleAr": "فهرس الموضوعات",
-      "titleFr": "Qirāʾāt — Ḥirz al-Amānī (al-Shāṭibiyya, 3ᵉ lycée)",
-      "order": 44,
-      "textbookAr": "القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي"
-    },
-    {
-      "id": "tafsir-tanawi-2",
-      "subject": "tafsir",
-      "level": "tanawi-2",
-      "titleAr": "Exégèse coranique — التفسير الثانوي الثاني",
-      "titleFr": "Tafsīr — al-Muḥarrar al-Wajīz d'Ibn ʿAṭiyya (suite)",
-      "order": 45,
-      "textbookAr": "التفسير من خلال المحرر الوجيز في تفسير الكتاب العزيز لابن عطية"
     },
     {
       "id": "tafsir-tanawi-1",
       "subject": "tafsir",
       "level": "tanawi-1",
-      "titleAr": "Exégèse coranique — ثانوي",
+      "titleAr": "التفسير من خلال المحرر الوجيز في تفسير الكتاب العزيز لابن عطية",
       "titleFr": "Tafsīr — al-Muḥarrar al-Wajīz d'Ibn ʿAṭiyya",
-      "order": 46,
+      "order": 39,
       "textbookAr": "التفسير من خلال المحرر الوجيز في تفسير الكتاب العزيز لابن عطية"
     },
     {
-      "id": "tafsir-tanawi-3",
-      "subject": "tafsir",
-      "level": "tanawi-3",
-      "titleAr": "المقدمة",
-      "titleFr": "Tafsīr — la sourate al-Kahf (al-Muḥarrar al-Wajīz)",
-      "order": 47,
-      "textbookAr": "تفسير سورة الكهف من خلال المحرر الوجيز في تفسير الكتاب العزيز لابن عطية"
-    },
-    {
-      "id": "taqtit-tanawi-1",
-      "subject": "taqtit",
+      "id": "hadith-tanawi-1",
+      "subject": "hadith",
       "level": "tanawi-1",
-      "titleAr": "Découpage temporel — الأولى ثانوي عتيق",
-      "titleFr": "Tawqīt — al-Muqniʿ d'al-Marghīthī (comput religieux)",
-      "order": 48,
-      "textbookAr": "التوقيت من منظومة المقنع بشرح المطلع على مسائل المقنع لمحمد بن سعيد المرغتي"
+      "titleAr": "الحديث من موطأ الإمام مالك بشرح الزرقاني",
+      "titleFr": "Ḥadīth — le Muwaṭṭaʾ de l'imam Mālik (lycée)",
+      "order": 40,
+      "textbookAr": "الحديث من موطأ الإمام مالك بشرح الزرقاني"
     },
     {
-      "id": "taqtit-tanawi-2",
-      "subject": "taqtit",
-      "level": "tanawi-2",
-      "titleAr": "مقدمة الكتاب",
-      "titleFr": "Tawqīt — ʿUmdat Ahl al-Thabt (temps et orientations)",
-      "order": 49,
-      "textbookAr": "التوقيت من منظومة عمدة أهل الثبت في علم الأوقات وسمت البيت"
+      "id": "usul-fiqh-tanawi-1",
+      "subject": "usul-fiqh",
+      "level": "tanawi-1",
+      "titleAr": "أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم الغرناطي",
+      "titleFr": "Uṣūl al-fiqh — la Manẓūma Marṭaqī al-Wuṣūl d'Ibn ʿĀṣim",
+      "order": 41,
+      "textbookAr": "أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم الغرناطي"
     },
     {
-      "id": "taqtit-tanawi-3",
-      "subject": "taqtit",
-      "level": "tanawi-3",
-      "titleAr": "فهرس المحتويات",
-      "titleFr": "Tawqīt — al-Jāmiʿ al-Mufīd (éclipses et croissants)",
-      "order": 50,
-      "textbookAr": "التوقيت من منظومة الجامع المفيد في حساب الخسوف والكسوف ورؤية الأهلة"
+      "id": "mantiq-tanawi-1",
+      "subject": "mantiq",
+      "level": "tanawi-1",
+      "titleAr": "المنطق من نظم السلم المنورق لعبد الرحمان الأخضري بشرح حسن القويسني",
+      "titleFr": "Mantiq — Naẓm al-Sullam d'al-Akhdarī, comm. d'al-Qawasnī",
+      "order": 42,
+      "textbookAr": "المنطق من نظم السلم المنورق لعبد الرحمان الأخضري بشرح حسن القويسني"
     },
     {
       "id": "ulum-hadith-tanawi-1",
       "subject": "ulum-hadith",
       "level": "tanawi-1",
-      "titleAr": "مقدمة الكتاب",
+      "titleAr": "علوم الحديث من المنظومة البيقونية بشرح الزرقاني",
       "titleFr": "Sciences du ḥadīth — la Manẓūma al-Bayqūniyya, comm. d'al-Zarqānī",
-      "order": 51,
+      "order": 43,
       "textbookAr": "علوم الحديث من المنظومة البيقونية بشرح الزرقاني"
     },
     {
-      "id": "ulum-hadith-tanawi-2",
-      "subject": "ulum-hadith",
-      "level": "tanawi-2",
-      "titleAr": "مقدمة الكتاب",
-      "titleFr": "Sciences du ḥadīth — 2ᵉ lycée",
-      "order": 52,
-      "textbookAr": "علوم الحديث"
+      "id": "qiraat-tanawi-1",
+      "subject": "qiraat",
+      "level": "tanawi-1",
+      "titleAr": "القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي",
+      "titleFr": "Qirāʾāt — Ḥirz al-Amānī (al-Shāṭibiyya) d'al-Shāṭibī",
+      "order": 44,
+      "textbookAr": "القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي"
     },
     {
-      "id": "ulum-hadith-tanawi-3",
-      "subject": "ulum-hadith",
-      "level": "tanawi-3",
-      "titleAr": "مقدمة الكتاب",
-      "titleFr": "Sciences du ḥadīth — 3ᵉ lycée",
-      "order": 53,
-      "textbookAr": "علوم الحديث"
+      "id": "taqtit-tanawi-1",
+      "subject": "taqtit",
+      "level": "tanawi-1",
+      "titleAr": "التوقيت من منظومة المقنع بشرح المطلع على مسائل المقنع لمحمد بن سعيد المرغتي",
+      "titleFr": "Tawqīt — al-Muqniʿ d'al-Marghīthī (comput religieux)",
+      "order": 45,
+      "textbookAr": "التوقيت من منظومة المقنع بشرح المطلع على مسائل المقنع لمحمد بن سعيد المرغتي"
+    },
+    {
+      "id": "fikr-islami-tanawi-1",
+      "subject": "fikr-islami",
+      "level": "tanawi-1",
+      "titleAr": "الفكر الإسلامي: قضايا كلامية",
+      "titleFr": "Pensée islamique — questions kalāmiques",
+      "order": 46,
+      "textbookAr": "الفكر الإسلامي: قضايا كلامية"
+    },
+    {
+      "id": "fiqh-tanawi-2",
+      "subject": "fiqh",
+      "level": "tanawi-2",
+      "titleAr": "الفقه من مختصر الشيخ خليل بشرح الدردير وحاشية الدسوقي للسنة الثانية من التعليم الثانوي العتيق",
+      "titleFr": "Fiqh — le Mukhtaṣar de Khalīl, comm. d'al-Dardīr et ḥāshiya al-Dasūqī (2ᵉ lycée)",
+      "order": 47
+    },
+    {
+      "id": "tafsir-tanawi-2",
+      "subject": "tafsir",
+      "level": "tanawi-2",
+      "titleAr": "التفسير من خلال المحرر الوجيز في تفسير الكتاب العزيز لابن عطية",
+      "titleFr": "Tafsīr — al-Muḥarrar al-Wajīz d'Ibn ʿAṭiyya (suite)",
+      "order": 48,
+      "textbookAr": "التفسير من خلال المحرر الوجيز في تفسير الكتاب العزيز لابن عطية"
     },
     {
       "id": "usul-fiqh-tanawi-2",
       "subject": "usul-fiqh",
       "level": "tanawi-2",
-      "titleAr": "مقدمة الكتاب",
+      "titleAr": "أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم الغرناطي",
       "titleFr": "Uṣūl al-fiqh — Marṭaqī al-Wuṣūl d'Ibn ʿĀṣim (2ᵉ lycée)",
-      "order": 54,
-      "textbookAr": "أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم الغرناطي"
-    },
-    {
-      "id": "usul-fiqh-tanawi-3",
-      "subject": "usul-fiqh",
-      "level": "tanawi-3",
-      "titleAr": "مقدمة الكتاب",
-      "titleFr": "Uṣūl al-fiqh — Marṭaqī al-Wuṣūl d'Ibn ʿĀṣim (3ᵉ lycée)",
-      "order": 55,
+      "order": 49,
       "textbookAr": "أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم الغرناطي"
     },
     {
@@ -762,36 +704,126 @@
       "level": "tanawi-2",
       "titleAr": "كتاب أصول الفقه من ورقات إمام الحرمين بشرح الحطاب الرعيني",
       "titleFr": "Uṣūl al-fiqh — al-Warāqāt d'al-Juwaynī, comm. d'al-Ḥaṭṭāb",
-      "order": 56,
+      "order": 50,
       "textbookAr": "كتاب أصول الفقه من ورقات إمام الحرمين بشرح الحطاب الرعيني"
     },
     {
-      "id": "usul-fiqh-tanawi-1",
-      "subject": "usul-fiqh",
-      "level": "tanawi-1",
-      "titleAr": "أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول",
-      "titleFr": "Uṣūl al-fiqh — la Manẓūma Marṭaqī al-Wuṣūl d'Ibn ʿĀṣim",
+      "id": "ulum-hadith-tanawi-2",
+      "subject": "ulum-hadith",
+      "level": "tanawi-2",
+      "titleAr": "علوم الحديث",
+      "titleFr": "Sciences du ḥadīth — 2ᵉ lycée",
+      "order": 51,
+      "textbookAr": "علوم الحديث"
+    },
+    {
+      "id": "qiraat-tanawi-2",
+      "subject": "qiraat",
+      "level": "tanawi-2",
+      "titleAr": "القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي",
+      "titleFr": "Qirāʾāt — Ḥirz al-Amānī (al-Shāṭibiyya, suite)",
+      "order": 52,
+      "textbookAr": "القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي"
+    },
+    {
+      "id": "taqtit-tanawi-2",
+      "subject": "taqtit",
+      "level": "tanawi-2",
+      "titleAr": "التوقيت من منظومة عمدة أهل الثبت في علم الأوقات وسمت البيت",
+      "titleFr": "Tawqīt — ʿUmdat Ahl al-Thabt (temps et orientations)",
+      "order": 53,
+      "textbookAr": "التوقيت من منظومة عمدة أهل الثبت في علم الأوقات وسمت البيت"
+    },
+    {
+      "id": "fikr-islami-tanawi-2",
+      "subject": "fikr-islami",
+      "level": "tanawi-2",
+      "titleAr": "الفكر الإسلامي: الفلسفة الإسلامية",
+      "titleFr": "Pensée islamique — la philosophie musulmane",
+      "order": 54,
+      "textbookAr": "الفكر الإسلامي: الفلسفة الإسلامية"
+    },
+    {
+      "id": "fiqh-tanawi-3",
+      "subject": "fiqh",
+      "level": "tanawi-3",
+      "titleAr": "الفقه من متن مختصر الشيخ خليل بشرح الدردير وحاشية الدسوقي",
+      "titleFr": "Fiqh — le Mukhtaṣar de Khalīl (suite du programme)",
+      "order": 55,
+      "textbookAr": "الفقه من متن مختصر الشيخ خليل بشرح الدردير وحاشية الدسوقي"
+    },
+    {
+      "id": "tafsir-tanawi-3",
+      "subject": "tafsir",
+      "level": "tanawi-3",
+      "titleAr": "تفسير سورة الكهف من خلال المحرر الوجيز في تفسير الكتاب العزيز لابن عطية",
+      "titleFr": "Tafsīr — la sourate al-Kahf (al-Muḥarrar al-Wajīz)",
+      "order": 56,
+      "textbookAr": "تفسير سورة الكهف من خلال المحرر الوجيز في تفسير الكتاب العزيز لابن عطية"
+    },
+    {
+      "id": "hadith-tanawi-3",
+      "subject": "hadith",
+      "level": "tanawi-3",
+      "titleAr": "كتاب الحديث من موطأ الإمام مالك بشرح الزرقاني",
+      "titleFr": "Ḥadīth — le Muwaṭṭaʾ de l'imam Mālik (3ᵉ lycée)",
       "order": 57,
+      "textbookAr": "كتاب الحديث من موطأ الإمام مالك بشرح الزرقاني"
+    },
+    {
+      "id": "faraid-tanawi-3",
+      "subject": "faraid",
+      "level": "tanawi-3",
+      "titleAr": "الفرائض من منظومة الجواهر المكنونة في صدف الفرائض المسنونة",
+      "titleFr": "Farāʾiḍ — la Manẓūma al-Jawāhir al-Maknūna (successions)",
+      "order": 58,
+      "textbookAr": "الفرائض من منظومة الجواهر المكنونة في صدف الفرائض المسنونة"
+    },
+    {
+      "id": "usul-fiqh-tanawi-3",
+      "subject": "usul-fiqh",
+      "level": "tanawi-3",
+      "titleAr": "أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم الغرناطي",
+      "titleFr": "Uṣūl al-fiqh — Marṭaqī al-Wuṣūl d'Ibn ʿĀṣim (3ᵉ lycée)",
+      "order": 59,
       "textbookAr": "أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم الغرناطي"
     },
     {
-      "id": "tafsir-5ep",
-      "subject": "tafsir",
-      "level": "5ep",
-      "titleAr": "التفسير من خلال تفسير الجلالين للسنة الخامسة من التعليم الابتدائي العتيق",
-      "titleFr": "Tafsīr — le Tafsīr al-Jalālayn",
-      "order": 58,
-      "textbookAr": "التفسير من خلال تفسير الجلالين"
+      "id": "ulum-hadith-tanawi-3",
+      "subject": "ulum-hadith",
+      "level": "tanawi-3",
+      "titleAr": "علوم الحديث",
+      "titleFr": "Sciences du ḥadīth — 3ᵉ lycée",
+      "order": 60,
+      "textbookAr": "علوم الحديث"
     },
     {
-      "id": "rasm-wa-dabt-6ep",
-      "subject": "rasm-wa-dabt",
-      "level": "6ep",
-      "titleAr": "الرسم والضبط من أرجوزة عمدة البيان لإدريس الودغيري",
-      "titleFr": "Rasm et ḍabṭ — ʿUmdat al-Bayān d'al-Wadghīrī (fin)",
-      "order": 59,
-      "textbookAr": "الرسم والضبط من أرجوزة عمدة البيان لإدريس الودغيري"
+      "id": "qiraat-tanawi-3",
+      "subject": "qiraat",
+      "level": "tanawi-3",
+      "titleAr": "القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي",
+      "titleFr": "Qirāʾāt — Ḥirz al-Amānī (al-Shāṭibiyya, 3ᵉ lycée)",
+      "order": 61,
+      "textbookAr": "القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي"
+    },
+    {
+      "id": "taqtit-tanawi-3",
+      "subject": "taqtit",
+      "level": "tanawi-3",
+      "titleAr": "التوقيت من منظومة الجامع المفيد في حساب الخسوف والكسوف ورؤية الأهلة",
+      "titleFr": "Tawqīt — al-Jāmiʿ al-Mufīd (éclipses et croissants)",
+      "order": 62,
+      "textbookAr": "التوقيت من منظومة الجامع المفيد في حساب الخسوف والكسوف ورؤية الأهلة"
+    },
+    {
+      "id": "fikr-islami-tanawi-3",
+      "subject": "fikr-islami",
+      "level": "tanawi-3",
+      "titleAr": "الفكر الإسلامي: التصوف الإسلامي",
+      "titleFr": "Pensée islamique — le soufisme (taṣawwuf)",
+      "order": 63,
+      "textbookAr": "الفكر الإسلامي: التصوف الإسلامي"
     }
   ],
-  "goalDocs": 934
+  "goalDocs": 1029
 }

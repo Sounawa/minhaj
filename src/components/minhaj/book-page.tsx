@@ -44,9 +44,11 @@ function LessonRow({
         <span
           className={cn(
             "flex size-9 shrink-0 items-center justify-center rounded-lg font-serif text-sm font-semibold",
-            lesson.hasFr
-              ? "bg-gradient-to-br from-amber-600 to-orange-800 text-amber-50 shadow-sm"
-              : "bg-secondary text-secondary-foreground"
+            lesson.pdfOnly
+              ? "border border-amber-700/30 bg-amber-100/70 text-amber-900 dark:border-amber-300/20 dark:bg-amber-900/40 dark:text-amber-100"
+              : lesson.hasFr
+                ? "bg-gradient-to-br from-amber-600 to-orange-800 text-amber-50 shadow-sm"
+                : "bg-secondary text-secondary-foreground"
           )}
           aria-hidden="true"
         >
@@ -79,7 +81,16 @@ function LessonRow({
               échantillon
             </Badge>
           )}
-          {lesson.hasFr ? (
+          {lesson.pdfOnly ? (
+            <Badge
+              variant="outline"
+              className="gap-1 rounded-full border-amber-700/30 bg-amber-100/70 text-[10px] text-amber-900 dark:border-amber-300/20 dark:bg-amber-900/40 dark:text-amber-100"
+              title="Texte publié par le Ministère au format PDF officiel"
+            >
+              <FileText className="size-3" aria-hidden="true" />
+              PDF
+            </Badge>
+          ) : lesson.hasFr ? (
             <Badge className="gap-1 rounded-full bg-gradient-to-br from-amber-600 to-orange-800 text-[10px] text-amber-50 shadow-sm">
               <Languages className="size-3" aria-hidden="true" />
               bilingue

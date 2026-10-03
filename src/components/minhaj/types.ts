@@ -59,6 +59,7 @@ export interface LessonSummary {
   titleFr: string;
   hasFr: boolean;
   sample: boolean;
+  pdfOnly: boolean;
 }
 export interface BookDetailPayload {
   program: LibraryPayload["program"];
@@ -84,6 +85,8 @@ export interface DocPayload {
   hasFr: boolean;
   index: number;
   count: number;
+  pdfUrl: string | null;
+  pdfOnly: boolean;
   prev: { docId: string; titleFr: string; titleAr: string } | null;
   next: { docId: string; titleFr: string; titleAr: string } | null;
 }

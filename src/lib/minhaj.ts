@@ -61,6 +61,8 @@ export interface LessonDoc {
   html: string;
   htmlFr?: string;
   sample?: boolean;
+  pdfUrl?: string | null;
+  pdfOnly?: boolean;
 }
 export interface BookFile {
   id: string;
@@ -128,6 +130,8 @@ export interface DocPayload {
   hasFr: boolean;
   index: number;
   count: number;
+  pdfUrl: string | null;
+  pdfOnly: boolean;
   prev: { docId: string; titleFr: string; titleAr: string } | null;
   next: { docId: string; titleFr: string; titleAr: string } | null;
 }
@@ -138,6 +142,7 @@ export interface LessonSummary {
   titleFr: string;
   hasFr: boolean;
   sample: boolean;
+  pdfOnly: boolean;
 }
 export interface BookDetailPayload {
   program: Manifest["program"];
@@ -259,6 +264,7 @@ export async function getBookDetail(bookId: string): Promise<BookDetailPayload |
     titleFr: l.titleFr || "",
     hasFr: Boolean((l.htmlFr || "").trim()),
     sample: Boolean(l.sample),
+    pdfOnly: Boolean(l.pdfOnly),
   }));
   return { program: manifest.program, book, level, subject, intro, lessons };
 }
@@ -490,6 +496,8 @@ export async function getDoc(bookId: string, docId: string): Promise<DocPayload 
     htmlFr: cur.doc.htmlFr || "",
     sample: Boolean((cur.doc as LessonDoc).sample),
     hasFr: Boolean((cur.doc.htmlFr || "").trim()),
+    pdfUrl: ((cur.doc as LessonDoc).pdfUrl as string | null) ?? null,
+    pdfOnly: Boolean((cur.doc as LessonDoc).pdfOnly),
     index: idx,
     count: seq.length,
     prev: nav(prev),

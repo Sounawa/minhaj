@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowLeft, ArrowRight, BookmarkCheck, ChevronLeft, ChevronRight, Columns2, FileQuestion, Heart, Hourglass, Languages, Loader2, Printer } from "lucide-react";
+import { ArrowLeft, ArrowRight, BookmarkCheck, ChevronLeft, ChevronRight, Columns2, ExternalLink, FileQuestion, FileText, Heart, Hourglass, Languages, Loader2, Printer } from "lucide-react";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -23,6 +23,47 @@ const TEXT_SIZE_AR_CLASS: Record<TextSize, string> = {
   large: "text-[18.5px]",
   xlarge: "text-[20px] leading-loose",
 };
+
+function PdfOnlyNotice({ doc }: { doc: DocPayload }) {
+  return (
+    <motion.section
+      key={`${doc.docId}-pdf`}
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+      className="no-print mx-auto mt-2 max-w-2xl"
+    >
+      <div className="rounded-2xl border border-amber-800/15 bg-gradient-to-b from-amber-100/70 to-card p-8 text-center shadow-sm dark:border-amber-200/15 dark:from-amber-900/30">
+        <span className="mx-auto flex size-14 items-center justify-center rounded-2xl border border-amber-800/20 bg-card shadow-sm">
+          <FileText className="size-7 text-primary" aria-hidden="true" />
+        </span>
+        <h2 className="mt-4 font-serif text-xl font-semibold text-amber-950 dark:text-amber-50">
+          Leçon publiée au format PDF officiel
+        </h2>
+        <p dir="rtl" lang="ar" className="mt-2 font-arabic text-lg leading-relaxed text-amber-900 dark:text-amber-100">
+          {doc.titleAr}
+        </p>
+        <p className="mx-auto mt-4 max-w-lg text-sm leading-relaxed text-muted-foreground">
+          Le Ministère des Habous publie le texte de cette leçon uniquement au format PDF
+          sur le site officiel du programme <em>Taʿlīm ʿatīq</em>. Le titre est intégré à la
+          bibliothèque pour la recherche et la navigation ; consultez le document original
+          pour le contenu intégral.
+        </p>
+        {doc.pdfUrl && (
+          <Button asChild className="mt-6 gap-2 rounded-xl" size="lg">
+            <a href={doc.pdfUrl} target="_blank" rel="noopener noreferrer">
+              <ExternalLink className="size-4" aria-hidden="true" />
+              Ouvrir le PDF officiel
+            </a>
+          </Button>
+        )}
+        <p className="mt-4 text-xs text-muted-foreground">
+          habous.gov.ma — وزارة الأوقاف والشؤون الإسلامية
+        </p>
+      </div>
+    </motion.section>
+  );
+}
 
 function ColumnChip({ lang, label }: { lang: "fr" | "ar"; label: string }) {
   return (
@@ -345,37 +386,41 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
         </p>
       )}
 
-      <motion.div
-        key={`${docId}-${mode}`}
-        initial={{ opacity: 0, y: 8 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.35, ease: "easeOut" }}
-        className={cn("grid gap-6", mode === "both" ? "lg:grid-cols-2" : "grid-cols-1")}
-      >
-        {showFr &&
-          (data.hasFr ? (
-            <article className="reader-col" dir="ltr" lang="fr">
-              <ColumnChip lang="fr" label="Français — traduction" />
+      {data.pdfOnly ? (
+        <PdfOnlyNotice doc={data} />
+      ) : (
+        <motion.div
+          key={`${docId}-${mode}`}
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.35, ease: "easeOut" }}
+          className={cn("grid gap-6", mode === "both" ? "lg:grid-cols-2" : "grid-cols-1")}
+        >
+          {showFr &&
+            (data.hasFr ? (
+              <article className="reader-col" dir="ltr" lang="fr">
+                <ColumnChip lang="fr" label="Français — traduction" />
+                <div
+                  className={cn("lesson-content text-foreground/90", TEXT_SIZE_CLASS[textSize])}
+                  dangerouslySetInnerHTML={{ __html: data.htmlFr }}
+                />
+              </article>
+            ) : (
+              <MissingFr />
+            ))}
+          {showAr && (
+            <article className="reader-col" dir="rtl" lang="ar">
+              <ColumnChip lang="ar" label="العربية — الأصل" />
               <div
-                className={cn("lesson-content text-foreground/90", TEXT_SIZE_CLASS[textSize])}
-                dangerouslySetInnerHTML={{ __html: data.htmlFr }}
+                className={cn("lesson-content text-foreground", TEXT_SIZE_AR_CLASS[textSize])}
+                dangerouslySetInnerHTML={{ __html: data.html }}
               />
             </article>
-          ) : (
-            <MissingFr />
-          ))}
-        {showAr && (
-          <article className="reader-col" dir="rtl" lang="ar">
-            <ColumnChip lang="ar" label="العربية — الأصل" />
-            <div
-              className={cn("lesson-content text-foreground", TEXT_SIZE_AR_CLASS[textSize])}
-              dangerouslySetInnerHTML={{ __html: data.html }}
-            />
-          </article>
-        )}
-      </motion.div>
+          )}
+        </motion.div>
+      )}
 
-      {singleCol && (
+      {!data.pdfOnly && singleCol && (
         <p className="no-print mt-4 text-center text-xs text-muted-foreground">
           <ArrowRight className="me-1 inline size-3 rotate-180" aria-hidden="true" />
           Astuce : activez le mode « Bilingue » pour lire la traduction et l&apos;original
