@@ -128,3 +128,89 @@ Stage Summary:
 - Priorités suivantes : (1) leçons PDF-only (~9 livres pour atteindre 64),
   (2) révision des traductions GT (GT-ismes des titres), (3) nouvelles
   fonctionnalités : recherche globale, favoris, impression, liens PDF officiels.
+
+---
+Task ID: R5a-R5b (reconstitués d'après git)
+Agent: agent principal (Z.ai Code)
+Task: Fusion de nouveaux documents découverts via Arquivo.pt (session interrompue)
+
+Work Log:
+- R5a (7da7200) : fusion +75 docs (Waraqat 29, qiraat +12, fiqh-4ep +6...),
+  4 nouveaux livres → 59 livres / 927 docs.
+- R5b (66643a1) : re-fetch SEF des 6 leçons Akhdari + fix mapping 15381
+  → 59 livres / 934 docs (897 leçons + 37 intros).
+
+Stage Summary:
+- Scripts Arquivo (arquivo-harvest.ts, arquivo-*.jsonl) présents dans scripts-recovery/.
+- Session coupée en plein fix de titres : 16 docs sans titleFr + placeholders.
+
+---
+Task ID: R5c
+Agent: agent principal (Z.ai Code)
+Task: Terminer le fix de titres interrompu + stats manifeste exactes
+
+Work Log:
+- État au départ : 16 docs sans titleFr (13 Waraqat, 3 Ulum Quran), plus des
+  placeholders « أهداف الدرس » / « &nbsp; » dans 7 livres.
+- scripts-recovery/fix-titles-v2.ts : extraction du sujet réel depuis le h1
+  de chaque doc + 63 traductions FR **faites main** (terminologie académique :
+  uṣūl al-fiqh, ḥaqīqa/majāz, khabar āḥād, istiṣḥāb, qiyās, kulliyyāt...).
+  → 63/63 corrigés, 0 résiduel corpus entier.
+- Vrai compte établi : 934 docs = 897 leçons + 37 intros (mon compte brut
+  précédent de 897 oubliait les intros séparés).
+- Manifeste v5 : goalBooks 64 / goalDocs 1152 (programme officiel complet),
+  note corrigée, progress honnête affiché (934/1 152).
+- QA : accueil « 59 manuels / 934/1 152 », table des matières Waraqat = vrai
+  curriculum uṣūl (28 leçons titrées proprement). 0 erreur console.
+- Backup + commit 138bfb7.
+
+Stage Summary:
+- Tous les documents du corpus ont désormais titres AR+FR propres.
+- Affichage des stats aligné sur la réalité (objectif officiel 64/1152).
+
+---
+Task ID: R6
+Agent: agent principal (Z.ai Code)
+Task: Vague de fonctionnalités — recherche globale, favoris, impression,
+reprise de lecture, taille de texte
+
+Work Log:
+- **Recherche globale bilingue** :
+  - src/lib/minhaj.ts : searchCorpus() + index in-memory paresseux (1re
+    requête ~1,9 s de construction, ensuite ~30 ms) ; normalisation pliée
+    (é→e, œ→oe) côté FR, suppression tashkīl + unification alifs/taʾ
+    marbūṭa côté AR ; scoring titre×60/texte×6 + bonus préfixe ; snippets
+    ±160 car.
+  - /api/search?q=&limit= (limit borné 5-50).
+  - search-dialog.tsx : ⌘K/Ctrl+K global, debounce 250 ms, navigation
+    ↑↓/Entrée, surlignage <mark> insensible aux accents, badge AR/FR,
+    footer « N documents trouvés ».
+- **Favoris** (localStorage minhaj.favorites) : cœur dans le lecteur (état
+  rempli + micro-animation), dialogue favoris dans l'en-tête (badge compteur,
+  suppression, dates FR), hooks useFavorites/useLastDoc via
+  useSyncExternalStore + snapshots serveur stables (fix boucle infinie
+  d'hydratation détectée en QA).
+- **Reprise de lecture** : minhaj.lastDoc écrit à chaque ouverture de leçon ;
+  carte « Reprendre la lecture » sur le héros de l'accueil (titre + manuel).
+- **Impression** : bouton Printer dans le lecteur + styles @media print
+  (@page 14/12 mm, break-inside avoid, 11pt, colonnes sobres) — PDF de test
+  31 pages OK.
+- **Taille du texte** : bouton A+ (3 niveaux persistés minhaj.textSize),
+  tailles distinctes FR/AR.
+- Fix en passant : titleFr du manifeste synchronisé depuis les fichiers
+  (59/59 — getDoc/searchCorpus lisent désormais file.titleFr en priorité) ;
+  lucide Bookmarked→BookmarkCheck ; CYCLES desc obsolète corrigée.
+- QA agent-browser complète : recherche « ablution » (89 hits, 25 affichés,
+  navigation clic OK → #/livre/hadith-1es/12897), recherche arabe
+  « التجويد » (hits AR avec badge), Ctrl+K OK, favoris (badge 1, dialogue,
+  retrait OK), reprise de lecture OK, mobile 375 px OK, 0 erreur console,
+  lint 0 erreur. Backup + commit 2aefff0.
+
+Stage Summary:
+- **5 nouvelles fonctionnalités livrées et vérifiées** : recherche globale
+  bilingue Ctrl+K, favoris, reprise de lecture, impression, taille de texte.
+- Le site passe d'un lecteur simple à une véritable bibliothèque navigable.
+- Prochaines priorités : (1) révision des titres de LIVRES GT-ismes
+  (« Hadith de Muwatta de l'Imam Malik, expliqué par Al-Zarqani » → « Le
+  Muwaṭṭaʾ d'Imam Mālik — commentaire d'al-Zarqānī »), (2) livres PDF-only
+  restants (5/64), (3) export/partage, (4) navigation clavier globale.
