@@ -1,14 +1,14 @@
 {
-  "version": 4,
+  "version": 5,
   "provisional": false,
-  "note": "Corpus Taʿlīm ʿatīq — 59 livres, 934 documents bilingues (source : site officiel via proxy).",
+  "note": "Corpus Taʿlīm ʿatīq — 59 livres, 934 documents bilingues (897 leçons + 37 introductions, 100 % du HTML disponible). Les 5 livres restants du programme (64/1152) n’existent qu’en PDF sur le site officiel.",
   "program": {
     "nameAr": "المنهاج النموذجي للتعليم العتيق",
     "nameFr": "Programme modèle de l'enseignement traditionnel (Taʿlīm ʿatīq)",
     "publisherAr": "وزارة الأوقاف والشؤون الإسلامية — المملكة المغربية",
     "publisherFr": "Ministère des Habous et des Affaires islamiques — Royaume du Maroc",
-    "goalBooks": 55,
-    "goalDocs": 852
+    "goalBooks": 64,
+    "goalDocs": 1152
   },
   "levels": [
     {
