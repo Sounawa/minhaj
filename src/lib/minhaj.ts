@@ -198,8 +198,9 @@ function summarize(bookDef: ManifestBook, file: BookFile | null): BookSummary {
     id: bookDef.id,
     subject: bookDef.subject,
     level: bookDef.level,
-    titleAr: bookDef.textbookAr || bookDef.titleAr,
-    titleFr: bookDef.titleFr,
+    // Le fichier réel prime sur le manifeste (titres traduits en continu)
+    titleAr: file?.titleAr || bookDef.textbookAr || bookDef.titleAr,
+    titleFr: (file?.titleFr && file.titleFr.trim()) || bookDef.titleFr,
     textbookAr: bookDef.textbookAr,
     order: bookDef.order,
     downloaded: Boolean(file),
