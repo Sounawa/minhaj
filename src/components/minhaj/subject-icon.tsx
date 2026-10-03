@@ -1,5 +1,6 @@
 "use client";
 
+import { createElement } from "react";
 import {
   AudioLines,
   BookOpenText,
@@ -61,7 +62,6 @@ export function SubjectTile({
   className?: string;
   iconClassName?: string;
 }) {
-  const Icon = subjectIcon(subjectId);
   return (
     <span
       aria-hidden="true"
@@ -71,7 +71,10 @@ export function SubjectTile({
         className
       )}
     >
-      <Icon className={cn("size-5", iconClassName)} strokeWidth={1.9} />
+      {createElement(subjectIcon(subjectId), {
+        className: cn("size-5", iconClassName),
+        strokeWidth: 1.9,
+      })}
     </span>
   );
 }

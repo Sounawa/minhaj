@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import type { BookDetailPayload, DocPayload, LibraryPayload } from "./types";
 
 // ————————————————————————————————— Routage par hash (#/livre/{bookId}/{docId})
@@ -59,65 +59,90 @@ export function invalidateLibraryCache() {
 }
 
 export function useLibrary() {
-  const [data, setData] = useState<LibraryPayload | null>(() => (memo.get("/api/books") as LibraryPayload) ?? null);
-  const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(!data);
-  const ref = useRef(false);
+  const [state, setState] = useState<{
+    data: LibraryPayload | null;
+    error: string | null;
+    loading: boolean;
+  }>(() => {
+    const cached = memo.get("/api/books") as LibraryPayload | undefined;
+    return cached
+      ? { data: cached, error: null, loading: false }
+      : { data: null, error: null, loading: true };
+  });
   useEffect(() => {
-    if (ref.current) return;
-    ref.current = true;
+    let alive = true;
     fetchJson<LibraryPayload>("/api/books")
-      .then(setData)
-      .catch((e: Error) => setError(e.message))
-      .finally(() => setLoading(false));
+      .then((data) => {
+        if (alive) setState({ data, error: null, loading: false });
+      })
+      .catch((e: Error) => {
+        if (alive) setState({ data: null, error: e.message, loading: false });
+      });
+    return () => {
+      alive = false;
+    };
   }, []);
-  return { data, error, loading };
+  return state;
 }
 
 export function useBookDetail(bookId: string | null) {
   const url = bookId ? `/api/books/${bookId}` : null;
-  const [data, setData] = useState<BookDetailPayload | null>(
-    () => (url ? ((memo.get(url) as BookDetailPayload) ?? null) : null)
-  );
-  const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(Boolean(url) && !data);
+  const [state, setState] = useState<{
+    data: BookDetailPayload | null;
+    error: string | null;
+    loading: boolean;
+  }>(() => {
+    if (!url) return { data: null, error: null, loading: false };
+    const cached = memo.get(url) as BookDetailPayload | undefined;
+    return cached
+      ? { data: cached, error: null, loading: false }
+      : { data: null, error: null, loading: true };
+  });
   useEffect(() => {
     if (!url) return;
     let alive = true;
-    setLoading(!memo.has(url));
-    setError(null);
     fetchJson<BookDetailPayload>(url)
-      .then((d) => alive && setData(d))
-      .catch((e: Error) => alive && setError(e.message))
-      .finally(() => alive && setLoading(false));
+      .then((data) => {
+        if (alive) setState({ data, error: null, loading: false });
+      })
+      .catch((e: Error) => {
+        if (alive) setState({ data: null, error: e.message, loading: false });
+      });
     return () => {
       alive = false;
     };
   }, [url]);
-  return { data, error, loading };
+  return state;
 }
 
 export function useDoc(bookId: string | null, docId: string | null) {
   const url = bookId && docId ? `/api/lessons/${bookId}/${docId}` : null;
-  const [data, setData] = useState<DocPayload | null>(
-    () => (url ? ((memo.get(url) as DocPayload) ?? null) : null)
-  );
-  const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(Boolean(url) && !data);
+  const [state, setState] = useState<{
+    data: DocPayload | null;
+    error: string | null;
+    loading: boolean;
+  }>(() => {
+    if (!url) return { data: null, error: null, loading: false };
+    const cached = memo.get(url) as DocPayload | undefined;
+    return cached
+      ? { data: cached, error: null, loading: false }
+      : { data: null, error: null, loading: true };
+  });
   useEffect(() => {
     if (!url) return;
     let alive = true;
-    setLoading(!memo.has(url));
-    setError(null);
     fetchJson<DocPayload>(url)
-      .then((d) => alive && setData(d))
-      .catch((e: Error) => alive && setError(e.message))
-      .finally(() => alive && setLoading(false));
+      .then((data) => {
+        if (alive) setState({ data, error: null, loading: false });
+      })
+      .catch((e: Error) => {
+        if (alive) setState({ data: null, error: e.message, loading: false });
+      });
     return () => {
       alive = false;
     };
   }, [url]);
-  return { data, error, loading };
+  return state;
 }
 
 // ————————————————————————————————— Préférences persistées

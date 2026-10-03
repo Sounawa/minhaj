@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import {
@@ -26,10 +26,16 @@ import { Home } from "./home";
 import { BookPage } from "./book-page";
 import { Reader } from "./reader";
 
+const emptySubscribe = () => () => {};
+
 function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+  // Détection de l'hydratation sans setState dans l'effet (règle ESLint).
+  const mounted = useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false
+  );
   return (
     <Button
       variant="outline"
