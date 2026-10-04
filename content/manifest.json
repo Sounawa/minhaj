@@ -1,7 +1,7 @@
 {
   "version": 6,
   "provisional": false,
-  "note": "Corpus Taʿlīm ʿatīq — 63 livres, 1029 documents (891 leçons bilingues intégrales, 52 introductions, 86 leçons référence PDF officiel). 63/64 livres du programme officiel ; hadith-tanawi-2 reste à sourcer (leçons PDF non publiées en HTML sur le site officiel).",
+  "note": "Corpus Taʿlīm ʿatīq — 63 livres, 1828 documents (891 leçons bilingues intégrales, 52 introductions, 885 leçons référence PDF officiel). 63/64 livres du programme officiel ; hadith-tanawi-2 reste à sourcer (leçons PDF non publiées en HTML sur le site officiel).",
   "program": {
     "nameAr": "المنهاج النموذجي للتعليم العتيق",
     "nameFr": "Programme modèle de l'enseignement traditionnel (Taʿlīm ʿatīq)",
@@ -825,5 +825,5 @@
       "textbookAr": "الفكر الإسلامي: التصوف الإسلامي"
     }
   ],
-  "goalDocs": 1029
+  "goalDocs": 1828
 }

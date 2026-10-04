@@ -6,6 +6,7 @@ import {
   ArrowRight,
   BookMarked,
   CloudDownload,
+  FileText as FileTextIcon,
   History,
   Layers,
   Library as LibraryIcon,
@@ -32,11 +33,13 @@ function fr(n: number) {
 
 function Hero({
   docsFr,
+  docsTotal,
   goalDocs,
   booksDownloaded,
   booksTotal,
 }: {
   docsFr: number;
+  docsTotal: number;
   goalDocs: number;
   booksDownloaded: number;
   booksTotal: number;
@@ -123,7 +126,7 @@ function Hero({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.15, ease: "easeOut" }}
-          className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-3"
+          className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
         >
           <div className="rounded-2xl border border-amber-800/15 bg-card/80 p-5 shadow-sm backdrop-blur-sm">
             <dt className="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground">
@@ -151,6 +154,21 @@ function Hero({
               value={goalDocs ? (docsFr / goalDocs) * 100 : 0}
               className="mt-3 h-2 bg-amber-800/10"
             />
+          </div>
+          <div className="rounded-2xl border border-amber-800/15 bg-card/80 p-5 shadow-sm backdrop-blur-sm">
+            <dt className="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground">
+              <FileTextIcon className="size-4 text-primary" aria-hidden="true" />
+              Documents référencés
+            </dt>
+            <dd className="mt-2 font-serif text-3xl font-semibold text-amber-950 dark:text-amber-50">
+              {fr(docsTotal)}
+              <span className="ms-1.5 text-sm font-normal text-muted-foreground">
+                dont PDF officiels
+              </span>
+            </dd>
+            <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
+              Introductions, leçons intégrales et renvois vers les PDF du Ministère.
+            </p>
           </div>
           <div className="rounded-2xl border border-amber-800/15 bg-card/80 p-5 shadow-sm backdrop-blur-sm">
             <dt className="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground">
@@ -261,6 +279,7 @@ export function Home() {
     <>
       <Hero
         docsFr={stats.docsFr}
+        docsTotal={stats.docsTotal}
         goalDocs={stats.goalDocs}
         booksDownloaded={stats.booksDownloaded}
         booksTotal={stats.booksTotal}
