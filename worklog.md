@@ -336,3 +336,42 @@ Stage Summary:
   ulum-quran-2es/3es, rasm-4ep, tafsir-5ep, tafsir-tanawi-1/2, taqtit-1, mantiq-1),
   (4) si un canal binaire émerge (proxy inhabituel, miroir marocain…), extraire le
   texte des 86+ PDF vers des leçons intégrales.
+
+---
+Task ID: R8c
+Agent: agent principal (Z.ai Code)
+Task: Extension des leçons référence PDF aux 26 livres intro-only restants
+
+Work Log:
+- Chemins de catégories dérivés du source-tree pour 27 livres cibles
+  (via docId de leur intro) + r8c-categories.ts (moissonneur de masse) :
+  fetch GT proxy des pages catégories (26/26 ✓, ~350 Ko chacune, retries 429),
+  extraction des ancres PDF (skip-list élargie AVEC suppression du tashkīl
+  pour matcher « التَّعْرِيفُ بِالمُؤَلِّفِ » etc. : منهجية التأليف، كيف أستعمل
+  كتابي، كفايات تدريس، التوزيع الدوري، التعريف بالمؤلف، غلاف الكتاب،
+  إضاءات منهجية، تقديم الكتاب…), dédoublonnage par titre contre les
+  leçons/intros existantes, traduction batch des titres (799, ~37 lots GT).
+- **+799 leçons PDF-référence créées sur 26 livres** — tous les livres
+  intro-only ont désormais leur sommaire complet : hadith-tanawi-3 (29),
+  usul-qiyam-4ep/5ep/6ep (25/26/25), fikr-islami-t1/2/3 (28/28/27),
+  usul-fiqh-t2/t3 (30/30), ulum-hadith-t1/2/3 (30/27/27), qiraat-t2/t3
+  (28/23), faraid-t3 (27), taqtit-t2/t3 (29/30), hadith-3es (29), tajwid-3es
+  (28), tafsir-tanawi-3 (29), tafsir-2es (+30→37), tafsir-3es (+37→43),
+  tafsir-5ep (+91→92 !), rasm-5ep/6ep (29/29), hadith-6ep (+28→29).
+- 4ᵉ carte de stats sur le héros : « DOCUMENTS RÉFÉRENCÉS — 1 828 dont PDF
+  officiels » (grille 2×2, icône FileText).
+- QA : héros 4 cartes vérifiées (63 manuels, 943/1152 bilingues, 1828 docs,
+  63/63), fikr-islami-tanawi-1 intro + 28 leçons PDF ✓, 0 erreur console
+  (le warning Fast Refresh « unrecoverable error » était transitoire à
+  mi-édition), lint 0 erreur. Backup 20261004-000524 + commit 48c0993.
+
+Stage Summary:
+- **Corpus final R8 : 63 livres / 1 828 documents (891 leçons intégrales
+  bilingues + 52 intros + 885 leçons référence PDF officiel)** — 943/1152
+  bilingues (82 %), 100 % des 63 livres ont intro + sommaire complet.
+- GT-ismes résiduels dans les 799 nouveaux titres FR (ex. « Transport et
+  raison » pour النقل والعقل, « Rangs de religion » pour مراتب الدين) —
+  passe manuelle recommandée en R9 (comme r8-fix-stubs.ts).
+- Restent : hadith-tanawi-2 (64ᵉ livre, aucune page HTML), usul-fiqh-tanawi-1
+  (catégorie inconnue — PDF non moissonnés), 11 intros manquantes, révision
+  du contenu FR des leçons intégrales.
