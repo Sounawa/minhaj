@@ -71,6 +71,7 @@ export interface BookFile {
   titleAr: string;
   titleFr?: string;
   pdfUrl?: string | null;
+  unpublished?: boolean;
   intro?: {
     docId: string;
     titleAr: string;
@@ -91,6 +92,7 @@ export interface BookSummary {
   textbookAr?: string;
   order: number;
   downloaded: boolean;
+  unpublished?: boolean;
   hasIntro: boolean;
   introFr: boolean;
   lessonsTotal: number;
@@ -209,6 +211,7 @@ function summarize(bookDef: ManifestBook, file: BookFile | null): BookSummary {
     textbookAr: bookDef.textbookAr,
     order: bookDef.order,
     downloaded: Boolean(file),
+    unpublished: Boolean(file?.unpublished),
     hasIntro,
     introFr,
     lessonsTotal,

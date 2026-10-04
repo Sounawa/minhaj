@@ -26,7 +26,7 @@
   },
   {
    "docId": "pdf-2",
-   "titleAr": "أجناس الطعام وبيعُ الطعام قبل قبضه",
+   "titleAr": "أجناس الطعام وبيع الطعام قبل قبضه",
    "titleFr": "Les catégories d'aliments et leur vente avant prise de possession",
    "html": "",
    "htmlFr": "",
@@ -35,7 +35,7 @@
   },
   {
    "docId": "pdf-3",
-   "titleAr": "بيع الخيار والبيعُ الفاسد",
+   "titleAr": "بيع الخيار والبيع الفاسد",
    "titleFr": "Vente à option (khayār) et vente invalide",
    "html": "",
    "htmlFr": "",
@@ -44,7 +44,7 @@
   },
   {
    "docId": "pdf-4",
-   "titleAr": "أحكام القرض وبعضُ البيوع المنهي عنها",
+   "titleAr": "أحكام القرض وبعض البيوع المنهي عنها",
    "titleFr": "Règles du prêt (qarḍ) et certaines ventes proscrites",
    "html": "",
    "htmlFr": "",
@@ -53,7 +53,7 @@
   },
   {
    "docId": "pdf-5",
-   "titleAr": "بيع الثمار والشيء الغائب وبيعُ السلم",
+   "titleAr": "بيع الثمار والشيء الغائب وبيع السلم",
    "titleFr": "Vente des fruits, de la chose absente et à terme (salam)",
    "html": "",
    "htmlFr": "",
@@ -62,7 +62,7 @@
   },
   {
    "docId": "pdf-6",
-   "titleAr": "الكالئ بالكالئ وبيوعُ الآجال والبيعُ على الجزاف والبرنامج",
+   "titleAr": "الكالئ بالكالئ وبيوع الآجال والبيع على الجزاف والبرنامج",
    "titleFr": "Crédit à terme (kalīʾ bi-kalīʾ), ventes différées, à vue et sur description",
    "html": "",
    "htmlFr": "",
@@ -90,7 +90,7 @@
   {
    "docId": "pdf-9",
    "titleAr": "أحكام المساقاة",
-   "titleFr": "Règles de l'irrigation partagée (musāqāt)",
+   "titleFr": "Les règles de l'association à l'irrigation (musāqāt)",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الفقه-الثالث-إعدادي/9._أحكام_المساقاة.pdf",
@@ -152,8 +152,8 @@
   },
   {
    "docId": "pdf-16",
-   "titleAr": "من تمنع شهادتهم وصفةُ تعديل الشهود",
-   "titleFr": "Témoins irrecevables et procédure d'attestation",
+   "titleAr": "من تمنع شهادتهم وصفة تعديل الشهود",
+   "titleFr": "Les personnes inaptes à témoigner et la procédure d'agrément des témoins",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الفقه-الثالث-إعدادي/16._من_تمنع_شهادتهم_وصفةُ_تعديل_الشهود.pdf",
@@ -161,8 +161,8 @@
   },
   {
    "docId": "pdf-17",
-   "titleAr": "شهادة الصبيان واختلافُ المتبايعين",
-   "titleFr": "Témoignage des garçons et différend entre les contractants",
+   "titleAr": "شهادة الصبيان واختلاف المتبايعين",
+   "titleFr": "Le témoignage des mineurs et le désaccord entre contractants",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الفقه-الثالث-إعدادي/17._شهادة_الصبيان_واختلافُ_المتبايعين.pdf",
@@ -189,7 +189,7 @@
   {
    "docId": "pdf-20",
    "titleAr": "أحكام الحوالة والقسمة",
-   "titleFr": "Règles du transfert de dette (ḥawāla) et du partage",
+   "titleFr": "Les règles de la cession de dette (ḥawāla) et du partage",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الفقه-الثالث-إعدادي/20._أحكام_الحوالة_والقسمة.pdf",
@@ -207,7 +207,7 @@
   {
    "docId": "pdf-22",
    "titleAr": "جملة من الفرائض والآداب",
-   "titleFr": "Chapitre des successions (farāʾiḍ) et des bienséances",
+   "titleFr": "Chapitre des successions (farāʾiḏ) et des bienséances",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الفقه-الثالث-إعدادي/22._جملة_من_الفرائض_والآداب.pdf",
@@ -216,7 +216,7 @@
   {
    "docId": "pdf-23",
    "titleAr": "جملة من مكارم الأخلاق",
-   "titleFr": "Un ensemble de nobles caractères",
+   "titleFr": "Des nobles traits de caractère",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الفقه-الثالث-إعدادي/23._جملة_من_مكارم_الأخلاق.pdf",
@@ -225,7 +225,7 @@
   {
    "docId": "pdf-24",
    "titleAr": "خصال الفطرة وبعض الآداب",
-   "titleFr": "Les traits de la fitra et quelques bienséances",
+   "titleFr": "Les traits de la nature primordiale (fiṭra) et quelques bienséances",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الفقه-الثالث-إعدادي/24.خصال_الفطرة_وبعض_الآداب.pdf",
@@ -243,7 +243,7 @@
   {
    "docId": "pdf-26",
    "titleAr": "فهرس وتراجم الأعلام",
-   "titleFr": "Index et notices biographiques",
+   "titleFr": "Index et notices biographiques des figures",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الفقه-الثالث-إعدادي/تراجم_الأعلام.pdf",

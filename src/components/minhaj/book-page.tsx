@@ -283,23 +283,38 @@ export function BookPage({ bookId }: { bookId: string }) {
                   ({data.lessons.length})
                 </span>
               </h2>
-              <div className="relative w-full sm:max-w-xs">
-                <Search
-                  className="pointer-events-none absolute start-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground"
-                  aria-hidden="true"
-                />
-                <Input
-                  type="search"
-                  value={query}
-                  onChange={(e) => setQuery(e.target.value)}
-                  placeholder="Filtrer les leçons…"
-                  aria-label="Filtrer les leçons"
-                  className="h-10 rounded-xl border-amber-800/20 bg-card/70 ps-9 text-sm shadow-none focus-visible:ring-primary/40"
-                />
-              </div>
+              {data.lessons.length > 0 && (
+                <div className="relative w-full sm:max-w-xs">
+                  <Search
+                    className="pointer-events-none absolute start-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground"
+                    aria-hidden="true"
+                  />
+                  <Input
+                    type="search"
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
+                    placeholder="Filtrer les leçons…"
+                    aria-label="Filtrer les leçons"
+                    className="h-10 rounded-xl border-amber-800/20 bg-card/70 ps-9 text-sm shadow-none focus-visible:ring-primary/40"
+                  />
+                </div>
+              )}
             </div>
 
-            {lessons.length === 0 ? (
+            {data.lessons.length === 0 && data.book.unpublished ? (
+              <div className="mt-6 rounded-2xl border border-amber-800/20 bg-gradient-to-br from-amber-50/80 to-orange-50/60 p-6 shadow-sm dark:from-amber-950/30 dark:to-orange-950/20">
+                <p className="flex items-center gap-2 font-serif text-base font-semibold text-amber-950 dark:text-amber-50">
+                  <Hourglass className="size-4.5 text-primary" aria-hidden="true" />
+                  Leçons non publiées par le ministère
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  Contrairement aux autres niveaux, le portail officiel du ministère des Habous
+                  ne publie à ce jour ni page d'ouvrage ni pages de cours pour cette année. La
+                  présentation bilingue ci-dessus résume le programme attendu ; les leçons
+                  seront intégrées dès leur publication officielle.
+                </p>
+              </div>
+            ) : lessons.length === 0 ? (
               <p className="mt-6 rounded-xl border border-dashed border-amber-800/25 bg-card/50 p-6 text-center text-sm text-muted-foreground">
                 Aucune leçon ne correspond à « {query} ».
               </p>

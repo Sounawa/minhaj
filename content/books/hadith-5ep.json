@@ -17,7 +17,7 @@
  "lessons": [
   {
    "docId": "pdf-1",
-   "titleAr": "التَّعْرِيفُ بِالمُؤَلِّفِ وَالمُؤَلَّفِ",
+   "titleAr": "التعريف بالمؤلف والمؤلف",
    "titleFr": "Présentation de l'auteur et de l'ouvrage",
    "html": "",
    "htmlFr": "",
@@ -26,7 +26,7 @@
   },
   {
    "docId": "pdf-2",
-   "titleAr": "الأَعْمَالُ بِالنِّيَّاتِ",
+   "titleAr": "الأعمال بالنيات",
    "titleFr": "Les actes ne valent que par les intentions",
    "html": "",
    "htmlFr": "",
@@ -35,7 +35,7 @@
   },
   {
    "docId": "pdf-3",
-   "titleAr": "الْإِسْلَامُ وَالْإِيمَانُ",
+   "titleAr": "الإسلام والإيمان",
    "titleFr": "L'islam et la foi (īmān)",
    "html": "",
    "htmlFr": "",
@@ -44,7 +44,7 @@
   },
   {
    "docId": "pdf-4",
-   "titleAr": "الْإِحْسَانُ وَأَمَارَاتُ السَّاعَةِ",
+   "titleAr": "الإحسان وأمارات الساعة",
    "titleFr": "L'excellence (iḥsān) et les signes de l'Heure",
    "html": "",
    "htmlFr": "",
@@ -53,7 +53,7 @@
   },
   {
    "docId": "pdf-5",
-   "titleAr": "أَرْكَانُ الْإِسْلَامِ",
+   "titleAr": "أركان الإسلام",
    "titleFr": "Les piliers de l'islam",
    "html": "",
    "htmlFr": "",
@@ -62,7 +62,7 @@
   },
   {
    "docId": "pdf-6",
-   "titleAr": "أَطْوَارُ خَلْقِ الْإِنْسَانِ",
+   "titleAr": "أطوار خلق الإنسان",
    "titleFr": "Les étapes de la création de l'homme",
    "html": "",
    "htmlFr": "",
@@ -71,8 +71,8 @@
   },
   {
    "docId": "pdf-7",
-   "titleAr": "دَعْمٌ وَتَطْبِيقٌ",
-   "titleFr": "Soutien et application",
+   "titleAr": "دعم وتطبيق",
+   "titleFr": "Consolidation et application",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الخامس-ابتدائي/المدرج/8-BDA51.PDF",
@@ -80,7 +80,7 @@
   },
   {
    "docId": "pdf-8",
-   "titleAr": "الْقَضَاءُ وَالْقَدَرُ",
+   "titleAr": "القضاء والقدر",
    "titleFr": "Le décret et la prédestination (qaḍāʾ et qadar)",
    "html": "",
    "htmlFr": "",
@@ -89,7 +89,7 @@
   },
   {
    "docId": "pdf-9",
-   "titleAr": "الْإِحْدَاثُ وَالِابْتِدَاعُ فِي الدِّينِ",
+   "titleAr": "الإحداث والابتداع في الدين",
    "titleFr": "Les innovations (bidʿa) dans la religion",
    "html": "",
    "htmlFr": "",
@@ -98,7 +98,7 @@
   },
   {
    "docId": "pdf-10",
-   "titleAr": "الْحَلَالُ وَالحَرَامُ وَالمُشْتَبِهَاتُ",
+   "titleAr": "الحلال والحرام والمشتبهات",
    "titleFr": "Le licite, l'illicite et le douteux",
    "html": "",
    "htmlFr": "",
@@ -107,7 +107,7 @@
   },
   {
    "docId": "pdf-11",
-   "titleAr": "إِصْلَاحُ الْقَلْبِ",
+   "titleAr": "إصلاح القلب",
    "titleFr": "La réforme du cœur",
    "html": "",
    "htmlFr": "",
@@ -116,7 +116,7 @@
   },
   {
    "docId": "pdf-12",
-   "titleAr": "الدِّينُ النَّصِيحَةُ",
+   "titleAr": "الدين النصيحة",
    "titleFr": "La religion, c'est le conseil (naṣīḥa)",
    "html": "",
    "htmlFr": "",
@@ -125,7 +125,7 @@
   },
   {
    "docId": "pdf-13",
-   "titleAr": "يُسْرُ دِينِ الْإِسْلَامِ",
+   "titleAr": "يسر دين الإسلام",
    "titleFr": "La facilité de la religion islamique",
    "html": "",
    "htmlFr": "",
@@ -134,8 +134,8 @@
   },
   {
    "docId": "pdf-14",
-   "titleAr": "دَعْمٌ وَتَطْبِيقٌ",
-   "titleFr": "Soutien et application",
+   "titleAr": "دعم وتطبيق",
+   "titleFr": "Consolidation et application",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الخامس-ابتدائي/المدرج/-141.PDF",
@@ -143,7 +143,7 @@
   },
   {
    "docId": "pdf-15",
-   "titleAr": "الْحَلَالُ وَإِجَابَةُ الدُّعَاءِ",
+   "titleAr": "الحلال وإجابة الدعاء",
    "titleFr": "Le licite et l'exaucement de l'invocation",
    "html": "",
    "htmlFr": "",
@@ -152,7 +152,7 @@
   },
   {
    "docId": "pdf-16",
-   "titleAr": "التَّوَرُّعُ عَنِ الشُّبُهَاتِ",
+   "titleAr": "التورع عن الشبهات",
    "titleFr": "La circonspection envers le douteux (waraʿ)",
    "html": "",
    "htmlFr": "",
@@ -161,7 +161,7 @@
   },
   {
    "docId": "pdf-17",
-   "titleAr": "تَرْكُ مَا لَا يَعْنِي",
+   "titleAr": "ترك ما لا يعني",
    "titleFr": "Délaisser ce qui ne nous regarde pas",
    "html": "",
    "htmlFr": "",
@@ -170,7 +170,7 @@
   },
   {
    "docId": "pdf-18",
-   "titleAr": "مَحَبَّةُ الْخَيْرِ لِلنَّاسِ",
+   "titleAr": "محبة الخير للناس",
    "titleFr": "Aimer le bien pour les gens",
    "html": "",
    "htmlFr": "",
@@ -179,7 +179,7 @@
   },
   {
    "docId": "pdf-19",
-   "titleAr": "مِنْ خِصَالِ الْإِيمَانِ",
+   "titleAr": "من خصال الإيمان",
    "titleFr": "Des qualités de la foi",
    "html": "",
    "htmlFr": "",
@@ -188,8 +188,8 @@
   },
   {
    "docId": "pdf-20",
-   "titleAr": "دَعْمٌ وَتَطْبِيقٌ",
-   "titleFr": "Soutien et application",
+   "titleAr": "دعم وتطبيق",
+   "titleFr": "Consolidation et application",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الخامس-ابتدائي/المدرج/20D4C91.PDF",
@@ -197,7 +197,7 @@
   },
   {
    "docId": "pdf-21",
-   "titleAr": "النَّهْيُ عَنِ الْغَضَبِ",
+   "titleAr": "النهي عن الغضب",
    "titleFr": "L'interdiction de la colère",
    "html": "",
    "htmlFr": "",
@@ -206,7 +206,7 @@
   },
   {
    "docId": "pdf-22",
-   "titleAr": "الْإِحْسَانُ فِي كُلِّ شَيْءٍ",
+   "titleAr": "الإحسان في كل شيء",
    "titleFr": "L'excellence (iḥsān) en toute chose",
    "html": "",
    "htmlFr": "",
@@ -215,7 +215,7 @@
   },
   {
    "docId": "pdf-23",
-   "titleAr": "التَّقْوَى وَحُسْنُ الْخُلُقِ",
+   "titleAr": "التقوى وحسن الخلق",
    "titleFr": "La piété (taqwā) et le bon caractère",
    "html": "",
    "htmlFr": "",
@@ -224,7 +224,7 @@
   },
   {
    "docId": "pdf-24",
-   "titleAr": "حِفْظُ أَوَامِرِ الله تَعَالَى",
+   "titleAr": "حفظ أوامر الله تعالى",
    "titleFr": "Préserver les commandements de Dieu",
    "html": "",
    "htmlFr": "",
@@ -233,7 +233,7 @@
   },
   {
    "docId": "pdf-25",
-   "titleAr": "الْحَيَاءُ مِنَ الْإِيمَانِ",
+   "titleAr": "الحياء من الإيمان",
    "titleFr": "La pudeur fait partie de la foi",
    "html": "",
    "htmlFr": "",
@@ -242,7 +242,7 @@
   },
   {
    "docId": "pdf-26",
-   "titleAr": "الِاسْتِقَامَةُ",
+   "titleAr": "الاستقامة",
    "titleFr": "La droiture (istiqāma)",
    "html": "",
    "htmlFr": "",
@@ -251,8 +251,8 @@
   },
   {
    "docId": "pdf-27",
-   "titleAr": "مِمَّا يُدْخِلُ الْجَنَّةَ",
-   "titleFr": "Ce qui mène au Paradis",
+   "titleAr": "مما يدخل الجنة",
+   "titleFr": "Ce qui fait entrer au Paradis",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الخامس-ابتدائي/المدرج/F1561.PDF",
@@ -260,8 +260,8 @@
   },
   {
    "docId": "pdf-28",
-   "titleAr": "دَعْمٌ وَتَطْبِيقٌ",
-   "titleFr": "Soutien et application",
+   "titleAr": "دعم وتطبيق",
+   "titleFr": "Consolidation et application",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الخامس-ابتدائي/المدرج/285EA21.PDF",
@@ -269,7 +269,7 @@
   },
   {
    "docId": "pdf-29",
-   "titleAr": "لَائِحَةُ الْمَصَادِرِ وَالْمَرَاجِعِ",
+   "titleAr": "لائحة المصادر والمراجع",
    "titleFr": "Liste des sources et références",
    "html": "",
    "htmlFr": "",

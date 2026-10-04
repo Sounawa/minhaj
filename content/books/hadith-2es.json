@@ -18,7 +18,7 @@
   {
    "docId": "pdf-2",
    "titleAr": "أحكام القصر والجمع بين الصلاتين في السفر والحضر",
-   "titleFr": "Règles du raccourcissement et du regroupement des prières (voyage et séjour)",
+   "titleFr": "Les règles de l'abrègement et du regroupement des prières, en voyage et à domicile",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2025/المديريات/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الثانية-إعدادي/1_._أحكام_القصر_والجمع_بين_الصلاتين_في_السفر_والحض.pdf",
@@ -36,7 +36,7 @@
   {
    "docId": "pdf-4",
    "titleAr": "من مستحبات الصلاة وآدابها",
-   "titleFr": "Des actes recommandés et bienséances de la prière",
+   "titleFr": "Des actes recommandés et des bienséances de la prière",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2025/المديريات/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الثانية-إعدادي/3_._من_مستحبات_الصلاة_وآدابها.pdf",
@@ -45,7 +45,7 @@
   {
    "docId": "pdf-5",
    "titleAr": "الالتفات والتصفيق والكلام في الصلاة",
-   "titleFr": "Se retourner, claquer des mains et parler pendant la prière",
+   "titleFr": "Se retourner, faire signer [en frappant des mains] et parler pendant la prière",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2025/المديريات/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الثانية-إعدادي/4_._الالتفات_والتصفيق_والكلام_في_الصلاة.pdf",
@@ -54,7 +54,7 @@
   {
    "docId": "pdf-6",
    "titleAr": "ما يطلب فعله أو تركه في الصلاة فرضا ونفلا",
-   "titleFr": "Ce qu'il faut faire ou délaisser dans la prière, obligatoire ou surérogatoire",
+   "titleFr": "Ce qu'il faut accomplir ou délaisser dans la prière, obligatoire ou surérogatoire",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2025/المديريات/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الثانية-إعدادي/5_._ما_يطلب_فعله_أو_تركه_في_الصلاة_فرضا_ونفلا.pdf",
@@ -63,7 +63,7 @@
   {
    "docId": "pdf-7",
    "titleAr": "أحكام العيدين",
-   "titleFr": "Les règles des deux fêtes (ʿīd)",
+   "titleFr": "Les règles des deux fêtes (ʿīdayn)",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2025/المديريات/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الثانية-إعدادي/6_._أحكام_العيدين.pdf",
@@ -72,7 +72,7 @@
   {
    "docId": "pdf-8",
    "titleAr": "صلاة الخوف والكسوف والخسوف",
-   "titleFr": "La prière de la peur, des éclipses solaire et lunaire",
+   "titleFr": "La prière du danger (ḫawf) et des éclipses solaire et lunaire",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2025/المديريات/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الثانية-إعدادي/7_._صلاة_الخوف_والكسوف_والخسوف.pdf",
@@ -89,7 +89,7 @@
   },
   {
    "docId": "pdf-10",
-   "titleAr": "أحكام القِبلة وفضل المسجد النبوي",
+   "titleAr": "أحكام القبلة وفضل المسجد النبوي",
    "titleFr": "Règles de la qibla et mérite de la mosquée du Prophète ﷺ",
    "html": "",
    "htmlFr": "",
@@ -99,7 +99,7 @@
   {
    "docId": "pdf-11",
    "titleAr": "الطهارة لمس المصحف وسجود التلاوة",
-   "titleFr": "Pureté pour toucher le Coran et prosternation de la récitation",
+   "titleFr": "La purification requise pour toucher le muṣḥaf et la prosternation de récitation",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2025/المديريات/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الثانية-إعدادي/10_._الطهارة_لمس_المصحف_وسجود_التلاوة.pdf",
@@ -108,7 +108,7 @@
   {
    "docId": "pdf-12",
    "titleAr": "فضل الذكر والدعاء",
-   "titleFr": "Le mérite de l'évocation (dhikr) et de l'invocation",
+   "titleFr": "Le mérite de l'évocation (ḏikr) et de l'invocation (duʿāʾ)",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2025/المديريات/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الثانية-إعدادي/11_._فضل_الذكر_والدعاء.pdf",
@@ -117,7 +117,7 @@
   {
    "docId": "pdf-13",
    "titleAr": "حكم الصلاة بعد الصبح والعصر",
-   "titleFr": "Statut de la prière après faḍr et ʿaṣr",
+   "titleFr": "Les prières surérogatoires après le faǧr et le ʿaṣr",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2025/المديريات/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الثانية-إعدادي/12_._حكم_الصلاة_بعد_الصبح_والعصر.pdf",
@@ -126,7 +126,7 @@
   {
    "docId": "pdf-14",
    "titleAr": "أحكام الجنائز (غسل الميت وكفنه والصلاة عليه)",
-   "titleFr": "Dispositions pour les funérailles (laver le mort, l'envelopper et prier pour lui)",
+   "titleFr": "Les rites funéraires (ǧanāʾiz) : lavage du défunt, linceul et prière",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2025/المديريات/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الثانية-إعدادي/13_._أحكام_الجنائز_-غسل_الميت_وكفنه_والصلاة_عليه.pdf",
@@ -135,7 +135,7 @@
   {
    "docId": "pdf-15",
    "titleAr": "أحكام الجنائز (القبر والدفن وآداب الجنازة)",
-   "titleFr": "Dispositions pour les funérailles (tombe, enterrement et étiquette funéraire)",
+   "titleFr": "Les rites funéraires (ǧanāʾiz) : tombe, inhumation et bienséances",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2025/المديريات/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الثانية-إعدادي/14_._أحكام_الجنائز_-القبر_والدفن_وآداب_الجنازة.pdf",
@@ -153,7 +153,7 @@
   {
    "docId": "pdf-17",
    "titleAr": "زكاة المعادن والحلي وأموال اليتامى",
-   "titleFr": "Zakāt des métaux, des bijoux et des biens des orphelins",
+   "titleFr": "La zakāt des minerais, des bijoux et des biens des orphelins",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2025/المديريات/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الثانية-إعدادي/16_._زكاة_المعادن_والحلي_وأموال_اليتامى.pdf",
@@ -162,7 +162,7 @@
   {
    "docId": "pdf-18",
    "titleAr": "زكاة الميراث والدين والعروض",
-   "titleFr": "Zakāt de l'héritage, des dettes et des marchandises",
+   "titleFr": "La zakāt des héritages, des créances et des marchandises",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2025/المديريات/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الثانية-إعدادي/17_._زكاة_الميراث_والدين_والعروض.pdf",
@@ -171,7 +171,7 @@
   {
    "docId": "pdf-19",
    "titleAr": "زكاة الماشية",
-   "titleFr": "La zakāt du bétail",
+   "titleFr": "La zakāt du cheptel",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2025/المديريات/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الثانية-إعدادي/18_._زكاة_الماشية.pdf",
@@ -180,7 +180,7 @@
   {
    "docId": "pdf-20",
    "titleAr": "زكاة خلطاء الماشية",
-   "titleFr": "Zakāt du bétail en association (khalṭa)",
+   "titleFr": "La zakāt du cheptel en association (ḫalṭa)",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2025/المديريات/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الثانية-إعدادي/19_._زكاة_خلطاء_الماشية.pdf",
@@ -188,8 +188,8 @@
   },
   {
    "docId": "pdf-21",
-   "titleAr": "زكاةُ الثمار والحبوب",
-   "titleFr": "Zakāt des fruits et des céréales",
+   "titleAr": "زكاة الثمار والحبوب",
+   "titleFr": "La zakāt des fruits et des céréales",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2025/المديريات/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الثانية-إعدادي/20_._زكاةُ_الثمار_والحبوب.pdf",
@@ -198,7 +198,7 @@
   {
    "docId": "pdf-22",
    "titleAr": "ما لا زكاة فيه والمستحقون للزكاة",
-   "titleFr": "Biens exempts de zakāt et ayants droit",
+   "titleFr": "Biens exemptés de zakāt et ayants droit",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2025/المديريات/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الثانية-إعدادي/21_._ما_لا_زكاة_فيه_والمستحقون_للزكاة.pdf",
@@ -207,7 +207,7 @@
   {
    "docId": "pdf-23",
    "titleAr": "زكاة الفطر",
-   "titleFr": "Zakât al-Fitr",
+   "titleFr": "La zakāt de la rupture (fiṭr)",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2025/المديريات/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الثانية-إعدادي/22_._زكاة_الفطر.pdf",
@@ -216,7 +216,7 @@
   {
    "docId": "pdf-24",
    "titleAr": "أحكام الصيام (1)",
-   "titleFr": "Règles sur le jeûne (1)",
+   "titleFr": "Les règles du jeûne (1)",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2025/المديريات/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الثانية-إعدادي/23_._أحكام_الصيام_1.pdf",
@@ -225,7 +225,7 @@
   {
    "docId": "pdf-25",
    "titleAr": "أحكام الصيام (2)",
-   "titleFr": "Règles sur le jeûne (2)",
+   "titleFr": "Les règles du jeûne (2)",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2025/المديريات/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الثانية-إعدادي/24_._أحكام_الصيام_2.pdf",
@@ -234,7 +234,7 @@
   {
    "docId": "pdf-26",
    "titleAr": "أحكام الصيام ( 3)",
-   "titleFr": "Règles sur le jeûne (3)",
+   "titleFr": "Les règles du jeûne (3)",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2025/المديريات/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الثانية-إعدادي/25_._أحكام_الصيام_3.pdf",
@@ -242,8 +242,8 @@
   },
   {
    "docId": "pdf-27",
-   "titleAr": "الصيام الممنوع والواجب وحكمُ من يشق عليه الصوم",
-   "titleFr": "Jeûnes interdits, obligatoires et cas de dispense",
+   "titleAr": "الصيام الممنوع والواجب وحكم من يشق عليه الصوم",
+   "titleFr": "Jeûnes proscrits et prescrits ; statut de celui pour qui jeûner est pénible",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2025/المديريات/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الثانية-إعدادي/2682F41.PDF",
@@ -252,7 +252,7 @@
   {
    "docId": "pdf-28",
    "titleAr": "القضاء والفدية في الصيام",
-   "titleFr": "Rattrapage et compensation (fiḍya) du jeûne",
+   "titleFr": "Rattrapage (qaḍāʾ) et compensation (fidya) du jeûne",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2025/المديريات/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الثانية-إعدادي/27_._القضاء_والفدية_في_الصيام.pdf",
@@ -261,7 +261,7 @@
   {
    "docId": "pdf-29",
    "titleAr": "فضل الصيام وحكم صوم يوم الجمعة وستة أيام من شوال",
-   "titleFr": "Mérite du jeûne ; vendredi et six jours de shawwāl",
+   "titleFr": "Le mérite du jeûne ; statut du jeûne du vendredi et des six jours de šawwāl",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2025/المديريات/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الثانية-إعدادي/28673C1.PDF",
@@ -270,7 +270,7 @@
   {
    "docId": "pdf-30",
    "titleAr": "فهرس الأعلام المترجم لها",
-   "titleFr": "Index des figures citées",
+   "titleFr": "Index des figures présentées",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2025/المديريات/التعليم-العتيق/دروس-التعليم-العتيق/الحديث-الثانية-إعدادي/فهرس_الأعلام_المترجم_لها.pdf",

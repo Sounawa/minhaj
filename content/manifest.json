@@ -1,7 +1,7 @@
 {
   "version": 6,
   "provisional": false,
-  "note": "Corpus Taʿlīm ʿatīq — 63 livres, 1828 documents (891 leçons bilingues intégrales, 52 introductions, 885 leçons référence PDF officiel). 63/64 livres du programme officiel ; hadith-tanawi-2 reste à sourcer (leçons PDF non publiées en HTML sur le site officiel).",
+  "note": "Corpus Taʿlīm ʿatīq — 63 livres (grille en ligne complète), 1835 documents (887 leçons bilingues intégrales, 63 introductions, 885 leçons référence PDF officiel). hadith-tanawi-2 (Muwaṭṭaʾ 2ᵉ lycée) : leçons non publiées à ce jour par le ministère — présentation seule. Objectif officiel du programme : 64 manuels.",
   "program": {
     "nameAr": "المنهاج النموذجي للتعليم العتيق",
     "nameFr": "Programme modèle de l'enseignement traditionnel (Taʿlīm ʿatīq)",
@@ -264,29 +264,20 @@
   ],
   "books": [
     {
-      "id": "tafsir-1ep",
-      "subject": "tafsir",
-      "level": "1ep",
-      "titleAr": "التفسير من خلال تفسير الجلالين",
-      "titleFr": "Tafsīr — le Tafsīr al-Jalālayn",
-      "order": 1,
-      "textbookAr": "التفسير من خلال تفسير الجلالين"
-    },
-    {
       "id": "fiqh-1ep",
       "subject": "fiqh",
       "level": "4ep",
       "titleAr": "الفقه من متن الأخضري بشرح الآبي الأزهري للسنة الرابعة من التعليم الابتدائي العتيق",
       "titleFr": "Fiqh — le Mukhtaṣar d'al-Akhdarī, comm. d'al-Ābī al-Azharī",
-      "order": 2
+      "order": 1
     },
     {
-      "id": "tafsir-4ep",
+      "id": "tafsir-1ep",
       "subject": "tafsir",
       "level": "4ep",
       "titleAr": "التفسير من خلال تفسير الجلالين",
       "titleFr": "Tafsīr — le Tafsīr al-Jalālayn",
-      "order": 3,
+      "order": 2,
       "textbookAr": "التفسير من خلال تفسير الجلالين"
     },
     {
@@ -295,7 +286,7 @@
       "level": "4ep",
       "titleAr": "الحديث من رياض الصالحين للإمام النووي بشرح روضة المتقين",
       "titleFr": "Ḥadīth — Riyāḍ al-Ṣāliḥīn d'al-Nawawī, comm. Rawḍat al-Muttaqīn",
-      "order": 4,
+      "order": 3,
       "textbookAr": "الحديث من رياض الصالحين للإمام النووي بشرح روضة المتقين"
     },
     {
@@ -304,7 +295,7 @@
       "level": "4ep",
       "titleAr": "الرسم والضبط",
       "titleFr": "Rasm et ḍabṭ — graphie et vocalisation coraniques",
-      "order": 5,
+      "order": 4,
       "textbookAr": "الرسم والضبط"
     },
     {
@@ -313,7 +304,7 @@
       "level": "4ep",
       "titleAr": "أصول القيم في القرآن والسنة",
       "titleFr": "Fondements des valeurs dans le Coran et la Sunna",
-      "order": 6,
+      "order": 5,
       "textbookAr": "أصول القيم في القرآن والسنة"
     },
     {
@@ -322,7 +313,7 @@
       "level": "5ep",
       "titleAr": "الفقه من منظومة المرشد المعين لابن عاشر بشرح ميارة الفاسي للسنة الخامسة من التعليم الابتدائي العتيق",
       "titleFr": "Fiqh — le Murshid al-Muʿīn d'Ibn ʿĀshir, comm. de Mayyāra al-Fāsī (5ᵉ primaire)",
-      "order": 7
+      "order": 6
     },
     {
       "id": "tajwid-5ep",
@@ -330,7 +321,7 @@
       "level": "5ep",
       "titleAr": "التجويد: تطبيقات على نظم تحفة الأطفال للجمزوري",
       "titleFr": "Tajwīd — applications de la Tuḥfat al-Aṭfāl d'al-Jamzūrī",
-      "order": 8,
+      "order": 7,
       "textbookAr": "التجويد: تطبيقات على نظم تحفة الأطفال للجمزوري"
     },
     {
@@ -339,7 +330,7 @@
       "level": "5ep",
       "titleAr": "التفسير من خلال تفسير الجلالين",
       "titleFr": "Tafsīr — le Tafsīr al-Jalālayn",
-      "order": 9,
+      "order": 8,
       "textbookAr": "التفسير من خلال تفسير الجلالين"
     },
     {
@@ -348,7 +339,7 @@
       "level": "5ep",
       "titleAr": "الحديث من كتاب الأربعين النووية للإمام النووي بشرح ابن دقيق العيد للسنة الخامسة من التعليم الابتدائي العتيق",
       "titleFr": "Ḥadīth — les Quarante hadiths d'al-Nawawī, comm. d'Ibn Daqīq al-ʿĪd (5ᵉ primaire)",
-      "order": 10
+      "order": 9
     },
     {
       "id": "rasm-wa-dabt-5ep",
@@ -356,7 +347,7 @@
       "level": "5ep",
       "titleAr": "الرسم والضبط من أرجوزة عمدة البيان لإدريس الودغيري",
       "titleFr": "Rasm et ḍabṭ — ʿUmdat al-Bayān d'al-Wadghīrī",
-      "order": 11,
+      "order": 10,
       "textbookAr": "الرسم والضبط من أرجوزة عمدة البيان لإدريس الودغيري"
     },
     {
@@ -365,7 +356,7 @@
       "level": "5ep",
       "titleAr": "أصول القيم في القرآن والسنة",
       "titleFr": "Fondements des valeurs dans le Coran et la Sunna (5ᵉ)",
-      "order": 12,
+      "order": 11,
       "textbookAr": "أصول القيم في القرآن والسنة"
     },
     {
@@ -374,7 +365,7 @@
       "level": "6ep",
       "titleAr": "الفقه من منظومة المرشد المعين لابن عاشر بشرح ميارة",
       "titleFr": "Fiqh — le Murshid al-Muʿīn d'Ibn ʿĀshir, comm. de Mayyāra",
-      "order": 13,
+      "order": 12,
       "textbookAr": "الفقه من منظومة المرشد المعين لابن عاشر بشرح ميارة"
     },
     {
@@ -383,7 +374,7 @@
       "level": "6ep",
       "titleAr": "التجويد من نظم الدرر اللوامع للإمام ابن بري",
       "titleFr": "Tajwīd — Naẓm al-Durar al-Lawāmiʿ d'Ibn Barrī",
-      "order": 14,
+      "order": 13,
       "textbookAr": "التجويد من نظم الدرر اللوامع للإمام ابن بري"
     },
     {
@@ -392,7 +383,7 @@
       "level": "6ep",
       "titleAr": "التفسير من خلال تفسير الجلالين",
       "titleFr": "Tafsīr — le Tafsīr al-Jalālayn",
-      "order": 15,
+      "order": 14,
       "textbookAr": "التفسير من خلال تفسير الجلالين"
     },
     {
@@ -401,7 +392,7 @@
       "level": "6ep",
       "titleAr": "الحديث من كتاب الأربعين النووية بشرح ابن دقيق العيد",
       "titleFr": "Ḥadīth — les Quarante hadiths d'al-Nawawī, comm. d'Ibn Daqīq al-ʿĪd",
-      "order": 16,
+      "order": 15,
       "textbookAr": "الحديث من كتاب الأربعين النووية بشرح ابن دقيق العيد"
     },
     {
@@ -410,7 +401,7 @@
       "level": "6ep",
       "titleAr": "الرسم والضبط من أرجوزة عمدة البيان لإدريس الودغيري",
       "titleFr": "Rasm et ḍabṭ — ʿUmdat al-Bayān d'al-Wadghīrī (fin)",
-      "order": 17,
+      "order": 16,
       "textbookAr": "الرسم والضبط من أرجوزة عمدة البيان لإدريس الودغيري"
     },
     {
@@ -419,7 +410,7 @@
       "level": "6ep",
       "titleAr": "أصول القيم في القرآن والسنة",
       "titleFr": "Fondements des valeurs dans le Coran et la Sunna (6ᵉ)",
-      "order": 18,
+      "order": 17,
       "textbookAr": "أصول القيم في القرآن والسنة"
     },
     {
@@ -428,7 +419,7 @@
       "level": "1es",
       "titleAr": "التوحيد من متن الرسالة لابن أبي زيد القيرواني",
       "titleFr": "Tawḥīd — la Risāla d'Ibn Abī Zayd al-Qayrawānī",
-      "order": 19,
+      "order": 18,
       "textbookAr": "التوحيد من متن الرسالة لابن أبي زيد القيرواني"
     },
     {
@@ -437,7 +428,7 @@
       "level": "1es",
       "titleAr": "الفقه من متن الرسالة لابن أبي زيد القيرواني بشرح كفاية الطالب الرباني",
       "titleFr": "Fiqh — la Risāla d'Ibn Abī Zayd al-Qayrawānī",
-      "order": 20,
+      "order": 19,
       "textbookAr": "الفقه من متن الرسالة لابن أبي زيد القيرواني بشرح كفاية الطالب الرباني"
     },
     {
@@ -446,7 +437,7 @@
       "level": "1es",
       "titleAr": "السيرة النبوية",
       "titleFr": "Sīra — la biographie du Prophète ﷺ",
-      "order": 21,
+      "order": 20,
       "textbookAr": "السيرة النبوية"
     },
     {
@@ -455,7 +446,7 @@
       "level": "1es",
       "titleAr": "التفسير من خلال التسهيل لعلوم التنزيل لابن جزي",
       "titleFr": "Tafsīr — al-Tashīl li-ʿUlūm al-Tanzīl d'Ibn Juzayy",
-      "order": 22,
+      "order": 21,
       "textbookAr": "التفسير من خلال التسهيل لعلوم التنزيل لابن جزي"
     },
     {
@@ -464,7 +455,7 @@
       "level": "1es",
       "titleAr": "الحديث من موطأ الإمام مالك بشرح الزرقاني",
       "titleFr": "Ḥadīth — le Muwaṭṭaʾ de l'imam Mālik, comm. d'al-Zarqānī",
-      "order": 23,
+      "order": 22,
       "textbookAr": "الحديث من موطأ الإمام مالك بشرح الزرقاني"
     },
     {
@@ -473,7 +464,7 @@
       "level": "1es",
       "titleAr": "علوم القرآن",
       "titleFr": "Sciences du Coran — ʿulūm al-Qurʾān",
-      "order": 24,
+      "order": 23,
       "textbookAr": "علوم القرآن"
     },
     {
@@ -482,7 +473,7 @@
       "level": "2es",
       "titleAr": "التوحيد من منظومة المرشد المعين على الضروري من علوم الدين لعبد الواحد بن عاشر",
       "titleFr": "Tawḥīd — le Murshid al-Muʿīn d'Ibn ʿĀshir",
-      "order": 25,
+      "order": 24,
       "textbookAr": "التوحيد من منظومة المرشد المعين على الضروري من علوم الدين لعبد الواحد بن عاشر"
     },
     {
@@ -491,7 +482,7 @@
       "level": "2es",
       "titleAr": "الفقه من رسالة ابن أبي زيد القيرواني بشرح كفاية الطالب الرباني بحاشية العدوي للسنة الثانية من التعليم الإعدادي العتيق",
       "titleFr": "Fiqh — la Risāla d'Ibn Abī Zayd, comm. al-Kifāya + ḥāshiya al-ʿAdawī (2ᵉ collège)",
-      "order": 26
+      "order": 25
     },
     {
       "id": "sira-2es",
@@ -499,7 +490,7 @@
       "level": "2es",
       "titleAr": "السيرة النبوية",
       "titleFr": "Sīra — la biographie du Prophète ﷺ (2ᵉ collège)",
-      "order": 27,
+      "order": 26,
       "textbookAr": "السيرة النبوية"
     },
     {
@@ -508,7 +499,7 @@
       "level": "2es",
       "titleAr": "التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لإبراهيم المارغني",
       "titleFr": "Tajwīd — al-Durar al-Lawāmiʿ d'Ibn Barrī, comm. al-Nujūm al-Ṭawāliʿ",
-      "order": 28,
+      "order": 27,
       "textbookAr": "التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لإبراهيم المارغني"
     },
     {
@@ -517,7 +508,7 @@
       "level": "2es",
       "titleAr": "التفسير من خلال التسهيل لعلوم التنزيل لابن جزي",
       "titleFr": "Tafsīr — al-Tashīl li-ʿUlūm al-Tanzīl d'Ibn Juzayy (suite)",
-      "order": 29,
+      "order": 28,
       "textbookAr": "التفسير من خلال التسهيل لعلوم التنزيل لابن جزي"
     },
     {
@@ -526,7 +517,7 @@
       "level": "2es",
       "titleAr": "الحديث من موطأ الإمام مالك بشرح الزرقاني للسنة الثانية من التعليم الإعدادي العتيق",
       "titleFr": "Ḥadīth — le Muwaṭṭaʾ de l'imam Mālik, comm. d'al-Zarqānī (2ᵉ collège)",
-      "order": 30
+      "order": 29
     },
     {
       "id": "ulum-quran-2es",
@@ -534,7 +525,7 @@
       "level": "2es",
       "titleAr": "علوم القرآن",
       "titleFr": "Sciences du Coran — ʿulūm al-Qurʾān (2ᵉ collège)",
-      "order": 31,
+      "order": 30,
       "textbookAr": "علوم القرآن"
     },
     {
@@ -543,7 +534,7 @@
       "level": "3es",
       "titleAr": "الفقه من متن الرسالة لابن أبي زيد القيرواني بشرح كفاية الطالب الرباني بحاشية العدوي",
       "titleFr": "Fiqh — la Risāla d'Ibn Abī Zayd al-Qayrawānī (suite)",
-      "order": 32,
+      "order": 31,
       "textbookAr": "الفقه من متن الرسالة لابن أبي زيد القيرواني بشرح كفاية الطالب الرباني بحاشية العدوي"
     },
     {
@@ -552,7 +543,7 @@
       "level": "3es",
       "titleAr": "السيرة النبوية",
       "titleFr": "Sīra — la biographie du Prophète ﷺ (3ᵉ collège)",
-      "order": 33,
+      "order": 32,
       "textbookAr": "السيرة النبوية"
     },
     {
@@ -561,7 +552,7 @@
       "level": "3es",
       "titleAr": "التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لإبراهيم المارغني",
       "titleFr": "Tajwīd — al-Durar al-Lawāmiʿ d'Ibn Barrī (suite)",
-      "order": 34,
+      "order": 33,
       "textbookAr": "التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لإبراهيم المارغني"
     },
     {
@@ -570,7 +561,7 @@
       "level": "3es",
       "titleAr": "التفسير من خلال التسهيل لعلوم التنزيل لابن جزي",
       "titleFr": "Tafsīr — al-Tashīl li-ʿUlūm al-Tanzīl d'Ibn Juzayy (fin)",
-      "order": 35,
+      "order": 34,
       "textbookAr": "التفسير من خلال التسهيل لعلوم التنزيل لابن جزي"
     },
     {
@@ -579,8 +570,17 @@
       "level": "3es",
       "titleAr": "الحديث من موطأ الإمام مالك بشرح الزرقاني",
       "titleFr": "Ḥadīth — le Muwaṭṭaʾ de l'imam Mālik (suite)",
-      "order": 36,
+      "order": 35,
       "textbookAr": "الحديث من موطأ الإمام مالك بشرح الزرقاني"
+    },
+    {
+      "id": "usul-fiqh-waraqat",
+      "subject": "usul-fiqh",
+      "level": "3es",
+      "titleAr": "كتاب أصول الفقه من ورقات إمام الحرمين بشرح الحطاب الرعيني",
+      "titleFr": "Uṣūl al-fiqh — al-Warāqāt d'al-Juwaynī, comm. d'al-Ḥaṭṭāb",
+      "order": 36,
+      "textbookAr": "كتاب أصول الفقه من ورقات إمام الحرمين بشرح الحطاب الرعيني"
     },
     {
       "id": "ulum-quran-3es",
@@ -690,22 +690,21 @@
       "textbookAr": "التفسير من خلال المحرر الوجيز في تفسير الكتاب العزيز لابن عطية"
     },
     {
+      "id": "hadith-tanawi-2",
+      "subject": "hadith",
+      "level": "tanawi-2",
+      "titleAr": "الحديث من موطأ الإمام مالك بشرح الزرقاني للسنة الثانية من التعليم الثانوي العتيق",
+      "titleFr": "Ḥadīth — le Muwaṭṭaʾ de l'imam Mālik (2ᵉ lycée)",
+      "order": 49
+    },
+    {
       "id": "usul-fiqh-tanawi-2",
       "subject": "usul-fiqh",
       "level": "tanawi-2",
       "titleAr": "أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم الغرناطي",
       "titleFr": "Uṣūl al-fiqh — Marṭaqī al-Wuṣūl d'Ibn ʿĀṣim (2ᵉ lycée)",
-      "order": 49,
-      "textbookAr": "أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم الغرناطي"
-    },
-    {
-      "id": "usul-fiqh-waraqat",
-      "subject": "usul-fiqh",
-      "level": "tanawi-2",
-      "titleAr": "كتاب أصول الفقه من ورقات إمام الحرمين بشرح الحطاب الرعيني",
-      "titleFr": "Uṣūl al-fiqh — al-Warāqāt d'al-Juwaynī, comm. d'al-Ḥaṭṭāb",
       "order": 50,
-      "textbookAr": "كتاب أصول الفقه من ورقات إمام الحرمين بشرح الحطاب الرعيني"
+      "textbookAr": "أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم الغرناطي"
     },
     {
       "id": "ulum-hadith-tanawi-2",
@@ -825,5 +824,5 @@
       "textbookAr": "الفكر الإسلامي: التصوف الإسلامي"
     }
   ],
-  "goalDocs": 1828
+  "goalDocs": 1835
 }

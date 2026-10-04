@@ -7,7 +7,13 @@
  "titleAr": "التفسير من خلال تفسير الجلالين",
  "titleFr": "Tafsīr — le Tafsīr al-Jalālayn",
  "pdfUrl": null,
- "intro": null,
+ "intro": {
+  "docId": "muqaddima",
+  "titleAr": "تقديم الكتاب",
+  "titleFr": "Présentation du manuel",
+  "html": "<p>تتوالى مادة التفسير في السنة الخامسة من التعليم الابتدائي العتيق على «تفسير الجلالين» ذاته، وتغطي دروس هذا المستوى الحزب التاسع والخمسين من القرآن الكريم، بالتوازي مع مقرر الحفظ في هذا الطور.</p>\n<p>ويتدرب التلميذ على القراءة المتأنية لتفسير الجلالين، واستخراج المعاني الجزئية والكليات للآيات، والوقوف على أسباب النزول وما تدعو إليه الآيات من قيم تربوية وسلوكية.</p>",
+  "htmlFr": "<p>En cinquième année du cycle primaire, l'exégèse se poursuit avec le même <em>Tafsīr al-Jalālayn</em> : les leçons de ce niveau couvrent le cinquante-neuvième <em>ḥizb</em> du Noble Coran, en parallèle du programme de mémorisation propre à ce degré.</p>\n<p>L'élève s'exerce à une lecture suivie du commentaire, à l'extraction des sens particuliers et globaux des versets, à l'attention portée aux circonstances de la révélation et aux valeurs éducatives et morales que les versets appellent.</p>"
+ },
  "lessons": [
   {
    "docId": "13886",
@@ -271,7 +277,7 @@
   {
    "docId": "pdf-mut23h3c-737",
    "titleAr": "فهرس الأعلام",
-   "titleFr": "Index des drapeaux",
+   "titleFr": "Index des figures citées",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثانية-ثانوي/فهرس_الأعلام.pdf",
@@ -523,7 +529,7 @@
   {
    "docId": "pdf-mut23h3c-765",
    "titleAr": "أنشطة التثبيت والدعم",
-   "titleFr": "Activités d’installation et de support",
+   "titleFr": "Activités de consolidation et de soutien",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/أنشطة_التثبيت_والدعم.pdf",
@@ -532,7 +538,7 @@
   {
    "docId": "pdf-mut23h3c-766",
    "titleAr": "فهرس الأعلام",
-   "titleFr": "Index des drapeaux",
+   "titleFr": "Index des figures citées",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/فهرس_الأعلام.pdf",
@@ -549,7 +555,7 @@
   },
   {
    "docId": "pdf-mut23h3c-768",
-   "titleAr": "&nbsp;سورة فاطر الآيات : 1 - 3",
+   "titleAr": "سورة فاطر الآيات : 1 - 3",
    "titleFr": "Sourate Fatir, versets : 1-3",
    "html": "",
    "htmlFr": "",
@@ -802,7 +808,7 @@
   {
    "docId": "pdf-mut23h3c-796",
    "titleAr": "فهرس الأعلام",
-   "titleFr": "Index des drapeaux",
+   "titleFr": "Index des figures citées",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثانية-إعدادي/فهرس_الأعلام.pdf",
@@ -820,7 +826,7 @@
   {
    "docId": "pdf-mut23h3c-798",
    "titleAr": "الدرس اسادس",
-   "titleFr": "Leçon six",
+   "titleFr": "Sixième leçon",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2017/التعليم_العتيق_ومحو_الأمية_بالمساجد/الكتب_المدرسية/التفسير/الإعدادي/الثالث-إعدادي/سورة_الشورى_الآيات_18-20.pdf",
@@ -829,7 +835,7 @@
   {
    "docId": "pdf-mut23h3c-799",
    "titleAr": "الدرس اخامس",
-   "titleFr": "Leçon cinq",
+   "titleFr": "Cinquième leçon",
    "html": "",
    "htmlFr": "",
    "pdfUrl": "https://www.habous.gov.ma/images/2017/التعليم_العتيق_ومحو_الأمية_بالمساجد/الكتب_المدرسية/التفسير/الإعدادي/الثالث-إعدادي/سورة_الشورى_الآيات_14-17.pdf",

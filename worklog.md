@@ -375,3 +375,71 @@ Stage Summary:
 - Restent : hadith-tanawi-2 (64ᵉ livre, aucune page HTML), usul-fiqh-tanawi-1
   (catégorie inconnue — PDF non moissonnés), 11 intros manquantes, révision
   du contenu FR des leçons intégrales.
+---
+Task ID: R9
+Agent: agent principal (Z.ai Code)
+Task: Élimination des GT-ismes des titres FR (passe manuelle complète) + corrections de grille du corpus + 64ᵉ livre + intros manquantes
+
+Work Log:
+- **R9-a/b : retraduction manuelle des titres.** Extraction des 885 titres pdfOnly
+  (737 uniques) + des titres intégraux à préfixe livre ; 3 lots de dictionnaire
+  manuel AR→FR (r9-fix-titles.ts 565 corrections, r9-fix-titles2.ts 212,
+  r9-fix-titles3.ts 189, +1 manuelle) = **966 titres retraduits** — terminologie
+  technique fiqh/hadith/tajwid/qiraat/usul/tasawwuf/mantiq/miqat avec
+  translittérations savantes (qirāḍ « commandite », istiṣḥāb « présomption de
+  permanence », mawḍūʿ « fabriqué », ʿawl « majoration », « les deux hamza
+  fatḥés », « points d'articulation », « allongement obligatoire verbal »…).
+  Scan final : 0 GT-isme résiduel (plus de « Extrait dîner partage », « Hébergement »,
+  « Télécharger », « réanimer les morts », « d'abeille », « Capturer les
+  connaissances », « Amusant en divorce », « Mahomet »…).
+- **R9-c : corrections de grille.**
+  1) usul-fiqh-waraqat : level tanawi-2 → **3es** (preuves : annonce officielle
+     10962 « للسنة الثالثة إعدادي » + intro du livre) — le Warāqāt est le manuel
+     d'uṣūl de 3ᵉ collège, encadré par Murtaqā al-Wuṣūl t1/t2/t3 au lycée.
+  2) Doublon découvert : « tafsir-1ep » (57 leçons, titres « للسنة الرابعة ») et
+     « tafsir-4ep » (6 pages d'apparat, docIds 12016+) = UN seul livre (le tafsīr
+     commence en 4ᵉ année, comme fiqh et hadith — confirmé par les catégories
+     officielles : pas de tafsīr ep 1-3). Fusion : id conservé « tafsir-1ep »
+     (stabilité des routes, précédent fiqh-1ep), level → 4ep, intro = 12016,
+     annexes 13621/13622 conservées, pages-guide 12017/12018/12302 écartées
+     (convention R8), tafsir-4ep.json supprimé (r9-merge-tafsir.ts).
+  3) hadith-tanawi-2 (64ᵉ slot, Muwaṭṭaʾ 2ᵉ lycée) créé avec intro bilingue
+     manuscrite + flag `unpublished: true` : vérifié que le ministère n'a publié
+     NI page de livre NI catégorie NI leçon pour ce niveau (sujets الحديث,
+     منشورات, recherche interne com_finder, pagination complète de الفقه/الثانوي).
+  4) Vérification exhaustive des 16 sujets (توقيت 1698/1704, سيرة 1610/1621/1664,
+     توحيد 1618/1619) : la grille EN LIGNE = 63 manuels exactement (dont
+     hadith-t2 non publié). Objectif officiel du programme maintenu : 64.
+  5) UI : BookFile/BookSummary/BookDetailPayload + flag unpublished ; carte
+     dédiée « Leçons non publiées par le ministère » ; filtre leçons masqué si
+     0 leçon.
+- **R9-d : 10 intros bilingues rédigées à la main** (r9-add-intros.ts) :
+  tafsir-5ep (59ᵉ ḥizb), tafsir-tanawi-1 (al-Naḥl), tafsir-tanawi-2 (al-Isrāʾ),
+  ulum-quran-2es/3es (Manāhil al-ʿIrfān), tawhid-1es (Risāla/Kifāya), tawhid-2es
+  (Muršid/Dr al-Ṯamīn), rasm-wa-dabt-4ep (ʿUmdat al-Bayān), taqtit-tanawi-1
+  (Muqniʿ/Marghīthī), mantiq-tanawi-1 (Sullam/Qwaysnī). docId synthétique
+  « muqaddima » pour les intros sans page officielle (bug lecteur 404 détecté
+  en QA et corrigé). **100 % des 63 livres ont désormais une intro bilingue.**
+- **QA agent-browser** : accueil 63 manuels/950/1152/1835 docs ✓ ; hadith-tanawi-2
+  (intro + carte unpublished + footer) ✓ ; tafsir-1ep badge « 4ᵉ primaire » 60
+  docs 100 % ✓ ; faraid-t3 titres retraduits ✓ ; sira-2es/sira-1es TOC impeccable ✓ ;
+  lecteur mantiq intro bilingue AR+FR ✓ ; recherche « majoration »/« présomption »
+  → bons résultats ✓ ; 0 erreur console ; lint 0 erreur. Manifeste v6 regenéré
+  (note corrigée). Backup 20261004-011644 (11 Mo) + commit R9.
+
+Stage Summary:
+- **Corpus : 63 livres (grille en ligne complète, 0 doublon) / 1 835 documents
+  (887 leçons intégrales bilingues + 63 intros + 885 leçons référence PDF) —
+  950/1152 bilingues (82 %).** Le programme officiel vise 64 manuels : le 64ᵉ
+  (hadith-tanawi-2) est présenté mais non publié par le ministère.
+- Grille niveaux désormais exacte : ep 4-5-6 (tafsīr/fiqh/hadith/rasm/usul-qiyam
+  + tajwid 5-6), es 1-3, tanawi 1-3 ; waraqat en 3es ; 1ep-3ep vides (normal).
+- Qualité éditoriale FR : ~970 titres retraduits à la main ; 10 nouvelles intros
+  savantes bilingues.
+- Scripts pérennes : r9-fix-titles{,2,3}.ts, r9-grid-fix.ts, r9-merge-tafsir.ts,
+  r9-add-intros.ts, regen-manifest.ts (note à jour).
+- Priorités suivantes : (1) révision du CONTENU FR des leçons intégrales
+  (htmlFr GT-ismes résiduels, ex. « enseignement préparatoire ancien »), 
+  (2) amélioration des stubs PDF si un canal binaire émerge, (3) enrichissement
+  UI éventuel (fil d'Ariane subjects, export/print d'une leçon), (4) surveiller
+  la publication officielle des leçons de hadith-tanawi-2 (catégorie 1608-like).

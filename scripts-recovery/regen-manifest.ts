@@ -53,11 +53,11 @@ manifest.provisional = false;
 manifest.books = books;
 manifest.goalDocs = docs;
 manifest.note =
-  `Corpus Taʿlīm ʿatīq — ${books.length} livres, ${docs} documents ` +
+  `Corpus Taʿlīm ʿatīq — ${books.length} livres (grille en ligne complète), ${docs} documents ` +
   `(${fullText} leçons bilingues intégrales, ${intros} introductions, ` +
   `${pdfLessons} leçons référence PDF officiel). ` +
-  `63/64 livres du programme officiel ; hadith-tanawi-2 reste à sourcer ` +
-  `(leçons PDF non publiées en HTML sur le site officiel).`;
+  `hadith-tanawi-2 (Muwaṭṭaʾ 2ᵉ lycée) : leçons non publiées à ce jour par le ` +
+  `ministère — présentation seule. Objectif officiel du programme : 64 manuels.`;
 
 writeFileSync(path.join(process.cwd(), "content", "manifest.json"), JSON.stringify(manifest, null, 2) + "\n", "utf-8");
 console.log(`Manifeste v6 : ${books.length} livres / ${docs} docs | ${fullText} intégral | ${intros} intros | ${pdfLessons} réf. PDF`);
