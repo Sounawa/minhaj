@@ -563,3 +563,35 @@ Stage Summary:
   13150, …, 13621/13622 annexes).
 - fiqh-1ep TERMINÉ (R10-b). Voir aussi : intro fiqh-1ep (11411) encore GT ; fiqh-5ep 10
   leçons GT à retraduire plus tard.
+---
+Task ID: R10-d
+Agent: agent principal (Z.ai Code)
+Task: Grille tafsīr corrigée + tafsir-1ep leçons 10-12 (sur périmètre corrigé à 29)
+
+Work Log:
+- **Découverte : tafsir-1ep était une chimère** (59 leçons) : 27 leçons 4ep (Fātiḥa + qṣār) +
+  30 documents du manuel 5ep (Ḥizb 59 : Nabaʾ, Nāziʿāt, ʿAbasa, Takwīr, Infiṭār, Muṭaffifīn,
+  Inshiqāq, Burūj, Ṭāriq + taqdīm officielle 12609 + annexes 14063/14067) + 2 annexes 4ep.
+- r10-grid-move-tafsir.ts : 30 leçons déplacées tafsir-1ep → tafsir-5ep (titres normalisés,
+  fix 16743 « ʿAbasa 1-10 » → en réalité 11-23 d'après le h1). **tafsir-1ep = 29 leçons
+  propres (27 + annexes 13621/13622), tafsir-5ep = 122 leçons** (31 html + 91 pdfOnly).
+  Manifeste regénéré (63 livres / 1835 docs inchangés — simple déplacement).
+- Leçons retraduites (suite R10-c) : 10. 12623 al-Shams (serment ×7, Ṣāliḥ et la chamelle,
+  Qurṭubī 20/78) · 11. 12960 al-Layl 12-21 (hudā, l'au-delà et ce monde, le plus pieux =
+  Abū Bakr selon Ibn Kathīr 8/422) · 12. 13044 al-Ḍuḥā (cause de la révélation, takbīr
+  final selon le Jalālayn, hadith « la richesse est celle de l'âme »).
+- Commits : grille (r10-grid-move-tafsir) + 3 leçons. Tafsir-1ep : 12/29.
+
+Stage Summary:
+- **tafsir-1ep : 12/29** — périmètre sain après correction. Ordre des leçons restantes :
+  13059 (Sharḥ), 13065 (Tīn), 13078 (ʿAlaq), 13084 (ʿAlaq 2), 13096 (Qadr), 13102 (Bayyina),
+  13109 (Zalzala), 13113 (ʿĀdiyāt), 13123 (Qāriʿa), 13143 (Takāthur+ʿAṣr), 13147 (Humaza),
+  13150 (Fīl+Quraysh), 13151 (Māʿūn+Kawthar), 13163 (Kāfirūn+Naṣr+Masad), 13193
+  (Ikhlāṣ+Muʿawwidhatayn), 13621/13622 (annexes).
+- ISSUE GRILLE EN SUSPENS : les 91 leçons pdfOnly de tafsir-5ep (al-Isrāʾ ×28+annexes,
+  al-Kahf ×26, Fāṭir ×14, Ḥadīd ×8, Mujādala ×6+annexes) appartiennent probablement à
+  tafsir-tanawi-2 (Isrāʾ) et tafsir-tanawi-3 (Kahf — son titre dit « تفسير سورة الكهف »,
+  29 pdfOnly, 0 html) ; Fāṭir/Ḥadīd/Mujādala à qualifier (tanawi-3 ?). À traiter dans un
+  futur passage grille (ne pas perdre : les docIds synthétiques pdf-mut23h3c-709…).
+- Titres FR tafsir-1ep restants à normaliser lors de la retraduction (ex. « Al-Duha » →
+  al-Ḍuḥā, « Al-Qaraa » → al-Qāriʿa…) via meta.json.
