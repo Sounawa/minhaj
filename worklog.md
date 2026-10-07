@@ -534,3 +534,32 @@ Stage Summary:
 - **Prochaine étape : tafsir-1ep (Tafsīr al-Jalālayn, 59 leçons, 60/60 docs bilingues GT)** —
   appliquer le même protocole : extract-src → traduction savante → tr-out → agent-merge → commit.
 - Après tafsir-1ep : hadith-1ep, puis revoir l'intro fiqh-1ep, puis le reste du corpus.
+---
+Task ID: R10-c
+Agent: agent principal (Z.ai Code)
+Task: tafsir-1ep — début de la retraduction manuelle (leçons 1-6/59)
+
+Work Log:
+- Protocole R10 appliqué au manuel tafsir-1ep (Tafsīr al-Jalālayn, 4ep, 59 leçons dont
+  2 annexes + 1 « تقديم الكتاب » en position 10). Particularité du format tafsīr : les versets
+  coraniques étaient des images dans la source (p vides) → **les versets sont réintégrés en
+  traduction française dans la section « Les versets » et cités en « » dans le commentaire** ;
+  les mots du glossaire (الشرح) également perdus en images → reconstitués depuis le glossaire
+  de la leçon suivante (édition savante) ; coquilles de références corrigées discrètement
+  (Ġāfir 15→16, al-Fajr 30-31→27-30, al-Wāqiʿa 77→74, « 19 à 32 »→19 à 30).
+- Leçons retraduites et fusionnées (n° — docId — sourate) :
+  1. 12021 al-Fātiḥa (leçon 1 du livre) · 2. 12034 al-Fajr 19-30 (leçon 7) ·
+  3. 12035 al-Balad 1-10 (leçon 8) · 4. 12036 al-Balad 11-20 (leçon 9) ·
+  5. 12058 al-Layl 1-11 (leçon 11, exorde révélé au sujet d'Abū Bakr) ·
+  6. 12297 al-Aʿlā 1-8 (leçon 2, hadith Ibn ʿAbbās sur la récitation).
+- Commits : 1 par leçon (be848c9 → 0186181), tafsir-1ep 6/59.
+
+Stage Summary:
+- **tafsir-1ep : 6/59** — la chaîne de traduction tafsīr est rodée (versets réintégrés,
+  glossaires reconstitués, jalalayn-style savant). Ordre des docIds ≠ ordre pédagogique
+  (ex. iʿdād qablī de 12036 = al-Shams qui est la leçon 12623, position 11).
+- Restantes tafsir-1ep : 53 leçons (12328, 12331, 12344, 12609 « تقديم », 12623, 12960,
+  13044, 13059, 13065, 13078, 13084, 13096, 13102, 13109, 13113, 13123, 13143, 13147,
+  13150, …, 13621/13622 annexes).
+- fiqh-1ep TERMINÉ (R10-b). Voir aussi : intro fiqh-1ep (11411) encore GT ; fiqh-5ep 10
+  leçons GT à retraduire plus tard.
