@@ -445,7 +445,7 @@ Stage Summary:
   la publication officielle des leçons de hadith-tanawi-2 (catégorie 1608-like).
 
 ---
-Task ID: R10 (en cours)
+Task ID: R10
 Agent: agent principal (Z.ai Code)
 Task: Retraduction manuelle du CONTENU FR des leçons intégrales — fiqh-1ep puis tafsir-1ep (perte des brouillons des sessions précédentes)
 
@@ -471,14 +471,20 @@ Work Log:
   1. 11366 ṭahāra · 2. 11367 wuḍūʾ (+fix titleFr GT erroné) · 3. 11368 wuḍūʾ suite ·
   4. 11371 nawāqiḍ al-wuḍūʾ · 5. 11372 mūǧibāt al-ġusl · 6. 11373 suite ġusl ·
   7. 11374 tayammum · 8. 11378 nawāqiḍ al-tayammum · 9. 11379 aḥkām al-ḥayḍ ·
-  10. 11380 aḥkām al-nifās · 11. 11381 awqāt al-ṣalawāt · 12. 11382 šurūṭ al-ṣalāt.
-- Commits : « Minhāj R10 — … » tous les 2 leçons. fiqh-1ep : 12/44 leçons à ce stade.
+  10. 11380 aḥkām al-nifās · 11. 11381 awqāt al-ṣalawāt · 12. 11382 šurūṭ al-ṣalāt ·
+  13. 11392 farāʾiḍ al-ṣalāt · 14. 11393 faḍāʾil wa-makrūhāt · 15. 11394 fawāʾid wa-aḥwāl ·
+  16. 11395 qaḍāʾ al-fawāʾit · 17. 11396 suǧūd al-sahw · 18. 11397 sahw (suite) ·
+  19. 11401 mā lā suǧūda fīhi · 20. 11402 mā lā yaǧūzu fiʿluhu.
+- Commits : « Minhāj R10 — … » tous les 1-2 leçons (10 commits).
+- **QA agent-browser** : lecteur 11366 bilingue (FR : h1 + objectifs + matn « … » +
+  termes ✓), lecteur 11402 ✓, page livre fiqh-1ep « 45/45 documents bilingues ·
+  Leçons (44) » ✓, 0 erreur console.
 
-Stage Summary (provisoire) :
-- fiqh-1ep : 12/44 leçons retraduites à la main. Restantes (docIds) :
-  11392,11393,11394,11395,11396,11397,11401,11402,11403,11404,11405,11406,11407,11408,
-  11409,11410,11412,11413,11937,11941,11943,11949,12002,12006,12011,12013,12014,12015,
-  12164,12351,12352,12431.
+Stage Summary :
+- **fiqh-1ep : 20/44 leçons retraduites à la main** (les 20 premières : kitāb
+  al-ṭahāra jusqu'à la fin des questions de sahw). Restantes (24, docIds) :
+  11403,11404,11405,11406,11407,11408,11409,11410,11412,11413,11937,11941,11943,11949,
+  12002,12006,12011,12013,12014,12015,12164,12351,12352,12431.
 - Après fiqh-1ep : tafsir-1ep 59 leçons (12021…), puis revoir l'intro fiqh-1ep (GT),
   puis le reste du corpus (hadith-1ep, tafsir-1es/2es/3es…).
 - RÈGLE ABSOLUE pour les sessions suivantes : ne jamais garder une traduction en mémoire
