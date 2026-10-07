@@ -595,3 +595,31 @@ Stage Summary:
   futur passage grille (ne pas perdre : les docIds synthétiques pdf-mut23h3c-709…).
 - Titres FR tafsir-1ep restants à normaliser lors de la retraduction (ex. « Al-Duha » →
   al-Ḍuḥā, « Al-Qaraa » → al-Qāriʿa…) via meta.json.
+---
+Task ID: R10-e
+Agent: agent principal (Z.ai Code)
+Task: tafsir-1ep leçons 13-14 + normalisation des 24 titres FR + QA finale de session
+
+Work Log:
+- Leçons retraduites : 13. 13059 al-Sharḥ (grâces ×3, « avec la difficulté est l'aisance » ×2,
+  hadith Ibn ʿAbbās du Musnad d'Aḥmad) · 14. 13065 al-Tīn (serment figuier/olivier/Sīnīn/Cité
+  sûre, taqwīm/asfal sāfilīn, Qurṭubī « le petit monde », Tirmidhī).
+- **24 titres FR de tafsir-1ep normalisés** (fin des « Al-Fatiha/Al-Qaraa/… à travers Tafsir
+  Al-Jalalayn » GT) : convention « La sourate X [— suite] — versets A à B », annexes alignées
+  (« Personnalités citées (aʿlām) » / « Sources et références »).
+- QA agent-browser : page livre tafsir-1ep « 30/30 documents bilingues · 29 leçons +
+  introduction 100 % » ✓, listes correctes, 0 erreur console.
+- Commits de session (30) : be848c9 → 0e40b07.
+
+Stage Summary:
+- **Bilan de session** : fiqh-1ep TERMINÉ (30/30 leçons + 2 annexes, grille corrigée,
+  titres propres) ; tafsir-1ep : périmètre corrigé (29 leçons) et **14/29 retraduites** +
+  titres 100 % normalisés.
+- Suite à donner (prochaine session, dire « la suite ») : tafsir-1ep leçons restantes
+  15-29 : 13078 (al-ʿAlaq 1-5), 13084 (6-20), 13096 (al-Qadr), 13102 (al-Bayyina), 13109
+  (al-Zalzala), 13113 (al-ʿĀdiyāt), 13123 (al-Qāriʿa), 13143 (Takāthur+ʿAṣr), 13147
+  (al-Humaza), 13150 (Fīl+Quraysh), 13151 (Māʿūn+Kawthar), 13163 (Kāfirūn+Naṣr+Masad),
+  13193 (Ikhlāṣ+Muʿawwidhatān), 13621/13622 (annexes aʿlām/maṣādir).
+- Puis : intro fiqh-1ep (11411, GT), fiqh-5ep (10 leçons GT), tafsir-5ep (30 leçons GT
+  déplacées), hadith-1ep, et le problème de grille en suspens sur les 91 pdfOnly de
+  tafsir-5ep (Isrāʾ→tanawi-2, Kahf→tanawi-3, Fāṭir/Ḥadīd/Mujādala à qualifier).
