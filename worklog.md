@@ -489,3 +489,48 @@ Stage Summary :
   puis le reste du corpus (hadith-1ep, tafsir-1es/2es/3es…).
 - RÈGLE ABSOLUE pour les sessions suivantes : ne jamais garder une traduction en mémoire
   plus de quelques minutes — écrire tr-out et merger immédiatement.
+---
+Task ID: R10-b
+Agent: agent principal (Z.ai Code)
+Task: Suite R10 — achèvement fiqh-1ep (leçons 21-30), correction de grille fiqh, QA navigateur
+
+Work Log:
+- Reprise « la suite » : état réel sur disque vérifié (git + tr-out) = 20/44 fiqh-1ep (brouillons des
+  sessions perdues définitivement abandonnés, R10 redémarre de zéro avec persistance immédiate).
+- **10 leçons retraduites à la main et fusionnées ce jour** (protocole R10 : extract-src → tr-out →
+  agent-merge → commit, 1 commit par leçon) :
+  21. 11403 mā lā yaǧūzu fiʿluhu 2 (souffle/éternument/bâillement, doute sur pureté, iltifāt,
+      vêtement/parole/sommeil ; hadith ʿĀʾisha « part dérobée par Satan »)
+  22. 11404 mā yuġṭfar fiʿluhu (anīn, tanāḥnuḥ, talqīn, qals ; al-Jazūlī Mawāhib al-Jalīl)
+  23. 11405 sahw al-maʾmūm + dafʿ al-aḏā (scorpion/serpent, shafʿ/witr ; al-Tannūkhī)
+  24. 11406 aḥkām al-masbūq (Dāraquṭnī « nul oubli pour le maʾmūm » ; vers Ibn ʿĀshir)
+  25. 11407 istidrāk al-rukn (rukūʿ/ suǧūd oubliés, salutation dans le doute ; Ibn ʿAskar Irshād)
+  26. 11408 sahw dans qaḍāʾ/nāfila (6 exceptions, tanahhud ; Meyyara Sharḥ kabīr)
+  27. 11409 mutābaʿat al-maʾmūm 1 (tasbīḥ, 5ᵉ rakʿa ; hadith Ibn Buḥayna)
+  28. 11410 mutābaʿat al-maʾmūm 2 (3ᵉ prosternation, salutation anticipée, ʿadlayn ;
+      hadith Ibn Masʿūd « ẓuhr en cinq »)
+  29. 11412 annexe aʿlām (9 Compagnons + 13 savants, bios savantes) + fix titleFr
+      GT « Liste des drapeaux dans » → « Personnalités citées (aʿlām) »
+  30. 11413 annexe sources (Coran + 10 livres de hadith + 10 de fiqh, coquilles dates
+      corrigées discrètement 5102→2015, 6198→1986)
+- **Correction de grille découverte** (r10-grid-move.ts) : les 14 leçons restantes de fiqh-1ep
+  n'appartenaient PAS à ce manuel (erreur de mapping des fusions R5-R8) — preuves par mention
+  explicite du niveau dans le html :
+  · 11937/11941/11943/11949/12002/12006/12011/12013 + annexes 12014/12015 → fiqh-5ep
+    (Muršid al-Muʿīn 5ep, jusqu'ici VIDE : 0 leçon) — 10 leçons, titres FR alignés R9
+  · 12164 + 12431 → fiqh-2es (Risāla, annexes) ; 12351 + 12352 → fiqh-3es (annexes)
+  · fiqh-1ep : 44 → 30 leçons.
+- **fiqh-1ep = 30/30 leçons retraduites à la main (100 %)** + intro (GT, à revoir).
+- Fix 6 titres FR GT (« Objectifs de la leçon » → vrais titres : temps des prières, conditions,
+  farāʾiḍ/sunan, mérites/blâmables, bienfaits/états ; 11368 « règlements » → « règles — suite »).
+- Manifeste v6 regénéré. QA agent-browser : accueil 63/63 + carte fiqh-1ep 31/31 100 % ✓,
+  page livre 30 leçons ✓, lecteur annexe aʿlām bilingue ✓, 0 erreur console.
+- Commits : 14 (leçons 11403→11413 + grille + titres), dernier fcf4454.
+
+Stage Summary:
+- **fiqh-1ep TERMINÉ : 30/30 leçons + 2 annexes retraduites à la main, titres propres, 31/31 docs
+  bilingues (seule l'intro 11411 reste en GT — à revoir).**
+- fiqh-5ep repeuplé (10 leçons GT, à retraduire plus tard), fiqh-2es +2 annexes, fiqh-3es +2 annexes.
+- **Prochaine étape : tafsir-1ep (Tafsīr al-Jalālayn, 59 leçons, 60/60 docs bilingues GT)** —
+  appliquer le même protocole : extract-src → traduction savante → tr-out → agent-merge → commit.
+- Après tafsir-1ep : hadith-1ep, puis revoir l'intro fiqh-1ep, puis le reste du corpus.
