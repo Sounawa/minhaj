@@ -969,3 +969,34 @@ Stage Summary:
 - **Prochaine étape suggérée (R14) : achever tafsir-5ep** (24 docs — al-Nāziʿāt 34-45
   + ʿAbasa + al-Takwīr, puis Infiṭār→Ṭāriq + annexes ; ~2-3 sessions), puis les 3
   intros, puis le reste du corpus (59 manuels).
+
+---
+Task ID: R14 (point d'étape)
+Agent: agent principal (Z.ai Code)
+Task: Réponse à la question d'avancement de l'utilisateur (« alors tu en es ou ? ») — vérification disque + bilan chiffré
+
+Work Log:
+- Reprise « alors tu en es ou ? » : worklog ENFIN lisible en intégralité (971 lignes,
+  les lectures des sessions précédentes échouaient en partial:true) + vérification disque.
+- État réel confirmé (git = vérité terrain) : 136 commits Minhāj ; R13 complet
+  (tafsir-5ep 7/31) + R14 DÉJÀ EN COURS avec 2 leçons commitées non encore journalisées :
+  · 16737 al-Nāziʿāt 34-45 (la ṭāmma, les deux groupes, al-Aʿrāf 187 + Luqmān 34
+    réintégrées, réf. Luqmān corrigée 33→34, al-Qurṭubī 22/66, 7 termes reconstitués)
+  · 16739 ʿAbasa 1-10 (Ibn Umm Maktūm, égalité des hommes, hadith Ibn ʿUmar jour de la
+    conquête, al-Ḥujurāt 13 réintégrée, réf. préparation corrigée al-Nāziʿāt→ʿAbasa,
+    6 termes reconstitués)
+- Corpus vérifié par script : 63 livres / 1 835 docs (950 intégraux bilingues +
+  885 pdfOnly) ; serveur 200 OK ; dev.log propre (simple warning cross-origin Next 16).
+- Cron 15 min webDevReview : ENCORE DISPARU (liste vide) → recréé.
+- **Point d'avancement fourni à l'utilisateur** : projet ≈ 65 % (pondération R13 :
+  app 25 % × 100 + corpus 25 % × 100 + titres 10 % × 100 + contenu savant 40 % × 11,8).
+  Retraduction : 112/950 (≈ 11,8 %) — 4 manuels achevés + tafsir-5ep 9/31.
+
+Stage Summary:
+- État : 4 manuels savants complets (fiqh-1ep, tafsir-1ep, hadith-1ep, fiqh-5ep) +
+  tafsir-5ep 9/31. Reste tafsir-5ep : 22 docs (al-Takwīr ×3 16767/16784/16227,
+  al-Infiṭār ×2 13886/13897, al-Muṭaffifīn ×4 13907/13915/13920/13931, al-Inshiqāq ×3
+  13936/13979/13983, al-Burūj ×3 13992/14005/14018, al-Ṭāriq ×2 14042/14052,
+  annexes 14063/14067).
+- Puis : 3 intros GT (11411, 12016, 11930), puis le reste du corpus (~810 leçons).
+- Règle confirmée : le cron 15 min disparaît régulièrement — vérifier à chaque reprise.
