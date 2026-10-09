@@ -623,3 +623,66 @@ Stage Summary:
 - Puis : intro fiqh-1ep (11411, GT), fiqh-5ep (10 leçons GT), tafsir-5ep (30 leçons GT
   déplacées), hadith-1ep, et le problème de grille en suspens sur les 91 pdfOnly de
   tafsir-5ep (Isrāʾ→tanawi-2, Kahf→tanawi-3, Fāṭir/Ḥadīd/Mujādala à qualifier).
+
+---
+Task ID: R10-f
+Agent: agent principal (Z.ai Code)
+Task: tafsir-1ep — achèvement complet du manuel (leçons 15-29 + 2 annexes) ;
+réponse au point d'avancement global demandé par l'utilisateur
+
+Work Log:
+- Reprise « continue » : relecture intégrale du worklog (625 lignes) + vérification disque
+  (git log, manifeste, serveur 200) — l'état réel confirmé : fiqh-1ep terminé (30/30+2 annexes),
+  tafsir-1ep 14/29, 63 livres / 1 835 docs (887 leçons intégrales + 63 intros + 885 pdfOnly).
+- **Point d'avancement global fourni à l'utilisateur** (question posée 5 fois sans réponse) :
+  ≈ 60 % du projet total ; app web 100 %, corpus 100 %, titres 100 %, contenu retraduit 46/950 (≈ 5 %).
+- **15 documents retraduits à la main ce jour** (protocole R10 : extract-src → tr-out →
+  agent-merge → commit, 1 commit par document) :
+  15. 13078 al-ʿAlaq 1-5 (première révélation, grotte de Ḥirāʾ ; hadith ʿUbāda du calame)
+  16. 13084 al-ʿAlaq 6-20 (Abū Jahl, zabāniya, hadith Ibn ʿAbbās/Musnad Aḥmad)
+  17. 13096 al-Qadr (nuit du Destin, hadith Ibn ʿUmar/Muslim + Muwaṭṭaʾ)
+  18. 13102 al-Bayyina (gens du Livre et associateurs, Kashshāf 4/782)
+  19. 13109 al-Zalzala (témoignage de la terre, hadith Abū Hurayra/Nasāʾī)
+  20. 13113 al-ʿĀdiyāt (serment par les cavalières, hadith Jarīr/Muslim)
+  21. 13123 al-Qāriʿa (balances, hadith 70 parts du feu de la Géhenne)
+  22. 13143 al-Takāthur + al-ʿAṣr (hadith Abū Mulayka/Shuʿab al-Īmān)
+  23. 13147 al-Humaza (diffamateur-moqueur, hadith Anas/Bukhārī)
+  24. 13150 al-Fīl + Quraysh (Abraha, Tashīl d'Ibn Juzayy 2/513)
+  25. 13151 al-Māʿūn + al-Kawthar (hadith Anas/Muslim sur le Bassin)
+  26. 13163 al-Kāfirūn + al-Naṣr + al-Masad (Umm Jamīl, Zuḥaylī 30/452)
+  27. 13193 al-Ikhlāṣ + al-Muʿawwidhatān (hadith Tirmidhī « ton amour te fera
+      entrer au Paradis »)
+  28. 13621 annexe aʿlām : 8 notices biographiques savantes (al-Maḥallī, al-Suyūṭī,
+      al-Zamakhsharī, al-Qurṭubī, Ibn Juzayy, Ibn Kathīr, Ibn ʿAjība, Ibn ʿĀshūr)
+  29. 13622 annexe sources : bibliographie complète des 27 ouvrages de référence
+- **Finitions qualité** :
+  - 6 titres FR encore GT normalisés (12021 « La sourate al-Fātiḥa », 13143/13150/13151/
+    13163/13193 « Les sourates X et Y » — fin des suffixes « (Tafsīr al-Jalālayn) » et des
+    caractères ḫ/ḏ non conventionnels).
+  - Coquilles corrigées : 13193 « transcernder »→« transcender » ; 13143 « quiconque que
+    la vie présente a détourné »→« celui que… » ; fausses alertes vérifiées en contexte
+    (« laquelle le », « ingratitude de », « corde de », « indique que » = OK).
+  - /home/z/tr-out/ recréé (le home hors my-project avait été purgé une énième fois —
+    confirmation de la leçon R4 : seul my-project est fiable).
+- **QA agent-browser complète** : accueil 63 manuels ✓ ; page livre tafsir-1ep « 100 % ·
+  29 leçons + introduction » ✓ ; lecteur 13193 bilingue intégral (objectifs/exorde/versets/
+  glossaire/exégèse 3 sections/évaluation/investissement/préparation) ✓ ; annexe 13621
+  (8 biographies) ✓ ; titre 13193 corrigé confirmé après reload (cache client 30 s +
+  Zustand périmé — l'API sert bien le nouveau titre) ✓ ; recherche « Kawthar » → 13151
+  en 1er résultat avec snippet de la nouvelle traduction ✓ ; mobile 375 px ✓ ;
+  0 erreur console ✓. Manifeste v6 regénéré (inchangé — les titres restent dans les
+  fichiers). Backup 20261007 + 18 commits.
+- Cron 15 min vérifié : job 434132 (webDevReview) actif.
+
+Stage Summary:
+- **tafsir-1ep TERMINÉ : 29/29 leçons (27 leçons + 2 annexes) retraduites à la main,
+  30/30 documents bilingues, titres 100 % normalisés.** Deuxième manuel complet après
+  fiqh-1ep. Bilan du chantier R10 : 61 documents savants retraduits au total
+  (32 fiqh-1ep + 29 tafsir-1ep).
+- Restent en GT dans ces 2 manuels : les intros 11411 (fiqh-1ep) et 12016 (tafsir-1ep,
+  18 977 car.).
+- **Prochaine étape suggérée (R11) : hadith-1ep** (Muwaṭṭaʾ d'imam Mālik, comm.
+  al-Zarqānī — 31 leçons + annexes, toutes en GT), puis fiqh-5ep (10 leçons GT),
+  tafsir-5ep (30 leçons GT déplacées), puis le reste du corpus (~840 leçons).
+- Avancement global mis à jour : **62/950 documents savants (≈ 6,5 %) ; projet global
+  ≈ 60 %** (app + corpus + titres = 100 % ; contenu savant en cours).
