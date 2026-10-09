@@ -686,3 +686,108 @@ Stage Summary:
   tafsir-5ep (30 leçons GT déplacées), puis le reste du corpus (~840 leçons).
 - Avancement global mis à jour : **62/950 documents savants (≈ 6,5 %) ; projet global
   ≈ 60 %** (app + corpus + titres = 100 % ; contenu savant en cours).
+
+---
+Task ID: R11
+Agent: agent principal (Z.ai Code)
+Task: hadith-1ep — achèvement complet du 3e manuel (31/31 leçons) ; réponse au point
+d'avancement global ; titres normalisés
+
+Work Log:
+- Reprise « continue » : relecture du worklog (fin R10-f) + vérification disque (git log, serveur
+  200, contenu réel) — état confirmé : fiqh-1ep ✅, tafsir-1ep ✅, hadith-1ep 0/31 (tout GT),
+  63 livres / 1 835 docs, avancement global ≈ 60 %, retraduction 62/950 (≈ 6,5 %).
+- **Point d'avancement global fourni à l'utilisateur** (question posée 6 fois sans réponse) :
+  projet ≈ 60 % — app 100 %, corpus 100 %, titres 100 %, retraduction savante 62/950 ≈ 6,5 %.
+- **31 titres FR de hadith-1ep normalisés** (r11-titles.ts, commit 12e3cf4) : fin des titres GT
+  « La vertu de… / Concours d'enseignement / Il préférait se réunir… » → convention savante
+  « Le mérite de… », translittération DIN 31635 (al-Fātiḥa, al-Muʿawwidhatān, qabḍ al-ʿilm…).
+- **31 documents retraduits à la main** (protocole R10 : extract-src → tr-out → agent-merge →
+  commit, 1 commit par document, validations qualité passées 31/31) :
+  · 12583 Présentation du manuel (intro + leçon 1, synchronisés — sommaire des 30 leçons +
+    compétences de fin d'année 4ep)
+  · 12788 mérite de la lecture du Coran (Abū Umāma « intercesseur pour ses compagnons »,
+    al-Nawwās « al-Baqara et Āl ʿImrān plaident », Fāṭir 29-30 réintégrée)
+  · 12792 al-Fātiḥa « Mère du Coran » + al-Ikhlāṣ « tiers du Coran » (Rāfiʿ ibn al-Muʿallā,
+    Abū Saʿīd al-Khudrī ; Ubayy « sept versets que l'on répète », Anas « son amour t'a fait
+    entrer au Paradis »)
+  · 12797 al-Kahf (Usayd ibn Ḥuḍayr et la nuée = les anges, sakīna, lumière du vendredi,
+    dix versets préservant du Dajjāl)
+  · 12799 al-Muʿawwidhatān (ʿUqba « on n'en vit jamais de semblables », versets al-Falaq et
+    al-Nās réintégrés, ruqyā du Prophète malade)
+  · 12800 āyat al-kursī (Ubayy « que la science te soit une joie, ô Abū l-Mundhir »,
+    Ghāfir jusqu'à ilayhi l-maṣīr)
+  · 12803 khawātīm al-Baqara (Ibn ʿAbbās « deux lumières », versets 285-286 réintégrés —
+    référence source 284-285 corrigée discrètement ; trésor sous le Trône, nuit de l'isrāʾ)
+  · 12810 apprendre le Coran et l'enseigner (ʿUthmān « le meilleur d'entre vous », al-Ḥijr 9
+    et al-Raḥmān 1-3 réintégrés, Ibn ʿAmr « la prophétie entre ses flancs »)
+  · 12811 taʿāhud (Abū Mūsā « plus prompt à s'échapper que les chameaux entravés », Ibn
+    ʿUmar, blâme de l'oubli, Anas « rien de plus grand que la sourate oubliée »)
+  · 12814 la maîtrise (ʿĀʾisha « avec les scribes nobles et dévoués », deux récompenses du
+    réciteur hésitant, lecture collective au Maghreb — Dr Ḥamīṭū)
+  · 12816 taghannī (Abū Hurayra « Allah n'a jamais prêté une oreille aussi attentive », Abū
+    Mūsā « chalumeau des chalumeaux de la famille de Dāwūd »)
+  · 12818 l'écoute par autrui (Ibn Masʿūd « récite-moi le Coran », larmes du Prophète,
+    al-Nisāʾ 41 + al-Anfāl 2 + al-Tawba 128 réintégrées)
+  · 12822 dans les demeures (Abū Hurayra « ne faites pas de vos demeures des tombeaux »,
+    le démon fuit al-Baqara, « vivant comparé au mort »)
+  · 12827 la réunion (sakīna-miséricorde-anges-mention dans l'assemblée suprême ; Abū
+    Wāqid les trois hommes au cercle)
+  · 12829 l'effet du Coran (maison en ruine, « lis et élève-toi », degrés du Paradis = versets,
+    al-Isrāʾ 9-10 réintégrée)
+  · 12830 les 4 états (cédrat/datte/basilic/coloquinte Abū Mūsā ; Anas « gens d'Allah et Ses
+    intimes »)
+  · 12834 la hiérarchie (ʿUmar « Allah élève des peuples et en abaisse », tadabbur — al-Nisāʾ
+    82 corr. discrète, Ṭā-Hā 121-122)
+  · 12840 la quête du savoir (Abū Hurayra « voie facilitée vers le Paradis », Abū l-Dardāʾ
+    « savants héritiers des prophètes »)
+  · 12842 tafaqquh (Muʿāwiya « celui à qui Allah veut du bien », al-Baqara 282 + al-Kahf 65 +
+    al-Tawba 122 réintégrées)
+  · 12845 ikhlāṣ (Abū Hurayra « ne trouvera pas l'odeur du Paradis », Kaʿb ibn Mālik
+    rivaliser/disputer/détourner les visages)
+  · 12846 amāna (Ibn Masʿūd « qu'Allah embellisse le visage… », al-Ḥujurāt 6 réintégrée,
+    dommages de la non-vérification)
+  · 12847 le voyage (Anas « sur le chemin d'Allah jusqu'à son retour », Fāṭir 28, mosquée
+    du Prophète « rang du combattant »)
+  · 12849 l'enseignement (les 3 œuvres survivantes : ṣadaqa jāriya, savoir profitable,
+    enfant vertueux ; Abū Dharr « un verset > cent rakʿa »)
+  · 12850 guider (ʿAlī « un seul homme > chameaux roux », « quiconque appelle à une guidée »)
+  · 12853 la noble compétition (Ibn Masʿūd « pas d'envie sauf en deux choses », al-Zumar 10 +
+    al-Mujādala 11 réintégrées)
+  · 12856 les savants (Abū Umāma « la fourmi dans son trou et le poisson prient sur les
+    enseignants du bien », lune vs astres)
+  · 12857 les états face au savoir (Abū Mūsā la pluie et les trois terres : pure/crêtes/
+    plaines ; invocation « un savoir qui ne profite pas »)
+  · 12859 la dissimulation (Abū Hurayra « muselé par un mors de feu », al-Baqara 159 corr.
+    discrète — la malédiction des dissimulateurs)
+  · 12861 qabḍ al-ʿilm (Ibn ʿAmr « Allah saisit le savoir en saisissant les savants », chefs
+    ignorants ; Abū Umāma « que vos mères vous pleurent »)
+  · 12863 annexe aʿlām : 18 notices biographiques de Compagnons (Abū Umāma, al-Nawwās,
+  Rāfiʿ, al-Khudrī, al-Barāʾ, ʿUqba, Ubayy, al-Nuʿmān, ʿUthmān dhū l-nūrayn, Abū Mūsā,
+  ʿĀʾisha, Anas, Abū Hurayra, Ibn Masʿūd, Ibn ʿAmr, ʿUmar, Muʿāwiya, Sahl)
+  · 12866 annexe sources : 16 ouvrages (Coran warshien, al-Bukhārī éd. al-Baghā, Dalīl
+  al-fāliḥīn, Riyāḍ éd. Shīḥā, Rawḍat al-muttaqīn, les Sunan, Shuʿab al-īmān, Muslim,
+  al-Mukhliṣiyyāt, al-Mustadrak, le Musnad…)
+- **Corrections discrètes** (protocole R10-c) : al-Baqara 284-285→285-286 ; al-Nisāʾ 81→82 ;
+  al-Baqara 173→159 ; al-Tawba 129→128 ; al-Kahf 64→65 ; istikhlāṣ dupliqué de 12816 remis
+  dans le sujet de la leçon ; versets réintégrés en français dans 12 leçons (images source).
+- **QA agent-browser complète** : page livre hadith-1ep « 32/32 documents bilingues · 31
+  leçons + introduction 100 % » ✓ ; les 31 titres savants s'affichent en liste ✓ ; lecteur
+  12863 (aʿlām, notice Suḍayy) ✓ ; API /api/lessons/hadith-1ep/12788 titre + htmlFr
+  nouveaux ✓ ; mobile 375 px ✓ ; 0 erreur console ✓ ; lint ✓ ; dev.log sans erreur ✓.
+- Manifeste inchangé (il ne cache pas les titres de leçons — vérifié). 32 commits de session.
+- Cron 15 min : job webDevReview actif (non déclenché cette session).
+
+Stage Summary:
+- **hadith-1ep TERMINÉ : 31/31 leçons (dont présentation 12583 synchronisée intro+leçon 1)
+  retraduites à la main, 32/32 documents bilingues, 31 titres 100 % normalisés.** Troisième
+  manuel complet après fiqh-1ep (R10-b) et tafsir-1ep (R10-f).
+- **Bilan du chantier de retraduction : 93/950 documents savants (≈ 9,8 %)** — 62 avant la
+  session + 31 hadith-1ep. Avancement global projet : ≈ 62 % (app + corpus + titres = 100 %,
+  contenu savant en cours).
+- Restent en GT : intro fiqh-1ep (11411), intro tafsir-1ep (12016), fiqh-5ep (10 leçons),
+  tafsir-5ep (30 leçons GT déplacées + 91 pdfOnly à qualifier), puis ~840 leçons du reste
+  du corpus.
+- **Prochaine étape suggérée (R12) : fiqh-5ep** (Muršid al-Muʿīn, 10 leçons GT — petit
+  manuel, achevable en une session), puis tafsir-5ep (30 leçons GT), puis les 2 intros en
+  suspens, puis le reste du corpus.
