@@ -888,3 +888,84 @@ Stage Summary:
 - **Prochaine étape suggérée (R13) : tafsir-5ep** (31 docs — le dernier manuel primaire
   en GT : al-Nabaʾ→al-Muṭaffifīn..., achevable en 1-2 sessions), puis les 3 intros en
   suspens, puis le reste du corpus.
+
+---
+Task ID: R13
+Agent: agent principal (Z.ai Code)
+Task: tafsir-5ep — début du 5e manuel (7/31 : préface + sourate al-Nabaʾ complète +
+al-Nāziʿāt 1-33) ; RÉPONSE FINALE au point d'avancement global demandé 8 sessions
+de suite ; recréation du cron 15 min
+
+Work Log:
+- Reprise « continue » : relecture du worklog (890 lignes, fin R12) + vérification
+  disque (git 128 commits, serveur 200, 950/950 docs avec htmlFr, tafsir-5ep 0/31
+  savant) — état confirmé conforme à R12.
+- **POINT D'AVANCEMENT GLOBAL FOURNI À L'UTILISATEUR (question posée depuis 8 sessions)** :
+  projet ≈ 63 % — app 100 % (25 % du poids), corpus 100 % (25 %), titres 100 % (10 %),
+  retraduction savante 103/950 ≈ 10,8 % (40 % du poids). Reste : 847 docs savants +
+  question des 885 pdfOnly. Rythme : 10-31 docs/session → ~45-55 sessions restantes.
+- **Cron 15 min webDevReview recréé** (job 446881) — l'ancien avait disparu (liste vide).
+- **7 documents retraduits à la main** (protocole R10 : extract-src → tr-out →
+  agent-merge → commit, 1 commit par document, validations qualité 7/7) :
+  1. 12609 préface du manuel (sommaire des 30 leçons al-Nabaʾ→al-Ṭāriq avec numérotation,
+     5 compétences, méthodologie d'élaboration en 7 points : riwāya Warsh de Nāfiʿ,
+     muṣḥaf muḥammadien, documentation des hadiths et avis savants, biographies aʿlām,
+     ḍabṭ complet) — coquille source corrigée (parenthèse manquante ligne 22)
+  2. 16711 al-Nabaʾ 1-16 (le procédé coranique de réponse aux négateurs : tafkhīm de
+     ʿammā — règle de l'alif élidée après préposition, réponse de serment élidée,
+     menaces répétées avec thumma ; les 8 signes cosmiques du ḥizb 59 : mahd, awtād,
+     azwāj, subāt, libās, maʿāsh, sabʿ shidād, sirāj wahhāj, muʿṣirāt thajjāj ;
+     enrichissement Rūḥ al-Bayān d'Ismāʿīl Ḥaqqī 10/290 — triple preuve du Baʿth)
+  3. 16714 al-Nabaʾ 17-30 (Jour du discernement yawm al-faṣl, Isrāfīl et la Trompe ṣūr,
+     ciel ouvert en portes, montagnes en mirage ; Géhenne mirṣād des tyrans, bard=sommeil
+     per Jalālayn, aḥqāb pluriel de ḥuqb ; hadith du coccyx ʿajb al-dhanab — Bukhārī,
+     Livre du tafsīr, bāb « yawma yunfakhu fī al-ṣūri »)
+  4. 16717 al-Nabaʾ 31-40 (mafāzan et le don ḥisāban — aʿṭānī fa-aḥsabanī ; l'Esprit et
+     les anges en rang, l'intercession n'appartient qu'à Allah ; yā de tanbīh ;
+     hadith al-Ḥākim al-Mustadrak sur al-Anʿām 38 — le talion des bêtes puis « kūnī
+     turābā »)
+  5. 16719 al-Nāziʿāt 1-14 (serment par les cinq catégories d'anges extracteurs ;
+     réponse élidée « latubʿathunna » ; khāfiya/hāfira — le nom de la première vie et le
+     vers d'Abū Ḥayyān al-Baḥr al-Muḥīṭ 10/393 « a-ḥāfiratun ʿalā ṣalaʿin wa-shaybin » ;
+     al-sāhira ; hadith Tirmidhī de ʿUbayy sur les prières sur le Prophète)
+  6. 16724 al-Nāziʿāt 15-26 (Moïse et Pharaon : vallée sanctifiée Ṭuwā, « hal laka ilā
+     an tazakkā », les sept signes — main ou bâton ; les deux paroles de Pharaon
+     châtiées par la noyade ; Ibn ʿAjība al-Baḥr al-Madīd 3/267 — douceur envers les
+     notables, Ṭā-Hā 43)
+  7. 16733 al-Nāziʿāt 27-33 (preuves cosmiques du Baʿth : samk selon Ibn Juzay
+     al-Tashīl 2/450, daḥa la terre, matāʿan complément de but ou maṣdar ; Ibn ʿĀshūr
+     al-Taḥrīr wa-l-tanwīr 30/83 — l'habitude qui voile la raison)
+- **Versets coraniques réintégrés en français** dans les 6 leçons (al-Nabaʾ 1-40,
+  al-Nāziʿāt 1-33 — lecture Warsh).
+- **MÉTHODE DE RECONSTITUTION VALIDÉE** : les listes d'expressions des sections
+  « préparation préalable » et les termes vocalisés des sections « explication des
+  termes » sont perdus dans la source HTML (balises <p> vides — images du site
+  original). Vérifié : le nombre de <p> vides correspond EXACTEMENT au nombre de
+  définitions de la leçon suivante → reconstitution croisée systématique
+  (8+9+5+11+8+4+7 termes reconstitués avec translittération).
+- **Corrections discrètes** (protocole R10-c) : al-Zumar 65→68 ; Ghāfir 56→57 (×2,
+  leçon 16733) ; référence sourate erronée « al-Nabaʾ 15-26 »→al-Nāziʿāt (16724).
+- **QA agent-browser complète** : accueil 200 ✓ ; bibliothèque → manuel tafsir-5ep
+  (122 leçons listées, titres officiels) ✓ ; lecteur 16711 bilingue intégral — les 9
+  sections savantes (objectifs/tamhīd/versets/compréhension/terms/commentaire/
+  évaluation/enrichissement/préparation) ✓ ; API 12609 ✓ ; **recherche « Isrāfīl » →
+  la nouvelle traduction 16714 ressort immédiatement** (corpusStamp R12 confirmé
+  opérationnel) ✓ ; mobile 375px sans débordement horizontal ✓ ; 0 erreur console ✓ ;
+  lint ✓ ; dev.log propre ✓.
+- 7 commits de session (929f2f8 → 253d093), total git 135.
+
+Stage Summary:
+- **tafsir-5ep : 7/31 docs savants (préface + al-Nabaʾ complète 3/3 + al-Nāziʿāt
+  3/4).** Sourate al-Nabaʾ 40/40 versets traduite intégralement.
+- **Bilan du chantier de retraduction : 110/950 documents savants (≈ 11,6 %)** —
+  103 avant la session + 7 tafsir-5ep. Avancement global projet : ≈ 63-64 %.
+- Reste dans tafsir-5ep : 24 docs — al-Nāziʿāt 34-45 (16737), ʿAbasa ×4 (16739, 16743,
+  16751, 16757), al-Takwīr ×3 (16767, 16784, 16227), al-Infiṭār ×2 (13886, 13897),
+  al-Muṭaffifīn ×4 (13907, 13915, 13920, 13931), al-Inshiqāq ×3 (13936, 13979, 13983),
+  al-Burūj ×3 (13992, 14005, 14018), al-Ṭāriq ×2 (14042, 14052), annexes aʿlām 14063
+  et sources 14067. Ordre du sommaire : poursuivre par 16737 puis l'ordre du sommaire.
+- Puis : les 3 intros en suspens (11411 fiqh-1ep, 12016 tafsir-1ep, 11930 fiqh-5ep),
+  puis les ~810 leçons du reste du corpus.
+- **Prochaine étape suggérée (R14) : achever tafsir-5ep** (24 docs — al-Nāziʿāt 34-45
+  + ʿAbasa + al-Takwīr, puis Infiṭār→Ṭāriq + annexes ; ~2-3 sessions), puis les 3
+  intros, puis le reste du corpus (59 manuels).
