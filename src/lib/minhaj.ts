@@ -354,9 +354,34 @@ interface IndexEntry {
 }
 
 let indexPromise: Promise<IndexEntry[]> | null = null;
+let indexStamp = "";
+
+/**
+ * Empreinte légère du corpus (mtime + taille du manifeste et de chaque livre).
+ * Permet d'invalider l'index de recherche dès qu'un fichier est retraduit,
+ * sans redémarrer le serveur.
+ */
+async function corpusStamp(): Promise<string> {
+  try {
+    const parts: string[] = [];
+    const manifestStat = await fs.stat(path.join(CONTENT_DIR, "manifest.json"));
+    parts.push(`manifest:${manifestStat.mtimeMs}:${manifestStat.size}`);
+    const booksDir = path.join(CONTENT_DIR, "books");
+    const files = (await fs.readdir(booksDir)).filter((f) => f.endsWith(".json")).sort();
+    for (const f of files) {
+      const st = await fs.stat(path.join(booksDir, f));
+      parts.push(`${f}:${st.mtimeMs}:${st.size}`);
+    }
+    return parts.join("|");
+  } catch {
+    return "";
+  }
+}
 
 async function getSearchIndex(): Promise<IndexEntry[]> {
-  if (!indexPromise) {
+  const stamp = await corpusStamp();
+  if (!indexPromise || stamp !== indexStamp) {
+    indexStamp = stamp;
     indexPromise = (async () => {
       const manifest = await getManifest();
       if (!manifest) return [] as IndexEntry[];
