@@ -791,3 +791,100 @@ Stage Summary:
 - **Prochaine étape suggérée (R12) : fiqh-5ep** (Muršid al-Muʿīn, 10 leçons GT — petit
   manuel, achevable en une session), puis tafsir-5ep (30 leçons GT), puis les 2 intros en
   suspens, puis le reste du corpus.
+
+---
+Task ID: R12
+Agent: agent principal (Z.ai Code)
+Task: fiqh-5ep — achèvement complet du 4e manuel (10/10 leçons) ; réponse au point
+d'avancement global demandé par l'utilisateur ; fix du cache de l'index de recherche
+
+Work Log:
+- Reprise « continue » : relecture intégrale du worklog (793 lignes) + vérification disque
+  (git log 115 commits, manifeste v6, serveur 200) — état confirmé : fiqh-1ep ✅, tafsir-1ep ✅,
+  hadith-1ep ✅, fiqh-5ep 0/10 (tout GT), tafsir-5ep 0/31, 63 livres / 1 835 docs.
+- **IMPORTANT : le résumé de session précédent était FAUX** (il prétendait fiqh-5ep 31/31 ✅
+  et tafsir-5ep 32/32 ✅ — vérification disque : les 2 manuels étaient 100 % GT). Confirmation
+  de la règle R12 : TOUJOURS relire le worklog + vérifier le disque, jamais se fier aux résumés.
+- **Point d'avancement global fourni à l'utilisateur** (question posée 7 sessions sans réponse,
+  dont la demande explicite de pourcentage) : projet ≈ 62 % avant session — app 100 %, corpus
+  100 % (63 livres / 1 835 docs), titres 100 %, retraduction savante 93/950 ≈ 9,8 %.
+- **10 documents retraduits à la main ce jour** (protocole R10 : extract-src → tr-out →
+  agent-merge → commit, 1 commit par document, validations qualité 10/10) :
+  1. 11937 farāʾiḍ al-wuḍūʾ (les sept obligations : dalk, fawr, niyya à trois formes,
+     shurūṭ wujūb/ṣiḥḥa/communes, dix lieux du mandūb selon al-Khulāṣa — versets
+     al-Māʾida 7 et al-Bayyina 5 réintégrés, hadiths « shatr al-īmān » et Zarrūq)
+  2. 11941 sunan al-wuḍūʾ (sept sunan + onze mérites : tasmiya, siwāk « deux rakʿa >
+     soixante-dix », isbāgh des pieds selon ʿAbd Allāh b. Zayd, précédence du côté droit
+     ʿĀʾisha, invocation des huit portes, « l'arme du croyant », ablutions prophétiques
+     de ʿAmr b. Yaḥyā al-Wāḍiḥa 1/4)
+  3. 11943 makrūhāt et omissions (l'ajout détesté « quiconque y ajoute a mal agi », sept
+     makrūhāt d'al-Khulāṣa, fawr selon incapacité/oubli/délibération, tache du dirham,
+     séchage : le linge du Prophète selon Mālik, Mudawwana 1/521) — titre normalisé
+     « Des règles de l'ablution (makrūhāt et omissions) »
+  4. 11949 aḥkām al-ghusl (quatre obligations : niyya et son englobement, fawr, dalk avec
+     délégation hors nombril/genoux, taḫlīl du cheveu ; sunan cinq/quant ; mandūbāt six ;
+     combinaison des intentions janāba+jumuʿa en 4 cas ; universalité du dalk des maghābin ;
+     réf. al-Māʾida corrigée 7→6, verset réintégré ; taḍghath de la femme)
+  5. 12002 ṣalāt al-jumua wa-l-jamāʿa (farḍ ʿayn, 5 conditions de validité — istyān, khuṭba
+     minimum selon Ibn al-Qāsim, jāmiʿ et Juwāthā, imam résident, les 12 hommes de Jābir ;
+     4 conditions d'obligation — voyageur, excuse, farsakh ≈ 5,5 km, masculinité ;
+     sunan : ghusl, tahjīr, belle tenue ; jamāʿa : rakʿa selon Mālik/Ibn al-Qāsim, répétition
+     du faḍhdh sauf maghrib/witr ; versets al-Jumuʿa 9 et 11 réintégrés)
+  6. 12006 shurūṭ al-imāma (8 conditions de validité : masculinité, taklīf, capacité,
+     connaissance — « aqrāʾuhum », absence de fisq/laḥn/imitation, résidence pour le
+     vendredi ; conditions de perfection : salas et quḥūr, imam détesté — maudit trois,
+     ashab al-aqṭaʿ, prière sans ridāʾ, imam permanent inconnu ; digression : prière entre
+     les colonnes selon Anas, devant l'imam, groupe après l'imam rātib ; ce qui n'empêche
+     pas : Ibn Umm Maktūm aveugle, lépreux selon Ibn Rushd ; vers d'al-Ajhūrī 2/73)
+  7. 12011 aḥkām al-masbūq (suivi du maʾmūm — hadith « innamā juʿila l-imāmu
+     li-yuʾtamma bihī », exception de l'ajout muḥaqqaq et ses deux catégories ; entrée
+     dans la prière : hadith de Muʿādh « qad sanna lakum Muʿādh », takbīr selon l'état
+     trouvé ; complétion : aqwāl/afʿāl, « fa-mā adraktum fa-ṣallū » al-Bukhārī/Muslim,
+     Ibn Ḥajar Fatḥ al-Bārī, récitation à voix haute d'Ibn ʿUmar Muwaṭṭaʾ)
+  8. 12013 aḥkām al-masbūq — tammim (takbīr du lever pair/impair, oubli à la charge du
+     masbūq — hadith al-Dāraquṭnī, sujūd qabliyy avec l'imam / baʿdiyy après son salut,
+     moins d'une rakʿa = pas de prosternation ; nullité de la prière de l'imam sauf deux
+     branches : ḥadath remembered — hadith du lavage, ḥadath dominant — « idhā fasā » ;
+     istikhlāf d'ʿAlī selon Abū Razīn, Muṣannaf ʿAbd al-Razzāq)
+  9. 12014 annexe aʿlām : 31 notices biographiques (Ibn ʿĀšir, Mayyāra al-kabīr, Muslim,
+     Ibn Abī Shayba, Abū ʿAwāna, al-Tatāʾī, al-Lakhmī, Ibn Bashīr, Ibn Ḥajar, Ibn al-Munīr,
+     Ibn al-Ḥājib, Ibn ʿAbd al-Barr, Ibn Rushd al-ḥafīd, Ibn Ḥabīb, al-Māzarī, Ibn
+     al-Mājishūn, Ibn al-Qāsim, Ibn Shās, qāḍī ʿIyāḍ, Ibn ʿArafa, Ibn Wahb, al-Bājī,
+     Khalīl, al-Ṣāwī, Ibn ʿAskar, al-Haskūrī, Ibn Yūnus, al-Ajhūrī, al-Qarawī,
+     al-Mirdāsī, Saḥnūn, ʿAlīsh)
+  10. 12015 annexe sources : le muṣḥaf muḥammadien 2010, 23 ouvrages de hadith (Sunan,
+      Ṣaḥīḥ, Muwaṭṭaʾ, Musnad, Muʿjam, Muṣannaf, Mustadrak, Mustakhraj…) et 12 de fiqh
+      (al-Durr al-thamīn, al-ʿArf al-nāshir, Khulāṣa, Bidāya, Bulgha al-sālik, Mudawwana,
+      Minḥ al-Jalīl…) avec maisons d'édition et années.
+- Titre du manuel normalisé : « Fiqh — le Muršid al-muʿīn d'Ibn ʿĀšir, avec le commentaire
+  de Mayyāra al-Fāsī (5ᵉ primaire) » (Murshid→Muršid, ʿĀshir→ʿĀšir — convention DIN).
+- **FIX IMPORTANT (bug découvert en QA)** : l'index de recherche (indexPromise dans
+  src/lib/minhaj.ts) était construit une seule fois et JAMAIS invalidé — les retraductions
+  n'apparaissaient pas dans la recherche sans redémarrage du serveur (snippets GT périmés).
+  Correction : fonction corpusStamp() (empreinte mtime+taille du manifeste et des 64 livres,
+  ~65 stat par requête) qui invalide et reconstruit l'index dès qu'un fichier change.
+  Vérifié : « passage des mains dans le cheveu » → 1 résultat fiqh-5ep/11949 avec le snippet
+  de la nouvelle traduction ; snippets « cheveu » de 11937/11949 rafraîchis.
+- **QA agent-browser complète** : accueil 63 manuels avec titre normalisé ✓ ; page livre
+  fiqh-5ep « 11/11 documents bilingues · 10 leçons + introduction 100 % » ✓ ; les 10 titres
+  savants en liste ✓ ; lecteur 11937 bilingue intégral (objectifs/préambule/poème/
+  explication/analyse/évaluation/enrichissement/préparation) avec verset al-Māʾida 7
+  réintégré ✓ ; recherche « Mayyāra » et expressions des nouvelles traductions ✓ ;
+  mobile 375 px ✓ ; 0 erreur console ✓ ; lint ✓ ; dev.log sans erreur ✓.
+- 13 commits de session (1054b55 → 5a60ed9).
+
+Stage Summary:
+- **fiqh-5ep TERMINÉ : 10/10 documents retraduits à la main (8 leçons + 2 annexes),
+  11/11 documents bilingues, titre de manuel normalisé.** Quatrième manuel complet après
+  fiqh-1ep (R10-b), tafsir-1ep (R10-f) et hadith-1ep (R11).
+- **Bilan du chantier de retraduction : 103/950 documents savants (≈ 10,8 %)** — 93 avant
+  la session + 10 fiqh-5ep. Avancement global projet : ≈ 63 % (app + corpus + titres = 100 %,
+  contenu savant en cours).
+- Bug de fraîcheur de l'index de recherche corrigé (corpusStamp) — toutes les futures
+  retraductions seront immédiatement cherchables.
+- Restent en GT : tafsir-5ep (31 docs : préface 12609 + 30 leçons), les 3 intros
+  (11411 fiqh-1ep, 12016 tafsir-1ep, 11930 fiqh-5ep), puis ~810 leçons du reste du
+  corpus + question des 885 pdfOnly à qualifier.
+- **Prochaine étape suggérée (R13) : tafsir-5ep** (31 docs — le dernier manuel primaire
+  en GT : al-Nabaʾ→al-Muṭaffifīn..., achevable en 1-2 sessions), puis les 3 intros en
+  suspens, puis le reste du corpus.
