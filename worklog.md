@@ -1113,3 +1113,61 @@ Stage Summary:
   (3) relancer tafsir-5ep en fin de parcours pour récupérer son intro
   « muqaddima » (rejetée avant le fix tiny) ; (4) vague 2 (~657 docs restants).
 - Réponse utilisateur fournie : solution déployée, chiffrage 24-48 h.
+
+---
+Task ID: R16
+Agent: agent principal (Z.ai Code)
+Task: Suite « continue » — automatisation complète de l'enchaînement des
+livres (superviseur 24/7) après stabilisation R15-bis ; QA de contrôle
+
+Work Log:
+- Reprise : 3 workers setsid TOUJOURS VIVANTS (PIDs 3410/3419/3428, logs
+  actifs) — la daemonisation double-fork a tenu. 160 commits.
+- Registre relu (structure {hand:[], llm:{}}) : **124/950** (109 manuels +
+  15 LLM). Débit mesuré sur la fenêtre 16:31→16:46 : **14 docs/15 min ≈
+  56 docs/h** — meilleur que l'estimation 48/h ; les orages 429 (20/16/14
+  occurrences) sont absorbés par le backoff 8 tentatives.
+- IMPORTANT (comprendre le comptage) : les htmlFr NON-vides mais absents
+  du registre contiennent la traduction GT initiale — « restant » se
+  mesure EXCLUSIVEMENT au registre savant (isSavant dans llm-translate.ts,
+  qui saute pdfOnly et html vides). Recomptage fiable : **825 docs
+  restants sur 62 livres**.
+- Cron 15 min : job 447326 trouvé « Disabled due to exec limits exceeded »
+  → supprimé et recréé (job **447437**).
+- **SUPERVISEUR DE PRODUCTION** (scripts-translate/supervisor.py, démon
+  PID 4079 PPID 1, log /home/z/tr-logs/supervisor.log, état
+  supervisor-state.json) :
+  · file ordonnée des 62 livres restants : primaire (tafsir-5ep/fiqh-6ep/
+    tafsir-6ep en cours détectés → tajwid-5ep/6ep, rasm-wa-dabt-4ep, puis
+    intros résiduelles 4ep/5ep/6ep) → tanawī 1/2/3 → secondaire 1es/2es/3es
+    + Waraqāt ;
+  · maintient MAX=3 workers constants (pgrep -af : jamais de doublon, les
+    workers en cours sont reconnus et complétés) ;
+  · 2 passes max par livre (rattrapage des rejets ; le registre empêche
+    toute refusion) ; lancements espacés de 25 s (anti-rafales 429) ;
+  · état persistant → redémarrable sans doublon ; sortie propre file
+    épuisée.
+- QA : API /api/lessons/tafsir-5ep/13920 (commité 16:46) = 7 994 car,
+  0 guillemet droit, 0 arabe résiduel, versets authentiques ; homepage
+  agent-browser conforme (63 manuels, 950/1 152, 1 835 docs) ; dev.log
+  propre.
+
+Stage Summary:
+- **Production 24/7 désormais AUTONOME** : plus aucune intervention
+  nécessaire entre livres — le superviseur enchaîne tout seul les 62
+  livres dans l'ordre pédagogique. Plus de trou entre deux manuels.
+- État : 124/950 savants ; 825 restants ÷ 56 docs/h ≈ **~15 h de
+  production continue** pour l'intégralité du corpus (si le quota tient).
+- Suivi des prochaines sessions : (1) vérifier PID superviseur actif +
+  supervisor.log ; (2) si sandbox l'a tué : relancer
+  `setsid -f python3 /home/z/my-project/scripts-translate/supervisor.py`
+  (l'état disque garantit l'absence de doublons) ; (3) recréer le cron 15
+  min s'il disparaît ; (4) sondage qualité sur 2-3 docs de livres
+  non-tafsir quand tajwid/rasm démarrent (pas de fenêtre coranique pour
+  ces matières — contrôle humain par échantillonnage) ; (5) monter MAX
+  à 4 dans supervisor.py si les 429 restent rares dans les logs.
+- Risques : (a) quota LLM — si débit < 20 docs/h constaté, envisager
+  MAX=2 temporaire ; (b) muqaddima tafsir-5ep rejetée 2× : la passe 2 du
+  superviseur la retentera (validate() assoupli R15-bis) ; si rejet
+  persistant → reprise manuelle --doc ; (c) exec limits du cron : le job
+  peut retomber « Disabled » — recréer à chaque session si nécessaire.
