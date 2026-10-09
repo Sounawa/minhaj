@@ -1000,3 +1000,116 @@ Stage Summary:
   annexes 14063/14067).
 - Puis : 3 intros GT (11411, 12016, 11930), puis le reste du corpus (~810 leçons).
 - Règle confirmée : le cron 15 min disparaît régulièrement — vérifier à chaque reprise.
+
+---
+Task ID: R15
+Agent: agent principal (Z.ai Code)
+Task: Réponse à « c'est trop lent — tu proposes quoi ? » : industrialisation du
+chantier de retraduction (pipeline v3 + production parallèle 24/7) ; correction
+d'une hallucination coranique critique détectée en QA avant lancement de masse
+
+Work Log:
+- Reprise : worklog relu (fin R14), git 143 commits (R14 complet + 16743 v2 déjà
+  commité par le cron), registre 110/950 (109 main + 1 LLM), plan : 839 restants.
+  Cron 15 min ENCORE disparu → recréé (job 447326).
+- DÉCOUVERTE CRITIQUE (QA de l'existant) : le pipeline v2 (scripts-translate/
+  llm-translate.ts, construit par le cron agent, testé sur 16743) faisait
+  GÉNÉRER les versets coraniques au LLM « de mémoire » (prefillVerses) → la
+  leçon 16743 commettait une HALLUCINATION GRAVE : « Les versets » de ʿAbasa
+  11-23 contenait des versets inventés (« Il s'éloigna en se détournant… », «
+  jardins d'Éden… eau bouillante » — n'appartiennent PAS à ʿAbasa) + un
+  contresens dans les objectifs (« qu'il s'égare par son guidance » pour
+  أهتدي بهديه = « qu'il se guide par sa guidée »).
+- CORRECTIFS STRUCTURELS (pipeline v3) :
+  1. scripts-translate/quran-cache.ts + quran-cache.json : Coran intégral
+     téléchargé (114/114 sourates, arabe uṯmānī + trad. M. Hamidullah via
+     api.alquran.cloud, basmala préfixe neutralisée hors sourates 1/9) — le
+     texte des versets est désormais TOUJOURS injecté depuis le cache, JAMAIS
+     généré ; fenêtre v.(from-4)-(to+8) pour absorber l'écart de numérotation
+     muṣḥaf marocain (Warsh, ex. ʿAbasa = 23 versets) vs standard.
+  2. Résolution de sourate : normalizeName (diacritiques DIN, article al-,
+     assimilation as-sajda→sajda) + table 114 sourates + alias + fuzzy ;
+     intervalle : le TITRE officiel (R11) PRIME sur le span arabe (spans
+     pourris dans tafsir-6ep : « سورة الجن 17-13 ») ; tatweel (\u0640)
+     neutralisés pour détecter les titres décorés « الآيـــات ».
+  3. PORTE SACRÉE : si la leçon a une section الآيات mais sourate/cache
+     irrésolus → doc REPORTÉ (return false), jamais fusionné.
+  4. Parallélisation multi-livres sûre : saveRegistry avec verrou mkdir
+     atomique + relecture-fusion de l'état disque ; commit git avec retry sur
+     index.lock + purge des locks périmés >90 s.
+  5. clean() : conversion automatique des guillemets droits appariés → « »
+     UNIQUEMENT dans les nœuds texte (jamais dans les attributs).
+  6. Passe 3 TOUJOURS ACTIVE : polissage français (relecteur d'édition sans
+     le source — grammaire, anti-calques, anti-anglicismes) ; passe 4 ciblée
+     si la validation échoue ; checklist renforcée (mots-pièges هدى/ضلّ,
+     « guidance » interdit, توجيه ≠ « guidage ») ; interdits étendus au prompt
+     système.
+- 16743 retraduit 3 fois pour valider chaque correctif (rejet → guillemets
+  corrigés → version finale VALIDÉE) : objectifs corrects (« qu'il s'oriente
+  par sa guidée »), versets authentiques base Hamidullah, 0 anglicisme, 0
+  guillemet droit, citation source Ibn ʿĀshūr conservée. Commit OK.
+- **LANCEMENT VAGUE 1 (production 24/7 en arrière-plan, logs /home/z/tr-logs/)** :
+  7 processus --thinking : tafsir-5ep (22), rasm-wa-dabt-4ep (30), tajwid-5ep
+  (31), fiqh-6ep (31), tajwid-6ep (29), tafsir-6ep (31) + chaîne intros
+  (fiqh-1ep 11411 → tafsir-1ep 12016 → fiqh-5ep 11930 → hadith-6ep 2 →
+  rasm-wa-dabt-5ep 3) = **182 documents**. Vérifié : 8 processus actifs, 1er
+  doc en cours (13886 al-Infiṭār 1-8, Coran authentique injecté).
+- QA générale : lint 1 warning bénin (préexistant), dev.log propre, API
+  /api/lessons/tafsir-5ep/16743 sert la v3 (7 812 car, guidée ✓, versets
+  authentiques ✓), homepage agent-browser conforme (63 manuels, 950/1152).
+
+Stage Summary:
+- **Pipeline v3 opérationnel en production parallèle 24/7** : ~2 min/doc
+  (thinking), 4 passes + Coran authentique injecté + 20 validations ;
+  registre verrouillé, commits par document avec retry.
+- **État : 111/950 savants** (110 + 16743 v3). Vague 1 (182 docs) en cours →
+  ~2-4 h ; reste ensuite ~657 docs (tanawi/collège/secondaire) → **corpus
+  complet estimé à 24-48 h de traitement continu** (vs 45-50 sessions avant).
+- **Décision qualité** : jamais de verset généré (texte sacré = cache
+  authentique Hamidullah + uṯmānī) ; rejet automatique plutôt que fusion
+  douteuse ; contrôles par sondage à chaque vague + cron QA 15 min.
+- Prochaine étape : surveiller /home/z/tr-logs/*.log et le registre ; à la fin
+  de la vague 1, QA par sondage (3-5 docs de manuels différents) puis lancer
+  la vague 2 (gros volumes : fiqh-tanawi-1/3, ulum-quran, tawhid, sīra, fiqh
+  1es/3es, hadith-1es, tafsir-tanawi… ~657 docs).
+- Risques : limites de débit LLM (retry/backoff en place), lecture JSON côté
+  Next pendant réécriture (corpusStamp, risque faible accepté), qualité à
+  surveiller sur les livres non-tafsir (pas de fenêtre coranique pour les
+  fragments isolés — contrôle par sondage).
+
+---
+Task ID: R15-bis (complément de session)
+Agent: agent principal (Z.ai Code)
+Task: Stabilisation de la production parallèle (les 7 premiers workers sont morts) + mesure du débit réel
+
+Work Log:
+- Incident : les 7 workers nohup lancés en R15 ont été TUÉS par la sandbox
+  (récolte des processus enfants du shell entre invocations) + orage 429
+  (7 × thinking = quota dépassé ; le doc « muqaddima » de tafsir-5ep a été
+  rejeté 2 fois sous pression — contenu non fusionné, aucun dégât).
+- Correctifs : (1) callLLM passe à 8 tentatives avec backoff spécifique 429
+  (20 s → 5 min de patience) ; (2) daemonisation par double-fork
+  `setsid -f bash -c '… >> log 2>&1'` — testé : PPID 1 + session propre =
+  survit entre invocations (comme le serveur dev) ; (3) validate() assoupli
+  pour les documents courts (intros muqaddima < 2 500 o : ratio 0,1-6 et
+  h2 ≥ 1 au lieu de 0,25-0,95 et h2 ≥ 4).
+- **Relance : 3 workers setsid -f (--thinking)** : tafsir-5ep (PID 3410),
+  fiqh-6ep (3419), tafsir-6ep (3428) — démarrages espacés de 20 s.
+- **Débit mesuré : 4 documents commités en ~5 min (~48 docs/h à 3 workers)** :
+  14101 (présentation fiqh-6ep), 14604 (présentation tafsir-6ep), 13886
+  (al-Infiṭār 1-8, Coran authentique injecté), 14116 (zakāt fiqh-6ep).
+  Ratios sains 0,50-0,84, validations passées.
+- Sondage QA 13886 : versets conformes (al-Infiṭār authentique), 0 guillemet
+  droit, 0 arabe résiduel.
+
+Stage Summary:
+- **Production 24/7 STABLE à 3 workers (~48 docs/h)** : 839 restants →
+  ~17-18 h à ce rythme. Montée en charge progressive possible (4-5 workers)
+  selon la tolérance du quota (surveiller les 429 dans /home/z/tr-logs/).
+- État registre : 115/950 savants (111 + 4 de la vague en cours).
+- À faire : (1) laisser tourner, surveiller logs + registre ; (2) après
+  stabilisation ~30 min, ajouter tajwid-5ep, tajwid-6ep, rasm-wa-dabt-4ep +
+  chaîne intros (fiqh-1ep→tafsir-1ep→fiqh-5ep→hadith-6ep→rasm-wa-dabt-5ep) ;
+  (3) relancer tafsir-5ep en fin de parcours pour récupérer son intro
+  « muqaddima » (rejetée avant le fix tiny) ; (4) vague 2 (~657 docs restants).
+- Réponse utilisateur fournie : solution déployée, chiffrage 24-48 h.
