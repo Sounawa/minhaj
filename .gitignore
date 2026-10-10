@@ -58,3 +58,6 @@ server.log
 
 # logs de production traduction (persistants, non versionnés)
 tr-logs/
+
+# scratch des traductions main (sources extraites + html injectés)
+tr-tmp/
