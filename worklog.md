@@ -1423,3 +1423,50 @@ Stage Summary:
   (ǧ/š/ḏ) — incohérence inter-couches acceptée, chaque couche est cohérente en interne.
 - Prochaine session : reprendre la production manuelle si famine persiste (docs suivants par
   taille croissante : fiqh-1ep/11411, tafsir-1ep/12016, fiqh-5ep/11930 ~10-12K car, puis tajwid-5ep).
+
+---
+
+Task ID: R20
+Agent: agent principal (Z.ai Code)
+Task: Famine 429 (suite) — production manuelle intensive : 4 documents savants + réparation d'orphelin + QA navigateur
+
+Work Log:
+- Réponse directe donnée à la demande « fais tout toi-même » : doctrine déjà en place depuis R19, appliquée
+  ce tour pendant que les 3 workers restaient bloqués en 429 (backoff 20s→5min, 0 doc traduit par les
+  workers sur toute la fenêtre 01:17→03:21).
+- Diagnostic initial : superviseur v3 vivant (PID 1811) ; registre 165/950 ; plan 774 restants ;
+  tafsir-5ep = 93 docs non-savants dont 91 pdf-* sans AR (non traduisibles par pipeline) — seuls
+  13931/13983 restent au worker + muqaddima orphelin.
+- RÉPARATION ORPHELIN : tafsir-5ep/muqaddima était en registre (« muqaddima » générique) mais contenu
+  GT 497 car — le risque noté en R19 s'était matérialisé (worker mort avant de traduire). Traduction
+  savante main + injection hand-set (commit 5d63863) : Tafsīr al-Jalālayn glosé, asbāb al-nuzūl
+  translittéré, valeurs éducatives ET comportementales (سلوكية rendu précisément).
+- TRADUCTIONS MAIN COMPLÈTES (3 présentations de manuels, ~12-13K car AR chacune) :
+  • fiqh-1ep/11411 (commit f349351) : généalogie complète d'al-Akhdarī restituée depuis l'index aʿlām
+    du corpus (Abū Zayd ʿAbd al-Raḥmān… al-Jazāʾirī 918-983 H./1512-1575), al-Ābī al-Azharī daté
+    (XIVᵉ s. H., vivant 1332 H.), naṣāb glosé, ToC 28 leçons = titres officiels verbatim, 7 compétences.
+  • tafsir-1ep/12016 (commit f47c4e2) : les deux Jalāl datés (al-Maḥallī 864 H., al-Suyūṭī 911 H.),
+    démarche méthodique des leçons (objectifs→tamhīd→sourate→sharḥ→maqāṣid→évaluation) rendue,
+    ToC 28 leçons sur l'ordre du manuel imprimé, typo source « Fajr 19-32 » corrigée en 19-30.
+  • fiqh-5ep/11930 (commit ee3288c) : Ibn ʿĀshir + Mayyāra al-Fāsī généalogisés et datés depuis le
+    corpus (990-1040 H./1581-1631 ; 999-1072 H./1590-1662, élève d'Ibn ʿĀshir), al-Murshid al-muʿīn
+    et al-Durr al-thamīn glosés, ToC 28 leçons (corpus fiqh-5ep n'a que 10 docs → ToC source complet).
+  • tajwid-5ep/15387 (commit 011a4eb) : Tuḥfat al-aṭfāl wa-l-ghilmān glosé, al-Jamzūrī généalogisé,
+    rubrique « ahtadī wa-aqtadī » rendue, allusion coranique al-safara al-kirām al-barara conservée,
+    ToC 27 leçons en terminologie corpus (iẓhār/idġām/iḫfāʾ/qalb, madd ṭabīʿī→ʿāriḍ, waqf/ibtidāʾ).
+- Chrome ministériel éliminé partout (menus matières, « للاطلاع أيضا », footer) — convention R19.
+- gitignore : tr-tmp/ ajouté (scratch traductions main) ; src-*.html purgés.
+- QA : 5/5 docs vérifiés via API (zéro résidu arabe, « » présents) + agent-browser : page fiqh-1ep →
+  intro → « Présentation du manuel » + « Table des matières » + généalogie rendus, 0 erreur console/page.
+- Workers : tous sortis en famine (bilans 0 ✓/n ✗) MAIS superviseur relance en boucle (passe 3
+  tafsir-5ep lancée 03:21:47) — aucun livre perdu (registre = vérité).
+
+Stage Summary:
+- **4 documents savants produits ce tour** (165 → 169 registre) ; plan 774 → **771 restants**.
+- Orphelin tafsir-5ep/muqaddima réparé — la file d'attente « présentations de manuels » est désormais
+  presque épuisée : restent surtout des leçons volumineuses (10-25K car) = territoire des workers.
+- Dispositif intact : superviseur v3 + 3 workers en backoff + cron 448245 (30 min) + sessions main.
+- Convention renforcée : dates/généalogies TOUJOURS sourcées depuis l'index aʿlām du corpus du livre
+  (jamais de mémoire) ; ToC = titres officiels corpus quand propres, sinon ToC source traduit fidèlement.
+- Prochaine session : si famine persiste → traductions main ciblées (ex. tafsir-5ep/13931 + 13983,
+  les 2 seuls docs restants du livre, ~20K car chacun) ; sinon vérifier reprise workers (35-56 docs/h).
