@@ -1371,3 +1371,55 @@ Stage Summary:
   worker échoue encore, puis fiqh-6ep/tafsir-6ep par la fin.
 - Toujours : vérifier superviseur (PID actif) + recréer cron si disparu +
   sondage qualité turbo sur premiers docs non-coraniques.
+
+---
+
+Task ID: R19
+Agent: agent principal (Z.ai Code)
+Task: Famine 429 — répondre à « fais tout toi-même » : production manuelle intensive + durcissement du dispositif
+
+Work Log:
+- Sonde SDK personnelle : 429 aussi → famine totale confirmée (workers + agent via SDK).
+  MAIS l'intelligence de l'agent ne passe pas par le SDK → production manuelle possible (prouvé en R18).
+- Diagnostic complet : superviseur v3 (PID 1811) + 3 workers en backoff ; registre 162/950 ;
+  cron 448185 DÉSABILITÉ (« exec limits exceeded ») ; site 200 OK.
+- Sondage `--plan` : 787 docs restants réels ; identification de 12 docs < 6000 car (10 muqaddimas
+  d'intros + 2 intros hadith hadith-2es/10960 et hadith-5ep/10958).
+- CRÉATION `scripts-translate/hand-set.py` : injection main (écriture atomique livre + verrou
+  registre + inscription hand). Même discipline de verrou que le pipeline.
+- 10 muqaddimas traduites à la main et commitées individuellement : tafsir-tanawi-1/2,
+  ulum-quran-2es/3es, rasm-wa-dabt-4ep, tawhid-1es/2es, mantiq-tanawi-1, taqtit-tanawi-1,
+  hadith-tanawi-2 (style : j/sh modérés — Jalāl ×247 vs š ×8 dans la couche savante —, gloses [« »],
+  dates hégiriennes doublées, titres d'œuvres en italique).
+- hadith-2es/10960 + hadith-5ep/10958 : présentations complètes (généalogie al-Nawawī/Ibn Daqīq
+  al-ʿĪd restituée, matn/sharḥ distingués, ToC 28+28 leçons ALIGNÉES sur les titleFr officiels du
+  corpus, chrome ministériel — menus/téléphone — éliminé). Ces 2 livres n'avaient QUE leur intro
+  comme vrai doc → **2 livres complets en savant**.
+- BUG CORRIGÉ (agent-merge.ts, commit 8fbebf9) : docId partagés intro/leçon (6 paires :
+  fiqh-1es/11505, hadith-1ep/12583, hadith-1es/13014, tafsir-1es/13360, ulum-quran-1es/15373,
+  tajwid-6ep/17502) — la fusion écrivait uniquement l'intro (première correspondance) et laissait
+  la leçon en GT ; désormais toutes les leçons jumelles reçoivent la traduction. Test non-régression OK.
+- Cron : 448185 supprimé (mort), CRÉÉ 448245 « Minhāj heartbeat production + QA » — 30 min,
+  expr `0 */30 * * * ?` Europe/Paris, kind webDevReview, message ULTRA-LEAN (≤ 6 actions :
+  reboot-check, avancement --plan, sonde 429, curl site, échantillon QA si nouveaux commits,
+  worklog court). Les jobs bavards 15 min/horaire finissaient tous désactivés par exec limits.
+- Fausse alerte élucidée : le vieux worker tafsir-5ep (lancé avant les traductions main R18) avait
+  6 cibles dont mes 3 docs ; il les a toutes traversées en 429 sans rien traduire puis est sorti —
+  aucune collision. Le remplaçant (PID 3258, 02:20:57) cible correctement [muqaddima, 13931, 13983].
+- Vérifications : API /api/lessons/hadith-5ep/10958 rend 4755 car, 0 arabe résiduel, « » ✓ ;
+  lint 0 erreur (1 warning préexistant) ; plan 787 → 774 restants.
+
+Stage Summary:
+- **12 documents savants produits à la main pendant la famine** (registre 162 → 165 entrées, soit
+  ~174 docs réels — l'entrée « muqaddima » couvre 11 intros : 10 faites main + tafsir-5ep que son
+  worker 3258 couvrira). Plan : 787 → **774** restants. 2 livres complets (hadith-2es, hadith-5ep).
+- Bug pipeline docId collision corrigé — critique pour tajwid-6ep (imminent dans la file).
+- Défense en profondeur restaurée : workers → superviseur v3 → cron 448245 (lean 30 min) → sessions.
+- RISQUE résiduel : si le worker 3258 meurt avant de finir tafsir-5ep, son muqaddima serait
+  sauté par tout remplaçant (déjà en registre) → alors `bun run scripts-translate/llm-translate.ts
+  --doc muqaddima --force --thinking` ou traduction main. Vérifier à la prochaine session que
+  tafsir-5ep est bien complet (intro = vraie traduction, pas GT 497 car).
+- Convention confirmée couche savante : j/sh modérés ; les titres (r11) restent en DIN strict
+  (ǧ/š/ḏ) — incohérence inter-couches acceptée, chaque couche est cohérente en interne.
+- Prochaine session : reprendre la production manuelle si famine persiste (docs suivants par
+  taille croissante : fiqh-1ep/11411, tafsir-1ep/12016, fiqh-5ep/11930 ~10-12K car, puis tajwid-5ep).
