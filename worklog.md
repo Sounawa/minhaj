@@ -1285,3 +1285,44 @@ Stage Summary:
 - Seule vulnérabilité non couverte : reboot sandbox pendant une fenêtre
   de famine exec-limits du cron → perte de production jusqu'à la prochaine
   session ( acceptable).
+
+---
+Task ID: R18
+Agent: agent principal (Z.ai Code)
+Task: Réponse à « propose mieux, c'est long » — mode TURBO sélectif du
+pipeline (économie ~30 % d'appels) + plan d'accélération à étages
+
+Work Log:
+- Analyse du goulot : le débit est borné par le QUOTA LLM externe (famine
+  totale constatée R17-bis, même une requête minimale est refusée). Le
+  seul levier sous mon contrôle = le nombre d'appels par document (et la
+  zéro-trou entre livres, déjà acquis par le superviseur v3).
+- **MODE TURBO implémenté** (llm-translate.ts, commit cf. git) :
+  · isTurboBook(bookId) = NON ^(tafsir-|ulum-quran-) → 554/790 docs
+    restants concernés (fiqh, hadith, tajwid, sira, tawhid, mantiq,
+    qiraat, taqtit, rasm, usul, faraid, fikr-islami) ;
+  · en turbo : passe 1 (traduction) + passe 2 (fidélité AVEC source +
+    POLISSAGE FUSIONNÉ via TURBO_POLISH_ADDON) + validation + passe 4
+    corrective conditionnelle = 3 appels au lieu de 3-4-5 ;
+  · tafsir-* et ulum-quran-* (236 docs, versets omniprésents) gardent le
+    pipeline complet 4 passes — le sacré n'est pas optimisé ;
+  · le tag [turbo] s'affiche dans les logs par document.
+- Worker fiqh-6ep tué (ancien code) → superviseur l'a relancé en <60 s
+  (passe 2, 14 docs, nouveau code turbo). Vérifié : 3 workers sur 3
+  livres. Smoke test --plan exit 0.
+- Cron heartbeat horaire 448185 actif (15 min tués par exec limits).
+
+Stage Summary:
+- **Nouvelle estimation : 10-15 h de production effective** (vs 14-22 h)
+  si le quota revient à un niveau comparable à l'avant-reboot.
+- Plan d'accélération à étages (conditions d'activation) :
+  (a) 429 rares au retour du quota → MAX=4 workers dans supervisor.py ;
+  (b) débit toujours faible malgré quota revenu → tester --thinking off
+  sur matières simples (si quota compté en tokens : gain ×2-3 possible,
+  validation identique en filet) ;
+  (c) sondage qualité demain sur les premiers docs turbo (fiqh-6ep) —
+  si le style baisse, retirer le livre du turbo (1 ligne).
+- RAPPEL PRODUIT pour l'utilisateur : les 950 leçons intégrales ont
+  TOUTES une version française lisible (base GT) — le site est complet et
+  utilisable dès maintenant ; l'upgrade savant est la couche qualité en
+  cours. Rien ne bloque l'utilisation/partage du site.
