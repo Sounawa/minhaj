@@ -55,3 +55,6 @@ server.log
 # Minhāj backups (tarballs locaux)
 /backups/
 .zscripts/dev.pid
+
+# logs de production traduction (persistants, non versionnés)
+tr-logs/

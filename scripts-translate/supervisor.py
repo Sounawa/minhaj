@@ -23,6 +23,10 @@ Sûreté :
 
 Lancement (démon détaché, survit à la session) :
   setsid -f python3 /home/z/my-project/scripts-translate/supervisor.py
+
+NOTE résilience : logs et état vivent dans {projet}/tr-logs (persistant,
+gitignoré) — l'ancien /home/z/tr-logs était EFFACÉ à chaque reboot de la
+sandbox (constaté le 2026-10-10 : 7 h de production perdues).
 """
 
 import json
@@ -32,7 +36,7 @@ import subprocess
 import time
 
 HOME = "/home/z/my-project"
-LOGS = "/home/z/tr-logs"
+LOGS = os.path.join(HOME, "tr-logs")  # persistant (dans le projet, gitignoré)
 STATE_PATH = os.path.join(LOGS, "supervisor-state.json")
 LOG_PATH = os.path.join(LOGS, "supervisor.log")
 MAX_CONCURRENT = 3          # workers simultanés (quota LLM : 3 = stable)
@@ -94,7 +98,12 @@ def save_state(state: dict) -> None:
 
 
 def worker_snapshot() -> tuple[set[str], int]:
-    """Livres en cours de traitement + nombre total de processus workers."""
+    """Livres en cours de traitement + nombre de workers (livres uniques).
+
+    IMPORTANT : compter les LIVRES uniques, pas les lignes pgrep — un
+    worker lancé via bash -c compte pour 2 processus (bash + bun), ce qui
+    plafonnait faussement la concurrence à 1,5 livre.
+    """
     try:
         proc = subprocess.run(
             ["pgrep", "-af", "llm-translate.ts --book"],
@@ -108,17 +117,27 @@ def worker_snapshot() -> tuple[set[str], int]:
         for b in QUEUE:
             if f"--book {b} " in line or line.rstrip().endswith(f"--book {b}"):
                 books.add(b)
-    return books, len(lines)
+    return books, len(books)
 
 
 def launch_worker(book: str) -> None:
+    """Lance un worker daemonisé.
+
+    IMPORTANT : ne PAS utiliser capture_output/pipe — le démon enfant
+    hériterait du write-end du pipe et subprocess.run() attendrait EOF
+    jusqu'au timeout (bug qui a tué le 1er superviseur). On utilise
+    DEVNULL partout : setsid -f fork et son parent sort immédiatement.
+    """
     inner = (
-        f"cd {shlex.quote(HOME)} && bun run scripts-translate/llm-translate.ts "
+        f"cd {shlex.quote(HOME)} && exec bun run scripts-translate/llm-translate.ts "
         f"--book {shlex.quote(book)} --thinking >> {LOGS}/{book}.log 2>&1"
     )
     subprocess.run(
         ["setsid", "-f", "bash", "-c", inner],
-        capture_output=True, timeout=30,
+        stdin=subprocess.DEVNULL,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+        timeout=30,
     )
 
 
@@ -129,24 +148,28 @@ def main() -> None:
         f"état existant={len(state)} livres déjà passés)")
 
     while True:
-        running, active = worker_snapshot()
-        launched_this_cycle = 0
+        try:
+            running, active = worker_snapshot()
+            launched_this_cycle = 0
 
-        for book in QUEUE:
-            if active >= MAX_CONCURRENT:
-                break
-            if book in running:
-                continue
-            if state.get(book, 0) >= MAX_PASSES_PER_BOOK:
-                continue
-            launch_worker(book)
-            state[book] = state.get(book, 0) + 1
-            save_state(state)
-            log(f"worker lancé : {book} (passe {state[book]}, actifs≈{active + 1})")
-            launched_this_cycle += 1
-            active += 1
-            running.add(book)
-            time.sleep(STAGGER_SECONDS)
+            for book in QUEUE:
+                if active >= MAX_CONCURRENT:
+                    break
+                if book in running:
+                    continue
+                if state.get(book, 0) >= MAX_PASSES_PER_BOOK:
+                    continue
+                launch_worker(book)
+                state[book] = state.get(book, 0) + 1
+                save_state(state)
+                log(f"worker lancé : {book} (passe {state[book]}, actifs≈{active + 1})")
+                launched_this_cycle += 1
+                active += 1
+                running.add(book)
+                time.sleep(STAGGER_SECONDS)
+        except Exception as exc:  # le superviseur ne meurt JAMAIS d'un incident
+            log(f"⚠ incident de cycle (ignoré, cycle suivant) : {exc!r}")
+            launched_this_cycle = 0
 
         if launched_this_cycle == 0:
             # Rien à lancer : soit tous occupés, soit file épuisée.
