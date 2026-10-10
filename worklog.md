@@ -1171,3 +1171,117 @@ Stage Summary:
   superviseur la retentera (validate() assoupli R15-bis) ; si rejet
   persistant → reprise manuelle --doc ; (c) exec limits du cron : le job
   peut retomber « Disabled » — recréer à chaque session si nécessaire.
+
+---
+Task ID: R17
+Agent: agent principal (Z.ai Code)
+Task: Reprise après REBOOT sandbox — relance de la production + durcissement
+du superviseur (2 bugs découverts et corrigés)
+
+Work Log:
+- Constat au réveil : machine rebootée (uptime 1 min) ; /home/z/tr-logs/
+  ENTIÈREMENT EFFACÉ (logs, état superviseur, tout) ; workers + superviseur
+  morts à ~17:54 → **~7 h de production perdues** (01:07 au réveil).
+- Pertes réelles : AUCUNE — registre + content + git persistants :
+  **159/950 savants** (109 hand + 50 llm), 197 commits. La fenêtre
+  16:54→17:54 avait produit 35 docs (~35/h avec dégradations 429).
+- Livres en cours à l'arrêt : tafsir-5ep 6 restants, fiqh-6ep 14,
+  tafsir-6ep 15. Restant global recalculé : **790 docs / 62 livres**.
+- Durcissement résilience (superviseur v2, commit dd7217b) :
+  1. LOGS déplacés /home/z/tr-logs → **{projet}/tr-logs** (persistant,
+     gitignoré — le reboot a prouvé que /home/z/tr-logs était volatile) ;
+  2. BUG #1 corrigé : subprocess.run(capture_output=True) + setsid -f =
+     le démon enfant gardait le write-end du pipe → TimeoutExpired à 30 s
+     → le 1er superviseur est MORT après son 1er lancement. Fix : flux
+     DEVNULL (setsid -f fork, son parent sort immédiatement) ;
+  3. BUG #2 corrigé : chaque worker comptait 2 processus (bash parent +
+     bun enfant) → compteur actifs doublé → plafonné à 2 livres. Fix :
+     comptage par LIVRES UNiques + `exec bun` dans bash -c (1 proc/worker) ;
+  4. Boucle principale blindée try/except (le superviseur ne meurt plus
+     d'aucun incident de cycle — log + cycle suivant).
+- Relance vérifiée : superviseur PID 1570 PPID 1 + 3 workers sur 3 livres
+  distincts (tafsir-5ep détecté sans doublon, fiqh-6ep, tafsir-6ep
+  1-proc) ; snapshot python : 3 livres actifs ✓. 429 immédiats absorbés
+  par backoff (tentatives 4-5/8) — normal après 7 h de repos du quota.
+- QA : homepage 200 ; API 15145 (iḥrām fiqh-6ep) 8 916 car, 0 arabe
+  résiduel ; les 2 « guillemets droits » détectés = attribut dir="ltr"
+  d'une table (légitime — la règle « jamais dans le texte » tient) ;
+  dev.log 0 erreur.
+- Cron : job 447437 DISPARU avec le reboot → recréé (**job 448172**).
+
+Stage Summary:
+- **Production relancée et durcie** : superviseur v2 (PID 1570) + 3
+  workers actifs sur les 3 manuels 6ep/5ep quasi finis, puis rotation
+  automatique (tajwid-5ep, tajwid-6ep, rasm-wa-dabt-4ep, intros, tanawī,
+  secondaire).
+- **Leçon d'architecture** : les démons setsid survivent aux sessions MAIS
+  PAS aux reboots sandbox ; /home/z/tr-logs est volatile — TOUJOURS
+  utiliser {projet}/tr-logs désormais. Le cron 15 min est le mécanisme de
+  ressuscitation : sa 1re action en cas de workers morts = relancer
+  `setsid -f python3 /home/z/my-project/scripts-translate/supervisor.py`
+  (idempotent : pgrep évite les doublons, état sur disque).
+- Reste : 790 docs. Estimation : ~35-56 docs/h selon pression 429 →
+  **14-22 h de production** pour finir le corpus.
+- Prochaines sessions : (1) vérifier superviseur PID actif +
+  tr-logs/supervisor.log ; (2) relancer si mort (commande ci-dessus) ;
+  (3) recréer le cron s'il manque ; (4) sondage qualité sur tajwid-5ep /
+  rasm-wa-dabt-4ep dès leurs premiers commits (matières non-coraniques) ;
+  (5) envisager MAX=4 si les 429 restent absorbés.
+
+---
+Task ID: R17-bis (complément)
+Agent: agent principal (Z.ai Code)
+Task: Gestion de la famine de quota LLM post-reboot (superviseur v3 + observation)
+
+Work Log:
+- Orage 429 TOTAL après le reboot : 0 doc produit de 01:10 à 01:25+, les
+  workers épuisent leurs 8 tentatives (fiqh-6ep 8/8, tafsir-5ep 8/8,
+  tafsir-6ep 7/8). Sonde directe : même une requête minimale SANS thinking
+  est refusée 429 → quota ENVIRONNEMENTAL épuisé (cause externe, partagé),
+  pas un problème de taille de requête ni de concurrence de nos workers.
+- Décision : NE PAS toucher aux workers. Le mode « grind » actuel est le
+  bon comportement — backoff croissant (20 s → 5 min), reprise immédiate
+  dès le retour de capacité, aucun worker ne meurt (catch par doc), le
+  superviseur v3 maintient la file. Réduire à 1-2 workers n'accélérerait
+  rien (capacité = 0) et ferait perdre le rythme au retour du quota.
+- Comportement vérifié : les échecs 8/8 sautent le doc (ko++) et passent
+  au suivant — aucune boucle infinie, aucune perte de donnée (registre =
+  vérité terrain). Le doc sauté sera repris à la passe suivante du
+  superviseur (v3 : un livre n'est abandonné que s'il a 0 doc restant, ou
+  cap 4 passes = garde-fou pathologique).
+
+Stage Summary:
+- Production en veille forcée par quota externe (fenêtre 01:10→?, à
+  surveiller). Infrastructure prête : 3 workers en attente patiente +
+  superviseur v3 + cron 15 min qui vérifie et relance si besoin.
+- À la prochaine session : vérifier si le quota est revenu (registry > 159
+  = oui). Si toujours 0 après plusieurs heures : patienter encore (rien à
+  corriger), éventuellement sonder avec la même commande bun -e.
+- État sauvé : 159/950 savants, 790 restants, 3 livres 5ep/6ep quasi finis
+  (6/14/15 restants), 200 commits.
+
+---
+Task ID: R17-ter (complément)
+Agent: agent principal (Z.ai Code)
+Task: Cron de secours repassé en rythme horaire (exec limits de la plateforme)
+
+Work Log:
+- Cron 15 min 448172 créé à 01:14 → aussitôt « Disabled due to exec
+  limits exceeded » : la limite de déclenchements est GLOBALE au compte
+  (épuisée par les jobs 15 min précédents). Supprimé.
+- Remplacé par un heartbeat HORAIRE (job **448185**, 0 0 * * * ?,
+  Europe/Paris) : rôle = ressusciter la production après un reboot
+  (relance superviseur idempotente) + sondage qualité + suivi registre.
+  Une latence max d'1 h est négligeable pour 14-22 h de production, et la
+  consommation d'exec est divisée par 4.
+- Le heartbeat a des instructions précises : NE PAS modifier le pipeline
+  (stable), NE PAS relancer les workers si 429 (famine externe = attendre),
+  relancer SEULEMENT le superviseur si reboot.
+
+Stage Summary:
+- Défense en profondeur : workers (immortels aux 429) → superviseur v3
+  (immortel aux incidents, relance les workers) → cron horaire (relance le
+  superviseur après reboot) → sessions utilisateur (relance le cron).
+- Seule vulnérabilité non couverte : reboot sandbox pendant une fenêtre
+  de famine exec-limits du cron → perte de production jusqu'à la prochaine
+  session ( acceptable).
