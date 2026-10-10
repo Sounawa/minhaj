@@ -364,10 +364,25 @@ const POLISH_PROMPT = `Tu es un relecteur professionnel d'éditions académiques
 Rends UNIQUEMENT le HTML complet corrigé, sans commentaire.`;
 
 // ─────────────────────────────────────────────────────────────────────────────
+// Mode TURBO (livres non coraniques) — polissage fusionné dans la passe 2.
+// Économise ~1 appel sur 3-4 par document (≈ -30 % de quota LLM) sous
+// contrainte de débit. Les livres tafsir-* et ulum-quran-* (versets
+// omniprésents, risque sacré maximal) gardent le pipeline complet à 4
+// passes. La passe 2 (fidélité AVEC le source sous les yeux) et la
+// validation + passe 4 corrective restent TOUJOURS — seul le polissage
+// style-only est fusionné.
+// ─────────────────────────────────────────────────────────────────────────────
+const isTurboBook = (bookId: string) => !/^(tafsir-|ulum-quran-)/.test(bookId);
+const TURBO_POLISH_ADDON = `
+
+POLISSAGE DU FRANÇAIS (fusionné dans cette passe) : en plus de la révision de fidélité ci-dessus, polis le style pour une édition académique — grammaire et accords, élisions correctes, ponctuation française (espace avant ; : ? !), guillemets « » exclusifs ; élimine tout calque mot-à-mot de l'arabe et tout anglicisme (« guidance » interdit → « guidée ») ; si tu remarques un contresens, rétablis le SENS EXACT. INTANGIBLES : ne modifie ni les citations entre « … », ni le contenu, ni l'ordre des sections, ni la structure HTML, ni les références, ni les translittérations DIN.`;
+
+// ─────────────────────────────────────────────────────────────────────────────
 // Traitement d'un document
 // ─────────────────────────────────────────────────────────────────────────────
 async function processTarget(t: Target): Promise<boolean> {
-  console.log(`\n━━━ ${t.bookId}/${t.docId} (${t.kind === "intro" ? "intro" : `leçon ${t.index}/${t.total}`}) — ${t.titleFr}`);
+  const turbo = isTurboBook(t.bookId);
+  console.log(`\n━━━ ${t.bookId}/${t.docId} (${t.kind === "intro" ? "intro" : `leçon ${t.index}/${t.total}`}) — ${t.titleFr}${turbo ? " [turbo]" : ""}`);
   const book = loadBook(t.bookId);
   let verseBlock = "";
   const vref = extractVerseRef(t.html, t.titleFr);
@@ -403,22 +418,27 @@ ${t.html}`;
   writeFileSync(path.join(TR_OUT, `${t.docId}.pass1.html`), fr, "utf-8");
 
   // Passe 2 : relecture de FIDÉLITÉ avec le source sous les yeux
+  // (TURBO : le polissage de style est fusionné ici pour économiser un appel)
   let fr2 = clean(await callLLM([
     { role: "assistant", content: SYSTEM_PROMPT },
     { role: "user", content: userMsg },
     { role: "assistant", content: fr },
-    { role: "user", content: REVIEW_CHECKLIST },
+    { role: "user", content: turbo ? REVIEW_CHECKLIST + TURBO_POLISH_ADDON : REVIEW_CHECKLIST },
   ]));
   if (fr2.startsWith("<h1")) fr = fr2; // si la passe 2 délire, on garde la passe 1
   writeFileSync(path.join(TR_OUT, `${t.docId}.pass2.html`), fr2, "utf-8");
 
-  // Passe 3 (TOUJOURS) : polissage du français — grammaire, naturel, anti-calques
-  const frPolish = clean(await callLLM([
-    { role: "assistant", content: POLISH_PROMPT },
-    { role: "user", content: `Polissage final du document suivant (HTML Minhāj déjà traduit) :\n\n${fr}` },
-  ]));
-  if (frPolish.startsWith("<h1")) fr = frPolish;
-  writeFileSync(path.join(TR_OUT, `${t.docId}.pass3.html`), frPolish, "utf-8");
+  // Passe 3 : polissage du français — grammaire, naturel, anti-calques
+  // (uniquement en pipeline complet ; en TURBO le polissage est fusionné
+  //  dans la passe 2 — la fidélité et la validation restent identiques)
+  if (!turbo) {
+    const frPolish = clean(await callLLM([
+      { role: "assistant", content: POLISH_PROMPT },
+      { role: "user", content: `Polissage final du document suivant (HTML Minhāj déjà traduit) :\n\n${fr}` },
+    ]));
+    if (frPolish.startsWith("<h1")) fr = frPolish;
+    writeFileSync(path.join(TR_OUT, `${t.docId}.pass3.html`), frPolish, "utf-8");
+  }
 
   // Validation + éventuelle passe 4 de correction ciblée
   let v = validate(fr, t.html, t);
