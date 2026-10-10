@@ -1326,3 +1326,48 @@ Stage Summary:
   TOUTES une version française lisible (base GT) — le site est complet et
   utilisable dès maintenant ; l'upgrade savant est la couche qualité en
   cours. Rien ne bloque l'utilisation/partage du site.
+
+---
+Task ID: R19
+Agent: agent principal (Z.ai Code)
+Task: Réponse à « fais tout toi-même au lieu d'attendre » — traduction
+savante MANUELLE en session pendant la famine de quota (canal main réactivé)
+
+Work Log:
+- Insight utilisateur validé : les tokens de l'agent principal ne passent
+  PAS par le quota z-ai-web-dev-sdk saturé. Les 109 premiers savants
+  étaient d'ailleurs des traductions manuelles de sessions. Canal réactivé.
+- Outillage : scripts-translate/hand-register.py (inscription registre
+  avec le MÊME verrou mkdir que llm-translate.ts — sinon le worker
+  piétinerait le travail manuel) + workflow tr-out/{docId}.html →
+  agent-merge.ts (validations : pas d'<img>, pas d'arabe hors attributs,
+  ≥180 o) → hand-register → commit.
+- Stratégie anti-collision : je traduis depuis la FIN de la file du worker
+  (16227 → 14067 → 14042), le worker mange par le début — zéro risque de
+  double-travail même si le quota revient en cours de session.
+- **3 documents livrés ce tour** (commités cfbbfc4, 6a36e83, 6d33475) :
+  · 16227 « Sourate al-Takwīr, versets 22 à 29 » — versets authentiques
+    cache Hamidullah, fragments Jalālayn restitués, lecture warshite
+    bi-ẓanīn rendue, citation al-Wāḥidī 451, Ibn ʿĀshūr avec Fuṣṣilat 26
+    restituée (réf. manuel [Fussilat:4] manifestement erronée → corrigée) ;
+  · 14067 « Sources et références » — 19 sources classiques, titres
+    translittérés DIN + gloses françaises, éditeurs/éditions ;
+  · 14042 « Sourate al-Ṭāriq, versets 1 à 10 » — versets authentiques,
+    note grammaticale lammā (allègement/redoublement du mīm) rendue,
+    glossaire 7 entrées reconstitué, al-Qurṭubī 2/203 (al-Dhāriyāt
+    20-21 restituées, le manuel ne citait que le v. 21).
+- Vérifié : API sert les 3 docs (8 632 / 5 794 / 7 648 car, 0 arabe
+  résiduel). Registre : **162/950** (112 main + 50 LLM).
+- tafsir-5ep : il ne reste que 3 docs (muqaddima — le worker la moud,
+  validation assouplie R15-bis — puis 13931 et 13983).
+
+Stage Summary:
+- **Modèle hybride en place** : main (agent en session, ~3-4 docs/tour,
+  insensible au quota) + workers (35-56 docs/h quand le quota revient).
+  Chaque tour d'utilisateur produit désormais des documents, même en
+  famine de quota.
+- Sessions suivantes (main) : continuer par la fin de file — 13983
+  (al-Inshiqāq 16-25), 13931 (al-Muṭaffifīn 29-36), puis muqaddima si le
+  worker échoue encore, puis fiqh-6ep/tafsir-6ep par la fin.
+- Toujours : vérifier superviseur (PID actif) + recréer cron si disparu +
+  sondage qualité turbo sur premiers docs non-coraniques.
