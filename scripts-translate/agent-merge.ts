@@ -112,6 +112,15 @@ const sample = /échantillon|démonstration/i.test(titleFr ?? "");
 if (target.kind === "intro") {
   target.data.intro.htmlFr = htmlFr;
   if (titleFr) target.data.intro.titleFr = titleFr;
+  // Collision intro/leçon (même docId, ex. muqaddima vs première leçon) :
+  // le même docId peut désigner aussi une leçon du même manuel — on écrit
+  // toutes les occurrences (précédent hadith-1ep/12583 : textes jumeaux).
+  const twins = (target.data.lessons ?? []).filter((l: any) => String(l.docId) === String(docId));
+  for (const twin of twins) {
+    twin.htmlFr = htmlFr;
+    if (titleFr) twin.titleFr = titleFr;
+  }
+  if (twins.length) console.log(`   ⚠︎ docId partagé : ${twins.length} leçon(s) jumelle(s) mise(s) à jour avec la même traduction.`);
 } else {
   const lesson = target.data.lessons[(target as any).lessonIndex];
   lesson.htmlFr = htmlFr;
