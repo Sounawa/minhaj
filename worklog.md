@@ -1470,3 +1470,62 @@ Stage Summary:
   (jamais de mémoire) ; ToC = titres officiels corpus quand propres, sinon ToC source traduit fidèlement.
 - Prochaine session : si famine persiste → traductions main ciblées (ex. tafsir-5ep/13931 + 13983,
   les 2 seuls docs restants du livre, ~20K car chacun) ; sinon vérifier reprise workers (35-56 docs/h).
+
+---
+
+Task ID: R42
+Agent: agent principal (Z.ai Code)
+Task: Reprise après 2ᵈ reset sandbox — diagnostic de perte R21-R41, reconstruction de l'outillage et production manuelle (famine 429 persistante)
+
+Work Log:
+- « continue » → vérifications d'usage après reset (doctrine : LE DISQUE EST LA SOURCE DE VÉRITÉ) :
+  git HEAD = c473348 « worklog R20 » (227 commits) ; worklog finit à R20 ; registre 169/950 (hand 119 + llm 50) ;
+  tr-tmp/ et tr-logs/ disparus (gitignorés) ; dangling commits = vieux débris R5-R10, pas le travail R21-R41.
+- CONSTAT MAJEUR : le contexte du cron 453646 (persistant, externe au sandbox) raconte R39-bis :
+  registre 293/950 (hand 243), fiqh-tanawi-2 15/22, doctrine main-only rôdée jusqu'à R41 — TOUT PERDU
+  sur disque (124 traductions main + entrées worklog R21-R41). Le disque est revenu à l'état R20 (10 oct.).
+  Récupéré du contexte cron : la doctrine pipeline main-only par doc + les specs extract/qa + les quirk outils.
+- Infrastructure : serveur dev VIVANT (curl / → 200) ; arbre propre vs git ; route API correcte
+  [bookId]/[docId] (le vestige [lessonId] N'EST PAS réapparu cette fois) ; corpus 63 livres intacts.
+- Sonde SDK : 429 PERSISTANT → doctrine main-only confirmée ; ni workers ni superviseur relancés (décision R41).
+- OUTILLAGE RECONSTRUIT : tr-tmp/extract.py (extraction source AR + baseline GT décoding + localisation
+  index aʿlām) et tr-tmp/qa-lesson.py (auto-fix NNBSP U+202F avant ;:!?» et après «, apostrophes U+2019,
+  doubles espaces ; vérifs : 0 arabe, « » appariés, balises appariées, 0 apostrophe droite).
+  AMÉLIORATION : copies commitées dans scripts-translate/ (suivies git) — ne seront plus perdues aux resets.
+- PRODUCTION MAIN (2 leçons tafsīr-5ep ~16K car AR chacune, versets perdus par OCR restitués authentiques) :
+  • tafsir-5ep/13931 « Sourate al-Muṭaffifīn, versets 29 à 36 » (Leçon 20) — rire des criminels/des croyants
+    en chiasme, gloses Jalālayn Abū Jahl / ʿAmmār-Bilāl-Salmān, jafn-ḥājib glosé, interrogation-taqrīr
+    du v. 36, istiṯmār Mafātīḥ al-ghayb al-Rāzī 31/95 (deux causes du rire), expressions de la préparation
+    restituées d'al-Inshiqāq 1-9 avec consignation [perte OCR] (commit a1e5f01*).
+  • tafsir-5ep/13983 « Sourate al-Inshiqāq, versets 16 à 25 » (Leçon 23) — serment par le crépuscule/la nuit/
+    la lune pleine, note grammaticale tarkabūnna→tarkabunna conservée, citation croisée al-Ḥāqqa 38-39,
+    istiṯmār al-Rāzī 31/104 (trois mobiles du démenti : imitation des ancêtres, jalousie, peur de perdre
+    les charges), lemmés du glossaire restitués avec consignation, expressions restituées d'al-Burūj 1-9
+    avec consignation.
+  → **LIVRE tafsir-5ep DÉSORMAIS COMPLET en traduction savante** (intro + toutes les leçons réelles ;
+    les 91 pdf-* sont des renvois de référence, hors pipeline). Il a disparu du --plan.
+- QA : API 13931/13983 = 7 985/7 909 car, 0 arabe résiduel ; agent-browser : bibliothèque → tafsir-5ep →
+  leçon 29-36 puis navigation SUIVANT jusqu'à 16-25 — rendu bilingue AR/FR, typographie NNBSP visible,
+  compteur « Leçon 8 / 123 » (position lecteur) vs « Leçon 20 » (numéro du manuel) — écart préexistant,
+  non-régression ; PRÉCÉDENT/SUIVANT corrects ; console SANS erreur (seul bruit dev HMR/DevTools).
+- Cron 453646 trouvé DÉSABILITÉ (« exec limits exceeded ») — supprimé, recréé avec contexte R42 à jour.
+
+Stage Summary:
+- **Registre 169 → 171 / 950 (hand 121 + llm 50) ; tafsir-5ep = 3ᵉ livre complet en savant**
+  (avec hadith-2es, hadith-5ep).
+- Doctrine R41 récupérée et ancrée dans le worklog (le worklog redevient autosuffisant) :
+  pipeline par doc = extract.py → rédaction manuscrite → qa-lesson.py → hand-set.py → commit →
+  curl API → agent-browser. Typographie : NNBSP U+202F, U+2019, « », guillemets imbriqués "…".
+  Consignations [ ] obligatoires pour restitutions OCR. Chrome ministériel éliminé. Généalogies
+  toujours sourcées dans l'index aʿlām du livre (jamais de mémoire). j/sh modérés couche savante,
+  DIN strict (ǧ/š/ḏ) couche titres r11 — incohérence inter-couches assumée.
+- File d'attente suivante (reprise doctrine R41, remise à zéro par le reset) : **fiqh-tanawi-2 dans
+  l'ordre → 12177 (intro/muqaddima du Mukhtaṣar Khalīl + al-Dardīr + ḥāshiya al-Dasūqī), 12230, 12232,
+  12239, 12241, 12242, 12243, 12253, 12261, 12498…** (22 docs). Structure fiqh documentée dans le
+  contexte cron (h1 = titre officiel + « : Livre de fiqh — le Mukhtaṣar de Cheikh Khalīl… », matn/sharḥ,
+  terminologie muslim/muslam ilayhi/muslam fīhi/ʿarḍ/ʿayn).
+- RISQUES : (1) le cron 15 min se DISABLE après « exec limits exceeded » → recréer à chaque tour si
+  besoin ; (2) tr-tmp/ (scratch) reste vidable aux resets — les outils sont désormais aussi dans
+  scripts-translate/ (copiés de tr-tmp/ à l'usage : utiliser ceux de scripts-translate/) ; (3) si le
+  quota SDK revient (sonder 1 requête chat), relancer éventuellement le pipeline workers historique
+  (35-56 docs/h) — scripts-translate/llm-translate.ts intacts.
