@@ -2205,3 +2205,59 @@ Stage Summary:
 - Corpus inchangé : 64 livres / 1853 docs / 983 FR — registre 174/950.
 - Reconstruction lancée (16 docs documentés + file fiqh-tanawi-2) ; protection renforcée
   (bundle git /tmp + backup par-doc + cron 453918 actif).
+
+---
+
+Task ID: R47
+Agent: agent principal (Z.ai Code)
+Task: Continuation session « continue » — reconstruction fidèle des traductions savantes perdues (7 docs à spec complète) + re-vérification indépendante de la fouille R46
+
+Work Log:
+- Re-vérification indépendante de la fouille ordonnée (avant lecture du verdict R46) : grep des 538 blobs git
+  avec les signatures savantes (ḍamān/muqāṣa/qarḍ) → 50 hits analysés un par un = 3 versions historiques de
+  fiqh-tanawi-2 (identiques ou antérieures à l'actuel), 2 de fiqh-3es, ~40 worklogs anciens, scripts →
+  0 traduction supplémentaire récupérable. CONFIRME le verdict R46 (892 blobs, miroir stoppé 10 oct. 03:30).
+- /tmp/my-project VIVANT (pas de reset n°4) : backup-tour (bundle 14,9 Mo + registre + worklog), tr-tmp répliqué.
+- RECONSTRUCTIONS FIDÈLES livrées ce tour (7 docs, specs R43/tasks 1-a→2-d du worklog, chaque doc :
+  rédaction manuelle → qa-lesson.py → QA spec [ToC verbatim normalisation bilatérale ’ + U+202F, sondes
+  codepoint-exactes, décisions documentées] → hand-set.py → vérification corpus → backup per-doc /tmp +
+  bundle → commit) :
+  1. usul-qiyam-5ep/22185 (3 998 car ; spec 2-b : pas de p « Manuel de la matière », quadripartition
+     īmāniyya/ḫuluqiyya/iǧtimāʿiyya/ǧamāliyya, charte éducative, gloses lexicales des termes-clés,
+     Dieu se tient derrière l'intention, ﷺ → paix et bénédictions sur lui ; ToC 26/26 « 1. … 26. »)
+  2. usul-qiyam-6ep/22192 (3 566 car ; spec 1-a : identification + adresse + doctrine šarīʿa
+     [uṣūl/furūʿ, taṣrīḥ/talmīḥ, tripartition īmāniyya/sulūkiyya/ǧamāliyya] + continuité 4e/5e +
+     maqāṣid + vie bonne al-ḥayāt al-ṭayyiba + activités + clausules ; statuts légaux ; ToC 25/25,
+     3 entrées liminaires source écartées)
+  3. ulum-hadith-tanawi-3/20435 (5 146 car ; spec 1-b : 8 p, matn Nuḫbat al-Fikr [« Le choix des
+     pensées »] + šarḥ Nuzhat al-Naẓar [« La promenade du regard »], malaka/tazkiya/iqtidāʾ/ḥikma,
+     ṣidq/amāna/iʿtidāl/wasaṭiyya, DIN strict, « الكتاب » → « Table des matières » ; ToC 27/27)
+  4. rasm-wa-dabt-6ep/18646 (4 627 car ; spec 1-c : 3 titres glosés al-rasm wa-l-ḍabṭ / ʿUmdat
+     al-Bayān / Bahjat al-naẓar wa-l-ʿiyān, ḥamdala allusion Q 21:107 sans référence plaquée,
+     urjūza+šarḥ sans dates, démarche complète, finalité ʿilal/muṣḥaf/alwāḥ ; ToC 29/29)
+  5. faraid-tanawi-3/18693 (5 397 car ; spec 1-d : manẓūma al-Rasmūkiyya m. 1133 H. seule date,
+     Īḍāḥ al-asrār al-maṣūna forme pleine puis courtes, éloge Mālikites tardifs muṭūn/šurūḥ/ḥawāšī,
+     istihlāl harmonisé titre officiel, « le livre de farāʾiḍ » ; ToC 26 numérotées + index non
+     numéroté ; 3 paires « » comme l'original)
+  6. fikr-islami-tanawi-2/22181 (5 165 car ; spec 2-c : identification al-Fikr al-islāmī : al-Falsafa
+     al-islāmiyya, sceau des prophètes, gloses aʿlām/malakūt/anfus-āfāq/iǧtihād/nuṣūṣ al-inṭilāq
+     wa-l-bināʾ/tamhīd/taʿlīl-tadlīl-tawthīq/malakat al-ḥiǧāǧ/istidlāl/masālik al-naẓar/istiẓmāriyya,
+     balance droite, clausule « Dieu est le garant du dessein, et c'est Lui qui guide vers la voie » ;
+     zéro date de philosophe ; ToC 28/28 format 01.-28.)
+  7. taqtit-tanawi-2/18695 (5 938 car ; spec 2-d : ʿUmdat ahl al-thabt + Ḥall al-ʿuqda formes
+     pleine/courtes 4 paires « », ḥamdala rythmée sans guillemets, ¶2 = ¶6 doublon source rendu à
+     l'identique, 3 <br> conservés, samt = azimut/orientation selon spec, ʿilm al-hayʾa, al-maʿmūr,
+     l'agir positif, al-ʿAlamī sans date ; ToC 29/29)
+- ÉTAT : les 8 docs à spec complète (tasks 1-a→2-d + 22184/22185) sont TOUS reconstruits. Restent :
+  8 docs R22 à specs concises (15371, 18691, 18649, 18676, 18675, 18671, 18677, 20297 — notes R22
+  lignes 1694-1713) puis la file fiqh-tanawi-2 (12239…12522/13349/13353, 17 leçons).
+- Vérif 18691 : le GT résiduel contient des diacritiques (faux positif « savant » possible) — tags
+  cassés <jj>/</jd>/</pied de page> + chrome ministériel traduit = bien GT, à reconstruire.
+- Protections maintenues à CHAQUE doc : backup-tour (livre + registre + worklog + bundle git) +
+  tr-tmp répliqué. 7 commits ce tour.
+
+Stage Summary:
+- Registre savant : 175 → 182/950 (7 reconstructions fidèles ce tour ; 8/8 docs à spec complète faits).
+- Verdict R46 re-confirmé indépendamment (538 blobs re-scannés : 0 récupérable).
+- Corpus : 64 livres / 1853 docs — couche savante en progression, 0 perte supplémentaire.
+- Prochaine étape : 8 docs R22 (specs concises lignes 1694-1713) puis file fiqh-tanawi-2.
