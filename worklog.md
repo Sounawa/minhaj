@@ -2153,3 +2153,55 @@ Stage Summary:
 - File d'attente inchangée : fiqh-tanawi-2 → 12239, 12241, 12242, 12243, 12253, 12261, 12498
   (qarḍ), 12499 (muqāṣa), 12500, 12502, 12503, 12505, 12510, 12512 (ḍamān al-rahn), 12517,
   12519/13349, 12522/13353.
+
+---
+
+Task ID: R46
+Agent: agent principal (Z.ai Code)
+Task: Fouille exhaustive ordonnée par l'utilisateur (« elle était là ce matin, cherche ce matin, hier, dans tous les dossiers, une dernière fois ») — verdict final sur les ~119 traductions savantes perdues + lancement de la reconstruction
+
+Work Log:
+- Zones fouillées (TOUTES) : /tmp racine + /tmp/my-project récursif (155 fichiers books json+bak,
+  103 captures tool-results, download/, db/, .zscripts, .initial_snapshot.json) ; /root, /var/tmp
+  (vide), /var, /opt, /srv, /etc, /usr/local — grep global des signatures savantes DIN
+  (istiṯmār, ḍamān, muqāṣa, ʿĀṣim…) hors projet = 0 hit pertinent ; /home/z complet y compris
+  cachés (.bun, .cache, .config, .local, .npm, .agent-browser) ; git : reflog, stash (vide),
+  branches (main seule), tags (aucun), fsck (4 dangling anciens R9/R10/stash) et SURTOUT scan
+  des **892 blobs DÉCOMPRESSÉS** avec 12 marqueurs savants → 97 hits, tous identifiés par
+  rev-list --objects (worklogs successifs, captures du 11 oct., versions actuelles/intermédiaires
+  de fiqh-tanawi-2/fiqh-5ep/faraid-tanawi-2) → comparaison docId par docId : **0 traduction
+  supplémentaire récupérable**.
+- Diff systématique miroir/projet par docId (htmlFr) : ~800 docIds « perdus » = stubs pdf-* GT
+  (déjà injectés R44) ; 343 « tailles différentes » = vieux GT du 5 oct. (fichiers .bak du miroir)
+  vs GT re-générés 7-10 oct. ; TEST des marqueurs savants SPÉCIFIQUES des 14 traductions
+  R22/tasks documentées (ʿĀṣim, Marṭaqī, Rajrājī, Ḥaǧar, Wadghīrī…) sur leurs .bak respectifs :
+  TOUS NÉGATIFS (DIN 0-2 = GT pur : « Ibn Asim », « Le système du chemin d'accès »).
+- Chronologie de la perte ÉTABLIE (preuves) : le miroir /tmp/my-project cesse de synchroniser
+  content/books au **10 oct. 03:30** (fin de la session nocturne R20) et ne reprend qu'au
+  **12 oct. 10:25** (post-reset) — les traductions R21-R41 (10 oct. jour → 12 oct. 10:15) n'ont
+  JAMAIS été écrites hors du disque rollbacké ; tr-tmp/ (scratchs) gitignoré → effacé au
+  rollback ; .git rollbacké au commit c473348 (10 oct. 22:36) → commits R21+ et leurs objets
+  perdus. boot-timeline.log confirme le reset du 12 oct. 10:15:25. Les captures worklog
+  s'arrêtent au 11 oct. 09:26 (R22 + tasks 1-a→2-d) : rien n'a survécu de R23-R41.
+- **VERDICT (prouvé par balayage exhaustif)** : les ~119 traductions savantes R21-R41 ne sont
+  récupérables sur AUCUN support du disque. Le texte intégral n'existe que dans l'historique de
+  conversation de l'utilisateur (panneau chat).
+- Valorisation : la documentation récupérée (R21-R22 + tasks 1-a→2-d, lignes 1630-1950 du
+  worklog) spécifie chaque traduction perdue avec précision (structure, décisions de traduction,
+  gloses, ToC verbatim, tailles) → **RECONSTRUCTION FIDÈLE possible**. Ordre lancé : 22184
+  (usul-qiyam-4ep, task 2-a, spec la plus complète), puis 22185, 22192, 20435, 18646, 18693,
+  puis les 8 docs R22 (15371, 18691, 18649, 18676, 18675, 18671, 18677, 20297), puis la file
+  fiqh-tanawi-2 (12239…).
+- BLINDAGE ANTI-RESET RENFORCÉ : (1) `git bundle create /tmp/my-project/backup-tour/minhaj.bundle
+  --all` à chaque fin de tour — le bundle restaure TOUT l'historique même après un rollback
+  complet du disque (zone /tmp = survivante) ; (2) copie du livre traduit + registre vers
+  backup-tour/ à CHAQUE doc injecté (plus seulement en fin de tour) ; (3) tr-tmp/ dorénavant
+  répliqué vers /tmp/my-project/tr-tmp/ après chaque rédaction.
+
+Stage Summary:
+- Fouille exhaustive TERMINÉE — verdict négatif PROUVÉ (892 blobs scannés décompressés, 155
+  fichiers miroir différenciés par docId, grep DIN global hors projet = 0, .bak = GT du 5 oct.,
+  sync miroir books stoppé au 10 oct. 03:30, dernière capture worklog 11 oct. 09:26).
+- Corpus inchangé : 64 livres / 1853 docs / 983 FR — registre 174/950.
+- Reconstruction lancée (16 docs documentés + file fiqh-tanawi-2) ; protection renforcée
+  (bundle git /tmp + backup par-doc + cron 453918 actif).
