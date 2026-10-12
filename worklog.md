@@ -1565,3 +1565,54 @@ Stage Summary:
   traductions de chaque leçon (corriger le titleFr dans le même commit que la traduction, comme fait ici).
 - Leçon d'architecture : quand une leçon est traduite, vérifier SON titleFr et le corriger dans le même
   commit si GT-isme (la ToC de la muqaddifa/leçon doit toujours être cohérente avec les titres du corpus).
+
+---
+
+Task ID: R43
+Agent: agent principal (Z.ai Code)
+Task: Reprise après 3ᵈ reset / perte du contexte « waves » — vérification disque, reprise de la file fiqh-tanawi-2 (12230, 12232)
+
+Work Log:
+- « continue » → vérifications d'usage (LE DISQUE EST LA SOURCE DE VÉRITÉ) : git HEAD = 667b4ef (233 commits, worklog R42-bis,
+  arbre propre) ; registre 172/950 (hand 122 + llm 50) ; tr-tmp/ = 11 fichiers (scratch R42 : 12177/13931/13983 + outils)
+  — le travail « wave 3 » décrit par le résumé de conversation (hadith-tanawi-3-18676, usul-fiqh-tanawi-2-18691,
+  ulum-hadith-tanawi-2-18677, tafsir-tanawi-3-18671) est INTÉGRALEMENT PERDU : jamais inscrit au registre, fichiers
+  disparus (tr-tmp vidable aux resets). Vérification formelle : les 4 chemins n'existent ni comme fichiers ni comme dirs.
+- Serveur dev VIVANT (curl / → 200, /api/books → 200) ; route API correcte [bookId]/[docId], pas de vestige [lessonId].
+- Cron 453826 trouvé DÉSABILITÉ (« exec limits exceeded ») → supprimé et recréé avec contexte R43 en fin de tour.
+- Sonde SDK : 429 PERSISTANT → doctrine main-only maintenue (aucun worker relancé).
+- PRODUCTION MAIN — fiqh-tanawi-2/12230 « Les règles de la garantie du capital du salam » (leçon 12, source 20 825 car) :
+  périssement du ʿarḍ chez le muslim (garantie du muslim ilayhi si négligence/dépôt/usage ; du muslim si tawaththuq sans
+  bayyina + serment + résolution, refus de serment → choix du muslim ilayhi) ; animal/ʿaqār → salam maintenu + recours
+  contre le jānī ; 2e condition : les 5 cas prohibés (deux ṭaʿām, deux naqdayn, quantité supérieure, meilleure qualité,
+  quantité moindre = ḍamān bi-juʿl) ; hadith ʿUbāda (six marchandises usurières, Muslim musāqāt) ; différence de manfaʿa
+  (mule bédouine, cheval de course, bardot, chameau de fort port, bovin, lait de brebis — ẓāhir Mudawwana) ; hadith Ibn
+  ʿUmar sur la muzābana (Muwaṭṭaʾ buyūʿ) ; istiṯmār al-Dasūqī 3/199-200 (quatre faces, avis préférentiel = différence
+  d'espèce). QA OK 18 390 car, 0 arabe. Commit 723a711.
+- PRODUCTION MAIN — fiqh-tanawi-2/12232 « La vente d'une marchandise contre une marchandise en salam » (leçon 13,
+  source 20 090 car) : différence d'utilité (tronc épais, sabre tranchant contre deux inférieurs, raqīq coton/lin, oiseau
+  dressé) vs identité (ponte/masculinité/féminité, filé, cuisson, calcul, écriture) ; chose contre son pareil = qarḍ
+  (conditions de licéité selon la formule : vente/salam/indéterminée → prohibé pour ṭaʿām et naqdayn) ; 3e condition :
+  report à terme connu > 15 jours (Nawrūz = 1er Āb copte, ḥaṣād, dirās, retour des pèlerins, ʿĀshūrāʾ, mawlid) ; hadith
+  « lā tabiʿ mā laysa ʿindaka » (Tirmidhī buyūʿ) ; les 4 restrictions du terme de 2 jours ; comptage par ahilla, mois
+  entamé complété à 30 (à partir du 4ᵉ, pas du suivant) ; terme indéterminé : al-Māzarī (fasad) vs Mālik/Ibn al-Qāsim
+  (livraison au milieu, préférentiel) ; istiṯmār Ibn Yūnus al-Siqillī 11/119 + Ibn ʿArafa 6/237. QA OK 16 969 car,
+  0 arabe. Commit cbc3e39.
+- QA navigateur (agent-browser) : 12230 et 12232 rendus bilingues, toutes sections présentes (objectifs → préparation
+  préalable), PRÉCÉDENT/SUIVANT corrects (12230 ↔ 12232 ↔ 12239), footer présent, console SANS erreur.
+- INCIDENT OUTIL (résolu) : j'ai enchaîné `hand-register.py fiqh-tanawi-2 12230` avec mauvais ordre d'args (le script ne
+  prend que des docIds) → entrée parasite « fiqh-tanawi-2 » ajoutée à hand (124 au lieu de 123). PURGÉE immédiatement.
+  LEÇON : hand-set.py S'AUTOREGISTRE — ne JAMAIS enchaîner hand-register.py derrière lui.
+- NB affichage : après hand-set, le lecteur SPA peut montrer l'ancien GT jusqu'au rechargement (cache client) →
+  agent-browser reload pour vérifier la nouvelle traduction.
+
+Stage Summary:
+- **Registre 174/950 (hand 124 + llm 50) ; fiqh-tanawi-2 : 3/22 (muqaddima + leçons 12-13)**. Commits 723a711, cbc3e39.
+- File d'attente suivante (19 docs) : **12239 (fixation de l'objet du salam), 12241, 12242, 12243, 12253, 12261, 12498
+  (qarḍ), 12499 (muqāṣa), 12500, 12502, 12503, 12505, 12510, 12512 (ḍamān al-rahn), 12517, 12519/13349 (index aʿlām),
+  12522/13353 (sources)**.
+- Doctrine inchangée : main-only (429 persistant, sonder à chaque tour), pipeline extract.py → rédaction → qa-lesson.py →
+  hand-set.py (AUTOREGISTRE, pas de hand-register.py derrière) → commit → curl API → agent-browser (reload après install).
+- RISQUES : (1) tr-tmp/ reste vidable aux resets — outils aussi dans scripts-translate/ (utiliser ceux-là) ;
+  (2) cron 15 min se DISABLE après « exec limits exceeded » → supprimer/recréer à chaque tour ; (3) les titleFr des
+  livres post-r11 non traduits restent des GT-ismes — campagne à poursuivre au fil des traductions.
