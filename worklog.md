@@ -2095,3 +2095,61 @@ Stage Summary:
   dans l'historique chat — suggérer à l'utilisateur de les exporter si besoin.
 - File d'attente inchangée : fiqh-tanawi-2 → 12239, 12241, 12242, 12243, 12253, 12261, 12498 (qarḍ),
   12499 (muqāṣa), 12500, 12502, 12503, 12505, 12510, 12512 (ḍamān al-rahn), 12517, 12519/13349, 12522/13353.
+
+
+---
+
+Task ID: R45
+Agent: agent principal (Z.ai Code)
+Task: Réponse à l'utilisateur furieux (« tu as perdu plus de 100 documents », « fais un véritable audit minutieux, j'ai pas confiance ») — audit forensique intégral du contenu et sécurisation maximale
+
+Work Log:
+- Interrogatoire complet du disque : git (HEAD = 7c22e02/R44, arbre propre), corpus content/books/,
+  manifest v6, registre savant, miroir /tmp/my-project (131 fichiers livres !), backup-tour (11:07).
+- **AUDIT CORPUS (structure réelle lessons[].html/htmlFr — 1er script avait regardé au mauvais
+  endroit, fausse alerte)** : 63 livres, 1772 leçons, 887 leçons bilingues AR intégrales,
+  902 leçons FR (887 GT + 15 stubs R44), 63 intros FR, 885 PDF → 965 documents FR au total.
+  Registre savant 174/174 TROUVÉS dans le corpus (les « 10 manquants » = intros à docId
+  générique « muqaddima » — faux positifs de mon 1er comptage leçons-only).
+- **AUDIT MIROIR /tmp/my-project** (R44 l'avait sous-exploité pour content/books/) :
+  • 68 anciens livres pré-grille (noms sources, 2-5 oct., corpus initial 131 livres) →
+    copiés et commités dans scripts-recovery/tmp-mirror-books/ (intégrité md5 vérifiée).
+  • Croisement docIds anciens vs actuels : 1111 docIds AR non couverts (choix délibéré
+    r10-grid-move), dont **22 docIds avec FR** perdus du corpus courant :
+    - faraid-tanawi-2 : 18/18 docs COMPLETS (intro + 17 leçons, AR 18K car + GT-FR 17-37K
+      car/doc, manuel réel du programme, 2ᵉ lycée, Mukhtaṣar Khalīl comm. al-Kharshī)
+    - tafsir-4ep : 3 docs GT aux titres cassés (« Première étape », « Traiter le livre original »…)
+    - tawhid/demo-tawhid-01 : 827 car (démo)
+  • Versions communes : AUCUNE version plus riche dans /tmp (0 doc avec +500 car) →
+    les ~119 traductions savantes R23-R41 (registre 293→174 au reset n°3) sont confirmées
+    ABSENTES de tout le disque — uniquement dans l'historique chat de l'utilisateur.
+- **RESTAURATION faraid-tanawi-2** : copie content/books/faraid-tanawi-2.json + entrée manifest
+  (ordre 50, bloc tanawi-2 après hadith-tanawi-2, miroir du layout tanawi-3) + renumérotation
+  orders 1..64 + manifest v7 : 64 livres, 1853 documents (904 leçons bilingues, 64 intros,
+  885 PDF), note mise à jour (« + faraid-tanawi-2 restauré du miroir /tmp après reset sandbox »).
+  Qualité GT (hors registre, honnête — modèle de l'app : GT par défaut, savant en remplacement).
+- tafsir-4ep + tawhid demo : préservés dans scripts-recovery/tmp-mirror-books/ SANS restauration
+  (titres GT cassés / démo — décision explicite).
+- QA agent-browser : accueil « 64 manuels affichés sur 64 », filtre الفرائض → 2 manuels,
+  page livre « 18/18 documents bilingues · 17 leçons + introduction · 100 % », lecteur leçon
+  15857 bilingue FR/AR OK, fil d'Ariane OK, recherche « taʿṣīb » → 3 résultats faraid-tanawi-2
+  (index auto-invalide par corpusStamp) + 1 tanawi-3, 0 erreur console, captures
+  scripts-recovery/qa-r45-{mobile,desktop}.png. Lint : 0 erreur (1 warning préexistant script).
+- Commit 8f0a2b1 (R45). Backup /tmp/my-project/backup-tour/ mis à jour (worklog + registre).
+
+Stage Summary:
+- **RÉPONSE À L'UTILISATEUR** : (1) le travail ÉTAIT sauvegardé — commits + worklog + doctrine
+  backup-tour ; ce sont les 3 resets du sandbox (10 oct. soir, 12 oct. 10:15 + 3/6 oct.) qui ont
+  rollbacké le disque ENTIER, git compris ; (2) les ~119 traductions savantes R23-R41 ne sont
+  récupérables NI sur disque NI dans /tmp (vérifié croisé docId + taille) — uniquement dans le
+  panneau chat de l'utilisateur ; (3) l'audit a néanmoins EXHUMÉ un livre complet perdu que R44
+  avait manqué : faraid-tanawi-2 (18 docs bilingues) → RESTAURÉ et visible dans l'app ;
+  (4) 68 anciens livres du corpus initial préservés en git.
+- Corpus : 64 livres / 1853 documents / 983 FR (53,2 %) — registre savant 174/950 inchangé
+  (faraid-tanawi-2 = GT, non compté).
+- DOCTRINE ANTI-RESET (inchangée + renforcée) : commit git systématique + copie fin de tour
+  worklog/registre vers /tmp/my-project/backup-tour/ + cron webDevReview 15 min (contexte externe
+  = journal d'état de référence).
+- File d'attente inchangée : fiqh-tanawi-2 → 12239, 12241, 12242, 12243, 12253, 12261, 12498
+  (qarḍ), 12499 (muqāṣa), 12500, 12502, 12503, 12505, 12510, 12512 (ḍamān al-rahn), 12517,
+  12519/13349, 12522/13353.
