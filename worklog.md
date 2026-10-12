@@ -1616,3 +1616,482 @@ Stage Summary:
 - RISQUES : (1) tr-tmp/ reste vidable aux resets — outils aussi dans scripts-translate/ (utiliser ceux-là) ;
   (2) cron 15 min se DISABLE après « exec limits exceeded » → supprimer/recréer à chaque tour ; (3) les titleFr des
   livres post-r11 non traduits restent des GT-ismes — campagne à poursuivre au fil des traductions.
+
+---
+
+# SECTION RÉCUPÉRÉE après le reset n°3 (12 oct. 10:15) — entrées perdues R21-R22 et tasks 1-a→2-d
+
+> **Provenance** : captures tool-results du miroir /tmp/my-project (qui survit partiellement aux resets).
+> R21-R22 : capture read_1791641519947 du 10 oct. 14:11 ; tasks 1-a→2-d : capture read_1791710804288 du 11 oct. 09:26.
+> Ces entrées décrivent un travail RÉELLEMENT EFFECTUÉ puis détruit par le rollback du 12 oct. 10:15:25
+> (boot-timeline.log). Les livrables tr-tmp/ et les injections corpus associés sont perdus ; les textes
+> complets existent uniquement dans l'historique de conversation (panneau chat de l'utilisateur).
+
+Task ID: R21
+Agent: agent principal (Z.ai Code)
+Task: Reboot sandbox 10:45 — récupération, 2 leçons tafsir-5ep à la main (LIVRE COMPLET), bug de daemonisation superviseur corrigé
+
+Work Log:
+- Reboot sandbox ~10:45 (processus tués, tr-logs/ gitignoré donc EFFACÉ une seconde fois —
+  SEULE mitigation qui survit : tout ce qui doit vivre est COMMITÉ dans git). Vérifié :
+  git intact (058d137), registre 169, diff « modifiés » = 0 insertion/0 suppression (métadonnées).
+- Famine 429 TOUJOURS active à 10:47 (sonde worker : tentative 2/8 429).
+- RÉPARATION POST-REBOOT : tr-logs/ recréé, superviseur relancé. Puis découverte du
+  BUG DE DAEMONISATION : deux relances (`nohup &` puis `setsid nohup &`) sont mortes
+  silencieusement en <60 s — car restées enfants du shell éphémère du tool Bash. Le worker,
+  lui, survit (lancé `setsid -f bash -c "… exec bun …"` → reparenté à init).
+  FIX : relance du superviseur via `setsid -f bash -c "… exec python3 supervisor.py …"` →
+  PPID=1, vrai démon. Survie confirmée sur 3 cycles (11:01→11:04, 3 workers lancés :
+  fiqh-6ep, tafsir-6ep, tajwid-5ep, stagger 25 s respecté).
+  ⚠︎ RÈGLE ABSOLUE POUR LES SESSIONS SUIVANTES : toujours `setsid -f` (PPID=1) pour tout
+  démon dans cette sandbox, jamais `nohup … &` seul.
+- PRODUCTION MAIN — 2 dernières leçons de tafsir-5ep (~16K car AR chacune) :
+  • 13931 « Sourate al-Muṭaffifīn, versets 29 à 36 » (commit bc8b0f7) : versets 83:29-36
+    injectés fidèlement depuis le cache Hamidullah, gloses Jalālayn entrelacées (Abū Jahl /
+    ʿAmmār-Bilāl-Salmān, jafn/ḥājib, muʿjibīn, interrogatif-taqrīr), citation al-Rāzī
+    (Mafātīḥ al-Ghayb 31/95, les deux avis sur le rire) rendue intégralement, préparation
+    préalable reconstruite avec 84:1-9. Format calqué sur les leçons sœurs savantes (13936…).
+  • 13983 « Sourate al-Inshiqāq, versets 16 à 25 » (commit 596f718) : versets 84:16-25
+    (numérotation 16→25 vérifiée après correction d'une coquille v24/25 avant injection),
+    serment : glose ṣila de « lā », note grammaticale tarākabūnanna (élision nūn + wāw
+    anti-sākinayn), citation parallèle 69:38-39 intégrée, al-Rāzī 31/104 (motifs de la
+    dénégation : imitation des ancêtres/envie/peur de perdre les charges), préparation
+    préalable avec 85:1-9 + aṣḥāb al-ukhdūd.
+- Worker affamé tué avant injection main (anti-collision : un worker vivant ciblant les
+  mêmes docs pouvait écraser la version main à la retour du quota ; les workers futurs
+  relisent le registre au lancement — pas de risque résiduel).
+- QA : API (zéro résidu arabe, numérotation versets complète) + agent-browser (leçon 13931
+  rendue : bloc versets 29-36 avec guillemets imbriqués “ ”, citation Mafātīḥ al-Ghayb
+  visible, 0 erreur console).
+- Fiqh-6ep relancé par le superviseur (passe 1, 14 docs) + tafsir-6ep (15 docs) + tajwid-5ep
+  (30 docs) — les 3 en attente de quota.
+
+Stage Summary:
+- **tafsir-5ep = 3ᵉ LIVRE COMPLET en couche savante** (après hadith-2es et hadith-5ep).
+  Registre : 169 → **171** savants. Plan : 771 → **769 restants**.
+- Famine 429 : >11 h consécutives (depuis ~23:00 la veille) — les 3 workers en backoff.
+- Bug critique de daemonisation identifié et corrigé (setsid -f obligatoire, PPID=1) —
+  le dispositif 24/7 est de nouveau opérationnel : superviseur + 3 workers + cron 448245.
+- File d'attente des « présentations » épuisée ; il reste des LEÇONS volumineuses (territoire
+  workers) — les sessions main devraient désormais cibler des docs courts orphelins ou
+  de la QA (sondage qualité turbo, vérif git-status, recréation cron si désactivé).
+- Prochaine session : vérifier retour du quota (workers 35-56 docs/h une fois nourris) ;
+  sinon QA turbo sur les prochains livres non-coraniques (tajwid-5ep en tête de file).
+
+---
+
+Task ID: R22
+Agent: agent principal (Z.ai Code)
+Task: Session « FAIS EN LE PLUS POSSIBLE » — rafale de 8 traductions savantes à la main, 8 LIVRES COMPLETÉS
+
+Work Log:
+- Reprise 13:33. État : famine 429 TOUJOURS active (3 workers en backoff depuis 11:01, tentatives 6-8/8),
+  superviseur v3 sain (PID 1877, PPID=1, setsid -f confirmé), cron 448245 DÉSACTIVÉ (« exec limits exceeded »).
+- Stratégie « max production » : les livres à 1 doc restant (~22 au total) sont la cible idéale —
+  chaque doc terminé = un LIVRE ENTIERS en couche savante, zéro conflit workers (eux : fiqh-6ep,
+  tafsir-6ep, tajwid-5ep). Convention corpus confirmée via leçon worker 13936 : tout FR, versets du
+  cache Hamidullah avec « » et numérotation, glossaire translittéré, titres de section bilingues.
+- 8 traductions savantes main, injectées via hand-set.py, QA API (zéro résidu arabe) + commit chacune :
+  1. usul-fiqh-tanawi-1/15371 (17 670 car, commit 0b8962c) : leçon liminaire du Marṭaqī al-wuṣūl —
+     manẓūma rendue en vers FR hémistiche par hémistiche (3 tableaux), bio complète d'Ibn ʿĀṣim
+     (760-829 H., Ibn Juzayy oncles, Ibn Lubb, al-Shāṭibī, al-Mawwāq, 5 œuvres), versets Yūsuf 40 /
+     Qamar 49 / Aḥzāb 45-46 injectés, citation al-Rajrājī (ḥamd/shukr, 5 avis) intégrale.
+  2. usul-fiqh-tanawi-2/18691 (5 168 car, cd610c0) : présentation, 5 autorités mālikites, ToC 29 —
+     correction corpus : « Traduire le Coran » → « La transmission du Coran » (nql).
+  3. ulum-hadith-tanawi-1/18649 (4 537 car, 00eb038) : Bayqūniyya+Zarqānī, ToC 28 verbatim
+     (terminologie ṣaḥīḥ→mawḍūʿ complète).
+  4. hadith-tanawi-3/18676 (5 971 car, b65a987) : aqḍiya de Médine, maqāṣid des ʿaṭāyā/nuḥl/qirāḍ…,
+     ToC 28.
+  5. hadith-3es/18675 (4 835 car, b65a987) : ḥajj/ʿumra/uḍḥiya/ḏabāʾiḥ/ṣayd/ʿaqīqa, 7 objectifs,
+     ToC 28. ATTENTION : hadith-3es = 3ᵉ année cycle INTERMÉDIAIRE (إعدادي) ≠ hadith-tanawi-3 (secondaire).
+  6. tafsir-tanawi-3/18671 (4 444 car, 834bc58) : al-Kahf / al-Muḥarrar al-wajīz d'Ibn ʿAṭiyya
+     (cadi Abū Muḥammad ʿAbd al-Ḥaqq b. Ghālib al-Maḥāribī al-Gharnāṭī), laṭāʾif/fawāʾid, ToC 26
+     leçons harmonisé « à » (corpus mêlait tirets/« à »/espaces insécables).
+  7. ulum-hadith-tanawi-2/18677 (5 684 car, 5a8e2f2) : Nuḫbat al-fikar + Nuzhat al-naẓar d'Ibn Ḥaǧar
+     glosées, méthode unifiée des leçons rendue, ToC 26.
+  8. qiraat-tanawi-2/20297 (4 890 car, 8e6b328) : al-Shāṭibī (m. 590 H.), Ibn al-Qāṣiḥ (m. 801 H.)
+     glosés, riwāya/talaqqī/adāʾ + dirāya/naẓar/taʿlīl, spécificité marocaine, ToC 26.
+- QA agent-browser : reader #/livre/usul-fiqh-tanawi-1/15371 (8 tableaux du poème rendus, 0 erreur
+  console/page, screenshot tr-tmp/qa-r22-usul1.png) + #/livre/qiraat-tanawi-2/20297 (H1 + ToC fatḥ/imāla OK).
+- Workers : 0 doc produit sur la fenêtre 11:01→14:30 (famine continue) — la production main a été
+  la SEULE source de progression (171 → 179).
+
+Stage Summary:
+- **8 LIVRES COMPLETÉS en couche savante en une session** (record) : usul-fiqh-tanawi-1, usul-fiqh-tanawi-2,
+  ulum-hadith-tanawi-1, ulum-hadith-tanawi-2, hadith-tanawi-3, hadith-3es, tafsir-tanawi-3, qiraat-tanawi-2.
+  Registre : 171 → **179 savants** (~760 restants). Total livres complets : 3 → 11.
+- Famine 429 : >15 h consécutives ; workers sains en backoff (relance auto), superviseur OK.
+- Doctrine R19/R20 revalidée : en famine, la main reste le seul canal productif (8 docs cette session).
+- Prochaine session : si famine → continuer la liste mono-doc (tajwid-3es/20267, taqtit-tanawi-2/18695,
+  fikr-islami-tanawi-1/2/3, ulum-hadith-tanawi-3/20435, usul-fiqh-tanawi-3/18692, faraid-tanawi-3/18693,
+  rasm-wa-dabt-6ep/18646, usul-qiyam-4ep/5ep/6ep, qiraat-tanawi-3/20304, taqtit-tanawi-3/20274 — ~14 restants) ;
+  si quota revient → surveiller la reprise workers (35-56 docs/h).
+- Cron heartbeat 448245 désactivé par exec limits — remplacé par un webDevReview 15 min (job créé via
+  l'outil cron, description standard mandatée) qui couvre relance/QA/worklog.
+
+
+Task ID: 1-a
+Agent: subagent-traducteur
+Task: Traduction usul-qiyam-6ep/22192 (Présentation du manuel)
+
+Work Log:
+- Lu la fin du worklog (contexte R19/R20 : convention « présentations de manuels » = h1 « Présentation du manuel », chrome ministériel supprimé, ToC = titres officiels corpus, dates sourcées depuis l'index aʿlām du texte source uniquement).
+- Lu le source AR (/home/z/my-project/tr-tmp/usul-qiyam-6ep-22192-AR.html) : contenu réel = h1 de matière + 4 paragraphes d'adresse aux élèves + ToC 28 entrées ; tout le reste (dl vide, blocs « المرحلة الأولى/الثانية » vides, listes des matières scolaires tajwīd/tafsīr/fiqh…, footer ministériel) = chrome à supprimer.
+- Lu _exemplar.html (fiqh-5ep, traduction savante validée) + les htmlFr R20 (tajwid-5ep, fiqh-5ep) pour caler le registre et la structure ; vérifié usul-qiyam-6ep.json : titleFr des 25 leçons = les titres officiels imposés par la spéc.
+- Traduction savante rédigée : paragraphe d'identification du manuel rendant le h1 source (matière Uṣūl al-qiyām fī l-Qurʾān wa-l-Sunna, 6ᵉ année taʿlīm ʿatīq), adresse genrée aux élèves, doctrine des valeurs dans la šarīʿa (uṣūl rassemblant les furūʿ, taṣrīḥ/talmīḥ, tripartition īmāniyya/sulūkiyya/ǧamāliyya), ancrage du livre dans la continuité 4ᵉ/5ᵉ années, maqāṣid + vie bonne (al-ḥayāt al-ṭayyiba), activités éducatives, clausules de louange.
+- ToC finale = 25 titres officiels verbatim (diff programmatique 25/25 OK ; seules normalisations : apostrophe ’ et espace fine U+202F avant « : », exigées par la règle typo). Numéros de page et 3 entrées liminaires du ToC source (« Comment j'utilise mon livre », « Compétences », « Répartition ») écartés conformément à la spéc (ToC = 25 leçons officielles).
+- Aucune date/généalogie : le source ne comporte pas de section aʿlām (matière sans classique étudié) → rien inventé, conformément à la règle f.
+- Chrome ministériel : 100 % supprimé (menus matières, footer « L'Islam au Maroc », divs vides, footer/téléphone).
+- Auto-QA exécuté (script de la spéc) : OK — 3 632 car, zéro résidu arabe, zéro forme de présentation, guillemets appariés (1/1), zéro apostrophe ASCII (27 apostrophes typographiques), 11 espaces fines insécables U+202F.
+
+Stage Summary:
+- Livré : /home/z/my-project/tr-tmp/usul-qiyam-6ep-22192.html — 3 632 car, fragment HTML corps (h1 + 6 p + h2 ToC + ul 25 items), prêt à injecter dans usul-qiyam-6ep.json (docId 22192, remplace le GT actuel de 16 146 car).
+- Auto-QA : « QA OK — 3632 car » (script spéc, exécuté tel quel).
+- Décisions notables : translittération ǧ/š harmonisée à la ToC officielle (ḥaǧǧ, ašʿarite → šarīʿa, taǧalliyāt, ǧamāliyya) ; titre du livre en <em>Uṣūl al-qiyām fī l-Qurʾān wa-l-Sunna</em> [« Fondements des valeurs dans le Coran et la Sunna »] (gloss = titleFr du corpus) ; aḥkām šarʿiyya = « statuts légaux », taḥallī = « s'en parer », ḥayāṭ ṭayyiba allusion coranique conservée en glosse sans référence (pas une citation) ; majuscules divines respectées (Très-Haut, Il).
+
+---
+Task ID: 1-b
+Agent: subagent-traducteur
+Task: Traduction ulum-hadith-tanawi-3/20435 (Présentation du manuel)
+
+Work Log:
+- Lu la fin du worklog (conventions R19/R20 : h1 « Présentation du manuel », h2 « Table des
+  matières », ToC = titres officiels verbatim, chrome ministériel éliminé, dates uniquement
+  depuis l’index aʿlām du texte source).
+- Lu la source AR (12 385 car) : corps utile = h1 (titre du livre), 8 paragraphes de présentation,
+  h2 « الكتاب » + liste ToC ; le reste = chrome (blocs vides المرحلة الأولى/الثانية, menus
+  matières « التجويد/التفسير/الفقه… », bloc « للاطلاع أيضا », footer ministériel) → SUPPRIMÉ.
+- Lu l’exemplaire validé (fiqh-5ep) + les présentations savantes hadith-2es/hadith-5ep pour le
+  registre ; croisé les 27 titleFr officiels dans content/books/ulum-hadith-tanawi-3.json
+  (item 26 vérifié codepoint par codepoint : « Le mathn Nuḫbat al-Fikr du ḥāfiẓ Ibn Ḥaǧar
+  al-ʿAsqalānī »).
+- Traduction intégrale : formule d’ouverture « C’est avec joie… » alignée sur l’exemplaire ;
+  matn/šarḥ distingués avec gloses [« Le choix des pensées »] / [« La promenade du regard »] ;
+  hamdala rendue ; démarche (rappel succinct vs surcroît d’explicitation, textes des fleurons
+  des sources) et finalités (malaka, tazkiya, iqtidāʾ, ḥikma, valeurs) restituées.
+- AUCUNE date/généalogie ajoutée pour Ibn Ḥaǧar : la section aʿlām est absente de CE texte
+  source (spéc. f : jamais de mémoire).
+- ToC finale : 27 titres officiels VERBATIM (01.-27., apostrophe ’ normalisée selon spec h),
+  générés/validés par script contre le JSON du corpus (27/27 exacts) ; items préliminaires
+  source (كيف أستعمل كتابي، كفايات، توزيع) et « غلاف الكتاب » couverts par l’entrée
+  officielle 01 / traités comme chrome.
+- Auto-QA spec + vérifs complémentaires (structure fragment, balises vides, translittération
+  DIN stricte ǧ/ḫ/š/ḥ/ṣ/ẓ/ʿ/ʾ, apostrophes) : tout passe après une itération (1er run :
+  check trop strict exigeant ḍ/ṭ alors qu’aucun mot du texte ne les contient — check corrigé).
+
+Stage Summary:
+- Livré : tr-tmp/ulum-hadith-tanawi-3-20435.html (5 219 car) — fragment HTML (h1 + 8 <p> +
+  h2 « Table des matières » + <ul> 27 <li>), 100 % français, zéro résidu arabe, zéro
+  apostrophe ASCII, guillemets appariés, translittération savante harmonisée avec la ToC
+  officielle (Nuḫbat al-fikr, Nuzhat al-naẓar, muṣṭalaḥ al-ḥadīth, ǧarḥ wa-taʿdīl…).
+- Auto-QA : « QA OK — 5219 car » + ToC verbatim 27/27 OK + structure OK.
+- Décisions notables : h1 « Présentation du manuel » (titre officiel du doc 20435, titre
+  complet du livre reporté dans le 1er paragraphe) ; « الكتاب » rendu « Table des matières »
+  (convention exemplaire/corpus) ; translittération DIN stricte dans le corps pour
+  s’harmoniser avec la ToC (là où les couches antérieures étaient en j/sh modérés).
+
+---
+Task ID: 1-c
+Agent: subagent-traducteur
+Task: Traduction rasm-wa-dabt-6ep/18646 (Présentation du manuel)
+
+Work Log:
+- Lu : fin du worklog (contexte/dispositif), source AR 18646 (12 464 car = présentation + ToC + lourd chrome ministériel), exemplar fiqh-5ep.
+- Conventions corpus vérifiées avant rédaction : h1 « Présentation du manuel » (R7), heading ToC « Table des matières » (exemplar), numérotation simple « 1. » (44/44 intros du corpus), gloses de titres à l’occurrence.
+- Corpus rasm-wa-dabt-6ep.json contrôlé : 29 titleFr officiels (27 leçons + sources + index) ; AUCUN doc aʿlām dans ce livre → règle f respectée à la lettre : aucune date ni généalogie inventée pour al-Wadghīrī / al-Masārī (seules mentions source : « l’imam Idrīs al-Wadghīrī », « Muḥammad ibn al-ʿArabī al-Masārī »).
+- Corps traduit intégralement (7 §) : identité du livre ; ḥamdala (allusion Q 21:107 « l’envoyé en miséricorde pour les mondes » rendue, sans référence plaquée) ; adresse aux élèves ; socle urjūza + sharḥ ; démarche pédagogique complète (objectifs → entrée en matière reliant l’acquis au nouveau → matn + explications auxiliaires + questions orientées → analyse resserrée → évaluation/exploitation/développement → préparation préalable de la leçon suivante) ; finalité (ʿilal, muṣḥaf, tablettes alwāḥ, usage calligraphique marocain) ; prière finale.
+- ToC finale = 29 titres officiels VERBATIM, ordre 1→29 ; items front-matter du ToC source (« Comment j’utilise ce livre », « Compétences », « Répartition périodique », « Couverture ») écartés : absents de la liste officielle (règle g prioritaire).
+- Chrome ministériel supprimé : menus des 16 matières, footer, blocs vides (dl vide, grilles المرحلة 1/2).
+- Titres glosés : al-rasm wa-l-ḍabṭ [« La graphie et la vocalisation »] ; ʿUmdat al-Bayān fī ḥukm al-marsūm min al-Qurʾān [« Le soutien de l’évidence sur les règles de l’écriture du Coran »] + forme courte [« Le soutien de l’évidence »] (glose de la spec) ; Bahjat al-naẓar wa-l-ʿiyān [« La joie du regard et de la vision »].
+- Typo : 43 apostrophes typographiques ’ (zéro ASCII), espaces avant ; : ? !, 5 paires « » appariées, translit harmonisée sur la ToC (hamz al-waṣl, kasra, ḍammé, quiescence, tāʾ, yāʾ).
+- Auto-QA script spec exécuté : PASS (4/4 asserts) ; contre-vérif : 29/29 titres = titleFr corpus au glyphe d’apostrophe près (’ imposé par règle h), ordre 1→29, structure 1×h1 + 7×p + 1×h2 + 29×li.
+
+Stage Summary:
+- Livré : /home/z/my-project/tr-tmp/rasm-wa-dabt-6ep-18646.html — 4 689 car, fragment corps (PAS une page complète), 100 % français.
+- Auto-QA OK : zéro résidu arabe, zéro presentation forms, guillemets appariés, zéro apostrophe ASCII ; ToC 29 leçons = titres officiels verbatim dans l’ordre.
+- Décisions notables : (1) zéro date/généalogie (aucune section aʿlām dans ce livre — rien inventé) ; (2) ToC = liste officielle stricte, front-matter source écarté ; (3) « Conclusion des systèmes (suite) » reproduit tel quel (titleFr officiel verbatim, non « corrigé ») ; (4) ḥamdala rendue sans référence coranique artificielle ; (5) l’htmlFr machine en corpus (« Dessin et contrôle… », 17 462 car, tags cassés) reste à remplacer par ce livrable au prochain merge (agent-merge).
+
+---
+Task ID: 1-d
+Agent: subagent-traducteur
+Task: Traduction faraid-tanawi-3/18693 (Présentation du manuel)
+
+Work Log:
+- Lu la fin du worklog (contexte R19-R20 : conventions présentations de manuels, chrome ministériel à éliminer,
+  dates/généalogies sourcées depuis le texte uniquement).
+- Lu l’exemplaire de style (_exemplar.html = fiqh-5ep) et le source AR (faraid-tanawi-3-18693-AR.html, 12 472 car AR) :
+  résumé (manẓūma al-Rasmūkiyya + sharḥ Īḍāḥ al-asrār al-maṣūna, auteur t. 1133 H.), hamdala, adresse aux élèves,
+  éloge des Mālikites tardifs, structure du livre, ToC « الكتاب » (26 leçons + فهرس + غلاف), puis chrome
+  (dl date, blocs vides المرحلة 1/2, menus des 16 matières, footer).
+- Croisé les titres officiels avec content/books/faraid-tanawi-3.json (27 titleFr du corpus) — reprise verbatim
+  (seule retouche : apostrophes ASCII → typographiques ’, imposée par la règle typo ; p.ex. l’exclusion, l’aveu, L’exécution).
+- Traduction savante intégrale écrite à la main → tr-tmp/faraid-tanawi-3-18693.html (fragment corps, pas de page complète).
+- Décisions : h1 « Présentation du manuel » (convention corpus/exemplar) ; h2 « Table des matières » pour le h2 الكتاب
+  (style exemplar, plus lisible que « Le manuel » de tafsir-1ep/tajwid-5ep) ; ToC = 26 leçons numérotées + « Index des
+  sources et références » non numéroté (convention R20/exemplar) ; entrées front-matter du ToC source (كيف أستعمل كتابي،
+  كفايات…، التوزيع الدوري) et « غلاف الكتاب » omises car absentes du corpus officiel ; guillemets doubles des titres
+  arabes rendus <em>…</em> [« … »] à chaque occurrence (forme pleine 1ʳᵉ occurrence, forme courte ensuite, conformément
+  à l’exemple de la spec : al-Jawāhir al-maknūna [« Les perles enfouies »]).
+- Date d’al-Rasmūkī : uniquement (m. 1133 H.) — c’est tout ce que donne le texte source ; pas de conversion grégorienne
+  inventée, pas de généalogie complémentaire (aucune section aʿlām dans ce document).
+- « التنازع في الاستهلال » rendu « la contestation en matière d’observation du croissant (istihlāl) » par harmonisation
+  forcée avec le titre officiel du corpus (l’acception classique « cri du nouveau-né » est sacrifiée à la cohérence corpus).
+- Auto-QA (script spec + vérif ToC verbatim vs JSON) : passée 2 fois (après retouches : suppression d’un connectif,
+  gloss al-ʿulūm al-šarʿiyya, « le livre de farāʾiḍ »).
+
+Stage Summary:
+- Livré : /home/z/my-project/tr-tmp/faraid-tanawi-3-18693.html — fragment HTML du corps, 5 768 car, 100 % français
+  (zéro caractère arabe, zéro forme de présentation), 51 apostrophes typographiques / 0 ASCII, 3 paires « » appariées,
+  translittération DIN stricte (ḥaǧb, taʿṣīb, ʿawl, munāsaḫāt, iqrār, ṣulḥ, inkisār, istihlāl, waṣāyā, manẓūma, muṭūn,
+  šurūḥ, ḥawāšī), ToC 27/27 titres officiels verbatim dans l’ordre.
+- Remplace le placeholder GT (17 923 car truffé d’erreurs : « prières obligatoires », « le recel », « le bandeau des
+  yeux », « copies » pour munāsaḫāt, chrome ministériel traduit) — à injecter en hand-set dans
+  content/books/faraid-tanawi-3.json → intro.htmlFr du doc 18693.
+- Point d’attention pour l’agent principal : les titleFr du corpus contiennent des apostrophes ASCII ; la couche
+  traduction impose ’ — vérifier la normalisation côté injection/rendu.
+
+---
+Task ID: 2-c
+Agent: subagent-traducteur
+Task: Traduction fikr-islami-tanawi-2/22181 (Présentation du manuel)
+
+Work Log:
+- Lu la fin du worklog (conventions établies : h1 « Présentation du manuel », h2 « Table des matières », ToC = titres officiels verbatim, chrome ministériel éliminé, dates uniquement depuis une section aʿlām du texte source).
+- Lu la source AR (12 843 car) : corps utile = h1 de matière (الفكر الإسلامي : الفلسفة الإسلامية, 2ᵉ année secondaire ʿatīq), ḥamdala, adresse genrée aux élèves, § sur la philosophie islamique comme produit de la rencontre des sciences, § méthodologique (objectifs → tamhīd → nuṣūṣ al-inṭilāq wa-l-bināʾ → explication contextuelle → dégagement → analyse taʿlīl/tadlīl/tawthīq → ḥiǧāǧ/istidlāl/naẓar), § questions et textes istiẓmāriyya, clausule « والله من وراء القصد », ToC source 25 leçons + front-matter ; le reste (dl date, blocs vides المرحلة 1/2, menus des 16 matières, footer) = chrome SUPPRIMÉ.
+- Lu l’exemplar fiqh-5ep + livrables précédents (usul-qiyam-6ep pour le patron du 1ᵉʳ § ; ulum-hadith pour la numérotation 01./02. de la ToC) ; croisé les 28 titleFr officiels dans content/books/fikr-islami-tanawi-2.json.
+- Traduction savante intégrale rédigée : identification du manuel avec titre en <em>al-Fikr al-islāmī : al-Falsafa al-islāmiyya</em> [« La pensée islamique : la philosophie islamique »] ; ḥamdala (« sceau des prophètes ») ; gloses techniques aʿlām, malakūt, anfus/āfāq, iǧtihād, nuṣūṣ al-inṭilāq wa-l-bināʾ, tamhīd, taʿlīl/tadlīl/tawthīq, malakat al-ḥiǧāǧ, istidlāl, masālik al-naẓar, istiẓmāriyya ; l’âme et les horizons = allusion coranique (anfus, āfāq) rendue en glose SANS référence plaquée (pas une citation) ; « la balance droite » pour al-mīzān al-mustaqīm.
+- AUCUNE date/généalogie pour al-Kindī, al-Fārābī, Ibn Sīnā, al-Ġazālī, Ibn Rušd, Ibn Ḫaldūn : aucune section aʿlām dans CE texte source (règle f : jamais de mémoire) — les savants n’apparaissent que dans la ToC officielle.
+- ToC finale = 28 titres officiels VERBATIM dans l’ordre 01→28, vérifiés programmatiquement contre le JSON du corpus (28/28 exacts) ; seules normalisations imposées par la règle typo : apostrophe ’ et espace fine U+202F avant « : » ; front-matter du ToC source (كيف أستعمل كتابي، كفايات) et numéros de page écartés ; le 2ᵉ bloc أنشطة الدعم والتثبيت (ص133) n’existe pas dans la liste officielle → non ajouté.
+- Normalisation typo systématique par script (44 apostrophes ’ , 18 espaces fines U+202F avant : ;) puis auto-QA.
+- Auto-QA spéc (4 asserts) : PASS — compléments : ToC 28/28, structure 1 h1 + 7 p + 1 h2 + 28 li, fragment corps sans <html>/<body>/<footer>, zéro balise vide, translittération DIN ǧ/ḫ/š/ḥ/ṣ/ẓ/ʿ/ʾ vérifiée sur la liste d’harmonisation.
+
+Stage Summary:
+- Livré : /home/z/my-project/tr-tmp/fikr-islami-tanawi-2-22181.html — 5 330 car, fragment HTML du corps, 100 % français (zéro caractère arabe, zéro presentation form), 44 apostrophes typographiques / 0 ASCII, guillemets appariés, espace fine U+202F avant ; : ? !.
+- Auto-QA : « QA OK — 5330 car » + ToC officielle verbatim 28/28 + structure OK.
+- Décisions notables : (1) h1 source rendu en 1ᵉʳ § d’identification (patron usul-qiyam-6ep) avec titre du livre translittéré + glose ; (2) zéro date de philosophe (pas de section aʿlām dans ce doc — rien inventé) ; (3) « والله من وراء القصد » rendu « Dieu est le garant du dessein, et c’est Lui qui guide vers la voie » ; (4) numérotation ToC au format 01.–28. (spéc) ; (5) remplace le htmlFr GT de 17 924 car (chrome traduit, balises cassées <jj>, </pied de page>) — à injecter dans content/books/fikr-islami-tanawi-2.json → intro.htmlFr du doc 22181 ; apostrophes ASCII des titleFr corpus à normaliser en ’ côté injection/rendu (déjà signalé en 1-d).
+---
+Task ID: 2-d
+Agent: subagent-traducteur
+Task: Traduction taqtit-tanawi-2/18695 (Présentation du manuel)
+
+Work Log:
+- Lu la fin du worklog (conventions de l’entrée précédente) + _exemplar.html (registre, typographie, h1
+  « Présentation du manuel », h2 « Table des matières », <em>Translit</em> [« traduction »]).
+- Lu la source AR (12 961 car) : h1 = titre complet du livre + « س2 ثا » ; ¶ de présentation (avec ¶2 = ¶6
+  répétés verbatim par la source) ; ḥamdala rythmée à échos coraniques ; h2 الكتاب + ToC (3 entrées
+  front-matter + leçons 1-25 + 4 entrées finales non numérotées + غلاف الكتاب) ; puis chrome (dl vide,
+  &nbsp;, tableaux vides المرحلة 1/2, menus des 16 matières, footer) — tout le chrome supprimé.
+- Croisé les titres officiels avec content/books/taqtit-tanawi-2.json (29 titleFr du corpus) — reprise
+  verbatim (seule retouche : apostrophes ASCII → ’, imposée par la règle typo, comme en faraid-3).
+- Traduction savante intégrale → tr-tmp/taqtit-tanawi-2-18695.html (fragment corps, pas de page complète).
+- Décisions notables : h1 « Présentation du manuel » (titleFr du doc 18695 dans le corpus ; le contenu du
+  h1 source — titre complet + 2ᵉ année secondaire — est intégralement couvert par le ¶1) ; titres de livres
+  en forme pleine + glose à la 1ʳᵉ occurrence, formes courtes de la spec ensuite (ʿUmdat ahl al-thabt
+  [« Le soutien des gens de la transmission assurée »], Ḥall al-ʿuqda [« La résolution du nœud »]) ;
+  ḥamdala = prose rimée d’auteur avec allusions coraniques (faire de la nuit et du jour deux signes ;
+  assujettir soleil et lune), NON citation verbatim → traduite sans guillemets ni référence ; سمت rendu
+  « azimut » dans le corps (harmonisé leçons 21-22-24 du corpus) mais « orientation » dans la glose du
+  titre de la manẓūma (harmonisé titleFr corpus « temps et orientations ») ; علم الهيئة → « la science de
+  la configuration du monde (ʿilm al-hayʾa) » ; المعمور → « le monde habité (al-maʿmūr) » ; مصطلحات
+  (sic) فلكية → « termes d’astronomie » (harmonisé ToC 27) ; entrées front-matter du ToC source (كيف أستعمل
+  كتابي ; كفايات تدريس مادة أصول الفقه — artefact de copier-coller ministériel dans un livre de tawqīt ;
+  التوزيع الدوري والأسبوعي) et « غلاف الكتاب » omises, absentes du corpus officiel (précédent faraid) ;
+  ¶ répété du source rendu à l’identique (fidélité au doublon) ; الفاعلية الإيجابية → « l’agir positif ».
+- Aucune date ni généalogie pour al-ʿAlamī : aucune section أعلام dans ce document, source muette → rien
+  inventé (règle f) ; مَحمد (vocalisation marocaine) harmonisé en « Muḥammad » conformément à la
+  dénomination du projet (spec).
+- Typo : 44 apostrophes typographiques / 0 ASCII ; espaces fines insécables U+202F insérées devant ;
+  (12×) et : (1×) par post-traitement ; 3 balises <br> conservées tag pour tag ; 4 paires « » (gloses
+  de titres).
+- Auto-QA : script spec (résidu arabe, presentation forms, guillemets appariés, apostrophe ASCII) passé
+  1 fois sans retouche nécessaire + vérif verbatim des 29 titres ToC vs corpus JSON (normalisation ’) :
+  OK 29/29 + chrome absent (footer/dl/&nbsp;/menus) vérifié.
+
+Stage Summary:
+- Livré : /home/z/my-project/tr-tmp/taqtit-tanawi-2-18695.html — fragment HTML du corps, 6 103 car,
+  100 % français (zéro caractère arabe, zéro forme de présentation), 0 apostrophe ASCII, 4 paires « »
+  appariées, translittération DIN harmonisée avec la ToC (tawqīt, mabsūṭ, mankūs, ġāya, niṣf al-faḍla,
+  maġrib, šurūq, ẓuhr, ʿaṣr, ʿišāʾ, faǧr, mīqāt, samt, hayʾa, maʿmūr), ToC 29/29 titres officiels
+  verbatim dans l’ordre (leçons numérotées 1-25 + mathn/lexique/notices/index numérotés 26-29).
+- Remplace le placeholder GT — à injecter en hand-set dans content/books/taqtit-tanawi-2.json →
+  intro.htmlFr du doc 18695.
+- Point d’attention récurrent (déjà signalé) : les titleFr du corpus contiennent des apostrophes ASCII ;
+  la couche traduction impose ’ — vérifier la normalisation côté injection/rendu.
+
+---
+Task ID: 2-b
+Agent: subagent-traducteur
+Task: Traduction usul-qiyam-5ep/22185 (Présentation du manuel)
+
+Work Log:
+- Lu la fin du worklog (conventions R19-R20 : présentations de manuels, chrome ministériel à éliminer,
+  dates/généalogies sourcées uniquement depuis le texte, ToC = titres officiels verbatim).
+- Lu l’exemplaire (_exemplar.html = fiqh-5ep) et les deux référents de la série : usul-qiyam-6ep-22192.html
+  (validé) + son source AR, et usul-qiyam-4ep-22184-AR.html (même série, non traduit) pour valider
+  le schéma d’ouverture.
+- Lu le source AR usul-qiyam-5ep-22185-AR.html (12 732 car) : h1 matière + dl date (lundi 16 mars 2026)
+  + adresse aux élèves + 4 paragraphes doctrinaux + ul ToC (front-matter + 22 leçons + 2 index), puis chrome
+  (grilles vides المرحلة 1/2, menus des 16 matières, footer ministériel).
+- Vérifié le corpus content/books/usul-qiyam-5ep.json : intro.docId = 22185, htmlFr GT existant = 16 864 car
+  (« Le sujet des principes de valeurs… », tags cassés jj/jd, chrome traduit) — à remplacer au merge ;
+  lessons[] = 26 titres officiels titleFr, recopiés VERBATIM depuis le JSON (seule retouche : apostrophes
+  ASCII → ’, imposée par la règle typo, même décision que Task 1-d faraid).
+- Traduction savante rédigée à la main → tr-tmp/usul-qiyam-5ep-22185.html (fragment corps, pas une page
+  complète). Structure = spec : h1 « Présentation du manuel », adresse, corps doctrinal (4 p), h2 « Table des
+  matières », ul/li. Pas de p introductif séparé « Manuel de la matière… » (contrairement à la 6ep) : le
+  source 5ep restitue lui-même le titre dans son 1er paragraphe, et le 4ep (même série) confirme ce schéma ;
+  la structure visée de la spec (h1-adresse-corps-h2-ul) est ainsi respectée sans duplication.
+- Chrome supprimé : dl date, blocs vides المرحلة الأولى/الثانية, menus des 16 matières (التجويد → الفكر
+  الإسلامي), footer ; entrées front-matter du ToC source non officielles écartées (كيف أستعمل كتابي، كفايات
+  تدريس المادة) + numéros de page (ص) abandonnés, comme en 6ep.
+- Zéro savant cité dans le texte source → zéro date, zéro généalogie (règle f : rien inventé).
+- Translittération harmonisée par script avec la 6ep validée (sondes codepoint-exactes : Uṣūl al-qiyām fī
+  l-Qurʾān wa-l-Sunna, taʿlīm ʿatīq, taǧalliyāt, maqāṣid + glose du titre « Fondements des valeurs dans le
+  Coran et la Sunna » reprise telle quelle).
+- Typographie : apostrophes ’ (34, zéro ASCII), espace fine U+202F avant : ; (10) et dans [« … »],
+  1 paire « » appariée, em-dashes espacés, ﷺ rendu « paix et bénédictions sur lui » (forme des titres officiels).
+- Auto-QA (script spec exécuté verbatim, + contre-vérifications : ToC 26/26 = corpus à l’apostrophe près,
+  ordre 1→26, absence d’espace pleine avant : ;, cohérence translit vs 6ep) : PASS.
+
+Stage Summary:
+- Livré : /home/z/my-project/tr-tmp/usul-qiyam-5ep-22185.html — fragment HTML du corps, 4 061 car, 100 %
+  français (zéro caractère arabe, zéro forme de présentation), 34 apostrophes typographiques / 0 ASCII,
+  10 espaces fines U+202F, ToC 26/26 titres officiels verbatim dans l’ordre (Introduction → Index des thèmes).
+- Décisions notables : (1) ﷺ → « paix et bénédictions sur lui », aligné sur les titleFr officiels 16 et 20 ;
+  (2) quadripartition des valeurs glosée īmāniyya / ḫuluqiyya / iǧtimāʿiyya / ǧamāliyya (la 6ep n’avait que
+  le trio īmāniyya / sulūkiyya / ǧamāliyya — gloses propres au texte 5ep) ; (3) وثيقة تربوية → « charte
+  éducative » ; (4) شروح معجمية مفتاحية → « gloses lexicales des termes-clés » ; (5) والله من وراء القصد →
+  « Dieu se tient derrière l’intention » (officialese marocain, premier rendu du corpus — à réutiliser pour
+  fikr-islami-tanawi-2/22181 qui contient la même formule) ; (6) pas de p « Manuel de la matière… » contrairement
+  à la 6ep (cf. Work Log) ; (7) chiffres ToC en « 1. … 26. » comme 6ep/faraid, le « 01. » de la spec n’étant
+  que son énumération.
+- Remplace le placeholder GT (16 864 car : « Le sujet des principes de valeurs », tags cassés, chrome traduit) —
+  à injecter en hand-set dans content/books/usul-qiyam-5ep.json → intro.htmlFr du doc 22185 (agent-merge).
+- Rappel pour l’agent principal : les titleFr du corpus contiennent des apostrophes ASCII ; la couche traduction
+  impose ’ — normalisation à prévoir côté injection/rendu (déjà signalé en 1-d).
+
+---
+Task ID: 2-a
+Agent: subagent-traducteur
+Task: Traduction usul-qiyam-4ep/22184 (Présentation du manuel)
+
+Work Log:
+- Lu la fin du worklog (conventions « présentations de manuels » : h1 « Présentation du manuel »,
+  chrome ministériel supprimé, ToC = titres officiels corpus verbatim, dates/généalogies
+  uniquement depuis une section aʿlām du source).
+- Lu le source AR usul-qiyam-4ep-22184-AR.html (12 657 car AR) : h1 de matière + dl date
+  (lundi 16 mars 2026) + ḥamdala + adresse aux élèves (كتابكم في مادة أصول القيم…) + démarche
+  pédagogique + 2 activités d’intégration + espoir + prière finale + ToC (4 items liminaires +
+  22 leçons numérotées 1-22 + 2 index) ; tout le reste (divs vides, grilles المرحلة الأولى/الثانية
+  vides, menus des 16 matières scolaires, footer ministériel) = chrome.
+- Lu _exemplar.html (fiqh-5ep) et la sœur validée usul-qiyam-6ep-22192.html (même matière) pour
+  registre/typographie/structure ; corpus usul-qiyam-4ep.json contrôlé : intro.docId = 22184,
+  titleFr des 25 leçons = liste officielle de la spéc.
+- Corps traduit intégralement (7 p) : identification du manuel en P1 (rend le h1 source — la
+  mention « quatrième année » n’existe QUE dans le h1 source, contrairement au 5ep où elle figure
+  dans le corps → convention P1 « Manuel de la matière… » de la sœur 6ep conservée) ; ḥamdala
+  (« l’envoyé en miséricorde pour les mondes » rendu sans référence plaquée, comme rasm-wa-dabt) ;
+  adresse genrée + quadruple classification des valeurs + taḥallī « vous en parer » + tazkiya
+  « purifier vos âmes » + nafʿ ʿāmm « intérêt général » + tašabbuʿ « imprégnation des valeurs de
+  la beauté » (ẓāhir/bāṭin « l’apparent/le caché ») ; démarche pédagogique complète (objectifs →
+  entrée en matière → textes légaux → analyse → activité de mise en œuvre des acquis, prises de
+  position justifiées par « les enseignements et les statuts de la Loi ») ; 2 activités
+  diversifiées (intégration des acquis, production/création, tawāṣul + travail collectif) ;
+  espoir ; prière finale.
+- ToC finale = 25 titres officiels VERBATIM générés par script depuis le JSON du corpus (diff
+  25/25 exact, ordre 1→25) ; seule normalisation : apostrophe ’ (règle h). Écartés : items
+  liminaires du ToC source (المقدمة couvert par l’entrée officielle 01 ; كيف أستعمل كتابي،
+  كفايات تدريس المادة، التوزيع الدوري = chrome non officiel), numéros de page (ص), <strong>
+  des items 6/21 du ToC source (présentation uniforme, comme tous les livrables précédents).
+- Découverte en cours de tâche : le livrable parallèle usul-qiyam-5ep-22185.html (Task 2-b, même
+  série, même template) était déjà posé → 3 harmonisations série appliquées : (1) numérotation
+  ToC « 1. »-« 25. » simple (le « 01. » de la spéc n’est que son énumération — décision explicite
+  de la Task 2-b, cohérente avec 6ep/faraid) ; (2) quadripartition rendue « de foi (īmāniyya),
+  morales (ḫuluqiyya), sociales (iǧtimāʿiyya) et esthétiques (ǧamāliyya) » à l’identique du 5ep
+  (même phrasé arabe source ; la 6ep n’a que le trio avec « de beauté ») ; (3) formule يسرنا أن
+  نضع بين أيديكم rendue « c’est avec joie que nous plaçons entre vos mains » (aligné 5ep ; le
+  « il nous est agréable » de rasm-wa-dabt écarté au profit de la cohérence de série).
+- Aucune date/généalogie : aucune section aʿlām dans ce source (matière sans classique étudié) →
+  rien inventé (règle f).
+- Chrome ministériel 100 % supprimé (dl date, blocs vides, menus matières, footer).
+- Typographie : 27 apostrophes typographiques ’ (0 ASCII), 7 espaces fines insécables U+202F
+  (avant : ; et dans « … », convention sœur 6ep), 1 paire « » appariés, translittération DIN
+  stricte (Uṣūl al-qiyām fī l-Qurʾān wa-l-Sunna, taʿlīm ʿatīq, ḫuluqiyya, iǧtimāʿiyya, ǧamāliyya,
+  tawāṣul, al-maʿrifa al-šarʿiyya + termes de la ToC ṣabr/birr al-wālidayn/ṭahāra/ṣidq/ṣilat
+  al-raḥim/tawāḍuʿ).
+- Auto-QA : script de la spéc exécuté verbatim → PASS ; + contre-vérifications PASS (structure
+  1×h1 + 7×p + 1×h2 + 25×li + 2×em, zéro balise vide, zéro espace pleine avant ; : ? !, zéro
+  guillemet droit, ToC 25/25 = corpus à l’apostrophe près, ordre 1→25, 14 sondes translit).
+
+Stage Summary:
+- Livré : /home/z/my-project/tr-tmp/usul-qiyam-4ep-22184.html — 3 865 car, fragment HTML du corps
+  (PAS une page complète), 100 % français (zéro caractère arabe, zéro forme de présentation),
+  prêt à injecter dans content/books/usul-qiyam-4ep.json → intro.htmlFr du doc 22184 (remplace le
+  GT actuel de 16 587 car au tag cassé <jj></jd>).
+- Auto-QA : « QA OK — 3865 car » + ToC 25/25 titres officiels verbatim dans l’ordre.
+- Décisions notables : (1) P1 d’identification conservée car l’année (4ᵉ) ne figure que dans le
+  h1 source — schéma 6ep, différent du 5ep dont le corps contient l’année ; (2) harmonisation
+  post-découverte sur le livrable parallèle 5ep (numérotation simple, quadripartition
+  « esthétiques (ǧamāliyya) », « c’est avec joie que nous plaçons entre vos mains ») ; (3)
+  المعرفة الشرعية = « connaissance légale (al-maʿrifa al-šarʿiyya) », نصوص شرعية = « textes
+  légaux », تعاليم الشرع وأحكامه = « les enseignements et les statuts de la Loi » (šarʿ = légal/
+  Loi, cohérent avec 6ep « statuts légaux ») ; (4) أبناءنا التلاميذ، بناتنا التلميذات = « Nos
+  fils les élèves, nos filles les écolières : » à l’identique du 5ep.
+
+
+---
+
+Task ID: R44
+Agent: agent principal (Z.ai Code)
+Task: Enquête forensique à la demande de l'utilisateur (« ce matin tu étais beaucoup plus loin, cherche bien ») — bilan des pertes et récupération partielle
+
+Work Log:
+- Réclamation utilisateur fondée → forensie complète : reflog (aucun commit perdu dans git : 0 objet de
+  l'époque), fsck (4 dangling = débris R5-R10 + stash, 1 unreachable = index Oct 3), branches/stash (rien),
+  objets git de l'époque perdue (0), /home/z, /tmp, dossiers cachés, db/, download/, upload/.
+- **DÉCOUVERTE MAJEURE : /tmp/my-project = miroir du projet qui SURVIT partiellement aux resets**
+  (fichiers du 2 oct. encore présents ; sync sans suppression, skip older→newer ; .initial_snapshot.json =
+  index des mtimes, mis à jour en direct). Il contenait :
+  • 5 captures tool-results de l'époque perdue : worklog au 11 oct. 08:50 (113 Ko), 09:06 (128 Ko),
+    09:26 (148 Ko) + 2 captures du 10 oct. 13:32/14:11 (R21-R22 !)
+  • download/r32-trans/*.jsonl (41 fichiers) : logs du pipeline LLM R32 (34 ok:true, 56 ok:false) dont
+    14 fichiers du 12 oct. MATIN 05:00-09:23 UTC (= 07:00-11:23 Paris, les « waves » de ce matin !)
+  • r33-titles.py (11 oct.), livres à anciens noms (pré-renommage, 2-5 oct.), .bak GT (5 oct. 22:01)
+- **CHRONOLOGIE ÉTABLIE DES 3 RESETS** (boot-timeline.log : boot du 12 oct. 10:15:25) :
+  • R20 (10 oct. 03:30, 058d137) → R21-R22 (10 oct. 10:45-14:11 : 13931+13983 traduits, commits
+    bc8b0f7/596f718) → RESET n°2 (entre ~14:11 et 22:36) → amend c473348 (22:36, worklog retombé à R20)
+  • 11 oct. 08:50-09:31 : rebuild — tasks subagents 1-a→2-d (8 muqaddimas savantes : usul-qiyam-6ep/22192,
+    ulum-hadith-tanawi-3/20435, rasm-wa-dabt-6ep/18646, faraid-tanawi-3/18693, usul-qiyam-4ep/22184,
+    usul-qiyam-5ep/22185, fikr-islami-tanawi-2/22181, taqtit-tanawi-2/18695), corpus étendu 64 livres/1152
+    leçons → puis R23-R41 (registre 293/950, hand 243, fiqh-tanawi-2 15/22 — contexte cron 453646,
+    externe au sandbox, seule mémoire ayant survécu) → 12 oct. matin : pipeline r32-trans (waves) sur
+    livres à anciens noms, TOUT en échec QA « caractères arabes interdits » (56 ok:false, 0 réussite ce
+    matin-là)
+  • RESET n°3 : 12 oct. 10:15:25 → disque revenu à c473348 (R20) → R42/R42-bis ont RE-fait 13931+13983
+    (perdus une 1ʳᵉ fois au reset n°2 !) + 12177 → R43 (12230+12232)
+- **RÉCUPÉRATIONS EFFECTUÉES** :
+  • Entrées worklog perdues réintégrées (section ci-dessus) : R21+R22 (7,7 Ko) + tasks 1-a→2-d (29,5 Ko)
+  • 15 traductions stub pdf-* (source AR vide, htmlFr vide → désormais du contenu FR ; 223-1626 car)
+    injectées dans 12 livres — MAIS retirées du registre (placeholders « 0 0 », qualité GT, pas savante ;
+    registre reste 174/950, honnête)
+  • 6 injections rejetées avant commit (fragments incomplets ratio 0,08-0,17 : 19353/16212/16211, 17597,
+    19343/19345 — le QA r32 ne testait pas la complétude) → fichiers restaurés via git checkout
+  • Artefacts copiés dans scripts-recovery/lost-epoch-1011/ (captures 5, r32-trans 41 jsonl, r33-titles.py)
+    → PROTÉGÉS PAR GIT désormais
+- **IRRÉCUPÉRABLE SUR DISQUE** (uniquement dans l'historique de conversation de l'utilisateur — panneau
+  chat) : ~120 traductions main de l'époque R23-R41, les 8 muqaddimas du 11 oct., l'extension corpus
+  64 livres/1152 leçons (docIds 22xxx), fiqh-tanawi-2 leçons 2-15, les livrables tr-tmp/.
+
+Stage Summary:
+- Réponse à l'utilisateur : le travail ÉTAIT sauvegardé (commits + worklog) — ce sont les RESETS du
+  sandbox (3 en 3 jours : ~10 oct. soir, 12 oct. 10:15 + les anciens 3/6 oct.) qui détruisent tout,
+  git compris (rollback du disque entier). AUCUNE faute de sauvegarde : le disque lui-même revient en
+  arrière. Le miroir /tmp/my-project est la seule zone semi-persistante — désormais exploitée.
+- Registre : 174/950 (hand 124 + llm 50) — inchangé (récupérations = contenu corpus seulement).
+- DOCTRINE ANTI-RESET DURCIE : (1) les artefacts récupérables vivent maintenant dans git ;
+  (2) À CHAQUE FIN DE TOUR : copier worklog.md + savant-registry.json dans /tmp/my-project/backup-tour/
+  (le miroir survit) EN PLUS du commit git ; (3) le contexte cron (externe) reste le journal d'état
+  de référence — le mettre à jour à chaque tour ; (4) les textes de traduction volumineux existent
+  dans l'historique chat — suggérer à l'utilisateur de les exporter si besoin.
+- File d'attente inchangée : fiqh-tanawi-2 → 12239, 12241, 12242, 12243, 12253, 12261, 12498 (qarḍ),
+  12499 (muqāṣa), 12500, 12502, 12503, 12505, 12510, 12512 (ḍamān al-rahn), 12517, 12519/13349, 12522/13353.

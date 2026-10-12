@@ -1,271 +1,271 @@
 {
- "id": "fikr-islami-tanawi-2",
- "subject": "fikr-islami",
- "level": "tanawi-2",
- "subjectAr": "الفكر-الإسلامي",
- "levelAr": "الفكر-الإسلامي-الفلسفة-الإسلامية-الثانوي-الثاني",
- "titleAr": "الفكر الإسلامي: الفلسفة الإسلامية",
- "titleFr": "Pensée islamique — la philosophie musulmane",
- "pdfUrl": null,
- "intro": {
-  "docId": "22181",
-  "titleAr": "الفكر الإسلامي الفلسفة الإسلامية للسنة الثانية من التعليم الثانوي العتيق",
-  "titleFr": "Présentation du manuel",
-  "html": "<h1> مادة الفكر الإسلامي (الفلسفة الإسلامية) للسنة الثانية من التعليم الثانوي العتيق</h1>\n <dl>\n <dt></dt>\n <dd>\n الإثنين 16 مارس 2026\n </dd>\n </dl>\n <p></p>\n <p>الحمد لله رب العالمين، والصلاة والسلام على خاتم الأنبياء والمرسلين، وعلى آله وأصحابه أجمعين.</p>\n <p>أبناءنا التلاميذ، بناتنا التلميذات: يسعدنا أن نضع بين أيديكم كتاب الفكر الإسلامي للسنة الثانية من التعليم الثانوي العتيق، الذي خصصناه لمحور الفلسفة الإسلامية وتناولنا من خلاله التعريف بنشأة الفلسفة الإسلامية وخصائصها وتطورها، والتعريف بأهم أعلامها، وقضاياها التي تعد نتاج تفاعل الفلاسفة المسلمين مع العلوم والمعارف التي اكتسبوها من مداومة النظر في القرآن الكريم والسنة النبوية الشريفة، واغترافهم من معينهما، ومن النظر في ملكوت الله تعالى، ومن الاستفادة من التراث الإنساني، فنتجت عن ذلك فلسفة إسلامية استمدت من نصوص الوحي الداعية إلى التأمل والتفكر في الأنفس والآفاق، ومما أنتجه الاجتهاد الإنساني الراشد.</p>\n <p>فالحديث عن الفلسفة الإسلامية حديث عن نتاج تلاقي العلوم وتفاعلها في العقلية الإسلامية، انطلاقا من علوم الشرع وما يخدمها من العلوم الأخرى في البناء الحضاري، وصناعة الإنسان السوي المنتفع بما استوعبه من المعارف والعلوم، القادر على التفكير السليم، وامتلاك الميزان المستقيم، والحس النقدي القويم، المعتمد في بناء القيم والمثل العليا على منظومة القيم الإسلامية.</p>\n <p>وقد اعتمدنا في عرض مضامين الكتاب وبسط محتوياته نفس الخطوات المتبعة في منهج عرض مضامين العلوم الأخرى؛ حيث بدأنا كل درس بالإعلان عن أهدافه، ثم ثنينا بالتمهيد له بما يعرف به، ويشوق المتعلم إليه، ثم أثبتنا نصوص الانطلاق والبناء، وأردفناها بشرح ما لا بد منه من مفرداته وعباراته في سياقها، ثم استخلاص مضامينها، وأتبعنا ذلك بتحليل النصوص، وهي مرحلة مهمة في البناء المعرفي مع التعليل والتدليل والتوثيق، وحرصنا على إكساب المتعلم ملكة الحجاج وآليات الاستدلال ومسالك النظر على ما تم الاقتناع به من الأفكار والآراء والتطلعات والرؤى.</p>\n <p>وتتخلل ذلك أسئلة اختبارية وتوظيفية وتقويمية، ونصوص استثمارية لترسيخ محتوى الدرس، وختمنا الدرس بأسئلة تهدف إلى إنهاض همم المتعلمين للاستعداد للدرس الجديد، وأخذ ما يمكن من التصور عنه والإلمام بمحاوره العامة.</p>\n <p>والله من وراء القصد، وهو يهدي السبيل.</p>\n \n <ul>\n <li>المقدمة (ص5)</li>\n <li>كيف أستعمل كتابي (ص6)</li>\n <li>كفايات تدريس المادة (ص7)</li>\n <li>التوزيع الأسبوعي والدوري (ص8)</li>\n <li>1 .&nbsp;مفهوم الفلسفة الإسلامية وخصائصها (ص9)</li>\n <li>2 .&nbsp;أصول الفلسفة الإسلامية واستمدادها (ص14)</li>\n <li>3 .&nbsp;نشأة الفلسفة الإسلامية وتطورها (ص19)</li>\n <li>4 .&nbsp;مدارس الفلسفة الإسلامية (ص25)</li>\n <li>5 .&nbsp;أصالة الفلسفة الإسلامية وامتداداتها<strong> (ص31)</strong></li>\n <li>6 .&nbsp;العلاقة بين الحكمة والشريعة (ص36)</li>\n <li>7 .&nbsp;أبو يوسف الكندي (ص41)</li>\n <li>8 .&nbsp;أبو نصر الفارابي (ص46)</li>\n <li>9 .&nbsp;أبو علي ابن سينا (ص51)</li>\n <li>10 .&nbsp;أبو حامد الغزالي (ص56)</li>\n <li>11 .&nbsp;أبو الوليد ابن رشد الحفيد (ص61)</li>\n <li>12 .&nbsp;عبد الرحمن ابن خلدون (ص66)</li>\n <li>13 .&nbsp;أنشطة الدعم والتثبيت (ص72)</li>\n <li>14 .&nbsp;نظرية المعرفة في الفلسفة الإسلامية مفهومها وموضوعاتها (ص74)</li>\n <li>15 .&nbsp;نظرية المعرفة في الفلسفة الإسلامية: مصادرها وحدودها (ص79)</li>\n <li>16 .&nbsp;صفات الله تعالى في الفلسفة الإسلامية (ص84)</li>\n <li>17 .&nbsp;صفات الله سبحانه وتعالى في الفلسفة الإسلامية (الوجود) (ص89)</li>\n <li>18 .&nbsp;أفعال الله تعالى (ص94)</li>\n <li>19 .&nbsp;النفس والإنسان (ص99)</li>\n <li>20 .&nbsp;الحرية والمسؤولية (ص105)</li>\n <li>21 .&nbsp;القيم والأخلاق في الفلسفة الإسلامية (القيم الاجتماعية) (ص111)</li>\n <li>22 .&nbsp;القيم والأخلاق في الفلسفة الإسلامية (الفضيلة) (ص117)</li>\n <li>23 .&nbsp;القيم والأخلاق في الفلسفة الإسلامية (السعادة) (ص123)</li>\n <li>24 .&nbsp;أثر الفلسفة الإسلامية في الفكر الإنساني (ص128)</li>\n <li>25 .&nbsp;أنشطة الدعم والتثبيت (ص133)</li>\n <li>لائحة المصادر والمراجع (ص136)</li>\n <li>فهرس الموضوعات (ص142)</li>\n </ul>\n <div>\n \n </div>\n </div>\n <div>\n \n </div>\n <div>\n <div>\n <h2>المرحلة الأولى</h2>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n </div>\n <div>\n <h2>المرحلة الثانية</h2>\n <div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n </div>\n </div>\n </div>\n <div>\n <div>\n <h2>التجويد</h2>\n <div>\n <ul>\n <li>تطبيقات في التجويد على نظم تحفة الأطفال للجمزوري للسنة الخامسة من الابتدائي العتيق</li>\n <li>التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لابراهيم المارغني للسنة السادسة من الابتدائي العتيق</li>\n <li>التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لابراهيم المارغني للسنة الأولى من التعليم الإعدادي العتيق</li>\n <li>التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لابراهيم المارغني للسنة الثانية من التعليم الإعدادي العتيق</li>\n <li>التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لإبراهيم المارغني للسنة الثالثة من التعليم الإعدادي العتيق</li>\n </ul>\n <h2>علوم القرآن</h2>\n <div>\n <ul>\n <li>علوم القرآن للسنة الأولى من التعليم الإعدادي العتيق</li>\n <li>علوم القرآن للسنة الثانية من التعليم الإعدادي العتيق</li>\n <li>علوم القرآن للسنة الثالثة من التعليم الإعدادي العتيق</li>\n </ul>\n <h2>القراءات</h2>\n <ul>\n <li>القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي للسنة الأولى من التعليم الثانوي العتيق</li>\n <li>القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي للسنة الثانية من التعليم الثانوي العتيق</li>\n <li>القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي للسنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n </div>\n </div>\n <div>\n <h2>الرسم والضبط</h2>\n <ul>\n <li>الرسم والضبط من خلال أرجوزة عمدة البيان لإدريس الودغيري للسنة الرابعة من التعليم الابتدائي العتيق</li>\n <li>الرسم والضبط من خلال أرجوزة عمدة البيان للودغيري بشرح بهجة النظر للمساري للسنة الخامسة الابتدائي العتيق</li>\n <li>الرسم والضبط من أرجوزة عمدة البيان لإدريس الودغيري بشرح بهجة النظر والعيان لمحمد بن العربي المساري السنة السادسة من التعليم الإبتدائي العتيق</li>\n </ul>\n <h2>التفسير</h2>\n <ul>\n <li>التفسير من خلال تفسير الجلالين للسنة الرابعة من التعليم الابتدائي العتيق</li>\n <li>التفسير من خلال تفسير الجلالين للسنة الخامسة من التعليم الإبتدائي العتيق</li>\n <li> التفسير من خلال تفـسير الجلالين للسنة السادسة من التعليم الابتدائي العتيق</li>\n <li>التفسير من خلال التسهيل لعلوم التنزيل لابن جزي للسنة أولى من التعليم الإعدادي العتيق <br></li>\n <li>كتاب التفـسير من خلال كتاب التسهيل لعلوم التنزيل لابن جزي للسنة الثانية من التعليم الإعدادي العتيق</li>\n <li>التفـسير من خلال كتاب التسهيل لعلوم التنزيل لابن جزي للسنة الثالثة من التعليم الإعدادي العتيق</li>\n <li>التفسير من خلال المحرر الوجيز في تفسير الكتاب العزيز لابن عطية للسنة الأولى من التعليم الثانوي العتيق</li>\n <li>التفسير من خلال المحرر الوجيز في تفسير الكتاب العزيز لابن عطية للسنة الثانية من التعليم الثانوي العتيق</li>\n <li>كتاب التفـسير من خلال المحرر الوجيز لتفـسير الكتاب العـزيز لابن عـطية للسنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n <h2>الحديث</h2>\n <ul>\n <li>الحديث من رياض الصالحين للإمام النووي بشرح روضة المتقين للسنة الرابعة من التعليم الابتدائي العتيق</li>\n <li>الحديث من من كتاب الأربعين النووية بشرح ابن دقيق العيد للسنة الخامسة من التعليم الإبتدائي العتيق</li>\n <li>الحديث من كتاب الأربعـين النووية للإمام النووي بشرح ابن دقـيق العـيد للسنة السادسة من التعليم الابتدائي العتيق</li>\n <li>الحديث من موطأ الإمام مالك بشرح الزرقاني للسنة الأولى من التعليم الإعدادي العتيق</li>\n <li> الحـديـث من موطأ الإمام مالك للسنة الثانية من التعليم الإعدادي العتيق</li>\n <li>الحديث من موطأ الإمام مالك بشـرح الزرقاني للسنة الثالثة من التعليم الإعدادي العتيق</li>\n <li>الحديث من موطأ الإمام مالك بشرح الزرقاني للسنة الأولى من التعليم الثانوي العتيق</li>\n <li>الحديث من موطأ الإمام مالك بشرح الزرقاني للسنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n <h2>علوم الحديث</h2>\n <ul>\n <li>علوم الحديث من المنظومة البيقونية بشرح الزرقاني للسنة الأولى من التعليم الثانوي العتيق</li>\n <li>علوم الحديث من متن نخبة الفكر بشرح نزهة النظر لابن حجر العسقلاني للسنة الثانية الثانوي العتيق</li>\n <li>علوم الحديث من متن نخبة الفكر بشرح نزهة النظر للحافظ ابن حجر العسقلاني للسنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n <h2>السيرة النبوية</h2>\n <ul>\n <li>السيرة النبوية للسنة الأولى من التعـليم الإعدادي العتيق</li>\n <li>السيرة النبوية للسنة الثانية من التعـليم الإعدادي العتيق</li>\n <li>السيرة النبوية للسنة الثالثة الإعدادي العتيق</li>\n </ul>\n <div>\n <h2>الفقه</h2>\n <ul>\n <li>الفقه من متن الأخضري بشرح الآبي الأزهري للسنة الرابعة من التعليم الابتدائي العتيق</li>\n <li>الفقه من منظومة المرشد المعين لابن عاشر بشرح ميارة الفاسي للسنة الخامسة من التعليم الإبتدائي العتيق</li>\n <li> الفـقه من منظومة المرشد المعـين لابن عاشر بشرح ميارة للسنة السادسة الابتدائي العتيق<br></li>\n <li>الفقه من متن الرسالة لابن أبي زيد القيرواني بشرح كفاية الطالب الرباني للسنة الأولى من التعليم الإعدادي العتيق</li>\n <li>الفقه من رسالة ابن أبي زيد القيرواني بشرح كفاية الطالب الرباني لأبي الحسن بحاشية العدوي للسنة الثانية من التعليم الإعدادي العتيق</li>\n <li>الفـقه من متن الرسالة لابن أبي زيد القيرواني بشرح كفاية الطالب الرباني لأبي الحسن بحاشية العـدوي للسنة الثالثة الإعدادي العتيق</li>\n <li>الفقه من متن مختصر الشيخ خليل بشرح الدردير وحاشية الدسوقي للسنة الأولى من التعليم الثانوي العتيق</li>\n <li>الفقه من مختصر الشيخ خليل بشرح الدردير وحاشية الدسوقي للسنة الثانية من التعليم الثانوي العتيق</li>\n <li>كتاب الفـقه من مختـصـر الشيخ خليل بشرح الدردير، وحاشية الدسوقي للسنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n </div>\n <h2>&nbsp;أصول الفقه</h2>\n <ul>\n <li><span dir=\"RTL\">أصول الفقه من ورقات إمام الحرمين بشرح الحطاب للسنة الثالثة من التعليم الإعدادي العتيق</span></li>\n <li>أصول الفقه من منظومة مرتقى الوصول إلى الضروري في علم الأصول لابن عاصم للسنة الأولى الثانوي العتيق</li>\n <li>أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم للسنة الثانية من التعليم الثانوي العتيق</li>\n <li>أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم للسنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n </div>\n <h2>التوحيد</h2>\n <ul>\n <li>التوحيد من مقدمة رسالة ابن أبي زيد القيرواني بشرح كفاية الطالب الرباني لأبي الحسن للسنة الأولى من التعليم الإعدادي العتيق<br></li>\n <li>التوحيد من منظومة المرشد المعين على الضروري من علوم الدين لعبد الواحد بن عاشر بشرح مختصر الدر الثمين لمحمد بن أحمد ميارة للسنة الثانية من التعليم الإعدادي العتيق</li>\n </ul>\n <h2>أصول القيم</h2>\n <ul>\n <li>أصول القيم في القرآن والسنة للسنة الرابعة ابتدائي عتيق</li>\n <li>أصول القيم في القرآن والسنة للسنة الخامسة ابتدائي عتيق</li>\n <li>أصول القيم في القرآن والسنة للسنة السادسة ابتدائي عتيق</li>\n </ul>\n <h2>الفرائض</h2>\n <ul>\n <li>الفرائض من مختصر الشيخ خليل بشرح الخرشي للسنة الثانية الثانوي العتيق<br></li>\n <li>الفرائض من منظومة الجواهر المكنونة في صدق الفرائض المسنونة بشرح إيضاح الأسرار المصونة للرسموكي السنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n <h2>التوقيت</h2>\n <ul>\n <li>التوقيت من منظومة المقنع بشرح المطلع على مسائل المقنع لمحمد بن سعيد المرغتي للسنة الأولى الثانوي العتيق</li>\n <li>التوقيت من منظومة عمدة أهل الثبت في علم الأوقات وسمت البيت بشرح حل العقدة عن مقاصد العمدة لمحمد العلمي للسنة الثانية من التعليم الثانوي العتيق</li>\n <li>التوقيت من منظومة الجامع المفيد على أصول الراصد الجديد بشرح تقريب البعيد من الجامع المفيد على أصول الراصد الجديد فـي حساب الخسوف والكسوف ورؤية الأهلة لمَحمد بن محمد العلمي للسنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n <h2>المنطق</h2>\n <ul>\n <li>المنطق من نظم السلم للأخضري بشرح القويسني للسنة الأولى الثانوي العتيق</li>\n </ul>\n <h2>الفكر الإسلامي</h2>\n <ul>\n <li> الفكر الإسلامي..قضايا كلامية، للسنة الأولى الثانوي العتيق</li>\n <li>الفكر الإسلامي..الفلسفة الإسلامية للسنة الثانية ثانوي عتيق</li>\n <li>الفكر الإسلامي (التصوف الإسلامي) للسنة الثالثة ثانوي العتيق</li>\n </ul>\n </div>\n </div>\n </div>\n <div>\n </div>\n </div>\n </div>\n <footer>\n <div>\n <div>\n <div>\n <div>\n <ul>\n <li>المجلس العلمي الأعلى</li>\n <li>الدروس الحسنية</li>\n <li>الحج</li>\n </ul>\n <ul>\n <li>الوزير</li>\n <li>الكتابة العامة</li>\n <li>المفتشية العامة</li>\n <li>النظارات</li>\n <li>المندوبيات</li>\n <li><span>في البرلمان</span></li>\n <li>نشرة المنجزات</li>\n <li>نصوص تشريعية</li>\n </ul>\n <ul>\n <li>الأوقاف</li>\n <li>الشؤون الإسلامية</li>\n <li>التعاون والشؤون الإدارية</li>\n <li>المساجد</li>\n <li>التعليم العتيق ومحو الأمية بالمساجد</li>\n </ul>\n <ul>\n <li>الإسلام في المغرب</li>\n <li>خطب منبرية</li>\n <li>الإمام</li>\n <li>كرونولوجيا</li>\n </ul>\n <ul>\n <li>القرآن الكريم</li>\n <li>مواقيت الصلاة</li>\n <li>جوائز محمد السادس</li>\n </ul>\n </div>\n <div>\n <div>\n <ul>\n <li>للكتابة إلينا</li>\n <li>اتفاقية استخدام الموقع</li>\n <li>أوقات الصلاة</li>\n </ul>\n </div>\n </div>\n </div>\n <div>\n <h1>الإسلام في المغرب</h1>\n <h4><span><strong>وزارة الأوقاف والشؤون الإسلامية</strong> &nbsp;<strong>المشور السعيد - الرباط - المغرب</strong><strong> الهاتف </strong> <em> : 51 68 76 37 5 (212) - </em><em>01 68 76 37 5 (212) </em></span></h4>\n </div>\n </div>\n </div>\n </footer>\n </div>\n <div> \n </div>\n \n \n \n \n \n </body>\n</html>",
-  "htmlFr": "<h1>Le sujet de la pensée islamique (philosophie islamique) pour la deuxième année de l'enseignement secondaire ancien</h1>\n <dl>\n <dt></dt>\n <jj>\n lundi 16 mars 2026\n </jd>\n </dl>\n <p></p>\n <p>Louange à Dieu, Seigneur des mondes, et que la bénédiction et la paix soient sur le sceau des prophètes et messagers, ainsi que sur toute sa famille et ses compagnons.</p>\n <p>Nos fils d'étudiants, nos filles d'étudiants : Nous sommes heureux de remettre entre vos mains le livre de la pensée islamique pour la deuxième année de l'enseignement secondaire ancien, que nous avons consacré à l'axe de la philosophie islamique et à travers lequel nous avons abordé la définition de l'émergence de la philosophie islamique, ses caractéristiques et son développement, ainsi que la définition de ses figures et enjeux les plus importants, qui sont le résultat de l'interaction des philosophes musulmans avec les sciences et les connaissances qu'ils ont acquises en continuant à regarder le Saint Coran et la Sunna du Noble Prophète, et en apprenant. de leurs sources, et de la considération du Royaume de Dieu Tout-Puissant, et du bénéfice de l'héritage humain, a abouti une philosophie islamique dérivée des textes de révélation appelant à la contemplation et à la contemplation des âmes et des horizons, et de ce qui a été produit par la diligence humaine rationnelle.</p>\n <p>Le discours sur la philosophie islamique est un discours sur le produit de la convergence des sciences et de leur interaction dans la mentalité islamique, basé sur les sciences de la charia et les autres sciences qui les servent dans la construction de la civilisation, et sur la création d'un être humain normal qui bénéficie des connaissances et des sciences qu'il a absorbées, qui est capable de penser sainement, possède un équilibre droit et un sens critique solide, basé sur la construction de valeurs et d'idéaux sur le système de valeurs islamique.</p>\n <p>Nous avons adoptéPrésenter le contenu du livre et expliquer son contenu sont les mêmes étapes que celles suivies dans la méthode de présentation du contenu d'autres sciences. Nous avons commencé chaque cours en déclarant ses objectifs, puis nous avons commencé par l'introduire avec ce qu'il sait et ce à quoi aspire l'apprenant. Ensuite, nous avons établi les textes de départ et de construction, et les avons complétés en expliquant le vocabulaire et les phrases nécessaires dans leur contexte, puis en extrayant leur contenu. Nous avons ensuite procédé à l'analyse des textes, étape importante dans la construction des connaissances avec raisonnement, preuve et documentation. Nous avons eu à coeur de donner à l'apprenant la capacité de raisonner, les mécanismes de raisonnement et les pistes de regard sur ce dont il est convaincu. Idées, opinions, aspirations et visions.</p>\n <p>Cela comprend des questions de test, d'emploi et d'évaluation, ainsi que des textes d'investissement pour consolider le contenu de la leçon. Nous avons conclu la leçon avec des questions visant à motiver les apprenants à se préparer à la nouvelle leçon, à acquérir ce qu'ils peuvent en imaginer et à se familiariser avec ses thèmes généraux.</p>\n <p>Et Dieu est derrière l'intention, et Il guide le chemin.</p>\n \n <ul>\n <li>Introduction (p. 5)</li>\n <li>Comment utiliser mon livre (p. 6)</li>\n <li>Compétences pour enseigner la matière (p. 7)</li>\n <li>Distribution hebdomadaire et périodique (p. 8)</li>\n <li>1 . Le concept de philosophie islamique et ses caractéristiques (p. 9)</li>\n <li>2 . Les origines de la philosophie islamique et ses origines (p. 14)</li>\n <li>3. Les origines et le développement de la philosophie islamique (p. 19)</li>\n <li>4. Écoles de philosophie islamique (p. 25)</li>\n <li>5. L'originalité de la philosophie islamique et ses extensions<strong>(p. 31)</strong></li>\n <li>6 . La relation entre la sagesse et la charia (p. 36)</li>\n <li>7. Abou Yusuf Al-Kindi (p. 41)</li>\n <li>8 . Abou Nasr Al-Farabi (p. 46)</li>\n <li>9. Abou Ali Ibn Sina (p. 51)</li>\n <li>10 . Abou Hamid Al-Ghazali (p. 56)</li>\n <li>11 . Abou Al-Walid Ibn Rushd Al-Hafid (p. 61)</li>\n <li>12 . Abd al-Rahman Ibn Khaldun (p. 66)</li>\n <li>13 . Activités de soutien et de stabilisation (p. 72)</li>\n <li>14 . La théorie de la connaissance dans la philosophie islamique, son concept et ses sujets (p. 74)</li>\n <li>15 . La théorie de la connaissance dans la philosophie islamique : ses sources et ses limites (p. 79)</li>\n <li>16 . Les attributs de Dieu Tout-Puissant dans la philosophie islamique (p. 84)</li>\n <li>17 . Les attributs de Dieu Tout-Puissant dans la philosophie islamique (existence) (p. 89)</li>\n <li>18 . Actions de Dieu Tout-Puissant (p. 94)</li>\n <li>19. L'âme et l'homme (p. 99)</li>\n <li>20 . Liberté et responsabilité (p. 105)</li>\n <li>21 . Valeurs et éthique dans la philosophie islamique (valeurs sociales) (p. 111)</li>\n <li>22 . Valeurs et éthique dans la philosophie islamique (vertu) (p. 117)</li>\n <li>23 . Valeurs et éthique dans la philosophie islamique (bonheur) (p. 123)</li>\n <li>24 . L'impact de la philosophie islamique sur la pensée humaine (p. 128)</li><li>25 . Activités de soutien et de stabilisation (p. 133)</li>\n <li>Liste des sources et références (p. 136)</li>\n <li>Index des sujets (p. 142)</li>\n </ul>\n <div>\n \n </div>\n </div>\n <div>\n \n </div>\n <div>\n <div>\n <h2>La première étape</h2>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n </div>\n <div>\n <h2>La deuxième étape</h2>\n <div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n </div>\n </div>\n </div>\n <div>\n <div>\n <h2>Tajweed</h2>\n <div>\n <ul>\n <li>Candidatures en Tajweed sur les airs de Tuhfat al-Atfal par Al-Jamzouri pour la cinquième année de l'école primaire ancienne</li>\n <li>Tajweed est tiré des compositions de Durar Al-Lawame d'Ibn Bari, expliquant les étoiles montantes d'Ibrahim Al-Marghani pour la sixième année de l'école primaire d'Al-Atiq</li>\n <li>Tajweed d'après les compositions de Durar Al-Lawame d'Ibn Bari, expliquant les étoiles montantes d'Ibrahim Al-Marghani pour la première année de l'enseignement préparatoire ancien</li>\n <li>Tajweed d'après les compositions de Durar Al-Lawame d'Ibn Bari, expliquant les étoiles montantes d'Ibrahim Al-Marghani pour la deuxième année de l'enseignement préparatoire ancien</li>\n <li>Tajweed d'après les compositions de Durar Al-Lawame d'Ibn Bari, expliquant les étoiles montantes d'Ibrahim Al-Marghani pour la troisième année de l'enseignement préparatoire ancien</li>\n </ul>\n <h2>Sciences coraniques</h2>\n <div>\n <ul>\n <li>Sciences coraniques pour la première année de l'enseignement préparatoire ancien</li>\n <li>Sciences coraniques pour la deuxième année de l'enseignement préparatoire ancien</li>\n <li>Sciences coraniques pour la troisième année de l'enseignement préparatoire ancien</li>\n </ul>\n <h2>Lectures</h2>\n <ul>\n <li>Lectures du texte « Hazr Al-Amani » et félicitations à Abu Al-Qasim Al-Shatibi pour la première année de l'enseignement secondaire ancien</li>\n <li>Lectures des textes « Harz al-Amani » et « Wajh ».Félicitations à Abu Al-Qasim Al-Shatibi pour la deuxième année de l'enseignement secondaire ancien</li>\n <li>Lectures du texte « Hazr Al-Amani » et félicitations à Abu Al-Qasim Al-Shatibi pour la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n </div>\n </div>\n <div>\n <h2>Dessin et réglage</h2>\n <ul>\n <li>Dessin et réglage à travers Arjouza Umdat Al-Bayan par Idris Al-Wadghiri pour la quatrième année de l'enseignement primaire ancien</li>\n <li>Dessin et contrôle à travers Arjouza Umdat al-Bayan par Al-Wadghairi, expliquant le plaisir de la vision par Al-Masari pour la cinquième année de l'école primaire ancienne</li>\n <li>Dessin et contrôle d'Arjouza Umdat Al-Bayan par Idris Al-Wadghiri, expliquant la joie de regarder et de voir par Muhammad bin Al-Arabi Al-Masari, sixième année de l'enseignement primaire ancien</li>\n </ul>\n <h2>Interprétation</h2>\n <ul>\n <li>Interprétation à travers Tafsir Al-Jalalayn pour la quatrième année de l'enseignement primaire ancien</li>\n <li>Interprétation à travers Tafsir Al-Jalalayn pour la cinquième année de l'enseignement primaire ancien</li>\n <li>Interprétation à travers Tafsir Al-Jalalayn pour la sixième année de l'enseignement primaire ancien</li>\n <li>Interprétation par facilitation des sciences de la révélation par Ibn Jazi pour la première année de l'enseignement préparatoire ancien <br></li>\n <li>Le Livre d'Interprétation à travers le Livre de Tashil pour les Sciences de la Révélation d'Ibn Jazi pour la deuxième année de l'enseignement préparatoire ancien</li>\n <li>Interprétation à travers le livre Al-Tas'heel pour les sciences de la révélation d'Ibn Jazi pour la troisième année de l'enseignement préparatoire ancien</li>\n <li>Interprétation par le bref éditeur dans l'interprétation du cher livre d'Ibn Attiya pour la première année de l'enseignement secondaire ancien</li>\n <li>Interprétation par le bref éditeur dans l'interprétation du cher livre d'Ibn Attiya pour la deuxième année de l'enseignement secondaire ancien</li>\n <li>Le livre d'interprétation à travers le bref éditeur pour l'interprétation du cher livre d'Ibn Attiya pour la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n <h2>Hadith</h2>\n <ul>\n <li>Le hadith de Riyad al-Salihin de l'Imam al-Nawawi expliquant Rawdat al-Muttaqin pour la quatrième année de l'enseignement primaire ancien</li>\n <li>Hadith du livre Al-Arba'in Al-Nawawi, expliqué par Ibn Daqiq Al-Eid pour la cinquième année de l'enseignement primaire ancien</li>\n <li>Le hadith du livre Les Quarante Nawawi de l'Imam al-Nawawi, avec l'explication d'Ibn Daqiq Al-Eid pour la sixième année de l'enseignement primaire ancien</li>\n <li>Hadith du Muwatta de l'Imam Malik, expliqué par Al-Zarqani pour la première année de l'enseignement préparatoire ancien</li>\n <li>Le hadith du Muwatta de l'Imam Malik pour la deuxième année de l'enseignement préparatoireL'ancien</li>\n <li>Hadith du Muwatta de l'Imam Malik, expliqué par Al-Zarqani pour la troisième année de l'enseignement préparatoire ancien</li>\n <li>Hadith de Muwatta de l'Imam Malik, expliqué par Al-Zarqani pour la première année de l'enseignement secondaire ancien</li>\n <li>Hadith de Muwatta de l'Imam Malik, expliqué par Al-Zarqani pour la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n <h2>Sciences des Hadiths</h2>\n <ul>\n <li>Sciences des hadiths du système bayconien, expliquées par Al-Zarqani pour la première année de l'enseignement secondaire ancien</li>\n <li>Sciences des hadiths tirées du texte de Nukhbat al-Fikr, expliquant Nuzhat al-Nazr par Ibn Hajar al-Asqalani pour la deuxième année du secondaire, Al-Atiq</li>\n <li>Sciences des hadiths tirées du texte de Nukhbat al-Fikr, avec une explication de Nuzhat al-Nazr par Al-Hafiz Ibn Hajar al-Asqalani pour la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n <h2>Biographie du Prophète</h2>\n <ul>\n <li>Biographie du Prophète pour la première année de l'enseignement préparatoire ancien</li>\n <li>Biographie du Prophète pour la deuxième année de l'enseignement préparatoire ancien</li>\n <li>Biographie du Prophète pour la troisième année du collège, Al-Atiq</li>\n </ul>\n <div>\n <h2>Jurisprudence</h2>\n <ul>\n <li>Jurisprudence du texte d'Al-Akhdari, expliquée par Al-Abi Al-Azhari pour la quatrième année de l'enseignement primaire ancien</li>\n <li>Jurisprudence du système du guide désigné d'Ibn Ashir, expliquée par Mayara Al-Fassi pour la cinquième année de l'enseignement primaireL'ancien</li>\n <li>Jurisprudence du système du guide désigné d'Ibn Ashir, expliquée par Mayara pour la sixième année de l'école primaire, Al-Atiq<br></li>\n <li>Jurisprudence tirée du texte du message d'Ibn Abi Zaid al-Qayrawani, expliquant la suffisance de l'étudiant divin pour la première année de l'enseignement préparatoire ancien</li>\n <li>Jurisprudence du traité d'Ibn Abi Zaid al-Qayrawani expliquant le Kifayat al-Talib al-Rabbani d'Abou al-Hasan à Hashiyat al-Adawi pour la deuxième année de l'enseignement préparatoire ancien</li>\n <li>Jurisprudence du texte d'Al-Risala d'Ibn Abi Zaid Al-Qayrawani avec une explication du Kifayat Al-Talib Al-Rabbani d'Abi Al-Hasan à Hashiyat Al-Adawi pour la troisième année de l'école préparatoire Al-Atiq</li>\n <li>Jurisprudence tirée du texte du résumé de Cheikh Khalil, avec l'explication d'Al-Dardir et de Hashiyat Al-Dasouki pour la première année de l'enseignement secondaire ancien</li>\n <li>Jurisprudence du résumé de Cheikh Khalil, avec l'explication d'Al-Dardir et de Hashiyat Al-Dasouki pour la deuxième année de l'enseignement secondaire ancien</li>\n <li>Le livre de jurisprudence tiré du résumé de Cheikh Khalil, expliqué par Al-Dardir et Hashiyat Al-Dasouki pour la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n </div>\n <h2> Fondements de la jurisprudence</h2>\n <ul>\n <li><span dir=\"RTL\">Les principes de la jurisprudence issus des papiers de l'Imam des Deux Saintes Mosquées, expliqués par Al-Hattab pour la troisième année de l'enseignement préparatoire ancien</span></li>\n <li>Les fondements de la jurisprudence à partir du système de progression d'accès au nécessaire en science des principes par Ibn Asim pour la première année du secondaire, Al-Atiq</li>\n <li>Les principes de jurisprudence du système de « Murtaqa au Nécessaire » à partir des principes d'Ibn Asim pour la deuxième année de l'enseignement secondaire ancien</li>\n <li>Les principes de jurisprudence du système de « Murtaqa au Nécessaire » à partir des principes d'Ibn Asim pour la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n </div>\n <h2>Monothéisme</h2>\n <ul>\n <li>Tawhid de l'introduction du traité d'Ibn Abi Zaid al-Qayrawani expliquant la suffisance de l'étudiant divin par Abu al-Hasan pour la première année de l'enseignement préparatoire ancien<br></li>\n <li>Tawhid du système du guide nommé aux sciences religieuses nécessaires par Abd al-Wahid ibn Ashir, avec une explication de Mukhtasar al-Durr al-Thameen par Muhammad ibn Ahmad Mayara pour la deuxième année de l'enseignement préparatoire ancien</li>\n </ul>\n <h2>Les origines des valeurs</h2>\n <ul>\n <li>Les principes de valeurs du Coran et de la Sunna pour la quatrième année du primaire, Atiq</li>\n <li>Les principes de valeurs du Coran et de la Sunna pour la cinquième année du primaire, Atiq</li>\n <li>Les principes de valeurs du Coran et de la Sunna pour la sixième année primaire, Atiq</li>\n </ul>\n <h2>Obligations</h2>\n <ul>\n <li>Les devoirs obligatoires du résumé de Cheikh Khalil, expliqués par Al-Kharshi, pour la deuxième année du secondaire, Al-Atiq<br></li>\n <li>Les obligations du système des joyaux cachés dans la véracité des obligations de la Sunna avec une explication de l'illustration des secrets préservés pour Al-Rasmouki, la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n <h2>Heure</h2>\n <ul>\n <li>Le timing du système Al-Muqani avec l'explication d'Al-Muqani' sur les questions d'Al-Muqani par Muhammad bin Saeed Al-Marghati pour la première année de l'école secondaire Al-Atiq</li>\n <li>Le timing du système d'Umdah Ahl al-Thabit dans la science des temps et le verset du verset expliquant la solution du nœud sur Maqasid al-Umdah par Muhammad al-Alami pour la deuxième année de l'enseignement secondaire ancien</li>\n <li>Le timing du système d'Al-Jami' Al-Mufid sur les principes du nouvel observateur avec une explication de l'approximation de la distance d'Al-Jami' Al-Mufid sur les principes du nouvel observateur dans le calcul des éclipses, des éclipses et de l'observation du croissant par Muhammad bin Muhammad Al-Alami pour la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n <h2>Logique</h2>\n <ul>\n <li>Logique de Nazm al-Salam par Al-Akhdari, expliquée par Al-Quwaisni pour la première année du secondaire, Al-Atiq</li>\n </ul>\n <h2>Pensée islamique</h2>\n <ul>\n <li>La pensée islamique...questions de discours, pour la première année du secondaire ancien</li>\n <li>Pensée islamique...Philosophie islamique pour la deuxième année du secondaire, Atiq</li>\n <li>Pensée islamique (soufisme islamique) pour la troisième année de l'école secondaire Al-Atiq</li>\n </ul>\n </div>\n </div>\n </div>\n <div>\n </div>\n </div>\n </div>\n <pied de page><div>\n <div>\n <div>\n <div>\n <ul>\n <li>Conseil scientifique suprême</li>\n <li>Bonnes leçons</li>\n <li>Hajj</li>\n </ul>\n <ul>\n <li>Le ministre</li>\n <li>Rédaction générale</li>\n <li>Inspection générale</li>\n <li>Lunettes</li>\n <li>Commandes</li>\n <li><span>Au Parlement</span></li>\n <li>Bulletin des réalisations</li>\n <li>Textes législatifs</li>\n </ul>\n <ul>\n <li>Awqaf</li>\n <li>Affaires islamiques</li>\n <li>Coopération et affaires administratives</li>\n <li>Mosquées</li>\n <li>Éducation ancienne et éradication de l'analphabétisme dans les mosquées</li>\n </ul>\n <ul>\n <li>L'Islam au Maroc</li>\n <li>Discours en chaire</li>\n <li>Imam</li>\n <li>Chronologie</li>\n </ul>\n <ul>\n <li>Le Saint Coran</li>\n <li>Horaires de prière</li>\n <li>Prix Mohammed VI</li>\n </ul>\n </div>\n <div>\n <div>\n <ul>\n <li>Pour nous écrire</li>\n <li>Contrat d'utilisation du site Web</li>\n <li>Horaires de prière</li>\n </ul>\n </div>\n </div>\n </div>\n <div>\n <h1>L'Islam au Maroc</h1>\n <h4><span><strong>Ministère des Dotations et des Affaires islamiques</strong>  <strong>Al-Mashour Al-Saeed - Rabat - Maroc</strong><strong> Téléphone</strong><em> : 51 68 76 37 5 (212) - </em><em>01 68 76 37 5 (212)</em></span></h4>\n </div>\n </div>\n </div>\n </pied de page>\n </div>\n <div> \n </div>\n \n \n \n \n \n </corps>\n</html>"
- },
- "lessons": [
-  {
-   "docId": "pdf-mut23h2r-142",
-   "titleAr": "المقدمة",
-   "titleFr": "Introduction",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/المقدمة.pdf",
-   "pdfOnly": true
+  "id": "fikr-islami-tanawi-2",
+  "subject": "fikr-islami",
+  "level": "tanawi-2",
+  "subjectAr": "الفكر-الإسلامي",
+  "levelAr": "الفكر-الإسلامي-الفلسفة-الإسلامية-الثانوي-الثاني",
+  "titleAr": "الفكر الإسلامي: الفلسفة الإسلامية",
+  "titleFr": "Pensée islamique — la philosophie musulmane",
+  "pdfUrl": null,
+  "intro": {
+    "docId": "22181",
+    "titleAr": "الفكر الإسلامي الفلسفة الإسلامية للسنة الثانية من التعليم الثانوي العتيق",
+    "titleFr": "Présentation du manuel",
+    "html": "<h1> مادة الفكر الإسلامي (الفلسفة الإسلامية) للسنة الثانية من التعليم الثانوي العتيق</h1>\n <dl>\n <dt></dt>\n <dd>\n الإثنين 16 مارس 2026\n </dd>\n </dl>\n <p></p>\n <p>الحمد لله رب العالمين، والصلاة والسلام على خاتم الأنبياء والمرسلين، وعلى آله وأصحابه أجمعين.</p>\n <p>أبناءنا التلاميذ، بناتنا التلميذات: يسعدنا أن نضع بين أيديكم كتاب الفكر الإسلامي للسنة الثانية من التعليم الثانوي العتيق، الذي خصصناه لمحور الفلسفة الإسلامية وتناولنا من خلاله التعريف بنشأة الفلسفة الإسلامية وخصائصها وتطورها، والتعريف بأهم أعلامها، وقضاياها التي تعد نتاج تفاعل الفلاسفة المسلمين مع العلوم والمعارف التي اكتسبوها من مداومة النظر في القرآن الكريم والسنة النبوية الشريفة، واغترافهم من معينهما، ومن النظر في ملكوت الله تعالى، ومن الاستفادة من التراث الإنساني، فنتجت عن ذلك فلسفة إسلامية استمدت من نصوص الوحي الداعية إلى التأمل والتفكر في الأنفس والآفاق، ومما أنتجه الاجتهاد الإنساني الراشد.</p>\n <p>فالحديث عن الفلسفة الإسلامية حديث عن نتاج تلاقي العلوم وتفاعلها في العقلية الإسلامية، انطلاقا من علوم الشرع وما يخدمها من العلوم الأخرى في البناء الحضاري، وصناعة الإنسان السوي المنتفع بما استوعبه من المعارف والعلوم، القادر على التفكير السليم، وامتلاك الميزان المستقيم، والحس النقدي القويم، المعتمد في بناء القيم والمثل العليا على منظومة القيم الإسلامية.</p>\n <p>وقد اعتمدنا في عرض مضامين الكتاب وبسط محتوياته نفس الخطوات المتبعة في منهج عرض مضامين العلوم الأخرى؛ حيث بدأنا كل درس بالإعلان عن أهدافه، ثم ثنينا بالتمهيد له بما يعرف به، ويشوق المتعلم إليه، ثم أثبتنا نصوص الانطلاق والبناء، وأردفناها بشرح ما لا بد منه من مفرداته وعباراته في سياقها، ثم استخلاص مضامينها، وأتبعنا ذلك بتحليل النصوص، وهي مرحلة مهمة في البناء المعرفي مع التعليل والتدليل والتوثيق، وحرصنا على إكساب المتعلم ملكة الحجاج وآليات الاستدلال ومسالك النظر على ما تم الاقتناع به من الأفكار والآراء والتطلعات والرؤى.</p>\n <p>وتتخلل ذلك أسئلة اختبارية وتوظيفية وتقويمية، ونصوص استثمارية لترسيخ محتوى الدرس، وختمنا الدرس بأسئلة تهدف إلى إنهاض همم المتعلمين للاستعداد للدرس الجديد، وأخذ ما يمكن من التصور عنه والإلمام بمحاوره العامة.</p>\n <p>والله من وراء القصد، وهو يهدي السبيل.</p>\n \n <ul>\n <li>المقدمة (ص5)</li>\n <li>كيف أستعمل كتابي (ص6)</li>\n <li>كفايات تدريس المادة (ص7)</li>\n <li>التوزيع الأسبوعي والدوري (ص8)</li>\n <li>1 .&nbsp;مفهوم الفلسفة الإسلامية وخصائصها (ص9)</li>\n <li>2 .&nbsp;أصول الفلسفة الإسلامية واستمدادها (ص14)</li>\n <li>3 .&nbsp;نشأة الفلسفة الإسلامية وتطورها (ص19)</li>\n <li>4 .&nbsp;مدارس الفلسفة الإسلامية (ص25)</li>\n <li>5 .&nbsp;أصالة الفلسفة الإسلامية وامتداداتها<strong> (ص31)</strong></li>\n <li>6 .&nbsp;العلاقة بين الحكمة والشريعة (ص36)</li>\n <li>7 .&nbsp;أبو يوسف الكندي (ص41)</li>\n <li>8 .&nbsp;أبو نصر الفارابي (ص46)</li>\n <li>9 .&nbsp;أبو علي ابن سينا (ص51)</li>\n <li>10 .&nbsp;أبو حامد الغزالي (ص56)</li>\n <li>11 .&nbsp;أبو الوليد ابن رشد الحفيد (ص61)</li>\n <li>12 .&nbsp;عبد الرحمن ابن خلدون (ص66)</li>\n <li>13 .&nbsp;أنشطة الدعم والتثبيت (ص72)</li>\n <li>14 .&nbsp;نظرية المعرفة في الفلسفة الإسلامية مفهومها وموضوعاتها (ص74)</li>\n <li>15 .&nbsp;نظرية المعرفة في الفلسفة الإسلامية: مصادرها وحدودها (ص79)</li>\n <li>16 .&nbsp;صفات الله تعالى في الفلسفة الإسلامية (ص84)</li>\n <li>17 .&nbsp;صفات الله سبحانه وتعالى في الفلسفة الإسلامية (الوجود) (ص89)</li>\n <li>18 .&nbsp;أفعال الله تعالى (ص94)</li>\n <li>19 .&nbsp;النفس والإنسان (ص99)</li>\n <li>20 .&nbsp;الحرية والمسؤولية (ص105)</li>\n <li>21 .&nbsp;القيم والأخلاق في الفلسفة الإسلامية (القيم الاجتماعية) (ص111)</li>\n <li>22 .&nbsp;القيم والأخلاق في الفلسفة الإسلامية (الفضيلة) (ص117)</li>\n <li>23 .&nbsp;القيم والأخلاق في الفلسفة الإسلامية (السعادة) (ص123)</li>\n <li>24 .&nbsp;أثر الفلسفة الإسلامية في الفكر الإنساني (ص128)</li>\n <li>25 .&nbsp;أنشطة الدعم والتثبيت (ص133)</li>\n <li>لائحة المصادر والمراجع (ص136)</li>\n <li>فهرس الموضوعات (ص142)</li>\n </ul>\n <div>\n \n </div>\n </div>\n <div>\n \n </div>\n <div>\n <div>\n <h2>المرحلة الأولى</h2>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n </div>\n <div>\n <h2>المرحلة الثانية</h2>\n <div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n </div>\n </div>\n </div>\n <div>\n <div>\n <h2>التجويد</h2>\n <div>\n <ul>\n <li>تطبيقات في التجويد على نظم تحفة الأطفال للجمزوري للسنة الخامسة من الابتدائي العتيق</li>\n <li>التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لابراهيم المارغني للسنة السادسة من الابتدائي العتيق</li>\n <li>التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لابراهيم المارغني للسنة الأولى من التعليم الإعدادي العتيق</li>\n <li>التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لابراهيم المارغني للسنة الثانية من التعليم الإعدادي العتيق</li>\n <li>التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لإبراهيم المارغني للسنة الثالثة من التعليم الإعدادي العتيق</li>\n </ul>\n <h2>علوم القرآن</h2>\n <div>\n <ul>\n <li>علوم القرآن للسنة الأولى من التعليم الإعدادي العتيق</li>\n <li>علوم القرآن للسنة الثانية من التعليم الإعدادي العتيق</li>\n <li>علوم القرآن للسنة الثالثة من التعليم الإعدادي العتيق</li>\n </ul>\n <h2>القراءات</h2>\n <ul>\n <li>القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي للسنة الأولى من التعليم الثانوي العتيق</li>\n <li>القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي للسنة الثانية من التعليم الثانوي العتيق</li>\n <li>القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي للسنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n </div>\n </div>\n <div>\n <h2>الرسم والضبط</h2>\n <ul>\n <li>الرسم والضبط من خلال أرجوزة عمدة البيان لإدريس الودغيري للسنة الرابعة من التعليم الابتدائي العتيق</li>\n <li>الرسم والضبط من خلال أرجوزة عمدة البيان للودغيري بشرح بهجة النظر للمساري للسنة الخامسة الابتدائي العتيق</li>\n <li>الرسم والضبط من أرجوزة عمدة البيان لإدريس الودغيري بشرح بهجة النظر والعيان لمحمد بن العربي المساري السنة السادسة من التعليم الإبتدائي العتيق</li>\n </ul>\n <h2>التفسير</h2>\n <ul>\n <li>التفسير من خلال تفسير الجلالين للسنة الرابعة من التعليم الابتدائي العتيق</li>\n <li>التفسير من خلال تفسير الجلالين للسنة الخامسة من التعليم الإبتدائي العتيق</li>\n <li> التفسير من خلال تفـسير الجلالين للسنة السادسة من التعليم الابتدائي العتيق</li>\n <li>التفسير من خلال التسهيل لعلوم التنزيل لابن جزي للسنة أولى من التعليم الإعدادي العتيق <br></li>\n <li>كتاب التفـسير من خلال كتاب التسهيل لعلوم التنزيل لابن جزي للسنة الثانية من التعليم الإعدادي العتيق</li>\n <li>التفـسير من خلال كتاب التسهيل لعلوم التنزيل لابن جزي للسنة الثالثة من التعليم الإعدادي العتيق</li>\n <li>التفسير من خلال المحرر الوجيز في تفسير الكتاب العزيز لابن عطية للسنة الأولى من التعليم الثانوي العتيق</li>\n <li>التفسير من خلال المحرر الوجيز في تفسير الكتاب العزيز لابن عطية للسنة الثانية من التعليم الثانوي العتيق</li>\n <li>كتاب التفـسير من خلال المحرر الوجيز لتفـسير الكتاب العـزيز لابن عـطية للسنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n <h2>الحديث</h2>\n <ul>\n <li>الحديث من رياض الصالحين للإمام النووي بشرح روضة المتقين للسنة الرابعة من التعليم الابتدائي العتيق</li>\n <li>الحديث من من كتاب الأربعين النووية بشرح ابن دقيق العيد للسنة الخامسة من التعليم الإبتدائي العتيق</li>\n <li>الحديث من كتاب الأربعـين النووية للإمام النووي بشرح ابن دقـيق العـيد للسنة السادسة من التعليم الابتدائي العتيق</li>\n <li>الحديث من موطأ الإمام مالك بشرح الزرقاني للسنة الأولى من التعليم الإعدادي العتيق</li>\n <li> الحـديـث من موطأ الإمام مالك للسنة الثانية من التعليم الإعدادي العتيق</li>\n <li>الحديث من موطأ الإمام مالك بشـرح الزرقاني للسنة الثالثة من التعليم الإعدادي العتيق</li>\n <li>الحديث من موطأ الإمام مالك بشرح الزرقاني للسنة الأولى من التعليم الثانوي العتيق</li>\n <li>الحديث من موطأ الإمام مالك بشرح الزرقاني للسنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n <h2>علوم الحديث</h2>\n <ul>\n <li>علوم الحديث من المنظومة البيقونية بشرح الزرقاني للسنة الأولى من التعليم الثانوي العتيق</li>\n <li>علوم الحديث من متن نخبة الفكر بشرح نزهة النظر لابن حجر العسقلاني للسنة الثانية الثانوي العتيق</li>\n <li>علوم الحديث من متن نخبة الفكر بشرح نزهة النظر للحافظ ابن حجر العسقلاني للسنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n <h2>السيرة النبوية</h2>\n <ul>\n <li>السيرة النبوية للسنة الأولى من التعـليم الإعدادي العتيق</li>\n <li>السيرة النبوية للسنة الثانية من التعـليم الإعدادي العتيق</li>\n <li>السيرة النبوية للسنة الثالثة الإعدادي العتيق</li>\n </ul>\n <div>\n <h2>الفقه</h2>\n <ul>\n <li>الفقه من متن الأخضري بشرح الآبي الأزهري للسنة الرابعة من التعليم الابتدائي العتيق</li>\n <li>الفقه من منظومة المرشد المعين لابن عاشر بشرح ميارة الفاسي للسنة الخامسة من التعليم الإبتدائي العتيق</li>\n <li> الفـقه من منظومة المرشد المعـين لابن عاشر بشرح ميارة للسنة السادسة الابتدائي العتيق<br></li>\n <li>الفقه من متن الرسالة لابن أبي زيد القيرواني بشرح كفاية الطالب الرباني للسنة الأولى من التعليم الإعدادي العتيق</li>\n <li>الفقه من رسالة ابن أبي زيد القيرواني بشرح كفاية الطالب الرباني لأبي الحسن بحاشية العدوي للسنة الثانية من التعليم الإعدادي العتيق</li>\n <li>الفـقه من متن الرسالة لابن أبي زيد القيرواني بشرح كفاية الطالب الرباني لأبي الحسن بحاشية العـدوي للسنة الثالثة الإعدادي العتيق</li>\n <li>الفقه من متن مختصر الشيخ خليل بشرح الدردير وحاشية الدسوقي للسنة الأولى من التعليم الثانوي العتيق</li>\n <li>الفقه من مختصر الشيخ خليل بشرح الدردير وحاشية الدسوقي للسنة الثانية من التعليم الثانوي العتيق</li>\n <li>كتاب الفـقه من مختـصـر الشيخ خليل بشرح الدردير، وحاشية الدسوقي للسنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n </div>\n <h2>&nbsp;أصول الفقه</h2>\n <ul>\n <li><span dir=\"RTL\">أصول الفقه من ورقات إمام الحرمين بشرح الحطاب للسنة الثالثة من التعليم الإعدادي العتيق</span></li>\n <li>أصول الفقه من منظومة مرتقى الوصول إلى الضروري في علم الأصول لابن عاصم للسنة الأولى الثانوي العتيق</li>\n <li>أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم للسنة الثانية من التعليم الثانوي العتيق</li>\n <li>أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم للسنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n </div>\n <h2>التوحيد</h2>\n <ul>\n <li>التوحيد من مقدمة رسالة ابن أبي زيد القيرواني بشرح كفاية الطالب الرباني لأبي الحسن للسنة الأولى من التعليم الإعدادي العتيق<br></li>\n <li>التوحيد من منظومة المرشد المعين على الضروري من علوم الدين لعبد الواحد بن عاشر بشرح مختصر الدر الثمين لمحمد بن أحمد ميارة للسنة الثانية من التعليم الإعدادي العتيق</li>\n </ul>\n <h2>أصول القيم</h2>\n <ul>\n <li>أصول القيم في القرآن والسنة للسنة الرابعة ابتدائي عتيق</li>\n <li>أصول القيم في القرآن والسنة للسنة الخامسة ابتدائي عتيق</li>\n <li>أصول القيم في القرآن والسنة للسنة السادسة ابتدائي عتيق</li>\n </ul>\n <h2>الفرائض</h2>\n <ul>\n <li>الفرائض من مختصر الشيخ خليل بشرح الخرشي للسنة الثانية الثانوي العتيق<br></li>\n <li>الفرائض من منظومة الجواهر المكنونة في صدق الفرائض المسنونة بشرح إيضاح الأسرار المصونة للرسموكي السنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n <h2>التوقيت</h2>\n <ul>\n <li>التوقيت من منظومة المقنع بشرح المطلع على مسائل المقنع لمحمد بن سعيد المرغتي للسنة الأولى الثانوي العتيق</li>\n <li>التوقيت من منظومة عمدة أهل الثبت في علم الأوقات وسمت البيت بشرح حل العقدة عن مقاصد العمدة لمحمد العلمي للسنة الثانية من التعليم الثانوي العتيق</li>\n <li>التوقيت من منظومة الجامع المفيد على أصول الراصد الجديد بشرح تقريب البعيد من الجامع المفيد على أصول الراصد الجديد فـي حساب الخسوف والكسوف ورؤية الأهلة لمَحمد بن محمد العلمي للسنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n <h2>المنطق</h2>\n <ul>\n <li>المنطق من نظم السلم للأخضري بشرح القويسني للسنة الأولى الثانوي العتيق</li>\n </ul>\n <h2>الفكر الإسلامي</h2>\n <ul>\n <li> الفكر الإسلامي..قضايا كلامية، للسنة الأولى الثانوي العتيق</li>\n <li>الفكر الإسلامي..الفلسفة الإسلامية للسنة الثانية ثانوي عتيق</li>\n <li>الفكر الإسلامي (التصوف الإسلامي) للسنة الثالثة ثانوي العتيق</li>\n </ul>\n </div>\n </div>\n </div>\n <div>\n </div>\n </div>\n </div>\n <footer>\n <div>\n <div>\n <div>\n <div>\n <ul>\n <li>المجلس العلمي الأعلى</li>\n <li>الدروس الحسنية</li>\n <li>الحج</li>\n </ul>\n <ul>\n <li>الوزير</li>\n <li>الكتابة العامة</li>\n <li>المفتشية العامة</li>\n <li>النظارات</li>\n <li>المندوبيات</li>\n <li><span>في البرلمان</span></li>\n <li>نشرة المنجزات</li>\n <li>نصوص تشريعية</li>\n </ul>\n <ul>\n <li>الأوقاف</li>\n <li>الشؤون الإسلامية</li>\n <li>التعاون والشؤون الإدارية</li>\n <li>المساجد</li>\n <li>التعليم العتيق ومحو الأمية بالمساجد</li>\n </ul>\n <ul>\n <li>الإسلام في المغرب</li>\n <li>خطب منبرية</li>\n <li>الإمام</li>\n <li>كرونولوجيا</li>\n </ul>\n <ul>\n <li>القرآن الكريم</li>\n <li>مواقيت الصلاة</li>\n <li>جوائز محمد السادس</li>\n </ul>\n </div>\n <div>\n <div>\n <ul>\n <li>للكتابة إلينا</li>\n <li>اتفاقية استخدام الموقع</li>\n <li>أوقات الصلاة</li>\n </ul>\n </div>\n </div>\n </div>\n <div>\n <h1>الإسلام في المغرب</h1>\n <h4><span><strong>وزارة الأوقاف والشؤون الإسلامية</strong> &nbsp;<strong>المشور السعيد - الرباط - المغرب</strong><strong> الهاتف </strong> <em> : 51 68 76 37 5 (212) - </em><em>01 68 76 37 5 (212) </em></span></h4>\n </div>\n </div>\n </div>\n </footer>\n </div>\n <div> \n </div>\n \n \n \n \n \n </body>\n</html>",
+    "htmlFr": "<h1>Le sujet de la pensée islamique (philosophie islamique) pour la deuxième année de l'enseignement secondaire ancien</h1>\n <dl>\n <dt></dt>\n <jj>\n lundi 16 mars 2026\n </jd>\n </dl>\n <p></p>\n <p>Louange à Dieu, Seigneur des mondes, et que la bénédiction et la paix soient sur le sceau des prophètes et messagers, ainsi que sur toute sa famille et ses compagnons.</p>\n <p>Nos fils d'étudiants, nos filles d'étudiants : Nous sommes heureux de remettre entre vos mains le livre de la pensée islamique pour la deuxième année de l'enseignement secondaire ancien, que nous avons consacré à l'axe de la philosophie islamique et à travers lequel nous avons abordé la définition de l'émergence de la philosophie islamique, ses caractéristiques et son développement, ainsi que la définition de ses figures et enjeux les plus importants, qui sont le résultat de l'interaction des philosophes musulmans avec les sciences et les connaissances qu'ils ont acquises en continuant à regarder le Saint Coran et la Sunna du Noble Prophète, et en apprenant. de leurs sources, et de la considération du Royaume de Dieu Tout-Puissant, et du bénéfice de l'héritage humain, a abouti une philosophie islamique dérivée des textes de révélation appelant à la contemplation et à la contemplation des âmes et des horizons, et de ce qui a été produit par la diligence humaine rationnelle.</p>\n <p>Le discours sur la philosophie islamique est un discours sur le produit de la convergence des sciences et de leur interaction dans la mentalité islamique, basé sur les sciences de la charia et les autres sciences qui les servent dans la construction de la civilisation, et sur la création d'un être humain normal qui bénéficie des connaissances et des sciences qu'il a absorbées, qui est capable de penser sainement, possède un équilibre droit et un sens critique solide, basé sur la construction de valeurs et d'idéaux sur le système de valeurs islamique.</p>\n <p>Nous avons adoptéPrésenter le contenu du livre et expliquer son contenu sont les mêmes étapes que celles suivies dans la méthode de présentation du contenu d'autres sciences. Nous avons commencé chaque cours en déclarant ses objectifs, puis nous avons commencé par l'introduire avec ce qu'il sait et ce à quoi aspire l'apprenant. Ensuite, nous avons établi les textes de départ et de construction, et les avons complétés en expliquant le vocabulaire et les phrases nécessaires dans leur contexte, puis en extrayant leur contenu. Nous avons ensuite procédé à l'analyse des textes, étape importante dans la construction des connaissances avec raisonnement, preuve et documentation. Nous avons eu à coeur de donner à l'apprenant la capacité de raisonner, les mécanismes de raisonnement et les pistes de regard sur ce dont il est convaincu. Idées, opinions, aspirations et visions.</p>\n <p>Cela comprend des questions de test, d'emploi et d'évaluation, ainsi que des textes d'investissement pour consolider le contenu de la leçon. Nous avons conclu la leçon avec des questions visant à motiver les apprenants à se préparer à la nouvelle leçon, à acquérir ce qu'ils peuvent en imaginer et à se familiariser avec ses thèmes généraux.</p>\n <p>Et Dieu est derrière l'intention, et Il guide le chemin.</p>\n \n <ul>\n <li>Introduction (p. 5)</li>\n <li>Comment utiliser mon livre (p. 6)</li>\n <li>Compétences pour enseigner la matière (p. 7)</li>\n <li>Distribution hebdomadaire et périodique (p. 8)</li>\n <li>1 . Le concept de philosophie islamique et ses caractéristiques (p. 9)</li>\n <li>2 . Les origines de la philosophie islamique et ses origines (p. 14)</li>\n <li>3. Les origines et le développement de la philosophie islamique (p. 19)</li>\n <li>4. Écoles de philosophie islamique (p. 25)</li>\n <li>5. L'originalité de la philosophie islamique et ses extensions<strong>(p. 31)</strong></li>\n <li>6 . La relation entre la sagesse et la charia (p. 36)</li>\n <li>7. Abou Yusuf Al-Kindi (p. 41)</li>\n <li>8 . Abou Nasr Al-Farabi (p. 46)</li>\n <li>9. Abou Ali Ibn Sina (p. 51)</li>\n <li>10 . Abou Hamid Al-Ghazali (p. 56)</li>\n <li>11 . Abou Al-Walid Ibn Rushd Al-Hafid (p. 61)</li>\n <li>12 . Abd al-Rahman Ibn Khaldun (p. 66)</li>\n <li>13 . Activités de soutien et de stabilisation (p. 72)</li>\n <li>14 . La théorie de la connaissance dans la philosophie islamique, son concept et ses sujets (p. 74)</li>\n <li>15 . La théorie de la connaissance dans la philosophie islamique : ses sources et ses limites (p. 79)</li>\n <li>16 . Les attributs de Dieu Tout-Puissant dans la philosophie islamique (p. 84)</li>\n <li>17 . Les attributs de Dieu Tout-Puissant dans la philosophie islamique (existence) (p. 89)</li>\n <li>18 . Actions de Dieu Tout-Puissant (p. 94)</li>\n <li>19. L'âme et l'homme (p. 99)</li>\n <li>20 . Liberté et responsabilité (p. 105)</li>\n <li>21 . Valeurs et éthique dans la philosophie islamique (valeurs sociales) (p. 111)</li>\n <li>22 . Valeurs et éthique dans la philosophie islamique (vertu) (p. 117)</li>\n <li>23 . Valeurs et éthique dans la philosophie islamique (bonheur) (p. 123)</li>\n <li>24 . L'impact de la philosophie islamique sur la pensée humaine (p. 128)</li><li>25 . Activités de soutien et de stabilisation (p. 133)</li>\n <li>Liste des sources et références (p. 136)</li>\n <li>Index des sujets (p. 142)</li>\n </ul>\n <div>\n \n </div>\n </div>\n <div>\n \n </div>\n <div>\n <div>\n <h2>La première étape</h2>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n </div>\n <div>\n <h2>La deuxième étape</h2>\n <div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n </div>\n </div>\n </div>\n <div>\n <div>\n <h2>Tajweed</h2>\n <div>\n <ul>\n <li>Candidatures en Tajweed sur les airs de Tuhfat al-Atfal par Al-Jamzouri pour la cinquième année de l'école primaire ancienne</li>\n <li>Tajweed est tiré des compositions de Durar Al-Lawame d'Ibn Bari, expliquant les étoiles montantes d'Ibrahim Al-Marghani pour la sixième année de l'école primaire d'Al-Atiq</li>\n <li>Tajweed d'après les compositions de Durar Al-Lawame d'Ibn Bari, expliquant les étoiles montantes d'Ibrahim Al-Marghani pour la première année de l'enseignement préparatoire ancien</li>\n <li>Tajweed d'après les compositions de Durar Al-Lawame d'Ibn Bari, expliquant les étoiles montantes d'Ibrahim Al-Marghani pour la deuxième année de l'enseignement préparatoire ancien</li>\n <li>Tajweed d'après les compositions de Durar Al-Lawame d'Ibn Bari, expliquant les étoiles montantes d'Ibrahim Al-Marghani pour la troisième année de l'enseignement préparatoire ancien</li>\n </ul>\n <h2>Sciences coraniques</h2>\n <div>\n <ul>\n <li>Sciences coraniques pour la première année de l'enseignement préparatoire ancien</li>\n <li>Sciences coraniques pour la deuxième année de l'enseignement préparatoire ancien</li>\n <li>Sciences coraniques pour la troisième année de l'enseignement préparatoire ancien</li>\n </ul>\n <h2>Lectures</h2>\n <ul>\n <li>Lectures du texte « Hazr Al-Amani » et félicitations à Abu Al-Qasim Al-Shatibi pour la première année de l'enseignement secondaire ancien</li>\n <li>Lectures des textes « Harz al-Amani » et « Wajh ».Félicitations à Abu Al-Qasim Al-Shatibi pour la deuxième année de l'enseignement secondaire ancien</li>\n <li>Lectures du texte « Hazr Al-Amani » et félicitations à Abu Al-Qasim Al-Shatibi pour la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n </div>\n </div>\n <div>\n <h2>Dessin et réglage</h2>\n <ul>\n <li>Dessin et réglage à travers Arjouza Umdat Al-Bayan par Idris Al-Wadghiri pour la quatrième année de l'enseignement primaire ancien</li>\n <li>Dessin et contrôle à travers Arjouza Umdat al-Bayan par Al-Wadghairi, expliquant le plaisir de la vision par Al-Masari pour la cinquième année de l'école primaire ancienne</li>\n <li>Dessin et contrôle d'Arjouza Umdat Al-Bayan par Idris Al-Wadghiri, expliquant la joie de regarder et de voir par Muhammad bin Al-Arabi Al-Masari, sixième année de l'enseignement primaire ancien</li>\n </ul>\n <h2>Interprétation</h2>\n <ul>\n <li>Interprétation à travers Tafsir Al-Jalalayn pour la quatrième année de l'enseignement primaire ancien</li>\n <li>Interprétation à travers Tafsir Al-Jalalayn pour la cinquième année de l'enseignement primaire ancien</li>\n <li>Interprétation à travers Tafsir Al-Jalalayn pour la sixième année de l'enseignement primaire ancien</li>\n <li>Interprétation par facilitation des sciences de la révélation par Ibn Jazi pour la première année de l'enseignement préparatoire ancien <br></li>\n <li>Le Livre d'Interprétation à travers le Livre de Tashil pour les Sciences de la Révélation d'Ibn Jazi pour la deuxième année de l'enseignement préparatoire ancien</li>\n <li>Interprétation à travers le livre Al-Tas'heel pour les sciences de la révélation d'Ibn Jazi pour la troisième année de l'enseignement préparatoire ancien</li>\n <li>Interprétation par le bref éditeur dans l'interprétation du cher livre d'Ibn Attiya pour la première année de l'enseignement secondaire ancien</li>\n <li>Interprétation par le bref éditeur dans l'interprétation du cher livre d'Ibn Attiya pour la deuxième année de l'enseignement secondaire ancien</li>\n <li>Le livre d'interprétation à travers le bref éditeur pour l'interprétation du cher livre d'Ibn Attiya pour la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n <h2>Hadith</h2>\n <ul>\n <li>Le hadith de Riyad al-Salihin de l'Imam al-Nawawi expliquant Rawdat al-Muttaqin pour la quatrième année de l'enseignement primaire ancien</li>\n <li>Hadith du livre Al-Arba'in Al-Nawawi, expliqué par Ibn Daqiq Al-Eid pour la cinquième année de l'enseignement primaire ancien</li>\n <li>Le hadith du livre Les Quarante Nawawi de l'Imam al-Nawawi, avec l'explication d'Ibn Daqiq Al-Eid pour la sixième année de l'enseignement primaire ancien</li>\n <li>Hadith du Muwatta de l'Imam Malik, expliqué par Al-Zarqani pour la première année de l'enseignement préparatoire ancien</li>\n <li>Le hadith du Muwatta de l'Imam Malik pour la deuxième année de l'enseignement préparatoireL'ancien</li>\n <li>Hadith du Muwatta de l'Imam Malik, expliqué par Al-Zarqani pour la troisième année de l'enseignement préparatoire ancien</li>\n <li>Hadith de Muwatta de l'Imam Malik, expliqué par Al-Zarqani pour la première année de l'enseignement secondaire ancien</li>\n <li>Hadith de Muwatta de l'Imam Malik, expliqué par Al-Zarqani pour la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n <h2>Sciences des Hadiths</h2>\n <ul>\n <li>Sciences des hadiths du système bayconien, expliquées par Al-Zarqani pour la première année de l'enseignement secondaire ancien</li>\n <li>Sciences des hadiths tirées du texte de Nukhbat al-Fikr, expliquant Nuzhat al-Nazr par Ibn Hajar al-Asqalani pour la deuxième année du secondaire, Al-Atiq</li>\n <li>Sciences des hadiths tirées du texte de Nukhbat al-Fikr, avec une explication de Nuzhat al-Nazr par Al-Hafiz Ibn Hajar al-Asqalani pour la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n <h2>Biographie du Prophète</h2>\n <ul>\n <li>Biographie du Prophète pour la première année de l'enseignement préparatoire ancien</li>\n <li>Biographie du Prophète pour la deuxième année de l'enseignement préparatoire ancien</li>\n <li>Biographie du Prophète pour la troisième année du collège, Al-Atiq</li>\n </ul>\n <div>\n <h2>Jurisprudence</h2>\n <ul>\n <li>Jurisprudence du texte d'Al-Akhdari, expliquée par Al-Abi Al-Azhari pour la quatrième année de l'enseignement primaire ancien</li>\n <li>Jurisprudence du système du guide désigné d'Ibn Ashir, expliquée par Mayara Al-Fassi pour la cinquième année de l'enseignement primaireL'ancien</li>\n <li>Jurisprudence du système du guide désigné d'Ibn Ashir, expliquée par Mayara pour la sixième année de l'école primaire, Al-Atiq<br></li>\n <li>Jurisprudence tirée du texte du message d'Ibn Abi Zaid al-Qayrawani, expliquant la suffisance de l'étudiant divin pour la première année de l'enseignement préparatoire ancien</li>\n <li>Jurisprudence du traité d'Ibn Abi Zaid al-Qayrawani expliquant le Kifayat al-Talib al-Rabbani d'Abou al-Hasan à Hashiyat al-Adawi pour la deuxième année de l'enseignement préparatoire ancien</li>\n <li>Jurisprudence du texte d'Al-Risala d'Ibn Abi Zaid Al-Qayrawani avec une explication du Kifayat Al-Talib Al-Rabbani d'Abi Al-Hasan à Hashiyat Al-Adawi pour la troisième année de l'école préparatoire Al-Atiq</li>\n <li>Jurisprudence tirée du texte du résumé de Cheikh Khalil, avec l'explication d'Al-Dardir et de Hashiyat Al-Dasouki pour la première année de l'enseignement secondaire ancien</li>\n <li>Jurisprudence du résumé de Cheikh Khalil, avec l'explication d'Al-Dardir et de Hashiyat Al-Dasouki pour la deuxième année de l'enseignement secondaire ancien</li>\n <li>Le livre de jurisprudence tiré du résumé de Cheikh Khalil, expliqué par Al-Dardir et Hashiyat Al-Dasouki pour la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n </div>\n <h2> Fondements de la jurisprudence</h2>\n <ul>\n <li><span dir=\"RTL\">Les principes de la jurisprudence issus des papiers de l'Imam des Deux Saintes Mosquées, expliqués par Al-Hattab pour la troisième année de l'enseignement préparatoire ancien</span></li>\n <li>Les fondements de la jurisprudence à partir du système de progression d'accès au nécessaire en science des principes par Ibn Asim pour la première année du secondaire, Al-Atiq</li>\n <li>Les principes de jurisprudence du système de « Murtaqa au Nécessaire » à partir des principes d'Ibn Asim pour la deuxième année de l'enseignement secondaire ancien</li>\n <li>Les principes de jurisprudence du système de « Murtaqa au Nécessaire » à partir des principes d'Ibn Asim pour la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n </div>\n <h2>Monothéisme</h2>\n <ul>\n <li>Tawhid de l'introduction du traité d'Ibn Abi Zaid al-Qayrawani expliquant la suffisance de l'étudiant divin par Abu al-Hasan pour la première année de l'enseignement préparatoire ancien<br></li>\n <li>Tawhid du système du guide nommé aux sciences religieuses nécessaires par Abd al-Wahid ibn Ashir, avec une explication de Mukhtasar al-Durr al-Thameen par Muhammad ibn Ahmad Mayara pour la deuxième année de l'enseignement préparatoire ancien</li>\n </ul>\n <h2>Les origines des valeurs</h2>\n <ul>\n <li>Les principes de valeurs du Coran et de la Sunna pour la quatrième année du primaire, Atiq</li>\n <li>Les principes de valeurs du Coran et de la Sunna pour la cinquième année du primaire, Atiq</li>\n <li>Les principes de valeurs du Coran et de la Sunna pour la sixième année primaire, Atiq</li>\n </ul>\n <h2>Obligations</h2>\n <ul>\n <li>Les devoirs obligatoires du résumé de Cheikh Khalil, expliqués par Al-Kharshi, pour la deuxième année du secondaire, Al-Atiq<br></li>\n <li>Les obligations du système des joyaux cachés dans la véracité des obligations de la Sunna avec une explication de l'illustration des secrets préservés pour Al-Rasmouki, la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n <h2>Heure</h2>\n <ul>\n <li>Le timing du système Al-Muqani avec l'explication d'Al-Muqani' sur les questions d'Al-Muqani par Muhammad bin Saeed Al-Marghati pour la première année de l'école secondaire Al-Atiq</li>\n <li>Le timing du système d'Umdah Ahl al-Thabit dans la science des temps et le verset du verset expliquant la solution du nœud sur Maqasid al-Umdah par Muhammad al-Alami pour la deuxième année de l'enseignement secondaire ancien</li>\n <li>Le timing du système d'Al-Jami' Al-Mufid sur les principes du nouvel observateur avec une explication de l'approximation de la distance d'Al-Jami' Al-Mufid sur les principes du nouvel observateur dans le calcul des éclipses, des éclipses et de l'observation du croissant par Muhammad bin Muhammad Al-Alami pour la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n <h2>Logique</h2>\n <ul>\n <li>Logique de Nazm al-Salam par Al-Akhdari, expliquée par Al-Quwaisni pour la première année du secondaire, Al-Atiq</li>\n </ul>\n <h2>Pensée islamique</h2>\n <ul>\n <li>La pensée islamique...questions de discours, pour la première année du secondaire ancien</li>\n <li>Pensée islamique...Philosophie islamique pour la deuxième année du secondaire, Atiq</li>\n <li>Pensée islamique (soufisme islamique) pour la troisième année de l'école secondaire Al-Atiq</li>\n </ul>\n </div>\n </div>\n </div>\n <div>\n </div>\n </div>\n </div>\n <pied de page><div>\n <div>\n <div>\n <div>\n <ul>\n <li>Conseil scientifique suprême</li>\n <li>Bonnes leçons</li>\n <li>Hajj</li>\n </ul>\n <ul>\n <li>Le ministre</li>\n <li>Rédaction générale</li>\n <li>Inspection générale</li>\n <li>Lunettes</li>\n <li>Commandes</li>\n <li><span>Au Parlement</span></li>\n <li>Bulletin des réalisations</li>\n <li>Textes législatifs</li>\n </ul>\n <ul>\n <li>Awqaf</li>\n <li>Affaires islamiques</li>\n <li>Coopération et affaires administratives</li>\n <li>Mosquées</li>\n <li>Éducation ancienne et éradication de l'analphabétisme dans les mosquées</li>\n </ul>\n <ul>\n <li>L'Islam au Maroc</li>\n <li>Discours en chaire</li>\n <li>Imam</li>\n <li>Chronologie</li>\n </ul>\n <ul>\n <li>Le Saint Coran</li>\n <li>Horaires de prière</li>\n <li>Prix Mohammed VI</li>\n </ul>\n </div>\n <div>\n <div>\n <ul>\n <li>Pour nous écrire</li>\n <li>Contrat d'utilisation du site Web</li>\n <li>Horaires de prière</li>\n </ul>\n </div>\n </div>\n </div>\n <div>\n <h1>L'Islam au Maroc</h1>\n <h4><span><strong>Ministère des Dotations et des Affaires islamiques</strong>  <strong>Al-Mashour Al-Saeed - Rabat - Maroc</strong><strong> Téléphone</strong><em> : 51 68 76 37 5 (212) - </em><em>01 68 76 37 5 (212)</em></span></h4>\n </div>\n </div>\n </div>\n </pied de page>\n </div>\n <div> \n </div>\n \n \n \n \n \n </corps>\n</html>"
   },
-  {
-   "docId": "pdf-mut23h2r-143",
-   "titleAr": "التوزيع الأسبوعي والدوري",
-   "titleFr": "Répartition hebdomadaire et périodique",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/التوزيع_الأسبوعي_والدوري.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2r-144",
-   "titleAr": "مفهوم الفلسفة الإسلامية وخصائصها",
-   "titleFr": "La notion de philosophie islamique et ses caractéristiques",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/مفهوم_الفلسفة_الإسلامية_وخصائصها.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2r-145",
-   "titleAr": "أصول الفلسفة الإسلامية واستمدادها",
-   "titleFr": "Les fondements de la philosophie islamique et ses sources",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/أصول_الفلسفة_الإسلامية_واستمدادها.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2r-146",
-   "titleAr": "نشأة الفلسفة الإسلامية وتطورها",
-   "titleFr": "La naissance de la philosophie islamique et son développement",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/نشأة_الفلسفة_الإسلامية_وتطورها.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2r-147",
-   "titleAr": "مدارس الفلسفة الإسلامية",
-   "titleFr": "Les écoles de la philosophie islamique",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/مدارس_الفلسفة_الإسلامية.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2r-148",
-   "titleAr": "أصالة الفلسفة الإسلامية وامتداداتها",
-   "titleFr": "L'originalité de la philosophie islamique et ses prolongements",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/أصالة_الفلسفة_الإسلامية_وامتداداتها.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2r-149",
-   "titleAr": "العلاقة بين الحكمة والشريعة",
-   "titleFr": "La relation entre la sagesse (ḥikma) et la Loi (šarīʿa)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/العلاقة_بين_الحكمة_والشريعة.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2r-150",
-   "titleAr": "أبو يوسف الكندي",
-   "titleFr": "Abou Yūsuf al-Kindī",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/أبو_يوسف_الكندي.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2r-151",
-   "titleAr": "أبو نصر الفارابي",
-   "titleFr": "Abou Naṣr al-Fārābī",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/أبو_نصر_الفارابي.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2r-152",
-   "titleAr": "أبو علي ابن سينا",
-   "titleFr": "Abou ʿAlī Ibn Sīnā — Avicenne",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/أبو_علي_ابن_سينا.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2r-153",
-   "titleAr": "أبو حامد الغزالي",
-   "titleFr": "Abou Ḥāmid al-Ġazālī",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/أبو_حامد_الغزالي.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2r-154",
-   "titleAr": "أبو الوليد ابن رشد الحفيد",
-   "titleFr": "Abou al-Walīd Ibn Rušd — Averroès",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/أبو_الوليد_ابن_رشد_الحفيد.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2r-155",
-   "titleAr": "عبد الرحمن ابن خلدون",
-   "titleFr": "ʿAbd al-Raḥmān Ibn Ḫaldūn",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/عبد_الرحمن_ابن_خلدون.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2r-156",
-   "titleAr": "أنشطة الدعم والتثبيت",
-   "titleFr": "Activités de soutien et de consolidation",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/أنشطة_الدعم_والتثبيت.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2r-157",
-   "titleAr": "نظرية المعرفة في الفلسفة الإسلامية مفهومها وموضوعاتها",
-   "titleFr": "La théorie de la connaissance dans la philosophie islamique : notion et thèmes",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/نظرية_المعرفة_في_الفلسفة_الإسلامية_مفهومها_وموضوعاتها.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2r-158",
-   "titleAr": "نظرية المعرفة في الفلسفة الإسلامية: مصادرها وحدودها",
-   "titleFr": "La théorie de la connaissance dans la philosophie islamique : sources et limites",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/نظرية_المعرفة_في_الفلسفة_الإسلامية_مصادرها_وحدودها.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2r-159",
-   "titleAr": "صفات الله تعالى في الفلسفة الإسلامية",
-   "titleFr": "Les attributs divins dans la philosophie islamique",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/صفات_الله_تعالى_في_الفلسفة_الإسلامية.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2r-160",
-   "titleAr": "صفات الله سبحانه وتعالى في الفلسفة الإسلامية (الوجود)",
-   "titleFr": "Les attributs divins dans la philosophie islamique : l'existence",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/صفات_الله_سبحانه_وتعالى_في_الفلسفة_الإسلامية_الوجود.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2r-161",
-   "titleAr": "أفعال الله تعالى",
-   "titleFr": "Les actes de Dieu Très-Haut",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/أفعال_الله_تعالى.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2r-162",
-   "titleAr": "النفس والإنسان",
-   "titleFr": "L'âme et l'être humain",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/النفس_والإنسان.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2r-163",
-   "titleAr": "الحرية والمسؤولية",
-   "titleFr": "Liberté et responsabilité",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/الحرية_والمسؤولية.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2r-164",
-   "titleAr": "القيم والأخلاق في الفلسفة الإسلامية (القيم الاجتماعية)",
-   "titleFr": "Valeurs et éthique dans la philosophie islamique : les valeurs sociales",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/القيم_والأخلاق_في_الفلسفة_الإسلامية_القيم_الاجتماعية.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2r-165",
-   "titleAr": "القيم والأخلاق في الفلسفة الإسلامية (الفضيلة)",
-   "titleFr": "Valeurs et éthique dans la philosophie islamique : la vertu (faḍīla)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/القيم_والأخلاق_في_الفلسفة_الإسلامية_الفضيلة.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2r-166",
-   "titleAr": "القيم والأخلاق في الفلسفة الإسلامية (السعادة)",
-   "titleFr": "Valeurs et éthique dans la philosophie islamique : le bonheur (saʿāda)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/القيم_والأخلاق_في_الفلسفة_الإسلامية_السعادة.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2r-167",
-   "titleAr": "أثر الفلسفة الإسلامية في الفكر الإنساني",
-   "titleFr": "L'apport de la philosophie islamique à la pensée humaine",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/أثر_الفلسفة_الإسلامية_في_الفكر_الإنساني.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2r-168",
-   "titleAr": "لائحة المصادر والمراجع",
-   "titleFr": "Liste des sources et références",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/لائحة_المصادر_والمراجع.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2r-169",
-   "titleAr": "فهرس الموضوعات",
-   "titleFr": "Index des thèmes",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/الفهرس.pdf",
-   "pdfOnly": true
-  }
- ]
+  "lessons": [
+    {
+      "docId": "pdf-mut23h2r-142",
+      "titleAr": "المقدمة",
+      "titleFr": "Introduction",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/المقدمة.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2r-143",
+      "titleAr": "التوزيع الأسبوعي والدوري",
+      "titleFr": "Répartition hebdomadaire et périodique",
+      "html": "",
+      "htmlFr": "<p>La philosophie islamique : concept, caractéristiques et théorie de la connaissance</p>\n<p>Le concept et les sujets de la philosophie islamique</p>\n<p>Les fondements de la philosophie islamique et ses sources 1 Théorie de la connaissance dans la philosophie islamique :</p>\n<p>Ses sources et ses limites</p>\n<p>L'émergence et le développement de la philosophie islamique Les attributs divins dans la philosophie islamique Les écoles de la philosophie islamique Les attributs d'Allah — glorifié et exalté soit-Il — dans la philosophie islamique (l'existence)</p>\n<p>L'originalité de la philosophie islamique et ses prolongements Les actions d'Allah — le Très-Haut —</p>\n<p>Devoir n°1 : Liberté et responsabilité</p>\n<p>: 1 Les valeurs et l'éthique dans la philosophie islamique Abū Naṣr al-Fārābī (les valeurs sociales) (la vertu)</p>\n<p>12 Abū Ḥāmid al-Ghazālī Les valeurs et l'éthique dans la philosophie islamique Abū al-Walīd Ibn Rushd al-Ḥafīd (le bonheur) L'influence de la philosophie sur la pensée humaine</p>\n<p>ʿAbd al-Raḥmān Ibn Khaldūn</p>\n<p>Activités de soutien et de consolidation</p>\n<p>Activités de soutien et de consolidation</p>",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/التوزيع_الأسبوعي_والدوري.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2r-144",
+      "titleAr": "مفهوم الفلسفة الإسلامية وخصائصها",
+      "titleFr": "La notion de philosophie islamique et ses caractéristiques",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/مفهوم_الفلسفة_الإسلامية_وخصائصها.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2r-145",
+      "titleAr": "أصول الفلسفة الإسلامية واستمدادها",
+      "titleFr": "Les fondements de la philosophie islamique et ses sources",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/أصول_الفلسفة_الإسلامية_واستمدادها.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2r-146",
+      "titleAr": "نشأة الفلسفة الإسلامية وتطورها",
+      "titleFr": "La naissance de la philosophie islamique et son développement",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/نشأة_الفلسفة_الإسلامية_وتطورها.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2r-147",
+      "titleAr": "مدارس الفلسفة الإسلامية",
+      "titleFr": "Les écoles de la philosophie islamique",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/مدارس_الفلسفة_الإسلامية.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2r-148",
+      "titleAr": "أصالة الفلسفة الإسلامية وامتداداتها",
+      "titleFr": "L'originalité de la philosophie islamique et ses prolongements",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/أصالة_الفلسفة_الإسلامية_وامتداداتها.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2r-149",
+      "titleAr": "العلاقة بين الحكمة والشريعة",
+      "titleFr": "La relation entre la sagesse (ḥikma) et la Loi (šarīʿa)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/العلاقة_بين_الحكمة_والشريعة.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2r-150",
+      "titleAr": "أبو يوسف الكندي",
+      "titleFr": "Abou Yūsuf al-Kindī",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/أبو_يوسف_الكندي.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2r-151",
+      "titleAr": "أبو نصر الفارابي",
+      "titleFr": "Abou Naṣr al-Fārābī",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/أبو_نصر_الفارابي.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2r-152",
+      "titleAr": "أبو علي ابن سينا",
+      "titleFr": "Abou ʿAlī Ibn Sīnā — Avicenne",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/أبو_علي_ابن_سينا.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2r-153",
+      "titleAr": "أبو حامد الغزالي",
+      "titleFr": "Abou Ḥāmid al-Ġazālī",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/أبو_حامد_الغزالي.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2r-154",
+      "titleAr": "أبو الوليد ابن رشد الحفيد",
+      "titleFr": "Abou al-Walīd Ibn Rušd — Averroès",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/أبو_الوليد_ابن_رشد_الحفيد.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2r-155",
+      "titleAr": "عبد الرحمن ابن خلدون",
+      "titleFr": "ʿAbd al-Raḥmān Ibn Ḫaldūn",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/عبد_الرحمن_ابن_خلدون.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2r-156",
+      "titleAr": "أنشطة الدعم والتثبيت",
+      "titleFr": "Activités de soutien et de consolidation",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/أنشطة_الدعم_والتثبيت.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2r-157",
+      "titleAr": "نظرية المعرفة في الفلسفة الإسلامية مفهومها وموضوعاتها",
+      "titleFr": "La théorie de la connaissance dans la philosophie islamique : notion et thèmes",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/نظرية_المعرفة_في_الفلسفة_الإسلامية_مفهومها_وموضوعاتها.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2r-158",
+      "titleAr": "نظرية المعرفة في الفلسفة الإسلامية: مصادرها وحدودها",
+      "titleFr": "La théorie de la connaissance dans la philosophie islamique : sources et limites",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/نظرية_المعرفة_في_الفلسفة_الإسلامية_مصادرها_وحدودها.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2r-159",
+      "titleAr": "صفات الله تعالى في الفلسفة الإسلامية",
+      "titleFr": "Les attributs divins dans la philosophie islamique",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/صفات_الله_تعالى_في_الفلسفة_الإسلامية.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2r-160",
+      "titleAr": "صفات الله سبحانه وتعالى في الفلسفة الإسلامية (الوجود)",
+      "titleFr": "Les attributs divins dans la philosophie islamique : l'existence",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/صفات_الله_سبحانه_وتعالى_في_الفلسفة_الإسلامية_الوجود.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2r-161",
+      "titleAr": "أفعال الله تعالى",
+      "titleFr": "Les actes de Dieu Très-Haut",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/أفعال_الله_تعالى.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2r-162",
+      "titleAr": "النفس والإنسان",
+      "titleFr": "L'âme et l'être humain",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/النفس_والإنسان.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2r-163",
+      "titleAr": "الحرية والمسؤولية",
+      "titleFr": "Liberté et responsabilité",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/الحرية_والمسؤولية.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2r-164",
+      "titleAr": "القيم والأخلاق في الفلسفة الإسلامية (القيم الاجتماعية)",
+      "titleFr": "Valeurs et éthique dans la philosophie islamique : les valeurs sociales",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/القيم_والأخلاق_في_الفلسفة_الإسلامية_القيم_الاجتماعية.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2r-165",
+      "titleAr": "القيم والأخلاق في الفلسفة الإسلامية (الفضيلة)",
+      "titleFr": "Valeurs et éthique dans la philosophie islamique : la vertu (faḍīla)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/القيم_والأخلاق_في_الفلسفة_الإسلامية_الفضيلة.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2r-166",
+      "titleAr": "القيم والأخلاق في الفلسفة الإسلامية (السعادة)",
+      "titleFr": "Valeurs et éthique dans la philosophie islamique : le bonheur (saʿāda)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/القيم_والأخلاق_في_الفلسفة_الإسلامية_السعادة.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2r-167",
+      "titleAr": "أثر الفلسفة الإسلامية في الفكر الإنساني",
+      "titleFr": "L'apport de la philosophie islamique à la pensée humaine",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/أثر_الفلسفة_الإسلامية_في_الفكر_الإنساني.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2r-168",
+      "titleAr": "لائحة المصادر والمراجع",
+      "titleFr": "Liste des sources et références",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/لائحة_المصادر_والمراجع.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2r-169",
+      "titleAr": "فهرس الموضوعات",
+      "titleFr": "Index des thèmes",
+      "html": "",
+      "htmlFr": "<p>Index des thèmes</p>\n<p>Théorie de la connaissance en philosophie islamique : ses sources, les compétences requises pour l'enseignement de la matière, et ses limites</p>\n<p>Répartition hebdomadaire et périodique : Attributs d'Allah le Très-Haut en philosophie islamique - Concept de la philosophie islamique et ses caractéristiques - Attributs d'Allah — glorifié et exalté soit-Il — en philosophie islamique : (L'Existence)</p>\n<p>Fondements de la philosophie islamique et ses origines - Actions d'Allah le Très-Haut</p>\n<p>Naissance de la philosophie islamique et son évolution - L'âme et l'homme</p>\n<p>Originalité de la philosophie islamique et ses prolongements - Liberté et Responsabilité - Relation entre la sagesse et la Loi divine - Valeurs et Éthique en philosophie islamique (Valeurs : : Sociales)</p>\n<p>Abū Yūsuf al-Kindī - al-Fārābī - Valeurs et Éthique en philosophie islamique (La Vertu) - Abū Naṣr al-Fārābī</p>\n<p>Valeurs et Éthique en philosophie islamique (Le Bonheur) - Abū ʿAlī Ibn Sīnā</p>\n<p>L'influence de la philosophie islamique dans la pensée humaine - Abū Ḥāmid al-Ghazālī</p>\n<p>Activités de soutien et de consolidation</p>\n<p>Abū al-Walīd Ibn Rushd al-Ḥafid</p>\n<p>Liste des sources et références</p>",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/الفكر-الإسلامي-الفلسفة-الإسلامية-الثانية-ثانوي/الفهرس.pdf",
+      "pdfOnly": true
+    }
+  ]
 }

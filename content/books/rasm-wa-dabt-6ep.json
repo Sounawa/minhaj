@@ -1,280 +1,280 @@
 {
- "id": "rasm-wa-dabt-6ep",
- "subject": "rasm-wa-dabt",
- "level": "6ep",
- "subjectAr": "الرسم والضبط",
- "levelAr": "السنة السادسة من التعليم الابتدائي العتيق",
- "titleAr": "الرسم والضبط من أرجوزة عمدة البيان لإدريس الودغيري",
- "titleFr": "Rasm et ḍabṭ — ʿUmdat al-Bayān d'al-Wadghīrī (fin)",
- "pdfUrl": null,
- "intro": {
-  "docId": "18646",
-  "titleAr": "تقديم الكتاب",
-  "titleFr": "Présentation du manuel",
-  "html": "<h1> الرسم والضبط: من أرجوزة عمدة البيان لإدريس الودغيري بشرح بهجة النظر والعيان لمحمد بن العربي المساري س 6 اب</h1>\n <dl>\n <dt></dt>\n <dd>\n \n </dd>\n </dl>\n <p></p>\n <p>كتاب الرسم والضبط من فصول منظومة «عمدة البيان في حكم المرسوم من القرآن» للإمام إدريس الودغيري، مع شرحها «بهجة النظر والعيان» لمحمد بن العربي المساري، للسنة السادسة من التعليم الابتدائي العتيق؛</p>\n \n <p>&nbsp;الحمد لله رب العالـمين، والصلاة والسلام على الـمبعوث رحمة للعالـمين، سيدنا محمد وعلى آله وصحبه أجمعين.</p>\n <p>وبعد، فيسعدنا- أبناءنا التلاميذ، بناتنا التلميذات- أن نضع بين أيديكم كتاب الرسم والضبط للسنة السادسة من التعليم الابتدائي العتيق.</p>\n <p>وقد اعتمدنا في إعداد مضامين الكتاب أرجوزة «عمدة البيان» للإمام إدريس الودغيري، بشرح «بهجة النظر والعيان» لـمحمد بن العربي الـمساري، مع الحرص على تقريبها من الـمتعلم(ة) وتقديمها في أيسر صورة وأجمل حلة.</p>\n <p>كما حرصنا على بناء دروس الكتاب وفق خطوات تربوية تنطلق من تحديد الأهداف، ثم التمهيد للدرس بمدخل يربط السابق باللاحق، ثم إيراد الـمتن الذي عليه مدار الدرس ومادته، مذيلا بشروحات مساعدة، وأسئلة موجهة لاستخلاص الـمضامين العامة للمتن، ثم تحليل محاور الدرس بشكل مركز ومختصر، تتلوه أنشطة لتقويم التعلمات، واستثمار الـمكتسبات، وتنمية القدرات، ثم يختم الدرس بأنشطة الإعداد القبلي حتى يكون الـمتعلم(ة) على أتم الاستعداد للمشاركة في بناء الدرس الـموالي.</p>\n <p>ونأمل أن يجد الـمتعلم(ة) في هذا الكتاب ما يحقق الغاية منه، وهي الإلـمام بمباحث مهمة من علم الرسم والضبط القرآني، واستيعاب عللها وفهم أحكامها وضبط قواعدها التي لا ينفك يجدها في الـمصاحف، واكتساب القدرة على تطبيقها في كتابة النص القرآني وفق ماجرى به العمل عند الـمغاربة في كتابة الـمصاحف والألواح.</p>\n <p>ونسأل الله تعالى لتلميذاتنا وتلاميذنا التوفيق والنجاح، فهو الـموفق للصواب، والهادي إلى سواء السبيل.</p>\n <h2>الكتاب</h2>\n <ul>\n <li>كيف أستعمل كتابي هذا</li>\n <li>كفايات تدريس الرسم والضبط بالسنة السادسة من التعليم الابتدائي العتيق</li>\n <li>التوزيع الدوري والأسبوعي</li>\n <li>1 .فصل في حذف الواو</li>\n <li>2 .فصل فـي حذف النون</li>\n <li>3.فصل فـي أحكام اللام الـمتكرر</li>\n <li>4 .تصوير الهمزة فـي بداية الكلمة</li>\n <li>5 .الهمزة الـمصورة واوا والـمحذوفة بعـد ساكن</li>\n <li>6 .حـكـم الهمــزة الـمتوسطــة والـمتطرفة بعـد الألف</li>\n <li>7 .الهمزة الساكنة الـمتوسطة بعد متحرك والـمتطرفة</li>\n <li>8 .الهـمـــــزة الـمتــطـــرفـــــة الـمرفـــوعــــة الـمصورة واوا</li>\n <li>9 .الهمزة الـمتحركة وما قبلها متحرك</li>\n <li>10 .الهمزة الـمضمومة بعـد الكســر الواقـــع بعدها واو الـجمع</li>\n <li>11 .تصوير الهمزة الـمؤدي لاجتماع صورتين</li>\n <li>12 .حكم اجتماع صورتي همزتين</li>\n <li>13 .فصل فـي مواضع حذف همز الوصل</li>\n <li>14 .فصل فـي مواضع حذف همز الوصل (تتمة)</li>\n <li>15 .فصل فـي زيادة الألفات</li>\n <li>16 .فصل فـي زيادة الألفات (تتمة)</li>\n <li>17 .فصل فـي زيادة الياء</li>\n <li>18 .فصل فـي زيادة الواو</li>\n <li>19 .فصل فـيمــا يكتـــــب بياءيـــن وبـــاب الـمفصولات</li>\n <li>20 .فصــــل فـــي الـمفصــولات والـموصولات (تابع)</li>\n <li>21 .فصـــل فــــي الـمفصـــولات والـموصولات (تابع)</li>\n <li>22 .فصــل فــــي الـمفصـــولات والـمـوصولات (تابع)</li>\n <li>23 .فصــل فــــي الـمفصـــولات والـمـوصولات (تابع)</li>\n <li>24 .فصــل فــــي الـمفصـــولات والـمـوصولات (تتمة)</li>\n <li>25 .فصل فـي رسم تاء التأنيث</li>\n <li>26 .خاتمة النظم: العلم بذل وتواضع</li>\n <li>27 .خاتمة النظـم (تتمة) : تزكيــة ودعــاء ومناجاة</li>\n <li>لائحة الـمصادر والـمراجع</li>\n <li>هذا الفهرس</li>\n <li>غلاف الكتاب</li>\n </ul>\n <div>\n \n </div>\n </div>\n <div>\n \n </div>\n <div>\n <div>\n <h2>المرحلة الأولى</h2>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n </div>\n <div>\n <h2>المرحلة الثانية</h2>\n <div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n </div>\n </div>\n </div>\n <div>\n <div>\n <h2>التجويد</h2>\n <div>\n <ul>\n <li>تطبيقات في التجويد على نظم تحفة الأطفال للجمزوري للسنة الخامسة من الابتدائي العتيق</li>\n <li>التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لابراهيم المارغني للسنة السادسة من الابتدائي العتيق</li>\n <li>التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لابراهيم المارغني للسنة الأولى من التعليم الإعدادي العتيق</li>\n <li>التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لابراهيم المارغني للسنة الثانية من التعليم الإعدادي العتيق</li>\n <li>التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لإبراهيم المارغني للسنة الثالثة من التعليم الإعدادي العتيق</li>\n </ul>\n <h2>علوم القرآن</h2>\n <div>\n <ul>\n <li>علوم القرآن للسنة الأولى من التعليم الإعدادي العتيق</li>\n <li>علوم القرآن للسنة الثانية من التعليم الإعدادي العتيق</li>\n <li>علوم القرآن للسنة الثالثة من التعليم الإعدادي العتيق</li>\n </ul>\n <h2>القراءات</h2>\n <ul>\n <li>القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي للسنة الأولى من التعليم الثانوي العتيق</li>\n <li>القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي للسنة الثانية من التعليم الثانوي العتيق</li>\n <li>القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي للسنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n </div>\n </div>\n <div>\n <h2>الرسم والضبط</h2>\n <ul>\n <li>الرسم والضبط من خلال أرجوزة عمدة البيان لإدريس الودغيري للسنة الرابعة من التعليم الابتدائي العتيق</li>\n <li>الرسم والضبط من خلال أرجوزة عمدة البيان للودغيري بشرح بهجة النظر للمساري للسنة الخامسة الابتدائي العتيق</li>\n <li>الرسم والضبط من أرجوزة عمدة البيان لإدريس الودغيري بشرح بهجة النظر والعيان لمحمد بن العربي المساري السنة السادسة من التعليم الإبتدائي العتيق</li>\n </ul>\n <h2>التفسير</h2>\n <ul>\n <li>التفسير من خلال تفسير الجلالين للسنة الرابعة من التعليم الابتدائي العتيق</li>\n <li>التفسير من خلال تفسير الجلالين للسنة الخامسة من التعليم الإبتدائي العتيق</li>\n <li> التفسير من خلال تفـسير الجلالين للسنة السادسة من التعليم الابتدائي العتيق</li>\n <li>التفسير من خلال التسهيل لعلوم التنزيل لابن جزي للسنة أولى من التعليم الإعدادي العتيق <br></li>\n <li>كتاب التفـسير من خلال كتاب التسهيل لعلوم التنزيل لابن جزي للسنة الثانية من التعليم الإعدادي العتيق</li>\n <li>التفـسير من خلال كتاب التسهيل لعلوم التنزيل لابن جزي للسنة الثالثة من التعليم الإعدادي العتيق</li>\n <li>التفسير من خلال المحرر الوجيز في تفسير الكتاب العزيز لابن عطية للسنة الأولى من التعليم الثانوي العتيق</li>\n <li>التفسير من خلال المحرر الوجيز في تفسير الكتاب العزيز لابن عطية للسنة الثانية من التعليم الثانوي العتيق</li>\n <li>كتاب التفـسير من خلال المحرر الوجيز لتفـسير الكتاب العـزيز لابن عـطية للسنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n <h2>الحديث</h2>\n <ul>\n <li>الحديث من رياض الصالحين للإمام النووي بشرح روضة المتقين للسنة الرابعة من التعليم الابتدائي العتيق</li>\n <li>الحديث من من كتاب الأربعين النووية بشرح ابن دقيق العيد للسنة الخامسة من التعليم الإبتدائي العتيق</li>\n <li>الحديث من كتاب الأربعـين النووية للإمام النووي بشرح ابن دقـيق العـيد للسنة السادسة من التعليم الابتدائي العتيق</li>\n <li>الحديث من موطأ الإمام مالك بشرح الزرقاني للسنة الأولى من التعليم الإعدادي العتيق</li>\n <li> الحـديـث من موطأ الإمام مالك للسنة الثانية من التعليم الإعدادي العتيق</li>\n <li>الحديث من موطأ الإمام مالك بشـرح الزرقاني للسنة الثالثة من التعليم الإعدادي العتيق</li>\n <li>الحديث من موطأ الإمام مالك بشرح الزرقاني للسنة الأولى من التعليم الثانوي العتيق</li>\n <li>الحديث من موطأ الإمام مالك بشرح الزرقاني للسنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n <h2>علوم الحديث</h2>\n <ul>\n <li>علوم الحديث من المنظومة البيقونية بشرح الزرقاني للسنة الأولى من التعليم الثانوي العتيق</li>\n <li>علوم الحديث من متن نخبة الفكر بشرح نزهة النظر لابن حجر العسقلاني للسنة الثانية الثانوي العتيق</li>\n <li>علوم الحديث من متن نخبة الفكر بشرح نزهة النظر للحافظ ابن حجر العسقلاني للسنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n <h2>السيرة النبوية</h2>\n <ul>\n <li>السيرة النبوية للسنة الأولى من التعـليم الإعدادي العتيق</li>\n <li>السيرة النبوية للسنة الثانية من التعـليم الإعدادي العتيق</li>\n <li>السيرة النبوية للسنة الثالثة الإعدادي العتيق</li>\n </ul>\n <div>\n <h2>الفقه</h2>\n <ul>\n <li>الفقه من متن الأخضري بشرح الآبي الأزهري للسنة الرابعة من التعليم الابتدائي العتيق</li>\n <li>الفقه من منظومة المرشد المعين لابن عاشر بشرح ميارة الفاسي للسنة الخامسة من التعليم الإبتدائي العتيق</li>\n <li> الفـقه من منظومة المرشد المعـين لابن عاشر بشرح ميارة للسنة السادسة الابتدائي العتيق<br></li>\n <li>الفقه من متن الرسالة لابن أبي زيد القيرواني بشرح كفاية الطالب الرباني للسنة الأولى من التعليم الإعدادي العتيق</li>\n <li>الفقه من رسالة ابن أبي زيد القيرواني بشرح كفاية الطالب الرباني لأبي الحسن بحاشية العدوي للسنة الثانية من التعليم الإعدادي العتيق</li>\n <li>الفـقه من متن الرسالة لابن أبي زيد القيرواني بشرح كفاية الطالب الرباني لأبي الحسن بحاشية العـدوي للسنة الثالثة الإعدادي العتيق</li>\n <li>الفقه من متن مختصر الشيخ خليل بشرح الدردير وحاشية الدسوقي للسنة الأولى من التعليم الثانوي العتيق</li>\n <li>الفقه من مختصر الشيخ خليل بشرح الدردير وحاشية الدسوقي للسنة الثانية من التعليم الثانوي العتيق</li>\n <li>كتاب الفـقه من مختـصـر الشيخ خليل بشرح الدردير، وحاشية الدسوقي للسنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n </div>\n <h2>&nbsp;أصول الفقه</h2>\n <ul>\n <li><span dir=\"RTL\">أصول الفقه من ورقات إمام الحرمين بشرح الحطاب للسنة الثالثة من التعليم الإعدادي العتيق</span></li>\n <li>أصول الفقه من منظومة مرتقى الوصول إلى الضروري في علم الأصول لابن عاصم للسنة الأولى الثانوي العتيق</li>\n <li>أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم للسنة الثانية من التعليم الثانوي العتيق</li>\n <li>أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم للسنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n </div>\n <h2>التوحيد</h2>\n <ul>\n <li>التوحيد من مقدمة رسالة ابن أبي زيد القيرواني بشرح كفاية الطالب الرباني لأبي الحسن للسنة الأولى من التعليم الإعدادي العتيق<br></li>\n <li>التوحيد من منظومة المرشد المعين على الضروري من علوم الدين لعبد الواحد بن عاشر بشرح مختصر الدر الثمين لمحمد بن أحمد ميارة للسنة الثانية من التعليم الإعدادي العتيق</li>\n </ul>\n <h2>أصول القيم</h2>\n <ul>\n <li>أصول القيم في القرآن والسنة للسنة الرابعة ابتدائي عتيق</li>\n <li>أصول القيم في القرآن والسنة للسنة الخامسة ابتدائي عتيق</li>\n <li>أصول القيم في القرآن والسنة للسنة السادسة ابتدائي عتيق</li>\n </ul>\n <h2>الفرائض</h2>\n <ul>\n <li>الفرائض من مختصر الشيخ خليل بشرح الخرشي للسنة الثانية الثانوي العتيق<br></li>\n <li>الفرائض من منظومة الجواهر المكنونة في صدق الفرائض المسنونة بشرح إيضاح الأسرار المصونة للرسموكي السنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n <h2>التوقيت</h2>\n <ul>\n <li>التوقيت من منظومة المقنع بشرح المطلع على مسائل المقنع لمحمد بن سعيد المرغتي للسنة الأولى الثانوي العتيق</li>\n <li>التوقيت من منظومة عمدة أهل الثبت في علم الأوقات وسمت البيت بشرح حل العقدة عن مقاصد العمدة لمحمد العلمي للسنة الثانية من التعليم الثانوي العتيق</li>\n <li>التوقيت من منظومة الجامع المفيد على أصول الراصد الجديد بشرح تقريب البعيد من الجامع المفيد على أصول الراصد الجديد فـي حساب الخسوف والكسوف ورؤية الأهلة لمَحمد بن محمد العلمي للسنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n <h2>المنطق</h2>\n <ul>\n <li>المنطق من نظم السلم للأخضري بشرح القويسني للسنة الأولى الثانوي العتيق</li>\n </ul>\n <h2>الفكر الإسلامي</h2>\n <ul>\n <li> الفكر الإسلامي..قضايا كلامية، للسنة الأولى الثانوي العتيق</li>\n <li>الفكر الإسلامي..الفلسفة الإسلامية للسنة الثانية ثانوي عتيق</li>\n <li>الفكر الإسلامي (التصوف الإسلامي) للسنة الثالثة ثانوي العتيق</li>\n </ul>\n </div>\n </div>\n </div>\n <div>\n </div>\n </div>\n </div>\n <footer>\n <div>\n <div>\n <div>\n <div>\n <ul>\n <li>المجلس العلمي الأعلى</li>\n <li>الدروس الحسنية</li>\n <li>الحج</li>\n </ul>\n <ul>\n <li>الوزير</li>\n <li>الكتابة العامة</li>\n <li>المفتشية العامة</li>\n <li>النظارات</li>\n <li>المندوبيات</li>\n <li><span>في البرلمان</span></li>\n <li>نشرة المنجزات</li>\n <li>نصوص تشريعية</li>\n </ul>\n <ul>\n <li>الأوقاف</li>\n <li>الشؤون الإسلامية</li>\n <li>التعاون والشؤون الإدارية</li>\n <li>المساجد</li>\n <li>التعليم العتيق ومحو الأمية بالمساجد</li>\n </ul>\n <ul>\n <li>الإسلام في المغرب</li>\n <li>خطب منبرية</li>\n <li>الإمام</li>\n <li>كرونولوجيا</li>\n </ul>\n <ul>\n <li>القرآن الكريم</li>\n <li>مواقيت الصلاة</li>\n <li>جوائز محمد السادس</li>\n </ul>\n </div>\n <div>\n <div>\n <ul>\n <li>للكتابة إلينا</li>\n <li>اتفاقية استخدام الموقع</li>\n <li>أوقات الصلاة</li>\n </ul>\n </div>\n </div>\n </div>\n <div>\n <h1>الإسلام في المغرب</h1>\n <h4><span><strong>وزارة الأوقاف والشؤون الإسلامية</strong> &nbsp;<strong>المشور السعيد - الرباط - المغرب</strong><strong> الهاتف </strong> <em> : 51 68 76 37 5 (212) - </em><em>01 68 76 37 5 (212) </em></span></h4>\n </div>\n </div>\n </div>\n </footer>\n </div>\n <div> \n </div>\n \n \n \n \n \n </body>\n</html>",
-  "htmlFr": "<h1> Dessin et contrôle : extrait d'Arjouza Umdat Al-Bayan par Idris Al-Wadghairi, expliquant la joie de la vue et des yeux par Muhammad bin Al-Arabi Al-Masari, numéro 6, août</h1>\n <dl>\n <dt></dt>\n <jj>\n \n </jd>\n </dl>\n <p></p>\n <p>Le livre de dessin et de contrôle est l'un des chapitres du système « Umdat Al-Bayan fi Hukm Al-Mursir du Coran » de l'Imam Idris Al-Wadghairi, avec son explication de « La joie de la vue et des yeux » de Muhammad bin Al-Arabi Al-Masari, pour la sixième année de l'enseignement primaire ancien ;</p>\n \n <p> Loué soit Dieu, Seigneur des mondes, et que les bénédictions et la paix soient sur le Messager comme une miséricorde pour les mondes, notre Maître Muhammad et sur toute sa famille et ses compagnons.</p>\n <p>Et puis, nous sommes heureux - nos fils étudiants, nos filles étudiantes - de remettre entre vos mains le livre de dessins et de dessins pour la sixième année de l'enseignement primaire ancien.</p>\n <p>Pour préparer le contenu du livre, nous nous sommes appuyés sur l'Arjouza « Umdat al-Bayan » de l'Imam Idris Al-Wadghairi, avec une explication de « La joie de la vue et des yeux » de Muhammad bin Al-Arabi Al-Masari, en prenant soin de le rapprocher de l'apprenant et de le présenter sous la forme la plus simple et la plus belle.</p>\n <p>Nous avons également tenu à construire les leçons du livre selon des étapes pédagogiques qui commencent par la définition des objectifs, puis la préparation de la leçon avec une introduction reliant la précédente à la suivante, puis la présentation du texte qui contient le déroulement de la leçon et son matériel, annexé d'explications auxiliaires et de questions visant à extraire le contenu général du texte, puis l'analyse des axes de la leçon de manière ciblée et brève, suivie d'activités pour évaluer les apprentissages, investir dans les acquis et développer les capacités, puis le La leçon se termine par des activités de préparation afin que l'apprenant soit pleinement préparé à participer àConstruire la prochaine leçon.</p>\n <p>Nous espérons que l'apprenant trouvera dans ce livre ce qui atteint son objectif, à savoir se familiariser avec des sujets importants dans la science du dessin et de l'écriture coranique, en comprendre les raisons, comprendre ses règles et contrôler ses règles qu'il ne cesse de trouver dans le Coran, et acquérir la capacité de les appliquer dans l'écriture du texte coranique conformément à ce qui a été fait par les Marocains en écrivant le Coran et les tablettes.</p>\n <p>Nous demandons à Dieu Tout-Puissant pour nos étudiants et étudiants de nous accorder la réussite, car Il est Celui qui nous guide vers ce qui est juste et nous guide vers le bon chemin.</p>\n <h2>Le livre</h2>\n <ul>\n <li>Comment utiliser ce livre</li>\n <li>Compétences pour l'enseignement du dessin et du dessin en sixième année de l'enseignement primaire ancien</li>\n <li>Distribution périodique et hebdomadaire</li>\n <li>1.Chapitre sur la suppression du waw</li>\n <li>2.Chapitre sur la suppression du midi</li>\n <li>3. Un chapitre sur les dispositions des lams répétés</li>\n <li>4. Représenter le hamza au début d'un mot</li>\n <li>5. Le hamza wa-wa formel et le hamza supprimé après le sakin</li>\n <li>6. Jugement sur le hamza moyen et extrême après l'alif.</li>\n <li>7. Le sakun hamza intermédiaire après une voyelle et le hamza extrême</li>\n <li>8. Le hamza extrême à la forme nominative est wawa.</li>\n <li>9. La voyelle hamza et la voyelle qui la précède.</li>\n <li>10. Le dammah hamza après la chute du kasra.Puis le pluriel waw</li>\n <li>11. L'image du hamza qui conduit à la jointure de deux images</li>\n <li>12. Jugement de la combinaison de deux hamzas</li>\n <li>13. Un chapitre sur les lieux où le wasl hamza est supprimé.</li>\n <li>14. Un chapitre sur les endroits où le hamzat al-wasl est supprimé (suite)</li>\n <li>15. Un chapitre sur la familiarité croissante.</li>\n <li>16. Chapitre sur l'augmentation de la familiarité (suite)</li>\n <li>17. Un chapitre sur l'ajout du yā'</li>\n <li>18. Un chapitre sur l'augmentation du waw</li>\n <li>19. Un chapitre sur ce qui est écrit avec deux syllabes et un chapitre sur des éléments séparés.</li>\n <li>20. Chapitre sur les clauses relatives et relatives (suite)</li>\n <li>21. Chapitre sur les séparés et les connecteurs (suite)</li>\n <li>22. Chapitre sur les séparés et les connecteurs (suite)</li>\n <li>23.Chapitre sur les séparés et les connecteurs (suite)</li>\n <li>24. Un chapitre sur les séparés et les connecteurs (suite)</li>\n <li>25.Chapitre sur le dessin du féminin ta'.</li>\n <li>26. Conclusion des systèmes : la connaissance est sacrifice et humilité</li>\n <li>27. Conclusion des systèmes (suite) : acclamation, supplication et monologue</li>\n <li>Liste des sources et références</li>\n <li>Cet index</li>\n <li>Couverture du livre</li>\n </ul>\n <div>\n \n </div>\n </div>\n <div>\n \n </div>\n <div>\n <div>\n <h2>La première étape</h2>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n </div>\n <div>\n <h2>La deuxième étape</h2>\n <div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n </div>\n </div>\n </div>\n <div>\n <div>\n <h2>Tajweed</h2>\n <div>\n <ul>\n <li>Candidatures en Tajweed sur les airs de Tuhfat al-Atfal par Al-Jamzouri pour la cinquième année de l'école primaire ancienne</li>\n <li>Tajweed est tiré des compositions de Durar Al-Lawame d'Ibn Bari, expliquant les étoiles montantes d'Ibrahim Al-Marghani pour la sixième année de l'école primaire d'Al-Atiq</li>\n <li>Tajweed est issu des compositions de Durar Al-Lawame d'Ibn Bari, expliquant les étoiles montantes d'Ibrahim Al-Marghani pour la première année de l'enseignement préparatoire ancien</li>\n <li>Tajweed d'après les compositions de Durar Al-Lawame d'Ibn Bari, expliquant les étoiles montantes d'Ibrahim Al-Marghani pour la deuxième année de l'enseignement préparatoire ancien</li>\n <li>Tajweed d'après les compositions de Durar Al-Lawame d'Ibn Bari, expliquant les étoiles montantes d'Ibrahim Al-Marghani pour la troisième année de l'enseignement préparatoire ancien</li>\n </ul>\n <h2>Sciences coraniques</h2>\n <div>\n <ul>\n <li>Sciences coraniques pour la première année de l'enseignement préparatoire ancien</li>\n <li>Sciences coraniques pour la deuxième année de l'enseignement préparatoire ancien</li>\n <li>Sciences coraniques pour la troisième année de l'enseignement préparatoire ancien</li>\n </ul>\n <h2>Lectures</h2>\n <ul>\n <li>Lectures du texte « Hazr Al-Amani » et félicitations à Abu Al-Qasim Al-Shatibi pour la première année de l'enseignement secondaire ancien</li>\n <li>Lectures des textes « Harz al-Amani » et « Wajh ».Félicitations à Abu Al-Qasim Al-Shatibi pour la deuxième année de l'enseignement secondaire ancien</li>\n <li>Lectures du texte « Hazr Al-Amani » et félicitations à Abu Al-Qasim Al-Shatibi pour la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n </div>\n </div>\n <div>\n <h2>Dessin et réglage</h2>\n <ul>\n <li>Dessin et réglage à travers Arjouza Umdat Al-Bayan par Idris Al-Wadghiri pour la quatrième année de l'enseignement primaire ancien</li>\n <li>Dessin et contrôle à travers Arjouza Umdat al-Bayan par Al-Wadghairi, expliquant le plaisir de la vision par Al-Masari pour la cinquième année de l'école primaire ancienne</li>\n <li>Dessin et contrôle d'Arjouza Umdat Al-Bayan par Idris Al-Wadghiri, expliquant la joie de regarder et de voir par Muhammad bin Al-Arabi Al-Masari, sixième année de l'enseignement primaire ancien</li>\n </ul>\n <h2>Interprétation</h2>\n <ul>\n <li>Interprétation à travers Tafsir Al-Jalalayn pour la quatrième année de l'enseignement primaire ancien</li>\n <li>Interprétation à travers Tafsir Al-Jalalayn pour la cinquième année de l'enseignement primaire ancien</li>\n <li>Interprétation à travers Tafsir Al-Jalalayn pour la sixième année de l'enseignement primaire ancien</li>\n <li>Interprétation par facilitation des sciences de la révélation par Ibn Jazi pour la première année de l'enseignement préparatoire ancien <br></li>\n <li>Le Livre d'Interprétation à travers le Livre de Tashil pour les Sciences de la Révélation d'Ibn Jazi pour la deuxième année de l'enseignement préparatoire ancien</li>\n <li>Interprétation à travers le livre Al-Tas'heel pour les sciences de la révélation d'Ibn Jazi pour la troisième année de l'enseignement préparatoire ancien</li>\n <li>Interprétation par le bref éditeur dans l'interprétation du cher livre d'Ibn Attiya pour la première année de l'enseignement secondaire ancien</li>\n <li>Interprétation par le bref éditeur dans l'interprétation du cher livre d'Ibn Attiya pour la deuxième année de l'enseignement secondaire ancien</li>\n <li>Le livre d'interprétation à travers le bref éditeur pour l'interprétation du cher livre d'Ibn Attiya pour la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n <h2>Hadith</h2>\n <ul>\n <li>Le hadith de Riyad al-Salihin de l'Imam al-Nawawi, expliquant Rawdat al-Muttaqin pour la quatrième année de l'enseignement primaire ancien</li>\n <li>Le hadith du livre Al-Arba'in Al-Nawawi, expliqué par Ibn Daqiq Al-Eid, pour la cinquième année de l'enseignement primaire ancien</li>\n <li>Le hadith du livre « Les Quarante de Nawawi » de l'Imam al-Nawawi, expliqué par Ibn Daqiq, « Aïd » pour la sixième année de l'enseignement primaire ancien</li>\n <li>Hadith de Muwatta de l'Imam Malik, expliqué par Al-Zarqani pour la première année de l'enseignement préparatoire ancien</li>\n <li>Le hadith du Muwatta de l'Imam Malik pour la deuxième année de l'enseignement préparatoireL'ancien</li>\n <li>Hadith du Muwatta de l'Imam Malik, expliqué par Al-Zarqani pour la troisième année de l'enseignement préparatoire ancien</li>\n <li>Hadith de Muwatta de l'Imam Malik, expliqué par Al-Zarqani pour la première année de l'enseignement secondaire ancien</li>\n <li>Hadith de Muwatta de l'Imam Malik, expliqué par Al-Zarqani pour la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n <h2>Sciences des Hadiths</h2>\n <ul>\n <li>Sciences des hadiths du système bayconien, expliquées par Al-Zarqani pour la première année de l'enseignement secondaire ancien</li>\n <li>Hadith Sciences du texte de Nukhbat al-Fikr, expliquant Nuzhat al-Nazr par Ibn Hajar al-Asqalani pour la deuxième année du secondaire, Al-Atiq</li>\n <li>Sciences des hadiths tirées du texte de Nukhbat al-Fikr, avec une explication de Nuzhat al-Nazr par Al-Hafiz Ibn Hajar al-Asqalani pour la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n <h2>Biographie du Prophète</h2>\n <ul>\n <li>Biographie du Prophète pour la première année de l'enseignement préparatoire ancien</li>\n <li>Biographie du Prophète pour la deuxième année de l'enseignement préparatoire ancien</li>\n <li>Biographie du Prophète pour la troisième année du collège, Al-Atiq</li>\n </ul>\n <div>\n <h2>Jurisprudence</h2>\n <ul>\n <li>Jurisprudence du texte d'Al-Akhdari, expliquée par Al-Abi Al-Azhari pour la quatrième année de l'enseignement primaire ancien</li>\n <li>Jurisprudence du système du guide désigné d'Ibn Ashir, expliquée par Mayara Al-Fassi pour la cinquième année de l'enseignement primaireL'ancien</li>\n <li>Jurisprudence du système du guide désigné d'Ibn Ashir, expliquée par Mayara pour la sixième année de l'école primaire, Al-Atiq<br></li>\n <li>Jurisprudence tirée du texte du message d'Ibn Abi Zaid al-Qayrawani, expliquant la suffisance de l'étudiant divin pour la première année de l'enseignement préparatoire ancien</li>\n <li>Jurisprudence du traité d'Ibn Abi Zaid al-Qayrawani expliquant le Kifayat al-Talib al-Rabbani d'Abou al-Hasan à Hashiyat al-Adawi pour la deuxième année de l'enseignement préparatoire ancien</li>\n <li>Jurisprudence du texte d'Al-Risala d'Ibn Abi Zaid Al-Qayrawani avec une explication du Kifayat Al-Talib Al-Rabbani d'Abi Al-Hasan à Hashiyat Al-Adawi pour la troisième année de l'école préparatoire Al-Atiq</li>\n <li>Jurisprudence tirée du texte du résumé de Cheikh Khalil, avec l'explication d'Al-Dardir et de Hashiyat Al-Dasouki pour la première année de l'enseignement secondaire ancien</li>\n <li>Jurisprudence du résumé de Cheikh Khalil, expliqué par Al-Dardir et Hashiyat Al-Dasouki pour la deuxième année de l'enseignement secondaire ancien</li>\n <li>Le livre de jurisprudence du résumé de Cheikh Khalil, expliqué par Al-Dardir, et le commentaire d'Al-Dasouki pour la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n </div>\n <h2> Fondements de la jurisprudence</h2>\n <ul>\n <li><span dir=\"RTL\">Les principes de la jurisprudence issus des papiers de l'Imam des Deux Saintes Mosquées, expliqués par Al-Hattab pour la troisième année de l'enseignement préparatoire ancien</span></li>\n <li>Les fondements de la jurisprudence à partir du système de progression d'accès au nécessaire en science des principes par Ibn Asim pour la première année du secondaire, Al-Atiq</li>\n <li>Les principes de jurisprudence du système de « Murtaqa au Nécessaire » à partir des principes d'Ibn Asim pour la deuxième année de l'enseignement secondaire ancien</li>\n <li>Les principes de jurisprudence du système de « Murtaqa au Nécessaire » à partir des principes d'Ibn Asim pour la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n </div>\n <h2>Monothéisme</h2>\n <ul>\n <li>Tawhid de l'introduction du traité d'Ibn Abi Zaid al-Qayrawani expliquant la suffisance de l'étudiant divin par Abu al-Hasan pour la première année de l'enseignement préparatoire ancien<br></li>\n <li>Tawhid du système du guide nommé aux sciences religieuses nécessaires par Abd al-Wahid ibn Ashir, avec une explication de Mukhtasar al-Durr al-Thameen par Muhammad ibn Ahmad Mayara pour la deuxième année de l'enseignement préparatoire ancien</li>\n </ul>\n <h2>Les origines des valeurs</h2>\n <ul>\n <li>Les principes de valeurs du Coran et de la Sunna pour la quatrième année du primaire, Atiq</li>\n <li>Les principes de valeurs du Coran et de la Sunna pour la cinquième année du primaire, Atiq</li>\n <li>Les principes de valeurs du Coran et de la Sunna pour la sixième année primaire, Atiq</li>\n </ul>\n <h2>Obligations</h2>\n <ul>\n <li>Les devoirs obligatoires du résumé de Cheikh Khalil, expliqués par Al-Kharshi, pour la deuxième année du secondaire, Al-Atiq<br></li>\n <li>Les obligations du système des joyaux cachés dans la véracité des obligations de la Sunna avec une explication de l'illustration des secrets préservés pour Al-Rasmouki, la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n <h2>Heure</h2>\n <ul>\n <li>Le timing du système Al-Muqani avec l'explication d'Al-Muqani' sur les questions d'Al-Muqani par Muhammad bin Saeed Al-Marghati pour la première année de l'école secondaire Al-Atiq</li>\n <li>Le timing du système d'Umdah Ahl al-Thabit dans la science des temps et le verset du verset expliquant la solution du nœud sur Maqasid al-Umdah par Muhammad al-Alami pour la deuxième année de l'enseignement secondaire ancien</li>\n <li>Le timing du système d'Al-Jami' Al-Mufid sur les principes du nouvel observateur avec une explication de l'approximation de la distance d'Al-Jami' Al-Mufid sur les principes du nouvel observateur dans le calcul des éclipses, des éclipses et de l'observation du croissant par Muhammad bin Muhammad Al-Alami pour la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n <h2>Logique</h2>\n <ul>\n <li>Logique de Nazm al-Salam par Al-Akhdari, expliquée par Al-Quwaisni pour la première année du secondaire, Al-Atiq</li>\n </ul>\n <h2>Pensée islamique</h2>\n <ul>\n <li>La pensée islamique...questions de discours, pour la première année du secondaire ancien</li>\n <li>Pensée islamique...Philosophie islamique pour la deuxième année du secondaire, Atiq</li>\n <li>Pensée islamique (soufisme islamique) pour la troisième année de l'école secondaire Al-Atiq</li>\n </ul>\n </div>\n </div>\n </div>\n <div>\n </div>\n </div>\n </div>\n <pied de page><div>\n <div>\n <div>\n <div>\n <ul>\n <li>Conseil scientifique suprême</li>\n <li>Bonnes leçons</li>\n <li>Hajj</li>\n </ul>\n <ul>\n <li>Le Ministre</li>\n <li>Rédaction générale</li>\n <li>Inspection générale</li>\n <li>Lunettes</li>\n <li>Commandes</li>\n <li><span>Au Parlement</span></li>\n <li>Bulletin des réalisations</li>\n <li>Textes législatifs</li>\n </ul>\n <ul>\n <li>Awqaf</li>\n <li>Affaires islamiques</li>\n <li>Coopération et affaires administratives</li>\n <li>Mosquées</li>\n <li>Éducation ancienne et éradication de l'analphabétisme dans les mosquées</li>\n </ul>\n <ul>\n <li>L'Islam au Maroc</li>\n <li>Discours en chaire</li>\n <li>Imam</li>\n <li>Chronologie</li>\n </ul>\n <ul>\n <li>Le Saint Coran</li>\n <li>Horaires de prière</li>\n <li>Prix Mohammed VI</li>\n </ul>\n </div>\n <div>\n <div>\n <ul>\n <li>Pour nous écrire</li>\n <li>Contrat d'utilisation du site Web</li>\n <li>Horaires de prière</li>\n </ul>\n </div>\n </div>\n </div>\n <div>\n <h1>L'Islam au Maroc</h1>\n <h4><span><strong>Ministère des Dotations et des Affaires islamiques</strong>  <strong>Al-Mashour Al-Saeed - Rabat - Maroc</strong><strong> Téléphone</strong><em> : 51 68 76 37 5 (212) - </em><em>01 68 76 37 5 (212)</em></span></h4>\n </div>\n </div>\n </div>\n </pied de page>\n </div>\n <div> \n </div>\n \n \n \n \n \n </corps>\n</html>"
- },
- "lessons": [
-  {
-   "docId": "pdf-mut23h3a-652",
-   "titleAr": "فصل في حذف الواو",
-   "titleFr": "Chapitre : l'élision du wāw",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/1_._فصل_في_حذف_الواو.pdf",
-   "pdfOnly": true
+  "id": "rasm-wa-dabt-6ep",
+  "subject": "rasm-wa-dabt",
+  "level": "6ep",
+  "subjectAr": "الرسم والضبط",
+  "levelAr": "السنة السادسة من التعليم الابتدائي العتيق",
+  "titleAr": "الرسم والضبط من أرجوزة عمدة البيان لإدريس الودغيري",
+  "titleFr": "Rasm et ḍabṭ — ʿUmdat al-Bayān d'al-Wadghīrī (fin)",
+  "pdfUrl": null,
+  "intro": {
+    "docId": "18646",
+    "titleAr": "تقديم الكتاب",
+    "titleFr": "Présentation du manuel",
+    "html": "<h1> الرسم والضبط: من أرجوزة عمدة البيان لإدريس الودغيري بشرح بهجة النظر والعيان لمحمد بن العربي المساري س 6 اب</h1>\n <dl>\n <dt></dt>\n <dd>\n \n </dd>\n </dl>\n <p></p>\n <p>كتاب الرسم والضبط من فصول منظومة «عمدة البيان في حكم المرسوم من القرآن» للإمام إدريس الودغيري، مع شرحها «بهجة النظر والعيان» لمحمد بن العربي المساري، للسنة السادسة من التعليم الابتدائي العتيق؛</p>\n \n <p>&nbsp;الحمد لله رب العالـمين، والصلاة والسلام على الـمبعوث رحمة للعالـمين، سيدنا محمد وعلى آله وصحبه أجمعين.</p>\n <p>وبعد، فيسعدنا- أبناءنا التلاميذ، بناتنا التلميذات- أن نضع بين أيديكم كتاب الرسم والضبط للسنة السادسة من التعليم الابتدائي العتيق.</p>\n <p>وقد اعتمدنا في إعداد مضامين الكتاب أرجوزة «عمدة البيان» للإمام إدريس الودغيري، بشرح «بهجة النظر والعيان» لـمحمد بن العربي الـمساري، مع الحرص على تقريبها من الـمتعلم(ة) وتقديمها في أيسر صورة وأجمل حلة.</p>\n <p>كما حرصنا على بناء دروس الكتاب وفق خطوات تربوية تنطلق من تحديد الأهداف، ثم التمهيد للدرس بمدخل يربط السابق باللاحق، ثم إيراد الـمتن الذي عليه مدار الدرس ومادته، مذيلا بشروحات مساعدة، وأسئلة موجهة لاستخلاص الـمضامين العامة للمتن، ثم تحليل محاور الدرس بشكل مركز ومختصر، تتلوه أنشطة لتقويم التعلمات، واستثمار الـمكتسبات، وتنمية القدرات، ثم يختم الدرس بأنشطة الإعداد القبلي حتى يكون الـمتعلم(ة) على أتم الاستعداد للمشاركة في بناء الدرس الـموالي.</p>\n <p>ونأمل أن يجد الـمتعلم(ة) في هذا الكتاب ما يحقق الغاية منه، وهي الإلـمام بمباحث مهمة من علم الرسم والضبط القرآني، واستيعاب عللها وفهم أحكامها وضبط قواعدها التي لا ينفك يجدها في الـمصاحف، واكتساب القدرة على تطبيقها في كتابة النص القرآني وفق ماجرى به العمل عند الـمغاربة في كتابة الـمصاحف والألواح.</p>\n <p>ونسأل الله تعالى لتلميذاتنا وتلاميذنا التوفيق والنجاح، فهو الـموفق للصواب، والهادي إلى سواء السبيل.</p>\n <h2>الكتاب</h2>\n <ul>\n <li>كيف أستعمل كتابي هذا</li>\n <li>كفايات تدريس الرسم والضبط بالسنة السادسة من التعليم الابتدائي العتيق</li>\n <li>التوزيع الدوري والأسبوعي</li>\n <li>1 .فصل في حذف الواو</li>\n <li>2 .فصل فـي حذف النون</li>\n <li>3.فصل فـي أحكام اللام الـمتكرر</li>\n <li>4 .تصوير الهمزة فـي بداية الكلمة</li>\n <li>5 .الهمزة الـمصورة واوا والـمحذوفة بعـد ساكن</li>\n <li>6 .حـكـم الهمــزة الـمتوسطــة والـمتطرفة بعـد الألف</li>\n <li>7 .الهمزة الساكنة الـمتوسطة بعد متحرك والـمتطرفة</li>\n <li>8 .الهـمـــــزة الـمتــطـــرفـــــة الـمرفـــوعــــة الـمصورة واوا</li>\n <li>9 .الهمزة الـمتحركة وما قبلها متحرك</li>\n <li>10 .الهمزة الـمضمومة بعـد الكســر الواقـــع بعدها واو الـجمع</li>\n <li>11 .تصوير الهمزة الـمؤدي لاجتماع صورتين</li>\n <li>12 .حكم اجتماع صورتي همزتين</li>\n <li>13 .فصل فـي مواضع حذف همز الوصل</li>\n <li>14 .فصل فـي مواضع حذف همز الوصل (تتمة)</li>\n <li>15 .فصل فـي زيادة الألفات</li>\n <li>16 .فصل فـي زيادة الألفات (تتمة)</li>\n <li>17 .فصل فـي زيادة الياء</li>\n <li>18 .فصل فـي زيادة الواو</li>\n <li>19 .فصل فـيمــا يكتـــــب بياءيـــن وبـــاب الـمفصولات</li>\n <li>20 .فصــــل فـــي الـمفصــولات والـموصولات (تابع)</li>\n <li>21 .فصـــل فــــي الـمفصـــولات والـموصولات (تابع)</li>\n <li>22 .فصــل فــــي الـمفصـــولات والـمـوصولات (تابع)</li>\n <li>23 .فصــل فــــي الـمفصـــولات والـمـوصولات (تابع)</li>\n <li>24 .فصــل فــــي الـمفصـــولات والـمـوصولات (تتمة)</li>\n <li>25 .فصل فـي رسم تاء التأنيث</li>\n <li>26 .خاتمة النظم: العلم بذل وتواضع</li>\n <li>27 .خاتمة النظـم (تتمة) : تزكيــة ودعــاء ومناجاة</li>\n <li>لائحة الـمصادر والـمراجع</li>\n <li>هذا الفهرس</li>\n <li>غلاف الكتاب</li>\n </ul>\n <div>\n \n </div>\n </div>\n <div>\n \n </div>\n <div>\n <div>\n <h2>المرحلة الأولى</h2>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n </div>\n <div>\n <h2>المرحلة الثانية</h2>\n <div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n </div>\n </div>\n </div>\n <div>\n <div>\n <h2>التجويد</h2>\n <div>\n <ul>\n <li>تطبيقات في التجويد على نظم تحفة الأطفال للجمزوري للسنة الخامسة من الابتدائي العتيق</li>\n <li>التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لابراهيم المارغني للسنة السادسة من الابتدائي العتيق</li>\n <li>التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لابراهيم المارغني للسنة الأولى من التعليم الإعدادي العتيق</li>\n <li>التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لابراهيم المارغني للسنة الثانية من التعليم الإعدادي العتيق</li>\n <li>التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لإبراهيم المارغني للسنة الثالثة من التعليم الإعدادي العتيق</li>\n </ul>\n <h2>علوم القرآن</h2>\n <div>\n <ul>\n <li>علوم القرآن للسنة الأولى من التعليم الإعدادي العتيق</li>\n <li>علوم القرآن للسنة الثانية من التعليم الإعدادي العتيق</li>\n <li>علوم القرآن للسنة الثالثة من التعليم الإعدادي العتيق</li>\n </ul>\n <h2>القراءات</h2>\n <ul>\n <li>القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي للسنة الأولى من التعليم الثانوي العتيق</li>\n <li>القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي للسنة الثانية من التعليم الثانوي العتيق</li>\n <li>القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي للسنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n </div>\n </div>\n <div>\n <h2>الرسم والضبط</h2>\n <ul>\n <li>الرسم والضبط من خلال أرجوزة عمدة البيان لإدريس الودغيري للسنة الرابعة من التعليم الابتدائي العتيق</li>\n <li>الرسم والضبط من خلال أرجوزة عمدة البيان للودغيري بشرح بهجة النظر للمساري للسنة الخامسة الابتدائي العتيق</li>\n <li>الرسم والضبط من أرجوزة عمدة البيان لإدريس الودغيري بشرح بهجة النظر والعيان لمحمد بن العربي المساري السنة السادسة من التعليم الإبتدائي العتيق</li>\n </ul>\n <h2>التفسير</h2>\n <ul>\n <li>التفسير من خلال تفسير الجلالين للسنة الرابعة من التعليم الابتدائي العتيق</li>\n <li>التفسير من خلال تفسير الجلالين للسنة الخامسة من التعليم الإبتدائي العتيق</li>\n <li> التفسير من خلال تفـسير الجلالين للسنة السادسة من التعليم الابتدائي العتيق</li>\n <li>التفسير من خلال التسهيل لعلوم التنزيل لابن جزي للسنة أولى من التعليم الإعدادي العتيق <br></li>\n <li>كتاب التفـسير من خلال كتاب التسهيل لعلوم التنزيل لابن جزي للسنة الثانية من التعليم الإعدادي العتيق</li>\n <li>التفـسير من خلال كتاب التسهيل لعلوم التنزيل لابن جزي للسنة الثالثة من التعليم الإعدادي العتيق</li>\n <li>التفسير من خلال المحرر الوجيز في تفسير الكتاب العزيز لابن عطية للسنة الأولى من التعليم الثانوي العتيق</li>\n <li>التفسير من خلال المحرر الوجيز في تفسير الكتاب العزيز لابن عطية للسنة الثانية من التعليم الثانوي العتيق</li>\n <li>كتاب التفـسير من خلال المحرر الوجيز لتفـسير الكتاب العـزيز لابن عـطية للسنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n <h2>الحديث</h2>\n <ul>\n <li>الحديث من رياض الصالحين للإمام النووي بشرح روضة المتقين للسنة الرابعة من التعليم الابتدائي العتيق</li>\n <li>الحديث من من كتاب الأربعين النووية بشرح ابن دقيق العيد للسنة الخامسة من التعليم الإبتدائي العتيق</li>\n <li>الحديث من كتاب الأربعـين النووية للإمام النووي بشرح ابن دقـيق العـيد للسنة السادسة من التعليم الابتدائي العتيق</li>\n <li>الحديث من موطأ الإمام مالك بشرح الزرقاني للسنة الأولى من التعليم الإعدادي العتيق</li>\n <li> الحـديـث من موطأ الإمام مالك للسنة الثانية من التعليم الإعدادي العتيق</li>\n <li>الحديث من موطأ الإمام مالك بشـرح الزرقاني للسنة الثالثة من التعليم الإعدادي العتيق</li>\n <li>الحديث من موطأ الإمام مالك بشرح الزرقاني للسنة الأولى من التعليم الثانوي العتيق</li>\n <li>الحديث من موطأ الإمام مالك بشرح الزرقاني للسنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n <h2>علوم الحديث</h2>\n <ul>\n <li>علوم الحديث من المنظومة البيقونية بشرح الزرقاني للسنة الأولى من التعليم الثانوي العتيق</li>\n <li>علوم الحديث من متن نخبة الفكر بشرح نزهة النظر لابن حجر العسقلاني للسنة الثانية الثانوي العتيق</li>\n <li>علوم الحديث من متن نخبة الفكر بشرح نزهة النظر للحافظ ابن حجر العسقلاني للسنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n <h2>السيرة النبوية</h2>\n <ul>\n <li>السيرة النبوية للسنة الأولى من التعـليم الإعدادي العتيق</li>\n <li>السيرة النبوية للسنة الثانية من التعـليم الإعدادي العتيق</li>\n <li>السيرة النبوية للسنة الثالثة الإعدادي العتيق</li>\n </ul>\n <div>\n <h2>الفقه</h2>\n <ul>\n <li>الفقه من متن الأخضري بشرح الآبي الأزهري للسنة الرابعة من التعليم الابتدائي العتيق</li>\n <li>الفقه من منظومة المرشد المعين لابن عاشر بشرح ميارة الفاسي للسنة الخامسة من التعليم الإبتدائي العتيق</li>\n <li> الفـقه من منظومة المرشد المعـين لابن عاشر بشرح ميارة للسنة السادسة الابتدائي العتيق<br></li>\n <li>الفقه من متن الرسالة لابن أبي زيد القيرواني بشرح كفاية الطالب الرباني للسنة الأولى من التعليم الإعدادي العتيق</li>\n <li>الفقه من رسالة ابن أبي زيد القيرواني بشرح كفاية الطالب الرباني لأبي الحسن بحاشية العدوي للسنة الثانية من التعليم الإعدادي العتيق</li>\n <li>الفـقه من متن الرسالة لابن أبي زيد القيرواني بشرح كفاية الطالب الرباني لأبي الحسن بحاشية العـدوي للسنة الثالثة الإعدادي العتيق</li>\n <li>الفقه من متن مختصر الشيخ خليل بشرح الدردير وحاشية الدسوقي للسنة الأولى من التعليم الثانوي العتيق</li>\n <li>الفقه من مختصر الشيخ خليل بشرح الدردير وحاشية الدسوقي للسنة الثانية من التعليم الثانوي العتيق</li>\n <li>كتاب الفـقه من مختـصـر الشيخ خليل بشرح الدردير، وحاشية الدسوقي للسنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n </div>\n <h2>&nbsp;أصول الفقه</h2>\n <ul>\n <li><span dir=\"RTL\">أصول الفقه من ورقات إمام الحرمين بشرح الحطاب للسنة الثالثة من التعليم الإعدادي العتيق</span></li>\n <li>أصول الفقه من منظومة مرتقى الوصول إلى الضروري في علم الأصول لابن عاصم للسنة الأولى الثانوي العتيق</li>\n <li>أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم للسنة الثانية من التعليم الثانوي العتيق</li>\n <li>أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم للسنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n </div>\n <h2>التوحيد</h2>\n <ul>\n <li>التوحيد من مقدمة رسالة ابن أبي زيد القيرواني بشرح كفاية الطالب الرباني لأبي الحسن للسنة الأولى من التعليم الإعدادي العتيق<br></li>\n <li>التوحيد من منظومة المرشد المعين على الضروري من علوم الدين لعبد الواحد بن عاشر بشرح مختصر الدر الثمين لمحمد بن أحمد ميارة للسنة الثانية من التعليم الإعدادي العتيق</li>\n </ul>\n <h2>أصول القيم</h2>\n <ul>\n <li>أصول القيم في القرآن والسنة للسنة الرابعة ابتدائي عتيق</li>\n <li>أصول القيم في القرآن والسنة للسنة الخامسة ابتدائي عتيق</li>\n <li>أصول القيم في القرآن والسنة للسنة السادسة ابتدائي عتيق</li>\n </ul>\n <h2>الفرائض</h2>\n <ul>\n <li>الفرائض من مختصر الشيخ خليل بشرح الخرشي للسنة الثانية الثانوي العتيق<br></li>\n <li>الفرائض من منظومة الجواهر المكنونة في صدق الفرائض المسنونة بشرح إيضاح الأسرار المصونة للرسموكي السنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n <h2>التوقيت</h2>\n <ul>\n <li>التوقيت من منظومة المقنع بشرح المطلع على مسائل المقنع لمحمد بن سعيد المرغتي للسنة الأولى الثانوي العتيق</li>\n <li>التوقيت من منظومة عمدة أهل الثبت في علم الأوقات وسمت البيت بشرح حل العقدة عن مقاصد العمدة لمحمد العلمي للسنة الثانية من التعليم الثانوي العتيق</li>\n <li>التوقيت من منظومة الجامع المفيد على أصول الراصد الجديد بشرح تقريب البعيد من الجامع المفيد على أصول الراصد الجديد فـي حساب الخسوف والكسوف ورؤية الأهلة لمَحمد بن محمد العلمي للسنة الثالثة من التعليم الثانوي العتيق</li>\n </ul>\n <h2>المنطق</h2>\n <ul>\n <li>المنطق من نظم السلم للأخضري بشرح القويسني للسنة الأولى الثانوي العتيق</li>\n </ul>\n <h2>الفكر الإسلامي</h2>\n <ul>\n <li> الفكر الإسلامي..قضايا كلامية، للسنة الأولى الثانوي العتيق</li>\n <li>الفكر الإسلامي..الفلسفة الإسلامية للسنة الثانية ثانوي عتيق</li>\n <li>الفكر الإسلامي (التصوف الإسلامي) للسنة الثالثة ثانوي العتيق</li>\n </ul>\n </div>\n </div>\n </div>\n <div>\n </div>\n </div>\n </div>\n <footer>\n <div>\n <div>\n <div>\n <div>\n <ul>\n <li>المجلس العلمي الأعلى</li>\n <li>الدروس الحسنية</li>\n <li>الحج</li>\n </ul>\n <ul>\n <li>الوزير</li>\n <li>الكتابة العامة</li>\n <li>المفتشية العامة</li>\n <li>النظارات</li>\n <li>المندوبيات</li>\n <li><span>في البرلمان</span></li>\n <li>نشرة المنجزات</li>\n <li>نصوص تشريعية</li>\n </ul>\n <ul>\n <li>الأوقاف</li>\n <li>الشؤون الإسلامية</li>\n <li>التعاون والشؤون الإدارية</li>\n <li>المساجد</li>\n <li>التعليم العتيق ومحو الأمية بالمساجد</li>\n </ul>\n <ul>\n <li>الإسلام في المغرب</li>\n <li>خطب منبرية</li>\n <li>الإمام</li>\n <li>كرونولوجيا</li>\n </ul>\n <ul>\n <li>القرآن الكريم</li>\n <li>مواقيت الصلاة</li>\n <li>جوائز محمد السادس</li>\n </ul>\n </div>\n <div>\n <div>\n <ul>\n <li>للكتابة إلينا</li>\n <li>اتفاقية استخدام الموقع</li>\n <li>أوقات الصلاة</li>\n </ul>\n </div>\n </div>\n </div>\n <div>\n <h1>الإسلام في المغرب</h1>\n <h4><span><strong>وزارة الأوقاف والشؤون الإسلامية</strong> &nbsp;<strong>المشور السعيد - الرباط - المغرب</strong><strong> الهاتف </strong> <em> : 51 68 76 37 5 (212) - </em><em>01 68 76 37 5 (212) </em></span></h4>\n </div>\n </div>\n </div>\n </footer>\n </div>\n <div> \n </div>\n \n \n \n \n \n </body>\n</html>",
+    "htmlFr": "<h1> Dessin et contrôle : extrait d'Arjouza Umdat Al-Bayan par Idris Al-Wadghairi, expliquant la joie de la vue et des yeux par Muhammad bin Al-Arabi Al-Masari, numéro 6, août</h1>\n <dl>\n <dt></dt>\n <jj>\n \n </jd>\n </dl>\n <p></p>\n <p>Le livre de dessin et de contrôle est l'un des chapitres du système « Umdat Al-Bayan fi Hukm Al-Mursir du Coran » de l'Imam Idris Al-Wadghairi, avec son explication de « La joie de la vue et des yeux » de Muhammad bin Al-Arabi Al-Masari, pour la sixième année de l'enseignement primaire ancien ;</p>\n \n <p> Loué soit Dieu, Seigneur des mondes, et que les bénédictions et la paix soient sur le Messager comme une miséricorde pour les mondes, notre Maître Muhammad et sur toute sa famille et ses compagnons.</p>\n <p>Et puis, nous sommes heureux - nos fils étudiants, nos filles étudiantes - de remettre entre vos mains le livre de dessins et de dessins pour la sixième année de l'enseignement primaire ancien.</p>\n <p>Pour préparer le contenu du livre, nous nous sommes appuyés sur l'Arjouza « Umdat al-Bayan » de l'Imam Idris Al-Wadghairi, avec une explication de « La joie de la vue et des yeux » de Muhammad bin Al-Arabi Al-Masari, en prenant soin de le rapprocher de l'apprenant et de le présenter sous la forme la plus simple et la plus belle.</p>\n <p>Nous avons également tenu à construire les leçons du livre selon des étapes pédagogiques qui commencent par la définition des objectifs, puis la préparation de la leçon avec une introduction reliant la précédente à la suivante, puis la présentation du texte qui contient le déroulement de la leçon et son matériel, annexé d'explications auxiliaires et de questions visant à extraire le contenu général du texte, puis l'analyse des axes de la leçon de manière ciblée et brève, suivie d'activités pour évaluer les apprentissages, investir dans les acquis et développer les capacités, puis le La leçon se termine par des activités de préparation afin que l'apprenant soit pleinement préparé à participer àConstruire la prochaine leçon.</p>\n <p>Nous espérons que l'apprenant trouvera dans ce livre ce qui atteint son objectif, à savoir se familiariser avec des sujets importants dans la science du dessin et de l'écriture coranique, en comprendre les raisons, comprendre ses règles et contrôler ses règles qu'il ne cesse de trouver dans le Coran, et acquérir la capacité de les appliquer dans l'écriture du texte coranique conformément à ce qui a été fait par les Marocains en écrivant le Coran et les tablettes.</p>\n <p>Nous demandons à Dieu Tout-Puissant pour nos étudiants et étudiants de nous accorder la réussite, car Il est Celui qui nous guide vers ce qui est juste et nous guide vers le bon chemin.</p>\n <h2>Le livre</h2>\n <ul>\n <li>Comment utiliser ce livre</li>\n <li>Compétences pour l'enseignement du dessin et du dessin en sixième année de l'enseignement primaire ancien</li>\n <li>Distribution périodique et hebdomadaire</li>\n <li>1.Chapitre sur la suppression du waw</li>\n <li>2.Chapitre sur la suppression du midi</li>\n <li>3. Un chapitre sur les dispositions des lams répétés</li>\n <li>4. Représenter le hamza au début d'un mot</li>\n <li>5. Le hamza wa-wa formel et le hamza supprimé après le sakin</li>\n <li>6. Jugement sur le hamza moyen et extrême après l'alif.</li>\n <li>7. Le sakun hamza intermédiaire après une voyelle et le hamza extrême</li>\n <li>8. Le hamza extrême à la forme nominative est wawa.</li>\n <li>9. La voyelle hamza et la voyelle qui la précède.</li>\n <li>10. Le dammah hamza après la chute du kasra.Puis le pluriel waw</li>\n <li>11. L'image du hamza qui conduit à la jointure de deux images</li>\n <li>12. Jugement de la combinaison de deux hamzas</li>\n <li>13. Un chapitre sur les lieux où le wasl hamza est supprimé.</li>\n <li>14. Un chapitre sur les endroits où le hamzat al-wasl est supprimé (suite)</li>\n <li>15. Un chapitre sur la familiarité croissante.</li>\n <li>16. Chapitre sur l'augmentation de la familiarité (suite)</li>\n <li>17. Un chapitre sur l'ajout du yā'</li>\n <li>18. Un chapitre sur l'augmentation du waw</li>\n <li>19. Un chapitre sur ce qui est écrit avec deux syllabes et un chapitre sur des éléments séparés.</li>\n <li>20. Chapitre sur les clauses relatives et relatives (suite)</li>\n <li>21. Chapitre sur les séparés et les connecteurs (suite)</li>\n <li>22. Chapitre sur les séparés et les connecteurs (suite)</li>\n <li>23.Chapitre sur les séparés et les connecteurs (suite)</li>\n <li>24. Un chapitre sur les séparés et les connecteurs (suite)</li>\n <li>25.Chapitre sur le dessin du féminin ta'.</li>\n <li>26. Conclusion des systèmes : la connaissance est sacrifice et humilité</li>\n <li>27. Conclusion des systèmes (suite) : acclamation, supplication et monologue</li>\n <li>Liste des sources et références</li>\n <li>Cet index</li>\n <li>Couverture du livre</li>\n </ul>\n <div>\n \n </div>\n </div>\n <div>\n \n </div>\n <div>\n <div>\n <h2>La première étape</h2>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n </div>\n <div>\n <h2>La deuxième étape</h2>\n <div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n <div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n <div>\n <p></p>\n </div>\n </div>\n </div>\n </div>\n </div>\n <div>\n <div>\n <h2>Tajweed</h2>\n <div>\n <ul>\n <li>Candidatures en Tajweed sur les airs de Tuhfat al-Atfal par Al-Jamzouri pour la cinquième année de l'école primaire ancienne</li>\n <li>Tajweed est tiré des compositions de Durar Al-Lawame d'Ibn Bari, expliquant les étoiles montantes d'Ibrahim Al-Marghani pour la sixième année de l'école primaire d'Al-Atiq</li>\n <li>Tajweed est issu des compositions de Durar Al-Lawame d'Ibn Bari, expliquant les étoiles montantes d'Ibrahim Al-Marghani pour la première année de l'enseignement préparatoire ancien</li>\n <li>Tajweed d'après les compositions de Durar Al-Lawame d'Ibn Bari, expliquant les étoiles montantes d'Ibrahim Al-Marghani pour la deuxième année de l'enseignement préparatoire ancien</li>\n <li>Tajweed d'après les compositions de Durar Al-Lawame d'Ibn Bari, expliquant les étoiles montantes d'Ibrahim Al-Marghani pour la troisième année de l'enseignement préparatoire ancien</li>\n </ul>\n <h2>Sciences coraniques</h2>\n <div>\n <ul>\n <li>Sciences coraniques pour la première année de l'enseignement préparatoire ancien</li>\n <li>Sciences coraniques pour la deuxième année de l'enseignement préparatoire ancien</li>\n <li>Sciences coraniques pour la troisième année de l'enseignement préparatoire ancien</li>\n </ul>\n <h2>Lectures</h2>\n <ul>\n <li>Lectures du texte « Hazr Al-Amani » et félicitations à Abu Al-Qasim Al-Shatibi pour la première année de l'enseignement secondaire ancien</li>\n <li>Lectures des textes « Harz al-Amani » et « Wajh ».Félicitations à Abu Al-Qasim Al-Shatibi pour la deuxième année de l'enseignement secondaire ancien</li>\n <li>Lectures du texte « Hazr Al-Amani » et félicitations à Abu Al-Qasim Al-Shatibi pour la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n </div>\n </div>\n <div>\n <h2>Dessin et réglage</h2>\n <ul>\n <li>Dessin et réglage à travers Arjouza Umdat Al-Bayan par Idris Al-Wadghiri pour la quatrième année de l'enseignement primaire ancien</li>\n <li>Dessin et contrôle à travers Arjouza Umdat al-Bayan par Al-Wadghairi, expliquant le plaisir de la vision par Al-Masari pour la cinquième année de l'école primaire ancienne</li>\n <li>Dessin et contrôle d'Arjouza Umdat Al-Bayan par Idris Al-Wadghiri, expliquant la joie de regarder et de voir par Muhammad bin Al-Arabi Al-Masari, sixième année de l'enseignement primaire ancien</li>\n </ul>\n <h2>Interprétation</h2>\n <ul>\n <li>Interprétation à travers Tafsir Al-Jalalayn pour la quatrième année de l'enseignement primaire ancien</li>\n <li>Interprétation à travers Tafsir Al-Jalalayn pour la cinquième année de l'enseignement primaire ancien</li>\n <li>Interprétation à travers Tafsir Al-Jalalayn pour la sixième année de l'enseignement primaire ancien</li>\n <li>Interprétation par facilitation des sciences de la révélation par Ibn Jazi pour la première année de l'enseignement préparatoire ancien <br></li>\n <li>Le Livre d'Interprétation à travers le Livre de Tashil pour les Sciences de la Révélation d'Ibn Jazi pour la deuxième année de l'enseignement préparatoire ancien</li>\n <li>Interprétation à travers le livre Al-Tas'heel pour les sciences de la révélation d'Ibn Jazi pour la troisième année de l'enseignement préparatoire ancien</li>\n <li>Interprétation par le bref éditeur dans l'interprétation du cher livre d'Ibn Attiya pour la première année de l'enseignement secondaire ancien</li>\n <li>Interprétation par le bref éditeur dans l'interprétation du cher livre d'Ibn Attiya pour la deuxième année de l'enseignement secondaire ancien</li>\n <li>Le livre d'interprétation à travers le bref éditeur pour l'interprétation du cher livre d'Ibn Attiya pour la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n <h2>Hadith</h2>\n <ul>\n <li>Le hadith de Riyad al-Salihin de l'Imam al-Nawawi, expliquant Rawdat al-Muttaqin pour la quatrième année de l'enseignement primaire ancien</li>\n <li>Le hadith du livre Al-Arba'in Al-Nawawi, expliqué par Ibn Daqiq Al-Eid, pour la cinquième année de l'enseignement primaire ancien</li>\n <li>Le hadith du livre « Les Quarante de Nawawi » de l'Imam al-Nawawi, expliqué par Ibn Daqiq, « Aïd » pour la sixième année de l'enseignement primaire ancien</li>\n <li>Hadith de Muwatta de l'Imam Malik, expliqué par Al-Zarqani pour la première année de l'enseignement préparatoire ancien</li>\n <li>Le hadith du Muwatta de l'Imam Malik pour la deuxième année de l'enseignement préparatoireL'ancien</li>\n <li>Hadith du Muwatta de l'Imam Malik, expliqué par Al-Zarqani pour la troisième année de l'enseignement préparatoire ancien</li>\n <li>Hadith de Muwatta de l'Imam Malik, expliqué par Al-Zarqani pour la première année de l'enseignement secondaire ancien</li>\n <li>Hadith de Muwatta de l'Imam Malik, expliqué par Al-Zarqani pour la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n <h2>Sciences des Hadiths</h2>\n <ul>\n <li>Sciences des hadiths du système bayconien, expliquées par Al-Zarqani pour la première année de l'enseignement secondaire ancien</li>\n <li>Hadith Sciences du texte de Nukhbat al-Fikr, expliquant Nuzhat al-Nazr par Ibn Hajar al-Asqalani pour la deuxième année du secondaire, Al-Atiq</li>\n <li>Sciences des hadiths tirées du texte de Nukhbat al-Fikr, avec une explication de Nuzhat al-Nazr par Al-Hafiz Ibn Hajar al-Asqalani pour la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n <h2>Biographie du Prophète</h2>\n <ul>\n <li>Biographie du Prophète pour la première année de l'enseignement préparatoire ancien</li>\n <li>Biographie du Prophète pour la deuxième année de l'enseignement préparatoire ancien</li>\n <li>Biographie du Prophète pour la troisième année du collège, Al-Atiq</li>\n </ul>\n <div>\n <h2>Jurisprudence</h2>\n <ul>\n <li>Jurisprudence du texte d'Al-Akhdari, expliquée par Al-Abi Al-Azhari pour la quatrième année de l'enseignement primaire ancien</li>\n <li>Jurisprudence du système du guide désigné d'Ibn Ashir, expliquée par Mayara Al-Fassi pour la cinquième année de l'enseignement primaireL'ancien</li>\n <li>Jurisprudence du système du guide désigné d'Ibn Ashir, expliquée par Mayara pour la sixième année de l'école primaire, Al-Atiq<br></li>\n <li>Jurisprudence tirée du texte du message d'Ibn Abi Zaid al-Qayrawani, expliquant la suffisance de l'étudiant divin pour la première année de l'enseignement préparatoire ancien</li>\n <li>Jurisprudence du traité d'Ibn Abi Zaid al-Qayrawani expliquant le Kifayat al-Talib al-Rabbani d'Abou al-Hasan à Hashiyat al-Adawi pour la deuxième année de l'enseignement préparatoire ancien</li>\n <li>Jurisprudence du texte d'Al-Risala d'Ibn Abi Zaid Al-Qayrawani avec une explication du Kifayat Al-Talib Al-Rabbani d'Abi Al-Hasan à Hashiyat Al-Adawi pour la troisième année de l'école préparatoire Al-Atiq</li>\n <li>Jurisprudence tirée du texte du résumé de Cheikh Khalil, avec l'explication d'Al-Dardir et de Hashiyat Al-Dasouki pour la première année de l'enseignement secondaire ancien</li>\n <li>Jurisprudence du résumé de Cheikh Khalil, expliqué par Al-Dardir et Hashiyat Al-Dasouki pour la deuxième année de l'enseignement secondaire ancien</li>\n <li>Le livre de jurisprudence du résumé de Cheikh Khalil, expliqué par Al-Dardir, et le commentaire d'Al-Dasouki pour la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n </div>\n <h2> Fondements de la jurisprudence</h2>\n <ul>\n <li><span dir=\"RTL\">Les principes de la jurisprudence issus des papiers de l'Imam des Deux Saintes Mosquées, expliqués par Al-Hattab pour la troisième année de l'enseignement préparatoire ancien</span></li>\n <li>Les fondements de la jurisprudence à partir du système de progression d'accès au nécessaire en science des principes par Ibn Asim pour la première année du secondaire, Al-Atiq</li>\n <li>Les principes de jurisprudence du système de « Murtaqa au Nécessaire » à partir des principes d'Ibn Asim pour la deuxième année de l'enseignement secondaire ancien</li>\n <li>Les principes de jurisprudence du système de « Murtaqa au Nécessaire » à partir des principes d'Ibn Asim pour la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n </div>\n <h2>Monothéisme</h2>\n <ul>\n <li>Tawhid de l'introduction du traité d'Ibn Abi Zaid al-Qayrawani expliquant la suffisance de l'étudiant divin par Abu al-Hasan pour la première année de l'enseignement préparatoire ancien<br></li>\n <li>Tawhid du système du guide nommé aux sciences religieuses nécessaires par Abd al-Wahid ibn Ashir, avec une explication de Mukhtasar al-Durr al-Thameen par Muhammad ibn Ahmad Mayara pour la deuxième année de l'enseignement préparatoire ancien</li>\n </ul>\n <h2>Les origines des valeurs</h2>\n <ul>\n <li>Les principes de valeurs du Coran et de la Sunna pour la quatrième année du primaire, Atiq</li>\n <li>Les principes de valeurs du Coran et de la Sunna pour la cinquième année du primaire, Atiq</li>\n <li>Les principes de valeurs du Coran et de la Sunna pour la sixième année primaire, Atiq</li>\n </ul>\n <h2>Obligations</h2>\n <ul>\n <li>Les devoirs obligatoires du résumé de Cheikh Khalil, expliqués par Al-Kharshi, pour la deuxième année du secondaire, Al-Atiq<br></li>\n <li>Les obligations du système des joyaux cachés dans la véracité des obligations de la Sunna avec une explication de l'illustration des secrets préservés pour Al-Rasmouki, la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n <h2>Heure</h2>\n <ul>\n <li>Le timing du système Al-Muqani avec l'explication d'Al-Muqani' sur les questions d'Al-Muqani par Muhammad bin Saeed Al-Marghati pour la première année de l'école secondaire Al-Atiq</li>\n <li>Le timing du système d'Umdah Ahl al-Thabit dans la science des temps et le verset du verset expliquant la solution du nœud sur Maqasid al-Umdah par Muhammad al-Alami pour la deuxième année de l'enseignement secondaire ancien</li>\n <li>Le timing du système d'Al-Jami' Al-Mufid sur les principes du nouvel observateur avec une explication de l'approximation de la distance d'Al-Jami' Al-Mufid sur les principes du nouvel observateur dans le calcul des éclipses, des éclipses et de l'observation du croissant par Muhammad bin Muhammad Al-Alami pour la troisième année de l'enseignement secondaire ancien</li>\n </ul>\n <h2>Logique</h2>\n <ul>\n <li>Logique de Nazm al-Salam par Al-Akhdari, expliquée par Al-Quwaisni pour la première année du secondaire, Al-Atiq</li>\n </ul>\n <h2>Pensée islamique</h2>\n <ul>\n <li>La pensée islamique...questions de discours, pour la première année du secondaire ancien</li>\n <li>Pensée islamique...Philosophie islamique pour la deuxième année du secondaire, Atiq</li>\n <li>Pensée islamique (soufisme islamique) pour la troisième année de l'école secondaire Al-Atiq</li>\n </ul>\n </div>\n </div>\n </div>\n <div>\n </div>\n </div>\n </div>\n <pied de page><div>\n <div>\n <div>\n <div>\n <ul>\n <li>Conseil scientifique suprême</li>\n <li>Bonnes leçons</li>\n <li>Hajj</li>\n </ul>\n <ul>\n <li>Le Ministre</li>\n <li>Rédaction générale</li>\n <li>Inspection générale</li>\n <li>Lunettes</li>\n <li>Commandes</li>\n <li><span>Au Parlement</span></li>\n <li>Bulletin des réalisations</li>\n <li>Textes législatifs</li>\n </ul>\n <ul>\n <li>Awqaf</li>\n <li>Affaires islamiques</li>\n <li>Coopération et affaires administratives</li>\n <li>Mosquées</li>\n <li>Éducation ancienne et éradication de l'analphabétisme dans les mosquées</li>\n </ul>\n <ul>\n <li>L'Islam au Maroc</li>\n <li>Discours en chaire</li>\n <li>Imam</li>\n <li>Chronologie</li>\n </ul>\n <ul>\n <li>Le Saint Coran</li>\n <li>Horaires de prière</li>\n <li>Prix Mohammed VI</li>\n </ul>\n </div>\n <div>\n <div>\n <ul>\n <li>Pour nous écrire</li>\n <li>Contrat d'utilisation du site Web</li>\n <li>Horaires de prière</li>\n </ul>\n </div>\n </div>\n </div>\n <div>\n <h1>L'Islam au Maroc</h1>\n <h4><span><strong>Ministère des Dotations et des Affaires islamiques</strong>  <strong>Al-Mashour Al-Saeed - Rabat - Maroc</strong><strong> Téléphone</strong><em> : 51 68 76 37 5 (212) - </em><em>01 68 76 37 5 (212)</em></span></h4>\n </div>\n </div>\n </div>\n </pied de page>\n </div>\n <div> \n </div>\n \n \n \n \n \n </corps>\n</html>"
   },
-  {
-   "docId": "pdf-mut23h3a-653",
-   "titleAr": "فصل في حذف النون",
-   "titleFr": "Chapitre : l'élision du nūn",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/2_._فصل_فـي_حذف_النون.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h3a-654",
-   "titleAr": "فصل في أحكام اللام المتكرر",
-   "titleFr": "Chapitre : les règles du lām redoublé",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/3._فصل_فـي_أحكام_اللام_الـمتكرر.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h3a-655",
-   "titleAr": "تصوير الهمزة في بداية الكلمة",
-   "titleFr": "La graphie du hamza en début de mot",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/4_._تصوير_الهمزة_فـي_بداية_الكلم.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h3a-656",
-   "titleAr": "الهمزة المصورة واوا والمحذوفة بعد ساكن",
-   "titleFr": "Le hamza noté wāw et le hamza élidé après quiescence",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/5_._الهمزة_الـمصورة_واوا_والـمحذ.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h3a-657",
-   "titleAr": "حكم الهمزة المتوسطة والمتطرفة بعد الألف",
-   "titleFr": "Le statut du hamza médian et final après l'alif",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/6_._حـكـم_الهمــزة_الـمتوسطــة_و.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h3a-658",
-   "titleAr": "الهمزة الساكنة المتوسطة بعد متحرك والمتطرفة",
-   "titleFr": "Le hamza quiescent au milieu du mot après voyelle, et le hamza final",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/7_._الهمزة_الساكنة_الـمتوسطة_بعد.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h3a-659",
-   "titleAr": "الهمزة المتطرفة المرفوعة المصورة واوا",
-   "titleFr": "Le hamza final au nominatif, noté wāw",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/8_._الهـمـــــزة_الـمتــطـــرفــ.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h3a-660",
-   "titleAr": "الهمزة المتحركة وما قبلها متحرك",
-   "titleFr": "Le hamza voyellé précédé d'une voyelle",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/9_._الهمزة_الـمتحركة_وما_قبلها_م.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h3a-661",
-   "titleAr": "الهمزة المضمومة بعد الكسر الواقع بعدها واو الجمع",
-   "titleFr": "Le hamza ḍammé après kasra, suivi du wāw du pluriel",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/10_._الهمزة_الـمضمومة_بعـد_الكسـ.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h3a-662",
-   "titleAr": "تصوير الهمزة المؤدي لاجتماع صورتين",
-   "titleFr": "La graphie du hamza en cas de succession de deux graphies",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/11_._تصوير_الهمزة_الـمؤدي_لاجتما.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h3a-663",
-   "titleAr": "حكم اجتماع صورتي همزتين",
-   "titleFr": "Le statut de la succession des graphies de deux hamza",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/12_._حكم_اجتماع_صورتي_همزتين.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h3a-664",
-   "titleAr": "فصل في مواضع حذف همز الوصل",
-   "titleFr": "Chapitre : les lieux d'élision du hamza de liaison (hamz al-waṣl)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/13_._فصل_فـي_مواضع_حذف_همز_الوصل.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h3a-665",
-   "titleAr": "فصل في مواضع حذف همز الوصل (تتمة)",
-   "titleFr": "Chapitre : les lieux d'élision du hamza de liaison — suite",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/14_._فصل_فـي_مواضع_حذف_همز_الوصل.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h3a-666",
-   "titleAr": "فصل في زيادة الألفات",
-   "titleFr": "Chapitre : l'addition des alif",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/15_._فصل_فـي_زيادة_الألفات.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h3a-667",
-   "titleAr": "فصل في زيادة الألفات (تتمة)",
-   "titleFr": "Chapitre : l'addition des alif — suite",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/16_._فصل_فـي_زيادة_الألفات_تتمة.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h3a-668",
-   "titleAr": "فصل في زيادة الياء",
-   "titleFr": "Chapitre : l'addition du yāʾ",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/17_._فصل_فـي_زيادة_الياء.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h3a-669",
-   "titleAr": "فصل في زيادة الواو",
-   "titleFr": "Chapitre : l'addition du wāw",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/18_._فصل_فـي_زيادة_الواو.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h3a-670",
-   "titleAr": "فصل فيما يكتب بياءين وباب المفصولات",
-   "titleFr": "Chapitre : ce qui s'écrit avec deux yāʾ, et chapitre des mots écrits séparément",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/19_._فصل_فـيمــا_يكتـــــب_بياءي.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h3a-671",
-   "titleAr": "فصل في المفصولات والموصولات (تابع)",
-   "titleFr": "Chapitre des mots écrits séparément et liés — suite",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/20._فصــــل_فـــي_الـمفصــولات_و.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h3a-672",
-   "titleAr": "فصل في المفصولات والموصولات (تابع)",
-   "titleFr": "Chapitre des mots écrits séparément et liés — suite",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/21_._فصـــل_فــــي_الـمفصـــولات.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h3a-673",
-   "titleAr": "فصل في المفصولات والموصولات (تابع)",
-   "titleFr": "Chapitre des mots écrits séparément et liés — suite",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/22._فصــل_فــــي_الـمفصـــولات_و.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h3a-674",
-   "titleAr": "فصل في المفصولات والموصولات (تابع)",
-   "titleFr": "Chapitre des mots écrits séparément et liés — suite",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/23_.فصــل_فــــي_الـمفصـــولات_و.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h3a-675",
-   "titleAr": "فصل في المفصولات والموصولات (تتمة)",
-   "titleFr": "Chapitre des mots écrits séparément et liés — suite",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/24._فصــل_فــــي_الـمفصـــولات_والـمـوصولات.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h3a-676",
-   "titleAr": "فصل في رسم تاء التأنيث",
-   "titleFr": "Chapitre : la graphie du tāʾ féminin",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/25_.فصل_فـي_رسم_تاء_التأنيث.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h3a-677",
-   "titleAr": "خاتمة النظم: العلم بذل وتواضع",
-   "titleFr": "Conclusion du poème : le savoir, un don et une humilité",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/العلم_بذل_وتواضع_-26.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h3a-678",
-   "titleAr": "خاتمة النظم (تتمة) : تزكية ودعاء ومناجاة",
-   "titleFr": "Conclusion des systèmes (suite) : Louange, supplication et monologue",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/27._خاتمة_النظـم_تتمة_تزكيــة_ودعــاء_ومناجاة.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h3a-679",
-   "titleAr": "لائحة المصادر والمراجع",
-   "titleFr": "Liste des sources et références",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/لائحة_الـمصادر_والـمراجع.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h3a-680",
-   "titleAr": "هذا الفهرس",
-   "titleFr": "Le présent index",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/فهرس_الموضوعات.pdf",
-   "pdfOnly": true
-  }
- ]
+  "lessons": [
+    {
+      "docId": "pdf-mut23h3a-652",
+      "titleAr": "فصل في حذف الواو",
+      "titleFr": "Chapitre : l'élision du wāw",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/1_._فصل_في_حذف_الواو.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h3a-653",
+      "titleAr": "فصل في حذف النون",
+      "titleFr": "Chapitre : l'élision du nūn",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/2_._فصل_فـي_حذف_النون.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h3a-654",
+      "titleAr": "فصل في أحكام اللام المتكرر",
+      "titleFr": "Chapitre : les règles du lām redoublé",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/3._فصل_فـي_أحكام_اللام_الـمتكرر.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h3a-655",
+      "titleAr": "تصوير الهمزة في بداية الكلمة",
+      "titleFr": "La graphie du hamza en début de mot",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/4_._تصوير_الهمزة_فـي_بداية_الكلم.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h3a-656",
+      "titleAr": "الهمزة المصورة واوا والمحذوفة بعد ساكن",
+      "titleFr": "Le hamza noté wāw et le hamza élidé après quiescence",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/5_._الهمزة_الـمصورة_واوا_والـمحذ.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h3a-657",
+      "titleAr": "حكم الهمزة المتوسطة والمتطرفة بعد الألف",
+      "titleFr": "Le statut du hamza médian et final après l'alif",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/6_._حـكـم_الهمــزة_الـمتوسطــة_و.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h3a-658",
+      "titleAr": "الهمزة الساكنة المتوسطة بعد متحرك والمتطرفة",
+      "titleFr": "Le hamza quiescent au milieu du mot après voyelle, et le hamza final",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/7_._الهمزة_الساكنة_الـمتوسطة_بعد.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h3a-659",
+      "titleAr": "الهمزة المتطرفة المرفوعة المصورة واوا",
+      "titleFr": "Le hamza final au nominatif, noté wāw",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/8_._الهـمـــــزة_الـمتــطـــرفــ.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h3a-660",
+      "titleAr": "الهمزة المتحركة وما قبلها متحرك",
+      "titleFr": "Le hamza voyellé précédé d'une voyelle",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/9_._الهمزة_الـمتحركة_وما_قبلها_م.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h3a-661",
+      "titleAr": "الهمزة المضمومة بعد الكسر الواقع بعدها واو الجمع",
+      "titleFr": "Le hamza ḍammé après kasra, suivi du wāw du pluriel",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/10_._الهمزة_الـمضمومة_بعـد_الكسـ.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h3a-662",
+      "titleAr": "تصوير الهمزة المؤدي لاجتماع صورتين",
+      "titleFr": "La graphie du hamza en cas de succession de deux graphies",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/11_._تصوير_الهمزة_الـمؤدي_لاجتما.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h3a-663",
+      "titleAr": "حكم اجتماع صورتي همزتين",
+      "titleFr": "Le statut de la succession des graphies de deux hamza",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/12_._حكم_اجتماع_صورتي_همزتين.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h3a-664",
+      "titleAr": "فصل في مواضع حذف همز الوصل",
+      "titleFr": "Chapitre : les lieux d'élision du hamza de liaison (hamz al-waṣl)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/13_._فصل_فـي_مواضع_حذف_همز_الوصل.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h3a-665",
+      "titleAr": "فصل في مواضع حذف همز الوصل (تتمة)",
+      "titleFr": "Chapitre : les lieux d'élision du hamza de liaison — suite",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/14_._فصل_فـي_مواضع_حذف_همز_الوصل.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h3a-666",
+      "titleAr": "فصل في زيادة الألفات",
+      "titleFr": "Chapitre : l'addition des alif",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/15_._فصل_فـي_زيادة_الألفات.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h3a-667",
+      "titleAr": "فصل في زيادة الألفات (تتمة)",
+      "titleFr": "Chapitre : l'addition des alif — suite",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/16_._فصل_فـي_زيادة_الألفات_تتمة.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h3a-668",
+      "titleAr": "فصل في زيادة الياء",
+      "titleFr": "Chapitre : l'addition du yāʾ",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/17_._فصل_فـي_زيادة_الياء.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h3a-669",
+      "titleAr": "فصل في زيادة الواو",
+      "titleFr": "Chapitre : l'addition du wāw",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/18_._فصل_فـي_زيادة_الواو.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h3a-670",
+      "titleAr": "فصل فيما يكتب بياءين وباب المفصولات",
+      "titleFr": "Chapitre : ce qui s'écrit avec deux yāʾ, et chapitre des mots écrits séparément",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/19_._فصل_فـيمــا_يكتـــــب_بياءي.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h3a-671",
+      "titleAr": "فصل في المفصولات والموصولات (تابع)",
+      "titleFr": "Chapitre des mots écrits séparément et liés — suite",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/20._فصــــل_فـــي_الـمفصــولات_و.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h3a-672",
+      "titleAr": "فصل في المفصولات والموصولات (تابع)",
+      "titleFr": "Chapitre des mots écrits séparément et liés — suite",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/21_._فصـــل_فــــي_الـمفصـــولات.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h3a-673",
+      "titleAr": "فصل في المفصولات والموصولات (تابع)",
+      "titleFr": "Chapitre des mots écrits séparément et liés — suite",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/22._فصــل_فــــي_الـمفصـــولات_و.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h3a-674",
+      "titleAr": "فصل في المفصولات والموصولات (تابع)",
+      "titleFr": "Chapitre des mots écrits séparément et liés — suite",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/23_.فصــل_فــــي_الـمفصـــولات_و.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h3a-675",
+      "titleAr": "فصل في المفصولات والموصولات (تتمة)",
+      "titleFr": "Chapitre des mots écrits séparément et liés — suite",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/24._فصــل_فــــي_الـمفصـــولات_والـمـوصولات.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h3a-676",
+      "titleAr": "فصل في رسم تاء التأنيث",
+      "titleFr": "Chapitre : la graphie du tāʾ féminin",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/25_.فصل_فـي_رسم_تاء_التأنيث.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h3a-677",
+      "titleAr": "خاتمة النظم: العلم بذل وتواضع",
+      "titleFr": "Conclusion du poème : le savoir, un don et une humilité",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/العلم_بذل_وتواضع_-26.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h3a-678",
+      "titleAr": "خاتمة النظم (تتمة) : تزكية ودعاء ومناجاة",
+      "titleFr": "Conclusion des systèmes (suite) : Louange, supplication et monologue",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/27._خاتمة_النظـم_تتمة_تزكيــة_ودعــاء_ومناجاة.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h3a-679",
+      "titleAr": "لائحة المصادر والمراجع",
+      "titleFr": "Liste des sources et références",
+      "html": "",
+      "htmlFr": "<p>Liste des sources et références</p>\n<p>- Le Coran récité selon la transmission de Warsh de Nāfṣ ; le Muṣḥaf al-Muḥammadi ; édition de l'Institut d'Édition du Muṣḥaf al-Sharif ; Royaume du Maroc.</p>\n<p>- Le Bustān en science de la récitation coranique d'Abū ʿAbdillāh Muḥammad ibn Yūsuf al-Jinātī ; établi par Mūlāy al-Muṣṭafá Būhāl ; édition du Centre d'Abū ʿAmr al-Dānī à Marrakech, affilié à la Ligue Muhammadéenne des Oulémas ; Dār al-Amān ; Rabat ; éd. 1435/1H, 2014M.</p>\n<p>- La Beauté de la vue et de la contemplation dans l'explication dʿUmdat al-Bayān de Muḥammad ibn al-ʿArabī al-Bakkālī al-Masārī ; établi par ʿAbd al-ʿAlī Maʿkūl ; Imprimerie Waraqah Bīlāl ; Fès, éd. 2013/1M.</p>\n<p>- Les Perles des avantages dans le Rasm des six exemplaires de Nāfṣ d'Abū al-ʿAlā Idrīs ibn ʿAbdallāh al-Wudghirī al-Idrīsī (manuscrit).</p>\n<p>- Le Guide du vagabond vers la source du assoiffé d'Ibrāhīm ibn Aḥmad al-Mārghānī at-Tūnisī ; établi par Muḥammad Ṣafāʾ ; édition Dār al-Amān ; Rabat, éd. 1440/1H, 2019M.</p>\n<p>- Le Al-Munqaḥ fī maʿrifat al-Rasm al-Muṣḥāf Āhl al-Amṣār d'Abū ʿAmr al-Dānī ; établi par Nūra bint Ḥasan al-Ḥamīd ; édition Dār at-Tadmīriyya ; collection des Épîtres Scientifiques, n° 16. - ʿUmdat al-Bayān dans le jugement des omissions dans le Coran d'Abū al-ʿAlā Idrīs ibn ʿAbdallāh al-Bakrāwī al-Wudghirī ; avec son explication, La Beauté de la vue et de la contemplation du Masārī.</p>\n<p>- La Guidée du lecteur vers la récitation de la Parole du Créateur dʿAbd al-Fattāḥ al-Sayyid ʿAjamī al-Marṣifī ; deuxième édition ; éditions Maktabat Ṭaybah ; Al-Madīnah al-Munawwarah.</p>",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/لائحة_الـمصادر_والـمراجع.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h3a-680",
+      "titleAr": "هذا الفهرس",
+      "titleFr": "Le présent index",
+      "html": "",
+      "htmlFr": "<p>Index des matières</p>\n<p>Leçon n° 0 : L'appendice</p>\n<p>Évaluation n° 1</p>\n<p>Planification annuelle et hebdomadaire 9 /</p>\n<p>Leçons</p>\n<p>Leçon 1 : Les lettres muettes et les lettres liées ; la hamza muette moyenne placée après une voyelle (à suivre) ; la hamza finale muette et prolongée (à suivre) (suite)</p>\n<p>Leçon 2 : Les règles de la hamza prolongée placée après une voyelle 56</p>\n<p>Synthèse</p>",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/الرسم-و-الضبط-السادس-ابتدائي/فهرس_الموضوعات.pdf",
+      "pdfOnly": true
+    }
+  ]
 }
