@@ -61,3 +61,6 @@ tr-logs/
 
 # scratch des traductions main (sources extraites + html injectés)
 tr-tmp/
+
+# sorties d'outils persistées (scratch, non versionnées)
+tool-results/
