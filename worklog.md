@@ -1529,3 +1529,39 @@ Stage Summary:
   scripts-translate/ (copiés de tr-tmp/ à l'usage : utiliser ceux de scripts-translate/) ; (3) si le
   quota SDK revient (sonder 1 requête chat), relancer éventuellement le pipeline workers historique
   (35-56 docs/h) — scripts-translate/llm-translate.ts intacts.
+
+---
+
+Task ID: R42-bis
+Agent: agent principal (Z.ai Code)
+Task: Poursuite R42 — muqaddima fiqh-tanawi-2 (12177) + correction des 17 titres GT-ismes du livre
+
+Work Log:
+- Production main continue après le R42 : fiqh-tanawi-2/12177 « Présentation du manuel » (intro du livre,
+  corps utile 3,4K car) — muqaddima fidèle : Mukhtaṣar de Cheikh Khalīl / sharḥ al-Dardīr / ḥāshiya al-Dasūqī,
+  al-muʿāwaḍāt rendu « contrats à contrepartie », malaka fiqhiyya glosée « compétence juridique »,
+  valeurs (justice, véracité, loyauté, bienfaisance, dignité, liberté) rendues intégralement ;
+  ToC 30 items traduite du source COMPLET (le corpus ne couvre que 21 leçons — convention fiqh-5ep/11930) ;
+  compétences ×7 en ol ; style aligné sur la muqaddima fiqh-5ep (h1 = titleFr simple).
+- DÉCOUVERTE CRITIQUE : les titleFr des leçons fiqh-tanawi-2 étaient des GT-ISMES DOCTRINALEMENT NOCIFS —
+  « Identifier le musulman » (pour ضبط المسلم فيه = l'objet du salam !), « Des règles de paix dans le fruit
+  du mur » (salam ≠ paix, حائط ≠ mur !), « vendre pacifiquement », « Dispositions hypothécaires » (rahn =
+  gage, pas hypothèque), « disposition … par le créancier » (rāhin = constituant/débiteur !). Cause : les
+  livres tanawi/6ep ont été créés APRÈS la vague r11 des titres — jamais traités.
+- 17 titres corrigés et alignés sur la ToC (12230→12517) : salam, objet du salam, gage (rahn), constituant,
+  créancier gagiste, garantie (ḍamān al-rahn), détention (ḥiyāza), causes de nullité, qarḍ, muqāṣa.
+  12519/12522/13349/13353 (index) déjà propres — inchangés.
+- QA : API 12177 = 5 436 car, 0 arabe ; agent-browser : lecteur fiqh-tanawi-2 → titres corrigés visibles
+  (« Les règles de la garantie du capital du salam », « La fixation de l'objet du salam… ») ; muqaddima
+  bilingue rendue, console propre.
+
+Stage Summary:
+- **Registre 172/950 (hand 122 + llm 50)**. fiqh-tanawi-2 : 1/22 (muqaddima) ; prochains : 12230, 12232,
+  12239, 12241, 12242, 12243, 12253, 12261, 12498, 12499, 12500, 12502, 12503, 12505, 12510, 12512,
+  12517, 12519, 12522, 13349, 13353 (leçons salam/qarḍ/muqāṣa/rahn + 4 index/bibliographies).
+- **RISQUE SYSTÉMIQUE NOTÉ (priorité future)** : les titleFr des livres post-r11 (tanawi-2/3, 6ep, 1es
+  récents…) restent des GT-ismes (« Jurisprudence Zakat », « La jurisprudence contrôle la vente des
+  biens du failli »…) — campagne de remédiation des titres à planifier par livre, idéalement au fil des
+  traductions de chaque leçon (corriger le titleFr dans le même commit que la traduction, comme fait ici).
+- Leçon d'architecture : quand une leçon est traduite, vérifier SON titleFr et le corriger dans le même
+  commit si GT-isme (la ToC de la muqaddifa/leçon doit toujours être cohérente avec les titres du corpus).
