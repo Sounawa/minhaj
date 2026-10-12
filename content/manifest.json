@@ -1,7 +1,7 @@
 {
-  "version": 6,
+  "version": 7,
   "provisional": false,
-  "note": "Corpus Taʿlīm ʿatīq — 63 livres (grille en ligne complète), 1835 documents (887 leçons bilingues intégrales, 63 introductions, 885 leçons référence PDF officiel). hadith-tanawi-2 (Muwaṭṭaʾ 2ᵉ lycée) : leçons non publiées à ce jour par le ministère — présentation seule. Objectif officiel du programme : 64 manuels.",
+  "note": "Corpus Taʿlīm ʿatīq — 64 livres (63 grille en ligne + faraid-tanawi-2 restauré du miroir /tmp après reset sandbox), 1853 documents (904 leçons bilingues intégrales, 64 introductions, 885 leçons référence PDF officiel). hadith-tanawi-2 (Muwaṭṭaʾ 2ᵉ lycée) : leçons non publiées à ce jour par le ministère — présentation seule. Objectif officiel du programme : 64 manuels.",
   "program": {
     "nameAr": "المنهاج النموذجي للتعليم العتيق",
     "nameFr": "Programme modèle de l'enseignement traditionnel (Taʿlīm ʿatīq)",
@@ -698,12 +698,22 @@
       "order": 49
     },
     {
+      "id": "faraid-tanawi-2",
+      "subject": "faraid",
+      "level": "tanawi-2",
+      "titleAr": "الفرائض من مختصر الشيخ خليل بشرح الخرشي",
+      "titleFr": "Farāʾiḍ — le Mukhtaṣar de Khalīl, comm. d'al-Kharshī (2ᵉ lycée)",
+      "order": 50,
+      "textbookAr": "الفرائض من مختصر الشيخ خليل بشرح الخرشي",
+      "known": true
+    },
+    {
       "id": "usul-fiqh-tanawi-2",
       "subject": "usul-fiqh",
       "level": "tanawi-2",
       "titleAr": "أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم الغرناطي",
       "titleFr": "Uṣūl al-fiqh — Marṭaqī al-Wuṣūl d'Ibn ʿĀṣim (2ᵉ lycée)",
-      "order": 50,
+      "order": 51,
       "textbookAr": "أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم الغرناطي"
     },
     {
@@ -712,7 +722,7 @@
       "level": "tanawi-2",
       "titleAr": "علوم الحديث",
       "titleFr": "Sciences du ḥadīth — 2ᵉ lycée",
-      "order": 51,
+      "order": 52,
       "textbookAr": "علوم الحديث"
     },
     {
@@ -721,7 +731,7 @@
       "level": "tanawi-2",
       "titleAr": "القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي",
       "titleFr": "Qirāʾāt — Ḥirz al-Amānī (al-Shāṭibiyya, suite)",
-      "order": 52,
+      "order": 53,
       "textbookAr": "القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي"
     },
     {
@@ -730,7 +740,7 @@
       "level": "tanawi-2",
       "titleAr": "التوقيت من منظومة عمدة أهل الثبت في علم الأوقات وسمت البيت",
       "titleFr": "Tawqīt — ʿUmdat Ahl al-Thabt (temps et orientations)",
-      "order": 53,
+      "order": 54,
       "textbookAr": "التوقيت من منظومة عمدة أهل الثبت في علم الأوقات وسمت البيت"
     },
     {
@@ -739,7 +749,7 @@
       "level": "tanawi-2",
       "titleAr": "الفكر الإسلامي: الفلسفة الإسلامية",
       "titleFr": "Pensée islamique — la philosophie musulmane",
-      "order": 54,
+      "order": 55,
       "textbookAr": "الفكر الإسلامي: الفلسفة الإسلامية"
     },
     {
@@ -748,7 +758,7 @@
       "level": "tanawi-3",
       "titleAr": "الفقه من متن مختصر الشيخ خليل بشرح الدردير وحاشية الدسوقي",
       "titleFr": "Fiqh — le Mukhtaṣar de Khalīl (suite du programme)",
-      "order": 55,
+      "order": 56,
       "textbookAr": "الفقه من متن مختصر الشيخ خليل بشرح الدردير وحاشية الدسوقي"
     },
     {
@@ -757,7 +767,7 @@
       "level": "tanawi-3",
       "titleAr": "تفسير سورة الكهف من خلال المحرر الوجيز في تفسير الكتاب العزيز لابن عطية",
       "titleFr": "Tafsīr — la sourate al-Kahf (al-Muḥarrar al-Wajīz)",
-      "order": 56,
+      "order": 57,
       "textbookAr": "تفسير سورة الكهف من خلال المحرر الوجيز في تفسير الكتاب العزيز لابن عطية"
     },
     {
@@ -766,7 +776,7 @@
       "level": "tanawi-3",
       "titleAr": "كتاب الحديث من موطأ الإمام مالك بشرح الزرقاني",
       "titleFr": "Ḥadīth — le Muwaṭṭaʾ de l'imam Mālik (3ᵉ lycée)",
-      "order": 57,
+      "order": 58,
       "textbookAr": "كتاب الحديث من موطأ الإمام مالك بشرح الزرقاني"
     },
     {
@@ -775,7 +785,7 @@
       "level": "tanawi-3",
       "titleAr": "الفرائض من منظومة الجواهر المكنونة في صدف الفرائض المسنونة",
       "titleFr": "Farāʾiḍ — la Manẓūma al-Jawāhir al-Maknūna (successions)",
-      "order": 58,
+      "order": 59,
       "textbookAr": "الفرائض من منظومة الجواهر المكنونة في صدف الفرائض المسنونة"
     },
     {
@@ -784,7 +794,7 @@
       "level": "tanawi-3",
       "titleAr": "أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم الغرناطي",
       "titleFr": "Uṣūl al-fiqh — Marṭaqī al-Wuṣūl d'Ibn ʿĀṣim (3ᵉ lycée)",
-      "order": 59,
+      "order": 60,
       "textbookAr": "أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم الغرناطي"
     },
     {
@@ -793,7 +803,7 @@
       "level": "tanawi-3",
       "titleAr": "علوم الحديث",
       "titleFr": "Sciences du ḥadīth — 3ᵉ lycée",
-      "order": 60,
+      "order": 61,
       "textbookAr": "علوم الحديث"
     },
     {
@@ -802,7 +812,7 @@
       "level": "tanawi-3",
       "titleAr": "القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي",
       "titleFr": "Qirāʾāt — Ḥirz al-Amānī (al-Shāṭibiyya, 3ᵉ lycée)",
-      "order": 61,
+      "order": 62,
       "textbookAr": "القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي"
     },
     {
@@ -811,7 +821,7 @@
       "level": "tanawi-3",
       "titleAr": "التوقيت من منظومة الجامع المفيد في حساب الخسوف والكسوف ورؤية الأهلة",
       "titleFr": "Tawqīt — al-Jāmiʿ al-Mufīd (éclipses et croissants)",
-      "order": 62,
+      "order": 63,
       "textbookAr": "التوقيت من منظومة الجامع المفيد في حساب الخسوف والكسوف ورؤية الأهلة"
     },
     {
@@ -820,7 +830,7 @@
       "level": "tanawi-3",
       "titleAr": "الفكر الإسلامي: التصوف الإسلامي",
       "titleFr": "Pensée islamique — le soufisme (taṣawwuf)",
-      "order": 63,
+      "order": 64,
       "textbookAr": "الفكر الإسلامي: التصوف الإسلامي"
     }
   ],
