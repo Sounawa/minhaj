@@ -2898,3 +2898,125 @@ Stage Summary:
   et -2 ; (3) audit des autres GT-ismes dans les titleFr du corpus (comme « drapeaux ») ;
   (4) features en attente : export EPUB/PDF d'une leçon, extraction des 885 PDF-only,
   compteur de notes dans l'en-tête.
+
+---
+Task ID: R56
+Agent: agent principal (Z.ai Code — relance utilisateur « continue » / « go pour les traductions pour enfin finir tout le projet »)
+Task: Rafale de 15 traductions savantes tafsir-6ep — LIVRE №21 INTÉGRAL + fix overflow mobile lecteur
+
+Work Log:
+- CONTEXTE : suite directe de R55 (registre 225/950, 20 livres intégraux, priorité suivante = tafsir-6ep
+  15 leçons non-savantes restantes puis fikr-islami-tanawi-1/2). Toutes les 15 étaient des
+  REMPLACEMENTS GT INTÉGRAUX (GT-ismes du type « Préparation tribale », « calendrier »).
+- **15 RECONSTRUCTIONS SAVANTES** (rédaction main intégrale, workflow extract → rédaction →
+  qa-lesson → hand-set → QA navigateur → commit + backup par doc, règles a/b/c/d respectées) :
+  1. 13861 (10 432 car, b6eca37) — Al-Jinn 1-7 : versets 1-7 Hamidullah avec guillemets
+     imbriqués « + “ + ‘, pronom shāʾ de annahū, taqūla allégé de taqūlata, istiʿādha auprès
+     des djinns (sudnā = devenus maîtres), 5 termes reconstruits du tableau-image, cross-réf
+     Al-Aḥqāf 29 (manuel écrit 28 — coquille manifeste corrigée).
+  2. 14113 (9 712 car, ff5cdad) — Al-Jinn 13-17 : ordre du manuel respecté (v16 récompense
+     AVANT v15 châtiment), falā yakhāfu prédicat d'un sujet omis « huwa », an/annahum +
+     coordination à v1, naslukhu lu au nūn/yāʾ, Fuṣṣilat 26-31 intégrale, date dd (Lundi
+     23 décembre 2019).
+  3. 14403 (8 069 car, 8e494d3) — Al-Muddaththir 8-17 : chaîne grammaticale (fāʾ causal,
+     yawmaʾidhin substitution de dhālika, idhā + phrase de réponse, waḥīdan
+     coordination/mafʿūl maʿahu, shuhūdan ḥāl de banīna ou du pronom elidé dans mamdūdan),
+     h2 Objectifs ajouté (absent du source — normalisation), 4 expressions de la préparation
+     reconstruites par croisement avec la table de la leçon 14411.
+  4. 14411 (9 330 car, 950e7f1) — Al-Muddaththir 18-29 : mots de v22-23 cités séparément,
+     hadith Muslim sur l'orgueil (kibr = baṭr al-ḥaqq + ghamṭ al-nās), narration al-Ṭabarī/
+     ʿIkrima complète (Abū Jahl, rajaz/qasīda), titleFr GT-ism corrigé en cours de route ?
+     NON — c'est 14430.
+  5. 14430 (9 832 car, c755048) — **titleFr corrigé « Objectifs de la leçon » → « Sourate
+     Al-Muddaththir, versets 48-55 »** (GT-isme manifeste, convention 15274) ; leçon couvre
+     en fait jusqu'à v56 (plage manuel 48-55 conservée au titre, écart documenté) ;
+     grammaire mā/lahum/muʿriḍīna de v49, qirāʾa bi-l-tāʾ wa-l-yāʾ, hadith Muʿādh (Bukhārī
+     Ruqāq), citations al-Sāwī 3/254 + al-Ṭabarī 24/43 + al-Rāzī 30/718 (vol/page normalisés).
+  6. 14437 (9 532 car, 982073e) — Al-Qiyamah 1-12 : serment lā uqsimu formule de renforcement
+     + réponse omise, ʿAdī ibn Rabīʿa (al-Wāḥidī Asbāb al-nuzūl 448), Mālik Muwaṭṭaʾ (Ibn
+     Masʿūd ṣidq/kadhib) + al-Bājī al-Muntaqā 7/317 (al-Ḥasan : pas à pas), date dd (2 mars
+     2020). 2 passages QA guillemets corrigés (citations Ibn ʿAṭiyya imbriquées).
+  7. 14497 (8 578 car, 4c7cc07) — Al-Qiyamah 19-24 (v25 incluse au tafsīr, chevauchement
+     avec leçon 18 documenté) : kallā = alā, nāḍira dérivé de naḍāra, hadith Jarīr (vision
+     d'Allah comme la lune, Bukhārī Tawḥīd), cross-réfs Al-Insan 27, Al-Isrāʾ 18-19,
+     ʿAbasa 38-41, al-Qaṣaṣ 77.
+  8. 14506 (7 382 car, b0b7e08) — Al-Qiyamah 25-34 : agonie complète (rāqin médecin,
+     al-firāq séparation du monde, al-sāq bi-l-sāq double lecture, al-masāq agent de idhā,
+     awlā laka nom-verbe + proverbe arabe d'intimidation), cross-réfs al-Wāqiʿa 86-90 +
+     Al-Muddaththir 38-46, date dd (9 mars 2020).
+  9. 14570 (5 272 car, 449cd06) — Al-Insan 29-31 : tadhkira = exhortation, ʿalīman
+     bi-khalqihi, ḥakīman sommet de la sagesse, tableau de synthèse sourate Al-Qiyāma
+     signalé image (contenu absent du manuel, non inventé — convention 15198).
+  10. 14577 (7 996 car, 4abe47d) — Al-Mursalat 1-15 : série des serments (vents en rafales
+      comme la crinière du cheval, ʿurfan ḥāl, versets séparant vrai/faux, anges porteurs de
+      révélation, ʿudhuran/nudhuran deux lectures), signes du Jour (étoiles effacées, ciel
+      fendu, montagnes pulvérisées + Ṭā-Hā 103-104, uqqitat lu au wāw/hamza), 4 cross-réfs
+      eschatologiques (Infiṭār, Takwīr, Inshiqāq, Nabaʾ), date dd (23 mars 2020).
+  11. 14582 (7 285 car, 1bc8cf9) — Al-Mursalat 16-28 : nations antérieures (Nūḥ, ʿĀd,
+      Thamūd, Lūṭ), création (māʾ mahīn = sperme faible, qarār makīn = utérus, qadar maʿlūm
+      = terme, fa-niʿma al-qādirūna = c'est Nous), kifātan vivants sur le dos/morts dans le
+      ventre, section « les versets m'orientent vers » reconstruite des 2 leçons du ul.
+  12. 14586 (10 004 car, 3b4bb44) — Al-Mursalat 29-40 : Enfer (ombre à trois branches =
+      fumée divisée en trois colonnes, étincelles comme des palais, jimālatun pluriel de
+      jimāla/jamal + lecture au singulier, ṣufr = noirs mêlés de jaune), excursus complet
+      al-Sāwī 3/266 (fa-yaʿtadirūna coordonné sans causation : nominatif vs accusatif +
+      Fāṭir 36), dialectique al-Rāzī Mafātīḥ al-ghayb 30/778 (l'excuse corrompue du décret,
+      an-Nisāʾ 165 + Ṭā-Hā 134 + al-Mursalāt 6).
+  13. 14594 (7 412 car, a2d5938) — Al-Mursalat 41-50 (titleFr officiel sans virgule repris
+      tel quel) : récompense des pieux (ombrages denses sans soleil, sources jaillissantes,
+      ar-Raʿd 35, hanīʾan ḥāl), irkaʿū = priez / ne s'inclinent pas = ne prient pas,
+      al-ḥadīth = le Coran inimitable, Maryam 59-60, section أتخلق reconstruite des thèmes
+      propres (prière/Coran/œuvre).
+  14. 14599 (6 213 car, f44f019) — Index des figures citées : 15 biographies (Maḥallī 864 H
+      → Wāḥidī 468 H) dont Suyūṭī ~600 ouvrages, Ibn ʿAbbās ḥabr al-umma ~1660 hadiths,
+      naissances/morts sourcées du manuel uniquement (règle f), titres glosés — convention
+      15274.
+  15. 14600 (5 186 car, e2ba1d7) — Index des sources et références : 20 entrées (muṣḥaf
+      Warsh/Nāfiʿ Fondation Muḥammad VI 2012, Jalālayn Dār al-Ḥadīth, Ziriklī, Abū Ḥayyān,
+      Ibn ʿĀshūr, Ibn Juzayy, Ibn Kathīr 774 H, Bukhārī, Qurṭubī, Ghazālī, Abū Dāwūd,
+      Tirmidhī, Ibn ʿAṭiyya, Rāzī, Muwaṭṭaʾ, Nasāʾī, Bājī, Wāḥidī, Ṣāwī) avec éditeurs
+      critiques rendus intégralement.
+- **BUGFIX LECTEUR** (8554838) : overflow mobile 390 px de la barre d'outils du lecteur
+  (shrink-0 empêchait le retrait — détecté en QA sur 13861) → min-w-0 + wrap interne.
+  Vérifié : 390 px 0 overflow, desktop inchangé (barre alignée à droite, même ligne que
+  l'en-tête), lint 0 erreur (1 warning préexistant llm-translate.ts:561).
+- QA NAVIGATEUR FINALE : accueil **21 badges « traduction savante intégrale »** (20→21),
+  0 erreur console ; lecteurs 13861/14113/14430 (titleFr corrigé vérifié)/14594/14599 OK
+  (h1, sections FR, versets injectés) ; mobile 390 px 0 overflow après fix ; captures
+  qa-r56-*.png.
+- Registre : 225 → **240/950** (+15 main, 190 hand + 50 LLM).
+- Backup /tmp/my-project/backup-tour/ rafraîchi après CHAQUE document (règle b) : registry
+  + git bundle + tr-tmp répliqué.
+- Décisions documentées ce tour : (1) titleFr GT-ismes manifestes corrigés (14430
+  « Objectifs de la leçon ») ; (2) plages de versets du manuel conservées au titre mais
+  contenu réel étendu (14430 jusqu'à v56, 14497 v25) — écarts documentés aux commits ;
+  (3) expressions des préparation préalables reconstruites par croisement avec la table
+  de la leçon suivante (convention 13878, 4 occurrences) ; (4) sections أتخلق normalisées
+  en h3 (4 leçons, était dans un p avec br) ; (5) dates dd conservées traduites (3
+  leçons) ; (6) refs vol/page normalisées (Ṣāwī 3/254, Ṭabarī 24/43, Rāzī 30/718) ; (7)
+  incohérence interne du manuel Ibn Kathīr 750 H (14599) vs 774 H (14600) conservée en
+  l'état, documentée ; (8) images non extractibles (tableaux de synthèse 14570/14594,
+  liste aʿlām des vertus 14582) signalées, contenu non inventé (règle f).
+
+Stage Summary:
+- **État** : sain. HEAD 8554838, registre **240/950** (190 main + 50 LLM), **21 livres en
+  couche savante intégrale** (tafsir-6ep 31/31 rejoint fiqh-6ep, fiqh-1ep, tafsir-1ep,
+  fiqh-5ep, hadith-1ep, fikr-islami-tanawi-3, usul-fiqh-tanawi-3, fiqh-tanawi-2 + 12
+  mono-doc). Tafsīr al-Jalālayn intégral : 64 versets traduits (Al-Jinn, Al-Muzzammil,
+  Al-Muddaththir, Al-Qiyamah, Al-Insan, Al-Mursalat) avec l'appareil grammatical jalāliyya
+  complet (qirāʾāt, iʿrāb, ḥāl/mubtadaʾ), les causes de descente et les citations des
+  commentaires (Ṭabarī, Ibn ʿAṭiyya, Rāzī, Ṣāwī, Wāḥidī, Bājī, Mālik).
+- **Bugs corrigés** : overflow mobile barre d'outils lecteur (390 px) — préexistant,
+  désormais 0 overflow.
+- **Risques / attention** : (a) ~710 traductions restent (240/950) — la production main
+  (15 docs/tour) reste le goulot, les livres multi-leçons dominent (tafsir-5ep 91,
+  tafsir-3es 43, tafsir-2es 37…) ; (b) les reconstructions des expressions-image
+  (préparations préalables) sont des choix documentés — si le client possède le PDF
+  original, une passe de vérification est possible ; (c) 2 docs (14403, 14430) ont un h2
+  « Objectifs » ajouté par normalisation — cohérent avec le reste du corpus.
+- **Priorités suivantes** : (1) fikr-islami-tanawi-1 (28 leçons restantes) puis
+  fikr-islami-tanawi-2 (28) — les 2 prochains livres complets atteignables ; (2) audit
+  GT-ismes des titleFr du corpus (2 cas corrigés ce tour : 14430 + 15274 en R55 —
+  scanner tous les titleFr non traduits/suspects) ; (3) tafsir-3es (43) et tafsir-2es (37)
+  pour compléter la matière tafsīr ; (4) features en attente : export EPUB/PDF d'une
+  leçon, extraction des 885 PDF-only, compteur de notes dans l'en-tête.
