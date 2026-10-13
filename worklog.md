@@ -2414,3 +2414,84 @@ Stage Summary:
   régénérés à chaque commit.
 - Risque : rien de nouveau ; convention ToC « entrées liminaires écartées » et « titres
   officiels verbatim y compris imperfections GT du titre 17 tanawi-2 » documentée ici.
+
+---
+Task ID: R51
+Agent: agent principal (Z.ai Code — cron webDevReview 455619, 3e tour)
+Task: QA générale + fixes prioritaires + reprise file R22 (3 muqaddimas) + features lecteur
+
+Work Log:
+- ÉTAT INITIAL : HEAD 20725bc (R50), git propre, serveur 200, registre 185/950. Relecture
+  worklog : restent 5 docs R22 (15371, 18676, 18675, 18671, 20297) puis file fiqh-tanawi-2.
+- QA agent-browser (accueil, lecteur 18649/18677, API) : 0 erreur console — MAIS bug
+  résiduel découvert sur 18649 : l'AR pane affiche encore des h2 « المرحلة الأولى/الثانية »
+  suivis de grilles VIDES (chrome du site ministériel que le sanitizer R49 n'avait pas
+  retiré sur les INTROS ; le scan R49 itérait lessons mais le correctif de détection
+  échouait sur ce cas).
+- **BUGFIX SANITIZER v2** (scripts-recovery/sanitize-chrome.py) — 3 causes corrigées :
+  (1) grid_is_structural : la fenêtre 600 car. était battue par le TEXTE du 2e titre
+  jumelar (المرحلة الثانية) → les titres de grilles sont neutralisés avant le test de
+  vacuité ; (2) chrome_follows exigeait un footer/signature APRÈS la coupe — or le footer
+  avait déjà été retiré en R49 → nouveau fallback grid_tail_is_empty (grille orpheline en
+  queue = chrome sans besoin de signature suivante) ; (3) early-return de sanitize_once
+  court-circuitait la logique grille quand plus aucun footer → condition élargie. Bonus
+  clean_tail : <div> ouvrants non fermés retirés en queue. Dry-run : 22 intros AR / 16 Ko ;
+  APPLY + re-scan corpus : **0 résidu** ; QA navigateur 18649 après reload : h2 chrome
+  disparus. Commit c5ae03f. (NB : les références Luqmān 19 et Nūr 40 du manuel scolaire
+  15371 sont manifestement erronées dans la source — seul le marqueur de référence est
+  rendu, fidélité au source.)
+- **3 RECONSTRUCTIONS SAVANTES livrées** (rédaction main, workflow R50 : tr-tmp →
+  qa-lesson.py → diff ToC vs titres officiels → hand-set.py → QA navigateur → commit +
+  backup par doc) :
+  1. usul-fiqh-tanawi-1/15371 « Présentation du manuel » (17 059 car, f16d32c) — LE PLUS
+     LOURD de la file R22 : leçon liminaire du Marṭaqī al-wuṣūl, 15 vers rendus HÉMISTICHE
+     PAR HÉMISTICHE en 4 tableaux (matn complet + 3 citations de l'analyse : louange de
+     Dieu v.1-7, louange du Prophète v.8-11, fonctions v.12-15) ; bio complète d'Ibn ʿĀṣim
+     (760-829 H. : oncles Ibn Juzayy, Ibn Lubb, al-Shāṭibī, élèves Yaḥyā + al-Mawwāq, 5
+     œuvres glossées dont Tawshīḥ al-dībāǧ + Azhār al-riyāḍ en source) ; hadith aǧḏam
+     (Abū Dāwūd) ; versets Yūsuf 40 / Qamar 49 / Aḥzāb 33:45-46 injectés du cache
+     Hamidullah ; lettres a-i des attributs divins ; citation al-Rajrājī INTÉGRALE (5 avis
+     ḥamd/shukr, Rafʿ al-niqāb I, 12) ; j/sh modérés (convention usul-fiqh). Registre
+     185 → 186.
+  2. hadith-tanawi-3/18676 (5 355 car, 46b7a97) : aqḍiya du Messager/Compagnons/
+     Successeurs, qadāʾ+ʿamal de Médine, maqāṣid (ʿaṭāyā/nuḥūl/waṣiyya/ḏamān/rahn/šufʿa/
+     musāqāt/qirāḍ — préservation des intérêts financiers établissement+suppression),
+     valeurs don/libéralité/coopération, malaka → études supérieures, clausule ḥamd ;
+     ToC 28 VERBATIM 29/29 (1 fix nuḥl→nuḥūl au diff). Registre 186 → 187.
+  3. hadith-3es/18675 (4 239 car, 2a685de) : cycle INTERMÉDIAIRE إعدادي (≠ tanawi-3),
+     périmètre ḥaǧǧ/ʿumra/uḍḥiya/ḏabāʾiḥ/ṣayd/ʿaqīqa, adresse « nos fils les élèves, nos
+     filles les élèves », 7 objectifs verbatim (maḏhab mālikite constante religieuse du
+     pays, construction des leçons par les élèves…), clausule rapprochement/Sunna/
+     Compagnons ; ToC 28 VERBATIM 29/29. Registre 187 → 188.
+- **FEATURES LECTEUR** (cced49e) :
+  1. Tableaux de vers (manẓūma) : détection client (table 3 colonnes sans th, colonne
+     médiane vide) → classe .verse-table : rendu POÉTIQUE (bordures supprimées, filet
+     médian doré 38 % primary, FR italique serif, AR line-height 2.1, jamais de coupure de
+     vers à l'impression) — premier usage réel : 15371 (8 tableaux marqués FR+AR).
+  2. Barre de progression de lecture : fixed top, gradient ambre→orange, ARIA
+     progressbar, no-print ; testée 14,8 % à scroll 800.
+  3. Navigation clavier ← → entre leçons du même livre (gardes : input/textarea/
+     contentEditable, modificateurs ctrl/meta/alt) + hints kbd sous « Sommaire » (masqués
+     si pas de voisin, ex. livre mono-doc) ; testée fiqh-1ep 11366→11367→11366.
+  Effet verse-table synchronisé (sans rAF — les callbacks rAF ne tirent pas sur page
+  cachée, robustesse headless).
+- QA finale : accueil 200 (93 boutons, footer, hero), stats API 64/1853/983/188, dark
+  mode OK (séparateur vers oklab 0.76), 0 débordement 1280px, 0 erreur console, lint
+  0 erreur (1 warning préexistant llm-translate.ts:561). Captures qa-r51-*.png.
+
+Stage Summary:
+- **État projet** : sain et progressant. HEAD cced49e, registre **188/950** (+3 ce tour),
+  corpus dépollué à 100 % (0 chrome résiduel après sanitizer v2), 3 features lecteur
+  livrées. Restent 2 docs R22 : 18671 (tafsir-tanawi-3, al-Kahf/Ibn ʿAṭiyya, ToC 26) et
+  20297 (qiraat-tanawi-2, al-Shāṭibī/Ibn al-Qāṣiḥ, ToC 26) ; puis file fiqh-tanawi-2
+  (17 leçons) ; en parallèle l'option récupération des ~119 traductions perdues depuis
+  l'historique chat utilisateur reste ouverte.
+- **Risques / attention** : (a) convention gardée — ToC = titres officiels VERBATIM y
+  compris duplicata « Dispositions du testament » 27/28 (hadith-tanawi-3) ; (b) les refs
+  coraniques Luqmān 19 / Nūr 40 du source 15371 sont erronées dans le manuel — rendues
+  comme marqueurs de référence seuls, SANS injection de texte (décision fidélité,
+  documentée ici) ; (c) sanitize-chrome.py reste idempotent — re-scan post-apply 0 résidu.
+- **Priorités suivantes** : (1) finir R22 : 18671 + 20297 (livres entiers passent en
+  couche savante : 13 → 15 livres complets) ; (2) file fiqh-tanawi-2 ; (3) proposer au
+  client le collage des traductions perdues ; (4) idées features : extraction des 885
+  PDF-only, export EPUB/PDF d'une leçon, surlignage persistant.
