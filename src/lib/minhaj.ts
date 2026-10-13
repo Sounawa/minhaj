@@ -99,6 +99,8 @@ export interface BookSummary {
   lessonsFr: number;
   docsTotal: number;
   docsFr: number;
+  /** Documents de ce livre en traduction savante (registre, avec FR réellement écrit). */
+  docsSavant: number;
 }
 
 export interface LibraryPayload {
@@ -230,11 +232,20 @@ export async function getBookFile(bookId: string): Promise<BookFile | null> {
   return readJsonCached<BookFile>(`books/${bookId}.json`);
 }
 
-function summarize(bookDef: ManifestBook, file: BookFile | null): BookSummary {
+function summarize(
+  bookDef: ManifestBook,
+  file: BookFile | null,
+  savantIds: Set<string> | null,
+): BookSummary {
   const lessonsTotal = file?.lessons?.length ?? 0;
   const lessonsFr = file?.lessons?.filter((l) => (l.htmlFr ?? "").trim().length > 0).length ?? 0;
   const hasIntro = Boolean(file?.intro);
   const introFr = Boolean(file?.intro?.htmlFr && file.intro.htmlFr.trim().length > 0);
+  // Couche savante : docIds du registre disposant d'un FR réellement écrit.
+  const docs = file
+    ? ([file.intro, ...(file.lessons ?? [])].filter(Boolean) as Array<{ docId: string; htmlFr?: string }>)
+    : [];
+  const savantDocs = savantIds ? new Set(docs.filter((d) => savantIds.has(d.docId) && (d.htmlFr ?? "").trim().length > 0).map((d) => d.docId)) : new Set<string>();
   return {
     id: bookDef.id,
     subject: bookDef.subject,
@@ -252,6 +263,7 @@ function summarize(bookDef: ManifestBook, file: BookFile | null): BookSummary {
     lessonsFr,
     docsTotal: lessonsTotal + (hasIntro ? 1 : 0),
     docsFr: lessonsFr + (introFr ? 1 : 0),
+    docsSavant: savantDocs.size,
   };
 }
 
@@ -261,7 +273,10 @@ export async function getLibrary(): Promise<LibraryPayload> {
     throw new Error("manifest.json introuvable dans content/");
   }
   const files = await Promise.all(manifest.books.map((b) => getBookFile(b.id)));
-  const books = manifest.books.map((b, i) => summarize(b, files[i] as BookFile | null));
+  const savantIdsForBooks = await getSavantIds();
+  const books = manifest.books.map((b, i) =>
+    summarize(b, files[i] as BookFile | null, savantIdsForBooks),
+  );
   const subjects = manifest.subjects.map((s) => ({
     ...s,
     booksCount: manifest.books.filter((b) => b.subject === s.id).length,
@@ -298,7 +313,8 @@ export async function getBookDetail(bookId: string): Promise<BookDetailPayload |
   const bookDef = manifest.books.find((b) => b.id === bookId);
   if (!bookDef) return null;
   const file = await getBookFile(bookId);
-  const book = summarize(bookDef, file);
+  const savantIdsForDetail = await getSavantIds();
+  const book = summarize(bookDef, file, savantIdsForDetail);
   const level = manifest.levels.find((l) => l.id === bookDef.level) ?? null;
   const subject = manifest.subjects.find((s) => s.id === bookDef.subject) ?? null;
   const savantIds = await getSavantIds();
