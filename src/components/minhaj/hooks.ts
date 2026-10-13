@@ -314,6 +314,110 @@ export function useLastDoc() {
   return useSyncExternalStore(subscribeLs, getLastDoc, () => NO_LAST_DOC);
 }
 
+// ————————————————————————————————— Surlignages persistants (offsets texte)
+
+export type HlPane = "fr" | "ar";
+export type HlRange = [number, number];
+type HlStore = Record<string, Partial<Record<HlPane, HlRange[]>>>;
+
+const HL_KEY = "minhaj.highlights.v1";
+
+const hlCache: { raw: string | null; store: HlStore } = { raw: null, store: {} };
+
+function getHighlightsStore(): HlStore {
+  if (typeof window === "undefined") return {};
+  const raw = localStorage.getItem(HL_KEY);
+  if (raw !== hlCache.raw) {
+    hlCache.raw = raw;
+    try {
+      const v = JSON.parse(raw ?? "{}");
+      hlCache.store = v && typeof v === "object" ? (v as HlStore) : {};
+    } catch {
+      hlCache.store = {};
+    }
+  }
+  return hlCache.store;
+}
+
+function writeHighlightsStore(store: HlStore) {
+  try {
+    localStorage.setItem(HL_KEY, JSON.stringify(store));
+    hlCache.raw = localStorage.getItem(HL_KEY);
+    hlCache.store = store;
+    notifyLs();
+  } catch {
+    /* ignore */
+  }
+}
+
+const EMPTY_HL: Record<string, HlRange[]> = {};
+
+export function useHighlights(bookId: string, docId: string) {
+  const key = `${bookId}/${docId}`;
+  const ranges = useSyncExternalStore(
+    subscribeLs,
+    () => getHighlightsStore()[key] ?? EMPTY_HL,
+    () => EMPTY_HL
+  );
+  const add = useCallback(
+    (pane: HlPane, start: number, end: number) => {
+      const store = { ...getHighlightsStore() };
+      const doc = { ...(store[key] ?? {}) };
+      const list = [...(doc[pane] ?? [])];
+      // fusion des chevauchements + tri
+      list.push([Math.min(start, end), Math.max(start, end)]);
+      list.sort((a, b) => a[0] - b[0]);
+      const merged: HlRange[] = [];
+      for (const r of list) {
+        const last = merged[merged.length - 1];
+        if (last && r[0] <= last[1] + 1) last[1] = Math.max(last[1], r[1]);
+        else merged.push([r[0], r[1]]);
+      }
+      doc[pane] = merged;
+      store[key] = doc;
+      writeHighlightsStore(store);
+    },
+    [key]
+  );
+  const clearAll = useCallback(() => {
+    const store = { ...getHighlightsStore() };
+    if (store[key]) {
+      delete store[key];
+      writeHighlightsStore(store);
+    }
+  }, [key]);
+  const count = (ranges.fr?.length ?? 0) + (ranges.ar?.length ?? 0);
+  return { ranges, add, clearAll, count };
+}
+
+// ————————————————————————————————— Position de lecture (reprise au scroll)
+
+const POS_KEY = "minhaj.readPos.v1";
+
+export function getReadPos(bookId: string, docId: string): number | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const v = JSON.parse(localStorage.getItem(POS_KEY) ?? "{}");
+    const p = v?.[`${bookId}/${docId}`];
+    return typeof p === "number" && p > 2 && p < 97 ? p : null;
+  } catch {
+    return null;
+  }
+}
+
+export function setReadPos(bookId: string, docId: string, pct: number) {
+  if (typeof window === "undefined") return;
+  try {
+    const v = JSON.parse(localStorage.getItem(POS_KEY) ?? "{}");
+    const key = `${bookId}/${docId}`;
+    if (pct > 2 && pct < 97) v[key] = Math.round(pct * 10) / 10;
+    else if (v[key] !== undefined) delete v[key];
+    localStorage.setItem(POS_KEY, JSON.stringify(v));
+  } catch {
+    /* ignore */
+  }
+}
+
 // ————————————————————————————————— Divers
 
 /** Valeur retardée (recherche « pendant que je tape »). */

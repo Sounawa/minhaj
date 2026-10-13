@@ -84,6 +84,11 @@
   --sidebar-accent-foreground: oklch(0.37 0.055 50);
   --sidebar-border: oklch(0.886 0.034 76);
   --sidebar-ring: oklch(0.62 0.11 50);
+  /* Surlignages persistants (CSS Custom Highlight API) */
+  --hl-fr-bg: oklch(0.87 0.1 88 / 62%);
+  --hl-fr-line: oklch(0.6 0.11 60 / 75%);
+  --hl-ar-bg: oklch(0.84 0.11 70 / 50%);
+  --hl-ar-line: oklch(0.56 0.12 50 / 70%);
 }
 
 /* ————————————————————————————————— Thème AUTOMNE (sombre : nuit d'octobre) ————————————————————————————————— */
@@ -119,6 +124,11 @@
   --sidebar-accent-foreground: oklch(0.925 0.018 80);
   --sidebar-border: oklch(1 0 0 / 12%);
   --sidebar-ring: oklch(0.6 0.1 60);
+  /* Surlignages persistants — nuit : laque ambrée */
+  --hl-fr-bg: oklch(0.45 0.07 70 / 55%);
+  --hl-fr-line: oklch(0.78 0.12 75 / 80%);
+  --hl-ar-bg: oklch(0.4 0.08 55 / 50%);
+  --hl-ar-line: oklch(0.75 0.11 60 / 75%);
 }
 
 @layer base {
@@ -133,6 +143,14 @@
   }
   ::selection {
     background: oklch(0.898 0.075 78 / 70%);
+  }
+  /* Sélection différenciée par colonne du lecteur */
+  .reader-col[dir="ltr"] ::selection {
+    background: oklch(0.898 0.075 78 / 78%);
+  }
+  .reader-col[dir="rtl"] ::selection {
+    background: oklch(0.734 0.12 67 / 55%);
+    color: inherit;
   }
 }
 
@@ -164,6 +182,25 @@
 }
 .dark .pattern-islamic {
   background-image: url("data:image/svg+xml,%3Csvg width='56' height='56' viewBox='0 0 56 56' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23d97706' stroke-opacity='0.10'%3E%3Cpath d='M28 0 L56 28 L28 56 L0 28 Z'/%3E%3Cpath d='M28 12 L44 28 L28 44 L12 28 Z'/%3E%3Ccircle cx='28' cy='28' r='4'/%3E%3Cpath d='M0 0 L12 12 M56 0 L44 12 M0 56 L12 44 M56 56 L44 44'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ————————————————————————————————— Surlignages persistants (Highlight API) ————————————————————————————————— */
+
+/* Portées enregistrées par reader.tsx (mnhj-fr / mnhj-ar) — aucune mutation
+   du DOM React : survit aux re-rendus. Couleurs par variables de thème. */
+::highlight(mnhj-fr) {
+  background-color: var(--hl-fr-bg);
+  text-decoration: underline;
+  text-decoration-color: var(--hl-fr-line);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+::highlight(mnhj-ar) {
+  background-color: var(--hl-ar-bg);
+  text-decoration: underline;
+  text-decoration-color: var(--hl-ar-line);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
 
 /* Contenu de leçon (HTML injecté) */
@@ -212,6 +249,9 @@
 .lesson-content li {
   margin-block: 0.35em;
 }
+.lesson-content ul li::marker {
+  color: color-mix(in oklab, var(--primary) 70%, var(--foreground));
+}
 .lesson-content a {
   color: var(--primary);
   text-decoration: underline;
@@ -242,6 +282,10 @@
   padding-inline-start: 1em;
   margin-block: 1em;
   color: var(--muted-foreground);
+}
+/* Citations : italique romain en colonne française, romain en arabe */
+.reader-col[dir="ltr"] .lesson-content blockquote {
+  font-style: italic;
 }
 
 /* Tableaux de vers (manẓūma) : hémistiche / séparateur / hémistiche.
@@ -281,6 +325,10 @@
 }
 .lesson-content table.verse-table + table.verse-table {
   margin-block-start: 0.4em;
+}
+/* Souffle du vers sous le curseur */
+.lesson-content table.verse-table tbody tr:hover td {
+  background: color-mix(in oklab, var(--primary) 5%, transparent);
 }
 
 /* Colonnes du lecteur bilingue */

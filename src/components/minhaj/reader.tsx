@@ -1,13 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { ArrowLeft, ArrowRight, BookMarked, BookmarkCheck, ChevronLeft, ChevronRight, Columns2, ExternalLink, FileQuestion, FileText, Heart, Hourglass, Languages, Loader2, Printer } from "lucide-react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { ArrowLeft, ArrowRight, BookMarked, BookmarkCheck, ChevronLeft, ChevronRight, Columns2, Eraser, ExternalLink, FileQuestion, FileText, Heart, Highlighter, Hourglass, Languages, Loader2, Printer } from "lucide-react";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
-import { navigate, setLastDoc, useDoc, useFavorites, useLocalState } from "./hooks";
+import { getReadPos, navigate, setLastDoc, setReadPos, useDoc, useFavorites, useHighlights, useLocalState } from "./hooks";
+import type { HlPane } from "./hooks";
 import type { DocPayload } from "./types";
 
 type ViewMode = "both" | "fr" | "ar";
@@ -23,6 +24,62 @@ const TEXT_SIZE_AR_CLASS: Record<TextSize, string> = {
   large: "text-[18.5px]",
   xlarge: "text-[20px] leading-loose",
 };
+
+// ————————————————————————————————— Surlignages (CSS Custom Highlight API)
+
+type HlBridge = { set: (k: string, v: unknown) => void; delete: (k: string) => void };
+function hlBridge(): HlBridge | null {
+  if (typeof window === "undefined") return null;
+  const w = window as unknown as { Highlight?: unknown; CSS?: { highlights?: HlBridge } };
+  return typeof w.Highlight === "function" && w.CSS?.highlights ? w.CSS.highlights : null;
+}
+
+const subscribeNoop = () => () => undefined;
+const getHlSupport = () => hlBridge() !== null;
+const getHlSupportServer = () => false;
+
+/** Offset texte d'un point (nœud, offset) depuis le début d'un conteneur. */
+function textOffsetFrom(container: Element, node: Node, offsetInNode: number): number | null {
+  try {
+    const range = document.createRange();
+    range.selectNodeContents(container);
+    range.setEnd(node, offsetInNode);
+    return range.toString().length;
+  } catch {
+    return null;
+  }
+}
+
+/** Range inverse : depuis des offsets texte dans un conteneur. */
+function rangeFromOffsets(container: Element, start: number, end: number): Range | null {
+  const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT);
+  const range = document.createRange();
+  let pos = 0;
+  let started = false;
+  let node: Node | null;
+  while ((node = walker.nextNode())) {
+    const len = node.textContent?.length ?? 0;
+    if (len === 0) continue;
+    if (!started && pos + len > start) {
+      try {
+        range.setStart(node, Math.max(0, start - pos));
+      } catch {
+        return null;
+      }
+      started = true;
+    }
+    if (started && pos + len >= end) {
+      try {
+        range.setEnd(node, Math.max(0, end - pos));
+      } catch {
+        return null;
+      }
+      return range;
+    }
+    pos += len;
+  }
+  return null;
+}
 
 function PdfOnlyNotice({ doc }: { doc: DocPayload }) {
   return (
@@ -281,6 +338,11 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
   const { toggle, has } = useFavorites();
   const [justToggled, setJustToggled] = useState(false);
   const [progress, setProgress] = useState(0);
+  const { ranges: hlRanges, add: hlAdd, clearAll: hlClear, count: hlCount } = useHighlights(bookId, docId);
+  const [hlSel, setHlSel] = useState<{ pane: HlPane; start: number; end: number; x: number; y: number } | null>(null);
+  const [hlPopover, setHlPopover] = useState(false);
+  const hlSupport = useSyncExternalStore(subscribeNoop, getHlSupport, getHlSupportServer);
+  const [restoredNote, setRestoredNote] = useState(false);
 
   // Mémoriser la dernière lecture (reprise depuis l'accueil)
   useEffect(() => {
@@ -295,21 +357,59 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
     }
   }, [data?.docId, data?.titleFr, data?.titleAr, data?.bookTitleFr, bookId, docId]);
 
-  // Barre de progression de lecture (défilement du document)
+  // Reprise de la position de lecture (une seule fois par document — AVANT l'effet
+  // de sauvegarde pour capturer la valeur avant toute écriture)
+  const posDone = useRef(false);
   useEffect(() => {
-    const onScroll = () => {
+    if (!data || data.pdfOnly || posDone.current) return;
+    posDone.current = true;
+    const pct = getReadPos(bookId, docId);
+    if (pct === null) return;
+    const mountedAt = Date.now();
+    const t = window.setTimeout(() => {
+      // annulé si l'utilisateur a déjà défilé entre-temps
+      if (lastSaveRef.current > mountedAt) return;
+      const el = document.documentElement;
+      const max = el.scrollHeight - el.clientHeight;
+      if (max > 40) {
+        window.scrollTo({ top: (pct / 100) * max, behavior: "auto" });
+        setRestoredNote(true);
+        window.setTimeout(() => setRestoredNote(false), 2600);
+      }
+    }, 420);
+    return () => {
+      window.clearTimeout(t);
+      posDone.current = false;
+    };
+  }, [data, bookId, docId]);
+
+  // Barre de progression de lecture (défilement du document) + mémorisation position
+  const lastSaveRef = useRef(0);
+  useEffect(() => {
+    const compute = () => {
       const doc = document.documentElement;
       const max = doc.scrollHeight - doc.clientHeight;
-      setProgress(max > 40 ? Math.min(100, Math.max(0, (doc.scrollTop / max) * 100)) : 0);
+      return max > 40 ? Math.min(100, Math.max(0, (doc.scrollTop / max) * 100)) : 0;
     };
-    onScroll();
+    const onScroll = () => {
+      const pct = compute();
+      setProgress(pct);
+      if (data && !data.pdfOnly && pct > 2) {
+        const now = Date.now();
+        if (now - lastSaveRef.current > 500) {
+          lastSaveRef.current = now;
+          setReadPos(bookId, docId, pct);
+        }
+      }
+    };
+    onScroll(); // état initial (sauvegarde sans effet au sommet : pct 0 → garde)
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
     return () => {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
     };
-  }, [docId]);
+  }, [docId, data, bookId]);
 
   // Tableaux de vers (manẓūma) : marquer les structures hémistiche/séparateur/hémistiche
   // pour la mise en forme poétique (voir .verse-table dans globals.css)
@@ -328,6 +428,76 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
       if (isVerse) table.classList.add("verse-table");
     });
   }, [data, mode, textSize]);
+
+  // Surlignages persistants : inscription des ranges dans CSS.highlights (une
+  // portée « mnhj-fr » / « mnhj-ar » par colonne — aucune mutation du DOM React)
+  useEffect(() => {
+    const bridge = hlBridge();
+    if (!bridge || !data || data.pdfOnly) return;
+    const W = window as unknown as { Highlight: new (...rs: Range[]) => unknown };
+    const apply = () => {
+      document.querySelectorAll<HTMLElement>(".reader-col").forEach((col) => {
+        const pane: HlPane = col.getAttribute("dir") === "rtl" ? "ar" : "fr";
+        const content = col.querySelector(".lesson-content");
+        if (!content) return;
+        const list = pane === "fr" ? hlRanges.fr : hlRanges.ar;
+        const live = (list ?? [])
+          .map(([s, e]) => rangeFromOffsets(content, s, e))
+          .filter((r): r is Range => r !== null);
+        if (live.length) bridge.set(`mnhj-${pane}`, new W.Highlight(...live));
+        else bridge.delete(`mnhj-${pane}`);
+      });
+    };
+    apply();
+    return () => {
+      bridge.delete("mnhj-fr");
+      bridge.delete("mnhj-ar");
+    };
+  }, [data, mode, textSize, hlRanges]);
+
+  // Sélection courante dans une colonne → barre flottante « Surligner »
+  useEffect(() => {
+    if (!hlSupport) return;
+    const readSelection = () => {
+      const sel = document.getSelection();
+      if (!sel || sel.isCollapsed || sel.rangeCount === 0) {
+        setHlSel(null);
+        return;
+      }
+      const range = sel.getRangeAt(0);
+      const node = range.commonAncestorContainer;
+      const el = node instanceof Element ? node : node.parentElement;
+      const col = el?.closest(".reader-col");
+      const content = col?.querySelector(".lesson-content");
+      if (!col || !content || !content.contains(range.startContainer) || !content.contains(range.endContainer)) {
+        setHlSel(null);
+        return;
+      }
+      const pane: HlPane = col.getAttribute("dir") === "rtl" ? "ar" : "fr";
+      const s = textOffsetFrom(content, range.startContainer, range.startOffset);
+      const e = textOffsetFrom(content, range.endContainer, range.endOffset);
+      const rect = range.getBoundingClientRect();
+      if (s === null || e === null || Math.abs(e - s) < 2 || (rect.width === 0 && rect.height === 0)) {
+        setHlSel(null);
+        return;
+      }
+      setHlSel({
+        pane,
+        start: Math.min(s, e),
+        end: Math.max(s, e),
+        x: Math.min(Math.max(rect.left + rect.width / 2, 90), window.innerWidth - 90),
+        y: rect.top,
+      });
+    };
+    const onSelChange = () => window.setTimeout(readSelection, 10);
+    const onHide = () => setHlSel(null);
+    document.addEventListener("selectionchange", onSelChange);
+    window.addEventListener("scroll", onHide, { passive: true });
+    return () => {
+      document.removeEventListener("selectionchange", onSelChange);
+      window.removeEventListener("scroll", onHide);
+    };
+  }, [hlSupport]);
 
   // Navigation clavier : ← → entre leçons (sauf saisie dans un champ)
   useEffect(() => {
@@ -449,6 +619,64 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
           >
             <Heart className={cn("size-4.5 transition-transform", isFav && "fill-current", justToggled && "scale-125")} aria-hidden="true" />
           </Button>
+          {hlSupport && (
+            <div className="relative">
+              <Button
+                variant="outline"
+                size="icon"
+                aria-label={hlCount > 0 ? `Surlignages (${hlCount}) — gérer` : "Aucun surlignage"}
+                title={hlCount > 0 ? `${hlCount} surlignage${hlCount > 1 ? "s" : ""} enregistré${hlCount > 1 ? "s" : ""}` : "Surlignages : sélectionnez un passage puis « Surligner »"}
+                aria-expanded={hlPopover}
+                className={cn(
+                  "size-10 border-amber-800/15 bg-card/70 hover:bg-amber-100/60 dark:hover:bg-amber-900/40",
+                  hlCount > 0 ? "text-amber-700 dark:text-amber-300" : "text-amber-900/70 dark:text-amber-100/70"
+                )}
+                onClick={() => setHlPopover((o) => !o)}
+              >
+                <Highlighter className={cn("size-4.5", hlCount > 0 && "fill-amber-200/70 dark:fill-amber-700/50")} aria-hidden="true" />
+                {hlCount > 0 && (
+                  <span className="absolute -right-1.5 -top-1.5 flex size-5 items-center justify-center rounded-full bg-amber-600 text-[10px] font-semibold leading-none text-white shadow">
+                    {hlCount > 9 ? "9+" : hlCount}
+                  </span>
+                )}
+              </Button>
+              {hlPopover && (
+                <>
+                  <div className="fixed inset-0 z-40" onClick={() => setHlPopover(false)} aria-hidden="true" />
+                  <div
+                    role="dialog"
+                    aria-label="Gestion des surlignages"
+                    className="absolute right-0 top-12 z-50 w-64 rounded-xl border border-amber-800/15 bg-card p-3 shadow-lg"
+                  >
+                    {hlCount === 0 ? (
+                      <p className="text-xs leading-relaxed text-muted-foreground">
+                        Sélectionnez un passage du texte — français ou arabe — puis touchez
+                        « Surligner » : il sera conservé d’une visite à l’autre.
+                      </p>
+                    ) : (
+                      <>
+                        <p className="text-xs text-muted-foreground">
+                          {hlCount} surlignage{hlCount > 1 ? "s" : ""} enregistré{hlCount > 1 ? "s" : ""} pour cette leçon.
+                        </p>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="mt-2 w-full gap-1.5 border-rose-800/20 text-rose-700 hover:bg-rose-100/60 dark:text-rose-300 dark:hover:bg-rose-900/30"
+                          onClick={() => {
+                            hlClear();
+                            setHlPopover(false);
+                          }}
+                        >
+                          <Eraser className="size-3.5" aria-hidden="true" />
+                          Tout effacer
+                        </Button>
+                      </>
+                    )}
+                  </div>
+                </>
+              )}
+            </div>
+          )}
           <Button
             variant="outline"
             size="icon"
@@ -466,6 +694,13 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
         <p className="no-print mt-2 flex items-center gap-1.5 text-xs text-muted-foreground" role="status">
           <BookmarkCheck className="size-3.5 text-rose-500" aria-hidden="true" />
           {isFav ? "Leçon ajoutée à vos favoris — accessible depuis l'en-tête" : "Leçon retirée des favoris"}
+        </p>
+      )}
+
+      {restoredNote && (
+        <p className="no-print mt-2 flex items-center gap-1.5 text-xs text-muted-foreground" role="status">
+          <Hourglass className="size-3.5 text-primary" aria-hidden="true" />
+          Position de lecture restaurée
         </p>
       )}
 
@@ -509,6 +744,30 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
           Astuce : activez le mode « Bilingue » pour lire la traduction et l&apos;original
           côte à côte.
         </p>
+      )}
+
+      {/* Barre flottante « Surligner » (sélection active dans une colonne) */}
+      {hlSupport && hlSel && (
+        <div
+          className="no-print fixed z-50 -translate-x-1/2 -translate-y-full"
+          style={{ left: hlSel.x, top: Math.max(hlSel.y - 10, 46) }}
+          role="toolbar"
+          aria-label="Marquer la sélection"
+        >
+          <button
+            type="button"
+            onMouseDown={(e) => e.preventDefault()}
+            onClick={() => {
+              hlAdd(hlSel.pane, hlSel.start, hlSel.end);
+              document.getSelection()?.removeAllRanges();
+              setHlSel(null);
+            }}
+            className="flex items-center gap-1.5 rounded-full border border-amber-800/25 bg-card px-3.5 py-1.5 text-xs font-medium text-amber-900 shadow-lg transition-colors hover:bg-amber-100 focus-visible:outline-2 focus-visible:outline-ring dark:border-amber-200/20 dark:text-amber-100 dark:hover:bg-amber-900/60"
+          >
+            <Highlighter className="size-3.5" aria-hidden="true" />
+            Surligner
+          </button>
+        </div>
       )}
 
       <DocNav doc={data} />
