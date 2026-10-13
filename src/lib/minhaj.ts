@@ -242,10 +242,12 @@ function summarize(
   const hasIntro = Boolean(file?.intro);
   const introFr = Boolean(file?.intro?.htmlFr && file.intro.htmlFr.trim().length > 0);
   // Couche savante : docIds du registre disposant d'un FR réellement écrit.
+  // Comptage par entrée (même base que docsFr) : les docIds partagés
+  // intro/leçon comptent chacun, sinon le badge ne peut atteindre docsFr.
   const docs = file
     ? ([file.intro, ...(file.lessons ?? [])].filter(Boolean) as Array<{ docId: string; htmlFr?: string }>)
     : [];
-  const savantDocs = savantIds ? new Set(docs.filter((d) => savantIds.has(d.docId) && (d.htmlFr ?? "").trim().length > 0).map((d) => d.docId)) : new Set<string>();
+  const savantDocs = savantIds ? docs.filter((d) => savantIds.has(d.docId) && (d.htmlFr ?? "").trim().length > 0) : [];
   return {
     id: bookDef.id,
     subject: bookDef.subject,
@@ -263,7 +265,7 @@ function summarize(
     lessonsFr,
     docsTotal: lessonsTotal + (hasIntro ? 1 : 0),
     docsFr: lessonsFr + (introFr ? 1 : 0),
-    docsSavant: savantDocs.size,
+    docsSavant: savantDocs.length,
   };
 }
 
