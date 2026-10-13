@@ -754,7 +754,7 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
 
       <div className="flex flex-wrap items-start justify-between gap-4">
         <DocHeader doc={data} />
-        <div className="no-print mt-1 flex shrink-0 flex-wrap items-center justify-end gap-2">
+        <div className="no-print mt-1 flex min-w-0 flex-wrap items-center justify-end gap-2">
           <ViewModeToggle mode={mode} onChange={setMode} />
           <TextSizeControl size={textSize} onChange={setTextSize} />
           {data && !data.pdfOnly && <OutlineButton items={outline} />}
