@@ -499,8 +499,10 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
   // innerHTML (reconstruction complète du DOM, ~117 nœuds) lorsque l'objet
   // { __html } change d'identité à chaque re-rendu — p.ex. à chaque image du
   // défilement via la barre de progression. Identité stable → DOM intact.
-  const frHtml = useMemo(() => (data?.htmlFr ? { __html: data.htmlFr } : null), [data?.htmlFr]);
-  const arHtml = useMemo(() => (data?.html ? { __html: data.html } : null), [data?.html]);
+  const htmlFr = data?.htmlFr;
+  const htmlAr = data?.html;
+  const frHtml = useMemo(() => (htmlFr != null ? { __html: htmlFr } : null), [htmlFr]);
+  const arHtml = useMemo(() => (htmlAr != null ? { __html: htmlAr } : null), [htmlAr]);
   const [restoredNote, setRestoredNote] = useState(false);
 
   // Mémoriser la dernière lecture (reprise depuis l'accueil)
