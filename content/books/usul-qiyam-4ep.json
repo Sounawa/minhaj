@@ -1,244 +1,244 @@
 {
- "id": "usul-qiyam-4ep",
- "subject": "usul-qiyam",
- "level": "4ep",
- "subjectAr": "أصول-القيم-في-القرآن-والسنة",
- "levelAr": "أصول-القيم-في-القرآن-والسنة-للسنة-الرابعة-ابتدائي",
- "titleAr": "أصول القيم في القرآن والسنة",
- "titleFr": "Fondements des valeurs dans le Coran et la Sunna",
- "pdfUrl": null,
- "intro": {
-  "docId": "22184",
-  "titleAr": "مادة أصول القيم في القرآن والسنة للسنة الرابعة ابتدائي عتيق",
-  "titleFr": "Présentation du manuel",
-  "html": "<h1> مادة أصول القيم في القرآن والسنة للسنة الرابعة ابتدائي عتيق</h1>\n <dl>\n <dt></dt>\n <dd>\n الإثنين 16 مارس 2026\n </dd>\n </dl>\n <p>الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ، وَالصَّلَاةُ وَالسَّلَامُ عَلَى الْمَبْعُوثِ رَحْمَةً لِلْعَالَمِينَ سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِهِ وَصَحْبِهِ أَجْمَعِينَ.</p>\n <p>أبناءنا التلاميذ، بناتنا التلميذات، يَسُرُّنَا أَنْ نَضَعَ بَيْنَ أَيْدِيكُمْ كِتَابَكُمْ فِي مَادَّةِ أُصُولِ الْقِيَمِ فِي الْقُرْآنِ وَالسُّنَّةِ، وَيَتَضَمَّنُ مَادَّةً عِلْمِيَّةً تُسَاعِدُكُمْ عَلَى اكْتِسَابِ جُمْلَةٍ مِنَ الْقِيَمِ الْإِيمَانِيَّةِ وَالْخُلُقِيَّةِ وَالاجْتِمَاعِيَّةِ وَالْجَمَالِيَّةِ، وَالتَّحَلِّي بِهَا لِتَرْسِيخِ إِيمَانِكُمْ، وَتَزْكِيَةِ نُفُوسِكُمْ، وَالْإِسْهَامِ فِي تَحْقِيقِ النَّفْعِ الْعَامِّ فِي مُجْتَمَعِكُمْ، مَعَ التَّشَبُّعِ بِقِيَمِ الْجَمَالِ وَالْحِرْصِ عَلَيْهِ فِي الظَّاهِرِ وَالْبَاطِنِ.</p>\n <p>وَمُرَاعَاةً لِطَبِيعَةِ هَذِهِ الْمَادَّةِ وَخُصُوصِيَّاتِهَا اعْتَمَدْنَا فِي بِنَاءِ مَضَامِينِ الْكِتَابِ وَأَنْشِطَتِهِ مَنْهَجًا يُزَاوِجُ بَيْنَ اكْتِسَابِ الْمَعْرِفَةِ الشَّرْعِيَّةِ وَتَوْظِيفِهَا، وَيَعْتَمِدُ خُطُواتٍ تَرْبَوِيَّةً تَنْطَلِقُ مِنْ تَحْدِيدِ أَهْدَافِ التَّعَلُّم، ثُمَّ تَمْهِيدٍ مُنَاسِبٍ يَضَعُكُمْ فِي سِيَاقِ الدَّرْس، وَيُحَفِّزُكُمْ عَلَى التَّسَاؤل وَالْبَحْث، يُرْدَفُ ذَلِكَ بِنُصُوصِ شَرْعِيَّةِ انْتُقِيَتْ بِعِنَايَةِ تَامَّةٍ لِتَكُونَ مَصْدَرًا لِلْمَعْرِفَةِ الشَّرْعِيَّةِ الَّتِي تَكْتَسِبُونَهَا مِنَ الدَّرْسِ، ثُمَّ مَرْحَلَةِ التَّحْلِيلِ الَّتِي اعْتَمَدْنَا فِيهَا لُغَةً وَاضِحَةً وَأَسْلُوبًا يُيَسِّرُ اكْتِسَابَ الْمَعَارِفِ الشَّرْعِيَّةِ وَبِنَاءَهَا، وَتُخْتَمُ بِنَشَاطٍ لِتَوْظِيفِ الْمُكْتَسَبَاتِ يُتِيحُ لَكُمُ الْفُرْصَةَ لِبِنَاءِ الْمَوَاقِفِ وَتَعْلِيلِهَا بِمَا يَنْسَجِمُ مَعَ تَعَالِيمِ الشَّرْعِ وَأَحْكَامِهِ.</p>\n <p>وَحِرْصًا عَلَى إِبْرَازِ التَّكَامُلِ بَيْنَ دُرُوسِ المَادَّةِ ضَمَّنَّا الْكِتَابَ نَشَاطَيْنِ مُتَنَوِّعَيْنِ، يَسْتَهْدِفَانِ تَدْرِيبَكُمْ عَلَى دَمْجِ مُكْتَسَباتِكُمْ لِمُنَاقَشَةِ مُخْتَلِفِ الْقَضَايَا وَتَحْلِيلِهَا، وَتَشْجِيعَكُمْ عَلَى الْإِنْتَاجِ وَالإِبْدَاعِ مَعَ التَّحَلِّي بِقِيمِ التَّوَاصُلِ وَالعَمَلِ الجَمَاعِيِّ.</p>\n <p>وَنَأْمُلُ أَنْ يَكُونَ هَذَا الكِتَابُ أَدَاةً مُعِينَةً لَكُمْ عَلَى التَّعَلُّمِ دَاخِلَ الفَصْلِ وَخَارِجَهُ.</p>\n <p>وَاللهَ تَعَالَى نَسْأَلُ أَنْ يُوَفِّقَكُمْ لِمَا يُحِبُّهُ وَيَرْضَاهُ.</p>\n \n <ul>\n <li>المقدمة (ص5)</li>\n <li>كيف أستعمل كتابي (ص6)</li>\n <li>كفايات تدريس المادة (ص8)</li>\n <li>التوزيع الدوري والأسبوعي (ص9)</li>\n <li>1 .&nbsp;مراتب الدين (ص10)</li>\n <li>2 .&nbsp;الصبر (ص15)</li>\n <li>3 .&nbsp;بر الوالدين (1) (ص19)</li>\n <li>4 .&nbsp;الطهارة (1) (ص24)</li>\n <li>5 .&nbsp;الإيمان بالله تعالى (ص30)</li>\n <li>6 .&nbsp;<strong>الصدق (ص35)</strong></li>\n <li>7 .&nbsp;بر الوالدين (2) (ص39)</li>\n <li>8 .&nbsp;الطهارة (2) (ص44)</li>\n <li>9 .&nbsp;الإيمان بالملائكة (ص48)</li>\n <li>10 .&nbsp;القول الحسن (ص53)</li>\n <li>11 .&nbsp;صلة الرحم (ص58)</li>\n <li>12 .&nbsp;أنشطة التقويم والدعم (ص63)</li>\n <li>13 .&nbsp;الطهارة (3) (ص68)</li>\n <li>14 .&nbsp;الإيمان بالكتب والرسل (ص73)</li>\n <li>15 .&nbsp;الرفق واللين (ص78)</li>\n <li>16 .&nbsp;الإحسان إلى الجار (ص83)</li>\n <li>17 .&nbsp;حماية البيئة من التلوث المعنوي (ص87)</li>\n <li>18 .&nbsp;الإيمان باليوم الآخر والقضاء والقدر (ص92)</li>\n <li>19 .&nbsp;التواضع (ص97)</li>\n <li>20 .&nbsp;احترام الكبير وتوقيره (ص102)</li>\n <li>21 .&nbsp;<strong>الحفاظ على جمال صنع الله في البيئة (ص106)</strong></li>\n <li>22 .&nbsp;أنشطة التقويم والدعم (ص111)</li>\n <li>فهرس المصادر والمراجع (ص115)</li>\n <li>فهرس الموضوعات (ص117)",
-  "htmlFr": "<h1>Présentation du manuel</h1>\n<p>Manuel de la matière <em>Uṣūl al-qiyām fī l-Qurʾān wa-l-Sunna</em> [« Fondements des valeurs dans le Coran et la Sunna »], quatrième année de l’enseignement primaire traditionnel (taʿlīm ʿatīq).</p>\n<p>Louange à Dieu, Seigneur des mondes, et que la prière et le salut soient sur celui qui a été envoyé en miséricorde pour les mondes, notre maître Muḥammad, ainsi que sur sa famille et l’ensemble de ses compagnons.</p>\n<p>Nos fils les élèves, nos filles les écolières : c’est avec joie que nous plaçons entre vos mains votre manuel de la matière <em>Uṣūl al-qiyām fī l-Qurʾān wa-l-Sunna</em>, qui comprend une matière scientifique propre à vous aider à acquérir un ensemble de valeurs de foi (īmāniyya), morales (ḫuluqiyya), sociales (iǧtimāʿiyya) et esthétiques (ǧamāliyya), et à vous en parer (taḥallī) pour affermir votre foi, purifier vos âmes (tazkiya) et contribuer à la réalisation de l’intérêt général (nafʿ ʿāmm) dans votre société, avec l’imprégnation des valeurs de la beauté (tašabbuʿ) et le souci de celles-ci dans l’apparent et le caché (ẓāhir/bāṭin).</p>\n<p>Conformément à la nature de cette matière et à ses spécificités, nous avons adopté, pour la construction des contenus du manuel et de ses activités, une méthode qui associe l’acquisition de la connaissance légale (al-maʿrifa al-šarʿiyya) et sa mise en œuvre, selon des étapes éducatives qui partent de la définition des objectifs d’apprentissage, se poursuivent par une mise en contexte appropriée qui vous place dans le contexte de la leçon et vous incite à l’interrogation et à la recherche ; viennent ensuite les textes légaux, sélectionnés avec le plus grand soin pour constituer la source de la connaissance légale que vous retirez de la leçon ; puis l’étape de l’analyse, menée dans une langue claire et selon un style qui facilite l’acquisition et la construction des connaissances légales ; elle s’achève enfin par une activité de mise en œuvre des acquis, qui vous offre l’occasion de construire des prises de position et de les justifier par ce qui s’accorde avec les enseignements et les statuts de la Loi.</p>\n<p>Soucieux de mettre en évidence la complémentarité entre les leçons de la matière, nous avons inclus dans le manuel deux activités diversifiées : elles visent à vous entraîner à mobiliser vos acquis pour discuter des différentes questions et les analyser, et à vous encourager à la production et à la création, tout en vous parant des valeurs de la communication (tawāṣul) et du travail collectif.</p>\n<p>Nous espérons que ce manuel sera pour vous un outil précieux pour apprendre, dans la classe comme en dehors d’elle.</p>\n<p>C’est Dieu Très-Haut que nous implorons de vous accorder la réussite dans ce qu’Il aime et ce qui L’agrée.</p>\n<h2>Table des matières</h2>\n<ul>\n<li>1. Introduction</li>\n<li>2. Rangs de religion</li>\n<li>3. La patience (ṣabr)</li>\n<li>4. La piété filiale (birr al-wālidayn) (1)</li>\n<li>5. La purification (ṭahāra) (1)</li>\n<li>6. La foi en Dieu Très-Haut</li>\n<li>7. La véracité (ṣidq)</li>\n<li>8. La piété filiale (birr al-wālidayn) (2)</li>\n<li>9. La purification (ṭahāra) (2)</li>\n<li>10. La foi aux anges</li>\n<li>11. La belle parole</li>\n<li>12. Les liens de parenté (ṣilat al-raḥim)</li>\n<li>13. Activités d’évaluation et de soutien</li>\n<li>14. La purification (ṭahāra) (3)</li>\n<li>15. La foi aux Livres et aux Messagers</li>\n<li>16. La douceur et la bienveillance</li>\n<li>17. La bienfaisance envers le voisin</li>\n<li>18. Préserver l’environnement de la pollution morale</li>\n<li>19. La foi au Jour dernier, au décret et à la prédestination</li>\n<li>20. L’humilité (tawāḍuʿ)</li>\n<li>21. Le respect et la vénération des aînés</li>\n<li>22. Préserver la beauté de la création de Dieu dans l’environnement</li>\n<li>23. Activités d’évaluation et de soutien</li>\n<li>24. Index des sources et références</li>\n<li>25. Index des thèmes</li>\n</ul>"
- },
- "lessons": [
-  {
-   "docId": "pdf-mut23h2n-30",
-   "titleAr": "المقدمة",
-   "titleFr": "Introduction",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/المقدمة.pdf",
-   "pdfOnly": true
+  "id": "usul-qiyam-4ep",
+  "subject": "usul-qiyam",
+  "level": "4ep",
+  "subjectAr": "أصول-القيم-في-القرآن-والسنة",
+  "levelAr": "أصول-القيم-في-القرآن-والسنة-للسنة-الرابعة-ابتدائي",
+  "titleAr": "أصول القيم في القرآن والسنة",
+  "titleFr": "Fondements des valeurs dans le Coran et la Sunna",
+  "pdfUrl": null,
+  "intro": {
+    "docId": "22184",
+    "titleAr": "مادة أصول القيم في القرآن والسنة للسنة الرابعة ابتدائي عتيق",
+    "titleFr": "Présentation du manuel",
+    "html": "<h1> مادة أصول القيم في القرآن والسنة للسنة الرابعة ابتدائي عتيق</h1>\n <dl>\n <dt></dt>\n <dd>\n الإثنين 16 مارس 2026\n </dd>\n </dl>\n <p>الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ، وَالصَّلَاةُ وَالسَّلَامُ عَلَى الْمَبْعُوثِ رَحْمَةً لِلْعَالَمِينَ سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِهِ وَصَحْبِهِ أَجْمَعِينَ.</p>\n <p>أبناءنا التلاميذ، بناتنا التلميذات، يَسُرُّنَا أَنْ نَضَعَ بَيْنَ أَيْدِيكُمْ كِتَابَكُمْ فِي مَادَّةِ أُصُولِ الْقِيَمِ فِي الْقُرْآنِ وَالسُّنَّةِ، وَيَتَضَمَّنُ مَادَّةً عِلْمِيَّةً تُسَاعِدُكُمْ عَلَى اكْتِسَابِ جُمْلَةٍ مِنَ الْقِيَمِ الْإِيمَانِيَّةِ وَالْخُلُقِيَّةِ وَالاجْتِمَاعِيَّةِ وَالْجَمَالِيَّةِ، وَالتَّحَلِّي بِهَا لِتَرْسِيخِ إِيمَانِكُمْ، وَتَزْكِيَةِ نُفُوسِكُمْ، وَالْإِسْهَامِ فِي تَحْقِيقِ النَّفْعِ الْعَامِّ فِي مُجْتَمَعِكُمْ، مَعَ التَّشَبُّعِ بِقِيَمِ الْجَمَالِ وَالْحِرْصِ عَلَيْهِ فِي الظَّاهِرِ وَالْبَاطِنِ.</p>\n <p>وَمُرَاعَاةً لِطَبِيعَةِ هَذِهِ الْمَادَّةِ وَخُصُوصِيَّاتِهَا اعْتَمَدْنَا فِي بِنَاءِ مَضَامِينِ الْكِتَابِ وَأَنْشِطَتِهِ مَنْهَجًا يُزَاوِجُ بَيْنَ اكْتِسَابِ الْمَعْرِفَةِ الشَّرْعِيَّةِ وَتَوْظِيفِهَا، وَيَعْتَمِدُ خُطُواتٍ تَرْبَوِيَّةً تَنْطَلِقُ مِنْ تَحْدِيدِ أَهْدَافِ التَّعَلُّم، ثُمَّ تَمْهِيدٍ مُنَاسِبٍ يَضَعُكُمْ فِي سِيَاقِ الدَّرْس، وَيُحَفِّزُكُمْ عَلَى التَّسَاؤل وَالْبَحْث، يُرْدَفُ ذَلِكَ بِنُصُوصِ شَرْعِيَّةِ انْتُقِيَتْ بِعِنَايَةِ تَامَّةٍ لِتَكُونَ مَصْدَرًا لِلْمَعْرِفَةِ الشَّرْعِيَّةِ الَّتِي تَكْتَسِبُونَهَا مِنَ الدَّرْسِ، ثُمَّ مَرْحَلَةِ التَّحْلِيلِ الَّتِي اعْتَمَدْنَا فِيهَا لُغَةً وَاضِحَةً وَأَسْلُوبًا يُيَسِّرُ اكْتِسَابَ الْمَعَارِفِ الشَّرْعِيَّةِ وَبِنَاءَهَا، وَتُخْتَمُ بِنَشَاطٍ لِتَوْظِيفِ الْمُكْتَسَبَاتِ يُتِيحُ لَكُمُ الْفُرْصَةَ لِبِنَاءِ الْمَوَاقِفِ وَتَعْلِيلِهَا بِمَا يَنْسَجِمُ مَعَ تَعَالِيمِ الشَّرْعِ وَأَحْكَامِهِ.</p>\n <p>وَحِرْصًا عَلَى إِبْرَازِ التَّكَامُلِ بَيْنَ دُرُوسِ المَادَّةِ ضَمَّنَّا الْكِتَابَ نَشَاطَيْنِ مُتَنَوِّعَيْنِ، يَسْتَهْدِفَانِ تَدْرِيبَكُمْ عَلَى دَمْجِ مُكْتَسَباتِكُمْ لِمُنَاقَشَةِ مُخْتَلِفِ الْقَضَايَا وَتَحْلِيلِهَا، وَتَشْجِيعَكُمْ عَلَى الْإِنْتَاجِ وَالإِبْدَاعِ مَعَ التَّحَلِّي بِقِيمِ التَّوَاصُلِ وَالعَمَلِ الجَمَاعِيِّ.</p>\n <p>وَنَأْمُلُ أَنْ يَكُونَ هَذَا الكِتَابُ أَدَاةً مُعِينَةً لَكُمْ عَلَى التَّعَلُّمِ دَاخِلَ الفَصْلِ وَخَارِجَهُ.</p>\n <p>وَاللهَ تَعَالَى نَسْأَلُ أَنْ يُوَفِّقَكُمْ لِمَا يُحِبُّهُ وَيَرْضَاهُ.</p>\n \n <ul>\n <li>المقدمة (ص5)</li>\n <li>كيف أستعمل كتابي (ص6)</li>\n <li>كفايات تدريس المادة (ص8)</li>\n <li>التوزيع الدوري والأسبوعي (ص9)</li>\n <li>1 .&nbsp;مراتب الدين (ص10)</li>\n <li>2 .&nbsp;الصبر (ص15)</li>\n <li>3 .&nbsp;بر الوالدين (1) (ص19)</li>\n <li>4 .&nbsp;الطهارة (1) (ص24)</li>\n <li>5 .&nbsp;الإيمان بالله تعالى (ص30)</li>\n <li>6 .&nbsp;<strong>الصدق (ص35)</strong></li>\n <li>7 .&nbsp;بر الوالدين (2) (ص39)</li>\n <li>8 .&nbsp;الطهارة (2) (ص44)</li>\n <li>9 .&nbsp;الإيمان بالملائكة (ص48)</li>\n <li>10 .&nbsp;القول الحسن (ص53)</li>\n <li>11 .&nbsp;صلة الرحم (ص58)</li>\n <li>12 .&nbsp;أنشطة التقويم والدعم (ص63)</li>\n <li>13 .&nbsp;الطهارة (3) (ص68)</li>\n <li>14 .&nbsp;الإيمان بالكتب والرسل (ص73)</li>\n <li>15 .&nbsp;الرفق واللين (ص78)</li>\n <li>16 .&nbsp;الإحسان إلى الجار (ص83)</li>\n <li>17 .&nbsp;حماية البيئة من التلوث المعنوي (ص87)</li>\n <li>18 .&nbsp;الإيمان باليوم الآخر والقضاء والقدر (ص92)</li>\n <li>19 .&nbsp;التواضع (ص97)</li>\n <li>20 .&nbsp;احترام الكبير وتوقيره (ص102)</li>\n <li>21 .&nbsp;<strong>الحفاظ على جمال صنع الله في البيئة (ص106)</strong></li>\n <li>22 .&nbsp;أنشطة التقويم والدعم (ص111)</li>\n <li>فهرس المصادر والمراجع (ص115)</li>\n <li>فهرس الموضوعات (ص117)",
+    "htmlFr": "<h1>Les fondements des valeurs dans le Coran et la Sunna — 4ᵉ année de l’enseignement primaire traditionnel</h1>\n<p>Manuel de la matière <em>Uṣūl al-qiyām fī l-Qurʾān wa-l-Sunna</em> [« Fondements des valeurs dans le Coran et la Sunna »], quatrième année de l’enseignement primaire traditionnel (taʿlīm ʿatīq).</p>\n<p>Louange à Dieu, Seigneur des mondes, et que la prière et le salut soient sur celui qui a été envoyé en miséricorde pour les mondes, notre maître Muḥammad, ainsi que sur sa famille et l’ensemble de ses compagnons.</p>\n<p>Nos fils les élèves, nos filles les écolières : c’est avec joie que nous plaçons entre vos mains votre manuel de la matière <em>Uṣūl al-qiyām fī l-Qurʾān wa-l-Sunna</em>, qui comprend une matière scientifique propre à vous aider à acquérir un ensemble de valeurs de foi (īmāniyya), morales (ḫuluqiyya), sociales (iǧtimāʿiyya) et esthétiques (ǧamāliyya), et à vous en parer (taḥallī) pour affermir votre foi, purifier vos âmes (tazkiya) et contribuer à la réalisation de l’intérêt général (nafʿ ʿāmm) dans votre société, avec l’imprégnation des valeurs de la beauté (tašabbuʿ) et le souci de celles-ci dans l’apparent et le caché (ẓāhir/bāṭin).</p>\n<p>Conformément à la nature de cette matière et à ses spécificités, nous avons adopté, pour la construction des contenus du manuel et de ses activités, une méthode qui associe l’acquisition de la connaissance légale (al-maʿrifa al-šarʿiyya) et sa mise en œuvre, selon des étapes éducatives qui partent de la définition des objectifs d’apprentissage, se poursuivent par une mise en contexte appropriée qui vous place dans le contexte de la leçon et vous incite à l’interrogation et à la recherche ; viennent ensuite les textes légaux, sélectionnés avec le plus grand soin pour constituer la source de la connaissance légale que vous retirez de la leçon ; puis l’étape de l’analyse, menée dans une langue claire et selon un style qui facilite l’acquisition et la construction des connaissances légales ; elle s’achève enfin par une activité de mise en œuvre des acquis, qui vous offre l’occasion de construire des prises de position et de les justifier par ce qui s’accorde avec les enseignements et les statuts de la Loi.</p>\n<p>Soucieux de mettre en évidence la complémentarité entre les leçons de la matière, nous avons inclus dans le manuel deux activités diversifiées : elles visent à vous entraîner à mobiliser vos acquis pour discuter des différentes questions et les analyser, et à vous encourager à la production et à la création, tout en vous parant des valeurs de la communication (tawāṣul) et du travail collectif.</p>\n<p>Nous espérons que ce manuel sera pour vous un outil précieux pour apprendre, dans la classe comme en dehors d’elle.</p>\n<p>C’est Dieu Très-Haut que nous implorons de vous accorder la réussite dans ce qu’Il aime et ce qui L’agrée.</p>\n<h2>Table des matières</h2>\n<ul>\n<li>1. Introduction</li>\n<li>2. Rangs de religion</li>\n<li>3. La patience (ṣabr)</li>\n<li>4. La piété filiale (birr al-wālidayn) (1)</li>\n<li>5. La purification (ṭahāra) (1)</li>\n<li>6. La foi en Dieu Très-Haut</li>\n<li>7. La véracité (ṣidq)</li>\n<li>8. La piété filiale (birr al-wālidayn) (2)</li>\n<li>9. La purification (ṭahāra) (2)</li>\n<li>10. La foi aux anges</li>\n<li>11. La belle parole</li>\n<li>12. Les liens de parenté (ṣilat al-raḥim)</li>\n<li>13. Activités d’évaluation et de soutien</li>\n<li>14. La purification (ṭahāra) (3)</li>\n<li>15. La foi aux Livres et aux Messagers</li>\n<li>16. La douceur et la bienveillance</li>\n<li>17. La bienfaisance envers le voisin</li>\n<li>18. Préserver l’environnement de la pollution morale</li>\n<li>19. La foi au Jour dernier, au décret et à la prédestination</li>\n<li>20. L’humilité (tawāḍuʿ)</li>\n<li>21. Le respect et la vénération des aînés</li>\n<li>22. Préserver la beauté de la création de Dieu dans l’environnement</li>\n<li>23. Activités d’évaluation et de soutien</li>\n<li>24. Index des sources et références</li>\n<li>25. Index des thèmes</li>\n</ul>"
   },
-  {
-   "docId": "pdf-mut23h2o-31",
-   "titleAr": "مراتب الدين",
-   "titleFr": "Rangs de religion",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/مراتب_الدين.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2o-32",
-   "titleAr": "الصبر",
-   "titleFr": "La patience (ṣabr)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/الصبر.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2o-33",
-   "titleAr": "بر الوالدين (1)",
-   "titleFr": "La piété filiale (birr al-wālidayn) (1)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/بر_الوالدين-1.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2o-34",
-   "titleAr": "الطهارة (1)",
-   "titleFr": "La purification (ṭahāra) (1)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/الطهارة-1.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2o-35",
-   "titleAr": "الإيمان بالله تعالى",
-   "titleFr": "La foi en Dieu Très-Haut",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/الإيمان_بالله_تعالى.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2o-36",
-   "titleAr": "الصدق",
-   "titleFr": "La véracité (ṣidq)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/الصدق.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2o-37",
-   "titleAr": "بر الوالدين (2)",
-   "titleFr": "La piété filiale (birr al-wālidayn) (2)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/بر_الوالدين_-2.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2o-38",
-   "titleAr": "الطهارة (2)",
-   "titleFr": "La purification (ṭahāra) (2)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/الطهارة-2.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2o-39",
-   "titleAr": "الإيمان بالملائكة",
-   "titleFr": "La foi aux anges",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/الإيمان_بالملائكة.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2o-40",
-   "titleAr": "القول الحسن",
-   "titleFr": "La belle parole",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/القول_الحسن.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2o-41",
-   "titleAr": "صلة الرحم",
-   "titleFr": "Les liens de parenté (ṣilat al-raḥim)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/صلة_الرحم.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2o-42",
-   "titleAr": "أنشطة التقويم والدعم",
-   "titleFr": "Activités d'évaluation et de soutien",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/أنشطة_التقويم_والدعم.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2o-43",
-   "titleAr": "الطهارة (3)",
-   "titleFr": "La purification (ṭahāra) (3)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/الطهارة-3.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2o-44",
-   "titleAr": "الإيمان بالكتب والرسل",
-   "titleFr": "La foi aux Livres et aux Messagers",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/الإيمان_بالكتب_والرسل.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2o-45",
-   "titleAr": "الرفق واللين",
-   "titleFr": "La douceur et la bienveillance",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/الرفق_واللين.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2o-46",
-   "titleAr": "الإحسان إلى الجار",
-   "titleFr": "La bienfaisance envers le voisin",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/الإحسان_إلى_الجار.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2o-47",
-   "titleAr": "حماية البيئة من التلوث المعنوي",
-   "titleFr": "Préserver l'environnement de la pollution morale",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/حماية_البيئة_من_التلوث_المعنوي.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2o-48",
-   "titleAr": "الإيمان باليوم الآخر والقضاء والقدر",
-   "titleFr": "La foi au Jour dernier, au décret et à la prédestination",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/الإيمان_باليوم_الآخر_والقضاء_والقدر.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2o-49",
-   "titleAr": "التواضع",
-   "titleFr": "L'humilité (tawāḍuʿ)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/التواضع.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2o-50",
-   "titleAr": "احترام الكبير وتوقيره",
-   "titleFr": "Le respect et la vénération des aînés",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/احترام_الكبير_وتوقيره.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2o-51",
-   "titleAr": "الحفاظ على جمال صنع الله في البيئة",
-   "titleFr": "Préserver la beauté de la création de Dieu dans l’environnement",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/الحفاظ_على_جمال_صنع_الله_في_البيئة.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2o-52",
-   "titleAr": "أنشطة التقويم والدعم",
-   "titleFr": "Activités d'évaluation et de soutien",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/أنشطة_التقويم_والدعم_2.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2o-53",
-   "titleAr": "فهرس المصادر والمراجع",
-   "titleFr": "Index des sources et références",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/فهرس_المصادر_والمراجع.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2o-54",
-   "titleAr": "فهرس الموضوعات",
-   "titleFr": "Index des thèmes",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/الفهرس.pdf",
-   "pdfOnly": true
-  }
- ]
+  "lessons": [
+    {
+      "docId": "pdf-mut23h2n-30",
+      "titleAr": "المقدمة",
+      "titleFr": "Introduction",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/المقدمة.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2o-31",
+      "titleAr": "مراتب الدين",
+      "titleFr": "Rangs de religion",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/مراتب_الدين.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2o-32",
+      "titleAr": "الصبر",
+      "titleFr": "La patience (ṣabr)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/الصبر.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2o-33",
+      "titleAr": "بر الوالدين (1)",
+      "titleFr": "La piété filiale (birr al-wālidayn) (1)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/بر_الوالدين-1.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2o-34",
+      "titleAr": "الطهارة (1)",
+      "titleFr": "La purification (ṭahāra) (1)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/الطهارة-1.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2o-35",
+      "titleAr": "الإيمان بالله تعالى",
+      "titleFr": "La foi en Dieu Très-Haut",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/الإيمان_بالله_تعالى.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2o-36",
+      "titleAr": "الصدق",
+      "titleFr": "La véracité (ṣidq)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/الصدق.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2o-37",
+      "titleAr": "بر الوالدين (2)",
+      "titleFr": "La piété filiale (birr al-wālidayn) (2)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/بر_الوالدين_-2.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2o-38",
+      "titleAr": "الطهارة (2)",
+      "titleFr": "La purification (ṭahāra) (2)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/الطهارة-2.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2o-39",
+      "titleAr": "الإيمان بالملائكة",
+      "titleFr": "La foi aux anges",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/الإيمان_بالملائكة.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2o-40",
+      "titleAr": "القول الحسن",
+      "titleFr": "La belle parole",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/القول_الحسن.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2o-41",
+      "titleAr": "صلة الرحم",
+      "titleFr": "Les liens de parenté (ṣilat al-raḥim)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/صلة_الرحم.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2o-42",
+      "titleAr": "أنشطة التقويم والدعم",
+      "titleFr": "Activités d'évaluation et de soutien",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/أنشطة_التقويم_والدعم.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2o-43",
+      "titleAr": "الطهارة (3)",
+      "titleFr": "La purification (ṭahāra) (3)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/الطهارة-3.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2o-44",
+      "titleAr": "الإيمان بالكتب والرسل",
+      "titleFr": "La foi aux Livres et aux Messagers",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/الإيمان_بالكتب_والرسل.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2o-45",
+      "titleAr": "الرفق واللين",
+      "titleFr": "La douceur et la bienveillance",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/الرفق_واللين.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2o-46",
+      "titleAr": "الإحسان إلى الجار",
+      "titleFr": "La bienfaisance envers le voisin",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/الإحسان_إلى_الجار.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2o-47",
+      "titleAr": "حماية البيئة من التلوث المعنوي",
+      "titleFr": "Préserver l'environnement de la pollution morale",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/حماية_البيئة_من_التلوث_المعنوي.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2o-48",
+      "titleAr": "الإيمان باليوم الآخر والقضاء والقدر",
+      "titleFr": "La foi au Jour dernier, au décret et à la prédestination",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/الإيمان_باليوم_الآخر_والقضاء_والقدر.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2o-49",
+      "titleAr": "التواضع",
+      "titleFr": "L'humilité (tawāḍuʿ)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/التواضع.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2o-50",
+      "titleAr": "احترام الكبير وتوقيره",
+      "titleFr": "Le respect et la vénération des aînés",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/احترام_الكبير_وتوقيره.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2o-51",
+      "titleAr": "الحفاظ على جمال صنع الله في البيئة",
+      "titleFr": "Préserver la beauté de la création de Dieu dans l’environnement",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/الحفاظ_على_جمال_صنع_الله_في_البيئة.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2o-52",
+      "titleAr": "أنشطة التقويم والدعم",
+      "titleFr": "Activités d'évaluation et de soutien",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/أنشطة_التقويم_والدعم_2.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2o-53",
+      "titleAr": "فهرس المصادر والمراجع",
+      "titleFr": "Index des sources et références",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/فهرس_المصادر_والمراجع.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2o-54",
+      "titleAr": "فهرس الموضوعات",
+      "titleFr": "Index des thèmes",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2026/التعليم-العتيق/الكتب-المدرسية/أصول-القيم-في-القرآن-والسنة-الرابعة-ابتدائي/الفهرس.pdf",
+      "pdfOnly": true
+    }
+  ]
 }

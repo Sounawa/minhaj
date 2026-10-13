@@ -1,289 +1,289 @@
 {
- "id": "usul-fiqh-tanawi-2",
- "subject": "usul-fiqh",
- "level": "tanawi-2",
- "subjectAr": "أصول-الفقه",
- "levelAr": "أصول-الفقه-الثانية-ثانوي-عتيق",
- "titleAr": "أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم الغرناطي",
- "titleFr": "Uṣūl al-fiqh — Marṭaqī al-Wuṣūl d'Ibn ʿĀṣim (2ᵉ lycée)",
- "pdfUrl": null,
- "intro": {
-  "docId": "18691",
-  "titleAr": "أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم للسنة الثانية من التعليم الثانوي العتيق",
-  "titleFr": "Présentation du manuel",
-  "html": "<h1> أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم الغرناطي الأندلسي المالكي س 2 ثا</h1>\n <dl>\n <dt></dt>\n <dd>\n \n </dd>\n </dl>\n <p></p>\n <p>كتاب مادة أصول الفقه، اعتمادا على \"منظومة مرتقى الوصول إلى الضروري من الأصول\" لأبي بكر محمد بن محمد بن عاصم الغرناطي الأندلسي المالكي (ت 829 هـ) مع الاستعانة في شرح هذه المنظومة، بأمهات تآليف الأئمة المالكية رحمهم الله في علم أصول الفقه، كالإمام ابن جزي الغرناطي، والإمام المازري، والقاضي أبي بكر بن العربي، والإمام القرافي، والإمام أبي إسحاق الشاطبي.</p>\n <p>الكتاب موجه لتلاميذ السنة الثانية من التعليم الثانوي العتيق.</p>\n \n <p>أبناءنا التلاميذ، بناتنا التلميذات:</p>\n <p>ها نحن بعون من الله تعالى وحسن توفيقه نضع بين أيديكم كتاب مادة: أصول الفقه للسنة الثانية من التعليم الثانوي العتيق. وسيرا على نهجنا في السنة الأولى اعتمدنا في تأليف هذا الكتاب منظومة: «مرتقى الوصول إلى الضروري من الأصول» لأبي بكر محمد بن محمد بن عاصم الغرناطي الأندلسي المالكي (ت 829 هـ) مستعينين في بناء الدروس وشرح هذه المنظومة بأمهات ما ألفه المالكية رحمهم الله في علم أصول الفقه، كالإمام ابن جزي الغرناطي، والإمام المازري، والقاضي أبي بكر بن العربي، والإمام القرافي، والإمام أبي إسحاق الشاطبي، وغيرهم من أعلام الدرس الأصولي مستندين إلى منهجية تقرب مضامين المتن موضوع الدراسة والتحليل بأسلوب يجمع بين التفكيك لأجزاء النظم والبناء لمضامين مستخلصة من الشروح المصاحبة للمتن والمؤلفات البانية على منواله.</p>\n <p>وهذا الكتاب ميسر للمادة العلمية الأصولية، ومشجع على كسب مزيد من مهارة التعامل مع كتب التراث الأصولي المالكي التي تمكن من امتلاك القواعد الأصولية، وتعين على اكتساب الملكة الفقهية، وتحفز على متابعة الدراسات العليا مزودين بأدوات البحث والتدقيق والتحقيق، وهي أدوات أساسية لكل طالب علم في مجال أصول الفقه عموما، وأصول الفقه المالكي خاصة، وقد كان للمالكية إسهام متميز كما ونوعا في هذا العلم النفيس.</p>\n <p>والأمل معقود عليكم بتفاعلكم مع مضامين هذا الكتاب لتحصيل الملكات والكفايات والأهداف المراد تحقيقها في نهاية السنة الدراسية.</p>\n <p>وفقنا الله وإياكم، وسدد خطاكم وجعل النجاح حليفكم إنه تعالى ولي ذلك والقادر عليه.</p>\n <h2>الكتاب</h2>\n <ul>\n <li> كيف أستعمل كتابي</li>\n <li>كفايات تدريس مادة أصول الفقه</li>\n <li>التوزيع الدوري والأسبوعي</li>\n <li>1 .القرآن الكريم أصل الأدلة الشرعية</li>\n <li>2 . نقل القرآن وما يقبل من القراءات</li>\n <li>3 .الـمحكم والمتشابه</li>\n <li>4 . الـمبين والمجمل والنص والظاهر والـمؤول</li>\n <li>5 . البيان</li>\n <li>6 .البيان (تتمة)</li>\n <li>&nbsp;7 .العموم ومسائله</li>\n <li>&nbsp;8 .العموم ومسائله (تتمة)</li>\n <li>&nbsp;9 .التخصيص</li>\n <li>&nbsp;10 . التخصيص (تتمة)</li>\n <li>&nbsp;11 . قواعد الاستثناء</li>\n <li>&nbsp;12 . المطلق والمقيد</li>\n <li>&nbsp;13 . قواعد الأمر&nbsp;</li>\n <li>&nbsp; 14 .قواعد النهي</li>\n <li>&nbsp;15 . قواعد النهي (تتمة)</li>\n <li>&nbsp;16 . النسخ</li>\n <li>&nbsp;17 . النسخ (تابع)</li>\n <li>&nbsp;18 . النسخ (تتمة)</li>\n <li>&nbsp;19 . السنة وأقسامها</li>\n <li>&nbsp;20 .الـخبر الـمتواتر</li>\n <li>&nbsp;21 . طرق إفادة الخبر للعلم ومراتب رواية الصحابي</li>\n <li>&nbsp;22 . الألفاظ المحتملة ومراتب رواية غير الصحابة</li>\n <li>&nbsp;23 . طرق تحمل الـحديث ومراتبها</li>\n <li>&nbsp;24 . خبر الواحد</li>\n <li>&nbsp;25 . التعديل والتجريح</li>\n <li>&nbsp;26 . قوادح الرواية</li>\n <li>&nbsp;27 . الإجماع</li>\n <li>&nbsp;28 . الإجماع (تابع)</li>\n <li>&nbsp;29 . الإجماع (تتمة) وقول الصحابي</li>\n <li>لائحة المصادر والمراجع</li>\n <li>غلاف الكتاب",
-  "htmlFr": "<h1>Présentation du manuel</h1>\n<p>Livre de la matière des fondements du droit (uṣūl al-fiqh), fondé sur la manẓūma <em>Marṭaqī al-wuṣūl ilā l-ḍarūrī min al-uṣūl</em> [« L’ascension de l’accès au nécessaire des fondements »] d’Abū Bakr Muḥammad ibn Muḥammad ibn ʿĀṣim al-Gharnāṭī al-Andalusī al-Mālikī (m. 829 H.), avec l’appui, pour le commentaire de cette manẓūma, des ouvrages-mères des imams mālikites — que Dieu leur fasse miséricorde — en science des fondements du droit, tels l’imam Ibn Juzayy al-Gharnāṭī, l’imam al-Māzarī, le cadi Abū Bakr Ibn al-ʿArabī, l’imam al-Qarāfī et l’imam Abū Isḥāq al-Shāṭibī.</p>\n<p>Le livre est destiné aux élèves de la deuxième année de l’enseignement secondaire traditionnel.</p>\n<p>Nos fils les élèves, nos filles les écolières :</p>\n<p>Voici qu’avec l’aide de Dieu Très-Haut et Sa bonne guidée, nous plaçons entre vos mains le livre de la matière des fondements du droit de la deuxième année de l’enseignement secondaire traditionnel. Marchant sur les traces de notre pratique de la première année, nous avons fondé la composition de ce livre sur la manẓūma <em>Marṭaqī al-wuṣūl ilā l-ḍarūrī min al-uṣūl</em> d’Abū Bakr Muḥammad ibn Muḥammad ibn ʿĀṣim al-Gharnāṭī al-Andalusī al-Mālikī (m. 829 H.), en nous appuyant, pour la construction des leçons et le commentaire de cette manẓūma, sur les ouvrages-mères de ce que les Mālikites — que Dieu leur fasse miséricorde — ont composé en science des fondements du droit, tels l’imam Ibn Juzayy al-Gharnāṭī, l’imam al-Māzarī, le cadi Abū Bakr Ibn al-ʿArabī, l’imam al-Qarāfī et l’imam Abū Isḥāq al-Shāṭibī, parmi les autres figures de l’enseignement des fondements, en nous appuyant sur une méthodologie qui rend accessibles les contenus du matn objet de l’étude et de l’analyse, selon un style qui combine la décomposition des parties du poème et la construction de contenus dégagés des commentaires qui accompagnent le matn et des ouvrages édifiés sur son modèle.</p>\n<p>Ce livre facilite l’accès à la matière scientifique des fondements et encourage l’acquisition d’une aisance accrue dans la fréquentation des livres du patrimoine uṣūlī mālikite, lesquels permettent de posséder les règles des fondements, aident à acquérir la maîtrise juridique (malaka) et incitent à poursuivre les études supérieures, doté des outils de la recherche, de l’examen critique et de l’édition critique — outils fondamentaux pour tout étudiant en la science des fondements du droit en général, et des fondements du droit mālikite en particulier ; les Mālikites ont apporté à cette précieuse science une contribution éminente, en quantité comme en qualité.</p>\n<p>L’espoir repose sur vous : par votre interaction avec les contenus de ce livre, vous acquerrez les maîtrises, les compétences et les objectifs dont la réalisation est visée au terme de l’année scolaire.</p>\n<p>Que Dieu nous accorde, à nous comme à vous, la réussite, affermisse vos pas et fasse du succès votre compagnon : c’est Lui, Très-Haut, qui en est le garant et qui en a le pouvoir.</p>\n<h2>Table des matières</h2>\n<ul>\n<li>1. Le Noble Coran, source première des preuves légales</li>\n<li>2. La transmission du Coran et les lectures acceptées</li>\n<li>3. Le catégorique (muḥkam) et l’équivoque (mutašābih)</li>\n<li>4. L’explicite (mubayyan), l’implicite (muǧmal), le texte (naṣṣ), l’apparent (ẓāhir) et l’interprété (muʾawwal)</li>\n<li>5. L’exposé (bayān)</li>\n<li>6. L’exposé (bayān) — suite</li>\n<li>7. La portée générale (ʿumūm) et ses questions</li>\n<li>8. La portée générale (ʿumūm) et ses questions — suite</li>\n<li>9. La restriction (taḫṣīṣ)</li>\n<li>10. La restriction (taḫṣīṣ) — suite</li>\n<li>11. Les règles de l’exception</li>\n<li>12. L’absolu (muṭlaq) et le qualifié (muqayyad)</li>\n<li>13. Les règles de l’injonction (amr)</li>\n<li>14. Les règles de la prohibition (nahy)</li>\n<li>15. Les règles de la prohibition (nahy) — suite</li>\n<li>16. L’abrogation (nasḫ)</li>\n<li>17. L’abrogation (nasḫ) — suite</li>\n<li>18. L’abrogation (nasḫ) — suite</li>\n<li>19. La Sunna et ses catégories</li>\n<li>20. Le récit massivement transmis (mutawātir)</li>\n<li>21. Les modes par lesquels le récit fait acquérir la science, et les niveaux de transmission du Compagnon</li>\n<li>22. Les termes équivoques et les niveaux de transmission des successeurs (tābiʿūn)</li>\n<li>23. Les modes de réception du hadith (taḥammul) et leurs niveaux</li>\n<li>24. Le récit singulier (ḫabar wāḥid)</li>\n<li>25. L’agrément et la critique des transmetteurs (taʿdīl wa-taǧrīḥ)</li>\n<li>26. Les motifs de rejet de la transmission (qawādiḥ)</li>\n<li>27. Le consensus (iǧmāʿ)</li>\n<li>28. Le consensus (iǧmāʿ) — suite</li>\n<li>29. Le consensus (iǧmāʿ) — suite — et la parole du Compagnon</li>\n<li>Liste des sources et références</li>\n</ul>"
- },
- "lessons": [
-  {
-   "docId": "pdf-mut23h2s-170",
-   "titleAr": "القرآن الكريم أصل الأدلة الشرعية",
-   "titleFr": "Le Noble Coran, source première des preuves légales",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/1E67C1.PDF",
-   "pdfOnly": true
+  "id": "usul-fiqh-tanawi-2",
+  "subject": "usul-fiqh",
+  "level": "tanawi-2",
+  "subjectAr": "أصول-الفقه",
+  "levelAr": "أصول-الفقه-الثانية-ثانوي-عتيق",
+  "titleAr": "أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم الغرناطي",
+  "titleFr": "Uṣūl al-fiqh — Marṭaqī al-Wuṣūl d'Ibn ʿĀṣim (2ᵉ lycée)",
+  "pdfUrl": null,
+  "intro": {
+    "docId": "18691",
+    "titleAr": "أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم للسنة الثانية من التعليم الثانوي العتيق",
+    "titleFr": "Présentation du manuel",
+    "html": "<h1> أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم الغرناطي الأندلسي المالكي س 2 ثا</h1>\n <dl>\n <dt></dt>\n <dd>\n \n </dd>\n </dl>\n <p></p>\n <p>كتاب مادة أصول الفقه، اعتمادا على \"منظومة مرتقى الوصول إلى الضروري من الأصول\" لأبي بكر محمد بن محمد بن عاصم الغرناطي الأندلسي المالكي (ت 829 هـ) مع الاستعانة في شرح هذه المنظومة، بأمهات تآليف الأئمة المالكية رحمهم الله في علم أصول الفقه، كالإمام ابن جزي الغرناطي، والإمام المازري، والقاضي أبي بكر بن العربي، والإمام القرافي، والإمام أبي إسحاق الشاطبي.</p>\n <p>الكتاب موجه لتلاميذ السنة الثانية من التعليم الثانوي العتيق.</p>\n \n <p>أبناءنا التلاميذ، بناتنا التلميذات:</p>\n <p>ها نحن بعون من الله تعالى وحسن توفيقه نضع بين أيديكم كتاب مادة: أصول الفقه للسنة الثانية من التعليم الثانوي العتيق. وسيرا على نهجنا في السنة الأولى اعتمدنا في تأليف هذا الكتاب منظومة: «مرتقى الوصول إلى الضروري من الأصول» لأبي بكر محمد بن محمد بن عاصم الغرناطي الأندلسي المالكي (ت 829 هـ) مستعينين في بناء الدروس وشرح هذه المنظومة بأمهات ما ألفه المالكية رحمهم الله في علم أصول الفقه، كالإمام ابن جزي الغرناطي، والإمام المازري، والقاضي أبي بكر بن العربي، والإمام القرافي، والإمام أبي إسحاق الشاطبي، وغيرهم من أعلام الدرس الأصولي مستندين إلى منهجية تقرب مضامين المتن موضوع الدراسة والتحليل بأسلوب يجمع بين التفكيك لأجزاء النظم والبناء لمضامين مستخلصة من الشروح المصاحبة للمتن والمؤلفات البانية على منواله.</p>\n <p>وهذا الكتاب ميسر للمادة العلمية الأصولية، ومشجع على كسب مزيد من مهارة التعامل مع كتب التراث الأصولي المالكي التي تمكن من امتلاك القواعد الأصولية، وتعين على اكتساب الملكة الفقهية، وتحفز على متابعة الدراسات العليا مزودين بأدوات البحث والتدقيق والتحقيق، وهي أدوات أساسية لكل طالب علم في مجال أصول الفقه عموما، وأصول الفقه المالكي خاصة، وقد كان للمالكية إسهام متميز كما ونوعا في هذا العلم النفيس.</p>\n <p>والأمل معقود عليكم بتفاعلكم مع مضامين هذا الكتاب لتحصيل الملكات والكفايات والأهداف المراد تحقيقها في نهاية السنة الدراسية.</p>\n <p>وفقنا الله وإياكم، وسدد خطاكم وجعل النجاح حليفكم إنه تعالى ولي ذلك والقادر عليه.</p>\n <h2>الكتاب</h2>\n <ul>\n <li> كيف أستعمل كتابي</li>\n <li>كفايات تدريس مادة أصول الفقه</li>\n <li>التوزيع الدوري والأسبوعي</li>\n <li>1 .القرآن الكريم أصل الأدلة الشرعية</li>\n <li>2 . نقل القرآن وما يقبل من القراءات</li>\n <li>3 .الـمحكم والمتشابه</li>\n <li>4 . الـمبين والمجمل والنص والظاهر والـمؤول</li>\n <li>5 . البيان</li>\n <li>6 .البيان (تتمة)</li>\n <li>&nbsp;7 .العموم ومسائله</li>\n <li>&nbsp;8 .العموم ومسائله (تتمة)</li>\n <li>&nbsp;9 .التخصيص</li>\n <li>&nbsp;10 . التخصيص (تتمة)</li>\n <li>&nbsp;11 . قواعد الاستثناء</li>\n <li>&nbsp;12 . المطلق والمقيد</li>\n <li>&nbsp;13 . قواعد الأمر&nbsp;</li>\n <li>&nbsp; 14 .قواعد النهي</li>\n <li>&nbsp;15 . قواعد النهي (تتمة)</li>\n <li>&nbsp;16 . النسخ</li>\n <li>&nbsp;17 . النسخ (تابع)</li>\n <li>&nbsp;18 . النسخ (تتمة)</li>\n <li>&nbsp;19 . السنة وأقسامها</li>\n <li>&nbsp;20 .الـخبر الـمتواتر</li>\n <li>&nbsp;21 . طرق إفادة الخبر للعلم ومراتب رواية الصحابي</li>\n <li>&nbsp;22 . الألفاظ المحتملة ومراتب رواية غير الصحابة</li>\n <li>&nbsp;23 . طرق تحمل الـحديث ومراتبها</li>\n <li>&nbsp;24 . خبر الواحد</li>\n <li>&nbsp;25 . التعديل والتجريح</li>\n <li>&nbsp;26 . قوادح الرواية</li>\n <li>&nbsp;27 . الإجماع</li>\n <li>&nbsp;28 . الإجماع (تابع)</li>\n <li>&nbsp;29 . الإجماع (تتمة) وقول الصحابي</li>\n <li>لائحة المصادر والمراجع</li>\n <li>غلاف الكتاب",
+    "htmlFr": "<h1>Les uṣūl al-fiqh : la manẓūma Marṭaqī al-wuṣūl ilā l-ḍarūrī min al-uṣūl d’Ibn ʿĀṣim al-Gharnāṭī al-Andalusī al-Mālikī — 2ᵉ année de l’enseignement secondaire traditionnel</h1>\n<p>Livre de la matière des fondements du droit (uṣūl al-fiqh), fondé sur la manẓūma <em>Marṭaqī al-wuṣūl ilā l-ḍarūrī min al-uṣūl</em> [« L’ascension de l’accès au nécessaire des fondements »] d’Abū Bakr Muḥammad ibn Muḥammad ibn ʿĀṣim al-Gharnāṭī al-Andalusī al-Mālikī (m. 829 H.), avec l’appui, pour le commentaire de cette manẓūma, des ouvrages-mères des imams mālikites — que Dieu leur fasse miséricorde — en science des fondements du droit, tels l’imam Ibn Juzayy al-Gharnāṭī, l’imam al-Māzarī, le cadi Abū Bakr Ibn al-ʿArabī, l’imam al-Qarāfī et l’imam Abū Isḥāq al-Shāṭibī.</p>\n<p>Le livre est destiné aux élèves de la deuxième année de l’enseignement secondaire traditionnel.</p>\n<p>Nos fils les élèves, nos filles les écolières :</p>\n<p>Voici qu’avec l’aide de Dieu Très-Haut et Sa bonne guidée, nous plaçons entre vos mains le livre de la matière des fondements du droit de la deuxième année de l’enseignement secondaire traditionnel. Marchant sur les traces de notre pratique de la première année, nous avons fondé la composition de ce livre sur la manẓūma <em>Marṭaqī al-wuṣūl ilā l-ḍarūrī min al-uṣūl</em> d’Abū Bakr Muḥammad ibn Muḥammad ibn ʿĀṣim al-Gharnāṭī al-Andalusī al-Mālikī (m. 829 H.), en nous appuyant, pour la construction des leçons et le commentaire de cette manẓūma, sur les ouvrages-mères de ce que les Mālikites — que Dieu leur fasse miséricorde — ont composé en science des fondements du droit, tels l’imam Ibn Juzayy al-Gharnāṭī, l’imam al-Māzarī, le cadi Abū Bakr Ibn al-ʿArabī, l’imam al-Qarāfī et l’imam Abū Isḥāq al-Shāṭibī, parmi les autres figures de l’enseignement des fondements, en nous appuyant sur une méthodologie qui rend accessibles les contenus du matn objet de l’étude et de l’analyse, selon un style qui combine la décomposition des parties du poème et la construction de contenus dégagés des commentaires qui accompagnent le matn et des ouvrages édifiés sur son modèle.</p>\n<p>Ce livre facilite l’accès à la matière scientifique des fondements et encourage l’acquisition d’une aisance accrue dans la fréquentation des livres du patrimoine uṣūlī mālikite, lesquels permettent de posséder les règles des fondements, aident à acquérir la maîtrise juridique (malaka) et incitent à poursuivre les études supérieures, doté des outils de la recherche, de l’examen critique et de l’édition critique — outils fondamentaux pour tout étudiant en la science des fondements du droit en général, et des fondements du droit mālikite en particulier ; les Mālikites ont apporté à cette précieuse science une contribution éminente, en quantité comme en qualité.</p>\n<p>L’espoir repose sur vous : par votre interaction avec les contenus de ce livre, vous acquerrez les maîtrises, les compétences et les objectifs dont la réalisation est visée au terme de l’année scolaire.</p>\n<p>Que Dieu nous accorde, à nous comme à vous, la réussite, affermisse vos pas et fasse du succès votre compagnon : c’est Lui, Très-Haut, qui en est le garant et qui en a le pouvoir.</p>\n<h2>Table des matières</h2>\n<ul>\n<li>1. Le Noble Coran, source première des preuves légales</li>\n<li>2. La transmission du Coran et les lectures acceptées</li>\n<li>3. Le catégorique (muḥkam) et l’équivoque (mutašābih)</li>\n<li>4. L’explicite (mubayyan), l’implicite (muǧmal), le texte (naṣṣ), l’apparent (ẓāhir) et l’interprété (muʾawwal)</li>\n<li>5. L’exposé (bayān)</li>\n<li>6. L’exposé (bayān) — suite</li>\n<li>7. La portée générale (ʿumūm) et ses questions</li>\n<li>8. La portée générale (ʿumūm) et ses questions — suite</li>\n<li>9. La restriction (taḫṣīṣ)</li>\n<li>10. La restriction (taḫṣīṣ) — suite</li>\n<li>11. Les règles de l’exception</li>\n<li>12. L’absolu (muṭlaq) et le qualifié (muqayyad)</li>\n<li>13. Les règles de l’injonction (amr)</li>\n<li>14. Les règles de la prohibition (nahy)</li>\n<li>15. Les règles de la prohibition (nahy) — suite</li>\n<li>16. L’abrogation (nasḫ)</li>\n<li>17. L’abrogation (nasḫ) — suite</li>\n<li>18. L’abrogation (nasḫ) — suite</li>\n<li>19. La Sunna et ses catégories</li>\n<li>20. Le récit massivement transmis (mutawātir)</li>\n<li>21. Les modes par lesquels le récit fait acquérir la science, et les niveaux de transmission du Compagnon</li>\n<li>22. Les termes équivoques et les niveaux de transmission des successeurs (tābiʿūn)</li>\n<li>23. Les modes de réception du hadith (taḥammul) et leurs niveaux</li>\n<li>24. Le récit singulier (ḫabar wāḥid)</li>\n<li>25. L’agrément et la critique des transmetteurs (taʿdīl wa-taǧrīḥ)</li>\n<li>26. Les motifs de rejet de la transmission (qawādiḥ)</li>\n<li>27. Le consensus (iǧmāʿ)</li>\n<li>28. Le consensus (iǧmāʿ) — suite</li>\n<li>29. Le consensus (iǧmāʿ) — suite — et la parole du Compagnon</li>\n<li>Liste des sources et références</li>\n</ul>"
   },
-  {
-   "docId": "pdf-mut23h2s-171",
-   "titleAr": "نقل القرآن وما يقبل من القراءات",
-   "titleFr": "La transmission du Coran et les lectures acceptées",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/2CA161.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2s-172",
-   "titleAr": "المحكم والمتشابه",
-   "titleFr": "Le catégorique (muḥkam) et l'équivoque (mutašābih)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/3_.الـمحكم_والمتشابه.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2s-173",
-   "titleAr": "المبين والمجمل والنص والظاهر والمؤول",
-   "titleFr": "L'explicite (mubayyan), l'implicite (muǧmal), le texte (naṣṣ), l'apparent (ẓāhir) et l'interprété (muʾawwal)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/4A5BD1.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2s-174",
-   "titleAr": "البيان",
-   "titleFr": "L'exposé (bayān)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/5_._البيان.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2s-175",
-   "titleAr": "البيان (تتمة)",
-   "titleFr": "L'exposé (bayān) — suite",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/6_._البيان_تتمة.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2s-176",
-   "titleAr": "العموم ومسائله",
-   "titleFr": "La portée générale (ʿumūm) et ses questions",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/7_._العموم_ومسائله.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2s-177",
-   "titleAr": "العموم ومسائله (تتمة)",
-   "titleFr": "La portée générale (ʿumūm) et ses questions — suite",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/8_._العموم_ومسائله_تتمة.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2s-178",
-   "titleAr": "التخصيص",
-   "titleFr": "La restriction (taḫṣīṣ)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/9_.التخصيص.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2s-179",
-   "titleAr": "التخصيص (تتمة)",
-   "titleFr": "La restriction (taḫṣīṣ) — suite",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/10_._التخصيص_تتمة.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2s-180",
-   "titleAr": "قواعد الاستثناء",
-   "titleFr": "Les règles de l'exception",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/11_._قواعد_الاستثناء.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2s-181",
-   "titleAr": "المطلق والمقيد",
-   "titleFr": "L'absolu (muṭlaq) et le qualifié (muqayyad)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/12_._المطلق_والمقيد.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2s-182",
-   "titleAr": "قواعد الأمر",
-   "titleFr": "Les règles de l'injonction (amr)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/13_._قواعد_الأمر.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2s-183",
-   "titleAr": "قواعد النهي",
-   "titleFr": "Les règles de la prohibition (nahy)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/14_._قواعد_النهي.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2s-184",
-   "titleAr": "قواعد النهي (تتمة)",
-   "titleFr": "Les règles de la prohibition (nahy) — suite",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/15_._قواعد_النهي_تتمة.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2s-185",
-   "titleAr": "النسخ",
-   "titleFr": "L'abrogation (nasḫ)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/16_._النسخ.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2s-186",
-   "titleAr": "النسخ (تابع)",
-   "titleFr": "L'abrogation (nasḫ) — suite",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/17_._النسخ_تابع.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2s-187",
-   "titleAr": "النسخ (تتمة)",
-   "titleFr": "L'abrogation (nasḫ) — suite",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/18_._النسخ_تتمة.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2s-188",
-   "titleAr": "السنة وأقسامها",
-   "titleFr": "La Sunna et ses catégories",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/19_._السنة_وأقسامها.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2s-189",
-   "titleAr": "الخبر المتواتر",
-   "titleFr": "Le récit massivement transmis (mutawātir)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/20_.الـخبر_الـمتواتر.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2s-190",
-   "titleAr": "طرق إفادة الخبر للعلم ومراتب رواية الصحابي",
-   "titleFr": "Les modes par lesquels le récit fait acquérir la science, et les niveaux de transmission du Compagnon",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/21C8D41.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2s-191",
-   "titleAr": "الألفاظ المحتملة ومراتب رواية غير الصحابة",
-   "titleFr": "Les termes équivoques et les niveaux de transmission des successeurs (tābiʿūn)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/2272D01.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2s-192",
-   "titleAr": "طرق تحمل الحديث ومراتبها",
-   "titleFr": "Les modes de réception du hadith (taḥammul) et leurs niveaux",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/23B57C1.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2s-193",
-   "titleAr": "خبر الواحد",
-   "titleFr": "Le récit singulier (ḫabar wāḥid)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/24_._خبر_الواحد.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2s-194",
-   "titleAr": "التعديل والتجريح",
-   "titleFr": "L'agrément et la critique des transmetteurs (taʿdīl wa-taǧrīḥ)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/25_._التعديل_والتجريح.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2s-195",
-   "titleAr": "قوادح الرواية",
-   "titleFr": "Les motifs de rejet de la transmission (qawādiḥ)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/26_._قوادح_الرواية.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2s-196",
-   "titleAr": "الإجماع",
-   "titleFr": "Le consensus (iǧmāʿ)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/27_._الإجماع.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2s-197",
-   "titleAr": "الإجماع (تابع)",
-   "titleFr": "Le consensus (iǧmāʿ) — suite",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/28_._الإجماع_تابع.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2s-198",
-   "titleAr": "الإجماع (تتمة) وقول الصحابي",
-   "titleFr": "Le consensus (iǧmāʿ) — suite — et la parole du Compagnon",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/29CE311.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2s-199",
-   "titleAr": "لائحة المصادر والمراجع",
-   "titleFr": "Liste des sources et références",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/لائحة_المصادر_والمراجع.pdf",
-   "pdfOnly": true
-  }
- ]
+  "lessons": [
+    {
+      "docId": "pdf-mut23h2s-170",
+      "titleAr": "القرآن الكريم أصل الأدلة الشرعية",
+      "titleFr": "Le Noble Coran, source première des preuves légales",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/1E67C1.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2s-171",
+      "titleAr": "نقل القرآن وما يقبل من القراءات",
+      "titleFr": "La transmission du Coran et les lectures acceptées",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/2CA161.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2s-172",
+      "titleAr": "المحكم والمتشابه",
+      "titleFr": "Le catégorique (muḥkam) et l'équivoque (mutašābih)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/3_.الـمحكم_والمتشابه.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2s-173",
+      "titleAr": "المبين والمجمل والنص والظاهر والمؤول",
+      "titleFr": "L'explicite (mubayyan), l'implicite (muǧmal), le texte (naṣṣ), l'apparent (ẓāhir) et l'interprété (muʾawwal)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/4A5BD1.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2s-174",
+      "titleAr": "البيان",
+      "titleFr": "L'exposé (bayān)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/5_._البيان.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2s-175",
+      "titleAr": "البيان (تتمة)",
+      "titleFr": "L'exposé (bayān) — suite",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/6_._البيان_تتمة.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2s-176",
+      "titleAr": "العموم ومسائله",
+      "titleFr": "La portée générale (ʿumūm) et ses questions",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/7_._العموم_ومسائله.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2s-177",
+      "titleAr": "العموم ومسائله (تتمة)",
+      "titleFr": "La portée générale (ʿumūm) et ses questions — suite",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/8_._العموم_ومسائله_تتمة.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2s-178",
+      "titleAr": "التخصيص",
+      "titleFr": "La restriction (taḫṣīṣ)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/9_.التخصيص.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2s-179",
+      "titleAr": "التخصيص (تتمة)",
+      "titleFr": "La restriction (taḫṣīṣ) — suite",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/10_._التخصيص_تتمة.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2s-180",
+      "titleAr": "قواعد الاستثناء",
+      "titleFr": "Les règles de l'exception",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/11_._قواعد_الاستثناء.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2s-181",
+      "titleAr": "المطلق والمقيد",
+      "titleFr": "L'absolu (muṭlaq) et le qualifié (muqayyad)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/12_._المطلق_والمقيد.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2s-182",
+      "titleAr": "قواعد الأمر",
+      "titleFr": "Les règles de l'injonction (amr)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/13_._قواعد_الأمر.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2s-183",
+      "titleAr": "قواعد النهي",
+      "titleFr": "Les règles de la prohibition (nahy)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/14_._قواعد_النهي.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2s-184",
+      "titleAr": "قواعد النهي (تتمة)",
+      "titleFr": "Les règles de la prohibition (nahy) — suite",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/15_._قواعد_النهي_تتمة.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2s-185",
+      "titleAr": "النسخ",
+      "titleFr": "L'abrogation (nasḫ)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/16_._النسخ.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2s-186",
+      "titleAr": "النسخ (تابع)",
+      "titleFr": "L'abrogation (nasḫ) — suite",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/17_._النسخ_تابع.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2s-187",
+      "titleAr": "النسخ (تتمة)",
+      "titleFr": "L'abrogation (nasḫ) — suite",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/18_._النسخ_تتمة.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2s-188",
+      "titleAr": "السنة وأقسامها",
+      "titleFr": "La Sunna et ses catégories",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/19_._السنة_وأقسامها.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2s-189",
+      "titleAr": "الخبر المتواتر",
+      "titleFr": "Le récit massivement transmis (mutawātir)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/20_.الـخبر_الـمتواتر.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2s-190",
+      "titleAr": "طرق إفادة الخبر للعلم ومراتب رواية الصحابي",
+      "titleFr": "Les modes par lesquels le récit fait acquérir la science, et les niveaux de transmission du Compagnon",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/21C8D41.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2s-191",
+      "titleAr": "الألفاظ المحتملة ومراتب رواية غير الصحابة",
+      "titleFr": "Les termes équivoques et les niveaux de transmission des successeurs (tābiʿūn)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/2272D01.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2s-192",
+      "titleAr": "طرق تحمل الحديث ومراتبها",
+      "titleFr": "Les modes de réception du hadith (taḥammul) et leurs niveaux",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/23B57C1.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2s-193",
+      "titleAr": "خبر الواحد",
+      "titleFr": "Le récit singulier (ḫabar wāḥid)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/24_._خبر_الواحد.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2s-194",
+      "titleAr": "التعديل والتجريح",
+      "titleFr": "L'agrément et la critique des transmetteurs (taʿdīl wa-taǧrīḥ)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/25_._التعديل_والتجريح.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2s-195",
+      "titleAr": "قوادح الرواية",
+      "titleFr": "Les motifs de rejet de la transmission (qawādiḥ)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/26_._قوادح_الرواية.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2s-196",
+      "titleAr": "الإجماع",
+      "titleFr": "Le consensus (iǧmāʿ)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/27_._الإجماع.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2s-197",
+      "titleAr": "الإجماع (تابع)",
+      "titleFr": "Le consensus (iǧmāʿ) — suite",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/28_._الإجماع_تابع.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2s-198",
+      "titleAr": "الإجماع (تتمة) وقول الصحابي",
+      "titleFr": "Le consensus (iǧmāʿ) — suite — et la parole du Compagnon",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/29CE311.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2s-199",
+      "titleAr": "لائحة المصادر والمراجع",
+      "titleFr": "Liste des sources et références",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/أصول-الفقه-الثانية-ثانوي/لائحة_المصادر_والمراجع.pdf",
+      "pdfOnly": true
+    }
+  ]
 }
