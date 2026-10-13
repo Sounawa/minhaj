@@ -2678,3 +2678,104 @@ Stage Summary:
   restant = livre intégral !) puis fiqh-6ep 17/31, tafsir-5ep 32/123, tafsir-6ep
   16/31 ; (2) collage des 119 traductions perdues si le client les fournit ;
   (3) idées : extraction PDF-only, export EPUB, notes sur surlignages.
+
+---
+Task ID: R54
+Agent: agent principal (Z.ai Code — cron webDevReview, 6e tour, trace 1a1346dafe621341 + relance utilisateur)
+Task: QA + réponse au client (119 traductions perdues irrécupérables → retraduction) + file hadith-1ep/fiqh-6ep + fix h1 intros + 3 features + 2 fixes critiques
+
+Work Log:
+- CONTEXTE CLIENT : le client confirme n'avoir RIEN retrouvé de plus (audit WeTransfer complet) —
+  les ~119 traductions perdues de l'ancien AI sont définitivement irrécupérables ; la retraduction
+  est la voie acceptée, le client veut clôturer le projet vite. Stratégie : maximiser le débit de
+  traductions savantes + livrer features de finition.
+- QA INITIALE : accueil 200 (hero/stats/REPRENDRE), lecteur OK, mobile 390 px 0 overflow, 0 erreur.
+- **DÉCOUVERTE 1 — 2 livres à 1 intro de l'intégralité** : audit par registre ∩ lessons : seuls
+  fikr-islami-tanawi-3 (22179) et usul-fiqh-tanawi-3 (18692) avaient TOUTES leurs leçons savantes
+  mais une intro GT. Traduits ce tour → +2 livres intégraux.
+- **5 RECONSTRUCTIONS SAVANTES** (rédaction main, workflow extract→rédaction→qa-lesson→hand-set→
+  QA navigateur→commit+backup par doc, règles a/b respectées) :
+  1. hadith-1ep/12583 (5 069 car, 2d47736) — intro du livre ENTIER : Riyāḍ al-Ṣāliḥīn/comm.
+     ʿIrfān, 2 thèmes (mérites du Coran/mérite du savoir), ToC 29 VERBATIM + compétences 6 états
+     de l'apprenant (iǧtihād/taqlīd glosés). **HADITH-1EP = 32/32 → LIVRE INTÉGRAL**.
+  2. fikr-islami-tanawi-3/22179 (6 020 car, 08edcbf) — soufisme islamique 3e lycée à la manière
+     de al-Ǧunayd (m. 298 H.), constante religieuse du Royaume ; méthode complète 9 éléments ;
+     sulūk/taḫliya-taḥliya-tazkiya/ṭarīqa ; ToC 30 items paginés VERBATIM. **LIVRE INTÉGRAL 27+1**.
+  3. usul-fiqh-tanawi-3/18692 (6 824 car, 08edcbf) — Marṭaqā al-wuṣūl d'Ibn ʿĀṣim (m. 829 H.) :
+     preuves rationnelles iǧtihādiques, qiyāṣ/ʿilla/masālik/qawādiḥ, Ǧamʿ ʿArafa-Muzdalifa ;
+     lettre aux écoliers ; ToC 33 VERBATIM (coquilles officielles mathn/Murtqā corrigées, écart
+     documenté). **LIVRE INTÉGRAL 30+1**.
+  4. fiqh-6ep/14728 (11 736 car, 6d7ff9a) — maṣārif zakāt : les 8 catégories de Tawbah 60
+     RECONSTRUITES aux 2 spans vides (convention 14116), lām = maṣraf+istiḥqāq non milk,
+     citation al-Lakhmī (murīb), 9 règles zakāt al-fiṭr (hadiths Bukhārī Ibn ʿUmar/Abū Saʿīd,
+     fatwā Haut Conseil sur le numéraire, ḏimma perpétuelle).
+  5. fiqh-6ep/15126 (11 460 car, b60aea3) — wāǧibāt al-ḥaǧǧ : 3 catégories d'actes, les 11
+     obligations du poète + ǧamʿ, mīqāt zamānī (réf Baqara 196 conservée seule — convention
+     15371) et makānī (hadith Muslim 5 lieux, avion, Maghreb→Juḥfa, ḥill : Ǧiʿrāna/Tanʿīm).
+  6. fiqh-6ep/15132 (10 135 car, 794067e) — déroulement à l'iḥrām : 5 actes (ġusl des 3 du
+     ḥaǧǧ, izāra/ridāʾ, sunna al-Kāfirūn+Ikhlāṣ, consécration sur monture, talbiya aux
+     changements d'état + Muwaṭṭaʾ femmes sans élévation de voix) ; hadith Bukhārī istiṯmār
+     complet des vêtements du muḥrim ; tableau matn 3 colonnes (hémistiches inversés LTR).
+  7. fiqh-6ep/15134 (8 966 car, 2f12fa6) — saʿy Ṣafā-Marwa : pilier, takbīr×3+tahlīl intégrale,
+     khabab entre les 2 bornes (Muwaṭṭaʾ), 7 circuits/4 stations×2 (hadith Ǧābir Tirmidhī),
+     sermon du 7e jour abandonné, 3 conditions + sunan + ṭahāratayn ; réf Baqara 157 du manuel
+     (décalée) conservée seule — fidélité documentée.
+  Registre : 209 → **215/950**. 19 badges « traduction savante intégrale » sur l'accueil (16→19).
+- **FIX SYSTÉMIQUE h1 DES INTROS (42 livres, 32eeadb)** : audit complet révèle (a) 25 intros dont
+  le h1 « Présentation du manuel » dupliquait le titre du lecteur, (b) 21 intros GT au h1 erroné
+  (« 6 août » pour « 6e année primaire » !, « Atiq », « Hashiyat Al-Dasouki », « problèmes de
+  parole » pour kalām…). Correction : 38 lignes-matière traduites MAIN (conventions du corpus :
+  wajīz/wajh en j, Cheikh Khalīl, al-Murshid al-Muʿīn, Tafsīr al-Jalālayn, Nukhbat al-fikar,
+  Īḍāḥ al-asrār al-maṣūna, Marṭaqā al-wuṣūl…) + 4 suppressions pures (sources sans h1) ;
+  script scripts-translate/fix-intro-h1.py archivé ; QA navigateur 4 livres + reload franc.
+- **3 FEATURES LECTEUR (453d7a7 + a34b9f4)** :
+  1. SOMMAIRE DE LEÇON : bouton ListTree → popover h2/h3 du htmlFr (h3 indenté, masqué si <3),
+     saut scrollIntoView smooth + flash ambre 1,7 s (keyframes outline-flash color-mix primary,
+     prefers-reduced-motion respecté), scroll-margin-top 6,5 rem.
+  2. TEMPS DE LECTURE ESTIMÉ : badge « ≈ N min de lecture » (1 400 car/min FR sans balises).
+  3. NOTES PERSONNELLES PAR LEÇON : bouton StickyNote + popover textarea, hook useNote
+     (useSyncExternalStore + pattern useHydrated, auto-sauvegarde à la frappe, clé
+     minhaj.notes.v1:book/doc), pastille ambre, persiste au reload.
+- **FIX CRITIQUE A (préexistant, cassait la compilation CSS)** : `::highlight()` (Highlight
+  API) non reconnu par lightningcss → 500 sur / à toute recompilation fraîche (le serveur
+  servait un bundle CSS caché). Règles mnhj-fr/mnhj-ar servies en CSS BRUT via <style> dans
+  layout.tsx ; surlignages re-vérifiés E2E (registre CSS.highlights + rendu + persistance).
+- **FIX CRITIQUE B (préexistant, perf majeure)** : React 19 ré-exécutait innerHTML des 2
+  colonnes à CHAQUE re-rendu (objet {__html} recréé chaque render → 117 nœuds détruits/
+  reconstruits à chaque frame de défilement via la barre de progression — détection par
+  MutationObserver : 6 mutations/145 ms au scroll). Mémoïsation frHtml/arHtml par useMemo →
+  0 mutation au scroll ; verse-tables et flash désormais stables (avant : classes effacées
+  au défilement !) ; lint react-hooks/preserve-manual-memoization satisfait par extraction
+  des primitives avant useMemo.
+- **INCIDENT SERVEUR** : le process next-server a disparu (OOM probable — aucun crash loggé,
+  le log s'arrête sur « ✓ Compiled »). Relance via setsid -f (règle c) — c'est une RECOUVRANCE
+  de panne, pas le redémarrage d'un serveur sain (règle d). Vérifié : 200, 0 erreur, port 3000.
+- QA FINALE : accueil 200 (hero, 19 badges intégrales, 91 cartes, REPRENDRE), lecteur 14728/
+  15126/15132/15134 OK (badge savant + ≈ min + sommaire 9 sections + flash sur L'analyse +
+  notes écrites/lues/badge persistant + surlignage FR enregistré + verse-table stable au
+  scroll), mobile 390 px 0 overflow, session neuve 0 erreur console/page, lint 0 erreur
+  (1 warning préexistant llm-translate.ts:561). Captures qa-r54-*.png.
+- Cron de secours 455619 (15 min) mis à jour → 456116 : file courante (fiqh-6ep 9 restantes,
+  puis tafsir-6ep), registre 215/950, note « 119 perdues irrécupérées, client veut clôturer
+  vite », garde-fous a/b/c/d + procédure de recouvrance OOM.
+
+Stage Summary:
+- **État projet** : sain et nettement accéléré vers la clôture. HEAD a34b9f4, registre
+  **215/950** (+6 ce tour), **19 livres en couche savante intégrale** (16→19 : hadith-1ep,
+  fikr-islami-tanawi-3, usul-fiqh-tanawi-3). fiqh-6ep 21/30 savants. 2 bugs critiques
+  préexistants corrigés (compilation CSS ::highlight, ré-exécution innerHTML à chaque frame
+  de scroll), 1 fix systémique (h1 des 42 intros), 3 features lecteur livrées.
+- **Risques / attention** : (a) le process next-server est mort une fois par OOM pendant ce
+  tour — si 500/connexion refusée, voir procédure de recouvrance dans le cron 456116 et
+  ci-dessus ; (b) les offsets de surlignage survivent désormais au scroll (fix B) mais
+  restent liés au texte d'un doc — remplacement GT→savant les décale (ranges invalides
+  ignorés silencieusement, comportement acceptable) ; (c) Safari/Firefox : surlignages
+  dégradés proprement, sommaire/notes/temps de lecture 100 % fonctionnels ; (d) les
+  références coraniques erronées du manuel (Baqara 157/196) sont rendues en marqueurs
+  seuls — convention 15371, fidélité au manuel documentée dans chaque commit.
+- **Priorités suivantes** : (1) finir fiqh-6ep — 9 leçons : 15135 (Minā/ʿArafa), 15136
+  (Muzdalifa/Minā/sacrifice), 15139 (tašrīq 2), 15146 (interdits iḥrām suite), 15147 (ʿumra/
+  ziyāra), 15148+15164 (principes du soufisme : tawba/taqwā + suite), 15198 (ornement des
+  stations), 15274 (drapeaux), 15275 (sources) — puis livre #20 intégral ; (2) tafsir-6ep
+  (15 non-savantes) puis fikr-islami-tanawi-1/2 ; (3) idées features : export EPUB/PDF
+  d'une leçon, extraction des 885 PDF-only, compteur de notes dans l'en-tête.
