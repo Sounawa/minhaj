@@ -2364,3 +2364,53 @@ Stage Summary:
   savant est maintenant propre, chrome GT retiré ✓) puis file fiqh-tanawi-2 ; envisager
   l'extraction des 885 PDF-only comme prochaine feature majeure.
 - Backup-tour /tmp/my-project/ à rafraîchir après ce commit (bundle + worklog + registre).
+
+---
+Task ID: R50
+Agent: agent principal (Z.ai Code — cron webDevReview 455619, 2e tour)
+Task: QA + reprise de la file de reconstruction R22 (2 muqaddimas) + feature « À propos » dynamique
+
+Work Log:
+- ÉTAT INITIAL : HEAD 5e0c4a3 (worklog R49), git propre, serveur 200. Vérification d'intégrité
+  des 7 docs R22 restants : AUCUN au registre, htmlFr = GT — conforme au verdict de perte R46.
+- **2 RECONSTRUCTIONS SAVANTES livrées** (rédaction main par l'agent, workflow établi :
+  tr-tmp → qa-lesson.py [auto-fix NNBSP/apostrophes + 4 vérif dures] → diff ToC vs titres
+  officiels corpus → hand-set.py [injection atomique + registre] → QA navigateur → commit +
+  backup par doc) :
+  1. ulum-hadith-tanawi-1/18649 « Présentation du manuel » (4 114 car) : manẓūma al-Bayqūniyya
+     + šarḥ al-Zarqānī ; « nos élèves, fils et filles » + c'est avec joie ; riwāya/dirāya,
+     malaka de la ṣināʿa ḥadīthiyya, ādāb du traditionniste/étudiant avec waṣāyā
+     taʿabbudiyya et morales, taqrīrī/taṭbīqī, valeurs ṣidq/ʿadāla/ḍabṭ/tathabbut,
+     taḥammul/adāʾ, nabī al-raḥma ; clausule samīʿ muǧīb ; ToC 28 leçons « 1. … 28. » titres
+     officiels VERBATIM (diff 0 après normalisation) + notices/sources, entrées liminaires
+     source écartées (convention 22192/18691) ; registre 183 → 184.
+  2. ulum-hadith-tanawi-2/18677 « Présentation du manuel » (5 199 car) : matn Nuḫbat al-Fikr
+     [« Le choix des pensées »] + šarḥ Nuzhat al-Naẓar [« La promenade du regard »] du ḥāfiẓ
+     Ibn Ḥaǧar — que Dieu lui fasse miséricorde — (gloses forme pleine 1re occurrence, corpus
+     tanawi-2) ; ḥamdala رب العالمين ; « nos enfants — élèves garçons et filles » + c'est avec
+     joie ; concision d'Ibn Ḥaǧar → surcroît d'explicitation via sources autoritaires,
+     gradation cognitive + acquis 1re année ; MÉTHODE UNIFIÉE des leçons intégralement rendue
+     (titre → objectifs → mise en contexte → matn → expl. mots/expressions → questions
+     d'orientation → analyse/discussion → textes des imams ihtidāʾ/iqtidāʾ → évaluation →
+     istiẓmār → préparation préalable) ; clausule « voie de la rectitude » ; ToC 26 leçons
+     « Leçon N : » + notices, titres officiels VERBATIM 27/27 (diff 0) ; registre 184 → 185.
+- QA agent-browser des 2 docs : h1, badge « Traduction savante », ToC complet, sondes lexicales
+  (malaka, istiẓmār, méthode unifiée, clausules) — 0 erreur console/page. Captures qa-r50-*.png.
+- **FEATURE « À propos » dynamique** : stats.docsSavant ajouté à getLibrary (dédupliqué par
+  docId — 196→185 : docIds partagés intro/leçon) ; AboutDialog reçoit aboutStats (Header
+  prop) → compteur live (64 manuels · 983/1 152 docs · 185 savants), section « Deux niveaux de
+  traduction » avec cartes légende dorée (BookMarked, savante) / neutre (Languages, automatique)
+  — explicite le modèle qualité du site (GT par défaut, savant en remplacement) et affine la
+  feature badge R49 ; dialog max-h-85vh scrollable (petits écrans).
+- Lint : 0 erreur (1 warning préexistant).
+
+Stage Summary:
+- Registre savant : 185/950 (+2 ce tour). Restent 5 docs R22 : 15371 (usul-fiqh-tanawi-1,
+  17 670 car — manẓūma en vers + 3 tableaux + bio Ibn ʿĀṣim + versets Yūsuf 40/Qamar 49/
+  Aḥzāb 45-46 + citation al-Rajrājī 5 avis : le plus lourd), 18676 (hadith-tanawi-3), 18675
+  (hadith-3es), 18671 (tafsir-tanawi-3), 20297 (qiraat-tanawi-2) ; puis file fiqh-tanawi-2
+  (17 leçons).
+- Commits : 2 docs (1 par doc, règle absolue) + 1 worklog R50 ; bundle /tmp + backup-tour
+  régénérés à chaque commit.
+- Risque : rien de nouveau ; convention ToC « entrées liminaires écartées » et « titres
+  officiels verbatim y compris imperfections GT du titre 17 tanawi-2 » documentée ici.

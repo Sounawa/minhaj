@@ -4,9 +4,11 @@ import { useEffect, useState, useSyncExternalStore } from "react";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import {
+  BookMarked,
   BookOpenCheck,
   Heart,
   Info,
+  Languages,
   Leaf,
   Moon,
   Search,
@@ -56,7 +58,15 @@ function ThemeToggle() {
   );
 }
 
-function AboutDialog() {
+interface AboutStats {
+  booksTotal: number;
+  docsFr: number;
+  docsTotal: number;
+  docsSavant: number;
+}
+
+function AboutDialog({ stats }: { stats: AboutStats | null }) {
+  const fmt = (n: number) => n.toLocaleString("fr-FR");
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -69,7 +79,7 @@ function AboutDialog() {
           <Info className="size-4.5" />
         </Button>
       </DialogTrigger>
-      <DialogContent className="max-w-lg border-amber-800/20 bg-card sm:max-w-lg">
+      <DialogContent className="max-h-[85vh] max-w-lg overflow-y-auto border-amber-800/20 bg-card sm:max-w-lg">
         <DialogHeader>
           <DialogTitle className="font-serif text-xl text-amber-950 dark:text-amber-50">
             À propos de Minhāj
@@ -83,15 +93,44 @@ function AboutDialog() {
             </p>
             <Separator className="bg-amber-800/15" />
             <p>
-              <strong className="text-foreground">64 manuels · 1 152 leçons</strong>, du primaire
-              au lycée : monothéisme (tawḥīd), droit rituel (fiqh), biographie prophétique (sīra),
-              psalmodie (tajwīd), exégèse (tafsīr), grammaire (naḥw), et bien d&apos;autres
-              matières.
+              <strong className="text-foreground">
+                {stats ? `${fmt(stats.booksTotal)} manuels` : "64 manuels"} ·{" "}
+                {stats ? `${fmt(stats.docsFr)} / ${fmt(stats.docsTotal)} documents` : "1 853 documents"}
+              </strong>
+              , du primaire au lycée : monothéisme (tawḥīd), droit rituel (fiqh), biographie
+              prophétique (sīra), psalmodie (tajwīd), exégèse (tafsīr), grammaire (naḥw), et bien
+              d&apos;autres matières.
             </p>
+            <Separator className="bg-amber-800/15" />
+            <div className="space-y-2">
+              <p className="font-semibold text-foreground">Deux niveaux de traduction</p>
+              <p className="flex items-start gap-2.5 rounded-xl border border-amber-500/40 bg-gradient-to-br from-amber-100/80 to-yellow-50/60 p-3 dark:border-amber-400/25 dark:from-amber-900/40 dark:to-amber-800/25">
+                <BookMarked className="mt-0.5 size-4 shrink-0 text-amber-700 dark:text-amber-300" aria-hidden="true" />
+                <span>
+                  <strong className="text-amber-900 dark:text-amber-100">Traduction savante</strong>{" "}
+                  — révisée avec soin : terminologie académique translittérée, versets coraniques
+                  vérifiés, gloses des termes techniques.
+                  {stats && (
+                    <span className="mt-0.5 block text-xs text-muted-foreground">
+                      {fmt(stats.docsSavant)} documents concernés
+                    </span>
+                  )}
+                </span>
+              </p>
+              <p className="flex items-start gap-2.5 rounded-xl border border-amber-800/15 bg-card/70 p-3">
+                <Languages className="mt-0.5 size-4 shrink-0 text-muted-foreground" aria-hidden="true" />
+                <span>
+                  <strong className="text-foreground">Traduction automatique</strong> — le texte
+                  arabe officiel reste toujours affiché en regard ; la traduction savante remplace
+                  progressivement la version automatique, document par document.
+                </span>
+              </p>
+            </div>
+            <Separator className="bg-amber-800/15" />
             <p className="text-muted-foreground">
-              Conventions de traduction : vouvoiement, translittération scientifique
-              (tawḥīd, waḍūʾ…), versets coraniques en <em>italique</em> avec référence
-              [S. x:y], formules prophétiques développées.
+              Conventions : vouvoiement, translittération scientifique (tawḥīd, waḍūʾ…), versets
+              coraniques en <em>italique</em> avec référence [S. x:y], formules prophétiques
+              développées.
             </p>
           </DialogDescription>
         </DialogHeader>
@@ -103,9 +142,11 @@ function AboutDialog() {
 function Header({
   onSearch,
   onFavorites,
+  aboutStats,
 }: {
   onSearch: () => void;
   onFavorites: () => void;
+  aboutStats: AboutStats | null;
 }) {
   const { favorites } = useFavorites();
   return (
@@ -164,7 +205,7 @@ function Header({
               </span>
             )}
           </Button>
-          <AboutDialog />
+          <AboutDialog stats={aboutStats} />
           <ThemeToggle />
         </div>
       </div>
@@ -206,9 +247,12 @@ function Footer({ docsFr, docsTotal }: { docsFr?: number; docsTotal?: number }) 
 
 export function MinhajApp() {
   const route = useHashRoute();
-  const [footerStats, setFooterStats] = useState<{ docsFr: number; docsTotal: number } | null>(
-    null
-  );
+  const [footerStats, setFooterStats] = useState<{
+    docsFr: number;
+    docsTotal: number;
+    booksTotal: number;
+    docsSavant: number;
+  } | null>(null);
   const [searchOpen, setSearchOpen] = useState(false);
   const [favOpen, setFavOpen] = useState(false);
 
@@ -234,7 +278,12 @@ export function MinhajApp() {
       .then((r) => (r.ok ? r.json() : null))
       .then((d) => {
         if (alive && d?.stats) {
-          setFooterStats({ docsFr: d.stats.docsFr as number, docsTotal: d.stats.goalDocs as number });
+          setFooterStats({
+            docsFr: d.stats.docsFr as number,
+            docsTotal: d.stats.goalDocs as number,
+            booksTotal: d.stats.booksTotal as number,
+            docsSavant: d.stats.docsSavant as number,
+          });
         }
       })
       .catch(() => undefined);
@@ -251,7 +300,11 @@ export function MinhajApp() {
       >
         Aller au contenu
       </a>
-      <Header onSearch={() => setSearchOpen(true)} onFavorites={() => setFavOpen(true)} />
+      <Header
+        onSearch={() => setSearchOpen(true)}
+        onFavorites={() => setFavOpen(true)}
+        aboutStats={footerStats}
+      />
       {searchOpen && <SearchDialog open={searchOpen} onOpenChange={setSearchOpen} />}
       {favOpen && <FavoritesDialog open={favOpen} onOpenChange={setFavOpen} />}
       <main id="contenu" className="flex-1">

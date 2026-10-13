@@ -113,6 +113,8 @@ export interface LibraryPayload {
     docsFr: number;
     goalDocs: number;
     goalBooks: number;
+    /** Documents bénéficiant d'une traduction savante (registre). */
+    docsSavant: number;
   };
 }
 
@@ -264,6 +266,20 @@ export async function getLibrary(): Promise<LibraryPayload> {
     ...s,
     booksCount: manifest.books.filter((b) => b.subject === s.id).length,
   }));
+  // Compteur des traductions savantes (registre) sur les docs réellement bilingues.
+  // Dédupliqué par docId : certains docIds sont partagés intro/leçon dans un même livre.
+  const savantIds = await getSavantIds();
+  const savantWithFr = new Set<string>();
+  for (const f of files) {
+    if (!f) continue;
+    const docs = [f.intro, ...(f.lessons ?? [])].filter(Boolean) as Array<{ docId: string; htmlFr?: string }>;
+    for (const d of docs) {
+      if (savantIds.has(d.docId) && (d.htmlFr ?? "").trim().length > 0) {
+        savantWithFr.add(d.docId);
+      }
+    }
+  }
+  const docsSavant = savantWithFr.size;
   const stats = {
     booksTotal: manifest.books.length,
     booksDownloaded: books.filter((b) => b.downloaded).length,
@@ -271,6 +287,7 @@ export async function getLibrary(): Promise<LibraryPayload> {
     docsFr: books.reduce((acc, b) => acc + b.docsFr, 0),
     goalDocs: manifest.program.goalDocs,
     goalBooks: manifest.program.goalBooks,
+    docsSavant,
   };
   return { program: manifest.program, levels: manifest.levels, subjects, books, stats };
 }
