@@ -2495,3 +2495,94 @@ Stage Summary:
   couche savante : 13 → 15 livres complets) ; (2) file fiqh-tanawi-2 ; (3) proposer au
   client le collage des traductions perdues ; (4) idées features : extraction des 885
   PDF-only, export EPUB/PDF d'une leçon, surlignage persistant.
+
+---
+Task ID: R52
+Agent: agent principal (Z.ai Code — cron webDevReview, 4e tour, trace 1a133977d677b2b5)
+Task: QA générale + bugfix prioritaire + fin de la file R22 (2 muqaddimas) + features lecteur + 1re leçon fiqh-tanawi-2
+
+Work Log:
+- ÉTAT INITIAL : HEAD 1ea13ae (R51), serveur 200, registre 188/950. Restaient 2 docs R22
+  (18671, 20297) puis file fiqh-tanawi-2 (17 leçons).
+- **BUGFIX CRITIQUE verse-table** (découvert en QA agent-browser) : navigation SPA retour vers
+  un doc déjà visité (cache mémoire useDoc) → 0 classe .verse-table sur 15371 alors que 8
+  tableaux présents. Diagnostic par MutationObserver : le re-fetch post-cache-hit appelait
+  setState avec un NOUVEL objet d'état (même référence data) → re-rendu superflu → React
+  réinitialisait innerHTML de .lesson-content → classes poétiques effacées, effet
+  [data,mode,textSize] ne re-fusant pas (référence inchangée). FIX : setState fonctionnel
+  no-op (prev.data === data && !prev.error && !prev.loading → prev) appliqué aux 3 hooks
+  (useLibrary/useBookDetail/useDoc). Vérifié : reload 8/8, round-trip SPA 8/8, accueil OK,
+  0 erreur console. Commit 78fcf2c.
+- **2 RECONSTRUCTIONS SAVANTES R22** (rédaction main, workflow : extract.py → tr-tmp →
+  qa-lesson.py → diff ToC vs titres officiels → hand-set.py → QA navigateur → commit +
+  backup par doc) — FILE R22 TERMINÉE :
+  1. tafsir-tanawi-3/18671 (4 152 car, 7ac0997) : leçons de tafsīr de Sūrat al-Kahf fondées
+     sur al-Muḥarrar al-wajīz du cadi Abū Muḥammad ʿAbd al-Ḥaqq b. Ghālib b. ʿAṭiyya
+     al-Maḥāribī al-Gharnāṭī [glossé « Le commentaire affiné et concis du Livre puissant »]
+     + apports Abū Ḥayyān/al-Qurṭubī ; 4 principes méthodologiques (fondation+enrichissement
+     aux passages non traités ou condensés en allusion, style sans prolixité lassante ni
+     concision mutilante, capitalisation des acquis — tafsīr domaine où les sciences se
+     rencontrent — + istinbāṭ, clôture par laṭāʾif/fawāʾid + iʿjāz bayānī) ; adresse « Ô
+     élève, ô écolière » (convention tajwid-5ep) ; ToC 26 + 3 finales VERBATIM 29/29.
+     Registre 188 → 189.
+  2. qiraat-tanawi-2/20297 (4 701 car, 7610ced) : ḥamdala (paraphrase Furqān 25:1) + ṣalāt ;
+     « nos fils les élèves et nos filles les élèves » ; 2e étape du cycle secondaire ;
+     Shāṭibiyya Ḥirz al-amānī wa-wajh al-tahānī d'al-Shāṭibī (m. 590 H.) + šarḥ Sirāj
+     al-qāriʾ al-mubtadī wa-tadhkār al-muqriʾ al-muntahī d'Ibn al-Qāṣiḥ (m. 801 H.), tous
+     deux glossés ; méthode riwāya/talaqqī/adāʾ + dirāya/naẓar/taʿlīl, qurrāʾ et leurs
+     écoles, pratique établie du Maroc sur les questions disputées (spécificité iqraʾ) ;
+     ToC 26 + 2 finales VERBATIM 28/28 (apostrophe/NNBSP normalisés ; ﴿Āmantum﴾ → « Āmantum »
+     — convention main 0-arabe, écart documenté). Registre 189 → 190.
+- **FEATURES LECTEUR** (f599806) :
+  1. SURLIGNAGES PERSISTANTS (CSS Custom Highlight API — Chrome/Edge ; zéro mutation du DOM
+     React, survit aux re-rendus et au bug innerHTML) : sélection FR ou AR → pastille
+     flottante « Surligner » (positionnée sur la sélection, masquée au défilement) → portées
+     mnhj-fr/mnhj-ar (fond laqué ambre + soulignement ; variables --hl-* clair/sombre) ;
+     offsets texte par colonne (textOffsetFrom/rangeFromOffsets), fusion des chevauchements,
+     localStorage minhaj.highlights.v1 ; bouton Highlighter avec badge compteur + popover
+     « Tout effacer » ; support détecté via useSyncExternalStore (SSR-safe, pas d'erreur
+     d'hydratation) ; dégradation gracieuse sans support.
+  2. REPRISE DE POSITION PAR DOC : scroll % mémorisé (minhaj.readPos.v1, throttle 500 ms,
+     purge <2 %/>97 %), restauration après 420 ms + note « Position de lecture restaurée »
+     (2,6 s), annulée si l'utilisateur a défilé entre-temps ; ordre des effets inversé
+     (capture AVANT toute écriture) — piège d'effacement documenté dans le code.
+  3. STYLES : ::selection différenciée par colonne (FR ambre clair / AR orange profond),
+     li::marker ambré, blockquote italique en colonne FR, survol discret des vers manẓūma
+     (5 % primary), surlignages adaptés au thème nuit.
+  QA agent-browser : toolbar visible après sélection, FR+AR enregistrés (store [[140,180]] /
+  [[0,30]]), round-trip SPA 15371→11366→15371 persistant (mnhj-fr réinscrite), badge
+  2→0 après « Tout effacer », restauration 44,6 %→45 % + note visible à 1,6 s puis disparue,
+  VLM confirme le rendu ambre (clair ET sombre), 8 verse-tables intacts, 0 erreur console.
+- **1re LEÇON DE LA FILE fiqh-tanawi-2** (4074b02) : 12239 « La fixation de l'objet du salam
+  et l'énoncé de ses caractères » (17 352 car — leçon 14, Mukhtaṣar Khalīl/šarḥ al-Dardīr/
+  ḥāšiyya al-Dasūqī) : matn intégral translittéré-glosé, glossaire 10 termes voyellisés,
+  hadith Ibn ʿAbbās (Bukhārī, kitāb al-salam) sourcé, 3 axes (fixation valide/invalide —
+  taʾwīlān de la Mudawwana, divergence Abū ʿImrān/al-Qāḍī ʿIyāḍ/Saḥnūn — caractéristiques,
+  nullité par maǧhūl + ulġiya), citation al-Bahrām al-Dimīrī (Shāmil 1/624), structure main
+  11366 (Objectifs/tamhīd/matn/Compréhension/Analyse/Évaluation/Istiṯmār/Préparation).
+  QA structurelle : 8 h2 + 5 h3 + 2 h4 + 6 ol + 24 li strictement identiques à la source,
+  0 arabe. Registre 190 → 191.
+- QA finale : accueil 200 (hero + stats + REPRENDRE LA LECTURE), lecteurs 18671/20297/12239
+  OK (badge savant, sondes matn/hadith/Bukhārī), dark mode OK (VLM), 0 débordement, 0 erreur
+  console, lint 0 erreur (1 warning préexistant llm-translate.ts:561).
+
+Stage Summary:
+- **État projet** : sain et en accélération. HEAD 4074b02, registre **191/950** (+3 ce tour :
+  2 muqaddimas + 1 leçon complète), **FILE R22 TERMINÉE — 15 livres entiers en couche
+  savante** (usul-fiqh-tanawi-1/2, ulum-hadith-tanawi-1/2, hadith-tanawi-3, hadith-3es,
+  tafsir-tanawi-3, qiraat-tanawi-2, + les 7 antérieurs). 1 bug lecteur corrigé (perte des
+  tableaux poétiques en navigation interne — racine : re-rendu cache), 2 features majeures
+  livrées (surlignages persistants, reprise de position), 5 raffinements typographiques.
+- **Risques / attention** : (a) surlignages — l'API CSS Custom Highlight n'est pas supportée
+  par Safari/Firefox : bouton masqué proprement, aucun effet négatif ; (b) les offsets
+  surlignage sont liés au texte : si une traduction évolue (remplacement GT→savant), les
+  offsets d'un doc peuvent se décaler —ranges invalides ignorés silencieusement
+  (rangeFromOffsets → null → skip) ; (c) convention documentée : ﴿Āmantum﴾ rendu « Āmantum »
+  (0-arabe main) dans le ToC de 20297 — écart verbatim assumé ; (d) verse-table : la détection
+  dépend d'innerText — en page non rendue certains cas limites pourraient différer (non
+  observé).
+- **Priorités suivantes** : (1) continuer la file fiqh-tanawi-2 — 16 leçons restantes
+  (12241, 12242, 12243, 12253, 12261, 12498-12503, 12505, 12510, 12512, 12517/13349,
+  12522/13353 — 8-15 k car AR chacune, ~45 min/doc) ; (2) proposer au client le collage des
+  ~119 traductions perdues (historique chat) pour réinjection ; (3) idées features :
+  extraction des 885 PDF-only, export EPUB/PDF d'une leçon, notes attachées aux surlignages.
