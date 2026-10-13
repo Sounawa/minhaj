@@ -2312,3 +2312,55 @@ Stage Summary:
   depuis SON historique chat (collage dans la conversation) avant toute nouvelle production.
 - Règles maintenues : JAMAIS de sous-agents pour la traduction ; commit + backup /tmp à chaque doc ;
   setsid -f pour tout daemon ; ne jamais redémarrer le serveur dev.
+
+---
+Task ID: R49
+Agent: agent principal (Z.ai Code — cron webDevReview 455619, 1er tour post-restauration)
+Task: QA générale agent-browser + chasse aux bugs + améliorations (styling/features) — round automatique
+
+Work Log:
+- ÉTAT INITIAL : HEAD 3d55f58 (R48), git propre, serveur sain (200 partout), registre 183/950.
+- QA approfondie des zones non couvertes en R48 : dark mode ✓ (bg lab 4.5), favoris ✓ (ajout +
+  dialog + compteur), navigation leçon précédent/suivant/sommaire ✓, vues Bilingue/FR/AR ✓,
+  recherche Ctrl+K ✓ — 0 erreur console partout.
+- **BUG MAJEUR DÉCOUVERT — chrome ministériel dans le corpus** : le crawler avait capturé, après
+  chaque leçon, le chrome du site habous.gov.ma : module « للاطلاع أيضا » (liens), grilles vides
+  « المرحلة الأولى/الثانية », sidebar des 16 matières (listant les 64 manuels), <footer>
+  ministériel (liens + coordonnées). Ampleur réelle : **952 champs html (AR) + 752 champs htmlFr
+  (GT traduit, y compris ~11 Ko appendés aux reconstructions savantes type 15371) = 1 730 champs
+  pollués, ~20 Mo**. Visible en colonne AR du lecteur + pollution de l'index de recherche
+  (« الوزير » matchait ~900 docs).
+- **SANITIZER CHIRURGICAL** (scripts-recovery/sanitize-chrome.py, idempotent, dry-run par défaut) :
+  coupe au marqueur le plus précoce (related h4 AR/FR, grid structurellement vide, sidebar 16
+  sujets ordonnés OU ≥12 mentions « للسنة/année de l'enseignement » pour la sidebar GT traduite,
+  footer-list « المجلس العلمي الأعلى/Conseil scientifique suprême » pour les footers sans balise)
+  ; gardes : signature forte dans les 16K suivants (signatures exclusives footer — « المجلس
+  العلمي الأعلى » ÉCARTÉ : bibliographies légitimes « منشورات المجلس العلمي الأعلى » prouvées
+  sur fiqh-6ep/15275), texte réel ≥80 car ou h1/h2 dans le kept (stubs titre-seul type 19353),
+  passes itératives ×3, clean_tail linéaire (backtracking catastrophique \s*\s+ corrigé — doc
+  13584 htmlFr 27 Ko). Validation échantillon : fins de leçons réelles (exercices, bibliographies)
+  sur 11366/15275/15857/18693/13011/13758/12021 + 8 FR aléatoires.
+- RÉSULTAT : **0 résidu chrome sur les 1 853 docs** (re-scan signatures + footer + footer-list) ;
+  983 docs FR intacts ; stats API inchangées (64 livres / 1 853 docs / 983 FR) ; lecteur 11366
+  propre après reload (cache page 30 s) ; recherche « الوزير » → 1 hit pertinent (index
+  auto-réinvalidé via corpusStamp) ; captures qa-r49-*.png.
+- **FEATURE « Traduction savante »** : registre scripts-translate/savant-registry.json (133 hand +
+  50 LLM) exposé via getSavantIds() (cache mtime, suivi à chaud des injections) dans
+  lib/minhaj.ts → champ `savant` sur DocPayload (getDoc), LessonSummary (getBookDetail) et
+  SearchHit (searchCorpus) ; types client miroir ; UI : badge doré (BookMarked, gradient
+  amber→yellow, dark mode) dans le lecteur (« Traduction savante » + title explicatif), page
+  livre (badge « savante » sur les 30 leçons + intro de fiqh-1ep, hidden sm:), recherche
+  (mini-badge sur les hits). API vérifiée : 11366 savant=true, fiqh-1ep 30/30+intro, recherche
+  purification → 11366 savant=true / 12881 savant=false.
+- Lint : 0 erreur (1 warning préexistant llm-translate.ts:561).
+
+Stage Summary:
+- Corpus DÉPOLLUÉ (le bug existait depuis le crawl initial — invisible car le FR savant était
+  propre mais l'AR et le FR-GT affichaient ~13 Ko de chrome par leçon) + recherche assainie.
+- Transparence qualité en place : l'utilisateur distingue désormais traduction savante (183) vs
+  machine (800) dans les 3 surfaces (lecteur, liste, recherche).
+- Commit 49af243 (72 fichiers : 63 livres JSON + 5 src + sanitizer + 4 captures QA).
+- Priorités suivantes inchangées : 7 docs R22 restants (15371 FR à re-sanitizer ? NON — son htmlFr
+  savant est maintenant propre, chrome GT retiré ✓) puis file fiqh-tanawi-2 ; envisager
+  l'extraction des 885 PDF-only comme prochaine feature majeure.
+- Backup-tour /tmp/my-project/ à rafraîchir après ce commit (bundle + worklog + registre).
