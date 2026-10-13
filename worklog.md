@@ -2639,3 +2639,42 @@ Work Log (intermédiaire 2) :
 
 Stage Summary (intermédiaire 2) :
 - Restent 5 leçons de fond + 3 index. Priorité : finir fiqh-tanawi-2 entièrement.
+
+---
+Task ID: R53 (final)
+Agent: agent principal (Z.ai Code — cron webDevReview, 5e tour, trace 1a133977d677b2b5 + relance utilisateur 1a13460a4a2d3ab9)
+Task: QA + file fiqh-tanawi-2 ENTIÈRE + features + bilan utilisateur
+
+Work Log:
+- **18 RECONSTRUCTIONS SAVANTES** ce tour (main, workflow complet par doc) :
+  12241, 12242, 12243, 12253, 12261 (section salam) ; 12498 qarḍ, 12499 muqāṣa,
+  12500/12502/12503/12505/12510/12512/12517 rahn complet, 12519/13349 index figures,
+  12522/13353 index sources.
+- **FIQH-TANAWI-2 TERMINÉ À 100 % : 22/22 docs** (21 leçons + intro) en couche
+  savante — registre 191 → **209/950** (+18). Commits 5a8ea2b…cb47cd4, backup
+  rafraîchi après CHAQUE document (règle b).
+- **FEATURE : progression savante par livre** (db352cb) : BookSummary.docsSavant
+  côté serveur + cartes accueil (badge Award « traduction savante intégrale » /
+  « N savantes » + % / « trad. machine ») + en-tête page livre ; dénominateur =
+  docsFr (PDF-only hors champ, décision documentée). Vérifié : 17 intégrales,
+  20 partiels, 27 machine ; fiqh-tanawi-2 « 22/22 · Traduction savante intégrale ».
+- **BUGFIX : erreur d'hydratation préexistante** (db352cb) : useFavorites/
+  useLastDoc/useLocalState lisaient localStorage pendant l'hydratation →
+  mismatch header. Fix useHydrated() (pattern officiel useSyncExternalStore).
+  QA : console + page errors 0, favoris restaurés post-reload, REPRENDRE OK.
+- Fausse alerte `lSupport` ligne 500 : mangling d'affichage bash — source
+  correcte (vérifié codepoints + chunk compilé). 3 captures QA dans tr-tmp/.
+
+Stage Summary:
+- **État** : sain. 64/64 livres reconstitués, 1853 docs, 983 bilingues, 209
+  savants (159 main + 50 LLM validés). 16 livres en couche savante intégrale
+  (fiqh-1ep, tafsir-1ep, fiqh-5ep, fiqh-tanawi-2 + 12 muqaddimas/livres 1-doc).
+- **Risques/attention** : (a) les ~119 traductions perdues (R21-R41, ancien AI)
+  n'existent QUE dans l'historique de chat du client — relancer l'offre de
+  collage pour réinjection ; (b) Turbopack a affiché une erreur stale pendant
+  l'HMR du fix (duplicate noopSubscribe transitoire) — compil actuel vérifié
+  propre, page errors 0 ; (c) Safari/Firefox : surlignages dégradés proprement.
+- **Priorités suivantes** : (1) file suivante — hadith-1ep 31/32 (1 doc
+  restant = livre intégral !) puis fiqh-6ep 17/31, tafsir-5ep 32/123, tafsir-6ep
+  16/31 ; (2) collage des 119 traductions perdues si le client les fournit ;
+  (3) idées : extraction PDF-only, export EPUB, notes sur surlignages.
