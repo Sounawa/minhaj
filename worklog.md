@@ -2617,3 +2617,25 @@ Stage Summary (intermédiaire) :
 - Restent 10 leçons + index : 12498 (qarḍ), 12499 (muqāṣa), 12500/12502 (rahn), 12503
   (nullité gage), 12505 (ḥiyāza), 12510 (disposition), 12512 (ḍamān al-rahn), 12517 (litige),
   12522/13353 + 13349/12519 (index). Puis UI/features.
+
+---
+Task ID: R53 (en cours — 2e point)
+Agent: agent principal (Z.ai Code — cron webDevReview, 5e tour)
+Task: Suite file fiqh-tanawi-2 — 10 leçons au total ce tour
+
+Work Log (intermédiaire 2) :
+- 5 leçons supplémentaires (12498 → 12503) : qarḍ complet (hadiths Abū Rāfiʿ/Ǧābir,
+  Zarqānī, Ibn Quddāma, siftaǧa = « chèque bancaire », 5 ǧarr manfaʿa, chèques = cas
+  crainte générale), muqāṣa (Ǧawharī/Fayyūmī/Ibn ʿArafa/Dardīr, 36 formes ʿayn — Dasūqī),
+  rahn (PILLIERS 4, Muddaththir 38 + Baqara 282 markers seuls, hadith cuirasse ʿĀʾisha,
+  mushāʿ, muḥāṣṣa 300/150, double-engagement fiduciaire), rahn suite (h4-استخلاص source,
+  musāqāt, miṯlī scellé, faḍla, mustaʿār, garanties amīn), nullités (diya/ʿāqila, Ashhab,
+  Māzarī, ʿāriyya).
+- **JALON : REGISTRE 200/950** atteint avec 12502 (commit ab80834). Actuellement 201/950.
+- 10 commits ce tour : 5a8ea2b, 43d41b9, aaf89ab, 10a2154, 2c5cb2d, dbee997, 4dbec75,
+  31bb9f9, ab80834, 458b301. Backup rafraîchi après CHAQUE doc (règle b respectée).
+- fiqh-tanawi-2 : 12/21 docs savants (reste 12505, 12510, 12512, 12517, 12519/13349,
+  12522/13353 + index).
+
+Stage Summary (intermédiaire 2) :
+- Restent 5 leçons de fond + 3 index. Priorité : finir fiqh-tanawi-2 entièrement.
