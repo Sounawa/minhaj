@@ -3367,3 +3367,77 @@ Stage Summary:
 - **Priorités suivantes** : (1) ulum-quran-3es (28 docs, nasḫ/qirāʾāt) → livre №43 ; (2)
   audit GT-ismes titleFr restants ; (3) features : extraction des 885 PDF-only, export
   EPUB/PDF d'une leçon, compteur de notes.
+
+---
+Task ID: R61
+Agent: Z.ai Code (agent principal — relance utilisateur « continue », feu vert traductions maintenu)
+Task: continue — ulum-quran-3es (28 entrées) en couche savante intégrale → LIVRE №43, avec restauration systématique des versets effacés au scraping
+
+Work Log:
+- **28 TRADUCTIONS SAVANTES INTÉGRALES** (rédaction main, workflow extract → rédaction → qa-lesson →
+  hand-set → commit + backup PAR DOC, règles a/b respectées). Unité nasḫ : 19308 (définition,
+  gloses آية/nunsihā/ḫayr), 19331 (ḥukm : 4 adilla naqliyya), 19338 (voies : Burayda, Zamzam),
+  19344/19347 (types : ʿĀʾiša dix nourrices, ʿUmar raǧm, qibla), 19351 (Zarqānī tripartition).
+  Unité muḥkam/mutašābih : 19352 (3 sections de manšaʾ al-tašābuh, gloses umm al-kitāb/zayġ).
+  Unité iʿǧāz : 19362 (triple tahaddī, 3 faces), 19453 (ġaybī/ʿilmī/tašrīʿī, 7 maqāṣid).
+  Unité qirāʾāt : 19466 (ḥadīth Hišām, Ṭayyiba), 19467 (ṭabaqāt ~40 noms), 19468 (3 types,
+  7 bienfaits), 19483 (3 piliers, ḥadīth Ḥuḏayfa), 19491 (6 types par sanad), 19494 (faḍl,
+  Ṭayyiba + Ḥirz en distiques), 19497/19502/19504 (les 7+3+4 lecteurs, notices + vers), 19518
+  (choix marocain Warš/Nāfiʿ/al-Azraq/al-Dānī/al-Ġāzī b. Qays, muṣḥaf muḥammadien).
+- **TECHNIQUE DE RESTAURATION INÉDITE (vs versets-image du source)** : les versets coraniques du
+  manuel habous.gov.ma sont des IMAGES JS-non-rendues → cause racine des lacunes du scraping.
+  Contournement : (1) index Google du site révèle les RÉFÉRENCES [sourate:verset] imprimées à côté
+  des images → recherches ciblées « habous <docId> <fragment> » ; (2) vérification des citations
+  savantes contre les sources en ligne (islamweb Taḥrīr 2:106 + Šifāʾ faṣl 9-10, shamela Manāhil
+  7249/954, šarḥ Ṭayyiba pour les variantes) ; (3) mot-cible : le contenu discuté ne figure pas au
+  numéro imprimé → coquille. Résultat : ~45 versets RESTAURÉS ce tour (2:106 ×3, 22:52, 45:29,
+  13:39, 16:101, 66:1, 2:183/184, 2:240/234, 58:12/13, 53:3-4, 2:187, 4:15, 2:115→116,
+  3:184, 9:100, 2:189, 11:1, 39:23, 3:7 ×3, 2:25, 2:69, 80:31-32, 37:93, 21:57, 4:3, 42:11,
+  18:1-2, 17:88, 11:13, 10:38, 41:26, 39:23, 15:9, 41:42, 30:1-5 ×2, 41:53, 16:89, 11:49,
+  3:44, 2:202-203, 9:108, 23:12-14, 6:125, 10:101, 45:13, 35:41, 28:88, 39:67, 4:82, 1:1/3/6,
+  18:51, 55:76, 9:128, 7:9, 10:92, 35:28, 35:32, 72:1-2).
+- **COQUILLES DE RÉFÉRENCE DU MANUEL CORRIGÉES contre le cache** (mot-cible, convention R58) :
+  2:188→189, 2:24→25, 39:22→23, 42:9→11, 4:81→82, 2:220→222, 5:7→6, 2:258→259, 41:52→53,
+  Tawba 90→100, Kahf 50→51 ×3, Raḥmān 75→76, Tawba 129→128, 19308 «(2)» superfflu. Vérifiées
+  chaque fois contre le contenu (ex. 2:189 : la glose « البيوت من ظهورها » n'est pas au n° 188).
+- **VARIANTES DE LECTURE IDENTIFIÉES** (19468/19483/19491) : ṣirāṭ/sirāṭ, maliki/māliki,
+  kuḏḏibū/kuḏibū, yaṭhurna/yattaṭhharna, arǧulakum/arǧulikum, min anfasikum, rafārif/ʿabāqirī,
+  ašhadnāhum/kunṭa (Kahf 18:51, Abū Ǧaʿfar) — chaque fois confirmées contre šarḥ Ṭayyiba ou
+  Iʿrāb al-šāḏḏa avant restauration.
+- **titleFr CORRIGÉS (GT-ismes)** : 19308 « restriction (2) »→« spécification (taḫṣīṣ) » ;
+  19331/19338/19344/19347 « copie »→« abrogation (nasḫ) » ; 19362/19453 « miracle »→
+  « inimitabilité (iʿǧāz) » ; 19467 « Couches de mémorisation »→« générations (ṭabaqāt) » ;
+  19494 « vertu »→« mérite (faḍl) » ; 19504 « récitants »→« lecteurs » ; 19466 « origine »→
+  « genèse » ; + harmonisations mineures. Coïrence ToC 18644 ↔ titres réels assurée.
+- **DISTIQUES** : Ṭayyiba (7+4+3 vers) et Ḥirz al-amānī (10 vers) traduits en lignes/paires,
+  convention tables ltr R60 respectée ; formules des vers de la Ṭayyiba sur les 3 piliers (19483).
+- **QA NAVIGATEUR** (agent-browser + playwright python) : accueil **43 badges « traduction savante
+  intégrale »** (42→43) ; page livre « 29/29 documents bilingues · 28 leçons + introduction » +
+  badge ; lecteur 19308 : h1 = titleFr corrigé, versets 2:106/22:52/45:29 restaurés visibles ;
+  **mobile 390 px : 0 overflow ×4 pages** (accueil, livre, 19308, 19522 — playwright viewport
+  390×844) ; 0 erreur console (playwright listeners) ; lint 0 erreur (1 warning préexistant
+  llm-translate.ts:561) ; captures qa-r61-*.png ; dev.log propre.
+- Registre : 336 → **364/950** (+28 main, 292 hand + 50 LLM). Backup /tmp/my-project/backup-tour/
+  rafraîchi après CHAQUE document (règle b : registry + worklog + latest-bundle.bdl + json du livre).
+
+Stage Summary:
+- **État** : sain. HEAD au terme de R61, registre **364/950**, **43 livres en couche savante
+  intégrale**. **ulum-quran-3es = LIVRE №43 : 29/29 entrées (intro + 28 leçons), 100% bilingue.**
+  La matière ʿulūm al-Qurʾān atteint 3 livres complets (1es LLM, 2es LLM, 3es savant) — le niveau
+  collège est couvert. La chaîne Warš/Nāfiʿ/al-Azraq documentée en 19518 boucle la cohérence avec
+  tajwid-5ep/6ep.
+- **Décisions documentées ce tour** : (1) restauration des versets-image par index Google +
+  vérification contre sources en ligne (islamweb/shamela/šarḥ Ṭayyiba) — ~45 versets, 15 coquilles
+  de référence corrigées ; (2) leçon 19271 importée du manuel 2es (leçon 16) : conservée fidèle,
+  écart documenté ; (3) glose « كاذب » (19331) sans mot vedette identifiable → signalée règle f ;
+  (4) consigne atelier 1 (19520) perdue au scraping → signalée ; (5) titre altéré « أوعية النشر »
+  (19491) corrigé en Ṭayyibat al-našr ; (6) coquilles de référence manuel vs contenu : le contenu
+  fait foi, écart consigné dans les commits.
+- **Risques / attention** : (a) ~586 traductions restent (364/950), production main = goulot ;
+  (b) les 885 pdfOnly exigent une extraction PDF (feature en attente) ; (c) la technique
+  d'index Google a des limites (versets des leçons 19462/19520 non référencés) — les lacunes
+  restantes sont signalées règle f dans le texte.
+- **Priorités suivantes** : (1) fikr-islami-tanawi-3 ou taqtit-tanawi-1 (si non complets) —
+  vérifier le registre par livre pour le prochain gros livre complet atteignable ; (2) audit
+  GT-ismes titleFr restants (~870 traductions GT) ; (3) features : extraction des 885 PDF-only,
+  export EPUB/PDF d'une leçon, compteur de notes.
