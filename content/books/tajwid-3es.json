@@ -1,271 +1,271 @@
 {
-  "id": "tajwid-3es",
-  "subject": "tajwid",
-  "level": "3es",
-  "subjectAr": "التجويد",
-  "levelAr": "التجويد-الثالثة-إعدادي-عتيق",
-  "titleAr": "التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لإبراهيم المارغني",
-  "titleFr": "Tajwīd — al-Durar al-Lawāmiʿ d'Ibn Barrī (suite)",
-  "pdfUrl": null,
-  "intro": {
-    "docId": "20267",
-    "titleAr": "التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لإبراهيم المارغني للسنة الثالثة من التعليم الإعدادي العتيق",
-    "titleFr": "Présentation du manuel",
-    "html": "<h1> التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لإبراهيم المارغني للسنة الثالثة من التعليم الإعدادي العتيق</h1>\n <dl>\n <dt></dt>\n <dd>\n \n </dd>\n </dl>\n <p></p>\n <p>&nbsp;الحمد لله الذي أنزل على عبده الكتاب ولم يجعل له عوجا، والصلاة والسلام على سيدنا محمد خير من تلا آيات الكتاب مجودا، وآله وصحبه الأخيار، ما تليت آيات القرآن الكريم آناء الليل وأطراف النهار.</p>\n <p>أيها التلميذ، أيتها التلميذة: يسعدنا أن نضع بين يديكما كتابكما هذا: «التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لإبراهيم الـمارغني» للسنة الثالثة من التعليم الإعدادي العتيق، آملين أن يعينكما على ضبط الـمباحث التجويدية الجليلة التي يتضمنها، وتطبيقها في كل ما تتلوانه من آيات الكتاب الـمبين، ترجوان بذلك تجارة مع الله لن تبور، ويوفيكما أجركما، ويزيدكما من فضله؛ فهو الغفور الشكور.</p>\n <p>ويحتوي هذا الكتاب على أبواب مهمة، لا يستغني عنها من يريد التمهر في تلاوة كتاب الله تعالى، وهي متممة لما درستماه في السنتين الـماضيتين، وقد بذلنا وسعنا لتذليل الصعب، وتقريب البعيد، وحرصنا على إبراز اختلاف راوِيَيْ نافع؛ ورش وقالون، واعتمدنا نظم «الدرر اللوامع»، وشرحها «النجوم الطوالع»، ومراجع مساعدة.</p>\n <p>كما تضمّن الكتاب أنشطةً تعليمية متنوعة لـمساعدتكما على تنمية معارفكما، وتطوير مهاراتكما من خلال تداريب تطبيقية، وتحفيزكما على البحث والتعلم الذاتي.</p>\n <p>وحرصا على التخلق بالقرآن الكريم، الذي هو غاية الغايات؛ أدرجنا عنصر «أتدبر وأتخلق» لتهتديا بهدي الـمصطفى سيدنا محمد صلى الله عليه وسلم وهدي صحابته الكرام رضي الله عنهم، وتقتديا بأئمة القرآن الذين جمعوا بين العلم ومكارم الأخلاق.</p>\n <p>وفقكما الله، وحقق آمالكما، وجعلكما من أهل القرآن أهل الله وخاصته.</p>\n \n <ul>\n <li>كيف أستعمل كتابي هذا<br></li>\n <li>كفايات تدريس التجويد بالسنة الثالثة من التعليم الإعدادي العتيق</li>\n <li>التوزيع الدوري والأسبوعي للدروس <br></li>\n <li>1 . باب الفتح والإمالة: التعريف، وحكم ذوات الياء مما فيه راء</li>\n <li>2 . إمالة ذوات الياء وشبهها مما لا راء فيه</li>\n <li>3 . إمالة الـمرسوم بالياء ورؤوس الآي</li>\n <li>4 . إمالة ذوات الواو والألفات قبل الراء الـمكسورة</li>\n <li>5 . الإمالة في فواتح السور، وأنواع الإمالة عند ورش</li>\n <li>6 .ما يميله قالون</li>\n <li>7 .موانع الإمالة</li>\n <li>8 . حكم (ذكرى الدار) والـمقصور الـمنون</li>\n <li>9 . باب ترقيق الراءات: الترقيق بعد ياء ساكنة أو كسرة لازمة</li>\n <li>10. مستثنيات ترقيق الراء بعد الكسرة</li>\n <li>11 . حكم (بشرر) وحكم الراء الساكنة</li>\n <li>12 . ترقيق الراء الـمكسورة وأحكام الوقف على الراء</li>\n <li>13 . أنشطة تطبيقية</li>\n <li>14 . باب اللامات: شروط تغليظها عند الإمام ورش</li>\n <li>15 . باب اللامات: ما يجوز فيه الترقيق والتغليظ عند ورش</li>\n <li>16 . باب الوقف: تعريف الوقف وأنواعه</li>\n <li>17 . الإشمام: تعريفه- محله- موانعه</li>\n <li>18 . الوقف على مرسوم الخط</li>\n <li>19 . ياءات الإضافة</li>\n <li>20 . الياءات الزوائد عند نافع</li>\n <li>21 . ما انفرد به قالون وما انفرد به ورش من الياءات الزوائد</li>\n <li>22 . باب فرش الحروف الـمفردة (1)</li>\n <li>23 . فرش الحروف (2)</li>\n <li>24 . فرش الحروف (3)</li>\n <li>25 .أنشطة تطبيقية</li>\n <li>26 . الأبيات المقررة من متن الدرر اللوامع: من أول باب الإمالة إلى آخر الـمتن</li>\n <li>لائحة الـمصادر والـمراجع</li>\n <li>هذا الفهرس",
-    "htmlFr": "<h1>Le tajwīd : le poème al-Durar al-lawāmiʿ d’Ibn Barī avec le commentaire al-Nuǧūm al-ṭawāliʿ d’Ibrāhīm al-Mārġanī — 3ᵉ année de l’enseignement collégial traditionnel</h1>\n <dl>\n <dt></dt>\n <jj>\n \n </jd>\n </dl>\n <p></p>\n <p> Loué soit Dieu qui a fait descendre le Livre à Son serviteur et ne l'a pas rendu tordu, et que la bénédiction et la paix soient sur notre maître Muhammad, le meilleur de ceux qui récitent dignement les versets du Livre, ainsi que sur sa famille et ses bons compagnons. Les versets du Saint Coran n'ont pas été récités la nuit ou en fin de journée.</p> Loué soit Dieu qui a fait descendre le Livre à Son serviteur et ne l'a pas rendu tordu.\n <p>Ô étudiant, Ô étudiant : Nous sommes heureux de remettre entre vos mains votre livre : \"Tajweed min Nazm al-Durar al-Luma'i' d'Ibn Bari bi Sharh al-Nujoum al-Tawala' d'Ibrahim al-Marghani\" pour la troisième année de l'enseignement préparatoire ancien, en espérant qu'il vous aidera à maîtriser les grands sujets du Tajweed qu'il contient et à les appliquer dans tous les versets du Livre Clair que vous réciter. Vous espérez un échange avec Dieu qui n’échouera pas et qu’Il ​​vous récompensera. Il vous récompensera tous les deux et vous augmentera de sa générosité. Il est le Pardonneur, le Reconnaissant.</p>\n <p>Ce livre contient des chapitres importants et indispensables à quiconque souhaite maîtriser la récitation du Livre de Dieu Tout-Puissant. Ils complètent ce que vous avez étudié au cours des deux dernières années. Nous avons fait de notre mieux pour surmonter le difficile et amener le lointain, et nous avons tenu à souligner la différence entre les deux narrateurs de Nafi’ ; Warsh et Qaloun, et nous avons adopté les systèmes de « Al-Durar Al-Lama'a », expliqués par « Al-Nojoum Al-Tala'a » et les références auxiliaires.</p>\n <p>Le livre comprend également diverses activités pédagogiques pour vous aider à développer vos connaissances, développer vos compétences grâce à des exercices appliqués et vous motiver à rechercher et à auto-apprendre.</p>\n <p>Dans l'intérêt de la créationPar le Saint Coran, qui est le but ultime ; Nous avons inclus l'élément «Je réfléchis et crée» afin que vous puissiez vous laisser guider par la direction de l'Élu, notre maître Muhammad, que Dieu le bénisse et lui accorder la paix, et par la direction de ses honorables compagnons, que Dieu soit satisfait d'eux, et suivre l'exemple des imams du Coran qui allient connaissance et bonne morale.</p>\n <p>Que Dieu vous accorde le succès, réalise vos espoirs et fasse de vous parmi le peuple du Coran, le peuple de Dieu et Ses privilégiés.</p>\n \n <ul>\n <li>Comment utiliser ce livre<br></li>\n <li>Compétences pour enseigner le Tajweed en troisième année de l'enseignement préparatoire ancien</li>\n <li>Distribution périodique et hebdomadaire des cours <br></li>\n <li>1 . Chapitre sur l'ouverture et l'inclinaison : définition, et jugement sur les lettres du yā' qui contiennent un rā'</li>\n <li>2 . Incliner le ḍāwāt yā' et les questions similaires sur lesquelles il n'y a pas d'opinion.</li>\n <li>3. Incliner le décret avec les têtes des yā' et des ayā'</li>\n <li>4. Inflexion des waws et des alifs avant le kasra rā'</li>\n <li>5. L'inclinaison dans les ouvertures des sourates, et les types d'inclinaison dans les ateliers</li>\n <li>6. Ce que Qaloun a tendance à faire.</li>\n <li>7. Barrières basculantes</li>\n <li>8 . Le jugement sur « Dhikra Al-Dar » et « Maqsour Al-Munun »</li>\n <li>9. Chapitre sur le Taraqiq de Ra'at : Taraqiq après un sakun yā' ou une kasra intransitive</li>\n <li>10. Exceptions à l'amincissement du Ra après la kasra</li>\n <li>11 . Le jugement sur « bashar » et le jugement sur la consonne rā’</li>\n <li>12 . L'amincissement du Raa brisé et les dispositions d'arrêt sur le Ra</li>\n <li>13 . Activités pratiques</li>\n <li>14 . Chapitre sur les Lamas : Conditions pour le rendre strict selon l'Imam Warsh</li>\n <li>15 . Chapitre sur les Lamas : Qu'est-ce qui est permis d'éclaircir ou d'épaissir lors d'un atelier</li>\n <li>16 . Chapitre : Dotation : Définition de la dotation et de ses types</li>\n <li>17 . La fusion : sa définition - sa place - ses contre-indications</li>\n <li>18 . Dotation en ligne décret</li>\n <li>19. Ajout yā'āt</li>\n <li>20 . Le yā’ supplémentaire selon Nafi’.</li>\n <li>21 . Ce qui est unique à Qalun et ce qui est unique à Warsh, ce sont les yā supplémentaires</li>\n <li>22 . Chapitre sur le brossage des lettres simples (1)</li>\n <li>23 . PinceauxLettres (2)</li>\n <li>24 . Pinceaux à lettres (3)</li>\n <li>25. Activités pratiques</li>\n <li>26 . Les versets prescrits du texte « Al-Durar Al-Lawa'i' » : du début du chapitre sur l'inclinaison jusqu'à la fin du texte.</li>\n <li>Liste des sources et références</li>\n <li>Cet index</li>\n </ul>\n <div>\n \n </div>\n </div>\n <div>\n \n </div>\n <div>\n <div>"
+ "id": "tajwid-3es",
+ "subject": "tajwid",
+ "level": "3es",
+ "subjectAr": "التجويد",
+ "levelAr": "التجويد-الثالثة-إعدادي-عتيق",
+ "titleAr": "التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لإبراهيم المارغني",
+ "titleFr": "Tajwīd — al-Durar al-Lawāmiʿ d'Ibn Barrī (suite)",
+ "pdfUrl": null,
+ "intro": {
+  "docId": "20267",
+  "titleAr": "التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لإبراهيم المارغني للسنة الثالثة من التعليم الإعدادي العتيق",
+  "titleFr": "Présentation du manuel",
+  "html": "<h1> التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لإبراهيم المارغني للسنة الثالثة من التعليم الإعدادي العتيق</h1>\n <dl>\n <dt></dt>\n <dd>\n \n </dd>\n </dl>\n <p></p>\n <p>&nbsp;الحمد لله الذي أنزل على عبده الكتاب ولم يجعل له عوجا، والصلاة والسلام على سيدنا محمد خير من تلا آيات الكتاب مجودا، وآله وصحبه الأخيار، ما تليت آيات القرآن الكريم آناء الليل وأطراف النهار.</p>\n <p>أيها التلميذ، أيتها التلميذة: يسعدنا أن نضع بين يديكما كتابكما هذا: «التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لإبراهيم الـمارغني» للسنة الثالثة من التعليم الإعدادي العتيق، آملين أن يعينكما على ضبط الـمباحث التجويدية الجليلة التي يتضمنها، وتطبيقها في كل ما تتلوانه من آيات الكتاب الـمبين، ترجوان بذلك تجارة مع الله لن تبور، ويوفيكما أجركما، ويزيدكما من فضله؛ فهو الغفور الشكور.</p>\n <p>ويحتوي هذا الكتاب على أبواب مهمة، لا يستغني عنها من يريد التمهر في تلاوة كتاب الله تعالى، وهي متممة لما درستماه في السنتين الـماضيتين، وقد بذلنا وسعنا لتذليل الصعب، وتقريب البعيد، وحرصنا على إبراز اختلاف راوِيَيْ نافع؛ ورش وقالون، واعتمدنا نظم «الدرر اللوامع»، وشرحها «النجوم الطوالع»، ومراجع مساعدة.</p>\n <p>كما تضمّن الكتاب أنشطةً تعليمية متنوعة لـمساعدتكما على تنمية معارفكما، وتطوير مهاراتكما من خلال تداريب تطبيقية، وتحفيزكما على البحث والتعلم الذاتي.</p>\n <p>وحرصا على التخلق بالقرآن الكريم، الذي هو غاية الغايات؛ أدرجنا عنصر «أتدبر وأتخلق» لتهتديا بهدي الـمصطفى سيدنا محمد صلى الله عليه وسلم وهدي صحابته الكرام رضي الله عنهم، وتقتديا بأئمة القرآن الذين جمعوا بين العلم ومكارم الأخلاق.</p>\n <p>وفقكما الله، وحقق آمالكما، وجعلكما من أهل القرآن أهل الله وخاصته.</p>\n \n <ul>\n <li>كيف أستعمل كتابي هذا<br></li>\n <li>كفايات تدريس التجويد بالسنة الثالثة من التعليم الإعدادي العتيق</li>\n <li>التوزيع الدوري والأسبوعي للدروس <br></li>\n <li>1 . باب الفتح والإمالة: التعريف، وحكم ذوات الياء مما فيه راء</li>\n <li>2 . إمالة ذوات الياء وشبهها مما لا راء فيه</li>\n <li>3 . إمالة الـمرسوم بالياء ورؤوس الآي</li>\n <li>4 . إمالة ذوات الواو والألفات قبل الراء الـمكسورة</li>\n <li>5 . الإمالة في فواتح السور، وأنواع الإمالة عند ورش</li>\n <li>6 .ما يميله قالون</li>\n <li>7 .موانع الإمالة</li>\n <li>8 . حكم (ذكرى الدار) والـمقصور الـمنون</li>\n <li>9 . باب ترقيق الراءات: الترقيق بعد ياء ساكنة أو كسرة لازمة</li>\n <li>10. مستثنيات ترقيق الراء بعد الكسرة</li>\n <li>11 . حكم (بشرر) وحكم الراء الساكنة</li>\n <li>12 . ترقيق الراء الـمكسورة وأحكام الوقف على الراء</li>\n <li>13 . أنشطة تطبيقية</li>\n <li>14 . باب اللامات: شروط تغليظها عند الإمام ورش</li>\n <li>15 . باب اللامات: ما يجوز فيه الترقيق والتغليظ عند ورش</li>\n <li>16 . باب الوقف: تعريف الوقف وأنواعه</li>\n <li>17 . الإشمام: تعريفه- محله- موانعه</li>\n <li>18 . الوقف على مرسوم الخط</li>\n <li>19 . ياءات الإضافة</li>\n <li>20 . الياءات الزوائد عند نافع</li>\n <li>21 . ما انفرد به قالون وما انفرد به ورش من الياءات الزوائد</li>\n <li>22 . باب فرش الحروف الـمفردة (1)</li>\n <li>23 . فرش الحروف (2)</li>\n <li>24 . فرش الحروف (3)</li>\n <li>25 .أنشطة تطبيقية</li>\n <li>26 . الأبيات المقررة من متن الدرر اللوامع: من أول باب الإمالة إلى آخر الـمتن</li>\n <li>لائحة الـمصادر والـمراجع</li>\n <li>هذا الفهرس",
+  "htmlFr": "<h1>Le tajwīd : le poème al-Durar al-lawāmiʿ d’Ibn Barī avec le commentaire al-Nuǧūm al-ṭawāliʿ d’Ibrāhīm al-Mārġanī — 3ᵉ année de l’enseignement collégial traditionnel</h1>\n<dl>\n<dt></dt>\n<dd>\n</dd>\n</dl>\n<p></p>\n<p>Louange à Dieu, qui a fait descendre sur Son serviteur le Livre et n’y a point mis de tortuosité ; prière et salut sur notre maître Muḥammad, le meilleur de ceux qui psalmodièrent les versets du Livre selon les règles du tajwīd, ainsi que sur sa famille et ses nobles Compagnons, tant que seront récitées les versets du Noble Coran au long de la nuit et aux extrémités du jour.</p>\n<p>Ô élève, ô étudiante : c’est avec joie que nous plaçons entre vos mains votre livre : « Le tajwīd tiré du poème al-Durar al-lawāmiʿ d’Ibn Barī, avec le commentaire al-Nuǧūm al-ṭawāliʿ d’Ibrāhīm al-Mārġanī », de la troisième année de l’enseignement collégial traditionnel (<em>taʿlīm ʿatīq</em>). Nous espérons qu’il vous aidera à maîtriser les importants chapitres de tajwīd qu’il renferme et à les appliquer à tous les versets du Livre explicite que vous récitez — dans l’espoir d’un commerce avec Dieu qui jamais ne périt, Lui qui vous acquittera votre récompense et vous accroîtra de Sa grâce, car Il est le Pardonneur, le Très-Reconnaissant.</p>\n<p>Ce livre contient des chapitres essentiels, dont ne peut se passer quiconque veut exceller dans la récitation du Livre de Dieu Très-Haut ; ils complètent ce que vous avez étudié au cours des deux années écoulées. Nous avons déployé nos efforts pour aplanir les difficultés et rendre proche ce qui était lointain ; nous avons veillé à mettre en relief les divergences entre les deux transmetteurs de Nāfiʿ — Warš et Qālūn — et nous avons retenu le poème <em>al-Durar al-lawāmiʿ</em> (« Les perles étincelantes »), son commentaire <em>al-Nuǧūm al-ṭawāliʿ</em> (« Les étoiles levantes »), ainsi que des ouvrages de référence auxiliaires.</p>\n<p>Le livre comprend en outre des activités éducatives variées destinées à vous aider à enrichir vos connaissances et à développer vos compétences à travers des exercices d’application, et à vous encourager à la recherche et à l’apprentissage autonome.</p>\n<p>Dans le souci de se parer des qualités du Noble Coran — qui est la finalité des finalités —, nous avons intégré l’élément « Je médite et je m’approprie » (<em>atadabbaru wa-atakhallaqu</em>), afin que vous suiviez la guidance de l’Élu, notre maître Muḥammad — que Dieu prie sur lui et le salue — et celle de ses nobles Compagnons — que Dieu les agrée —, et que vous preniez pour modèles les imams de la lecture coranique, qui unirent la science et les nobles caractères.</p>\n<p>Que Dieu vous accorde la réussite, réalise vos espérances et vous compte parmi les gens du Coran, les gens de Dieu et Ses élus.</p>\n<ul>\n<li>Comment j’utilise ce livre<br></li>\n<li>Compétences d’enseignement du tajwīd en troisième année de l’enseignement collégial traditionnel</li>\n<li>Répartition périodique et hebdomadaire des cours<br></li>\n<li>1. Chapitre du fatḥ et de l’imāla : définition, et statut des mots à yāʾ contenant un rāʾ</li>\n<li>2. L’imāla des mots à yāʾ et de leurs semblables dépourvus de rāʾ</li>\n<li>3. L’imāla de ce qui est noté avec yāʾ, et des rimes des versets (ruʾūs al-āy)</li>\n<li>4. L’imāla des mots à wāw et des alif [placés] avant le rāʾ kasré</li>\n<li>5. L’imāla dans les ouvertures de sourates, et les types d’imāla selon Warš</li>\n<li>6. Ce que Qālūn soumet à l’imāla</li>\n<li>7. Les empêchements de l’imāla</li>\n<li>8. Le statut de « ḏikrā al-dār » et du nom apocopé indéterminé (al-maqṣūr al-munawwan)</li>\n<li>9. Chapitre de l’atténuation des rāʾ : après un yāʾ quiescent ou une kasra stable</li>\n<li>10. Les exceptions à l’atténuation du rāʾ après kasra</li>\n<li>11. Le statut [du rāʾ dans] « bušrur » et celui du rāʾ quiescent</li>\n<li>12. L’atténuation du rāʾ kasré et les règles de l’arrêt sur le rāʾ</li>\n<li>13. Activités pratiques</li>\n<li>14. Chapitre des lām : conditions de leur empâtement selon l’imam Warš</li>\n<li>15. Chapitre des lām : ce qui admet atténuation ou empâtement selon Warš</li>\n<li>16. Chapitre de l’arrêt (waqf) : définition et types</li>\n<li>17. L’išmām (inflexion mitigée) : définition, contexte et empêchements</li>\n<li>18. L’arrêt conforme à la graphie du muṣḥaf</li>\n<li>19. Les yāʾ de liaison (yaʾāt al-iḍāfa)</li>\n<li>20. Les yāʾ pléonastiques (zawāʾid) selon Nāfiʿ</li>\n<li>21. Les yāʾ pléonastiques propres à Qālūn et à Warš</li>\n<li>22. Chapitre du déploiement des lettres isolées (1)</li>\n<li>23. Le déploiement des lettres (farš al-ḥurūf) (2)</li>\n<li>24. Le déploiement des lettres (farš al-ḥurūf) (3)</li>\n<li>25. Activités pratiques</li>\n<li>26. Les vers prescrits du mathn al-Durar al-lawāmiʿ : du début du chapitre de l’imāla à la fin du poème</li>\n<li>Liste des sources et références</li>\n<li>Le présent index</li>\n</ul>"
+ },
+ "lessons": [
+  {
+   "docId": "pdf-mut23h2z-447",
+   "titleAr": "باب الفتح والإمالة: التعريف، وحكم ذوات الياء مما فيه راء",
+   "titleFr": "Chapitre du fatḥ et de l'imāla : définition, et statut des mots à yāʾ contenant un rāʾ",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_1.pdf",
+   "pdfOnly": true
   },
-  "lessons": [
-    {
-      "docId": "pdf-mut23h2z-447",
-      "titleAr": "باب الفتح والإمالة: التعريف، وحكم ذوات الياء مما فيه راء",
-      "titleFr": "Chapitre du fatḥ et de l'imāla : définition et statut des [mots à] yāʾ contenant un rāʾ",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_1.pdf",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h2z-448",
-      "titleAr": "إمالة ذوات الياء وشبهها مما لا راء فيه",
-      "titleFr": "L'imāla des [mots à] yāʾ et similaires dépourvus de rāʾ",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_2_إمالة_ذوات_الياء.pdf",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h2z-449",
-      "titleAr": "إمالة المرسوم بالياء ورؤوس الآي",
-      "titleFr": "L'imāla de ce qui est noté avec yāʾ et des rimes des versets (ruʾūs al-āy)",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_3_إمالة_المرسوم_بالياء_ورؤوس_الآي.pdf",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h2z-450",
-      "titleAr": "إمالة ذوات الواو والألفات قبل الراء المكسورة",
-      "titleFr": "L'imāla des [mots à] wāw et des alif [placés] avant le rāʾ kasré",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_4_إمالة_ذوات_الواو_والألفات.pdf",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h2z-451",
-      "titleAr": "الإمالة في فواتح السور، وأنواع الإمالة عند ورش",
-      "titleFr": "L'imāla dans les ouvertures de sourates, et ses types selon Warš",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_5_الإمالة_في_فواتح_السور.pdf",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h2z-452",
-      "titleAr": "ما يميله قالون",
-      "titleFr": "Ce que Qālūn soumet à l'imāla",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_6_ما_يميله_قالون.pdf",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h2z-453",
-      "titleAr": "موانع الإمالة",
-      "titleFr": "Les empêchements de l'imāla",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_7_موانع_الإمالة.pdf",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h2z-454",
-      "titleAr": "حكم (ذكرى الدار) والمقصور المنون",
-      "titleFr": "Le statut de « ḏikrā al-dār » et du nom apocopé indéterminé (al-maqṣūr al-munawwan)",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_8_حكم_ذكرى_الدار.pdf",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h2z-455",
-      "titleAr": "باب ترقيق الراءات: الترقيق بعد ياء ساكنة أو كسرة لازمة",
-      "titleFr": "Chapitre de l'atténuation des rāʾ : après un yāʾ quiescent ou une kasra stable",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_9_باب_ترقيق_الراءات.pdf",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h2z-456",
-      "titleAr": "مستثنيات ترقيق الراء بعد الكسرة",
-      "titleFr": "Les exceptions à l'atténuation du rāʾ après kasra",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_10_مستنيات_ترقيق_الراء.pdf",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h2z-457",
-      "titleAr": "حكم (بشرر) وحكم الراء الساكنة",
-      "titleFr": "Le statut [du rāʾ dans] « bušrur » et celui du rāʾ quiescent",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_11_حكم_بشرر.pdf",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h2z-458",
-      "titleAr": "ترقيق الراء المكسورة وأحكام الوقف على الراء",
-      "titleFr": "L'atténuation du rāʾ kasré et les règles de l'arrêt sur le rāʾ",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_12_ترقيق_الراء_المكسورة.pdf",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h2z-459",
-      "titleAr": "أنشطة تطبيقية",
-      "titleFr": "Activités pratiques",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_13_أنشطة_تطبيقية.pdf",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h2z-460",
-      "titleAr": "باب اللامات: شروط تغليظها عند الإمام ورش",
-      "titleFr": "Chapitre des lām : conditions de leur empâtement selon l'imam Warš",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_14_باب_اللامات.pdf",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h2z-461",
-      "titleAr": "باب اللامات: ما يجوز فيه الترقيق والتغليظ عند ورش",
-      "titleFr": "Chapitre des lām : ce qui admet atténuation ou empâtement selon Warš",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_15_باب_اللامات_ما_يجوز_فيه_الترقيق_والتغليظ_عند_ورش.pdf",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h2z-462",
-      "titleAr": "باب الوقف: تعريف الوقف وأنواعه",
-      "titleFr": "Chapitre de l'arrêt (waqf) : définition et types",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_16_باب_الوقف_تعريف_الوقف_وأنواعه.pdf",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h2z-463",
-      "titleAr": "الإشمام: تعريفه- محله- موانعه",
-      "titleFr": "L'išmām (inflexion mitigée) : définition, contexte et empêchements",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_17_الإشمام_تعريفه_محله_موانعه.pdf",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h2z-464",
-      "titleAr": "الوقف على مرسوم الخط",
-      "titleFr": "L'arrêt conforme à la graphie du muṣḥaf",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_18_الوقف_على_مرسوم_الخط.pdf",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h2z-465",
-      "titleAr": "ياءات الإضافة",
-      "titleFr": "Les yāʾ de liaison (yaʾāt al-iḍāfa)",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_19_ياءات_الإضافة.pdf",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h2z-466",
-      "titleAr": "الياءات الزوائد عند نافع",
-      "titleFr": "Les yāʾ pléonastiques (zawāʾid) selon Nāfiʿ",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_20_الياءات_الزوائد_عند_نافع.pdf",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h2z-467",
-      "titleAr": "ما انفرد به قالون وما انفرد به ورش من الياءات الزوائد",
-      "titleFr": "Les yāʾ pléonastiques propres à Qālūn et à Warš",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_21_ما_انفرد_به_قالون_وما_انفرد_به_ورش_من_الياءات_الزوائد.pdf",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h2z-468",
-      "titleAr": "باب فرش الحروف المفردة (1)",
-      "titleFr": "Chapitre du déploiement des lettres isolées (1)",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_22_باب_فرش_الحروف_الـمفردة.pdf",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h2z-469",
-      "titleAr": "فرش الحروف (2)",
-      "titleFr": "Le déploiement des lettres (farš al-ḥurūf) (2)",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_23_فرش_الحروف.pdf",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h2z-470",
-      "titleAr": "فرش الحروف (3)",
-      "titleFr": "Le déploiement des lettres (farš al-ḥurūf) (3)",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_24_فرش_الحروف_3.pdf",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h2z-471",
-      "titleAr": "أنشطة تطبيقية",
-      "titleFr": "Activités pratiques",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_25_أنشطة_تطبيقية.pdf",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h2z-472",
-      "titleAr": "الأبيات المقررة من متن الدرر اللوامع: من أول باب الإمالة إلى آخر المتن",
-      "titleFr": "Les vers prescrits du mathn al-Durar al-Lawāmiʿ : du début du chapitre de l'imāla à la fin du poème",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الأبيات_المقررة_من_متن_الدرر_اللوامع.pdf",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h2z-473",
-      "titleAr": "لائحة المصادر والمراجع",
-      "titleFr": "Liste des sources et références",
-      "html": "",
-      "htmlFr": "<p>Le Coran sacré (al-Qur'ān al-Karīm) :</p>\n<p>Le Coran de l'Envoyé — qu'Allah le bénisse et lui accorde la paix — selon la transmission de Warš de Nāfiʿ, édité par la fondation Mohammed VI pour l'édition du Coran sacré / Royaume du Maroc.</p>\n<p>Ouvrages de tajwīd et de qirāʾāt (récitations coraniques) :</p>\n<p>Bayān al-Khilāf wa-l-Tashhīr wa-Mā Waqaʿa fī al-Ḥirz min al-Ziyādāt ʿalā al-Taysīr d'Abū Zayd ʿAbd al-Raḥmān ibn al-Qāḍī ; édition critique par le Dr. Muḥammad Buṭarbūsh » Première édition, 2015.</p>\n<p>al-Taysīr fī al-Qirāʾāt al-Sabʿ d'Abū ʿUmar ʿUthmān ibn Saʿīd al-Dānī ; édition critique par Otto Pretzl ; 6 éditions, Dār al-Kutub al-ʿArabī ; Édition : deuxième, 4e/4e + Beyrouth.</p>\n<p>Jāmiʿ al-Bayān fī al-Qirāʾāt al-Sabʿ d'Abū ʿUmar ʿUthmān ibn Saʿīd al-Dānī » édition critique par une équipe de chercheurs de l'Université de Charjah - Émirats arabes unis ; Édition : première » 1428 h/2007 m.</p>\n<p>al-Durar al-Lawāmiʿ fī Aṣl Qirāʾat al-Imām Nāfiʿ d'Abū al-Ḥasan ʿAlī ibn Muḥammad ; connu sous le nom d'Ibn Barrī.</p>\n<p>Sharḥ al-Durar al-Lawāmiʻ fī Aṣl Qirāʾat al-Imām Nāfiʿ d'Abū ʿAbd Allāh Muḥammad ibn ʿAbd al-Malik al-Muntūrī al-Qaysī ; préface et édition critique par le professeur Ṣiddīq Sīdī Fūzī ; Première édition, 1421 h/2001 m ; publications du ministère des Habous et des Affaires Islamiques ; Royaume du Maroc.</p>\n<p>al-Fajr al-Sāṭiʿ wa-l-Ḍiyāʾ al-Lāmiʿ fī Sharḥ al-Durar al-Lawāmiʿ d'Abū Zayd ʿAbd al-Raḥmān ibn al-Qāḍī ;</p>\n<p>édition critique par Aḥmad ibn Muḥammad al-Būshīkhī ; Imprimerie et Reliure Nationale ; Première édition ; 2007 ; Marrakech.</p>",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/لائحة_الـمصادر_والـمراجع.pdf",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h2z-474",
-      "titleAr": "هذا الفهرس",
-      "titleFr": "Le présent index",
-      "html": "",
-      "htmlFr": "<p>3 L'atténuation de la lettre rāʾ brisée et les règles juridiques de l'arrêt, pour les compétences d'enseignement du tajwīd en troisième année de l'enseignement traditionnel secondaire</p>\n<p>Section des lām : y est autorisée l'atténuation et la technique. Section de l'ouverture et de l'inclinaison : la définition ; et les règles des lettres se terminant par yāʾ dont la voyelle est une brisure. Section de l'arrêt : définition de l'arrêt et ses types. L'inclinaison des lettres se terminant par wāw et ām avant la rāʾ brisee !</p>\n<p>L'inclinaison au début des sourates et ses types ; ce qui a été spécifique à Qālūn et ce qui a été spécifique à Warsh au début des sourates ; et les types d'inclinaison des lām, rāʾ et wāw :</p>\n<p>Section de l'atténuation des rāʾ : l'atténuation après le madd dans les versets prescrits du matn « Les perles étincelantes » :</p>\n<p>Quiescente ou avec une brisure obligatoire, depuis le début de la section de l'inclinaison jusqu'à la fin du matn, les lettres rāʾ quiescentes sont atténuées. « Et il les a aspergées d'eau et il a atténué la rāʾ quiescente ».</p>",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/فهرس_الموضوعات.pdf",
-      "pdfOnly": true
-    }
-  ]
+  {
+   "docId": "pdf-mut23h2z-448",
+   "titleAr": "إمالة ذوات الياء وشبهها مما لا راء فيه",
+   "titleFr": "L'imāla des mots à yāʾ et de leurs semblables dépourvus de rāʾ",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_2_إمالة_ذوات_الياء.pdf",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h2z-449",
+   "titleAr": "إمالة المرسوم بالياء ورؤوس الآي",
+   "titleFr": "L'imāla de ce qui est noté avec yāʾ et des rimes des versets (ruʾūs al-āy)",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_3_إمالة_المرسوم_بالياء_ورؤوس_الآي.pdf",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h2z-450",
+   "titleAr": "إمالة ذوات الواو والألفات قبل الراء المكسورة",
+   "titleFr": "L'imāla des mots à wāw et des alif [placés] avant le rāʾ kasré",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_4_إمالة_ذوات_الواو_والألفات.pdf",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h2z-451",
+   "titleAr": "الإمالة في فواتح السور، وأنواع الإمالة عند ورش",
+   "titleFr": "L'imāla dans les ouvertures de sourates, et ses types selon Warš",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_5_الإمالة_في_فواتح_السور.pdf",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h2z-452",
+   "titleAr": "ما يميله قالون",
+   "titleFr": "Ce que Qālūn soumet à l'imāla",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_6_ما_يميله_قالون.pdf",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h2z-453",
+   "titleAr": "موانع الإمالة",
+   "titleFr": "Les empêchements de l'imāla",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_7_موانع_الإمالة.pdf",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h2z-454",
+   "titleAr": "حكم (ذكرى الدار) والمقصور المنون",
+   "titleFr": "Le statut de « ḏikrā al-dār » et du nom apocopé indéterminé (al-maqṣūr al-munawwan)",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_8_حكم_ذكرى_الدار.pdf",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h2z-455",
+   "titleAr": "باب ترقيق الراءات: الترقيق بعد ياء ساكنة أو كسرة لازمة",
+   "titleFr": "Chapitre de l'atténuation des rāʾ : après un yāʾ quiescent ou une kasra stable",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_9_باب_ترقيق_الراءات.pdf",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h2z-456",
+   "titleAr": "مستثنيات ترقيق الراء بعد الكسرة",
+   "titleFr": "Les exceptions à l'atténuation du rāʾ après kasra",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_10_مستنيات_ترقيق_الراء.pdf",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h2z-457",
+   "titleAr": "حكم (بشرر) وحكم الراء الساكنة",
+   "titleFr": "Le statut [du rāʾ dans] « bušrur » et celui du rāʾ quiescent",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_11_حكم_بشرر.pdf",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h2z-458",
+   "titleAr": "ترقيق الراء المكسورة وأحكام الوقف على الراء",
+   "titleFr": "L'atténuation du rāʾ kasré et les règles de l'arrêt sur le rāʾ",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_12_ترقيق_الراء_المكسورة.pdf",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h2z-459",
+   "titleAr": "أنشطة تطبيقية",
+   "titleFr": "Activités pratiques",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_13_أنشطة_تطبيقية.pdf",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h2z-460",
+   "titleAr": "باب اللامات: شروط تغليظها عند الإمام ورش",
+   "titleFr": "Chapitre des lām : conditions de leur empâtement selon l'imam Warš",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_14_باب_اللامات.pdf",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h2z-461",
+   "titleAr": "باب اللامات: ما يجوز فيه الترقيق والتغليظ عند ورش",
+   "titleFr": "Chapitre des lām : ce qui admet atténuation ou empâtement selon Warš",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_15_باب_اللامات_ما_يجوز_فيه_الترقيق_والتغليظ_عند_ورش.pdf",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h2z-462",
+   "titleAr": "باب الوقف: تعريف الوقف وأنواعه",
+   "titleFr": "Chapitre de l'arrêt (waqf) : définition et types",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_16_باب_الوقف_تعريف_الوقف_وأنواعه.pdf",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h2z-463",
+   "titleAr": "الإشمام: تعريفه- محله- موانعه",
+   "titleFr": "L'išmām (inflexion mitigée) : définition, contexte et empêchements",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_17_الإشمام_تعريفه_محله_موانعه.pdf",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h2z-464",
+   "titleAr": "الوقف على مرسوم الخط",
+   "titleFr": "L'arrêt conforme à la graphie du muṣḥaf",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_18_الوقف_على_مرسوم_الخط.pdf",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h2z-465",
+   "titleAr": "ياءات الإضافة",
+   "titleFr": "Les yāʾ de liaison (yaʾāt al-iḍāfa)",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_19_ياءات_الإضافة.pdf",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h2z-466",
+   "titleAr": "الياءات الزوائد عند نافع",
+   "titleFr": "Les yāʾ pléonastiques (zawāʾid) selon Nāfiʿ",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_20_الياءات_الزوائد_عند_نافع.pdf",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h2z-467",
+   "titleAr": "ما انفرد به قالون وما انفرد به ورش من الياءات الزوائد",
+   "titleFr": "Les yāʾ pléonastiques propres à Qālūn et à Warš",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_21_ما_انفرد_به_قالون_وما_انفرد_به_ورش_من_الياءات_الزوائد.pdf",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h2z-468",
+   "titleAr": "باب فرش الحروف المفردة (1)",
+   "titleFr": "Chapitre du déploiement des lettres isolées (1)",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_22_باب_فرش_الحروف_الـمفردة.pdf",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h2z-469",
+   "titleAr": "فرش الحروف (2)",
+   "titleFr": "Le déploiement des lettres (farš al-ḥurūf) (2)",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_23_فرش_الحروف.pdf",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h2z-470",
+   "titleAr": "فرش الحروف (3)",
+   "titleFr": "Le déploiement des lettres (farš al-ḥurūf) (3)",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_24_فرش_الحروف_3.pdf",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h2z-471",
+   "titleAr": "أنشطة تطبيقية",
+   "titleFr": "Activités pratiques",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الدرس_25_أنشطة_تطبيقية.pdf",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h2z-472",
+   "titleAr": "الأبيات المقررة من متن الدرر اللوامع: من أول باب الإمالة إلى آخر المتن",
+   "titleFr": "Les vers prescrits du mathn al-Durar al-Lawāmiʿ : du début du chapitre de l'imāla à la fin du poème",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/الأبيات_المقررة_من_متن_الدرر_اللوامع.pdf",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h2z-473",
+   "titleAr": "لائحة المصادر والمراجع",
+   "titleFr": "Liste des sources et références",
+   "html": "",
+   "htmlFr": "<p>Le Coran sacré (al-Qur'ān al-Karīm) :</p>\n<p>Le Coran de l'Envoyé — qu'Allah le bénisse et lui accorde la paix — selon la transmission de Warš de Nāfiʿ, édité par la fondation Mohammed VI pour l'édition du Coran sacré / Royaume du Maroc.</p>\n<p>Ouvrages de tajwīd et de qirāʾāt (récitations coraniques) :</p>\n<p>Bayān al-Khilāf wa-l-Tashhīr wa-Mā Waqaʿa fī al-Ḥirz min al-Ziyādāt ʿalā al-Taysīr d'Abū Zayd ʿAbd al-Raḥmān ibn al-Qāḍī ; édition critique par le Dr. Muḥammad Buṭarbūsh » Première édition, 2015.</p>\n<p>al-Taysīr fī al-Qirāʾāt al-Sabʿ d'Abū ʿUmar ʿUthmān ibn Saʿīd al-Dānī ; édition critique par Otto Pretzl ; 6 éditions, Dār al-Kutub al-ʿArabī ; Édition : deuxième, 4e/4e + Beyrouth.</p>\n<p>Jāmiʿ al-Bayān fī al-Qirāʾāt al-Sabʿ d'Abū ʿUmar ʿUthmān ibn Saʿīd al-Dānī » édition critique par une équipe de chercheurs de l'Université de Charjah - Émirats arabes unis ; Édition : première » 1428 h/2007 m.</p>\n<p>al-Durar al-Lawāmiʿ fī Aṣl Qirāʾat al-Imām Nāfiʿ d'Abū al-Ḥasan ʿAlī ibn Muḥammad ; connu sous le nom d'Ibn Barrī.</p>\n<p>Sharḥ al-Durar al-Lawāmiʻ fī Aṣl Qirāʾat al-Imām Nāfiʿ d'Abū ʿAbd Allāh Muḥammad ibn ʿAbd al-Malik al-Muntūrī al-Qaysī ; préface et édition critique par le professeur Ṣiddīq Sīdī Fūzī ; Première édition, 1421 h/2001 m ; publications du ministère des Habous et des Affaires Islamiques ; Royaume du Maroc.</p>\n<p>al-Fajr al-Sāṭiʿ wa-l-Ḍiyāʾ al-Lāmiʿ fī Sharḥ al-Durar al-Lawāmiʿ d'Abū Zayd ʿAbd al-Raḥmān ibn al-Qāḍī ;</p>\n<p>édition critique par Aḥmad ibn Muḥammad al-Būshīkhī ; Imprimerie et Reliure Nationale ; Première édition ; 2007 ; Marrakech.</p>",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/لائحة_الـمصادر_والـمراجع.pdf",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h2z-474",
+   "titleAr": "هذا الفهرس",
+   "titleFr": "Le présent index",
+   "html": "",
+   "htmlFr": "<p>3 L'atténuation de la lettre rāʾ brisée et les règles juridiques de l'arrêt, pour les compétences d'enseignement du tajwīd en troisième année de l'enseignement traditionnel secondaire</p>\n<p>Section des lām : y est autorisée l'atténuation et la technique. Section de l'ouverture et de l'inclinaison : la définition ; et les règles des lettres se terminant par yāʾ dont la voyelle est une brisure. Section de l'arrêt : définition de l'arrêt et ses types. L'inclinaison des lettres se terminant par wāw et ām avant la rāʾ brisee !</p>\n<p>L'inclinaison au début des sourates et ses types ; ce qui a été spécifique à Qālūn et ce qui a été spécifique à Warsh au début des sourates ; et les types d'inclinaison des lām, rāʾ et wāw :</p>\n<p>Section de l'atténuation des rāʾ : l'atténuation après le madd dans les versets prescrits du matn « Les perles étincelantes » :</p>\n<p>Quiescente ou avec une brisure obligatoire, depuis le début de la section de l'inclinaison jusqu'à la fin du matn, les lettres rāʾ quiescentes sont atténuées. « Et il les a aspergées d'eau et il a atténué la rāʾ quiescente ».</p>",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التجويد-الثالثة-إعدادي/فهرس_الموضوعات.pdf",
+   "pdfOnly": true
+  }
+ ]
 }
