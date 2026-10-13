@@ -186,27 +186,40 @@
 
 /* ————————————————————————————————— Surlignages persistants (Highlight API) ————————————————————————————————— */
 
-/* Portées enregistrées par reader.tsx (mnhj-fr / mnhj-ar) — aucune mutation
-   du DOM React : survit aux re-rendus. Couleurs par variables de thème. */
-::highlight(mnhj-fr) {
-  background-color: var(--hl-fr-bg);
-  text-decoration: underline;
-  text-decoration-color: var(--hl-fr-line);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 3px;
-}
-::highlight(mnhj-ar) {
-  background-color: var(--hl-ar-bg);
-  text-decoration: underline;
-  text-decoration-color: var(--hl-ar-line);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
-}
+/* Les règles `::highlight(mnhj-fr)` / `::highlight(mnhj-ar)` sont servies en CSS
+   brut depuis layout.tsx : le pseudo-élément `::highlight()` n'est pas reconnu
+   par le pipeline CSS (lightningcss) et faisait échouer la compilation.
+   Les variables --hl-fr-bg / --hl-fr-line / --hl-ar-bg / --hl-ar-line restent
+   définies ci-dessous. */
 
 /* Contenu de leçon (HTML injecté) */
 .lesson-content {
   overflow-wrap: break-word;
   hyphens: auto;
+}
+/* Cibles du sommaire flottant : atterrir sous l'en-tête collant + flash ambre */
+.lesson-content :is(h2, h3, h4) {
+  scroll-margin-top: 6.5rem;
+}
+@keyframes mnhj-outline-flash {
+  0% {
+    background-color: color-mix(in oklab, var(--primary) 26%, transparent);
+    box-shadow: 0 0 0 4px color-mix(in oklab, var(--primary) 12%, transparent);
+  }
+  100% {
+    background-color: transparent;
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+.lesson-content .outline-flash {
+  animation: mnhj-outline-flash 1.7s ease-out 1 both;
+  border-radius: 8px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .lesson-content .outline-flash {
+    animation: none;
+    background-color: color-mix(in oklab, var(--primary) 14%, transparent);
+  }
 }
 .lesson-content p {
   margin-block: 0.75em;

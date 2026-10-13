@@ -235,6 +235,39 @@ export function useLocalState<T extends string>(key: string, initial: T) {
 
 // ————————————————————————————————— Favoris & reprise de lecture
 
+// ——— Notes personnelles par leçon (localStorage, auto-sauvegarde à la frappe) ———
+export function useNote(bookId: string, docId: string) {
+  const key = `minhaj.notes.v1:${bookId}/${docId}`;
+  const hydrated = useHydrated();
+  const text = useSyncExternalStore(
+    subscribeLs,
+    hydrated
+      ? () => {
+          try {
+            return localStorage.getItem(key) ?? "";
+          } catch {
+            return "";
+          }
+        }
+      : () => "",
+    () => ""
+  );
+  const setNote = useCallback(
+    (v: string) => {
+      try {
+        if (v.trim()) localStorage.setItem(key, v);
+        else localStorage.removeItem(key);
+        notifyLs();
+      } catch {
+        /* stockage indisponible */
+      }
+    },
+    [key]
+  );
+  return { text, setNote, hasNote: text.trim().length > 0 };
+}
+
+
 export interface FavoriteDoc {
   bookId: string;
   docId: string;

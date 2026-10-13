@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect, useRef, useState, useSyncExternalStore } from "react";
-import { ArrowLeft, ArrowRight, BookMarked, BookmarkCheck, ChevronLeft, ChevronRight, Columns2, Eraser, ExternalLink, FileQuestion, FileText, Heart, Highlighter, Hourglass, Languages, Loader2, Printer } from "lucide-react";
+import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { ArrowLeft, ArrowRight, BookMarked, BookmarkCheck, Check, ChevronLeft, ChevronRight, Clock3, Columns2, Eraser, ExternalLink, FileQuestion, FileText, Heart, Highlighter, Hourglass, Languages, ListTree, Loader2, Printer, StickyNote } from "lucide-react";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
-import { getReadPos, navigate, setLastDoc, setReadPos, useDoc, useFavorites, useHighlights, useLocalState } from "./hooks";
+import { getReadPos, navigate, setLastDoc, setReadPos, useDoc, useFavorites, useHighlights, useLocalState, useNote } from "./hooks";
 import type { HlPane } from "./hooks";
 import type { DocPayload } from "./types";
 
@@ -24,6 +24,27 @@ const TEXT_SIZE_AR_CLASS: Record<TextSize, string> = {
   large: "text-[18.5px]",
   xlarge: "text-[20px] leading-loose",
 };
+
+/** Temps de lecture estimé (minutes) — ~1 400 caractères/min pour un texte d'étude. */
+function readMinutes(html: string | undefined): number {
+  if (!html) return 0;
+  const text = html.replace(/<[^>]+>/g, " ");
+  return Math.max(1, Math.round(text.trim().length / 1400));
+}
+
+/** Sommaire de la leçon : titres h2/h3 extraits du HTML FR (ordre du document). */
+type OutlineItem = { level: 2 | 3; text: string };
+function lessonOutline(html: string | undefined): OutlineItem[] {
+  if (!html) return [];
+  const out: OutlineItem[] = [];
+  const re = /<(h[23])\b[^>]*>([\s\S]*?)<\/\1>/g;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(html))) {
+    const text = m[2].replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
+    if (text) out.push({ level: m[1] === "h2" ? 2 : 3, text });
+  }
+  return out;
+}
 
 // ————————————————————————————————— Surlignages (CSS Custom Highlight API)
 
@@ -171,6 +192,16 @@ function DocHeader({ doc }: { doc: DocPayload }) {
             Traduction savante
           </Badge>
         )}
+        {doc.hasFr && !doc.pdfOnly && (
+          <Badge
+            variant="outline"
+            title="Estimation fondée sur la longueur du texte français (≈ 1 400 caractères par minute)."
+            className="gap-1.5 rounded-full border-amber-800/25 bg-card/70 text-[11px] font-medium text-amber-900/85 dark:border-amber-200/20 dark:text-amber-100/85"
+          >
+            <Clock3 className="size-3.5" aria-hidden="true" />
+            ≈ {readMinutes(doc.htmlFr)} min de lecture
+          </Badge>
+        )}
         {doc.sample && (
           <Badge
             variant="outline"
@@ -248,6 +279,127 @@ function TextSizeControl({ size, onChange }: { size: TextSize; onChange: (s: Tex
         A<span className="align-super text-[10px]">+</span>
       </span>
     </Button>
+  );
+}
+
+/** Sommaire flottant : saut vers les titres h2/h3 de la leçon (défilement doux + flash ambre). */
+function OutlineButton({ items }: { items: OutlineItem[] }) {
+  const [open, setOpen] = useState(false);
+  if (items.length < 3) return null;
+  const jump = (idx: number) => {
+    const col = Array.from(document.querySelectorAll<HTMLElement>(".reader-col")).find((c) =>
+      c.querySelector(".lesson-content")
+    );
+    if (!col) return;
+    const heads = col.querySelectorAll(".lesson-content h2, .lesson-content h3");
+    const el = heads[idx] as HTMLElement | undefined;
+    if (!el) return;
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+    el.classList.remove("outline-flash");
+    void el.offsetWidth; // relance l'animation
+    el.classList.add("outline-flash");
+    setOpen(false);
+  };
+  return (
+    <div className="relative">
+      <Button
+        variant="outline"
+        size="icon"
+        aria-label={`Sommaire de la leçon — ${items.length} sections`}
+        title="Sommaire de la leçon"
+        aria-expanded={open}
+        className="size-10 border-amber-800/15 bg-card/70 text-amber-900 hover:bg-amber-100/60 dark:text-amber-100 dark:hover:bg-amber-900/40"
+        onClick={() => setOpen((o) => !o)}
+      >
+        <ListTree className="size-4.5" aria-hidden="true" />
+      </Button>
+      {open && (
+        <>
+          <div className="fixed inset-0 z-40" onClick={() => setOpen(false)} aria-hidden="true" />
+          <nav
+            role="dialog"
+            aria-label="Sommaire de la leçon"
+            className="absolute right-0 top-12 z-50 max-h-96 w-72 overflow-y-auto rounded-xl border border-amber-800/15 bg-card p-3 shadow-lg [scrollbar-width:thin]"
+          >
+            <p className="px-1.5 pb-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+              Sommaire — {items.length} sections
+            </p>
+            <ol className="mt-0.5 space-y-0.5">
+              {items.map((it, i) => (
+                <li key={i}>
+                  <button
+                    type="button"
+                    onClick={() => jump(i)}
+                    className={cn(
+                      "w-full rounded-lg px-2.5 py-1.5 text-left text-[13px] leading-snug text-foreground/85 transition-colors hover:bg-amber-100/70 hover:text-foreground focus-visible:outline-2 focus-visible:outline-ring dark:hover:bg-amber-900/40",
+                      it.level === 3 && "ps-5 text-[12.5px] text-muted-foreground"
+                    )}
+                  >
+                    {it.text}
+                  </button>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        </>
+      )}
+    </div>
+  );
+}
+
+/** Notes personnelles par leçon (localStorage, auto-sauvegarde à la frappe). */
+function NotesButton({ bookId, docId }: { bookId: string; docId: string }) {
+  const [open, setOpen] = useState(false);
+  const { text, setNote, hasNote } = useNote(bookId, docId);
+  return (
+    <div className="relative">
+      <Button
+        variant="outline"
+        size="icon"
+        aria-label={hasNote ? "Notes personnelles — une note est enregistrée pour cette leçon" : "Notes personnelles"}
+        title="Notes personnelles"
+        aria-expanded={open}
+        className={cn(
+          "size-10 border-amber-800/15 bg-card/70 hover:bg-amber-100/60 dark:hover:bg-amber-900/40",
+          hasNote ? "text-amber-700 dark:text-amber-300" : "text-amber-900/80 dark:text-amber-100/80"
+        )}
+        onClick={() => setOpen((o) => !o)}
+      >
+        <StickyNote className={cn("size-4.5", hasNote && "fill-amber-300/60 dark:fill-amber-700/50")} aria-hidden="true" />
+        {hasNote && (
+          <span className="absolute -right-1 -top-1 size-2.5 rounded-full bg-amber-600 shadow" aria-hidden="true" />
+        )}
+      </Button>
+      {open && (
+        <>
+          <div className="fixed inset-0 z-40" onClick={() => setOpen(false)} aria-hidden="true" />
+          <div
+            role="dialog"
+            aria-label="Notes personnelles"
+            className="absolute right-0 top-12 z-50 w-80 max-w-[calc(100vw-2rem)] rounded-xl border border-amber-800/15 bg-card p-3 shadow-lg"
+          >
+            <label
+              htmlFor="mnhj-note"
+              className="block px-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground"
+            >
+              Mes notes sur cette leçon
+            </label>
+            <textarea
+              id="mnhj-note"
+              value={text}
+              onChange={(e) => setNote(e.target.value)}
+              rows={6}
+              placeholder="À comprendre, à mémoriser, questions à poser…"
+              className="mt-2 w-full resize-y rounded-lg border border-amber-800/20 bg-background/60 px-3 py-2 text-[13px] leading-relaxed text-foreground outline-none transition focus:border-amber-500/60 focus:ring-2 focus:ring-amber-500/25"
+            />
+            <p className="mt-2 flex items-center gap-1.5 px-1 text-[11px] text-muted-foreground">
+              <Check className="size-3 text-primary" aria-hidden="true" />
+              Enregistrée automatiquement — conservée sur cet appareil
+            </p>
+          </div>
+        </>
+      )}
+    </div>
   );
 }
 
@@ -342,6 +494,13 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
   const [hlSel, setHlSel] = useState<{ pane: HlPane; start: number; end: number; x: number; y: number } | null>(null);
   const [hlPopover, setHlPopover] = useState(false);
   const hlSupport = useSyncExternalStore(subscribeNoop, getHlSupport, getHlSupportServer);
+  const outline = useMemo(() => lessonOutline(data?.htmlFr), [data?.htmlFr]);
+  // Mémoïser les objets dangerouslySetInnerHTML est CRUCIAL : React ré-exécute
+  // innerHTML (reconstruction complète du DOM, ~117 nœuds) lorsque l'objet
+  // { __html } change d'identité à chaque re-rendu — p.ex. à chaque image du
+  // défilement via la barre de progression. Identité stable → DOM intact.
+  const frHtml = useMemo(() => (data?.htmlFr ? { __html: data.htmlFr } : null), [data?.htmlFr]);
+  const arHtml = useMemo(() => (data?.html ? { __html: data.html } : null), [data?.html]);
   const [restoredNote, setRestoredNote] = useState(false);
 
   // Mémoriser la dernière lecture (reprise depuis l'accueil)
@@ -596,6 +755,8 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
         <div className="no-print mt-1 flex shrink-0 flex-wrap items-center justify-end gap-2">
           <ViewModeToggle mode={mode} onChange={setMode} />
           <TextSizeControl size={textSize} onChange={setTextSize} />
+          {data && !data.pdfOnly && <OutlineButton items={outline} />}
+          {data && !data.pdfOnly && <NotesButton bookId={bookId} docId={docId} />}
           <Button
             variant="outline"
             size="icon"
@@ -720,7 +881,7 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
                 <ColumnChip lang="fr" label="Français — traduction" />
                 <div
                   className={cn("lesson-content text-foreground/90", TEXT_SIZE_CLASS[textSize])}
-                  dangerouslySetInnerHTML={{ __html: data.htmlFr }}
+                  dangerouslySetInnerHTML={frHtml ?? undefined}
                 />
               </article>
             ) : (
@@ -731,7 +892,7 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
               <ColumnChip lang="ar" label="العربية — الأصل" />
               <div
                 className={cn("lesson-content text-foreground", TEXT_SIZE_AR_CLASS[textSize])}
-                dangerouslySetInnerHTML={{ __html: data.html }}
+                dangerouslySetInnerHTML={arHtml ?? undefined}
               />
             </article>
           )}
