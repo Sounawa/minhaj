@@ -92,7 +92,10 @@ export function useLibrary() {
     let alive = true;
     fetchJson<LibraryPayload>("/api/books")
       .then((data) => {
-        if (alive) setState({ data, error: null, loading: false });
+        if (alive)
+          setState((prev) =>
+            prev.data === data && !prev.error && !prev.loading ? prev : { data, error: null, loading: false }
+          );
       })
       .catch((e: Error) => {
         if (alive) setState({ data: null, error: e.message, loading: false });
@@ -122,7 +125,10 @@ export function useBookDetail(bookId: string | null) {
     let alive = true;
     fetchJson<BookDetailPayload>(url)
       .then((data) => {
-        if (alive) setState({ data, error: null, loading: false });
+        if (alive)
+          setState((prev) =>
+            prev.data === data && !prev.error && !prev.loading ? prev : { data, error: null, loading: false }
+          );
       })
       .catch((e: Error) => {
         if (alive) setState({ data: null, error: e.message, loading: false });
@@ -152,7 +158,12 @@ export function useDoc(bookId: string | null, docId: string | null) {
     let alive = true;
     fetchJson<DocPayload>(url)
       .then((data) => {
-        if (alive) setState({ data, error: null, loading: false });
+        // Évite le re-rendu (et la réinitialisation d'innerHTML) quand le cache
+        // renvoie exactement le même objet : le DOM déjà affiché reste intact.
+        if (alive)
+          setState((prev) =>
+            prev.data === data && !prev.error && !prev.loading ? prev : { data, error: null, loading: false }
+          );
       })
       .catch((e: Error) => {
         if (alive) setState({ data: null, error: e.message, loading: false });
