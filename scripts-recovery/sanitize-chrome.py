@@ -63,9 +63,34 @@ def text_is_empty(html: str) -> bool:
     return len(txt) < 20
 
 
+STAGE_HEADINGS_AR = ("المرحلة الأولى", "المرحلة الثانية")
+STAGE_HEADINGS_FR = ("Première étape", "Deuxième étape")
+
+
+def _text_no_tags(html: str) -> str:
+    txt = re.sub(r"<[^>]+>", " ", html)
+    txt = txt.replace("&nbsp;", " ").replace("&#160;", " ")
+    return txt
+
+
 def grid_is_structural(html: str, pos: int) -> bool:
-    """« المرحلة الأولى » = grille vide du site : 600 car. suivants sans texte."""
-    return text_is_empty(html[pos : pos + 600])
+    """« المرحلة الأولى » = grille vide du site : fenêtre 600 car. suivante sans
+    texte RÉEL — les titres des grilles jumelles (المرحلة الثانية) sont neutres
+    car ils font partie du chrome, pas du contenu."""
+    txt = _text_no_tags(html[pos : pos + 600])
+    for h in STAGE_HEADINGS_AR + STAGE_HEADINGS_FR:
+        txt = txt.replace(h, " ")
+    return len(txt.strip()) < 20
+
+
+def grid_tail_is_empty(html: str, pos: int) -> bool:
+    """Variante R51 : grille en FIN de document (footer déjà retiré par un
+    passage antérieur) — tout ce qui suit est vide à l'exception des titres
+    des grilles elles-mêmes. Chrome avéré sans besoin de signature suivante."""
+    txt = _text_no_tags(html[pos:])
+    for h in STAGE_HEADINGS_AR + STAGE_HEADINGS_FR:
+        txt = txt.replace(h, " ")
+    return len(txt.strip()) < 20
 
 
 def find_sidebar_start_ar(html: str):
@@ -109,7 +134,7 @@ def clean_tail(html: str) -> str:
     backtracking catastrophique des quantificateurs \s imbriqués, cf. doc
     tafsir-tanawi-1/13584 htmlFr 27 Ko)."""
     tail = re.compile(
-        r"(?:\s*(?:</div>|<div>\s*</div>|<p>\s*</p>|</p>|</ul>|</ol>|</li>))+\s*$"
+        r"(?:\s*(?:</div>|<div>\s*</div>|<div>|<p>\s*</p>|</p>|</ul>|</ol>|</li>))+\s*$"
     )
     prev = None
     while prev != html:
@@ -134,18 +159,37 @@ def real_text_len(html: str) -> int:
 
 def sanitize_once(html: str, strong_sigs):
     """Une passe : retourne (html, cut, removed) ; cut=None si rien à faire."""
-    if not html or (not any(s in html for s in strong_sigs) and "<footer" not in html and not RE_FOOTERLIST_AR.search(html) and not RE_FOOTERLIST_FR.search(html)):
+    if not html:
+        return html, None, 0
+    # R51 : même sans footer/signature restants, une grille vide en queue
+    # de document reste du chrome à retirer.
+    has_grid_tail = any(
+        m and grid_tail_is_empty(html, m.start())
+        for m in (rx.search(html) for rx in (RE_GRID_AR, RE_GRID_FR))
+    )
+    if (
+        not has_grid_tail
+        and not any(s in html for s in strong_sigs)
+        and "<footer" not in html
+        and not RE_FOOTERLIST_AR.search(html)
+        and not RE_FOOTERLIST_FR.search(html)
+    ):
         return html, None, 0
 
     candidates = []
+    tail_only = []
     for regex in (RE_RELATED_AR, RE_RELATED_FR, RE_FOOTERLIST_AR, RE_FOOTERLIST_FR):
         m = regex.search(html)
         if m:
             candidates.append(m.start())
     for regex in (RE_GRID_AR, RE_GRID_FR):
         m = regex.search(html)
-        if m and grid_is_structural(html, m.start()):
-            candidates.append(m.start())
+        if m:
+            if grid_is_structural(html, m.start()):
+                candidates.append(m.start())
+            if grid_tail_is_empty(html, m.start()):
+                # grille orpheline en queue : chrome même sans footer derrière
+                tail_only.append(m.start())
     sb = find_sidebar_start_ar(html)
     if sb is not None:
         candidates.append(sb)
@@ -158,6 +202,8 @@ def sanitize_once(html: str, strong_sigs):
         candidates.append(f)
 
     valid = [c for c in candidates if c > 0 and chrome_follows(html, c, strong_sigs)]
+    if not valid:
+        valid = [c for c in tail_only if c > 0]
     if not valid:
         return html, None, 0
 
