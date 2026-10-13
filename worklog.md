@@ -2779,3 +2779,122 @@ Stage Summary:
   stations), 15274 (drapeaux), 15275 (sources) — puis livre #20 intégral ; (2) tafsir-6ep
   (15 non-savantes) puis fikr-islami-tanawi-1/2 ; (3) idées features : export EPUB/PDF
   d'une leçon, extraction des 885 PDF-only, compteur de notes dans l'en-tête.
+
+---
+Task ID: R55
+Agent: agent principal (Z.ai Code — relance utilisateur « bon bha go pour les traductions pour enfin finir tout le projet »)
+Task: Rafale traductions savantes fiqh-6ep — LIVRE №20 INTÉGRAL + fix entités nbsp cassées
+
+Work Log:
+- CONTEXTE CLIENT : clôture rapide du projet souhaitée ; les ~119 traductions perdues de l'ancien
+  AI sont définitivement irrécupérables (client confirmé) — la retraduction main est LA voie.
+  Cible de la file (R54) : finir fiqh-6ep (10 docs restants) → livre №20 intégral.
+- **BUGFIX PRÉALABLE — entités nbsp cassées** (d1a0b5b) : 15132 ×8 + 15134 ×7 contenaient
+  `&nbsp\u202f;` (espace fine insérée par l'auto-fix QA dans une entité déjà mal formée
+  `&nbsp ;` écrite main) → les séparateurs de vers affichaient des « ; » parasites à l'écran.
+  Scan corpus complet : seuls ces 2 docs touchés (983 docs vérifiés). Remplacé par `&nbsp;`
+  valide ; vérifié E2E au navigateur (cellules [NBSP] propres, 0 erreur). Les nouvelles
+  traductions utilisent `&nbsp;` correct dès la rédaction.
+- **10 RECONSTRUCTIONS SAVANTES** (rédaction main intégrale, workflow extract → rédaction →
+  qa-lesson → hand-set → QA navigateur → commit + backup par doc, règles a/b/c/d respectées) :
+  1. 15135 (10 772 car, 619fa96) — Le départ à Minā et la station à ʿArafa : poème 6 vers
+     (hémistiches inversés LTR), tarwiya→ʿArafa lettres a-j (iḥrām mutamattiʿ, ṭawāf ×7,
+     vendredi silencieux selon Mālik), hadith Ǧābir « ʿArafa tout entière lieu de station »
+     [Sunan Abī Dāwūd], 5 règles dont station rukn + ḥajj manqué → ʿumra de sortie + hadī ;
+     istithmār : citation al-Tawḍīḥ du cheikh Khalīl 3/10 (Mālik/Abū Yūsuf, vendredi à ʿArafa,
+     guillemets imbriqués « » + “ ”).
+  2. 15136 (10 111 car, bf2c1fc) — Muzdalifa/Minā/jour du sacrifice : poème 7 vers avec CRUX
+     كالفول résolu par croisement prose (يَلْقُطُ مِنَ الْمُزْدَلِفَةِ) = « pierrettes de
+     Muzdalifa grosses comme des fèves » ; ṭawāf ifāḍa + 2 rakʿa + saʿy conditionnel ;
+     hadiths Ǧābir (Jamʿ = Muzdalifa, glosé) et ʿĀʾisha 78/1973 ; 7 règles (ḍābiṭ qasr,
+     taḥallul aṣghar) ; istithmār Ibn Ghunaym al-Durr al-thamīn (4 spécificités de la ʿAqaba).
+  3. 15139 (10 753 car, 9e855b9) — rites des jours de tašrīq (2) : poème 4 vers (comptage
+     jours « du sacrifice » 10-12-13 explicité), lapidation 10 actes (Ibn ʿUmar Muwaṭṭaʾ
+     p. 447 ; nafr + taḥṣīb Nāfiʿ Ṣaḥīḥ Muslim ; ǧiʿrāna/tanʿīm pour ifrād ; wadāʿ),
+     2 blocs imbriqués de règles (5 conditions validité — pierre/jet/khadhf/stèle elle-même/
+     horizon —, tartīb + qaḍāʾ + hadī mashhūr ; 6 règles wadāʾ dont menstruée vs ifāḍa) ;
+     2 marqueurs coraniques seuls (Mumtaḥana 4, Fāṭir 6 — textes absents du manuel,
+     convention 15371).
+  4. 15146 (9 914 car, 99d386b) — interdictions de l'iḥrām — suite : poème 5 vers (glose
+     al-muḥīṭ = vers liminaire du poème), parfum muʾannath/mudhakkar complet (musc/ambre/
+     camphre/safran vs jasmin/henné, fidya au contact, muzaffar/muwarras/muʿaṣfar), ongles
+     (fayḍa vs ḥafna), taḥallul aṣghar (ʿAqaba ou expiration de l'heure) / akbar (ifāḍa,
+     saʿy conditionnel, rasage), istiẓlāl (fixe vs maḥmil/shuqduf) ; hadith Ṣafwān ibn Yaʿlā
+     (jubba teinte, al-Ǧiʿrāna) Ṣaḥīḥ Muslim ; tamhīd h2 ajouté (paragraphe sans titre au
+     source — normalisation corpus documentée).
+  5. 15147 (14 348 car, dfe71b6) — règles de la ʿumra et bienséances de la visite [au
+     Prophète] : REMPLACEMENT GT INTÉGRAL (le GT affichait « Calendrier/Investissement/
+     Préparation tribale » !) ; poème 9 vers dont vers 8 avec hémistine عجز dupliqué par
+     coquille du manuel → marqueur d'élision documenté ; ﷺ du h1 développé en formule
+     consacrée (convention corpus tawhid-1es/sira-1es) ; ʿumra sunna mashhūr (Ǧābir
+     Bayhaqī), Tanʿīm vs mutamattiʿ/qirān (note du manuel sur les contraintes
+     administratives conservée), ʿĀʾisha al-Sunan al-kubrā 6/413, ziyāra complète (sortie
+     par Kudāʾ, prière au miḥrāb/rawḍa, salut selon Mālik avec formule traduite, al-Baqīʿ,
+     Qubāʾ, puits d'Aris), hadith « le voyage est une part de tourment » Muwaṭṭaʾ 2/344,
+     entrée de jour + présent de joie ; citation Mayyāra←Khalīl al-Durr al-thamīn.
+  6. 15148 (10 052 car, 7e690fd) — principes du soufisme : tawba et taqwā (OUVERTURE du
+     livre final du Murshid) : poème 10 vers (tawba : iqālʿ + nafy iṣrār + istighfār ;
+     taqwā 4 divisions : membres/shubuhāt/wuqūf/purification du cœur), hadith iḥsān
+     [unanime], sharḥ complet (mabādīʾ/taṣawwuf/hawādī/shahīd sur schème faʿīl), 2e tableau
+     istithmār 7 vers (récapitulatif islām-īmān-iḥsān du poème, crux qiṭāʿ glosé
+     translittéré « parts prélevées ») ; marqueur Naḥl 43 seul.
+  7. 15164 (11 044 car, 6ed7ec6) — tawba/taqwā suite (conditions de la tazkiya) : poème
+     7 vers (racine des maux = amour de la préséance + de l'immédiat ; shaykh connaisseur
+     des voies ; muḥāsaba sur les souffles, qisṭās = balance de la Loi ; farāʾiḍ = capital /
+     nawāfil = profit ; dhikr du plus pur du cœur), 4 sections (recours à Dieu, suhba,
+     muḥāsaba 6 cas détaillés, farāʾiḍ+dhikr avec hadith « vivant et mort » [unanime]),
+     citation al-Akhḍarī Mukhtaṣar INTÉGRALE (lumière de la prière, recueillement) ;
+     marqueurs Anbiyāʾ 47 et Kahf 28 seuls ; date du dl (Lundi 19 octobre 2020) conservée
+     traduite (convention 22179).
+  8. 15198 (7 719 car, 260da82) — l'ornement des stations de la certitude — suite :
+     LEÇON FINALE DU MURSHID : poème 10 vers dont COLOPHON (314 vers = nombre des Envoyés,
+     nomination al-Murshid al-Muʿīn « sur le nécessaire des sciences de la religion »,
+     clausule hamdala + ṣalāt) ; 8 maqāmāt (khawf/rajāʾ/shukr/ṣabr/tawba/zuhd/tawakkul/
+     riḍā + maḥabba) ; sidq al-shāhid + waraʿ ; tableau des marques absent du manuel
+     (image) — documenté ; leçon numérotée 28 (le chiffre « 27 » du manuel = coquille,
+     15164 = 27) ; date dl conservée.
+  9. 15274 (7 354 car, d256f16 + f1782a2) — Liste des figures citées (aʿlām) : 19
+     biographies Ibn ʿĀshir → Ibn Baṭṭāl, naissances/morts sourcées du manuel uniquement,
+     titres glosés ; **titleFr corrigé « Liste des drapeaux » → « Liste des figures citées
+     (aʿlām) »** (GT-isme manifeste : aʿlām = personnalités ≠ drapeaux, calqué sur 12519) ;
+     notice Ibn al-Ḥāǧib RECONSTRUITE (source tronqué mi-phrase « سنة: (5 » + li orphelin ;
+     570 H. complété) ; Abū Dāwūd 802 → 202 H. (coquille manifeste, mort 275 H.) ; « ومن
+     تصانيفه » orphelin de la notice Mālik omis (liste perdue du manuel).
+  10. 15275 (6 512 car, 23a8c56) — Liste des sources et références : bibliographie complète
+      (muṣḥaf Muḥammad VI 2010 ; 13 livres de hadith avec éditions critiques et éditeurs
+      rendus intégralement ; 6 livres de fiqh dont Mayyāra al-Durr al-thamīn 1429/2008,
+      Zarrūq).
+- Registre : 215 → **225/950** (+10). **FIQH-6EP = 31/31 (intro + 30 leçons) = LIVRE №20 EN
+  COUCHE SAVANTE INTÉGRALE.** Total livres intégraux : 19 → **20**.
+- QA navigateur complète : accueil 20 badges « traduction savante intégrale » (65 titres,
+  session froide 0 erreur console/page) ; lecteur 15135 (h1, tableaux de vers, citation
+  al-Tawḍīḥ) / 15147 (tableau, Zamzam) / 15274 (titre corrigé, Mayyāra l'Aîné, al-Ḥāǧib) ;
+  mobile 390 px 0 overflow (15275, la page la plus large) ; captures qa-r55-*.png.
+- NOTE QA : une erreur d'hydratation React est apparue dans la console de la session
+  longue-vie du navigateur de test — investigation : **artefact Fast Refresh** (la session a
+  traversé ~15 cycles HMR pendant les commits) ; navigation froide = 0 erreur. Pas de bug
+  réel.
+- Backup /tmp/my-project/backup-tour/ rafraîchi après CHAQUE document (règle b) :
+  registry + git bundle.
+
+Stage Summary:
+- **État** : sain, accéléré. HEAD 23a8c56, registre **225/950** (175 main + 50 LLM), **20
+  livres en couche savante intégrale** (fiqh-6ep rejoint fiqh-1ep, tafsir-1ep, fiqh-5ep,
+  hadith-1ep, fikr-islami-tanawi-3, usul-fiqh-tanawi-3, fiqh-tanawi-2 + 12 mono-doc).
+  fiqh-6ep = 2e plus gros livre du corpus complété en entier (22e→31e leçons du Murshid).
+- **Décisions documentées ce tour** : (1) séparateurs de vers `&nbsp;` valides seulement ;
+  (2) ﷺ des h1 développé en « que Dieu le bénisse et lui accorde la paix » ; (3) versets
+  coraniques absents du manuel → marqueur seul [Sūrat X, v] (convention 15371, 5 occurrences
+  ce tour) ; (4) titleFr GT-ismes manifestes corrigés (15274 « drapeaux ») avec écart
+  documenté au commit ; (5) coquilles du manuel corrigées quand manifestes (Abū Dāwūd 202 H.,
+  numéro de leçon 15198, hémistine dupliquée 15147 v8 → élision).
+- **Risques / attention** : (a) ~725 traductions restent (225/950) — la vitesse de
+  production main (10 docs/demi-journée) reste le goulot ; (b) les marqueurs coraniques
+  « texte absent du manuel » sont volontairement secs — si le client veut le texte Hamidullah
+  injecté, il faudra une passe dédiée ; (c) l'erreur d'hydratation Fast Refresh est bénigne
+  mais réapparaîtra dans les consoles de sessions longues — ne pas la confondre avec un bug.
+- **Priorités suivantes** : (1) tafsir-6ep — 15 leçons non-savantes restantes (file R54,
+  docs : cf. registre llm ∩ tafsir-6ep) → livre №21 intégral ; (2) puis fikr-islami-tanawi-1
+  et -2 ; (3) audit des autres GT-ismes dans les titleFr du corpus (comme « drapeaux ») ;
+  (4) features en attente : export EPUB/PDF d'une leçon, extraction des 885 PDF-only,
+  compteur de notes dans l'en-tête.
