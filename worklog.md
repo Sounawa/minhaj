@@ -3070,3 +3070,168 @@ Stage Summary:
 - **Décisions documentées ce tour** : (1) ~70 versets restaurés du muṣḥaf Warsh (convention 14116) ; (2) 6 références d'off-by-one du manuel corrigées contre le cache (Ghāfir 7, Shūrā 7, Anʿām 130+164, Sajda 3, Āl ʿImrān 64) ; (3) qirāʾāt Warsh vs Ḥafṣ distinguées dans l'appareil (Ḥafīẓ/shahīd, kalima sabqat/faṣl, ilā/bi-ḥimlihā) ; (4) numérotation al-Shūrā 50 vs 53 versets documentée dans le lecteur ; (5) 8 écarts de citations signalés « non reproduit » (règle f) au lieu d'être inventés.
 - **Risques / attention** : (a) la reconstruction des citations vides s'appuie sur l'identification contextuelle du Tashīl/Nasafī — chaque cas est documenté au commit, une passe client avec les PDF originaux reste possible ; (b) ~671 traductions HTML restent (279/950), la production main reste le goulot ; (c) les 885 pdfOnly exigent une extraction PDF (feature en attente).
 - **Priorités suivantes** : (1) sira-2es (29 docs — intro 13942 + 28 leçons Hégire/Badr/Uḥud/Coalisés, livre complet atteignable) ; (2) tajwid-6ep (29 docs, points d'articulation) ou ulum-quran-3es (28 docs, nasḫ/qirāʾāt) ; (3) feature en attente : extraction des 885 PDF-only ; (4) features : export EPUB/PDF d'une leçon, compteur de notes.
+
+---
+Task ID: R59
+Agent: Z.ai Code (agent principal — relance utilisateur « continue », feu vert traductions maintenu)
+Task: continue — fermer le livre prioritaire R58 (sira-2es : 29 docs = intro + 20 leçons + 4 blocs d'activités + aʿlām + sources) en couche savante intégrale, QA navigateur complète, worklog, backup
+
+Work Log:
+- **29 TRADUCTIONS SAVANTES INTÉGRALES** (remplacements GT totaux — GT-ismes du type « stade préparatoire
+  antique », « adopter des raisons », « calendrier » ; rédaction main, workflow
+  extract → rédaction → qa-lesson → hand-set → commit + backup PAR DOC, règles a/b respectées) :
+  1. 13942 (intro, 5 873 car, c3bd8c3) — présentation Direction de l'enseignement traditionnel/
+     alphabétisation, période 1er ʿAqaba → Coalisés, ToC 20 leçons + 4 blocs + aʿlām + sources,
+     6 compétences.
+  2. 13961 (L1, 11 844 car, 3c781e2) — les deux serments d'al-ʿAqaba : Ibn Hishām 2/428-429
+     (« le Prophète dont les Juifs vous menaçaient ») + 2/441-442 (al-ʿAbbās garant, « protégez-moi
+     comme vos femmes et enfants ») ; 1re bayʿa an 11 (6 puis 12, clauses intégrales, Muṣʿab
+     al-Muqriʾ), 2e an 13 (73 + Nusayba/Asmāʾ) ; Naḥl 127-128 + Yūsuf 110 RESTAURÉES ;
+     al-Ghazālī 161 (« l'énergie bouillonnante… c'est le Coran »).
+  3. 14729 (L2, 11 863 car, 8656dad) — Hégire contexte/motifs : ʿĀʾisha Ibn Saʿd Ṭabaqāt 2/175
+     INTÉGRAL ; Dār al-Nadwa, ʿAlī et les dépôts ; Bukhārī 3694 INTÉGRAL (dhāt al-niṭāqayn) ;
+     Anfāl 24 + Nisāʾ 79 RESTAURÉES ; Ṣuhaib Ibn Ḥibbān 7082.
+  4. 14767 (L3, 11 171 car, 536e2e4) — Hégire leçons : grotte de Thawr (qāʾif, toile, 100 chamelles),
+     Tawba 40 avec guillemets imbriqués ; Surāqa ; arrivée 12 rabīʿ I an 13 ; Ṭalāq 3 + Yūnus 58 +
+     Ḥajj 36 RESTAURÉES ; Umm Maʿbad INTÉGRAL (al-Najjār 185).
+  5. 14773 (act 1-3, 5 607 car, 436d3c1) — ʿUbāda b. al-Ṣāmit (Ibn Hishām 2/434), Abū Shahba
+     1/374-377 (route du sud), al-Būṭī 144-145 (le Prophète Législateur) ; ﷺ développé (convention
+     R58) ; cartes signalées (règle f).
+  6. 14777 (L4, 8 803 car, 33fd444) — fondements A mosquées : Khuḍarī 83 INTÉGRAL (marbad des 2
+     orphelins acheté, qibla Bayt al-Maqdis), vers des ouvriers + « ô Dieu il n'est de vie… » ;
+     Nūr 36-37 + Tawba 18 RESTAURÉES ; al-Ghazālī 190.
+  7. 14780 (L5, 8 263 car, 78b7b61) — fondements B fraternisation : Suhaylī 4/296 ; **Anfāl '76'
+     médinois CORRIGÉ → 75 muṣḥaf courant** (abrogation de l'héritage par muʾākhāt à Badr,
+     ulū al-arḥām priorité — cohérent avec Ibn Sayyid al-Nās) ; Bukhārī 3722 + 2200 ;
+     Muslim 2586 (corps) ; Ḥujurāt 10.
+  8. 14781 (L6, 10 825 car, 7617308) — fondements C Charte de Médine : texte fondateur Ibn Hishām
+     2/501-503 INTÉGRAL (umma une, ribʿa/taʿāqul/ʿānī/dasiʿa/yūtigh glosés) ; 3 composantes, 7
+     contenus ; Bukhārī 3001 (dhimma une) ; Baqara 255 + Tawba 72 RESTAURÉES ; al-Ghazālī 193.
+  9. 14782 (act 4-6, 5 416 car, ad2fa43) — mosquées dossier ; Ibn Sayyid al-Nās ʿUyūn 2/231
+     (Anfāl 75 RESTAURÉE, '76' médinois documenté, guillemet ouvrant restauré — extrait in medias
+     res) ; al-Ghazālī 190 (ʿaṣabiyyāt dissoutes) ; Sibāʿī 76-77.
+  10. 14785 (L7, 9 359 car, 3bf68a3) — Abū Ayyūb : Raḥīq 156-157 (chamelle « elle a reçu ordre »,
+      « l'homme est avec sa selle ») ; étages (poussière des pas, déménagement) Bayhaqī 3/501 +
+      ʿIyāḍ al-Shifāʾ 3/35 ; **Tawba '101' CORRIGÉE → 100** (éloge des Anṣār, le 101 = hypocrites) ;
+      Ḥashr 9 ; Bukhārī 3572 ; al-Ghazālī 198 (lampes).
+  11. 14786 (L8, 10 472 car, fe5abb2) — Badr causes/événements : **Ḥajj '37-38' CORRIGÉ → 39-40**
+      (mot-cible uʾidhina) ; Ḥashr 8 + Āl ʿImrān 123 + Māʾida 26 + Mumtaḥana 8-9 RESTAURÉES ;
+      consultation (al-Miqdād « va toi et ton Seigneur », Saʿd « traverser la mer »), al-Ḥubāb
+      (enfoncer les puits, « avis avisé »), 1000 vs 314, 17 ramaḍān an 2.
+  12. 14788 (L9, 9 187 car, 3e09649) — Badr miracles : Anfāl 9-11 + 42-43 + 9 + 11 + 17 + Āl ʿImrān
+      123-125 RESTAURÉES ; ʿUmar Muslim 1763 INTÉGRAL (manteau repris par Abū Bakr) ; Abū Shahba
+      3/157, Maqrīzī 2/117, al-Būṭī 162, Khuḍarī 91.
+  13. 14790 (L10, 6 966 car, 3c674f6) — la planification : **Māʾida '69' CORRIGÉE → 67** (« ô
+      Messager transmets », le 69 = gens du Livre) ; Maḥmūd Shākir 9/190-195 + « l'islam appelle à
+      considérer l'avenir » ; Ṭāʾif→Aws/Khazraj→Hégire→mosquée→Charte→Badr.
+  14. 14792 (act 7-10, 3 664 car, 2ad385c) — le changement de qibla : Abū Shahba 3/104 INTÉGRAAL
+      (ẓuhr/ʿaṣr, mosquée des deux qiblas « son emplacement subsiste ») ; anglicisme de rédaction
+      (« midday ») corrigé in-process.
+  15. 14793 (L11, 10 262 car, 0cf9bdd) — société après Badr : Raḥīq 217-218 (vœu d'Abū Sufyān) ;
+      Maqrīzī 1/119 (rançon = enseigner à 10 garçons, Zayd b. Thābit) ; Quraysh 3-4 + Jumuʿa 2
+      RESTAURÉES ; ḥākim 311 + Bukhārī 89 (relais de ʿUmar) + Muslim 4873 ; al-Ghazālī Iqtiṣād
+      393 INTÉGRAL (« ceint du monde entier »).
+  16. 14794 (L12, 10 021 car, 1f2f10f) — Uḥud : Āl ʿImrān 152 (×3 contextes) + 179 RESTAURÉES ;
+      retrait d'Ibn Ubayy, 50 archers au mont ʿAynayn, Khālid, visage touché/incisive, Abū Dujāna
+      et Nusayba, 70 martyrs dont Ḥamza ; al-Ghazālī 265-266 (« botté ce monde de leurs sandales »).
+  17. 14798 (L13, 9 028 car, 7c8c1fa) — l'envoi des lecteurs : Raḥīq 265-268 (ʿAḍal/al-Qāra,
+      al-Rajīʿ, puits de Maʿūna) ; al-Būṭī 199 (responsabilité de l'appel, 70 jeunes d'élite) ;
+      Bukhārī 3226 + Ḥākim 7846 (cinq avant cinq) ; **Nisāʾ '58' CORRIGÉE → 59** (obéissance) et
+      **Anfāl '59' CORRIGÉE → 58** (trahison) ; Muslim 3368 (étendard du traître).
+  18. 14799 (act 11-13, 5 452 car, 2b3b7f6) — Guide de l'imam du Ministère des Habous 85-86 (« le
+      tranchant de l'épée ne fut jamais qu'exception et défense ») ; Khuḍarī 127 (dispute→accord,
+      défaillance→constance, désobéissance→obéissance) ; Abū Shahba 2/242 (voisinage).
+  19. 14800 (L14, 9 819 car, 39084f2) — entre Uḥud et les Coalisés : Khuḍarī 118-121 (complot du
+      rocher, Dhāt al-Riqāʿ, al-Ḥārith b. Ḍirār) ; Badr la seconde (8 jours), Dūmat al-Jandal ;
+      Naḥl 91 + Anfāl 62 + Ḥashr 1-5 RESTAURÉES ; Muslim 3364 (ne trahissez pas/ne mutilez pas).
+  20. 14805 (L15, 10 705 car, 3666534) — Quraysh mobilise : Ibn Saʿd Ṭabaqāt 2/50 INTÉGRAL
+      (aḥābīsh, 10 000) ; moitié des dattes de Khaybar à Ghaṭafān ; shūrā, ḥarrāt, 6 jours, fort
+      de Fāriʿ, mont Salʿ, « jamais l'humiliation même à la jāhiliyya » ; Bukhārī 3822 (rajaz
+      d'Ibn Rawāḥa) ; al-Būṭī 230 (« la sagesse chose perdue du croyant ») ; ʿUmarī 2/419.
+  21. 14809 (L16, 11 993 car, 644274d) — le secours divin : Aḥzāb 9-11 + 22 RESTAURÉES ;
+      **Aḥzāb '52' CORRIGÉE → 25** (inversion de chiffres 25↔52) ; al-Būṭī 288 (Nuʿaym, « la guerre
+      est ruse ») ; ʿAmr b. ʿAbd Wadd et le duel d'ʿAlī, « Nuʿaym vous a dit vrai » des deux côtés,
+      armée de vent ; « trésors de Chosroès et de César » ; al-Ghazālī 300 (palais d'al-Ḥīra).
+  22. 14810 (act 14-16, 3 759 car, 314e65a) — al-Ghazālī 275-276 (Ḥamrāʾ al-Asad 16 shawwāl,
+      « cueillir le profitable retour ») ; Bukhārī 3893 (« que nul ne prie ʿaṣr sinon chez les
+      Banū Qurayẓa ») ; incohérence interne du manuel (h1 14-16 vs corps 11-13) conservée.
+  23. 14812 (L17, 12 515 car, 83b7f29) — l'éducation prophétique : Aḥzāb 21 + Jumuʿa 2 + Nūr
+      36-37 + Qalam 4 + Āl ʿImrān 110 + 164 RESTAURÉES ; **Māʾida '17-18' CORRIGÉE → 15-16**
+      (lumière et chemins du salut) ; Bukhārī 6139 (Salmān/Abū al-Dardāʾ INTÉGRAL : « ton Seigneur
+      a un droit sur toi ») ; Muslim 746 (« son caractère était le Coran ») ; 4 fondements + 4 effets.
+  24. 14813 (L18, 11 840 car, 0253d1c) — Muṣʿab b. ʿUmayr : Mubārakfūrī 130 INTÉGRAL (Usayd
+      « vous êtes équitables », « nous reconnûmes l'islam sur son visage ») ; Ḥashr 21 + Āl ʿImrān
+      134 RESTAURÉES ; **Shūrā '49' CORRIGÉE → 52-53** (numérotation médinoise 50v, cohérente avec
+      la note R58 tafsir-3es) ; **Fussilat '32' CORRIGÉE → 33** (« appelle à Dieu ») ; al-Jābirī 111.
+  25. 14905 (L19, 8 503 car, c455534) — Nusayba Umm ʿUmāra : Aḥzāb 35 RESTAURÉE (« je ne voyais
+      pas que les femmes fussent mentionnées » — Tirmidhī 3211) ; Bukhārī 3580, 2e ʿAqaba malgré
+      les espions, Uḥud (« qui peut endurer ce que tu endures » — Wāqidī 1/271), transmetteurs
+      (Ibn Saʿd 8/412-413, Iṣāba, Tahdhīb al-kamāl 35/372).
+  26. 14909 (L20, 11 622 car, ae82224) — lueurs des vertus : Sawād b. Ghazīya (Ibn Hishām 1/626,
+      « que ma peau touche ta peau ») ; « maintenant c'est nous qui marchons contre eux » ;
+      Bukhārī 6566 (« une part du Feu ») ; **Māʾida '14' CORRIGÉE → 13** (« Pardonne-leur », le 14
+      finit sur l'inimitié) ; Āl ʿImrān 159 ×2 ; **Abū Ḥayyān Baḥr al-muḥīṭ 3/407-408 INTÉGRAL
+      TRADUIT** (point d'attache de la miséricorde, 2 lectures, « le fruit de la douceur est
+      l'amour »).
+  27. 14913 (act 17-20, 5 264 car, c963cec) — Aḥzāb 45-48 + Tawba 129 RESTAURÉES ; Sibāʿī 69
+      (ʿĀʾisha/Asmāʾ) ; **poème « Walad al-hudā » d'Aḥmad Shawqī TRADUIT EN VERS** (« la religion
+      est aisance, le califat un serment, le commandement consultation, les droits justice » ;
+      duplication de 4 vers au source non reproduite, documentée).
+  28. 14915 (aʿlām, 20 059 car, a74478a) — **55 biographies INTÉGRALES** (Anas → al-Walīd «
+      l'Unique »), nasab/kunya/batailles/morts sourcées du manuel uniquement, titres glosés
+      (ḥabr al-umma, dhū al-nūrayn, al-Fārūq…) ; **titleFr corrigé « Liste des drapeaux » → «
+      Liste des figures citées (aʿlām) »** (GT-isme, convention 15274/14599).
+  29. 14917 (sources, 5 784 car, 9a6675f) — 35 entrées avec éditions critiques et éditeurs rendus
+      intégralement ; coquille manuel « 437 H. » corrigée en 1437 H./2016 (manifeste, documentée).
+- **APPAREIL CRITIQUE** : ~45 versets restaurés du quran-cache (muṣḥaf Warsh, convention 14116) :
+  Naḥl 127-128, Yūsuf 110, Anfāl 24/75/17/9-11/42-43/58/62/59, Nisāʾ 79/59, Tawba 40/18/72/100/
+  129/9?, Ṭalāq 3, Yūnus 58, Ḥajj 36/39-40, Māʾida 26/15-16/67/13, Ḥashr 8/21/9/1-5/36-37??,
+  Nūr 36-37, Qalam 4, Āl ʿImrān 123/125/134/152/179/110/164/159, Ḥujurāt 10, Aḥzāb 35/9-11/22/
+  25/21/45-48, Mumtaḥana 8-9, Baqara 255, Quraysh 3-4, Jumuʿa 2, Shūrā 52-53, Fussilat 33.
+- **10 RÉFÉRENCES CORRIGÉES contre le quran-cache** (mots-cibles vérifiés, coquilles manuel
+  documentées aux commits) : Anfāl 76m→75 (×2), Tawba 101→100, Ḥajj 37-38→39-40, Māʾida 69→67,
+  Nisāʾ 58→59, Anfāl 59→58, Aḥzāb 52→25 (inversion), Māʾida 17-18→15-16, Shūrā 49→52-53 (médinois),
+  Fussilat 32→33, Māʾida 14→13.
+- **BUGFIX OUTILS** : qa-lesson.py auto-fix corrompait les entités HTML («&nbsp;» → «&nbsp\u202f;»
+  affichage littéral) — protection des entités ajoutée (fix commit) + **réparation rétroactive de
+  92 occurrences** (fiqh-6ep 65, sira-2es 27) dans content/books + 110 dans tr-tmp ; bug présent
+  depuis R55, détecté en QA sur 14782. Script backup.sh créé (registry + worklog + bundle latest
+  HEAD, unifié).
+- **NORMALISATIONS** : ﷺ développé « que Dieu prie sur lui et le salue » (convention R58/sira-3es,
+  86 occurrences là-bas) ; guillemets inversés du source (»…«) normalisés 5 fois ; guillemets
+  ouvrants/fermants manquants du scraping restaurés 8 fois (chaque cas documenté) ; 1 duplication
+  scraping dédupliquée (14729) ; fragments orphelins omis (14729 « بالرحلة », 14913 4 vers ×2) ;
+  tableaux/cartes/images vides signalés « non reproduit dans le manuel » (règle f, ~15 cas).
+- **QA NAVIGATEUR** (agent-browser + playwright python) : accueil **40 badges « traduction savante
+  intégrale »** (39→40), 0 erreur console à froid (console cleared + reload) ; page livre sira-2es
+  « 29/29 documents bilingues · 100% · Traduction savante intégrale » + titleFr aʿlām corrigé
+  visible ; lecteurs 13961 (h1, Ibn Hishām 2/428-429, Muṣʿab al-Muqriʾ, Nusayba/Asmāʾ) et 14813
+  (Anfāl 75, Ḥashr 21) vérifiés ; **mobile 390 px : 0 overflow ×4 pages** (accueil, livre, 2
+  leçons — playwright viewport 390×844) ; lint 0 erreur (1 warning préexistant llm-translate.ts:561) ;
+  captures qa-r59-*.png ; dev.log propre.
+- Registre : 299 → **308/950** (+29 main, 258 hand + 50 LLM). Backup /tmp/my-project/backup-tour/
+  rafraîchi après CHAQUE document (règle b : registry + worklog + latest-bundle.bdl).
+
+Stage Summary:
+- **État** : sain. HEAD au terme de R59, registre **308/950**, **41 livres en couche savante
+  intégrale** (40 visibles + 1 non publié). **sira-2es = LIVRE №41 : 29/29 docs (intro + 20
+  leçons + 4 blocs d'activités + aʿlām + sources), 100% bilingue.** La matière sīra du corpus
+  (1es-2es-3es collège) est désormais complète à 100%.
+- **Décisions documentées ce tour** : (1) 10 corrections de références contre le cache avec
+  mots-cibles (cf. supra) — dont la numérotation médinoise d'al-Shūrā (49→52-53) cohérente avec
+  la note R58 ; (2) Anfāl « 76 » médinois = 75 muṣḥaf courant (abrogation du mīrāth par
+  muʾākhāt, double source Suhaylī + Ibn Sayyid al-Nās concordantes) ; (3) le commentaire arabe
+  d'Abū Ḥayyān (14909) et le poème de Shawqī (14913) TRADUITS intégralement (pas laissés en
+  arabe) ; (4) titleFr GT-isme corrigé (14915 « drapeaux ») ; (5) incohérence interne du manuel
+  14810 (h1 14-16 vs corps 11-13) conservée en l'état ; (6) coquille manuel « 437 H. » → 1437 H.
+- **Bugs corrigés** : corruption d'entités HTML par l'auto-fix typographique de qa-lesson.py
+  (92 occurrences réparées rétroactivement dans le corpus — elles s'affichaient littéralement
+  «&nbsp ;» dans le lecteur depuis R55).
+- **Risques / attention** : (a) ~642 traductions restent (308/950), la production main reste le
+  goulot ; (b) les 885 pdfOnly exigent une extraction PDF (feature en attente) ; (c) le bug
+  d'entités est corrigé à la racine mais les tr-tmp historiques réparés ne sont PAS réinjectés —
+  les book JSON font foi (réparés, vérifiés).
+- **Priorités suivantes** : (1) tajwid-6ep (29 docs, points d'articulation) ou ulum-quran-3es
+  (28 docs, nasḫ/qirāʾāt) — prochains gros livres complets atteignables ; (2) audit des ~870
+  traductions GT restantes pour d'autres GT-ismes de titleFr (2 corrigés ce tour) ; (3) features
+  en attente : extraction des 885 PDF-only, export EPUB/PDF d'une leçon, compteur de notes.
