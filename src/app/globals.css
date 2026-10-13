@@ -244,6 +244,45 @@
   color: var(--muted-foreground);
 }
 
+/* Tableaux de vers (manẓūma) : hémistiche / séparateur / hémistiche.
+   Détection côté client (reader.tsx) : 3 colonnes sans en-tête, colonne
+   médiane vide. Rendu poétique — pas de grille, filet médian doré. */
+.lesson-content table.verse-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-block: 1.4em;
+  font-size: 1em;
+}
+.lesson-content table.verse-table td {
+  border: none;
+  padding: 0.22em 0;
+  vertical-align: baseline;
+  width: 50%;
+}
+.lesson-content table.verse-table td:nth-child(2) {
+  width: 2.25em;
+  border-inline-start: 1px solid color-mix(in oklab, var(--primary) 38%, transparent);
+  border-block-end: none;
+}
+.lesson-content table.verse-table td:nth-child(3) {
+  padding-inline-start: 1.1em;
+}
+.lesson-content table.verse-table p {
+  margin: 0;
+  line-height: 1.8;
+}
+.reader-col[dir="ltr"] .lesson-content table.verse-table p {
+  font-style: italic;
+  hyphens: none;
+}
+.reader-col[dir="rtl"] .lesson-content table.verse-table {
+  line-height: 2.1;
+}
+.lesson-content table.verse-table + table.verse-table {
+  margin-block-start: 0.4em;
+}
+
 /* Colonnes du lecteur bilingue */
 .reader-col {
   min-width: 0;
@@ -305,6 +344,13 @@
   .lesson-content li,
   .lesson-content table {
     break-inside: avoid;
+  }
+  /* Vers : jamais de coupure au milieu d'un vers */
+  .lesson-content table.verse-table tr {
+    break-inside: avoid;
+  }
+  .lesson-content table.verse-table td:nth-child(2) {
+    border-inline-start-color: #b8b8b8;
   }
   .lesson-content a {
     color: inherit !important;

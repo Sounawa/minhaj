@@ -237,14 +237,22 @@ function DocNav({ doc }: { doc: DocPayload }) {
       ) : (
         <span className="w-[10%]" />
       )}
-      <Button
-        variant="ghost"
-        size="sm"
-        className="hidden shrink-0 gap-1.5 text-muted-foreground hover:text-foreground sm:inline-flex"
-        onClick={() => navigate(`/livre/${doc.bookId}`)}
-      >
-        Sommaire
-      </Button>
+      <div className="hidden shrink-0 flex-col items-center gap-0.5 sm:flex">
+        <Button
+          variant="ghost"
+          size="sm"
+          className="gap-1.5 text-muted-foreground hover:text-foreground"
+          onClick={() => navigate(`/livre/${doc.bookId}`)}
+        >
+          Sommaire
+        </Button>
+        {(doc.prev || doc.next) && (
+          <span className="flex items-center gap-1 text-[10px] text-muted-foreground/70" title="Navigation clavier">
+            <kbd className="rounded border border-border bg-muted px-1 font-sans text-[9px] leading-4">←</kbd>
+            <kbd className="rounded border border-border bg-muted px-1 font-sans text-[9px] leading-4">→</kbd>
+          </span>
+        )}
+      </div>
       {doc.next ? (
         <Button
           variant="outline"
@@ -272,6 +280,7 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
   const [textSize, setTextSize] = useLocalState<TextSize>("minhaj.textSize", "normal");
   const { toggle, has } = useFavorites();
   const [justToggled, setJustToggled] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   // Mémoriser la dernière lecture (reprise depuis l'accueil)
   useEffect(() => {
@@ -285,6 +294,56 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
       });
     }
   }, [data?.docId, data?.titleFr, data?.titleAr, data?.bookTitleFr, bookId, docId]);
+
+  // Barre de progression de lecture (défilement du document)
+  useEffect(() => {
+    const onScroll = () => {
+      const doc = document.documentElement;
+      const max = doc.scrollHeight - doc.clientHeight;
+      setProgress(max > 40 ? Math.min(100, Math.max(0, (doc.scrollTop / max) * 100)) : 0);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, [docId]);
+
+  // Tableaux de vers (manẓūma) : marquer les structures hémistiche/séparateur/hémistiche
+  // pour la mise en forme poétique (voir .verse-table dans globals.css)
+  useEffect(() => {
+    if (!data || data.pdfOnly) return;
+    document.querySelectorAll<HTMLElement>(".lesson-content table").forEach((table) => {
+      if (table.classList.contains("verse-table")) return;
+      const rows = Array.from(table.querySelectorAll("tr"));
+      if (rows.length === 0 || table.querySelector("th")) return;
+      const isVerse = rows.every((row) => {
+        const cells = Array.from(row.children).filter((c) => c.tagName === "TD");
+        if (cells.length !== 3) return false;
+        const mid = (cells[1] as HTMLElement).innerText.replace(/[\u00a0\u202f ]/g, "");
+        return mid === "";
+      });
+      if (isVerse) table.classList.add("verse-table");
+    });
+  }, [data, mode, textSize]);
+
+  // Navigation clavier : ← → entre leçons (sauf saisie dans un champ)
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey) return;
+      const el = e.target as HTMLElement | null;
+      if (el && (el.tagName === "INPUT" || el.tagName === "TEXTAREA" || el.isContentEditable)) return;
+      if (e.key === "ArrowLeft" && data?.prev) {
+        navigate(`/livre/${bookId}/${data.prev.docId}`);
+      } else if (e.key === "ArrowRight" && data?.next) {
+        navigate(`/livre/${bookId}/${data.next.docId}`);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [bookId, data?.prev, data?.next]);
 
   if (loading) {
     return (
@@ -327,6 +386,20 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
+      {/* Progression de lecture */}
+      <div
+        className="no-print fixed inset-x-0 top-0 z-40 h-0.5 bg-transparent"
+        role="progressbar"
+        aria-label="Progression de la lecture"
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={Math.round(progress)}
+      >
+        <div
+          className="h-full bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 transition-[width] duration-150 ease-out"
+          style={{ width: `${progress}%` }}
+        />
+      </div>
       <nav aria-label="Fil d'Ariane" className="mb-5 flex items-center gap-1 text-sm">
         <Button
           variant="ghost"
