@@ -1,280 +1,280 @@
 {
-  "id": "taqtit-tanawi-2",
-  "subject": "taqtit",
-  "level": "tanawi-2",
-  "subjectAr": "التوقيت",
-  "levelAr": "التوقيت-الثانية-ثانوي",
-  "titleAr": "التوقيت من منظومة عمدة أهل الثبت في علم الأوقات وسمت البيت",
-  "titleFr": "Tawqīt — ʿUmdat Ahl al-Thabt (temps et orientations)",
-  "pdfUrl": null,
-  "intro": {
-    "docId": "18695",
-    "titleAr": "التوقيت من منظومة عمدة أهل الثبت في علم الأوقات وسمت البيت بشرح حل العقدة عن مقاصد العمدة لمحمد العلمي للسنة الثانية من التعليم الثانوي العتيق",
-    "titleFr": "Présentation du manuel",
-    "html": "<h1> التوقيت من منظومة عمدة أهل الثبت في علم الأوقات وسمت البيت بشرح حل العقدة عن مقاصد العمدة لمحمد العلمي س2 ثا</h1>\n <dl>\n <dt></dt>\n <dd>\n \n </dd>\n </dl>\n <p>&nbsp;</p>\n <p>كتاب التوقيت للسنة الثانية من التعليم الثانوي العتيق، اعتمادا على منظومة: «عمدة أهل الثبت في علم الأوقات وسمت البيت» بشرح «حل العقدة عن مقاصد العمدة» للعلامة الفلكي مَحمد بن محمد بن إبراهيم العلمي - رحمه الله- مع نصوص داعمة من مراجع متخصصة في هذا العلم.</p>\n <p>ويروم هذا الكتاب التعريف بأهم المصطلحات الفلكية التي لا غنى للمبتدئ عنها، وبيان صورتها في علم الهيئة، وكيفية حساب اللوغاريتم، وتحديد أوقات الصلاة، وتعيين سمت القبلة لجميع أطوال وعروض المعمور، وما يرتبط بذلك من قواعد علم التوقيت.</p>\n <p>الكتاب موجه لتلاميذ السنة الثانية من التعليم الثانوي العتيق.</p>\n \n <p>الحمد لله الذي جعل الليل والنهار آيتين، وسخر الشمس والقمر دائبين، والصلاة والسلام على سيدنا محمد سيد الرسل والأنبياء، وعلى آله نجوم الاهتداء، وأصحابه أئمة الاقتداء. <br>\n أيها التلاميذ، أيتها التلميذات،</p>\n <p>نضع بين أيديكم كتاب التوقيت للسنة الثانية من التعليم الثانوي العتيق، ليكون لكم سندا في بناء المعارف الفلكية، واكتساب الكفايات والمهارات، وتعزيز التعلم الذاتي، وإدراك جهود علماء التوقيت والفلك عبر العصور.<br>\n وقد اعتمدنا في تأليف هذا الكتاب منظومة: «عمدة أهل الثبت في علم الأوقات وسمت البيت» بشرح «حل العقدة عن مقاصد العمدة» للعلامة الفلكي مَحمد بن محمد بن إبراهيم العلمي - رحمه الله- مع نصوص داعمة من مراجع متخصصة في هذا العلم.</p>\n <p>ويروم هذا الكتاب التعريف بأهم المصطلحات الفلكية التي لا غنى للمبتدئ عنها، وبيان صورتها في علم الهيئة، وكيفية حساب اللوغاريتم، وتحديد أوقات الصلاة، وتعيين سمت القبلة لجميع أطوال وعروض المعمور، وما يرتبط بذلك من قواعد علم التوقيت.</p>\n <p>وقد اعتمدنا في بناء دروس هذا الكتاب مقاربة تربوية تحقق مبدأ الفاعلية الإيجابية، وتجعل المتعلم (ة) في قلب العملية التعليمية التعلمية، كما عززنا الكتاب بأنشطة تفاعلية متنوعة تتوخى إبراز الأثر العلمي والعملي لعلم التوقيت، وتثبيت التعلمات وترسيخها، وتنمية الكفايات التواصلية، وتقويم المكتسبات المعرفية والمهارية، واستثمارها في حل وضعيات جديدة.</p>\n <p>ونأمل أن تتفاعلوا مع أنشطة هذا الكتاب داخل الفصل وخارجه، فستجدون فيه ما يلبي حاجاتكم المعرفية، وما يمهد لكم السبيل لتستمروا في البحث والتحصيل والتعلم الذاتي.<br>\n نسأل الله تعالى أن يفتح بصائركم، وينور سرائركم، ويرزقكم التوفيق والنجاح</p>\n <h2>الكتاب</h2>\n <ul>\n <li>كيف أستعمل كتابي</li>\n <li>كفايات تدريس مادة أصول الفقه</li>\n <li>التوزيع الدوري والأسبوعي</li>\n <li>1 . طرق علم التوقيت</li>\n <li>2 . الأعمال الحسابية في الأنساب اللوغاريتمية</li>\n <li>3 . كيفية التعامل مع اللوغاريتم</li>\n <li>4 . العدد البياني وقاعدة التصرف فيه</li>\n <li>5 . معرفة الجيب المبسوط والمنكوس من القوس وعكسه</li>\n <li>6 . معرفـة الظل المبسوط والمنكوس مـن القوس وعكسه</li>\n <li>7 . أنشطـة لاستـثـمار التعلمات ودعـمها {من الدرس 1 إلى 6}</li>\n <li>8 . استخـراج درجـة الشمـس وبعدها عن أقرب الاعتدالين</li>\n <li>9 . استخراج الميل الجزئي للشمس ومعرفة عرض البلد وطوله</li>\n <li>10 . استخراج الغاية والأصل المطلق</li>\n <li>11 . استخراج بعد القطر ونصف الفضلة</li>\n <li>12 .استخراج حصتي الغروب والشروق</li>\n <li>13 .أنشطة لاستثمار التعلمــات ودعمها {من الدرس 8 إلى 12}</li>\n <li>14 . الدائر وفضله من الارتفاع</li>\n <li>15 . استخراج حـصتي الـظهـر الأول الظهر الثاني</li>\n <li>16 . استخراج حصة العصر الأول</li>\n <li>17 . استخراج حصة العصر الثاني</li>\n <li>18 . استخراج حصة العشاء</li>\n <li>19 . استخراج حصة الفجر</li>\n <li>20 . أنشطة لاستثمار التعلمات ودعمها {من الدرس 14 إلى 19}</li>\n <li>21 . سعــة المـشرق والمغرب والارتفاع الذي لا سمت له</li>\n <li>22 . حصة السمت للارتفاع الـمفروض وتعديله وسمت الارتفاع</li>\n <li>23 . فضل دائر الارتفاع اـذي لا سمت له والجهات الأربع</li>\n <li>24 . معرفة سمت مكة المشرفة</li>\n <li>25 . أنشطة لاستثمار التعلمات ودعمها {من الدرس 21 إلى 24}</li>\n <li>مَتْنُ العُمْدَة فـي التوقيت</li>\n <li>كشاف المصطلحات الفلكية والميقاتية</li>\n <li>تراجم الأعلام</li>\n <li>فهرس المصادر والمراجع</li>\n <li>غلاف الكتاب",
-    "htmlFr": "<h1>Le tawqīt : la manẓūma ʿUmdat ahl al-thabt fī ʿilm al-awqāt wa-samt al-bayt, avec le commentaire Ḥall al-ʿuqda ʿan maqāṣid al-ʿumda de Muḥammad al-ʿAlamī — 2ᵉ année de l’enseignement secondaire traditionnel</h1>\n<p>Livre du calcul des temps (tawqīt) pour la deuxième année de l’enseignement secondaire traditionnel, fondé sur la manẓūma <em>ʿUmdat ahl al-thabt fī ʿilm al-awqāt wa-samt al-bayt</em> [« Le soutien des gens de la transmission assurée en science des temps et en l’orientation de la maison »], avec le commentaire <em>Ḥall al-ʿuqda ʿan maqāṣid al-ʿumda</em> [« La résolution du nœud sur les visées du Soutien »] de l’illustre astronome Muḥammad ibn Muḥammad ibn Ibrāhīm al-ʿAlamī — que Dieu lui fasse miséricorde —, ainsi que sur des textes d’appui tirés de références spécialisées en cette science.</p>\n<p>Ce livre ambitionne de faire connaître les principaux termes d’astronomie indispensables au débutant, d’en exposer la figure dans la science de la configuration du monde (ʿilm al-hayʾa), d’enseigner le calcul du logarithme, la détermination des temps de la prière et la fixation de l’azimut (samt) de la qibla pour toutes les longitudes et latitudes du monde habité (al-maʿmūr), ainsi que les règles du calcul des temps qui s’y rattachent.</p>\n<p>Le livre est destiné aux élèves de la deuxième année de l’enseignement secondaire traditionnel.</p>\n<p>Louange à Dieu, qui a fait de la nuit et du jour deux signes, et qui a assujetti le soleil et la lune à un mouvement perpétuel, et prière et salut sur notre maître Muḥammad, maître des envoyés et des prophètes, ainsi que sur sa famille, astres du cheminement, et sur ses compagnons, imams du modèle à suivre. <br>\nÉlèves, écolières,</p>\n<p>nous plaçons entre vos mains le livre du calcul des temps (tawqīt) de la deuxième année de l’enseignement secondaire traditionnel, pour qu’il vous soit un appui dans la construction des connaissances astronomiques, l’acquisition des compétences et des habiletés, le renforcement de l’apprentissage autonome et la prise de conscience des efforts des savants du calcul des temps et de l’astronomie à travers les âges. <br>\nPour la composition de ce livre, nous nous sommes fondés sur la manẓūma <em>ʿUmdat ahl al-thabt</em> [« Le soutien des gens de la transmission assurée »], avec le commentaire <em>Ḥall al-ʿuqda</em> [« La résolution du nœud »] de l’illustre astronome Muḥammad ibn Muḥammad ibn Ibrāhīm al-ʿAlamī — que Dieu lui fasse miséricorde —, ainsi que sur des textes d’appui tirés de références spécialisées en cette science.</p>\n<p>Ce livre ambitionne de faire connaître les principaux termes d’astronomie indispensables au débutant, d’en exposer la figure dans la science de la configuration du monde (ʿilm al-hayʾa), d’enseigner le calcul du logarithme, la détermination des temps de la prière et la fixation de l’azimut (samt) de la qibla pour toutes les longitudes et latitudes du monde habité (al-maʿmūr), ainsi que les règles du calcul des temps qui s’y rattachent.</p>\n<p>Pour la construction des leçons de ce livre, nous avons adopté une approche éducative qui réalise le principe de l’agir positif et place l’apprenant(e) au cœur du processus d’enseignement-apprentissage ; nous avons en outre renforcé le livre d’activités interactives variées, visant à faire ressortir l’effet scientifique et pratique du calcul des temps (tawqīt), à fixer et à consolider les apprentissages, à développer les compétences communicationnelles, à évaluer les acquis cognitifs et habilitaires et à les exploiter dans la résolution de situations nouvelles.</p>\n<p>Nous espérons que vous interagirez avec les activités de ce livre, dans la classe comme en dehors d’elle : vous y trouverez de quoi satisfaire vos besoins de connaissance, et ce qui vous frayera la voie pour persévérer dans la recherche, l’étude et l’apprentissage autonome. <br>\nNous demandons à Dieu Très-Haut d’ouvrir vos consciences, d’illuminer vos secrets et de vous accorder la réussite et le succès.</p>\n<h2>Table des matières</h2>\n<ul>\n<li>1. Les méthodes de la science du calcul des temps (tawqīt)</li>\n<li>2. Les opérations arithmétiques sur les tables logarithmiques</li>\n<li>3. L’usage des logarithmes</li>\n<li>4. Le nombre exprimé en toutes lettres (ʿadad bayānī) et la règle de son usage</li>\n<li>5. Le sinus direct (mabsūṭ) et inversé (mankūs) d’un arc, et sa réciproque</li>\n<li>6. L’ombre (tangente) directe et inversée d’un arc, et sa réciproque</li>\n<li>7. Activités de valorisation et de consolidation des acquis {leçons 1 à 6}</li>\n<li>8. Le calcul du degré du soleil et de sa distance à l’équinoxe le plus proche</li>\n<li>9. Le calcul de la déclinaison partielle du soleil et la détermination de la latitude et de la longitude du lieu</li>\n<li>10. Le calcul de l’apogée (ġāya) et de l’origine absolue</li>\n<li>11. Le calcul de la distance du diamètre [orthogonal] et de la demi-équation (niṣf al-faḍla)</li>\n<li>12. Le calcul des parts du coucher (maġrib) et du lever (šurūq)</li>\n<li>13. Activités de valorisation et de consolidation des acquis {leçons 8 à 12}</li>\n<li>14. Le cercle de hauteur et son utilité</li>\n<li>15. Le calcul des parts du premier et du second ẓuhr</li>\n<li>16. Le calcul de la part du premier ʿaṣr</li>\n<li>17. Le calcul de la part du second ʿaṣr</li>\n<li>18. Le calcul de la part de la prière du ʿišāʾ</li>\n<li>19. Le calcul de la part de l’aube (faǧr)</li>\n<li>20. Activités de valorisation et de consolidation des acquis {leçons 14 à 19}</li>\n<li>21. L’amplitude [de lever] orientale et occidentale, et la hauteur sans azimut</li>\n<li>22. L’azimut pour une hauteur donnée, son ajustement et l’azimut de la hauteur</li>\n<li>23. La vertu d’un cercle de hauteur sans zénith et quatre directions</li>\n<li>24. La détermination de l’azimut de la Mecque honorée</li>\n<li>25. Activités de valorisation et de consolidation des acquis {leçons 21 à 24}</li>\n<li>26. Le mathn al-ʿUmda fī al-tawqīt (poème du calcul des heures)</li>\n<li>27. Lexique des termes d’astronomie et de calcul des temps (mīqāt)</li>\n<li>28. Notices biographiques des savants</li>\n<li>29. Index des sources et références</li>\n</ul>"
+ "id": "taqtit-tanawi-2",
+ "subject": "taqtit",
+ "level": "tanawi-2",
+ "subjectAr": "التوقيت",
+ "levelAr": "التوقيت-الثانية-ثانوي",
+ "titleAr": "التوقيت من منظومة عمدة أهل الثبت في علم الأوقات وسمت البيت",
+ "titleFr": "Tawqīt — ʿUmdat Ahl al-Thabt (temps et orientations)",
+ "pdfUrl": null,
+ "intro": {
+  "docId": "18695",
+  "titleAr": "التوقيت من منظومة عمدة أهل الثبت في علم الأوقات وسمت البيت بشرح حل العقدة عن مقاصد العمدة لمحمد العلمي للسنة الثانية من التعليم الثانوي العتيق",
+  "titleFr": "Présentation du manuel",
+  "html": "<h1> التوقيت من منظومة عمدة أهل الثبت في علم الأوقات وسمت البيت بشرح حل العقدة عن مقاصد العمدة لمحمد العلمي س2 ثا</h1>\n <dl>\n <dt></dt>\n <dd>\n \n </dd>\n </dl>\n <p>&nbsp;</p>\n <p>كتاب التوقيت للسنة الثانية من التعليم الثانوي العتيق، اعتمادا على منظومة: «عمدة أهل الثبت في علم الأوقات وسمت البيت» بشرح «حل العقدة عن مقاصد العمدة» للعلامة الفلكي مَحمد بن محمد بن إبراهيم العلمي - رحمه الله- مع نصوص داعمة من مراجع متخصصة في هذا العلم.</p>\n <p>ويروم هذا الكتاب التعريف بأهم المصطلحات الفلكية التي لا غنى للمبتدئ عنها، وبيان صورتها في علم الهيئة، وكيفية حساب اللوغاريتم، وتحديد أوقات الصلاة، وتعيين سمت القبلة لجميع أطوال وعروض المعمور، وما يرتبط بذلك من قواعد علم التوقيت.</p>\n <p>الكتاب موجه لتلاميذ السنة الثانية من التعليم الثانوي العتيق.</p>\n \n <p>الحمد لله الذي جعل الليل والنهار آيتين، وسخر الشمس والقمر دائبين، والصلاة والسلام على سيدنا محمد سيد الرسل والأنبياء، وعلى آله نجوم الاهتداء، وأصحابه أئمة الاقتداء. <br>\n أيها التلاميذ، أيتها التلميذات،</p>\n <p>نضع بين أيديكم كتاب التوقيت للسنة الثانية من التعليم الثانوي العتيق، ليكون لكم سندا في بناء المعارف الفلكية، واكتساب الكفايات والمهارات، وتعزيز التعلم الذاتي، وإدراك جهود علماء التوقيت والفلك عبر العصور.<br>\n وقد اعتمدنا في تأليف هذا الكتاب منظومة: «عمدة أهل الثبت في علم الأوقات وسمت البيت» بشرح «حل العقدة عن مقاصد العمدة» للعلامة الفلكي مَحمد بن محمد بن إبراهيم العلمي - رحمه الله- مع نصوص داعمة من مراجع متخصصة في هذا العلم.</p>\n <p>ويروم هذا الكتاب التعريف بأهم المصطلحات الفلكية التي لا غنى للمبتدئ عنها، وبيان صورتها في علم الهيئة، وكيفية حساب اللوغاريتم، وتحديد أوقات الصلاة، وتعيين سمت القبلة لجميع أطوال وعروض المعمور، وما يرتبط بذلك من قواعد علم التوقيت.</p>\n <p>وقد اعتمدنا في بناء دروس هذا الكتاب مقاربة تربوية تحقق مبدأ الفاعلية الإيجابية، وتجعل المتعلم (ة) في قلب العملية التعليمية التعلمية، كما عززنا الكتاب بأنشطة تفاعلية متنوعة تتوخى إبراز الأثر العلمي والعملي لعلم التوقيت، وتثبيت التعلمات وترسيخها، وتنمية الكفايات التواصلية، وتقويم المكتسبات المعرفية والمهارية، واستثمارها في حل وضعيات جديدة.</p>\n <p>ونأمل أن تتفاعلوا مع أنشطة هذا الكتاب داخل الفصل وخارجه، فستجدون فيه ما يلبي حاجاتكم المعرفية، وما يمهد لكم السبيل لتستمروا في البحث والتحصيل والتعلم الذاتي.<br>\n نسأل الله تعالى أن يفتح بصائركم، وينور سرائركم، ويرزقكم التوفيق والنجاح</p>\n <h2>الكتاب</h2>\n <ul>\n <li>كيف أستعمل كتابي</li>\n <li>كفايات تدريس مادة أصول الفقه</li>\n <li>التوزيع الدوري والأسبوعي</li>\n <li>1 . طرق علم التوقيت</li>\n <li>2 . الأعمال الحسابية في الأنساب اللوغاريتمية</li>\n <li>3 . كيفية التعامل مع اللوغاريتم</li>\n <li>4 . العدد البياني وقاعدة التصرف فيه</li>\n <li>5 . معرفة الجيب المبسوط والمنكوس من القوس وعكسه</li>\n <li>6 . معرفـة الظل المبسوط والمنكوس مـن القوس وعكسه</li>\n <li>7 . أنشطـة لاستـثـمار التعلمات ودعـمها {من الدرس 1 إلى 6}</li>\n <li>8 . استخـراج درجـة الشمـس وبعدها عن أقرب الاعتدالين</li>\n <li>9 . استخراج الميل الجزئي للشمس ومعرفة عرض البلد وطوله</li>\n <li>10 . استخراج الغاية والأصل المطلق</li>\n <li>11 . استخراج بعد القطر ونصف الفضلة</li>\n <li>12 .استخراج حصتي الغروب والشروق</li>\n <li>13 .أنشطة لاستثمار التعلمــات ودعمها {من الدرس 8 إلى 12}</li>\n <li>14 . الدائر وفضله من الارتفاع</li>\n <li>15 . استخراج حـصتي الـظهـر الأول الظهر الثاني</li>\n <li>16 . استخراج حصة العصر الأول</li>\n <li>17 . استخراج حصة العصر الثاني</li>\n <li>18 . استخراج حصة العشاء</li>\n <li>19 . استخراج حصة الفجر</li>\n <li>20 . أنشطة لاستثمار التعلمات ودعمها {من الدرس 14 إلى 19}</li>\n <li>21 . سعــة المـشرق والمغرب والارتفاع الذي لا سمت له</li>\n <li>22 . حصة السمت للارتفاع الـمفروض وتعديله وسمت الارتفاع</li>\n <li>23 . فضل دائر الارتفاع اـذي لا سمت له والجهات الأربع</li>\n <li>24 . معرفة سمت مكة المشرفة</li>\n <li>25 . أنشطة لاستثمار التعلمات ودعمها {من الدرس 21 إلى 24}</li>\n <li>مَتْنُ العُمْدَة فـي التوقيت</li>\n <li>كشاف المصطلحات الفلكية والميقاتية</li>\n <li>تراجم الأعلام</li>\n <li>فهرس المصادر والمراجع</li>\n <li>غلاف الكتاب",
+  "htmlFr": "<h1>Le tawqīt : la manẓūma ʿUmdat ahl al-thabt fī ʿilm al-awqāt wa-samt al-bayt, avec le commentaire Ḥall al-ʿuqda ʿan maqāṣid al-ʿumda de Muḥammad al-ʿAlamī — 2ᵉ année de l’enseignement secondaire traditionnel</h1>\n<p>Livre du calcul des temps (tawqīt) pour la deuxième année de l’enseignement secondaire traditionnel, fondé sur la manẓūma <em>ʿUmdat ahl al-thabt fī ʿilm al-awqāt wa-samt al-bayt</em> [« Le soutien des gens de la transmission assurée en science des temps et en l’orientation de la maison »], avec le commentaire <em>Ḥall al-ʿuqda ʿan maqāṣid al-ʿumda</em> [« La résolution du nœud sur les visées du Soutien »] de l’illustre astronome Muḥammad ibn Muḥammad ibn Ibrāhīm al-ʿAlamī — que Dieu lui fasse miséricorde —, ainsi que sur des textes d’appui tirés de références spécialisées en cette science.</p>\n<p>Ce livre ambitionne de faire connaître les principaux termes d’astronomie indispensables au débutant, d’en exposer la figure dans la science de la configuration du monde (ʿilm al-hayʾa), d’enseigner le calcul du logarithme, la détermination des temps de la prière et la fixation de l’azimut (samt) de la qibla pour toutes les longitudes et latitudes du monde habité (al-maʿmūr), ainsi que les règles du calcul des temps qui s’y rattachent.</p>\n<p>Le livre est destiné aux élèves de la deuxième année de l’enseignement secondaire traditionnel.</p>\n<p>Louange à Dieu, qui a fait de la nuit et du jour deux signes, et qui a assujetti le soleil et la lune à un mouvement perpétuel, et prière et salut sur notre maître Muḥammad, maître des envoyés et des prophètes, ainsi que sur sa famille, astres du cheminement, et sur ses compagnons, imams du modèle à suivre. <br>\nÉlèves, écolières,</p>\n<p>nous plaçons entre vos mains le livre du calcul des temps (tawqīt) de la deuxième année de l’enseignement secondaire traditionnel, pour qu’il vous soit un appui dans la construction des connaissances astronomiques, l’acquisition des compétences et des habiletés, le renforcement de l’apprentissage autonome et la prise de conscience des efforts des savants du calcul des temps et de l’astronomie à travers les âges. <br>\nPour la composition de ce livre, nous nous sommes fondés sur la manẓūma <em>ʿUmdat ahl al-thabt</em> [« Le soutien des gens de la transmission assurée »], avec le commentaire <em>Ḥall al-ʿuqda</em> [« La résolution du nœud »] de l’illustre astronome Muḥammad ibn Muḥammad ibn Ibrāhīm al-ʿAlamī — que Dieu lui fasse miséricorde —, ainsi que sur des textes d’appui tirés de références spécialisées en cette science.</p>\n<p>Ce livre ambitionne de faire connaître les principaux termes d’astronomie indispensables au débutant, d’en exposer la figure dans la science de la configuration du monde (ʿilm al-hayʾa), d’enseigner le calcul du logarithme, la détermination des temps de la prière et la fixation de l’azimut (samt) de la qibla pour toutes les longitudes et latitudes du monde habité (al-maʿmūr), ainsi que les règles du calcul des temps qui s’y rattachent.</p>\n<p>Pour la construction des leçons de ce livre, nous avons adopté une approche éducative qui réalise le principe de l’agir positif et place l’apprenant(e) au cœur du processus d’enseignement-apprentissage ; nous avons en outre renforcé le livre d’activités interactives variées, visant à faire ressortir l’effet scientifique et pratique du calcul des temps (tawqīt), à fixer et à consolider les apprentissages, à développer les compétences communicationnelles, à évaluer les acquis cognitifs et habilitaires et à les exploiter dans la résolution de situations nouvelles.</p>\n<p>Nous espérons que vous interagirez avec les activités de ce livre, dans la classe comme en dehors d’elle : vous y trouverez de quoi satisfaire vos besoins de connaissance, et ce qui vous frayera la voie pour persévérer dans la recherche, l’étude et l’apprentissage autonome. <br>\nNous demandons à Dieu Très-Haut d’ouvrir vos consciences, d’illuminer vos secrets et de vous accorder la réussite et le succès.</p>\n<h2>Table des matières</h2>\n<ul>\n<li>1. Les méthodes de la science du calcul des temps (tawqīt)</li>\n<li>2. Les opérations arithmétiques sur les tables logarithmiques</li>\n<li>3. L’usage des logarithmes</li>\n<li>4. Le nombre exprimé en toutes lettres (ʿadad bayānī) et la règle de son usage</li>\n<li>5. Le sinus direct (mabsūṭ) et inversé (mankūs) d’un arc, et sa réciproque</li>\n<li>6. L’ombre (tangente) directe et inversée d’un arc, et sa réciproque</li>\n<li>7. Activités de valorisation et de consolidation des acquis {leçons 1 à 6}</li>\n<li>8. Le calcul du degré du soleil et de sa distance à l’équinoxe le plus proche</li>\n<li>9. Le calcul de la déclinaison partielle du soleil et la détermination de la latitude et de la longitude du lieu</li>\n<li>10. Le calcul de l’apogée (ġāya) et de l’origine absolue</li>\n<li>11. Le calcul de la distance du diamètre [orthogonal] et de la demi-équation (niṣf al-faḍla)</li>\n<li>12. Le calcul des parts du coucher (maġrib) et du lever (šurūq)</li>\n<li>13. Activités de valorisation et de consolidation des acquis {leçons 8 à 12}</li>\n<li>14. Le cercle de hauteur et son utilité</li>\n<li>15. Le calcul des parts du premier et du second ẓuhr</li>\n<li>16. Le calcul de la part du premier ʿaṣr</li>\n<li>17. Le calcul de la part du second ʿaṣr</li>\n<li>18. Le calcul de la part de la prière du ʿišāʾ</li>\n<li>19. Le calcul de la part de l’aube (faǧr)</li>\n<li>20. Activités de valorisation et de consolidation des acquis {leçons 14 à 19}</li>\n<li>21. L’amplitude [de lever] orientale et occidentale, et la hauteur sans azimut</li>\n<li>22. L’azimut pour une hauteur donnée, son ajustement et l’azimut de la hauteur</li>\n<li>23. La vertu d’un cercle de hauteur sans zénith et quatre directions</li>\n<li>24. La détermination de l’azimut de la Mecque honorée</li>\n<li>25. Activités de valorisation et de consolidation des acquis {leçons 21 à 24}</li>\n<li>26. Le mathn al-ʿUmda fī al-tawqīt (poème du calcul des heures)</li>\n<li>27. Lexique des termes d’astronomie et de calcul des temps (mīqāt)</li>\n<li>28. Notices biographiques des savants</li>\n<li>29. Index des sources et références</li>\n</ul>"
+ },
+ "lessons": [
+  {
+   "docId": "pdf-mut23h30-500",
+   "titleAr": "طرق علم التوقيت",
+   "titleFr": "Les méthodes de la science du calcul des temps (tawqīt)",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/1E0581.PDF",
+   "pdfOnly": true
   },
-  "lessons": [
-    {
-      "docId": "pdf-mut23h30-500",
-      "titleAr": "طرق علم التوقيت",
-      "titleFr": "Les méthodes de la science du calcul des temps (tawqīt)",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/1E0581.PDF",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h30-501",
-      "titleAr": "الأعمال الحسابية في الأنساب اللوغاريتمية",
-      "titleFr": "Les opérations arithmétiques sur les tables logarithmiques",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/237C61.PDF",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h30-502",
-      "titleAr": "كيفية التعامل مع اللوغاريتم",
-      "titleFr": "L'usage des logarithmes",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/3450E1.PDF",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h30-503",
-      "titleAr": "العدد البياني وقاعدة التصرف فيه",
-      "titleFr": "Le nombre exprimé en toutes lettres (ʿadad bayānī) et la règle de son usage",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/46CC51.PDF",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h30-504",
-      "titleAr": "معرفة الجيب المبسوط والمنكوس من القوس وعكسه",
-      "titleFr": "Le sinus direct (mabsūṭ) et inversé (mankūs) d'un arc, et sa réciproque",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/58B491.PDF",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h30-505",
-      "titleAr": "معرفة الظل المبسوط والمنكوس من القوس وعكسه",
-      "titleFr": "L'ombre (tangente) directe et inversée d'un arc, et sa réciproque",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/682AB1.PDF",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h30-506",
-      "titleAr": "أنشطة لاستثمار التعلمات ودعمها {من الدرس 1 إلى 6}",
-      "titleFr": "Activités de valorisation et de consolidation des acquis {leçons 1 à 6}",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/7161.PDF",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h30-507",
-      "titleAr": "استخراج درجة الشمس وبعدها عن أقرب الاعتدالين",
-      "titleFr": "Le calcul du degré du soleil et de sa distance à l'équinoxe le plus proche",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/8A6FE1.PDF",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h30-508",
-      "titleAr": "استخراج الميل الجزئي للشمس ومعرفة عرض البلد وطوله",
-      "titleFr": "Le calcul de la déclinaison partielle du soleil et la détermination de la latitude et de la longitude du lieu",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/922CA1.PDF",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h30-509",
-      "titleAr": "استخراج الغاية والأصل المطلق",
-      "titleFr": "Le calcul de l'apogée (ġāya) et de l'origine absolue",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/10E9CF1.PDF",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h30-510",
-      "titleAr": "استخراج بعد القطر ونصف الفضلة",
-      "titleFr": "Le calcul de la distance du diamètre [orthogonal] et de la demi-équation (niṣf al-faḍla)",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/1163631.PDF",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h30-511",
-      "titleAr": "استخراج حصتي الغروب والشروق",
-      "titleFr": "Le calcul des parts du coucher (maġrib) et du lever (šurūq)",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/125F611.PDF",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h30-512",
-      "titleAr": "أنشطة لاستثمار التعلمات ودعمها {من الدرس 8 إلى 12}",
-      "titleFr": "Activités de valorisation et de consolidation des acquis {leçons 8 à 12}",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/138121.PDF",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h30-513",
-      "titleAr": "الدائر وفضله من الارتفاع",
-      "titleFr": "Le cercle de hauteur et son utilité",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/14AE481.PDF",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h30-514",
-      "titleAr": "استخراج حصتي الظهر الأول الظهر الثاني",
-      "titleFr": "Le calcul des parts du premier et du second ẓuhr",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/1525D51.PDF",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h30-515",
-      "titleAr": "استخراج حصة العصر الأول",
-      "titleFr": "Le calcul de la part du premier ʿaṣr",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/16BE931.PDF",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h30-516",
-      "titleAr": "استخراج حصة العصر الثاني",
-      "titleFr": "Le calcul de la part du second ʿaṣr",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/17FFA01.PDF",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h30-517",
-      "titleAr": "استخراج حصة العشاء",
-      "titleFr": "Le calcul de la part de la prière du ʿišāʾ",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/1858F61.PDF",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h30-518",
-      "titleAr": "استخراج حصة الفجر",
-      "titleFr": "Le calcul de la part de l'aube (faǧr)",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/19A0A01.PDF",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h30-519",
-      "titleAr": "أنشطة لاستثمار التعلمات ودعمها {من الدرس 14 إلى 19}",
-      "titleFr": "Activités de valorisation et de consolidation des acquis {leçons 14 à 19}",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/201411.PDF",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h30-520",
-      "titleAr": "سعة المشرق والمغرب والارتفاع الذي لا سمت له",
-      "titleFr": "L'amplitude [de lever] orientale et occidentale, et la hauteur sans azimut",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/2179E01.PDF",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h30-521",
-      "titleAr": "حصة السمت للارتفاع المفروض وتعديله وسمت الارتفاع",
-      "titleFr": "L'azimut pour une hauteur donnée, son ajustement et l'azimut de la hauteur",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/22596C1.PDF",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h30-522",
-      "titleAr": "فضل دائر الارتفاع اذي لا سمت له والجهات الأربع",
-      "titleFr": "La vertu d'un cercle de hauteur sans zénith et quatre directions",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/234EC11.PDF",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h30-523",
-      "titleAr": "معرفة سمت مكة المشرفة",
-      "titleFr": "La détermination de l'azimut de la Mecque honorée",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/24FFAF1.PDF",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h30-524",
-      "titleAr": "أنشطة لاستثمار التعلمات ودعمها {من الدرس 21 إلى 24}",
-      "titleFr": "Activités de valorisation et de consolidation des acquis {leçons 21 à 24}",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/252121.PDF",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h30-525",
-      "titleAr": "متن العمدة في التوقيت",
-      "titleFr": "Le mathn al-ʿUmda fī al-tawqīt (poème du calcul des heures)",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/ED101.PDF",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h30-526",
-      "titleAr": "كشاف المصطلحات الفلكية والميقاتية",
-      "titleFr": "Lexique des termes d'astronomie et de calcul des temps (mīqāt)",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/248E1.PDF",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h30-527",
-      "titleAr": "تراجم الأعلام",
-      "titleFr": "Notices biographiques des savants",
-      "html": "",
-      "htmlFr": "",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/F3211.PDF",
-      "pdfOnly": true
-    },
-    {
-      "docId": "pdf-mut23h30-528",
-      "titleAr": "فهرس المصادر والمراجع",
-      "titleFr": "Index des sources et références",
-      "html": "",
-      "htmlFr": "<p>Al-Hirb al-Musāʿir, al-Marā</p>\n<p>Al-Muṣḥaf al-Karīm « al-Muḥammadī » : Royaume du Maroc.</p>\n<p>Al-Zubda min Ḥal al-ʿUqda. Muḥammad al-Makwār. Copié à l'écriture de l'auteur en vue de l'imprimer par photographie. Al-Mīqāt : ses fondements et ses méthodes ; présentation et établissement par Muḥammad al-ʿArabī al-Khaṭṭāb ; imprimé sous les ordres du regretté Aḥmad Subṭ al-Mārdīnī ; Muḥammad al-ʿIlmī - édition lithographique 1350 H.</p>\n<p>Taṣbīra al-Mubtadā wa-Tadhkira al-Muntahā fī ḥisāb maṭālīb al-Awqāt bi-l-Lughārithmīyāt ; Muḥammad al-Rimshānī. Al-Azmān wa-l-Anwāʾ ; Abū Isḥāq Ibrāhīm b. Ismāʿīl connu sous le nom d'Ibn al-Jadābī ; établissement : le Docteur ʿIzzat Ḥasan ; des publications du Ministère des Habous et des Affaires Islamiques ; Royaume du Maroc ; Deuxième édition 2006.</p>",
-      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/C5DD1.PDF",
-      "pdfOnly": true
-    }
-  ]
+  {
+   "docId": "pdf-mut23h30-501",
+   "titleAr": "الأعمال الحسابية في الأنساب اللوغاريتمية",
+   "titleFr": "Les opérations arithmétiques sur les tables logarithmiques",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/237C61.PDF",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h30-502",
+   "titleAr": "كيفية التعامل مع اللوغاريتم",
+   "titleFr": "L'usage des logarithmes",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/3450E1.PDF",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h30-503",
+   "titleAr": "العدد البياني وقاعدة التصرف فيه",
+   "titleFr": "Le nombre exprimé en toutes lettres (ʿadad bayānī) et la règle de son usage",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/46CC51.PDF",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h30-504",
+   "titleAr": "معرفة الجيب المبسوط والمنكوس من القوس وعكسه",
+   "titleFr": "Le sinus direct (mabsūṭ) et inversé (mankūs) d'un arc, et sa réciproque",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/58B491.PDF",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h30-505",
+   "titleAr": "معرفة الظل المبسوط والمنكوس من القوس وعكسه",
+   "titleFr": "L'ombre (tangente) directe et inversée d'un arc, et sa réciproque",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/682AB1.PDF",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h30-506",
+   "titleAr": "أنشطة لاستثمار التعلمات ودعمها {من الدرس 1 إلى 6}",
+   "titleFr": "Activités de valorisation et de consolidation des acquis {leçons 1 à 6}",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/7161.PDF",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h30-507",
+   "titleAr": "استخراج درجة الشمس وبعدها عن أقرب الاعتدالين",
+   "titleFr": "Le calcul du degré du soleil et de sa distance à l'équinoxe le plus proche",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/8A6FE1.PDF",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h30-508",
+   "titleAr": "استخراج الميل الجزئي للشمس ومعرفة عرض البلد وطوله",
+   "titleFr": "Le calcul de la déclinaison partielle du soleil et la détermination de la latitude et de la longitude du lieu",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/922CA1.PDF",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h30-509",
+   "titleAr": "استخراج الغاية والأصل المطلق",
+   "titleFr": "Le calcul de l'apogée (ġāya) et de l'origine absolue",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/10E9CF1.PDF",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h30-510",
+   "titleAr": "استخراج بعد القطر ونصف الفضلة",
+   "titleFr": "Le calcul de la distance du diamètre [orthogonal] et de la demi-équation (niṣf al-faḍla)",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/1163631.PDF",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h30-511",
+   "titleAr": "استخراج حصتي الغروب والشروق",
+   "titleFr": "Le calcul des parts du coucher (maġrib) et du lever (šurūq)",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/125F611.PDF",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h30-512",
+   "titleAr": "أنشطة لاستثمار التعلمات ودعمها {من الدرس 8 إلى 12}",
+   "titleFr": "Activités de valorisation et de consolidation des acquis {leçons 8 à 12}",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/138121.PDF",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h30-513",
+   "titleAr": "الدائر وفضله من الارتفاع",
+   "titleFr": "Le cercle de hauteur et son utilité",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/14AE481.PDF",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h30-514",
+   "titleAr": "استخراج حصتي الظهر الأول الظهر الثاني",
+   "titleFr": "Le calcul des parts du premier et du second ẓuhr",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/1525D51.PDF",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h30-515",
+   "titleAr": "استخراج حصة العصر الأول",
+   "titleFr": "Le calcul de la part du premier ʿaṣr",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/16BE931.PDF",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h30-516",
+   "titleAr": "استخراج حصة العصر الثاني",
+   "titleFr": "Le calcul de la part du second ʿaṣr",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/17FFA01.PDF",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h30-517",
+   "titleAr": "استخراج حصة العشاء",
+   "titleFr": "Le calcul de la part de la prière du ʿišāʾ",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/1858F61.PDF",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h30-518",
+   "titleAr": "استخراج حصة الفجر",
+   "titleFr": "Le calcul de la part de l'aube (faǧr)",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/19A0A01.PDF",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h30-519",
+   "titleAr": "أنشطة لاستثمار التعلمات ودعمها {من الدرس 14 إلى 19}",
+   "titleFr": "Activités de valorisation et de consolidation des acquis {leçons 14 à 19}",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/201411.PDF",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h30-520",
+   "titleAr": "سعة المشرق والمغرب والارتفاع الذي لا سمت له",
+   "titleFr": "L'amplitude [de lever] orientale et occidentale, et la hauteur sans azimut",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/2179E01.PDF",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h30-521",
+   "titleAr": "حصة السمت للارتفاع المفروض وتعديله وسمت الارتفاع",
+   "titleFr": "L'azimut pour une hauteur donnée, son ajustement et l'azimut de la hauteur",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/22596C1.PDF",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h30-522",
+   "titleAr": "فضل دائر الارتفاع اذي لا سمت له والجهات الأربع",
+   "titleFr": "La vertu d'un cercle de hauteur sans zénith et quatre directions",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/234EC11.PDF",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h30-523",
+   "titleAr": "معرفة سمت مكة المشرفة",
+   "titleFr": "La détermination de l'azimut de la Mecque honorée",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/24FFAF1.PDF",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h30-524",
+   "titleAr": "أنشطة لاستثمار التعلمات ودعمها {من الدرس 21 إلى 24}",
+   "titleFr": "Activités de valorisation et de consolidation des acquis {leçons 21 à 24}",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/252121.PDF",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h30-525",
+   "titleAr": "متن العمدة في التوقيت",
+   "titleFr": "Le mathn al-ʿUmda fī al-tawqīt (poème du calcul des heures)",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/ED101.PDF",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h30-526",
+   "titleAr": "كشاف المصطلحات الفلكية والميقاتية",
+   "titleFr": "Lexique des termes d'astronomie et de calcul des temps (mīqāt)",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/248E1.PDF",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h30-527",
+   "titleAr": "تراجم الأعلام",
+   "titleFr": "Notices biographiques des savants",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/F3211.PDF",
+   "pdfOnly": true
+  },
+  {
+   "docId": "pdf-mut23h30-528",
+   "titleAr": "فهرس المصادر والمراجع",
+   "titleFr": "Index des sources et références",
+   "html": "",
+   "htmlFr": "",
+   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التوقيت-الثانية-ثانوي/C5DD1.PDF",
+   "pdfOnly": true
+  }
+ ]
 }
