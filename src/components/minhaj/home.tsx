@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
+  Award,
   BookMarked,
   CloudDownload,
   FileText as FileTextIcon,
@@ -397,6 +398,10 @@ export function Home() {
               const level = levelById[b.level];
               const subj = subjectById[b.subject];
               const pct = b.docsTotal ? Math.round((b.docsFr / b.docsTotal) * 100) : 0;
+              const savantPct = b.docsFr ? Math.min(100, Math.round((b.docsSavant / b.docsFr) * 100)) : 0;
+              // Intégrale = toutes les traductions FR existantes sont de niveau savant
+              // (les leçons PDF-only, sans texte source, sont hors du champ de la traduction).
+              const fullSavant = b.docsFr > 0 && b.docsSavant >= b.docsFr;
               return (
                 <motion.li
                   key={b.id}
@@ -452,6 +457,28 @@ export function Home() {
                             <span className="font-medium text-primary">{pct}%</span>
                           </div>
                           <Progress value={pct} className="mt-1.5 h-1.5 bg-amber-800/10" />
+                          <div className="mt-1 flex items-center justify-between text-[10px]">
+                            {fullSavant ? (
+                              <Badge
+                                variant="outline"
+                                title={`Toutes les traductions de ce manuel (${b.docsSavant}/${b.docsFr}) sont de niveau savant (registre)`}
+                                className="gap-1 rounded-full border-amber-500/50 bg-gradient-to-br from-amber-100 to-yellow-50 px-2 py-0 font-semibold text-amber-800 dark:border-amber-400/30 dark:from-amber-900/50 dark:to-amber-800/30 dark:text-amber-200"
+                              >
+                                <Award className="size-3" aria-hidden="true" />
+                                traduction savante intégrale
+                              </Badge>
+                            ) : b.docsSavant > 0 ? (
+                              <span className="flex items-center gap-1 text-muted-foreground">
+                                <BookMarked className="size-3 text-amber-700 dark:text-amber-400" aria-hidden="true" />
+                                {b.docsSavant} savante{b.docsSavant > 1 ? "s" : ""}
+                              </span>
+                            ) : (
+                              <span className="text-muted-foreground/70">trad. machine</span>
+                            )}
+                            {b.docsSavant > 0 && !fullSavant && (
+                              <span className="font-medium text-amber-700 dark:text-amber-400">{savantPct}%</span>
+                            )}
+                          </div>
                         </>
                       ) : (
                         <p className="flex items-center gap-1.5 text-xs text-muted-foreground">

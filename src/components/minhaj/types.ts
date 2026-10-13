@@ -31,6 +31,8 @@ export interface BookSummary {
   lessonsFr: number;
   docsTotal: number;
   docsFr: number;
+  /** Documents de ce livre en traduction savante (registre). */
+  docsSavant: number;
 }
 export interface LibraryPayload {
   program: {

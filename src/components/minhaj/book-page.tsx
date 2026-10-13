@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowLeft,
+  Award,
   BookMarked,
   BookOpen,
   CloudDownload,
@@ -175,6 +176,12 @@ export function BookPage({ bookId }: { bookId: string }) {
 
   const { book, level, subject, program } = data;
   const pct = book.docsTotal ? Math.round((book.docsFr / book.docsTotal) * 100) : 0;
+  const savantPct = book.docsFr
+    ? Math.min(100, Math.round((book.docsSavant / book.docsFr) * 100))
+    : 0;
+  // Intégrale = toutes les traductions FR existantes sont de niveau savant
+  // (les leçons PDF-only, sans texte source, sont hors du champ de la traduction).
+  const fullSavant = book.docsFr > 0 && book.docsSavant >= book.docsFr;
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
@@ -233,6 +240,34 @@ export function BookPage({ bookId }: { bookId: string }) {
                   <span className="font-semibold text-primary">{pct}%</span>
                 </div>
                 <Progress value={pct} className="mt-1.5 h-2 bg-amber-800/10" />
+                {book.docsSavant > 0 && (
+                  <div className="mt-2.5 flex flex-wrap items-center gap-2">
+                    {fullSavant ? (
+                      <Badge
+                        variant="outline"
+                        title={`Toutes les traductions de ce manuel (${book.docsSavant}/${book.docsFr}) sont de niveau savant : terminologie académique, versets et hadiths vérifiés`}
+                        className="gap-1.5 rounded-full border-amber-500/50 bg-gradient-to-br from-amber-100 to-yellow-50 px-2.5 py-0.5 font-semibold text-amber-800 dark:border-amber-400/30 dark:from-amber-900/50 dark:to-amber-800/30 dark:text-amber-200"
+                      >
+                        <Award className="size-3.5" aria-hidden="true" />
+                        Traduction savante intégrale
+                      </Badge>
+                    ) : (
+                      <Badge
+                        variant="outline"
+                        title="Documents en traduction savante (registre) dans ce manuel"
+                        className="gap-1.5 rounded-full border-amber-700/30 bg-amber-100/70 px-2.5 py-0.5 text-amber-900 dark:border-amber-300/20 dark:bg-amber-900/40 dark:text-amber-100"
+                      >
+                        <BookMarked className="size-3.5" aria-hidden="true" />
+                        {book.docsSavant}/{book.docsFr} traductions savantes
+                      </Badge>
+                    )}
+                    {!fullSavant && (
+                      <span className="text-[11px] font-medium text-amber-700 dark:text-amber-400">
+                        {savantPct}% du corpus traduit en niveau savant
+                      </span>
+                    )}
+                  </div>
+                )}
               </div>
             ) : (
               <div className="mt-5 flex items-center gap-2 rounded-xl border border-dashed border-amber-800/30 bg-amber-100/40 px-4 py-3 text-sm text-amber-900 dark:bg-amber-900/20 dark:text-amber-100">

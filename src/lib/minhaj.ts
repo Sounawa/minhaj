@@ -317,7 +317,7 @@ export async function getBookDetail(bookId: string): Promise<BookDetailPayload |
   const book = summarize(bookDef, file, savantIdsForDetail);
   const level = manifest.levels.find((l) => l.id === bookDef.level) ?? null;
   const subject = manifest.subjects.find((s) => s.id === bookDef.subject) ?? null;
-  const savantIds = await getSavantIds();
+  const savantIds = savantIdsForDetail;
   const intro: LessonSummary | null = file?.intro
     ? {
         docId: file.intro.docId,

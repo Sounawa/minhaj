@@ -179,6 +179,18 @@ export function useDoc(bookId: string | null, docId: string | null) {
 
 const lsListeners = new Set<() => void>();
 
+/** Vrai une fois l'hydratation React terminée (pattern officiel useSyncExternalStore).
+ *  Permet de servir le même snapshot que le serveur pendant l'hydratation puis
+ *  de basculer sur le vrai état localStorage ensuite — évite tout mismatch. */
+const noopSubscribe = () => () => undefined;
+export function useHydrated(): boolean {
+  return useSyncExternalStore(
+    noopSubscribe,
+    () => true,
+    () => false,
+  );
+}
+
 function subscribeLs(onChange: () => void) {
   lsListeners.add(onChange);
   window.addEventListener("storage", onChange);
@@ -193,15 +205,18 @@ function notifyLs() {
 }
 
 export function useLocalState<T extends string>(key: string, initial: T) {
+  const hydrated = useHydrated();
   const value = useSyncExternalStore(
     subscribeLs,
-    () => {
-      try {
-        return (localStorage.getItem(key) as T | null) ?? initial;
-      } catch {
-        return initial;
-      }
-    },
+    hydrated
+      ? () => {
+          try {
+            return (localStorage.getItem(key) as T | null) ?? initial;
+          } catch {
+            return initial;
+          }
+        }
+      : () => initial,
     () => initial
   );
   const setValue = useCallback(
@@ -256,7 +271,9 @@ function writeJsonList(key: string, list: unknown[]) {
 const favsCache: { raw: string | null; list: FavoriteDoc[] } = { raw: null, list: [] };
 /** Snapshot serveur stable (jamais de nouveau objet à chaque appel). */
 const EMPTY_FAVS: FavoriteDoc[] = [];
+const getEmptyFavs = () => EMPTY_FAVS;
 const NO_LAST_DOC: LastDoc | null = null;
+const getNoLastDoc = () => NO_LAST_DOC;
 
 export function getFavorites(): FavoriteDoc[] {
   if (typeof window === "undefined") return [];
@@ -269,7 +286,12 @@ export function getFavorites(): FavoriteDoc[] {
 }
 
 export function useFavorites() {
-  const favorites = useSyncExternalStore(subscribeLs, getFavorites, () => EMPTY_FAVS);
+  const hydrated = useHydrated();
+  const favorites = useSyncExternalStore(
+    subscribeLs,
+    hydrated ? getFavorites : getEmptyFavs,
+    () => EMPTY_FAVS,
+  );
   const toggle = useCallback((fav: Omit<FavoriteDoc, "ts">) => {
     const list = getFavorites();
     const i = list.findIndex((f) => f.bookId === fav.bookId && f.docId === fav.docId);
@@ -311,7 +333,12 @@ export function setLastDoc(doc: Omit<LastDoc, "ts">) {
 }
 
 export function useLastDoc() {
-  return useSyncExternalStore(subscribeLs, getLastDoc, () => NO_LAST_DOC);
+  const hydrated = useHydrated();
+  return useSyncExternalStore(
+    subscribeLs,
+    hydrated ? getLastDoc : getNoLastDoc,
+    () => NO_LAST_DOC,
+  );
 }
 
 // ————————————————————————————————— Surlignages persistants (offsets texte)
