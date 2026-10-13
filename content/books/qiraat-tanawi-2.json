@@ -1,271 +1,271 @@
 {
- "id": "qiraat-tanawi-2",
- "subject": "qiraat",
- "level": "tanawi-2",
- "subjectAr": "القراءات",
- "levelAr": "القراءات-الثانية-ثانوي-عتيق",
- "titleAr": "القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي",
- "titleFr": "Qirāʾāt — Ḥirz al-Amānī (al-Shāṭibiyya, suite)",
- "pdfUrl": null,
- "intro": {
-  "docId": "20297",
-  "titleAr": "القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي بشرح سراج القارئ المبتدي لابن القاصح",
-  "titleFr": "Présentation du manuel",
-  "html": "<h1> القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي للسنة الثانية من التعليم الثانوي العتيق</h1>\n <dl>\n <dt></dt>\n <dd>\n \n </dd>\n </dl>\n <p>&nbsp;</p>\n <p>الحمد لله الذي أنزل الكتاب على عبده ليكون للعالمين نذيرا، والصلاة والسلام على سيدنا محمد الذي بعثه الله هاديا وبشيرا، وعلى آله وصحبه ومن اتبع هديه إلى يوم الدين. <br>\n وبعد، أبناءنا التلاميذ، وبناتنا التلميذات:</p>\n <p>ها أنتم قد انتقلتم إلى المرحلة الثانية من الطور الثانوي بتوفيق ومددٍ من الله تعالى، وفيها تستكملون معارفكم، وتوسعون مدارككم ومهاراتكم في مختلف الفنون والعلوم المقررة، ومن بينها علم القراءات، ولأجل تحقيق هذه الغاية وضعنا بين أيديكم مقرر مادة القراءات الذي يؤطر مباحث هذا العلم ومسائله المقررة في هذه السنة.</p>\n <p>ويستمد هذا الكتاب مادته العلمية من متن الشاطبية المسمى: «حِرز الأماني ووجْه التّهاني» للإمام أبي القاسم الشاطبي (ت 590 هـ)، ومن شرحها المختصر الشهير: «سراج القارئ المبتدي وتَذْكار المقرئ المنتهي»، للإمام أبي البقاء علي بن عثمان المعروف بابن القاصح (ت 801)، مع الاستئناس بمؤلفات المتقدمين والمتأخرين التي تساعد على استيعاب مسائل القراءات، وتُعلِّل الأحكام القرائية.<br>\n وقد اعتمدنا منهجا ملائما لصياغة التعلمات يستوفي مقوّمات الدرس الأساسية، ويستجيب للمواصفات التربوية والعلمية، ويراعي في الآن نفسه خصوصية علم القراءات، باعتباره علما يقوم على الرواية والتلقي والأداء، بالإضافة إلى الدراية والنظر والتعليل، ولهذا حرصنا على تنويع الأمثلة التطبيقية وربطها بأصول القراء ومذاهبهم في القراءة، مع التنصيص على ما جرى به العمل في بلدنا المغرب في المسائل الخلافية، حفاظا على الخصوصية المغربية في القراءة والإقراء.<br>\n وفقكم الله تعالى، وجعل مسيرتكم الدراسية حافلة بالنجاح والعطاء.</p>\n \n <ul>\n <li>كيف أستعمل كتابي</li>\n <li>كفايات تدريس القراءات بالسنة الثانية من التعليم الثانوي العتيق</li>\n <li>التوزيع الدوري والأسبوعي</li>\n <li>1. باب الهمزتين من كلمة (1)</li>\n <li>2. ﴿ءامنتم﴾ باب الهمزتين من كلمة (2) كلمة</li>\n <li>3.باب الهمزتين من كلمة (3)</li>\n <li>4. باب الهمزتين من كلمة (4)</li>\n <li>5. باب الهمزتين من كلمتين (1)</li>\n <li>6. باب الهمزتين من كلمتين (2)</li>\n <li>7. باب الهمز المفرد (1)</li>\n <li>8. باب الهمز المفرد (2)</li>\n <li>9. باب نقل حركة الهمزة إلى الساكن قبلها <br></li>\n <li>10. باب وقف حمزة وهشام على الهمز (1)</li>\n <li>11. باب وقف حمزة وهشام على الهمز (2)</li>\n <li>12. باب وقف حمزة وهشام على الهمز (3)</li>\n <li>13. أنشطة الدعم والتثبيت</li>\n <li>14. باب الإظهار والإدغام: ذكر ذال «إذ»</li>\n <li>15. ذكر دال «قد» وتاء التأنيث</li>\n <li>16. ذكر لام «هل» و«بل» باب اتفاقهم في إدغام الحروف الخمسة</li>\n <li>17. باب حروف قربت مخارجها (1)</li>\n <li>18. باب حروف قربت مخارجها (2)</li>\n <li>19. باب أحكام النون الساكنة والتنوين</li>\n <li>20. باب الفتح والإمالة وبين اللفظين (1)</li>\n <li>21. باب الفتح والإمالة وبين اللفظين (2)</li>\n <li>22. باب الفتح والإمالة وبين اللفظين(3)</li>\n <li>23. باب الفتح والإمالة وبين اللفظين(4)</li>\n <li>24. باب الفتح والإمالة وبين اللفظين(5)</li>\n <li>25. باب الفتح والإمالة وبين اللفظين (6) وباب مذهب الكسائي في إمالة هاء التأنيث في الوقف</li>\n <li>26. أنشطة الدعم والتثبيت</li>\n <li>لائحة المصادر والمراجع</li>\n <li>هذا الفهرس</li>\n <li>غلاف الكتاب",
-  "htmlFr": "<h1> Lectures du texte de « Hazr Al-Amani » et félicitations à Abu Al-Qasim Al-Shatibi pour la deuxième année de l'enseignement secondaire ancien</h1>\n <dl>\n <dt></dt>\n <jj>\n \n </jd>\n </dl>\n <p> </p>\n <p> Louange à Dieu qui a fait descendre le Livre à son serviteur afin qu'il puisse être un avertisseur pour les mondes, et que la bénédiction et la paix soient sur notre Maître Muhammad, que Dieu a envoyé comme guide et donneur de bonnes nouvelles, ainsi que sur sa famille et ses compagnons et sur quiconque suit sa direction jusqu'au Jour du Jugement. <br>\n Et puis, nos fils et filles étudiants :</p>\n <p>Ici, vous êtes passé au deuxième cycle de l'école secondaire, avec la grâce et le soutien de Dieu Tout-Puissant, dans lequel vous compléterez vos connaissances et élargirez votre compréhension et vos compétences dans les différents arts et sciences prescrits, y compris la science des récitations. Pour atteindre cet objectif, nous avons mis entre vos mains le programme du sujet des récitations, qui encadre les recherches sur cette science et les questions qui lui sont assignées cette année.</p>\n <p>Ce livre tire son matériel scientifique du texte d'Al-Shatibiyyah, intitulé : « Faire des vœux et des félicitations », de l'Imam Abu al-Qasim al-Shatibi (mort en 590 AH), et de sa célèbre brève explication : « Le Siraj du lecteur débutant et le souvenir du lecteur fini », de l'Imam Abu al-Baqa Ali bin Uthman, connu sous le nom d'Ibn al-Qasih (d. 801), en référence aux écrits des plus anciens et des plus récents qui aident à comprendre les enjeux des lectures. Cela explique la lecture des jugements.<br>\n Nous avons adopté une approche appropriée pour formuler des consignes qui remplissent les composantes de base de la leçon, répondent aux spécifications pédagogiques et scientifiques, et tiennent en même temps compte de la spécificité de la science de la lecture.En tant que science basée sur la narration, la réception et l'exécution, outre la connaissance, la considération et le raisonnement, c'est pourquoi nous avons tenu à diversifier les exemples appliqués et à les relier aux origines des lecteurs et à leurs doctrines de lecture, tout en précisant ce qui a été fait dans notre pays, le Maroc, sur des questions controversées, afin de préserver l'intimité marocaine dans la lecture et la récitation.<br>\n Que Dieu Tout-Puissant vous accorde la réussite et rende votre parcours académique plein de réussite et de générosité.</p>\n \n <ul>\n <li>Comment utiliser mon livre</li>\n <li>Compétences pour enseigner la lecture en deuxième année de l'enseignement secondaire ancien</li>\n <li>Distribution périodique et hebdomadaire</li>\n <li>1. Chapitre sur les deux hamzas du mot (1)</li>\n <li>2. « Tu as cru » Chapitre sur les deux hamzas du mot (2) mot</li>\n <li>3.Chapitre sur les deux hamzas du mot (3)</li>\n <li>4. Chapitre sur les deux hamzas du mot (4)</li>\n <li>5. Chapitre sur les deux hamzas à partir de deux mots (1)</li>\n <li>6. Chapitre sur les deux hamzas à partir de deux mots (2)</li>\n <li>7. Chapitre sur le hamza unique (1)</li>\n <li>8. Chapitre sur le hamza unique (2)</li>\n <li>9. Chapitre sur le transfert de la voyelle hamza à la consonne qui la précède <br></li>\n <li>10. Chapitre : Hamza et Hisham se sont arrêtés sur le hamza (1)</li>\n <li>11. Chapitre : Hamza et Hisham se sont arrêtés sur le hamza (2)</li>\n <li>12. Chapitre : Hamza et Hisham se sont arrêtés sur le hamza (3)</li>\n <li>13. Activités de soutien et de stabilisation</li>\n <li>14. Chapitre sur l'assimilation et l'assimilation : mentionner le sujet « si »</li>\n <li>15. Mâle dal « qad » et féminin ta'</li>\n <li>16. Lam a mentionné « hal » et « bel » dans le chapitre sur leur accord dans l'assimilation des cinq lettres</li>\n <li>17. Chapitre sur les lettres dont les sorties sont proches (1)</li>\n <li>18. Chapitre sur les lettres dont les sorties sont proches (2)</li>\n <li>19. Chapitre : Décisions sur les Sakinah et Tanween de midi</li>\n <li>20. Chapitre sur l'ouverture et le basculement et entre les deux mots (1)</li>\n <li>21. Chapitre sur l'ouverture et le basculement et entre les deux mots (2)</li>\n <li>22. Chapitre sur l'ouverture et le basculement et entre les deux mots (3)</li>\n <li>23. Chapitre sur l'ouverture et le basculement et entre les deux mots (4)</li>\n <li>24. Chapitre sur l'ouverture et le basculement et entre les deux mots (5)</li>\n <li>25. Chapitre sur l'ouverture et l'inclinaison et entre les deux prononciations (6) et Chapitre sur la doctrine d'Al-Kisa'i sur l'inclinaison du ha' féminin dans le stop.</li>\n <li>26. Activités de soutien et de stabilisation</li>\n <li>Liste des sources et références</li>\n <li>Cet index</li>\n <li>Couverture du livre</li>\n </ul>\n <div>\n \n </div>\n </div>\n <div>\n \n </div>\n <div>\n <div>"
- },
- "lessons": [
-  {
-   "docId": "pdf-mut23h2v-282",
-   "titleAr": "1. باب الهمزتين من كلمة (1)",
-   "titleFr": "1. Chapitre des deux hamza en un seul mot (1)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/1._باب_الهمزتين_من_كلمة_1.pdf",
-   "pdfOnly": true
+  "id": "qiraat-tanawi-2",
+  "subject": "qiraat",
+  "level": "tanawi-2",
+  "subjectAr": "القراءات",
+  "levelAr": "القراءات-الثانية-ثانوي-عتيق",
+  "titleAr": "القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي",
+  "titleFr": "Qirāʾāt — Ḥirz al-Amānī (al-Shāṭibiyya, suite)",
+  "pdfUrl": null,
+  "intro": {
+    "docId": "20297",
+    "titleAr": "القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي بشرح سراج القارئ المبتدي لابن القاصح",
+    "titleFr": "Présentation du manuel",
+    "html": "<h1> القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي للسنة الثانية من التعليم الثانوي العتيق</h1>\n <dl>\n <dt></dt>\n <dd>\n \n </dd>\n </dl>\n <p>&nbsp;</p>\n <p>الحمد لله الذي أنزل الكتاب على عبده ليكون للعالمين نذيرا، والصلاة والسلام على سيدنا محمد الذي بعثه الله هاديا وبشيرا، وعلى آله وصحبه ومن اتبع هديه إلى يوم الدين. <br>\n وبعد، أبناءنا التلاميذ، وبناتنا التلميذات:</p>\n <p>ها أنتم قد انتقلتم إلى المرحلة الثانية من الطور الثانوي بتوفيق ومددٍ من الله تعالى، وفيها تستكملون معارفكم، وتوسعون مدارككم ومهاراتكم في مختلف الفنون والعلوم المقررة، ومن بينها علم القراءات، ولأجل تحقيق هذه الغاية وضعنا بين أيديكم مقرر مادة القراءات الذي يؤطر مباحث هذا العلم ومسائله المقررة في هذه السنة.</p>\n <p>ويستمد هذا الكتاب مادته العلمية من متن الشاطبية المسمى: «حِرز الأماني ووجْه التّهاني» للإمام أبي القاسم الشاطبي (ت 590 هـ)، ومن شرحها المختصر الشهير: «سراج القارئ المبتدي وتَذْكار المقرئ المنتهي»، للإمام أبي البقاء علي بن عثمان المعروف بابن القاصح (ت 801)، مع الاستئناس بمؤلفات المتقدمين والمتأخرين التي تساعد على استيعاب مسائل القراءات، وتُعلِّل الأحكام القرائية.<br>\n وقد اعتمدنا منهجا ملائما لصياغة التعلمات يستوفي مقوّمات الدرس الأساسية، ويستجيب للمواصفات التربوية والعلمية، ويراعي في الآن نفسه خصوصية علم القراءات، باعتباره علما يقوم على الرواية والتلقي والأداء، بالإضافة إلى الدراية والنظر والتعليل، ولهذا حرصنا على تنويع الأمثلة التطبيقية وربطها بأصول القراء ومذاهبهم في القراءة، مع التنصيص على ما جرى به العمل في بلدنا المغرب في المسائل الخلافية، حفاظا على الخصوصية المغربية في القراءة والإقراء.<br>\n وفقكم الله تعالى، وجعل مسيرتكم الدراسية حافلة بالنجاح والعطاء.</p>\n \n <ul>\n <li>كيف أستعمل كتابي</li>\n <li>كفايات تدريس القراءات بالسنة الثانية من التعليم الثانوي العتيق</li>\n <li>التوزيع الدوري والأسبوعي</li>\n <li>1. باب الهمزتين من كلمة (1)</li>\n <li>2. ﴿ءامنتم﴾ باب الهمزتين من كلمة (2) كلمة</li>\n <li>3.باب الهمزتين من كلمة (3)</li>\n <li>4. باب الهمزتين من كلمة (4)</li>\n <li>5. باب الهمزتين من كلمتين (1)</li>\n <li>6. باب الهمزتين من كلمتين (2)</li>\n <li>7. باب الهمز المفرد (1)</li>\n <li>8. باب الهمز المفرد (2)</li>\n <li>9. باب نقل حركة الهمزة إلى الساكن قبلها <br></li>\n <li>10. باب وقف حمزة وهشام على الهمز (1)</li>\n <li>11. باب وقف حمزة وهشام على الهمز (2)</li>\n <li>12. باب وقف حمزة وهشام على الهمز (3)</li>\n <li>13. أنشطة الدعم والتثبيت</li>\n <li>14. باب الإظهار والإدغام: ذكر ذال «إذ»</li>\n <li>15. ذكر دال «قد» وتاء التأنيث</li>\n <li>16. ذكر لام «هل» و«بل» باب اتفاقهم في إدغام الحروف الخمسة</li>\n <li>17. باب حروف قربت مخارجها (1)</li>\n <li>18. باب حروف قربت مخارجها (2)</li>\n <li>19. باب أحكام النون الساكنة والتنوين</li>\n <li>20. باب الفتح والإمالة وبين اللفظين (1)</li>\n <li>21. باب الفتح والإمالة وبين اللفظين (2)</li>\n <li>22. باب الفتح والإمالة وبين اللفظين(3)</li>\n <li>23. باب الفتح والإمالة وبين اللفظين(4)</li>\n <li>24. باب الفتح والإمالة وبين اللفظين(5)</li>\n <li>25. باب الفتح والإمالة وبين اللفظين (6) وباب مذهب الكسائي في إمالة هاء التأنيث في الوقف</li>\n <li>26. أنشطة الدعم والتثبيت</li>\n <li>لائحة المصادر والمراجع</li>\n <li>هذا الفهرس</li>\n <li>غلاف الكتاب",
+    "htmlFr": "<h1>Présentation du manuel</h1>\n<p>Louange à Dieu, qui a fait descendre le Livre sur Son serviteur pour qu’il soit un avertisseur pour les mondes ; prière et salut sur notre maître Muḥammad, que Dieu a envoyé en guide et porteur de bonnes nouvelles, ainsi que sur sa famille, ses Compagnons et tous ceux qui ont suivi sa guidance jusqu’au Jour de la religion.</p>\n<p>Après ce préambule, nos fils les élèves et nos filles les élèves :</p>\n<p>Vous voici parvenus, par une grâce et un secours de Dieu Très-Haut, à la deuxième étape du cycle de l’enseignement secondaire traditionnel (<em>taʿlīm ʿatīq</em>) : vous y portez à terme vos connaissances, et vous y élargissez vos horizons et vos compétences dans les différentes disciplines et sciences inscrites au programme — au nombre desquelles la science des lectures coraniques (<em>qirāʾāt</em>). C’est en vue de cette fin que nous avons déposé entre vos mains le programme de la matière des lectures coraniques, qui prend en charge les chapitres de cette science et les questions au programme de la présente année.</p>\n<p>Le livre tire sa matière scientifique du <em>matn</em> de la Shāṭibiyya, intitulé <em>Ḥirz al-amānī wa-wajh al-tahānī</em> [« La protection des espérances et le visage des félicitations »], de l’imam Abū al-Qāsim al-Shāṭibī (m. 590 H.), ainsi que de son célèbre commentaire concis, <em>Sirāj al-qāriʾ al-mubtadī wa-tadhkār al-muqriʾ al-muntahī</em> [« La lampe du récitant débutant et le mémoratif du maître récitateur parvenu au terme »], de l’imam Abū al-Baqāʾ ʿAlī b. ʿUthmān, connu sous le nom d’Ibn al-Qāṣiḥ (m. 801 H.) — en nous appuyant également sur les ouvrages des anciens comme des tardifs qui aident à maîtriser les questions des lectures coraniques et à justifier leurs règles (<em>taʿlīl</em>).</p>\n<p>Nous avons adopté une méthode adaptée à la mise en forme des apprentissages : elle remplit les composantes essentielles de la leçon, répond aux spécifications pédagogiques et scientifiques, et respecte en même temps la spécificité de la science des lectures — une science qui repose sur la transmission (<em>riwāya</em>), la réception orale (<em>talaqqī</em>) et l’exécution (<em>adāʾ</em>), auxquelles s’ajoutent la science raisonnée (<em>dirāya</em>), l’examen (<em>naẓar</em>) et la justification (<em>taʿlīl</em>). C’est pourquoi nous avons veillé à diversifier les exemples d’application et à les rattacher aux principes des lecteurs canoniques (<em>qurrāʾ</em>) et à leurs écoles en matière de lecture, tout en signalant expressément ce sur quoi la pratique est établie dans notre pays, le Maroc, sur les questions disputées — en préservation de la spécificité marocaine dans la lecture et dans l’enseignement de la lecture (<em>iqraʾ</em>).</p>\n<p>Que Dieu Très-Haut vous accorde la réussite, et fasse de votre parcours d’études un cheminement riche de succès et de don de soi.</p>\n<h2>Table des matières</h2>\n<ul>\n<li>1. Chapitre des deux hamza en un seul mot (1)</li>\n<li>2. « Āmantum » ; chapitre des deux hamza en un seul mot (2)</li>\n<li>3. Chapitre des deux hamza en un seul mot (3)</li>\n<li>4. Chapitre des deux hamza en un seul mot (4)</li>\n<li>5. Chapitre des deux hamza en deux mots (1)</li>\n<li>6. Chapitre des deux hamza en deux mots (2)</li>\n<li>7. Chapitre du hamza unique (1)</li>\n<li>8. Chapitre du hamza unique (2)</li>\n<li>9. Chapitre du transfert de la voyelle du hamza vers la consonne quiescente précédente</li>\n<li>10. Chapitre : l’arrêt de Ḥamza et Hišām sur le hamza (1)</li>\n<li>11. Chapitre : l’arrêt de Ḥamza et Hišām sur le hamza (2)</li>\n<li>12. Chapitre : l’arrêt de Ḥamza et Hišām sur le hamza (3)</li>\n<li>13. Activités de soutien et de consolidation</li>\n<li>14. Chapitre de l’iẓhār et de l’idġām : le ḏāl de « iḏ »</li>\n<li>15. Le dāl de « qad » et le tāʾ du féminin</li>\n<li>16. Le lām de « hal » et de « bal » ; chapitre de leur accord sur l’idġām des cinq lettres</li>\n<li>17. Chapitre des lettres aux points d’articulation proches (1)</li>\n<li>18. Chapitre des lettres aux points d’articulation proches (2)</li>\n<li>19. Chapitre des règles du nūn quiescent et du tanwīn</li>\n<li>20. Chapitre du fatḥ, de l’imāla et de l’intermédiaire (1)</li>\n<li>21. Chapitre du fatḥ, de l’imāla et de l’intermédiaire (2)</li>\n<li>22. Chapitre du fatḥ, de l’imāla et de l’intermédiaire (3)</li>\n<li>23. Chapitre du fatḥ, de l’imāla et de l’intermédiaire (4)</li>\n<li>24. Chapitre du fatḥ, de l’imāla et de l’intermédiaire (5)</li>\n<li>25. Chapitre du fatḥ, de l’imāla et de l’intermédiaire (6) ; l’école d’al-Kisāʾī sur l’imāla du hāʾ féminin à l’arrêt</li>\n<li>26. Activités de soutien et de consolidation</li>\n<li>Liste des sources et références</li>\n<li>Le présent index</li>\n</ul>"
   },
-  {
-   "docId": "pdf-mut23h2v-283",
-   "titleAr": "2. ﴿ءامنتم﴾ باب الهمزتين من كلمة (2) كلمة",
-   "titleFr": "2. ﴿Āmantum﴾ ; chapitre des deux hamza en un seul mot (2)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/2._ءامنتم_باب_الهمزتين_من_كلمة_2_كلمة.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2v-284",
-   "titleAr": "3.باب الهمزتين من كلمة (3)",
-   "titleFr": "3. Chapitre des deux hamza en un seul mot (3)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/3.باب_الهمزتين_من_كلمة_3.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2v-285",
-   "titleAr": "4. باب الهمزتين من كلمة (4)",
-   "titleFr": "4. Chapitre des deux hamza en un seul mot (4)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/4._باب_الهمزتين_من_كلمة_4.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2v-286",
-   "titleAr": "5. باب الهمزتين من كلمتين (1)",
-   "titleFr": "5. Chapitre des deux hamza en deux mots (1)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/5._باب_الهمزتين_من_كلمتين_1.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2v-287",
-   "titleAr": "6. باب الهمزتين من كلمتين (2)",
-   "titleFr": "6. Chapitre des deux hamza en deux mots (2)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/6._باب_الهمزتين_من_كلمتين_2.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2v-288",
-   "titleAr": "7. باب الهمز المفرد (1)",
-   "titleFr": "7. Chapitre du hamza unique (1)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/7._باب_الهمز_المفرد_1.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2v-289",
-   "titleAr": "8. باب الهمز المفرد (2)",
-   "titleFr": "8. Chapitre du hamza unique (2)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/8._باب_الهمز_المفرد_2.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2v-290",
-   "titleAr": "9. باب نقل حركة الهمزة إلى الساكن قبلها",
-   "titleFr": "9. Chapitre du transfert de la voyelle du hamza vers la consonne quiescente précédente",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/9._باب_الهمز_المفرد_2.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2v-291",
-   "titleAr": "10. باب وقف حمزة وهشام على الهمز (1)",
-   "titleFr": "10. Chapitre : l'arrêt de Ḥamza et Hišām sur le hamza (1)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/10._باب_وقف_حمزة_وهشام_على_الهمز_1.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2v-292",
-   "titleAr": "11. باب وقف حمزة وهشام على الهمز (2)",
-   "titleFr": "11. Chapitre : l'arrêt de Ḥamza et Hišām sur le hamza (2)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/11._باب_وقف_حمزة_وهشام_على_الهمز_2.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2v-293",
-   "titleAr": "12. باب وقف حمزة وهشام على الهمز (3)",
-   "titleFr": "12. Chapitre : l'arrêt de Ḥamza et Hišām sur le hamza (3)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/12._باب_وقف_حمزة_وهشام_على_الهمز_3.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2v-294",
-   "titleAr": "13. أنشطة الدعم والتثبيت",
-   "titleFr": "13. Activités de soutien et de consolidation",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/13._أنشطة_الدعم_والتثبيت.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2v-295",
-   "titleAr": "14. باب الإظهار والإدغام: ذكر ذال «إذ»",
-   "titleFr": "14. Chapitre de l'iẓhār et de l'idġām : le ḏāl de « iḏ »",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/14._باب_الإظهار_والإدغام_ذكر_ذال_إذ.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2v-296",
-   "titleAr": "15. ذكر دال «قد» وتاء التأنيث",
-   "titleFr": "15. Le dāl de « qad » et le tāʾ du féminin",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/15._ذكر_دال_قد_وتاء_التأنيث.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2v-297",
-   "titleAr": "16. ذكر لام «هل» و«بل» باب اتفاقهم في إدغام الحروف الخمسة",
-   "titleFr": "16. Le lām de « hal » et de « bal » ; chapitre de leur accord sur l'idġām des cinq lettres",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/16._ذكر_لام_-هل-_و-بل-_باب_اتفاقهم_في_إدغام_الحروف_الخمسة.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2v-298",
-   "titleAr": "17. باب حروف قربت مخارجها (1)",
-   "titleFr": "17. Chapitre des lettres aux points d'articulation proches (1)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/17._باب_حروف_قربت_مخارجها_1.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2v-299",
-   "titleAr": "18. باب حروف قربت مخارجها (2)",
-   "titleFr": "18. Chapitre des lettres aux points d'articulation proches (2)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/18._باب_حروف_قربت_مخارجها_2.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2v-300",
-   "titleAr": "19. باب أحكام النون الساكنة والتنوين",
-   "titleFr": "19. Chapitre des règles du nūn quiescent et du tanwīn",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/19._باب_أحكام_النون_الساكنة_والتنوين.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2v-301",
-   "titleAr": "20. باب الفتح والإمالة وبين اللفظين (1)",
-   "titleFr": "20. Chapitre du fatḥ, de l'imāla et de l'intermédiaire (1)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/20._باب_الفتح_والإمالة_وبين_اللفظين.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2v-302",
-   "titleAr": "21. باب الفتح والإمالة وبين اللفظين (2)",
-   "titleFr": "21. Chapitre du fatḥ, de l'imāla et de l'intermédiaire (2)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/21._باب_الفتح_والإمالة_وبين_اللفظين_2.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2v-303",
-   "titleAr": "22. باب الفتح والإمالة وبين اللفظين(3)",
-   "titleFr": "22. Chapitre du fatḥ, de l'imāla et de l'intermédiaire (3)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/22._باب_الفتح_والإمالة_وبين_اللفظين3.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2v-304",
-   "titleAr": "23. باب الفتح والإمالة وبين اللفظين(4)",
-   "titleFr": "23. Chapitre du fatḥ, de l'imāla et de l'intermédiaire (4)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/23._باب_الفتح_والإمالة_وبين_اللفظين4.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2v-305",
-   "titleAr": "24. باب الفتح والإمالة وبين اللفظين(5)",
-   "titleFr": "24. Chapitre du fatḥ, de l'imāla et de l'intermédiaire (5)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/24._باب_الفتح_والإمالة_وبين_اللفظين5.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2v-306",
-   "titleAr": "25. باب الفتح والإمالة وبين اللفظين (6) وباب مذهب الكسائي في إمالة هاء التأنيث في الوقف",
-   "titleFr": "25. Chapitre du fatḥ, de l'imāla et de l'intermédiaire (6) ; l'école d'al-Kisāʾī sur l'imāla du hāʾ féminin à l'arrêt",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/25._باب_الفتح_والإمالة_وبين_اللفظين_6_وباب_مذهب_الكسائي_في_إمالة_هاء_التأنيث_في_الوقف.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2v-307",
-   "titleAr": "26. أنشطة الدعم والتثبيت",
-   "titleFr": "26. Activités de soutien et de consolidation",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/26._أنشطة_الدعم_والتثبيت.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2v-308",
-   "titleAr": "لائحة المصادر والمراجع",
-   "titleFr": "Liste des sources et références",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/لائحة_المصادر_والمراجع.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2v-309",
-   "titleAr": "هذا الفهرس",
-   "titleFr": "Le présent index",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/هذا_الفهرس.pdf",
-   "pdfOnly": true
-  }
- ]
+  "lessons": [
+    {
+      "docId": "pdf-mut23h2v-282",
+      "titleAr": "1. باب الهمزتين من كلمة (1)",
+      "titleFr": "1. Chapitre des deux hamza en un seul mot (1)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/1._باب_الهمزتين_من_كلمة_1.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2v-283",
+      "titleAr": "2. ﴿ءامنتم﴾ باب الهمزتين من كلمة (2) كلمة",
+      "titleFr": "2. ﴿Āmantum﴾ ; chapitre des deux hamza en un seul mot (2)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/2._ءامنتم_باب_الهمزتين_من_كلمة_2_كلمة.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2v-284",
+      "titleAr": "3.باب الهمزتين من كلمة (3)",
+      "titleFr": "3. Chapitre des deux hamza en un seul mot (3)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/3.باب_الهمزتين_من_كلمة_3.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2v-285",
+      "titleAr": "4. باب الهمزتين من كلمة (4)",
+      "titleFr": "4. Chapitre des deux hamza en un seul mot (4)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/4._باب_الهمزتين_من_كلمة_4.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2v-286",
+      "titleAr": "5. باب الهمزتين من كلمتين (1)",
+      "titleFr": "5. Chapitre des deux hamza en deux mots (1)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/5._باب_الهمزتين_من_كلمتين_1.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2v-287",
+      "titleAr": "6. باب الهمزتين من كلمتين (2)",
+      "titleFr": "6. Chapitre des deux hamza en deux mots (2)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/6._باب_الهمزتين_من_كلمتين_2.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2v-288",
+      "titleAr": "7. باب الهمز المفرد (1)",
+      "titleFr": "7. Chapitre du hamza unique (1)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/7._باب_الهمز_المفرد_1.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2v-289",
+      "titleAr": "8. باب الهمز المفرد (2)",
+      "titleFr": "8. Chapitre du hamza unique (2)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/8._باب_الهمز_المفرد_2.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2v-290",
+      "titleAr": "9. باب نقل حركة الهمزة إلى الساكن قبلها",
+      "titleFr": "9. Chapitre du transfert de la voyelle du hamza vers la consonne quiescente précédente",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/9._باب_الهمز_المفرد_2.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2v-291",
+      "titleAr": "10. باب وقف حمزة وهشام على الهمز (1)",
+      "titleFr": "10. Chapitre : l'arrêt de Ḥamza et Hišām sur le hamza (1)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/10._باب_وقف_حمزة_وهشام_على_الهمز_1.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2v-292",
+      "titleAr": "11. باب وقف حمزة وهشام على الهمز (2)",
+      "titleFr": "11. Chapitre : l'arrêt de Ḥamza et Hišām sur le hamza (2)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/11._باب_وقف_حمزة_وهشام_على_الهمز_2.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2v-293",
+      "titleAr": "12. باب وقف حمزة وهشام على الهمز (3)",
+      "titleFr": "12. Chapitre : l'arrêt de Ḥamza et Hišām sur le hamza (3)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/12._باب_وقف_حمزة_وهشام_على_الهمز_3.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2v-294",
+      "titleAr": "13. أنشطة الدعم والتثبيت",
+      "titleFr": "13. Activités de soutien et de consolidation",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/13._أنشطة_الدعم_والتثبيت.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2v-295",
+      "titleAr": "14. باب الإظهار والإدغام: ذكر ذال «إذ»",
+      "titleFr": "14. Chapitre de l'iẓhār et de l'idġām : le ḏāl de « iḏ »",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/14._باب_الإظهار_والإدغام_ذكر_ذال_إذ.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2v-296",
+      "titleAr": "15. ذكر دال «قد» وتاء التأنيث",
+      "titleFr": "15. Le dāl de « qad » et le tāʾ du féminin",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/15._ذكر_دال_قد_وتاء_التأنيث.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2v-297",
+      "titleAr": "16. ذكر لام «هل» و«بل» باب اتفاقهم في إدغام الحروف الخمسة",
+      "titleFr": "16. Le lām de « hal » et de « bal » ; chapitre de leur accord sur l'idġām des cinq lettres",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/16._ذكر_لام_-هل-_و-بل-_باب_اتفاقهم_في_إدغام_الحروف_الخمسة.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2v-298",
+      "titleAr": "17. باب حروف قربت مخارجها (1)",
+      "titleFr": "17. Chapitre des lettres aux points d'articulation proches (1)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/17._باب_حروف_قربت_مخارجها_1.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2v-299",
+      "titleAr": "18. باب حروف قربت مخارجها (2)",
+      "titleFr": "18. Chapitre des lettres aux points d'articulation proches (2)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/18._باب_حروف_قربت_مخارجها_2.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2v-300",
+      "titleAr": "19. باب أحكام النون الساكنة والتنوين",
+      "titleFr": "19. Chapitre des règles du nūn quiescent et du tanwīn",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/19._باب_أحكام_النون_الساكنة_والتنوين.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2v-301",
+      "titleAr": "20. باب الفتح والإمالة وبين اللفظين (1)",
+      "titleFr": "20. Chapitre du fatḥ, de l'imāla et de l'intermédiaire (1)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/20._باب_الفتح_والإمالة_وبين_اللفظين.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2v-302",
+      "titleAr": "21. باب الفتح والإمالة وبين اللفظين (2)",
+      "titleFr": "21. Chapitre du fatḥ, de l'imāla et de l'intermédiaire (2)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/21._باب_الفتح_والإمالة_وبين_اللفظين_2.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2v-303",
+      "titleAr": "22. باب الفتح والإمالة وبين اللفظين(3)",
+      "titleFr": "22. Chapitre du fatḥ, de l'imāla et de l'intermédiaire (3)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/22._باب_الفتح_والإمالة_وبين_اللفظين3.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2v-304",
+      "titleAr": "23. باب الفتح والإمالة وبين اللفظين(4)",
+      "titleFr": "23. Chapitre du fatḥ, de l'imāla et de l'intermédiaire (4)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/23._باب_الفتح_والإمالة_وبين_اللفظين4.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2v-305",
+      "titleAr": "24. باب الفتح والإمالة وبين اللفظين(5)",
+      "titleFr": "24. Chapitre du fatḥ, de l'imāla et de l'intermédiaire (5)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/24._باب_الفتح_والإمالة_وبين_اللفظين5.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2v-306",
+      "titleAr": "25. باب الفتح والإمالة وبين اللفظين (6) وباب مذهب الكسائي في إمالة هاء التأنيث في الوقف",
+      "titleFr": "25. Chapitre du fatḥ, de l'imāla et de l'intermédiaire (6) ; l'école d'al-Kisāʾī sur l'imāla du hāʾ féminin à l'arrêt",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/25._باب_الفتح_والإمالة_وبين_اللفظين_6_وباب_مذهب_الكسائي_في_إمالة_هاء_التأنيث_في_الوقف.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2v-307",
+      "titleAr": "26. أنشطة الدعم والتثبيت",
+      "titleFr": "26. Activités de soutien et de consolidation",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/26._أنشطة_الدعم_والتثبيت.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2v-308",
+      "titleAr": "لائحة المصادر والمراجع",
+      "titleFr": "Liste des sources et références",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/لائحة_المصادر_والمراجع.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2v-309",
+      "titleAr": "هذا الفهرس",
+      "titleFr": "Le présent index",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/القراءات-الثانية-ثانوي/هذا_الفهرس.pdf",
+      "pdfOnly": true
+    }
+  ]
 }
