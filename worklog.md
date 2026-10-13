@@ -2586,3 +2586,34 @@ Stage Summary:
   12522/13353 — 8-15 k car AR chacune, ~45 min/doc) ; (2) proposer au client le collage des
   ~119 traductions perdues (historique chat) pour réinjection ; (3) idées features :
   extraction des 885 PDF-only, export EPUB/PDF d'une leçon, notes attachées aux surlignages.
+
+---
+Task ID: R53 (en cours)
+Agent: agent principal (Z.ai Code — cron webDevReview, 5e tour, trace 1a133977d677b2b5-web-cron-review-202610131453)
+Task: QA générale + file fiqh-tanawi-2 (suite) — progression intermédiaire
+
+Work Log (intermédiaire, 5 leçons) :
+- QA initiale : accueil 200, lecteur 12239 OK, surlignages E2E (toolbar visible, sauvegarde
+  localStorage, badge), mobile 390px 0 overflow, dark mode OK, recherche Ctrl+K « salam » 25
+  résultats, 0 erreur console, lint 0 erreur. Fausse alerte `lSupport` = mangling d'affichage
+  bash (source correcte `[hlSupport]` — vérifié Read + codepoints Python + chunk compilé).
+- 5 RECONSTRUCTIONS SAVANTES (main, workflow habituel extract→rédaction→qa-lesson→hand-set→
+  QA navigateur→commit+backup par doc) — SECTION SALAM DE fiqh-tanawi-2 TERMINÉE :
+  1. 12241 (16 883 car, 5a8ea2b) — dette dans la ḏimma + existence à l'échéance ; VERSE-TABLE
+     Ibn ʿĀṣim (ḏimma) ; hadiths Ṭabarānī 11581 + Muwaṭṭaʾ ×2.
+  2. 12242 (12 857 car, 43d41b9) — fruits du verger : fasḫ dīn fī dīn, valeur vs makīla,
+     qarya ṣaġīra 3 taʾwīlāt (Mudawwana/Ibn Abī Zayd/Qayrawāniens, Manḥ al-Ǧalīl 5/329).
+  3. 12243 (22 311 car, aaf89ab) — LA PLUS LONGUE : istiṣnāʿ complet (définition/piliers/
+     conditions/licéité — hadiths bague + chaire Bukhārī/analogie Dhū l-Qarnayn/2 formes
+     dāʾim al-ʿamal/3 nullités + exception vente+location mashhūr).
+  4. 12253 (14 137 car, 10a2154) — salam interdit : ǧuzāf/immeubles/soufre rouge, fer contre
+     épées (Ibn al-Qāsim vs Saḥnūn), khazz, muzābana, maʾālāt mālikites.
+  5. 12261 (17 764 car, 2c5cb2d) — équivalent avant terme (h5 source préservé !),
+     ḥuṭṭa l-ḍamān wa-azīdak / ḍaʿ wa-taʿaǧǧal, 4+3 conditions paiement autre espèce,
+     augmentation après terme (tension interne manuel préservée et documentée).
+- Registre : 191 → 196/950. Backup /tmp/my-project/backup-tour/ rafraîchi après CHAQUE doc.
+
+Stage Summary (intermédiaire) :
+- Restent 10 leçons + index : 12498 (qarḍ), 12499 (muqāṣa), 12500/12502 (rahn), 12503
+  (nullité gage), 12505 (ḥiyāza), 12510 (disposition), 12512 (ḍamān al-rahn), 12517 (litige),
+  12522/13353 + 13349/12519 (index). Puis UI/features.
