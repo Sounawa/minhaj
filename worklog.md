@@ -3995,3 +3995,76 @@ Stage Summary:
   (3) 5 coquilles de référence signalées inline dans 14253 (modèle off-by-one) — vérifier contre
   le livre imprimé si accessible ; (4) glossaires 14249/14253 complets et non brouillés (contra-
   riement à 14243/14247).
+
+---
+Task ID: R62
+Agent: Z.ai Code (agent principal — relance utilisateur « continue », feu vert traductions maintenu)
+Task: continue — sira-1es (30 entrées) en couche savante intégrale → LIVRE №44 et PREMIÈRE MATIÈRE 100% SAVANTE (sīra 1es+2es+3es)
+
+Work Log:
+- **30 TRADUCTIONS SAVANTES INTÉGRALES** (rédaction par 10 subagents-traducteurs en 3 vagues parallèles
+  R62-a…R62-j, 3 docs chacun ; workflow extract.py → brief unifié tr-tmp/_brief-sira1es.md → rédaction →
+  qa-lesson.py → revue main → hand-set → commit + backup PAR DOC ; règles a/b respectées). Le main agent a
+  fait l'analyse du registre, la pré-extraction des 30 sources, le brief, l'identification des versets-image
+  de l'intro, la relecture QA (re-run qa-lesson sur les 30), l'injection, les 30 commits et le backup.
+- **PRÉCÉDENT : la sīra devient la PREMIÈRE MATIÈRE COMPLÈTE en couche savante intégrale** — sira-1es
+  30/30 + sira-2es 29/29 + sira-3es 9/9 = 68 documents savants, les 3 niveaux du cycle collégial.
+- **Versets RESTAURÉS (~37) depuis le cache Hamidullah** (« Allah »→« Dieu », convention corpus) avec
+  vérification systématique mot-cible : intro (al-Aḥzāb 33:21 + Āl ʿImrān 3:31 — IDENTIFIÉES par l'agent
+  principal via l'index Google du site habous, imprimées « سورة الأحزاب الآية 21 » / « سورة آل عمران »,
+  technique R61) ; 13986 (Ṭā-Hā 21 coquille 20→21, al-Aḥzāb 21, al-ḥašr 59:7) ; 14014 (Āl ʿImrān 67,
+  coquille 66→67) ; 14180 (al-Šarḥ 94:1) ; 14182 (an-Nisāʾ 4:58/135 + al-Māʾida 5:8, 3 coquilles -1
+  récurrentes : 57→58, 134→135, 9→8) ; 14186 (Āl ʿImrān 31, al-Aḥzāb 45-48) ; 14191 (al-Aḥzāb 6) ;
+  14197 (al-ʿAlaq 1-5 ×2, Āl ʿImrān 190-191, al-Muǧādala 11, coquille al-Zumar 10→9) ; 14202 (al-Ṣaff 6,
+  al-Aʿrāf 157) ; 14205 (al-Muddaṯṯir 1-7, Sabāʾ 28, al-Naḥl 125) ; 14206 (al-Tawba 100, coquille 101→100) ;
+  14211 (al-Šuʿarāʾ 26:214 ×3, coquille 213→214 + al-Masad 1-2 ×2) ; 14215 (al-Naḥl 106, Fāṭir 4,
+  al-ḏāriyāt 52/54, al-Ṭūr 48 coquille 46→48) ; 14224 (Maryam 1 confirmée par OCR كهيعص + Luqmān 13
+  coquille 12→13) ; 14227 (al-Naḥl 125, Hūd 115, Fuṣṣilat 33) ; 14228 (al-Ḥiǧr 97/98-99/95-96,
+  al-Anʿām 11) ; 14232 (Fuṣṣilat 1-5 réf confirmée triple + al-Isrāʾ 90-93) ; 14243 (al-Šarḥ 5-6,
+  al-Baqara 153 coquille 152→153 + Āl ʿImrān 146) ; 14249 (al-Isrāʾ 17:1, al-Naǧm 53:18/10,
+  al-ʿAnkabūt 29:1-2, al-Layl 92:17-18) ; 14253 (al-Zumar 33, al-Aḥqāf 35, Ṭā-Hā 132, al-Anbiyāʾ 107,
+  al-Tawba 128, Āl ʿImrān 159 — 5 coquilles off-by-one corrigées) ; 15720 (mêmes 5 versets que 14249,
+  zéro coquille, corroborés par les alts d'images du duplicata + texte-source du Šifāʾ en ligne).
+- **DÉCOUVERTE TECHNIQUE (R62-i/j)** : les attributs `alt` des images-verset du miroir habous (duplicata
+  15720) portent les MOTS D'OUVERTURE des versets (سبحان الذي أسرى، لقد راءى…) → corroboration des
+  références imprimées sans VLM (le VLM a été ÉCARTÉ après test de contrôle hallucinant : lu Ṭā Hā 67 sur
+  une image al-Šarḥ 5-6) ; l'indice orchestrateur « al-Naǧm 13-18 » du manuel est disprové (alt = v18 seul).
+- **Hadiths et textes fondateurs INTÉGRAUX** : ʿĀʾiša/début de la révélation (Muslim), zammilūnī (Bukhārī),
+  Abū ḏarr/Zamzam, Ǧaʿfar devant le Naǧāšī (Rawḍ al-unuf II 111 + ʿUyūn al-aṯar I 138), duʿāʾ de Ṭāʾif
+  [Ṭabarānī], ange des montagnes (Bukhārī+Muslim), ʿUṭba/Raḥīq/Būṭī/Ġazālī/Mubārakfūrī/Qasṭallānī/
+  Ḏahabī/Šifāʾ… chacun avec source entre crochets ; bibliographie 14270 au format convention R61 19522
+  (27 entrées, coquilles éditoriales corrigées : تدمر → Tadmurī, Abū Dāwūd 725 → 275 H., تهدذيب → Tahḏīb).
+- **Écarts du source documentés (règle f / fidélité)** : généalogie longue de 14177 non scrapée → non
+  inventée ; second exode abyssin absent de 14221 → non inventé ; hadiths « menteur »/« pluie » de la
+  consigne 14194 absents du source ; évaluation 14243 = copie CMS de la leçon 20 traduite + N.B. ;
+  glossaires brouillés 14243/14247 (gloses de la leçon 18) → sens lexicaux + note transparente ; Mubārakfūrī
+  14205 moitiés inversées au scraping → ordre rétabli ; 2 anomalies textuelles 14224 (ولم يفرضها ولد
+  authentique web-vérifié, ولا يكادون altéré contre Ibn Hišām) ; ~20 schémas/cartes/tableaux-image signalés
+  « non reproduit dans le manuel » avec orientations tirées des intitulés alt.
+- **QA NAVIGATEUR** (agent-browser) : accueil **44 badges « traduction savante intégrale »** (43→44) ;
+  page livre sira-1es « 30/30 documents bilingues · 29 leçons + introduction · 100% · badge » ; lecteurs
+  vérifiés 13981 (2 versets restaurés visibles), 14224 (discours de Ǧaʿfar, Maryam, Luqmān), 14249 (Burāq,
+  sidrat al-muntahā, al-Isrāʾ 17:1) ; **API 30/30 OK** (htmlFr servi, 0 résidu arabe) ; mobile 390 px :
+  **0 overflow ×4 pages** (accueil, livre, intro, 14249) ; console propre (0 erreur) ; lint 0 erreur
+  (1 warning préexistant llm-translate.ts:561 ; 3 scripts VLM scratch des subagents supprimés) ;
+  captures qa-r62-*.png ; dev.log propre.
+- Registre : 364 → **394/950** (+30 main, 344 hand + 50 LLM). Backup /tmp/my-project/backup-tour/
+  rafraîchi après CHAQUE document (règle b : registry + worklog + latest-bundle.bdl + json du livre).
+- Cron webDevReview 15 min recréé (job 457413, description standard mandatée).
+
+Stage Summary:
+- **État** : sain. HEAD au terme de R62, registre **394/950**, **44 livres en couche savante intégrale**.
+  **sira-1es = LIVRE №44 : 30/30 entrées (intro + 29 leçons), 100% bilingue.** **La matière SĪRA est la
+  PREMIÈRE COMPLÈTEMENT couverte en savant (1es + 2es + 3es = 68 docs, badge ×3).**
+- **Innovation du tour** : production déléguée à 10 subagents-traducteurs parallèles (3 vagues × 4/4/2)
+  avec brief unifié (_brief-sira1es.md) + exemplaire 13961 + QA dure — débit 30 docs en un tour (record,
+  vs 28-29 en solo), qualité contrôlée par relecture QA main + worklog de chaque agent. Corroboration des
+  références par les `alt` des images-verset du miroir (technique nouvelle, VLM écarté comme non fiable).
+- **Risques / attention** : (a) ~556 traductions restent (394/950), les livres tout-HTML non entamés les
+  plus gros : fiqh-1es (30), hadith-1es (31), tafsir-1es (30), fiqh-tanawi-1/3 (31/32), hadith-tanawi-1
+  (31), ulum-quran-1es (28), qiraat-tanawi-1 (23), usul-fiqh-waraqat (29), tajwid-2es (28), faraid-tanawi-2
+  (18) ; (b) les 885 pdfOnly exigent l'extraction PDF (feature toujours en attente) ; (c) la matière tafsīr
+  est à 5/9 livres complets (manquent 1es, tanawi-1/2/3) — prochaine cible « matière complète » atteignable.
+- **Priorités suivantes** : (1) tafsir-1es (31 docs) → 6ᵉ livre tafsīr complet ; ou ulum-quran-1es (28) pour
+  doubler la matière ʿulūm al-Qurʾān ; (2) audit GT-ismes titleFr restants ; (3) features : extraction
+  des 885 PDF-only, export EPUB/PDF d'une leçon, compteur de notes.
