@@ -64,3 +64,6 @@ tr-tmp/
 
 # sorties d'outils persistées (scratch, non versionnées)
 tool-results/
+
+# archive WeTransfer de restauration (backup local, ne pas versionner)
+download/wetransfer/

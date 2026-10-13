@@ -2261,3 +2261,54 @@ Stage Summary:
 - Verdict R46 re-confirmé indépendamment (538 blobs re-scannés : 0 récupérable).
 - Corpus : 64 livres / 1853 docs — couche savante en progression, 0 perte supplémentaire.
 - Prochaine étape : 8 docs R22 (specs concises lignes 1694-1713) puis file fiqh-tanawi-2.
+
+---
+Task ID: R48
+Agent: agent principal (Z.ai Code — nouvelle session utilisateur, reprise après changement d'agent)
+Task: Reset sandbox n°4 — récupération du projet via archive WeTransfer fournie par l'utilisateur, audit général complet, restauration intégrale + QA + rétablissement doctrine anti-reset
+
+Work Log:
+- Contexte : NOUVEAU sandbox (reset n°4 — /tmp/my-project et .git de l'ancien monde absents, backup-tour perdu,
+  workspace = template Next.js vierge). L'utilisateur a fourni l'intégralité du projet via WeTransfer
+  (https://we.tl/t-FNTAwDouF8SBkgMk → tar.gz 148 Mo, 2 691 fichiers) : SEULE copie existante du projet.
+- Téléchargement : résolution du lien we.tl → API v4 wetransfer (POST /transfers/{id}/download, security_hash
+  7126bf) → lien direct → tar extrait vers /home/z/audit-workspace (analyse sans toucher au workspace).
+- AUDIT GÉNÉRAL (résumé) :
+  • Git : 250 commits (3 oct. → 13 oct. 04:41), HEAD = cda325b (reconstruction usul-fiqh-tanawi-2/18691,
+    registre 183/950). Statut : PROPRE. 4 commits lost-found conservés (R9, R10, WIP R5b, R20).
+  • Corpus : 64 livres / 1 853 documents (904 leçons bilingues intégrales + 64 intros + 885 renvois PDF
+    officiels) ; 983 docs FR. Manifest v7. content/ = 45 Mo.
+  • Couche savante : registre 183/950 (133 main + 50 LLM validés). ~119 traductions R21-R41 irrécupérables
+    (verdict R46/R47 prouvé — uniquement dans l'historique chat utilisateur). Reconstructions fidèles :
+    8/8 specs complètes + 18691 fait ; restent 7 docs R22 à specs concises (15371, 18649, 18676, 18675,
+    18671, 18677, 20297) puis file fiqh-tanawi-2 (12239, 12241, 12242, 12243, 12253, 12261, 12498-12522,
+    13349, 13353 — 17 leçons).
+  • App : 9 composants minhaj/ (~2 500 lignes), lib/minhaj.ts (lecture JSON directe, Prisma non utilisé —
+    schéma par défaut), 4 routes API, hash-routing #/livre/{bookId}/{docId}, thème automne, i18n FR/AR,
+    favoris localStorage, recherche indexée 934 docs. Qualité code : élevée (a11y, responsive, dark mode).
+  • Outillage : scripts-translate/ (supervisor, llm-translate 4 passes, hand-set/register, qa-lesson,
+    quran-cache, agent-merge) + scripts-recovery/ (crawler, build-corpus, tmp-mirror-books 68 livres
+    pré-grille, lost-epoch-1011). tr-logs/ et tr-tmp/ vides (scratchs gitignorés, perdus au reset).
+  • Archives préservées : wetransfer/project.tar (148 Mo) dans download/wetransfer/ (gitignoré).
+- RESTAURATION : rsync -a archive → /home/z/my-project (exclusions node_modules/.next/dev.log/.zscripts/
+  download/wetransfer) ; git status PROPRE immédiat (byte-exact vs cda325b) ; .gitignore += download/wetransfer/.
+  Dépendances identiques au template (bun install : no changes). DB par défaut (inutilisée par l'app).
+- QA agent-browser (post-restauration) : accueil 200 (64 manuels, stats 983/1 152 · 1 853 · 64/64) ;
+  livre fiqh-1ep 31/31 bilingues 100 % ; lecteur 11366 bilingue FR/AR (savant main) + vues FR/AR seules ;
+  Ctrl+K → 934 docs indexés, résultats « tafsir » pertinents ; mobile 375 px SANS débordement ;
+  footer sticky vérifié page courte (bottom=577=viewport) et poussé naturellement page longue ;
+  0 ERREUR console. Captures : scripts-recovery/qa-r48-{restauration,mobile,desktop}.png.
+- Lint : 0 erreur (1 warning préexistant llm-translate.ts:561, documenté).
+- Doctrine anti-reset rétablie : /tmp/my-project/backup-tour/ = minhaj.bundle (15 Mo, « complete history »
+  vérifié) + worklog.md + savant-registry.json ; /tmp/my-project/tr-tmp/ créé ; archive WeTransfer conservée
+  dans download/wetransfer/ ; cron webDevReview 15 min recréé.
+
+Stage Summary:
+- **PROJET MINHĀJ INTÉGRALEMENT RESTAURÉ ET VÉRIFIÉ** après reset n°4 — aucune perte supplémentaire :
+  git 250 commits + corpus 64 livres/1 853 docs + registre 183/950 + app complète + outillage.
+- L'archive WeTransfer reste la sauvegarde de référence (copie hors git, 148 Mo).
+- Priorités suivantes : (1) reprendre la reconstruction des 7 docs R22 restants (specs lignes ~1694-1713),
+  (2) file fiqh-tanawi-2 (17 leçons), (3) proposer au client la récupération des ~119 traductions perdues
+  depuis SON historique chat (collage dans la conversation) avant toute nouvelle production.
+- Règles maintenues : JAMAIS de sous-agents pour la traduction ; commit + backup /tmp à chaque doc ;
+  setsid -f pour tout daemon ; ne jamais redémarrer le serveur dev.
