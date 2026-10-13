@@ -130,6 +130,8 @@ export interface DocPayload {
   htmlFr: string;
   sample: boolean;
   hasFr: boolean;
+  /** Traduction savante (registre hand/LLM validé) — sinon qualité machine (GT). */
+  savant: boolean;
   index: number;
   count: number;
   pdfUrl: string | null;
@@ -145,6 +147,8 @@ export interface LessonSummary {
   hasFr: boolean;
   sample: boolean;
   pdfOnly: boolean;
+  /** Traduction savante (registre) — sinon qualité machine (GT). */
+  savant: boolean;
 }
 export interface BookDetailPayload {
   program: Manifest["program"];
@@ -181,6 +185,34 @@ async function readJsonCached<T>(relPath: string): Promise<T | null> {
     return data;
   } catch {
     return null;
+  }
+}
+
+// ———————————————————————————————————————— Registre des traductions savantes
+// scripts-translate/savant-registry.json — docIds bénéficiant d'une traduction
+// révisée (main ou LLM validée). Les autres documents bilingues sont en
+// qualité machine (GT). Cache mtime → suivi à chaud des injections.
+
+interface SavantRegistry {
+  hand?: string[];
+  llm?: Record<string, unknown>;
+}
+let savantCache: { mtimeMs: number; ids: Set<string> } | null = null;
+
+async function getSavantIds(): Promise<Set<string>> {
+  const abs = path.join(process.cwd(), "scripts-translate", "savant-registry.json");
+  try {
+    const stat = await fs.stat(abs);
+    if (savantCache && Math.abs(savantCache.mtimeMs - stat.mtimeMs) < 1) {
+      return savantCache.ids;
+    }
+    const raw = await fs.readFile(abs, "utf-8");
+    const reg = JSON.parse(raw) as SavantRegistry;
+    const ids = new Set<string>([...(reg.hand ?? []), ...Object.keys(reg.llm ?? {})]);
+    savantCache = { mtimeMs: stat.mtimeMs, ids };
+    return ids;
+  } catch {
+    return savantCache?.ids ?? new Set<string>();
   }
 }
 
@@ -252,6 +284,7 @@ export async function getBookDetail(bookId: string): Promise<BookDetailPayload |
   const book = summarize(bookDef, file);
   const level = manifest.levels.find((l) => l.id === bookDef.level) ?? null;
   const subject = manifest.subjects.find((s) => s.id === bookDef.subject) ?? null;
+  const savantIds = await getSavantIds();
   const intro: LessonSummary | null = file?.intro
     ? {
         docId: file.intro.docId,
@@ -259,6 +292,7 @@ export async function getBookDetail(bookId: string): Promise<BookDetailPayload |
         titleFr: file.intro.titleFr || "",
         hasFr: Boolean((file.intro.htmlFr || "").trim()),
         sample: Boolean(file.intro.sample),
+        savant: savantIds.has(file.intro.docId),
       }
     : null;
   const lessons: LessonSummary[] = (file?.lessons ?? []).map((l) => ({
@@ -268,6 +302,7 @@ export async function getBookDetail(bookId: string): Promise<BookDetailPayload |
     hasFr: Boolean((l.htmlFr || "").trim()),
     sample: Boolean(l.sample),
     pdfOnly: Boolean(l.pdfOnly),
+    savant: savantIds.has(l.docId),
   }));
   return { program: manifest.program, book, level, subject, intro, lessons };
 }
@@ -286,6 +321,8 @@ export interface SearchHit {
   snippet: string;
   score: number;
   lang: "fr" | "ar" | "both";
+  /** Traduction savante (registre) — sinon qualité machine (GT). */
+  savant: boolean;
 }
 export interface SearchPayload {
   query: string;
@@ -441,7 +478,7 @@ function makeSnippet(plain: string, nText: string, query: string, max = 160): st
 export async function searchCorpus(rawQuery: string, limit = 25): Promise<SearchPayload> {
   const query = normAll(rawQuery.trim().replace(/\s+/g, " "));
   if (query.length < 2) return { query: rawQuery, total: 0, truncated: false, hits: [] };
-  const index = await getSearchIndex();
+  const [index, savantIds] = await Promise.all([getSearchIndex(), getSavantIds()]);
   const hits: SearchHit[] = [];
   for (const e of index) {
     let score = 0;
@@ -475,6 +512,7 @@ export async function searchCorpus(rawQuery: string, limit = 25): Promise<Search
       snippet,
       score,
       lang,
+      savant: savantIds.has(e.docId),
     });
   }
   hits.sort((a, b) => b.score - a.score || a.titleFr.localeCompare(b.titleFr));
@@ -494,6 +532,7 @@ export async function getDoc(bookId: string, docId: string): Promise<DocPayload 
   if (!bookDef) return null;
   const file = await getBookFile(bookId);
   if (!file) return null;
+  const savantIds = await getSavantIds();
 
   const seq: Array<{ doc: NonNullable<BookFile["intro"]> | LessonDoc; isIntro: boolean }> = [];
   if (file.intro) seq.push({ doc: file.intro, isIntro: true });
@@ -524,6 +563,7 @@ export async function getDoc(bookId: string, docId: string): Promise<DocPayload 
     htmlFr: cur.doc.htmlFr || "",
     sample: Boolean((cur.doc as LessonDoc).sample),
     hasFr: Boolean((cur.doc.htmlFr || "").trim()),
+    savant: savantIds.has(cur.doc.docId),
     pdfUrl: ((cur.doc as LessonDoc).pdfUrl as string | null) ?? null,
     pdfOnly: Boolean((cur.doc as LessonDoc).pdfOnly),
     index: idx,

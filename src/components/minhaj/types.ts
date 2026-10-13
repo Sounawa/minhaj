@@ -60,6 +60,8 @@ export interface LessonSummary {
   hasFr: boolean;
   sample: boolean;
   pdfOnly: boolean;
+  /** Traduction savante (registre) — sinon qualité machine (GT). */
+  savant: boolean;
 }
 export interface BookDetailPayload {
   program: LibraryPayload["program"];
@@ -83,6 +85,8 @@ export interface DocPayload {
   htmlFr: string;
   sample: boolean;
   hasFr: boolean;
+  /** Traduction savante (registre) — sinon qualité machine (GT). */
+  savant: boolean;
   index: number;
   count: number;
   pdfUrl: string | null;

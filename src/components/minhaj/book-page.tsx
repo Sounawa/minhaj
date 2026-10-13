@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowLeft,
+  BookMarked,
   BookOpen,
   CloudDownload,
   Compass,
@@ -73,6 +74,16 @@ function LessonRow({
           </span>
         </span>
         <span className="flex shrink-0 items-center gap-1.5">
+          {lesson.savant && (
+            <Badge
+              variant="outline"
+              title="Traduction française révisée (terminologie académique, versets vérifiés)"
+              className="hidden gap-1 rounded-full border-amber-500/50 bg-gradient-to-br from-amber-100 to-yellow-50 text-[10px] font-semibold text-amber-800 sm:inline-flex dark:border-amber-400/30 dark:from-amber-900/50 dark:to-amber-800/30 dark:text-amber-200"
+            >
+              <BookMarked className="size-3" aria-hidden="true" />
+              savante
+            </Badge>
+          )}
           {lesson.sample && (
             <Badge
               variant="outline"
@@ -261,10 +272,22 @@ export function BookPage({ bookId }: { bookId: string }) {
                   </span>
                 </span>
                 {data.intro.hasFr ? (
-                  <Badge className="gap-1 rounded-full bg-gradient-to-br from-amber-600 to-orange-800 text-[10px] text-amber-50 shadow-sm">
-                    <Languages className="size-3" aria-hidden="true" />
-                    bilingue
-                  </Badge>
+                  <span className="flex shrink-0 items-center gap-1.5">
+                    {data.intro.savant && (
+                      <Badge
+                        variant="outline"
+                        title="Traduction française révisée (terminologie académique, versets vérifiés)"
+                        className="gap-1 rounded-full border-amber-500/50 bg-gradient-to-br from-amber-100 to-yellow-50 text-[10px] font-semibold text-amber-800 dark:border-amber-400/30 dark:from-amber-900/50 dark:to-amber-800/30 dark:text-amber-200"
+                      >
+                        <BookMarked className="size-3" aria-hidden="true" />
+                        savante
+                      </Badge>
+                    )}
+                    <Badge className="gap-1 rounded-full bg-gradient-to-br from-amber-600 to-orange-800 text-[10px] text-amber-50 shadow-sm">
+                      <Languages className="size-3" aria-hidden="true" />
+                      bilingue
+                    </Badge>
+                  </span>
                 ) : (
                   <Badge variant="secondary" className="gap-1 rounded-full text-[10px]">
                     <Hourglass className="size-3" aria-hidden="true" />

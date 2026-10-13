@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowLeft, ArrowRight, BookmarkCheck, ChevronLeft, ChevronRight, Columns2, ExternalLink, FileQuestion, FileText, Heart, Hourglass, Languages, Loader2, Printer } from "lucide-react";
+import { ArrowLeft, ArrowRight, BookMarked, BookmarkCheck, ChevronLeft, ChevronRight, Columns2, ExternalLink, FileQuestion, FileText, Heart, Hourglass, Languages, Loader2, Printer } from "lucide-react";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -102,6 +102,16 @@ function DocHeader({ doc }: { doc: DocPayload }) {
             className="rounded-full border-amber-800/25 bg-amber-100/60 text-[11px] text-amber-900 dark:border-amber-200/20 dark:bg-amber-900/30 dark:text-amber-100"
           >
             {doc.subject.titleFr}
+          </Badge>
+        )}
+        {doc.savant && doc.hasFr && !doc.pdfOnly && (
+          <Badge
+            variant="outline"
+            title="Version française révisée : terminologie académique, versets coraniques vérifiés, gloses des termes techniques."
+            className="gap-1.5 rounded-full border-amber-500/50 bg-gradient-to-br from-amber-100 to-yellow-50 text-[11px] font-semibold text-amber-800 shadow-sm dark:border-amber-400/30 dark:from-amber-900/50 dark:to-amber-800/30 dark:text-amber-200"
+          >
+            <BookMarked className="size-3.5" aria-hidden="true" />
+            Traduction savante
           </Badge>
         )}
         {doc.sample && (

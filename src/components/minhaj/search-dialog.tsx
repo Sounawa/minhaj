@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { BookOpen, CornerDownLeft, FileText, Loader2, Search, SearchX } from "lucide-react";
+import { BookMarked, BookOpen, CornerDownLeft, FileText, Loader2, Search, SearchX } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -26,6 +26,8 @@ export interface SearchHitClient {
   snippet: string;
   score: number;
   lang: "fr" | "ar" | "both";
+  /** Traduction savante (registre) — sinon qualité machine (GT). */
+  savant: boolean;
 }
 interface SearchResponse {
   query: string;
@@ -243,6 +245,16 @@ export function SearchDialog({ open, onOpenChange }: { open: boolean; onOpenChan
                   {hit.isIntro && (
                     <Badge className="rounded-full bg-amber-800/15 px-1.5 text-[10px] text-amber-900 dark:bg-amber-200/15 dark:text-amber-100">
                       intro
+                    </Badge>
+                  )}
+                  {hit.savant && (
+                    <Badge
+                      variant="outline"
+                      title="Traduction française révisée"
+                      className="gap-0.5 rounded-full border-amber-500/50 bg-gradient-to-br from-amber-100 to-yellow-50 px-1.5 text-[10px] font-semibold text-amber-800 dark:border-amber-400/30 dark:from-amber-900/50 dark:to-amber-800/30 dark:text-amber-200"
+                    >
+                      <BookMarked className="size-2.5" aria-hidden="true" />
+                      savante
                     </Badge>
                   )}
                   {hit.lang === "ar" && (
