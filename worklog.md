@@ -3840,3 +3840,158 @@ Stage Summary:
   l'évaluation demande à l'élève de l'expliquer) ; (4) « الرسول الكريم/المصطفى » rendus « le
   noble Messager/l'Élu », « عليه الصلاة والسلام » (Nūr al-yaqīn) → « — sur lui la prière et la
   paix — ».
+---
+Task ID: R62-j
+Agent: subagent-traducteur
+Task: Traduction sira-1es 14268+14270+15720 (index des aʿlām + bibliographie + leçon isrāʾ approfondie)
+
+Work Log:
+- Lu _brief-sira1es.md (spéc complète) + worklog (R59→R62-i) ; registre calqué sur l'exemplaire 13961 et les
+  livraisons parallèles sira-1es (14197/14205/14215/14221/14227/14247 relues avant rédaction) ; bibliographie =
+  convention R61 19522 (titres translittérés en <span> + [« traduction française »], auteur + kunya + mort,
+  édition critique + éditeur + n° d'édition + date, villes en français, éditeurs translittérés) ; index aʿlām =
+  15274/14915 en référence, MAIS structure du source (23 h3 + p) conservée tel quel (fidélité source > format ul).
+- **14268 (23 notices biographiques)** : h1 = titleFr « Notices biographiques des figures citées » verbatim ;
+  ṣalāwāt selon convention (compagnons « — que Dieu l'agrée — », prophètes « — sur lui la paix — », « عليهما
+  الصلاة والسلام » → « — sur eux deux la prière et le salut — ») ; dates sourcées du manuel uniquement (Ibn
+  Isḥāq né 80 H., ʿAyn al-Tamr conquise 12 H., Naǧāšī décédé raǧab an 9 H., ʿUmar assassiné 23 H.).
+  COQUILLES CORRIGÉES (silencieuses, cf. précédent R62-h شعب بني طالب) : (1) titre « حمزة بن أبي طالب » →
+  Ḥamza b. ʿAbd al-Muṭṭalib — coquille manifeste : la notice dit « عم رسول الله » et la leçon 17 du MÊME livre
+  (14227, livré par R62-g) porte « Ḥamza b. ʿAbd al-Muṭṭalib » ; (2) « ولم يعرف أن أحدا » lu « on ne connaît
+  personne qui… » (source contorsionné). DIN soigné partout : naǧǧārite/ḫazraǧite, ṯarīd, Quṣayy, Mudrika,
+  Mulḥān, Šurāḥīl, Ḫayyāṭ, Aṣḥama, Fayrūz, muṭṭalibite ; gloses intégrées : al-Waḥīd (l'Unique), Ḏū al-Nūrayn,
+  Abū Lahab (le père de la flamme), Abū Ǧahl vs Abū al-Ḥakam, ḥabr al-umma, ḥarb al-Fiǧār glosée « guerre des
+  sacrilèges », ṣalāt al-ġāʾib. Citation Hāšim/Ibn Isḥāq en « » inline.
+- **14270 (27 entrées, ordre du source)** : h1 = « Liste des sources et références » verbatim + phrase
+  d'ouverture ; format 19522 : <span>Titre</span> [« Traduction »], de Auteur (mort en X) ; édition critique :
+  Y ; éditeur : Dār… ; nᵉ éd., date. COQUILLES CORRIGÉES : (1) « دكتور عمر عبد السلام. تدمر. » → Dr ʿUmar
+  ʿAbd al-Salām Tadmurī — coquille manifeste (splt du nom تدمري ; éditeur attesté de la Sīra d'Ibn Hišām,
+  Dār al-Kitāb al-ʿArabī Beyrouth 3ᵉ éd. 1990, web-vérifié) ; (2) Abū Dāwūd « ت.725هـ » → 275 H. (inversion
+  manifeste — mort 275 H., précédent 15274 802→202) ; (3) « تهدذيب » → Tahḏīb (double ذ du manuel normalisé).
+  Fidélité : « شركة مصطفى الحلبي » rendu sous la forme abrégée du manuel (société Muṣṭafā al-Ḥalabī), aucune
+  ville inventée ; « cheikh des ḥuffāẓ » aligné sur le corpus sira-1es/R61 (4× « cheikh ») ; Bukhārī/Qushayrī
+  graphies établies (le brief lui-même écrit al-Bukhārī) ; ṣalāwāt du titre al-Atlas développée (ﷺ interdit).
+- **15720 (variante approfondie de la leçon isrāʾ)** : h1 = « Le miracle du voyage nocturne et ses
+  significations » verbatim ; sous-titre sans n° de leçon (le source n'en porte pas) ; objectifs infinitifs
+  (Connaître/Prendre conscience/Ressentir, cf. 14205 « Ressentir ») ; structure h2/h3 du source conservée
+  (L'évaluation en h3 comme au source). FORENSIQUE IMAGES (miroir sira-1ep.json) : 7 images, dont 5
+  versets-images identifiés PAR NOM DE FICHIER : سبحان_الذي_أسرى (Isrāʾ 17:1), لقد_راءى (Naǧm 53:18),
+  الم-أحسب (ʿAnkabūt 29:1-2), وسيجنبها (Layl 92:17-18), فاوحى (Naǧm 53:10) — les 5 RÉFS IMPRIMÉES sont
+  CORRECTES (zéro coquille) ; [النجم:10] confirmé en outre par le texte-source du Šifāʾ (eshia.ir, p. 38 :
+  « فقال تعالى: ﴿فأوحى إلى عبده ما أوحى﴾… قال القاضي أبو الفضل » — le passage interpolé d'ellipses du manuel
+  correspond exactement). 5 versets restitués Hamidullah (adaptation [Muhammad]→[Muḥammad] DIN documentée ;
+  guillemets internes «Nous croyons!» → “Nous croyons !” convention R62-a/f ; « Mosquée Al-Harâm/Al-Aqsâ »
+  conservées verbatim Hamidullah en 17:1, corps en « Mosquée sacrée (al-Masǧid al-Ḥarām) / Mosquée très
+  lointaine (al-Masǧid al-Aqṣā) » — corpus sira-1es 4× « la Mosquée sacrée »).
+- 15720 ANOMALIES CMS normalisées : phrase « كما عرف عنه الوجل والخوف… » dupliquée + fragment tronqué
+  « <span>كما عرف عنه</span> » au début du التقويم — supprimés (déjà rendus en fin d'أهتدي وأقتدي) ;
+  hadith Tirmiḏī coupé en 2 <p> au milieu d'un mot (فَإِنْ/انْتَقَصَ) — fusionné ; N.B. le miroir est TRONQUÉ
+  après la citation du Šifāʾ (les 4 questions d'évaluation n'y figurent pas) — le src.html (postérieur) fait
+  foi. Règle f ×1 : « خريطة مسار رحلة الإسراء » — VLM (glm-4.5v) : carte géographique authentique de l'Atlas
+  de Šawqī Abū Ḫalīl (p. 70, Méditerranée/Damas/Jérusalem/Mekke) → signalée « carte non reproduite » avec
+  orientation ; image d'en-tête (chrome) écartée.
+- Citations 15700s rendues intégralement : Būṭī p. 115 retouches (عليه الصلاة والسلام → « sur lui la prière
+  et le salut ») ; Ġazālī p. 140-143 ; Mubārakfūrī p. 125 (dialogue des allègements en tirets, «قد استحيت
+  من ربي» → “J'ai eu honte devant mon Seigneur”) ; Muslim kitāb al-īmān ; Tirmiḏī kitāb al-ṣalāt ; al-Ḥākim
+  Mustadrak + Ḏahabī « chaîne authentique » ; al-Šifāʾ du cadi ʿIyāḍ (= Abū al-Faḍl) t. 2 p. 38 retouches,
+  ellipses du manuel conservées (versets non restitués à l'intérieur, le manuel abrège « فقلبه… ولسانه…
+  وبصره»).
+- ÉCART BRIFF SIGNALÉ : le brief donne « ʿUṭbā » comme graphie établie — DIN du source عتبة = ʿUtba, aucun
+  ʿUṭbā dans worklog/content, corpus 14915 = ʿUtba ×4 → retenu ʿUtba b. Rabīʿa.
+- QA : 3 × « QA OK » (0 arabe, 0 apostrophe droite, guillemets/balises appariés, auto-fix NNBSP). NI
+  hand-set.py NI git NI content/books touchés.
+
+Stage Summary:
+- Livrables : tr-tmp/14268.html (8 007 car, 23 notices), tr-tmp/14270.html (6 048 car, 27 entrées),
+  tr-tmp/15720.html (14 510 car) — traductions savantes intégrales, h1 = titleFr officiels, prêts pour
+  hand-set.py (main agent).
+- Versets restitués (15720) : al-Isrāʾ 17:1 ; al-Naǧm 53:18 ; al-ʿAnkabūt 29:1-2 ; al-Layl 92:17-18 ;
+  al-Naǧm 53:10 — chaque réf. vérifiée au mot-cible ET corroborée par le nom de fichier de l'image du miroir ;
+  aucune coquille de référence dans les trois docs (première leçon sira-1es sans correction à noter).
+- Coquilles éditoriales corrigées : Ḥamza b. Abī Ṭālib → Ḥamza b. ʿAbd al-Muṭṭalib (14268, corroborée par
+  14227) ; تدمر → Tadmurī et Abū Dāwūd 725 → 275 H. (14270, web-vérifiées) ; تهدذيب → Tahḏīb.
+- Règle f : 1 signalement (carte du trajet 15720, restituée comme orientation, VLM-vérifiée) ; 14268/14270
+  sans perte de contenu (images = chrome de titre seulement, vérifié au miroir).
+- Points d'attention main agent : (1) ʿUtba retenu contre « ʿUṭbā » du brief — harmoniser si un doc futur
+  tranche autrement ; (2) 15720 = VARIANTE de la leçon 14249 (livrée par R62-i en parallèle) — vérifier la
+  cohérence des graphies entre les deux leçons isrāʾ (Burāq, sidrat al-muntahā, Mosquée très lointaine) ;
+  (3) 14270 : les villes absentes du manuel ne sont pas inventées (Dār Ṣādir est à Beyrouth car imprimé,
+  Dār al-Kitāb al-ʿArabī idem, mais p. ex. Dār al-Fayḥāʾ/Amman suit le manuel) ; (4) le manuel 14268 ne dit
+  pas « مات سنة… » pour Anas (contrairement à 14915 sira-2es qui ajoute 93 H.) — rien ajouté.
+---
+Task ID: R62-i
+Agent: subagent-traducteur
+Task: Traduction sira-1es 14249+14253+14262 (leçon 21 isrāʾ/miʿrāǧ, leçon 22 éthique et valeurs, activités 17-22)
+
+Work Log:
+- Brief sira-1es + fin du worklog (R59→R62-h) lus ; registre calqué sur 14247/14232 (dernières leçons
+  livrées) et 14209/14228 (format des documents d'activités, sous-titre sans « leçon de ») ;
+  sous-titres « …, leçon de Sīra prophétique pour la première année du cycle collégial traditionnel
+  (Leçon 21/22) ».
+- FORENSIQUE IMAGES DÉTERMINANTE : VLM (glm-4.5v) s'est révéré HALLUCINANT sur les images-versets —
+  test de contrôle : الشرح-_-5-_-6.png (14243, réf. confirmée correcte par R62-h au mot-cible) lu
+  3 fois « فأوجس في نفسه خيفة موسى » (Ṭā Hā 67) = hallucination stable → VLM écarté. SOLUTION :
+  la page DUPLICATA 15720 (même leçon 21 que 14249, autre entrée CMS, toujours live) conserve les
+  images-scan ORIGINALES du livre avec alt = MOTS D'OUVERTURE du verset : « سبحان الذي أسرى »
+  (799×251), « لقد راءى » (471×111), « الم أحسب » (827×283), « وسيجنبها » (787×107), « فاوحى »
+  (545×126) → les 5 réf. imprimées de 14249 SONT CONFIRMÉES (al-Isrāʾ 17:1 ; al-Naǧm 53:18 SEUL ;
+  al-ʿAnkabūt 29:1-2 ; al-Layl 91:17-18 ; al-Naǧm 53:10 SEUL), AUCUNE coquille. L'indice
+  d'orchestration « al-Naǧm 13-18 » est DISPROUVÉ (alt « لقد راءى » + image 1 ligne) : v18 seul
+  restitué.
+- **14253 — 5 COQUILLES corrigées (mot-cible, notes inline format 14182/14224), toutes
+  « off-by-one »** : الزمر 32→al-Zumar 39:33 (Dieu atteste SA véracité = « celui qui vient avec la
+  vérité » ; l'image 700×70 = 1 ligne ≈ 9 mots = v33, v32 en fait 16) ; الأحقاف 34→al-Aḥqāf 46:35
+  (« فاصبر كما صبر أولو العزم » = patience dans le mal) ; طه 131→Ṭā Hā 20:132 (« واصطبر عليها » =
+  patience dans l'obéissance) ; الأنبياء 106→al-Anbiyāʾ 21:107 (« miséricorde pour l'univers » =
+  témoignage divin de sa miséricorde) ; التوبة 129→al-Tawba 9:128 (« compatissant et miséricordieux
+  envers les croyants » = miséricorde envers la communauté ; le 129 = tawakkul, hors sujet).
+  Āl ʿImrān 3:159 vérifiée CORRECTE (raḥma/linta).
+- Versets (cache Hamidullah, « Allah »→« Dieu ») : 14249 → 5 restitués sans coquille ; 14253 → 6
+  restitués dont 5 réf. corrigées ; 14262 → aucun verset imprimé au source (vérifié : zéro span).
+- RÈGLE f : 14249 → carte du trajet du Voyage nocturne (avant la citation al-Ġazālī, position
+  confirmée par le miroir) ; 14253 → schéma « القيمة وتجلياتها » (rubrique أهتدي وأقتدي, orientation
+  tirée de l'alt/intitulé) ; 14262 → tableau « محطات المسار الدعوي » (activité 3) + carte « خريطة
+  تبين المواضع المرتبطة بحدث الإسراء والمعراج » (activité 5). Aucune image restituée (VLM
+  hallucinant), orientations prudentes tirées des intitulés alt et des consignes.
+- Conventions appliquées : ṣalāwāt du source (صلى الله عليه وسلم → « — que Dieu prie sur lui et le
+  salue — » ; عليه الصلاة والسلام → « — sur lui la prière et le salut — » (Būṭī/Nūr al-yaqīn)) ;
+  anges → « — sur lui la paix — » (Ǧibrīl, Mūsā, Ibrāhīm) ; hadith « des cavaliers au creux de la
+  vallée » = rendu à l'identique de 14211 ; parole de Ḫadīǧa alignée sur 14202 (version Ibn Isḥāq :
+  « tu rends le dépôt… vicissitudes du droit ») ; citation Ǧaʿfar alignée sur 14224 ; « متفق عليه »
+  → [unanimement rapporté (muttafaq ʿalayhi)] (cf. 19338) ; al-Ṣiddīq (le Très-véridique) (cf.
+  14206) ; « Prophète de la guidée » (cf. 14197) ; al-Ṣādiq al-Amīn (le véridique, le digne de foi)
+  (cf. R62-c) ; « al-Amīn » dans Nūr al-yaqīn = « le digne de foi » (cf. 14209).
+- Adaptations Hamidullah documentées : « Alif, Lâm, Mîm » → « Alif, Lām, Mīm » (DIN, cf. 14224
+  « Kāf, Hāʾ, Yāʾ, ʿAyn, Ṣād ») ; « Mosquée Al-Harâm » → « Mosquée sacrée » (cf. 14211/14247) ;
+  « Al-Aqsâ » → « al-Aqṣā » ; interpolations « [Muhammad] »/« (Muhammad) » gardées en « [Muḥammad]/
+  (Muḥammad) » (DIN) ; « (d'Allah) » → « (de Dieu) » ; « Salât » verbatim (Ṭā Hā 132) ; parole
+  interne «Nous croyons !» → “Nous croyons !”.
+- Anomalies source normalisées : 14249 citation d'exploitation « ثم أخبر تعالى… فقال تعالى: »
+  non fermée par le scraping → fermée « …dit alors : » et ellipse « …, le cadi Abū al-Faḍl dit : »
+  conservée ; 14262 en-têtes d'activités harmonisés en h2 (le « النشاط الرابع » h3/span du CMS) ;
+  « نص1/نص 2 » → « Texte 1/Texte 2 » ; Texte 2 de 14262 : guillemet fermant orphelin du CMS
+  normalisé (citation ouverte en tête).
+- QA : 3 × « QA OK » — 14249 : 14 937 car (15 paires « »), 14253 : 13 036 car (15), 14262 :
+  6 291 car (4) ; 0 caractère arabe, 0 apostrophe droite, balises appariées, NNBSP auto-fix.
+  NI hand-set.py NI git NI content/books touchés. Fichiers d'audit dans tr-tmp/_r62i-imgs/
+  (images téléchargées + vlm.js/vlm2.js/net.js + live_*.html).
+
+Stage Summary:
+- Livrés : tr-tmp/14249.html (14 937 car), tr-tmp/14253.html (13 036 car), tr-tmp/14262.html
+  (6 291 car) — traductions savantes intégrales, h1 = titleFr officiels (le ﷺ du h1 de 14253
+  développé « — que Dieu prie sur lui et le salue — » ; 14249/14262 sans ﷺ, conformes au tableau).
+- Versets restitués : 14249 → al-Isrāʾ 1 ; al-Naǧm 18 ; al-ʿAnkabūt 1-2 ; al-Layl 17-18 ;
+  al-Naǧm 10 — RÉFÉRENCES TOUTES CONFIRMÉES (page duplicata 15720 : alts des images-scan
+  originales = mots d'ouverture) ; 14253 → al-Zumar 33, al-Aḥqāf 35, Ṭā Hā 132, al-Anbiyāʾ 107,
+  al-Tawba 128 (5 coquilles off-by-one corrigées et notées inline), Āl ʿImrān 159 (correcte) ;
+  14262 → aucun verset au source.
+- Règle f : 4 signalements (carte 14249 ; schéma valeurs 14253 ; tableau محطات + carte isrāʾ/miʿrāǧ
+  14262), jamais restitués — VLM prouvé hallucinant sur ce type d'images.
+- Points pour le main agent : (1) l'indice « al-Naǧm 13-18 » pour 14249 était erroné — v18 seul,
+  preuve par alt « لقد راءى » de la page live 15720 ; (2) 15720 = duplicata CMS de 14249 (même
+  leçon 21, texte quasi identique mais images-scan AVEC alts explicites) — l'agent chargé de 15720
+  pourra réutiliser 14249 presqu'intégralement (h1 différent, « خريطة مسار رحلة الإسراء » en
+  légende texte, التقويم de 15720 pollué par 2 phrases dupliquées de ثالثا = bruit CMS) ;
+  (3) 5 coquilles de référence signalées inline dans 14253 (modèle off-by-one) — vérifier contre
+  le livre imprimé si accessible ; (4) glossaires 14249/14253 complets et non brouillés (contra-
+  riement à 14243/14247).
