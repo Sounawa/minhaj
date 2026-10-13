@@ -3235,3 +3235,135 @@ Stage Summary:
   (28 docs, nasḫ/qirāʾāt) — prochains gros livres complets atteignables ; (2) audit des ~870
   traductions GT restantes pour d'autres GT-ismes de titleFr (2 corrigés ce tour) ; (3) features
   en attente : extraction des 885 PDF-only, export EPUB/PDF d'une leçon, compteur de notes.
+
+---
+Task ID: R60
+Agent: Z.ai Code (agent principal — relance utilisateur « continue », feu vert traductions maintenu)
+Task: continue — fermer le livre prioritaire R59 (tajwid-6ep : 29 entrées / 28 docIds uniques — intro+L1 partagées, 25 leçons maḫāriǧ/ṣifāt, tableau, mathn) en couche savante intégrale + fix badge, QA navigateur, worklog, backup
+
+Work Log:
+- **29 TRADUCTIONS SAVANTES INTÉGRALES** (remplacements GT totaux ; rédaction main, workflow
+  extract → rédaction → qa-lesson → hand-set → commit + backup PAR DOC, règles a/b respectées).
+  Particularité du livre : mathn al-Durar al-Lawāmiʿ d'Ibn Barrī + sharḥ al-Nujūm al-Ṭawāliʿ
+  d'al-Māriġnī → TOUS les vers du mathn (+ Tuḥfa d'Abū Wakīl, Muqaddima/Jazariyya d'Ibn
+  al-Jazarī, vers d'al-Ṭībī) TRADUITS EN DISTIQUES dans des tables 2-3 colonnes, hémistiches
+  ordonnés gauche→droite en table ltr (convention établie ce tour, calquée sur fiqh-6ep 15126).
+  1. 17502 (intro + L1, docId partagé ×2, 6 087 car, 20cef40) — présentation du manuel, ToC 27
+     leçons, 8 compétences dont l'école marocaine Warsh/Nāfiʿ voie d'al-Azraq ; typo manuel
+     انسفال = استفال rendue istifāl (standard) ; div orphelin final du source omis (documenté).
+  2. 17503 (L1, 5 767 car, d27aa5f) — maḫāriǧ définition/bienfaits : mathn vv. 1-3 ; Tuḥfa
+     (« la zone où la lettre vient siéger ») + Muqaddima (« afin de prononcer selon la plus
+     pure des langues ») ; 4 bienfaits dont laḥn ǧalī (aʿūdhu/aʿūdu — mot effacé au scraping
+     restitué d'après le contexte, documenté).
+  3. 17508 (L2, 4 906 car, 71848c4) — généraux/spécifiques : 3 généraux (gosier/langue/
+     lèvres), 15 spécifiques (3+10+2) ; al-Ṭībī (« vingt-neuf sans conteste ») ; exemple « ib ».
+  4. 17509 (L3, 5 837 car, 8e18c82) — gosier : aqṣā/wasaṭ/adnā avec 3 sous-tableaux (hémistiches
+     élidés du manuel conservés en pointillés) ; 7 gutturales vs 6 (alif jawfī, divergence
+     documentée) ; Ibn al-Jazarī (« purifie le hāʾ de jibāhahum »).
+  5. 17521 (L4, 5 473 car, 1364444) — qāf/kāf : aqṣā al-lisān, al-lahawiyyān (luette) ;
+     **Balad 8-9 RESTAURÉE du cache** (« une langue et deux lèvres », identification
+     contextuelle certaine, convention 14116).
+  6. 17522 (L5, 4 757 car, c432395) — ǧīm/šīn/yāʾ : wasaṭ al-lisān, méthode sukūn (« ij »,
+     « ī », « ish ») ; yāʾ avant šīn par nécessité métrique (écart du mathn documenté) ;
+     shajriyya (shajr = milieu).
+  7. 17526 (L6, 4 843 car, 0df263f) — ḍād : bord de la langue + molaires, ʿUmar des deux
+     côtés (le plus rare) ; laḥn « wa-lā al-ẓāllīn » ; surnom al-mustaṭīl ; al-ḍāllīn restitué
+     du contexte (Fātiḥa) ; ordre des hémistiches du 2e tableau corrigé in-process (documenté).
+  8. 17528 (L7, 2 678 car, 1b49db0) — applications I : ~12 emplacements effacés signalés.
+  9. 17530 (L10, 4 876 car, 4411b2a) — dhāl/thāʾ/ẓāʾ : lithawiyya (latha = gencive) ;
+     anecdote al-Aʿlā (aʿūdhu vs aʿūdu) ; **coquille manuel documentée : la ligne de leçon
+     répète « lām, rāʾ et nūn » (report de la leçon 8), corrigée en ṭāʾ/tāʾ/dāl d'après le
+     contenu** ; le manuel numérote cette leçon 10 (ordre pédagogique 9=17534/10=17530).
+  10. 17533 (L8, 5 483 car, 5ce160f) — lām/rāʾ/nūn : 3 vers TRADUITS ; divergence al-Farrāʾ
+      (un seul maḫraj) vs jumhūr (choix du nāẓim) ; dhulqiyya ; nūn toujours murqqaq,
+      lām/rāʾ selon taqlīl/tafkhīm de la voie al-Azraq/Warsh.
+  11. 17534 (L9, 5 405 car, dd04bdf) — ṭāʾ/tāʾ/dāl : niṭʿiyya (niṭʿ = plafond de la voûte
+      du palais) ; tāʾ avant dāl par nécessité métrique ; ṣifāt distinctives (ṭāʾ empâté, tāʾ
+      shidda aminci, dāl jahr + qalqala) ; anʿamta/anʿamṭa.
+  12. 17540 (L11, 5 122 car, 43aebc9) — ṣād/zāy/sīn : asaliyya (asala = bout) ; sīn entre
+      qāf et ṭāʾ empâtés → devient ṣād (laḥn) ; **Aḥqāf '34' CORRIGÉE contre le cache → 35**
+      (mot-cible : le v34 ne contient AUCUNE lettre asaliyya, le v35 en contient 7+ —
+      convention R58) ; anecdote ʿasā/ʿaṣā.
+  13. 17543 (L12, 6 457 car, bcb9b5f) — lèvres/cavité nasale : 3 vers TRADUITS (fāʾ face
+      interne lèvre inf + incisives ; mīm/bāʾ d'entre elles, wāw sans contact ; ghunna du
+      khayshūm) ; fermeture bāʾ > mīm ; Balad 8-9 RESTAURÉE ; khayshūm = 16e et dernier
+      maḫraj.
+  14. 17570 (L13, 2 054 car, ed5b16e) — applications II : 5 surnoms récapitulés ; Ḥujurāt
+      non reproduites avec note d'orientation (les 3 interdits des objectifs = Ḥujurāt 12,
+      couple de versets non identifiable — règle f).
+  15. 17571 (L14, 4 724 car, 522a0d3) — ṣifāt bienfaits/catégories : 17 célèbres / 13 du
+      nāẓim + ghunna ; 3 bienfaits (ṭāʾ sans istiʿlā/ǧahr/iṭbāq serait tāʾ ; fort/faible →
+      iẓhār/idghām) ; 5+5 avec contraire, 7-8 sans.
+  16. 17572 (L15, 4 982 car, 396b641) — hams/ǧahr : ḥaththa shakhṣahu fa-saktā ;
+      **Ṭā-Hā 108 RESTAURÉE du cache** (« tu n'entendras alors qu'un chuchotement », mot-cible
+      hams = al-ḥiss al-khafī) ; majhūra = le reste (« as », « ath », « aṣ »).
+  17. 17573 (L16, 5 924 car, 3e0b0b1) — shidda/rakhāwa/baynīyya : ajadta quṭbaka (8),
+      thakhidh ẓaghshin zaḥfin ṣahin ḍasin (13, formule translittérée), lam yarʿawnā (8) ;
+      divergences du manuel documentées (alif fait tomber → 7 ; 5 selon « lin ʿumar »).
+  18. 17577 (L17, 4 122 car, ef348dd) — istifāl/istiʿlāʾ : qiẓ khuṣṣa ḍaghṭin (7, toutes
+      empâtées, plus fort avec fatḥa) ; istifāl voisines d'istiʿlāʾ à ne pas empâter ;
+      orthographe manuel انسفال documentée (la leçon donne les 2 formes).
+  19. 17578 (L18, 3 960 car, d7173bd) — iṭbāq/infitāḥ : 4 occlusives (ṭ ṣ ḍ ẓ) issues des 7
+      élevées, 25 ouvertes.
+  20. 17582 (L19, 4 016 car, fb763d3) — dhulāqa/iṣmāt : farra min lubb (6) ; muṣmata
+      interdites seules en racine 4/5 lettres — « ʿasjad » (or) / « ʿusṭūs » (arbre) non
+      arabes ; lien avec le ṣarf.
+  21. 17585 (L20, 2 181 car, ff5bdba) — applications III : dāl entre 2 istiʿlāʾ, kāf à
+      l'arrêt (hams+shidda, éviter ikhfāʾ).
+  22. 17586 (L21, 3 821 car, 67a97a6) — ṣafīr/tafashshī : s ṣ z ; š f ḍ avec divergence
+      sur le ḍād (la plupart : šīn seul, documenté).
+  23. 17588 (L22, 5 067 car, c3c41d8) — istiṭāla/inḥrāf/takrīr : ḍād « la longue » (jusqu'au
+      maḫraj du lām) ; lām « l'inclinée » (son à droite/gauche) ; rāʾ roulement À ÉVITER
+      (« al-Raḥīm » ≠ « al-Rrrr-ḥīm »).
+  24. 17589 (L23, 4 275 car, 636359c) — qalqala/layn (Jazariyya) : attributs ACCIDENTELS
+      (absents du mathn d'Ibn Barrī) ; quṭb jad à l'immobile (milieu/fin, plus clair à
+      l'arrêt) ; layn = wāw/yāʾ immobiles après fatḥa.
+  25. 17592 (L24, 5 023 car, 77b4fec) — bāb al-ghunna : tous les états de n/m SAUF nūn
+      assimilée à rāʾ/lām ; tanwīn = nūn surajoutée ; test du doigt ; 4 degrés (akmal →
+      anqaṣ) ; conclusion du chapitre ṣifāt.
+  26. 17595 (L25, 2 079 car, a544c52) — applications IV : zāy son dû de sifflement, rāʾ
+      redoublé sans takrīr, fāʾ/lām voisins du ḍād à ne pas empâter.
+  27. 17597 (L26, 700 car, 767bf10) — tableau des 29 lettres : image au source, signalé
+      non reproduit avec note d'orientation vers les leçons 1-24 (convention 14570).
+  28. 17598 (L27, 4 779 car, 2216fc2) — **MATHN INTÉGRAL : 28 vers TRADUITS EN DISTIQUES**
+      (basmala → ṣalāt → 15 maḫāriǧ → 17 ṣifāt → « ces attributs servent à l'idghām et à
+      l'iẓhār ») ; les 2 hémistiches élidés dans les leçons 17586/17578 sont résolus ici
+      (« et les autres sont ouvertes. Puis le sifflement », « qu'il fut dit que c'est dans
+      le ḍād… la longue ») ; cohérence verbatim avec les 24 leçons vérifiée.
+- **BUGFIX BADGE** (commit dédié) : comptage docsSavant par livre dédupliqué par docId alors
+  que docsFr compte par entrée → tajwid-6ep (17502 ×2) plafonnait à 28/29 ; le numérateur
+  compte désormais par entrée (même base que docsFr), les stats globales restent dédupliquées.
+- **QA NAVIGATEUR** : accueil **42 badges « traduction savante intégrale »** (41→42), 0 erreur
+  console à froid (console cleared + reload) ; page livre tajwid-6ep « 29/29 documents
+  bilingues · 100% · Traduction savante intégrale » (après fix) ; lecteurs 17503 (mathn,
+  Tuḥfa, Muqaddima) et 17598 (28 vers) vérifiés — **NB route lecteur : #/livre/<bookId>/<docId>
+  (sans segment /lecon/)** ; mobile 390 px : 0 overflow ×3 (2 leçons + livre) ; lint 0 erreur
+  (1 warning préexistant llm-translate.ts:561) ; captures qa-r60-*.png.
+- Registre : 308 → **336/950** (+28 main, 286 hand + 50 LLM). Backup /tmp/my-project/backup-tour/
+  rafraîchi après CHAQUE document (règle b : registry + worklog + latest-bundle.bdl + json du livre).
+
+Stage Summary:
+- **État** : sain. HEAD au terme de R60, registre **336/950**, **42 livres en couche savante
+  intégrale**. **tajwid-6ep = LIVRE №42 : 29/29 entrées (intro+L1 17502 partagées, 25 leçons,
+  tableau, mathn intégral), 100% bilingue.** La matière tajwīd atteint 4 livres complets
+  (tajwid-5ep partiel, tajwid-3es, qiraat-tanawi-3, tajwid-6ep).
+- **Décisions documentées ce tour** : (1) convention des tables de vers : hémistiches ordonnés
+  gauche→droite en table ltr (td1 = 1er hémistiche), calquée sur fiqh-6ep 15126, appliquée à
+  ~30 vers sur 14 leçons + le mathn intégral ; (2) formules mnémotechniques arabes
+  translittérées (« ḥaththa shakhṣahu fa-saktā », « thakhidh ẓaghshin zaḥfin ṣahin ḍasin »)
+  — 0 caractère arabe résiduel (QA) ; (3) Aḥqāf '34'→35 corrigé contre le cache (mot-cible,
+  v34 sans aucune asaliyya) ; Balad 8-9 et Ṭā-Hā 108 RESTAURÉES (identification contextuelle
+  certaine) ; (4) coquille manuel 17530 (ligne de leçon copiée de la leçon 8) corrigée
+  d'après le contenu ; (5) ~70 emplacements effacés par le scraping signalés « non reproduit
+  dans le manuel » (règle f) — les mots d'exemple tajwīd ne sont pas identifiables avec
+  certitude ; (6) ordre pédagogique du manuel (L9=17534, L10=17530) respecté dans les textes,
+  l'ordre JSON du livre conserve son agencement propre.
+- **Bugs corrigés** : badge docsSavant plafonné à 28/29 pour les livres à docId partagé
+  intro/leçon (tajwid-6ep) — comptage par entrée, vérifié 29/29 + « Traduction savante
+  intégrale » après reload.
+- **Risques / attention** : (a) ~614 traductions restent (336/950), production main = goulot ;
+  (b) les 885 pdfOnly exigent une extraction PDF (feature en attente) ; (c) ulum-quran-3es
+  (28 docs) = prochain gros livre complet atteignable.
+- **Priorités suivantes** : (1) ulum-quran-3es (28 docs, nasḫ/qirāʾāt) → livre №43 ; (2)
+  audit GT-ismes titleFr restants ; (3) features : extraction des 885 PDF-only, export
+  EPUB/PDF d'une leçon, compteur de notes.
