@@ -3622,3 +3622,221 @@ Stage Summary:
 - Règle f : 14177 (أهتدي وأقتدي + tableau des sens), 14180 (liste des événements), 14182 (أهتدي وأقتدي + tableau) — images du site prouvées étrangères aux leçons (VLM), non restituées.
 - Écarts signalés : négation « لا » manquante (14182) traduite au sens voulu par le verset ; chaîne généalogique longue absente du web-source → non inventée ; Bayhaqī « p. 621-721 » conservé tel qu'imprimé ; graphies DIN vs sīra-2es documentées.
 - Technique transmise : miroir scripts-recovery/tmp-mirror-books/sira-1ep.json + VLM « z-ai vision » pour auditer les images de leçon — ne JAMAIS restituer le contenu d'une image sans double vérification (cache/mot-cible).
+---
+Task ID: R62-g
+Agent: subagent-traducteur
+Task: Traduction sira-1es 14227+14228+14232 (leçon 16 + activités 12-16 + leçon 17)
+Work Log:
+- Brief _brief-sira1es.md + fin du worklog (R62-a…c) lus ; livraisons parallèles 14186/14205/14202
+  calquées (sous-titre « …, leçon de Sīra prophétique pour la première année du cycle collégial
+  traditionnel (Leçon N) » ; activités sans « leçon de », calque 14186 ; « Troisièmément : je me
+  guide et je prends modèle » ; « L’extraction des contenus : » ; glossaire ul/li ; chrome supprimé).
+- FORENSIQUE (miroir scripts-recovery/tmp-mirror-books/sira-1ep.json) : noms de fichiers <img>
+  relevés → TOUTES les réf. imprimées confirmées : 14227 = النحل___125___2.png, هود-_-115.png,
+  فصلت-_-33.png ; 14228 = الحجر-_-97/98-99/95-96.png + الأنعام-_-11.png + TABLE-image
+  « …جدول.png » ; 14232 = فصلت-_-1-_-5.png (540×324 ≈ 5-6 lignes, soit bien vv. 1-5 et non
+  1-13) + الإسراء--_-90-_-93.png.
+- 14227 « Le soutien divin : la conversion de Ḥamza b. ʿAbd al-Muṭṭalib et de ʿUmar b. al-Ḫaṭṭāb
+  (qu’Allāh les agrée) » (9 063 car, QA OK) : ḥadīṯ Ibn ʿAbbās (Abū Nuʿaym, Dalāʾil al-nubuwwa
+  t. 1 p. 240) traduit intégralement (glose du manuel « أي: حين أسلم » rendue en incise) ;
+  ḥadīṯs Tirmiḏī (duʿāʾ « Ô Dieu, honore l’islam… »), Ibn al-Ǧawzī (Ṣuḥayb), Aḥmad (Ibn Masʿūd),
+  Bukhārī ×3 (manāqib al-anṣār/islām ʿUmar ; manāqib ʿUmar Abī Ḥafṣ ×2 ; taʿbīr, bāb al-laban).
+  3 versets « أهتدي وأقتدي » restitués : al-Naḥl 125, Hūd 115, Fuṣṣilat 33 — AUCUNE coquille
+  (mot-cible vérifié : bonne exhortation / « sois patient » / « plus belles paroles »).
+  Anomalie source : objectif 1 « رضي الله عنه » SINGULIER pour deux compagnons → rendu pluriel
+  « — que Dieu les agrée — » (évident co-texte h1 عنهما) ; « إيه يا ابن الخطاب » rendu « Eh bien,
+  ô fils d’al-Ḫaṭṭāb ! » ; elision du manuel « .... » gardée « … » ; 0 règle f (les 3 images =
+  versets, tous restitués).
+- 14228 « Activités de renforcement et de consolidation des acquis (leçons 12 à 16) » (4 090 car,
+  QA OK) : 4 versets restitués — al-Ḥiǧr 97, 98-99, 95-96, al-Anʿām 11 — AUCUNE coquille
+  (mot-cible : « ta poitrine se serre » / ce qui dissipe l’étroitesse / « Nous t’avons défendu
+  vis-à-vis des railleurs » / sort de ceux qui traitent la vérité de mensonge). Citation Raḥīq
+  p. 76 retouches structurée en intro « … : » + versets « … » (convention 14205 Texte 1) ;
+  RÈGLE f ×1 : la table-image (alt « …جدول ») de l’activité 1 item 2 signalée « (tableau non
+  reproduit dans le manuel) » ; consignes du journal mural traduites intégralement (conception /
+  collecte / organisation).
+- 14232 « Qurayš négocie avec le Prophète — que Dieu prie sur lui et le salue — » (12 447 car,
+  QA OK) : h1 titleFr avec ﷺ développé (mid-title, calque 14194). Fuṣṣilat 1-5 restitué ;
+  DÉCISION DOCUMENTÉE : la référence imprimée 1-5 est confirmée triple (span, nom de fichier
+  فصلت-_-1-_-5.png, hauteur d’image ~324px ≈ 5-6 lignes) ET le glossaire du manuel porte sur des
+  mots du v. 5 (fī akinnatin, waqran) → AUCUNE coquille, extrait éditorial du 1-13 classique
+  (Ibn Hišām/Raḥīq p. 94-95 où la récitation va jusqu’à la ṣāʿiqa v. 13, scène de la main sur
+  la bouche) — suivi de la réf. imprimée, écart signalé ici pour le main agent (le brief laissait
+  « 1-13 ou un extrait »). al-Isrāʾ 90-93 restitué (Allah→Dieu ; inner « » → “ ” ; « Dis-[leur] : »).
+  Adaptation signalée : « H’â, Mîm. » (Hamidullah, apostrophe droite) → « Ḥāʾ-Mīm. » (DIN).
+  Citations : Ibn Hišām t. 1 p. 293-294 et 294-297 ; Raḥīq p. 94-95 et 95 ; Būṭī « ص: 90/ 92 »
+  rendu « p. 90-92, retouches » (elisions « … » du source gardées). Glossaire 3 termes
+  (sawwadnāka ʿalaynā, fī akinnatin, waqran) ; h3 « رسول » gardé « le Messager » (fidélité).
+  Fix QA : 2 fermantes « » » parasites supprimées (guillemets 9/9).
+- Translittération DIN stricte : Ḥamza, ʿUmar b. al-Ḫaṭṭāb, ʿUṭba b. Rabīʿa, Abū al-Walīd,
+  Ṣuḥayb b. Sinān al-Rūmī, Ibn Masʿūd, Abū Ḥafṣ, al-Tirmiḏī, Ibn al-Ǧawzī, Dalāʾil al-nubuwwa,
+  Manāqib, Faḍāʾil al-ṣaḥāba, al-Būṭī, al-Ḥiǧr, al-Anʿām, Fuṣṣilat, al-Isrāʾ, Banū Hāšim.
+  Registre : « conversion » (jamais le GT-isme « l’Islam de »), « l’islam » bas de casse dans
+  le corps ; « Mekke », « la Kaʿba », « la Maison » ; majuscules divines (Dieu, le Très-Haut).
+  Versets : « Allah »→« Dieu », numéros (98)(99) en fin de verset (convention 13961/14186),
+  paroles internes “ ”, « Musulmans » (capitalisation Hamidullah) conservée.
+- QA : 3/3 « QA OK » (0 arabe, guillemets appariés, balises appariées, 0 apostrophe droite ;
+  auto-fix NNBSP appliqué). NI hand-set.py NI git NI content/books touchés.
+Stage Summary:
+- Livrés : tr-tmp/14227.html (9 063 car), tr-tmp/14228.html (4 090 car), tr-tmp/14232.html
+  (12 447 car) — traductions savantes intégrales, QA OK, h1 = titleFr officiels (ﷺ développé,
+  (qu’Allāh l’agrée) conservé).
+- Versets restitués (cache Hamidullah, Allah→Dieu) : 14227 → al-Naḥl 125, Hūd 115, Fuṣṣilat 33 ;
+  14228 → al-Ḥiǧr 97, 98-99, 95-96, al-Anʿām 11 ; 14232 → Fuṣṣilat 1-5, al-Isrāʾ 90-93.
+  Coquilles de référence : AUCUNE (les 9 réf. imprimées vérifiées au mot-cible).
+- Règle f : 14228 → 1 table-image signalée ; 14227/14232 → rien (images = versets restitués).
+- Décisions notables pour le main agent : (1) Fuṣṣilat 1-5 (réf. imprimée confirmée) restitué
+  tel quel — le récit classique va jusqu’à v. 13, le manuel abrège délibérément ; (2) « Ḥāʾ-Mīm. »
+  substitué à « H’â, Mîm. » (Hamidullah, apostrophe droite interdite par la QA) ; (3) Būṭī
+  « 90/ 92 » normalisé « p. 90-92 » ; (4) ḥadīṯ Abū Mūsā : elision « .... » du manuel rendue
+  « … » sans reconstitution ; (5) ʿUmar b. al-Ḫaṭṭāb DIN dans le corps, « qu’Allāh les agrée »
+  du titleFr conservé verbatim au h1.
+---
+Task ID: R62-e
+Agent: subagent-traducteur
+Task: Traduction sira-1es 14206+14211+14209 (leçons 11-12 + activités 6-11)
+
+Work Log:
+- Lu _brief-sira1es.md (spéc complète), fin du worklog (R59-R62) ; registre calqué sur l'exemplaire
+  13961.html et sur les livraisons sira-1es parallèles (14205 pour la famille « étapes de la
+  prédication », 14186 pour le format des documents d'activités, sous-titre compris).
+- Conventions reprises telles quelles : h1 = titleFr VERBATIM ; sous-titre « …, leçon de Sīra
+  prophétique pour la première année du cycle collégial traditionnel (Leçon N) » (14206 = Leçon 11,
+  14211 = Leçon 12 selon le source) ; 14209 calqué sur 14186 (sous-titre sans « leçon de ») ;
+  glossaires ul/li « terme : glose » ; DIN strict dans le corps (Ḫadīǧa, Ḫuṯaym, ʿUṯmān, Maẓʿūn,
+  Luʾayy, al-Ḫaṭṭāb, Ḫabbāb b. al-Aratt, al-Ḫuḍarī, al-Ḏahabī, al-Tirmiḏī, al-Šuʿarāʾ, al-Masad,
+  al-Tawba — forme « al- » non assimilée, cf. al-Nisāʾ/al-Ḥašr 14182/13986) ; « tout premiers »
+  (al-sābiqūn al-awwalūn) contre le « prédécesseurs » du GT (GT-isme écarté) ; « al-ǧahr » /
+  « al-ṣadʿ bi-l-ḥaqq » introduits en glose ; aucun ṣalāwāt ajoutée là où le source n'en porte pas.
+- **14206 (Leçon 11, les Sābiqūn)** : texte Nūr al-yaqīn p. 67-68, liste d'Ibn Isḥāq (Sīra d'Ibn
+  Hišām t. 1 p. 432) rendue intégralement, Siyar aʿlām al-nubalāʾ t. 1 p. 144, ḥadīṯ Ṭabarānī
+  (al-Muʿǧam al-awsaṭ) et Tirmiḏī (manāqib Abū Bakr) traduits avec paroles internes après
+  deux-points sans guillemets imbriqués (convention 14182). COQUILLE CORRIGÉE (règle mot-cible) :
+  التوبة:101 → at-Tawba 9:100 — le verset 100 est celui des tout premiers (Émigrés/Auxiliaires/
+  successeurs dans le bien), objet même de la section « mérite et rang des Sābiqūn » ; le 101
+  décrit les hypocrites parmi les Bédouins — note en ligne au format 14182. Hamidullah adapté :
+  Allah→Dieu, « Emigrés »→« Émigrés » (accentuation française), le reste verbatim. Gloss ṣarf/
+  ʿadl (Nihāya d'Ibn al-Athīr : nāfila/farīḍa) donnée en parenthèses ; « p. 862-962 » du Ṭabarānī
+  et « p. 87/89 » du Būṭī conservés tels qu'imprimés (plages probables coquilles, non inventés).
+  Règle f ×1 : tableau « أهتدي وأقتدي » (image) signalé « (tableau non reproduit dans le manuel) ».
+- **14209 (activités 6-11)** : aucun verset imprimé au source (vérifié : zéro span, zéro image),
+  aucune perte règle f. Citations rendues intégralement : al-Šifāʾ du cadi ʿIyāḍ t. 1 p. 269-270
+  (retouches), Nūr al-yaqīn p. 29 ; « l'incident de la Pierre noire » (al-ḥaǧar al-aswad) ;
+  « عليه الصلاة والسلام » rendu « — que la prière et le salut soient sur lui — » (variante
+  source) ; « al-ʿizza wa-l-anafa » translittéré et glosé « fierté et susceptibilité orgueilleuse ».
+- **14211 (Leçon 12, al-ṣadʿ bi-l-ḥaqq)** : ḥadīṯ Ibn ʿAbbās (Bukhārī, tafsīr), ḥadīṯ Muslim
+  (banū Kaʿb… Fāṭima), citations Ḫuḍarī p. 33, 34 (retouches), 67-68, Suhaylī al-Rawḍ al-unuf
+  t. 3 p. 46 (soleil/lune), Ġazālī p. 100-101 (retouches) — paroles internes après deux-points.
+  COQUILLE CORRIGÉE ×3 occurrences : الشعراء:213 → al-Šuʿarāʾ 26:214 (le ḥadīṯ cite lui-même
+  « wa-anẓir ʿašīrataka-l-aqrabīn », qui est au v214 ; le v213 porte sur l'interdiction d'invoquer
+  une autre divinité) — note complète à la 1ʳᵉ occurrence, réf. corrigée nue ensuite. al-Masad
+  111:1-2 ×2 restitué, « Abû-Lahab » (Hamidullah) adapté « Abū Lahab » (DIN, écart documenté).
+  Technique 14205 généralisée : ḥadīṯ cité en plusieurs <p> avec citation fermée au deux-points
+  avant chaque verset (pas d'imbrication « ») ; verset inséré dans la citation Ġazālī rendu en
+  “ … ” (convention R62-a « paroles internes en “ ” »). Glossaire : al-Ṣafā (saʿy), tabbat.
+- Écarts vs consigne orchestrator : la consigne mentionnait « Bilāl b. Rabāḥ » en 14206 et
+  « al-Ḥiǧr » en 14211 — éléments introuvables du source (vérification src.html complète) ;
+  traités comme confusion d'orchestration (précédent R62-c), RIEN inventé ; l'« al-Ḥiǧr » de la
+  consigne correspond en fait à la Pierre noire de 14209 et « Ṣawt/summit » à la station sur
+  al-Ṣafā / « révèle-toi » à fa-ṣdaʿ (proclamer) — tous rendus depuis le source.
+- QA : QA OK ×3 (0 arabe, guillemets appariés 6/3/15, balises appariées, 0 apostrophe droite,
+  auto-fix NNBSP appliqué). NI hand-set.py NI git NI content/books touchés.
+
+Stage Summary:
+- Livrables : tr-tmp/14206.html (9 665 car), tr-tmp/14209.html (4 027 car), tr-tmp/14211.html
+  (11 569 car) — traductions savantes intégrales, h1 = titleFr officiels, prêts pour hand-set.py.
+- Versets restitués : 14206 → al-Tawba 100 (coquille 101→100 corrigée et notée) ; 14211 →
+  al-Šuʿarāʾ 214 ×3 (coquille 213→214, notée) + al-Masad 1-2 ×2 ; 14209 → aucun verset au source.
+- Règle f : 14206 tableau أهتدي وأقتدي (1 signalement) ; 14209 et 14211 sans perte de contenu.
+- Décisions à retenir : sourates en « al- » non assimilé (al-Tawba, al-Šuʿarāʾ, al-Masad) ;
+  Hamidullah « Abû-Lahab »→« Abū Lahab » et « Emigrés »→« Émigrés » dans les versets (adaptations
+  typographiques DIN/françaises, documentées) ; plages de pages Ṭabarānī (862-962) et Būṭī (87/89)
+  conservées telles qu'imprimées — à vérifier si un jour le manuel imprimé est consultable.
+---
+Task ID: R62-f
+Agent: subagent-traducteur
+Task: Traduction sira-1es 14215+14221+14224 (leçons 13-15 : patience des croyants face à l'épreuve, émigration vers l'Abyssinie, discours de Ǧaʿfar devant le Naǧāšī)
+
+Work Log:
+- Lu _brief-sira1es.md, fin du worklog (R60-R62) et les livrages parallèles (13961 exemplaire 2es, 14205/14182/14191 pour les conventions sira-1es) ; sous-titre calqué sur la forme majoritaire « …, leçon de Sīra prophétique pour la première année du cycle collégial traditionnel (Leçon N) » ; structure h1→objectifs infinitifs→Introduction→Le texte→La compréhension→L'explication des termes→L'extraction des contenus→L'analyse (Premièrement :/Deuxièmement :/Troisièmement :)→L'évaluation→L'exploitation→La préparation préalable.
+- FORENSIQUE IMAGES (méthode R62-b) : miroir scripts-recovery/tmp-mirror-books/sira-1ep.json → noms de fichiers <img> corrélés aux positions ; téléchargement des 7 versets-images + 6 schémas depuis habous.gov.ma ; lecture VLM (z-ai vision). RÉSULTAT CLÉ : « مريم-_-1.png » contient bien كهيعص (Maryam 1, confirmé à x6 autocontraste — réf. imprimée CORRECTE) ; les autres versets-images sont en OCR partiel/bruité (voire insertions CMS étrangères, cf. R62-b) → la vérification s'est faite par la règle mot-cible du brief (contenu discuté vs cache Hamidullah).
+- VERSETS RESTITUÉS (cache Hamidullah, Allah→Dieu, paroles internes en “ ”) : 14215 → al-Naḥl 106 (ʿAmmār contraint — réf. correcte), Fāṭir 4, al-Ḏāriyāt 52, al-Ḏāriyāt 54, al-Ṭūr 48 ; 14224 → Maryam 1, Luqmān 13. 14221 : aucun verset imprimé au source.
+- COQUILLES CORRIGÉES (mot-cible, annotées inline selon le format 14182) : Ṭūr 46→48 (la glose du manuel « اصبر على أذاهم فإنك بحيث نراك ونحفظك » paraphrase « اصبر لحكم ربك فإنك بأعيننا » = 52:48 ; or 52:46 = « le jour où leur ruse ne leur servira à rien », hors sujet) ; Luqmān 12→13 (le mot-cible شرك/ظلم عظيم est au v13 « لا تشرك بالله إن الشرك لظلم عظيم » ; v12 = sagesse donnée à Luqmân). Maryam:1 vérifiée CORRECTE (image = كهيعص).
+- RÈGLE f (6 signalements, orientations prudentes dérivées du texte de leçon, jamais du contenu des images — VLM a prouvé que plusieurs schémas étaient des insertions étrangères : mind-map du mariage pour « الرذائل », diagramme du Coran pour « القيم », tableau de compétences d'une autre leçon pour « من صفات الرسول ») : 14215 → schéma des attributs du croyant (section أهتدي وأقتدي) ; 14221 → carte de l'Atlas de la Sīra de Šawqī Abū Ḫalīl (après les maqāṣid) + tableau à remplir de l'évaluation (en-têtes de colonnes corroborés par VLM : cause de l'émigration / raisons du choix de l'Abyssinie / figures et finalités — concorde avec les sections de la leçon) ; 14224 → schéma des vices de la ǧāhiliyya, schéma des valeurs de l'islam, schéma des attributs de l'Élu (أهتدي وأقتدي).
+- FIDÉLITÉ (règle f stricte) : la consigne R62-f évoquait pour 14221 « premier et second exodes + Ǧaʿfar » — le source ne narre que le PREMIER exode (raǧab, an 5, 10 hommes + 4 femmes, poursuite jusqu'à la mer) ; le second exode n'apparaît qu'en allusion dans la citation d'al-Sibāʿī (« أولا وثانيا »), et Ǧaʿfar qu'en préparation préalable → RIEN inventé. 14224 : « وَلَمْ يَفْرِضْهَا وَلَدٌ » vérifié par recherche web comme leçon AUTHENTIQUE du texte d'Ibn Sayyid al-Nās (« العذراء البتول التي لم يمسسها بشر ولم يفرضها ولد » — فرض = fendre) → rendu « qu'aucun enfant n'a fendue » ; « وَلَا يُكَادُونَ » (fin de la parole du Naǧāšī, altéré ; Ibn Hišām : « وَلَا أُكَادُهُمْ ») → rendu au sens passif « et ils ne seront point inquiétés ».
+- Citations classiques rendues intégralement avec crochets : 14215 → Fiqh al-sīra d'al-Ġazālī p. 107-108 ; al-Raḥīq al-maḫtūm p. 78 retouches ; Nūr al-yaqīn p. 34 ; al-Bukhārī (manāqib al-Anṣār) ; Sīra d'Ibn Hišām p. 321 ; Ḥilyat al-awliyāʾ d'Abū Nuʿaym t. 1 p. 144 ; al-Šifāʾ du cadi ʿIyāḍ t. 2 p. 42-43 (citation de Makkī b. Abī Ṭālib al-Qaysī avec ses 4 versets interleavés et leurs gloses). 14221 → Sīra d'Ibn Isḥāq t. 1 p. 213 (Umm Salama) ; Tafsīr d'al-Ṭabarī t. 2 p. 328 ; Sīra d'Ibn Hišām t. 1 p. 75-76 ; Musnad d'Aḥmad (Musnad des dix annoncés au Paradis) ; al-Sibāʿī p. 51 retouches. 14224 → al-Rawḍ al-unuf d'al-Suhaylī t. 2 p. 111 retouches (discours intégral de Ǧaʿfar, citation continue sur 3 <p> avec le verset inséré, comme au source) ; Sīra d'Ibn Hišām t. 1 p. 337 ; ʿUyūn al-aṯar d'Ibn Sayyid al-Nās t. 1 p. 138 (l'échange sur ʿĪsā et Maryam).
+- Conventions appliquées : al-Amīn (le digne de foi) / al-Ṣādiq (le véridique) comme R62-c ; « Commandeur des croyants » (cf. 19466/19518) ; discours direct après deux-points sans guillemets imbriqués ; « Un, Un ! » (aḥad, aḥad) pour Bilāl ; DIN strict (Ḏāriyāt, Ṭabarī, Ǧubayr, Ḫabbāb b. al-Aratt, Aṣḥama, Naǧāšī, miškāt, raǧab, abṭaḥ/ramḍāʾ glosés au glossaire) ; graphies établies (Mekke, Abyssinie, Kaʿba) ; NI hand-set.py NI git NI content/books.
+
+Stage Summary:
+- Livrables : tr-tmp/14215.html (14 105 car), tr-tmp/14221.html (8 495 car), tr-tmp/14224.html (8 580 car) — traductions savantes intégrales, 3 × « QA OK » (0 arabe, guillemets et balises appariés, 0 apostrophe droite ; auto-fix NNBSP appliqué).
+- Versets restitués : al-Naḥl 106 ; Fāṭir 4 ; al-Ḏāriyāt 52 ; al-Ḏāriyāt 54 ; al-Ṭūr 48 ; Maryam 1 ; Luqmān 13 — chaque réf. vérifiée au mot-cible contre le cache ; 2 coquilles corrigées (Ṭūr 46→48, Luqmān 12→13), Maryam:1 confirmée par OCR de l'image (كهيعص).
+- Règle f : 6 signalements (schéma 14215 ; carte Atlas + tableau d'évaluation 14221 ; 3 schémas 14224), orientations prudentes — VLM a montré que la plupart des schémas étaient des insertions CMS étrangères, donc jamais restitués.
+- Écarts documentés : consigne « second exode » de 14221 non fondée dans le source (rien inventé) ; « ولم يفرضها ولد » authentique (web-vérifié) ; « ولا يكادون » altéré, rendu au sens ; numérotation des leçons du source respectée (Leçons 13, 14, 15).
+- Reste sira-1es : 14227, 14228, 14232, 14239, 14243, 14247, 14249, 14253, 14262, 14268, 14270, 15720 — conventions R62 établies, prêtes pour les agents suivants.
+---
+Task ID: R62-h
+Agent: subagent-traducteur
+Task: Traduction sira-1es 14239+14243+14247 (leçons 18-20 : siège et boycott, année du deuil, voyage à Ṭāʾif)
+Work Log:
+- Brief sira-1es + worklog (R59→R62) lus ; harmonisation avec les livraisons parallèles relues avant
+  rédaction : 14205 (R62-d) et surtout 14232 = leçon 17 (R62-g), prélude immédiat (« Je lis, dans les
+  livres de Sīra, ce qui a trait au boycott que Qurayš imposa aux musulmans et aux Banū Hāšim ») :
+  même structure, ṣalāwāt, « L'extraction des contenus : », « je me guide et je prends modèle ».
+- FORENSIQUE IMAGES (miroir scripts-recovery/tmp-mirror-books/sira-1ep.json + téléchargement + VLM
+  glm-4.5v via z-ai-web-dev-sdk createVision) : 14239 → image « العبرة المستخلصة من مقاطعة قريش
+  وحصارها » (rubrique رابعا أهتدي وأقتدي, <p> vide) et 14247 → image « أهتدي وأقتدي … هجرة الرسول
+  إلى الطائف » : lectures VLM instables/hallucinantes (2 passes, upscale ×3 PIL) → NON restituées,
+  signalées règle f avec mention de la cause. 14243 → 3 versets-images identifiés par noms de
+  fichiers : الشرح 5-6, البقرة 152, آل عمران 146.
+- VERSETS RESTITUÉS (cache Hamidullah, « Allah »→« Dieu ») : al-Šarḥ 5-6 (14243 après « قال
+  تعالى: », réf. imprimée correcte au mot-cible « difficulté des commencements → facilité ») ;
+  al-Baqara 153 + Āl ʿImrān 146 (14243, citation Qasṭallān) avec COQUILLE corrigée البقرة
+  152→153 : vérifiée contre le texte original d'Iršād al-Sārī p. 413 (ablibrary.net) qui cite
+  « إن الله مع الصابرين، إن الله يحب الصابرين » — le v152 ne porte ni ṣabr ni maʿiyya ; note
+  inline dans la référence, convention 14182/14197.
+- ANOMALIES DU MANUEL WEB (toutes confirmées contre le miroir = source live) : (1) GLOSSAIRES
+  BOUILLÉS par coquille CMS : 14243 (salwāhu, ʿaḍudan) et 14247 (ḫuʾūla, allā yushīʿū dhālika,
+  ʿaqibihi) reçoivent les gloses des leçons précédentes (al-mīra, yataḍāghawna, naṯr al-turāb) —
+  rendus au sens lexical évident du mot dans le texte + note explicite dans le fichier (zéro
+  invention : aucune glose fabriquée) ; (2) 14239 « إلى شعب بني طالب » = coquille manifeste de
+  « شعب أبي طالب » (la même leçon écrit « من شعب أبي طالب » plus bas) corrigé silencieusement ;
+  (3) 14243 ÉVALUATION = copie conforme de celle de la leçon 18 (questions boycott/siège) —
+  traduite telle quelle + N.B. transparent dans le fichier ; (4) 14247 Texte 1 « عرض عليهم
+  نصرته » (Nūr al-yaqīn ; vraisemblablement « نفسه ») rendu « il leur demanda leur soutien
+  (nusra) » ; doublons CMS « الرسول الرسول ﷺ » et « إنَّ: اللهَ » normalisés sans note ;
+  (5) références imprimées conservées (al-Šifāʾ t. 2 p. 56, Bayhaqī t. 2 p. 350, Qasṭallānī
+  t. 2 p. 413).
+- HADITH DE L'ANGE DES MONTAGNES (14247, exploitation) traduit INTÉGRALEMENT avec la parole
+  prophétique célèbre « J'espère plutôt que Dieu fera sortir de leurs lignées celui qui adorera
+  Dieu seul, sans rien Lui associer » + [Rapporté par al-Bukhārī, Livre du début de la création,
+  et par Muslim, Livre du jihād et des expéditions (siyar)] ; attribution des répliques conforme
+  à la leçon canonique (l'ange : « cela est en ton pouvoir : si tu veux, je fais s'abattre sur
+  eux les deux massifs (al-Aḫšabayn) »). Duʿāʾ de Ṭāʾif (al-Ṭabarānī, al-Muʿǧam al-kabīr) et
+  hadith de ʿUrwa/Ibn ʿAmr (al-Bukhārī, Manāqib al-Anṣār) traduits intégralement.
+- Conventions : h1 = titleFr verbatim (ﷺ développé « — que Dieu prie sur lui et le salue — ») ;
+  sous-titre « …, leçon de Sīra prophétique pour la première année du cycle collégial traditionnel
+  (Leçon 18/19/20) » ; DIN strict dans le corps (Ṯaqīf, Ṭāʾif, ḫuʾūla, šiʿb, ʿUṭba et Šayba,
+  Ḫadīǧa, Ḏū al-Ḥiǧǧa, ḍuġāʾ, Naḫla, Ḫuzāʿa, Manṣūr b. ʿIkrima… b. Quṣayy) — corps 14243 en
+  Ḫadīǧa (son h1 ne porte pas le nom) ; discours direct après deux-points sans guillemets
+  imbriqués (14232), paroles du Prophète dans Texte 2 de 14247 en “ ” (le source y met des « ») ;
+  « trois milles » sans conversion km (convention R62-d) ; « Salât » verbatim Hamidullah ;
+  évaluations en <ol> numérotées comme le source.
+- QA : 3 × « QA OK » — 14239 : 10 798 car (3 paires de « »), 14243 : 11 768 car (9), 14247 :
+  12 097 car (7) ; 0 caractère arabe, 0 apostrophe droite, balises appariées, NNBSP auto-fix.
+  NI hand-set.py NI git NI content/books touchés ; fichiers d'audit conservés dans
+  tr-tmp/_r62h-imgs/ (images + vlm.js + net.js).
+Stage Summary:
+- Livrés : tr-tmp/14239.html, tr-tmp/14243.html, tr-tmp/14247.html — traductions savantes
+  intégrales, h1 = titleFr officiels, prêts pour hand-set.py (main agent).
+- Versets restitués : al-Šarḥ 5-6 ; al-Baqara 153 (coquille 152→153 corrigée + notée inline) ;
+  Āl ʿImrān 146. Aucun verset imprimé dans 14239 ni 14247.
+- Règle f : 2 listes d'enseignements en images illisibles (14239 رابعا, 14247 ثالثا) signalées ;
+  2 glossaires brouillés (14243/14247) rendus au sens lexical + note ; 1 N.B. évaluation
+  dupliquée (14243) ; 1 coquille شعب بني طالب corrigée silencieusement.
+- Points d'attention main agent : (1) évaluation 14243 = duplication de la leçon 18 — si le
+  livre imprimé donne d'autres questions, les substituer (non inventées ici) ; (2) glossaires
+  14243/14247 : les gloses authentiques du manuel imprimé sont inconnues (sens lexicaux donnés
+  à la place) ; (3) al-Aḫšabayn volontairement non glosé dans le hadith (la question 1 de
+  l'évaluation demande à l'élève de l'expliquer) ; (4) « الرسول الكريم/المصطفى » rendus « le
+  noble Messager/l'Élu », « عليه الصلاة والسلام » (Nūr al-yaqīn) → « — sur lui la prière et la
+  paix — ».
