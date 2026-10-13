@@ -1,280 +1,280 @@
 {
- "id": "tafsir-tanawi-3",
- "subject": "tafsir",
- "level": "tanawi-3",
- "subjectAr": "التفسير",
- "levelAr": "التفسير-الثانوي-الثالث",
- "titleAr": "تفسير سورة الكهف من خلال المحرر الوجيز في تفسير الكتاب العزيز لابن عطية",
- "titleFr": "Tafsīr — la sourate al-Kahf (al-Muḥarrar al-Wajīz)",
- "pdfUrl": null,
- "intro": {
-  "docId": "18671",
-  "titleAr": "التفسير من خلال المحرر الوجيز في تفسير الكتاب العزيز للسنة الثالثة من التعليم الثانوي العتيق",
-  "titleFr": "Présentation du manuel",
-  "html": "<h1> التفسير: تفسير سورة الكهف من خلال المحرر الوجيز في تفسير الكتاب العزيز لابن عطية س 3 ثا</h1>\n <dl>\n <dt></dt>\n <dd>\n \n </dd>\n </dl>\n <p></p>\n <p>دروس في <span>تفسير سورة الكهف</span>، تم الاعتماد فيها على تفسير القاضي أبي محمد عبد الحق بن غالب بن عطية المحاربي الغرناطي المسمى بـ «المحرر الوجيز، في تفسير الكتاب العزيز»، مع إضافات من تفسيري أبي حيان والقرطبي وغيرهما من أمهات كتب التفسير.</p>\n \n <p>أيها التلميذ، أيتها التلميذة:</p>\n <p>هذا كتابكما في مادة التفسير، يتضمن دروسا في <span>تفسير سورة الكهف</span> نعرضها وفق منهجية تربوية وأنشطة تعليمية، تراعي ما يأتي:</p>\n <ul>\n <li>الاعتماد في أصل مادة الكتاب على تفسير القاضي أبي محمد عبد الحق بن غالب بن عطية المحاربي الغرناطي المسمى بـ «المحرر الوجيز، في تفسير الكتاب العزيز»، مع إغنائه بإتمامات وإضافات من تفسيري أبي حيان والقرطبي وغيرهما من أمهات كتب التفسير، خاصة في المواضع التي لم يتعرض لتفسيرها الإمام ابن عطية أو أوجز فيها العبارة واكتفى بالإشارة.</li>\n <li>تقديم محتوى الكتاب بأسلوب علمي تعليمي يتناول الآيات ومقاطعها بالتفسير والبيان في غير إطناب ممل، أو إيجاز مخل.</li>\n <li>مساعدتكما على استثمار مكتسباتكما السابقة من العلوم الشرعية واللغوية المختلفة، باعتبار التفسير مجالا تلتقي فيه مختلف العلوم وتتكامل، لاستخراج معاني كلام الله وكشف أسراره، والتمكن من حسن التعامل مع المعارف المقررة وتوظيفها في الفهم والاستنباط.</li>\n <li>تذييل كل درس بذكر بعض ما تتضمنه الآيات المفسرة فيه من لطائف وفوائد، توقفكما على جمال لغة القرآن الكريم وإعجازه البياني، وتثري معلوماتكما بمعارف علمية، ولطائف بلاغية، وهدايات إيمانية، وفوائد تربوية وتشريعية.</li>\n </ul>\n <p>واللهَ نرجوا لكما التوفيق إلى تمثل معاني هذه السورة الكريمة والتحلي بقيمها والاهتداء بهداياتها، بلوغا إلى تحقيق الأهداف التربوية والمعرفية المتوخاة.</p>\n <p>والله سبحانه الموفق والهادي إلى سواء السبيل.</p>\n <h2>كتاب التفسير من خلال المحرر الوجيز في تفسير الكتاب العزيز (تفسير سورة الكهف)</h2>\n <ul>\n <li>كيف أستعمل كتابي</li>\n <li>كفايات تدريس المادة</li>\n <li>التوزيع الدوري والأسبوعي</li>\n <li>1 .سورة الكهف (الآيات : 1 - 5)</li>\n <li>2 .سورة الكهف (الآيات : 6 - 9)</li>\n <li>3 .سورة الكهف (الآيات : 10 - 12)</li>\n <li>4 .سورة الكهف (الآيات : 13 - 16)</li>\n <li>5 .سورة الكهف (الآيات : 17 - 18)</li>\n <li>6 .سورة الكهف (الآيتان 19 - 20)</li>\n <li>7 .سورة الكهف (الآيات 21 - 24)</li>\n <li>8 .سورة الكهف (الآيات 25 - 27)</li>\n <li>9 .سورة الكهف (الآيتان: 28 - 29)</li>\n <li>10 .سورة الكهف (الآيتان : 30 - 31)</li>\n <li>11 .سورة الكهف (الآيات :32 - 35)</li>\n <li>12 .سورة الكهف (الآيات : 36 - 43)</li>\n <li>13 .سورة الكهف (الآيتان : 44 - 45)</li>\n <li>14 .سورة الكهف (الآيات :46 - 48)</li>\n <li>15 .سورة الكهف (الآيات : 49 - 52)</li>\n <li>16 .سورة الكهف (الآيات : 53 - 55)</li>\n <li>17 .سورة الكهف (الآيات :56 - 58)</li>\n <li>18 .سورة الكهف (الآيات : 59 - 64)</li>\n <li>19 .سورة الكهف (الآيات : 65 - 72)</li>\n <li>20 .سورة الكهف (الآيات : 73 - 77)</li>\n <li>21 .سورة الكهف (الآيات : 78 - 81)</li>\n <li>22 .سورة الكهف (الآيات :82 - 84)</li>\n <li>23 .سورة الكهف (الآيات :85 - 91)</li>\n <li>24 .سورة الكهف (الآيات :92 - 97)</li>\n <li>25 .سورة الكهف (الآيات : 98 - 101)</li>\n <li>26 .سورة الكهف (الآيات: 102 - 105)</li>\n <li>أنشطة التثبيت والدعم</li>\n <li>فهرس الأعلام</li>\n <li>فهرس المصادر والمراجع</li>\n <li>غلاف الكتاب",
-  "htmlFr": "<h1> Interprétation : Interprétation de la sourate Al-Kahf à travers le bref éditeur dans l'interprétation du cher livre d'Ibn Atiyya, vol. 3 que</h1>\n <dl>\n <dt></dt>\n <jj>\n \n </jd>\n </dl>\n <p></p>\n <p>Leçons d'<span>interprétation de la sourate Al-Kahf</span>, s'appuyant sur l'interprétation du juge Abu Muhammad Abd al-Haqq ibn Ghalib ibn Attiya al-Muharbi al-Gharnati, appelé \"Le bref éditeur, dans l'interprétation du livre puissant\", avec des ajouts des interprétations d'Abu Hayyan et d'al-Qurtubi et d'autres livres d'interprétation majeurs.</p>\n \n <p>Ô étudiant, ô étudiant :</p>\n <p>Ceci est votre livre sur l'interprétation, qui comprend des leçons sur <span>l'interprétation de la sourate Al-Kahf</span> que nous présentons selon une méthodologie pédagogique et des activités pédagogiques, en tenant compte des éléments suivants :</p>\n <ul>\n <li>S'appuyant sur le matériel original du livre sur l'interprétation du juge Abu Muhammad Abd al-Haqq ibn Ghalib ibn Atiya al-Muharbi al-Gharnati, appelé « Le bref éditeur, dans l'interprétation du livre puissant », tout en l'enrichissant de compléments et d'ajouts provenant des interprétations d'Abu Hayyan et d'al-Qurtubi et d'autres livres d'interprétation majeurs, en particulier dans les endroits qui n'ont pas été interprétés par l'Imam Ibn Atiyah, ou là où il a résumé la phrase et l'a simplement souligné.</li>\n <li>Présenter le contenu du livre d'une manière scientifique et pédagogique qui aborde les versets et leurs passages avec des explications et des éclaircissements, sans redondance ennuyeuse ni concision trompeuse.</li>\n <li>Vous aider tous les deux à investir dans vos acquisitions antérieures dans les différentes sciences juridiques et linguistiques, en considérant l'interprétation comme un domaine dans lequel diverses sciences se rencontrent et s'intègrent, pour extraire le sens des paroles de Dieu et en révéler les secrets, et être capable de bien les traiter.Les connaissances établies et leur utilisation dans la compréhension et la déduction.</li>\n <li>Ajoutez chaque leçon en mentionnant certaines des bénédictions et des avantages contenus dans les versets interprétés, ce qui vous fera prendre conscience de la beauté de la langue du Saint Coran et de son miracle illustratif, et enrichira vos connaissances avec des connaissances scientifiques, des charmes rhétoriques, des conseils de foi et des avantages éducatifs et législatifs.</li>\n </ul>\n <p>Par Dieu, nous espérons que vous réussirez à imiter les significations de cette noble sourate, à adhérer à ses valeurs et à vous laisser guider par ses conseils, afin d'atteindre les objectifs éducatifs et cognitifs souhaités.</p>\n <p>Et Dieu Tout-Puissant est le Donateur du succès et le guide vers le droit chemin.</p>\n <h2>Le livre d'interprétation à travers le bref éditeur dans l'interprétation du Livre Saint (Interprétation de la Sourate Al-Kahf)</h2>\n <ul>\n <li>Comment utiliser mon livre</li>\n <li>Compétences pour enseigner la matière</li>\n <li>Distribution périodique et hebdomadaire</li>\n <li>1. Sourate Al-Kahf (versets : 1 - 5)</li>\n <li>2. Sourate Al-Kahf (versets : 6 - 9)</li>\n <li>3. Sourate Al-Kahf (versets : 10 - 12)</li>\n <li>4. Sourate Al-Kahf (versets : 13 - 16)</li>\n <li>5. Sourate Al-Kahf (versets : 17 - 18)</li>\n <li>6. Sourate Al-Kahf (versets 19-20)</li>\n <li>7. Sourate Al-Kahf (versets 21-24)</li>\n <li>8. Sourate Al-Kahf (versets 25-27)</li>\n <li>9. Sourate Al-Kahf (versets : 28 - 29)</li>\n <li>10. Sourate Al-Kahf (versets : 30 - 31)</li><li>11. Sourate Al-Kahf (versets : 32 - 35)</li>\n <li>12. Sourate Al-Kahf (versets : 36 - 43)</li>\n <li>13. Sourate Al-Kahf (versets : 44 - 45)</li>\n <li>14. Sourate Al-Kahf (versets : 46 - 48)</li>\n <li>15. Sourate Al-Kahf (versets : 49 - 52)</li>\n <li>16. Sourate Al-Kahf (versets : 53 - 55)</li>\n <li>17. Sourate Al-Kahf (versets : 56 - 58)</li>\n <li>18. Sourate Al-Kahf (versets : 59 - 64)</li>\n <li>19. Sourate Al-Kahf (versets : 65 - 72)</li>\n <li>20. Sourate Al-Kahf (versets : 73 - 77)</li>\n <li>21. Sourate Al-Kahf (versets : 78 - 81)</li>\n <li>22. Sourate Al-Kahf (versets : 82 - 84)</li>\n <li>23. Sourate Al-Kahf (versets : 85 - 91)</li>\n <li>24. Sourate Al-Kahf (versets : 92 - 97)</li>\n <li>25. Sourate Al-Kahf (versets : 98 - 101)</li>\n <li>26. Sourate Al-Kahf (versets : 102 - 105)</li>\n <li>Activités d'installation et de support</li>\n <li>Index des notables</li>\n <li>Index des sources et références</li>\n <li>Couverture du livre</li>\n </ul>\n <div>\n \n </div>\n </div>\n <div>\n \n </div>\n <div>\n <div>"
- },
- "lessons": [
-  {
-   "docId": "pdf-mut23h2u-226",
-   "titleAr": "سورة الكهف (الآيات : 1 - 5)",
-   "titleFr": "Sourate Al-Kahf (versets : 1 à 5)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/1._سورة_الكهف_الآيات_1_-_5.pdf",
-   "pdfOnly": true
+  "id": "tafsir-tanawi-3",
+  "subject": "tafsir",
+  "level": "tanawi-3",
+  "subjectAr": "التفسير",
+  "levelAr": "التفسير-الثانوي-الثالث",
+  "titleAr": "تفسير سورة الكهف من خلال المحرر الوجيز في تفسير الكتاب العزيز لابن عطية",
+  "titleFr": "Tafsīr — la sourate al-Kahf (al-Muḥarrar al-Wajīz)",
+  "pdfUrl": null,
+  "intro": {
+    "docId": "18671",
+    "titleAr": "التفسير من خلال المحرر الوجيز في تفسير الكتاب العزيز للسنة الثالثة من التعليم الثانوي العتيق",
+    "titleFr": "Présentation du manuel",
+    "html": "<h1> التفسير: تفسير سورة الكهف من خلال المحرر الوجيز في تفسير الكتاب العزيز لابن عطية س 3 ثا</h1>\n <dl>\n <dt></dt>\n <dd>\n \n </dd>\n </dl>\n <p></p>\n <p>دروس في <span>تفسير سورة الكهف</span>، تم الاعتماد فيها على تفسير القاضي أبي محمد عبد الحق بن غالب بن عطية المحاربي الغرناطي المسمى بـ «المحرر الوجيز، في تفسير الكتاب العزيز»، مع إضافات من تفسيري أبي حيان والقرطبي وغيرهما من أمهات كتب التفسير.</p>\n \n <p>أيها التلميذ، أيتها التلميذة:</p>\n <p>هذا كتابكما في مادة التفسير، يتضمن دروسا في <span>تفسير سورة الكهف</span> نعرضها وفق منهجية تربوية وأنشطة تعليمية، تراعي ما يأتي:</p>\n <ul>\n <li>الاعتماد في أصل مادة الكتاب على تفسير القاضي أبي محمد عبد الحق بن غالب بن عطية المحاربي الغرناطي المسمى بـ «المحرر الوجيز، في تفسير الكتاب العزيز»، مع إغنائه بإتمامات وإضافات من تفسيري أبي حيان والقرطبي وغيرهما من أمهات كتب التفسير، خاصة في المواضع التي لم يتعرض لتفسيرها الإمام ابن عطية أو أوجز فيها العبارة واكتفى بالإشارة.</li>\n <li>تقديم محتوى الكتاب بأسلوب علمي تعليمي يتناول الآيات ومقاطعها بالتفسير والبيان في غير إطناب ممل، أو إيجاز مخل.</li>\n <li>مساعدتكما على استثمار مكتسباتكما السابقة من العلوم الشرعية واللغوية المختلفة، باعتبار التفسير مجالا تلتقي فيه مختلف العلوم وتتكامل، لاستخراج معاني كلام الله وكشف أسراره، والتمكن من حسن التعامل مع المعارف المقررة وتوظيفها في الفهم والاستنباط.</li>\n <li>تذييل كل درس بذكر بعض ما تتضمنه الآيات المفسرة فيه من لطائف وفوائد، توقفكما على جمال لغة القرآن الكريم وإعجازه البياني، وتثري معلوماتكما بمعارف علمية، ولطائف بلاغية، وهدايات إيمانية، وفوائد تربوية وتشريعية.</li>\n </ul>\n <p>واللهَ نرجوا لكما التوفيق إلى تمثل معاني هذه السورة الكريمة والتحلي بقيمها والاهتداء بهداياتها، بلوغا إلى تحقيق الأهداف التربوية والمعرفية المتوخاة.</p>\n <p>والله سبحانه الموفق والهادي إلى سواء السبيل.</p>\n <h2>كتاب التفسير من خلال المحرر الوجيز في تفسير الكتاب العزيز (تفسير سورة الكهف)</h2>\n <ul>\n <li>كيف أستعمل كتابي</li>\n <li>كفايات تدريس المادة</li>\n <li>التوزيع الدوري والأسبوعي</li>\n <li>1 .سورة الكهف (الآيات : 1 - 5)</li>\n <li>2 .سورة الكهف (الآيات : 6 - 9)</li>\n <li>3 .سورة الكهف (الآيات : 10 - 12)</li>\n <li>4 .سورة الكهف (الآيات : 13 - 16)</li>\n <li>5 .سورة الكهف (الآيات : 17 - 18)</li>\n <li>6 .سورة الكهف (الآيتان 19 - 20)</li>\n <li>7 .سورة الكهف (الآيات 21 - 24)</li>\n <li>8 .سورة الكهف (الآيات 25 - 27)</li>\n <li>9 .سورة الكهف (الآيتان: 28 - 29)</li>\n <li>10 .سورة الكهف (الآيتان : 30 - 31)</li>\n <li>11 .سورة الكهف (الآيات :32 - 35)</li>\n <li>12 .سورة الكهف (الآيات : 36 - 43)</li>\n <li>13 .سورة الكهف (الآيتان : 44 - 45)</li>\n <li>14 .سورة الكهف (الآيات :46 - 48)</li>\n <li>15 .سورة الكهف (الآيات : 49 - 52)</li>\n <li>16 .سورة الكهف (الآيات : 53 - 55)</li>\n <li>17 .سورة الكهف (الآيات :56 - 58)</li>\n <li>18 .سورة الكهف (الآيات : 59 - 64)</li>\n <li>19 .سورة الكهف (الآيات : 65 - 72)</li>\n <li>20 .سورة الكهف (الآيات : 73 - 77)</li>\n <li>21 .سورة الكهف (الآيات : 78 - 81)</li>\n <li>22 .سورة الكهف (الآيات :82 - 84)</li>\n <li>23 .سورة الكهف (الآيات :85 - 91)</li>\n <li>24 .سورة الكهف (الآيات :92 - 97)</li>\n <li>25 .سورة الكهف (الآيات : 98 - 101)</li>\n <li>26 .سورة الكهف (الآيات: 102 - 105)</li>\n <li>أنشطة التثبيت والدعم</li>\n <li>فهرس الأعلام</li>\n <li>فهرس المصادر والمراجع</li>\n <li>غلاف الكتاب",
+    "htmlFr": "<h1>Présentation du manuel</h1>\n<p>Leçons d’exégèse (<em>tafsīr</em>) de la sourate al-Kahf [« la Caverne »], fondées sur le commentaire du cadi Abū Muḥammad ʿAbd al-Ḥaqq b. Ghālib b. ʿAṭiyya al-Maḥāribī al-Gharnāṭī, intitulé <em>al-Muḥarrar al-wajīz fī tafsīr al-kitāb al-ʿazīz</em> [« Le commentaire affiné et concis du Livre puissant »], avec des apports des exégèses d’Abū Ḥayyān et d’al-Qurṭubī et d’autres ouvrages-mères du genre.</p>\n<p>Le manuel est destiné aux élèves de la troisième année de l’enseignement secondaire traditionnel (<em>taʿlīm ʿatīq</em>).</p>\n<p>Ô élève, ô écolière,</p>\n<p>Voici votre livre d’exégèse : il rassemble des leçons sur le commentaire de la sourate al-Kahf, que nous présentons selon une méthodologie éducative et des activités d’apprentissage prenant en considération ce qui suit :</p>\n<ul>\n<li>Fonder la matière première du livre sur le commentaire du cadi Abū Muḥammad ʿAbd al-Ḥaqq b. Ghālib b. ʿAṭiyya al-Maḥāribī al-Gharnāṭī, intitulé <em>al-Muḥarrar al-wajīz fī tafsīr al-kitāb al-ʿazīz</em>, et l’enrichir de compléments et d’ajouts tirés des exégèses d’Abū Ḥayyān et d’al-Qurṭubī et d’autres ouvrages-mères du commentaire, en particulier dans les passages que l’imam Ibn ʿAṭiyya a laissés sans exégèse, ou qu’il a traités en condensant la formule et en se contentant d’une allusion.</li>\n<li>Présenter le contenu du livre dans un style scientifique et pédagogique qui aborde les versets et leurs passages par le commentaire et l’exposé, sans prolixité lassante ni concision mutilante.</li>\n<li>Vous aider — toi, élève, et toi, écolière — à capitaliser vos acquis antérieurs dans les diverses sciences religieuses et linguistiques, le <em>tafsīr</em> étant le domaine où les différentes sciences se rencontrent et s’intègrent : en extraire les sens de la parole de Dieu et en percer les secrets, et parvenir à bien manier les connaissances inscrites au programme et à les employer dans la compréhension et l’inférence (<em>istinbāṭ</em>).</li>\n<li>Clore chaque leçon par l’évocation de quelques-unes des subtilités (<em>laṭāʾif</em>) et des enseignements (<em>fawāʾid</em>) que recèlent les versets commentés : elles vous font découvrir la beauté de la langue du Noble Coran et son inimitabilité éloquente (<em>iʿjāz bayānī</em>), et enrichissent votre savoir de connaissances scientifiques, de finesses rhétoriques, d’orientations de foi et de bénéfices éducatifs et légaux.</li>\n</ul>\n<p>C’est de Dieu que nous espérons pour vous deux la réussite : vous approprier les sens de cette noble sourate, vous parer de ses valeurs et vous laisser guider par ses orientations, jusqu’à réaliser les objectifs éducatifs et cognitifs visés.</p>\n<p>Dieu — glorifié et exalté — est Celui qui accorde la réussite et qui guide vers la voie droite.</p>\n<h2>Table des matières</h2>\n<ul>\n<li>1. Sourate Al-Kahf (versets : 1 à 5)</li>\n<li>2. Sourate Al-Kahf (versets : 6-9)</li>\n<li>3. Sourate Al-Kahf (versets : 10-12)</li>\n<li>4. Sourate Al-Kahf (versets 13-16)</li>\n<li>5. Sourate Al-Kahf (versets 17-18)</li>\n<li>6. Sourate Al-Kahf (versets 19-20)</li>\n<li>7. Sourate Al-Kahf (versets 21-24)</li>\n<li>8. Sourate Al-Kahf (versets 25-27)</li>\n<li>9. Sourate Al-Kahf (versets : 28-29)</li>\n<li>10. Sourate Al-Kahf (versets : 30-31)</li>\n<li>11. Sourate Al-Kahf (versets 32-35)</li>\n<li>12. Sourate Al-Kahf (versets : 36-43)</li>\n<li>13. Sourate Al-Kahf (versets : 44-45)</li>\n<li>14. Sourate Al-Kahf (versets 46-48)</li>\n<li>15. Sourate Al-Kahf (versets : 49 - 52)</li>\n<li>16. Sourate Al-Kahf (versets : 53-55)</li>\n<li>17. Sourate Al-Kahf (versets 56-58)</li>\n<li>18. Sourate Al-Kahf (versets : 59-64)</li>\n<li>19. Sourate Al-Kahf (versets : 65-72)</li>\n<li>20. Sourate Al-Kahf (versets : 73-77)</li>\n<li>21. Sourate Al-Kahf (versets : 78-81)</li>\n<li>22. Sourate Al-Kahf (versets : 82-84)</li>\n<li>23. Sourate Al-Kahf (versets : 85-91)</li>\n<li>24. Sourate Al-Kahf (versets : 92-97)</li>\n<li>25. Sourate Al-Kahf (versets : 98 - 101)</li>\n<li>26. Sourate Al-Kahf (versets : 102 - 105)</li>\n<li>Activités de consolidation et de soutien</li>\n<li>Index des figures citées</li>\n<li>Index des sources et références</li>\n</ul>"
   },
-  {
-   "docId": "pdf-mut23h2u-227",
-   "titleAr": "سورة الكهف (الآيات : 6 - 9)",
-   "titleFr": "Sourate Al-Kahf (versets : 6-9)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/2_._سورة_الكهف_الآيات_6_-_9.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-228",
-   "titleAr": "سورة الكهف (الآيات : 10 - 12)",
-   "titleFr": "Sourate Al-Kahf (versets : 10-12)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/3_._سورة_الكهف_الآيات_10_-_12.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-229",
-   "titleAr": "سورة الكهف (الآيات : 13 - 16)",
-   "titleFr": "Sourate Al-Kahf (versets 13-16)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/4_._سورة_الكهف_الآيات_13_-_16.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-230",
-   "titleAr": "سورة الكهف (الآيات : 17 - 18)",
-   "titleFr": "Sourate Al-Kahf (versets 17-18)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/5_._سورة_الكهف_الآيات_17_-_18.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-231",
-   "titleAr": "سورة الكهف (الآيتان 19 - 20)",
-   "titleFr": "Sourate Al-Kahf (versets 19-20)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/6_._سورة_الكهف_الآيتان_19_-_20.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-232",
-   "titleAr": "سورة الكهف (الآيات 21 - 24)",
-   "titleFr": "Sourate Al-Kahf (versets 21-24)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/7_._سورة_الكهف_الآيات_21_-_24.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-233",
-   "titleAr": "سورة الكهف (الآيات 25 - 27)",
-   "titleFr": "Sourate Al-Kahf (versets 25-27)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/8_._سورة_الكهف_الآيات_25_-_27.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-234",
-   "titleAr": "سورة الكهف (الآيتان: 28 - 29)",
-   "titleFr": "Sourate Al-Kahf (versets : 28-29)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/9_._سورة_الكهف_الآيتان_28_-_29.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-235",
-   "titleAr": "سورة الكهف (الآيتان : 30 - 31)",
-   "titleFr": "Sourate Al-Kahf (versets : 30-31)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/10_._سورة_الكهف_الآيتان_30_-_31.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-236",
-   "titleAr": "سورة الكهف (الآيات :32 - 35)",
-   "titleFr": "Sourate Al-Kahf (versets 32-35)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/11_._سورة_الكهف_الآيات_32_-_35.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-237",
-   "titleAr": "سورة الكهف (الآيات : 36 - 43)",
-   "titleFr": "Sourate Al-Kahf (versets : 36-43)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/12_._سورة_الكهف_الآيات_36_-_43.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-238",
-   "titleAr": "سورة الكهف (الآيتان : 44 - 45)",
-   "titleFr": "Sourate Al-Kahf (versets : 44-45)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/13_._سورة_الكهف_الآيتان_44_-_45.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-239",
-   "titleAr": "سورة الكهف (الآيات :46 - 48)",
-   "titleFr": "Sourate Al-Kahf (versets 46-48)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/14_._سورة_الكهف_الآيات_46_-_48.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-240",
-   "titleAr": "سورة الكهف (الآيات : 49 - 52)",
-   "titleFr": "Sourate Al-Kahf (versets : 49 - 52)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/15_._سورة_الكهف_الآيات_49_-_52.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-241",
-   "titleAr": "سورة الكهف (الآيات : 53 - 55)",
-   "titleFr": "Sourate Al-Kahf (versets : 53-55)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/16_._سورة_الكهف_الآيات_53_-_55.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-242",
-   "titleAr": "سورة الكهف (الآيات :56 - 58)",
-   "titleFr": "Sourate Al-Kahf (versets 56-58)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/17_._سورة_الكهف_الآيات_56_-_58.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-243",
-   "titleAr": "سورة الكهف (الآيات : 59 - 64)",
-   "titleFr": "Sourate Al-Kahf (versets : 59-64)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/18_._سورة_الكهف_الآيات_59_-_64.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-244",
-   "titleAr": "سورة الكهف (الآيات : 65 - 72)",
-   "titleFr": "Sourate Al-Kahf (versets : 65-72)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/19_.سورة_الكهف_الآيات_65_-_72.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-245",
-   "titleAr": "سورة الكهف (الآيات : 73 - 77)",
-   "titleFr": "Sourate Al-Kahf (versets : 73-77)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/20_.سورة_الكهف_الآيات_73_-_77.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-246",
-   "titleAr": "سورة الكهف (الآيات : 78 - 81)",
-   "titleFr": "Sourate Al-Kahf (versets : 78-81)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/21_._سورة_الكهف_الآيات_78_-_81.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-247",
-   "titleAr": "سورة الكهف (الآيات :82 - 84)",
-   "titleFr": "Sourate Al-Kahf (versets : 82-84)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/22_._سورة_الكهف_الآيات_82_-_84.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-248",
-   "titleAr": "سورة الكهف (الآيات :85 - 91)",
-   "titleFr": "Sourate Al-Kahf (versets : 85-91)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/23_.سورة_الكهف_الآيات_85_-_91.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-249",
-   "titleAr": "سورة الكهف (الآيات :92 - 97)",
-   "titleFr": "Sourate Al-Kahf (versets : 92-97)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/24_._سورة_الكهف_الآيات92-_97.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-250",
-   "titleAr": "سورة الكهف (الآيات : 98 - 101)",
-   "titleFr": "Sourate Al-Kahf (versets : 98 - 101)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/25_._سورة_الكهف_الآيات_98_-_101.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-251",
-   "titleAr": "سورة الكهف (الآيات: 102 - 105)",
-   "titleFr": "Sourate Al-Kahf (versets : 102 - 105)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/26_._سورة_الكهف_الآيات_102_-_105.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-252",
-   "titleAr": "أنشطة التثبيت والدعم",
-   "titleFr": "Activités de consolidation et de soutien",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/أنشطة_التثبيت_والدعم.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-253",
-   "titleAr": "فهرس الأعلام",
-   "titleFr": "Index des figures citées",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/فهرس_الأعلام.pdf",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-254",
-   "titleAr": "فهرس المصادر والمراجع",
-   "titleFr": "Index des sources et références",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/فهرس_المصادر_والمراجع.pdf",
-   "pdfOnly": true
-  }
- ]
+  "lessons": [
+    {
+      "docId": "pdf-mut23h2u-226",
+      "titleAr": "سورة الكهف (الآيات : 1 - 5)",
+      "titleFr": "Sourate Al-Kahf (versets : 1 à 5)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/1._سورة_الكهف_الآيات_1_-_5.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-227",
+      "titleAr": "سورة الكهف (الآيات : 6 - 9)",
+      "titleFr": "Sourate Al-Kahf (versets : 6-9)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/2_._سورة_الكهف_الآيات_6_-_9.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-228",
+      "titleAr": "سورة الكهف (الآيات : 10 - 12)",
+      "titleFr": "Sourate Al-Kahf (versets : 10-12)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/3_._سورة_الكهف_الآيات_10_-_12.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-229",
+      "titleAr": "سورة الكهف (الآيات : 13 - 16)",
+      "titleFr": "Sourate Al-Kahf (versets 13-16)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/4_._سورة_الكهف_الآيات_13_-_16.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-230",
+      "titleAr": "سورة الكهف (الآيات : 17 - 18)",
+      "titleFr": "Sourate Al-Kahf (versets 17-18)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/5_._سورة_الكهف_الآيات_17_-_18.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-231",
+      "titleAr": "سورة الكهف (الآيتان 19 - 20)",
+      "titleFr": "Sourate Al-Kahf (versets 19-20)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/6_._سورة_الكهف_الآيتان_19_-_20.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-232",
+      "titleAr": "سورة الكهف (الآيات 21 - 24)",
+      "titleFr": "Sourate Al-Kahf (versets 21-24)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/7_._سورة_الكهف_الآيات_21_-_24.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-233",
+      "titleAr": "سورة الكهف (الآيات 25 - 27)",
+      "titleFr": "Sourate Al-Kahf (versets 25-27)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/8_._سورة_الكهف_الآيات_25_-_27.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-234",
+      "titleAr": "سورة الكهف (الآيتان: 28 - 29)",
+      "titleFr": "Sourate Al-Kahf (versets : 28-29)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/9_._سورة_الكهف_الآيتان_28_-_29.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-235",
+      "titleAr": "سورة الكهف (الآيتان : 30 - 31)",
+      "titleFr": "Sourate Al-Kahf (versets : 30-31)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/10_._سورة_الكهف_الآيتان_30_-_31.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-236",
+      "titleAr": "سورة الكهف (الآيات :32 - 35)",
+      "titleFr": "Sourate Al-Kahf (versets 32-35)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/11_._سورة_الكهف_الآيات_32_-_35.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-237",
+      "titleAr": "سورة الكهف (الآيات : 36 - 43)",
+      "titleFr": "Sourate Al-Kahf (versets : 36-43)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/12_._سورة_الكهف_الآيات_36_-_43.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-238",
+      "titleAr": "سورة الكهف (الآيتان : 44 - 45)",
+      "titleFr": "Sourate Al-Kahf (versets : 44-45)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/13_._سورة_الكهف_الآيتان_44_-_45.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-239",
+      "titleAr": "سورة الكهف (الآيات :46 - 48)",
+      "titleFr": "Sourate Al-Kahf (versets 46-48)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/14_._سورة_الكهف_الآيات_46_-_48.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-240",
+      "titleAr": "سورة الكهف (الآيات : 49 - 52)",
+      "titleFr": "Sourate Al-Kahf (versets : 49 - 52)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/15_._سورة_الكهف_الآيات_49_-_52.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-241",
+      "titleAr": "سورة الكهف (الآيات : 53 - 55)",
+      "titleFr": "Sourate Al-Kahf (versets : 53-55)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/16_._سورة_الكهف_الآيات_53_-_55.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-242",
+      "titleAr": "سورة الكهف (الآيات :56 - 58)",
+      "titleFr": "Sourate Al-Kahf (versets 56-58)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/17_._سورة_الكهف_الآيات_56_-_58.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-243",
+      "titleAr": "سورة الكهف (الآيات : 59 - 64)",
+      "titleFr": "Sourate Al-Kahf (versets : 59-64)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/18_._سورة_الكهف_الآيات_59_-_64.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-244",
+      "titleAr": "سورة الكهف (الآيات : 65 - 72)",
+      "titleFr": "Sourate Al-Kahf (versets : 65-72)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/19_.سورة_الكهف_الآيات_65_-_72.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-245",
+      "titleAr": "سورة الكهف (الآيات : 73 - 77)",
+      "titleFr": "Sourate Al-Kahf (versets : 73-77)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/20_.سورة_الكهف_الآيات_73_-_77.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-246",
+      "titleAr": "سورة الكهف (الآيات : 78 - 81)",
+      "titleFr": "Sourate Al-Kahf (versets : 78-81)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/21_._سورة_الكهف_الآيات_78_-_81.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-247",
+      "titleAr": "سورة الكهف (الآيات :82 - 84)",
+      "titleFr": "Sourate Al-Kahf (versets : 82-84)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/22_._سورة_الكهف_الآيات_82_-_84.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-248",
+      "titleAr": "سورة الكهف (الآيات :85 - 91)",
+      "titleFr": "Sourate Al-Kahf (versets : 85-91)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/23_.سورة_الكهف_الآيات_85_-_91.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-249",
+      "titleAr": "سورة الكهف (الآيات :92 - 97)",
+      "titleFr": "Sourate Al-Kahf (versets : 92-97)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/24_._سورة_الكهف_الآيات92-_97.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-250",
+      "titleAr": "سورة الكهف (الآيات : 98 - 101)",
+      "titleFr": "Sourate Al-Kahf (versets : 98 - 101)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/25_._سورة_الكهف_الآيات_98_-_101.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-251",
+      "titleAr": "سورة الكهف (الآيات: 102 - 105)",
+      "titleFr": "Sourate Al-Kahf (versets : 102 - 105)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/26_._سورة_الكهف_الآيات_102_-_105.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-252",
+      "titleAr": "أنشطة التثبيت والدعم",
+      "titleFr": "Activités de consolidation et de soutien",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/أنشطة_التثبيت_والدعم.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-253",
+      "titleAr": "فهرس الأعلام",
+      "titleFr": "Index des figures citées",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/فهرس_الأعلام.pdf",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-254",
+      "titleAr": "فهرس المصادر والمراجع",
+      "titleFr": "Index des sources et références",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/التفسير-الثالثة-ثانوي/فهرس_المصادر_والمراجع.pdf",
+      "pdfOnly": true
+    }
+  ]
 }
