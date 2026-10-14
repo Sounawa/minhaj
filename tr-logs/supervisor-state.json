@@ -1,0 +1,70 @@
+{
+ "tafsir-5ep": {
+  "passes": 0,
+  "done": true
+ },
+ "fiqh-6ep": {
+  "passes": 0,
+  "done": true
+ },
+ "tafsir-6ep": {
+  "passes": 0,
+  "done": true
+ },
+ "tajwid-5ep": {
+  "passes": 1,
+  "done": false
+ },
+ "tajwid-6ep": {
+  "passes": 0,
+  "done": true
+ },
+ "rasm-wa-dabt-4ep": {
+  "passes": 1,
+  "done": false
+ },
+ "fiqh-1ep": {
+  "passes": 0,
+  "done": true
+ },
+ "tafsir-1ep": {
+  "passes": 0,
+  "done": true
+ },
+ "fiqh-5ep": {
+  "passes": 0,
+  "done": true
+ },
+ "hadith-5ep": {
+  "passes": 0,
+  "done": true
+ },
+ "hadith-6ep": {
+  "passes": 0,
+  "done": true
+ },
+ "rasm-wa-dabt-5ep": {
+  "passes": 0,
+  "done": true
+ },
+ "usul-qiyam-4ep": {
+  "passes": 0,
+  "done": true
+ },
+ "usul-qiyam-5ep": {
+  "passes": 0,
+  "done": true
+ },
+ "usul-qiyam-6ep": {
+  "passes": 0,
+  "done": true
+ },
+ "rasm-wa-dabt-6ep": {
+  "passes": 0,
+  "done": true
+ },
+ "fiqh-tanawi-1": {
+  "passes": 1,
+  "done": false
+ }
+}
