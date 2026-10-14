@@ -317,6 +317,20 @@
 .lesson-content ul li::marker {
   color: color-mix(in oklab, var(--primary) 70%, var(--foreground));
 }
+/* Listes numérotées à la main (« 1 . … » dans le texte source) : la puce disc
+   fait double emploi avec le numéro — retrait du marker, le texte garde le
+   retrait de liste (hanging indent conservé par le padding du ul). */
+.lesson-content ul > li.li-num {
+  list-style: none;
+  padding-inline-start: 0;
+}
+.lesson-content ul > li.li-num::marker {
+  content: none;
+}
+/* Bibliographies : respiration légèrement accrue entre notices longues. */
+.lesson-content ul > li.li-num + li.li-num {
+  margin-block-start: 0.55em;
+}
 .lesson-content a {
   color: var(--primary);
   text-decoration: underline;
@@ -430,6 +444,36 @@
 }
 .lesson-content .verse-note:active {
   background: color-mix(in oklab, var(--primary) 22%, transparent);
+}
+/* Panneau OCR (leçons pdfOnly) : texte arabe reconnu par tesseract —
+   respiration ample, séparateur de pages sobre, ascenseur doux. */
+.ocr-panel section.ocr-page {
+  padding-block: 0.5em 1.25em;
+}
+.ocr-panel section.ocr-page + section.ocr-page {
+  border-block-start: 1px dashed color-mix(in oklab, var(--primary) 25%, transparent);
+  padding-block-start: 1.25em;
+}
+.ocr-panel section.ocr-page h3 {
+  font-size: 0.72em;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: color-mix(in oklab, var(--primary) 80%, var(--foreground));
+  margin-block: 0.25em 0.9em;
+}
+.ocr-panel p {
+  margin-block: 0.55em;
+  text-align: start;
+}
+.ocr-panel {
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in oklab, var(--primary) 45%, transparent) transparent;
+}
+@media print {
+  .ocr-panel {
+    max-height: none !important;
+    overflow: visible !important;
+  }
 }
 @media print {
   .lesson-content .verse-note {

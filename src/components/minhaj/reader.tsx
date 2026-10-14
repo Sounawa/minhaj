@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
-import { ArrowLeft, ArrowRight, BookMarked, BookmarkCheck, Check, ChevronLeft, ChevronRight, Clock3, Columns2, Download, Eraser, ExternalLink, FileQuestion, FileText, Headphones, Heart, Highlighter, Hourglass, Languages, ListTree, Loader2, Pause, Play, Printer, Quote, Square, StickyNote } from "lucide-react";
+import { ArrowLeft, ArrowRight, BookMarked, BookmarkCheck, Check, ChevronLeft, ChevronRight, Clock3, Columns2, Download, Eraser, ExternalLink, FileQuestion, FileText, Headphones, Heart, Highlighter, Hourglass, Languages, ListTree, Loader2, Pause, Play, Printer, Quote, ScanText, Square, StickyNote } from "lucide-react";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -104,6 +104,74 @@ function rangeFromOffsets(container: Element, start: number, end: number): Range
 }
 
 function PdfOnlyNotice({ doc }: { doc: DocPayload }) {
+  const { toast } = useToast();
+  // OCR à la demande des leçons pdfOnly (scans du ministère) : sonde GET au
+  // montage (cache content/ocr-cache), extraction POST sinon (tesseract ara).
+  const [ocrHtml, setOcrHtml] = useState<string | null>(null);
+  const [ocrPages, setOcrPages] = useState(0);
+  const [ocrBusy, setOcrBusy] = useState(false);
+  const [ocrFromCache, setOcrFromCache] = useState(false);
+  const [ocrError, setOcrError] = useState<string | null>(null);
+  const ocrRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    setOcrHtml(null);
+    setOcrPages(0);
+    setOcrError(null);
+    setOcrFromCache(false);
+    fetch(`/api/ocr/${doc.bookId}/${doc.docId}`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data: { cached?: boolean; pages?: number; html?: string | null } | null) => {
+        if (cancelled || !data?.cached || !data.html) return;
+        setOcrHtml(data.html);
+        setOcrPages(data.pages ?? 0);
+        setOcrFromCache(true);
+      })
+      .catch(() => undefined);
+    return () => {
+      cancelled = true;
+    };
+  }, [doc.bookId, doc.docId]);
+
+  const runOcr = useCallback(async () => {
+    if (ocrBusy) return;
+    setOcrBusy(true);
+    setOcrError(null);
+    try {
+      const res = await fetch(`/api/ocr/${doc.bookId}/${doc.docId}`, { method: "POST" });
+      const data = (await res.json()) as {
+        cached?: boolean;
+        pages?: number;
+        html?: string;
+        message?: string;
+        error?: string;
+      };
+      if (!res.ok || !data.html) {
+        throw new Error(data.message || data.error || `HTTP ${res.status}`);
+      }
+      setOcrHtml(data.html);
+      setOcrPages(data.pages ?? 0);
+      setOcrFromCache(Boolean(data.cached));
+      toast({
+        title: "Texte extrait",
+        description: `${data.pages ?? 0} page(s) reconnue(s) par OCR.`,
+      });
+      requestAnimationFrame(() => {
+        ocrRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      });
+    } catch (e) {
+      setOcrError(e instanceof Error ? e.message : String(e));
+      toast({
+        title: "Extraction impossible",
+        description: "Le PDF du ministère est injoignable ou illisible pour l'OCR.",
+        variant: "destructive",
+      });
+    } finally {
+      setOcrBusy(false);
+    }
+  }, [doc.bookId, doc.docId, ocrBusy, toast]);
+
   return (
     <motion.section
       key={`${doc.docId}-pdf`}
@@ -128,18 +196,67 @@ function PdfOnlyNotice({ doc }: { doc: DocPayload }) {
           bibliothèque pour la recherche et la navigation ; consultez le document original
           pour le contenu intégral.
         </p>
-        {doc.pdfUrl && (
-          <Button asChild className="mt-6 gap-2 rounded-xl" size="lg">
-            <a href={doc.pdfUrl} target="_blank" rel="noopener noreferrer">
-              <ExternalLink className="size-4" aria-hidden="true" />
-              Ouvrir le PDF officiel
-            </a>
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+          {doc.pdfUrl && (
+            <Button asChild className="gap-2 rounded-xl" size="lg">
+              <a href={doc.pdfUrl} target="_blank" rel="noopener noreferrer">
+                <ExternalLink className="size-4" aria-hidden="true" />
+                Ouvrir le PDF officiel
+              </a>
+            </Button>
+          )}
+          <Button
+            variant="outline"
+            size="lg"
+            className="gap-2 rounded-xl border-amber-800/25 bg-card/70 text-amber-900 hover:bg-amber-100/60 dark:text-amber-100 dark:hover:bg-amber-900/40"
+            onClick={runOcr}
+            disabled={ocrBusy}
+            aria-label="Extraire le texte arabe du PDF par reconnaissance optique"
+          >
+            {ocrBusy ? (
+              <Loader2 className="size-4 animate-spin" aria-hidden="true" />
+            ) : (
+              <ScanText className="size-4" aria-hidden="true" />
+            )}
+            {ocrBusy ? "Extraction en cours…" : ocrHtml ? "Actualiser l'OCR" : "Extraire le texte (OCR)"}
           </Button>
+        </div>
+        {ocrBusy && (
+          <p className="mt-3 text-xs text-muted-foreground" role="status">
+            Reconnaissance optique de l'arabe (tesseract) — environ 10 à 20 secondes par leçon.
+          </p>
+        )}
+        {ocrError && (
+          <p className="mt-3 text-xs text-destructive" role="alert">
+            {ocrError}
+          </p>
         )}
         <p className="mt-4 text-xs text-muted-foreground">
           habous.gov.ma — وزارة الأوقاف والشؤون الإسلامية
         </p>
       </div>
+      {ocrHtml && (
+        <div
+          ref={ocrRef}
+          className="mt-6 rounded-2xl border border-amber-800/15 bg-card p-4 shadow-sm sm:p-6 dark:border-amber-200/15"
+        >
+          <div className="mb-4 flex flex-wrap items-center justify-between gap-2 border-b border-dashed border-amber-800/20 pb-3 dark:border-amber-200/20">
+            <h3 className="flex items-center gap-2 font-serif text-base font-semibold text-amber-950 dark:text-amber-50">
+              <ScanText className="size-4 text-primary" aria-hidden="true" />
+              Texte arabe reconnu
+            </h3>
+            <p className="text-xs text-muted-foreground">
+              {ocrPages} page(s){ocrFromCache ? " — en cache" : ""} · reconnaissance optique, coquilles possibles
+            </p>
+          </div>
+          <div
+            dir="rtl"
+            lang="ar"
+            className="lesson-content ocr-panel max-h-[70vh] overflow-y-auto font-arabic text-lg leading-loose"
+            dangerouslySetInnerHTML={{ __html: ocrHtml }}
+          />
+        </div>
+      )}
     </motion.section>
   );
 }
@@ -1095,6 +1212,15 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
     document
       .querySelectorAll<HTMLElement>(".reader-col[dir='ltr'] .lesson-content")
       .forEach(styleVerseNotes);
+    // Listes numérotées à la main (convention du corpus : « 1 . … » écrit dans
+    // le texte source des manuels, notamment bibliographies et considérations)
+    // : le marker disc du ul fait double emploi avec le numéro — on retire la
+    // puce (les colonnes FR et AR sont toutes deux concernées).
+    document.querySelectorAll<HTMLElement>(".lesson-content ul > li").forEach((li) => {
+      if (li.classList.contains("li-num")) return;
+      const head = (li.childNodes[0] as Text | undefined)?.nodeValue ?? "";
+      if (/^\s*\d{1,2}\s*[.)\u202f\u00a0]/.test(head)) li.classList.add("li-num");
+    });
     // Compteur pour le bouton de parcours des citations (en-tête du lecteur).
     // Mesure DIFFÉRÉE (requestAnimationFrame) : le marquage des classes vient
     // d'être appliqué au DOM — on mesure après le rendu, sans setState
