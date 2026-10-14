@@ -56,13 +56,9 @@ server.log
 /backups/
 .zscripts/dev.pid
 
-# logs de production traduction (persistants, non versionnés)
-tr-logs/
-
-# scratch des traductions main (sources extraites + html injectés)
-tr-tmp/
-
-# sorties d'outils persistées (scratch, non versionnées)
+# R74 : scratch tr-tmp/ et logs tr-logs/ VERSIONNÉS (règle « ne rien perdre »
+# — miroirs habous, sources AR, bbox PNG, captures QA, état superviseur).
+# Seul tool-results/ (sorties d'outils, jetable) reste ignoré.
 tool-results/
 
 # archive WeTransfer de restauration (backup local, ne pas versionner)
