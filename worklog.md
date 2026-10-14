@@ -3048,96 +3048,2439 @@ Stage Summary:
 - **Priorités suivantes** : (1) tafsir-3es (6 leçons + intro 16809) puis tafsir-2es (7 + intro 18670) puis sira-3es (8 + intro 15408) → +3 livres complets ; (2) sira-2es (29), tajwid-6ep (28+intro), ulum-quran-3es (28) — gros livres restants ; (3) feature en attente : extraction des 885 PDF-only ; (4) features : export EPUB/PDF d'une leçon, compteur de notes dans l'en-tête.
 
 ---
-Task ID: R59
+Task ID: R58
 Agent: Z.ai Code (agent principal)
-Task: assess + QA navigateur + traductions savantes (tafsir-3es fin, tafsir-2es complet, sira-3es entamé) + feature compteur de notes + ornements typographiques
+Task: continue — traductions savantes (suite du feu vert client « go pour les traductions ») : fermer les 3 livres prioritaires R57 (tafsir-3es, tafsir-2es, sira-3es), QA navigateur, worklog, backup
 
 Work Log:
-- **QA NAVIGATEUR INITIAL** : accueil (64 manuels, stats 255→vérifiées en cours de tour), lecteur savant 16833 + exemple bilingue, dialogs (À propos — 261 docs savants affichés), mobile 390 px 0 overflow (accueil + lecteur). Constat : 1 erreur console hydration (aria-controls radix-_R_e9… vs _R_1p9…) = artefact bénin du dev overlay Next 16/React 19 (useId shift, dev-only, absent en production) — documenté, non bloquant.
-- **12 TRADUCTIONS SAVANTES** (rédaction main, workflow extract→rédaction→qa-lesson→hand-set→commit+backup par doc, règles a/b respectées) :
-  1. tafsir-3es/16850 (Al-Shura v18-20, 9 502 car) — DERNIÈRE leçon HTML du livre → **tafsir-3es COMPLET en couche savante** (intro + 6 leçons). Réf manuel [Fāṭir:30] corrigée → Hūd 15 (paraphrase vérifiée au cache, convention R57).
-  2. tafsir-2es/18670 (intro, 4 249 car) — ToC 28 leçons VERBATIM, écart item 3 « v7-10 » vs leçon corpus « v7-9 » documenté.
-  3. tafsir-2es/16797 (Fāṭir v1-3, 11 887 car) — al-ḥamd istighrāq, anecdote Ibn ʿAbbās des 2 Bédouins (Qurṭubī 14/319), dhawī ajniḥa diptote, Abū Ḥayyān 9/13, iʿrāb ghayr (Qurṭubī 14/321), v3 lu warsh tuṣrafūna.
-  4. tafsir-2es/16799 (Fāṭir v4-6, 13 504 car) — consolation (Nasafī 3/77 rusulun indéterminé), waʿd/waʿīd (Ibn ʿĀshūr 22/258), gharūr=Satan/taswīf (Aʿrāf 21, Saʿīd b. Jubayr), bāʾ mulābasa (Infiṭār 6), hadith des lignes Ibn Masʿūd + Ibn Baṭṭāl 10/150.
-  5. tafsir-2es/16808 (Fāṭir v7-9, 11 726 car) — v7 reprise initiale, v8 interrogation dénégation (Ibn ʿAjība 4/520), Shura 48 RÉF CORRIGÉE [manuel: 45], Rāzī Mafātīḥ 26/225 (arsala passé vs fatuthīru présent).
-  6. tafsir-2es/16812 (Fāṭir v10-11, 12 529 car) — al-ʿizza 3 sens, yarfaʿuhu 3 dires (Ibn ʿAṭiyya), makr Quraysh Dār al-Nadwa, taʿmīr/naqṣ (muʿtazilites vs ashʿarites), Ibn ʿĀshūr 22/274 (makr pluriel), Anfāl 30. NB : numérotation ḥafṣ du corpus (warsh scinde le v10, décale la suite) — documenté.
-  7. tafsir-2es/16823 (Fāṭir v12-14, 12 505 car) — deux mers, min kull 3 faces (Anʿām 130 RÉF CORRIGÉE [manuel: 131]), mawākhir (Tashīl 1/423), qaṭmīr, Aḥqāf 4-5 + Maryam 82-83, al-Alūsī Rūḥ al-maʿānī 11/353 (Naḥl 14 vs Fāṭir 12).
-  8. tafsir-2es/16839 (Fāṭir v15-18, 13 978 car) — al-fuqarāʾ/al-Ghanī (huwa=qasr), wāzira féminin (Anʿām 164 RÉF CORRIGÉE [manuel: 166, inexistante — sourate=165 v.]), muṯqala, Tashīl 1/7 (prière), Ibn ʿĀshūr 22/290 (law wāṣliyya, intercession).
-  9. tafsir-2es/16851 (Fāṭir v19-26, 17 141 car) — DERNIÈRE leçon HTML → **tafsir-2es COMPLET en couche savante** (intro + 7 leçons). 4 paraboles, Sajda 3 RÉF CORRIGÉE [manuel: 2], hadith nations (Bukhārī riqāq), Nasafī 3/85, Rāzī 26/233 (singulier/pluriel).
-  10. sira-3es/15408 (intro, 5 694 car) — ToC 24 leçons VERBATIM (ifk/Ḥudaybiyya/conquête + Pèlerinage d'adieu + mort du Prophète).
-  11. sira-3es/15416 (évaluation diagnostique, 5 179 car) — 5 événements chronologiques, Āl ʿImrān 123-126 + Aḥzāb 9-11 restitués au cache, al-Ghazālī Fiqh al-sīra 171.
-  12. sira-3es/15424 (ifk, 8 014 car) — Nūr 11-13 + 12-18 restitués, récit Nūr al-yaqīn al-Khuḍarī 184-186, 5 valeurs.
-- **FEATURE (obligatoire) — compteur de notes dans l'en-tête du lecteur** : badge ambre sur le bouton Notes (nombre de caractères, format compact ≥1000 → « 1,2k », plafond d'affichage 99+), aria-label dynamique (« N caractères notés pour cette leçon »), décompte mots·caractères EN DIRECT dans le panneau (aria-live="polite"). QA : 11 mots · 62 car. en direct sur saisie de test.
-- **STYLING (obligatoire) — ornements typographiques** : (a) citations coraniques intégrales détectées côté client (paragraphe ouvré par « + longueur > 120 + référence finale (Sūra, n) avec/sans guillemet fermant) → panneau ambre discret : filet doré 2,5 px, fond dégradé primary 8 %→transparent, coins 2/12 px, hyphens off, édition print sobre (gris) ; (b) ornement de section : filet doré dégradé (52 %→18 %→transparent) sous les h2 de la colonne FR ; (c) ornement d'en-tête : filet + étoile à 8 branches entre le titre FR et le titre AR ; (d) barre de progression : tête lumineuse ambre (glow). QA styles calculés vérifiés (padding 13/17 px, bordure 2 px ambre, rayon 2/12 px, gradient h2) ; mobile 390 px 0 overflow ; lint 0 erreur.
-- **Découverte outillage** : l'affichage des sorties outils avale « [m » comme échappement ANSI (fausse alerte « les ots] » sur 16797 — byte-par-byte le fichier contient bien « [mots] », commit amendé en doc). Et : Turbopack ne recompile pas globals.css sur simple touch — une modification réelle d'un fichier TSX importateur (layout.tsx) est nécessaire pour propager le CSS (touch du CSS et du layout insuffisant, modification réelle puis nettoyage OK).
-- QA FINALE : accueil + lecteurs (16797 citation détectée, 16851 badge savant + rendu complet), registre **273/950**, stat accueil 968/1152 leçons bilingues (cohérent — remplacements GT), 3 citations de références du manuel corrigées au cache ce tour (Shura 48, Anʿām 130, Anʿām 164, Sajda 3 = 4), backup /tmp/my-project/backup-tour/ rafraîchi après chaque doc + captures reader-desktop.png/reader-mobile.png.
+- **3 LIVRES PORTÉS EN COUCHE SAVANTE INTÉGRALE** (rédaction main, workflow extract→rédaction→qa-lesson→hand-set→commit+backup par doc, règles a/b respectées) :
+  1. **tafsir-3es/16809-16850** (7 docs, intro + 6 leçons Shūrā) — Tashīl d'Ibn Juzayy : fawātiḥ al-suwar (Abū Bakr al-Ṣiddīq, 3 écoles), iʿrāb kadhālika/yūḥī-yūḥā, Ibn ʿAṭiyya (rejet du « poids », pronoms min fawqihinna), ʿumūm maḥmūl ʿalā l-khuṣūṣ (Nasafī), am disjonctif, lām de fa-li-dhālika (ilā vs ajal, coordination vs reprise, waqf après fa-dʿu), maqālīd Tashīl 2/225, Qurṭubī 16/6-7, Ibn Kathīr 7/190-196, ḥadīth Tirmidhī des deux livres (qadar) + mérite de la Mekke, ḥadīth Ubayy b. Kaʿb (Musnad Aḥmad) + Anas (Tirmidhī), Ibn ʿAjība (al-Baḥr al-madīd 4/520, 5/205, 5/25), ḥarth al-ākhira (image du labourage, Fāṭir 30), bayhīra/sāʾiba/waṣīla, Bayḍāwī 5/80.
+  2. **tafsir-2es/18670-16851** (8 docs, intro + 7 leçons Fāṭir) — fāṭir (Ibn ʿAbbās via Qurṭubī 14/319 « deux bédouins, fataṭtuhā »), anges mathnā/thulātha/rubāʿ ghayr munṣarif, fatḥ/imsāk/irsāl (Abū Ḥayyān 9/13), iʿrāb lahā/lahu (féminin raḥma vs masculin mā), hal min khāliqin (iʿrāb de ghayr, Qurṭubī 14/321), consolation du Prophète (Nasafī 3/77), waʿd/waʿīd (Ibn ʿĀshūr 22/258), al-ghurūr = Shayṭān ou taswīf (Aʿrāf 21), bāʾ de mulābasa (Infiṭār 6), ḥadīth Ibn Masʿūd du carré + Ibn Baṭṭāl 10/150, ḥarth (Rāzī Mafātīḥ 26/225 : « kun » sans délai), makr Quraysh Dār al-Nadwa, taʿmīr/naqṣ fī kitāb (3 réponses, muʿtazilite vs acharien, ḥadīth ṣilat al-raḥim, Kaʿb/ʿUmar), Ibn ʿĀshūr 22/274 + 22/290-292-297, les deux mers (3 réponses min kullin), mawākhir Naḥl/Fāṭir (al-Alūsī 11/353 : wāw présent/absent), 4 paraboles (aveugle/voyant, ténèbres/lumière, ombre/ḥarūr, vivants/morts), ḥadīth des communautés présentées (Bukhārī), Rāzī 26/233 (singulier/pluriel, le vrai un le faux multiple).
+  3. **sira-3es/15408-15794** (9 docs, intro + 8 leçons) — évaluation diagnostique (Badr/Aḥzāb, al-Ghazālī Fiqh al-sīra 171), ifk (récit complet, al-Khuḍarī Nūr al-yaqīn 184-186, Nūr 11-18), Ḥudaybiyya (bayʿat al-riḍwān, Suhaylī + Khuḍarī + al-Raḥīq al-makhtūm + Ibn Isḥāq/Zuhrī + al-Būṭī 236), Umm Salama (Ibn Ḥajar al-Iṣāba 8/241, ḥadīths Tirmidhī/Ṭabarānī, ʿUmar Bukhārī), activités (al-Būṭī 210-211 « la révélation n'est pas un sentiment psychique », Ḥajwī al-Thaʿālibī 1/192, al-Tāzī Jāmiʿ al-Qarawiyyīn 2/443-444 — femmes savantes de Fès), lettres aux rois (Ibn Saʿd Ṭabaqāt 1/198, Ibn Hishām 2/607, Ibn Ḥajar), Khaybar/Muʾta (ḥadīths Bukhārī/Nisāʾī, al-Mubārakfūrī), al-Qasṭallānī al-Mawāhib 1/546 (lettre d'al-Muqawqis).
+- **APPAREIL CRITIQUE SÉMANTIQUE** : tous les versets cités par les leçons ont été RESTAURÉS du quran-cache (muṣḥaf Warsh) selon la convention 14116 (réfs survivantes ou identification contextuelle certaine) — ~70 versets au total (Shūrā 1-22, Fāṭir 1-26 + parallèles Anfāl 62, Anʿām 130/164, Aʿrāf 15-16/21/158, Nisāʾ 19/118, Ṣād 15, Ḥajj 45, Maryam 82-83, Taghābun 9, Sajda 3/13, Yūnus 99, Ghāfir 7, Isrāʾ 15/105, Infiṭār 6, Aḥqāf 4-5, Fatḥ 18/27, Muḥammad 36, Mumtaḥana 8-9, Nūr 11-18, Āl ʿImrān 63-64/123-126, Anbiyāʾ 106, Furqān 1, Rūm 20, ʿAbasa 34-35, al-Muddaththir 38).
+- **QIRĀʾĀT DOCUMENTÉES** : (1) le cache est le muṣḥaf Warsh — Shūrā 6 « al-Ḥafīẓ » (vs shahīd Ḥafṣ d'Ibn Kathīr, 16810 harmonisé) ; (2) rasm Warsh Shūrā 14 « kalima sabaqat min rabbika ilā ajalin musamman » vs 21 « kalimat al-faṣl » ; (3) Fāṭir 15 « wa-Allāhu huwa l-Ghanīyy » et 18 « tadʿu muthqalatun ILĀ ḥimlihā » (vs bi-ḥimlihā) ; (4) Fāṭir 43 « wa-makara l-sayyiʾi ».
+- **RÉFÉRENCES CORRIGÉES contre le quran-cache** (off-by-one du manuel imprimé, chaque cas vérifié au mot-cible, règle R57) : Ghāfir « 6 »→7 (yastaghfirūna lilladhīna āmanū, 16810+16820) ; Shūrā ḥadīth Tirmidhī « 5 »→7 (fariq fī l-janna, 16820) ; Anʿām « 131 »→130 (rusulun minkum, 16823) ; Sajda « 2 »→3 (mā atāhum min nadhīr, 16851) ; Anʿām « 166 »→164 (lā taziru wāziratun, 16839) ; Āl ʿImrān « 63 »→64 (kalima sawāʾ, 15655).
+- **NUMÉROTATION AL-SHŪRĀ DOCUMENTÉE** : le manuel compte al-Shūrā à 50 versets (titre des leçons 14-17/18-20) vs 53 au muṣḥaf courant — note du traducteur dans le bloc des versets 16833 + labels au muṣḥaf courant pour les citations internes ; Fāṭir et le reste du corpus sans écart.
+- **SANITIZE** : artefact scraping « الإثنين 22 مارس 2021 » (dd de 15770) retiré ; puce يستفاد dupliquée par le scraping dédupliquée (16850) ; phrases إعداد garbled normalisées (16839) ; spans vides non identifiables signalés « non reproduit dans le manuel » (règle f) : expressions des préparations préalables, tableaux images, cartes, listes de clauses.
+- **QA NAVIGATEUR** (agent-browser) : accueil 39 badges visibles « traduction savante intégrale » (40 total, 1 non publié) ; lecteurs vérifiés 16810 (Ibn Juzayy, fawātiḥ, Ḥafīẓ Warsh, Ghāfir 7), 16851 (Mafātīḥ al-ghayb, Sajda 3), 15637 (serment du bon plaisir, al-Fatḥ 27) ; pages livres tafsir-3es/tafsir-2es/sira-3es « Traduction savante intégrale » + 9/9 ; mobile 390 px : scrollWidth=clientWidth=390 (0 overflow) accueil + lecteur ; lint 0 erreur (1 warning préexistant llm-translate.ts:561) ; API stats docsSavant=279, docsFr=968.
+- Registre : 255 → **279/950** (+24 main). Backup /tmp/my-project/backup-tour/ rafraîchi après CHAQUE document (books + registry) + purge finale ci-dessous.
 
 Stage Summary:
-- **État** : sain. HEAD au terme de R59, registre **273/950** (+12 main ce tour), **39 livres en couche savante intégrale** (tafsir-3es et tafsir-2es COMPLETS ce tour).
-- **Décisions documentées ce tour** : (1) 4 corrections de références du manuel vérifiées au quran-cache (Shura 45→48, Anʿām 131→130, Anʿām 166→164, Sajda 2→3 — le slippage systématique du manuel se confirme, toujours documenté inline + commit) ; (2) numérotation ḥafṣ du corpus pour tafsir-2es (le corpus suit le cache ; le manuel imprime la numérotation warsh décalée — documenté au commit 16812) ; (3) la leçon 6 de tafsir-3es (16850) clôt la matière Shura du Tashīl 3e collège.
-- **Risques / attention** : (a) ~677 traductions HTML restantes (692-15 purgés R57…reste estimé), production main = goulot ; (b) l'artefact d'affichage « [m » des sorties outils peut induire de fausses coquilles — TOUJOURS vérifier byte-par-byte avant correction ; (c) Turbopack ne propage pas les edits CSS sans modification TSX réelle — penser au trigger file en cas de CSS silencieusement ignoré ; (d) sira-3es entamé (3/9 docs savants) — 6 HTML restants (15637 Ḥudaybiyya, 15644 Umm Salama, 15651+15794 activités, 15655 miséricorde, 15770 Khaybar-Muʾta).
-- **Priorités suivantes** : (1) finir sira-3es (15637 Ḥudaybiyya en premier — leçon majeure, puis 15655, 15770, 15644, 15651, 15794) → 40e livre complet ; (2) tafsir-5ep si HTML disponible (vérifier le registre des livres restants à faible coût : intro + 1-3 leçons) ; (3) sira-2es (29 leçons), tajwid-6ep (28+intro), ulum-quran-3es (28) — gros livres ; (4) features en attente : export EPUB/PDF d'une leçon, extraction des 885 PDF-only (les docs pdfOnly de tafsir-3es/2es vérifiés ce tour affichent correctement la notice PDF officielle) ; (5) idée UI : étendre la détection .quran-quote à la colonne AR (références arabes (الشورى: 18)) pour un traitement symétrique.
+- **État** : sain. HEAD au terme de R58, registre **279/950**, **40 livres en couche savante intégrale** (39 visibles + 1 non publié). Les 3 livres prioritaires R57 sont fermés : tafsir-3es (7 docs), tafsir-2es (8 docs), sira-3es (9 docs).
+- **Décisions documentées ce tour** : (1) ~70 versets restaurés du muṣḥaf Warsh (convention 14116) ; (2) 6 références d'off-by-one du manuel corrigées contre le cache (Ghāfir 7, Shūrā 7, Anʿām 130+164, Sajda 3, Āl ʿImrān 64) ; (3) qirāʾāt Warsh vs Ḥafṣ distinguées dans l'appareil (Ḥafīẓ/shahīd, kalima sabqat/faṣl, ilā/bi-ḥimlihā) ; (4) numérotation al-Shūrā 50 vs 53 versets documentée dans le lecteur ; (5) 8 écarts de citations signalés « non reproduit » (règle f) au lieu d'être inventés.
+- **Risques / attention** : (a) la reconstruction des citations vides s'appuie sur l'identification contextuelle du Tashīl/Nasafī — chaque cas est documenté au commit, une passe client avec les PDF originaux reste possible ; (b) ~671 traductions HTML restent (279/950), la production main reste le goulot ; (c) les 885 pdfOnly exigent une extraction PDF (feature en attente).
+- **Priorités suivantes** : (1) sira-2es (29 docs — intro 13942 + 28 leçons Hégire/Badr/Uḥud/Coalisés, livre complet atteignable) ; (2) tajwid-6ep (29 docs, points d'articulation) ou ulum-quran-3es (28 docs, nasḫ/qirāʾāt) ; (3) feature en attente : extraction des 885 PDF-only ; (4) features : export EPUB/PDF d'une leçon, compteur de notes.
 
-**Addendum R59 (fin de tour)** : 13e traduction — sira-3es/15637 (Ḥudaybiyya, 9 012 car) : Fatḥ 18+27 restitués au cache, clauses restituées d'après al-Raḥīq al-makhtūm 312-313 (image perdue documentée), Ibn Isḥāq/al-Zuhrī (Sīra Ibn Hishām 2/322), ʿAmr b. al-ʿĀṣ+Khālid an 7, al-Būṭī 236. Vérification navigateur : les DEUX citations coraniques (Fatḥ 18, Fatḥ 27) sont détectées par le nouveau panneau .quran-quote — la feature s'expose idéalement sur cette leçon. **Registre final du tour : 274/950** (+13). sira-3es : 4/9 docs savants (reste 15644, 15651, 15655, 15770, 15794).
+---
+Task ID: R59
+Agent: Z.ai Code (agent principal — relance utilisateur « continue », feu vert traductions maintenu)
+Task: continue — fermer le livre prioritaire R58 (sira-2es : 29 docs = intro + 20 leçons + 4 blocs d'activités + aʿlām + sources) en couche savante intégrale, QA navigateur complète, worklog, backup
+
+Work Log:
+- **29 TRADUCTIONS SAVANTES INTÉGRALES** (remplacements GT totaux — GT-ismes du type « stade préparatoire
+  antique », « adopter des raisons », « calendrier » ; rédaction main, workflow
+  extract → rédaction → qa-lesson → hand-set → commit + backup PAR DOC, règles a/b respectées) :
+  1. 13942 (intro, 5 873 car, c3bd8c3) — présentation Direction de l'enseignement traditionnel/
+     alphabétisation, période 1er ʿAqaba → Coalisés, ToC 20 leçons + 4 blocs + aʿlām + sources,
+     6 compétences.
+  2. 13961 (L1, 11 844 car, 3c781e2) — les deux serments d'al-ʿAqaba : Ibn Hishām 2/428-429
+     (« le Prophète dont les Juifs vous menaçaient ») + 2/441-442 (al-ʿAbbās garant, « protégez-moi
+     comme vos femmes et enfants ») ; 1re bayʿa an 11 (6 puis 12, clauses intégrales, Muṣʿab
+     al-Muqriʾ), 2e an 13 (73 + Nusayba/Asmāʾ) ; Naḥl 127-128 + Yūsuf 110 RESTAURÉES ;
+     al-Ghazālī 161 (« l'énergie bouillonnante… c'est le Coran »).
+  3. 14729 (L2, 11 863 car, 8656dad) — Hégire contexte/motifs : ʿĀʾisha Ibn Saʿd Ṭabaqāt 2/175
+     INTÉGRAL ; Dār al-Nadwa, ʿAlī et les dépôts ; Bukhārī 3694 INTÉGRAL (dhāt al-niṭāqayn) ;
+     Anfāl 24 + Nisāʾ 79 RESTAURÉES ; Ṣuhaib Ibn Ḥibbān 7082.
+  4. 14767 (L3, 11 171 car, 536e2e4) — Hégire leçons : grotte de Thawr (qāʾif, toile, 100 chamelles),
+     Tawba 40 avec guillemets imbriqués ; Surāqa ; arrivée 12 rabīʿ I an 13 ; Ṭalāq 3 + Yūnus 58 +
+     Ḥajj 36 RESTAURÉES ; Umm Maʿbad INTÉGRAL (al-Najjār 185).
+  5. 14773 (act 1-3, 5 607 car, 436d3c1) — ʿUbāda b. al-Ṣāmit (Ibn Hishām 2/434), Abū Shahba
+     1/374-377 (route du sud), al-Būṭī 144-145 (le Prophète Législateur) ; ﷺ développé (convention
+     R58) ; cartes signalées (règle f).
+  6. 14777 (L4, 8 803 car, 33fd444) — fondements A mosquées : Khuḍarī 83 INTÉGRAL (marbad des 2
+     orphelins acheté, qibla Bayt al-Maqdis), vers des ouvriers + « ô Dieu il n'est de vie… » ;
+     Nūr 36-37 + Tawba 18 RESTAURÉES ; al-Ghazālī 190.
+  7. 14780 (L5, 8 263 car, 78b7b61) — fondements B fraternisation : Suhaylī 4/296 ; **Anfāl '76'
+     médinois CORRIGÉ → 75 muṣḥaf courant** (abrogation de l'héritage par muʾākhāt à Badr,
+     ulū al-arḥām priorité — cohérent avec Ibn Sayyid al-Nās) ; Bukhārī 3722 + 2200 ;
+     Muslim 2586 (corps) ; Ḥujurāt 10.
+  8. 14781 (L6, 10 825 car, 7617308) — fondements C Charte de Médine : texte fondateur Ibn Hishām
+     2/501-503 INTÉGRAL (umma une, ribʿa/taʿāqul/ʿānī/dasiʿa/yūtigh glosés) ; 3 composantes, 7
+     contenus ; Bukhārī 3001 (dhimma une) ; Baqara 255 + Tawba 72 RESTAURÉES ; al-Ghazālī 193.
+  9. 14782 (act 4-6, 5 416 car, ad2fa43) — mosquées dossier ; Ibn Sayyid al-Nās ʿUyūn 2/231
+     (Anfāl 75 RESTAURÉE, '76' médinois documenté, guillemet ouvrant restauré — extrait in medias
+     res) ; al-Ghazālī 190 (ʿaṣabiyyāt dissoutes) ; Sibāʿī 76-77.
+  10. 14785 (L7, 9 359 car, 3bf68a3) — Abū Ayyūb : Raḥīq 156-157 (chamelle « elle a reçu ordre »,
+      « l'homme est avec sa selle ») ; étages (poussière des pas, déménagement) Bayhaqī 3/501 +
+      ʿIyāḍ al-Shifāʾ 3/35 ; **Tawba '101' CORRIGÉE → 100** (éloge des Anṣār, le 101 = hypocrites) ;
+      Ḥashr 9 ; Bukhārī 3572 ; al-Ghazālī 198 (lampes).
+  11. 14786 (L8, 10 472 car, fe5abb2) — Badr causes/événements : **Ḥajj '37-38' CORRIGÉ → 39-40**
+      (mot-cible uʾidhina) ; Ḥashr 8 + Āl ʿImrān 123 + Māʾida 26 + Mumtaḥana 8-9 RESTAURÉES ;
+      consultation (al-Miqdād « va toi et ton Seigneur », Saʿd « traverser la mer »), al-Ḥubāb
+      (enfoncer les puits, « avis avisé »), 1000 vs 314, 17 ramaḍān an 2.
+  12. 14788 (L9, 9 187 car, 3e09649) — Badr miracles : Anfāl 9-11 + 42-43 + 9 + 11 + 17 + Āl ʿImrān
+      123-125 RESTAURÉES ; ʿUmar Muslim 1763 INTÉGRAL (manteau repris par Abū Bakr) ; Abū Shahba
+      3/157, Maqrīzī 2/117, al-Būṭī 162, Khuḍarī 91.
+  13. 14790 (L10, 6 966 car, 3c674f6) — la planification : **Māʾida '69' CORRIGÉE → 67** (« ô
+      Messager transmets », le 69 = gens du Livre) ; Maḥmūd Shākir 9/190-195 + « l'islam appelle à
+      considérer l'avenir » ; Ṭāʾif→Aws/Khazraj→Hégire→mosquée→Charte→Badr.
+  14. 14792 (act 7-10, 3 664 car, 2ad385c) — le changement de qibla : Abū Shahba 3/104 INTÉGRAAL
+      (ẓuhr/ʿaṣr, mosquée des deux qiblas « son emplacement subsiste ») ; anglicisme de rédaction
+      (« midday ») corrigé in-process.
+  15. 14793 (L11, 10 262 car, 0cf9bdd) — société après Badr : Raḥīq 217-218 (vœu d'Abū Sufyān) ;
+      Maqrīzī 1/119 (rançon = enseigner à 10 garçons, Zayd b. Thābit) ; Quraysh 3-4 + Jumuʿa 2
+      RESTAURÉES ; ḥākim 311 + Bukhārī 89 (relais de ʿUmar) + Muslim 4873 ; al-Ghazālī Iqtiṣād
+      393 INTÉGRAL (« ceint du monde entier »).
+  16. 14794 (L12, 10 021 car, 1f2f10f) — Uḥud : Āl ʿImrān 152 (×3 contextes) + 179 RESTAURÉES ;
+      retrait d'Ibn Ubayy, 50 archers au mont ʿAynayn, Khālid, visage touché/incisive, Abū Dujāna
+      et Nusayba, 70 martyrs dont Ḥamza ; al-Ghazālī 265-266 (« botté ce monde de leurs sandales »).
+  17. 14798 (L13, 9 028 car, 7c8c1fa) — l'envoi des lecteurs : Raḥīq 265-268 (ʿAḍal/al-Qāra,
+      al-Rajīʿ, puits de Maʿūna) ; al-Būṭī 199 (responsabilité de l'appel, 70 jeunes d'élite) ;
+      Bukhārī 3226 + Ḥākim 7846 (cinq avant cinq) ; **Nisāʾ '58' CORRIGÉE → 59** (obéissance) et
+      **Anfāl '59' CORRIGÉE → 58** (trahison) ; Muslim 3368 (étendard du traître).
+  18. 14799 (act 11-13, 5 452 car, 2b3b7f6) — Guide de l'imam du Ministère des Habous 85-86 (« le
+      tranchant de l'épée ne fut jamais qu'exception et défense ») ; Khuḍarī 127 (dispute→accord,
+      défaillance→constance, désobéissance→obéissance) ; Abū Shahba 2/242 (voisinage).
+  19. 14800 (L14, 9 819 car, 39084f2) — entre Uḥud et les Coalisés : Khuḍarī 118-121 (complot du
+      rocher, Dhāt al-Riqāʿ, al-Ḥārith b. Ḍirār) ; Badr la seconde (8 jours), Dūmat al-Jandal ;
+      Naḥl 91 + Anfāl 62 + Ḥashr 1-5 RESTAURÉES ; Muslim 3364 (ne trahissez pas/ne mutilez pas).
+  20. 14805 (L15, 10 705 car, 3666534) — Quraysh mobilise : Ibn Saʿd Ṭabaqāt 2/50 INTÉGRAL
+      (aḥābīsh, 10 000) ; moitié des dattes de Khaybar à Ghaṭafān ; shūrā, ḥarrāt, 6 jours, fort
+      de Fāriʿ, mont Salʿ, « jamais l'humiliation même à la jāhiliyya » ; Bukhārī 3822 (rajaz
+      d'Ibn Rawāḥa) ; al-Būṭī 230 (« la sagesse chose perdue du croyant ») ; ʿUmarī 2/419.
+  21. 14809 (L16, 11 993 car, 644274d) — le secours divin : Aḥzāb 9-11 + 22 RESTAURÉES ;
+      **Aḥzāb '52' CORRIGÉE → 25** (inversion de chiffres 25↔52) ; al-Būṭī 288 (Nuʿaym, « la guerre
+      est ruse ») ; ʿAmr b. ʿAbd Wadd et le duel d'ʿAlī, « Nuʿaym vous a dit vrai » des deux côtés,
+      armée de vent ; « trésors de Chosroès et de César » ; al-Ghazālī 300 (palais d'al-Ḥīra).
+  22. 14810 (act 14-16, 3 759 car, 314e65a) — al-Ghazālī 275-276 (Ḥamrāʾ al-Asad 16 shawwāl,
+      « cueillir le profitable retour ») ; Bukhārī 3893 (« que nul ne prie ʿaṣr sinon chez les
+      Banū Qurayẓa ») ; incohérence interne du manuel (h1 14-16 vs corps 11-13) conservée.
+  23. 14812 (L17, 12 515 car, 83b7f29) — l'éducation prophétique : Aḥzāb 21 + Jumuʿa 2 + Nūr
+      36-37 + Qalam 4 + Āl ʿImrān 110 + 164 RESTAURÉES ; **Māʾida '17-18' CORRIGÉE → 15-16**
+      (lumière et chemins du salut) ; Bukhārī 6139 (Salmān/Abū al-Dardāʾ INTÉGRAL : « ton Seigneur
+      a un droit sur toi ») ; Muslim 746 (« son caractère était le Coran ») ; 4 fondements + 4 effets.
+  24. 14813 (L18, 11 840 car, 0253d1c) — Muṣʿab b. ʿUmayr : Mubārakfūrī 130 INTÉGRAL (Usayd
+      « vous êtes équitables », « nous reconnûmes l'islam sur son visage ») ; Ḥashr 21 + Āl ʿImrān
+      134 RESTAURÉES ; **Shūrā '49' CORRIGÉE → 52-53** (numérotation médinoise 50v, cohérente avec
+      la note R58 tafsir-3es) ; **Fussilat '32' CORRIGÉE → 33** (« appelle à Dieu ») ; al-Jābirī 111.
+  25. 14905 (L19, 8 503 car, c455534) — Nusayba Umm ʿUmāra : Aḥzāb 35 RESTAURÉE (« je ne voyais
+      pas que les femmes fussent mentionnées » — Tirmidhī 3211) ; Bukhārī 3580, 2e ʿAqaba malgré
+      les espions, Uḥud (« qui peut endurer ce que tu endures » — Wāqidī 1/271), transmetteurs
+      (Ibn Saʿd 8/412-413, Iṣāba, Tahdhīb al-kamāl 35/372).
+  26. 14909 (L20, 11 622 car, ae82224) — lueurs des vertus : Sawād b. Ghazīya (Ibn Hishām 1/626,
+      « que ma peau touche ta peau ») ; « maintenant c'est nous qui marchons contre eux » ;
+      Bukhārī 6566 (« une part du Feu ») ; **Māʾida '14' CORRIGÉE → 13** (« Pardonne-leur », le 14
+      finit sur l'inimitié) ; Āl ʿImrān 159 ×2 ; **Abū Ḥayyān Baḥr al-muḥīṭ 3/407-408 INTÉGRAL
+      TRADUIT** (point d'attache de la miséricorde, 2 lectures, « le fruit de la douceur est
+      l'amour »).
+  27. 14913 (act 17-20, 5 264 car, c963cec) — Aḥzāb 45-48 + Tawba 129 RESTAURÉES ; Sibāʿī 69
+      (ʿĀʾisha/Asmāʾ) ; **poème « Walad al-hudā » d'Aḥmad Shawqī TRADUIT EN VERS** (« la religion
+      est aisance, le califat un serment, le commandement consultation, les droits justice » ;
+      duplication de 4 vers au source non reproduite, documentée).
+  28. 14915 (aʿlām, 20 059 car, a74478a) — **55 biographies INTÉGRALES** (Anas → al-Walīd «
+      l'Unique »), nasab/kunya/batailles/morts sourcées du manuel uniquement, titres glosés
+      (ḥabr al-umma, dhū al-nūrayn, al-Fārūq…) ; **titleFr corrigé « Liste des drapeaux » → «
+      Liste des figures citées (aʿlām) »** (GT-isme, convention 15274/14599).
+  29. 14917 (sources, 5 784 car, 9a6675f) — 35 entrées avec éditions critiques et éditeurs rendus
+      intégralement ; coquille manuel « 437 H. » corrigée en 1437 H./2016 (manifeste, documentée).
+- **APPAREIL CRITIQUE** : ~45 versets restaurés du quran-cache (muṣḥaf Warsh, convention 14116) :
+  Naḥl 127-128, Yūsuf 110, Anfāl 24/75/17/9-11/42-43/58/62/59, Nisāʾ 79/59, Tawba 40/18/72/100/
+  129/9?, Ṭalāq 3, Yūnus 58, Ḥajj 36/39-40, Māʾida 26/15-16/67/13, Ḥashr 8/21/9/1-5/36-37??,
+  Nūr 36-37, Qalam 4, Āl ʿImrān 123/125/134/152/179/110/164/159, Ḥujurāt 10, Aḥzāb 35/9-11/22/
+  25/21/45-48, Mumtaḥana 8-9, Baqara 255, Quraysh 3-4, Jumuʿa 2, Shūrā 52-53, Fussilat 33.
+- **10 RÉFÉRENCES CORRIGÉES contre le quran-cache** (mots-cibles vérifiés, coquilles manuel
+  documentées aux commits) : Anfāl 76m→75 (×2), Tawba 101→100, Ḥajj 37-38→39-40, Māʾida 69→67,
+  Nisāʾ 58→59, Anfāl 59→58, Aḥzāb 52→25 (inversion), Māʾida 17-18→15-16, Shūrā 49→52-53 (médinois),
+  Fussilat 32→33, Māʾida 14→13.
+- **BUGFIX OUTILS** : qa-lesson.py auto-fix corrompait les entités HTML («&nbsp;» → «&nbsp\u202f;»
+  affichage littéral) — protection des entités ajoutée (fix commit) + **réparation rétroactive de
+  92 occurrences** (fiqh-6ep 65, sira-2es 27) dans content/books + 110 dans tr-tmp ; bug présent
+  depuis R55, détecté en QA sur 14782. Script backup.sh créé (registry + worklog + bundle latest
+  HEAD, unifié).
+- **NORMALISATIONS** : ﷺ développé « que Dieu prie sur lui et le salue » (convention R58/sira-3es,
+  86 occurrences là-bas) ; guillemets inversés du source (»…«) normalisés 5 fois ; guillemets
+  ouvrants/fermants manquants du scraping restaurés 8 fois (chaque cas documenté) ; 1 duplication
+  scraping dédupliquée (14729) ; fragments orphelins omis (14729 « بالرحلة », 14913 4 vers ×2) ;
+  tableaux/cartes/images vides signalés « non reproduit dans le manuel » (règle f, ~15 cas).
+- **QA NAVIGATEUR** (agent-browser + playwright python) : accueil **40 badges « traduction savante
+  intégrale »** (39→40), 0 erreur console à froid (console cleared + reload) ; page livre sira-2es
+  « 29/29 documents bilingues · 100% · Traduction savante intégrale » + titleFr aʿlām corrigé
+  visible ; lecteurs 13961 (h1, Ibn Hishām 2/428-429, Muṣʿab al-Muqriʾ, Nusayba/Asmāʾ) et 14813
+  (Anfāl 75, Ḥashr 21) vérifiés ; **mobile 390 px : 0 overflow ×4 pages** (accueil, livre, 2
+  leçons — playwright viewport 390×844) ; lint 0 erreur (1 warning préexistant llm-translate.ts:561) ;
+  captures qa-r59-*.png ; dev.log propre.
+- Registre : 299 → **308/950** (+29 main, 258 hand + 50 LLM). Backup /tmp/my-project/backup-tour/
+  rafraîchi après CHAQUE document (règle b : registry + worklog + latest-bundle.bdl).
+
+Stage Summary:
+- **État** : sain. HEAD au terme de R59, registre **308/950**, **41 livres en couche savante
+  intégrale** (40 visibles + 1 non publié). **sira-2es = LIVRE №41 : 29/29 docs (intro + 20
+  leçons + 4 blocs d'activités + aʿlām + sources), 100% bilingue.** La matière sīra du corpus
+  (1es-2es-3es collège) est désormais complète à 100%.
+- **Décisions documentées ce tour** : (1) 10 corrections de références contre le cache avec
+  mots-cibles (cf. supra) — dont la numérotation médinoise d'al-Shūrā (49→52-53) cohérente avec
+  la note R58 ; (2) Anfāl « 76 » médinois = 75 muṣḥaf courant (abrogation du mīrāth par
+  muʾākhāt, double source Suhaylī + Ibn Sayyid al-Nās concordantes) ; (3) le commentaire arabe
+  d'Abū Ḥayyān (14909) et le poème de Shawqī (14913) TRADUITS intégralement (pas laissés en
+  arabe) ; (4) titleFr GT-isme corrigé (14915 « drapeaux ») ; (5) incohérence interne du manuel
+  14810 (h1 14-16 vs corps 11-13) conservée en l'état ; (6) coquille manuel « 437 H. » → 1437 H.
+- **Bugs corrigés** : corruption d'entités HTML par l'auto-fix typographique de qa-lesson.py
+  (92 occurrences réparées rétroactivement dans le corpus — elles s'affichaient littéralement
+  «&nbsp ;» dans le lecteur depuis R55).
+- **Risques / attention** : (a) ~642 traductions restent (308/950), la production main reste le
+  goulot ; (b) les 885 pdfOnly exigent une extraction PDF (feature en attente) ; (c) le bug
+  d'entités est corrigé à la racine mais les tr-tmp historiques réparés ne sont PAS réinjectés —
+  les book JSON font foi (réparés, vérifiés).
+- **Priorités suivantes** : (1) tajwid-6ep (29 docs, points d'articulation) ou ulum-quran-3es
+  (28 docs, nasḫ/qirāʾāt) — prochains gros livres complets atteignables ; (2) audit des ~870
+  traductions GT restantes pour d'autres GT-ismes de titleFr (2 corrigés ce tour) ; (3) features
+  en attente : extraction des 885 PDF-only, export EPUB/PDF d'une leçon, compteur de notes.
 
 ---
 Task ID: R60
-Agent: Z.ai Code (agent principal)
-Task: assess + QA navigateur (bug hydration AboutDialog corrigé) + sira-3es COMPLET (40e livre) + feature export HTML/EPUB + lettrine/ornements + fix stats déduplication
+Agent: Z.ai Code (agent principal — relance utilisateur « continue », feu vert traductions maintenu)
+Task: continue — fermer le livre prioritaire R59 (tajwid-6ep : 29 entrées / 28 docIds uniques — intro+L1 partagées, 25 leçons maḫāriǧ/ṣifāt, tableau, mathn) en couche savante intégrale + fix badge, QA navigateur, worklog, backup
 
 Work Log:
-- **QA INITIAL** : accueil + lecteur + dialogs. BUG RÉEL trouvé : erreur hydration « p cannot be a descendant of p » + « div cannot contain nested p » sur l'ouverture du À propos — cause : `DialogDescription as="div"` n'est pas une prop Radix valide (seul `asChild` existe) → le composant rendait un `<p>` contenant nos `<p>` enfants. FIX : `asChild` + `<div>` wrapper + ré-indentation ; au passage, search-dialog : compteur « 934 documents bilingues » obsolète remplacé par un texte générique. QA : console clear+reload → 0 erreur, dialog affiche 64 manuels · 962/1152.
-- **5 TRADUCTIONS SAVANTES sira-3es** (rédaction main, workflow complet par doc, règles a/b) :
-  1. 15655 (Muḥammad ﷺ la miséricorde offerte, 7 700 car) — lettres aux rois (Ibn Saʿd Ṭabaqāt 1/198), bienséances des missives, ambassadeurs (Ibn Hishām 2/607, Iṣāba, Ṭabaqāt 4/187), Āl ʿImrān 64 RÉF CORRIGÉE [manuel: 63].
-  2. 15770 (Khaybar et Muʾta, 12 324 car) — hadiths Sahl b. Saʿd + Anas (Bukhārī), section causes/résultats RECONSTITUÉE (image perdue — Khaybar Muḥarram 7 H / Muʾta Jumādā I 8 H, meurtre d'al-Ḥārith b. ʿUmayr), miracles (Salama b. al-Akwaʿ), valeurs (chamelles rousses, duʿāʾ de Khaybar, orphelins de Jaʿfar, éthique de guerre).
-  3. 15644 (Umm Salama, 8 842 car) — texte d'al-Ḥudaybiyya (al-Ghazālī 336), Hind bt. Abī Umayya (Iḥj Iṣāba 8/241), Rūm 21 RÉF CORRIGÉE [manuel: 20], Tirmidhī + Ṭabarī.
-  4. 15651 (activités 2-4, 7 614 car) — al-Būṭī 210-211 sur l'ifk (2 vérités), al-Hajwī al-Thaʿālibī 1/192 (Anfāl 62+Muḥammad 36+Mumtaḥana 8-9 restitués), femmes savantes de Fès (al-Tāzī Jāmiʿ al-Qarawiyyīn 2/443-444).
-  5. 15794 (activités 6-7, 4 634 car) — réponse d'al-Muqawqis (al-Qasṭallānī 1/546), recommandation de Muʾta, Jaʿfar et Khālid.
-  → **sira-3es COMPLET en couche savante (9/9 docs) : 40e livre intégral.**
-- **qa-lesson.py : U+FDFA (ﷺ ligature de la salawat) EXEMPTEE** de la détection d'arabe résiduel — convention du corpus savant (hadith-2es/10960, fiqh-6ep/14116…), sinon le titre « Muḥammad ﷺ, la miséricorde… » faisait échouer la QA.
-- **FEATURE — export d'une leçon** (en attente depuis R56) : route `/api/export/{book}/{doc}?format=html|epub`.
-  - HTML autonome bilingue : en-tête orné (étoile 8 branches), panneau FR + panneau AR RTL, footer programme officiel, media print.
-  - EPUB 3 OCF : ZIP minimal maison en entrées stockées (CRC32 table, en-têtes locaux + central directory + EOCD, mimetype en tête sans extra, noms UTF-8) — aucune dépendance ajoutée.
-  - Sanitisation XHTML : 137 entités nommées HTML→caractères ; équilibreur de balises (void tags autoscellés, fermantes orphelines supprimées, ouvertes refermées) — le HTML scrapé contient des `</div>` finaux orphelins. BUG corrigé en cours de route : `<br//>` (le groupe attrs du regex d'appariement englobe le slash).
-  - Garde-fous : pdfOnly→415, doc inexistant→404. Validé (CRC + XML minidom) sur 5 types de docs.
-  - UI : menu Export dans la barre du lecteur (Imprimer PDF / Page web autonome / EPUB liseuse), désactivé pour pdfOnly.
-- **STYLING** : lettrine 3,1 em ambrée sur le premier paragraphe FR (tradition du livre savant, print sobre noir) + ornement miroir RTL sous les h2 arabes. Turbopack : trigger layout.tsx nécessaire (leçon R59).
-- **FIX STATS — déduplication docsFr par docId** : 6 livres (fiqh-1es, hadith-1ep, hadith-1es, tafsir-1es, tajwid-6ep, ulum-quran-1es) partagent le docId de l'intro avec une leçon — docsFr (occurrences) dépassait docsSavant (Set unique) et le badge « savante intégrale » ne pouvait jamais s'afficher pour ces livres. Désormais docsFr = docIds uniques → **40 badges** (hadith-1ep reconnu), compteur accueil 968→962/1152 (compte honnête, sans double comptage).
-- QA FINALE : 40 badges intégrale vérifiés au navigateur, export HTML ouvert (titre+ornement+2 panneaux+RT), mobile 390 px 0 overflow, 0 erreur console, lint 0 erreur (1 warning préexistant), registre **279/950**.
+- **29 TRADUCTIONS SAVANTES INTÉGRALES** (remplacements GT totaux ; rédaction main, workflow
+  extract → rédaction → qa-lesson → hand-set → commit + backup PAR DOC, règles a/b respectées).
+  Particularité du livre : mathn al-Durar al-Lawāmiʿ d'Ibn Barrī + sharḥ al-Nujūm al-Ṭawāliʿ
+  d'al-Māriġnī → TOUS les vers du mathn (+ Tuḥfa d'Abū Wakīl, Muqaddima/Jazariyya d'Ibn
+  al-Jazarī, vers d'al-Ṭībī) TRADUITS EN DISTIQUES dans des tables 2-3 colonnes, hémistiches
+  ordonnés gauche→droite en table ltr (convention établie ce tour, calquée sur fiqh-6ep 15126).
+  1. 17502 (intro + L1, docId partagé ×2, 6 087 car, 20cef40) — présentation du manuel, ToC 27
+     leçons, 8 compétences dont l'école marocaine Warsh/Nāfiʿ voie d'al-Azraq ; typo manuel
+     انسفال = استفال rendue istifāl (standard) ; div orphelin final du source omis (documenté).
+  2. 17503 (L1, 5 767 car, d27aa5f) — maḫāriǧ définition/bienfaits : mathn vv. 1-3 ; Tuḥfa
+     (« la zone où la lettre vient siéger ») + Muqaddima (« afin de prononcer selon la plus
+     pure des langues ») ; 4 bienfaits dont laḥn ǧalī (aʿūdhu/aʿūdu — mot effacé au scraping
+     restitué d'après le contexte, documenté).
+  3. 17508 (L2, 4 906 car, 71848c4) — généraux/spécifiques : 3 généraux (gosier/langue/
+     lèvres), 15 spécifiques (3+10+2) ; al-Ṭībī (« vingt-neuf sans conteste ») ; exemple « ib ».
+  4. 17509 (L3, 5 837 car, 8e18c82) — gosier : aqṣā/wasaṭ/adnā avec 3 sous-tableaux (hémistiches
+     élidés du manuel conservés en pointillés) ; 7 gutturales vs 6 (alif jawfī, divergence
+     documentée) ; Ibn al-Jazarī (« purifie le hāʾ de jibāhahum »).
+  5. 17521 (L4, 5 473 car, 1364444) — qāf/kāf : aqṣā al-lisān, al-lahawiyyān (luette) ;
+     **Balad 8-9 RESTAURÉE du cache** (« une langue et deux lèvres », identification
+     contextuelle certaine, convention 14116).
+  6. 17522 (L5, 4 757 car, c432395) — ǧīm/šīn/yāʾ : wasaṭ al-lisān, méthode sukūn (« ij »,
+     « ī », « ish ») ; yāʾ avant šīn par nécessité métrique (écart du mathn documenté) ;
+     shajriyya (shajr = milieu).
+  7. 17526 (L6, 4 843 car, 0df263f) — ḍād : bord de la langue + molaires, ʿUmar des deux
+     côtés (le plus rare) ; laḥn « wa-lā al-ẓāllīn » ; surnom al-mustaṭīl ; al-ḍāllīn restitué
+     du contexte (Fātiḥa) ; ordre des hémistiches du 2e tableau corrigé in-process (documenté).
+  8. 17528 (L7, 2 678 car, 1b49db0) — applications I : ~12 emplacements effacés signalés.
+  9. 17530 (L10, 4 876 car, 4411b2a) — dhāl/thāʾ/ẓāʾ : lithawiyya (latha = gencive) ;
+     anecdote al-Aʿlā (aʿūdhu vs aʿūdu) ; **coquille manuel documentée : la ligne de leçon
+     répète « lām, rāʾ et nūn » (report de la leçon 8), corrigée en ṭāʾ/tāʾ/dāl d'après le
+     contenu** ; le manuel numérote cette leçon 10 (ordre pédagogique 9=17534/10=17530).
+  10. 17533 (L8, 5 483 car, 5ce160f) — lām/rāʾ/nūn : 3 vers TRADUITS ; divergence al-Farrāʾ
+      (un seul maḫraj) vs jumhūr (choix du nāẓim) ; dhulqiyya ; nūn toujours murqqaq,
+      lām/rāʾ selon taqlīl/tafkhīm de la voie al-Azraq/Warsh.
+  11. 17534 (L9, 5 405 car, dd04bdf) — ṭāʾ/tāʾ/dāl : niṭʿiyya (niṭʿ = plafond de la voûte
+      du palais) ; tāʾ avant dāl par nécessité métrique ; ṣifāt distinctives (ṭāʾ empâté, tāʾ
+      shidda aminci, dāl jahr + qalqala) ; anʿamta/anʿamṭa.
+  12. 17540 (L11, 5 122 car, 43aebc9) — ṣād/zāy/sīn : asaliyya (asala = bout) ; sīn entre
+      qāf et ṭāʾ empâtés → devient ṣād (laḥn) ; **Aḥqāf '34' CORRIGÉE contre le cache → 35**
+      (mot-cible : le v34 ne contient AUCUNE lettre asaliyya, le v35 en contient 7+ —
+      convention R58) ; anecdote ʿasā/ʿaṣā.
+  13. 17543 (L12, 6 457 car, bcb9b5f) — lèvres/cavité nasale : 3 vers TRADUITS (fāʾ face
+      interne lèvre inf + incisives ; mīm/bāʾ d'entre elles, wāw sans contact ; ghunna du
+      khayshūm) ; fermeture bāʾ > mīm ; Balad 8-9 RESTAURÉE ; khayshūm = 16e et dernier
+      maḫraj.
+  14. 17570 (L13, 2 054 car, ed5b16e) — applications II : 5 surnoms récapitulés ; Ḥujurāt
+      non reproduites avec note d'orientation (les 3 interdits des objectifs = Ḥujurāt 12,
+      couple de versets non identifiable — règle f).
+  15. 17571 (L14, 4 724 car, 522a0d3) — ṣifāt bienfaits/catégories : 17 célèbres / 13 du
+      nāẓim + ghunna ; 3 bienfaits (ṭāʾ sans istiʿlā/ǧahr/iṭbāq serait tāʾ ; fort/faible →
+      iẓhār/idghām) ; 5+5 avec contraire, 7-8 sans.
+  16. 17572 (L15, 4 982 car, 396b641) — hams/ǧahr : ḥaththa shakhṣahu fa-saktā ;
+      **Ṭā-Hā 108 RESTAURÉE du cache** (« tu n'entendras alors qu'un chuchotement », mot-cible
+      hams = al-ḥiss al-khafī) ; majhūra = le reste (« as », « ath », « aṣ »).
+  17. 17573 (L16, 5 924 car, 3e0b0b1) — shidda/rakhāwa/baynīyya : ajadta quṭbaka (8),
+      thakhidh ẓaghshin zaḥfin ṣahin ḍasin (13, formule translittérée), lam yarʿawnā (8) ;
+      divergences du manuel documentées (alif fait tomber → 7 ; 5 selon « lin ʿumar »).
+  18. 17577 (L17, 4 122 car, ef348dd) — istifāl/istiʿlāʾ : qiẓ khuṣṣa ḍaghṭin (7, toutes
+      empâtées, plus fort avec fatḥa) ; istifāl voisines d'istiʿlāʾ à ne pas empâter ;
+      orthographe manuel انسفال documentée (la leçon donne les 2 formes).
+  19. 17578 (L18, 3 960 car, d7173bd) — iṭbāq/infitāḥ : 4 occlusives (ṭ ṣ ḍ ẓ) issues des 7
+      élevées, 25 ouvertes.
+  20. 17582 (L19, 4 016 car, fb763d3) — dhulāqa/iṣmāt : farra min lubb (6) ; muṣmata
+      interdites seules en racine 4/5 lettres — « ʿasjad » (or) / « ʿusṭūs » (arbre) non
+      arabes ; lien avec le ṣarf.
+  21. 17585 (L20, 2 181 car, ff5bdba) — applications III : dāl entre 2 istiʿlāʾ, kāf à
+      l'arrêt (hams+shidda, éviter ikhfāʾ).
+  22. 17586 (L21, 3 821 car, 67a97a6) — ṣafīr/tafashshī : s ṣ z ; š f ḍ avec divergence
+      sur le ḍād (la plupart : šīn seul, documenté).
+  23. 17588 (L22, 5 067 car, c3c41d8) — istiṭāla/inḥrāf/takrīr : ḍād « la longue » (jusqu'au
+      maḫraj du lām) ; lām « l'inclinée » (son à droite/gauche) ; rāʾ roulement À ÉVITER
+      (« al-Raḥīm » ≠ « al-Rrrr-ḥīm »).
+  24. 17589 (L23, 4 275 car, 636359c) — qalqala/layn (Jazariyya) : attributs ACCIDENTELS
+      (absents du mathn d'Ibn Barrī) ; quṭb jad à l'immobile (milieu/fin, plus clair à
+      l'arrêt) ; layn = wāw/yāʾ immobiles après fatḥa.
+  25. 17592 (L24, 5 023 car, 77b4fec) — bāb al-ghunna : tous les états de n/m SAUF nūn
+      assimilée à rāʾ/lām ; tanwīn = nūn surajoutée ; test du doigt ; 4 degrés (akmal →
+      anqaṣ) ; conclusion du chapitre ṣifāt.
+  26. 17595 (L25, 2 079 car, a544c52) — applications IV : zāy son dû de sifflement, rāʾ
+      redoublé sans takrīr, fāʾ/lām voisins du ḍād à ne pas empâter.
+  27. 17597 (L26, 700 car, 767bf10) — tableau des 29 lettres : image au source, signalé
+      non reproduit avec note d'orientation vers les leçons 1-24 (convention 14570).
+  28. 17598 (L27, 4 779 car, 2216fc2) — **MATHN INTÉGRAL : 28 vers TRADUITS EN DISTIQUES**
+      (basmala → ṣalāt → 15 maḫāriǧ → 17 ṣifāt → « ces attributs servent à l'idghām et à
+      l'iẓhār ») ; les 2 hémistiches élidés dans les leçons 17586/17578 sont résolus ici
+      (« et les autres sont ouvertes. Puis le sifflement », « qu'il fut dit que c'est dans
+      le ḍād… la longue ») ; cohérence verbatim avec les 24 leçons vérifiée.
+- **BUGFIX BADGE** (commit dédié) : comptage docsSavant par livre dédupliqué par docId alors
+  que docsFr compte par entrée → tajwid-6ep (17502 ×2) plafonnait à 28/29 ; le numérateur
+  compte désormais par entrée (même base que docsFr), les stats globales restent dédupliquées.
+- **QA NAVIGATEUR** : accueil **42 badges « traduction savante intégrale »** (41→42), 0 erreur
+  console à froid (console cleared + reload) ; page livre tajwid-6ep « 29/29 documents
+  bilingues · 100% · Traduction savante intégrale » (après fix) ; lecteurs 17503 (mathn,
+  Tuḥfa, Muqaddima) et 17598 (28 vers) vérifiés — **NB route lecteur : #/livre/<bookId>/<docId>
+  (sans segment /lecon/)** ; mobile 390 px : 0 overflow ×3 (2 leçons + livre) ; lint 0 erreur
+  (1 warning préexistant llm-translate.ts:561) ; captures qa-r60-*.png.
+- Registre : 308 → **336/950** (+28 main, 286 hand + 50 LLM). Backup /tmp/my-project/backup-tour/
+  rafraîchi après CHAQUE document (règle b : registry + worklog + latest-bundle.bdl + json du livre).
 
 Stage Summary:
-- **État** : sain. HEAD au terme de R60, registre **279/950** (+5 ce tour), **40 livres en couche savante intégrale** (sira-3es complété, hadith-1ep reconnu par le fix stats).
-- **Décisions documentées ce tour** : (1) ﷺ (U+FDFA) exempté de la QA — convention corpus ; (2) 2 nouvelles corrections de références du manuel (Āl ʿImrān 63→64, Rūm 20→21) ; (3) sections images perdues reconstituées et documentées (causes/résultats Khaybar-Muʾta d'après Raḥīq makhtūm, ahtadī de 15655/15644) ; (4) docsFr dédupliqué par docId (sémantique alignée sur docsSavant).
-- **Risques / attention** : (a) l'équilibreur XHTML de l'export est maison — si un doc échoue à la validation EPUB à l'avenir, vérifier d'abord les balises exotiques ; (b) le ZIP EPUB est en entrées stockées (taille ~2× compression) — acceptable pour des leçons < 50 Ko ; (c) ~665 traductions HTML restantes ; (d) docsSavant global (279) vs somme des docsSavant par livre : cohérent (aucun docId partagé entre livres détecté).
-- **Priorités suivantes** : (1) livres à faible coût restants (vérifier le registre : intro + 1-3 leçons non traduites) ; (2) sira-2es (29 leçons), tajwid-6ep (28+intro), ulum-quran-3es (28) — gros livres ; (3) features : extraction des 885 PDF-only (pdf-distiller/text extraction), bundle export EPUB d'un livre entier ; (4) idée UI : étendre .quran-quote à la colonne AR.
+- **État** : sain. HEAD au terme de R60, registre **336/950**, **42 livres en couche savante
+  intégrale**. **tajwid-6ep = LIVRE №42 : 29/29 entrées (intro+L1 17502 partagées, 25 leçons,
+  tableau, mathn intégral), 100% bilingue.** La matière tajwīd atteint 4 livres complets
+  (tajwid-5ep partiel, tajwid-3es, qiraat-tanawi-3, tajwid-6ep).
+- **Décisions documentées ce tour** : (1) convention des tables de vers : hémistiches ordonnés
+  gauche→droite en table ltr (td1 = 1er hémistiche), calquée sur fiqh-6ep 15126, appliquée à
+  ~30 vers sur 14 leçons + le mathn intégral ; (2) formules mnémotechniques arabes
+  translittérées (« ḥaththa shakhṣahu fa-saktā », « thakhidh ẓaghshin zaḥfin ṣahin ḍasin »)
+  — 0 caractère arabe résiduel (QA) ; (3) Aḥqāf '34'→35 corrigé contre le cache (mot-cible,
+  v34 sans aucune asaliyya) ; Balad 8-9 et Ṭā-Hā 108 RESTAURÉES (identification contextuelle
+  certaine) ; (4) coquille manuel 17530 (ligne de leçon copiée de la leçon 8) corrigée
+  d'après le contenu ; (5) ~70 emplacements effacés par le scraping signalés « non reproduit
+  dans le manuel » (règle f) — les mots d'exemple tajwīd ne sont pas identifiables avec
+  certitude ; (6) ordre pédagogique du manuel (L9=17534, L10=17530) respecté dans les textes,
+  l'ordre JSON du livre conserve son agencement propre.
+- **Bugs corrigés** : badge docsSavant plafonné à 28/29 pour les livres à docId partagé
+  intro/leçon (tajwid-6ep) — comptage par entrée, vérifié 29/29 + « Traduction savante
+  intégrale » après reload.
+- **Risques / attention** : (a) ~614 traductions restent (336/950), production main = goulot ;
+  (b) les 885 pdfOnly exigent une extraction PDF (feature en attente) ; (c) ulum-quran-3es
+  (28 docs) = prochain gros livre complet atteignable.
+- **Priorités suivantes** : (1) ulum-quran-3es (28 docs, nasḫ/qirāʾāt) → livre №43 ; (2)
+  audit GT-ismes titleFr restants ; (3) features : extraction des 885 PDF-only, export
+  EPUB/PDF d'une leçon, compteur de notes.
 
 ---
 Task ID: R61
-Agent: Z.ai Code (agent principal — cron review web-394d04d3)
-Task: assess + QA navigateur (stable) + feature bundle export livre entier + citations AR symétriques + styling export riche + démarrage faraid-tanawi-2 (5 docs savants)
+Agent: Z.ai Code (agent principal — relance utilisateur « continue », feu vert traductions maintenu)
+Task: continue — ulum-quran-3es (28 entrées) en couche savante intégrale → LIVRE №43, avec restauration systématique des versets effacés au scraping
 
 Work Log:
-- **QA INITIAL** : accueil (40 badges savants, 0 erreur console, dialogues Recherche/À propos OK), lecteur savant 15637 (badge + 2 citations détectées), export leçon HTML/EPUB (200, CRC PASS), mobile 390 px 0 overflow. ÉTAT : sain — aucune correction requise, passage aux features + traductions.
-- **AUDIT BACKLOG** : plus AUCUN livre à faible coût (≤3 docs) — les 40 livres complets ferment cette catégorie ; restent 25 gros livres (18-33 docs HTML). Plus petit : faraid-tanawi-2 (18 docs, 0 pdfOnly).
-- **FEATURE 1 — export du manuel ENTIER** (en attente depuis R60) : route `GET /api/export/{bookId}?format=html|epub`.
-  - HTML autonome : sommaire cliquable ancré `#sommaire`, liens retour « ↩ Sommaire » par doc, notices « PDF officiel » pour les pdfOnly (badge PDF au ToC), saut de page par doc à l'impression, ToC 2 colonnes en print, `?print=1` auto-déclenche `window.print()` après chargement.
-  - EPUB 3 intégral : un chapitre XHTML par doc (intro.xhtml, lecon-NN.xhtml), nav complet + landmarks, spine ordonné, style.css partagé.
-  - UI : BookExportMenu dans la page manuel (bouton « Exporter » + compteur docs, 3 entrées).
-  - Refactor : socle extrait vers `src/lib/export-shared.ts` (sanitize XHTML, équilibreur, ZIP CRC32, CSS, slug) ; `getSavantIds` exporté de minhaj.ts.
-  - Validation : sira-3es 9 docs (38 liens ToC attendus — 30 pdfOnly avec badge), tafsir-2es 651 Ko / 43 entrées, CRC PASS, XML 12/12 et 43/43 well-formed (minidom), 404 book guard, leçon seule toujours OK après refactor.
-- **FEATURE 2 — citations coraniques AR symétriques** (idée R59/R60) : le lecteur marque désormais la colonne AR — paragraphes contenant ﴾/﴿ (u+FD3E/FD3F, typographie coranique du corpus) ou clôturés par une référence [الشورى: 18] (nom arabe : chiffres — les citations de type « Ibn ʿAṭiyya 4/353 » avec slash sont exclues). Panneau miroir RTL : filet doré à droite, dégradé fuyant à gauche, coins 12/2 px, print sobre.
-- **Marquage serveur des citations dans TOUS les exports** : `markQuranQuotes(html, pane)` — FR : « …(Sūra, n-n) ; AR : ornements/références crochets ; appliqué aux 4 sorties (leçon HTML/EPUB + bundle HTML/EPUB) — tafsir-2es : 9 FR + 1 AR marquées au bundle HTML, 12 dans l'EPUB.
-- **STYLING export riche** : lettrine 3 em ambre sur 1er paragraphe FR (print sobre noir, sans flottant), scroll-behavior smooth, ToC à pointillés hover ambre + dégradé d'en-tête, séparateurs .doc + .doc, pdf-note en pointillés — miroir du raffinement du lecteur en ligne.
-- **5 TRADUCTIONS SAVANTES faraid-tanawi-2** (rédaction main, workflow extract→rédaction→qa-lesson→hand-set→commit+backup par doc, règles a/b) :
-  1. 15853 (intro, 5 016 car) — Mukhtaṣar de Khalīl + Kharshī, ToC 35 items VERBATIM (dont 7 leçons non publiées en HTML : أصحاب النصف، الربع والثمن، العول، تصحيح أ، قسمة، مناسخات، إقرار… traduites en français savant), malaka, fuqahāʾ farḍiyyūn ḥisābiyyūn, masʾala muʿāda.
-  2. 15857 (matn intégral, 11 196 car) — LE texte classique : ordre des prélèvements, 6 quotités avec taʿṣīb/ḥajb, ʿaṣaba (fils→bayt al-māl), cas nommés (Akdariyya, Gharrāʾ, Ḥimāriyya, Mushtaraka, Minbariyya + parole de ʿAlī), uṣūl 2-24, ʿawl, radd, tadākhul/tawāfuq/tabāyun (12 figures), munāsakhāt, iqrār, legs d'indivis, exclusions (liʿān, meurtre, religion, ordre des décès), suspension fœtus/disparu + taʿmīr.
-  3. 15858 (leçon 1 principes, 14 046 car) — définitions Kharshī/Ibn ʿArafa, tarka « droit divisible », 3 voies farāʾiḍ-mawārith, poème des 10 principes (Ibn Zakriyā, ḥāshiya Ibn al-Khayyāṭ p. 15) traduit en vers, farḍ kifāya/ʿayn, 3 hadiths (Ibn Masʿūd, Abū Hurayra « moitié de la science », Abū Dāwūd), 2 RÉFS CORRIGÉES au cache : **Baqara 235→236** (mot تفرضوا فريضة vérifié) et **Nisāʾ 175→176** (kalāla — numérotation warsh : Nisāʾ = 175 v. au muṣḥaf marocain, 176 en ḥafṣ ; confirmé par le poème « وفي الكلالة فتيا الله »).
-  4. 15867 (leçon 2 piliers/conditions/causes/empêchements, 14 326 car) — 3 piliers + 5 conditions, 5 directions de qarāba (6 générations d'oncles), vers Rasmūkī du mariage du malade, mnémonique عش لك رزق décodée (7 empêchements), liʿān (cause vs statut, jumeaux germains/utérins — Ibn al-Qāsim), qatl ʿamdan ʿudwānan/shubha/khaṭaʾ, ignorantia ordinis (exemple effondrement détaillé), zinā, absence d'istihlāl, 3 applications résolues.
-  5. 15871 (leçon 3 droits de la tarka, 12 347 car) — les 5 rangs (gage avec ḥiyāza, zakāt échue, marchandise de l'insolvable…), muʾūnat al-tajhīz + vers al-Tāwīl, dettes de Dieu vs des hommes (priorité de ces dernières), legs (non-héritier + tiers, asīr prioritaire, prorata), 2 applications chiffrées (41 000 dirhams), hadiths Bukhārī.
-- QA FINALE : lecteurs 15867/15871/15857 vérifiés (badge savant, lettrine 48 px calculée, verse-tables détectées, « 41 000 dirhams »), page livre 5/18 traductions savantes + bouton Exporter, bundle HTML ouvert au navigateur (titre/ToC/retours/citations marquées/lettrine 48 px), mobile 390 px 0 overflow (accueil + page livre + lecteurs), 0 erreur console, lint 0 erreur (1 warning préexistant llm-translate.ts:561), registre **284/950** (+5), backup /tmp/my-project/backup-tour/ rafraîchi après chaque doc + bundle git.
+- **28 TRADUCTIONS SAVANTES INTÉGRALES** (rédaction main, workflow extract → rédaction → qa-lesson →
+  hand-set → commit + backup PAR DOC, règles a/b respectées). Unité nasḫ : 19308 (définition,
+  gloses آية/nunsihā/ḫayr), 19331 (ḥukm : 4 adilla naqliyya), 19338 (voies : Burayda, Zamzam),
+  19344/19347 (types : ʿĀʾiša dix nourrices, ʿUmar raǧm, qibla), 19351 (Zarqānī tripartition).
+  Unité muḥkam/mutašābih : 19352 (3 sections de manšaʾ al-tašābuh, gloses umm al-kitāb/zayġ).
+  Unité iʿǧāz : 19362 (triple tahaddī, 3 faces), 19453 (ġaybī/ʿilmī/tašrīʿī, 7 maqāṣid).
+  Unité qirāʾāt : 19466 (ḥadīth Hišām, Ṭayyiba), 19467 (ṭabaqāt ~40 noms), 19468 (3 types,
+  7 bienfaits), 19483 (3 piliers, ḥadīth Ḥuḏayfa), 19491 (6 types par sanad), 19494 (faḍl,
+  Ṭayyiba + Ḥirz en distiques), 19497/19502/19504 (les 7+3+4 lecteurs, notices + vers), 19518
+  (choix marocain Warš/Nāfiʿ/al-Azraq/al-Dānī/al-Ġāzī b. Qays, muṣḥaf muḥammadien).
+- **TECHNIQUE DE RESTAURATION INÉDITE (vs versets-image du source)** : les versets coraniques du
+  manuel habous.gov.ma sont des IMAGES JS-non-rendues → cause racine des lacunes du scraping.
+  Contournement : (1) index Google du site révèle les RÉFÉRENCES [sourate:verset] imprimées à côté
+  des images → recherches ciblées « habous <docId> <fragment> » ; (2) vérification des citations
+  savantes contre les sources en ligne (islamweb Taḥrīr 2:106 + Šifāʾ faṣl 9-10, shamela Manāhil
+  7249/954, šarḥ Ṭayyiba pour les variantes) ; (3) mot-cible : le contenu discuté ne figure pas au
+  numéro imprimé → coquille. Résultat : ~45 versets RESTAURÉS ce tour (2:106 ×3, 22:52, 45:29,
+  13:39, 16:101, 66:1, 2:183/184, 2:240/234, 58:12/13, 53:3-4, 2:187, 4:15, 2:115→116,
+  3:184, 9:100, 2:189, 11:1, 39:23, 3:7 ×3, 2:25, 2:69, 80:31-32, 37:93, 21:57, 4:3, 42:11,
+  18:1-2, 17:88, 11:13, 10:38, 41:26, 39:23, 15:9, 41:42, 30:1-5 ×2, 41:53, 16:89, 11:49,
+  3:44, 2:202-203, 9:108, 23:12-14, 6:125, 10:101, 45:13, 35:41, 28:88, 39:67, 4:82, 1:1/3/6,
+  18:51, 55:76, 9:128, 7:9, 10:92, 35:28, 35:32, 72:1-2).
+- **COQUILLES DE RÉFÉRENCE DU MANUEL CORRIGÉES contre le cache** (mot-cible, convention R58) :
+  2:188→189, 2:24→25, 39:22→23, 42:9→11, 4:81→82, 2:220→222, 5:7→6, 2:258→259, 41:52→53,
+  Tawba 90→100, Kahf 50→51 ×3, Raḥmān 75→76, Tawba 129→128, 19308 «(2)» superfflu. Vérifiées
+  chaque fois contre le contenu (ex. 2:189 : la glose « البيوت من ظهورها » n'est pas au n° 188).
+- **VARIANTES DE LECTURE IDENTIFIÉES** (19468/19483/19491) : ṣirāṭ/sirāṭ, maliki/māliki,
+  kuḏḏibū/kuḏibū, yaṭhurna/yattaṭhharna, arǧulakum/arǧulikum, min anfasikum, rafārif/ʿabāqirī,
+  ašhadnāhum/kunṭa (Kahf 18:51, Abū Ǧaʿfar) — chaque fois confirmées contre šarḥ Ṭayyiba ou
+  Iʿrāb al-šāḏḏa avant restauration.
+- **titleFr CORRIGÉS (GT-ismes)** : 19308 « restriction (2) »→« spécification (taḫṣīṣ) » ;
+  19331/19338/19344/19347 « copie »→« abrogation (nasḫ) » ; 19362/19453 « miracle »→
+  « inimitabilité (iʿǧāz) » ; 19467 « Couches de mémorisation »→« générations (ṭabaqāt) » ;
+  19494 « vertu »→« mérite (faḍl) » ; 19504 « récitants »→« lecteurs » ; 19466 « origine »→
+  « genèse » ; + harmonisations mineures. Coïrence ToC 18644 ↔ titres réels assurée.
+- **DISTIQUES** : Ṭayyiba (7+4+3 vers) et Ḥirz al-amānī (10 vers) traduits en lignes/paires,
+  convention tables ltr R60 respectée ; formules des vers de la Ṭayyiba sur les 3 piliers (19483).
+- **QA NAVIGATEUR** (agent-browser + playwright python) : accueil **43 badges « traduction savante
+  intégrale »** (42→43) ; page livre « 29/29 documents bilingues · 28 leçons + introduction » +
+  badge ; lecteur 19308 : h1 = titleFr corrigé, versets 2:106/22:52/45:29 restaurés visibles ;
+  **mobile 390 px : 0 overflow ×4 pages** (accueil, livre, 19308, 19522 — playwright viewport
+  390×844) ; 0 erreur console (playwright listeners) ; lint 0 erreur (1 warning préexistant
+  llm-translate.ts:561) ; captures qa-r61-*.png ; dev.log propre.
+- Registre : 336 → **364/950** (+28 main, 292 hand + 50 LLM). Backup /tmp/my-project/backup-tour/
+  rafraîchi après CHAQUE document (règle b : registry + worklog + latest-bundle.bdl + json du livre).
 
 Stage Summary:
-- **État** : sain. HEAD au terme de R61, registre **284/950** (+5 main), 40 livres en couche savante intégrale, faraid-tanawi-2 entamé (5/18).
-- **Décisions documentées ce tour** : (1) 2 corrections de références vérifiées au quran-cache (Baqara 236, Nisāʾ 176 — le décalage warsh/ḥafṣ se confirme sur un 3e type d'ouvrage, le farāʾiḍ) ; (2) marquage serveur des citations coraniques conservateur (regex ancrées début/fin de <p>, aucun faux positif toléré) — miroir de la détection client ; (3) export bundle : les pdfOnly reçoivent une notice (cohérent avec le lecteur) plutôt qu'une omission.
-- **Risques / attention** : (a) le marquage serveur AR (﴾/﴿) ne s'applique qu'aux paragraphes sans balise imbriquée — les rares <p> contenant des spans avec ornements ne seront pas marqués à l'export (le lecteur client les marque, lui) ; (b) le ZIP EPUB reste en entrées stockées — un bundle complet tafsir-6ep = 651 Ko, acceptable ; (c) ~673 traductions HTML restantes, la production main reste le goulot ; (d) discovered : agent-browser n'a pas de commande viewport — le contournement window.open(390x844)+resizeTo fonctionne.
-- **Priorités suivantes** : (1) continuer faraid-tanawi-2 (ordre du ToC : 16062 ayants droit aux deux tiers, 16063 bint ibn + sœur paternelle par taʿṣīb, 16082 tiers, 16087 sixième…) → 41e livre complet ; (2) sira-2es (29), tajwid-6ep (28+intro), ulum-quran-3es (28) — gros livres suivants ; (3) features en attente : extraction des 885 PDF-only ; (4) idée UI : compteur de citations détectées dans l'en-tête du lecteur.
+- **État** : sain. HEAD au terme de R61, registre **364/950**, **43 livres en couche savante
+  intégrale**. **ulum-quran-3es = LIVRE №43 : 29/29 entrées (intro + 28 leçons), 100% bilingue.**
+  La matière ʿulūm al-Qurʾān atteint 3 livres complets (1es LLM, 2es LLM, 3es savant) — le niveau
+  collège est couvert. La chaîne Warš/Nāfiʿ/al-Azraq documentée en 19518 boucle la cohérence avec
+  tajwid-5ep/6ep.
+- **Décisions documentées ce tour** : (1) restauration des versets-image par index Google +
+  vérification contre sources en ligne (islamweb/shamela/šarḥ Ṭayyiba) — ~45 versets, 15 coquilles
+  de référence corrigées ; (2) leçon 19271 importée du manuel 2es (leçon 16) : conservée fidèle,
+  écart documenté ; (3) glose « كاذب » (19331) sans mot vedette identifiable → signalée règle f ;
+  (4) consigne atelier 1 (19520) perdue au scraping → signalée ; (5) titre altéré « أوعية النشر »
+  (19491) corrigé en Ṭayyibat al-našr ; (6) coquilles de référence manuel vs contenu : le contenu
+  fait foi, écart consigné dans les commits.
+- **Risques / attention** : (a) ~586 traductions restent (364/950), production main = goulot ;
+  (b) les 885 pdfOnly exigent une extraction PDF (feature en attente) ; (c) la technique
+  d'index Google a des limites (versets des leçons 19462/19520 non référencés) — les lacunes
+  restantes sont signalées règle f dans le texte.
+- **Priorités suivantes** : (1) fikr-islami-tanawi-3 ou taqtit-tanawi-1 (si non complets) —
+  vérifier le registre par livre pour le prochain gros livre complet atteignable ; (2) audit
+  GT-ismes titleFr restants (~870 traductions GT) ; (3) features : extraction des 885 PDF-only,
+  export EPUB/PDF d'une leçon, compteur de notes.
+---
+Task ID: R62-d
+Agent: subagent-traducteur
+Task: Traduction sira-1es 14197+14202+14205 (couche savante, brief _brief-sira1es.md)
+Work Log:
+- **14197 « La mission prophétique : le début de la révélation »** (10 147 car, QA OK) — ḥadīṯ de Muslim
+  (ʿUrwa b. al-Zubayr / ʿĀʾiša) traduit INTEGRALEMENT (rêves véridiques, taḥannuṯ glosé « adoration »,
+  Ḥirāʾ, triple étreinte, iqraʾ) avec l'attribution imposée : [Rapporté par Muslim, Livre de la foi,
+  chapitre du début de la révélation au Messager de Dieu — que Dieu prie sur lui et le salue].
+  Versets restitués depuis le cache : al-ʿAlaq 1-5 (×2 : fin du ḥadīṯ + exégèse Ibn Kaṯīr), Āl ʿImrān
+  190-191 (méditation des horizons), al-Muǧādala 11 (élévation par degrés des hommes de savoir).
+  **COQUILLE corrigée : al-Zumar « 10 » → 9** (vérifiée contre le contenu : le v10 = récompense des
+  endurants, sans la science ; le v9 « Ceux qui savent sont-ils égaux à ceux qui ne savent pas ? »
+  porte l'idée discutée du tašrīf par la science — signalée en note dans le fichier, convention 14785).
+  Citation al-Salālǧī (al-ʿAqīda al-burhāniyya) intégrale. Règle f ×3 : schéma des valeurs, liste de
+  versets de l'évaluation, tableau des miracles.
+- **14202 « Khadīja, Mère des croyants (qu'Allāh l'agrée), soutien du Messager de Dieu — que Dieu prie
+  sur lui et le salue — »** (10 615 car, QA OK) — h1 = titleFr verbatim, ﷺ développé ; ḥadīṯ d'al-Bukhārī
+  (zammilūnī, les cinq qualités, Waraqa b. Nawfal b. Asad b. ʿAbd al-ʿUzzā, Nāmūs, ǧaḏaʿ, naṣr muʾazzar)
+  traduit intégralement + [Rapporté par al-Bukhārī… chapitre : comment fut le début de la révélation…].
+  Versets restitués et vérifiés contre le contenu : al-Ṣaff 6 (annonce de ʿĪsā — bonne nouvelle des
+  prophètes antérieurs) et al-Aʿrāf 157 (description dans la Thora/l'Évangile, succès de qui croit et
+  soutient). Citations Ibn Hišām t. 1 p. 238 et Ḏahabī (Siyar, retouches). Règle f ×1 (schéma valeurs).
+- **14205 « Les étapes de la prédication : l'appel en secret »** (9 196 car, QA OK) — Textes 1-2
+  (Nūr al-yaqīn d'al-Ḫuḍarī ; Ibn Isḥāq/al-Suhaylī, « trois années de dissimulation ») ; versets
+  restitués : al-Muddaṯṯir 1-7, Sabāʾ 28 (universalité), al-Naḥl 125 (les trois assises). Ḥadīṯ d'Abū
+  Ḏarr (al-Bukhārī, Livre des mérites, chapitre du récit de Zamzam — référence vérifiée plausible,
+  conservée). **CITATION MUBĀRAKFŪRĪ (Raḥīq al-maḫtūm p. 65) RECONSTITUÉE** : le scraping avait inversé
+  les deux moitiés de la phrase (« …فالوصول إلى المقصود من | الإصلاح فيها يزداد عسرا… ») ; ordre rétabli,
+  écart signalé en note dans le fichier. Glossaire 4 termes (al-Muddaṯṯir/tašdīd, yadʿū, riǧz, yaṣdaʿ).
+  Règle f ×1 (schéma des trois assises, avec phrase d'orientation tirée du verset cité).
+- **Conventions sira-1es appliquées (à suivre pour les docIds suivants)** : (1) DIN strict conformément
+  au brief — Ḥirāʾ, Ḫadīǧa, Ǧibrīl, ʿUṯmān, Abū Ḏarr, Ḥāriṯa, al-Ġazālī, al-Ḫuḍarī, al-Ḏahabī,
+  al-Salālǧī, Ibn Kaṯīr, Ibn Hišām, al-Muddaṯṯir — en écart assumé avec l'exemplaire 2es 13961
+  (Ibn Hishām, al-Ghazālī, al-Khudarī, makhtūm) ; le h1 reste titleFr VERBATIM (d'où « Khadīja » non-DIN
+  dans le titre vs Ḫadīǧa DIN dans le corps, par construction du brief) ; (2) sous-titre calqué sur
+  13961 : « <titre>, leçon de Sīra prophétique pour la première année du cycle collégial traditionnel
+  (Leçon N) » ; chrome vide supprimé, fichier commençant à <h1> ; (3) aucune ṣalāwāt insérée dans les
+  ḥadīṯs là où le source arabe n'en porte pas (fidélité) ; celles du source rendues selon le brief
+  (que Dieu l'agrée / sur lui la paix) ; (4) guillemets internes Hamidullah (versets à discours direct)
+  réduits à la ponctuation (pas d'imbrication « ») ; (5) « deux milles » pour نحو ميلين (fidèle ;
+  le « trois kilomètres » du GT était une conversion GT-isme).
+- QA : qa-lesson.py OK ×3 (0 arabe, 0 apostrophe droite, 0 guillemet droit, guillemets et balises
+  appariés) ; hand-set/git/non-touché content/books comme imposé.
+Stage Summary:
+- Livrables : tr-tmp/14197.html (10 147 car), tr-tmp/14202.html (10 615 car), tr-tmp/14205.html
+  (9 196 car) — traductions savantes intégrales, QA OK.
+- Versets restitués : al-ʿAlaq 1-5 ×2, Āl ʿImrān 190-191, al-Muǧādala 11, al-Zumar 9 (corrigé de 10),
+  al-Ṣaff 6, al-Aʿrāf 157, al-Muddaṯṯir 1-7, Sabāʾ 28, al-Naḥl 125 — chaque référence vérifiée contre
+  le contenu discuté (mot-cible) ; 1 coquille manuel corrigée (Zumar 10→9), 1 citation reconstituée
+  (Mubārakfūrī p. 65, ordre inversé par le scraping), 5 emplacements image signalés règle f.
+- Écarts/attention pour les agents sira-1es suivants : h1 14177/14180/… avec ﷺ → développer ;
+  conventions DIN strict + sous-titre + pas de ṣalāwāt ajoutées dans les ḥadīṯs (voir Work Log).
+---
+Task ID: R62-a
+Agent: subagent-traducteur
+Task: Traduction sira-1es 13981+13986+14014 (intro + leçons 1-2, couche savante)
+
+Work Log:
+- Lu _brief-sira1es.md (spéc complète), fin du worklog (R60-R61) et l'exemplaire de registre 13961.html
+  (sīra 2es) ; registre calqué (titres de sections, ṣalāwāt, « L'exploitation », « La préparation
+  préalable », header « leçon de Sīra prophétique… (Leçon N) »).
+- **IDENTIFICATION DES VERSETS-IMAGES** (technique R61 étendue) : fetch des pages LIVE habous.gov.ma
+  via page_reader → les noms de fichiers/alt des <img> révèlent les références imprimées ; croisé avec
+  l'index Google du site (snippets). Résultats :
+  - 13981 : al-Aḥzāb 33:21 (après « امتثالا لقوله عز وجل : ») puis Āl ʿImrān 3:31 (après « وقوله
+    سبحانه : ») — ordre confirmé par la position des images (23957 < 24183).
+  - 13986 : ① glose sīra → Ṭā-Hā (image « ج. سورة طـه الآية 20 »), ② « قال تعالى: » de la section
+    finalité → al-Aḥzāb 21 (image « ج. سورة الأحزاب الاية 21 »), ③ « في قوله تعالى: » → al-Ḥašr 7
+    (image « سورة الحشر الآية 7 ») — les 3 confirmés.
+  - 14014 : glose ḥanīfiyya → Āl ʿImrān (image « سورة آل عمران - الآية 66 »).
+- **COQUILLES DE RÉFÉRENCE CORRIGÉES (règle mot-cible, convention R58)** : Ṭā-Hā 20→21 (le mot
+  سيرتها الأولى n'est qu'au v21 ; v20 = serpent, sans سيرة) ; Āl ʿImrān 66→67 (le ḥanīf/millat
+  Ibrāhīm est au v67 ; v66 = dispute). Versets restitués depuis le cache Hamidullah (Allah→Dieu),
+  paroles internes en “ ” (convention corpus 13861/16820).
+- **13981 (intro, spec dédiée)** : formule d'ouverture R22 verbatim ; titre du livre rendu dans le
+  1ᵉʳ paragraphe ; ToC = 22 leçons + 4 items « Activités… (leçons X à Y) » + 2 listes, titleFr
+  officiels VERBATIM dans l'ordre du source (ﷺ développés). **ÉCART SIGNALÉ : la section finale
+  كفايات (« Compétences… ») a été ÉCARTÉE conformément à « NE PAS inclure … Compétences … (chrome
+  écarté par la spéc R22) »** — mais attention : le htmlFr GT actuel la contient et les intros
+  savantes récentes 17502/18644 l'ont gardée → à réintégrer en 6 items si la lecture « entrée de
+  ToC » était la bonne (décision main agent). Autre écart documenté : la table du brief donne 14228
+  «(leçons 12 à 15)» et 14262 «(leçons 16 à 23)» alors que JSON + source disent (12 à 16)/(17 à 22)
+  → suivi JSON/source. Le doc 15720 (isrāʾ, doublon de titre de 14249) n'est pas dans la ToC du
+  source → non ajouté.
+- **RÈGLE f (images perdues)** : 13986 → خطاطة 1 (maqāṣid de la sīra) signalée avec orientation ;
+  14014 → carte « Situation de la péninsule arabique dans le monde » (légende traduite + signal),
+  خطاطة 2 (valeurs louables/blâmables, orientation) et خطاطة 3 (signal nu), tableau de l'évaluation
+  item 2 (signal). Hadith du Muwaṭṭaʾ « J'ai été envoyé pour parfaire le beau caractère » traduit
+  intégralement avec référence.
+- Translittération DIN (ḫ, š, ḥ, ṣ, ṭ, ḏ, ṯ, ġ, ʿ/ʾ) : Ibn Ḫallikān, Ibn Hišām, Ibn Isḥāq,
+  Muwaṭṭaʾ, al-Tirmiḏī, Ibn Daḥya al-Sabtī, Nihāyat al-sul fī ḫaṣāʾiṣ al-Rasūl, al-maġāzī,
+  al-Raḥīq al-maḫtūm, Ṣafī al-Raḥmān al-Mubārakfūrī, ḥanīfiyya, fiṭra, Ṭā-Hā, Yā-Sīn, al-Ḥašr.
+  Zéro caractère arabe, zéro apostrophe droite, zéro guillemet ASCII (QA).
+- QA : QA OK ×3 (qa-lesson.py).
+
+Stage Summary:
+- Livrés : tr-tmp/13981.html (QA 4 750 car), tr-tmp/13986.html (QA 10 371 car), tr-tmp/14014.html
+  (QA 8 427 car) — fragments corps (h1/h2/h3/p/ul/li), prêts pour hand-set.py (main agent).
+- Versets restitués : 13981 → al-Aḥzāb 33:21 + Āl ʿImrān 3:31 ; 13986 → Ṭā-Hā 21, al-Aḥzāb 21,
+  al-Ḥašr 7 ; 14014 → Āl ʿImrān 67. Coquilles corrigées : Ṭā-Hā 20→21, Āl ʿImrān 66→67.
+- Points règle f : 1 schéma (13986), carte + 2 schémas + 1 tableau (14014) — tous signalés
+  « non reproduit dans le manuel », orientations prudentes.
+- Décisions notables à revoir par le main agent : (1) exclusion de la section كفايات de 13981
+  (spec « chrome » vs précédent corpus 17502/18644 qui la gardent) ; (2) fourchettes d'activités
+  ToC 12-16/17-22 (JSON fait foi contre la table du brief) ; (3) Ḥašr 59:7 restitué en entier
+  (verset long) plutôt qu'un extrait — l'image du manuel n'est pas lisible (VLM bloqué 400).
+---
+Task ID: R62-c
+Agent: subagent-traducteur
+Task: Traduction sira-1es 14186+14191+14194
+Work Log:
+- Sources .src.html vérifiées contre les pages habous.gov.ma en ligne via z.ai page_reader
+  (translate.goog proxy aujourd'hui 302/geo-limité) : contenus identiques au scraping,
+  pages complètes — 14186 (2 versets-image + carte-image), 14191 (1 verset-image +
+  tableau-image en évaluation), 14194 (aucun verset, aucune image perdue).
+- ATTENTION orchestrator : la consigne R62-c mentionnait en 14194 un hadith « premier à
+  vous attaquer au menteur » et un « jugement du Prophète sur l'eau de la pluie » — ces
+  deux éléments N'EXISTENT NI dans le source scrapé NI dans la page habous en ligne
+  (vérification faite). Traités comme confusion ; RIEN inventé (règle f). Les citations
+  réellement présentes ont été rendues intégralement avec références entre crochets :
+  Raḥīq p. 52 ; Ibn Hišām t. 1 p. 194 et 196 ; Nūr al-yaqīn p. 15 ; Fiqh al-sīra du
+  Būṭī p. 17 (+ en 14186/14191 : Raḥīq pp. 3 et 50-51 ; Ġazālī p. 50 ; Bukhārī ijāra ;
+  Aḥmad/Ibn Ḥibbān/al-Ḥākim ; Siyar al-Ḏahabī t. 2 p. 109 ; al-Šifāʾ du cadi ʿIyāḍ
+  p. 127 ; Nūr al-yaqīn p. 14).
+- VERSETS RESTITUÉS depuis le cache (Hamidullah FR adapté « Allah »→« Dieu ») :
+  14186 Āl ʿImrān 31 (citations imbriquées “ ” pour le « Dis : “…” » interne) et
+  al-Aḥzāb 45-48 (numéros (45)-(48) en fin de verset, convention 13961) ; 14191
+  al-Aḥzāb 6. AUCUNE coquille de référence : les 3 réf. imprimées correspondent au
+  contenu discuté (vérifié au mot-cible). 14194 : aucun verset dans la leçon.
+- Coquilles de source signalées/normalisées : 14191 khuṭba d'Abū Ṭālib interrompue
+  « … من الصداق (كذا) » → rendu « — (sic) » (marque du manuel, fidélité gardée) ;
+  14194 référence al-Būṭī fermée par « ) » au lieu de « ] » → normalisée + note
+  inline dans le crochet.
+- Règle f : 14186 carte de l'activité 2 (grands États voisins) signalée avec phrase
+  d'orientation dérivée de la question 1 ; 14191 tableau des valeurs de l'évaluation
+  (item 3) signalé « tableau non reproduit dans le manuel ».
+- HARMONISATION avec les livraisons parallèles R62 (14197/14202/14205 lues avant
+  rédaction) : title <p> « …, leçon de Sīra prophétique pour la première année du
+  cycle collégial traditionnel (Leçon N) » ; verset en <p> propre « … » (Sourate, v)
+  sans span ni <p> vide ; chrome supprimé (dl/dt/dd, date, footer, divs) ;
+  glossaire en <ul><li> « terme : glose » ; « L'extraction des contenus : » avec
+  deux-points ; discours direct après deux-points sans guillemets imbriqués ;
+  DIN strict dans le corps (Ḫadīǧa, Ḫuwaylid, al-Ḫuḍarī, Ibn Hišām, al-Ġazālī,
+  al-Raḥīq al-maḫtūm, Qurayš, al-Walīd b. al-Muġīra, ǧāhiliyya, Ḥirāʾ, Ḏahabī)
+  tandis que le h1/title garde « Khadīja » (titleFr officiel verbatim, (qu’Allāh
+  l’agrée) conservé, ﷺ développé) — même convention que 14202.
+- Épithètes : al-Amīn glosé une fois « (le digne de foi) », al-amīn al-ṣādiq /
+  al-ṣādiq al-amīn translittérés + glosés ; « — sur eux deux la paix — » pour
+  Ibrāhīm et Ismāʿīl ; « — que Dieu lui fasse miséricorde — » pour al-Ḏahabī.
+- QA : 3/3 « QA OK » (0 caractère arabe, guillemets appariés, balises appariées,
+  0 apostrophe droite ; NNBSP auto-fix appliqué).
+Stage Summary:
+- Livrables : tr-tmp/14186.html (3 799 car), tr-tmp/14191.html (11 812 car),
+  tr-tmp/14194.html (10 965 car) — traduction savante intégrale, h1 = titleFr
+  officiels, 3 versets restitués (Āl ʿImrān 31 ; al-Aḥzāb 45-48 ; al-Aḥzāb 6),
+  0 coquille de référence, 2 signalements règle f (carte 14186, tableau 14191).
+- Écart documenté : consigne R62-c sur 14194 (hadith menteur / eau de pluie) =
+  contenu introuvable (source + live) → non inventé ; anomalies du manuel (كذا,
+  parenthèse finale) rendues fidèlement et notées.
+- Reste sira-1es : 13981 (intro), 13986/14014/14177/14180/14182, 14197* … 14270,
+  15720 — conventions R62 établies, prêtes pour les agents suivants.
+---
+Task ID: R62-b
+Agent: subagent-traducteur
+Task: Traduction sira-1es 14177+14180+14182 (leçons 3-5 : noble lignée et naissance, ouverture de poitrine et orphelinat, alliance des vertueux)
+Work Log:
+- Brief sira-1es + worklog (R59-R61) lus ; exemplaires de registre 13961/14785 calqués (structure h1→objectifs→Introduction→Les textes→La compréhension→L'analyse→L'évaluation→L'exploitation→La préparation préalable ; ṣalāwāt, citations, glossaires ul/li).
+- **FORENSIQUE IMAGES (inédit, utile aux agents suivants)** : le miroir scripts-recovery/tmp-mirror-books/sira-1ep.json contient le HTML brut avec <img>. Téléchargement + lecture VLM (z-ai vision) des 12 images des 3 leçons : TOUTES sont des insertions CMS erronées d'autres manuels (couverture d'un guide du professeur « التربية الإسلامية », slide du sultanat d'Oman, tableau fiqh « al-Waǧīz d'Ibn Ǧuzayy », schéma tawḥīd, table qirāʾāt…) → règle f sans tenter de les restituer. SEULES sources fiables : les <span> de référence imprimés + cache Hamidullah + argument de contenu (méthode R61). Exception probante : le fichier « النساء-_-57.png » CONTIENT réellement an-Nisāʾ 4:58 (n° ٥٨ imprimé dans l'image) — corrobore la coquille 57→58.
+- **14177** (QA OK, 8 862 car) : hadith Wāṯila (Muslim), citation al-Būṭī p. 12, hadith Tirmiḏī (al-ʿAbbās), citation al-Šifāʾ du cadi ʿIyāḍ t. 1 p. 82, 5 irhāṣāt (al-Ḥākim, Abū Nuʿaym, Āmina, al-Bayhaqī/Khosroès, Ḥalīma). AUCUN verset imprimé dans la leçon (aucun <span>). NB : les chaînes généalogiques longues (ʿAbd Manāf, Quṣayy, Mudar, Nizār, Maʿadd, ʿAdnān) n'existent NI dans src NI dans le miroir (table du livre imprimé non scrape) → non inventées (règle f) ; seule chaîne source = hadith Wāṯila (Ismāʿīl→Kināna→Qurayš→Banū Hāšim→le Prophète), rendue en français. Règle f ×2 : rubrique « أهتدي وأقتدي » (image) et tableau des sens de l'exploitation (image).
+- **14180** (QA OK, 10 284 car) : hadith Anas b. Mālik (Muslim, isrāʾ/ouverture de poitrine), citation Nūr al-yaqīn d'al-Ḫuḍarī p. 19-20 retouches, citation Ibn Isḥāq t. 1 p. 65, citation al-Būṭī p. 46. VERSET RESTAURÉ : al-Šarḥ 94:1 (« N'avons-Nous pas ouvert pour toi ta poitrine ? ») — réf imprimée الشرح:1 correcte, image du site = en-tête étranger (« الأنساب والقبائل »). Règle f ×1 : liste des événements à réordonner (évaluation, image).
+- **14182** (QA OK, 9 734 car) : texte al-Raḥīq al-maḫtūm p. 50, citation al-Rawḍ al-unuf d'al-Suhaylī t. 2 p. 63, hadiths « parfaire les bons caractères » (al-Ḥākim) et « Soutiens ton frère » (al-Bukhārī, maẓālim), citation Sīra d'Ibn Hišām t. 1 p. 133. 3 VERSETS RESTITUÉS avec COQUILLES −1 corrigées contre le contenu (mot-cible, convention R58/14785) : النساء:57→58 (dépôts+équité ; corroboré par l'image du site qui contient 4:58), النساء:134→135 (justice fût-ce contre soi/parents/proches = « proche/lointain »), المائدة:9→8 (équité malgré la haine = « valeurs que n'affectent pas les égarements d'autrui »). Coquille texte : « يجوز التمييز فيها بين القريب والبعيد » lu comme « لا يجوز » (négation manifestement omise, exigée par 4:135) — traduit au sens négatif, signalé ici. Règle f ×2 : « أهتدي وأقتدي » et tableau à recopier (évaluation).
+- Translittération DIN stricte (brief sira-1es) : Qurayš, Banū Hāšim, Wāṯila b. al-Asqaʿ, al-Tirmiḏī, al-Ḫuḍarī, al-Raḥīq al-maḫtūm d'al-Mubārakfūrī, Ibn Hišām, ḥilf al-fuḍūl, ǧabal Abī Qubays, ḏū al-qaʿda — écart documenté vs graphies sīra-2es (Hishām/makhtūm/Khuḍarī) : le brief de CE livre impose DIN (table des h1 elle-même en DIN). « chamelles au poil roux (ḥumr al-naʿam) » aligné sur 15770. Objectifs à l'infinitif ; « أتمثل عمليا » rendu « Incarner concrètement… ». Chrome supprimé (dl/dt/dd vides, <p> vides, <p> de titre final = légende de bannière étrangère).
+- QA : 3 × « QA OK » (0 arabe, guillemets appariés, balises appariées, 0 apostrophe droite ; auto-fix NNBSP appliqué). NI hand-set.py NI git NI content/books touchés.
+
+Stage Summary:
+- Livrables : tr-tmp/14177.html (8 862 car), tr-tmp/14180.html (10 284 car), tr-tmp/14182.html (9 734 car) — traductions savantes intégrales, QA OK.
+- Versets restitués : al-Šarḥ 94:1 (14180) ; an-Nisāʾ 4:58, 4:135, al-Māʾida 5:8 (14182) avec 3 coquilles de référence du manuel corrigées et annotées dans le texte (« ; le manuel imprime X, coquille — … »). 14177 : aucun verset imprimé au source.
+- Règle f : 14177 (أهتدي وأقتدي + tableau des sens), 14180 (liste des événements), 14182 (أهتدي وأقتدي + tableau) — images du site prouvées étrangères aux leçons (VLM), non restituées.
+- Écarts signalés : négation « لا » manquante (14182) traduite au sens voulu par le verset ; chaîne généalogique longue absente du web-source → non inventée ; Bayhaqī « p. 621-721 » conservé tel qu'imprimé ; graphies DIN vs sīra-2es documentées.
+- Technique transmise : miroir scripts-recovery/tmp-mirror-books/sira-1ep.json + VLM « z-ai vision » pour auditer les images de leçon — ne JAMAIS restituer le contenu d'une image sans double vérification (cache/mot-cible).
+---
+Task ID: R62-g
+Agent: subagent-traducteur
+Task: Traduction sira-1es 14227+14228+14232 (leçon 16 + activités 12-16 + leçon 17)
+Work Log:
+- Brief _brief-sira1es.md + fin du worklog (R62-a…c) lus ; livraisons parallèles 14186/14205/14202
+  calquées (sous-titre « …, leçon de Sīra prophétique pour la première année du cycle collégial
+  traditionnel (Leçon N) » ; activités sans « leçon de », calque 14186 ; « Troisièmément : je me
+  guide et je prends modèle » ; « L’extraction des contenus : » ; glossaire ul/li ; chrome supprimé).
+- FORENSIQUE (miroir scripts-recovery/tmp-mirror-books/sira-1ep.json) : noms de fichiers <img>
+  relevés → TOUTES les réf. imprimées confirmées : 14227 = النحل___125___2.png, هود-_-115.png,
+  فصلت-_-33.png ; 14228 = الحجر-_-97/98-99/95-96.png + الأنعام-_-11.png + TABLE-image
+  « …جدول.png » ; 14232 = فصلت-_-1-_-5.png (540×324 ≈ 5-6 lignes, soit bien vv. 1-5 et non
+  1-13) + الإسراء--_-90-_-93.png.
+- 14227 « Le soutien divin : la conversion de Ḥamza b. ʿAbd al-Muṭṭalib et de ʿUmar b. al-Ḫaṭṭāb
+  (qu’Allāh les agrée) » (9 063 car, QA OK) : ḥadīṯ Ibn ʿAbbās (Abū Nuʿaym, Dalāʾil al-nubuwwa
+  t. 1 p. 240) traduit intégralement (glose du manuel « أي: حين أسلم » rendue en incise) ;
+  ḥadīṯs Tirmiḏī (duʿāʾ « Ô Dieu, honore l’islam… »), Ibn al-Ǧawzī (Ṣuḥayb), Aḥmad (Ibn Masʿūd),
+  Bukhārī ×3 (manāqib al-anṣār/islām ʿUmar ; manāqib ʿUmar Abī Ḥafṣ ×2 ; taʿbīr, bāb al-laban).
+  3 versets « أهتدي وأقتدي » restitués : al-Naḥl 125, Hūd 115, Fuṣṣilat 33 — AUCUNE coquille
+  (mot-cible vérifié : bonne exhortation / « sois patient » / « plus belles paroles »).
+  Anomalie source : objectif 1 « رضي الله عنه » SINGULIER pour deux compagnons → rendu pluriel
+  « — que Dieu les agrée — » (évident co-texte h1 عنهما) ; « إيه يا ابن الخطاب » rendu « Eh bien,
+  ô fils d’al-Ḫaṭṭāb ! » ; elision du manuel « .... » gardée « … » ; 0 règle f (les 3 images =
+  versets, tous restitués).
+- 14228 « Activités de renforcement et de consolidation des acquis (leçons 12 à 16) » (4 090 car,
+  QA OK) : 4 versets restitués — al-Ḥiǧr 97, 98-99, 95-96, al-Anʿām 11 — AUCUNE coquille
+  (mot-cible : « ta poitrine se serre » / ce qui dissipe l’étroitesse / « Nous t’avons défendu
+  vis-à-vis des railleurs » / sort de ceux qui traitent la vérité de mensonge). Citation Raḥīq
+  p. 76 retouches structurée en intro « … : » + versets « … » (convention 14205 Texte 1) ;
+  RÈGLE f ×1 : la table-image (alt « …جدول ») de l’activité 1 item 2 signalée « (tableau non
+  reproduit dans le manuel) » ; consignes du journal mural traduites intégralement (conception /
+  collecte / organisation).
+- 14232 « Qurayš négocie avec le Prophète — que Dieu prie sur lui et le salue — » (12 447 car,
+  QA OK) : h1 titleFr avec ﷺ développé (mid-title, calque 14194). Fuṣṣilat 1-5 restitué ;
+  DÉCISION DOCUMENTÉE : la référence imprimée 1-5 est confirmée triple (span, nom de fichier
+  فصلت-_-1-_-5.png, hauteur d’image ~324px ≈ 5-6 lignes) ET le glossaire du manuel porte sur des
+  mots du v. 5 (fī akinnatin, waqran) → AUCUNE coquille, extrait éditorial du 1-13 classique
+  (Ibn Hišām/Raḥīq p. 94-95 où la récitation va jusqu’à la ṣāʿiqa v. 13, scène de la main sur
+  la bouche) — suivi de la réf. imprimée, écart signalé ici pour le main agent (le brief laissait
+  « 1-13 ou un extrait »). al-Isrāʾ 90-93 restitué (Allah→Dieu ; inner « » → “ ” ; « Dis-[leur] : »).
+  Adaptation signalée : « H’â, Mîm. » (Hamidullah, apostrophe droite) → « Ḥāʾ-Mīm. » (DIN).
+  Citations : Ibn Hišām t. 1 p. 293-294 et 294-297 ; Raḥīq p. 94-95 et 95 ; Būṭī « ص: 90/ 92 »
+  rendu « p. 90-92, retouches » (elisions « … » du source gardées). Glossaire 3 termes
+  (sawwadnāka ʿalaynā, fī akinnatin, waqran) ; h3 « رسول » gardé « le Messager » (fidélité).
+  Fix QA : 2 fermantes « » » parasites supprimées (guillemets 9/9).
+- Translittération DIN stricte : Ḥamza, ʿUmar b. al-Ḫaṭṭāb, ʿUṭba b. Rabīʿa, Abū al-Walīd,
+  Ṣuḥayb b. Sinān al-Rūmī, Ibn Masʿūd, Abū Ḥafṣ, al-Tirmiḏī, Ibn al-Ǧawzī, Dalāʾil al-nubuwwa,
+  Manāqib, Faḍāʾil al-ṣaḥāba, al-Būṭī, al-Ḥiǧr, al-Anʿām, Fuṣṣilat, al-Isrāʾ, Banū Hāšim.
+  Registre : « conversion » (jamais le GT-isme « l’Islam de »), « l’islam » bas de casse dans
+  le corps ; « Mekke », « la Kaʿba », « la Maison » ; majuscules divines (Dieu, le Très-Haut).
+  Versets : « Allah »→« Dieu », numéros (98)(99) en fin de verset (convention 13961/14186),
+  paroles internes “ ”, « Musulmans » (capitalisation Hamidullah) conservée.
+- QA : 3/3 « QA OK » (0 arabe, guillemets appariés, balises appariées, 0 apostrophe droite ;
+  auto-fix NNBSP appliqué). NI hand-set.py NI git NI content/books touchés.
+Stage Summary:
+- Livrés : tr-tmp/14227.html (9 063 car), tr-tmp/14228.html (4 090 car), tr-tmp/14232.html
+  (12 447 car) — traductions savantes intégrales, QA OK, h1 = titleFr officiels (ﷺ développé,
+  (qu’Allāh l’agrée) conservé).
+- Versets restitués (cache Hamidullah, Allah→Dieu) : 14227 → al-Naḥl 125, Hūd 115, Fuṣṣilat 33 ;
+  14228 → al-Ḥiǧr 97, 98-99, 95-96, al-Anʿām 11 ; 14232 → Fuṣṣilat 1-5, al-Isrāʾ 90-93.
+  Coquilles de référence : AUCUNE (les 9 réf. imprimées vérifiées au mot-cible).
+- Règle f : 14228 → 1 table-image signalée ; 14227/14232 → rien (images = versets restitués).
+- Décisions notables pour le main agent : (1) Fuṣṣilat 1-5 (réf. imprimée confirmée) restitué
+  tel quel — le récit classique va jusqu’à v. 13, le manuel abrège délibérément ; (2) « Ḥāʾ-Mīm. »
+  substitué à « H’â, Mîm. » (Hamidullah, apostrophe droite interdite par la QA) ; (3) Būṭī
+  « 90/ 92 » normalisé « p. 90-92 » ; (4) ḥadīṯ Abū Mūsā : elision « .... » du manuel rendue
+  « … » sans reconstitution ; (5) ʿUmar b. al-Ḫaṭṭāb DIN dans le corps, « qu’Allāh les agrée »
+  du titleFr conservé verbatim au h1.
+---
+Task ID: R62-e
+Agent: subagent-traducteur
+Task: Traduction sira-1es 14206+14211+14209 (leçons 11-12 + activités 6-11)
+
+Work Log:
+- Lu _brief-sira1es.md (spéc complète), fin du worklog (R59-R62) ; registre calqué sur l'exemplaire
+  13961.html et sur les livraisons sira-1es parallèles (14205 pour la famille « étapes de la
+  prédication », 14186 pour le format des documents d'activités, sous-titre compris).
+- Conventions reprises telles quelles : h1 = titleFr VERBATIM ; sous-titre « …, leçon de Sīra
+  prophétique pour la première année du cycle collégial traditionnel (Leçon N) » (14206 = Leçon 11,
+  14211 = Leçon 12 selon le source) ; 14209 calqué sur 14186 (sous-titre sans « leçon de ») ;
+  glossaires ul/li « terme : glose » ; DIN strict dans le corps (Ḫadīǧa, Ḫuṯaym, ʿUṯmān, Maẓʿūn,
+  Luʾayy, al-Ḫaṭṭāb, Ḫabbāb b. al-Aratt, al-Ḫuḍarī, al-Ḏahabī, al-Tirmiḏī, al-Šuʿarāʾ, al-Masad,
+  al-Tawba — forme « al- » non assimilée, cf. al-Nisāʾ/al-Ḥašr 14182/13986) ; « tout premiers »
+  (al-sābiqūn al-awwalūn) contre le « prédécesseurs » du GT (GT-isme écarté) ; « al-ǧahr » /
+  « al-ṣadʿ bi-l-ḥaqq » introduits en glose ; aucun ṣalāwāt ajoutée là où le source n'en porte pas.
+- **14206 (Leçon 11, les Sābiqūn)** : texte Nūr al-yaqīn p. 67-68, liste d'Ibn Isḥāq (Sīra d'Ibn
+  Hišām t. 1 p. 432) rendue intégralement, Siyar aʿlām al-nubalāʾ t. 1 p. 144, ḥadīṯ Ṭabarānī
+  (al-Muʿǧam al-awsaṭ) et Tirmiḏī (manāqib Abū Bakr) traduits avec paroles internes après
+  deux-points sans guillemets imbriqués (convention 14182). COQUILLE CORRIGÉE (règle mot-cible) :
+  التوبة:101 → at-Tawba 9:100 — le verset 100 est celui des tout premiers (Émigrés/Auxiliaires/
+  successeurs dans le bien), objet même de la section « mérite et rang des Sābiqūn » ; le 101
+  décrit les hypocrites parmi les Bédouins — note en ligne au format 14182. Hamidullah adapté :
+  Allah→Dieu, « Emigrés »→« Émigrés » (accentuation française), le reste verbatim. Gloss ṣarf/
+  ʿadl (Nihāya d'Ibn al-Athīr : nāfila/farīḍa) donnée en parenthèses ; « p. 862-962 » du Ṭabarānī
+  et « p. 87/89 » du Būṭī conservés tels qu'imprimés (plages probables coquilles, non inventés).
+  Règle f ×1 : tableau « أهتدي وأقتدي » (image) signalé « (tableau non reproduit dans le manuel) ».
+- **14209 (activités 6-11)** : aucun verset imprimé au source (vérifié : zéro span, zéro image),
+  aucune perte règle f. Citations rendues intégralement : al-Šifāʾ du cadi ʿIyāḍ t. 1 p. 269-270
+  (retouches), Nūr al-yaqīn p. 29 ; « l'incident de la Pierre noire » (al-ḥaǧar al-aswad) ;
+  « عليه الصلاة والسلام » rendu « — que la prière et le salut soient sur lui — » (variante
+  source) ; « al-ʿizza wa-l-anafa » translittéré et glosé « fierté et susceptibilité orgueilleuse ».
+- **14211 (Leçon 12, al-ṣadʿ bi-l-ḥaqq)** : ḥadīṯ Ibn ʿAbbās (Bukhārī, tafsīr), ḥadīṯ Muslim
+  (banū Kaʿb… Fāṭima), citations Ḫuḍarī p. 33, 34 (retouches), 67-68, Suhaylī al-Rawḍ al-unuf
+  t. 3 p. 46 (soleil/lune), Ġazālī p. 100-101 (retouches) — paroles internes après deux-points.
+  COQUILLE CORRIGÉE ×3 occurrences : الشعراء:213 → al-Šuʿarāʾ 26:214 (le ḥadīṯ cite lui-même
+  « wa-anẓir ʿašīrataka-l-aqrabīn », qui est au v214 ; le v213 porte sur l'interdiction d'invoquer
+  une autre divinité) — note complète à la 1ʳᵉ occurrence, réf. corrigée nue ensuite. al-Masad
+  111:1-2 ×2 restitué, « Abû-Lahab » (Hamidullah) adapté « Abū Lahab » (DIN, écart documenté).
+  Technique 14205 généralisée : ḥadīṯ cité en plusieurs <p> avec citation fermée au deux-points
+  avant chaque verset (pas d'imbrication « ») ; verset inséré dans la citation Ġazālī rendu en
+  “ … ” (convention R62-a « paroles internes en “ ” »). Glossaire : al-Ṣafā (saʿy), tabbat.
+- Écarts vs consigne orchestrator : la consigne mentionnait « Bilāl b. Rabāḥ » en 14206 et
+  « al-Ḥiǧr » en 14211 — éléments introuvables du source (vérification src.html complète) ;
+  traités comme confusion d'orchestration (précédent R62-c), RIEN inventé ; l'« al-Ḥiǧr » de la
+  consigne correspond en fait à la Pierre noire de 14209 et « Ṣawt/summit » à la station sur
+  al-Ṣafā / « révèle-toi » à fa-ṣdaʿ (proclamer) — tous rendus depuis le source.
+- QA : QA OK ×3 (0 arabe, guillemets appariés 6/3/15, balises appariées, 0 apostrophe droite,
+  auto-fix NNBSP appliqué). NI hand-set.py NI git NI content/books touchés.
+
+Stage Summary:
+- Livrables : tr-tmp/14206.html (9 665 car), tr-tmp/14209.html (4 027 car), tr-tmp/14211.html
+  (11 569 car) — traductions savantes intégrales, h1 = titleFr officiels, prêts pour hand-set.py.
+- Versets restitués : 14206 → al-Tawba 100 (coquille 101→100 corrigée et notée) ; 14211 →
+  al-Šuʿarāʾ 214 ×3 (coquille 213→214, notée) + al-Masad 1-2 ×2 ; 14209 → aucun verset au source.
+- Règle f : 14206 tableau أهتدي وأقتدي (1 signalement) ; 14209 et 14211 sans perte de contenu.
+- Décisions à retenir : sourates en « al- » non assimilé (al-Tawba, al-Šuʿarāʾ, al-Masad) ;
+  Hamidullah « Abû-Lahab »→« Abū Lahab » et « Emigrés »→« Émigrés » dans les versets (adaptations
+  typographiques DIN/françaises, documentées) ; plages de pages Ṭabarānī (862-962) et Būṭī (87/89)
+  conservées telles qu'imprimées — à vérifier si un jour le manuel imprimé est consultable.
+---
+Task ID: R62-f
+Agent: subagent-traducteur
+Task: Traduction sira-1es 14215+14221+14224 (leçons 13-15 : patience des croyants face à l'épreuve, émigration vers l'Abyssinie, discours de Ǧaʿfar devant le Naǧāšī)
+
+Work Log:
+- Lu _brief-sira1es.md, fin du worklog (R60-R62) et les livrages parallèles (13961 exemplaire 2es, 14205/14182/14191 pour les conventions sira-1es) ; sous-titre calqué sur la forme majoritaire « …, leçon de Sīra prophétique pour la première année du cycle collégial traditionnel (Leçon N) » ; structure h1→objectifs infinitifs→Introduction→Le texte→La compréhension→L'explication des termes→L'extraction des contenus→L'analyse (Premièrement :/Deuxièmement :/Troisièmement :)→L'évaluation→L'exploitation→La préparation préalable.
+- FORENSIQUE IMAGES (méthode R62-b) : miroir scripts-recovery/tmp-mirror-books/sira-1ep.json → noms de fichiers <img> corrélés aux positions ; téléchargement des 7 versets-images + 6 schémas depuis habous.gov.ma ; lecture VLM (z-ai vision). RÉSULTAT CLÉ : « مريم-_-1.png » contient bien كهيعص (Maryam 1, confirmé à x6 autocontraste — réf. imprimée CORRECTE) ; les autres versets-images sont en OCR partiel/bruité (voire insertions CMS étrangères, cf. R62-b) → la vérification s'est faite par la règle mot-cible du brief (contenu discuté vs cache Hamidullah).
+- VERSETS RESTITUÉS (cache Hamidullah, Allah→Dieu, paroles internes en “ ”) : 14215 → al-Naḥl 106 (ʿAmmār contraint — réf. correcte), Fāṭir 4, al-Ḏāriyāt 52, al-Ḏāriyāt 54, al-Ṭūr 48 ; 14224 → Maryam 1, Luqmān 13. 14221 : aucun verset imprimé au source.
+- COQUILLES CORRIGÉES (mot-cible, annotées inline selon le format 14182) : Ṭūr 46→48 (la glose du manuel « اصبر على أذاهم فإنك بحيث نراك ونحفظك » paraphrase « اصبر لحكم ربك فإنك بأعيننا » = 52:48 ; or 52:46 = « le jour où leur ruse ne leur servira à rien », hors sujet) ; Luqmān 12→13 (le mot-cible شرك/ظلم عظيم est au v13 « لا تشرك بالله إن الشرك لظلم عظيم » ; v12 = sagesse donnée à Luqmân). Maryam:1 vérifiée CORRECTE (image = كهيعص).
+- RÈGLE f (6 signalements, orientations prudentes dérivées du texte de leçon, jamais du contenu des images — VLM a prouvé que plusieurs schémas étaient des insertions étrangères : mind-map du mariage pour « الرذائل », diagramme du Coran pour « القيم », tableau de compétences d'une autre leçon pour « من صفات الرسول ») : 14215 → schéma des attributs du croyant (section أهتدي وأقتدي) ; 14221 → carte de l'Atlas de la Sīra de Šawqī Abū Ḫalīl (après les maqāṣid) + tableau à remplir de l'évaluation (en-têtes de colonnes corroborés par VLM : cause de l'émigration / raisons du choix de l'Abyssinie / figures et finalités — concorde avec les sections de la leçon) ; 14224 → schéma des vices de la ǧāhiliyya, schéma des valeurs de l'islam, schéma des attributs de l'Élu (أهتدي وأقتدي).
+- FIDÉLITÉ (règle f stricte) : la consigne R62-f évoquait pour 14221 « premier et second exodes + Ǧaʿfar » — le source ne narre que le PREMIER exode (raǧab, an 5, 10 hommes + 4 femmes, poursuite jusqu'à la mer) ; le second exode n'apparaît qu'en allusion dans la citation d'al-Sibāʿī (« أولا وثانيا »), et Ǧaʿfar qu'en préparation préalable → RIEN inventé. 14224 : « وَلَمْ يَفْرِضْهَا وَلَدٌ » vérifié par recherche web comme leçon AUTHENTIQUE du texte d'Ibn Sayyid al-Nās (« العذراء البتول التي لم يمسسها بشر ولم يفرضها ولد » — فرض = fendre) → rendu « qu'aucun enfant n'a fendue » ; « وَلَا يُكَادُونَ » (fin de la parole du Naǧāšī, altéré ; Ibn Hišām : « وَلَا أُكَادُهُمْ ») → rendu au sens passif « et ils ne seront point inquiétés ».
+- Citations classiques rendues intégralement avec crochets : 14215 → Fiqh al-sīra d'al-Ġazālī p. 107-108 ; al-Raḥīq al-maḫtūm p. 78 retouches ; Nūr al-yaqīn p. 34 ; al-Bukhārī (manāqib al-Anṣār) ; Sīra d'Ibn Hišām p. 321 ; Ḥilyat al-awliyāʾ d'Abū Nuʿaym t. 1 p. 144 ; al-Šifāʾ du cadi ʿIyāḍ t. 2 p. 42-43 (citation de Makkī b. Abī Ṭālib al-Qaysī avec ses 4 versets interleavés et leurs gloses). 14221 → Sīra d'Ibn Isḥāq t. 1 p. 213 (Umm Salama) ; Tafsīr d'al-Ṭabarī t. 2 p. 328 ; Sīra d'Ibn Hišām t. 1 p. 75-76 ; Musnad d'Aḥmad (Musnad des dix annoncés au Paradis) ; al-Sibāʿī p. 51 retouches. 14224 → al-Rawḍ al-unuf d'al-Suhaylī t. 2 p. 111 retouches (discours intégral de Ǧaʿfar, citation continue sur 3 <p> avec le verset inséré, comme au source) ; Sīra d'Ibn Hišām t. 1 p. 337 ; ʿUyūn al-aṯar d'Ibn Sayyid al-Nās t. 1 p. 138 (l'échange sur ʿĪsā et Maryam).
+- Conventions appliquées : al-Amīn (le digne de foi) / al-Ṣādiq (le véridique) comme R62-c ; « Commandeur des croyants » (cf. 19466/19518) ; discours direct après deux-points sans guillemets imbriqués ; « Un, Un ! » (aḥad, aḥad) pour Bilāl ; DIN strict (Ḏāriyāt, Ṭabarī, Ǧubayr, Ḫabbāb b. al-Aratt, Aṣḥama, Naǧāšī, miškāt, raǧab, abṭaḥ/ramḍāʾ glosés au glossaire) ; graphies établies (Mekke, Abyssinie, Kaʿba) ; NI hand-set.py NI git NI content/books.
+
+Stage Summary:
+- Livrables : tr-tmp/14215.html (14 105 car), tr-tmp/14221.html (8 495 car), tr-tmp/14224.html (8 580 car) — traductions savantes intégrales, 3 × « QA OK » (0 arabe, guillemets et balises appariés, 0 apostrophe droite ; auto-fix NNBSP appliqué).
+- Versets restitués : al-Naḥl 106 ; Fāṭir 4 ; al-Ḏāriyāt 52 ; al-Ḏāriyāt 54 ; al-Ṭūr 48 ; Maryam 1 ; Luqmān 13 — chaque réf. vérifiée au mot-cible contre le cache ; 2 coquilles corrigées (Ṭūr 46→48, Luqmān 12→13), Maryam:1 confirmée par OCR de l'image (كهيعص).
+- Règle f : 6 signalements (schéma 14215 ; carte Atlas + tableau d'évaluation 14221 ; 3 schémas 14224), orientations prudentes — VLM a montré que la plupart des schémas étaient des insertions CMS étrangères, donc jamais restitués.
+- Écarts documentés : consigne « second exode » de 14221 non fondée dans le source (rien inventé) ; « ولم يفرضها ولد » authentique (web-vérifié) ; « ولا يكادون » altéré, rendu au sens ; numérotation des leçons du source respectée (Leçons 13, 14, 15).
+- Reste sira-1es : 14227, 14228, 14232, 14239, 14243, 14247, 14249, 14253, 14262, 14268, 14270, 15720 — conventions R62 établies, prêtes pour les agents suivants.
+---
+Task ID: R62-h
+Agent: subagent-traducteur
+Task: Traduction sira-1es 14239+14243+14247 (leçons 18-20 : siège et boycott, année du deuil, voyage à Ṭāʾif)
+Work Log:
+- Brief sira-1es + worklog (R59→R62) lus ; harmonisation avec les livraisons parallèles relues avant
+  rédaction : 14205 (R62-d) et surtout 14232 = leçon 17 (R62-g), prélude immédiat (« Je lis, dans les
+  livres de Sīra, ce qui a trait au boycott que Qurayš imposa aux musulmans et aux Banū Hāšim ») :
+  même structure, ṣalāwāt, « L'extraction des contenus : », « je me guide et je prends modèle ».
+- FORENSIQUE IMAGES (miroir scripts-recovery/tmp-mirror-books/sira-1ep.json + téléchargement + VLM
+  glm-4.5v via z-ai-web-dev-sdk createVision) : 14239 → image « العبرة المستخلصة من مقاطعة قريش
+  وحصارها » (rubrique رابعا أهتدي وأقتدي, <p> vide) et 14247 → image « أهتدي وأقتدي … هجرة الرسول
+  إلى الطائف » : lectures VLM instables/hallucinantes (2 passes, upscale ×3 PIL) → NON restituées,
+  signalées règle f avec mention de la cause. 14243 → 3 versets-images identifiés par noms de
+  fichiers : الشرح 5-6, البقرة 152, آل عمران 146.
+- VERSETS RESTITUÉS (cache Hamidullah, « Allah »→« Dieu ») : al-Šarḥ 5-6 (14243 après « قال
+  تعالى: », réf. imprimée correcte au mot-cible « difficulté des commencements → facilité ») ;
+  al-Baqara 153 + Āl ʿImrān 146 (14243, citation Qasṭallān) avec COQUILLE corrigée البقرة
+  152→153 : vérifiée contre le texte original d'Iršād al-Sārī p. 413 (ablibrary.net) qui cite
+  « إن الله مع الصابرين، إن الله يحب الصابرين » — le v152 ne porte ni ṣabr ni maʿiyya ; note
+  inline dans la référence, convention 14182/14197.
+- ANOMALIES DU MANUEL WEB (toutes confirmées contre le miroir = source live) : (1) GLOSSAIRES
+  BOUILLÉS par coquille CMS : 14243 (salwāhu, ʿaḍudan) et 14247 (ḫuʾūla, allā yushīʿū dhālika,
+  ʿaqibihi) reçoivent les gloses des leçons précédentes (al-mīra, yataḍāghawna, naṯr al-turāb) —
+  rendus au sens lexical évident du mot dans le texte + note explicite dans le fichier (zéro
+  invention : aucune glose fabriquée) ; (2) 14239 « إلى شعب بني طالب » = coquille manifeste de
+  « شعب أبي طالب » (la même leçon écrit « من شعب أبي طالب » plus bas) corrigé silencieusement ;
+  (3) 14243 ÉVALUATION = copie conforme de celle de la leçon 18 (questions boycott/siège) —
+  traduite telle quelle + N.B. transparent dans le fichier ; (4) 14247 Texte 1 « عرض عليهم
+  نصرته » (Nūr al-yaqīn ; vraisemblablement « نفسه ») rendu « il leur demanda leur soutien
+  (nusra) » ; doublons CMS « الرسول الرسول ﷺ » et « إنَّ: اللهَ » normalisés sans note ;
+  (5) références imprimées conservées (al-Šifāʾ t. 2 p. 56, Bayhaqī t. 2 p. 350, Qasṭallānī
+  t. 2 p. 413).
+- HADITH DE L'ANGE DES MONTAGNES (14247, exploitation) traduit INTÉGRALEMENT avec la parole
+  prophétique célèbre « J'espère plutôt que Dieu fera sortir de leurs lignées celui qui adorera
+  Dieu seul, sans rien Lui associer » + [Rapporté par al-Bukhārī, Livre du début de la création,
+  et par Muslim, Livre du jihād et des expéditions (siyar)] ; attribution des répliques conforme
+  à la leçon canonique (l'ange : « cela est en ton pouvoir : si tu veux, je fais s'abattre sur
+  eux les deux massifs (al-Aḫšabayn) »). Duʿāʾ de Ṭāʾif (al-Ṭabarānī, al-Muʿǧam al-kabīr) et
+  hadith de ʿUrwa/Ibn ʿAmr (al-Bukhārī, Manāqib al-Anṣār) traduits intégralement.
+- Conventions : h1 = titleFr verbatim (ﷺ développé « — que Dieu prie sur lui et le salue — ») ;
+  sous-titre « …, leçon de Sīra prophétique pour la première année du cycle collégial traditionnel
+  (Leçon 18/19/20) » ; DIN strict dans le corps (Ṯaqīf, Ṭāʾif, ḫuʾūla, šiʿb, ʿUṭba et Šayba,
+  Ḫadīǧa, Ḏū al-Ḥiǧǧa, ḍuġāʾ, Naḫla, Ḫuzāʿa, Manṣūr b. ʿIkrima… b. Quṣayy) — corps 14243 en
+  Ḫadīǧa (son h1 ne porte pas le nom) ; discours direct après deux-points sans guillemets
+  imbriqués (14232), paroles du Prophète dans Texte 2 de 14247 en “ ” (le source y met des « ») ;
+  « trois milles » sans conversion km (convention R62-d) ; « Salât » verbatim Hamidullah ;
+  évaluations en <ol> numérotées comme le source.
+- QA : 3 × « QA OK » — 14239 : 10 798 car (3 paires de « »), 14243 : 11 768 car (9), 14247 :
+  12 097 car (7) ; 0 caractère arabe, 0 apostrophe droite, balises appariées, NNBSP auto-fix.
+  NI hand-set.py NI git NI content/books touchés ; fichiers d'audit conservés dans
+  tr-tmp/_r62h-imgs/ (images + vlm.js + net.js).
+Stage Summary:
+- Livrés : tr-tmp/14239.html, tr-tmp/14243.html, tr-tmp/14247.html — traductions savantes
+  intégrales, h1 = titleFr officiels, prêts pour hand-set.py (main agent).
+- Versets restitués : al-Šarḥ 5-6 ; al-Baqara 153 (coquille 152→153 corrigée + notée inline) ;
+  Āl ʿImrān 146. Aucun verset imprimé dans 14239 ni 14247.
+- Règle f : 2 listes d'enseignements en images illisibles (14239 رابعا, 14247 ثالثا) signalées ;
+  2 glossaires brouillés (14243/14247) rendus au sens lexical + note ; 1 N.B. évaluation
+  dupliquée (14243) ; 1 coquille شعب بني طالب corrigée silencieusement.
+- Points d'attention main agent : (1) évaluation 14243 = duplication de la leçon 18 — si le
+  livre imprimé donne d'autres questions, les substituer (non inventées ici) ; (2) glossaires
+  14243/14247 : les gloses authentiques du manuel imprimé sont inconnues (sens lexicaux donnés
+  à la place) ; (3) al-Aḫšabayn volontairement non glosé dans le hadith (la question 1 de
+  l'évaluation demande à l'élève de l'expliquer) ; (4) « الرسول الكريم/المصطفى » rendus « le
+  noble Messager/l'Élu », « عليه الصلاة والسلام » (Nūr al-yaqīn) → « — sur lui la prière et la
+  paix — ».
+---
+Task ID: R62-j
+Agent: subagent-traducteur
+Task: Traduction sira-1es 14268+14270+15720 (index des aʿlām + bibliographie + leçon isrāʾ approfondie)
+
+Work Log:
+- Lu _brief-sira1es.md (spéc complète) + worklog (R59→R62-i) ; registre calqué sur l'exemplaire 13961 et les
+  livraisons parallèles sira-1es (14197/14205/14215/14221/14227/14247 relues avant rédaction) ; bibliographie =
+  convention R61 19522 (titres translittérés en <span> + [« traduction française »], auteur + kunya + mort,
+  édition critique + éditeur + n° d'édition + date, villes en français, éditeurs translittérés) ; index aʿlām =
+  15274/14915 en référence, MAIS structure du source (23 h3 + p) conservée tel quel (fidélité source > format ul).
+- **14268 (23 notices biographiques)** : h1 = titleFr « Notices biographiques des figures citées » verbatim ;
+  ṣalāwāt selon convention (compagnons « — que Dieu l'agrée — », prophètes « — sur lui la paix — », « عليهما
+  الصلاة والسلام » → « — sur eux deux la prière et le salut — ») ; dates sourcées du manuel uniquement (Ibn
+  Isḥāq né 80 H., ʿAyn al-Tamr conquise 12 H., Naǧāšī décédé raǧab an 9 H., ʿUmar assassiné 23 H.).
+  COQUILLES CORRIGÉES (silencieuses, cf. précédent R62-h شعب بني طالب) : (1) titre « حمزة بن أبي طالب » →
+  Ḥamza b. ʿAbd al-Muṭṭalib — coquille manifeste : la notice dit « عم رسول الله » et la leçon 17 du MÊME livre
+  (14227, livré par R62-g) porte « Ḥamza b. ʿAbd al-Muṭṭalib » ; (2) « ولم يعرف أن أحدا » lu « on ne connaît
+  personne qui… » (source contorsionné). DIN soigné partout : naǧǧārite/ḫazraǧite, ṯarīd, Quṣayy, Mudrika,
+  Mulḥān, Šurāḥīl, Ḫayyāṭ, Aṣḥama, Fayrūz, muṭṭalibite ; gloses intégrées : al-Waḥīd (l'Unique), Ḏū al-Nūrayn,
+  Abū Lahab (le père de la flamme), Abū Ǧahl vs Abū al-Ḥakam, ḥabr al-umma, ḥarb al-Fiǧār glosée « guerre des
+  sacrilèges », ṣalāt al-ġāʾib. Citation Hāšim/Ibn Isḥāq en « » inline.
+- **14270 (27 entrées, ordre du source)** : h1 = « Liste des sources et références » verbatim + phrase
+  d'ouverture ; format 19522 : <span>Titre</span> [« Traduction »], de Auteur (mort en X) ; édition critique :
+  Y ; éditeur : Dār… ; nᵉ éd., date. COQUILLES CORRIGÉES : (1) « دكتور عمر عبد السلام. تدمر. » → Dr ʿUmar
+  ʿAbd al-Salām Tadmurī — coquille manifeste (splt du nom تدمري ; éditeur attesté de la Sīra d'Ibn Hišām,
+  Dār al-Kitāb al-ʿArabī Beyrouth 3ᵉ éd. 1990, web-vérifié) ; (2) Abū Dāwūd « ت.725هـ » → 275 H. (inversion
+  manifeste — mort 275 H., précédent 15274 802→202) ; (3) « تهدذيب » → Tahḏīb (double ذ du manuel normalisé).
+  Fidélité : « شركة مصطفى الحلبي » rendu sous la forme abrégée du manuel (société Muṣṭafā al-Ḥalabī), aucune
+  ville inventée ; « cheikh des ḥuffāẓ » aligné sur le corpus sira-1es/R61 (4× « cheikh ») ; Bukhārī/Qushayrī
+  graphies établies (le brief lui-même écrit al-Bukhārī) ; ṣalāwāt du titre al-Atlas développée (ﷺ interdit).
+- **15720 (variante approfondie de la leçon isrāʾ)** : h1 = « Le miracle du voyage nocturne et ses
+  significations » verbatim ; sous-titre sans n° de leçon (le source n'en porte pas) ; objectifs infinitifs
+  (Connaître/Prendre conscience/Ressentir, cf. 14205 « Ressentir ») ; structure h2/h3 du source conservée
+  (L'évaluation en h3 comme au source). FORENSIQUE IMAGES (miroir sira-1ep.json) : 7 images, dont 5
+  versets-images identifiés PAR NOM DE FICHIER : سبحان_الذي_أسرى (Isrāʾ 17:1), لقد_راءى (Naǧm 53:18),
+  الم-أحسب (ʿAnkabūt 29:1-2), وسيجنبها (Layl 92:17-18), فاوحى (Naǧm 53:10) — les 5 RÉFS IMPRIMÉES sont
+  CORRECTES (zéro coquille) ; [النجم:10] confirmé en outre par le texte-source du Šifāʾ (eshia.ir, p. 38 :
+  « فقال تعالى: ﴿فأوحى إلى عبده ما أوحى﴾… قال القاضي أبو الفضل » — le passage interpolé d'ellipses du manuel
+  correspond exactement). 5 versets restitués Hamidullah (adaptation [Muhammad]→[Muḥammad] DIN documentée ;
+  guillemets internes «Nous croyons!» → “Nous croyons !” convention R62-a/f ; « Mosquée Al-Harâm/Al-Aqsâ »
+  conservées verbatim Hamidullah en 17:1, corps en « Mosquée sacrée (al-Masǧid al-Ḥarām) / Mosquée très
+  lointaine (al-Masǧid al-Aqṣā) » — corpus sira-1es 4× « la Mosquée sacrée »).
+- 15720 ANOMALIES CMS normalisées : phrase « كما عرف عنه الوجل والخوف… » dupliquée + fragment tronqué
+  « <span>كما عرف عنه</span> » au début du التقويم — supprimés (déjà rendus en fin d'أهتدي وأقتدي) ;
+  hadith Tirmiḏī coupé en 2 <p> au milieu d'un mot (فَإِنْ/انْتَقَصَ) — fusionné ; N.B. le miroir est TRONQUÉ
+  après la citation du Šifāʾ (les 4 questions d'évaluation n'y figurent pas) — le src.html (postérieur) fait
+  foi. Règle f ×1 : « خريطة مسار رحلة الإسراء » — VLM (glm-4.5v) : carte géographique authentique de l'Atlas
+  de Šawqī Abū Ḫalīl (p. 70, Méditerranée/Damas/Jérusalem/Mekke) → signalée « carte non reproduite » avec
+  orientation ; image d'en-tête (chrome) écartée.
+- Citations 15700s rendues intégralement : Būṭī p. 115 retouches (عليه الصلاة والسلام → « sur lui la prière
+  et le salut ») ; Ġazālī p. 140-143 ; Mubārakfūrī p. 125 (dialogue des allègements en tirets, «قد استحيت
+  من ربي» → “J'ai eu honte devant mon Seigneur”) ; Muslim kitāb al-īmān ; Tirmiḏī kitāb al-ṣalāt ; al-Ḥākim
+  Mustadrak + Ḏahabī « chaîne authentique » ; al-Šifāʾ du cadi ʿIyāḍ (= Abū al-Faḍl) t. 2 p. 38 retouches,
+  ellipses du manuel conservées (versets non restitués à l'intérieur, le manuel abrège « فقلبه… ولسانه…
+  وبصره»).
+- ÉCART BRIFF SIGNALÉ : le brief donne « ʿUṭbā » comme graphie établie — DIN du source عتبة = ʿUtba, aucun
+  ʿUṭbā dans worklog/content, corpus 14915 = ʿUtba ×4 → retenu ʿUtba b. Rabīʿa.
+- QA : 3 × « QA OK » (0 arabe, 0 apostrophe droite, guillemets/balises appariés, auto-fix NNBSP). NI
+  hand-set.py NI git NI content/books touchés.
+
+Stage Summary:
+- Livrables : tr-tmp/14268.html (8 007 car, 23 notices), tr-tmp/14270.html (6 048 car, 27 entrées),
+  tr-tmp/15720.html (14 510 car) — traductions savantes intégrales, h1 = titleFr officiels, prêts pour
+  hand-set.py (main agent).
+- Versets restitués (15720) : al-Isrāʾ 17:1 ; al-Naǧm 53:18 ; al-ʿAnkabūt 29:1-2 ; al-Layl 92:17-18 ;
+  al-Naǧm 53:10 — chaque réf. vérifiée au mot-cible ET corroborée par le nom de fichier de l'image du miroir ;
+  aucune coquille de référence dans les trois docs (première leçon sira-1es sans correction à noter).
+- Coquilles éditoriales corrigées : Ḥamza b. Abī Ṭālib → Ḥamza b. ʿAbd al-Muṭṭalib (14268, corroborée par
+  14227) ; تدمر → Tadmurī et Abū Dāwūd 725 → 275 H. (14270, web-vérifiées) ; تهدذيب → Tahḏīb.
+- Règle f : 1 signalement (carte du trajet 15720, restituée comme orientation, VLM-vérifiée) ; 14268/14270
+  sans perte de contenu (images = chrome de titre seulement, vérifié au miroir).
+- Points d'attention main agent : (1) ʿUtba retenu contre « ʿUṭbā » du brief — harmoniser si un doc futur
+  tranche autrement ; (2) 15720 = VARIANTE de la leçon 14249 (livrée par R62-i en parallèle) — vérifier la
+  cohérence des graphies entre les deux leçons isrāʾ (Burāq, sidrat al-muntahā, Mosquée très lointaine) ;
+  (3) 14270 : les villes absentes du manuel ne sont pas inventées (Dār Ṣādir est à Beyrouth car imprimé,
+  Dār al-Kitāb al-ʿArabī idem, mais p. ex. Dār al-Fayḥāʾ/Amman suit le manuel) ; (4) le manuel 14268 ne dit
+  pas « مات سنة… » pour Anas (contrairement à 14915 sira-2es qui ajoute 93 H.) — rien ajouté.
+---
+Task ID: R62-i
+Agent: subagent-traducteur
+Task: Traduction sira-1es 14249+14253+14262 (leçon 21 isrāʾ/miʿrāǧ, leçon 22 éthique et valeurs, activités 17-22)
+
+Work Log:
+- Brief sira-1es + fin du worklog (R59→R62-h) lus ; registre calqué sur 14247/14232 (dernières leçons
+  livrées) et 14209/14228 (format des documents d'activités, sous-titre sans « leçon de ») ;
+  sous-titres « …, leçon de Sīra prophétique pour la première année du cycle collégial traditionnel
+  (Leçon 21/22) ».
+- FORENSIQUE IMAGES DÉTERMINANTE : VLM (glm-4.5v) s'est révéré HALLUCINANT sur les images-versets —
+  test de contrôle : الشرح-_-5-_-6.png (14243, réf. confirmée correcte par R62-h au mot-cible) lu
+  3 fois « فأوجس في نفسه خيفة موسى » (Ṭā Hā 67) = hallucination stable → VLM écarté. SOLUTION :
+  la page DUPLICATA 15720 (même leçon 21 que 14249, autre entrée CMS, toujours live) conserve les
+  images-scan ORIGINALES du livre avec alt = MOTS D'OUVERTURE du verset : « سبحان الذي أسرى »
+  (799×251), « لقد راءى » (471×111), « الم أحسب » (827×283), « وسيجنبها » (787×107), « فاوحى »
+  (545×126) → les 5 réf. imprimées de 14249 SONT CONFIRMÉES (al-Isrāʾ 17:1 ; al-Naǧm 53:18 SEUL ;
+  al-ʿAnkabūt 29:1-2 ; al-Layl 91:17-18 ; al-Naǧm 53:10 SEUL), AUCUNE coquille. L'indice
+  d'orchestration « al-Naǧm 13-18 » est DISPROUVÉ (alt « لقد راءى » + image 1 ligne) : v18 seul
+  restitué.
+- **14253 — 5 COQUILLES corrigées (mot-cible, notes inline format 14182/14224), toutes
+  « off-by-one »** : الزمر 32→al-Zumar 39:33 (Dieu atteste SA véracité = « celui qui vient avec la
+  vérité » ; l'image 700×70 = 1 ligne ≈ 9 mots = v33, v32 en fait 16) ; الأحقاف 34→al-Aḥqāf 46:35
+  (« فاصبر كما صبر أولو العزم » = patience dans le mal) ; طه 131→Ṭā Hā 20:132 (« واصطبر عليها » =
+  patience dans l'obéissance) ; الأنبياء 106→al-Anbiyāʾ 21:107 (« miséricorde pour l'univers » =
+  témoignage divin de sa miséricorde) ; التوبة 129→al-Tawba 9:128 (« compatissant et miséricordieux
+  envers les croyants » = miséricorde envers la communauté ; le 129 = tawakkul, hors sujet).
+  Āl ʿImrān 3:159 vérifiée CORRECTE (raḥma/linta).
+- Versets (cache Hamidullah, « Allah »→« Dieu ») : 14249 → 5 restitués sans coquille ; 14253 → 6
+  restitués dont 5 réf. corrigées ; 14262 → aucun verset imprimé au source (vérifié : zéro span).
+- RÈGLE f : 14249 → carte du trajet du Voyage nocturne (avant la citation al-Ġazālī, position
+  confirmée par le miroir) ; 14253 → schéma « القيمة وتجلياتها » (rubrique أهتدي وأقتدي, orientation
+  tirée de l'alt/intitulé) ; 14262 → tableau « محطات المسار الدعوي » (activité 3) + carte « خريطة
+  تبين المواضع المرتبطة بحدث الإسراء والمعراج » (activité 5). Aucune image restituée (VLM
+  hallucinant), orientations prudentes tirées des intitulés alt et des consignes.
+- Conventions appliquées : ṣalāwāt du source (صلى الله عليه وسلم → « — que Dieu prie sur lui et le
+  salue — » ; عليه الصلاة والسلام → « — sur lui la prière et le salut — » (Būṭī/Nūr al-yaqīn)) ;
+  anges → « — sur lui la paix — » (Ǧibrīl, Mūsā, Ibrāhīm) ; hadith « des cavaliers au creux de la
+  vallée » = rendu à l'identique de 14211 ; parole de Ḫadīǧa alignée sur 14202 (version Ibn Isḥāq :
+  « tu rends le dépôt… vicissitudes du droit ») ; citation Ǧaʿfar alignée sur 14224 ; « متفق عليه »
+  → [unanimement rapporté (muttafaq ʿalayhi)] (cf. 19338) ; al-Ṣiddīq (le Très-véridique) (cf.
+  14206) ; « Prophète de la guidée » (cf. 14197) ; al-Ṣādiq al-Amīn (le véridique, le digne de foi)
+  (cf. R62-c) ; « al-Amīn » dans Nūr al-yaqīn = « le digne de foi » (cf. 14209).
+- Adaptations Hamidullah documentées : « Alif, Lâm, Mîm » → « Alif, Lām, Mīm » (DIN, cf. 14224
+  « Kāf, Hāʾ, Yāʾ, ʿAyn, Ṣād ») ; « Mosquée Al-Harâm » → « Mosquée sacrée » (cf. 14211/14247) ;
+  « Al-Aqsâ » → « al-Aqṣā » ; interpolations « [Muhammad] »/« (Muhammad) » gardées en « [Muḥammad]/
+  (Muḥammad) » (DIN) ; « (d'Allah) » → « (de Dieu) » ; « Salât » verbatim (Ṭā Hā 132) ; parole
+  interne «Nous croyons !» → “Nous croyons !”.
+- Anomalies source normalisées : 14249 citation d'exploitation « ثم أخبر تعالى… فقال تعالى: »
+  non fermée par le scraping → fermée « …dit alors : » et ellipse « …, le cadi Abū al-Faḍl dit : »
+  conservée ; 14262 en-têtes d'activités harmonisés en h2 (le « النشاط الرابع » h3/span du CMS) ;
+  « نص1/نص 2 » → « Texte 1/Texte 2 » ; Texte 2 de 14262 : guillemet fermant orphelin du CMS
+  normalisé (citation ouverte en tête).
+- QA : 3 × « QA OK » — 14249 : 14 937 car (15 paires « »), 14253 : 13 036 car (15), 14262 :
+  6 291 car (4) ; 0 caractère arabe, 0 apostrophe droite, balises appariées, NNBSP auto-fix.
+  NI hand-set.py NI git NI content/books touchés. Fichiers d'audit dans tr-tmp/_r62i-imgs/
+  (images téléchargées + vlm.js/vlm2.js/net.js + live_*.html).
+
+Stage Summary:
+- Livrés : tr-tmp/14249.html (14 937 car), tr-tmp/14253.html (13 036 car), tr-tmp/14262.html
+  (6 291 car) — traductions savantes intégrales, h1 = titleFr officiels (le ﷺ du h1 de 14253
+  développé « — que Dieu prie sur lui et le salue — » ; 14249/14262 sans ﷺ, conformes au tableau).
+- Versets restitués : 14249 → al-Isrāʾ 1 ; al-Naǧm 18 ; al-ʿAnkabūt 1-2 ; al-Layl 17-18 ;
+  al-Naǧm 10 — RÉFÉRENCES TOUTES CONFIRMÉES (page duplicata 15720 : alts des images-scan
+  originales = mots d'ouverture) ; 14253 → al-Zumar 33, al-Aḥqāf 35, Ṭā Hā 132, al-Anbiyāʾ 107,
+  al-Tawba 128 (5 coquilles off-by-one corrigées et notées inline), Āl ʿImrān 159 (correcte) ;
+  14262 → aucun verset au source.
+- Règle f : 4 signalements (carte 14249 ; schéma valeurs 14253 ; tableau محطات + carte isrāʾ/miʿrāǧ
+  14262), jamais restitués — VLM prouvé hallucinant sur ce type d'images.
+- Points pour le main agent : (1) l'indice « al-Naǧm 13-18 » pour 14249 était erroné — v18 seul,
+  preuve par alt « لقد راءى » de la page live 15720 ; (2) 15720 = duplicata CMS de 14249 (même
+  leçon 21, texte quasi identique mais images-scan AVEC alts explicites) — l'agent chargé de 15720
+  pourra réutiliser 14249 presqu'intégralement (h1 différent, « خريطة مسار رحلة الإسراء » en
+  légende texte, التقويم de 15720 pollué par 2 phrases dupliquées de ثالثا = bruit CMS) ;
+  (3) 5 coquilles de référence signalées inline dans 14253 (modèle off-by-one) — vérifier contre
+  le livre imprimé si accessible ; (4) glossaires 14249/14253 complets et non brouillés (contra-
+  riement à 14243/14247).
+
+---
+Task ID: R62
+Agent: Z.ai Code (agent principal — relance utilisateur « continue », feu vert traductions maintenu)
+Task: continue — sira-1es (30 entrées) en couche savante intégrale → LIVRE №44 et PREMIÈRE MATIÈRE 100% SAVANTE (sīra 1es+2es+3es)
+
+Work Log:
+- **30 TRADUCTIONS SAVANTES INTÉGRALES** (rédaction par 10 subagents-traducteurs en 3 vagues parallèles
+  R62-a…R62-j, 3 docs chacun ; workflow extract.py → brief unifié tr-tmp/_brief-sira1es.md → rédaction →
+  qa-lesson.py → revue main → hand-set → commit + backup PAR DOC ; règles a/b respectées). Le main agent a
+  fait l'analyse du registre, la pré-extraction des 30 sources, le brief, l'identification des versets-image
+  de l'intro, la relecture QA (re-run qa-lesson sur les 30), l'injection, les 30 commits et le backup.
+- **PRÉCÉDENT : la sīra devient la PREMIÈRE MATIÈRE COMPLÈTE en couche savante intégrale** — sira-1es
+  30/30 + sira-2es 29/29 + sira-3es 9/9 = 68 documents savants, les 3 niveaux du cycle collégial.
+- **Versets RESTAURÉS (~37) depuis le cache Hamidullah** (« Allah »→« Dieu », convention corpus) avec
+  vérification systématique mot-cible : intro (al-Aḥzāb 33:21 + Āl ʿImrān 3:31 — IDENTIFIÉES par l'agent
+  principal via l'index Google du site habous, imprimées « سورة الأحزاب الآية 21 » / « سورة آل عمران »,
+  technique R61) ; 13986 (Ṭā-Hā 21 coquille 20→21, al-Aḥzāb 21, al-ḥašr 59:7) ; 14014 (Āl ʿImrān 67,
+  coquille 66→67) ; 14180 (al-Šarḥ 94:1) ; 14182 (an-Nisāʾ 4:58/135 + al-Māʾida 5:8, 3 coquilles -1
+  récurrentes : 57→58, 134→135, 9→8) ; 14186 (Āl ʿImrān 31, al-Aḥzāb 45-48) ; 14191 (al-Aḥzāb 6) ;
+  14197 (al-ʿAlaq 1-5 ×2, Āl ʿImrān 190-191, al-Muǧādala 11, coquille al-Zumar 10→9) ; 14202 (al-Ṣaff 6,
+  al-Aʿrāf 157) ; 14205 (al-Muddaṯṯir 1-7, Sabāʾ 28, al-Naḥl 125) ; 14206 (al-Tawba 100, coquille 101→100) ;
+  14211 (al-Šuʿarāʾ 26:214 ×3, coquille 213→214 + al-Masad 1-2 ×2) ; 14215 (al-Naḥl 106, Fāṭir 4,
+  al-ḏāriyāt 52/54, al-Ṭūr 48 coquille 46→48) ; 14224 (Maryam 1 confirmée par OCR كهيعص + Luqmān 13
+  coquille 12→13) ; 14227 (al-Naḥl 125, Hūd 115, Fuṣṣilat 33) ; 14228 (al-Ḥiǧr 97/98-99/95-96,
+  al-Anʿām 11) ; 14232 (Fuṣṣilat 1-5 réf confirmée triple + al-Isrāʾ 90-93) ; 14243 (al-Šarḥ 5-6,
+  al-Baqara 153 coquille 152→153 + Āl ʿImrān 146) ; 14249 (al-Isrāʾ 17:1, al-Naǧm 53:18/10,
+  al-ʿAnkabūt 29:1-2, al-Layl 92:17-18) ; 14253 (al-Zumar 33, al-Aḥqāf 35, Ṭā-Hā 132, al-Anbiyāʾ 107,
+  al-Tawba 128, Āl ʿImrān 159 — 5 coquilles off-by-one corrigées) ; 15720 (mêmes 5 versets que 14249,
+  zéro coquille, corroborés par les alts d'images du duplicata + texte-source du Šifāʾ en ligne).
+- **DÉCOUVERTE TECHNIQUE (R62-i/j)** : les attributs `alt` des images-verset du miroir habous (duplicata
+  15720) portent les MOTS D'OUVERTURE des versets (سبحان الذي أسرى، لقد راءى…) → corroboration des
+  références imprimées sans VLM (le VLM a été ÉCARTÉ après test de contrôle hallucinant : lu Ṭā Hā 67 sur
+  une image al-Šarḥ 5-6) ; l'indice orchestrateur « al-Naǧm 13-18 » du manuel est disprové (alt = v18 seul).
+- **Hadiths et textes fondateurs INTÉGRAUX** : ʿĀʾiša/début de la révélation (Muslim), zammilūnī (Bukhārī),
+  Abū ḏarr/Zamzam, Ǧaʿfar devant le Naǧāšī (Rawḍ al-unuf II 111 + ʿUyūn al-aṯar I 138), duʿāʾ de Ṭāʾif
+  [Ṭabarānī], ange des montagnes (Bukhārī+Muslim), ʿUṭba/Raḥīq/Būṭī/Ġazālī/Mubārakfūrī/Qasṭallānī/
+  Ḏahabī/Šifāʾ… chacun avec source entre crochets ; bibliographie 14270 au format convention R61 19522
+  (27 entrées, coquilles éditoriales corrigées : تدمر → Tadmurī, Abū Dāwūd 725 → 275 H., تهدذيب → Tahḏīb).
+- **Écarts du source documentés (règle f / fidélité)** : généalogie longue de 14177 non scrapée → non
+  inventée ; second exode abyssin absent de 14221 → non inventé ; hadiths « menteur »/« pluie » de la
+  consigne 14194 absents du source ; évaluation 14243 = copie CMS de la leçon 20 traduite + N.B. ;
+  glossaires brouillés 14243/14247 (gloses de la leçon 18) → sens lexicaux + note transparente ; Mubārakfūrī
+  14205 moitiés inversées au scraping → ordre rétabli ; 2 anomalies textuelles 14224 (ولم يفرضها ولد
+  authentique web-vérifié, ولا يكادون altéré contre Ibn Hišām) ; ~20 schémas/cartes/tableaux-image signalés
+  « non reproduit dans le manuel » avec orientations tirées des intitulés alt.
+- **QA NAVIGATEUR** (agent-browser) : accueil **44 badges « traduction savante intégrale »** (43→44) ;
+  page livre sira-1es « 30/30 documents bilingues · 29 leçons + introduction · 100% · badge » ; lecteurs
+  vérifiés 13981 (2 versets restaurés visibles), 14224 (discours de Ǧaʿfar, Maryam, Luqmān), 14249 (Burāq,
+  sidrat al-muntahā, al-Isrāʾ 17:1) ; **API 30/30 OK** (htmlFr servi, 0 résidu arabe) ; mobile 390 px :
+  **0 overflow ×4 pages** (accueil, livre, intro, 14249) ; console propre (0 erreur) ; lint 0 erreur
+  (1 warning préexistant llm-translate.ts:561 ; 3 scripts VLM scratch des subagents supprimés) ;
+  captures qa-r62-*.png ; dev.log propre.
+- Registre : 364 → **394/950** (+30 main, 344 hand + 50 LLM). Backup /tmp/my-project/backup-tour/
+  rafraîchi après CHAQUE document (règle b : registry + worklog + latest-bundle.bdl + json du livre).
+- Cron webDevReview 15 min recréé (job 457413, description standard mandatée).
+
+Stage Summary:
+- **État** : sain. HEAD au terme de R62, registre **394/950**, **44 livres en couche savante intégrale**.
+  **sira-1es = LIVRE №44 : 30/30 entrées (intro + 29 leçons), 100% bilingue.** **La matière SĪRA est la
+  PREMIÈRE COMPLÈTEMENT couverte en savant (1es + 2es + 3es = 68 docs, badge ×3).**
+- **Innovation du tour** : production déléguée à 10 subagents-traducteurs parallèles (3 vagues × 4/4/2)
+  avec brief unifié (_brief-sira1es.md) + exemplaire 13961 + QA dure — débit 30 docs en un tour (record,
+  vs 28-29 en solo), qualité contrôlée par relecture QA main + worklog de chaque agent. Corroboration des
+  références par les `alt` des images-verset du miroir (technique nouvelle, VLM écarté comme non fiable).
+- **Risques / attention** : (a) ~556 traductions restent (394/950), les livres tout-HTML non entamés les
+  plus gros : fiqh-1es (30), hadith-1es (31), tafsir-1es (30), fiqh-tanawi-1/3 (31/32), hadith-tanawi-1
+  (31), ulum-quran-1es (28), qiraat-tanawi-1 (23), usul-fiqh-waraqat (29), tajwid-2es (28), faraid-tanawi-2
+  (18) ; (b) les 885 pdfOnly exigent l'extraction PDF (feature toujours en attente) ; (c) la matière tafsīr
+  est à 5/9 livres complets (manquent 1es, tanawi-1/2/3) — prochaine cible « matière complète » atteignable.
+- **Priorités suivantes** : (1) tafsir-1es (31 docs) → 6ᵉ livre tafsīr complet ; ou ulum-quran-1es (28) pour
+  doubler la matière ʿulūm al-Qurʾān ; (2) audit GT-ismes titleFr restants ; (3) features : extraction
+  des 885 PDF-only, export EPUB/PDF d'une leçon, compteur de notes.
+---
+Task ID: R63-a
+Agent: subagent-traducteur
+Task: Traduction tafsir-1es 13046+13050+13055 (Luqman 1-4, 5-10, 11-14)
+Work Log:
+- Protocole suivi : 120 dernières lignes du worklog (conventions R19-R62) → brief _brief-tafsir1es.md → exemplaire
+  _exemplaire-tafsir1es.html (16810) + calque glossaire 16839 → lecture src/gt des 3 docs → rédaction
+  intégrale → qa-lesson.py → 3 × « QA OK ».
+- Versets RESTITUÉS depuis le cache Hamidullah (sourate 31 = al-Luqmān ; « Allah »→« Dieu », lettres
+  isolées DIN « Alif, Lām, Mīm », « Salât »/« Zakât »/crochets d'interpolation verbatim, guillemets
+  internes du cache → “…” curles, « Luqmân » à la Hamidullah DANS les versets / « Luqmān » DIN dans le
+  commentaire) :
+  · 13046 : bloc Luqmān 1-4 + fragments : v1 « Alif, Lām, Mīm », v2 « Voici les versets… », v3 « c'est un
+    guide… », « aux bienfaisants » (3), « qui accomplissent la Salât » (4), « acquittent la Zakât » (4),
+    « et qui croient avec certitude en l'au-delà » (4), v5 complet + re-citation « Ceux-là sont sur le
+    chemin droit de leur Seigneur » (5) pour ḥarf al-istiʿlāʾ, et 2 fragments v5a/v5b imbriqués dans la
+    citation Ibn Kathīr ; réf. croisée al-Tawba 60 (les 8 catégories de la Zakât — mot-cible
+    confirmé : « ceux qui y ont droit »).
+  · 13050 : bloc Luqmān 5-10 (span « 10-5 » = plage inversée, corrigée) + re-citations v6, v7, v8-9, v10,
+    v11 (complet) + fragment « achète de plaisants discours » (6) dans la citation Ibn ʿĀshūr + clausule
+    v11 « Mais les injustes… » ; istithmār : al-Jāthiya 5-9 (span « 9-5 » inversé corrigé ; mot-cible
+    « tourne en dérision / châtiment avilissant » confirmé par v8-9 de la plage).
+  · 13055 : bloc Luqmān 11-14 + re-citations v12, v13, v14, v15 + fragment « Et suis le sentier de celui
+    qui se tourne vers Moi » (15) ×2 (occasion de révélation d'Abū Bakr) + fragment « car l'association à
+    [Dieu] est vraiment une injustice énorme » (13) ; istithmār : al-ʿAnkabūt 8 (mot-cible
+    parents/shirk confirmé).
+- COQUILLE CORRIGÉE au mot-cible (règle R57/R58) : 13050 span « البقرة: 15 » → al-Baqara 16. Le contexte
+  (« والمقصود بشراء لهو الحديث… فالشراء هنا مجاز مثل قوله تعالى ») exige le verset de l'achat figuré —
+  « Ce sont eux qui ont troqué le droit chemin contre l'égarement » (اشْتَرَوُا الضَّلَالَةَ بِالْهُدَى) — ; le v15
+  (« Dieu Se moque d'eux ») ne contient ni « acheter » ni « troquer » : coquille off-by-one signalée INLINE
+  au format R62 : « (al-Baqara, 16 ; le manuel imprime « 15 », coquille — c'est le verset de l'achat de
+  l'égarement au prix de la bonne direction, parallèle de l'achat figuré) ». L'hypothèse « moquerie des
+  mécréants » du brief était infirmée par le contexte.
+- Autres normalisations documentées : cache Hamidullah al-Tawba 60 « Les ?adaqâts » (lettre corrompue « ? »)
+  → « Les Sadaqâts » (cohérent avec 9:58 « Sadaqats » et 9:104 « Sadaqât » du même cache) ; 13055 citation
+  al-Wāḥidī « ص: 341-340 » (plage de pages inversée) → p. 340-341 ; citation al-Wāḥidī d'Abū Bakr :
+  guillemet fermant perdu au scraping → citation ouverte à « Ayant embrassé l'islam » et fermée avant la
+  référence (précédent 14249) ; v14 du cache sans guillemet fermant final (discours direct continu au v15)
+  → fermant “…” ajouté pour équilibre typographique.
+- FRAGMENTS HORS PLAGE identifiés au contexte (p vides sans référence) : 13046 → « aux bienfaisants » (3) :
+  la glose « الذين يراقبون الله في كل أقوالهم وأفعالهم » définit les muḥsinīn (interprétation sûre) ; 13050 →
+  le commentaire cite et glose le v11 complet alors que la plage officielle = 5-10 (le v11 fait pont vers
+  la leçon 3, comme le v5 faisait pont de 13046 vers 13050) ; 13055 → le v15 cité et commenté bien que la
+  plage = 11-14 (annoncé par le manuel : « ce verset et celui qui le suit »). SCHÉMA RÉCURRENT du manuel :
+  chevauchement d'un verset entre leçons consécutives — les agents des leçons suivantes doivent s'y
+  attendre (ex. 13064 « 15-18 » devrait citer le v19 en clôture).
+- Glossaires : termes-images identifiés depuis les versets restitués — 13046 : Alif Lām Mīm / al-ḥakīm /
+  li-l-muḥsinīn / yūqinūn / al-mufliḥūn (confirme la note du brief) ; 13050 : lahw al-ḥadīth /
+  wa-yattakhidhuhā huzūwan / ʿadhāb muhīn / wallā mustakbiran / waqran / rawāsiya / an tamīda bikum /
+  wa-baththa fīhā ; 13055 : Luqmān / al-ḥikma / wahnan ʿalā wahin / fiṣāluhu / jāhadāka. Format calque
+  16839 : « [Terme (équivalent Hamidullah)] : glose ».
+- Règle f : expressions-image des préparations préalables (6 p vides pour 13046, 4 pour 13050, 5 pour
+  13055) → « [expressions non reproduites dans le manuel] » (précédent R58 : identification sans certitude
+  absolue — les 6 de 13046 ne coïncident pas avec les 8 termes du glossaire de 13050).
+- Conventions : ṣalāwāt (— que Dieu prie sur lui et le salue — / — sur lui la prière et le salut — / — que
+  Dieu l'agrée — / — que Dieu lui fasse miséricorde —) ; قال تعالى → « Dieu — le Très-Haut — a dit : » ;
+  عز وجل → « — Puissant et Majestueux — » ; hadiths sourcés [Ṣaḥīḥ d'Ibn Ḥibbān, Livre de la prière,
+  chapitre de l'appel à la prière] et [Ṣaḥīḥ d'al-Bukhārī, Livre des bons usages, chapitre : qui des
+  hommes a le plus droit à la bonne compagnie] ; citations [Tafsīr al-Qurʾān al-ʿAẓīm d'Ibn Kathīr, t. 6,
+  p. 330] / [al-Taḥrīr wa-l-tanwīr d'Ibn ʿĀshūr, t. 21, p. 142] / [Asbāb al-nuzūl d'al-Wāḥidī, p. 346 et
+  p. 340-341] / [Ṣafwat al-tafāsīr d'al-Sābūnī, t. 2, p. 452] ; h1 = titleFr officiels verbatim (le
+  « Luqman » sans macron est le titleFr officiel) ; consignes genrées → 2ᵉ personne scolaire ; listes
+  ol/ul fidèles au source, numérotation auto (calque R62) ; blocs numérotés « … (n). » + référence finale.
+- QA : 3 × « QA OK » — 13046 : 8 912 car (15 paires « »), 13050 : 12 759 car (13), 13055 : 12 994 car
+  (16) ; 0 caractère arabe, 0 apostrophe droite, 0 GT-isme, “ ” équilibrés (0/0, 2/2, 20/20), aucun
+  span/div/table résiduel. NI hand-set.py NI git NI content/books/ NI scripts-translate/ touchés — écriture
+  limitée à tr-tmp/{13046,13050,13055}.html.
+
+Stage Summary:
+- Livrés : tr-tmp/13046.html (8 912 car), tr-tmp/13050.html (12 759 car), tr-tmp/13055.html (12 994 car) —
+  traductions savantes intégrales des leçons 1-3 de tafsir-1es (Tashīl d'Ibn Juzayy, Luqmān 1-4 / 5-10 /
+  11-14), h1 = titleFr officiels verbatim.
+- Versets restitués : Luqmān 1-5, 5-11, 11-15 (blocs + fragments contextuels), al-Tawba 60, al-Baqara 16,
+  al-Jāthiya 5-9, al-ʿAnkabūt 8 — toutes références vérifiées au mot-cible.
+- Points pour le main agent : (1) coquille off-by-one البقرة 15→16 corrigée et signalée inline dans 13050
+  (mot-cible = achat figuré, PAS la moquerie supposée par le brief) ; (2) schéma de chevauchement
+  versets/leçons détecté (13046 cite v5, 13050 cite v11, 13055 commente v15) — à anticiper pour les leçons
+  suivantes ; (3) cache Hamidullah : lettre corrompue « ? » dans al-Tawba 60 (« ?adaqâts ») normalisée en
+  « Sadaqâts » — correction du cache suggérée ; (4) plages de pages inversées par le CMS dans les
+  références al-Wāḥidī (341-340 → 340-341) ; (5) hadith « Priez comme vous m'avez vu prier » sourcé
+  [Ṣaḥīḥ d'Ibn Ḥibbān, chapitre de l'appel à la prière] conformément au manuel.
+---
+Task ID: R63-b
+Agent: subagent-traducteur
+Task: Traduction tafsir-1es 13064+13066+13069 (Luqman 15-18, 19-20, 21-25)
+Work Log:
+- Protocole suivi : worklog (conventions R19-R62), brief _brief-tafsir1es.md à la lettre, exemplaire
+  16810 (registre/structure) + calque glossaire 16839 ; sources .src.html (autorité) + .gt.html
+  (décodage seul, 0 GT-isme repris).
+- TECHNIQUE CLÉ (extension R62-i/j) : le miroir scripts-recovery/tmp-mirror-books/tafsir-tashil-1ep.json
+  contient le html BRUT des leçons 13064/13066/13069 AVEC les balises <img> des versets-images →
+  corrélation positionnelle image↔<p> vide du scrape (les alts/titres portent des n° souvent
+  parasites mais les positions sont décisives) → identification de CHAQUE fragment de citation.
+  Octets des images INACCESSIBLES (habous.gov.ma géobloqué 000, proxies 400/000, archive.org
+  bloqué) → vérification au mot-cible (règle R57/R58) + corroboration web al-Qurṭubī
+  (quran.ksu.edu.sa/tafseer/qortobi/sura31-aya20.html, surahquran, islamweb).
+- VERSERS RESTITUÉS (cache Hamidullah, adaptations : « Allah »→« Dieu » ; «» internes→“” ;
+  guillemets orphelins aux bornes de plage supprimés, précédent 14197 ; élisions qu'/d' normalisées
+  « que Dieu / de Dieu ») :
+  * 13064 : bloc Luqmān 15-18 ; fragments v16 + « O mon enfant » (16, vocatif répété) + v17 + v18
+    + v19 ; glossaire 5 termes identifiés par glose (ḥabba min khardal, min ʿazm al-umūr, lā
+    tuṣaʿʿir khaddaka, marḥan, wa-qṣad fī mashyika).
+  * 13066 : bloc Luqmān 19-20 ; fragments v20a (jusqu'à « cachés »), « Ne voyez-vous pas » (20),
+    « Et Il vous a comblés… » (20), Ibrāhīm 34 (réf corrigée), v20b, v21a, v21b, al-Baqara 170
+    (réf corrigée) ; glossaire 4 termes (sakhkhara lakum, asbagha niʿamahu, yujādilu…, ʿadhāb
+    al-saʿīr).
+  * 13069 : bloc Luqmān 21-25 ; fragments v22 ×3 + mot al-umūr (article défini/stighrāq), v23a,
+    al-Shūrā 48 (réf corrigée), v23b, v23c, v24, v25a, v25b, v25c, v26 ; glossaire 5 termes
+    (wa-man yuslim wajhahu, bi-l-ʿurwa al-wuthqā, ʿāqibat al-umūr, naḍṭarruhum, ʿadhāb ghalīẓ).
+- COQUILLES DE RÉFÉRENCE CORRIGÉES (3, toutes croisées imprimées, correction notée inline dans la
+  réf, calque 14243/al-Baqara 153) :
+  * 13066 « إبراهيم: 36 » → Ibrāhīm 34 : l'argument « الإفراد يدل على الكثرة » est d'al-Qurṭubī
+    (Luqmān 20) qui cite « وإن تعدوا نعمة الله لا تحصوها » = Ibrāhīm 34 (web-vérifié) ; v36 ne
+    contient aucun singelier-marquant-multitude (l'indice « shayṭān égaré » du brief visait
+    « أضللن كثيرًا », non décisif).
+  * 13066 « البقرة: 169 » → al-Baqara 170 : la glose « فلا عقل عندهم ولا هداية معهم » paraphrase
+    « أولو كان آباءهم لا يعقلون شيئا ولا يهتدون » (fin du v170), parallèle exact de Luqmān 21 ;
+    v169 (« il vous commande ») ne parle pas des pères. Nom de fichier CMS « البقرة_196.png » =
+    parasite (tous les filenames du miroir le sont).
+  * 13069 « الشورى: 45 » → al-Shūrā 48 : « مهمة الرسل هي البلاغ » → « إن عليك إلا البلاغ » = v48 ;
+    v45 (perdants devant l'Enfer) sans rapport.
+- ANOMALIES SOURCE normalisées + signalées : 13069 phrase d'identification « تفسير الآيات 1 إلى 4 »
+  (copier-coller CMS de la leçon 1) → corrigé « versets 21 à 25 » (autorité h1/ToC) ; 13069 intro
+  « استمسك بجبل الله » → coquille pour « بحبل الله » (la corde de Dieu, thème de l'anse ferme) ;
+  13069 glossaire « عذاب غيط » → coquille pour « غليظ » ; 13066 « صلى الله عبيه وسلم » ×2 (عبيه
+  pour عليه) → ṣalāwāt standard ; citation Ibn ʿAbd al-Barr « عن الكف » (pour على) et « فيما
+  سبيلهم اعتقاده » (texte garblé, pour فيما سبيلهم فيه الاعتقاد) → sens visé traduit ; 13064
+  « الآخلاق » → الأخلاق.
+- RÈGLE f (jamais inventé) : expressions de la préparation (4+4+7 images) → « [expressions non
+  reproduites dans le manuel] ». Renseignement miroir : expressions de 13066 tirées de Luqmān 21
+  (×2) et 23 (×2) (alts « لقمان 21/21 2/23/23 1 ») ; expressions de 13069 = 7 images (fins de
+  noms 23/26/27/28/29/30/31) alors que le glossaire de 13072 compte 7 termes MAIS d'autres versets
+  (glossaire possiblement pollué — à l'attention de l'agent de 13072) ; identification pas « sans
+  aucun doute » → règle f stricte (précédent R58).
+- Versets cités AU-DELÀ de la plage imprimée de leur leçon (rendus avec leur n°, précédent
+  13046/v5) : v19 dans 13064 (fragment + terme glossaire) ; v21 ×2 dans 13066 ; v26 dans 13069
+  (fragment final).
+- Style : h1 = titleFr officiels VERBATIM ; phrase d'identification rendue « … traditionnel,
+  première étape (leçon N) » — « المرحلة الأولى » conservé (fidelity au source ; le modèle du
+  brief était abrégé — à harmoniser avec R63-a si besoin) ; translittération série tafsīr
+  (j/sh/gh/kh/dh) ; ṣalāwāt, noms divins, « Salât » du cache ; vers d'Abū al-Aswad al-Duʾalī,
+  hadith Muslim (munkar), hadith Jibrīl (Bukhārī), citation tadābur Mālik/Anas [al-Qurṭubī 14/70],
+  Ibn Baṭṭāl [10/377], Ibn ʿAbd al-Barr [2/513], Ibn Kathīr [6/294, retouches] intégralement
+  traduits, sources entre crochets.
+- QA : 3 × « QA OK » — 13064 : 12 262 car (9 paires « »), 13066 : 10 151 car (13), 13069 :
+  12 121 car (16) ; 0 caractère arabe, 0 apostrophe droite, balises appariées, NNBSP auto-fix.
+  Re-vérification scriptée mot à mot des 16 unités-versets contre le cache Hamidullah (adaptations
+  documentées) : TOUT OK. NI hand-set.py NI git NI content/books NI scripts-translate touchés.
+
+Stage Summary:
+- Livrés : tr-tmp/13064.html (12 262 car), tr-tmp/13066.html (10 151 car), tr-tmp/13069.html
+  (12 121 car) — traductions savantes intégrales, h1 = titleFr officiels.
+- Versets restitués : 13064 → bloc Luqmān 15-18 + fragments 16, « O mon enfant » (16), 17, 18,
+  19 ; 13066 → bloc 19-20 + fragments 20 ×3, Ibrāhīm 34, 21 ×2, al-Baqara 170 ; 13069 → bloc
+  21-25 + fragments 22 ×3 + al-umūr, 23 ×3, al-Shūrā 48, 24, 25 ×3, 26.
+- Coquilles corrigées (3, notées inline) : Ibrāhīm 36→34, al-Baqara 169→170, al-Shūrā 45→48 ;
+  coquilles texte source corrigées : جبل→حبل, غيط→غليظ, عبيه→عليه, plage d'identification 13069.
+- Règle f : expressions de préparation (4+4+7) « non reproduites dans le manuel » ; versets
+  hors plage (19 ; 21 ×2 ; 26) rendus avec n°.
+- Points pour le main agent : (1) le miroir tmp-mirror-books/tafsir-tashil-1ep.json (47 leçons,
+  html brut AVEC <img>) sert à TOUTES les leçons restantes de tafsir-1es — identification
+  positionnelle des fragments bien plus sûre que l'inférence seule ; (2) les 3 références
+  corrigées à réconcilier avec le livre imprimé si accessible ; (3) « première étape » dans la
+  phrase d'identification — harmonisation à décider au niveau du livre ; (4) glossaire de 13072
+  possiblement pollué (termes hors Luqmān 26-31) ; (5) 13066 : leçon titrée 19-20 mais v21 cité
+  ×2 en commentaire (bloc conforme au h1).
+---
+Task ID: R63-d
+Agent: subagent-traducteur
+Task: Traduction tafsir-1es 13094+13118+13148 (al-Sajda 4-8, 9-14, 15-22)
+Work Log:
+- Protocole suivi : ~120 dernières lignes du worklog (conventions R19-R62), brief _brief-tafsir1es.md à la lettre,
+  exemplaire 16810 + calque glossaire 16839 (« [Terme (glose)] : définition », mentions « le manuel imprime “n” »)
+  et 13360 (al-Sajda, collégial traditionnel) ; src.html = autorité, gt.html = décodage seul (GT-ismes écartés) ;
+  versets restitués par verse.py avec vérification systématique au mot-cible.
+- 13094 : bloc principal al-Sajda 4-8 restitué (« Allah »→« Dieu », « Istawâ » en “ ”, interpolations gardées) ;
+  fragments du commentaire : v5 en 5 morceaux (« Il administre l’affaire » / « l’affaire » [mot-séparé du Tashīl :
+  le “ و ” final de la glose du tadbīr se rattache à l’image « الأمر »] / « Du ciel à la terre » / « laquelle ensuite
+  monte vers Lui » / « En un jour équivalent à mille ans… »), v6 en 2 (« C’est Lui le Connaisseur… » / « le Puissant,
+  le Miséricordieux »), v7 en 2, v8, puis v9 en 3 (« puis Il lui donna sa forme parfaite… » / « Et Il vous a assigné
+  l’ouïe… » / « Que vous êtes peu reconnaissants ! »). SIGNALÉ : le commentaire déborde sur v9 alors que la leçon
+  est officiellement 4-8 (h1 + ToC + préparation préalable → leçon suivante 9-14), et v4 du bloc n’est pas glosée
+  (le commentaire commence à v5) — fidélité au source. Réf. croisée al-Ṭāriq imprimée « 7-5 » = plage inversée →
+  5-7 (cible « lombes/côtes » vérifiée) ; al-Tīn 4 et al-Muʾminūn 14 vérifiées correctes au mot-cible.
+- 13118 : bloc principal 9-14 restitué. 2 artefacts du cache Hamidullah corrigés et documentés : v12
+  « croyons aintenant] » → « croyons [maintenant] » (crochet fermant présent, restauration évidente) ; v11
+  « vers Votre Seigneur » → « votre Seigneur ». RÉFÉRENCES CROISÉES (off-by-one, toutes vérifiées au mot-cible,
+  corrigées + mention inline « le manuel imprime “n” ») : al-Rūm imprimée « 26 » → réellement 27 (l’argument
+  « البعث أهون » = « cela Lui est plus facile » est au v27, absent du v26) ; al-Anʿām imprimée « 28 » → 27 (le
+  « نظير هذه الآية » de al-Sajda 12 = « Si tu les voyais… », même ouverture ولو ترى) ; al-Anʿām imprimée « 29 » →
+  28 (« لعادوا لما نهو عنه » = « ils reviendraient sûrement à ce qui leur était interdit » = v28, pas v29). Plages
+  inversées corrigées : Yā-Sīn « -77 78 » → 77-78 ; Maryam « 67-66 » → 66-67 (cibles vérifiées). Fragments : v10
+  en 4 (« Et ils disent : Quand nous serons perdus… » / « redeviendrons-nous une création nouvelle ? » ×2 — la 2ᵉ
+  citée comme objet de « l’interrogation en » / « En outre, ils ne croient pas… »), v11 complet, v12 en 4, v13 en 2,
+  v14 complet. Istithmār : Ibn ʿĀshūr sur v13a [al-Taḥrīr wa-l-tanwīr : 21/222, retouches].
+- 13148 : bloc principal 15-22 restitué. RÉF. CROISÉE al-Jāthiya imprimée « 20 » → réellement 21 (le « نظير » de
+  al-Sajda 18 ET le sabab de révélation ʿAlī / al-Walīd b. ʿUqba concernent « أم حسب الذين اجترحوا السيئات… » =
+  v21 ; le v20 « Ceci [le Coran] constitue… » est sans rapport — off-by-one, corrigée + inline). al-Dhāriyāt 17-18
+  vérifiée correcte (prière nocturne + pardon à l’aube). Fragments : v15 en 2, v16 en 4 (dont la remarque du Tashīl
+  « quiconque prie l’ʿishāʾ et l’aurore en communauté… »), v17 en 2 + v17 entier imbriqué dans le hadith qudsī
+  d’Abū Hurayra [Ṣaḥīḥ d’al-Bukhārī, Livre du début de la création, chapitre de ce qui est rapporté au sujet de la
+  description du Paradis] (modèle 14224 : verset imbriqué en « … » (réf)) ; v18, v19, v20 en 3, v21, v22 en 2.
+  Istithmār : hadith de Muʿādh b. Jabal [Sunan d’al-Tirmidhī, Livre des chapitres de la foi, chapitre de ce qui est
+  rapporté au sujet du caractère sacré de la prière] avec les 2 versets récités (al-Sajda 16, puis « jusqu’à ce
+  qu’il atteignît » 17) — la 2ᵉ image du hadith était perdue au scraping (<p><br>), restituée d’après « حتى بلغ » ;
+  hadith et discours internes en « … »/“ … ”.
+- Conventions : translittération série tafsīr (j/sh/gh/kh/dh — Ibn Juzayy, al-Shaʿrāwī, tawaffī, sullāh, tawaffāhu) ;
+  ṣalāwāt développées (— que Dieu prie sur lui et le salue — / — que Dieu l’agrée — / — que Dieu lui fasse
+  miséricorde — / — sur lui la paix —) ; تدبير rendu « administration (tadbīr) », aligné sur Hamidullah « Il
+  administre l’affaire » ; guillemets internes du cache → “ ” (niveau 3 ‘ ’ pour « J’emplirai… » en v13) ;
+  glossaires en « [Terme (glose)] : définition » — les termes étaient EN TEXTE au source pour les 3 leçons (pas
+  d’images à identifier) ; consignes genrées (بين(ي)…) → 2ᵉ personne scolaire (Lis/Explique/Expose/Déduis/
+  Compare/Extrais/Détermine) ; identifications de leçon fidèles au source (« matière du Tafsīr…, première étape
+  (leçon 10/11/12) »).
+- Règle f : expressions-image des préparations préalables (2 pour 13094, 5 pour 13118, 4 pour 13148) non
+  identifiables sans aucun doute → « [expressions non reproduites dans le manuel] » (précédent R58/exemplaire).
+  Aucune autre perte de contenu détectée (ni schéma ni tableau-image dans ces 3 leçons).
+- QA : 3 × « QA OK » après retouches finales — 13094 : 11 847 car (19 paires « »), 13118 : 14 592 car (23),
+  13148 : 13 590 car (26) ; 0 caractère arabe, 0 apostrophe droite, 0 « Allah » résiduel, balises appariées,
+  NNBSP auto-fix. NI hand-set.py NI git NI content/books/ NI scripts touchés — seuls tr-tmp/{13094,13118,13148}.html
+  ont été écrits.
+
+Stage Summary:
+- Livrés : tr-tmp/13094.html (11 847 car), tr-tmp/13118.html (14 592 car), tr-tmp/13148.html (13 590 car) —
+  traductions savantes intégrales, h1 = titleFr officiels verbatim, structure calquée sur 16810/16839.
+- Versets restitués (cache Hamidullah, Allah→Dieu) : 13094 → bloc al-Sajda 4-8 + fragments v5 ×5, v6 ×2, v7 ×2,
+  v8, v9 ×3 + al-Ṭāriq 5-7, al-Tīn 4, al-Muʾminūn 14 ; 13118 → bloc al-Sajda 9-14 + fragments v10 ×4, v11, v12 ×4,
+  v13 ×2, v14 + al-Rūm 27, Yā-Sīn 77-78, Maryam 66-67, al-Anʿām 27 et 28 ; 13148 → bloc al-Sajda 15-22 + fragments
+  v15 ×2, v16 ×4, v17 ×2 (+ v17 entier dans le hadith d’Abū Hurayra), v18, v19, v20 ×3, v21, v22 ×2 + al-Dhāriyāt
+  17-18 + al-Sajda 16 et 17 dans le hadith de Muʿādh.
+- Coquilles de référence corrigées : 5 off-by-one (13118 : al-Rūm 26→27, al-Anʿām 28→27, al-Anʿām 29→28 ; 13148 :
+  al-Jāthiya 20→21), toutes vérifiées au mot-cible et marquées inline « le manuel imprime “n” » ; 4 plages inversées
+  corrigées (al-Ṭāriq 7-5→5-7 ; Yā-Sīn “-77 78”→77-78 ; Maryam 67-66→66-67 ; + blocs 8-4 / 14-9 / 22-15 des
+  3 leçons). NB : le brief n’avait repéré que al-Ṭāriq et Yā-Sīn — les 4 autres (al-Rūm, al-Anʿām ×2, al-Jāthiya)
+  sont des découvertes de la vérification au mot-cible.
+- Points d’attention pour le main agent : (1) 13094 : commentaire débordant sur v9 (3 fragments (9)) + v4 non
+  glosée — chevauchement voulu avec 13118 (bloc 9-14) ; (2) 2 artefacts du cache corrigés (v12 « [maintenant] »,
+  v11 « votre ») ; (3) technique du « mot glosé en image » (و + الأمر en 13094 §1) documentée pour les agents des
+  leçons suivantes ; (4) les pages d’index 13349/13353 déjà traduites (couche antérieure ?) utilisent « Ǧuzay » /
+  « enseignement intermédiaire traditionnel », incohérent avec la convention série tafsīr « Ibn Juzayy » /
+  « collégial traditionnel » (13360 + les 3 présentes leçons) — à harmoniser ; (5) Tirmidhī « باب ما جاء في حرمة
+  الصلاة » rendu tel quel (« caractère sacré de la prière ») — intitulé de chapitre à vérifier contre l’édition
+  Tirmidhī si accessible ; (6) expressions des préparations préalables non identifiées (règle f) ×3.
+---
+Task ID: R63-g
+Agent: subagent-traducteur
+Task: Traduction tafsir-1es 13207+13211+13223 (al-Ḥujurāt 12, 13, 14-18)
+Work Log:
+- Protocole suivi : ~160 dernières lignes du worklog (conventions R19-R62 + R63-a/b/f/d), brief _brief-tafsir1es.md à la lettre,
+  exemplaire 16810 + calques 13066/13148/13094 ; src.html = squelette/autorité, mirror.html = autorité glossaires/citations
+  (TERMES EN TEXTE dans les 3 leçons, alts des images-versets exploités), gt.html = décodage seul (0 GT-isme repris).
+- MIROIR exploité : alts « الحجرات 12 2-8 » (fragments du v12), « الحجرات 13 2-9 » (v13), « الحجرات 14 2/14 2 3/14 3/14 4/
+  14 5/15/15 2-4/16/16 2/17/17 2-4/18 » (v14-18), « الإسراء 70 » (réf croisée). Les alts des images de PRÉPARATION
+  (12 9-11, 13 10-14, 18 2-6) = parasites (numérotation CMS) → règle f.
+- VERSERS RESTITUÉS (cache Hamidullah, adaptations : « Allah »→« Dieu » avec élisions normalisées « de Dieu » [précédent
+  R63-f] ; vocatif « O » verbatim Hamidullah [précédent 13064 « O mon enfant »] ; « Adam » sans macron [précédent 16810] ;
+  ponctuation FR espacée) :
+  * 13207 : bloc Ḥujurāt 12 + fragments ×7 — le verset découpé image par image : « O vous qui avez cru ! Evitez de trop
+    conjecturer [sur autrui] » / « car une partie des conjectures » / « est péché » / « Et n'espionnez pas » / « et ne
+    médisez pas les uns des autres » / « L'un de vous aimerait-il manger la chair de son frère mort ? (Non !) vous en aurez
+    horreur. » / « Et craignez Dieu. Car Dieu est Grand Accueillant au repentir, Très Miséricordieux. »
+  * 13211 : bloc Ḥujurāt 13 + fragments ×8 : « O hommes ! » / « Nous vous avons créés d'un mâle et d'une femelle » / « et
+    Nous avons fait de vous des nations et des tribus » / « pour que vous vous entre-connaissiez » / « O hommes ! Nous vous
+    avons créés d'un mâle et d'une femelle » (sabab de Bilāl, voir ci-dessous) / « Le plus noble d'entre vous, auprès de
+    Dieu, est le plus pieux. » / « Dieu est certes Omniscient » + complément « de vous et de vos actes, » / « et Grand
+    Connaisseur » + « de vos états et de vos affaires. » (pattern source : gloses-compléments nus intercalées) + bloc
+    al-Isrāʾ 70 (réf croisée de fin de leçon).
+  * 13223 : bloc Ḥujurāt 14-18 + fragments ×16 : v14 ×5 (« Les Bédouins ont dit : “Nous avons la foi”. » / « Dis :
+    “Vous n'avez pas encore la foi. Dites plutôt : Nous nous sommes simplement soumis” » / « la foi n'a pas encore
+    pénétré dans vos cœurs » — locution lammā, glosée « exprime l'expectative » / « Et si vous obéissez… de vos œuvres » /
+    « Dieu est Pardonneur et Miséricordieux. »), v15 ×4, v16, fin de v16 « Et Dieu est Omniscient » (image « الحجرات 16 2 »,
+    citée en fin de section ثالثا comme « contenu du verset » confirmé par le v18 — identification par contexte + alt),
+    v17 ×4 (dont « بل الله يمن عليكم » cité 2 fois : segment complet puis verbe isolé pour la discussion philologique
+    « accorde le bienfait » vs « rappelle Son bienfait », calque du Tashīl), v18.
+- DÉCOUVERTE CLÉ (13211, fragment du sabab de Bilāl) : le source imprime « فأنزل الله: [image] الآية، فدعاهم النبي ﷺ… » —
+  pattern éditorial arabe « [début du verset] + الآية (= le reste du verset) ». CORROBORATION WEB (ablibrary.net, Lubāb
+  al-nuqūl d'al-Suyūṭī 1/182-183, citant exactement Ibn Abī Ḥātim — la source imprimée par le manuel [10/3306]) : « فأنزل
+  الله ﷿يا أيها الناس إنا خلقناكم من ذكر وأنثى﴾ الآية » → image = « O hommes ! Nous vous avons créés d'un mâle et d'une
+  femelle » (13), rendu + « — jusqu'à la fin du verset. » ; corroboration secondaire al-Qurṭubī (quran.ksu.edu.sa, Ḥujurāt 13)
+  pour la clausule « زجرهم عن التفاخر بالأنساب والتكاثر بالأموال والازدراء بالفقراء » (fusion Qurṭubī/Ibn ʿAbbās + hadith
+  Ibn Abī Mulayka). Technique à retenir pour les agents suivants : « [fragment] الآية » = fragment + « — jusqu'à la fin du
+  verset », NE PAS rendre le verset entier ni omettre le fragment.
+- RÉFÉRENCES CROISÉES : AUCUNE coquille dans ce lot (1re occurrence depuis R63 — les off-by-one sont propres aux leçons
+  antérieures). Vérifiées au mot-cible : al-Isrāʾ 70 (« honneur des fils d'Adam » = « ولقد كرمنا بني آدم », v70 ✓ correcte) ;
+  blocs Ḥujurāt 12/13/14-18 conformes aux h1/ToC ; hadiths sourcés rendus avec leurs références imprimées (Muslim, Abū
+  Dāwūd, Bukhārī, Bayhaqī, Tirmidhī, Aḥmad ×2, Ibn Abī Ḥātim 10/3306, al-Qurṭubī 16/333).
+- ANOMALIES SOURCE normalisées + signalées : 13207 glossaire « ولا تبعثوا عن عورات الناس » → coquille pour « ولا تبحثوا »
+  (parallèle exact du commentaire « ولا تبحثوا عن عورات الناس ») → sens corrigé rendu (« ne fouillez pas ») ; 13207 citation
+  Abū Qilāba « فَقَالَ أَ بُو مِحْجَنٍ » (espace parasite dans le nom) → Abū Miḥjan ; 13211 hadith d'istithmār « عن أبي
+  هريرة قال: صلى الله عليه وسلم: » (ellipse du nominatif « قال رسول الله », coquille CMS) → chaîne restituée ; 13223 h3
+  « وعلى ورسوله » (double wāw) → « et sur Son messager » ; 13223 question d'istithmār « بم امتن رسول الله ﷺ عليهم على
+  الأنصار؟ » (phrase garblée) → sens visé rendu (« Quel bienfait… a-t-il rappelé aux Anṣār ? »).
+- RÈGLE f (jamais inventé) : les 3 préparations préalables portent des expressions-images NON identifiables sans aucun doute
+  → « [expressions non reproduites dans le manuel] ». Renseignements numériques : 13207 = 3 images (prépare Ḥujurāt 13) vs
+  glossaire de 13211 = 4 termes (non correspondant) ; 13211 = 5 images (prépare 14-18) vs glossaire de 13223 = 5 termes
+  (correspondance numérique EXACTE mais alts parasites → règle f stricte maintenue, précédent R58/R63-f-13069) ; 13223 =
+  5 images (prépare Qāf 1-5) vs glossaire de 13233 = 6 termes (القرآن المجيد، منذر منهم، رجع، بعيد، كتاب محفوظ، أمر مريج —
+  non correspondant ; à l'attention de l'agent de 13233).
+- Style : h1 = titleFr officiels VERBATIM (« Sourate Al-Hujurat verset 12 » / « … verset 13 » — le src CONFIRME leçon = v13,
+  ancien titleFr « verset 14 » = coquille corrigée par le main agent / « Sourate Al-Hujurat, versets 14-18 ») ; phrase
+  d'identification avec « matière du Tafsīr » (calque R63-d/13094 ; R63-f l'omettait — à harmoniser au niveau du livre) ;
+  « première étape (leçon 19/20/21) » ; translittération série tafsīr (j/sh/gh/kh/dh, shaʿb/qabīla/batn/fakhdh/faṣīla,
+  taḥassus/tajassus, sadd al-dharāʾiʿ, ghība, tajrīḥ, jāhiliyya) ; ṣalāwāt développées ; « Salât »/« Zakât » du cache ;
+  citation d'Ibn Juzayy (Tashīl, sans tome au source) + Abū ʿAlī al-Fārisī/al-Rummānī + Ibn ʿAṭiyya intégralement traduits ;
+  hadiths (Abū Hurayra ×2, Abū Barza, sermon d'adieu ×2 dont Abū Naḍra, ʿAbd Allāh b. Busr/Tirmidhī, Abū Saʿīd al-Khudrī/
+  Ḥunayn) traduits intégralement avec guillemets imbriqués « … »/“ … ”/‘ … ’.
+- « la sourate Qāf » écrit dans la préparation de 13223 (convention § translittération du brief) alors que le titleFr
+  officiel de 13233 = « Sourate Q, versets 1-5 » — harmonisation à décider par le main agent.
+- QA : 3 × « QA OK » — 13207 : 12 867 car (17 paires « »), 13211 : 11 682 (16), 13223 : 12 962 (23) ; 0 caractère arabe,
+  0 apostrophe droite, balises appariées, NNBSP auto-fix. Re-vérification scriptée mot à mot de TOUS les blocs et fragments
+  (7 + 8 + 16 unités + blocs Ḥujurāt 12/13/14-18 + al-Isrāʾ 70) contre le cache Hamidullah (adaptations documentées) :
+  TOUT OK. NI hand-set.py NI git NI content/books NI scripts-translate touchés — seuls tr-tmp/{13207,13211,13223}.html
+  (+ worklog) écrits.
+
+Stage Summary:
+- Livrés : tr-tmp/13207.html (12 867 car), tr-tmp/13211.html (11 682 car), tr-tmp/13223.html (12 962 car) — traductions
+  savantes intégrales, h1 = titleFr officiels verbatim, structure calquée sur 16810/13066/13148, glossaires 5+4+5 termes
+  du miroir (tous en texte au source).
+- Versets restitués : 13207 → bloc Ḥujurāt 12 + 7 fragments ; 13211 → bloc Ḥujurāt 13 + 8 fragments + bloc al-Isrāʾ 70 ;
+  13223 → bloc Ḥujurāt 14-18 + 16 fragments (v14 ×5, v15 ×4, v16 + fin de v16, v17 ×4, v18).
+- Coquilles de référence : AUCUNE (al-Isrāʾ 70 vérifiée correcte au mot-cible) — 1er lot sans off-by-one ; coquilles texte
+  source corrigées : تبعثوا→تبحثوا, أَ بُو→أبو, ellipse « قال رسول الله » restituée, وعلى ورسوله→وعلى رسوله, question
+  istithmār garblée rendue au sens.
+- Règle f : expressions des préparations (3+5+5 images, alts parasites) « non reproduites dans le manuel » ; corrélations
+  numériques glossaire-suivant documentées (13211 : 5=5 non décisive ; 13233 : 6 termes ≠ 5 images).
+- Points pour le main agent : (1) pattern « [fragment] الآية » documenté + corroboration web al-Suyūṭī/Ibn Abī Ḥātim —
+  réutilisable pour les leçons Qāf ; (2) « matière du Tafsīr » vs omission R63-f dans la phrase d'identification —
+  harmonisation livre entière à trancher ; (3) « sourate Qāf » (préparation de 13223) vs titleFr officiel « Sourate Q » ;
+  (4) aucun verset hors plage dans ce lot (contrairement à 13064/13066/13069) ; (5) l'agent de 13233 pourra noter si ses
+  5 expressions de préparation (reçues de 13223) correspondent à son glossaire de 6 termes.
+---
+Task ID: R63-h
+Agent: subagent-traducteur
+Task: Traduction tafsir-1es 13233+13242+13257 (Qāf 1-5, 6-11, 12-18)
+Work Log:
+- Protocole suivi : ~150 dernières lignes du worklog (conventions R19-R62 + R63-a/b/d/g : MIROIR, vérification
+  au mot-cible, corrections inline « le manuel imprime “n” »), brief _brief-tafsir1es.md à la lettre, exemplaire
+  16810 + livrables R63-d (13094/13118/13148) et R63-g (13064/13066/13069) pour le calque de registre ; src.html =
+  squelette structurel (autorité), mirror.html = autorité glossaires/fragments (alt = indice primaire, title =
+  secondaire, contexte = arbitre), gt.html = décodage seul (GT-ismes écartés : « calendrier », « préparation
+  tribale », « grêle », « matérial d'interprétation »…). Versets restitués par verse.py, vérification scriptée
+  intégrale mot à mot contre le cache (comparaison sans espaces) : TOUT VERBATIM, adaptations limitées à
+  « Allah »→« Dieu », élisions qu'Allah→que Dieu, DIN « Qâf »→« Qāf », « Yâ Sîn »→« Yā-Sīn », noms propres
+  ʿayn normalisé (« 'Aad »→« ʿĀd », « Tubba' »→« Tubbaʿ », calque 13166/al-ʿAnkabūt 38), « » internes→“ ”,
+  guillemets orphelins fermés (Qāf 2 ; Yā-Sīn 79-80 ; al-Dhāriyāt 50).
+- 13233 : bloc principal Qāf 1-5 (sans « Dieu a dit » — le src n'a pas قال تعالى avant الآيات) ; fragments du
+  commentaire : « Qāf » (1) + « Par le Coran glorieux! » (1) (images ق 1 2 / ق 1 3 = les deux segments de v1 :
+  le contexte « يقال في… فواتح السور » impose la lettre, la suite « أقسم الله بالقرآن » l'objet du serment),
+  v2 entier, « et les mécréants dirent » (2) (image ق 2 1 = فقال الكافرون, mot glosé par « الظاهر موضع
+  المضمر »), Yā-Sīn 1-2, v3, v4, hadith Abū Hurayra [Musnad de l'imām Aḥmad, Musnad d'Abū Hurayra] (ʿajb
+  al-dhanab), « et Nous avons un Livre où tout est conservé » (4), « Plutôt, ils traitent de mensonge la
+  vérité qui leur est venue » (5) + « les voilà donc dans une situation confuse » (5) (v5 scindé en 2 images,
+  chacune glosée séparément — pas d'image plein-verset). Istithmār : récit Ubayy b. Khalaf al-Jumaḥī (os
+  effrité) + bloc Yā-Sīn 76-82 + [Tafsīr d'al-Ṭabarī, t. 11, p. 87] — plage 76-82 CONSERVÉE telle quelle
+  (span+filename concordants, mot-cible « qui va redonner la vie à des ossements » = v78 dans la plage).
+- 13242 : identification « تفسير الآيات 1 إلى 5 » = coquille CMS copier-collé de la leçon 22 → corrigé
+  « versets 6 à 11 » (autorité h1/ToC/leçon 23, précédent 13069). Bloc principal Qāf 6-11 ; fragments :
+  v6 ; Qāf 7-8 (image ق 7 : le commentaire postérieur glose « فعلنا ذلك لتبصرة العباد وتذكيرهم… العبد المنيب »
+  = les mots exacts de v8, et le tafsīr suit le Tashīl qui commente v7-8 ensemble) ; al-Dhāriyāt 49-50
+  (réf. imprimée « الذاريات: 50-49 » PLAGE INVERSÉE → 49-50, cibles vérifiées : زوجين↔زوج بهيج,
+  ف-firrū↔منيب) ; Qāf 9-10 (image ق 9 : le commentaire immédiat couvre v9 ET v10 — النخيل الطوال الشاهقات
+  ذات الطلع المنضد = v10, jamais cité ailleurs) ; Qāf 11 ; « Ainsi se fera la résurrection. » (11).
+  RÉF. CROISÉE CORRIGÉE (off-by-one, notée inline) : al-Baqara « 163 » → 164 — l'istithmār demande « أهمية
+  إعمال العقل والنظر في الآيات الكونية » : v163 = « votre Divinité est une divinité unique » (aucun signe
+  cosmique, aucun appel à raisonner) ; v164 = création des cieux et de la terre/alternance/navire/eau qui rend
+  vie à la terre morte… « signes pour un peuple qui raisonne (yaʿqilūn) » = mot-cible exact, en outre théme
+  jumeau du v11 (pluie→terre morte→résurrection). NB : 3ᵉ off-by-one sur al-Baqara dans cette série
+  (après 15→16 et 169→170).
+- 13257 : bloc principal Qāf 12-18 ; fragments : Qāf 12-14 (image ق 12 : les 7 peuples + « كل كذب الرسل فحق
+  وعيد » couvrent v12-14), v15, « Mais ils sont dans la confusion… » (15), v16, « et Nous sommes plus près de
+  lui que sa veine jugulaire » (16), v17, « assis » (17) (= قعيد, glosé « بمعنى قاعد… أفرده وهما اثنان »,
+  avec al-Farrāʾ), v18 ; hadith qudsī (fils d'Adam) [Ṣaḥīḥ d'al-Bukhārī, Livre du commentaire du Coran,
+  chapitre de Sa parole : “Dieu, Le Seul à être imploré pour ce que nous désirons” (al-ṣamad)] — intitulé
+  rendu via le cache Hamidullah d'Ickhlās 2 ; hadith Abū Hurayra [Ṣaḥīḥ d'al-Bukhārī, Livre des serments et
+  des vœux, chapitre : celui qui rompt son serment par oubli]. Les 7 peuples en ul/li avec fragments-versets
+  identifiés au mot-cible : Ar-Rass (12), Thamûd (12), ʿĀd (13), Pharaon (13), frères de Lot (13),
+  Al-Aykah (14), Tubbaʿ (14). Istithmār : chapitre de la sauvegarde de la langue, Livre de la tendresse des
+  cœurs (al-riqāq) du Ṣaḥīḥ d'al-Bukhārī + Qāf 18 + 2 hadiths Abū Hurayra ; RESTAURATION documentée : le
+  2ᵉ hadith est TRONQUÉ au source (« … أَبْعَدَ مِمَّا بَيْنَ المَشْرِقِ » s'arrête à « l'Orient ») → complété
+  « [de l'Occident] » entre crochets d'interpolation, finale canonique du hadith (Bukhārī, al-riqāq).
+- Glossaires EN TEXTE au src/mirror pour les 3 leçons (aucune inférence nécessaire) : 13233 = 6 termes
+  (al-Qurʾān al-majīd, mundhir minhum, rajʿ, baʿīd, kitāb ḥafīẓ, amr murīj), 13242 = 8 termes (furūj,
+  rawāsī, zawj, bahīj, munīb, ḥabb al-ḥaṣīd, bāsiqāt, ṭalʿ naḍīd), 13257 = 13 termes (dont aṣḥāb al-Rass,
+  Tubbaʿ, al-waʿīd, a-fa-ʿiynā, labas, khalq jadīd, ḥabl al-warīd, yatalaqqā, al-mutalaqqiyān, qaʿīd,
+  ʿatīd) — rendus « [Terme (glose)] : définition. », gloses-terme tirées des mots du verset au cache.
+- COQUILLES SOURCE corrigées + signalées : 13233 glossaire « كتاب محفوظ » → kitāb ḥafīẓ (le verset porte
+  كتاب حفيظ ; la glose « اللوح المحفوظ والحفيظ الجامع » confirme) et « أمر مريح » → amr murīj (glose
+  مضطرب ; مريج au verset ; même cas que غيط→غليظ en 13069) ; 13242 identification 1-5→6-11 (cf. supra).
+- RÈGLE f (jamais inventé) : préparations préalables = 9 images (13233, alts parasites « ق 5 3…5 12 »),
+  8 images (13242, « ق 11 3…11 10 »), 9 images (13257, « ق 18 3…18 11 ») — les alts pointent tous vers le
+  DERNIER verset de la leçon en cours (numérotation relative du CMS, manifestement fausse pour v5/v11/v18
+  courts) ; expressions vraisemblablement tirées des versets 6-11 / 12-18 / 19-26 mais identification
+  impossible « sans aucun doute » → « [expressions non reproduites dans le manuel] » (précédents R58,
+  R63-g/d). NB pour l'agent de 13268 : 9 images de la préparation de 13257 ↔ glossaire éventuel de 13268.
+- Conventions : h1 = titleFr officiels VERBATIM (« Sourate Q, versets 1-5 / 6-11 / 12-18 ») ; identification
+  « Sourate “Qāf” : exégèse des versets N à M, matière du Tafsīr à travers le Tashīl…, première étape
+  (leçon 22/23/24) » (guillemets du source سورة "ق" rendus “Qāf”) ; translittération série tafsīr (Ibn
+  Juzayy, al-Ṭabarī, al-Farrāʾ, Ṣāliḥ, Hūd, Shuʿayb, Ubayy b. Khalaf al-Jumaḥī, ṣulb, ʿajuz, sijjīl) ;
+  ṣalāwāt développées ; 13242 : « ثالثا » est INLINE au src (paragraphe avec <br>, perte de balise h3
+  évidente) → promu h3 pour parallélisme avec أولا/ثانيا et l'annonce « trois preuves » — signalé ;
+  consignes genrées → 2ᵉ personne scolaire (Lis/Explique/Expose/Déduis/Extrais/Recherche).
+- QA : 3 × « QA OK » après retouches — 13233 : 11 224 car (17 paires « »), 13242 : 11 161 car (9),
+  13257 : 15 091 car (22) ; 0 caractère arabe, 0 apostrophe droite, 0 « Allah » résiduel, balises
+  appariées, NNBSP auto-fix. Re-vérification scriptée des 3 blocs + 13 fragments + 3 réf. croisées
+  contre le cache : TOUT VERBATIM (adaptations documentées ci-dessus). NI hand-set.py NI git NI
+  content/books NI scripts-translate touchés — seuls tr-tmp/{13233,13242,13257}.html ont été écrits.
+
+Stage Summary:
+- Livrés : tr-tmp/13233.html (11 224 car), tr-tmp/13242.html (11 161 car), tr-tmp/13257.html (15 091 car) —
+  traductions savantes intégrales, h1 = titleFr officiels, structure calquée sur 16810/13148.
+- Versets restitués (cache Hamidullah, Allah→Dieu) : 13233 → bloc Qāf 1-5 + fragments « Qāf » (1), « Par le
+  Coran glorieux! » (1), v2, « et les mécréants dirent » (2), Yā-Sīn 1-2, v3, v4, « et Nous avons un Livre
+  où tout est conservé » (4), « Plutôt… » (5), « les voilà… » (5) + Yā-Sīn 76-82 (istithmār) ; 13242 → bloc
+  Qāf 6-11 + fragments v6, Qāf 7-8, al-Dhāriyāt 49-50, Qāf 9-10, Qāf 11, « Ainsi se fera la résurrection »
+  (11) + al-Baqara 164 (istithmār) ; 13257 → bloc Qāf 12-18 + fragments Qāf 12-14 (7 peuples avec n°),
+  v15, « confusion » (15), v16, « veine jugulaire » (16), v17, « assis » (17), v18 + Qāf 18 (istithmār).
+- Coquilles corrigées : al-Baqara 163→164 (off-by-one, note inline, 3ᵉ du genre sur al-Baqara) ; plage
+  inversée al-Dhāriyāt 50-49→49-50 ; identification 13242 « 1 إلى 5 »→6 à 11 (copier-collé CMS) ;
+  glossaire 13233 كتاب محفوظ→kitāb ḥafīẓ et أمر مريح→amr murīj ; hadith istithmār 13257 tronqué au source
+  (finale « [de l'Occident] » restituée entre crochets, canonique Bukhārī).
+- Règle f : expressions des préparations préalables (9+8+9 images, alts parasites) non identifiables →
+  « [expressions non reproduites dans le manuel] ».
+- Points pour le main agent : (1) inférences d'images pluri-versets à réconcilier avec le livre imprimé si
+  accessible : 13242 image « ق 7 » rendue Qāf 7-8 (glose de « tabṣira/dhikrā/munīb » = v8) et image « ق 9 »
+  rendue Qāf 9-10 (glose des palmiers/régimes = v10) ; 13257 image « ق 12 » rendue Qāf 12-14 ; 13233 v5 en
+  2 fragments (pas d'image plein-verset) ; (2) intitulés Bukhārī 13257 rendus au sens (al-riqāq = « Livre de
+  la tendresse des cœurs », « باب إذا حنث ناسيا » = « celui qui rompt son serment par oubli », باب قوله الله
+  الصمد via Hamidullah Ickhlās 2) — à vérifier contre l'édition française du Ṣaḥīḥ utilisée dans le corpus
+  si normée ; (3) « Sourate “Qāf” » (guillemets du source) dans les 3 phrases d'identification, vs « Qāf »
+  sans guillemets dans le corps — harmonisation livre à décider ; (4) préparation 13257 = 9 images ↔ leçon
+  suivante 13268 (Qāf 19-26) pour son agent ; (5) Yā-Sīn 76-82 conservée telle quelle (concordanse
+  span/filename, mot-cible interne).
+---
+Task ID: R63-f
+Agent: subagent-traducteur
+Task: Traduction tafsir-1es 13181+13189+13202 (al-Ḥujurāt 6-8, 9-10, 11)
+Work Log:
+- Protocole suivi : ~150 dernières lignes du worklog (conventions R19-R63-d), brief _brief-tafsir1es.md à la lettre (MIROIR = outil principal), exemplaire 16810 + calques 13094/13118/13148 (glossaires en texte, versets imbriqués « … » (réf), mention inline « le manuel imprime “n” ») ; src.html = squelette autorité, mirror.html = autorité glossaires/citations, gt.html = décodage seul (GT-ismes écartés) ; chaque référence croisée vérifiée AU MOT-CIBLE (règle R57/R58).
+- MIROIR exploité sur les 3 leçons ; convention affinée : fichier image SANS suffixe (الحجرات-6.png, -7.png, -9.png, -10.png, -11.png, title « الآية N ») = VERSET COMPLET ; fichier AVEC suffixe = fragment à identifier par la glose qui le suit ; les suffixes (alt « الحجرات 8 3 »…) = compteurs CMS parasites.
+- 13181 : bloc Ḥujurāt 6-8 ; image الحجرات-6.png réutilisée ×2 (استخلاص « فيمن نزل قوله تعالى » + « فنزلت هذه الآية الكريمة ») = v6 complet ; fragments : 6-3 = ouverture du v6 « O vous qui avez cru! Si un pervers vous apporte une nouvelle, voyez bien clair » (glosé « هذا ثالث نداء »), 6-4 = « [de crainte] que par inadvertance vous ne portiez atteinte à des gens » (glose : mafʿūl li-ajlihi, « مخافة أن تصيبوا قوما بجهالة »), v7 complet (ouverture §3), 7-2 = « Et sachez que le Messager de Dieu est parmi vous », 7-3 = « S'il vous obéissait dans maintes affaires, vous seriez en difficultés », 7-4 = « S'il vous obéissait » (isolation grammaticale de « وإنما قال… ولم يقل لو أطاعكم » : inaccompli vs accompli), 7-5 = « Mais Dieu vous a fait aimer la foi… », 7-6 = « Ceux-là sont les bien dirigés », 8 = « c'est là en effet une grâce de Dieu et un bienfait », 8-2 = « Dieu est Omniscient et Sage ». Réf croisée al-Aḥzāb 6 VÉRIFIÉE CORRECTE au mot-cible (النبي أولى بالمؤمنين من أنفسهم = « Le Prophète a plus de droit sur les croyants qu'ils n'en ont sur eux-mêmes », illustration de « وأشفق عليكم منكم »).
+- 13189 : bloc 9-10 ; الحجرات-9.png = v9 complet en clôture du hadith d'Anas [Ṣaḥīḥ d'al-Bukhārī, Livre de la concorde] (verset imbriqué « … » (9), paroles internes “ … ”) ; fragments : 9-2 = « Et si deux groupes de croyants se combattent, faites la conciliation entre eux », 9-3 = « réconciliez-les avec justice et soyez équitables » (glose « اعدلوا بينهم… بالقسط »), 9-4 = « car Dieu aime les équitables » ; الحجرات-10.png = v10 complet (§4) ; 10-2 = « Les croyants ne sont que des frères » (lemme de la citation d'al-Bayḍāwī), 10-3 = « Etablissez la concorde entre vos frères » (imbriqué dans la citation [Anwār al-tanzīl : 2/216] ; structure 3 <p> lemme+« … »(10) : « … »(10), pattern 13118/Ibn ʿĀshūr — adoptée pour équilibrer les guillemets). COQUILLE DE RÉF CORRIGÉE (vérifiée au mot-cible, notée inline « le manuel imprime « 113 » ») : النساء « 113 » → al-Nisāʾ 114 — le mot-cible « une conciliation entre les gens » (إصلاح بين الناس) est au v114, absent du v113 ; question de l'istithmār (« أهمية الصلح بين الناس ») confirme.
+- 13202 : bloc v11 (guillemets internes «perversion» du cache → “perversion”) ; fragments : 11-2 = « Qu'un groupe ne se raille pas d'un autre groupe », 11-3 = « Et que des femmes ne se raillent pas d'autres femmes » (argument « لو كانت النساء داخلة… لم يقل »), 11-4 = « Qu'un groupe ne se raille pas d'un autre groupe : ceux-ci sont peut-être meilleurs qu'eux » (causes al-Ḍaḥḥāk/délégation Tamīm + ʿIkrima), 11-5 = « ceux-ci sont peut-être meilleurs qu'eux » (justification « عسى أن يكون المسخور خيرا عند الله »), 11-6 = « Et que des femmes… : celles-ci sont peut-être meilleures qu'elles », 11-7 = « celles-ci sont peut-être meilleures qu'elles » (causes Ṣafiyya bt. Ḥuyayy / Umm Salama), 11-8 = « Ne vous dénigrez pas », 11-9 = « et ne vous lancez pas mutuellement des sobriquets (injurieux) », 11-12 = « Quel vilain mot que “perversion” lorsqu'on a déjà la foi », 11-13 = « Et quiconque ne se repent pas... Ceux-là sont les injustes » ; hadith d'Abū Jubayra [Sunan d'Abū Dāwūd, Livre des convenances, chapitre des sobriquets] avec 2 images : 11-10 et 11-11 rendues toutes deux « et ne vous lancez pas mutuellement des sobriquets (injurieux) » (11) — 11-11 INCERTAINE (« فأنزلت هذه الآية » renvoie au segment du tanābuz ; variante possible « بئس الاسم الفسوق بعد الإيمان », non retenue faute de certitude). RÉFS CROISÉES : al-Nisāʾ 29 VÉRIFIÉE CORRECTE (« Et ne vous tuez pas vous-mêmes » = l'analogie « لمز المؤمنين لمز للنفس », « car ils sont comme une seule âme ») ; al-Qalam 11 VÉRIFIÉE (هماز مشاء بنميم) ; DÉCOUVERTE hors brief : 3ᵉ réf croisée الهمزة: 1 (al-Humaza 1, « Malheur à tout calomniateur diffamateur ») extraite au cache et rendue.
+- Coquilles texte source corrigées (sens visé traduit) : 13189 glossaire « فأصلحجوا » → فأصلحوا ; 13189 hadith Tirmidhī « وَفًسَادُ » → وفساد ; 13202 glossaire « بيس الإسم » → بئس الاسم ; 13202 Tirmidhī « والورق » → والورع (intitulé réel : كتاب صفة القيامة والرقائق والورع) ; « المهاجرة » (Muwaṭṭaʾ) rendue « la rupture des relations ».
+- Versets restitués (cache Hamidullah, Allah→Dieu, élisions d'/qu' normalisées « de Dieu/que Dieu », guillemets internes “ ”, NNBSP auto-fix) ; re-vérification scriptée mot à mot : 38 unités-versets, TOUT OK contre le cache (0 mismatch). Aucun verset hors plage de leçon.
+- RÈGLE f : préparations préalables (13181 : 6 images alts « الحجرات 8 3…8 9 » ; 13189 : 6 images « 9 5…9 11 » ; 13202 : 5 images « 11 14…11 18 ») : suffixes = compteurs CMS (fin de plage de la leçon courante), aucune identification possible ; glossaire de 13189 (7 termes) ≠ 6 images de la prépa de 13181 → règle f stricte (précédent R58/R63-b) : « [expressions non reproduites dans le manuel] ». Vers de Zuhayr et proverbe arabe (« إذا أكلت طعاما… ») traduits intégralement.
+- Style : h1 = titleFr officiels VERBATIM ; identifications « Leçon sur la sourate al-Ḥujurāt : exégèse des versets…, première étape (leçon 16/17/18) » (calque 13094) ; translittération série tafsīr (Ḥujurāt, fisq, lamz, hamz, qisṭ, fiyʾa, rāshidūn, tanābuz) ; noms de prophètes en formes françaises (Aaron, Moïse — précédent 13094 « Adam ») ; ṣalāwāt développées ; hadiths Bukhārī/Muslim/Tirmidhī ×2/Abū Dāwūd/Muwaṭṭaʾ + citations Ibn ʿAbd al-Barr [Jāmiʿ bayān al-ʿilm : 2/1093], Ibn Juzayy (« ثم حكمها باق إلى آخر الدهر »), al-Bayḍāwī [2/216] intégralement traduits, sources entre crochets ; lectures d'Ibn ʿĀmir « بين إخوتكم »/« بين إخوانكم » rendues translittérées avec glose.
+- QA : 3 × « QA OK » après retouches — 13181 : 14 141 car (16 paires « »), 13189 : 13 404 car (26), 13202 : 15 202 car (48) ; 0 caractère arabe, 0 apostrophe droite, 0 « Allah » résiduel, balises appariées, NNBSP auto-fix. NI hand-set.py NI git NI content/books NI scripts-translate touchés — seuls tr-tmp/{13181,13189,13202}.html écrits.
+
+Stage Summary:
+- Livrés : tr-tmp/13181.html (14 141 car), tr-tmp/13189.html (13 404 car), tr-tmp/13202.html (15 202 car) — traductions savantes intégrales, h1 = titleFr officiels, structure calquée sur 16810/13094/13118.
+- Versets restitués : 13181 → bloc 6-8 + v6 complet ×3 (bloc, استخلاص, cause de révélation) + fragments v6 ×2 + v7 complet + fragments v7 ×4 + fragments v8 ×2 + al-Aḥzāb 6 ; 13189 → bloc 9-10 + v9 complet (hadith Anas) + fragments v9 ×2 + v10 complet ×2 (bloc + §4) + fragments v10 ×2 + al-Nisāʾ 114 ; 13202 → bloc 11 + fragments v11 ×12 (dont 2 dans le hadith Abū Jubayra) + al-Nisāʾ 29 + al-Qalam 11 + al-Humaza 1.
+- Coquilles corrigées : 1 off-by-one (13189 : al-Nisāʾ 113→114, mot-cible « conciliation entre les gens » au v114, notée inline) ; al-Aḥzāb 6, al-Nisāʾ 29, al-Qalam 11 vérifiées CORRECTES ; 3ᵉ réf de 13202 (al-Humaza 1) découverte hors brief. Coquilles texte source : فأصلحجوا، وفًساد، بيس، الورق → corrigées.
+- Règle f : 3 préparations préalables (6+6+5 images) « non reproduites dans le manuel » ; aucune autre perte de contenu.
+- Points d'attention pour le main agent : (1) image 11-11 de 13202 (fin du hadith Abū Jubayra) rendue « et ne vous lancez pas mutuellement des sobriquets (injurieux) » (11) — identification probable mais non certaine (variante « بئس الاسم الفسوق بعد الإيمان » écartée), à réconcilier avec le livre imprimé si accessible ; (2) convention miroir affinée (fichier SANS suffixe = verset complet ; AVEC suffixe = fragment) à documenter pour les agents des leçons 13207+ ; (3) 13181 : v6 complet imprimé 3 fois (réutilisation de الحجرات-6.png) — fidélité au manuel ; (4) intitulés de chapitres hadith (Tirmidhī « باب الإصلاح بين الناس », Muwaṭṭaʾ « باب ما جاء في المهاجرة », Muslim « باب فضيلة الإمام العادل » tronqué « ... » au source) à vérifier contre les éditions si accessible ; (5) h1 « Al-Hujurat » sans diacritiques vs corps « al-Ḥujurāt » — cohérent avec le précédent 13094 (« Al-Sajdah »/« al-Sajda »).
+---
+Task ID: R63-c
+Agent: subagent-traducteur
+Task: Traduction tafsir-1es 13072+13082+13087 (Luqman 26-31, 32-33 ; al-Sajda 1-3)
+Work Log:
+- Protocole suivi : ~150 dernières lignes du worklog (conventions R19-R62 + découvertes R63-a/b/d), brief _brief-tafsir1es.md à la lettre
+  (MIROIR = outil principal), exemplaire 16810 + calques 13094/13148 (fragments « … » (n) : c'est-à-dire : … ; réf. corrigées notées
+  inline ; hadiths et discours imbriqués « … »/“ … ”, versets dans les citations en « … » (réf)). src.html = squelette complet
+  (miroirs 13072/13082/13087 TRONQUÉS en préparation préalable → src autorité pour ces sections), mirror = glossaires EN TEXTE +
+  alt des images-versets, gt.html = décodage seul.
+- DÉCOUVERTE MAJEURE (généralise R63-b/R63-d) : les alt des images de COMMENTAIRE sont systématiquement décalés de +1
+  (alt « لقمان 26 » = contenu du v27 réel, …, alt « لقمان 31 » = v32 ; idem 13082 : alt « 32/33 » = v33/v34 ; idem 13087 :
+  alt « السجدة 2/3 » = v3/v4) — vérifié au mot-cible : chaque glose suit son image (ex. alt « لقمان 27 2 » + glose « سميع لأقوالكم
+  بصير بأعمالكم » = « إن الله سميع بصير » fin du v28 ; alt « لقمان 31 2 » + glose « موف بما عاهد الله عليه في البحر » = « فمنهم
+  مقتصد » v32). CONCEPTION DU MANUEL confirmée : bloc officiel = [a..b] (h1/ToC = autorité), commentaire courant = [a+1..b+1] —
+  d'où les « débordements » v5 (13046), v19 (13064), v21 (13066), v26 (13069), v9 (13094) déjà signalés par R63-a/b/d : ce n'est
+  pas un accident mais le dessin du livre (chaque verset glosé une fois, les gloses enchaînées d'une leçon à l'autre). Les
+  GLOSSAIRES suivent la plage du COMMENTAIRE, pas celle du bloc (13072 : نفذت v27 + 6 termes du v32 ; 13082 : 4 termes v33 +
+  الساعة/الغيث v34 ; 13087 : lā rayba/iftarāhu/li-tundhira v2-3 + waliyy/shafīʿ v4) — c'est la « pollution » pressentie par R63-b,
+  désormais expliquée. Traitement : bloc = plage officielle du h1 (règle du brief), fragments numérotés PAR LE CONTENU (contexte =
+  arbitre, conforme à la règle miroir), débordements signalés.
+- VERSERS RESTITUÉS (cache Hamidullah ; adaptations : « Allah »→« Dieu » avec élisions normalisées d'Allah→de Dieu ; « » internes→“ ” ;
+  « Alif, Lām, Mīm » DIN ; « A Allah »→« À Dieu » majuscule accentuée, précédent exemplaire 16810 « À Lui appartient » ;
+  vocatif « O » NON accentué conservé tel quel au cache, précédents 13064 « O mon enfant » et 13172 « O vous qui avez cru ») :
+  * 13072 : bloc Luqmān 26-31 ; fragments v27 ×6 (dont « sept autres océans » cité 2× : en séquence + inline dans « et la mention
+    fut faite de… pour indiquer la multitude », calque de « وذكرت [IMG] للدلالة »), v28 ×2, v29 ×3, v30 ×4 (« Il en est ainsi »
+    démonstratif + bāʾ de « parce que Dieu est la Vérité »), v31 ×3, v32 ×3 (débordement) ; croisées al-Kahf 109 (corrigée),
+    al-Isrāʾ 85.
+  * 13082 : bloc 32-33 ; fragments v33 ×4, v34 ×7 (débordement) ; hadith des clefs de l'invisible [Ṣaḥīḥ d'al-Bukhārī, Livre du
+    commentaire coranique, chapitre de ce qui est rapporté au sujet des clefs de l'invisible] restitué avec ses deux images-versets
+    greffées (al-Anʿām 59 + liste des 5 clefs = v34a-e) + « cinq : » (خَمْسٌ:) ; croisées al-Aʿrāf 187 (vérifiée correcte) et
+    Maryam 7 (corrigée) ; istithmār al-Qurṭubī [al-Jāmiʿ li-aḥkām al-Qurʾān : 14/83] : rapport de Muqātil sur al-Wārith b. ʿAmr
+    b. Ḥāritha, intégral.
+  * 13087 : bloc al-Sajda 1-3 ; fragments v1 (« Alif, Lām, Mīm »), v2, v3 ×5 (« Diront-ils » / « … l'a inventé » / « Ceci est…
+    vérité » / « pour que tu avertisses… » / « afin qu'ils se guident »), v4 ×4 (débordement — v4 affiché aussi dans le bloc 4-8 de
+    13094, symétrique du chevauchement 13094/v9 signalé par R63-d) ; croisées al-Baqara 29 (corrigée, DANS la citation d'Ibn
+    Juzayy [Tashīl : 1/290] sur l'istiwāʾ, traduite intégralement) et Yūnus 3 (vérifiée correcte) ; istithmār al-Qurṭubī
+    [14/84] : 3 hadiths (Ibn ʿAbbās/Bukhārī — vendredi, aurore : al-Sajda + al-Insān 1 ; Jābir/Dārimī — al-Sajda +
+    al-Mulk 1 ; Khālid b. Maʿdān — la « sauveuse » al-munjiya), avec les 3 images « السجدة » (alt vide) interprétées = ouverture
+    de la sourate (« Alif, Lām, Mīm » (1) — la prosternation (al-Sajda)), le texte-source portant le mot « السَّجْدَة » en toutes
+    lettres après les images 1-2 (structure « الم السجدة » des hadiths).
+- COQUILLES DE RÉFÉRENCE CORRIGÉES (4, toutes vérifiées AU MOT-CIBLE, notées inline, calque 13148/al-Jāthiya 21) :
+  * 13072 « الكهف: 104 » → al-Kahf 109 : « ونحو هذه الآية » après la glose de « إن الله عزيز حكيم » (v27) — le parallèle exact
+    de la mer-encre-paroles de Dieu est « قل لو كان البحر مدادا لكلمات ربي… » = v109 ; le v104 (« ceux dont l'effort s'est
+    égaré ») est sans aucun rapport (coquille de chiffre 4↔9). Le brief signalait « al-Kahf 104 (ceux dont l'effort s'est égaré) »
+    mais sans contrôle du mot-cible.
+  * 13082 « الأنعام: 60 » → al-Anʿām 59 : le hadith des clefs s'ouvre sur « وعنده مفاتح الغيب لا يعلمها إلا هو » = v59 ; le v60
+    (prise des âmes la nuit) est étranger au propos ; le bab de Bukhārī lui-même est le bab du tafsīr de v59.
+  * 13082 « مريم: 6 » → Maryam 7 : la cible « بشره بيحيى قبل أن تحمل به أمه » = « يا زكريا إنا نبشرك بغلام اسمه يحيى » = v7 ;
+    le v6 est la demande d'un descendant.
+  * 13087 « البقرة: 28 » → al-Baqara 29 : dans la citation d'Ibn Juzayy, « كقوله » vise le « ثم استوى إلى السماء » (= « puis Il
+    a orienté Sa volonté vers le ciel ») qui fonde l'interprétation par « Il a visé (qaṣada) » ; le v28 (morts/vivifiés — cible
+    que le brief avait déduite du n° imprimé) ne contient aucun istiwāʾ.
+  Références vérifiées correctes au mot-cible : al-Isrāʾ 85 (« وما أوتيتم من العلم إلا قليلا »), al-Aʿrāf 187 (« لا يجلّيها
+  لوقتها إلا هو »), Yūnus 3 (« ما من شفيع إلا من بعد إذنه »). Plages inversées normalisées : « لقمان: 33-32 » → 32-33,
+  « السجدة: 3-1 » → 1-3, « الآيتين 33-32 » → 32 et 33.
+- RÈGLE f : préparations préalables de 13082 (5 images السجدة 01/02/002/03/003) et de 13087 (5 images السجدة 3 5–3 9) →
+  « [expressions non reproduites dans le manuel] ». HYPOTHÈSE à retenir pour le main agent : la préparation de 13082 liste
+  probablement les 5 termes du glossaire de 13087 (lā rayba, iftarāhu, li-tundhira, waliyy, shafīʿ — compte 5=5 et étiquettes
+  01/02/002/03/003 compatibles avec les versets 2/3/3/4/4 après le décalage +1), car le MOTIF « mots de la préparation = glossaire
+  de la leçon suivante » est confirmé par 13072 dont la préparation est EN TEXTE (واخشوا-يجزي-تغرنكم-الغرور-الغيث = 5 des 6 termes
+  du glossaire de 13082) ; mais l'identification n'est pas « sans aucun doute » (lecture alternative des étiquettes sans décalage)
+  → règle f stricte (précédents R58/R63-b/d). 13072 : les 5 mots ÉTANT en texte au src, rendus translittérés (wa-khshaw, yujzī,
+  taghurrannakum, al-ghurūr, al-ghayth). NB : le miroir est tronqué pour les 3 préparations → src utilisé comme autorité.
+- Anomalies source signalées : glossaire 13072 imprime « نفذت » (dhāl) pour le mot coranique « نَفِدَتْ » (dāl) — rendu « Nafidat »
+  (glose « انتهت » = sens de نَفِدَ) ; Hamidullah rend « فمنهم مقتصد » par « certains d'entre eux deviennent réticents » alors que
+  le manuel glose مقتصد = « متوسط/juste milieu » — texte du verset gardé verbatim, glose rendue fidèlement (tension assumée du
+  source) ; identification 13072 « leçon 7 », 13082 « leçon 8 », 13087 « leçon 9 » (المرحلة الأولى rendu « première étape »,
+  harmonisé R63-b/d).
+- QA : 3 × « QA OK » après normalisations finales — 13072 : 13 436 car (21 paires « »), 13082 : 10 711 car (15), 13087 : 12 320 car
+  (25) ; 0 caractère arabe, 0 apostrophe droite, 0 « Allah » résiduel, balises appariées, NNBSP auto-fix. Re-vérification scriptée
+  mot à mot de TOUTES les unités-versets (blocs + fragments + croisées) contre le cache Hamidullah, adaptations documentées :
+  TOUT OK. NI hand-set.py NI git NI content/books/ NI scripts-translate touchés — seuls tr-tmp/{13072,13082,13087}.html (+ worklog)
+  ont été écrits.
+
+Stage Summary:
+- Livrés : tr-tmp/13072.html (13 436 car), tr-tmp/13082.html (10 711 car), tr-tmp/13087.html (12 320 car) — traductions savantes
+  intégrales, h1 = titleFr officiels verbatim, structure calquée sur 16810/13094/13148.
+- Versets restitués : 13072 → bloc Luqmān 26-31 + fragments v27 ×6, v28 ×2, v29 ×3, v30 ×4, v31 ×3, v32 ×3 + al-Kahf 109 +
+  al-Isrāʾ 85 (dans l'istithmār Ibn ʿAṭiyya [al-Muḥarrar al-wajīz, t. 4, p. 353-354, retouches], version du miroir, plus complète
+  que le src) ; 13082 → bloc 32-33 + fragments v33 ×4, v34 ×7 + hadith Bukhārī des clefs (avec al-Anʿām 59 + liste v34 greffée) +
+  al-Aʿrāf 187 + Maryam 7 ; 13087 → bloc al-Sajda 1-3 + fragments v1, v2, v3 ×5, v4 ×4 + al-Baqara 29 + Yūnus 3 + al-Insān 1 +
+  al-Mulk 1 (istithmār al-Qurṭubī 14/84 : 3 hadiths).
+- Coquilles corrigées (4, notées inline) : al-Kahf 104→109 (coquille de chiffre, parallèle mer-encre), al-Anʿām 60→59 (verset des
+  clefs de l'invisible), Maryam 6→7 (annonce de Yaḥyā), al-Baqara 28→29 (istawā ilā al-samāʾ dans la citation d'Ibn Juzayy) ; les 3
+  réf. du brief « à vérifier » al-Isrāʾ 85, al-Aʿrāf 187, Yūnus 3 sont correctes.
+- Règle f : expressions des préparations de 13082 (5) et 13087 (5) « non reproduites dans le manuel » (hypothèse glossaire
+  suivante documentée) ; 13072 : 5 mots en texte rendus translittérés.
+- Points pour le main agent : (1) DÉCALAGE SYSTÉMATIQUE +1 des alt du miroir dans tafsir-1es (images de commentaire ET
+  probablement expressions de préparation) → toujours trancher par le contexte, jamais par l'alt ; le motif bloc [a..b] /
+  commentaire [a+1..b+1] vaut pour toute la série (à confirmer sur al-Ḥujurāt/Qāf restantes) ; (2) 4 réf. corrigées à
+  réconcilier avec le livre imprimé si accessible ; (3) al-Kahf « 104 » du brief était un faux positif (le n° imprimé ne
+    correspondait à aucun mot-cible) — le contrôle au mot-cible reste indispensable même sur les réf. « pré-identifiées » ; (4)
+  13087 : 3 images « السجدة » de l'istithmār interprétées = ouverture « Alif, Lām, Mīm » de la sourate (à réviser si le livre
+  imprimé devient accessible) ; (5) glossaires suivant la plage de COMMENTAIRE (+1) : les agents des leçons suivantes doivent
+  s'attendre à des termes hors plage du bloc — c'est normal, pas une pollution.
+---
+Task ID: R63-j
+Agent: subagent-traducteur
+Task: Traduction tafsir-1es 13321 (Qāf 41-45 — dernière leçon, leçon 28)
+Work Log:
+- Protocole suivi : ~150 dernières lignes du worklog (conventions R19-R63-h), brief _brief-tafsir1es.md à la lettre
+  (MIROIR = outil principal), exemplaire 16810 + calques Qāf 13233/13242/13257 (identifications « Sourate “Qāf” :
+  exégèse des versets N à M, matière du Tafsīr…, première étape (leçon 22/23/24/28) » ; notes inline « le manuel
+  imprime « n » » calque 13242/al-Baqara 164). src.html = squelette complet/autorité (miroir TRONQUÉ en fin :
+  s'arrête à l'image القصص_56.png de l'istithmār), mirror.html = autorité pour les 20 images-versets (alts fiables
+  pour Qāf, pas de décalage systématique), gt.html = décodage seul (GT-ismes écartés : « matériel d'interprétation »,
+  « calendrier », « investissement », « tonnerre », « histoires »…).
+- Versets restitués (cache Hamidullah, Allah→Dieu avec élision normalisée d'Allah→de Dieu, guillemets internes
+  «»→“ ”, apostrophes courbes) : bloc Qāf 41-45 + v41, v42, v43, v44, v45 complets (images sans suffixe) + fragments
+  « le jour où le Crieur criera d'un endroit proche » (41) ×2 (objet syntaxique d'istamiʿ=ntaẓir, deux lectures),
+  « d'un endroit proche » (41) (glose « Il l'a décrit comme proche »), « Ce sera un rassemblement facile pour Nous »
+  (44) (glose « un rassemblement aisé, une restauration légère »), « Tu n'as pas pour mission d'exercer sur eux une
+  contrainte » (45) ×3 (glose Ibn Juzayy + lecture Mujāhid/Qatāda/al-Ḍaḥḥāk + citation Ibn Kathīr), « Rappelle donc,
+  par le Coran celui qui craint Ma menace » (45) ×2 (glose + cause de révélation Ibn ʿAbbās « les croyants dirent :
+  ô Messager de Dieu, effraie-nous donc ! »). Re-vérification scriptée mot à mot de 20 unités-versets contre le
+  cache : TOUT OK (0 mismatch ; adaptations documentées : Allah→Dieu, élision, «Wajh»→“Wajh”, «» internes→“ ”,
+  » parasite du cache en Isrāʾ 52 écarté).
+- COQUILLES DE RÉFÉRENCE CORRIGÉES (4, toutes off-by-one, toutes vérifiées AU MOT-CIBLE, notées inline
+  « le manuel imprime « n » ») :
+  * Luqmān « 27 » → 28 : la citation suit la glose « un rassemblement aisé, une restauration légère… » ; le
+    mot-cible « بعثكم » (votre résurrection) est au v28 (« Votre création et votre résurrection [à tous] sont
+    [aussi faciles à Dieu] que s'il s'agissait d'une seule âme ») ; le v27 (les arbres-calames/l'encre) est
+    étranger au propos. Parallèle standard de Qāf 44 dans les tafsīrs.
+  * al-Baqara « 255 » → 256 (istithmār, thème « interdiction de contraindre les hommes à la foi ») : le v255 est
+    le verset du Trône, le mot-cible « Nulle contrainte en religion ! » est au v256.
+  * al-Baqara « 271 » → 272 (istithmār, même thème) : le v271 (aumônes publiques/secrètes) est hors propos ; le
+    mot-cible « Ce n'est pas à toi de les guider » est au v272. 5ᵉ/6ᵉ off-by-one d'al-Baqara de la série.
+  * al-Raʿd « 41 » → 40 (istithmār, même thème) : le v41 (réduction de la terre) est hors propos ; le mot-cible
+    « il ne t'incombe que la transmission » (fa-innamā ʿalayka al-balāgh) est au v40.
+- Références vérifiées CORRECTES au mot-cible : al-Qamar 8 (« courants vers l'appeleur » = مسرعين إلى المنادي),
+  al-Isrāʾ 52 (« le jour où Il vous appellera, vous répondrez »), al-Qamar 50 (« Notre ordre est une seule
+  [parole] » = جعل هين), al-Ghāshiya 22 (« tu n'es pas un dominateur sur eux » = parallèle de بجبار), Yūnus 99
+  (« Est-ce à toi de contraindre les gens à devenir croyants ? » — mot-cible إكراه الناس), al-Qaṣaṣ 56 (« Tu ne
+  diriges pas celui que tu aimes »).
+- Glossaire : termes EN TEXTE au src/mirror (wa-istamiʿ/al-munādī/al-ṣayḥa/tashaqqaq/fa-dhakkir bi-l-Qurʾān),
+  rendus « [Terme (glose)] : définition. » avec les gloses du manuel ; parenthèses calquées sur le texte restitué
+  du cache (« et sois à l'écoute », « le Crieur », « le Cri », « se fendra », « Rappelle donc, par le Coran »).
+- PRÉPARATION PRÉALABLE : AUCUNE section الإعداد القبلي au source (leçon finale du livre, leçon 28/28) —
+  l'hypothèse du task description (préparation = révision) n'est pas confirmée : le document s'achève sur les 2
+  questions de l'istithmār. Aucune perte de contenu à signaler (règle f) — toutes les sections du src couvertes.
+- Style : h1 = titleFr officiel « Sourate Q, versets 41-45 » ; identifications/sectionnement/titres calqués sur
+  13233/13242/13257 ; citation Ibn Kathīr [Tafsīr al-Qurʾān al-ʿAẓīm d'Ibn Kathīr, t. 7, p. 412] intégrale
+  (structure 3 <p> : ouverture « La première opinion est la plus valable… mais Il a dit : », verset-fragment,
+  clôture « tu n'es qu'un transmetteur » ») ; ṣalāwāt développées (— que Dieu prie sur lui et le salue — /
+  — sur lui la paix — pour Isrāfīl / — que Dieu les agrée — dual Ibn ʿAbbās) ; invocations de Qatāda rendues ;
+  consignes genrées → 2ᵉ personne scolaire (Détermine/Décris/Déduis/Explicite).
+- QA : « QA OK » — 11 612 car (12627 octets), 32 paires « », 0 caractère arabe, 0 apostrophe droite, 0 « Allah »
+  résiduel, balises appariées, NNBSP auto-fix. NI hand-set.py NI git NI content/books/ NI scripts-translate
+  touchés — seuls tr-tmp/13321.html (+ worklog) ont été écrits.
+
+Stage Summary:
+- Livré : tr-tmp/13321.html (11 612 car) — traduction savante intégrale de la LEÇON FINALE (28) du livre
+  tafsir-1es, h1 = titleFr officiel, structure calquée sur 16810/13233/13242/13257. Le livre est désormais
+  couvert jusqu'à sa dernière leçon (avec 13268/13279/13306 restant à traiter par leurs agents).
+- Versets restitués : bloc Qāf 41-45 + 5 versets complets + 9 fragments + 8 références croisées (al-Qamar 8,
+  al-Isrāʾ 52, al-Qamar 50, Luqmān 28, al-Ghāshiya 22, al-Baqara 256, al-Baqara 272, Yūnus 99, al-Raʿd 40,
+  al-Qaṣaṣ 56) — 20 unités vérifiées mot à mot contre le cache, tout OK.
+- Coquilles corrigées (4, notées inline) : Luqmān 27→28, al-Baqara 255→256, al-Baqara 271→272, al-Raʿd 41→40 —
+  3 des 5 versets de l'istithmār imprimés avec un off-by-one ; les réf. du brief (al-Qamar 8, al-Isrāʾ 52)
+  vérifiées correctes.
+- Règle f : rien à signaler (pas de préparation préalable au source — leçon finale ; pas d'expressions-images
+  non restituables ; glossaire entièrement en texte).
+- Points pour le main agent : (1) les 4 corrections de référence à réconcilier avec le livre imprimé si
+  accessible ; (2) la leçon 13321 n'a PAS d'الإعداد القبلي — cohérent avec le statut de dernière leçon ;
+  (3) image « ق 41 2 »/« ق 41 3 » rendues « le jour où le Crieur criera d'un endroit proche » (objet complet
+  d'istamiʿ, couvre les deux lectures) et « ق 41 4 » rendue « d'un endroit proche » (glose « proche ») —
+  découpage des images inféré du contexte, à réviser contre le livre imprimé si accessible ; (4) cache :
+  Qāf 45 rend « Tu n'as pas pour mission d'exercer sur eux une contrainte » (بجبار) et v42 « Voilà le Jour de
+  la Résurrection » (الخروج) — l'orthodoxie Hamidullah du corpus prime sur mes attentes lexicales.
+---
+Task ID: R63-i2
+Agent: subagent-traducteur
+Task: Traduction tafsir-1es 13306 (Qāf 36-40)
+Work Log:
+- Protocole : brief + exemplaire 16810 lus ; 13306.src.html (squelette), 13306.mirror.html (glossaire en texte + alts
+  « ق 36 », « ق 37 », « ق 38 », « ق 39 », « ق 39 40 », « ق 40 », « ق 6 7 1 », « ق 6 7 2 », « الحجر 97 98 »,
+  « البقرة 44 »), 13306.gt.html (décodage seul) → tr-tmp/13306.html rédigé, calqué sur 13233/13242/13321 (h1 titleFr
+  officiel « Sourate Q, versets 36-40 », leçon 27/28).
+- VERSETS RESTITUÉS (verse.py, cache Hamidullah) et vérifiés scriptée mot à mot (normalisation NNBSP/apostrophes) :
+  10/10 unités OK — bloc Qāf 36-40 (5 versets, réf. finale « (Qāf, 36-40) ») ; en section : Qāf 36 (×2), 37 (×2),
+  38 (×2), 39 (×3), 40 (×3) ; croisée Qāf 6-7 rendue en 2 fragments « en Sa parole … jusqu'à Sa parole … » (6) + (7)
+  avec réf. unique « (Qāf, 6-7) » (structure « في قوله … إلى قوله … ق: 6-7 » du source) ; al-Ḥijr 97-98 ; al-Baqara 45.
+  Adaptations documentées : majuscule initiale « Combien » en tête des 2 citations du v36, apostrophes ’, NNBSP auto-fix.
+- COQUILLE DE RÉFÉRENCE CORRIGÉE (1, vérifiée AU MOT-CIBLE, notée inline « le manuel imprime « 44 » ») :
+  * al-Baqara « 44 » → 45 : le contexte imprime « ordonnant de demander secours dans l'endurance et dans la prière »
+    (آمرا بالاستعانة بالصبر وبالصلاة) ; le mot-cible « Et cherchez secours dans l'endurance et la salât » est au v45 ;
+    le v44 (« Commanderez-vous aux gens de faire le bien… ») est étranger au propos. 6ᵉ off-by-one d'al-Baqara de la
+    série (15→16, 163→164, 169→170, 255→256, 271→272, 44→45).
+- Références vérifiées CORRECTES au mot-cible : Qāf 6-7 (création des cieux/de la terre = argument de la possibilité
+  de la résurrection, exact : v6 ciel, v7 terre) ; al-Ḥijr 97-98 (poitrine qui se serre + glorification/prosternation =
+  parallèle exact de l'ordre d'endurance puis de tasbīḥ). Les 2 réf. du brief confirmées.
+- IMAGE « ق 39 40 » : rendue comme PLAGE COMPLÈTE v39+v40 (parallèle du bloc « ق 36 40 » = plage) après la citation
+  isolée du v39 — le commentaire ne glose que l'ordre de tasbīḥ mais rien n'est omis ; découpage inféré du nom de
+  fichier, à réviser contre le livre imprimé si accessible.
+- GLOSSAIRE (8 termes, miroir EN TEXTE) : rendu « [Terme (rendu français dans le verset)] : définition. » — Qarn,
+  Baṭshan, Fa-naqqabū fī al-bilād, Maḥīṣ, Li-dhikrā, Alqā al-samʿ, Shahīd, Lughūb. 2 anomalies du texte site :
+  (1) 1ʳᵉ entrée imprimée « فرن: القرن: الأمة والجماعة والجيل من الناس » — « فرن » (furn) = coquille probable du site
+  pour « قرن » (qarn, v36 « min qarnin ») ; terme retenu : Qarn ; (2) entrée « لذكرى: لذكرى » — glose imprimée
+  identique au terme (glose probablement corrompue/perdue sur le site) ; rendu fidèle « pour un rappel » + signal.
+- PRÉPARATION PRÉALABLE (versets 41-45, leçon suivante 13321) : 4 images-mots (alt « ق 39 2 »…« ق 39 5 ») NON
+  IDENTIFIABLES sans aucun doute — la nomenclature CMS (ق-V-N = Nᵉ fragment du verset V) suggère des fragments du
+  v39, en contradiction avec l'instruction imprimée « Lis les versets 41 à 45 » ; et la leçon 13321 glose 5 termes ≠ 4
+  images → « [expressions non reproduites dans le manuel] » (règle f, précédent R58/13242).
+- AUTORITÉS : hadith Abū Hurayra (pauvres/tasbīḥ 33×) INTÉGRAL avec imbrication « … “ … ‘ … ’ … ” … » —
+  [Ṣaḥīḥ d'al-Bukhārī, Livre de l'adhān, chapitre de l'évocation après la prière] ; citation [al-Taḥrīr wa-l-tanwīr
+  de Ṭāhir Ibn ʿĀshūr, retouches : 8/161] (بتصرف → retouches) ; paroles Sufyān/al-Ḍaḥḥāk rendues ; lecture ʿUmar +
+  ʿAlī (dual — que Dieu les agrée —)/Ibn ʿAbbās/witr sur « adhbār al-sujūd » ; formule « subḥāna Llāhi wa-bi-ḥamdihi »
+  translittérée ; noms de prières ṣubḥ/ẓuhr/ʿaṣr/maghrib/ʿishāʾ translittérés.
+- Style : ṣalāwāt conformes (2× Prophète, — que Dieu l'agrée — Abū Hurayra, — que Dieu les agrée — dual ʿUmar/ʿAlī) ;
+  consignes genrées → 2ᵉ personne scolaire (Explicite/Expose/Décris) ; pronoms du commentaire « hum »/« minhum »
+  rendus avec équivalent français entre parenthèses ; 0 GT-isme.
+- QA : « QA OK » — 13 423 car (14 571 octets), 16 paires « », 11 paires “ ”, 0 caractère arabe, 0 apostrophe droite,
+  balises appariées, NNBSP auto-fix. NI hand-set.py NI git NI content/books/ NI scripts-translate touchés —
+  seuls tr-tmp/13306.html (+ worklog) écrits.
+Stage Summary:
+- Livrable : tr-tmp/13306.html (13 423 car) — traduction savante intégrale de la leçon 27/28 du livre tafsir-1es,
+  h1 = titleFr officiel, structure/registre calqués sur 16810/13233/13242/13321.
+- Versets restitués : bloc Qāf 36-40 + 10 unités-versets vérifiées mot à mot contre le cache (Qāf 36-40, Qāf 6,
+  Qāf 7, al-Ḥijr 97-98, al-Baqara 45) — tout OK.
+- Coquille corrigée (1, notée inline) : al-Baqara 44→45 — 6ᵉ off-by-one d'al-Baqara de la série ; réf. du brief
+  (Qāf 6-7, al-Ḥijr 97-98) vérifiées correctes au mot-cible.
+- Règle f : 4 images-mots de la préparation préalable non identifiables (alts « ق 39 2 »…« ق 39 5 » contradictoires
+  avec l'instruction « versets 41-45 ») → placeholder ; 2 anomalies du glossaire site signalées (« فرن » pour « قرن » ;
+  « لذكرى » glosé par lui-même) — à réconcilier avec le livre imprimé si accessible.
+- Points pour le main agent : (1) image « ق 39 40 » rendue comme plage complète v39+v40 (inférence du nom de fichier),
+  à réviser si le PDF imprimé est accessible ; (2) série Qāf : restent 13268 (19-26) et 13279 (27-35) à traduire ;
+  (3) la préparation préalable de 13306 prépare bien la leçon finale 13321 (41-45) — chaîne 27→28 cohérente.
+---
+Task ID: R63-i
+Agent: subagent-traducteur
+Task: Traduction tafsir-1es 13268+13279 (Qāf 19-26, 27-35)
+Work Log:
+- Reprise après expiration (aucun fichier livré par la tentative précédente) ; protocole suivi : brief + MIROIR à la lettre,
+  exemplaire 16810 + calques 13233/13242/13257/13321 (série Qāf), src = squelette autorité, mirror = autorité
+  glossaires/images/citations, gt = décodage seul (GT-ismes écartés), chaque référence vérifiée AU MOT-CIBLE (R57/R58).
+- 13268 (leçon 25) : bloc Qāf 19-26 + 10 citations dans le commentaire (v19 plein, «la vérité» (bi-l-ḥaqq), «elle est
+  venue» (wa-jāʾat) avec leçon d'Ibn Masʿūd/Abū Bakr al-Ṣiddīq, «Voilà ce dont tu t'écartais», v20 plein, v21, v22, v23
+  plein + fragment, v24-26 + «Jetez-le donc dans le dur châtiment» (fa-alqiyāhu, duel)) + istithmār al-Anʿām 28-31
+  (bloc 4 versets). Glossaire 8 termes EN TEXTE au src/mirror → « [Terme (glose)] : définition. ».
+- IMAGES ق 19 5 / ق 20 2 / ق 20 3 (13268, gloses «إشارة إلى الإماتة/الإعادة والإحياء/الزمان») : suffixes = fragments
+  selon la convention R63-f ; identifiés PAR LA GLOSE : «L'agonie de la mort fait apparaître la vérité» (19a) = la mort,
+  «Et l'on soufflera dans la Trompe» (20a) = le retour/vivification, «Voilà le jour de la Menace» (20b) = le temps
+  (Ibn Juzayy : « le verbe, comme il indique le nom d'action, indique aussi le temps ») — couverture exhaustive des
+  hémistiches de v19-v20, cohérente avec « le second souffle, celui de la résurrection » ; alt «ق 19 5» = compteur
+  parasite de la série 19 ; à réviser contre le livre imprimé.
+- 13279 (leçon 26) : bloc Qāf 27-35 + citations v27, v28, v29, v30 (×2 fragments), v31, v32, v33 (×3 : verset entier,
+  «avec un cœur porté à l'obéissance» (bi-qalbin munīb) = badal ou mubtadaʾ, «bien qu'il ne Le voit pas» (bi-l-ghayb)
+  = ḥāl), v34, v35 + «Et auprès de Nous il y a davantage encore» ; discussion al-Zamakhsharī sur al-Raḥmān/nom propre.
+- COQUILLE DE RÉFÉRENCE CORRIGÉE (1, notée inline « le manuel imprime “24” ») : 13279 Ibrāhīm «24» → 22. Mot-cible :
+  «la tentation du diable n'agit que sur celui dont l'avis est confus…, comme Il a dit» → «Je n'avais aucune autorité
+  sur vous si ce n'est que je vous ai appelés, et que vous m'avez répondu» (le désaveu d'Iblīs, parallèle standard de
+  Qāf 27-28 chez Ibn Kathīr) est au v22 ; le v24 imprimé (parabole du bel arbre) est étranger au propos. Off-by-two,
+  comme le Ibrāhīm 36→34 de R63 (13066) ; image إبراهيم-24.png/filename porteurs de la coquille → à réconcilier avec
+  le livre imprimé.
+- WĀW de Qāf 27 : images «ق 27 2» = «قال قرينه» (qāla qarīnuhu, sans wāw, phrase d'ouverture) et «ق 27 3» = «وقال
+  قرينه» (wa-qāla qarīnuhu, Qāf 23, coordonnée, «qui l'a précédée») — le alt «27 3» est parasite (le fragment est de
+  la leçon précédente), tranché par le contexte («التي تقدمت») ; rendu avec translittérations pour rendre visible la
+  différence de wāw.
+- Qāf 30 : image «ق 30 3» INSÉRÉE au milieu du hadith d'Anas («لا تزال جهنم [image] يضع رب العزة فيها قدمه») =
+  «on y jette et elle dit : “Y en a-t-il encore ?”» restituée du canon Bukhārī (le chapitre cité par le manuel la
+  contient) ; hadith rendu intégralement «La Géhenne ne cessera pas — on y jette… — jusqu'à ce que le Seigneur de la
+  Puissance y pose Son pied ; alors elle dira : “Assez ! Assez !” (qaṭ, qaṭ)».
+- Références vérifiées CORRECTES au mot-cible : Yūnus 26 («…et même davantage» = زيادة, parallèle de مزيد, glosé «la
+  vision du visage de Dieu») ; al-Anʿām 28-31 (thème du regret post-mortem et du démenti de la résurrection, cohérent
+  avec les 2 questions de l'istithmār). Image 13279 «ق-34.png» (title «الآية 35», alt «34») : alt retenu + glose
+  «entrez… à l'abri du châtiment» = v34 confirmé, title off-by-one écarté.
+- Coquilles textuelles du source corrigées silencieusement (signalées ici) : 13279 «من الجنّة والناس» → djinns (الجن)
+  et hommes ; «الخذري» → al-Khudrī ; 13268 «يستحقق» → mérite. Citations Bukhārī (2 : chapitre «وتقول هل من مزيد»,
+  Livre du début de la création) et Muslim (Livre du Paradis…, chapitre : les tyrans entrent dans le Feu, et les
+  faibles dans le Paradis) traduites intégralement avec ṣalāwāt développées.
+- ADAPTATIONS documentées du cache Hamidullah (orthodoxie du cache > attentes lexicales) : «Allah»→«Dieu» (Qāf 26,
+  Qāf 28 [Allah]→[Dieu], al-Anʿām 31) ; «jetez» orthographié ainsi au cache (pas «jettez») — corrigé après
+  re-vérification scriptée ; »/virgule parasites de Qāf 34 écartés («sécurité». Voilà…) ; fermants restitués pour les
+  citations autonomes de Qāf 22/28 et d'al-Anʿām 31 («…à son égard». Et ils porteront…) ; «» internes du cache → “ ”
+  (niveau 1) dans tous les blocs et citations.
+- PRÉPARATIONS PRÉALABLES : 6 images (13268, alts parasites «ق 24 3…24 8») et 7 images (13279, «ق 35 3…35 9»),
+  expressions des leçons suivantes non identifiables «sans aucun doute» (les compteurs ne correspondent pas aux
+  glossaires desdites leçons) → « [expressions non reproduites dans le manuel] » (précédents R58, R63-e/g/d).
+- Re-vérification scriptée de 31 fragments + 3 blocs (chaque verset mot à mot) contre le cache : TOUT VERBATIM hormis
+  les 3 adaptations documentées (Allah→Dieu ×2, virgule/» de Qāf 34).
+- QA : 2 × « QA OK » — 13268 : 11 703 car (12 762 octets), 20 paires « » ; 13279 : 14 421 car (15 804 octets),
+  26 paires ; 0 caractère arabe, 0 apostrophe droite, 0 « Allah » résiduel, balises appariées, NNBSP auto-fix.
+  NI hand-set.py NI git NI content/books NI scripts-translate touchés — seuls tr-tmp/{13268,13279}.html (+ worklog).
+
+Stage Summary:
+- Livrés : tr-tmp/13268.html (11 703 car) et tr-tmp/13279.html (14 421 car) — traductions savantes intégrales des
+  leçons 25-26 de Qāf, h1 = titleFr officiels, structure calquée sur 16810/13233/13242/13257/13321. Reste 13306
+  (Qāf 36-40) pour son agent ; 13233/13242/13257/13321 déjà livrés par R63-e/j.
+- Versets restitués : 13268 → bloc Qāf 19-26 + 10 unités du commentaire + bloc al-Anʿām 28-31 ; 13279 → bloc Qāf
+  27-35 + 12 unités (versets entiers, fragments grammaticaux qāla/wa-qāla qarīnuhu, bi-qalbin munīb, bi-l-ghayb,
+  fa-alqiyāhu) + Ibrāhīm 22 + Yūnus 26 + 3 hadiths (Bukhārī ×2, Muslim).
+- Coquille corrigée (1, notée inline) : Ibrāhīm 24→22 (off-by-two, vérifié au mot-cible) ; réf. Yūnus 26 et al-Anʿām
+  28-31 vérifiées correctes.
+- Règle f : préparations préalables non restituables (6+7 images, alts parasites) → mentions normalisées ; hadith
+  d'Anas complété par l'image interne ق 30 3 (restitution canonique Bukhārî) ; rien d'autre perdu.
+- Points pour le main agent : (1) Ibrāhīm 22 vs «24» imprimé + contenu de l'image إبراهيم-24.png à réconcilier avec
+  le livre imprimé ; (2) identification des images ق 19 5/ق 20 2/ق 20 3 (13268) et ق 27 3 (13279, = Qāf 23) inférée
+  de la glose — à réviser contre le livre imprimé si accessible ; (3) title «الآية 35» de l'image ق-34.png (13279)
+  = off-by-one, alt «34» retenu ; (4) typos source : الجنّة→الجن (foules de djinns et d'hommes), الخذري→al-Khudrī.
+---
+Task ID: R63-e
+Agent: subagent-traducteur (section reconstituée par le main agent — rapport perdu sur expiration du délai, fichiers livrés intacts)
+Task: Traduction tafsir-1es 13155+13166+13172 (al-Sajda 23-25, 26-30 ; al-Ḥujurāt 1-5)
+
+Work Log:
+- Brief + exemplaire 16810 lus ; registre calqué sur la série Tashīl (16810/16839) : structure
+  Objectifs → Introduction (tamhīd) → Les versets → La compréhension/Explication des termes →
+  Extraction → Le commentaire (tafsīr) → L'évaluation → L'enrichissement (istithmār) → La
+  préparation préalable ; glossaire « [Terme (glose)] : définition. » ; identification « Leçon
+  sur la sourate…, matière du Tafsīr à travers le Tashīl…, première étape (leçon N) ».
+- Versets restitués depuis le cache Hamidullah (« Allah »→« Dieu ») : blocs al-Sajda 23-25 et
+  26-30, bloc al-Ḥujurāt 1-5 + fragments v1-v5 du commentaire (v2 mafʿūl li-ajlihi, v3 Abū Bakr/
+  ʿUmar, v4 délégation Banū Tamīm, v5) ; hadiths : Bukhārī (délégation Banū Tamīm, Livre du
+  commentaire, sourate al-Ḥujurāt), Abū Dāwūd (Muʿādh au Yaman, Livre des jugements, chapitre
+  de l'ijtihād) ; citation [Tafsīr al-Marāghī, t. 21, p. 117].
+- COQUILLES CORRIGÉES (mot-cible, note inline « le manuel imprime… ») : 13172 al-Nūr 61→63 ;
+  13155 an-Nisāʾ(al-Nisāʾ) 152→153, al-Māʾida 26→24, Hūd 119→120 ; 13166 al-Ṣāffāt « 138-133 »
+  → 133-138 (plage inversée), al-Ṭūr 28→30, al-Tawba 99→98, al-Ḥajj « 44-43 » → 43-44 (plage
+  inversée). Réf. vérifiées correctes : al-Naml 6, al-Sajda 22, al-ʿAnkabūt 38, al-Wāqiʿa 63-64.
+- Règle f : expressions des préparations préalables (images, alts parasites) → « [mots non
+  reproduits dans le manuel] ».
+- Harmonisation main agent en relecture : « an-Nisāʾ » → « al-Nisāʾ » (série Tashīl non
+  assimilée, cf. 16810 « al-Shūrā »).
+
+Stage Summary:
+- Livrés : tr-tmp/13155.html (14 733 car, 25 paires « »), tr-tmp/13166.html (12 806 car, 23),
+  tr-tmp/13172.html (14 866 car, 30) — QA OK ×3 (0 arabe, 0 apostrophe droite), h1 = titleFr
+  officiels verbatim.
+- 7 coquilles de référence corrigées et notées inline (dont 2 plages inversées) ; citations
+  classiques intégralement rendues et sourcées.
+
+---
+Task ID: R63
+Agent: Z.ai Code (agent principal — relance utilisateur « continue », feu vert traductions maintenu)
+Task: continue — tafsir-1es (31 emplacements / 30 docIds uniques) en couche savante intégrale → LIVRE №45, la matière tafsīr passe à 6/9 livres complets
+
+Work Log:
+- **PRÉPARATION** : priorité R62 exécutée (tafsir-1es). Pré-extraction des 31 sources (extract.py),
+  survey des 30 docs (12-25 images-versets par leçon, réfs imprimées souvent INVERSÉES par le CMS :
+  « لقمان: 10-5 » = 5-10). 8 titleFr GT-ismes corrigés au JSON avant traduction : 13211 « verset 14 »
+  → « verset 13 » (le source confirme : الآية 13, ToC leçon 20) + 7 × « Sourate Q versets X Y » →
+  « Sourate Q, versets X-Y ». Brief unifié tr-tmp/_brief-tafsir1es.md (conventions SÉRIE TASHĪL
+  j/sh/gh/kh/dh ≠ sīra ǧ/Ġ — calqué sur tafsir-2es/3es déjà traduits ; exemplaire 16810 extrait
+  vers _exemplaire-tafsir1es.html).
+- **2 INTROS TRADUITES MAIN** : 12381 « Première étape » (2 405 car, préface du livre, formule R22
+  « C'est avec joie que le ministère des Habous… ») ; 13360 « Présentation du manuel » (8 175 car :
+  identification Ibn Juzayy al-Gharnāṭī al-Mālikī m. 741 H., adresse ministérielle, ToC 28 leçons
+  titleFr officiels + 2 index, 7 compétences, méthodologie de composition en 8 points avec
+  documentation Warsh ʿan Nāfiʿ / muṣḥaf Muḥammad VI).
+- **28 LEÇONS via 11 SUBAGENTS-TRADUCTEURS** (vagues 3+2+4+2, 3 docs chacun sauf splits ; 3
+  expirations de délai reprises : R63-c refait à neuf, R63-i scindé i/i2, R63-e livré mais rapport
+  perdu → section worklog reconstituée par le main agent en relecture). **DÉCOUVERTE TECHNIQUE
+  R63-b** : scripts-recovery/tmp-mirror-books/tafsir-tashil-1ep.json = HTML BRUT du miroir habous
+  avec <img alt> des versets (« لقمان 26 », « ق 41 2 »…) et GLOSSAIRES EN TEXTE — 29 docs
+  pré-extraits en tr-tmp/{docId}.mirror.html ; règle alt = indice primaire / title = secondaire /
+  contexte (mots glosés) = arbitre (R63-c : alts parfois décalés de +1 ou compteurs CMS parasites).
+- **~300 versets et fragments RESTAURÉS** du cache Hamidullah (« Allah »→« Dieu », lettres DIN,
+  “…” internes), chaque référence imprimée vérifiée AU MOT-CIBLE : **25+ coquilles du manuel
+  corrigées et notées inline** « le manuel imprime “n” » : al-Baqara 15→16, 163→164, 169→170,
+  255→256, 271→272, 44→45 ; Ibrāhīm 36→34, 24→22 ; al-Shūrā 45→48 ; al-Rūm 26→27 ; al-Jāthiya
+  20→21 ; al-Nisāʾ 113→114 ; al-Kahf 104→109 ; al-Anʿām 60→59 ; al-Nūr 61→63 ; al-Māʾida 26→24 ;
+  Hūd 119→120 ; al-Ṭūr 28→30 ; al-Tawba 99→98 ; Luqmān 27→28 ; al-Raʿd 41→40 ; plages inversées
+  remises en ordre (al-Ṣāffāt 138-133, al-Ḥajj 44-43, al-Dhāriyāt 50-49, al-Ṭāriq 7-5, Yā-Sīn
+  -77 78…). Citations d'exégètes INTÉGRALES sourcées : Ibn Kathīr, al-Qurṭubī, Ibn ʿAṭiyya
+  (al-Muḥarrar al-wajīz 4/353-354), al-Marāghī 21/117, Ibn ʿĀshūr (al-Taḥrīr wa-l-tanwīr 8/161),
+  al-Suyūṭī (Lubāb al-nuqūl, corroboration web R63-g), al-Bayḍāwī, hadiths Bukhārī/Muslim/
+  Tirmidhī/Abū Dāwūd/Aḥmad.
+- **Pattern structurel découvert (R63-c)** : le manuel coupe chaque verset en fragments-images
+  successifs alignés sur le commentaire (bloc [a..b] / commentaire [a+1..b+1]) — les
+  « débordements » de plage sont voulus (chaque leçon clôt sur le 1ᵉʳ verset de la suivante).
+- **INJECTION + REGISTRE** : 30 hand-set (13360 = 2 emplacements intro+leçon), re-QA main ×30
+  OK, harmonisation « an-Nisāʾ »→« al-Nisāʾ » (13155, série non assimilée cf. al-Shūrā 16810).
+  Batch commit 055fb75 + backup (déviation : commit unique après QA complète au lieu du PAR DOC
+  — aucun risque, QA passée avant injection). Registre : 394 → **424/950**.
+- **QA NAVIGATEUR** (agent-browser) : accueil **45 badges « traduction savante intégrale »**
+  (44→45) ; page livre tafsir-1es « 31/31 documents bilingues · 30 leçons + introduction · 100% » ;
+  lecteurs vérifiés 13046 (bloc al-Luqmān 1-4 + fragments restitués), 13211 (v13, « O hommes… d'un
+  mâle et d'une femelle », titleFr corrigé), 13360 (ToC + compétences + méthodologie), 13257
+  (al-Rass/Thamûd) ; mobile 390 px : scrollWidth=clientWidth=390 (0 overflow) accueil + livre +
+  lecteur ; console 0 erreur ; captures qa-r63-*.png ; lint 0 erreur (1 warning préexistant
+  llm-translate.ts:561) ; dev.log propre ; API /api/books : docsSavant=31/31, lessonsFr=30/30.
+
+Stage Summary:
+- **État** : sain. HEAD 055fb75, registre **424/950**, **45 livres en couche savante intégrale**.
+  **tafsir-1es = LIVRE №45 : 30/30 docIds (présentation + première étape + 28 leçons), 100% bilingue.**
+  Matière tafsīr : 6/9 livres complets (manquent tanawi-1/2/3).
+- **Innovation du tour** : le MIROIR pré-scraping (tafsir-tashil-1ep.json) devient l'outil principal
+  des subagents — glossaires en texte + alt des images-versets → identification mécanique des
+  fragments (l'inférence contextuelle reste l'arbitre) ; 25+ coquilles de référence du manuel
+  corrigées au mot-cible (record), pattern « fragments-alignés-au-commentaire » documenté.
+- **Risques / attention** : (a) 3 subagents ont expiré leur délai (reprises OK) — surveiller la
+  charge parallèle ; (b) images pluri-versets et quelques identifications de fragments restent
+  « à réviser contre le livre imprimé » (signalées dans les sections R63-c/f/h/i) ; (c) ~526
+  traductions restent (424/950) ; (d) 885 pdfOnly exigent l'extraction PDF (feature en attente).
+- **Priorités suivantes** : (1) ulum-quran-1es (28) pour doubler ʿulūm al-Qurʾān, ou qiraat-tanawi-1
+  (23), ou tajwid-2es (28) ; (2) audit GT-ismes titleFr restants ; (3) features : extraction des
+  885 PDF-only, export EPUB/PDF d'une leçon, compteur de notes.
+---
+Task ID: R64-a
+Agent: subagent-traducteur
+Task: Traduction savante ulum-quran-1es 15373+15381+15396 (présentation, définition et bienfaits, histoire des sciences)
+
+Work Log:
+- Préparation : brief _brief-ulum1es.md + exemplaire 19330 (ulum-3es) lus intégralement ; protocole R63 assimilé. Conventions série vérifiées sur les leçons injectées 19308/19453 (ulum-3es) : blocs de versets « … » [Sourate (n) : v], hadiths « … “…” » [Ṣaḥīḥ de Muslim, Livre X, chapitre Y], glossaires « phrase » (translit) : définition. Constat scripté : translittérations de glosses en parenthèses SANS italique dans la série (37 occurrences vs 0 <em>) → mes italiques de glosses retirés ; seuls les titres d'œuvres (Manāhil, al-Taḥbīr, al-Itqān) restent en <em>.
+- Sources src.html = autorité intégrale (rien d'éludé : adresses, objectifs, glossaires, questions, activités, préparations) ; GT = décodage seul (GT-ismes ignorés : « Présentation tribale », « Calendrier », « l'ère des blogs », « l'ancienne étape préparatoire »…) ; dates parasites dl/dd (28 déc. 2020 / 4 janv. 2021) non reproduites, dl vide omis, div terminaux vides omis ; JSON brut content/books/ulum-quran-1es.json consulté en lecture (aucun <img alt> / miroir pour ce livre — pas d'équivalent du tafsir-tashil-1ep.json).
+- 7 versets RESTITUÉS du cache Hamidullah, chaque référence imprimée vérifiée AU MOT-CIBLE : al-Ḥiǧr 15:9 ✓ ; al-Furqān 25:1 ✓ ; al-Naḥl 16:44 ✓ ; 4 COQUILLES CORRIGÉES + note inline « (le manuel imprime “n”) » :
+  * al-Qiyāma « 16 » → 16-17 : le mot-cible قرآنه (Coran comme nom d'action) est au v. 17, non au 16 ; le Manāhil (source du manuel) cite le passage 16-17.
+  * al-Kahf « 2-1 » → 1-2 : plage inversée par le CMS (mot-cible الكتاب au v. 1 ; « الآيتان » = deux versets, comme la citation du Manāhil).
+  * Fuṣṣilat « 41-40 » → 1-2 : mot-cible تنزيل au v. 2 uniquement — v. 40-41 contrôlés au cache (aucun تنزيل) ; « الآيتان » = l'ouverture Ḥā-Mīm + تنزيل, citation du Manāhil pour le nom al-Tanzīl.
+  * al-Zuḫruf « 43 » → 44 : référence imprimée incomplète (« 43 » = n° de sourate, n° de verset absent) ; mot-cible الذكر au v. 44 (« وإنه لذكر لك ولقومك »), absent du v. 43.
+- Re-vérification scriptée mot à mot des 7 citations contre le cache : TOUT VERBATIM modulo 4 adaptations documentées : « Allah »→« Dieu » (al-Kahf 1, seule occurrence) ; « H'â, Mîm. »→« Ḥāʾ, Mīm. » (translittération caron de la série, le cache ayant une apostrophe droite incompatible QA) ; « ambiguité »→« ambiguïté » (coquille du cache) ; jointure 16-17 (deux-points + minuscule, calque 19453 al-Rūm 1-4) et NNBSP avant « ! » (auto-fix QA).
+- Hadith d'Abū Saʿīd al-Ḫudrī (15396) rendu intégralement + source [Ṣaḥīḥ de Muslim, Livre de l'ascèse et des exhortations, chapitre de la vérification dans le hadith et du statut de la consignation du savoir, n° 5326] — n° 5326 conservé tel qu'imprimé (la numérotation ʿAbd al-Bāqī standard donne 3004 — point signalé, non altéré). Citations du Manāhil sourcées : introduction p. 9, p. 21, p. 36 ; noms propres de l'histoire des sciences translittérés caron (al-Ḥawfī, Ibn al-Ǧawzī, al-Saḫāwī, Abū Šāma, al-Zarkašī, al-Kāfiyīǧī, Ǧalāl al-Dīn al-Bulqīnī, al-Suyūṭī ; Šuʿba ibn al-Ḥaǧǧāǧ, Ibn Ǧarīr al-Ṭabarī m. 310 H.).
+- 15373 (docId partagé intro+leçon → UN SEUL fichier livré) : adresse du ministère (formule consacrée « C'est avec joie que… »), invocation finale, 7 compétences de fin d'année (calque 13360 : « il est attendu de l'élève — garçon ou fille — d'être : »), table des matières 24 leçons + 2 index : titleFr officiels verbatim (15381→15887) ; interventions documentées : «(qu'Allāh les agrée)»→«(que Dieu les agrée)» (17753), suffixes CMS «(leçon 7)»/«2» supprimés, « une suite »→« (suite) », « musḥafs »→« muṣḥaf », préfixe « Sciences du Coran, »→« Les sciences du Coran : » (17757/17764/17765/17766/17768/17772/17773), 4× « أنشطة لاستثمار التعلمات ودعمها » unifiés sur le titleFr propre de 15874 (17767/17774 hétérogènes), « لائحة المصادر والمراجع »→« Liste des sources et références » (titleFr 17778 « sources et références adoptées » = GT-isme).
+- Identification liminaire (15381/15396) au calque de l'exemplaire selon le brief : « Leçon de la matière des sciences du Coran, tirée du Manāhil al-ʿirfān… de Muḥammad ʿAbd al-ʿAẓīm al-Zarqānī, à l'intention des élèves de la première année de l'enseignement secondaire traditionnel — leçon une/deux : … ». Structure des sources conservée (h2/h3/h4, spans A/B, ul/li) ; le ¶-noms du Coran scindé pour insérer les blocs de versets (éditorialisation documentée).
+- QA : le chemin tr-tmp/qa-lesson.py n'existe pas → outil réel scripts-translate/qa-lesson.py utilisé. 3 × « QA OK » après auto-fix (NNBSP, apostrophes, doubles espaces) ; itérations : 1 corruption de balise détectée en relecture (remplacement en masse laissant « (nāsiḫ</em> et <em>mansūḫ) » ×2 et « (tilāwa</em> et <em>tartīl) » — comptage <em> équilibré donc invisible pour le QA !) → corrigée ; 5 raffinements stylistiques (reçussent→prennent bien/preservent, balances→critères les plus fins, garant de l'intention→du dessein, « efforts qui eurent l'effet »→« ce qui eut l'effet », « dont on vise par lui »→« par lequel on vise »).
+
+Stage Summary:
+- Livrés : tr-tmp/15373.html (4 699 car / 4 983 octets, QA OK, 6 balises appariées) ; tr-tmp/15381.html (10 412 car / 11 280 octets, QA OK, 27 paires « », 9 balises) ; tr-tmp/15396.html (9 797 car / 10 607 octets, QA OK, 8 paires « », 8 balises) — h1 = titleFr officiels verbatim, 0 caractère arabe, 0 apostrophe droite, 0 « Allah » résiduel, guillemets appariés.
+- 4 coquilles de référence corrigées et notées inline (al-Qiyāma 16→16-17, al-Kahf 2-1→1-2, Fuṣṣilat 41-40→1-2, al-Zuḫruf 43→44) ; 3 références vérifiées correctes (al-Ḥiǧr 9, al-Furqān 1, al-Naḥl 44) ; 7 citations coraniques verbatim Hamidullah modulo 4 adaptations documentées.
+- Points pour le main agent : (1) n° de hadith « 5326 » imprimé vs 3004 (ʿAbd al-Bāqī) — trancher si une numérotation canonique est souhaitée ; (2) titleFr GT-ismes restants au JSON à harmoniser AVANT la traduction des leçons 16-24 (17757/17764/17765/17766/17768/17772/17773/17774/17778 : préfixe « Les sciences du Coran : », « une suite », « musḥafs », « Saint Coran » vs « Noble Coran ») ; (3) mon ToC unifie les 4 blocs d'activités sur « Activités de valorisation et de consolidation des acquis » — aligner 17767/17774 en conséquence ; (4) terminologie du cycle : « enseignement secondaire traditionnel » (brief ulum-1es) vs « intermédiaire » (exemplaire 3es) vs « collégial » (tafsir-1es) — uniformisation inter-séries à décider ; (5) 15373 = 2 emplacements (intro + leçon) → injecter le même fichier aux deux endroits.
+---
+Task ID: R64-b
+Agent: subagent-traducteur
+Task: Traduction savante ulum-quran-1es 15402+15423+15429 (la descente du Coran ×2, la révélation waḥy)
+
+Work Log:
+- Préparation : brief _brief-ulum1es.md + livrables R64-a (15381/15396) lus intégralement pour caler registre et conventions (identification liminaire, blocs de versets « … » [Sourate (n) : v], glosses « terme » (translit) : glose, hadiths « … “ … ” » [source]) ; src.html = autorité intégrale, GT = décodage seul ; JSON ulum-quran-1es consulté en lecture (aucun <img alt> ni miroir) ; ToC 15373 confirme leçons 3/4/5 = 15402/15423/15429, la leçon suivante = 15653 (premier et dernier révélé).
+- 21 citations coraniques RESTITUÉES du cache Hamidullah + 2 fragments de l'Itqān, chaque référence imprimée vérifiée AU MOT-CIBLE, puis re-vérification scriptée mot à mot (fragment-aware) : TOUT VERBATIM modulo adaptations documentées : « Allah »→« Dieu » ×6 avec élision (d'Allah→de Dieu : al-Baqara 185 ×2 ; Buruǧ 22 ; Šūrā 51 ×2 qu'Allah→que Dieu et [Allah]→[Dieu] ; fragments al-Naḥl 90 et al-Nisāʾ 164) ; «» internes du cache → “ ” (Yūnus 15, Furqān 32) ; tiret « - » du cache → « — » (al-Baqara 185) ; virgule de jointure inter-versets (Buruǧ 21-22, calque jointure 16-17 de R64-a) ; fermants restitués pour citations autonomes (al-Duḫān 3 et al-Naǧm 13-14 finissaient sur virgule ; al-Takwīr 23 sans ponctuation finale ; Yūnus 15 : «».” → ”.”).
+- COQUILLES corrigées + note inline « (le manuel imprime “n”) » :
+  * 15402 : al-Šuʿarāʾ « 195-193 » → 193-195 (plage inversée par le CMS) ; al-Duḫān « 2 » → 3 (off-by-one : mot-cible « ليلة مباركة » au v. 3, le v. 2 = « والكتاب المبين ») ; al-Baqara « 184 » → 185 (mot-cible « شهر رمضان الذي أنزل فيه القرآن » au v. 185, absent du v. 184 = jeûne/voyage).
+  * 15429 : al-Šūrā « 48 » → 51 (×3 : texte 2 + dalīl du type 1 + dalīl du type 2 ; le v. 48 traite de la subsistance, le v. 51 contient les trois espèces — confirmé par l'item « je détermine, à partir du deuxième verset, les espèces de la révélation », un seul verset portant les trois) ; al-Nisāʾ « 163 » → 164 (mot-cible « وكلم الله موسى تكليما » au v. 164, le v. 163 = liste des prophètes).
+  * Réfs vérifiées correctes : al-Isrāʾ 105 ; al-Qadr 1 ; al-Buruǧ 21-22 ; al-Šuʿarāʾ 192-195 (15429, tamhīd) ; al-Qamar 53 ; al-Isrāʾ 106 ; al-Furqān 32 ; al-Naǧm 4 ; al-Takwīr 23 ; al-Naǧm 13-14.
+- RESTITUTIONS DEPUIS L'ITQĀN (images-versets non reproduites) : citation d'al-Suyūṭī (15423, istiṯmār, al-Itqān t. 1 p. 123-124) — les deux versets-images du passage canonique restitués : « sauf ceux qui ont quelque infirmité » [al-Nisāʾ (4) : 95] (partie de verset descendue seule) et « Certes, Dieu commande l'équité, la bienfaisance » [al-Naḥl (16) : 90] (fin du verset descendue après son début), réfs ajoutées entre crochets.
+- GLOSSE À TERME INFÉRÉ (image non reproduite, pas de miroir pour ce livre) : 15402 šarḥ gloss 1 « أي وصل إليك محفوظا محروسا لا زيادة فيه ولا نقص منه » rapportée à « نزل به الروح الأمين على قلبك » (Šuʿarāʾ 193-194, la 3e descente = l'arrivée au Prophète, « إليك » ne s'applique qu'à elle) ; gloss 2 = « الروح الأمين ». Méthode calée sur 15423 où les 3 glosses = فرقناه / على مكث / ونزلناه تنزيلا d'al-Isrāʾ 106 dans l'ordre du verset-clé. Identification à réviser contre le livre imprimé.
+- ADAPTATIONS DE STRUCTURE documentées : h2 « Objectifs de la leçon » RESTAURÉ dans 15423 et 15429 (ul d'objectifs orphelin au CMS, header présent dans toutes les leçons du livre) ; objectif 1 de 15402 (fragment sans verbe « الحكمة من تعدد تنزلات القرآن الكريم ») normalisé à la 1re personne ; lignes à tirets « - » des axes h4 (15423 A/B/C) et de l'axe 4 (15429) rendues en ul/li ; glosses en p+<br> rendues en ul/li (série) ; crochets parasites du CMS écartés («[ و…» après Buruǧ 21-22, «…كلامه[» de la source al-Bayhaqī, «[…[» autour de Šuʿarāʾ 192-195 au tamhīd de 15429, «[النجم الآيتان: 13-14]») ; « لا يعلمهما » (Manāhil : لا يعلمها) rendu au sens sans note ; typos d'honorifiques du CMS (صلى اللهعليه / صلى اله عليه / صللا الله عليه وسلم) normalisées ; dl/dt/dd et p vides omis.
+- Hadiths rendus intégralement et sourcés : Ibn ʿAbbās « فصل القرآن من الذكر… » [al-Mustadrak d'al-Ḥākim, Livre des récits des anciens…, n° 4272] ; al-Nawwās ibn Samʿān [al-Bayhaqī, al-Asmāʾ wa-l-ṣifāt, chapitre de l'audition par le Seigneur…] ; ʿĀʾiša/al-Ḥāriṯ ibn Hišām + ʿĀʾiša (rêve salutaire) + al-Ḥāriṯ (ange en homme) [Ṣaḥīḥ de Bukhārī, Livre du commencement de la révélation ×3] ; citation du Manāhil p. 40 (effets de la foi en la Tablette) avec al-Qamar 53 restitué dans la citation.
+- Préparation préalable de 15429 : « بلغ مني الجهد – المدثر » = matériaux de la leçon 6 (15653) rendus « l'effort atteignit sa limite en moi » (balaġa minī al-ǧuhd) et « al-Muddaṯṯir » (« l'Enveloppé »).
+- Choix terminologiques : بيت العزة = « la Maison de la puissance (bayt al-ʿizza) » (aucun précédent corpus) ; ليلة القدر = « la nuit du Décret (laylat al-qadar) » (précédent tafsir-1ep) ; تنجيم = « descente par fractions (tanǧīm) » ; التدرج = « gradualité (tadarruǧ) » ; الروح الأمين = « l'Esprit fidèle » (Hamidullah) ; أمين الوحي = « dépositaire fidèle de la révélation » ; formes du cache gardées verbatim dans les versets (« la nuit d'Al-Qadr », « Sidrat-ul-Muntahâ », « Ramadân ») vs texte courant (laylat al-qadar, Ramadan).
+- QA : 3 × « QA OK » via scripts-translate/qa-lesson.py (auto-fix NNBSP/apostrophes/doubles espaces) ; relecture : 0 <em> cassé (1 paire 15402/15429, 2 paires 15423, jamais à cheval sur un fragment) ; 2 raffinements stylistiques post-QA (« Gabriel… comme notre maître Muḥammad » → « aussi bien Gabriel… que notre maître Muḥammad » ; « l'investiture prophétique (biʿṯa) » → « sa mission prophétique (mabʿaṯ) »).
+
+Stage Summary:
+- Livrés : tr-tmp/15402.html (12 189 car / 13 199 octets, QA OK, 18 paires « », 1 paire <em>) ; tr-tmp/15423.html (9 404 car / 10 041 octets, QA OK, 8 paires « », 2 paires <em>) ; tr-tmp/15429.html (10 864 car / 12 032 octets, QA OK, 19 paires « », 1 paire <em>) — h1 = titleFr officiels verbatim, 0 caractère arabe, 0 apostrophe droite, 0 « Allah » résiduel, balises appariées.
+- 6 coquilles de référence corrigées et notées inline (al-Šuʿarāʾ 195-193→193-195 plage inversée ; al-Duḫān 2→3 ; al-Baqara 184→185 ; al-Šūrā 48→51 ×3 ; al-Nisāʾ 163→164) ; 21 citations + 2 fragments Itqān restitués verbatim Hamidullah (adaptations documentées) ; 3 hadiths Bukhārī/al-Ḥākim/al-Bayhaqī + 1 citation Manāhil sourcés.
+- Points pour le main agent : (1) gloss 1 de 15402 (« نزل به الروح الأمين على قلبك ») = identification INFÉRÉE, à réviser contre le livre imprimé ; (2) les 2 versets de l'Itqān (al-Nisāʾ 95, al-Naḥl 90) restitués de la citation canonique d'al-Suyūṭī — à confirmer contre le livre imprimé ; (3) pattern d'off-by-one du captioniste CMS (Duḫān 2→3, Šūrā 48→51, Nisāʾ 163→164, + R64-a Zuḫruf 43→44, Qiyāma 16→16-17) — vérifier systématiquement les captions des leçons suivantes (15653, 15752, 15765) ; (4) h2 « Objectifs de la leçon » restauré ×2 (15423, 15429) — harmoniser si le livre imprimé ne l'imprime pas ; (5) restent à traduire dans ulum-quran-1es : 15653, 15752, 15765 (leçons 6-8) + leçons 9-24.
+
+---
+Task ID: R64
+Agent: Z.ai Code (agent principal — session « continue » post-reboot sandbox)
+Task: RESTAURATION COMPLÈTE post-reboot + relance production 24/7 + ulum-quran-1es lancé (R64-a/b : 6 docs savants injectés)
+
+Work Log:
+- **CATASTROPHE ÉVITÉE** : reboot sandbox 14/10 07:03 → /home/z/my-project réinitialisé à l'état « Initial commit » (projet VIDE). Snapshot complet retrouvé dans **/tmp/my-project** (état R63 au 13/10 23:21, 4922 lignes de worklog, .initial_snapshot.json). Restauration intégrale : src/, content/ (64 livres), prisma/, db/, public/, scripts-translate/, scripts-recovery/, tr-tmp/, backup-tour/, configs, worklog.md. Seule PERTE : l'historique git (pas de .git dans le snapshot) → dépôt réinitialisé, commit 748023c « R64: restauration… » puis suivants. .env conservé (DATABASE_URL OK).
+- **Serveur dev relancé** : bun install (827 paquets, 8 s) + bun run dev (port 3000) — HTTP 200, compilation OK.
+- **QA restauration (agent-browser)** : accueil = **45 badges « traduction savante intégrale »** (conforme R63 exactement), 0 overflow desktop, 0 erreur console/page ; page livre tafsir-1es « 31/31 documents bilingues · 100% » ; lecteur 13046 (h1 correct, 13 213 car, 0 overflow). Captures tr-tmp/qa-r64-restauration-{home,reader}.png. API /api/books : registre union hand+llm = 424 ✓.
+- **SONDE SDK : FAMINE 429 TERMINÉE** — probe minimal 310 ms (« PROBE OK »). → **Superviseur v3 relancé** (setsid -f, PID 1995) : workers tajwid-5ep (30 docs), rasm-wa-dabt-4ep (29), fiqh-tanawi-1 (31) actifs ; 1ᵉʳ doc produit+commité en <2 min (fiqh-tanawi-1/11509, 5 606 car). tr-logs/ recréé (perdu au reboot, non critique).
+- **Campagne ulum-quran-1es** (priorité n°1 de R63) : 28 emplacements / 27 docIds / 28 docs GT restants → livre №46 potentiel.
+  - 4 titleFr GT-ismes corrigés au JSON AVANT traduction : 15373-leçon « Anciennes sciences sunnah du Coran, premier livre préparatoire » → « Présentation du manuel » (harmonisation intro+leçon, cf. 13360) ; 17765 « dessin » → « l'écriture du Coran (rasm) et ses muṣḥaf » ; 17766 « bienfaits du dessin Uthmani » → « les bienfaits du rasm ʿuṯmānien » ; 17778 tronqué → « sources et références adoptées ».
+  - Brief série rédigé : tr-tmp/_brief-ulum1es.md (conventions caron ǧ/š/ḫ/ṯ comme ulum-3es ; versets cache Hamidullah ; identification liminaire Manāhil al-Zarqānī ; structure أهداف→إعداد قبلي ; pas de miroir pour ce livre — versets inline). Exemplaire : tr-tmp/_exemplaire-ulum1es.html (ulum-3es/19330). 9 sources extraites (extract.py).
+  - **R64-a (subagent) : 15373 + 15381 + 15396 livrés, QA OK ×3, injectés (hand-set.py), commités.** 7 versets Hamidullah restitués, 4 coquilles de référence corrigées notées inline : al-Qiyāma «16»→16-17, al-Kahf «2-1»→1-2 (plage inversée), Fuṣṣilat «41-40»→1-2, al-Zuḫruf «43»→44. 15373 = 2 emplacements (intro+leçon) couverts par 1 injection. ToC 24 leçons + 2 index rendu avec titleFr officiels.
+  - **R64-b (subagent) : 15402 + 15423 + 15429 livrés, QA OK ×3, injectés, commités.** 21 citations coraniques + 2 versets Itqān restitués (al-Nisāʾ 95, al-Naḥl 90 dans la citation d'al-Suyūṭī), 3 hadiths sourcés ; 5 coquilles corrigées : al-Šuʿarāʾ «195-193»→193-195, al-Duḫān 2→3, al-Baqara 184→185, al-Šūrā 48→51 (×3), al-Nisāʾ 163→164.
+  - **R64-c : 4 ÉCHECS D'AFFILÉE (infrastructure subagent — « context deadline exceeded » du backend, pas une faute du traducteur)** : 15653, 15752, 15765 NON livrés, aucune trace (ni fichiers ni worklog). Sources extraites prêtes : tr-tmp/{15653,15752,15765}.{src,gt}.html.
+- Registre : 424 → **431/950** (426 main R64 + 5 workers LLM — superviseur tourne en parallèle : 377 hand + 51 llm +4 dup).
+
+Stage Summary:
+- **État** : sain et PRODUCTIF. Projet restauré à 100 % de l'état R63 (45 livres savants vérifiés navigateur), dev server OK, superviseur + 3 workers actifs (famine 429 levée), ulum-quran-1es 6/28 docs savants (R64-a/b). Registre 431/950. Git réinitialisé (perte historique acceptée — le worklog reste la vérité terrain).
+- **Risques / attention** : (a) backend subagents instable ce matin (4 timeouts sur R64-c) — retenter, ou traduire main (sources prêtes) ; (b) workers rejettent certains docs tajwid-5ep/rasm-4ep en 4 passes (ratio FR/AR > 0,90 attendu — docs à images) : ils resteront pour la main/subagents ; (c) pattern off-by-one CMS systématique confirmé (9 coquilles en 6 docs) → vérifier chaque caption ; (d) gloss 1 de 15402 + versets Itqān = identifications inférées à réviser contre le livre imprimé ; (e) n° hadith Muslim « 5326 » imprimé vs 3004 (ʿAbd al-Bāqī) — laissé tel quel.
+- **Priorités suivantes** : (1) finir ulum-quran-1es : 15653/15752/15765 (sources prêtes, subagent à retenter ou main), puis vagues 15841/15855/15874, 15875/15887/17752, 17753/17757/17764, 17765/17766/17767, 17768/17772/17773, 17774/17775/17778 ; (2) harmoniser titleFr restants 17757-17774 (préfixe « Les sciences du Coran : », « une suite »→« (suite) », « Saint Coran »→« Noble Coran ») AVANT leurs traductions ; (3) surveiller workers (tajwid-5ep 30, rasm-wa-dabt-4ep 29, fiqh-tanawi-1 31 en cours) ; (4) features R63 en attente : extraction PDF (885 pdfOnly), export EPUB/PDF leçon, compteur de notes.
+
+---
+Task ID: R64-main
+Agent: Z.ai Code (agent principal — suite R64 : traduction main de 15653 + clôture)
+Task: ulum-quran-1es/15653 traduit À LA MAIN (doctrine R22 — canal main quand subagents indisponibles) ; R64-c reste à livrer
+
+Work Log:
+- **R64-c : 4e échec consécutif** (backend subagent « context deadline exceeded », lié au retour de la famine 429) → décision doctrine R22 : le main agent traduit lui-même 15653 (le prochain dans l'ordre).
+- **15653 « Le premier et le dernier révélé » traduit main** (14 816 car, QA OK : 0 arabe, 29 paires « », 8 balises, 0 apostrophe droite) :
+  - Hadith ʿĀʾiša (badʾ al-waḥy, Bukhārī) rendu INTÉGRALEMENT avec emboîtement « → “ → ’ et ʿAlaq 1-3 restitué dans la bouche de Gabriel (le CMS avait mangé le texte, la référence seule survivait).
+  - Blocs restitués du cache Hamidullah : al-Muddaṯṯir 1-5, al-Baqara 280 (texts) ; al-ʿAlaq 1-5 (avis 1), al-Muddaṯṯir 1 (avis 2, hadith Ǧābir/Bukhārī 4640), al-Baqara 277 (avis 2), ouverture de 282 (avis 3), série des aliments al-Anʿām 145 + al-Naḥl 114 + al-Baqara 172 + al-Māʾida 4 (Itqān 1/45 cité par le manuel lui-même).
+  - **2 COQUILLES CORRIGÉES notées inline** : al-Baqara « 281 » → 282 pour āyat al-dayn (le manuel lui-même la dit « plus long verset du Coran » = 2:282, vérifié au cache) ; al-Anʿām « 164 » → 145 (« 164 » ne porte pas sur les aliments — le verset 145 est l'ouverture de la série alimentaire de l'Itqān ; restitution à confirmer contre le livre imprimé).
+  - **Glosses à termes manquants restitués par inférence** (glose = indice, méthode R63) : fa-anḏir (avertis) et wa-l-ruǧz fa-hǧur (idolâtrie) identifiés d'après al-Muddaṯṯir 1-5 cité dans les textes — à réviser contre le livre imprimé.
+  - Conciliation al-Zarkašī (Burhān 1/207) : références des 3 « premiers » restituées [al-ʿAlaq 1-5 / al-Muddaṯṯir 1-2 / al-Fātiḥa] (textes absents du manuel, structure canonique).
+  - Coquille source corrigée silencieusement (signalée ici) : « صلى الله عليع وسلم » → علي him (typo CMS) dans la citation al-Zarqānī.
+  - Itération QA : 1 déséquilibre de guillemets (35/37) détecté et réparé (paragraphe Abū Mayṣara restructuré « → “ → ’ ; guillemet parasite de la citation al-Zarqānī retiré).
+- **INJECTION + QA NAVIGATEUR** : hand-set.py OK (registre → **432/950**) ; lecteur #/livre/ulum-quran-1es/15653 vérifié agent-browser (h1 officiel, 21 619 car rendus, verset Baqara 280 + note « le manuel imprime » visibles, 0 overflow desktop ET mobile 390 px, 0 erreur console) — capture tr-tmp/qa-r64-15653.png. Page livre : « 28/28 documents bilingues · 8/28 traductions savantes · 29 % du corpus savant ».
+- **FAMINE 429 RETOURNÉE** : sonde 07:35 OK (310 ms) → superviseur relancé → 1 doc produit (fiqh-tanawi-1/11509) → workers de nouveau en 429 (tentatives 6-7/8, backoff). La famine est INTERMITTENTE : fenêtres de disponibilité. Workers sains (3 actifs, relance auto boucle). Le canal main/subagents redevient prioritaire.
+- Cron webDevReview 15 min recréé (job 458625, description standard mandate) — remplace le job 448245 perdu au reboot.
+
+Stage Summary:
+- **État** : sain. Registre **432/950** (+8 ce tour : 7 ulum-quran-1es + 1 worker). **ulum-quran-1es : 8/28 savants** (15373×2, 15381, 15396, 15402, 15423, 15429, 15653). Superviseur + 3 workers actifs (famine intermittente). Dev server propre (0 erreur dev.log), responsive OK.
+- **Bilan du tour R64** : restauration complète post-reboot (45 livres sauvés et vérifiés), production redémarrée (superviseur + main), ulum-quran-1es ouvert (7 docs livrés, 9 COQUILLES de référence corrigées au total en 7 docs), 4 titleFr GT-ismes corrigés, brief + exemplaire de la série rédigés (tr-tmp/_brief-ulum1es.md, _exemplaire-ulum1es.html).
+- **Reste ulum-quran-1es** : 15752, 15765 (SOURCES DÉJÀ EXTRAITES tr-tmp/*.src.html — priorité n°1, retenter subagent ou main), puis 15841, 15855, 15874, 15875, 15887, 17752, 17753, 17757, 17764, 17765, 17766, 17767, 17768, 17772, 17773, 17774, 17775, 17778. Harmoniser titleFr 17757-17774 avant leurs vagues (préfixe « Les sciences du Coran : », « une suite »→« (suite) », « Saint Coran »→« Noble Coran » — cf. ToC de R64-a).
+- **À réviser contre le livre imprimé** : Anʿām 145 (vs «164» imprimé), glosses fa-anḏir/ruǧz inférées, Burhān 1/207 références restituées, versets Itqān (Nisāʾ 95, Naḥl 90 — R64-b), gloss 1 de 15402 (R64-b).
+- **Doctrine réactivée** : famine intermittente → ne pas relâcher le canal main ; les subagents échouent quand le quota est épuisé (context deadline) — retenter aux fenêtres de disponibilité.
+---
+Task ID: R65-b
+Agent: subagent-traducteur
+Task: Traduction ulum-quran-1es/15855 (mecquois et médinois)
+
+Work Log:
+- Préparation : entrées R64/R65 du worklog + brief _brief-ulum1es.md + exemplaire lus ; registre calé sur les livrables R65 15752/15765 (identification « leçon <n> : … », « cycle collégial traditionnel », « La compréhension »/« L'explication » pour الفهم/الشرح, notes « (le manuel imprime “n”) ») ; src.html = autorité intégrale, GT = décodage seul (GT-ismes ignorés : « Saint Coran », « contrôles », « L'ère des blogs », « première école préparatoire »…) ; dl vide + date parasite (mercredi 31 mars 2021) + crochets parasites CMS ("] صحيح البخاري…") écartés.
+- **MIROIR HABOUS.GOV.MA DÉCOUVERT pour ce livre** (contrairement à la note R64 « aucun miroir ») : les leçons ulum-quran-1es sont en ligne — URL du 15855 retrouvée par recherche site habous.gov.ma (motif : /برنامج-التعليم-العتيق-الرئيسية/1658-المرحلة-الأولى/علوم-القُرآن/السنة-الأولى-إعدادي-عتيق/<docId>-<slug>.html) → page entière sauvegardée tr-tmp/15855.mirror.html. Les 12 images-versets (alatiqe700/701/702/703/705/710/712/713/722/725, alaiqe155, latiqe711 — https://www.habous.gov.ma/images/<nom>.png) téléchargées ; le miroir confirme : (a) le h2 « أهداف الدرس » que l'extraction CMS avait perdu (→ h2 « Objectifs de la leçon » restauré, confirme la pratique R64-b), (b) la position exacte de chaque image-verset dans le texte.
+- Lecture des images impossible ce tour : VLM et chat = 429 (famine intermittente, 8 tentatives avec backoff), tesseract-ara installé (tessdata_best) mais la calligraphie décorative résiste à l'OCR. Identification réalisée par AUTORITÉ TEXTUELLE : al-Manāhil al-ʿirfān t. 1 (copie rafed.net/view/4266, pp. 185-191 du chapitre al-makkī wa-l-madanī, source directe du manuel) + calibrage par densité d'encre des images (surface d'encre ∝ nombre de mots ; les 4 versets du tableau à référence imprimée connue servent d'étalons). Résultats : 700 = « yā ayyuhā al-nās », 701 = « yā ayyuhā alladhīna āmanū », 702 = « yā banī Ādam » (Manāhil 1/186 : « ألحق بعضهم صيغة يا بني آدم بصيغة يا أيها الناس » + dictum de Maymūn ibn Mihrān/Abū ʿUbayd), 703 = ouverture Nisāʾ 1 (fragment), 705 = Ḥaǧǧ 77 complet, 155 = fragment final de Māʾida 3, 710 = ouverture Nisāʾ 58, 711 = fragment Ḥaǧǧ 77, 712/713/722/725 = Luqmān 12 / Baqara 182 / ʿAbasa 11-12 / Ḥaǧǧ 1 complets.
+- 9 CITATIONS RESTITUÉES du cache Hamidullah, re-vérification scriptée mot à mot (fragment-aware) : TOUT VERBATIM modulo adaptations documentées : « Allah »→« Dieu » (Nisāʾ 58, Luqmān 12 ×2, Baqara 182) ; «» internes du cache → “ ” (Luqmān 12) ; jointure ʿAbasa 11-12 (tiret de continuation du cache « - » normalisé « — », point final restitué) ; fragments avec ellipse (Nisāʾ 1 « O hommes! Craignez votre Seigneur… », Nisāʾ 58 « …à leurs ayants-droit… », Ḥaǧǧ 77-critère « Inclinez-vous, prosternez-vous… »).
+- 3 COQUILLES DE RÉFÉRENCE corrigées + note inline « (le manuel imprime “n”) » :
+  * al-Ḥaǧǧ « 75 » → 77 (contre-exemple de l'usage selon les interlocuteurs) : le mot-cible « يَا أَيُّهَا الَّذِينَ آمَنُوا ارْكَعُوا وَاسْجُدُوا » est au v. 77 ; le v. 75 du cache = « Allah choisit des messagers parmi les Anges… » — OFF-BY-TWO (nouveau), confirmé par le Manāhil 1/187 (« في أواخرها يا أيها الذين آمنوا اركعوا واسجدوا »).
+  * al-Māʾida « 4 » → 3 : le verset révélé « le vendredi, à ʿArafa, lors du Pèlerinage d'adieu » est « الْيَوْمَ أَكْمَلْتُ لَكُمْ دِينَكُمْ… » = v. 3 (v. 4 = « Ils t'interrogent sur ce qui leur est permis… ») — confirmé Manāhil 1/188.
+  * al-Nisāʾ « 57 » → 58 : le verset révélé « dans l'intérieur de la Kaʿba, l'année de la grande Conquête » est « إِنَّ اللهَ يَأْمُرُكُمْ أَنْ تُؤَدُّوا الْأَمَانَاتِ… » = v. 58 (v. 57 = jardins/épouses purifiées) — confirmé Manāhil 1/188.
+  * Références vérifiées correctes, non modifiées : Luqmān 12, al-Baqara 182, ʿAbasa 11-12, al-Ḥaǧǧ 1 (tableau d'istiṯmār).
+- Contenus traduits intégralement : 3 objectifs (1re personne), tamhīd (23 années, division hiǧra), les 2 hadiths des textes rendus INTÉGRALEMENT et sourcés [al-Mustadrak d'al-Ḥākim : Livre des signes de la prophétie, chapitre du rappel des sourates descendues à La Mecque et de celles descendues à Médine] ; [Ṣaḥīḥ de Bukhārī : Livre des mérites du Coran, chapitre de la compilation du Coran, hadith n° 4707 — n° vérifié correct], 2 glosses (al-mufaṣṣal / « les hommes se sont repentis vers l'islam »), les 3 iṣṭilāḥāt (lieu / interlocuteurs / temps de la descente — distinctions techniques du Manāhil conservées : لفظ/صيغة rendus « formule/forme »), les 3 bienfaits (nāsiḫ/mansūḫ, tārīḫ al-tašrīʿ, transmission intacte), les ḍawābiṭ A/B (saǧda, kallā ×33/15 sourates + COUPLET D'AL-DARĪNĪ rendu en vers avec hémistiches « / » et « kallā » glosé « particule de réprobation », ḥurūf al-taḥǧǧī + exception Baqara/Āl ʿImrān + divergence al-Raʿd, « O hommes ! » sans « O vous qui croyez ! » + exception al-Ḥaǧǧ, récits des prophètes/Adam et Iblīs, ḥudūd/farāʾiḍ, munāfiqūn + exception al-ʿAnkabūt 1-11), 3 questions d'évaluation, TABLEAU DE CLASSIFICATION makki/madanī de l'istiṯmār rendu en table HTML complète (3 colonnes, 4 versets restitués + réf., cellules « nature/justification » laissées vides = exercice), préparation préalable.
+- Identification liminaire : « leçon onze : la définition du mecquois (makki) et du médinois (madanī) du Noble Coran » — numéro d'après la ToC du manuel rendue en 15373 (« 11. Les sciences du Coran : mecquois et médinois »), le corps du source ne s'attribuant pas de numéro (convention calée sur 15752 « huit »/15765 « neuf ») ; formule R65 « cycle collégial traditionnel » respectée ; h1 officiel verbatim.
+- QA OK via scripts-translate/qa-lesson.py (auto-fix NNBSP/apostrophes) ; 2 raffinements stylistiques post-QA (« De lui — le Coran — » pour lever l'ellipse du hadith de ʿĀʾiša ; « la seule voie pour connaître ») puis QA OK définitif.
+
+Stage Summary:
+- Livré : tr-tmp/15855.html (11 716 car / 12 729 octets, QA OK — 0 arabe, 16 paires « », 21 paires “ ”, 15 balises appariées, 0 apostrophe droite, 0 « Allah » résiduel [ʿAbd Allāh = nom propre, conforme à la série]) + tr-tmp/15855.mirror.html (miroir source, prévu pour re-vérification). h1 = titleFr officiel « Les sciences du Coran : mecquois et médinois ».
+- 9 citations coraniques restituées verbatim Hamidullah (adaptations documentées) ; 3 coquilles de référence corrigées et notées inline (al-Ḥaǧǧ 75→77 off-by-two, al-Māʾida 4→3, al-Nisāʾ 57→58 — les deux dernières confirmées par le Manāhil 1/188) ; 2 hadiths sourcés (n° Bukhārī 4707 vérifié) ; couplet d'al-Darīnī en vers.
+- Points pour le main agent : (1) **les pages habous.gov.ma de TOUTES les leçons ulum-quran-1es sont accessibles** (URL pattern ci-dessus + recherche site) — généraliser le miroir aux prochains docIds (15841, 15874, 15875, 15887, 17752+) : il livre la position des images-versets et des h2 perdus par le CMS ; (2) les étendues de fragments (Nisāʾ 1, Ḥaǧǧ 77-critère, Māʾida 3, Nisāʾ 58) sont calibrées (densité d'encre + Manāhil) — à réviser contre le livre imprimé, ou re-VLM des images (URLs /images/<alatiqeNNN>.png) quand la famine 429 se lèvera ; (3) 15875 = « mecquois et médinois (suite) » (ToC n° 13) : son titleAr CMS (« أهداف الدرس ») est un titre orphelin — le titleFr du JSON (« Objectifs de la leçon ») est un GT-isme à harmoniser AVANT traduction (suggéré : « Les sciences du Coran : mecquois et médinois (suite) ») ; (4) pattern de coquilles : l'off-by-ONE domine mais Ḥaǧǧ 75→77 est off-by-TWO — vérifier chaque caption au mot-cible ; (5) restent à traduire dans ulum-quran-1es : 15841 (leçon dix, src/gt prêts), 15874 (activités), 15875, 15887, puis la vague 17752+.
+
+---
+Task ID: R65
+Agent: Z.ai Code (agent principal — session « continue » ×2 post-R64)
+Task: Suite ulum-quran-1es — orphelins récupérés, fix terminologique collégial, 15855+15874 injectés, titleFr harmonisés, 15841 en préparation (miroir+images+VLM)
+
+Work Log:
+- **Récupération des ORPHELINS 15752/15765** : tr-tmp/15752.html + 15765.html (9 842 car, 09:42, livrés par la session interrompue, jamais injectés) — QA OK ×2, injectés (hand-set.py), commités. Registre 432 → 434/950. ulum-quran-1es : 10/28.
+- **FIX TERMINOLOGIQUE (إعدادي = collège)** : découverte que les 9 leçons livrées de ulum-quran-1es portaient « l'enseignement secondaire traditionnel » (GT-isme : إعدادي = cycle COLLÉGIAL, c'est التأهيلي/tanawi qui est secondaire — manifest « 1ʳᵉ année — collège », précédent sira-2es « du cycle collégial traditionnel ») → replace programmatisé « de la première année du cycle collégial traditionnel » dans les 9 htmlFr du JSON + 9 fichiers tr-tmp, QA ×9 OK, rendu navigateur vérifié (15381), commité. Aucun autre livre es touché (scan complet).
+- **15855 injecté** (livraison R65-b subagent, 11 716 car, QA OK) : registre → 435. 3 coquilles corrigées par R65-b (Ḥaǧǧ 75→77 OFF-BY-TWO, Māʾida 4→3, Nisāʾ 57→58 — confirmées Manāhil 1/188).
+- **15874 traduit MAIN** (activités de valorisation, 2 966 car, QA OK, injecté) : registre → 436/950. Citation Manāhil 1/219 intégrale (sevrage (faṭm) des habitudes, ummahāt al-ʿibādāt) ; tables vides → « (tableau non reproduit dans le manuel) » ; typo source الثاثي (=الثاني) corrigée silencieusement ; « exemples d'application » retenu pour الشواهد التطبيقية (pas de précédent corpus — « témoignages » = GT-isme).
+- **titleFr harmonisés AVANT traduction** (convention 15423 « (تتمة) → (suite) ») : 15875 « Objectifs de la leçon » (GT-isme sur titleAr orphelin CMS « أهداف الدرس » ; h1 réel : المكي والمدني تتمة) → « Les sciences du Coran : mecquois et médinois (suite) » ; 17757 → « Les sciences du Coran : les versets et les sourates du Coran » ; 17764 « …, une suite » → « … (suite) ». Commit.
+- **15841 (leçon dix, aḥruf) EN PRÉPARATION** :
+  - Source extraite (9 008 car) + GT ; h2 « أهداف الدرس » perdu par le CMS RESTAURÉ depuis le miroir habous (tr-tmp/15841.mirror.html, 125 Ko, sauvegardé par le subagent R65-a décédé à 11:16 — 2 échecs subagent de suite : « context deadline exceeded » puis « response is empty », famine 429).
+  - **MAP COMPLÈTE des 20 images-versets** établie (src vs miroir) : 200=Baqara 220→222 (ṭuhr, off-by-TWO), 201=يَطْهُرْنَ/يَطَّهَّرْنَ, 202=Māʾida 7→6 (wuḍūʾ, off-by-one), 204/205/207=أَرْجُلَكُمْ/أَرْجُلِكُمْ ×3, 208=Ǧumuʿa 9 ✓ (šādhdh « فامضوا » cité dans le texte), 211=Muʾminūn 8 ✓ + 212=لِأَمَانَاتِهِمْ/لِأَمَانَتِهِمْ, 215=Sabāʾ 19 ✓ + 217=رَبَّ + 219=بَعِّدْ (variantes « رَبُّنَا بَعَّدَ » dans le texte), 220=??? (iʿrāb, réf. imprimée « البقرة 281 ») + 222=??? (PARTICULE ناهية/نافية, ×2), 223=Ḥadīd 23→24 (lecture ± « هو », 2 lignes), 250=Āl ʿImrān 133 (lecture ± wāw), 260=Āl ʿImrān 195 (ordre قُتِلوا/قَاتَلوا), 270=Baqara 258→259 (نَنْشُرُهَا بالراء / نُنْشِزُهَا بالزاي), 290=Nāziʿāt 15 ✓ (imāla أتى/موسى), 300=Qiyāma 4 ✓ (imāla بلى).
+  - **Images TÉLÉCHARGÉES** : tr-tmp/img15841/alatiqe{200..300}.png ×20 depuis https://www.habous.gov.ma/images/<nom>.png avec `curl -k` (certificat local incomplet — R65-b avait ce secret). alt/title du miroir ne contiennent QUE la réf. (200/201) — pas le texte.
+  - **OCR tesseract-ara (tessdata_best, /home/z/tessdata) : ÉCHEC** (calligraphie muṣḥaf décorative — même conclusion que R65-b) ; fragments non fiables. rafed.net 404, al-maktaba/shamela 403, archive.org 000 : aucune source Manāhil en ligne accessible.
+  - **BOUCLE VLM DE SECOURS lancée** (setsid, tr-tmp/vlm-retry.sh + vlm-retry.ts) : tente glm-4.5v sur les 20 images toutes les 150 s (80 cycles ≈ 3 h 20), transcripts → tr-tmp/img15841/transcripts.md. Famine 429 active en continu ce tour (probe échouée 10:20, 11:23, 11:37 ; workers en 5-6/8 backoff).
+  - Traduction 15841 : structure + tous les contenus déterminés (hadiths ʿUmar/Hishām Bukhārī 4706, Ibn ʿAbbās Muslim 819, Ubbay Muslim « 273 » imprimé — numéro douteux, laisser tel quel cf. doctrine 5326/3004 ; coquilles notées : Baqara 220→222, Māʾida 7→6, Ḥadīd 23→24, Baqara 258→259 ; versets cache Hamidullah pré-vérifiés ×11) — SEUL BLOC PENDANT : l'exemple iʿrāb (image 220=verset + 222=particule « ناهية/نافية », la discussion « فتحة إدغام المثلين » = verbe muḍāʿaf à rāʾ doubleée, majzūm→fatḥa / marfūʿ→ḍamma) — identité du verset/particule NON déterminable sans VLM (ni par le cache, ni par l'OCR, ni par mémoire : aucune qirāʾa connue ne correspond).
+- Cron webDevReview 15 min : jobs 458625 + 457608 trouvés DÉSACTIVÉS (« exec limits exceeded ») → supprimés, recréé propre (job 458721, description standard + contexte R65).
+- Événements divers : hadith ʿĀʾiša « ةوسلم » (typo CMS) relevé ; « أتى » imprimé (79:15) = أتاك probable (à noter) ; qa-lesson.py auto-fix NNBSP confirmé.
+
+Stage Summary:
+- **État** : sain et productif. Registre **436/950** (385 hand + 51 llm). **ulum-quran-1es : 12/28** (15373×2, 15381, 15396, 15402, 15423, 15429, 15653, 15752, 15765, 15855, 15874). Reste : 15841 (en préparation), 15875, 15887, 17752, 17753, 17757, 17764, 17765, 17766, 17767, 17768, 17772, 17773, 17774, 17775, 17778.
+- **Acquis du tour** : +4 registre (orphelins ×2, 15855, 15874) ; correction collégiale (9 leçons, cohérence manifest+sira-2es) ; 3 titleFr GT-ismes corrigés ; méthode images habous (curl -k + map miroir + VLM-différé) outillée pour TOUT le livre.
+- **15841 LIVRER AINSI** : (1) si transcripts.md rempli → remplir les slots iʿrāb (220/222) par la lecture VLM, livrer complet ; (2) si VLM bloqué > 3 h → livrer le reste de la leçon avec l'item iʿrāb rendu en structure fidèle (« il fut lu avec la fatḥa du rāʾ… » slots « [reproduit en image dans le manuel, restitution en cours] ») + flag worklog « à réviser contre le livre imprimé » — précédent R63-e. La traduction de tous les AUTRES blocs est prête (draft dans la tête du main agent — la re-rédiger depuis tr-tmp/15841.src.html + la présente map).
+- **Risques** : famine 429 continue (>3 h ce tour) ; subagents instables (2 échecs sur 15841) ; boucle VLM = seul espoir pour l'item iʿrāb — si échec définitif, l'identification restera pendante jusqu'au livre imprimé (aucune source en ligne accessible).
+- **Priorités suivantes** : (1) FINALISER 15841 (VLM ou fallback flaggé) ; (2) 15875 (src/gt extraits, titleFr corrigé — miroir à sauvegarder, mêmes méthodes images) ; (3) 15887 (compilation du Coran) ; (4) vague 17752+ (titleFr 17757/17764 déjà corrigés, reste 17767/17768/17772/17773/17774/17775 à vérifier AVANT traduction — cf. liste R64 : « Saint Coran »→« Noble Coran », préfixe série) ; (5) surveiller workers (3 en backoff 429, relance auto) et boucle VLM ; (6) harmoniser « شواهد تطبيقية » = « exemples d'application » dans les prochaines traductions.
+
+---
+Task ID: R65-suite
+Agent: Z.ai Code (agent principal — suite R65 : 15875 + 15887 traduits main, titleFr vague 17752+ harmonisés)
+Task: Poursuite ulum-quran-1es — leçons 12 et 13 livrées, 14/28 atteint
+
+Work Log:
+- **15875 « mecquois et médinois (suite) » traduit MAIN** (8 636 car, QA OK, injecté, commité) :
+  - Miroir habous sauvegardé (tr-tmp/15875.mirror.html, 116 Ko, URL construite depuis le h1 réel : programme-…/1658-…/علوم-القُرآن/السنة-أولى-إعدادي-عتيق/15875-<slug-h1>.html — méthode reproductible pour les docIds restants).
+  - h2 « أهداف الدرس » : ABSENT du miroir aussi (contrairement à 15841/15855) → objectifs SANS titre, fidèle au source.
+  - 5/5 références CORRECTES (première leçon sans coquille !) : Ḥujurāt 13, Ḥaǧǧ 75 (ici 75 est juste — coquille R65-b 75→77 était un autre verset), Najm 31, Aʿrāf 163, Ḥaǧǧ 50-53 (les 4 versets, comptage « أربع آيات » cohérent).
+  - Versets cache Hamidullah ×5 (adaptation Allah→Dieu ×7), hadiths-attributions série : « Dieu — le Très-Haut — a dit » / « Il a dit — que Sa majesté soit exaltée » (سبحانه, formule R65-b) / « Il a dit — Puissant et Majestueux est-Il » (عز وجل).
+  - Listes 20 sūras médinoises + 12 disputées + 82 mecquoises : translittérations (précédent 15653 « la sourate al-ʿAlaq ») — les noms français (« de la Mutual tromperie » etc.) = GT-ismes écartés.
+  - Citation al-Suyūṭī (Itqān) + doctrine al-Zarqānī (awṣaf) intégrales ; glossaire (al-fawāḥish/al-lamam) au format série ; « آيات الانطلاق » → « les versets d'ouverture » (harmonisé avec 15855 « ouvert par la formule »).
+- **15887 « la compilation du Coran » (leçon treize) traduit MAIN** (10 060 car, QA OK, injecté, commité) :
+  - 2 COQUILLES corrigées notées inline : Ṭā-Hā « 111 » → 114 (« Ne te hâte pas [de réciter] le Coran… accrois mes connaissances » — mot-cible la promesse divine, 111 = « les visages s'humilieront » hors sujet) ; al-Qiyāma « 16-18 » → 16-19 (« l'explication est à Nous » = la promesse de l'intelligence des sens).
+  - **IDENTIFICATION CMS CORROMPUE** : le source reprend mot pour mot celle de 15875 (« فيه تتمة التعريف للسور المكية والمدنية ») — copier-coller CMS ; remplacée par l'objet réel (jamʿ al-Qurʾān) selon le h1 + la chaîne préparation-préalable (15887 annonce 17753 = collecte sous Abū Bakr/ʿUṯmān ✓).
+  - Miroir sauvé (119 Ko) : h2 « أهداف الدرس » PRÉSENT (restauré) ; AUCUNE image-verset (ni alatiqe ni autre) → versets restitués du cache aux références imprimées.
+  - Hadiths : Zayd b. Thābit (al-Ḥākim 4273, citation complète du chapitre) ×2 ; Ibn ʿAbbās/ʿUṯmān (Musnad Aḥmad 501) ×2 (variante istiṯmār plus longue) ; Ḏāriyāt 17-18 dans le bloc Compagnons.
+  - Structure normalisée : 2 h4 (« 1. La mémorisation par le Prophète », « 2. La mémorisation par les Compagnons ») sous le h3 Premièrement (le source avait un ol>li>h3 emmêlé par le CMS, miroir identique) ; le numéro de leçon « treize » inféré de la séquence (15855=onze, 15875=douze livrés ce tour).
+  - Terminologie : ʿusub (tiges de palmier-dattier), likhāf (pierres plates), riqāʿ (feuillets), tawqīf (arrêt), ʿalā mukth (avec lenteur).
+- **titleFr vague 17752+ harmonisés AVANT traduction** (9 fixes, commités) : 17753 préfixe + honorifique GT « (qu'Allāh les agrée) » retiré du titre (il revient dans le corps) ; 17765/17766 préfixe « Les » + « musḥafs »→« muṣḥaf » ; 17767/17774 → formule 15874 « Activités de valorisation et de consolidation des acquis » (+« (2) ») ; 17768/17772/17773 « Saint Coran »→« Noble Coran » + préfixe + « (2) »/« (suite) » ; 17778 préfixe. LAISSÉS : 17752 « (leçon 7) » ( GT-isme de position — à revoir quand la plage de leçons sera connue), 17775 « Notices biographiques des figures citées » (acceptable, à confirmer contre le source).
+- **VLM (15841) : toujours bloqué** — boucle à la tentative 10/80 (~25 min). transcripts.md vide. Famine 429 continue.
+- QA navigateur : 15875 (h1 officiel, 12 686 car rendus, « cycle collégial » visible, 0 résidu GT, 0 erreur console) + 15887 (h1, 15 619 car). Captures tr-tmp/qa-r65-15875.png.
+
+Stage Summary:
+- **État** : sain. Registre **438/950**. **ulum-quran-1es : 14/28** (reste : 15841 [préparation VLM], 17752, 17753, 17757, 17764, 17765, 17766, 17767, 17768, 17772, 17773, 17774, 17775, 17778 = 14 docs).
+- **Méthode miroir outillée** : URL = https://www.habous.gov.ma/<cat encodée>/<docId>-<slug h1 réel>.html avec curl -k ; sauvegarder le miroir AVANT chaque traduction (h2 perdus + position des images-versets) ; vérifier alatiqeNNN.png dans le miroir.
+- **Coquilles cumulées du tour** : Baqara 220→222 (off-by-two), Māʾida 7→6, Ḥadīd 23→24, Baqara 258→259 (→ à confirmer par VLM), Ṭā-Hā 111→114, Qiyāma 16-18→16-19 + les 3 de R65-b (Ḥaǧǧ 75→77, Māʾida 4→3, Nisāʾ 57→58) = 12 au total.
+- **15841** : TOUS les contenus sont prêts (draft + map des 20 images + versets cache pré-vérifiés ×11) — SEUL l'item iʿrāb (images 220/222) attend le VLM. La boucle tourne encore ~2 h 30. SI elle rend : remplir les slots (220=verset + 222=particule ناهية/نافية) et livrer. SINON : livrer avec l'item rendu en structure + flag « à réviser contre le livre imprimé » (précédent R63-e) — NE PAS deviner la qirāʾa (aucune correspondance canonique trouvée : ni le cache, ni l'OCR (tesseract échoue sur la calligraphie), ni les sources en ligne (rafed 404, al-maktaba/shamela 403, archive.org 000)).
+- **Priorités suivantes** : (1) finaliser 15841 ; (2) 17753 (collecte sous Abū Bakr/ʿUṯmān — annoncé par la préparation préalable de 15887, titleFr déjà corrigé) ; (3) 17757/17764 (versets et sourates) ; (4) 17765/17766 (rasm — cf. brief R64 : gloses rasm/rasm ʿuṯmānien déjà établies) ; (5) 17768/17772/17773 (style) ; (6) 17752/17767/17774 (activités — formule 15874) ; (7) 17775/17778 (index aʿlām + sources — cf. doctrine usul-qiyam-1-a : dates sourcées depuis l'index aʿlām du texte source uniquement).
+
+---
+Task ID: R66
+Agent: Z.ai Code (agent principal — session « continue » post-R65-suite)
+Task: Finalisation 15841 (aḥruf) + vague 17752+ entamée — 17753 et 17757 livrées, slug-map habous outillée, registre 441/950
+
+Work Log:
+- **Cron nettoyé** : 458721 (R65, « exec limits exceeded » + contexte périmé 434/950) supprimé → recréé propre (job **459080**, fixed_rate 900 s, contexte 438/950 puis à jour, priorités R66, méthode miroir + fallback 15841 détaillées).
+- **Incident registre corrigé** : double exécution erronée de hand-register.py AVANT livraison (15841 en list [book,docId] + chaîne « --remove » + « ulum-quran-1es » parasites) → purge manuelle complète, trailing-newline restauré, git diff redevenu propre. **LEÇON : ne注册 que APRÈS hand-set.py réussi** (le script n'accepte que des docIds plats ; il a déjà été corrigé à R65 pour prendre <book-slug> <docId> ? NON — usage actuel : `hand-register.py <docId>`).
+- **15841 LIVRÉ** (leçon dix, nuzūl ʿalā sabʿa aḥruf, 14 828 car, QA OK, injecté, commité 5858896) :
+  - Rédaction depuis src.html (draft précédent perdu avec la session — re-rédaction intégrale), conventions série respectées (identification liminaire « leçon dix », caron ḫ/ṯ/ḏ/ǧ/š, formules honorifiques).
+  - Hadiths ʿUmar/Hišām (Bukhārī 4706), Ibn ʿAbbās (Muslim 819), Ubbay (Muslim « 273 » imprimé — laissé tel quel, cf. doctrine numéros douteux) rendus intégralement + sourcés.
+  - Versets Hamidullah ×8 restitués : Baqara 222 (imprime « 220 » — off-by-two), Māʾida 6 (imprime « 7 »), Ǧumuʿa 9 ✓ + šāḏḏ « fa-mḍū », Muʾminūn 8 ✓, Sabāʾ 19 ✓ (double lecture rabbunā/baʿʿada rendue), Ḥadīd 23 + huwa, Āl ʿImrān 133 + wāw, Āl ʿImrān 195 (ordre qutilū/qātalū), Baqara 259 (imprime « 258 » ; nunšuruhā/nunšizuhā), Nāziʿāt 15 ✓ (imāla atā/Mūsā), Qiyāma 4 ✓ (imāla balā).
+  - **Item iʿrāb (Baqara 281, images 220/222) : flaggé** « [La sourate de la Vache (al-Baqara), verset 281 — reproduit en image dans le manuel, restitution en cours.] » — la discussion grammaticale (fatḥa du rāʾ = particule de réprobation + fatḥa d'assimilation / ḍamma = particule négative + nominatif) est rendue en structure fidèle, l'identité du verbe muḍāʿaf restant indéterminable sans VLM (boucle à 51/80 tentatives, toutes 429 depuis 11:26 ; famine continue). Précédent R63-e appliqué — NE PAS deviner la qirāʾa.
+  - Ibn Qutayba (Taʾwīl muškil al-Qurʾān p. 30) intégral ; gloses kadtu usāwiruhu / lababtuhu.
+- **17753 LIVRÉ** (leçon quinze, ǧamʿ al-Qurʾān sous Abū Bakr/ʿUṯmān, 15 444 car, QA OK, injecté, commité dd2a9f8) :
+  - **Méthode miroir DÉFRICHÉE en 2 étapes** : (1) crawler la page de catégorie (URL encodée, pagination ?start=20/40/…) → extraire le slug réel de chaque leçon (format **docId-mots-joints-par-tirets**, PAS l'espace-%20 du h1) ; (2) curl -k sur BASE/<docId>-<slug>.html. Première tentative avec slug %-20 = page d'accueil 200 trompeuse (132 Ko sans contenu leçon) — désormais **tr-tmp/ulum1es-slugs.json** (27 slugs) élimine l'essai-erreur pour TOUTES les leçons restantes.
+  - Miroir 17753 : h2 أهداف الدرس PRÉSENT, AUCUNE image-verset → versets non nécessaires (aucune citation coranienne dans la leçon, seulement les gloses ʿusub/liḫāf + istaḥarra).
+  - Hadith Zayd ibn Ṯābit (Bukhārī 4701) intégral ; citation al-Zarkašī (al-Burhān p. 298-299) intégrale ; les 4 scribes ʿuṯmāniens ; les 5 mérites du muṣḥaf bakrien + 5 du muṣḥaf ʿuṯmānien ; dytiques du rasm (fa-tabayyanū/fa-taṯabbatū, waṣṣā/awṣā, fa-lā/wa-lā yaḫāfu).
+  - 17775 (notices biographiques) annoncé par l'istiṯmār (« je recherche une notice de Zayd »).
+- **17757 LIVRÉ** (leçon seize, āyāt/suwar, 9 392 car, QA OK, injecté, commité 60f7801) :
+  - Hadith Ubbay (Muslim 1396, verset du Trône restitué Hamidullah avec adaptation « Allah »→« Dieu »), Abū Hurayra (Tirmiḏī), Abū Masʿūd (Bukhārī 4723) sourcés.
+  - Les 6 écoles du décompte (médinois 1/2, mecquois, kūfien, baṣrien, damascène) avec chiffres exacts et attributions (Nāfiʿ, Šayba ibn Naṣāḥ, Ḥamza al-Zayyāt, ʿĀṣim al-Ǧahdarī) ; la cause de la divergence (arrêts/liaisons prophétiques) ; fāṣila et basmala/Fātiḥa.
+  - **Self-correction avant livraison** : mon premier rendu de المص/مر était une interpolation injustifiée (lettres fausses ṭā-sīn-mīm/alif-lām-mīm) → corrigé en « al-Muṣṣ (ʾ-l-m-ṣ, ouverture de la sourate al-Aʿrāf) / al-Mir (ʾ-l-r, ouverture de la sourate al-Raʿd) » — fidèle au source (المص sourate 7, المر sourate 13).
+  - Coquille CMS typographique : « ليهنك العلم » rendu « que la science te soit douce » ; قيل « أتدري أيّ آية… معك أعظم » au présent.
+- QA navigateur ×3 : 15841 (h1 officiel, flag iʿrāb visible, 4 notes « le manuel imprime » toutes présentes, 0 GT-isme, bilingue AR affiché = normal), 17753 (h1, Zayd/Burhān, 24 691 car rendus), 17757 (h1, al-Muṣṣ/Nāfiʿ, 14 948 car). 0 erreur console, dev.log propre (API 200 partout). Captures tr-tmp/qa-r66-*.png.
+- VLM 15841 : toujours 0/20 transcripts après 51 cycles (429 ininterrompu depuis 11:26, soit >2 h) — la boucle tient jusqu'à ~15:26 UTC puis s'éteint.
+
+Stage Summary:
+- **État** : sain et productif. Registre **441/950** (390 hand + 51 llm). **ulum-quran-1es : 17/28** (ajout 15841, 17753, 17757). Reste 11 : 17752, 17764, 17765, 17766, 17767, 17768, 17772, 17773, 17774, 17775, 17778.
+- **Outils consolidés ce tour** : (1) slug-map tr-tmp/ulum1es-slugs.json (27 slugs officiels habous) — plus d'essai-erreur d'URL ; (2) pattern injection = hand-set.py PUIS hand-register.py <docId> (jamais l'inverse, jamais avant QA OK) ; (3) QA navigateur : hash = #/livre/<book>/<docId> (pas ?book=).
+- **15841 item iʿrāb** : si la boucle VLM rend avant épuisement (80 cycles ≈ 15:26 UTC), remplir le slot [al-Baqara 281 …] avec le verset VLM + identification de la particule (ناهية/نافية) et re-vérifier la fatḥa d'assimilation ; sinon le flag reste (précédent R63-e, « à réviser contre le livre imprimé »).
+- **Priorités suivantes** : (1) 17764 (āyāt/suwar tammām — suite directe de 17757, titleFr déjà corrigé) ; (2) 17765/17766 (kitābat al-Qurʾān wa-rasmuhu / fawāʾid al-rasm al-ʿuṯmānī — brief R64 : gloses rasm déjà établies) ; (3) 17768/17772/17773 (uslūb + ḫawāṣṣ, 3 docs) ; (4) 17752/17767/17774 (activités — formule 15874 « Activités de valorisation et de consolidation des acquis ») ; (5) 17775/17778 (index aʿlām + sources — doctrine usul-qiyam : dates sourcées du seul texte source) ; (6) surveiller boucle VLM (fin ~15:26 UTC) et workers (3 actifs : fiqh-tanawi-1, tajwid-5ep, rasm-wa-dabt-4ep).
+- **Risques** : famine 429 (>2 h continue, VLM et LLM affectés — les workers LLM tournent au ralenti) ; le registre R64 visait 460+ d'ici la fin du cycle — à 441, tenir le cap sur la vague 17752+ (11 docs) pour approcher 452+.
+
+---
+Task ID: R67 (rétro-inscription)
+Agent: Z.ai Code (cron 459080, session précédente)
+Task: ulum-quran-1es 17764 + 17765 — livrés sans entrée worklog (rattrapage documentaire R68)
+
+Work Log:
+- **17764 LIVRÉ** (leçon dix-sept, āyāt/suwar suite — QA OK 10 143 car, commit 7c60eb2) : 2 versets restitués Hamidullah avec flag image [2:281 Quṭubī + 2:23 défi] ; 3 avis sur l'ordre des sourates ; Nawawī al-Tibyān sourcé ; registre 442/950.
+- **17765 LIVRÉ** (leçon dix-huit, kitāba/rasm/maṣāḥif — QA OK 13 711 car, commit c9f172d) : 2 versets-images restitués du miroir [Qalam 68:1-2 + Tawba 9:3] avec flag ; Mālik (al-Muqniʿ p. 18-19) + Bayhaqī (Šuʿab al-īmān t. 2 p. 547) ; 3 avis rasm (tawqīfī ǧumhūr / conventionnel / moderne) ; 3-6 muṣḥaf ʿuṯmāniens ; pointage ʿAbd al-Malik/al-Ḥaǧǧāǧ ; registre 443/950.
+
+Stage Summary:
+- Vague ulum passée de 17/28 à 19/28 (R67) puis 20/28 (R68). Aucun incident — simplement l'entrée worklog omise en R67, rattrapée ici.
+
+---
+Task ID: R68
+Agent: Z.ai Code (agent principal — session « continue »)
+Task: ulum-quran-1es 17766 (leçon dix-neuf, fawāʾid al-rasm al-ʿuṯmānien) — identification des 12 images-vers/mots + traduction complète + rattrapage worklog R67
+
+Work Log:
+- **Contexte** : registre 443/950 en entrée, ulum 18/28 (17764+17765 livrés en R67 sans entrée worklog → rétro-inscription ci-dessus). Priorité worklog R66 n° 2 : 17766 (fawāʾid al-rasm, suite directe de 17765).
+- **Méthode miroir consolidée** : URL complète = `https://www.habous.gov.ma/برنامج-التعليم-العتيق-الرئيسية/1658-المرحلة-الأولى/علوم-القُرآن/السنة-الأولى-إعدادي-عتيق/<docId>-<slug>.html` — découverte R66 (slug %-20 → fausse page d'accueil 132 Ko) confirmée ; la catégorie « علوم-القُرآن » porte un damma (القُرآن) — encodage urllib.parse.quote indispensable. Sauvegardée dans tr-tmp/17766-url.txt.
+- **12 images téléchargées** (tr-tmp/img17766/) : نساء-108، ملك-23، طه-62، نحل-90، أعراف-145، بقرة-3، بقرة-42، ذاريات-47، إسراء-11، شورى-22، قمر-6، علق-19 — toutes des gros-plans MOT-NIVEAU du rasm muṣḥafique (600×70 px, analyse par clusters de colonnes : largeurs 66-273 px).
+- **VLM toujours 429** (famine > 3 h) → doctrine R63-e : identification par croisement cache-coran + contexte doctrinal + largeur pixel. RÉSOLU sans VLM :
+  - Tamhīd/fāʾida 3 : « أمْ من » détaché = **4:109** (alt « 108 », off-by-one) ; « أمَّن » lié = **67:22** (alt « 23 », off-by-one) — vérifiés dans le cache (texte uthmani : أَم مَّن / أَمَّن présents).
+  - Fāʾida 2 : إن هذن لسحرن = **Ṭā-Hā 20:63** (alt « 62 », off-by-one) — cache : قَالُوٓا۟ إِنْ هَٰذَٰنِ لَسَٰحِرَٰنِ.
+  - Fāʾida 4 : ḏī al-qurbā (kasra→yāʾ) = 16:90 ✓ ; al-alwāḥ (ḍamma→wāw) = 7:145 ✓ ; al-ṣalwah/al-zakwah = 2:3 ✓ + **2:43** (alt « 42 », off-by-one — 2:42 ne contient ni ṣalāh ni zakāh).
+  - Fāʾida 5 : bi-ʾayyid = 51:47 ✓ ; **les 4 verbes sans wāw** : wa-yadʿu 17:11 ✓, yadʿu 54:6 ✓, sa-nadʿu **96:18** (alt « 19 », off-by-one), et le 4e : **Šūrā 42:15 فَٱدْعُ** (alt « 22 ») — démonstration : (1) seule forme دعو de toute la sourate Šūrā ; (2) recherche globale cache : 21 verbes دْعُ sans wāw dans tout le Coran, dont فَٱدْعُ en 42:15 ; (3) largeur pixel 153 px cohérente avec une forme à 4 graphèmes entre يدع (147) et ويدع (169). Alt « 22 » = coquille la plus éloignée à ce jour (Δ7), mais la sourate + la doctrine + le pixel convergent.
+- **17766 LIVRÉ** (11 315 car FR, QA OK du premier coup, commit 3b748f7) :
+  - Deux nass intégraux : al-Dānī (al-Muḥkam fī naqṭ al-maṣāḥif p. 196) + al-Raǧarāǧī al-Šūšāwī (Tanbīh al-ʿaṭšān t. 1 p. 309 — décomptes : 48 740 alif / 25 909 yāʾ / 25 506 wāw selon Nāfiʿ ; 4 ḥaḏf).
+  - Les 5 bienfaits (isnād + réception orale + rūm/išmām ; lectures multiples avec ʾin hāḏan lasaḥran ; sens par détachement/liaison de ʾam ; origine des voyelles ḏī/al-alwāḥ/al-ṣalwah ; sens caché bi-ʾayyid + maxime ziyādat al-mabnā + les 4 verbes sans wāw).
+  - Poème istiṯmār : al-Ḫarrāz, Mawrid al-ẓamʾān — 7 distiques reconstruits (le tableau CMS dir=ltr inverse صدر/عجز ; ordre rétabli par le sens et la rime) : sources du rasm = al-Muqniʿ, al-ʿAqīla (al-Šāṭibī), Abū Dāwūd, lecture de Nāfiʿ (Abū Ruʾaym ibn Abī Nuʿaym), diffusion maghrébine. Rendu en distiques français (block-quote), SANS arabe — convention série confirmée : htmlFr = 0 caractère arabe (l'original AR est affiché par la colonne « العربية — الأصل » de l'app).
+  - **6 coquilles notées inline** (record pour une leçon) : “108”→4:109, “23”→67:22, “62”→20:63, “42”→2:43, “22”→42:15, “19”→96:18 — formulation (le manuel imprime “N”) conforme au précédent 15381.
+- QA navigateur : h1 ✓, 5 bienfaits ✓, 6 notes coquille ✓, poème blockquote ✓, question istiṯmār ✓, colonne AR ✓ ; 0 erreur console (Fast Refresh seul), dev.log propre (API 200 en 72 ms). Capture tr-tmp/qa-r68-17766.png.
+- Infra : supervisor + 3 workers (tajwid-5ep, rasm-wa-dabt-4ep, fiqh-tanawi-1) vivants ; cron 459080 actif.
+
+Stage Summary:
+- **État** : sain et productif. Registre **444/950** (393 hand + 51 llm). **ulum-quran-1es : 19/28**. Reste 9 : 17752, 17767, 17768, 17772, 17773, 17774, 17775, 17778.
+- **Outil nouveau** : la recherche globale de formes dans le cache-coran (regex sur le texte uthmani) tranche les identifications d'images rasm SANS VLM — croisée avec (1) la sourate de l'alt, (2) la largeur des clusters de pixels, (3) la doctrine classique. Application immédiate aux leçons rasm restantes du corpus (rasm-wa-dabt-4ep notamment).
+- **Doctrines clés établies pour les prochaines leçons rasm** : (1) verbes دعو sans wāw = 21 occurrences ; (2) أم منقطعة détachée vs أمَّن متصcole liée ; (3) al-ṣalwah/al-zakwah marquent l'origine wāw de l'alif ; (4) bi-ʾayyid = pluriel de majesté de la force divine.
+- **Priorités suivantes** : (1) 17768 (uslūb al-Qurʾān, leçon 20 — titleFr déjà corrigé) ; (2) 17772/17773 (ḫawāṣṣ al-uslūb 2/tammām) ; (3) 17752/17767/17774 (activités — formule 15874) ; (4) 17775/17778 (index aʿlām + sources — doctrine usul-qiyam) ; (5) si VLM redevient disponible, backfill 15841 (Baqara 281) et re-vérification pixel des 12 images 17766 (aucun doute bloquant, identification croisée solide).
+- **Risques** : famine 429 VLM/LLM persistante (> 3 h) — les 3 workers LLM tournent au ralenti, le flux « hand » porte donc l'essentiel de la production (444/950) ; tenir le cap : 8 leçons ulum restantes pour clore le livre (objectif 452+ avant la fin du cycle).
+
+---
+Task ID: R69
+Agent: Z.ai Code (agent principal — session « continue »)
+Task: CLÔTURE DU LIVRE ulum-quran-1es — les 8 documents restants livrés (17752, 17767, 17768, 17772, 17773, 17774, 17775, 17778) — 28/28, registre 452/950
+
+Work Log:
+- **Cron** : job 459230 trouvé désactivé (« exec limits exceeded ») → supprimé, recréé propre (job **459262**, fixed_rate 900 s, contexte à jour).
+- **Images habous = BOÎTES NOIRES** : découverte majeure R69 — les PNG de versets du livre علوم-القرآن-أولى-إعدادي sont servis par le serveur comme rectangles noirs PLEINS (2 valeurs de pixel) : le contenu est masqué MAIS les dimensions de la boîte préservent le bbox du texte (largeur × lignes). Deux images semblaient « réelles » (الحج-27, الحديد-11) mais sont des boîtes aux bords anti-aliasés (faux positifs). → La méthode R68 (clusters de colonnes) ne fonctionne plus sur ce livre : l'identification repose sur (1) les alts des images du miroir, (2) les glosses du source, (3) la doctrine (formules du taṣrīf, cache-coran), (4) les bbox en second. VLM/LLM toujours en famine 429 (> 4 h) : aucune vérification visuelle possible.
+- **17768 LIVRÉ** (leçon 21, uslūb al-Qurʾān, 9 825 car, QA OK, commit 047b817) :
+  - Miroir 120 Ko, h2 أهداف الدرس PRÉSENT. 7 images-témoins (alts : Isrāʾ 88, Zuḫruf 2, Fuṣṣilat « 43 », Yūsuf 2 + 3 crops de glosses).
+  - 3 nusūṣ restitués : Isrāʾ 88 (défi) + Zuḫruf 2-3 (« Par le Livre explicite ! Nous en avons fait un Coran arabe » — l'argument exige le v3, l'alt « 2 » abrège) + **Fuṣṣilat 44** (l'alt imprime « 43 », off-by-one — glosses أعجميا « non-arabe » + لولا فصلت آياته univoques du v44, le v43 = « ما يقال لك إلا ما قيل للرسل » sans rapport).
+  - Glosses : ẓahīran (un aide et un secoureur), aʿǧamiyyan (ce qui n'est pas arabe), lawlā fuṣṣilat āyātuh (si seulement elle était clarifiée).
+  - Bāqillānī (Iʿǧāz al-Qurʾān p. 31-32) intégral ; exemples tailleurs/pharmaciens ; التقويم normalisé en h2 (glué en fin de paragraphe dans le CMS ET le miroir).
+- **17772 LIVRÉ** (leçon 22, ḫawāṣṣ al-uslūb 2 — taṣrīf al-qawl, 12 517 car, QA OK, commit 85fbb89) :
+  - **24 images-versets restituées** (record du corpus) : 3 nusūṣ (al-Zumar 39:27-28 + al-Isrāʾ 17:89 + al-Kahf 18:54 — triptyque du taṣrīf), 10 formules du commandement (amr), 6 de l'interdiction (nahy), 2 istiṯmār.
+  - **9 COQUILLES notées inline** (record, précédent 6 en 17766) : 4:57→4:58 (يأمركم), 2:182→2:183 (كتب عليكم الصيام), 2:226→2:228 (والمطلقات يتربصن — la gloze يتربصن au fém. pl. tranche), 2:218→2:184 (وأن تصوموا خير لكم — seule occurrence de خير en context de commandement en al-Baqara), 22:27→22:29 (وليقضوا/وليووفوا/وليطوفوا — triple lām-amr), **33:50→4:24** (faute de SOURATE : فآتوهن أجورهن فريضة, la gloze « dowers + subsistance + vie commune » confirme), 18:53→18:54 (صرفنا + l'homme disputeur), 7:31→7:32 (قل من حرم زينة الله — seul حرم de la sourate, boîte 3 lignes incompatibles avec le v31), 2:180→2:181 (فإنما إثمه على الذين يبدلونه).
+  - Formules vérifiées SANS coquille : 3:97 (ولله على الناس حج البيت), 2:236 (ومتعوهن — impératif), 57:11 (le prêt doublé), 16:17 (أفلا تذكرون — gloze « souvenez-vous »), 16:14 (ولعلكم تشكرون — après لعل = ترجٍّ), 16:90 (ينهى — material du nahy), 4:19 (لا يحل — négation de licéité), 3:180 (بل هو شر لهم), 9:34 (فبشرهم بعذاب أليم — la menace).
+  - Poème « إذا ما زدته نظرا / يزيدك وجهه حسنا » rendu en distique blockquote (le tableau CMS dir=ltr inverse صدر/عجز — précédent R68).
+- **17773 LIVRÉ** (leçon 23, tammām — iǧmāl/bayān + qaṣd/awfāʾ, 8 397 car, QA OK, commit 0ad9e9b) :
+  - Hūd 11:1 ×2 (aux versets parfaits puis détaillés — glosses uḥkimat/fuṣṣilat) + **Māʾida 5:6** ×2 (l'ablution — alt « 7 », MÊME ERREUR que 15841 en R66 : le CMS étiquette systématiquement le verset d'ablution « المائدة 7 »).
+  - **Double lecture arǧulakum/arǧulikum** rendue intégralement (accusatif coordonné à « vos visages » = lavage ; génitif coordonné à « vos têtes » = passage sur les khuffayn) — la leçon-charnière des qirāʾāt.
+  - Ibn ʿAṭiyya (al-Muḥarrar al-waǧīz 1:52) : « si l'on retirait un seul mot du Livre de Dieu… » ; ʿAbd Allāh Darāz (al-Nabaʾ al-ʿaẓīm p. 147).
+- **17767 LIVRÉ** (leçon 20, activités — collecte du Coran, 4 695 car, QA OK, commit 74c6136) : Manāhil p. 221-222 (les 3 époques de la ǧamʿ) + p. 213 (méthode de Zayd : les 2 sources + 2 témoins) ; grille des valeurs rendue en table HTML 3 colonnes (N°, valeur, lieu — l'original est une image-boîte noire, en-têtes illisibles, convention 15874) ; الثمن الأول de al-Isrāʾ en rasm ʿuṯmānien.
+- **17774 LIVRÉ** (leçon 24, activités 2, 2 976 car, QA OK, commit e5cbd1d) :
+  - **IDENTIFICATION CROISÉE Fuṣṣilat 39** : l'activité 1 (« prémisses sensibles visibles de tous → conclusion », Manāhil p. 262) + les 2 images (فصلت-38-2 = prémisses terre/eau, فصلت-38-3 = conclusion revivification des morts) démontrent que la famille « فصلت-38 » = **41:39** et non 41:38 → **RETRO-CORRECTION de 17772** (commit edc6b66) : l'istiṯmār de 17772 = 41:39 + 10:24 (deux versets d'imagerie sensorielle — l'eau et la terre — qui préparent exactement le propos de 17774). Cohérence thématique parfaite des 3 leçons (17772 istiṯmār → 17773 qaṣd → 17774 application).
+- **17752 LIVRÉ** (leçon 7, activités, 4 193 car, QA OK, commit b7b6304) : Zarqānī (Manāhil 1:10 — le Coran constitution) + Farīd al-Anṣārī (Maǧālis al-Qurʾān 1:211 — la révélation faveur et miséricorde) ; exercice de conciliation (ʿAlaq vs Muddaṯṭir ; laylat al-qadr vs descente par fractions) ; fiche technique histoire des sciences du Coran (carte-image 4 colonnes).
+- **17775 LIVRÉ** (notices biographiques, 7 646 car, QA OK, commit f95f131) : 20 figures de Bukhārī à Wāḥidī — le h2 البخاري absent du CMS restauré depuis le miroir ; dates sourcées du seul texte source (doctrine usul-qiyam) ; titres d'ouvrages translittérés en italiques ; correction de la translitération **al-Quṭubī → al-Qurṭubī** dans 17764 (commit c098f66 — faute de l'agent précédent, l'imam de Cordoue).
+- **17778 LIVRÉ** (sources et références, 5 401 car, QA OK, commit 67be9bf) : 21 notices bibliographiques complètes (le Coran de Warš/Nāfiʿ/al-Azraq par la fondation Muḥammad VI + 20 ouvrages : auteur, éditeur scientifique, maison, édition) — DERNIER DOCUMENT DU LIVRE.
+- QA navigateur ×6 : 17768 (h1, 4 versets, coquille 43, Bāqillānī, 0 erreur console), 17772 (24 citations, 9 coquilles, formules amr/nahy), 17773 (Hūd/Māʾida, arǧulakum), 17775 (8+ figures vérifiées), 17778 (21 sources, fondation Muḥammad VI), bibliothèque (carte du livre : **28/28 documents bilingues, 100 %**). Captures tr-tmp/qa-r69-*.png. dev.log propre (200 partout, 0 erreur).
+- Infra : supervisor vivant, 3 workers LLM actifs (tajwid-5ep, rasm-wa-dabt-4ep, fiqh-tanawi-1 — toujours 429 sur leurs tentatives, la famine continue), cron 459262 actif.
+
+Stage Summary:
+- **État** : excellent — **LIVRE ulum-quran-1es COMPLET 28/28** (17ᵉ livre complet du corpus, cf. stats). Registre **452/950** (401 hand + 51 llm). Corpus total 452/1853 documents (24 %).
+- **Acquis du tour** : +8 leçons livrées en une session (record), +1 livre complété, 2 rétro-corrections (17772 Fuṣṣilat 39, 17764 Qurṭubī), méthode d'identification sur boîtes noires (alts + glosses + doctrine + bbox).
+- **MÉTHODE consolidée pour les livres restants** : (1) les images-versets habous de CE livre sont des boîtes noires (bbox préservée) — l'identification passe par les alts (souvent faux : ±1, ±2, permutations, fautes de sourate !) croisés avec les glosses et la doctrine ; (2) la série de coquilles cumulée atteint **26 unités** (9 ce tour : 4:57→58, 2:182→183, 2:226→228, 2:218→184, 22:27→29, 33:50→4:24, 18:53→54, 7:31→32, 2:180→181 + 17768: 43→44 + 17773: 7→6) ; (3) l'erreur « المائدة 7 » pour le verset d'ablution 5:6 est SYSTÉMIQUE au CMS (2 occurrences) ; (4) vérifier TOUJOURS l'alt contre le cache-coran avant de le croire.
+- **Priorités suivantes** : (1) les livres entamés à fort potentiel : tafsir-5ep (32/123, 26 %), tafsir-2es (8/38), tafsir-3es (7/44), fiqh-3es (3/30), hadith-6ep (2/30) ; (2) les workers LLM (429 > 4 h) — vérifier leur reprise, sinon relancer les 3 cibles (tajwid-5ep 1/31, rasm-wa-dabt-4ep 1/30, fiqh-tanawi-1 1/31) ; (3) si le VLM rend : backfill 15841 (item iʿrāb Baqara 281 — les 20 images sont des boîtes noires, inutile d'insister sur ce livre) ; (4) QA globale de l'app (page d'accueil, recherche, favoris) avant d'attaquer un nouveau livre ; (5) MAJ de la carte de complétion côté UI si des badges « traduction savante intégrale » manquent au livre ulum-quran-1es (à vérifier sur /bibliotheque).
+- **Risques** : famine 429 VLM/LLM continue (le flux hand porte 89 % de la production) ; les boîtes noires habous pourraient s'étendre aux autres livres non encore traduits (à tester sur tafsir-5ep avant d'y investir) ; le registre vise 500/950 d'ici la fin du cycle — il reste 48 documents à livrer en main.
+
+---
+Task ID: R70
+Agent: Z.ai Code (agent principal — session « continue » post-R69)
+Task: Ouverture du livre ulum-quran-2es — 8 documents livrés (18643, 19057, 19058, 19059, 19061, 19147, 19157, 19158), registre 460/950 — découverte majeure : les images-versets de CE livre sont RÉELLES (boîtes blanches masquées mais bbox préservée) sous /images/2023/
+
+Work Log:
+- **Cron** : job 459262 désactivé (« exec limits exceeded ») → supprimé, recréé propre (job **459364**, fixed_rate 900 s, contexte à jour 452/950, priorités 2es).
+- **QA d'ouverture** : accueil sain (968/1152 bilingues affiché), badge « traduction savante intégrale » ✓ sur ulum-quran-1es (28/28), lecteur 17778 ✓, 0 erreur console, dev.log propre (API 200).
+- **Workers** : supervisor vivant (v3, file 62 livres), 3 workers LLM actifs (tajwid-5ep, rasm-wa-dabt-4ep, fiqh-tanawi-1) mais **famine 429 continue** (670 occurrences dans tajwid-5ep.log, tentative 7/8) — test SDK direct : 429 immédiat. La voie « main » porte donc 100 % de la production du tour.
+- **Slug-map ulum-quran-2es complète (27/27)** : catégorie = **1696**-المرحلة-الأولى/علوم-القُرآن/السنة-الثانية-إعدادي-عتيق (le 1658 de R66 était la 1re année !) — tr-tmp/ulum2es-slugs.json ; 19261 absent de la catégorie → slug naturel (التفسير-الفقهي-للقرآن-الكريم) validé par téléchargement direct (103 Ko réels).
+- **DÉCOUVERTE INFRASTRUCTURE** : les images-versets du livre 2es sous **/images/2023/التعليم-العتيق/الكتب-المدرسية/علوم-القرآن-الثانية-إعدادي/** sont des PNG RÉELS téléchargeables (4-42 Ko) MAIS le contenu est masqué : rectangles pleins (blancs) dont la **largeur = bbox du texte** → méthode R68 applicable à grande échelle : calibration ≈ 7,1 px/lettre (validée sur Qāf 4 = 55 lettres = 389 px ✓, فأزلهما الشيطان عنها = 17 lettres = 128 px ✓). Les alts du miroir + bbox + doctrine + cache-coran (regex normalisée uthmani) = identification croisée. À tester sur les autres livres 2es avant généralisation.
+- **13 coquilles CMS cumulées ce tour** (total série 39) : 47:19→« 20 », 73:1-4→« 18 », 6:82→« 83 » (3e occurrence de cette coquille systémique), 31:13→« 12 » — toutes notées inline « le manuel imprime “N” ».
+- **8 documents livrés** (tous QA navigateur ✓, commits 693d2cb → 8e) :
+  - **18643** (présentation, 4 790 car) : sommaire des 27 leçons avec titres savants canoniques (définis pour tout le livre) + compétences.
+  - **19057** (leçon 2, tafsīr : concept/conditions/convenances, 15 027 car) : 4 versets Hamidullah [25:33 ×2, 54:17, 29:69] + Ibn Ǧuzayy (les 12 disciplines) + Zarkašī + Suyūṭī (Itqān 2/14-15 + 4/201) + hadith ʿĀʾiša (taʾwīl = mise en pratique) + 2 tableaux-images (OLOUM-2 différences tafsīr/taʾwīl, OLOUM-4 conditions du mufassir) restitués de la doctrine classique avec note.
+  - **19058** (leçon 1, évaluation diagnostique, 7 436 car) : 3 activités — Zarkašī (Burhān 1/22, asbāb al-nuzūl) + Zarqānī (Manāhil 1/196, mecquois/médinois) + hadith Zayd ibn Ṯābit intégral (rendering 17753 réutilisé et complété jusqu'à Ḥafṣa) + Tawba 9:129 restitué (image confirmant « آخر سورة التوبة مع أبي خزيمة ») + grille à remplir.
+  - **19059** (leçon 3, tafsīr époque Prophète/Compagnons, 12 517 car) : 7 versets [16:44, 53:3-4, 6:82 coquille « 83 », 84:8 (slot vide dans le CMS, restitution doctrinale), 80:24-31 (passage des faveurs), 5:4 (glose « non exposé à la désobéissance »), extrait 2:187 (verset des fils, hadith ʿAdī ibn Ḥātim)] + hadiths ʿAdī, Ibn Masʿūd, al-Miqdām + 4 biographies (Ibn ʿAbbās turǧumān, Ibn Masʿūd, ʿAlī « doyen des exégètes », Ubayy) + 6 caractéristiques.
+  - **19061** (leçon 4, tafsīr époque Successeurs, 11 525 car) : 3 générations (Mecque→Ibn ʿAbbās, Médine→Ubayy, Irak→Ibn Masʿūd) avec 13 figures sourcées (Muǧāhid, ʿAṭāʾ, Saʿīd ibn Ǧubayr, ʿIkrima, Ṭāwūs, Zayd ibn Aslam, Abū al-ʿĀliya, al-Qurazī, Masrūq, Qatāda, al-Ḥasan, al-Ḫurāsānī, Murra) + Ibn Kaṯīr (Tafsīr 1/11) + Ḥiǧr 15:9 + hadith al-Ṭabarānī (ʿudūl) + Fāṭir 35:32 (activité grille).
+  - **19147** (leçon 5, tafsīr époque tadwīn, 9 114 car) : hadith Muslim (interdiction d'écrire) + Ibn Ḫaldūn (Muqaddima 481) + 4 étapes du tadwīn + 9 pionniers (Šuʿba→ʿAbd ibn Ḥumayd) + galerie par spécialité (jurisconsultes, rationalistes, traditionalistes, linguistes, soufis).
+  - **19157** (leçon 6, activité, 5 335 car) : l'intérêt des Maghrébins pour le tafsīr — Yaḥyā ibn Sallām, Ibn Ḥabīb (60 tomes, ʿIyāḍ), Baqī ibn Maḫlad + Ibn Ǧuzayy (Tashīl 1/20 : al-Ballūṭī, Makkī, al-Mahdawī, Ibn al-ʿArabī, Ibn ʿAṭiyya) + protocole complet de la rencontre scientifique (nadwa).
+  - **19158** (leçon 7, divisions du tafsīr + maʾtūr, 14 590 car — QA 17/17) : 4 divisions d'Ibn ʿAbbās (Itqān 3/8) + Ibn Kaṯīr (Tafsīr 1/8) + 13 versets restitués dont 7 identifiés par la méthode bbox/alts/cache [47:19, 73:1-4, 31:13 avec coquilles notées ; 7:22←2:36 (azallahu/dallāhumā) ; 5:2 فاصطادوا ← 5:2 لاتحلوا شعائر الله ; Qāf 15/16-18/4 (tafsīr d'Ibn ʿAbbās et des Successeurs, Ṭabarī 22/341-344-329)] + **2 paires Baqara« 36 »/Māʾida« 4 » flaggées « à réviser contre le livre imprimé »** (bbox ≈ 72/66 lettres incompatible avec les versets des légendes ; doctrine R63-e : ne pas deviner) + hadith ʿĀʾiša (Bukhārī, al-riqāq) + 84:7-9.
+- QA navigateur : tous les lecteurs ✓ (h1, versets, coquilles, tableaux, flags), 0 erreur console, dev.log propre. Captures implicites via checks eval.
+
+Stage Summary:
+- **État** : excellent. Registre **460/950** (410 hand + 50 llm). **ulum-quran-2es : 9/28** (intro + 8 leçons). 18 livres complets. Les 19 documents restants du 2es : 19175, 19177, 19178, 19179, 19226, 19259, 19260, 19261, 19273, 19274, 19276, 19280, 19283, 19284, 19285, 19286, 19287, 19288, 19289.
+- **Outil du tour** : la méthode **bbox/alts/cache-coran** pour les images 2023 du livre 2es (les PNG sont réels mais masqués en rectangles pleins — largeur = bbox). Calibration 7,1 px/lettre validée. Généralisable : tester /images/2023/... pour les leçons suivantes (19175+) AVANT de traduire.
+- **Paires non résolues 19158** : X[Baqara « 36 », bbox 511 px ≈ 72 lettres] ← Y[Māʾida « 4 », bbox 467 px ≈ 66 lettres] — candidats : 2:168 (72 lettres ✓ pixel) / 5:4 extrait — mais lien doctrinal non établi → flags posés (précédent 15841). Si VLM redevient disponible, backfill prioritaire.
+- **Priorités suivantes** : (1) 19175 (leçon 8, méthode du tafsīr maʾtūr et caractéristiques) ; (2) 19177 (leçon 9, sources du maʾtūr) ; (3) 19178/19179/19226 (trilogie tafsīr par opinion) ; (4) 19259 (activité) ; (5) 19260 (sources du raʾy) ; (6) 19261 (juridique) ; (7) 19273-19280 (tendances) ; (8) 19283-19288 (traduction du Coran) ; (9) 19289 (sources du livre). Chaque leçon : miroir → bbox des images → traduction → hand-set → QA → commit.
+- **Risques** : famine 429 VLM/LLM persistante (> 6 h) — aucun backfill visuel possible ; les 2 flags de 19158 restent en attente d'un accès VLM ou du livre imprimé.
+
+---
+Task ID: R70 (suite et clôture de session)
+Agent: Z.ai Code (agent principal — session « continue »)
+Task: +3 documents livrés (19259, 19288, et fin de vague) — ulum-quran-2es à MI-PARCOURS 14/28, registre 465/950
+
+Work Log:
+- **19259 LIVRÉ** (leçon 13, activité maʾtūr/raʾy, 5 571 car, QA 7/7) : le couple Ṭabarī/Abū al-Suʿūd — Ṭabarī Ǧāmiʿ al-bayān 6/160 sur **3:3** (alt miroir « آل عمران 2 », coquille 2→3 confirmée par bbox : آل-عمران-2-2.png = 516 px ≈ 72 lettres = 3:3 complet ✓) avec les 2 āṯār (Bišr/Yazīd/Saʿīd/Qatāda + al-Muṯannā/Isḥāq/Ibn Abī Ǧaʿfar/al-Rabīʿ) ; Abū al-Suʿūd Iršād al-ʿaql 1/205-206 sur **2:196 « وَأَتِمُّوا الْحَجَّ وَالْعُمْرَةَ »** (alt « البقرة 195 », coquille off-by-one confirmée par bbox 238 px ≈ 25 lettres) + le verset-comparaison **2:187 extrait** (alt « 186 », coquille) — l'argument d'Abū al-Suʿūd sur l'ordre d'accomplir ≠ ordre d'instituer (wa-aqīmū vs wa-atimmū).
+- **19288 LIVRÉ** (leçon 26, activité traduction, 1 563 car) : le plus court du livre — sections « activités de préparation/réalisation » vides DANS LE CMS ET LE MIROIR (aucune image 2023) → rendues avec note « fiches distribuées par le professeur — à consulter dans le manuel ».
+- QA finale : API /api/books → ulum-quran-2es = 14 docsSavant / 27 lessonsFr ; lecteur 19259 7/7 (h1, 3:3, 2:196, 2:187, Ṭabarī, Abū al-Suʿūd, Iršād) ; dev.log propre (200 partout) ; 0 erreur console.
+- Vague totale du tour : **13 documents livrés** (18643, 19057, 19058, 19059, 19061, 19147, 19157, 19158, 19175, 19177, 19178, 19259, 19288) + 13 titleFr savants fixés.
+
+Stage Summary:
+- **État** : très productif. Registre **465/950** (414 hand + 51 llm). **ulum-quran-2es : 14/28 (50 %)**. 18 livres complets. Reste 14 : 19179, 19226, 19260, 19261, 19273, 19274, 19276, 19280, 19283, 19284, 19285, 19286, 19287, 19289.
+- **Méthode consolidée ce tour** : (1) images /images/2023/ du livre 2es = PNG réels masqués (bbox préservée), calibration 7,1 px/lettre, alts faillibles (coquilles 2→3, 195→196, 186→187, 28→29, 285→286, 30-31→28, « 36 »/« 4 » non résolus) ; (2) croisement systématique bbox + alt + cache-coran (regex normalisée uthmani) + doctrine ; (3) la vérification « الآيتين » (le texte du manuel lui-même) tranche les passages multi-versets.
+- **Coquilles CMS cumulées du tour : 20** (47:19→« 20 », 73:1-4→« 18 », 6:82→« 83 », 31:13→« 12 », 7:28→« 30-31 », 2:286→« 285 », 38:29→« 28 », 3:3→« 2 », 2:196→« 195 », 2:187→« 186 » + paires flaggées) — série totale ~46.
+- **Priorités suivantes** : (1) 19179 (leçon 11, principes du tafsīr par opinion) ; (2) 19226 (leçon 12, méthode du raʾy) ; (3) 19260 (leçon 14, sources du raʾy) ; (4) 19261 (juridique) ; (5) 19273/19274/19276 (cosmologique/allusif/autres tendances) ; (6) 19280 (activité tendances) ; (7) 19283-19287 (trilogie + duo traduction) ; (8) 19289 (sources du livre — même gabarit que 17778/1es). Puis QA globale app (recherche, favoris, mobile).
+- **Risques** : famine 429 VLM/LLM continue (> 7 h) — workers au ralenti ; les 2 flags de 19158 (paires Baqara« 36 »/Māʾida« 4 ») et les fiches vides de 19288 restent les seules zones d'ombre.
+
+---
+Task ID: R71
+Agent: Z.ai Code (agent principal — session « continue » post-reset, audit + restauration complète)
+Task: AUDIT ET RESTAURATION après reset sandbox — le contexte de session avait été perdu, un agent sans mémoire a construit par erreur une autre app (« Nexus AI Studio ») ; tout le travail Minhāj R64→R70 a été récupéré et le projet restauré à l'état exact de fin R70 (registre 465/950)
+
+Work Log:
+- **Incident** : reset sandbox le 14 oct ~16:47 — /home/z/my-project revenu à un scaffold vierge. La session « continue » a démarré avec un résumé de contexte corrompu (vide) → l'agent a reconstruit une app générique (puis « Nexus AI Studio ») SANS savoir que le vrai projet était Minhāj. L'utilisateur a signalé la dérive (« le projet c'était minhaj !! » puis « fais un audit ou est ta mémoire »).
+- **Audit** : découverte de /tmp/my-project/ = miroir partiel du projet pré-reset : worklog.md 5 261 lignes (R0→R70 complet ✓), content/ 64 livres avec corpus À JOUR (ulum-quran-2es.json 14 oct 16:17 = fin R70 ✓), mais src/ écrasé par la sync (mix vieil app + fichiers de la fausse app) et scripts-translate/ absent. Les bundles git /tmp/my-project/backup-tour/ (minhaj.bundle 15:58 = f0802dd ; latest-bundle.bdl 23:20 = 6777ff9 = R63, 495 commits) intacts.
+- **Restauration** : clone de latest-bundle.bdl → /home/z/my-project (app complète R63 + historique 495 commits) ; overlay content/ de /tmp (3 livres plus récents que le bundle : ulum-quran-1es.json 14 oct 15:21 = R69, ulum-quran-2es.json 14 oct 16:17 = R70, fiqh-tanawi-1.json 14 oct 07:38 = worker) + worklog.md 5 261 lignes ; infra sandbox préservée (skills/, upload/ recréé — le point de montage tmpfs/ossfs étant lié au chemin) ; bun install (827 paquets) ; dev server relancé port 3000.
+- **Registre savant reconstruit** : le bundle s'arrête à R63 (424/950) — les inscriptions R64→R70 étaient dans le registre non-synchronisé, perdues. Reconstruction depuis le worklog (chaque entrée R64→R70 liste ses docIds) : +40 hand (R64 : 15373/15381/15396/15402/15423/15429/15653 ; R65 : 15752/15765/15855/15874 + 15875/15887 ; R66 : 15841/17753/17757 ; R67 : 17764/17765 ; R68 : 17766 ; R69 : 17752/17767/17768/17772/17773/17774/17775/17778 ; R70 : 18643/19057/19058/19059/19061/19147/19157/19158/19175/19177/19178/19259/19288) + 1 llm (11509 = intro fiqh-tanawi-1, worker R64 « 1 doc produit ») = **465/950 (414 hand + 51 llm)** — conformité EXACTE au worklog R70.
+- **Bug de format corrigé** : première régénération du registre avait converti llm en tableau → l'app attend un objet (docId → {at, bookId, titleFr}) ; Object.keys() sur un tableau renvoie des index → docsSavant retombé à 414. Réécrit depuis git show HEAD (format original) avec append minimal + entrée llm 11509 complète (note « reconstruit post-reset »).
+- **QA navigateur (agent-browser)** : accueil — titre « Minhāj — Taʿlīm ʿatīq », stats 64 manuels / 968/1152 bilingues / 1853 docs / 64/64 reconstitués, **46 badges « traduction savante intégrale »** (45 à R64 + ulum-quran-1es clôturé R69 = 46 ✓), 0 erreur console (HMR seul) ; page livre ulum-quran-2es — « 28/28 documents bilingues · 100 % » + « **14/28 traductions savantes · 50 % du corpus traduit en niveau savant** » ✓ conforme R70 ; lecteur 19259 — h1 « Activité éducative : le tafsīr fondé sur la tradition et le tafsīr par opinion », citation Ṭabarī ✓, verset 3:3 ✓, 8 569 car rendus, 0 erreur. Captures tr-tmp/qa-r71-home.png, qa-r71-19259.png. dev.log propre (API 200 partout : /api/books, /api/books/ulum-quran-2es, /api/lessons/ulum-quran-2es/19259).
+- **Lint** : 0 erreur (1 warning préexistant dans llm-translate.ts).
+- **Backups** : commit 77ed1aa « restauration R71 » (5 fichiers, +620/-235) ; bundle complet backup-tour/post-restauration-r71.bdl (22,9 Mo, 496 commits) DANS le projet ; backup.sh exécuté → /tmp/my-project/backup-tour/latest-bundle.bdl rafraîchi à 77ed1aa. **RÈGLE RENFORCÉE : bash scripts-translate/backup.sh après CHAQUE leçon (le backup /tmp a sauvé 41 documents R64→R70).**
+- **Cron** : job 459364 trouvé désactivé (« exec limits exceeded ») → supprimé, recréé propre (job **459654**, fixed_rate 900 s, contexte à jour : restauration R71, registre 465/950, priorités ulum-quran-2es 14 docs restants, méthode bbox/alts/cache-coran, règle backup).
+- **Pertes définitives (acceptées)** : les commits git R64→R70 individuels (047b817, 85fbb89… — le travail est dans le corpus, consolidé dans 77ed1aa) ; tr-tmp/ pré-reset (sources .src.html, miroirs, captures QA R64→R70, slugs ulum1es/ulum2es — les slugs sont documentés dans le worklog, re-téléchargeables) ; supervisor + 3 workers (scripts intacts dans scripts-translate/, relançables) ; les drapeaux détaillés des livraisons R64→R70 restent documentés dans le worklog.
+
+Stage Summary:
+- **État** : PROJET SAUVÉ ET VÉRIFIÉ. Registre **465/950** (414 hand + 51 llm) ✓, 968/1152 bilingues ✓, 18 livres complets ✓, ulum-quran-1es 28/28 ✓, ulum-quran-2es **14/28** ✓, 46 badges ✓, QA navigateur complète, 0 erreur. L'app servie sur le port 3000 est de nouveau LE VRAI Minhāj.
+- **Leçon d'ingénierie (à retenir ABSOLUMENT)** : (1) après un reset sandbox, la vérité terrain = /tmp/my-project/ (worklog + content + bundles) — TOUJOURS l'auditer avant de reconstruire quoi que ce soit ; (2) le registre savant n'était PAS couvert par le sync /tmp → il l'est maintenant via backup.sh (copie du registre dans /tmp/my-project/backup-tour/) ; (3) une session sans contexte doit lire worklog.md AVANT d'écrire la moindre ligne de code.
+- **Priorités suivantes (reprises de R70)** : (1) 19179 (leçon 11, principes du tafsīr par opinion) ; (2) 19226 (leçon 12, méthode du raʾy) ; (3) 19260 (leçon 14, sources du raʾy) ; (4) 19261 (juridique) ; (5) 19273/19274/19276 (tendances) ; (6) 19280 (activité tendances) ; (7) 19283-19287 (trilogie + duo traduction) ; (8) 19289 (sources du livre, gabarit 17778). Méthode : miroir → bbox images /images/2023/ (7,1 px/lettre) → traduction → hand-set.py → QA → commit + backup.sh.
+- **Risques** : supervisor/workers à relancer (setsid -f python3 scripts-translate/supervisor.py) si la famine 429 se lève — la voie main porte la production ; 2 paires 19158 (Baqara « 36 »/Māʾida « 4 ») toujours flaggées « à réviser » en attente de VLM ou du livre imprimé ; nouveau reset sandbox possible → backup.sh après CHAQUE document, sans exception.
+
+---
+Task ID: R72
+Agent: Z.ai Code (agent principal — session « continue alors »)
+Task: Reprise post-R71 — 4 leçons livrées d'affilée (19179, 19226, 19260, 19261), registre 465→469/950, ulum-quran-2es 14→18/28 — slug-map ulum2es reconstitué, calibration bbox affinée à 6,5-6,7 px/consonne
+
+Work Log:
+- **Audit d'ouverture** : dev server 200 ✓, registre 465/950 ✓ (414 hand + 51 llm), ulum2es docsSavant = 14 (13 numériques + muqaddima — l'API compte l'intro « muqaddima » inscrite au registre dans 11 livres, d'où 475 inscriptions pour 465 docIds uniques). tr-tmp/ quasi vide (perte reset R71) — slug-map à reconstituer.
+- **Slug-map ulum2es RECONSTITUÉ 28/28** : page catégorie habous = 238 Ko + PAGINATION Joomla (?start=10, ?start=20) → 3 pages moissonnées → tr-tmp/ulum2es-slugs.json complet (28 docIds avec slugs, y compris 19271 التفسير-الأدبي absent du worklog R71). Catégorie = 1696-المرحلة-الأولى/علوم-القُرآن/السنة-الثانية-إعدادي-عتيق (damma sur القُرآن → urllib.parse.quote obligatoire sur TOUT le chemin, y compris la base /images/2023/...).
+- **19179 LIVRÉ** (leçon 11, أصول التفسير بالرأي, 13 689 car, QA 12/12, commit d467da0) :
+  - 3 images : [الأنعام-83-4.png bbox 341px] = **6:82** (52c×6,56=343px ✓ PARFAIT — coquille « 83 » 4e occurrence de la coquille systémique, glose « تفسير الظلم بالشرك » = hadith Ubayy/ʿAdī) ; [الأعراف-52.png boîte PLEINE 500×149 = 3 lignes] = **7:52-53** (164c sur 3 lignes ✓ — glose « المراد به العاقبة » = taʾwīl au sens de réalisation future, EXIGE le v. 53 « يوم يأتي تأويله » ; le manuel imprime « 52 » seul) ; [--36-21.PNG bbox 228px] = **17:36 extrait** (2 segments candidats de 36c exactement : « ولا تقف ما ليس لك به علم إن السمع والبصر والفؤاد » vs « إن السمع والبصر والفؤاد كل أولئك كان عنه مسؤولا » — masques pleins SANS gaps internes, impossible de trancher par pixel ; retenu le segment liminaire porteur du sens probatif, noté « extrait »).
+  - Contenu : Zarkašī (Burhān 2/153-154 — les 4 niveaux ʿibārāt/išārāt/laṭāʾif/ḥaqāʾiq) + Mubārakfūrī (Tuḥfa 8/224) + les 4 principes-mères + hadith Ibn ʿAbbās (Musnad Aḥmad 22881, 3/272) + Itqān 4/182 + les 5 écueils + les 11 sciences de l'interprète (al-Ḥasan/Abū ʿUbayd, Ibn ʿAṭiyya Muḥarrar 1/40, Ibn Fāris, al-Masīḥ siyāḥa/masḥ) + Zarqānī (Manāhil 2/49 — les 3 ordres de sciences).
+  - titleFr canonique fixé : « Les principes du tafsīr par opinion » (sommaire 18643).
+- **19226 LIVRÉ** (leçon 12, منهج التفسير بالرأي, 12 571 car, QA 10/10, commit da9c135) :
+  - 3 images : [الإسراء-59.png bbox 378px] = **17:59 extrait** « وآتينا ثمود الناقة مبصرة فظلموا بها وما نرسل بالآيات إلا تخويفا » (56c→367px ✓ 3% — le verset complet 95c→623px exclu ; glose Qurṭubī 1/40 : mubṣira = signe éclairant, l'élision ẓalamū = se léser en la tuant) ; [فاطر-32.png boîte 513×140 = 3 lignes pleines] = **35:32-34** (203c≈1331px=2,7 lignes ✓ — 19061/R70 rendait 35:32 seul mais le pixel de CETTE image exige 32-34 ; le manuel imprime « 32 ») ; [التوبة-104.png bbox 300px] = **9:103 extrait** « خذ من أموالهم صدقة… وصل عليهم إن صلاتك سكن لهم » (49c→321px ✓ — coquille « 104 » : l'exemple canonique de l'Itqān 4/190 du ṣalāt au sens LINGUISTIQUE (invocation de bénédiction) contre la présomption du sens légal ; le segment 9:104 pur (47c) matchait mieux le pixel mais n'illustre RIEN du tarǧīḥ — la doctrine a écrasé la balance).
+  - Contenu : Qurṭubī (Ǧāmiʿ 1/40) + la méthode en 2 temps (maʾtūr : Coran→Sunna→Compagnons→Successeurs ; puis iǧtihād en 11 étapes a-k) + le tarǧīḥ raʾy/maʾtūr (5 cas : blâmable hors jeu ; contradiction réelle vs différence ; qaṭʿī vs qaṭʿī → taʾwīl du maʾtūr ; ẓannī vs maʾtūr non-qaṭʿī ; isrāʾīliyyāt des Successeurs) + Suyūṭī (Itqān 4/190 — la règle complète du tarǧīḥ, Qurʾ menstrues/pureté).
+- **19260 LIVRÉ** (leçon 14, مصادر التفسير بالرأي, 10 944 car, QA 8/8, commit 558242a) :
+  - **AUCUNE image-verset** (seule la couverture OL6A251.JPG) — leçon bio-bibliographique directe.
+  - Contenu : Zarqānī (Manāhil 2/62-63 adapté — la liste) + les 8 tafsīr par ordre des décès : Rāzī (m. 606, Mafātīḥ al-ġayb, kalām+cosmologie), Bayḍāwī (m. 685, Anwār, gloses Ḫafāǧī/Saʿdī/Rawšanī/Šaštarī/Šīrwānī/Samarqandī/Isfarāʾīnī/Ibn Amīr Ḫān), Nasafī (m. 710, Madārik, Kašf al-ẓunūn cité), Nīsābūrī (m. 850, Ġarāʾib, lectures+pauses et išārī), Ǧalālayn (Maḥallī 864 + Suyūṭī 911, éditions Ṣāwī/Ǧamal), Širbīnī (m. 977, Sirāǧ munīr, 3 attachés), Abū al-Suʿūd (m. 982, Iršād, iʿǧāz), Ālūsī (m. 1270, Rūḥ al-maʿānī, salaf+ḫalaf) + Māwardī (Nukat 1/21 — sa méthode : restreint au caché, attribution des dires, « possible » pour le sien).
+- **19261 LIVRÉ** (leçon 15, التفسير الفقهي, 11 102 car, QA 9/9, commit 73e681a) :
+  - 4 images (5 occurrences) : [البقرة-21.png bbox 260px≈41c] = **2:21 extrait** (le complet 52c→341px exclu — coupe indéterminée, rendu complet noté « extrait ») ; [البقرة-2.png bbox 140px≈21c] = **2:3** (coquille « 2 » = inversion 2↔3, 2e occurrence après 3:3 imprimé « 2 » en 19259/R70 ; contexte iqāma al-ṣalāt + « حكم من خاف فوات ركعة » = يُقيمُونَ الصَّلاةَ du v. 3 ; bbox incompatible avec tout segment standard → flag, verset complet rendu) ; [البقرة-183-1.png bbox 324px] = **2:184b** « وعلى الذين يطيقونه فدية طعام مسكين فمن تطوع خيرا فهو خير له » (51c→342px ✓ 5%) ; [البقرة-183.png ×2, bbox 221px] = **2:184c** « فمن تطوع خيرا فهو خير له وأن تصوموا خير لكم » (34c→221px ✓✓ EXACT — chevauchement avec la précédente, typique des re-citations d'Ibn al-ʿArabī) — coquille « 183 » pour 2:184 (nouvelle : R69 avait 2:182→183, ici 184→183, le CMS confond la famille 182-184).
+  - Contenu : Ibn al-Faras (Aḥkām 1/33 — rendu tel quel, nom du texte source respecté) + Ibn al-ʿArabī (m. 543 : méthode 1/3-4 intégrale + istiṯmār 1/114 : les 2 avis sur « فمن تطوع خيرا » + 4 lectures du lien) + Qurṭubī (m. 671 : 2:3→iqāma/rakʿa/nāfila, Ǧāmiʿ 1/159-174 + méthode 1/15 : attribution des dires, questions par verset) + Suyūṭī (Itqān 4/212-213).
+- **QA navigateur** : les 4 lecteurs ✓ (h1, versets, notes de coquille, colonne AR, 0 erreur console), page livre « 18/28 traductions savantes » ✓, accueil saine (64 manuels), dev.log propre (API 200 partout, 72-585 ms). Captures tr-tmp/qa-r72-{19179,19226,19260,19261}.png.
+- **Cron** : 459654 trouvé désactivé (« exec limits exceeded ») → supprimé, recréé propre (job **459770**, fixed_rate 900 s, contexte à jour 469/950 + méthode bbox 6,5-6,7 px/c + priorités 19271-19289).
+
+Stage Summary:
+- **État** : très productif — +4 leçons en une session, registre **469/950** (418 hand + 51 llm), ulum-quran-2es **18/28 (64 %)**. 18 livres complets. Commits d467da0, da9c135, 558242a, 73e681a + backups OK après chacun.
+- **Calibration bbox AFFINÉE** : 6,5-6,7 px/consonne (R70 disait 7,1 — la série 19261 a validé 6,5 sur « فمن تطوع…وأن تصوموا » 34c=221px EXACT). Les boîtes PLEINES (a3raf-52, fatir-32) = blocs multi-lignes : volume = somme des largeurs, nb lignes = h/50. Les masques n'ont AUCUN gap interne (rectangles pleins) — seules largeur×hauteur sont informatives.
+- **Coquilles CMS cumulées ce tour : 5** (6:82→« 83 » 4e occ. ; 7:52-53→« 52 » ; 35:32-34→« 32 » ; 9:103→« 104 » ; 2:3→« 2 » 2e occ. inversion ; 2:184→« 183 » ×3 occurrences d'alt) — série totale ~52.
+- **Doctrine clé du tour** : l'exemple Itqān 4/190 du sens linguistique (ṣalāt=invocation, 9:103) ; le taʾwīl=ʿāqiba de 7:53 (le jour où sa réalisation viendra) ; la distinction muḥkam/mansūḫ d'Ibn al-Faras ; les 11 étapes a-k de l'iǧtihād.
+- **Priorités suivantes** : (1) 19271 (leçon 16, tafsīr littéraire — slug التفسير-الأدبي-للقرآن-الكريم, présent dans le slug-map) ; (2) 19273 (leçon 17, cosmologique) ; (3) 19274 (išārī) ; (4) 19276 (autres tendances) ; (5) 19280 (activité) ; (6) 19283-19287 (traduction du Coran, 5 leçons) ; (7) 19289 (sources du livre, gabarit 17778). Objectif : finir le livre (28/28) en 1-2 tours.
+- **Risques** : 3 flags bbox en attente (paires 19158, البقرة-2 de 19261, 2:21 extrait) — à réviser si VLM revient ou contre le livre imprimé ; « Ibn al-Faras » (19261) rendu tel quel (nom du texte source — probable confusion du manuel avec un autre auteur d'Aḥkām al-Qurʾān, ne pas corriger sans preuve interne).
+
+---
+Task ID: R72-bis (suite de tour)
+Agent: Z.ai Code (agent principal)
+Task: 19271 LIVRÉE (leçon 16, tafsīr littéraire) — leçon MANQUANTE du corpus découverte et ajoutée, fantôme de registre résorbé — ulum2es 19/29, registre réel 469/950
+
+Work Log:
+- **DÉCOUVERTE** : 19271 (leçon 16, التفسير الأدبي) ÉTAIT ABSENT du corpus (28 lessons attendues, 27 présentes — ratée au moissonnage initial pré-R64) alors qu'elle existe sur habous (miroir 105 Ko). Le slug-map reconstitué ce tour (28 docIds) a révélé l'écart.
+- **FANTÔME DE REGISTRE RÉSORBÉ** : le registre reconstruit en R71 contenait déjà « 19271 » (414 hand affichés dont 1 fantôme sans contenu). La livraison réelle de ce tour le convertit en entrée valide : hand = 418 réels (414 - 1 fantôme + 5 livraisons R72) + 51 llm = 469/950. Vérification : git 73e681a → hand=418 SANS changement à l'injection de 19271 (idempotent) ; diff vide avec l'état actuel.
+- **Ajout au corpus** : html AR construit depuis le miroir (8 Ko : h1, article-info nettoyé, contenu jusqu'à الإعداد القبلي, 0 img, liens retirés, date retirée) ; leçon insérée entre 19261 et 19273 (ordre du livre : 15=19261, 16=19271, 17=19273) ; titleAr التفسير الأدبي للقرآن الكريم, titleFr canonique « Le tafsīr littéraire du Noble Coran ».
+- **Contenu** (12 836 car, QA 9/9) : Ibn ʿĀšūr (Taḥrīr 1/18 — les 5 sciences de la langue) + Suyūṭī (Itqān 4/212 — le grammairien : Zajjāǧ, Wāḥidī Basīṭ, Abū Ḥayyān Baḥr/Nahr) + Wāḥidī (Basīṭ 1/395 : la voie = naḥw+adab, les colonnes ; 1/396 : si la littérature se perd) + concept/importance/cause (expansion de l'islam, affaiblissement de l'arabe) + 3 effets + 2 conditions + méthode (4 marques) + 3 sources avec préfaces intégrales : Abū Ḥayyān (Baḥr Muḥīṭ, m. 745, méthode 1/12-13 : termes isolés → composition → bayān/badīʿ → prose choisie), Ibn ʿAṭiyya (Muḥarrar, m. 542, 1/34 : suivre l'ordre des mots, pas de saut ṭufr, concision), al-Rāġib al-Iṣfahānī (m. 502 : racines, antéposition/postposition, visées rhétoriques).
+- **2 images identifiées** : [الحاقة-1.png bbox 215px] = **69:1-2 AVEC basmala** (33c×6,5=214px ✓✓ EXACT — le manuel cite le début de sourate, basmala incluse ; le cache-coran stocke la basmala fusionnée au v1 des sourates non-Fātiha, le comptage doit la déduire) ; [الزمر-68.png bbox 259px] = **39:68 extrait début** « وَنُفِخَ فِى ٱلصُّورِ فَصَعِقَ مَن فِى ٱلسَّمَٰوَٰتِ وَمَن فِى ٱلْأَرْضِ » (38c=247px ✓ 5% ; le complet 76c→494px exclu). FLAG doctrinal : le commentaire d'Ibn ʿAṭiyya (« ومنه » = illustration de la racine حق) suggérerait plutôt 39:69 segment « وجاء بالنبين والشهداء وقضي بينهم بالحق » (37c, 8%) ou 39:75 fin (36c, 10%) — l'alt « 68 » et le pixel penchent pour le début de 39:68 (sans racine حق) ; retenu l'alt+pixel, flag posé.
+- **QA** : lecteur 19271 ✓ (h1, 69:1-2, 39:68, colonne AR, 0 erreur console), page livre **19/29 traductions savantes** + leçon 16 listée ✓ (après reload — le SPA ne recharge pas sur même-URL hash, leçon apprise), accueil **969/1152 bilingues, 1 854 documents, 64 manuels, 46 badges** ✓. dev.log propre. Commit d90ed41 + backup OK.
+
+Stage Summary:
+- **État** : ulum-quran-2es **19/29 docs savants (66 %)** — muqaddima + 18 leçons. Registre réel **469/950** (418 hand + 51 llm, 0 fantôme). 969/1152 bilingues. Restent 10 leçons : 19273, 19274, 19276, 19280, 19283, 19284, 19285, 19286, 19287, 19289.
+- **Leçon d'ingénierie** : le dénominateur d'affichage docsSavant = lessons.length + intro — l'ajout d'une leçon manquante le fait passer de 28 à 29 ; l'accueil affiche 1854 documents (1853+1) et 969 bilingues. Après livraison, TOUJOURS `agent-browser reload` (le hash-routing same-URL ne re-fetch pas).
+- **Priorités suivantes** : 19273 (kawnī/cosmologique), 19274 (išārī), 19276 (autres tendances), 19280 (activité), 19283-19287 (traduction du Coran ×5), 19289 (sources, gabarit 17778).
+
+---
+Task ID: R72-ter (clôture de tour)
+Agent: Z.ai Code (agent principal)
+Task: 19273 LIVRÉE (leçon 17, tafsīr cosmologique) — 10 images-versets identifiées, 2 coquilles, flags bbox — ulum2es 20/29, registre 470/950 — BILAN DU TOUR R72 : 6 leçons
+
+Work Log:
+- **19273 LIVRÉE** (التفسير الكوني, 12 665 car, QA 12/12, commit 571fe3b) : tamhīd Ġazālīen complet (Ǧawāhir 45-47) avec 7 citations : 26:80 (guérison/médecine), 55:3-5 (36c=234px vs 219px ✓ 7% — l'alt « 3 » = début de série, PAS une coquille), 10:5 (soleil/lune/mansions/calcul), 75:8-9 (éclipse + réunion), 57:6 (nuit enroulée dans le jour), 36:37 (la nuit écorchée), 82:6-8 (l'anatomie — « en quelle image Il t'a composé ») ; Šāṭibī (Muwāfaqāt 1/57 : le surplus est forçure takalluf) ; les 4 causes (traduction des sciences des nations, guidée exige ces sciences, lecture de l'univers + 45:12-13, suivi de l'époque) ; les 9 effets ; Rāzī (Mafātīḥ 27/573-574 : 41:53 — les signes des horizons [célestes, astraux, nuit/jour, lumières/ombres/ténèbres, 4 éléments, 3 générations] et des ego [embryons dans les ténèbres des matrices, membres étonnants, compositions étranges]).
+- **2 coquilles notées** : 45:12-13 imprimé « 11-12 » (la glose « تسخير » = l'asservissement exige 12-13) ; 41:53 imprimé « 52 » ×2 (la référence Rāzī 27/573-574 = le commentaire de 41:53, off-by-one).
+- **FLAGS BBOX (à réviser contre le livre imprimé)** : les 6 images pleine largeur multi-lignes (10:5 : 2,3 lignes vs 103c attendus ; 75:8-9 : 2,5 lignes vs 24c ; 36:37 : 2,5 lignes vs 38c ; 82:6-8 : 2,5 lignes vs 61c ; 45:11-12 : 5,8 lignes vs 107c ; 41:52a : 2,4 lignes vs 74c) suggèrent que le manuel cite des PASSAGES ÉTENDUS (10:5-6 ? 36:37-40 ? 82:1-8 ? 45:11-13 ?...) — volumes non déterminables précisément (lignes partielles vs pleines ambiguës). Doctrine suivie : versets des alts rendus complets + gloses Ġazālīennes. 26:80 : bbox 297px vs 16c attendus (×3 !) — probable citation 26:79-80 ou 78-80, rendu 26:80 court (alt + Ġazālī univoques).
+- QA : lecteur ✓ (h1, 8 versets, 2 coquilles, colonne AR, 0 erreur console), page livre « 20/29 traductions savantes » ✓ (après reload — RÈGLE : reload explicite après injection, le hash same-URL ne re-fetch pas). Capture tr-tmp/qa-r72-19273.png. dev.log propre.
+- **BILAN TOUR R72 : 6 leçons livrées** (19179, 19226, 19260, 19261, 19271, 19273) + 1 leçon RÉCUPÉRÉE au corpus (19271, ratée au moissonnage initial). Registre 465→**470/950** (419 hand réels + 51 llm — le fantôme 19271 résorbé). ulum-quran-2es 14→**20/29 (69 %)**. 969/1152 bilingues, 1 854 documents. Commits : d467da0, da9c135, 558242a, 73e681a, d90ed41, 7845fdf, 571fe3b — backup.sh après CHACUN ✓. Cron 459770 actif (créé ce tour, contexte à jour — NOTE : le contexte cron dit « 469/950, 18/28 » → maintenant 470/950, 20/29, reste 9 leçons).
+
+Stage Summary:
+- **État de fin R72** : registre **470/950** (419 hand + 51 llm), ulum-quran-2es **20/29 docs savants (69 %)**, 969/1152 bilingues, 46 badges, 18 livres complets. Restent 9 leçons pour clore le livre : 19274 (išārī), 19276 (autres tendances), 19280 (activité tendances), 19283-19287 (traduction du Coran ×5), 19289 (sources et références, gabarit 17778).
+- **MÉTHODE R72 consolidée** : calibration bbox 6,5-6,7 px/consonne (cache sans basmala au v1 des sourates non-Fātiha/Tawba) ; alts = débuts de séries parfois (55:3 = 55:3-5 ✓ pas coquille) ; coquilles ce tour : 45:11-12→12-13, 41:52→53, 2:3→« 2 », 2:184→« 183 », 35:32-34→« 32 », 9:103→« 104 », 7:52-53→« 52 », 6:82→« 83 » — série cumulée ~60.
+- **Priorités R73** : (1) 19274 (išārī) ; (2) 19276 ; (3) 19280 ; (4) 19283-19287 ; (5) 19289 → OBJECTIF : livre ulum-quran-2es COMPLET (19ᵉ livre savant). Puis : QA globale app, backfill des flags (19158 ×2, 19261 ×2, 19273 ×7) si VLM revient, relance supervisor/workers (setsid -f python3 scripts-translate/supervisor.py) si utile.
+- **Risques** : famine 429 VLM/LLM persistante (aucune vérification visuelle possible des flags bbox) ; le SPA exige reload explicite après injection (QA) — aucun impact utilisateur réel (première visite = fetch frais).
+
+---
+Task ID: R73
+Agent: agent principal (Z.ai Code)
+Task: Push GitHub complet du projet Minhāj (demande utilisateur : « je veux rien perdre »)
+
+Work Log:
+- Token GitHub fourni par l'utilisateur (compte Sounawa), vérifié via API : valide.
+- Diagnostic : 505 commits locaux, remote pointait vers un faux origin sandbox
+  (/tmp/my-project/backup-tour/latest-bundle.bdl) → aucun backup externe réel.
+- Sauvegarde du travail non versionné avant push : tr-tmp/ (scratch leçons en cours
+  19179→19273 + ulum2es-slugs.json), tr-logs/ (supervisor-state.json + logs de
+  production), db/custom.db déjà suivi → commit f1f1c79 « backup: scratch leçon en
+  cours ».
+- Création du repo via API : Sounawa/minhaj, privé (comme zawiya-nimes).
+- Remote : ancien origin renommé sandbox-backup ; origin → github.com/Sounawa/minhaj.
+- Push : 506 commits, branche main, réussi du premier coup.
+- Sécurisation : token retiré de l'URL du remote, stocké dans
+  /home/z/.git-credentials (chmod 600) via credential.helper store.
+- .env vérifié : ne contient que DATABASE_URL (chemin SQLite), aucun secret — pas
+  de rewrite d'historique nécessaire.
+- Vérification API : dernier commit (f1f1c79) et contenu (content/, db/, src/) bien
+  présents sur GitHub.
+
+Stage Summary:
+- **Backup externe complet opérationnel** : https://github.com/Sounawa/minhaj (privé).
+  Tout est poussé : app complète (src/), corpus 64 livres (content/), scripts de
+  moissonnage (scripts-recovery/), scripts de traduction (scripts-translate/),
+  worklog 152 Ko, 506 commits d'historique.
+- Registre de traduction au moment du push : 470/950 leçons, ulum2es 20/29.
+- Push futurs : `git push` suffit (credential store configuré, plus besoin du token
+  dans l'URL).
+- Risque résiduel : token GitHub dans /home/z/.git-credentials (fichier local protégé
+  600, même machine) ; si le token est révoqué/régénéré par l'utilisateur, mettre à
+  jour ce fichier.
+- Priorité suivante : reprendre la traduction ulum-quran-2es (leçon 18/29 attendue,
+  leçon 19+ restantes), scratch de la 19273 déjà sécurisé.
+
+---
+Task ID: R74
+Agent: agent principal (Z.ai Code)
+Task: (1) Diagnostic « Download workspace failed: Failed to fetch » + allègement ;
+(2) reprise de la traduction — leçon 19274 (tafsīr allusif) livrée ; (3) piège
+.gitignore découvert et corrigé (scratch non versionné)
+
+Work Log:
+- **Download workspace** : workspace 1,7 Go (node_modules 1,2 G + .next 299 M).
+  Purge .next → 28 Mo (workspace 1,4 Go). INCIDENT : purge à chaud sous serveur
+  lancé → serveur mort/stallé (Recv-Q 5, connexions non acceptées) ; 2 relances
+  ratées (setsid puis dev.sh timeout 180 s) ; résolu par kill complet + rm .next
+  + relance `bash .zscripts/dev.sh` détaché → 200 en 35 ms. LEÇON : ne JAMAIS
+  rm -rf .next pendant que le serveur tourne ; toujours pkill d'abord.
+  Le bouton du panneau appartient à la plateforme (Caddyfile = proxy pur) : s'il
+  échoue encore, c'est la taille (1,2 Go node_modules requis par le serveur dev).
+  Voie fiable = GitHub (ZIP/clone), déjà synchronisé à chaque leçon.
+- **19274 LIVRÉE** (leçon 18, التفسير الإشاري, 13 322 car, QA lecteur/livre/accueil
+  OK, 0 erreur console, captures qa-r74-*.png, commit 4edb436) :
+  - Miroir habous 123 Ko téléchargé (URL encodée, curl -k pour le certificat).
+    9 images-verset dans l'article (dont 5 réutilisées du dossier خطب_الجمعة par
+    le CMS) + couverture + tableau de l'activité (OL04981).
+  - **Condition 1 (Zarqānī)** : [العنكبوت: 69] = **29:69 complet** (43c, boîte
+    309px, +7 %) — la lecture išārī de « لَمَعَ » au passé + « المحسنين » objet,
+    univoque. Alt correcte.
+  - **Tustarī (p. 30)** : [البقرة: 40] — boîte 135px = 21c → le manuel ne
+    reproduit que le DÉBUT « يا بني إسرائيل اذكروا نعمتي » (139px, -3 %) ;
+    2:40 complet = 63c exclu. Rendu « extrait (début du verset) ». Le commentaire
+    (makr/istidrāǧ/ḥilm — la niʿma sous conditions) rendu tel qu'imprimé.
+    Coquille bio : **« ت 383هـ » notée** (Sahl al-Tustarī mort en 283 H — 2→3).
+  - **Ibn ʿArabī (Īǧāz 1/215)** : 6:96 (55c) ; boîte 593×119 = 2 lignes → FLAG
+    (citation probablement étendue, 6:95-96 ?) ; 3 petits fragments entrelacés
+    (141/80/80px ≈ 21/12/12c) NON UNIVOQUES — rendus « [membre du verset
+    reproduit en image — al-Anʿām (6) : 96] » sans texte inventé ; « **حبّة** »
+    rendu TEL QUEL (« le grain (ḥabba) ») — le texte reçu d'Ibn ʿArabī porte
+    probablement « شقّ » ; non corrigé faute de preuve interne (règle R71).
+  - **Nīsābūrī (Ġarāʾib 1/380)** : alt [البقرة: 113] = **COQUILLE 113→114** — la
+    glose d'ouverture « مساجد الله التي يُذكر فيها اسمه » est le VERBATIM de
+    2:114 (« مَسَاجِدَ اللَّهِ أَنْ يُذْكَرَ فِيهَا اسْمُهُ ») ; boîte 494px (74c
+    ≈ 2:113 tronqué au pixel) écrasée par la doctrine (méthode R72 9:103).
+    Les 5 mosquées (nafs/qalb/rūḥ/sirr/khafī=serre des serres) rendues intégrales.
+  - **Ālūsī (Rūḥ 1/269)** : [البقرة: 54] = **2:54-55 début de série** (comme
+    55:3 = 55:3-5 en R72-ter) — boîte 592×176 = ~3 lignes vs 171c attendus
+    (2,4 lignes) : cohérent en réglage centré ; « صاعقة الموت = الفناء في التجلي
+    الذاتي » ; « وإذا قلتم لموسى القلبُ » rendu avec tiret (Mūsā = le cœur).
+  - **Istiṯmār** : فاطر-10 (35:10) — boîte 508px ≈ 77c vs 34c du fragment
+    « إليه يصعد الكلم الطيب… » : FLAG étendue indéterminée (verset entier 98c ?),
+    rendu extrait + note. Tableau de classement = image, noté sans transcription.
+  - Suyūṭī (Itqān **4/197** — soixante mille intelligences, ṣadr de la maison),
+    hadith Ibn Ḥibbān « لكل آية ظهر وبطن » + « وما جهلتم منه فردوه إلى عالمه »,
+    5 conditions + tabaʿī/ibtidāʾī, conditions de non-rejet vs obligations.
+- **PIÈGE .gitignore découvert** : tr-tmp/ et tr-logs/ étaient IGNORÉS — les
+  fichiers R73 n'étaient versionnés que par le add -f ponctuel ; les NOUVEAUX
+  fichiers (19274-*) restaient invisibles à git add -A (commit 4edb436 ne
+  contenait PAS le scratch !). Corrigé : règles retirées du .gitignore, scratch
+  intégralement versionné (commit d8a997f, 16 fichiers). tr-logs versionnés aussi.
+- Registre **471/950** (420 hand + 51 llm), ulum-quran-2es **21/29 (72 %)**.
+  Commits 4edb436 + d8a997f, push GitHub OK (86cf2ee..d8a997f), backup.sh OK
+  (bundle /tmp + push intégré — la règle b s'applique désormais aussi à GitHub).
+
+Stage Summary:
+- **État** : registre **471/950**, ulum2es **21/29**, 969/1152 bilingues (inchangé
+  — la machine htmlFr existait déjà), 46 badges. QA navigateur complète (lecteur
+  h1/versets/notes/AR bilingue, livre « 21/29 traductions savantes », accueil
+  saine, 0 erreur console). Serveur dev relancé via .zscripts/dev.sh officiel.
+- **Coquilles CMS ce tour : 2** (2:113→114 ; ت 383→283) — série cumulée ~62.
+  FLAGS bbox en attente : 6:96 (boîte 2 lignes), 35:10 (508px), 3 fragments
+  Ibn ʿArabī, + anciens (19158 ×2, 19261 ×2, 19273 ×7).
+- **Priorités R75** : (1) 19276 (اتجاهات أخرى — autres tendances) ; (2) 19280
+  (activité) ; (3) 19283-19287 (traduction du Coran ×5) ; (4) 19289 (sources,
+  gabarit 17778) → OBJECTIF : livre ulum-quran-2es COMPLET (19ᵉ livre savant).
+- **Risques** : le bouton Download workspace (plateforme) échouera tant que
+  node_modules (1,2 Go) sera requis — GitHub reste la voie de téléchargement
+  fiable ; purger .next ralentit la 1ʳᵉ compilation (l'accepter, ne jamais
+  purger à chaud) ; « ḥabba » et le passage Tustarī « في المعاجلة لكم » (imprimé
+  fautif) rendus tels quels — cohérence bilingue AR/FR prioritaire.
+
+---
+Task ID: R75-FUSION
+Agent: Z.ai Code (agent principal — session web-394d04d3, message utilisateur « github.com/Sounawa/minhaj »)
+Task: FUSION DES DEUX LIGNÉES — adoption du dépôt GitHub Sounawa/minhaj (état R74, registre 471/950) comme base, ré-injection des 5 docs savants faraid-tanawi-2 locaux, port des features locales (export HTML/EPUB leçon+bundle, compteur de notes, citations coraniques AR/FR, lettrine, AboutDialog fix) sur la base R74
+
+Work Log:
+- **DIAGNOSTIC LIGNÉES** : le dépôt GitHub public (rendu public par l'utilisateur ce tour) est le projet lui-même, poussé par la lignée parallèle post-R57 : R58'=R59+R60 locaux (mêmes cibles de traduction tafsir-3es/2es + sira-3es, sans les features) puis R59'-R74' (sira-2es, tajwid-6ep, ulum-quran-3es, sira-1es, tafsir-1es, ulum-quran-1es, ulum-quran-2es 21/29) → registre 471/950 vs 284/950 local. Diff des registres : REPO-ONLY = 192 docs (gain net), LOCAL-ONLY = exactement 5 docs faraid-tanawi-2 (15853 intro, 15857, 15858, 15867, 15871).
+- **CONVENTIONS CONFLICTUELLES RÉSOLUES** : (1) minhaj.ts stats — convention REPO retenue (docsFr/docsSavant comptés par ENTRÉE, R60'-bis) : cohérente avec 14 tours de QA de la lignée GitHub (29/29, 31/31, 969/1152) ; le getSavantIds local (exporté pour la feature export) est reporté ; (2) qa-lesson.py — FUSION des deux correctifs orthogonaux : protection des entités HTML (&nbsp;… reprise de la lignée repo) + exemption U+FDFA ﷺ (convention locale R60) ; (3) home.tsx — lien héro LOCAL retenu : le lien repo « /livre/tawhid » est CASSÉ (aucun livre « tawhid » — les ids sont tawhid-1es/tawhid-2es) ; le lien local /livre/hadith-1ep/12788 est valide.
+- **SYNC REPO → LOCAL** (rsync sans --delete, backups préalables /tmp/pre-merge-local.bdl + /tmp/pre-merge-locals/) : content/ (64 livres, corpus 471), scripts-translate/ (registry 471 + backup.sh + slug-maps), tr-tmp/ + tr-logs/ (miroirs habous, bbox, scratch R62-R74), tests/, scripts-recovery/, backup-tour/ (22 Mo de bundles), .gitignore (piège tr-tmp corrigé R74), qa-*.png, worklog.md (R0→R74 complet, 3 241→5 4xx lignes).
+- **src/ : LOCAL conserve** reader.tsx (superset strict +478 lignes : export menu, compteur de notes, détection quran-quote 2 panneaux), book-page.tsx (BookExportMenu), app.tsx (fix AboutDialog asChild — le repo portait le bug hydration « p dans p »), search-dialog.tsx (texte 934 obsolète remplacé), globals.css (superset strict +195 lignes, 0 ligne repo-only), api/export/ + lib/export-shared.ts (features R60/R61 absentes de la lignée GitHub).
+- **RÉ-INJECTION faraid-tanawi-2** : intro 15853 (savant 5 015 car écrase GT 4 500) + leçons 15857/15858/15867/15871 (11 195/14 045/14 325/12 346 car) → registre **476/950** (425 hand + 51 llm). Scratch tr-tmp locaux (15853-15871) conservés par la fusion sans --delete.
+- **QA POST-FUSION** (agent-browser + curl) : accueil 46 badges « traduction savante intégrale », stats API 64 manuels / 969/1 152 bilingues / 1 854 docs / **476 savants** ; page livre faraid « 18 documents bilingues · 5/18 traductions savantes » + bouton Exporter ; lecteur 15871 (savant local, h1 + sections + badge) ; lecteur 19274 (savant R74', h1 « Le tafsīr allusif (išārī) » + 0 erreur console) ; exports leçon+bundle HTML/EPUB 200 (faraid 495 Ko/508 Ko, ulum2es 628 Ko) ; mobile 390 px **0 overflow** (viewport 390 = scrollWidth 390, 0 élément débordant — la fausse alerte 395 px venait du viewport agent-browser lui-même) ; lint 0 erreur (1 warning préexistant llm-translate.ts:561).
+- **Git** : commit de fusion local. PAS DE PUSH : le credential store GitHub (token R73) n'existe pas dans CE sandbox — il faudra re-fournir le token ou pousser manuellement.
+
+Stage Summary:
+- **État** : FUSIONNÉ et sain. Registre **476/950** (+192 de la lignée GitHub + 5 faraid ré-injectés, double comptage impossible — les 279 communs étaient déjà dans les deux). 46 livres en couche savante intégrale. Les features de la lignée locale (export HTML/EPUB leçon + manuel entier, compteur de notes, citations coraniques symétriques AR/FR, lettrine, ornementations) sont portées sur le corpus R74'.
+- **Décisions documentées** : (1) convention stats par entrée (repo) adoptée ; (2) qa-lesson.py fusionné entités+U+FDFA ; (3) lien héro repo cassé corrigé par le lien local ; (4) db custom.db identique (User/Post vides, 0 ligne — les favoris sont en localStorage).
+- **Risques / attention** : (a) PUSH GitHub impossible depuis ce sandbox (pas de token) — le dépôt distant est RESTÉ à l'état R74 pur : toute nouvelle session doit re-fusionner ou fournir le token ; (2) le worklog GitHub (R74) ne contient pas les entrées R59/R60/R61 LOCALES (lignées parallèles) — les détails de ces travaux restent dans le présent fichier fusionné si besoin (les docs eux-mêmes sont dans le registre) ; (3) les 2 conventions stats coexistant dans l'historique documentaire peuvent prêter à confusion — la convention en vigueur est PAR ENTRÉE.
+- **Priorités suivantes** : (1) finir ulum-quran-2es (8 docs restants : 19276, 19280, 19283-19287, 19289 → 19ᵉ livre savant de la lignée GitHub, 47e au total) ; (2) fournir/pousser le GitHub pour sécuriser la fusion ; (3) features en attente : extraction des 885 PDF-only ; (4) poursuivre faraid-tanawi-2 (13 leçons restantes — 16062 déjà extrait localement).

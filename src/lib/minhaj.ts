@@ -242,14 +242,12 @@ function summarize(
   const hasIntro = Boolean(file?.intro);
   const introFr = Boolean(file?.intro?.htmlFr && file.intro.htmlFr.trim().length > 0);
   // Couche savante : docIds du registre disposant d'un FR réellement écrit.
+  // Comptage par entrée (même base que docsFr) : les docIds partagés
+  // intro/leçon comptent chacun, sinon le badge ne peut atteindre docsFr.
   const docs = file
     ? ([file.intro, ...(file.lessons ?? [])].filter(Boolean) as Array<{ docId: string; htmlFr?: string }>)
     : [];
-  const savantDocs = savantIds ? new Set(docs.filter((d) => savantIds.has(d.docId) && (d.htmlFr ?? "").trim().length > 0).map((d) => d.docId)) : new Set<string>();
-  // Déduplication par docId : 6 livres partagent le docId de l'intro avec une
-  // leçon — sinon docsFr (occurrences) dépasse docsSavant (unicité) et le
-  // badge « savante intégrale » ne peut jamais s'afficher pour ces livres.
-  const frDocIds = new Set(docs.filter((d) => (d.htmlFr ?? "").trim().length > 0).map((d) => d.docId));
+  const savantDocs = savantIds ? docs.filter((d) => savantIds.has(d.docId) && (d.htmlFr ?? "").trim().length > 0) : [];
   return {
     id: bookDef.id,
     subject: bookDef.subject,
@@ -266,8 +264,8 @@ function summarize(
     lessonsTotal,
     lessonsFr,
     docsTotal: lessonsTotal + (hasIntro ? 1 : 0),
-    docsFr: frDocIds.size,
-    docsSavant: savantDocs.size,
+    docsFr: lessonsFr + (introFr ? 1 : 0),
+    docsSavant: savantDocs.length,
   };
 }
 
@@ -609,5 +607,3 @@ export async function getDoc(bookId: string, docId: string): Promise<DocPayload 
     next: nav(next),
   };
 }
-
-// trigger: export bundle R61

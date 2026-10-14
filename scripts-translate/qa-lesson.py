@@ -32,6 +32,14 @@ PAIRED = {"h1", "h2", "h3", "h4", "h5", "p", "dl", "dt", "dd", "ul", "ol", "li",
 
 
 def fix_text(t: str) -> str:
+    # protéger les entités HTML (&nbsp; &amp; &#8230; …) avant toute transformation
+    entities: list = []
+
+    def _protect(m):
+        entities.append(m.group(0))
+        return f"\x00{len(entities) - 1}\x00"
+
+    t = re.sub(r"&[a-zA-Z]+;|&#\d+;", _protect, t)
     # apostrophe droite -> typographique
     t = t.replace("'", "\u2019")
     # espace (y compris NBSP existant) avant ; : ! ? » -> NNBSP
@@ -40,6 +48,8 @@ def fix_text(t: str) -> str:
     t = re.sub(r"«[ \u00a0\u202f]*", "«" + NB, t)
     # doubles espaces -> simple
     t = re.sub(r" {2,}", " ", t)
+    # restaurer les entités protégées
+    t = re.sub(r"\x00(\d+)\x00", lambda m: entities[int(m.group(1))], t)
     return t
 
 
