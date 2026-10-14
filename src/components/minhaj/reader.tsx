@@ -1393,10 +1393,10 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
         <Button
           variant="ghost"
           size="sm"
-          className="max-w-[14rem] gap-2 truncate text-muted-foreground hover:text-foreground"
+          className="max-w-[14rem] gap-2 overflow-hidden text-muted-foreground hover:text-foreground"
           onClick={() => navigate(`/livre/${bookId}`)}
         >
-          {data.bookTitleFr}
+          <span className="truncate">{data.bookTitleFr}</span>
         </Button>
       </nav>
 

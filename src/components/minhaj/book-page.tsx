@@ -99,10 +99,10 @@ function LessonRow({
             <Badge
               variant="outline"
               className="gap-1 rounded-full border-amber-700/30 bg-amber-100/70 text-[10px] text-amber-900 dark:border-amber-300/20 dark:bg-amber-900/40 dark:text-amber-100"
-              title="Texte publié par le Ministère au format PDF officiel"
+              title="Texte publié par le Ministère au format PDF officiel — extraction du texte arabe par OCR disponible dans la leçon"
             >
               <FileText className="size-3" aria-hidden="true" />
-              PDF
+              PDF · OCR
             </Badge>
           ) : lesson.hasFr ? (
             <Badge className="gap-1 rounded-full bg-gradient-to-br from-amber-600 to-orange-800 text-[10px] text-amber-50 shadow-sm">
