@@ -331,6 +331,38 @@
 .lesson-content ul > li.li-num + li.li-num {
   margin-block-start: 0.55em;
 }
+/* Glossaires (Explication lexicale / الشرح) — convention « terme : définition » :
+   sans puce, retrait léger, termes déjà colorés par .lesson-content em ;
+   filet discret entre entrées multiples pour le balayage visuel. */
+.lesson-content ul.lexique {
+  padding-inline-start: 0.9em;
+  margin-block: 0.6em;
+}
+.lesson-content ul.lexique > li {
+  list-style: none;
+  padding-inline-start: 0;
+  margin-block: 0.32em;
+  line-height: 1.62;
+}
+.lesson-content ul.lexique > li::before {
+  content: "";
+  display: inline-block;
+  inline-size: 0.5em;
+  block-size: 0.5em;
+  margin-inline-end: 0.55em;
+  vertical-align: 0.08em;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--primary) 45%, transparent);
+}
+.lesson-content ul.lexique > li + li {
+  border-block-start: 1px dotted color-mix(in oklab, var(--primary) 18%, transparent);
+  padding-block-start: 0.42em;
+}
+@media print {
+  .lesson-content ul.lexique > li::before {
+    background: #8a7a4a;
+  }
+}
 .lesson-content a {
   color: var(--primary);
   text-decoration: underline;

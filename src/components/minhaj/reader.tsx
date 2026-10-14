@@ -1221,6 +1221,23 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
       const head = (li.childNodes[0] as Text | undefined)?.nodeValue ?? "";
       if (/^\s*\d{1,2}\s*[.)\u202f\u00a0]/.test(head)) li.classList.add("li-num");
     });
+    // Glossaires (Explication lexicale / الشرح) : la liste qui suit le h3 est
+    // marquée .lexique — mise en forme « terme : définition » sans puce, avec
+    // retrait de définition (termes déjà colorés par .lesson-content em).
+    // NB : \b est une frontière ASCII (les lettres arabes ne sont pas \w) —
+    // la branche arabe n'en emploie donc pas.
+    const H3_LEX = /^(?:L['\u2019])?Explication lexicale\b|الشرح/i;
+    document.querySelectorAll<HTMLElement>(".lesson-content h3").forEach((h) => {
+      const t = (h.textContent ?? "").trim();
+      if (!H3_LEX.test(t) || t.length > 40) return;
+      let sib = h.nextElementSibling as HTMLElement | null;
+      while (sib && sib.tagName !== "H2" && sib.tagName !== "H3") {
+        if (sib.tagName === "UL" && !sib.classList.contains("lexique")) {
+          sib.classList.add("lexique");
+        }
+        sib = sib.nextElementSibling as HTMLElement | null;
+      }
+    });
     // Compteur pour le bouton de parcours des citations (en-tête du lecteur).
     // Mesure DIFFÉRÉE (requestAnimationFrame) : le marquage des classes vient
     // d'être appliqué au DOM — on mesure après le rendu, sans setState
