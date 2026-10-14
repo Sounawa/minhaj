@@ -1,12 +1,19 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
-import { ArrowLeft, ArrowRight, BookMarked, BookmarkCheck, Check, ChevronLeft, ChevronRight, Clock3, Columns2, Download, Eraser, ExternalLink, FileQuestion, FileText, Headphones, Heart, Highlighter, Hourglass, Languages, ListTree, Loader2, Pause, Play, Printer, Quote, ScanText, Square, StickyNote } from "lucide-react";
+import { ArrowLeft, ArrowRight, BookMarked, BookmarkCheck, Check, ChevronLeft, ChevronRight, Clock3, Columns2, Download, Eraser, ExternalLink, FileQuestion, FileText, Headphones, Heart, Highlighter, Hourglass, Languages, ListTree, Loader2, Pause, Play, Printer, Quote, ScanText, Sigma, Square, StickyNote } from "lucide-react";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { getReadPos, navigate, setLastDoc, setReadPos, useDoc, useFavorites, useHighlights, useLocalState, useNote } from "./hooks";
 import { useToast } from "@/hooks/use-toast";
 import type { HlPane } from "./hooks";
@@ -478,6 +485,69 @@ function OutlineButton({ items }: { items: OutlineItem[] }) {
  *  savantes les restituent entre crochets avec référence. Encadrement ambre
  *  discret (voir .verse-note dans globals.css) + copie au clic. */
 const VERSE_NOTE_RE = /\[(?:verset|tableau|schéma|carte)\b[^\]]{3,700}\]/g;
+
+/** Tableaux de répartition (dāʾira) : données structurées des chips
+ *  [tableau…] « Base de la question : N. Héritier : part (n) ; … » —
+ *  cliquer sur la chip ouvre un dialogue avec la table rendue et des barres
+ *  proportionnelles (les parts n / somme). Les héritiers sans (n) —
+ *  empêchés — forment des lignes grisées. Tolérant : toute ligne non
+ *  reconnue est simplement ignorée. */
+type DairaRow = { label: string; share: string; parts: number | null; note: string };
+type DairaData = { raw: string; base: string | null; rows: DairaRow[]; total: number };
+export function parseDairaNote(text: string): DairaData | null {
+  const raw = text.trim().replace(/^\[|\]$/g, "");
+  if (!/^(?:tableau|schéma|carte)\b/.test(raw)) return null;
+  const inner = raw.replace(/^[^«]*«\s*/, "").replace(/\s*»\s*$/, "");
+  let base: string | null = null;
+  let rowsText = inner;
+  const bm = inner.match(/Base de la question\s*:([^.]*)\./);
+  if (bm && bm.index !== undefined) {
+    base = bm[1].trim().replace(/[«»]\s*$/, "");
+    rowsText = inner.slice(bm.index + bm[0].length);
+  }
+  const rows: DairaRow[] = [];
+  // Nettoyage des notes : séparateurs résiduels (tiret, virgule) de tête.
+  const cleanNote = (s: string) => s.replace(/^[,;:\s]*[—–-]\s*/, "").replace(/^,?\s*/, "").trim();
+  const push = (label: string, share: string, parts: number | null, note: string) =>
+    rows.push({ label: label.trim(), share: share.trim(), parts, note: cleanNote(note) });
+  for (const seg of rowsText.split(/\s*;\s*/)) {
+    const s = seg.replace(/^[-–—\s]+/, "").replace(/[.«»]+$/, "").trim();
+    if (!s) continue;
+    // Convention du corpus : « héritier : la part (n), note » — et la
+    // variante ancienne « (n parts) ».
+    let m = s.match(/^(.+?)\s*:\s*(.+?)\s*\((\d+)(?:\s+parts?)?\)\s*[,.]?\s*(.*)$/);
+    if (m) {
+      push(m[1], m[2], parseInt(m[3], 10), m[4]);
+      continue;
+    }
+    // « héritier : N parts, note » (nombre devant — 16063 et 16088).
+    m = s.match(/^(.+?)\s*:\s*(\d+)\s+parts?\b\s*[,.]?\s*(.*)$/);
+    if (m) {
+      push(m[1], "", parseInt(m[2], 10), m[3]);
+      continue;
+    }
+    // « héritier : N — note » (nombre nu — égalités de muqāsama).
+    m = s.match(/^(.+?)\s*:\s*(\d+)\s*(?:[—–-]\s*(.*))?$/);
+    if (m) {
+      push(m[1], "", parseInt(m[2], 10), m[3] ?? "");
+      continue;
+    }
+    // Ligne sans deux-points mais avec quantité (ancien format 16063) :
+    // « Deux tiers (2 parts) aux deux ayantes droit ».
+    m = s.match(/^(.+?)\s*\((\d+)(?:\s+parts?)?\)\s*[,.]?\s*(.*)$/);
+    if (m) {
+      push(m[1], m[3], parseInt(m[2], 10), "");
+      continue;
+    }
+    // Héritier empêché : « X : empêché (ḥajb-abolition) par … ».
+    const e = s.match(/^(.+?)\s*:\s*(.+)$/);
+    if (e) push(e[1], e[2], null, "");
+  }
+  if (rows.length === 0) return null;
+  const total = rows.reduce((a, r) => a + (r.parts ?? 0), 0);
+  return { raw, base, rows, total };
+}
+
 function styleVerseNotes(root: ParentNode) {
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
   const targets: { node: Text; matches: RegExpMatchArray[] }[] = [];
@@ -496,8 +566,15 @@ function styleVerseNotes(root: ParentNode) {
     for (const m of matches.slice().reverse()) {
       try {
         const span = document.createElement("span");
-        span.className = "verse-note";
-        span.title = "Verset restauré d'après le manuel officiel — cliquer pour copier";
+        // Variante dāʾira : les [tableau de répartition…] ouvrent un dialogue
+        // de table rendue ; les [verset…] restent copie au clic.
+        const isDaira = /^\[(?:tableau|schéma|carte)\b/.test(m[0]);
+        span.className = isDaira ? "verse-note verse-note--daira" : "verse-note";
+        span.title = isDaira
+          ? "Tableau de répartition (dāʾira) — cliquer pour ouvrir"
+          : "Verset restauré d'après le manuel officiel — cliquer pour copier";
+        span.setAttribute("role", "button");
+        span.tabIndex = 0;
         const range = document.createRange();
         range.setStart(node, m.index ?? 0);
         range.setEnd(node, (m.index ?? 0) + m[0].length);
@@ -1022,6 +1099,96 @@ function DocNav({ doc }: { doc: DocPayload }) {
   );
 }
 
+/** Dialogue du tableau de répartition (dāʾira) : les chips [tableau…] du
+ *  corpus savant s'ouvrent au clic en table rendue — héritier / part /
+ *  parts — avec barres proportionnelles à la masse (n / somme des parts).
+ *  Les héritiers empêchés (sans quantité) forment des lignes grisées.
+ *  Bouton de copie de la note brute ; Échap ferme (Radix). */
+function DairaDialog({ data, onClose }: { data: DairaData; onClose: () => void }) {
+  const { toast } = useToast();
+  const copy = () => {
+    if (!navigator.clipboard?.writeText) return;
+    navigator.clipboard.writeText(`[${data.raw}]`).then(
+      () =>
+        toast({
+          title: "Note copiée",
+          description: "La répartition est dans le presse-papiers.",
+        }),
+      () => undefined,
+    );
+  };
+  return (
+    <Dialog
+      open
+      onOpenChange={(o) => {
+        if (!o) onClose();
+      }}
+    >
+      <DialogContent className="max-h-[85vh] overflow-y-auto sm:max-w-lg">
+        <DialogHeader>
+          <DialogTitle className="flex items-center gap-2 font-serif">
+            <Sigma className="size-4.5 text-amber-700 dark:text-amber-300" aria-hidden="true" />
+            Tableau de répartition (dāʾira)
+          </DialogTitle>
+          <DialogDescription>
+            {data.base ? (
+              <>
+                Base de la question&nbsp;: <strong>{data.base}</strong>.
+              </>
+            ) : (
+              "Répartition de la masse successorale."
+            )}
+            {data.total > 0 ? <> Somme des parts&nbsp;: {data.total}.</> : null}
+          </DialogDescription>
+        </DialogHeader>
+        <table className="daira-table">
+          <thead>
+            <tr>
+              <th scope="col">Héritier</th>
+              <th scope="col">Part</th>
+              <th scope="col" className="daira-col-n">
+                Parts
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.rows.map((r, i) => (
+              <tr key={i} className={r.parts == null ? "daira-excl" : undefined}>
+                <td>{r.label}</td>
+                <td>
+                  {r.share || (r.parts != null ? `${r.parts} part${r.parts > 1 ? "s" : ""}` : "")}
+                  {r.note ? <span className="daira-note"> — {r.note}</span> : null}
+                </td>
+                <td className="daira-col-n">
+                  {r.parts == null ? (
+                    "—"
+                  ) : (
+                    <span className="daira-bar" aria-hidden="true">
+                      <span className="daira-fill" style={{ width: `${Math.max(3, Math.round((r.parts / Math.max(1, data.total)) * 100))}%` }} />
+                    </span>
+                  )}
+                  {r.parts == null ? "" : <span className="daira-num">{r.parts}</span>}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <div className="flex justify-end">
+          <Button
+            variant="outline"
+            size="sm"
+            className="border-amber-800/20 text-amber-900 hover:bg-amber-100/70 dark:text-amber-100 dark:hover:bg-amber-900/40"
+            onClick={copy}
+          >
+            <Quote className="size-3.5" aria-hidden="true" />
+            Copier la note
+          </Button>
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
+}
+
 export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
   const { data, error, loading } = useDoc(bookId, docId);
   const { toast } = useToast();
@@ -1052,33 +1219,67 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
   const [quotesCount, setQuotesCount] = useState(0);
   const [quoteIdx, setQuoteIdx] = useState(-1);
   const [quotesDocId, setQuotesDocId] = useState(docId);
+  // Tableau de répartition (dāʾira) ouvert depuis une chip [tableau…].
+  const [daira, setDaira] = useState<DairaData | null>(null);
   if (quotesDocId !== docId) {
     setQuotesDocId(docId);
     setQuoteIdx(-1);
     setQuotesCount(0);
   }
 
-  // Copie au clic des notes de restauration de versets (.verse-note) :
+  // Copie au clic des notes de restauration de versets (.verse-note) et
+  // ouverture du dialogue de répartition (.verse-note--daira) :
   // délégation d'événement sur le document — aucun handler par note.
+  // Clavier : Enter/Espace déclenche la même action (chips role=button).
   useEffect(() => {
     if (!data || data.pdfOnly) return;
-    const onCopy = (e: MouseEvent) => {
-      const target = e.target as HTMLElement | null;
-      const note = target?.closest?.(".verse-note");
-      if (!note) return;
+    const activate = (note: HTMLElement) => {
       const text = (note.textContent ?? "").trim().replace(/^\[|\]$/g, "");
-      if (!text || !navigator.clipboard?.writeText) return;
+      if (!text) return;
+      if (note.classList.contains("verse-note--daira")) {
+        // Tableau de répartition : ouverture du dialogue rendu ; si la note
+        // n'est pas parsable (p.ex. « [tableau non reproduit…] »), repli sur
+        // la copie au lieu d'un clic silencieux.
+        const d = parseDairaNote(text);
+        if (d) {
+          setDaira(d);
+          return;
+        }
+      }
+      if (!navigator.clipboard?.writeText) return;
       navigator.clipboard.writeText(text).then(
         () =>
           toast({
-            title: "Citation copiée",
-            description: "Le texte du verset restauré est dans le presse-papiers.",
+            title: /^(?:tableau|schéma|carte)\b/.test(text) ? "Note copiée" : "Citation copiée",
+            description: /^(?:tableau|schéma|carte)\b/.test(text)
+              ? "La note de restauration est dans le presse-papiers."
+              : "Le texte du verset restauré est dans le presse-papiers.",
           }),
         () => undefined,
       );
     };
+    const onCopy = (e: MouseEvent) => {
+      const target = e.target as HTMLElement | null;
+      const note = target?.closest?.(".verse-note");
+      if (note) {
+        activate(note as HTMLElement);
+        return;
+      }
+    };
+    const onKey = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (e.key !== "Enter" && e.key !== " ") return;
+      const note = target?.closest?.(".verse-note");
+      if (!note) return;
+      e.preventDefault();
+      activate(note as HTMLElement);
+    };
     document.addEventListener("click", onCopy);
-    return () => document.removeEventListener("click", onCopy);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("click", onCopy);
+      document.removeEventListener("keydown", onKey);
+    };
   }, [data, toast]);
 
   /** Citation coranique suivante : défilement doux + pulsation ambre
@@ -1594,6 +1795,8 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
           </button>
         </div>
       )}
+
+      {daira ? <DairaDialog data={daira} onClose={() => setDaira(null)} /> : null}
 
       <DocNav doc={data} />
     </div>

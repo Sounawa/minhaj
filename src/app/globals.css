@@ -477,6 +477,90 @@
 .lesson-content .verse-note:active {
   background: color-mix(in oklab, var(--primary) 22%, transparent);
 }
+/* Variante dāʾira ([tableau de répartition…]) : double filet ambre,
+   curseur d'ouverture — le clic ouvre la table rendue (dialogue). */
+.lesson-content .verse-note--daira {
+  cursor: zoom-in;
+  border-inline-start: 3px double color-mix(in oklab, var(--primary) 55%, transparent);
+}
+.lesson-content .verse-note--daira:hover {
+  background: color-mix(in oklab, var(--primary) 16%, transparent);
+}
+/* Accessibilité clavier des chips (role=button) : anneau de focus ambre. */
+.lesson-content .verse-note:focus-visible {
+  outline: 2px solid color-mix(in oklab, var(--primary) 65%, transparent);
+  outline-offset: 2px;
+  border-start-end-radius: 7px;
+  border-end-end-radius: 7px;
+}
+/* ——— Dialogue dāʾira : table de répartition ——— */
+table.daira-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+.daira-table th {
+  text-align: start;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--primary) 78%, var(--foreground));
+  padding: 0.3rem 0.55rem 0.45rem;
+  border-bottom: 1.5px solid color-mix(in oklab, var(--primary) 32%, transparent);
+}
+.daira-table td {
+  padding: 0.42rem 0.55rem;
+  vertical-align: middle;
+  border-bottom: 1px dotted color-mix(in oklab, var(--primary) 20%, transparent);
+}
+.daira-table td:first-child {
+  font-weight: 500;
+  white-space: nowrap;
+}
+.daira-table .daira-col-n {
+  text-align: end;
+  white-space: nowrap;
+  width: 34%;
+}
+.daira-note {
+  color: var(--muted-foreground);
+  font-size: 0.84em;
+}
+.daira-excl td {
+  color: color-mix(in oklab, var(--muted-foreground) 82%, transparent);
+  font-style: italic;
+}
+.daira-excl td:first-child {
+  font-weight: 400;
+}
+/* Barre proportionnelle (parts / somme) : pastille pleine sous le nombre. */
+.daira-bar {
+  position: relative;
+  display: inline-block;
+  vertical-align: -0.18em;
+  width: 4.6rem;
+  margin-inline-end: 0.5rem;
+  height: 0.62rem;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--primary) 9%, var(--muted));
+  overflow: hidden;
+}
+.daira-fill {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    color-mix(in oklab, var(--primary) 72%, transparent),
+    color-mix(in oklab, var(--primary) 46%, transparent)
+  );
+}
+.daira-num {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
 /* Panneau OCR (leçons pdfOnly) : texte arabe reconnu par tesseract —
    respiration ample, séparateur de pages sobre, ascenseur doux. */
 .ocr-panel section.ocr-page {
