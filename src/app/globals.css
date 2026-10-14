@@ -152,6 +152,22 @@
     background: oklch(0.734 0.12 67 / 55%);
     color: inherit;
   }
+  /* Anneau de focus clavier : ambre pour tout élément focalisable —
+     les <button> shadcn gardent leur ring propre (outline neutralisé). */
+  :focus-visible {
+    outline: 2px solid color-mix(in oklab, var(--primary) 55%, transparent);
+    outline-offset: 2px;
+  }
+  button:focus-visible,
+  [role="button"]:focus-visible {
+    outline: none;
+  }
+  /* Équilibrage des titres sur plusieurs lignes (amélioration progressive) */
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
 }
 
 /* ————————————————————————————————— Utilitaires Minhāj ————————————————————————————————— */
@@ -182,6 +198,42 @@
 }
 .dark .pattern-islamic {
   background-image: url("data:image/svg+xml,%3Csvg width='56' height='56' viewBox='0 0 56 56' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23d97706' stroke-opacity='0.10'%3E%3Cpath d='M28 0 L56 28 L28 56 L0 28 Z'/%3E%3Cpath d='M28 12 L44 28 L28 44 L12 28 Z'/%3E%3Ccircle cx='28' cy='28' r='4'/%3E%3Cpath d='M0 0 L12 12 M56 0 L44 12 M0 56 L12 44 M56 56 L44 44'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Couche savante (page manuel) : barre fine sous la barre bilingue —
+   remplissage doré + reflet balayant, discret (6 s par cycle). */
+.bar-savant {
+  position: relative;
+  overflow: hidden;
+  background: color-mix(in oklab, var(--primary) 80%, transparent);
+}
+.bar-savant::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.5) 50%,
+    transparent 70%
+  );
+  background-size: 220% 100%;
+  animation: mnhj-savant-shimmer 6s ease-in-out infinite;
+}
+@keyframes mnhj-savant-shimmer {
+  0% {
+    background-position: 190% 0;
+  }
+  55%,
+  100% {
+    background-position: -110% 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bar-savant::after {
+    animation: none;
+    background: none;
+  }
 }
 
 /* ————————————————————————————————— Surlignages persistants (Highlight API) ————————————————————————————————— */
@@ -354,6 +406,36 @@
     background: none !important;
     border-inline-start: 2px solid #b8b8b8 !important;
     padding-inline-start: 0.8em !important;
+  }
+  /* Tableaux de vers : filet médian sobre à l'impression */
+  .lesson-content table.verse-table td:nth-child(2) {
+    border-inline-start: 1px solid #c9c9c9;
+  }
+}
+
+/* Pulsation de parcours : citation coranique ciblée par le bouton de
+   navigation de l'en-tête — anneau ambre + fond chaud, estompage doux. */
+@keyframes mnhj-quran-flash {
+  0% {
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--primary) 55%, transparent);
+    background-color: color-mix(in oklab, var(--primary) 16%, transparent);
+  }
+  60% {
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--primary) 22%, transparent);
+    background-color: color-mix(in oklab, var(--primary) 7%, transparent);
+  }
+  100% {
+    box-shadow: 0 0 0 3px transparent;
+    background-color: transparent;
+  }
+}
+.lesson-content p.quran-quote.quran-flash {
+  animation: mnhj-quran-flash 2s ease-out 1 both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .lesson-content p.quran-quote.quran-flash {
+    animation: none;
+    background-color: color-mix(in oklab, var(--primary) 12%, transparent);
   }
 }
 

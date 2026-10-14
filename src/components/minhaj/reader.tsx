@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
-import { ArrowLeft, ArrowRight, BookMarked, BookmarkCheck, Check, ChevronLeft, ChevronRight, Clock3, Columns2, Download, Eraser, ExternalLink, FileQuestion, FileText, Heart, Highlighter, Hourglass, Languages, ListTree, Loader2, Printer, StickyNote } from "lucide-react";
+import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { ArrowLeft, ArrowRight, BookMarked, BookmarkCheck, Check, ChevronLeft, ChevronRight, Clock3, Columns2, Download, Eraser, ExternalLink, FileQuestion, FileText, Headphones, Heart, Highlighter, Hourglass, Languages, ListTree, Loader2, Pause, Play, Printer, Quote, Square, StickyNote } from "lucide-react";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -355,6 +355,41 @@ function OutlineButton({ items }: { items: OutlineItem[] }) {
   );
 }
 
+/** Parcours des citations coraniques détectées : compteur dans l'en-tête du
+ *  lecteur, clic = citation suivante (défilement doux + pulsation ambre).
+ *  Miroir du sommaire flottant — même registre visuel que NotesButton. */
+function QuotesNavButton({
+  count,
+  index,
+  onNext,
+}: {
+  count: number;
+  index: number;
+  onNext: () => void;
+}) {
+  if (count === 0) return null;
+  return (
+    <Button
+      variant="outline"
+      size="icon"
+      aria-label={`Citations coraniques (${count}) — passer à la suivante${
+        index >= 0 ? ` (${index + 1}/${count})` : ""
+      }`}
+      title={`Citations coraniques détectées : ${count} — cliquer pour parcourir`}
+      className="relative size-10 border-amber-800/15 bg-card/70 text-amber-900 hover:bg-amber-100/60 dark:text-amber-100 dark:hover:bg-amber-900/40"
+      onClick={onNext}
+    >
+      <Quote className="size-4.5" aria-hidden="true" />
+      <span
+        className="absolute -right-1 -top-1 flex h-4 min-w-4 items-center justify-center rounded-full bg-amber-600 px-1 text-[9px] font-bold leading-none text-amber-50 shadow"
+        aria-hidden="true"
+      >
+        {count > 9 ? "9+" : count}
+      </span>
+    </Button>
+  );
+}
+
 /** Notes personnelles par leçon (localStorage, auto-sauvegarde à la frappe).
  *  Compteur de notes : badge sur le bouton + décompte mots/caractères dans le panneau. */
 function formatCount(n: number): string {
@@ -431,6 +466,232 @@ function NotesButton({ bookId, docId }: { bookId: string; docId: string }) {
             </p>
           </div>
         </>
+      )}
+    </div>
+  );
+}
+
+/** Lecture à voix haute du pan français (Web Speech API du navigateur) :
+ *  découpage phrase par phrase, voix française de préférence, panneau de
+ *  contrôle (phrase courante, pause/reprise, arrêt). Aucune dépendance —
+ *  l'API est native et fonctionne hors-ligne selon les voix installées. */
+type SpeechState = "idle" | "speaking" | "paused";
+
+function splitSentences(html: string): string[] {
+  const text = html
+    .replace(/<(script|style)[\s\S]*?<\/\1>/gi, " ")
+    .replace(/<\/(p|li|h[1-6]|blockquote|tr|div|td|th)>/gi, ". ")
+    .replace(/<br\s*\/?>/gi, ". ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&nbsp;/gi, "\u00a0")
+    .replace(/&amp;/gi, "&")
+    .replace(/&lt;/gi, "<")
+    .replace(/&gt;/gi, ">")
+    .replace(/&quot;/gi, '"')
+    .replace(/&#0?39;/g, "'")
+    .replace(/&laquo;/gi, "«")
+    .replace(/&raquo;/gi, "»")
+    .replace(/\s+/g, " ")
+    .trim();
+  const out: string[] = [];
+  const re = /[^.!?…]+[.!?…]+["»)\u00bb]*\s*|[^.!?…]+$/g;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(text))) {
+    const s = m[0].trim();
+    if (s) out.push(s);
+  }
+  // fusionner les fragments trop courts avec la phrase voisine
+  const merged: string[] = [];
+  for (const s of out) {
+    if (merged.length && (s.length < 30 || merged[merged.length - 1].length < 30)) {
+      merged[merged.length - 1] = `${merged[merged.length - 1]} ${s}`;
+    } else {
+      merged.push(s);
+    }
+  }
+  return merged;
+}
+
+function ReadAloudButton({ docId, htmlFr }: { docId: string; htmlFr: string }) {
+  const [supported] = useState(
+    () => typeof window !== "undefined" && "speechSynthesis" in window
+  );
+  const [state, setState] = useState<SpeechState>("idle");
+  const [sentences, setSentences] = useState<string[]>([]);
+  const [idx, setIdx] = useState(0);
+  const voiceRef = useRef<SpeechSynthesisVoice | null>(null);
+  const queueRef = useRef<string[]>([]);
+  const stateRef = useRef<SpeechState>("idle");
+
+  useEffect(() => {
+    stateRef.current = state;
+  }, [state]);
+
+  // voix française de préférence (les voix se chargent de façon asynchrone)
+  useEffect(() => {
+    if (!supported) return;
+    const pick = () => {
+      const voices = window.speechSynthesis.getVoices();
+      voiceRef.current =
+        voices.find((v) => v.lang?.toLowerCase().replace("_", "-").startsWith("fr")) ?? null;
+    };
+    pick();
+    window.speechSynthesis.addEventListener("voiceschanged", pick);
+    return () => window.speechSynthesis.removeEventListener("voiceschanged", pick);
+  }, [supported]);
+
+  // arrêt propre au changement de document / démontage
+  useEffect(() => {
+    return () => {
+      queueRef.current = [];
+      if (typeof window !== "undefined" && "speechSynthesis" in window) {
+        window.speechSynthesis.cancel();
+      }
+    };
+  }, [docId]);
+
+  if (!supported) return null;
+
+  const speakFrom = (start: number) => {
+    const synth = window.speechSynthesis;
+    synth.cancel();
+    const speakNext = (pos: number) => {
+      if (pos >= queueRef.current.length) {
+        setState("idle");
+        setIdx(0);
+        return;
+      }
+      setIdx(pos);
+      const u = new SpeechSynthesisUtterance(queueRef.current[pos]);
+      if (voiceRef.current) u.voice = voiceRef.current;
+      u.lang = voiceRef.current?.lang || "fr-FR";
+      u.rate = 0.95;
+      u.onend = () => {
+        if (stateRef.current === "speaking") speakNext(pos + 1);
+      };
+      synth.speak(u);
+    };
+    speakNext(start);
+  };
+
+  const toggle = () => {
+    const synth = window.speechSynthesis;
+    if (state === "idle") {
+      const sents = splitSentences(htmlFr);
+      if (sents.length === 0) return;
+      queueRef.current = sents;
+      setSentences(sents);
+      setState("speaking");
+      speakFrom(0);
+    } else if (state === "speaking") {
+      synth.pause();
+      setState("paused");
+    } else {
+      synth.resume();
+      setState("speaking");
+    }
+  };
+
+  const stop = () => {
+    window.speechSynthesis.cancel();
+    queueRef.current = [];
+    setState("idle");
+    setIdx(0);
+  };
+
+  return (
+    <div className="relative">
+      <Button
+        variant="outline"
+        size="icon"
+        aria-label={
+          state === "idle"
+            ? "Écouter la leçon — lecture à voix haute du texte français"
+            : state === "speaking"
+              ? `Lecture en cours (${idx + 1}/${sentences.length}) — mettre en pause`
+              : "Lecture en pause — reprendre"
+        }
+        title={
+          state === "idle"
+            ? "Écouter — lecture à voix haute (navigateur)"
+            : state === "speaking"
+              ? "Pause de la lecture"
+              : "Reprendre la lecture"
+        }
+        aria-expanded={state !== "idle"}
+        className={cn(
+          "size-10 border-amber-800/15 bg-card/70 hover:bg-amber-100/60 dark:hover:bg-amber-900/40",
+          state === "idle"
+            ? "text-amber-900 dark:text-amber-100"
+            : "text-amber-700 dark:text-amber-300"
+        )}
+        onClick={toggle}
+      >
+        {state === "idle" ? (
+          <Headphones className="size-4.5" aria-hidden="true" />
+        ) : state === "speaking" ? (
+          <Pause className="size-4.5" aria-hidden="true" />
+        ) : (
+          <Play className="size-4.5" aria-hidden="true" />
+        )}
+        {state !== "idle" && (
+          <span
+            className="absolute -right-1 -top-1 flex size-4 items-center justify-center rounded-full bg-amber-600 text-[9px] font-bold leading-none text-amber-50 shadow"
+            aria-hidden="true"
+          >
+            {sentences.length > 9 ? "9+" : sentences.length}
+          </span>
+        )}
+      </Button>
+      {state !== "idle" && sentences.length > 0 && (
+        <div
+          className="absolute right-0 top-12 z-50 w-80 max-w-[calc(100vw-2rem)] rounded-xl border border-amber-800/15 bg-card p-3 shadow-lg"
+          role="dialog"
+          aria-label="Lecture à voix haute"
+        >
+          <div className="flex items-center justify-between gap-2 px-1">
+            <span className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+              <Headphones className="size-3 text-primary" aria-hidden="true" />
+              Lecture à voix haute
+            </span>
+            <span className="shrink-0 rounded-full border border-amber-700/25 bg-amber-100/70 px-2 py-0.5 text-[10px] font-semibold tabular-nums text-amber-800 dark:border-amber-300/20 dark:bg-amber-900/40 dark:text-amber-200">
+              {Math.min(idx + 1, sentences.length)} / {sentences.length} phrase
+              {sentences.length > 1 ? "s" : ""}
+            </span>
+          </div>
+          <p className="mt-2 max-h-20 overflow-y-auto rounded-lg border border-amber-800/15 bg-amber-100/40 px-3 py-2 font-serif text-[12.5px] leading-relaxed text-amber-950 dark:border-amber-300/10 dark:bg-amber-900/25 dark:text-amber-100 [scrollbar-width:thin]">
+            {sentences[Math.min(idx, sentences.length - 1)]}
+          </p>
+          <div className="mt-2 flex items-center gap-2">
+            <Button
+              variant="outline"
+              size="sm"
+              className="flex-1 gap-1.5 border-amber-800/20 text-amber-800 hover:bg-amber-100/60 dark:text-amber-200 dark:hover:bg-amber-900/40"
+              onClick={toggle}
+            >
+              {state === "speaking" ? (
+                <>
+                  <Pause className="size-3.5" aria-hidden="true" />
+                  Pause
+                </>
+              ) : (
+                <>
+                  <Play className="size-3.5" aria-hidden="true" />
+                  Reprendre
+                </>
+              )}
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              className="gap-1.5 border-rose-800/20 text-rose-700 hover:bg-rose-100/60 dark:text-rose-300 dark:hover:bg-rose-900/30"
+              onClick={stop}
+            >
+              <Square className="size-3.5" aria-hidden="true" />
+              Arrêter
+            </Button>
+          </div>
+        </div>
       )}
     </div>
   );
@@ -629,6 +890,35 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
   const arHtml = useMemo(() => (htmlAr != null ? { __html: htmlAr } : null), [htmlAr]);
   const [restoredNote, setRestoredNote] = useState(false);
 
+  // Citations coraniques détectées : compteur pour l'en-tête + index de parcours.
+  // Réinitialisation au changement de document — pattern « état dérivé du rendu »
+  // (setState pendant le rendu est la correction recommandée par React pour
+  // l'ajustement d'état sur changement de prop, sans effet ni cascade).
+  const [quotesCount, setQuotesCount] = useState(0);
+  const [quoteIdx, setQuoteIdx] = useState(-1);
+  const [quotesDocId, setQuotesDocId] = useState(docId);
+  if (quotesDocId !== docId) {
+    setQuotesDocId(docId);
+    setQuoteIdx(-1);
+    setQuotesCount(0);
+  }
+
+  /** Citation coranique suivante : défilement doux + pulsation ambre
+   *  (voir .quran-flash dans globals.css — miroir du sommaire flottant). */
+  const goToNextQuote = useCallback(() => {
+    const quotes = Array.from(
+      document.querySelectorAll<HTMLElement>(".lesson-content p.quran-quote")
+    );
+    if (quotes.length === 0) return;
+    const next = (quoteIdx + 1) % quotes.length;
+    setQuoteIdx(next);
+    const el = quotes[next];
+    el.scrollIntoView({ behavior: "smooth", block: "center" });
+    el.classList.remove("quran-flash");
+    void el.offsetWidth; // relance l'animation
+    el.classList.add("quran-flash");
+  }, [quoteIdx]);
+
   // Mémoriser la dernière lecture (reprise depuis l'accueil)
   useEffect(() => {
     if (data?.docId) {
@@ -738,6 +1028,14 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
         p.classList.add("quran-quote", "quran-quote-ar");
       }
     });
+    // Compteur pour le bouton de parcours des citations (en-tête du lecteur).
+    // Mesure DIFFÉRÉE (requestAnimationFrame) : le marquage des classes vient
+    // d'être appliqué au DOM — on mesure après le rendu, sans setState
+    // synchrone dans le corps de l'effet (règle react-hooks/set-state-in-effect).
+    const raf = requestAnimationFrame(() => {
+      setQuotesCount(document.querySelectorAll(".lesson-content p.quran-quote").length);
+    });
+    return () => cancelAnimationFrame(raf);
   }, [data, mode, textSize]);
 
   // Surlignages persistants : inscription des ranges dans CSS.highlights (une
@@ -915,6 +1213,12 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
           <ViewModeToggle mode={mode} onChange={setMode} />
           <TextSizeControl size={textSize} onChange={setTextSize} />
           {data && !data.pdfOnly && <OutlineButton items={outline} />}
+          {data && !data.pdfOnly && (
+            <QuotesNavButton count={quotesCount} index={quoteIdx} onNext={goToNextQuote} />
+          )}
+          {data && !data.pdfOnly && data.hasFr && data.htmlFr && (
+            <ReadAloudButton docId={docId} htmlFr={data.htmlFr} />
+          )}
           {data && !data.pdfOnly && <NotesButton bookId={bookId} docId={docId} />}
           <Button
             variant="outline"

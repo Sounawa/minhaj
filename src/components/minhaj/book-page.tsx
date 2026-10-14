@@ -321,6 +321,35 @@ export function BookPage({ bookId }: { bookId: string }) {
                   <span className="font-semibold text-primary">{pct}%</span>
                 </div>
                 <Progress value={pct} className="mt-1.5 h-2 bg-amber-800/10" />
+                {book.docsSavant > 0 && !fullSavant && book.docsFr > 0 && (
+                  <div className="mt-1.5">
+                    <div className="flex items-center justify-between text-[11px] text-muted-foreground">
+                      <span className="flex items-center gap-1">
+                        <BookMarked
+                          className="size-3 text-amber-700/80 dark:text-amber-400/80"
+                          aria-hidden="true"
+                        />
+                        dont couche savante
+                      </span>
+                      <span className="font-semibold tabular-nums text-amber-700 dark:text-amber-400">
+                        {book.docsSavant}/{book.docsFr}
+                      </span>
+                    </div>
+                    <div
+                      className="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-amber-800/10"
+                      role="progressbar"
+                      aria-label="Documents en traduction savante"
+                      aria-valuemin={0}
+                      aria-valuemax={100}
+                      aria-valuenow={savantPct}
+                    >
+                      <div
+                        className="bar-savant h-full rounded-full"
+                        style={{ width: `${savantPct}%` }}
+                      />
+                    </div>
+                  </div>
+                )}
                 {book.docsSavant > 0 && (
                   <div className="mt-2.5 flex flex-wrap items-center gap-2">
                     {fullSavant ? (
