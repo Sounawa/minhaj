@@ -246,6 +246,10 @@ function summarize(
     ? ([file.intro, ...(file.lessons ?? [])].filter(Boolean) as Array<{ docId: string; htmlFr?: string }>)
     : [];
   const savantDocs = savantIds ? new Set(docs.filter((d) => savantIds.has(d.docId) && (d.htmlFr ?? "").trim().length > 0).map((d) => d.docId)) : new Set<string>();
+  // Déduplication par docId : 6 livres partagent le docId de l'intro avec une
+  // leçon — sinon docsFr (occurrences) dépasse docsSavant (unicité) et le
+  // badge « savante intégrale » ne peut jamais s'afficher pour ces livres.
+  const frDocIds = new Set(docs.filter((d) => (d.htmlFr ?? "").trim().length > 0).map((d) => d.docId));
   return {
     id: bookDef.id,
     subject: bookDef.subject,
@@ -262,7 +266,7 @@ function summarize(
     lessonsTotal,
     lessonsFr,
     docsTotal: lessonsTotal + (hasIntro ? 1 : 0),
-    docsFr: lessonsFr + (introFr ? 1 : 0),
+    docsFr: frDocIds.size,
     docsSavant: savantDocs.size,
   };
 }
