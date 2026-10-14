@@ -5350,3 +5350,40 @@ Stage Summary:
 - **MÉTHODE R72 consolidée** : calibration bbox 6,5-6,7 px/consonne (cache sans basmala au v1 des sourates non-Fātiha/Tawba) ; alts = débuts de séries parfois (55:3 = 55:3-5 ✓ pas coquille) ; coquilles ce tour : 45:11-12→12-13, 41:52→53, 2:3→« 2 », 2:184→« 183 », 35:32-34→« 32 », 9:103→« 104 », 7:52-53→« 52 », 6:82→« 83 » — série cumulée ~60.
 - **Priorités R73** : (1) 19274 (išārī) ; (2) 19276 ; (3) 19280 ; (4) 19283-19287 ; (5) 19289 → OBJECTIF : livre ulum-quran-2es COMPLET (19ᵉ livre savant). Puis : QA globale app, backfill des flags (19158 ×2, 19261 ×2, 19273 ×7) si VLM revient, relance supervisor/workers (setsid -f python3 scripts-translate/supervisor.py) si utile.
 - **Risques** : famine 429 VLM/LLM persistante (aucune vérification visuelle possible des flags bbox) ; le SPA exige reload explicite après injection (QA) — aucun impact utilisateur réel (première visite = fetch frais).
+
+---
+Task ID: R73
+Agent: agent principal (Z.ai Code)
+Task: Push GitHub complet du projet Minhāj (demande utilisateur : « je veux rien perdre »)
+
+Work Log:
+- Token GitHub fourni par l'utilisateur (compte Sounawa), vérifié via API : valide.
+- Diagnostic : 505 commits locaux, remote pointait vers un faux origin sandbox
+  (/tmp/my-project/backup-tour/latest-bundle.bdl) → aucun backup externe réel.
+- Sauvegarde du travail non versionné avant push : tr-tmp/ (scratch leçons en cours
+  19179→19273 + ulum2es-slugs.json), tr-logs/ (supervisor-state.json + logs de
+  production), db/custom.db déjà suivi → commit f1f1c79 « backup: scratch leçon en
+  cours ».
+- Création du repo via API : Sounawa/minhaj, privé (comme zawiya-nimes).
+- Remote : ancien origin renommé sandbox-backup ; origin → github.com/Sounawa/minhaj.
+- Push : 506 commits, branche main, réussi du premier coup.
+- Sécurisation : token retiré de l'URL du remote, stocké dans
+  /home/z/.git-credentials (chmod 600) via credential.helper store.
+- .env vérifié : ne contient que DATABASE_URL (chemin SQLite), aucun secret — pas
+  de rewrite d'historique nécessaire.
+- Vérification API : dernier commit (f1f1c79) et contenu (content/, db/, src/) bien
+  présents sur GitHub.
+
+Stage Summary:
+- **Backup externe complet opérationnel** : https://github.com/Sounawa/minhaj (privé).
+  Tout est poussé : app complète (src/), corpus 64 livres (content/), scripts de
+  moissonnage (scripts-recovery/), scripts de traduction (scripts-translate/),
+  worklog 152 Ko, 506 commits d'historique.
+- Registre de traduction au moment du push : 470/950 leçons, ulum2es 20/29.
+- Push futurs : `git push` suffit (credential store configuré, plus besoin du token
+  dans l'URL).
+- Risque résiduel : token GitHub dans /home/z/.git-credentials (fichier local protégé
+  600, même machine) ; si le token est révoqué/régénéré par l'utilisateur, mettre à
+  jour ce fichier.
+- Priorité suivante : reprendre la traduction ulum-quran-2es (leçon 18/29 attendue,
+  leçon 19+ restantes), scratch de la 19273 déjà sécurisé.
