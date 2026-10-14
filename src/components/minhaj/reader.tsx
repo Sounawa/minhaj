@@ -222,7 +222,15 @@ function DocHeader({ doc }: { doc: DocPayload }) {
           </span>
         </h1>
       )}
-      <p dir="rtl" lang="ar" className="mt-1.5 text-right font-arabic text-xl leading-relaxed text-primary">
+      {/* Filet orné entre le titre français et le titre arabe */}
+      <span className="mt-3 flex items-center gap-2" aria-hidden="true">
+        <span className="h-px flex-1 bg-gradient-to-r from-transparent via-amber-700/30 to-amber-700/30 dark:via-amber-300/25 dark:to-amber-300/25" />
+        <svg viewBox="0 0 24 24" className="size-3.5 shrink-0 text-amber-700/70 dark:text-amber-300/70" fill="currentColor">
+          <path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z" />
+        </svg>
+        <span className="h-px flex-1 bg-gradient-to-l from-transparent via-amber-700/30 to-amber-700/30 dark:via-amber-300/25 dark:to-amber-300/25" />
+      </span>
+      <p dir="rtl" lang="ar" className="mt-2 text-right font-arabic text-xl leading-relaxed text-primary">
         {doc.titleAr}
       </p>
     </div>
@@ -347,17 +355,27 @@ function OutlineButton({ items }: { items: OutlineItem[] }) {
   );
 }
 
-/** Notes personnelles par leçon (localStorage, auto-sauvegarde à la frappe). */
+/** Notes personnelles par leçon (localStorage, auto-sauvegarde à la frappe).
+ *  Compteur de notes : badge sur le bouton + décompte mots/caractères dans le panneau. */
+function formatCount(n: number): string {
+  return n >= 1000 ? `${(n / 1000).toFixed(1).replace(".", ",")}k` : String(n);
+}
 function NotesButton({ bookId, docId }: { bookId: string; docId: string }) {
   const [open, setOpen] = useState(false);
   const { text, setNote, hasNote } = useNote(bookId, docId);
+  const charCount = text.trim().length;
+  const wordCount = charCount === 0 ? 0 : text.trim().split(/\s+/).length;
   return (
     <div className="relative">
       <Button
         variant="outline"
         size="icon"
-        aria-label={hasNote ? "Notes personnelles — une note est enregistrée pour cette leçon" : "Notes personnelles"}
-        title="Notes personnelles"
+        aria-label={
+          hasNote
+            ? `Notes personnelles — ${formatCount(charCount)} caractère${charCount > 1 ? "s" : ""} notés pour cette leçon`
+            : "Notes personnelles"
+        }
+        title={hasNote ? `Notes personnelles (${formatCount(charCount)} caractères)` : "Notes personnelles"}
         aria-expanded={open}
         className={cn(
           "size-10 border-amber-800/15 bg-card/70 hover:bg-amber-100/60 dark:hover:bg-amber-900/40",
@@ -367,7 +385,12 @@ function NotesButton({ bookId, docId }: { bookId: string; docId: string }) {
       >
         <StickyNote className={cn("size-4.5", hasNote && "fill-amber-300/60 dark:fill-amber-700/50")} aria-hidden="true" />
         {hasNote && (
-          <span className="absolute -right-1 -top-1 size-2.5 rounded-full bg-amber-600 shadow" aria-hidden="true" />
+          <span
+            className="absolute -right-1 -top-1 flex h-4 min-w-4 items-center justify-center rounded-full bg-amber-600 px-1 text-[9px] font-bold leading-none text-amber-50 shadow"
+            aria-hidden="true"
+          >
+            {charCount > 99 ? "99+" : charCount}
+          </span>
         )}
       </Button>
       {open && (
@@ -378,12 +401,22 @@ function NotesButton({ bookId, docId }: { bookId: string; docId: string }) {
             aria-label="Notes personnelles"
             className="absolute right-0 top-12 z-50 w-80 max-w-[calc(100vw-2rem)] rounded-xl border border-amber-800/15 bg-card p-3 shadow-lg"
           >
-            <label
-              htmlFor="mnhj-note"
-              className="block px-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground"
-            >
-              Mes notes sur cette leçon
-            </label>
+            <div className="flex items-center justify-between gap-2 px-1">
+              <label
+                htmlFor="mnhj-note"
+                className="block text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground"
+              >
+                Mes notes sur cette leçon
+              </label>
+              {charCount > 0 && (
+                <span
+                  className="shrink-0 rounded-full border border-amber-700/25 bg-amber-100/70 px-2 py-0.5 text-[10px] font-semibold tabular-nums text-amber-800 dark:border-amber-300/20 dark:bg-amber-900/40 dark:text-amber-200"
+                  aria-live="polite"
+                >
+                  {wordCount} mot{wordCount > 1 ? "s" : ""} · {formatCount(charCount)} car.
+                </span>
+              )}
+            </div>
             <textarea
               id="mnhj-note"
               value={text}
@@ -573,7 +606,10 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
   }, [docId, data, bookId]);
 
   // Tableaux de vers (manẓūma) : marquer les structures hémistiche/séparateur/hémistiche
-  // pour la mise en forme poétique (voir .verse-table dans globals.css)
+  // pour la mise en forme poétique (voir .verse-table dans globals.css).
+  // Citations coraniques (colonne FR) : paragraphes ouvrés par « et clôturés par
+  // une référence de verset — p.ex. « … » (Al-Shura, 18-20) — mis en exergue
+  // par un panneau ambre discret (voir .quran-quote dans globals.css).
   useEffect(() => {
     if (!data || data.pdfOnly) return;
     document.querySelectorAll<HTMLElement>(".lesson-content table").forEach((table) => {
@@ -587,6 +623,14 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
         return mid === "";
       });
       if (isVerse) table.classList.add("verse-table");
+    });
+    const QUOTE_REF = /\([^()]{2,40},\s*[\d\s\u2013-]+\)\s*[»"]?\s*$/;
+    document.querySelectorAll<HTMLElement>(".reader-col[dir='ltr'] .lesson-content > p").forEach((p) => {
+      if (p.classList.contains("quran-quote")) return;
+      const t = (p.innerText ?? "").trim();
+      if (t.startsWith("«") && t.length > 120 && QUOTE_REF.test(t)) {
+        p.classList.add("quran-quote");
+      }
     });
   }, [data, mode, textSize]);
 
@@ -727,9 +771,16 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
         aria-valuenow={Math.round(progress)}
       >
         <div
-          className="h-full bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 transition-[width] duration-150 ease-out"
+          className="relative h-full bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 transition-[width] duration-150 ease-out"
           style={{ width: `${progress}%` }}
-        />
+        >
+          {progress > 1 && progress < 99.5 && (
+            <span
+              className="absolute -right-[3px] top-1/2 size-[7px] -translate-y-1/2 rounded-full bg-amber-400 shadow-[0_0_8px_2px_rgba(251,191,36,0.75)]"
+              aria-hidden="true"
+            />
+          )}
+        </div>
       </div>
       <nav aria-label="Fil d'Ariane" className="mb-5 flex items-center gap-1 text-sm">
         <Button

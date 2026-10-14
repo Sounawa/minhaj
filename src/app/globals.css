@@ -301,6 +301,58 @@
   font-style: italic;
 }
 
+/* Citations coraniques intégrales (détection client reader.tsx) : panneau
+   ambre discret — filet doré, fond dégradé, respiration. Le sentiment
+   typographique reste sobre : la citation respire sans crier. */
+.reader-col[dir="ltr"] .lesson-content p.quran-quote {
+  position: relative;
+  margin-block: 1.25em;
+  padding: 0.85em 1.1em 0.85em 1.25em;
+  border-inline-start: 2.5px solid color-mix(in oklab, var(--primary) 55%, transparent);
+  border-start-start-radius: 2px;
+  border-start-end-radius: 12px;
+  border-end-end-radius: 12px;
+  border-end-start-radius: 2px;
+  background:
+    linear-gradient(
+      to right,
+      color-mix(in oklab, var(--primary) 8%, transparent),
+      color-mix(in oklab, var(--primary) 2.5%, transparent) 62%,
+      transparent
+    );
+  hyphens: none;
+}
+.reader-col[dir="ltr"] .lesson-content p.quran-quote + p.quran-quote {
+  margin-block-start: 0.9em;
+}
+@media print {
+  .lesson-content p.quran-quote {
+    background: none !important;
+    border-inline-start: 2px solid #b8b8b8 !important;
+    padding-inline-start: 0.8em !important;
+  }
+}
+
+/* Ornément de section : filet doré dégradé sous les h2 de la colonne française */
+.reader-col[dir="ltr"] .lesson-content h2 {
+  padding-block-end: 0.28em;
+  background-image: linear-gradient(
+    to right,
+    color-mix(in oklab, var(--primary) 52%, transparent),
+    color-mix(in oklab, var(--primary) 18%, transparent) 46%,
+    transparent 88%
+  );
+  background-size: 100% 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+}
+@media print {
+  .reader-col[dir="ltr"] .lesson-content h2 {
+    background-image: none;
+    border-block-end: 1px solid #d4d4d4;
+  }
+}
+
 /* Tableaux de vers (manẓūma) : hémistiche / séparateur / hémistiche.
    Détection côté client (reader.tsx) : 3 colonnes sans en-tête, colonne
    médiane vide. Rendu poétique — pas de grille, filet médian doré. */
