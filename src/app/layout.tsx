@@ -54,6 +54,7 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <body
+        
         className={`${amiri.variable} ${lora.variable} antialiased bg-background text-foreground`}
       >
         {/* CSS Custom Highlight API : `::highlight()` n'est pas encore reconnu par le

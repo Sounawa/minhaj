@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
-import { ArrowLeft, ArrowRight, BookMarked, BookmarkCheck, Check, ChevronLeft, ChevronRight, Clock3, Columns2, Eraser, ExternalLink, FileQuestion, FileText, Heart, Highlighter, Hourglass, Languages, ListTree, Loader2, Printer, StickyNote } from "lucide-react";
+import { ArrowLeft, ArrowRight, BookMarked, BookmarkCheck, Check, ChevronLeft, ChevronRight, Clock3, Columns2, Download, Eraser, ExternalLink, FileQuestion, FileText, Heart, Highlighter, Hourglass, Languages, ListTree, Loader2, Printer, StickyNote } from "lucide-react";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -429,6 +429,97 @@ function NotesButton({ bookId, docId }: { bookId: string; docId: string }) {
               <Check className="size-3 text-primary" aria-hidden="true" />
               Enregistrée automatiquement — conservée sur cet appareil
             </p>
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
+/** Export / impression : menu regroupant impression navigateur, HTML autonome et EPUB. */
+function ExportMenu({ doc }: { doc: DocPayload }) {
+  const [open, setOpen] = useState(false);
+  const disabled = doc.pdfOnly || (!doc.html && !doc.htmlFr);
+  if (disabled) {
+    return (
+      <Button
+        variant="outline"
+        size="icon"
+        disabled
+        aria-label="Export indisponible — leçon au format PDF officiel uniquement"
+        title="Export indisponible"
+        className="size-10 border-amber-800/15 bg-card/70 text-amber-900/40 dark:text-amber-100/40"
+      >
+        <Printer className="size-4.5" aria-hidden="true" />
+      </Button>
+    );
+  }
+  const base = `/api/export/${doc.bookId}/${doc.docId}`;
+  return (
+    <div className="relative">
+      <Button
+        variant="outline"
+        size="icon"
+        aria-label="Imprimer ou exporter cette leçon"
+        title="Imprimer / exporter"
+        aria-expanded={open}
+        className="size-10 border-amber-800/15 bg-card/70 text-amber-900 hover:bg-amber-100/60 dark:text-amber-100 dark:hover:bg-amber-900/40"
+        onClick={() => setOpen((o) => !o)}
+      >
+        <Printer className="size-4.5" aria-hidden="true" />
+      </Button>
+      {open && (
+        <>
+          <div className="fixed inset-0 z-40" onClick={() => setOpen(false)} aria-hidden="true" />
+          <div
+            role="dialog"
+            aria-label="Imprimer ou exporter"
+            className="absolute right-0 top-12 z-50 w-64 rounded-xl border border-amber-800/15 bg-card p-1.5 shadow-lg"
+          >
+            <button
+              type="button"
+              className="flex w-full items-start gap-2.5 rounded-lg px-2.5 py-2 text-left text-[13px] text-foreground transition hover:bg-amber-100/70 dark:hover:bg-amber-900/40"
+              onClick={() => {
+                setOpen(false);
+                window.print();
+              }}
+            >
+              <Printer className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
+              <span>
+                <span className="block font-medium">Imprimer (PDF)</span>
+                <span className="block text-[11px] leading-snug text-muted-foreground">
+                  Dialogue d’impression du navigateur — « Enregistrer en PDF ».
+                </span>
+              </span>
+            </button>
+            <a
+              href={`${base}?format=html`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start gap-2.5 rounded-lg px-2.5 py-2 text-left text-[13px] text-foreground transition hover:bg-amber-100/70 dark:hover:bg-amber-900/40"
+              onClick={() => setOpen(false)}
+            >
+              <FileText className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
+              <span>
+                <span className="block font-medium">Page web autonome</span>
+                <span className="block text-[11px] leading-snug text-muted-foreground">
+                  Fichier HTML bilingue — s’ouvre partout, sans connexion.
+                </span>
+              </span>
+            </a>
+            <a
+              href={`${base}?format=epub`}
+              className="flex items-start gap-2.5 rounded-lg px-2.5 py-2 text-left text-[13px] text-foreground transition hover:bg-amber-100/70 dark:hover:bg-amber-900/40"
+              onClick={() => setOpen(false)}
+            >
+              <Download className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
+              <span>
+                <span className="block font-medium">Livre numérique EPUB</span>
+                <span className="block text-[11px] leading-snug text-muted-foreground">
+                  Pour liseuse (EPUB 3) — français et arabe.
+                </span>
+              </span>
+            </a>
           </div>
         </>
       )}
@@ -891,16 +982,7 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
               )}
             </div>
           )}
-          <Button
-            variant="outline"
-            size="icon"
-            aria-label="Imprimer cette leçon"
-            title="Imprimer"
-            className="size-10 border-amber-800/15 bg-card/70 text-amber-900 hover:bg-amber-100/60 dark:text-amber-100 dark:hover:bg-amber-900/40"
-            onClick={() => window.print()}
-          >
-            <Printer className="size-4.5" aria-hidden="true" />
-          </Button>
+          <ExportMenu doc={data} />
         </div>
       </div>
 

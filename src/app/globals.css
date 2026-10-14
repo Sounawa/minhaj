@@ -333,6 +333,25 @@
   }
 }
 
+/* Lettrine : première lettre du pan français — tradition typographique du livre savant */
+.reader-col[dir="ltr"] .lesson-content > p:first-of-type::first-letter {
+  font-family: var(--font-lora), serif;
+  font-weight: 700;
+  font-size: 3.1em;
+  line-height: 0.82;
+  float: left;
+  padding: 0.06em 0.12em 0 0;
+  color: color-mix(in oklab, var(--primary) 88%, var(--foreground));
+  text-shadow: 1px 1px 0 color-mix(in oklab, var(--primary) 22%, transparent);
+}
+@media print {
+  .reader-col[dir="ltr"] .lesson-content > p:first-of-type::first-letter {
+    font-size: 2.6em;
+    color: #000;
+    text-shadow: none;
+  }
+}
+
 /* Ornément de section : filet doré dégradé sous les h2 de la colonne française */
 .reader-col[dir="ltr"] .lesson-content h2 {
   padding-block-end: 0.28em;
@@ -411,6 +430,24 @@
 }
 .reader-col[dir="rtl"] .lesson-content h3 {
   font-size: 1.4rem;
+}
+/* Miroir de l'ornement français : filet doré sous les h2 arabes (sens RTL) */
+.reader-col[dir="rtl"] .lesson-content h2 {
+  padding-block-end: 0.28em;
+  background-image: linear-gradient(
+    to left,
+    color-mix(in oklab, var(--primary) 52%, transparent),
+    color-mix(in oklab, var(--primary) 18%, transparent) 46%,
+    transparent 88%
+  );
+  background-size: 100% 2px;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+}
+@media print {
+  .reader-col[dir="rtl"] .lesson-content h2 {
+    background-image: none;
+  }
 }
 .reader-col[dir="ltr"] .lesson-content {
   font-family: var(--font-lora), serif;
