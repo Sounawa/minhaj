@@ -444,6 +444,18 @@ async function corpusStamp(): Promise<string> {
       const st = await fs.stat(path.join(booksDir, f));
       parts.push(`${f}:${st.mtimeMs}:${st.size}`);
     }
+    // Cache OCR (leçons pdfOnly extraites à la demande) : fait partie de
+    // l'index de recherche — un changement d'état invalide l'index.
+    try {
+      const ocrDir = path.join(CONTENT_DIR, "ocr-cache");
+      const ocrFiles = (await fs.readdir(ocrDir)).filter((f) => f.endsWith(".json")).sort();
+      for (const f of ocrFiles) {
+        const st = await fs.stat(path.join(ocrDir, f));
+        parts.push(`ocr/${f}:${st.mtimeMs}:${st.size}`);
+      }
+    } catch {
+      /* répertoire absent : aucune leçon OCR-ée */
+    }
     return parts.join("|");
   } catch {
     return "";
@@ -457,6 +469,28 @@ async function getSearchIndex(): Promise<IndexEntry[]> {
     indexPromise = (async () => {
       const manifest = await getManifest();
       if (!manifest) return [] as IndexEntry[];
+      // Textes OCR des leçons pdfOnly (extractions à la demande) : mappés par
+      // docId puis fusionnés dans le texte arabe de l'entrée d'index — ces
+      // leçons deviennent ainsi recherchables après extraction.
+      const ocrTexts = new Map<string, string>();
+      try {
+        const ocrDir = path.join(CONTENT_DIR, "ocr-cache");
+        const ocrFiles = (await fs.readdir(ocrDir)).filter((f) => f.endsWith(".json"));
+        for (const f of ocrFiles) {
+          try {
+            const raw = JSON.parse(await fs.readFile(path.join(ocrDir, f), "utf-8")) as {
+              docId?: string;
+              bookId?: string;
+              html?: string;
+            };
+            if (raw?.docId && raw?.html) ocrTexts.set(String(raw.docId), raw.html);
+          } catch {
+            /* fichier de cache illisible : ignoré */
+          }
+        }
+      } catch {
+        /* répertoire absent */
+      }
       const entries: IndexEntry[] = [];
       for (const bookDef of manifest.books) {
         const file = await getBookFile(bookDef.id);
@@ -473,7 +507,9 @@ async function getSearchIndex(): Promise<IndexEntry[]> {
         for (const l of file.lessons ?? []) docs.push({ ...l, isIntro: false });
         for (const d of docs) {
           const plainFr = stripHtml(d.htmlFr || "");
-          const plainAr = stripHtml(d.html || "");
+          const plainAr = stripHtml(
+            ocrTexts.has(String(d.docId)) && !d.html ? (ocrTexts.get(String(d.docId)) as string) : d.html || ""
+          );
           entries.push({
             ...base,
             docId: d.docId,
