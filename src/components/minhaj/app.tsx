@@ -84,54 +84,56 @@ function AboutDialog({ stats }: { stats: AboutStats | null }) {
           <DialogTitle className="font-serif text-xl text-amber-950 dark:text-amber-50">
             À propos de Minhāj
           </DialogTitle>
-          <DialogDescription as="div" className="space-y-3 text-left text-sm leading-relaxed">
-            <p>
-              <strong className="text-foreground">Minhāj</strong> propose la consultation
-              bilingue (arabe ↔ français) des manuels du <em>programme modèle de
-              l&apos;enseignement traditionnel</em> (المنهاج النموذجي للتعليم العتيق) publié
-              par le ministère marocain des Habous et des Affaires islamiques.
-            </p>
-            <Separator className="bg-amber-800/15" />
-            <p>
-              <strong className="text-foreground">
-                {stats ? `${fmt(stats.booksTotal)} manuels` : "64 manuels"} ·{" "}
-                {stats ? `${fmt(stats.docsFr)} / ${fmt(stats.docsTotal)} documents` : "1 853 documents"}
-              </strong>
-              , du primaire au lycée : monothéisme (tawḥīd), droit rituel (fiqh), biographie
-              prophétique (sīra), psalmodie (tajwīd), exégèse (tafsīr), grammaire (naḥw), et bien
-              d&apos;autres matières.
-            </p>
-            <Separator className="bg-amber-800/15" />
-            <div className="space-y-2">
-              <p className="font-semibold text-foreground">Deux niveaux de traduction</p>
-              <p className="flex items-start gap-2.5 rounded-xl border border-amber-500/40 bg-gradient-to-br from-amber-100/80 to-yellow-50/60 p-3 dark:border-amber-400/25 dark:from-amber-900/40 dark:to-amber-800/25">
-                <BookMarked className="mt-0.5 size-4 shrink-0 text-amber-700 dark:text-amber-300" aria-hidden="true" />
-                <span>
-                  <strong className="text-amber-900 dark:text-amber-100">Traduction savante</strong>{" "}
-                  — révisée avec soin : terminologie académique translittérée, versets coraniques
-                  vérifiés, gloses des termes techniques.
-                  {stats && (
-                    <span className="mt-0.5 block text-xs text-muted-foreground">
-                      {fmt(stats.docsSavant)} documents concernés
-                    </span>
-                  )}
-                </span>
+          <DialogDescription asChild>
+            <div className="space-y-3 text-left text-sm leading-relaxed">
+              <p>
+                <strong className="text-foreground">Minhāj</strong> propose la consultation
+                bilingue (arabe ↔ français) des manuels du <em>programme modèle de
+                l&apos;enseignement traditionnel</em> (المنهاج النموذجي للتعليم العتيق) publié
+                par le ministère marocain des Habous et des Affaires islamiques.
               </p>
-              <p className="flex items-start gap-2.5 rounded-xl border border-amber-800/15 bg-card/70 p-3">
-                <Languages className="mt-0.5 size-4 shrink-0 text-muted-foreground" aria-hidden="true" />
-                <span>
-                  <strong className="text-foreground">Traduction automatique</strong> — le texte
-                  arabe officiel reste toujours affiché en regard ; la traduction savante remplace
-                  progressivement la version automatique, document par document.
-                </span>
+              <Separator className="bg-amber-800/15" />
+              <p>
+                <strong className="text-foreground">
+                  {stats ? `${fmt(stats.booksTotal)} manuels` : "64 manuels"} ·{" "}
+                  {stats ? `${fmt(stats.docsFr)} / ${fmt(stats.docsTotal)} documents` : "1 853 documents"}
+                </strong>
+                , du primaire au lycée : monothéisme (tawḥīd), droit rituel (fiqh), biographie
+                prophétique (sīra), psalmodie (tajwīd), exégèse (tafsīr), grammaire (naḥw), et bien
+                d&apos;autres matières.
               </p>
-            </div>
-            <Separator className="bg-amber-800/15" />
-            <p className="text-muted-foreground">
-              Conventions : vouvoiement, translittération scientifique (tawḥīd, waḍūʾ…), versets
-              coraniques en <em>italique</em> avec référence [S. x:y], formules prophétiques
-              développées.
-            </p>
+              <Separator className="bg-amber-800/15" />
+              <div className="space-y-2">
+                <p className="font-semibold text-foreground">Deux niveaux de traduction</p>
+                <p className="flex items-start gap-2.5 rounded-xl border border-amber-500/40 bg-gradient-to-br from-amber-100/80 to-yellow-50/60 p-3 dark:border-amber-400/25 dark:from-amber-900/40 dark:to-amber-800/25">
+                  <BookMarked className="mt-0.5 size-4 shrink-0 text-amber-700 dark:text-amber-300" aria-hidden="true" />
+                  <span>
+                    <strong className="text-amber-900 dark:text-amber-100">Traduction savante</strong>{" "}
+                    — révisée avec soin : terminologie académique translittérée, versets coraniques
+                    vérifiés, gloses des termes techniques.
+                    {stats && (
+                      <span className="mt-0.5 block text-xs text-muted-foreground">
+                        {fmt(stats.docsSavant)} documents concernés
+                      </span>
+                    )}
+                  </span>
+                </p>
+                <p className="flex items-start gap-2.5 rounded-xl border border-amber-800/15 bg-card/70 p-3">
+                  <Languages className="mt-0.5 size-4 shrink-0 text-muted-foreground" aria-hidden="true" />
+                  <span>
+                    <strong className="text-foreground">Traduction automatique</strong> — le texte
+                    arabe officiel reste toujours affiché en regard ; la traduction savante remplace
+                    progressivement la version automatique, document par document.
+                  </span>
+                </p>
+              </div>
+              <Separator className="bg-amber-800/15" />
+              <p className="text-muted-foreground">
+                Conventions : vouvoiement, translittération scientifique (tawḥīd, waḍūʾ…), versets
+                coraniques en <em>italique</em> avec référence [S. x:y], formules prophétiques
+                développées.
+              </p>
+          </div>
           </DialogDescription>
         </DialogHeader>
       </DialogContent>

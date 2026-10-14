@@ -167,7 +167,7 @@ export function SearchDialog({ open, onOpenChange }: { open: boolean; onOpenChan
             Rechercher dans le corpus
           </DialogTitle>
           <DialogDescription className="text-left">
-            934 documents bilingues — titres et contenus, arabe et français.
+            Titres et contenus, arabe et français.
           </DialogDescription>
         </DialogHeader>
 
