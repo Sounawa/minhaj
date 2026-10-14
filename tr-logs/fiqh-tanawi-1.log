@@ -888,3 +888,45 @@ error: API request failed with status 429: {"error":"Too many requests, please t
       at async <anonymous> (/home/z/my-project/scripts-translate/llm-translate.ts:561:14)
 
    ⚠︎ tentative 8/8 échouée [429] : API request failed with status 429: {"error":"Too many requests, please try again later"}
+   ✗ exception sur 11934 : LLM indisponible après 8 tentatives : API request failed with status 429: {"error":"Too many requests, please try again later"}
+
+━━━ fiqh-tanawi-1/11935 (leçon 14/30) — Les ventes nulles (bayʿ fāsid) — suite [turbo]
+Failed to make API request:  98 |                 headers: headers,
+ 99 |                 body: JSON.stringify(requestBody),
+100 |             });
+101 |             if (!response.ok) {
+102 |                 const errorBody = await response.text();
+103 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createChatCompletion (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:103:27)
+      at async callLLM (/home/z/my-project/scripts-translate/llm-translate.ts:251:53)
+      at async processTarget (/home/z/my-project/scripts-translate/llm-translate.ts:416:24)
+
+   ⚠︎ tentative 1/8 échouée [429] : API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make API request:  98 |                 headers: headers,
+ 99 |                 body: JSON.stringify(requestBody),
+100 |             });
+101 |             if (!response.ok) {
+102 |                 const errorBody = await response.text();
+103 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createChatCompletion (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:103:27)
+      at async callLLM (/home/z/my-project/scripts-translate/llm-translate.ts:251:53)
+      at async processTarget (/home/z/my-project/scripts-translate/llm-translate.ts:416:24)
+
+   ⚠︎ tentative 2/8 échouée [429] : API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make API request:  98 |                 headers: headers,
+ 99 |                 body: JSON.stringify(requestBody),
+100 |             });
+101 |             if (!response.ok) {
+102 |                 const errorBody = await response.text();
+103 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createChatCompletion (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:103:27)
+      at async callLLM (/home/z/my-project/scripts-translate/llm-translate.ts:251:53)
+      at async processTarget (/home/z/my-project/scripts-translate/llm-translate.ts:416:24)
+
+   ⚠︎ tentative 3/8 échouée [429] : API request failed with status 429: {"error":"Too many requests, please try again later"}
