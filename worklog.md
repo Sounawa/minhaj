@@ -5387,3 +5387,80 @@ Stage Summary:
   jour ce fichier.
 - Priorité suivante : reprendre la traduction ulum-quran-2es (leçon 18/29 attendue,
   leçon 19+ restantes), scratch de la 19273 déjà sécurisé.
+
+---
+Task ID: R74
+Agent: agent principal (Z.ai Code)
+Task: (1) Diagnostic « Download workspace failed: Failed to fetch » + allègement ;
+(2) reprise de la traduction — leçon 19274 (tafsīr allusif) livrée ; (3) piège
+.gitignore découvert et corrigé (scratch non versionné)
+
+Work Log:
+- **Download workspace** : workspace 1,7 Go (node_modules 1,2 G + .next 299 M).
+  Purge .next → 28 Mo (workspace 1,4 Go). INCIDENT : purge à chaud sous serveur
+  lancé → serveur mort/stallé (Recv-Q 5, connexions non acceptées) ; 2 relances
+  ratées (setsid puis dev.sh timeout 180 s) ; résolu par kill complet + rm .next
+  + relance `bash .zscripts/dev.sh` détaché → 200 en 35 ms. LEÇON : ne JAMAIS
+  rm -rf .next pendant que le serveur tourne ; toujours pkill d'abord.
+  Le bouton du panneau appartient à la plateforme (Caddyfile = proxy pur) : s'il
+  échoue encore, c'est la taille (1,2 Go node_modules requis par le serveur dev).
+  Voie fiable = GitHub (ZIP/clone), déjà synchronisé à chaque leçon.
+- **19274 LIVRÉE** (leçon 18, التفسير الإشاري, 13 322 car, QA lecteur/livre/accueil
+  OK, 0 erreur console, captures qa-r74-*.png, commit 4edb436) :
+  - Miroir habous 123 Ko téléchargé (URL encodée, curl -k pour le certificat).
+    9 images-verset dans l'article (dont 5 réutilisées du dossier خطب_الجمعة par
+    le CMS) + couverture + tableau de l'activité (OL04981).
+  - **Condition 1 (Zarqānī)** : [العنكبوت: 69] = **29:69 complet** (43c, boîte
+    309px, +7 %) — la lecture išārī de « لَمَعَ » au passé + « المحسنين » objet,
+    univoque. Alt correcte.
+  - **Tustarī (p. 30)** : [البقرة: 40] — boîte 135px = 21c → le manuel ne
+    reproduit que le DÉBUT « يا بني إسرائيل اذكروا نعمتي » (139px, -3 %) ;
+    2:40 complet = 63c exclu. Rendu « extrait (début du verset) ». Le commentaire
+    (makr/istidrāǧ/ḥilm — la niʿma sous conditions) rendu tel qu'imprimé.
+    Coquille bio : **« ت 383هـ » notée** (Sahl al-Tustarī mort en 283 H — 2→3).
+  - **Ibn ʿArabī (Īǧāz 1/215)** : 6:96 (55c) ; boîte 593×119 = 2 lignes → FLAG
+    (citation probablement étendue, 6:95-96 ?) ; 3 petits fragments entrelacés
+    (141/80/80px ≈ 21/12/12c) NON UNIVOQUES — rendus « [membre du verset
+    reproduit en image — al-Anʿām (6) : 96] » sans texte inventé ; « **حبّة** »
+    rendu TEL QUEL (« le grain (ḥabba) ») — le texte reçu d'Ibn ʿArabī porte
+    probablement « شقّ » ; non corrigé faute de preuve interne (règle R71).
+  - **Nīsābūrī (Ġarāʾib 1/380)** : alt [البقرة: 113] = **COQUILLE 113→114** — la
+    glose d'ouverture « مساجد الله التي يُذكر فيها اسمه » est le VERBATIM de
+    2:114 (« مَسَاجِدَ اللَّهِ أَنْ يُذْكَرَ فِيهَا اسْمُهُ ») ; boîte 494px (74c
+    ≈ 2:113 tronqué au pixel) écrasée par la doctrine (méthode R72 9:103).
+    Les 5 mosquées (nafs/qalb/rūḥ/sirr/khafī=serre des serres) rendues intégrales.
+  - **Ālūsī (Rūḥ 1/269)** : [البقرة: 54] = **2:54-55 début de série** (comme
+    55:3 = 55:3-5 en R72-ter) — boîte 592×176 = ~3 lignes vs 171c attendus
+    (2,4 lignes) : cohérent en réglage centré ; « صاعقة الموت = الفناء في التجلي
+    الذاتي » ; « وإذا قلتم لموسى القلبُ » rendu avec tiret (Mūsā = le cœur).
+  - **Istiṯmār** : فاطر-10 (35:10) — boîte 508px ≈ 77c vs 34c du fragment
+    « إليه يصعد الكلم الطيب… » : FLAG étendue indéterminée (verset entier 98c ?),
+    rendu extrait + note. Tableau de classement = image, noté sans transcription.
+  - Suyūṭī (Itqān **4/197** — soixante mille intelligences, ṣadr de la maison),
+    hadith Ibn Ḥibbān « لكل آية ظهر وبطن » + « وما جهلتم منه فردوه إلى عالمه »,
+    5 conditions + tabaʿī/ibtidāʾī, conditions de non-rejet vs obligations.
+- **PIÈGE .gitignore découvert** : tr-tmp/ et tr-logs/ étaient IGNORÉS — les
+  fichiers R73 n'étaient versionnés que par le add -f ponctuel ; les NOUVEAUX
+  fichiers (19274-*) restaient invisibles à git add -A (commit 4edb436 ne
+  contenait PAS le scratch !). Corrigé : règles retirées du .gitignore, scratch
+  intégralement versionné (commit d8a997f, 16 fichiers). tr-logs versionnés aussi.
+- Registre **471/950** (420 hand + 51 llm), ulum-quran-2es **21/29 (72 %)**.
+  Commits 4edb436 + d8a997f, push GitHub OK (86cf2ee..d8a997f), backup.sh OK
+  (bundle /tmp + push intégré — la règle b s'applique désormais aussi à GitHub).
+
+Stage Summary:
+- **État** : registre **471/950**, ulum2es **21/29**, 969/1152 bilingues (inchangé
+  — la machine htmlFr existait déjà), 46 badges. QA navigateur complète (lecteur
+  h1/versets/notes/AR bilingue, livre « 21/29 traductions savantes », accueil
+  saine, 0 erreur console). Serveur dev relancé via .zscripts/dev.sh officiel.
+- **Coquilles CMS ce tour : 2** (2:113→114 ; ت 383→283) — série cumulée ~62.
+  FLAGS bbox en attente : 6:96 (boîte 2 lignes), 35:10 (508px), 3 fragments
+  Ibn ʿArabī, + anciens (19158 ×2, 19261 ×2, 19273 ×7).
+- **Priorités R75** : (1) 19276 (اتجاهات أخرى — autres tendances) ; (2) 19280
+  (activité) ; (3) 19283-19287 (traduction du Coran ×5) ; (4) 19289 (sources,
+  gabarit 17778) → OBJECTIF : livre ulum-quran-2es COMPLET (19ᵉ livre savant).
+- **Risques** : le bouton Download workspace (plateforme) échouera tant que
+  node_modules (1,2 Go) sera requis — GitHub reste la voie de téléchargement
+  fiable ; purger .next ralentit la 1ʳᵉ compilation (l'accepter, ne jamais
+  purger à chaud) ; « ḥabba » et le passage Tustarī « في المعاجلة لكم » (imprimé
+  fautif) rendus tels quels — cohérence bilingue AR/FR prioritaire.
