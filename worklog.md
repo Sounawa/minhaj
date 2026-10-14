@@ -3079,3 +3079,34 @@ Stage Summary:
 - **Priorités suivantes** : (1) finir sira-3es (15637 Ḥudaybiyya en premier — leçon majeure, puis 15655, 15770, 15644, 15651, 15794) → 40e livre complet ; (2) tafsir-5ep si HTML disponible (vérifier le registre des livres restants à faible coût : intro + 1-3 leçons) ; (3) sira-2es (29 leçons), tajwid-6ep (28+intro), ulum-quran-3es (28) — gros livres ; (4) features en attente : export EPUB/PDF d'une leçon, extraction des 885 PDF-only (les docs pdfOnly de tafsir-3es/2es vérifiés ce tour affichent correctement la notice PDF officielle) ; (5) idée UI : étendre la détection .quran-quote à la colonne AR (références arabes (الشورى: 18)) pour un traitement symétrique.
 
 **Addendum R59 (fin de tour)** : 13e traduction — sira-3es/15637 (Ḥudaybiyya, 9 012 car) : Fatḥ 18+27 restitués au cache, clauses restituées d'après al-Raḥīq al-makhtūm 312-313 (image perdue documentée), Ibn Isḥāq/al-Zuhrī (Sīra Ibn Hishām 2/322), ʿAmr b. al-ʿĀṣ+Khālid an 7, al-Būṭī 236. Vérification navigateur : les DEUX citations coraniques (Fatḥ 18, Fatḥ 27) sont détectées par le nouveau panneau .quran-quote — la feature s'expose idéalement sur cette leçon. **Registre final du tour : 274/950** (+13). sira-3es : 4/9 docs savants (reste 15644, 15651, 15655, 15770, 15794).
+
+---
+Task ID: R60
+Agent: Z.ai Code (agent principal)
+Task: assess + QA navigateur (bug hydration AboutDialog corrigé) + sira-3es COMPLET (40e livre) + feature export HTML/EPUB + lettrine/ornements + fix stats déduplication
+
+Work Log:
+- **QA INITIAL** : accueil + lecteur + dialogs. BUG RÉEL trouvé : erreur hydration « p cannot be a descendant of p » + « div cannot contain nested p » sur l'ouverture du À propos — cause : `DialogDescription as="div"` n'est pas une prop Radix valide (seul `asChild` existe) → le composant rendait un `<p>` contenant nos `<p>` enfants. FIX : `asChild` + `<div>` wrapper + ré-indentation ; au passage, search-dialog : compteur « 934 documents bilingues » obsolète remplacé par un texte générique. QA : console clear+reload → 0 erreur, dialog affiche 64 manuels · 962/1152.
+- **5 TRADUCTIONS SAVANTES sira-3es** (rédaction main, workflow complet par doc, règles a/b) :
+  1. 15655 (Muḥammad ﷺ la miséricorde offerte, 7 700 car) — lettres aux rois (Ibn Saʿd Ṭabaqāt 1/198), bienséances des missives, ambassadeurs (Ibn Hishām 2/607, Iṣāba, Ṭabaqāt 4/187), Āl ʿImrān 64 RÉF CORRIGÉE [manuel: 63].
+  2. 15770 (Khaybar et Muʾta, 12 324 car) — hadiths Sahl b. Saʿd + Anas (Bukhārī), section causes/résultats RECONSTITUÉE (image perdue — Khaybar Muḥarram 7 H / Muʾta Jumādā I 8 H, meurtre d'al-Ḥārith b. ʿUmayr), miracles (Salama b. al-Akwaʿ), valeurs (chamelles rousses, duʿāʾ de Khaybar, orphelins de Jaʿfar, éthique de guerre).
+  3. 15644 (Umm Salama, 8 842 car) — texte d'al-Ḥudaybiyya (al-Ghazālī 336), Hind bt. Abī Umayya (Iḥj Iṣāba 8/241), Rūm 21 RÉF CORRIGÉE [manuel: 20], Tirmidhī + Ṭabarī.
+  4. 15651 (activités 2-4, 7 614 car) — al-Būṭī 210-211 sur l'ifk (2 vérités), al-Hajwī al-Thaʿālibī 1/192 (Anfāl 62+Muḥammad 36+Mumtaḥana 8-9 restitués), femmes savantes de Fès (al-Tāzī Jāmiʿ al-Qarawiyyīn 2/443-444).
+  5. 15794 (activités 6-7, 4 634 car) — réponse d'al-Muqawqis (al-Qasṭallānī 1/546), recommandation de Muʾta, Jaʿfar et Khālid.
+  → **sira-3es COMPLET en couche savante (9/9 docs) : 40e livre intégral.**
+- **qa-lesson.py : U+FDFA (ﷺ ligature de la salawat) EXEMPTEE** de la détection d'arabe résiduel — convention du corpus savant (hadith-2es/10960, fiqh-6ep/14116…), sinon le titre « Muḥammad ﷺ, la miséricorde… » faisait échouer la QA.
+- **FEATURE — export d'une leçon** (en attente depuis R56) : route `/api/export/{book}/{doc}?format=html|epub`.
+  - HTML autonome bilingue : en-tête orné (étoile 8 branches), panneau FR + panneau AR RTL, footer programme officiel, media print.
+  - EPUB 3 OCF : ZIP minimal maison en entrées stockées (CRC32 table, en-têtes locaux + central directory + EOCD, mimetype en tête sans extra, noms UTF-8) — aucune dépendance ajoutée.
+  - Sanitisation XHTML : 137 entités nommées HTML→caractères ; équilibreur de balises (void tags autoscellés, fermantes orphelines supprimées, ouvertes refermées) — le HTML scrapé contient des `</div>` finaux orphelins. BUG corrigé en cours de route : `<br//>` (le groupe attrs du regex d'appariement englobe le slash).
+  - Garde-fous : pdfOnly→415, doc inexistant→404. Validé (CRC + XML minidom) sur 5 types de docs.
+  - UI : menu Export dans la barre du lecteur (Imprimer PDF / Page web autonome / EPUB liseuse), désactivé pour pdfOnly.
+- **STYLING** : lettrine 3,1 em ambrée sur le premier paragraphe FR (tradition du livre savant, print sobre noir) + ornement miroir RTL sous les h2 arabes. Turbopack : trigger layout.tsx nécessaire (leçon R59).
+- **FIX STATS — déduplication docsFr par docId** : 6 livres (fiqh-1es, hadith-1ep, hadith-1es, tafsir-1es, tajwid-6ep, ulum-quran-1es) partagent le docId de l'intro avec une leçon — docsFr (occurrences) dépassait docsSavant (Set unique) et le badge « savante intégrale » ne pouvait jamais s'afficher pour ces livres. Désormais docsFr = docIds uniques → **40 badges** (hadith-1ep reconnu), compteur accueil 968→962/1152 (compte honnête, sans double comptage).
+- QA FINALE : 40 badges intégrale vérifiés au navigateur, export HTML ouvert (titre+ornement+2 panneaux+RT), mobile 390 px 0 overflow, 0 erreur console, lint 0 erreur (1 warning préexistant), registre **279/950**.
+
+Stage Summary:
+- **État** : sain. HEAD au terme de R60, registre **279/950** (+5 ce tour), **40 livres en couche savante intégrale** (sira-3es complété, hadith-1ep reconnu par le fix stats).
+- **Décisions documentées ce tour** : (1) ﷺ (U+FDFA) exempté de la QA — convention corpus ; (2) 2 nouvelles corrections de références du manuel (Āl ʿImrān 63→64, Rūm 20→21) ; (3) sections images perdues reconstituées et documentées (causes/résultats Khaybar-Muʾta d'après Raḥīq makhtūm, ahtadī de 15655/15644) ; (4) docsFr dédupliqué par docId (sémantique alignée sur docsSavant).
+- **Risques / attention** : (a) l'équilibreur XHTML de l'export est maison — si un doc échoue à la validation EPUB à l'avenir, vérifier d'abord les balises exotiques ; (b) le ZIP EPUB est en entrées stockées (taille ~2× compression) — acceptable pour des leçons < 50 Ko ; (c) ~665 traductions HTML restantes ; (d) docsSavant global (279) vs somme des docsSavant par livre : cohérent (aucun docId partagé entre livres détecté).
+- **Priorités suivantes** : (1) livres à faible coût restants (vérifier le registre : intro + 1-3 leçons non traduites) ; (2) sira-2es (29 leçons), tajwid-6ep (28+intro), ulum-quran-3es (28) — gros livres ; (3) features : extraction des 885 PDF-only (pdf-distiller/text extraction), bundle export EPUB d'un livre entier ; (4) idée UI : étendre .quran-quote à la colonne AR.
