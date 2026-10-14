@@ -88,7 +88,7 @@ function Hero({
               size="lg"
               variant="outline"
               className="h-12 gap-2 rounded-xl border-amber-800/25 bg-card/70 px-6 font-serif text-amber-950 hover:bg-amber-100/60 dark:text-amber-50 dark:hover:bg-amber-900/40"
-              onClick={() => navigate("/livre/tawhid")}
+              onClick={() => navigate("/livre/hadith-1ep/12788")}
             >
               <BookMarked className="size-4.5" aria-hidden="true" />
               Ouvrir un exemple bilingue
