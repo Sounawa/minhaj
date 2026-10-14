@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
 import { getReadPos, navigate, setLastDoc, setReadPos, useDoc, useFavorites, useHighlights, useLocalState, useNote } from "./hooks";
+import { useToast } from "@/hooks/use-toast";
 import type { HlPane } from "./hooks";
 import type { DocPayload } from "./types";
 
@@ -353,6 +354,42 @@ function OutlineButton({ items }: { items: OutlineItem[] }) {
       )}
     </div>
   );
+}
+
+/** Notes de restauration des versets-images (convention du corpus savant) :\n *  « [verset reproduit en image dans le manuel : « … » — Sūra (n) : v] » — le
+ *  manuel officiel habous rend les versets en images non-texte ; les traductions
+ *  savantes les restituent entre crochets avec référence. Encadrement ambre
+ *  discret (voir .verse-note dans globals.css) + copie au clic. */
+const VERSE_NOTE_RE = /\[(?:verset|tableau|schéma|carte)\b[^\]]{3,700}\]/g;
+function styleVerseNotes(root: ParentNode) {
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  const targets: { node: Text; matches: RegExpMatchArray[] }[] = [];
+  for (let n = walker.nextNode(); n; n = walker.nextNode()) {
+    const parent = n.parentElement;
+    if (!parent || parent.closest(".verse-note")) continue;
+    const t = n.nodeValue ?? "";
+    if (!t.includes("[verset") && !t.includes("[tableau") && !t.includes("[schéma") && !t.includes("[carte")) continue;
+    const matches = Array.from(t.matchAll(VERSE_NOTE_RE));
+    if (matches.length) targets.push({ node: n as Text, matches });
+  }
+  for (const { node, matches } of targets) {
+    // Ordre INVERSE : surroundContents fractionne le nœud texte — les indices
+    // des matches précédents (plus à droite) restent alors valides sur la
+    // tête du nœud ; un traitement direct invaliderait les matches suivants.
+    for (const m of matches.slice().reverse()) {
+      try {
+        const span = document.createElement("span");
+        span.className = "verse-note";
+        span.title = "Verset restauré d'après le manuel officiel — cliquer pour copier";
+        const range = document.createRange();
+        range.setStart(node, m.index ?? 0);
+        range.setEnd(node, (m.index ?? 0) + m[0].length);
+        range.surroundContents(span);
+      } catch {
+        /* nœud fractionné par un rendu intermédiaire : occurrence ignorée */
+      }
+    }
+  }
 }
 
 /** Parcours des citations coraniques détectées : compteur dans l'en-tête du
@@ -870,6 +907,7 @@ function DocNav({ doc }: { doc: DocPayload }) {
 
 export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
   const { data, error, loading } = useDoc(bookId, docId);
+  const { toast } = useToast();
   const [mode, setMode] = useLocalState<ViewMode>("minhaj.viewMode", "both");
   const [textSize, setTextSize] = useLocalState<TextSize>("minhaj.textSize", "normal");
   const { toggle, has } = useFavorites();
@@ -902,6 +940,29 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
     setQuoteIdx(-1);
     setQuotesCount(0);
   }
+
+  // Copie au clic des notes de restauration de versets (.verse-note) :
+  // délégation d'événement sur le document — aucun handler par note.
+  useEffect(() => {
+    if (!data || data.pdfOnly) return;
+    const onCopy = (e: MouseEvent) => {
+      const target = e.target as HTMLElement | null;
+      const note = target?.closest?.(".verse-note");
+      if (!note) return;
+      const text = (note.textContent ?? "").trim().replace(/^\[|\]$/g, "");
+      if (!text || !navigator.clipboard?.writeText) return;
+      navigator.clipboard.writeText(text).then(
+        () =>
+          toast({
+            title: "Citation copiée",
+            description: "Le texte du verset restauré est dans le presse-papiers.",
+          }),
+        () => undefined,
+      );
+    };
+    document.addEventListener("click", onCopy);
+    return () => document.removeEventListener("click", onCopy);
+  }, [data, toast]);
 
   /** Citation coranique suivante : défilement doux + pulsation ambre
    *  (voir .quran-flash dans globals.css — miroir du sommaire flottant). */
@@ -1028,6 +1089,12 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
         p.classList.add("quran-quote", "quran-quote-ar");
       }
     });
+    // Notes de restauration des versets-image : encadrement ambre discret
+    // (colonne FR uniquement — la convention de crochets est propre au panneau
+    // traduit ; les offsets du surlignage sont préservés : aucun texte ajouté).
+    document
+      .querySelectorAll<HTMLElement>(".reader-col[dir='ltr'] .lesson-content")
+      .forEach(styleVerseNotes);
     // Compteur pour le bouton de parcours des citations (en-tête du lecteur).
     // Mesure DIFFÉRÉE (requestAnimationFrame) : le marquage des classes vient
     // d'être appliqué au DOM — on mesure après le rendu, sans setState

@@ -401,6 +401,43 @@
 .reader-col[dir="rtl"] .lesson-content p.quran-quote + p.quran-quote {
   margin-block-start: 0.9em;
 }
+/* Notes de restauration des versets-images (reader.tsx, convention du corpus
+   savant) : « [verset reproduit en image dans le manuel : « … » — Sūra (n) : v] ».
+   Pastille inline ambre — clonée à chaque rupture de ligne — curseur copie,
+   retour visuel au survol, citation italique sobre. */
+.lesson-content .verse-note {
+  cursor: copy;
+  font-size: 0.94em;
+  padding: 0.08em 0.42em 0.12em 0.38em;
+  margin-inline: 0.12em;
+  border-inline-start: 2px solid color-mix(in oklab, var(--primary) 42%, transparent);
+  border-start-start-radius: 2px;
+  border-end-start-radius: 2px;
+  border-start-end-radius: 7px;
+  border-end-end-radius: 7px;
+  background: linear-gradient(
+    to right,
+    color-mix(in oklab, var(--primary) 8.5%, transparent),
+    color-mix(in oklab, var(--primary) 3%, transparent) 72%,
+    transparent
+  );
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  transition: background-color 120ms ease;
+}
+.lesson-content .verse-note:hover {
+  background: color-mix(in oklab, var(--primary) 14%, transparent);
+}
+.lesson-content .verse-note:active {
+  background: color-mix(in oklab, var(--primary) 22%, transparent);
+}
+@media print {
+  .lesson-content .verse-note {
+    background: none !important;
+    border-inline-start: 2px solid #8a7a4a !important;
+    padding-inline-start: 0.3em !important;
+  }
+}
 @media print {
   .lesson-content p.quran-quote {
     background: none !important;
