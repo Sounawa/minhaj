@@ -21,7 +21,10 @@ import re
 import sys
 
 NB = "\u202f"   # narrow no-break space
-ARABIC = re.compile(r"[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFF]")
+# NB : U+FDFA (ﷺ, ligature de la salawat) est EXEMPTEE — convention du corpus
+# savant (cf. hadith-2es/10960, fiqh-6ep/14116...) : symbole de vénération,
+# non du texte arabe residuel.
+ARABIC = re.compile(r"[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDF9\uFDFB-\uFDFF\uFE70-\uFEFF]")
 VOID = {"br", "hr", "img", "input", "meta", "link"}
 PAIRED = {"h1", "h2", "h3", "h4", "h5", "p", "dl", "dt", "dd", "ul", "ol", "li",
           "strong", "em", "i", "b", "table", "thead", "tbody", "tr", "td", "th",
