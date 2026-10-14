@@ -9,10 +9,12 @@ import {
   BookOpen,
   CloudDownload,
   Compass,
+  Download,
   FileText,
   Hourglass,
   Languages,
   Loader2,
+  Printer,
   Search,
   SearchX,
 } from "lucide-react";
@@ -120,6 +122,85 @@ function LessonRow({
         </span>
       </button>
     </li>
+  );
+}
+
+/** Export du manuel entier : impression du bundle HTML, page autonome, EPUB. */
+function BookExportMenu({ bookId, docsTotal }: { bookId: string; docsTotal: number }) {
+  const [open, setOpen] = useState(false);
+  const base = `/api/export/${bookId}`;
+  return (
+    <div className="relative shrink-0">
+      <Button
+        variant="outline"
+        size="sm"
+        aria-label="Exporter le manuel complet"
+        title="Exporter le manuel complet"
+        aria-expanded={open}
+        className="h-10 gap-2 rounded-xl border-amber-800/15 bg-card/70 text-amber-900 hover:bg-amber-100/60 dark:text-amber-100 dark:hover:bg-amber-900/40"
+        onClick={() => setOpen((o) => !o)}
+      >
+        <Download className="size-4" aria-hidden="true" />
+        Exporter
+      </Button>
+      {open && (
+        <>
+          <div className="fixed inset-0 z-40" onClick={() => setOpen(false)} aria-hidden="true" />
+          <div
+            role="dialog"
+            aria-label="Exporter le manuel"
+            className="absolute end-0 top-12 z-50 w-72 rounded-xl border border-amber-800/15 bg-card p-1.5 shadow-lg"
+          >
+            <p className="px-2.5 pb-1 pt-2 text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+              Manuel complet · {docsTotal} documents
+            </p>
+            <a
+              href={`${base}?format=html&print=1`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start gap-2.5 rounded-lg px-2.5 py-2 text-left text-[13px] text-foreground transition hover:bg-amber-100/70 dark:hover:bg-amber-900/40"
+              onClick={() => setOpen(false)}
+            >
+              <Printer className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
+              <span>
+                <span className="block font-medium">Imprimer (PDF)</span>
+                <span className="block text-[11px] leading-snug text-muted-foreground">
+                  Ouvre le manuel bilingue puis le dialogue d’impression.
+                </span>
+              </span>
+            </a>
+            <a
+              href={`${base}?format=html`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start gap-2.5 rounded-lg px-2.5 py-2 text-left text-[13px] text-foreground transition hover:bg-amber-100/70 dark:hover:bg-amber-900/40"
+              onClick={() => setOpen(false)}
+            >
+              <FileText className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
+              <span>
+                <span className="block font-medium">Page web autonome</span>
+                <span className="block text-[11px] leading-snug text-muted-foreground">
+                  Sommaire cliquable + toutes les leçons — sans connexion.
+                </span>
+              </span>
+            </a>
+            <a
+              href={`${base}?format=epub`}
+              className="flex items-start gap-2.5 rounded-lg px-2.5 py-2 text-left text-[13px] text-foreground transition hover:bg-amber-100/70 dark:hover:bg-amber-900/40"
+              onClick={() => setOpen(false)}
+            >
+              <Download className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
+              <span>
+                <span className="block font-medium">Livre numérique EPUB</span>
+                <span className="block text-[11px] leading-snug text-muted-foreground">
+                  Un chapitre par leçon — pour liseuse (EPUB 3).
+                </span>
+              </span>
+            </a>
+          </div>
+        </>
+      )}
+    </div>
   );
 }
 
@@ -341,22 +422,25 @@ export function BookPage({ bookId }: { bookId: string }) {
                   ({data.lessons.length})
                 </span>
               </h2>
-              {data.lessons.length > 0 && (
-                <div className="relative w-full sm:max-w-xs">
-                  <Search
-                    className="pointer-events-none absolute start-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground"
-                    aria-hidden="true"
-                  />
-                  <Input
-                    type="search"
-                    value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                    placeholder="Filtrer les leçons…"
-                    aria-label="Filtrer les leçons"
-                    className="h-10 rounded-xl border-amber-800/20 bg-card/70 ps-9 text-sm shadow-none focus-visible:ring-primary/40"
-                  />
-                </div>
-              )}
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+                {data.lessons.length > 0 && (
+                  <div className="relative w-full sm:max-w-xs">
+                    <Search
+                      className="pointer-events-none absolute start-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground"
+                      aria-hidden="true"
+                    />
+                    <Input
+                      type="search"
+                      value={query}
+                      onChange={(e) => setQuery(e.target.value)}
+                      placeholder="Filtrer les leçons…"
+                      aria-label="Filtrer les leçons"
+                      className="h-10 rounded-xl border-amber-800/20 bg-card/70 ps-9 text-sm shadow-none focus-visible:ring-primary/40"
+                    />
+                  </div>
+                )}
+                <BookExportMenu bookId={bookId} docsTotal={book.docsTotal} />
+              </div>
             </div>
 
             {data.lessons.length === 0 && data.book.unpublished ? (

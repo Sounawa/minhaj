@@ -203,7 +203,7 @@ interface SavantRegistry {
 }
 let savantCache: { mtimeMs: number; ids: Set<string> } | null = null;
 
-async function getSavantIds(): Promise<Set<string>> {
+export async function getSavantIds(): Promise<Set<string>> {
   const abs = path.join(process.cwd(), "scripts-translate", "savant-registry.json");
   try {
     const stat = await fs.stat(abs);
@@ -609,3 +609,5 @@ export async function getDoc(bookId: string, docId: string): Promise<DocPayload 
     next: nav(next),
   };
 }
+
+// trigger: export bundle R61

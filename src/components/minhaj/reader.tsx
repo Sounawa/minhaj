@@ -698,9 +698,14 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
 
   // Tableaux de vers (manẓūma) : marquer les structures hémistiche/séparateur/hémistiche
   // pour la mise en forme poétique (voir .verse-table dans globals.css).
-  // Citations coraniques (colonne FR) : paragraphes ouvrés par « et clôturés par
-  // une référence de verset — p.ex. « … » (Al-Shura, 18-20) — mis en exergue
-  // par un panneau ambre discret (voir .quran-quote dans globals.css).
+  // Citations coraniques : mise en exergue par un panneau ambre discret (voir
+  // .quran-quote dans globals.css) — détection SYMÉTRIQUE :
+  //  - colonne FR : paragraphes ouvrés par « et clôturés par une référence de
+  //    verset — p.ex. « … » (Al-Shura, 18-20) ;
+  //  - colonne AR : paragraphes contenant les parenthèses ornementales ﴾ ﴿
+  //    (u+FD3E/u+FD3F, typographie coranique du corpus) ou clôturés par une
+  //    référence entre crochets — p.ex. [الشورى: 18] (nom arabe : chiffres,
+  //    sans volume/page pour écarter les citations de commentaires).
   useEffect(() => {
     if (!data || data.pdfOnly) return;
     document.querySelectorAll<HTMLElement>(".lesson-content table").forEach((table) => {
@@ -721,6 +726,16 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
       const t = (p.innerText ?? "").trim();
       if (t.startsWith("«") && t.length > 120 && QUOTE_REF.test(t)) {
         p.classList.add("quran-quote");
+      }
+    });
+    // Colonne AR : ﴾…﴿ ou référence [الشورى: 18] finale
+    const AR_QUOTE_REF = /\[\s*[\u0600-\u06FF][\u0600-\u06FF\s]{0,25}:\s*[\d\u0660-\u0669][\d\u0660-\u0669\s\u2013-]*\]\s*$/;
+    document.querySelectorAll<HTMLElement>(".reader-col[dir='rtl'] .lesson-content > p").forEach((p) => {
+      if (p.classList.contains("quran-quote")) return;
+      const t = (p.innerText ?? "").trim();
+      const hasOrnate = t.includes("\u{FD3E}") || t.includes("\u{FD3F}");
+      if ((hasOrnate && t.length > 40) || (t.length > 120 && AR_QUOTE_REF.test(t))) {
+        p.classList.add("quran-quote", "quran-quote-ar");
       }
     });
   }, [data, mode, textSize]);

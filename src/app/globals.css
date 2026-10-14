@@ -325,6 +325,30 @@
 .reader-col[dir="ltr"] .lesson-content p.quran-quote + p.quran-quote {
   margin-block-start: 0.9em;
 }
+/* Variante AR (détection symétrique ﴾…﴿ / [الشورى: 18]) : miroir RTL —
+   filet doré à droite, dégradé fuyant vers la gauche, italique OFF
+   (l'arabe ne s'italique pas), graisse légèrement appuyée pour distinguer
+   le registre coranique du commentaire. */
+.reader-col[dir="rtl"] .lesson-content p.quran-quote {
+  position: relative;
+  margin-block: 1.25em;
+  padding: 0.85em 1.25em 0.85em 1.1em;
+  border-inline-end: 2.5px solid color-mix(in oklab, var(--primary) 55%, transparent);
+  border-start-end-radius: 2px;
+  border-end-end-radius: 2px;
+  border-start-start-radius: 12px;
+  border-end-start-radius: 12px;
+  background:
+    linear-gradient(
+      to left,
+      color-mix(in oklab, var(--primary) 8%, transparent),
+      color-mix(in oklab, var(--primary) 2.5%, transparent) 62%,
+      transparent
+    );
+}
+.reader-col[dir="rtl"] .lesson-content p.quran-quote + p.quran-quote {
+  margin-block-start: 0.9em;
+}
 @media print {
   .lesson-content p.quran-quote {
     background: none !important;
