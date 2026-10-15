@@ -5853,3 +5853,89 @@ Stage Summary:
   رن» rendu «معطوف على أنْ تخشع» (confiance moyenne — sens certain, lettres douteuses) ;
   «ولما بين حال المصدقين» (2 lectures ولا/وما — conservé «ولما بين») ; push GitHub
   suspendu (token) ; cron à recréer (voir R84-cron).
+
+---
+Task ID: R85
+Agent: Z.ai Code (agent principal)
+Task: PUSH GITHUB (token utilisateur) + livraison de la leçon 575 (سورة الحديد 19-23 = Ḥafṣ 20-24, tafsir-2es, 13e leçon pdf-only) + fix réf Bayḍāwī 574
+
+Work Log:
+- **PUSH GITHUB EFFECTUÉ** (demande explicite utilisateur + token fourni) : 35 commits
+  en attente poussés (1c4d98d → 0549fe7), branche main synchronisée, remote vérifié.
+- **PDF 575** (2019-1.PDF, 7 pages) téléchargé via proxy translate.goog (curl -k, exit 60
+  SSL contourné). Rendus 300 + 600 dpi, OCR psm4/6/7/13 multi-seuils (128/200/210/225/245).
+- **VLM DE RETOUR** (fin du 429 persistant !) : glm-5v-turbo opérationnel sur crops
+  serrés (1 mot = fiable ; lignes larges/demi-pages = hallucinations — ne PAS lui
+  soumettre de contexte suggestif, il confirme les candidats proposés !).
+- **Règle d'or satisfaite 6e fois** : les idad 574 flaggés R84 «مَغْفِرَةٌ» (lecture
+  «مَابفْواً») et «فَتَرَىٰهُ» (flag تراه/رأها) sont CONFIRMÉS par le texte du bloc v20
+  (وَمَغْفِرَةٌۭ مِّنَ ٱللَّهِ + فَتَرَىٰهُ مُصْفَرًّۭا) — aucune correction de 574 idad nécessaire.
+- **BLOC آيات = cache v20-24, numérotation madrasa ١٩-٢٣** : triple preuve — (1) le bloc
+  commence à اعلموا أنما الحياة الدنيا (Ḥafṣ 20 ✓ règle R84 manual=Ḥafṣ−1 pour N≥15) ;
+  (2) fin du bloc pixel-vérifiée p2 : وَمَن يَتَوَلَّ ۝ ٱللَّهَ هُوَ ٱلْغَنِىُّ ٱلْحَمِيدُ ۝٢٣ +
+  label [سورة الحديد: ١٩-٢٣] ; (3) le tafsīr p5 cite (وَمَن يَتَوَلَّ فَإِنَّ ٱللَّهَ هُوَ ٱلْغَنِىُّ ٱلْحَمِيدُ)
+  avec le commentaire «ووصفه بأنه الحميد» — cohérence parfaite.
+- **575 LIVRÉE** (الدرس 20/38, 13e pdf-only) : AR 8 611 car + FR 13 810 car (registre
+  savant, NNBSP auto-fix, NdT numérotation). Structure : أهداف (3) / تمهيد / 5 versets
+  Warš ١٩-٢٣ / الشرح 5 gloses (وزينة: ما يتزين به الإنسان / وتفاخر: ما يتفاخر به الناس /
+  وتكاثر: ما يتباهى به الناس / سابقوا: سارعوا / نبرأها: نخلقها) / استخلاص (2) /
+  تفسير 3 parties (تحذير الناس من التعلق بالدنيا / تسلية المؤمنين على ما يلحقهم من مصائب /
+  مقاصد) / تقويم (3) / حديث أبي هريرة «المؤمن القوي» [صحيح مسلم، كتاب القدر] /
+  أتأمل (2) / إعداد قبلي (3 questions, 6 lemmes).
+- Citations restituées : Bayḍāwī «لما ذكر حال الفريقين في الآخرة؛ حقر أمور الدنيا…»
+  [تفسير البيضاوي: 189/5] ; Ibn Kathīr «ولما كان هذا المثل دالا على زوال الدنيا…»
+  [تفسير القرآن العظيم؛ لابن كثير: 25/8] ; Nasafī [تفسير النسفي: 440/3] ; hadith
+  «كتب الله مقادير الخلائق قبل أن يخلق السماوات والأرض بخمسين ألف سنة» [صحيح مسلم،
+  كتاب القدر، باب حجاج آدم وموسى] ; qiraʾāt : الجمهور بالمد (بما آتاكم) vs أبو عمرو
+  بالقصر (بما أتاكم) ; iʿrāb (الذين يبخلون) : بدل من كل مختال فخور / خبر مبتدأ محذوف
+  تقديره هم الذين / منصوب بإضمار أعني / مبتدأ وخبره محذوف ; Abū Bakr «اللهم إنا لا
+  نستطيع إلا أن نفرح بما زينت لنا».
+- **IDAD 576 (pour la suite) TRANSCRIT — 6 lemmes** (méthode croisée pixel + VLM +
+  gloses 576.pdf) : بِالْبَيِّنَاتِ - الْمِيزَانَ - وَقَفَّيْنَا - رَهْبَانِيَّةً - ابْتَدَعُوهَا -
+  فَمَا رَعَوْهَا + question iʿrāb «وَرَهْبَانِيَّةً ابْتَدَعُوهَا». Les gloses de 576
+  (bénéficiant du PDF 576 déjà téléchargé : بِالْبَيِّنَاتِ: المعجزات الواضحات /
+  ابْتَدَعُوهَا: استحدثوها / فَمَا رَعَوْهَا: لم يدوموا عليها) valident 3/6 lemmes ;
+  zone-runs + VLM pour les 3 autres (الميزان par structure م+ي+ز+ا+ن+ال, وقفينا par
+  le pattern OCR فَقِيتا, رهبانية par VLM ×2 + finale ةً).
+- **FIX 574 — réf Bayḍāwī pixel-vérifiée 108/1 → 188/1** (AR + FR) : les 2e/3e chiffres
+  sont des «8» (anneau à barre médiane) et non «0» (anneau vide) — distinction 0/8
+  validée en comparant le vrai «0» de la réf Ibn Kathīr 574 (20/8) et le vrai «8» de
+  25/8 (575). Pages 188→189 consécutives avec la réf Bayḍāwī 575 = 189/5 ✓. Le «1»
+  final de 574 est vraisemblablement une coquille du manuel pour «5» — transcrit tel
+  quel. Réfs Ibn Kathīr 574 (20/8) et Ṭabarī 574 (192/23) re-vérifiées : correctes.
+- Incident registre : hand-register.py a absorbé «add/--book/tafsir-2es» comme docIds
+  (bug connu R84) — purge immédiate → registre 492/950 (441 hand + 51 llm), 575 enregistrée.
+- **QA navigateur (agent-browser) complète** : accueil **982/1152** ; lecteur 575
+  «Sourate Al-Hadid (versets 19-23)», Leçon 20/38, badge «Traduction savante», les 5
+  versets (19)-(23) + NdT Ḥafṣ 20-24, gloses FR (wa-zīna…nabraʾahā), 3 réfs rendues,
+  hadith «croyant fort», préparation 24-26 avec les 6 lemmes ; navigation SUIVANT→576
+  («Sourate Al-Hadid (versets : 24-26)») puis retour 575 ✓ ; 574 re-vérifié (188/1
+  visible, 108/1 purgée AR+FR) ; page livre **21/38 (55 %)** avec carte 575 «savante
+  bilingue» ; mobile 390 px overflow 0 px ; desktop overflow 0 px ; **console 0 erreur**.
+  Captures : tr-tmp/qa-r85-{home,575-reader,575-mobile,574-fix,book}.png. lint 0 erreur
+  (1 warning préexistant).
+- Commits : 80529a6 (575 + fix 574 + worklog R84 déjà poussé 0549fe7) — **push GitHub
+  immédiat** (main synchronisé).
+
+Stage Summary:
+- **ÉTAT : registre 492/950 ; 982/1152 bilingues (85,2 %) ; tafsir-2es 21/38 docs
+  (55 %) ; leçons 556-575 livrées ; GitHub à jour.** Dev 200 propre, 0 erreur console.
+- **MÉTHODES consolidées** : (1) distinction pixel 0 (anneau vide) vs 8 (anneau à barre
+  médiane) pour les chiffres de refs — vérifier TOUJOURS par glyphe, jamais par OCR
+  global ; (2) VLM fiable UNIQUEMENT sur crops serrés (1-2 mots), sans candidats
+  suggestifs dans le prompt ; (3) les gloses de la leçon N+1 (PDF téléchargeable en
+  avance) valident les lemmes idad de la leçon N — généraliser ce raccourci ; (4)
+  hand-register.py : ne passer QUE le docId (jamais de flags), sinon purge nécessaire.
+- **Priorités R86** : (1) leçon 576 (سورة الحديد 24-26 = Ḥafṣ 25-27 — PDF déjà dans
+  tr-tmp/576.pdf ; bloc = cache s57 v25-27 ; gloses déjà transcrites : بالبينات/
+  ابتدعوها/فما رعوها ; thème بعثة الرسل والشرائع السماوية ; iʿrāb ورهبانية ابتدعوها
+  à exposer) ; puis 577 (27-28 = Ḥafṣ 28-29, fin Ḥadīd), 578-583 (المجادلة),
+  584 فهرس, 585 مصادر ; (2) QA app globale ; (3) push GitHub à chaque leçon.
+- **Risques** : 1 phrase p3 575 en confiance moyenne : «ثم بيّن تعالى متقلباته؛ هذا
+  تشبيه للدنيا…» — le mot «متقلباته» (456 px, finissant en ـاته) et le segment
+  «يكون هذا» n'ont pas convergé proprement (OCR متباín : مصعراته/محجراته/mصغرانم ;
+  VLM suggère «كيف يكون» mais trop court pour 456 px) — à re-vérifier en futur
+  tour si un passage parallèle émerge ; 2e phrase p5 «إذ قل من يثبّت نفسه» — يثبّت
+  confirmé VLM (forme II) ; «حال هذا النبات» vs «كيف يكون هذا» tranché par VLM ×2
+  mais prompt contaminé — flag levé sur «متقلباته» seulement.
+- VLM/web-search : VLM OK ce tour (429 levé) — web_search non testé.
