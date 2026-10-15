@@ -486,6 +486,22 @@
 .lesson-content .verse-note--daira:hover {
   background: color-mix(in oklab, var(--primary) 16%, transparent);
 }
+/* Variante indisponible : [tableau…] NON parsable — tableaux d'exercice à
+   remplir, « tableau non reproduit » — filet pointillé, teinte atténuée,
+   curseur copie : le clic copie la note (repli du handler), aucun dialogue. */
+.lesson-content .verse-note--unavail {
+  cursor: copy;
+  border-inline-start: 2px dashed color-mix(in oklab, var(--primary) 38%, transparent);
+  background: linear-gradient(
+    to right,
+    color-mix(in oklab, var(--primary) 5%, transparent),
+    transparent 68%
+  );
+  color: color-mix(in oklab, var(--foreground) 78%, var(--muted-foreground));
+}
+.lesson-content .verse-note--unavail:hover {
+  background: color-mix(in oklab, var(--primary) 10%, transparent);
+}
 /* Accessibilité clavier des chips (role=button) : anneau de focus ambre. */
 .lesson-content .verse-note:focus-visible {
   outline: 2px solid color-mix(in oklab, var(--primary) 65%, transparent);
@@ -560,6 +576,35 @@ table.daira-table {
 .daira-num {
   font-variant-numeric: tabular-nums;
   font-weight: 600;
+}
+/* Pourcentage de la masse (parts / somme) : après le nombre, discret. */
+.daira-pct {
+  font-variant-numeric: tabular-nums;
+  color: var(--muted-foreground);
+  font-size: 0.78em;
+  font-weight: 400;
+  margin-inline-start: 0.3rem;
+}
+/* Impression du dialogue de répartition : filets sobres, barres en niveaux
+   de gris, pourcentages conservés (utile au lecteur papier). */
+@media print {
+  .daira-table th {
+    color: #444;
+    border-bottom: 1.5px solid #8a7a4a;
+  }
+  .daira-table td {
+    border-bottom: 1px dotted #8a7a4a66;
+  }
+  .daira-bar {
+    background: #eee;
+    outline: 0.5pt solid #bbb;
+  }
+  .daira-fill {
+    background: #8a7a4a;
+  }
+  .daira-excl td {
+    color: #666;
+  }
 }
 /* Panneau OCR (leçons pdfOnly) : texte arabe reconnu par tesseract —
    respiration ample, séparateur de pages sobre, ascenseur doux. */

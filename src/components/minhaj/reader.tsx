@@ -14,7 +14,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { getReadPos, navigate, setLastDoc, setReadPos, useDoc, useFavorites, useHighlights, useLocalState, useNote } from "./hooks";
+import { getReadPos, navigate, setLastDoc, setReadPos, toggleReadMark, useDoc, useFavorites, useHighlights, useLocalState, useNote, useReadMarks } from "./hooks";
 import { useToast } from "@/hooks/use-toast";
 import type { HlPane } from "./hooks";
 import type { DocPayload } from "./types";
@@ -567,12 +567,20 @@ function styleVerseNotes(root: ParentNode) {
       try {
         const span = document.createElement("span");
         // Variante dāʾira : les [tableau de répartition…] ouvrent un dialogue
-        // de table rendue ; les [verset…] restent copie au clic.
+        // de table rendue ; les [verset…] restent copie au clic. Les notes
+        // [tableau…] NON parsables (tableaux d'exercice, « non reproduit »)
+        // prennent la variante --unavail : pointillés + curseur copie —
+        // le clic reste la copie (repli du handler), sans lester le zoom.
         const isDaira = /^\[(?:tableau|schéma|carte)\b/.test(m[0]);
-        span.className = isDaira ? "verse-note verse-note--daira" : "verse-note";
-        span.title = isDaira
+        const parses = isDaira && parseDairaNote(m[0]) !== null;
+        span.className = isDaira
+          ? `verse-note${parses ? " verse-note--daira" : " verse-note--unavail"}`
+          : "verse-note";
+        span.title = parses
           ? "Tableau de répartition (dāʾira) — cliquer pour ouvrir"
-          : "Verset restauré d'après le manuel officiel — cliquer pour copier";
+          : isDaira
+            ? "Tableau signalé dans le manuel (non reproduit) — cliquer pour copier la note"
+            : "Verset restauré d'après le manuel officiel — cliquer pour copier";
         span.setAttribute("role", "button");
         span.tabIndex = 0;
         const range = document.createRange();
@@ -1163,11 +1171,30 @@ function DairaDialog({ data, onClose }: { data: DairaData; onClose: () => void }
                   {r.parts == null ? (
                     "—"
                   ) : (
-                    <span className="daira-bar" aria-hidden="true">
+                    <span
+                      className="daira-bar"
+                      aria-hidden="true"
+                      title={
+                        data.total > 0
+                          ? `${r.parts} part${r.parts > 1 ? "s" : ""} sur ${data.total} — ${Math.round((r.parts / data.total) * 100)} % de la masse`
+                          : undefined
+                      }
+                    >
                       <span className="daira-fill" style={{ width: `${Math.max(3, Math.round((r.parts / Math.max(1, data.total)) * 100))}%` }} />
                     </span>
                   )}
-                  {r.parts == null ? "" : <span className="daira-num">{r.parts}</span>}
+                  {r.parts == null ? (
+                    ""
+                  ) : (
+                    <>
+                      <span className="daira-num">{r.parts}</span>
+                      {data.total > 0 && (
+                        <span className="daira-pct">
+                          {Math.round((r.parts / data.total) * 100)} %
+                        </span>
+                      )}
+                    </>
+                  )}
                 </td>
               </tr>
             ))}
@@ -1195,7 +1222,10 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
   const [mode, setMode] = useLocalState<ViewMode>("minhaj.viewMode", "both");
   const [textSize, setTextSize] = useLocalState<TextSize>("minhaj.textSize", "normal");
   const { toggle, has } = useFavorites();
+  const { isRead } = useReadMarks(bookId);
   const [justToggled, setJustToggled] = useState(false);
+  const [justRead, setJustRead] = useState(false);
+  const docRead = isRead(docId);
   const [progress, setProgress] = useState(0);
   const { ranges: hlRanges, add: hlAdd, clearAll: hlClear, count: hlCount } = useHighlights(bookId, docId);
   const [hlSel, setHlSel] = useState<{ pane: HlPane; start: number; end: number; x: number; y: number } | null>(null);
@@ -1631,6 +1661,38 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
             <ReadAloudButton docId={docId} htmlFr={data.htmlFr} />
           )}
           {data && !data.pdfOnly && <NotesButton bookId={bookId} docId={docId} />}
+          <Button
+            variant="outline"
+            size="icon"
+            aria-label={docRead ? "Retirer la marque « leçon lue »" : "Marquer la leçon comme lue"}
+            title={docRead ? "Retirer la marque « leçon lue »" : "Marquer la leçon comme lue — la progression s'affiche sur la page du livre"}
+            className={cn(
+              "size-10 border-amber-800/15 bg-card/70 hover:bg-amber-100/60 dark:hover:bg-amber-900/40",
+              docRead
+                ? "border-amber-500/60 bg-amber-100/70 text-amber-700 dark:border-amber-400/40 dark:bg-amber-900/50 dark:text-amber-300"
+                : "text-amber-900 hover:text-amber-700 dark:text-amber-100 dark:hover:text-amber-300"
+            )}
+            onClick={() => {
+              const nowRead = toggleReadMark(bookId, docId);
+              setJustRead(true);
+              setTimeout(() => setJustRead(false), 1200);
+              toast({
+                title: nowRead ? "Leçon marquée comme lue" : "Marque retirée",
+                description: nowRead
+                  ? "La progression de lecture est visible sur la page du livre."
+                  : undefined,
+              });
+            }}
+          >
+            <BookmarkCheck
+              className={cn(
+                "size-4.5 transition-transform",
+                docRead && "stroke-[2.4]",
+                justRead && "scale-125",
+              )}
+              aria-hidden="true"
+            />
+          </Button>
           <Button
             variant="outline"
             size="icon"

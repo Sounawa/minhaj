@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState, useSyncExternalStore } from "react";
+import { useCallback, useEffect, useMemo, useState, useSyncExternalStore } from "react";
 import type { BookDetailPayload, DocPayload, LibraryPayload } from "./types";
 
 // ————————————————————————————————— Routage par hash (#/livre/{bookId}/{docId})
@@ -341,6 +341,73 @@ export function useFavorites() {
     [favorites]
   );
   return { favorites, toggle, remove, has };
+}
+
+/* ——— Leçons lues (progression personnelle) ———
+   Structure : { [bookId]: { [docId]: horodatage } } — marque posée
+   manuellement depuis le lecteur, restituée sur la page du livre. */
+
+const READS_KEY = "minhaj.readDocs";
+const readsCache: { raw: string | null; map: Record<string, Record<string, number>> } = {
+  raw: null,
+  map: {},
+};
+
+export function getReadMap(): Record<string, Record<string, number>> {
+  if (typeof window === "undefined") return {};
+  const raw = localStorage.getItem(READS_KEY);
+  if (raw !== readsCache.raw) {
+    readsCache.raw = raw;
+    let map: Record<string, Record<string, number>> = {};
+    try {
+      const v = raw ? JSON.parse(raw) : {};
+      if (v && typeof v === "object" && !Array.isArray(v)) map = v;
+    } catch {
+      map = {};
+    }
+    readsCache.map = map;
+  }
+  return readsCache.map;
+}
+
+function writeReadMap(map: Record<string, Record<string, number>>) {
+  try {
+    localStorage.setItem(READS_KEY, JSON.stringify(map));
+    notifyLs();
+  } catch {
+    /* ignore */
+  }
+}
+
+export function toggleReadMark(bookId: string, docId: string): boolean {
+  const map = getReadMap();
+  const book = { ...(map[bookId] ?? {}) };
+  const nowRead = !(docId in book);
+  if (nowRead) book[docId] = Date.now();
+  else delete book[docId];
+  writeReadMap({ ...map, [bookId]: book });
+  return nowRead;
+}
+
+export function useReadMarks(bookId: string): {
+  readIds: string[];
+  count: number;
+  isRead: (docId: string) => boolean;
+} {
+  const hydrated = useHydrated();
+  const map = useSyncExternalStore(
+    subscribeLs,
+    hydrated ? getReadMap : (() => readsCache.map),
+    () => readsCache.map,
+  );
+  // Identité stable : ni le book ni isRead ne changent tant que map[bookId]
+  // garde la même référence (cache LS).
+  return useMemo(() => {
+    const book = map[bookId];
+    const readIds = book ? Object.keys(book) : [];
+    const isRead = (docId: string) => book != null && docId in book;
+    return { readIds, count: readIds.length, isRead };
+  }, [map, bookId]);
 }
 
 const lastCache: { raw: string | null; doc: LastDoc | null } = { raw: null, doc: null };

@@ -7,6 +7,8 @@ import {
   Award,
   BookMarked,
   BookOpen,
+  BookmarkCheck,
+  Check,
   CloudDownload,
   Compass,
   Download,
@@ -24,7 +26,7 @@ import { Input } from "@/components/ui/input";
 import { Progress } from "@/components/ui/progress";
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
-import { navigate, useBookDetail } from "./hooks";
+import { navigate, useBookDetail, useReadMarks } from "./hooks";
 import { SubjectTile } from "./subject-icon";
 import type { LessonSummary } from "./types";
 
@@ -32,10 +34,12 @@ function LessonRow({
   bookId,
   lesson,
   index,
+  read,
 }: {
   bookId: string;
   lesson: LessonSummary;
   index: number;
+  read: boolean;
 }) {
   return (
     <li>
@@ -43,20 +47,29 @@ function LessonRow({
         type="button"
         onClick={() => navigate(`/livre/${bookId}/${lesson.docId}`)}
         className="group flex w-full items-center gap-4 rounded-xl border border-transparent px-3 py-3 text-left transition-all hover:border-amber-800/20 hover:bg-amber-100/50 hover:shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary dark:hover:bg-amber-900/25"
-        aria-label={`Ouvrir : ${lesson.titleFr || lesson.titleAr}`}
+        aria-label={`Ouvrir : ${lesson.titleFr || lesson.titleAr}${read ? " (leçon lue)" : ""}`}
       >
-        <span
-          className={cn(
-            "flex size-9 shrink-0 items-center justify-center rounded-lg font-serif text-sm font-semibold",
-            lesson.pdfOnly
-              ? "border border-amber-700/30 bg-amber-100/70 text-amber-900 dark:border-amber-300/20 dark:bg-amber-900/40 dark:text-amber-100"
-              : lesson.hasFr
-                ? "bg-gradient-to-br from-amber-600 to-orange-800 text-amber-50 shadow-sm"
-                : "bg-secondary text-secondary-foreground"
+        <span className="relative shrink-0" aria-hidden="true">
+          <span
+            className={cn(
+              "flex size-9 items-center justify-center rounded-lg font-serif text-sm font-semibold",
+              lesson.pdfOnly
+                ? "border border-amber-700/30 bg-amber-100/70 text-amber-900 dark:border-amber-300/20 dark:bg-amber-900/40 dark:text-amber-100"
+                : lesson.hasFr
+                  ? "bg-gradient-to-br from-amber-600 to-orange-800 text-amber-50 shadow-sm"
+                  : "bg-secondary text-secondary-foreground"
+            )}
+          >
+            {index}
+          </span>
+          {read && (
+            <span
+              className="absolute -bottom-1 -end-1 flex size-4 items-center justify-center rounded-full border-2 border-card bg-amber-600 text-amber-50"
+              title="Leçon lue"
+            >
+              <Check className="size-2.5" strokeWidth={3.5} />
+            </span>
           )}
-          aria-hidden="true"
-        >
-          {index}
         </span>
         <span className="min-w-0 flex-1">
           {lesson.titleFr ? (
@@ -207,6 +220,7 @@ function BookExportMenu({ bookId, docsTotal }: { bookId: string; docsTotal: numb
 export function BookPage({ bookId }: { bookId: string }) {
   const { data, error, loading } = useBookDetail(bookId);
   const [query, setQuery] = useState("");
+  const { count: readCount, isRead } = useReadMarks(bookId);
 
   const lessons = useMemo(() => {
     if (!data) return [];
@@ -378,6 +392,16 @@ export function BookPage({ bookId }: { bookId: string }) {
                     )}
                   </div>
                 )}
+                {readCount > 0 && (
+                  <div
+                    className="mt-2 flex items-center gap-1.5 text-[11px] font-medium text-amber-700 dark:text-amber-400"
+                    title="Leçons marquées comme lues depuis le lecteur (marque personnelle, stockée localement)"
+                  >
+                    <BookmarkCheck className="size-3.5" aria-hidden="true" />
+                    {readCount}/{book.docsTotal} document{book.docsTotal > 1 ? "s" : ""} lu
+                    {readCount > 1 ? "s" : ""} — progression personnelle
+                  </div>
+                )}
               </div>
             ) : (
               <div className="mt-5 flex items-center gap-2 rounded-xl border border-dashed border-amber-800/30 bg-amber-100/40 px-4 py-3 text-sm text-amber-900 dark:bg-amber-900/20 dark:text-amber-100">
@@ -492,7 +516,7 @@ export function BookPage({ bookId }: { bookId: string }) {
             ) : (
               <ol className="scroll-autumn mt-4 max-h-[28rem] space-y-1.5 overflow-y-auto rounded-2xl border border-amber-800/15 bg-card/60 p-2 shadow-inner">
                 {lessons.map((l, i) => (
-                  <LessonRow key={l.docId} bookId={bookId} lesson={l} index={i + 1} />
+                  <LessonRow key={l.docId} bookId={bookId} lesson={l} index={i + 1} read={isRead(l.docId)} />
                 ))}
               </ol>
             )}
