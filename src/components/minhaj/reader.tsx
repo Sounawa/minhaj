@@ -198,10 +198,12 @@ function PdfOnlyNotice({ doc }: { doc: DocPayload }) {
           {doc.titleAr}
         </p>
         <p className="mx-auto mt-4 max-w-lg text-sm leading-relaxed text-muted-foreground">
-          Le Ministère des Habous publie le texte de cette leçon uniquement au format PDF
+          {doc.hasFr
+            ? "La traduction française de la leçon est affichée ci-dessus ; le texte arabe du PDF officiel peut être extrait ci-dessous par reconnaissance optique, et le document original reste consultable."
+            : <>Le Ministère des Habous publie le texte de cette leçon uniquement au format PDF
           sur le site officiel du programme <em>Taʿlīm ʿatīq</em>. Le titre est intégré à la
           bibliothèque pour la recherche et la navigation ; consultez le document original
-          pour le contenu intégral.
+          pour le contenu intégral.</>}
         </p>
         <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
           {doc.pdfUrl && (
@@ -307,7 +309,7 @@ function DocHeader({ doc }: { doc: DocPayload }) {
             {doc.subject.titleFr}
           </Badge>
         )}
-        {doc.savant && doc.hasFr && !doc.pdfOnly && (
+        {doc.savant && doc.hasFr && (
           <Badge
             variant="outline"
             title="Version française révisée : terminologie académique, versets coraniques vérifiés, gloses des termes techniques."
@@ -317,7 +319,7 @@ function DocHeader({ doc }: { doc: DocPayload }) {
             Traduction savante
           </Badge>
         )}
-        {doc.hasFr && !doc.pdfOnly && (
+        {doc.hasFr && (
           <Badge
             variant="outline"
             title="Estimation fondée sur la longueur du texte français (≈ 1 400 caractères par minute)."
@@ -939,14 +941,14 @@ function ReadAloudButton({ docId, htmlFr }: { docId: string; htmlFr: string }) {
 /** Export / impression : menu regroupant impression navigateur, HTML autonome et EPUB. */
 function ExportMenu({ doc }: { doc: DocPayload }) {
   const [open, setOpen] = useState(false);
-  const disabled = doc.pdfOnly || (!doc.html && !doc.htmlFr);
+  const disabled = !doc.html && !doc.htmlFr;
   if (disabled) {
     return (
       <Button
         variant="outline"
         size="icon"
         disabled
-        aria-label="Export indisponible — leçon au format PDF officiel uniquement"
+        aria-label="Export indisponible — aucun texte publié pour cette leçon"
         title="Export indisponible"
         className="size-10 border-amber-800/15 bg-card/70 text-amber-900/40 dark:text-amber-100/40"
       >
@@ -1218,6 +1220,10 @@ function DairaDialog({ data, onClose }: { data: DairaData; onClose: () => void }
 
 export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
   const { data, error, loading } = useDoc(bookId, docId);
+  // Leçon pdfOnly traduite : le panneau français existe (traduction) — les
+  // enrichissements du lecteur (chips, glossaires, verse-tables, citations,
+  // surlignages, boutons d'en-tête) s'appliquent comme aux leçons HTML.
+  const frPaneOk = data != null && (!data.pdfOnly || (data.hasFr && Boolean(data.htmlFr)));
   const { toast } = useToast();
   const [mode, setMode] = useLocalState<ViewMode>("minhaj.viewMode", "both");
   const [textSize, setTextSize] = useLocalState<TextSize>("minhaj.textSize", "normal");
@@ -1262,7 +1268,7 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
   // délégation d'événement sur le document — aucun handler par note.
   // Clavier : Enter/Espace déclenche la même action (chips role=button).
   useEffect(() => {
-    if (!data || data.pdfOnly) return;
+    if (!frPaneOk) return;
     const activate = (note: HTMLElement) => {
       const text = (note.textContent ?? "").trim().replace(/^\[|\]$/g, "");
       if (!text) return;
@@ -1406,7 +1412,7 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
   //    référence entre crochets — p.ex. [الشورى: 18] (nom arabe : chiffres,
   //    sans volume/page pour écarter les citations de commentaires).
   useEffect(() => {
-    if (!data || data.pdfOnly) return;
+    if (!frPaneOk) return;
     document.querySelectorAll<HTMLElement>(".lesson-content table").forEach((table) => {
       if (table.classList.contains("verse-table")) return;
       const rows = Array.from(table.querySelectorAll("tr"));
@@ -1483,7 +1489,7 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
   // portée « mnhj-fr » / « mnhj-ar » par colonne — aucune mutation du DOM React)
   useEffect(() => {
     const bridge = hlBridge();
-    if (!bridge || !data || data.pdfOnly) return;
+    if (!bridge || !frPaneOk) return;
     const W = window as unknown as { Highlight: new (...rs: Range[]) => unknown };
     const apply = () => {
       document.querySelectorAll<HTMLElement>(".reader-col").forEach((col) => {
@@ -1653,14 +1659,14 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
         <div className="no-print mt-1 flex min-w-0 flex-wrap items-center justify-end gap-2">
           <ViewModeToggle mode={mode} onChange={setMode} />
           <TextSizeControl size={textSize} onChange={setTextSize} />
-          {data && !data.pdfOnly && <OutlineButton items={outline} />}
-          {data && !data.pdfOnly && (
+          {frPaneOk && data && <OutlineButton items={outline} />}
+          {frPaneOk && data && (
             <QuotesNavButton count={quotesCount} index={quoteIdx} onNext={goToNextQuote} />
           )}
-          {data && !data.pdfOnly && data.hasFr && data.htmlFr && (
+          {frPaneOk && data && data.hasFr && data.htmlFr && (
             <ReadAloudButton docId={docId} htmlFr={data.htmlFr} />
           )}
-          {data && !data.pdfOnly && <NotesButton bookId={bookId} docId={docId} />}
+          {frPaneOk && data && <NotesButton bookId={bookId} docId={docId} />}
           <Button
             variant="outline"
             size="icon"
@@ -1793,7 +1799,30 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
       )}
 
       {data.pdfOnly ? (
-        <PdfOnlyNotice doc={data} />
+        <>
+          {/* Leçon pdfOnly traduite : la traduction s'affiche comme colonne de
+           *  lecture principale ; le PDF officiel et l'OCR (texte arabe)
+           *  restent accessibles par le panneau dédié ci-dessous. */}
+          {data.hasFr && data.htmlFr && (
+            <motion.article
+              key={`${docId}-fr-pdfonly`}
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.35, ease: "easeOut" }}
+              className="reader-col mx-auto max-w-3xl"
+              dir="ltr"
+              lang="fr"
+              aria-label="Traduction française de la leçon"
+            >
+              <ColumnChip lang="fr" label="Français — traduction" />
+              <div
+                className={cn("lesson-content text-foreground/90", TEXT_SIZE_CLASS[textSize])}
+                dangerouslySetInnerHTML={frHtml ?? undefined}
+              />
+            </motion.article>
+          )}
+          <PdfOnlyNotice doc={data} />
+        </>
       ) : (
         <motion.div
           key={`${docId}-${mode}`}
