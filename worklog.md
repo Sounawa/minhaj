@@ -5613,3 +5613,35 @@ Stage Summary:
 - **Découvertes** : (1) ligne idad en ordre INVERSE du coranique (première occurrence — reproduire tel quel) ; (2) NNBSP manquant dans JSON 565/566 (corrigé) ; (3) coquille CMS #70 (Anʿām 29→28).
 - **Priorités R80** : (1) leçon 568 (فاطر 41-44 — OCR à compléter p2-p5, livrable en ~1 tour) ; (2) puis 569 (45-46, fin de la sourate), 570-577 (الحديد) ; (3) QA globale + push GitHub quand l'utilisateur redonnera le token.
 - **Risques** : push GitHub suspendu (token retiré — commits locaux + backup.sh) ; coquilles CMS cumulées 70 ; VLM toujours en 429 (non testé ce tour, méthode pixel suffisante) ; le cron job 460639 est DISABLED (exec limits) — à recréer ce tour.
+---
+Task ID: R80
+Agent: Z.ai Code (agent principal)
+Task: Livraison de la leçon 568 (فاطر 41-44, tafsir-2es, 6e leçon pdf-only) — poursuite du pipeline PDF-only après R79
+
+Work Log:
+- **Reprise post-reset de contexte** : session continuation (résumé précédent perdu), environnement INTACT cette fois (contrairement au diagnostic du résumé) : git propre à c5d8a41 (worklog R79), dev server port 3000 actif, registre 484/950, PDF 569-585 présents. Priorités lues dans R79 : 568 (OCR p2-p5 à compléter) puis 569.
+- **tesseract-ara réinstallé** : le modèle ara.traineddata avait disparu du reset usine → téléchargé tessdata_best depuis GitHub (12,6 Mo), installé via TESSDATA_PREFIX=/home/z/tessdata (répertoire utilisateur, le répertoire système n'étant pas inscriptible).
+- **Rendu/OCR complet des 6 pages** : p0-p1 déjà faits (R78), p2-p5 rendus à 300 dpi + OCR psm4 ; zones 600 dpi pour vérifications. Line-maps par profils d'encre (bands 300/600 dpi).
+- **Zones ambiguës résolues** (méthode pixel + recoupement multi-OCR + cohérence inter-leçons) :
+  - Citations coraniques du tafsīr identifiées par convergence de fragments sur ~10 passes OCR (zoom 1,5-4x, psm 6/7/13, variantes sharp/thick) :
+    * «ونظير هذا قوله تعالى» (p1) = **الحج 22:65** «وَيُمْسِكُ ٱلسَّمَآءَ أَن تَقَعَ عَلَىٰ ٱلْأَرْضِ إِلَّا بِإِذْنِهِۦ» [الحج: 65] — signature «أن تقع»→«ادتقع» (assimilation نت) + «على الأرض»→«علرالاض».
+    * «كما قال تعالى» (p2, après Nasafī 3/92) = **طه 20:82** «وَإِنِّى لَغَفَّارٌۭ لِّمَن تَابَ وَءَامَنَ وَعَمِلَ صَٰلِحًۭا ثُمَّ ٱهْتَدَىٰ» [طه: 82] — signatures «وام»=وَءَامَنَ, «وعمرطا»=وَعَمِلَ صَٰلِحًۭا, «إمَتجِئى»=ثُمَّ ٱهْتَدَىٰ + confusion غ/ع («لعق»=لَغَفَّارٌ — MÊME signature que غيب/عيب en R79). Référence [طه: ٨٢] confirmée : ٨=Λ à contrepoinçon ouvert (deux parois + creux), ٢=crochet à base plate.
+    * «ونظير هذه الآية» (p3) = **الأنعام 6:157** (fragment «أَوْ تَقُولُوا۟ لَوْ أَنَّآ أُنزِلَ عَلَيْنَا ٱلْكِتَٰبُ لَكُنَّآ أَهْدَىٰ مِنْهُمْ فَقَدْ جَآءَكُم بَيِّنَةٌۭ مِّن رَّبِّكُمْ وَهُدًۭى وَرَحْمَةٌۭ») [الأنعام: 157-158] + **الصافات 37:167-170** [الصافات: 167-170].
+    * 2e citation de l'استثمار (p4) = **الفتح 48:10** fragment «فَمَن نَّكَثَ فَإِنَّمَا يَنكُثُ عَلَىٰ نَفْسِهِۦ» [الفتح: 10] — lecture «[التح: 0…]» = [الفتح: ١٠] (الفتح amputé du ف).
+  - Versets 41-44 + toutes citations restitués du cache Warš (texte + Hamidullah).
+  - **Glosses الشرح croisées avec l'الإعداد القبلي de 567** (règle de cohérence inter-leçons R75) : 567 demandait «يَحِيقُ» - «تَزُولَا» - «يُمْسِكُ» → 568 livre «يُمْسِكُ: يحفظ ويمنع» / «تَزُولَا: تضطرب وتنتقل من أماكنها» / «يَحِيقُ: يحيط وينزل» — ET la traduction FR de 567 (R79) les avait déjà anticipées («il préserve et empêche»…). Triple confirmation.
+  - Athar Ibn Abī Ḥātim (p4 استثمار) : «ثلاث من فعلهن لم ينجُ حتى ينزل به من مكر أو بغي أو نكث» (حتى confirmé sur passe 600 dpi, ت/ن sur نكث tranché par le thème).
+  - «مِنْ بَعْدِهِ» = «من بعد تركه الإمساك» (lecture «بعر» = ب-ع-د-ه ligaturé).
+- **568 LIVRÉE** (سورة فاطر 41-44, leçon 13 du livre tafsir, leçon 21/38, 6e pdf-only, commit 146e697) :
+  - AR 6 735 car (14 sections h2/h3) + FR 11 275 car (registre savant, translittération mafʿūl li-aǧlihi/badal/lām al-tawṭiʾa…, NNBSP typographiques).
+  - Thème : retenue des cieux et de la terre (v41 + الحج 65), le serment des associateurs et leur répulsion (v42 + Anʿām 157 parallèle), le mauvais stratagème n'enveloppe que ses auteurs (v43 + Ṣāffāt 167-170 + Nasafī 3/92-93), la sunna de Dieu sans changement (v44).
+  - Injectée par tr-tmp/scripts/inject568.py (html+htmlFr+pdfOnly:false, écriture atomique) + hand-register → **registre 485/950 (434 hand + 51 llm)**.
+- **QA navigateur (agent-browser)** : lecteur 568 «Sourate Fatir (versets : 41-44)», Leçon 21, badge «Traduction savante», 12 sections au sommaire, colonnes bilingues AR+FR, les 5 citations ([الحج: 65], [طه: 82], [الصافات: 167-170], [الأنعام: 157-158], [الفتح: 10]) toutes rendues, navigation 567↔568 testée par clics (PRÉCÉDENT/SUIVANT), page livre **14/38 (37 %)**, accueil **975/1 152 bilingues**, «REPRENDRE LA LECTURE» → 568, mobile 390 px sans overflow horizontal. Console : 0 erreur (seul l'hydration warning préexistant theme-provider, documenté R78). Captures : tr-tmp/qa-r80-568-{reader,book,home,mobile,final}.png. lint 0 erreur (1 warning préexistant llm-translate.ts).
+- Backup OK : 146e697 (push GitHub toujours suspendu — réseau/token).
+
+Stage Summary:
+- **ÉTAT : registre 485/950 ; 975/1152 bilingues ; 64 manuels ; tafsir-2es 14/38 (37 %).** Dev server propre, 0 erreur console. Commit 146e697 + backup.
+- **MÉTHODES consolidées ce tour** : (1) identification de citations par convergence multi-OCR (10+ passes à zoom/psm variés) + signatures d'assimilation (نت→دت) et de confusions connues (غ/ع, س/ت) ; (2) lecture de chiffres par contrepoinçon (٨ = Λ à creux interne, ٢ = crochet) ; (3) croisement inter-leçons prep(témoins)↔شرح(gloses) désormais systématique — 567 avait prédit les gloses de 568.
+- **Fidélité** : citation طه 82 identifiée par 3 fragments indépendants (وام/وعمرطا/إمتجئى) — confiance élevée ; الحج 65 par 2 fragments + parallèle sémantique évident ; الفتح 10 par référence [الفتح] lue + thème نكث (confiance moyenne-élevée, fragments plus courts).
+- **Priorités R81** : (1) leçon 569 (فاطر 45-46 selon catalogue — ATTENTION : Fāṭir n'a que 45 versets, «الآيتان 45-46» est une anomalie du catalogue CMS à instruire : leçon 569 = probablement v45 + début d'une autre sourate ou coquille CMS ; l'الإعداد القبلي de 568 demande «45-46» et cite des lemmes de v44/v45) ; (2) puis 570-577 (الحديد) ; (3) QA globale + push GitHub quand le token revient.
+- **Risques** : push GitHub suspendu (bundle /tmp + commits locaux) ; coquilles CMS cumulées 70 + anomalie «الآيتان 45-46» ; VLM toujours en 429 (méthode pixel suffisante) ; le cron job 460639 est DISABLED (exec limits) — recréé ce tour (voir R80-cron).
