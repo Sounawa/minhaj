@@ -5584,3 +5584,32 @@ Stage Summary:
 - Registre **483/950** (432 hand + 51 llm) ; accueil **973/1152** ; tafsir-2es 12/38 (32 % avec intro).
 - Coquilles CMS ce tour : 0 nouvelle identifiée (l'alt [فاطر: 29] s'est révélé CORRECT, contrairement à la première hypothèse 33 — leçon de méthode : toujours vérifier la signature d'OCR avant de conclure à une coquille).
 
+
+---
+Task ID: R79
+Agent: Z.ai Code (agent principal)
+Task: Poursuite du pipeline PDF-only — LIVRAISON de la leçon 567 (فاطر 38-40, tafsir-2es, 5e leçon pdf-only) + NCC natif résolution idad + coquille CMS #70 + re-injection NNBSP 565/566
+
+Work Log:
+- **Contexte R79** : reprise après R78-bis (566 livrée, registre 483/950). Priorité : 567 (فاطر 38-40) — PDF 6 pages déjà téléchargé, p0-p1 OCR-isés par R78, gloss 4 lemmes déjà identifiée (ḏāt al-ṣudūr/ḫalāʾif/maqtan/bayyina).
+- **567 LIVRÉE** (سورة فاطر 38-40, leçon 12, tafsir-2es, 5e leçon pdf-only, commit 2db51b2) :
+  - AR 6 238 car (12 sections) + FR 10 915 car (registre savant, translittération).
+  - Thème : l'étendue de la science divine (v38), les hommes comme خلفاء de Dieu (v39 — Warš avec l'extension مقتا), les arguments contre les associateurs (v40).
+  - **3 LEMMES idad (568) résolus par NCC RÉSOLUTION NATURELLE** (nouvelle variante de la méthode : comparaison pixel native SANS redimensionnement) : templates = 3 gloses de 568-p1 (600dpi) — **yumsiku** (NCC 0.961, dims 260×196 = EXACTEMENT T1), **tazūlā** (0.964, 258×187 ≈ T2 259×187), **yaḥīqu** (0.847, 231×126 ≈ T3 239×127) — discrimination parfaite (non-matches ≈ 0). **ORDRE INVERSE du coranique découvert** : la ligne idad imprime يَحِيقُ (v43) - تَزُولَا (v41) - يُمْسِكُ (v41) — vérifié par positions x des composantes + largeurs + hauteurs (يَحِيق sans ascendantes h=125 ; يُمْسِك avec ك/س h=186 ; تَزُولَا avec ا/ل h=185) + convention RTL validée sur la ligne idad de 565-p6 ( droite=يُقْضَى=premier). Reproduit tel qu'imprimé (fidélité d'édition).
+  - **COQUILLE CMS #70** : la citation tafsīrique « وَلَوْ رُدُّوا۟ لَعَادُوا۟ لِمَا نُهُوا۟ عَنْهُ » est imprimée [الأنعام: ٢٩] mais la phrase est la FIN de v28 (cache vérifié). Digit lu à 2000dpi : ٢ (crochet + base horizontale) + ٩ (boucle FERMÉE + queue descendante ≠ ٨ = Λ ouvert) → le manuel imprime bien 29. Correction : AR = [الأنعام: 28], FR note inline « le manuel imprime "29", coquille ».
+  - **Citations Warš vérifiées au pixel** : les 2 citations de v39 dans le tafsīr impriment **ٱلْكَٰفِرِينَ** (Warš) et non الظالمين (Ḥafṣ) — confirmé par ASCII-art des mots (ك...ف-boucle...ر pattern, absence de ظ/م) + présence de عِندَ رَبِّهِمْ (extension waršienne) dans la citation maqtan.
+  - **Alūsī (روح المعاني 11/374, بتصرف) reconstruit ligne à ligne** (600dpi, lignes isolées par vallées du profil d'encre, cadre décoratif exclu x654-724/4585-4655) : تقريرٌ (lu à 3 reprises, ≠ تخريج/تفريز des OCR bruts), غيب (point de غ + fatha empilés vérifiés en CC ≠ عيب), **لا أطاح اللهَ تعالى ولا عبده...** (ح final confirmé : tête + longue queue horizontale de base, ≠ ع bol fermé ; traduit « ne se hâterait jamais vers Dieu » avec note inline du manuel « lā aṭāḥa »), لن تطول أيام عذابه (≠ لمن تطول), فَلَوْ كان... لَعَلِمَهُ (connecteur فلو établi).
+  - **Nasafī 3/92 ×2 + Ibn Juzayy Tashīl 1/283 + Zamaḫšarī (ذات = féminin de ذو) + Ibn Kathīr 6/557** : structure أي: «...» unifiée (guillemets rééquilibrés — le gloss Nasafī est UNE citation de آلهتكم à الشركة).
+  - **Q2 idad tronquée récupérée** : « وكيف أعتبر بسنة الله تعالى في معاملة من سبقهم من أمم؟ » — ligne wrap y982-1041 lue à 4× (conf 87-93).
+  - 3e question التقويم découverte à 600dpi (absente du OCR 300) : « ما هي الحجج التي واجه بها الله تعالى المشركين لتقرير وحدانيته؟ ».
+- **Re-injection 565/566 avec NNBSP** (219/165 espaces fines) : découverte que le pipeline R78 avait injecté AVANT l'auto-fix QA → JSON sans NNBSP. Corrigé pour consistance typographique avec 567 (158 NNBSP).
+- **QA navigateur (agent-browser)** : lecteur 567 « Leçon 20/38 », badge « Traduction savante », 12 sections, versets 38-40 Warš intégraux, mode bilingue AR+FR, navigation 566↔567 testée par clics, console PROPRE (0 erreur, seuls HMR/Fast Refresh), accueil **974/1152** bilingues, page livre **13/38 (34 %)**, « REPRENDRE LA LECTURE » montre 567. Capture qa-r79-567-reader.png. lint 0 erreur (1 warning préexistant llm-translate.ts).
+- **Registre : 484/950** (433 hand + 51 llm).
+
+Stage Summary:
+- **ÉTAT : registre 484/950 ; 974/1152 bilingues ; 64 manuels ; tafsir-2es 13/38 (34 %).** Dev server propre, 0 erreur console. Commit 2db51b2.
+- **MÉTHODES consolidées ce tour** : (1) NCC résolution native (sans resize) — dims exactes = confirmation d'identité ; (2) digits arabo-indiens déchiffrés par morphologie (٢ = crochet+base ; ٩ = boucle fermée+queue ; ٨ = Λ ouvert) à 2000dpi ; (3) lettres finales ح/ع discriminées par la queue horizontale de base (ح) vs le bol fermé (ع) ; (4) points diacritiques empilés (point de غ SOUS la fatha) pour غيب/عيب ; (5) lignes denses séparées par vallées du profil d'encre avec exclusion du cadre décoratif.
+- **568 PRÊT À MOITIÉ** : p0-p2 déjà rendus (300dpi) + p1 glose lue (yumsiku/tazūlā/yaḥīqu), p0-p1 OCR-isés. Corps du tafsīr 568 : أولا دلائل قدرة الله (يمسك السماوات والأرض أن تزولا + ل ينيل بمعنى يمنع), versets 41-44 Warš au cache. Livrable en ~1 tour.
+- **Découvertes** : (1) ligne idad en ordre INVERSE du coranique (première occurrence — reproduire tel quel) ; (2) NNBSP manquant dans JSON 565/566 (corrigé) ; (3) coquille CMS #70 (Anʿām 29→28).
+- **Priorités R80** : (1) leçon 568 (فاطر 41-44 — OCR à compléter p2-p5, livrable en ~1 tour) ; (2) puis 569 (45-46, fin de la sourate), 570-577 (الحديد) ; (3) QA globale + push GitHub quand l'utilisateur redonnera le token.
+- **Risques** : push GitHub suspendu (token retiré — commits locaux + backup.sh) ; coquilles CMS cumulées 70 ; VLM toujours en 429 (non testé ce tour, méthode pixel suffisante) ; le cron job 460639 est DISABLED (exec limits) — à recréer ce tour.
