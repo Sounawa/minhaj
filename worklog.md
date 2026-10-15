@@ -5491,3 +5491,32 @@ Stage Summary:
 - **FLAGS bbox en attente de VLM** : passages étendus 2:155-159 ? (19284), 2:22-25 ? (19284), 10:11-17 ? (19285), 53:1-5 (19285), 18:10-11 ? (19284), 27:16 coupe ±1 mot (19276), 12:109 borne finale (19276), + anciens (19158 ×2, 19261 ×2, 19273 ×7, 19274 ×4).
 - **Priorités R76** : (1) push GitHub à la demande de l'utilisateur (token retiré — quand il le dira) ; (2) relancer la traduction savante sur un autre livre (479/950 — restent ~471) : candidats = livres au titre savant non entamés (tafsir-3es? hadith-3es? fiqh?…) — vérifier le registre pour le prochain livre le plus avancé ; (3) QA globale de l'app (agent-browser, pages livres, accueil) ; (4) backfill des flags si VLM revient.
 - **Risques** : backup externe = bundle /tmp uniquement (push GitHub suspendu jusqu'au retour du token — l'utilisateur a dit « on fera une mise à jour quand je te le dirai ») ; le SPA exige reload explicite après injection (règle connue).
+
+---
+Task ID: R76
+Agent: Z.ai Code (agent principal)
+Task: Reprise après sauvegarde GitHub — diagnostic du backlog + NOUVEAU PIPELINE OCR PDF + 1re leçon PDF-only livrée (563, فاطر 27-28)
+
+Work Log:
+- **Diagnostic du corpus** : les 905 leçons CMS (docId numérique) sont toutes bilingues (479 savantes + 426 GT) ; le reste = **885 leçons pdf-only** (pdfUrl habous, html/htmlFr vides, pdfOnly:true). Seules 14 sont des doublons de leçons CMS (tafsir-2es 556-562, tafsir-3es 592-598) → **873 leçons uniques** constituent le backlog réel.
+- **Pipeline OCR arabe construit et validé** :
+  - Téléchargement PDF habous (curl python ssl-no-verify + URL-encode arabe) — 25/25 PDFs tafsir-2es téléchargés (600-880 Ko chacun) dans tr-tmp/pdf/tafsir-2es/.
+  - tesseract-ara installé (tessdata_best, TESSDATA_PREFIX=/home/z/.tessdata + configs copiées de /usr/share) — OCR 300dpi psm4 ≈ 90-95 % correct sur texte courant.
+  - **Problème identifié** : le texte coranique est en police décorative (AXt fonts Identity-H) → PyMuPDF extrait du charabia ET tesseract échoue dessus.
+  - **Solution (méthode établie transposée)** : versets restitués du cache Warš (scripts-translate/quran-cache.json, texte + traduction Hamidullah) ; lemmes décoratifs du الشرح identifiés par (a) largeur d'encre px/lettre calibrée sur phrases décoratives connues, (b) **cohérence croisée entre leçons** (les lemmes de l'الإعداد القبلي d'une leçon = les items du الشرح de la leçon SUIVANTE, en police simple lisible). Résultat : les 4 lemmes de 563 (تبور/ليوفيهم/ويزيدهم من فضله/لخبير) confirmés par la glose de 564 ; les 3 de 556 (الأمور/الغرور/حزبه) par la glose de 557.
+  - Zones ambigües résolues par zoom 450-900dpi + psm6/7 + ciblage TSV (intro hadith ʿAlī/Dārimī retrouvée ; « والمعاقب المنيب حقه أن يخشى » confirmé Nasafī 3/87 ; « تتعلق كذلك بما قبلها » confirmé).
+  - VLM retenté : toujours 429 (famine).
+- **563 LIVRÉE** (سورة فاطر 27-28, leçon 8, tafsir-2es, 1re leçon pdf-only du corpus, commit ae648a6) :
+  - AR 6 091 car (html structuré : أهداف/تمهيد/الآيات [27-28 Warš intégral]/الفهم-الشرح 4 items/التفسير 3 axes/التقويم 4 q/الاستثمار [ʿAlī b. Abī Ṭālib, Dārimī]/الإعداد القبلي).
+  - FR 10 977 car (registre savant, translittération, citations Qurṭubī 14/341, Ibn ʿĀšūr 22/301+303, Nasafī 3/87, Dārimī ; note de lecture « li-yuwaffiyahum » glose de la leçon suivante).
+  - pdfOnly→false, badge « savante bilingue » vérifié navigateur ; page livre 9/38 docs bilingues (24 %) ; accueil 970/1152 ; 0 erreur console ; captures qa-r76-563-reader.png.
+  - Registre : **480/950** (429 hand + 51 llm).
+- QA navigateur complète (agent-browser) : lecteur h1 FR+AR, versets AR intégraux rendus, 12 sections au sommaire, mode bilingue OK, navigation prev/next OK (562→563→564).
+
+Stage Summary:
+- **ÉTAT** : registre **480/950** ; accueil **970/1152 bilingues** ; 64 manuels ; 19 livres complets. Dev server 200 OK, 0 erreur console.
+- **RÉUSSITE CLÉ** : le backlog de 873 leçons PDF-only est désormais **déverrouillé** — pipeline complet éprouvé : téléchargement → OCR tesseract-ara → nettoyage → restitution Warš du cache → traduction savante → injection (html+htmlFr+pdfOnly:false) → registre → QA navigateur → commit. ~40-60 min/leçon selon taille.
+- **MÉTHODE** : (1) OCR psm4 300dpi pour la structure ; (2) lemmes décoratifs = glose de la leçon suivante (règle d'or du التعليم العتيق : الإعداد القبلي prépare la leçon suivante) ; (3) versets = cache Warš ; (4) zones doutes = zoom TSV ciblé ; (5) VLM en 429 — ne pas compter dessus.
+- **Doublons identifiés** (14) : tafsir-2es 556-562, tafsir-3es 592-598 dupliquent des leçons CMS déjà traduites — non traduits (inutile), à masquer éventuellement plus tard si UX le demande.
+- **Priorités R77** : (1) enchaîner les leçons PDF tafsir-2es restantes (564 فاطر 29-31, 565 32-35, 566 36-37, 567 38-40, 568 41-44, 569 45-46, puis الحديد 570-577, المجادلة 578-583, فهرس 584, مصادر 585 — 23 leçons dont PDFs déjà téléchargés) ; (2) puis tafsir-3es (30 uniques) ; (3) les glossaires des leçons 564+ déjà OCR-isés servent directement.
+- **Risques** : le token GitHub est retiré (push suspendu à la demande de l'utilisateur — les commits restent locaux + bundle /tmp) ; le bouton « Download workspace » de la plateforme échoue sur node_modules 1,2 Go (voie fiable : git clone GitHub) ; « سترة الشرح » hmm — non : coquille CMS connue cumulée ~66.
