@@ -5939,3 +5939,83 @@ Stage Summary:
   confirmé VLM (forme II) ; «حال هذا النبات» vs «كيف يكون هذا» tranché par VLM ×2
   mais prompt contaminé — flag levé sur «متقلباته» seulement.
 - VLM/web-search : VLM OK ce tour (429 levé) — web_search non testé.
+
+---
+
+Task ID: R86
+Agent: Z.ai Code (agent principal)
+Task: Reprise après confirmation sync GitHub (l'utilisateur a demandé vérification exhaustive) + livraison de la leçon 576 (سورة الحديد 24-26 = Ḥafṣ 25-27, tafsir-2es, 14e leçon pdf-only)
+
+Work Log:
+- **Vérification sync GitHub demandée par l'utilisateur** : `git fetch` + `git diff origin/main`
+  (vide) + 0 untracked non-ignoré + 0 stash → **tout était déjà sur GitHub** (commit d3105cd
+  = R85) ; le « ahead by 1 » était une référence locale obsolète. Rien omis, confirmé à
+  l'utilisateur ; sur sa consigne, reprise du travail (la sauvegarde GitHub suivante se fera
+  sur demande).
+- **PDF 576** déjà présent (/home/z/tr-tmp/576.pdf, 8 pages, 879 Ko) — rendus 300 + 600 dpi,
+  OCR psm6 multi-seuils (128/200/225) + TSV pour localisation des zones.
+- **VLM (glm-4.6v via z-ai-web-dev-sdk, crops base64)** : FIABLE sur les crops de CHIFFRES
+  (a confirmé 114/10, 418/27, 470/29 en lecture double avec tesseract) mais HALLUCINE sur
+  les crops de mots en naskh du manuel (invente du texte) → ne pas utiliser pour les mots,
+  uniquement pour les chiffres ; les mots tranchés par tesseract multi-résolutions
+  (300+600 dpi × 3 seuils).
+- **Règle d'or satisfaite 7e fois** : les idad 576 flaggés R85 (بِالْبَيِّنَاتِ/الْمِيزَانَ/
+  وَقَفَّيْنَا/رَهْبَانِيَّةً/ابْتَدَعُوهَا/فَمَا رَعَوْهَا) — 3 gloses livrées dans le الشرح
+  (بالبينات/ابتدعوها/فما رعوها), le iʿrāb «ورهبانية ابتدعوها» demandé au تقويم Q2, la
+  relation بين الرسالات au تقويم Q3 — cohérence parfaite avec l'إعداد de 575.
+- **BLOC آيات = cache s57 Ḥafṣ 25-27, numérotation madrasa ٢٤-٢٦** : label pixel-vérifié
+  [سورة الحديد: ٢٤-٢٦] (p2 y891), fin de bloc فاسقون ۝٢٦, 3 versets Warš du cache.
+- **Réfs pixel-vérifiées (tesseract ×2 résolutions + VLM concordants)** : [البحر المحيط
+  لأبي حيان: 114/10] (4≠8 confirmé) ; [التحرير والتنوير... بتصرف: 418/27] (8≠0 — pas
+  410) ; [مفاتيح الغيب...: 470/29] (0≠8 — pas 478).
+- **Corrections majeures par rapport au reconstruction initiale (preuve 600 dpi)** :
+  (1) Rāzī : «مدار **التكليف**» (300 dpi lisait «كيف» charabia — 600 dpi t128+t200
+  concordants) ; (2) «وهو **العَارِف**» (3 lectures ع-ر-ف ; flag variante vs éditions
+  «العلم») ; (3) «**والزَّائِدُ** عن النقص» (5 lectures) ; (4) «**وكان** أشرف الأقسام»
+  (و sans point ×3 ; flag variante vs éditions «فكان») ; (5) paire confirmée «رعاية
+  **الصلاح** الروحانية / رعاية **المصالح** الجسمانية» (t300 vs t600 contradictoires,
+  tranché par crop dédié) ; (6) puce 2 maqāṣid COMPLÈTE en 2 lignes : «...التي تحرر
+  الإنسان **وتقوم على قيم العدل والإنصاف والفضيلة**» ; (7) expression 1 de l'إعداد =
+  «**كِفْلَيْنِ**» (mot rare Ḥadīd 28, préparation leçon 577) — 5 lectures fragmentaires
+  convergentes ك-ف-ل-ي-ن.
+- **576 LIVRÉE** (الدرس 21/38, 14e pdf-only) : AR 9 236 car + FR 15 041 car (registre
+  savant, NNBSP auto-fix, NdT numérotation). Structure : أهداف (3) / تمهيد / 3 versets
+  Warš ٢٤-٢٦ / الشرح 3 gloses / استخلاص (2) / تفسير 3 parties (إرسال الرسل لإقامة العدل /
+  تتابع الرسل ووحدة الشرائع / مقاصد) / تقويم (3) / استثمار : citation Rāzī [مفاتيح
+  الغيب: 470/29] + أتأمل / إعداد قبلي (2 questions, 3 expressions).
+- Citations restituées : Abū Ḥayyān [البحر المحيط: 114/10] avec Āl ʿImrān 18 cité du
+  cache ; Ibn ʿĀshūr بتصرف [418/27] ; Rāzī [470/29] ; lecture Ibn Masʿūd «ما كتبناها
+  عليهم؛ لكن ابتدعوها فما رعوها حق رعايتها» ; qawlān sur l'istithnāʾ (منقطع أرجح vs
+  متصل) ; fiqh comparé Abū Ḥanīfa vs maliqites (الصلاة والصوم والاعتكاف والحج والعمرة
+  والطواف والائتمام) ; iʿrāb «بِٱلْغَيْبِ» حال من فاعل «يَنصُرُهُ».
+- Incident registre évité : hand-register.py appelé avec LE docId seul (leçon R85) →
+  registre **493/950** (442 main + 51 LLM), 576 enregistrée.
+- **QA navigateur (agent-browser) complète** : accueil **983/1152** ; livre tafsir-2es
+  **22/38 (58 %)** ; lecteur 576 «Leçon 29/38», badge «Traduction savante», h1 leçon 21,
+  3 versets (24)-(26) + NdT Ḥafṣ 25-27, gloses FR (bayyināt/ibtadaʿūhā/fa-mā raʿawhā),
+  3 réfs rendues (114/10, 418/27, 470/29), citation Rāzī taklīf complète, إعداد 27-28
+  avec كِفْلَيْنِ ; navigation SUIVANT→577 (PDF placeholder) puis retour 576 ✓ ; mobile
+  390 px overflow 0 px ; footer ok ; desktop 1280 overflow 0 ; **console 0 erreur**.
+  Captures : tr-tmp/qa-r86-{home,576-reader,576-reader-bas,576-mobile}.png. lint 0 erreur
+  (1 warning préexistant).
+
+Stage Summary:
+- **ÉTAT : registre 493/950 ; 983/1152 bilingues (85,7 %) ; tafsir-2es 22/38 (58 %) ;
+  leçons 556-576 livrées ; GitHub à jour jusqu'à R85, R86 prêt à pousser.**
+- **MÉTHODES consolidées** : (1) VLM ok sur CHIFFRES seul (double lecture tesseract+VLM),
+  jamais sur mots en naskh (hallucinations confirmées R86) ; (2) pour les mots douteux :
+  tesseract multi-résolutions (300+600 dpi) × multi-seuils (128/200/225), majorité
+  l'emporte ; (3) les flags «variante vs édition» (العارف/وكان) sont transcrits TELS
+  QUELS avec flag worklog — le print du manuel gouverne ; (4) les gloses de la leçon N+1
+  valident l'idad de la leçon N (règle R85 généralisée : l'إعداد de 576 = expressions de
+  Ḥadīd 28 = leçon 577).
+- **Priorités R87** : (1) leçon 577 (سورة الحديد 27-28 = Ḥafṣ 28-29, FIN de Ḥadīd —
+  PDF à télécharger ; thème : l'espérance des croyants ; expressions déjà connues :
+  كِفْلَيْنِ/اتقوا الله/وآمنوا برسوله ; question : المخاطب par «يا أيها الذين آمنوا
+  اتقوا الله») ; puis 578-583 (المجادلة), 584 فهرس, 585 مصادر ; (2) QA app globale ;
+  (3) push GitHub (R86 = commit en attente + worklog).
+- **Risques** : 2 flags variantes Rāzī («وهو العارف», «وكان») — à re-vérifier si une
+  édition de Mafātīḥ al-ġayb devient accessible (shamela bloquée) ; le squelette de la
+  transition p4→p5 (quote نوح/إبراهيم en 2 morceaux) reconstitué par convergence sémantique
+  — tous les énoncés attestés, l'ordre exact des 2 lignes p5 non pixel-tracé (faible
+  impact).
