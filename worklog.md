@@ -5694,3 +5694,23 @@ Stage Summary:
 - **Découvertes** : (1) basmala intégrée à v1 dans le muṣḥaf madrasa (detectable par ligne centrée ~1000px dans le cadre آيات) — utiliser le cache s57 v1 tel quel ; (2) [البقرة: 28] imprimé = Ḥafṣ 29 (règle ḥurūf −1 appliquée à البقرة pour la 1re fois) — noté inline FR ; (3) تفسير ligne «لَمَّا أخبر بأنه له الملك» (pas «لا») — zoom 4x nécessaire ; (4) hadith: le manuel écrit «حَيْثُ مَا كَانَ» en deux mots (Bayhaqī: حَيْثُمَا).
 - **Priorités R83** : (1) leçon 571 (سورة الحديد 5-8 — PDF à télécharger depuis pdfUrl du JSON ; idad attendu «بِذَاتِ الصُّدُورِ» - «مُسْتَخْلَفِينَ فِيهِ» que la glose 571 doit couvrir ; versets cache s57 v5-8) ; puis 572-577 (Ḥadīd), 578-583 (المجادلة), 584 فهرس, 585 مصادر ; (2) si le corpus GitHub a d'autres usages : vérifier les citations des leçons futures (Rāzī/Quṭrubī quotes) ; (3) QA app globale + push GitHub quand l'utilisateur redonnera le token.
 - **Risques** : lecture «بِذَاتِ الصُّدُورِ - مُسْتَخْلَفِينَ فِيهِ» des idad 571 déduite par fragments OCR réconciliés (confiance moyenne-élevée — la glose 571 tranchera, pattern R78) ; le digit «86» de [القرطبي: 86/14] est la lecture la plus fréquente (une passe a lu «6/14») mais le 8 est morphologiquement double-boucle — retenu 86/14 ; push GitHub suspendu ; cron job 461273 créé ce tour — si «Disabled (exec limits)», c'est le quota plateforme, le recréer au tour suivant.
+
+---
+Task ID: R82-b
+Agent: Z.ai Code (agent principal)
+Task: Livraison de la leçon 571 (سورة الحديد 5-8, tafsir-2es, 9e leçon pdf-only) — même session R82
+
+Work Log:
+- **571 LIVRÉE** (سورة الحديد 5-8, Leçon 24/38, commit e510d2b) : PDF 165-81.PDF téléchargé (6 pages), AR 6 740 car + FR 10 834 car. Injectée + hand-register → **registre 488/950 (437 main + 51 llm)**.
+- **الشرح 571 = 3 gloses** : «بِذَاتِ الصُّدُورِ: بما تضمره الصدور وتعتقده» + «مُسْتَخْلَفِينَ فِيهِ: الأموال التي بين أيديكم» + «مِيثَاقِكُمْ: ما جعل الله في عقولكم من النظر المؤدي إلى الإيمان» — les 2 lemmes idad de 570 SONT GLOSSÉS (règle d'or 3e validation consécutive) ✓✓.
+- **Réfs pixel-vérifiées** : [التحرير والتنوير للطاهر بن عاشور: 27/265] (composantes: ]2 7 / 2 6 5:) · [مفاتيح الغيب لفخر الدين الرازي: 450/29] (art ASCII: 4=diag+bar+stem, 5, 0=ring, /, 2, 9=ring+descender). Nouvelle source citée : at-Taḥrīr wa-t-tanwīr d'Ibn ʿĀšūr (1re fois dans le livre).
+- **Citation hors-Ḥadīd** : «لَقَدْ جَاءَكُمْ رَسُولٌ مِنْ أَنْفُسِكُمْ» (révélée sur ʿUṯmān b. ʿAffān, جيش العسرة/Tabūk) — l'idad Q3 de 571 demande son سبب نزول pour 572.
+- **Idad 572 (Ḥadīd 9-11) transcrit avec niveau de confiance variable** : «ءَايَٰتٍۢ بَيِّنَٰتٍ» - «مِنْ أَنفَقَ» - «ٱلْخَبِيرِ» - «قَرْضًا حَسَنًا» — T1 (full-page «اوجاج تيتاي» + w6 «يتاي»=بَيِّنَاتٍ, le run scan coupé à x2500 cachait آيات) et T4 («قاحسا»=قرضا حسنا) CONFIRMÉS ; T2 («انف»≈مَنْ أَنفَقَ, alt: أَلَّا تُنفِقُوا) et T3 («الخقيى»≈الْخَبِيرِ, alt: مِنْ قَبْلِ الْفَتْحِ) MOYENS — la glose de 572 tranchera (pattern R78). FLAG pour R83.
+- Zones OCR récalcitrantes résolues : «خطاب لمشركي قريش» (o3 «لشركي»), «لَمَّا» vs «لا» (pattern zoom 4x), «التَّوَثُّقُ في موضع الحال» (confiance moyenne — flag), Rāzī quote reconstituée ligne par ligne (box frame y3215-6029, 10 sous-lignes).
+- **QA navigateur** : lecteur 571 «Leçon 24/38», badge savante, gloses rendues, réfs 27/265 + 450/29 rendues, 5 labels الحديد, navigation SUIVANT→572 par clic, accueil **978/1152**, mobile 390px overflow 0, console 0 erreur. Captures : tr-tmp/qa-r82-571-{reader,mobile}.png. lint 0 erreur (1 warning préexistant).
+
+Stage Summary:
+- **ÉTAT : registre 488/950 ; 978/1854 docs bilingues (52,8 %) dont 503 savantes ; tafsir-2es 17/38 avec intro (45 %).** Commits 14f59f4 + e510d2b + worklog, backups /tmp OK.
+- **MÉTHODE R82 consolidée** : (1) corpus GitHub hadith (hassanmsthf11) pour identifier quotes ; (2) refs pixel-vérifiées composante par composante ; (3) run-segmentation (gap <18px intra-mot) + scan SANS coupure à droite pour les idad ; (4) la règle d'or idad→glose validée 3 fois (569→570, 570→571).
+- **Priorités R83** : (1) leçon 572 (سورة الحديد 9-11 — PDF via pdfUrl ; VERIFIER d'abord la glose de 572 contre les idad transcrits ci-dessus, corriger si divergence, pattern R78 ; versets cache s57 v9-11) ; puis 573-577 (Ḥadīd), 578-583 (المجادلة), 584-585 ; (2) VLM/web-search toujours en 429 — le corpus GitHub couvre les hadiths mais pas les tafsīrs (Rāzī/Quṭrubī/Ibn ʿAṭiyya) : continuer la méthode pixel.
+- **Risques** : idad 572 T2/T3 (flag ci-dessus) ; «التَّوَثُّقُ» (571, confiance moyenne) ; push GitHub suspendu ; cron 461273 (créé R82) probablement en exec-limit — recréer si besoin.
