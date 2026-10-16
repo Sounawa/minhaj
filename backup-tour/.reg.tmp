@@ -1,0 +1,416 @@
+{
+  "_comment": "Registre des documents Minhāj bénéficiant d'une traduction SAVANTE (main ou LLM validé). Tout docId absent de ce registre mais doté d'un html est considéré en qualité GT (Google Translate) et éligible au pipeline llm-translate.ts.",
+  "hand": [
+    "11366",
+    "11367",
+    "11368",
+    "11371",
+    "11372",
+    "11373",
+    "11374",
+    "11378",
+    "11379",
+    "11380",
+    "11381",
+    "11382",
+    "11392",
+    "11393",
+    "11394",
+    "11395",
+    "11396",
+    "11397",
+    "11401",
+    "11402",
+    "11403",
+    "11404",
+    "11405",
+    "11406",
+    "11407",
+    "11408",
+    "11409",
+    "11410",
+    "11412",
+    "11413",
+    "12021",
+    "12034",
+    "12035",
+    "12036",
+    "12058",
+    "12297",
+    "12328",
+    "12331",
+    "12344",
+    "12623",
+    "12960",
+    "13044",
+    "13059",
+    "13065",
+    "13078",
+    "13084",
+    "13096",
+    "13102",
+    "13109",
+    "13113",
+    "13123",
+    "13143",
+    "13147",
+    "13150",
+    "13151",
+    "13163",
+    "13193",
+    "13621",
+    "13622",
+    "12583",
+    "12788",
+    "12792",
+    "12797",
+    "12799",
+    "12800",
+    "12803",
+    "12810",
+    "12811",
+    "12814",
+    "12816",
+    "12818",
+    "12822",
+    "12827",
+    "12829",
+    "12830",
+    "12834",
+    "12840",
+    "12842",
+    "12845",
+    "12846",
+    "12847",
+    "12849",
+    "12850",
+    "12853",
+    "12856",
+    "12857",
+    "12859",
+    "12861",
+    "12863",
+    "12866",
+    "11937",
+    "11941",
+    "11943",
+    "11949",
+    "12002",
+    "12006",
+    "12011",
+    "12013",
+    "12014",
+    "12015",
+    "12609",
+    "16711",
+    "16714",
+    "16717",
+    "16719",
+    "16724",
+    "16733",
+    "16737",
+    "16739",
+    "16227",
+    "14067",
+    "14042",
+    "muqaddima",
+    "10960",
+    "10958",
+    "11411",
+    "12016",
+    "11930",
+    "15387",
+    "13931",
+    "13983",
+    "12177",
+    "12230",
+    "12232",
+    "22184",
+    "22185",
+    "22192",
+    "20435",
+    "18646",
+    "18693",
+    "22181",
+    "18695",
+    "18691",
+    "18649",
+    "18677",
+    "15371",
+    "18676",
+    "18675",
+    "18671",
+    "20297",
+    "12239",
+    "12241",
+    "12242",
+    "12243",
+    "12253",
+    "12261",
+    "12498",
+    "12499",
+    "12500",
+    "12502",
+    "12503",
+    "12505",
+    "12510",
+    "12512",
+    "12517",
+    "12519",
+    "13349",
+    "12522",
+    "13353"
+  ],
+  "llm": {
+    "13878": {
+      "at": "2026-10-09T16:35:56.786Z",
+      "bookId": "tafsir-6ep",
+      "titleFr": "Sourate Al-Jinn versets 8 à 12"
+    },
+    "13886": {
+      "at": "2026-10-09T16:32:46.203Z",
+      "bookId": "tafsir-5ep",
+      "titleFr": "Sourate al-Infiṭār, versets 1 à 8"
+    },
+    "13897": {
+      "at": "2026-10-09T16:35:23.093Z",
+      "bookId": "tafsir-5ep",
+      "titleFr": "Sourate al-Infiṭār, versets 9 à 19"
+    },
+    "13907": {
+      "at": "2026-10-09T16:41:44.924Z",
+      "bookId": "tafsir-5ep",
+      "titleFr": "Sourate al-Muṭaffifīn, versets 1 à 6"
+    },
+    "13915": {
+      "at": "2026-10-09T16:44:01.308Z",
+      "bookId": "tafsir-5ep",
+      "titleFr": "Sourate al-Muṭaffifīn, versets 7 à 17"
+    },
+    "13920": {
+      "at": "2026-10-09T16:46:49.572Z",
+      "bookId": "tafsir-5ep",
+      "titleFr": "Sourate al-Muṭaffifīn, versets 18 à 28"
+    },
+    "13936": {
+      "at": "2026-10-09T17:54:32.142Z",
+      "bookId": "tafsir-5ep",
+      "titleFr": "Sourate al-Inshiqāq, versets 1 à 9"
+    },
+    "13979": {
+      "at": "2026-10-09T16:57:01.066Z",
+      "bookId": "tafsir-5ep",
+      "titleFr": "Sourate al-Inshiqāq, versets 10 à 15"
+    },
+    "13992": {
+      "at": "2026-10-09T17:04:42.585Z",
+      "bookId": "tafsir-5ep",
+      "titleFr": "Sourate al-Burūj, versets 1 à 9"
+    },
+    "14005": {
+      "at": "2026-10-09T17:06:05.653Z",
+      "bookId": "tafsir-5ep",
+      "titleFr": "Sourate al-Burūj, versets 10 à 16"
+    },
+    "14018": {
+      "at": "2026-10-09T17:11:49.374Z",
+      "bookId": "tafsir-5ep",
+      "titleFr": "Sourate al-Burūj, versets 17 à 22"
+    },
+    "14052": {
+      "at": "2026-10-09T17:16:44.084Z",
+      "bookId": "tafsir-5ep",
+      "titleFr": "Sourate al-Ṭāriq, versets 11 à 17"
+    },
+    "14063": {
+      "at": "2026-10-09T17:22:38.870Z",
+      "bookId": "tafsir-5ep",
+      "titleFr": "Personnalités citées (aʿlām)"
+    },
+    "14101": {
+      "at": "2026-10-09T16:31:20.367Z",
+      "bookId": "fiqh-6ep",
+      "titleFr": "Présentation du manuel"
+    },
+    "14116": {
+      "at": "2026-10-09T16:33:31.440Z",
+      "bookId": "fiqh-6ep",
+      "titleFr": "Jurisprudence Zakat et la richesse sur laquelle elle est due"
+    },
+    "14139": {
+      "at": "2026-10-09T16:46:07.694Z",
+      "bookId": "tafsir-6ep",
+      "titleFr": "Sourate Al-Jinn, versets 18-23"
+    },
+    "14158": {
+      "at": "2026-10-09T16:35:22.874Z",
+      "bookId": "fiqh-6ep",
+      "titleFr": "Les seuils d'imposition (niṣāb) de la zakāt : céréales, fruits et monnaies"
+    },
+    "14169": {
+      "at": "2026-10-09T16:51:13.419Z",
+      "bookId": "tafsir-6ep",
+      "titleFr": "Sourate Al-Jinn, versets 24-28"
+    },
+    "14203": {
+      "at": "2026-10-09T16:42:38.326Z",
+      "bookId": "fiqh-6ep",
+      "titleFr": "Jurisprudence : Zakat sur les marchandises commerciales"
+    },
+    "14342": {
+      "at": "2026-10-09T16:53:15.671Z",
+      "bookId": "tafsir-6ep",
+      "titleFr": "Sourate Al-Muzzammil, versets 1 à 8"
+    },
+    "14352": {
+      "at": "2026-10-09T16:55:38.995Z",
+      "bookId": "tafsir-6ep",
+      "titleFr": "Sourate Al-Muzzammil, versets 9-17"
+    },
+    "14370": {
+      "at": "2026-10-09T17:01:37.604Z",
+      "bookId": "tafsir-6ep",
+      "titleFr": "Sourate Al-Muzzammil verset 18"
+    },
+    "14382": {
+      "at": "2026-10-09T17:04:30.424Z",
+      "bookId": "tafsir-6ep",
+      "titleFr": "Sourate Al-Muddaththir, versets 1 à 7"
+    },
+    "14417": {
+      "at": "2026-10-09T17:15:56.702Z",
+      "bookId": "tafsir-6ep",
+      "titleFr": "Sourate Al-Muddaththir, versets 30-31"
+    },
+    "14423": {
+      "at": "2026-10-09T17:21:07.276Z",
+      "bookId": "tafsir-6ep",
+      "titleFr": "Sourate Al-Muddaththir, versets 32-47"
+    },
+    "14469": {
+      "at": "2026-10-09T17:32:27.904Z",
+      "bookId": "tafsir-6ep",
+      "titleFr": "Sourate Al-Qiyamah, versets 13-18"
+    },
+    "14516": {
+      "at": "2026-10-09T17:41:29.407Z",
+      "bookId": "tafsir-6ep",
+      "titleFr": "Sourate Al-Qiyamah, versets 35 à 39"
+    },
+    "14523": {
+      "at": "2026-10-09T17:43:30.637Z",
+      "bookId": "tafsir-6ep",
+      "titleFr": "Sourate Al-Insan, versets 1 à 6"
+    },
+    "14536": {
+      "at": "2026-10-09T17:45:36.953Z",
+      "bookId": "tafsir-6ep",
+      "titleFr": "Sourate Al-Insan, versets 7-14"
+    },
+    "14543": {
+      "at": "2026-10-09T17:52:40.758Z",
+      "bookId": "tafsir-6ep",
+      "titleFr": "Sourate Al-Insan, versets 15-22"
+    },
+    "14555": {
+      "at": "2026-10-09T17:54:12.724Z",
+      "bookId": "tafsir-6ep",
+      "titleFr": "Sourate Al-Insan, versets 23-28"
+    },
+    "14604": {
+      "at": "2026-10-09T16:31:20.738Z",
+      "bookId": "tafsir-6ep",
+      "titleFr": "Présentation du manuel"
+    },
+    "14718": {
+      "at": "2026-10-09T16:44:02.193Z",
+      "bookId": "fiqh-6ep",
+      "titleFr": "Jurisprudence Zakat sur les chameaux, son quorum et son âge"
+    },
+    "14719": {
+      "at": "2026-10-09T16:45:37.709Z",
+      "bookId": "fiqh-6ep",
+      "titleFr": "Jurisprudence, décisions sur la zakat pour les vaches et les moutons"
+    },
+    "14724": {
+      "at": "2026-10-09T16:51:12.475Z",
+      "bookId": "fiqh-6ep",
+      "titleFr": "Jurisprudence sur le profit, la progéniture et ce qui est soumis à la zakat"
+    },
+    "14725": {
+      "at": "2026-10-09T16:52:21.734Z",
+      "bookId": "fiqh-6ep",
+      "titleFr": "Jurisprudence : ce qui est inclus dans les fonds de la zakat"
+    },
+    "14732": {
+      "at": "2026-10-09T17:02:12.114Z",
+      "bookId": "fiqh-6ep",
+      "titleFr": "Jurisprudence, décisions sur le jeûne"
+    },
+    "14757": {
+      "at": "2026-10-09T17:04:53.098Z",
+      "bookId": "fiqh-6ep",
+      "titleFr": "Jurisprudence, décisions sur le jeûne, suite"
+    },
+    "14769": {
+      "at": "2026-10-09T17:06:42.893Z",
+      "bookId": "fiqh-6ep",
+      "titleFr": "Jurisprudence : ce qui n'est pas apprécié dans le jeûne"
+    },
+    "14778": {
+      "at": "2026-10-09T17:11:23.155Z",
+      "bookId": "fiqh-6ep",
+      "titleFr": "Jurisprudence : l'intention du jeûne et ses conséquences recommandées"
+    },
+    "14783": {
+      "at": "2026-10-09T17:13:16.045Z",
+      "bookId": "fiqh-6ep",
+      "titleFr": "Jurisprudence, pouvoir judiciaire et expiation"
+    },
+    "14789": {
+      "at": "2026-10-09T17:14:36.338Z",
+      "bookId": "fiqh-6ep",
+      "titleFr": "Jurisprudence : Effectuer une rédemption volontaire et types d'expiation"
+    },
+    "14795": {
+      "at": "2026-10-09T17:16:20.895Z",
+      "bookId": "fiqh-6ep",
+      "titleFr": "Jurisprudence Hajj et ses piliers"
+    },
+    "15133": {
+      "at": "2026-10-09T17:28:39.636Z",
+      "bookId": "fiqh-6ep",
+      "titleFr": "Le déroulement de la circumambulation (ṭawāf)"
+    },
+    "15145": {
+      "at": "2026-10-09T17:52:01.697Z",
+      "bookId": "fiqh-6ep",
+      "titleFr": "Les interdictions de l'iḥrām"
+    },
+    "16743": {
+      "at": "2026-10-09T16:20:40.621Z",
+      "bookId": "tafsir-5ep",
+      "titleFr": "Sourate ʿAbasa, versets 11 à 23"
+    },
+    "16751": {
+      "at": "2026-10-09T17:32:32.854Z",
+      "bookId": "tafsir-5ep",
+      "titleFr": "Sourate ʿAbasa, versets 24 à 32"
+    },
+    "16757": {
+      "at": "2026-10-09T17:34:24.487Z",
+      "bookId": "tafsir-5ep",
+      "titleFr": "Sourate ʿAbasa, versets 33 à 42"
+    },
+    "16767": {
+      "at": "2026-10-09T17:41:38.753Z",
+      "bookId": "tafsir-5ep",
+      "titleFr": "Sourate al-Takwīr, versets 1 à 14"
+    },
+    "16784": {
+      "at": "2026-10-09T17:43:21.893Z",
+      "bookId": "tafsir-5ep",
+      "titleFr": "Sourate al-Takwīr, versets 15 à 21"
+    }
+  }
+}

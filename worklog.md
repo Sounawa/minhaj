@@ -6316,3 +6316,33 @@ Stage Summary:
 - **Risques** : push GitHub suspendu (token absent, bundles /tmp = seule protection
   anti-rollback) ; 584 (فهرس الأعلام) et 585 (المصادر) seront des formats inédits
   (pas de آيات/gloses) — anticiper la structure HTML.
+
+---
+Task ID: R93
+Agent: main (Z.ai Code)
+Task: Livrer la leçon 580 (سورة المجادلة 8-10, Tafsīr 2ᵉ collège, PDF 258-11.PDF) — transcription AR + traduction savante FR, registre et corpus.
+
+Work Log:
+- Session démarrée sur un résumé compacté : constat que R92 (leçon 579) était déjà commis (f09d725) ; le « R90 perdu » de l'ancien résumé correspondait en fait à la chaîne R91-R92 ; la leçon 580 restait à livrer (priorité 1 du worklog R92).
+- PDF 258-11.PDF re-téléchargé via proxy translate.goog (6 pages) ; tessdata arabe re-téléchargé (ara.traineddata tessdata_best — /home/z/tessdata avait été purgé) ; OCR 18 variantes t{128,200,225} × p{1..6} régénéré.
+- quran-cache s58 v8-10 + FR extraits ; v11 aussi (pour l'idad 581) ; s27 v59 et s4 v114 extraits pour les citations.
+- Rétablissement des vérifications perdues : gloses 580 = النَّجْوَى(يتحدثون سرا)/بِالْإِثْمِ(المعصية)/الْعُدْوَانِ(الظلم)/يَصْلَوْنَهَا(يقاسون حرها) — règle d'or tenue pour la 3e fois consécutive (les 4 termes de l'الإعداد القبلي de 579 = les 4 gloses de 580).
+- VERROUS R93 (méthode R92 : pixel-ASCII + calibrage sur échantillons vrais) :
+  1. Citation « السلام الوارد في قوله تعالى » : VLM non fiable (3 lectures divergentes) → Tashīl original retrouvé via web-search (quranpedia.net/surah/1/58/book/345, texte intégral) = ﴿قُلِ ٱلْحَمْدُ لِلَّهِ وَسَلَٰمٌ عَلَىٰ عِبَادِهِ ٱلَّذِينَ ٱصْطَفَىٰٓ﴾ [النمل: ٥٩] ; «بإذايته» confirmé tel qu'imprimé (Tashīl + manuel concordants).
+  2. «ويؤيد هذا قوله تعالى» : Tashīl quranpedia portait «ليجزي الذين آمنوا [يونس: ٤]» — REJETÉ pour le manuel : VLM sur crop réel = ﴿لِيَحْزُنَ ٱلَّذِينَ ءَامَنُوا۟﴾ SANS référence (auto-citation de v10) ; sémantique cohérente (la nuǧwā qui attriste les croyants = celle des Juifs/hypocrites).
+  3. «إذ هي ظلمات العباد» : Muḥarrar original (scan turathalanbiaa 1758.pdf + citation aklaam) = **ظلامات** (avec alif, «torts faits aux serviteurs») — alif tombé par tesseract ; livré ظلامات.
+  4. «فرخّص في ذلك بص?ة» : tesseract بصقة / VLM بصورة / sources Aḥkām (modoee + alukah, 2 attestations) = **بصفة** ; pixel-ASCII = UNE pastille au-dessus de la 3e lettre (point de ف, pas 2 points de ق, pas l'absence de و) → livré بصفة.
+  5. Référence Ibn Kaṯīr : tesseract×3 + VLM disaient 44/8, la logique d'édition (579=72/8) disait ≥74 → ARBITRAGE PIXEL : atlas de glyphes construit sur échantillons vrais du même manuel (579 re-téléchargé : 72/8 et 194/5) — ٧ = barre+diagonale+pointe nue, ٢ = idem+plaque basale, les deux chiffres de 580 ne correspondent NI à ٧ NI à ٢ → ٤٤ confirmé ; corroboration inattendue : dans l'édition quranpedia (Dār Ṭayyiba?), le commentaire de v10 s'achève exactement p.44 — le «44/8» du manuel est donc imprimé tel quel (éditions citées incohérentes entre leçons = problème éditorial du manuel, pas le nôtre). Livré 44/8 tel qu'imprimé.
+  6. Références Muḥarrar 277/5 et Aḥkām 627/1 : pixel-atlas vérifié (٢=plaque, ٧=pointe nue, ٦=boucle, ١=barre à serifs) ; format PAGE/VOL (page à gauche du slash) respecté.
+  7. Citation d'ouverture de l'استثمار : ﴿لَّا خَيْرَ فِى كَثِيرٍۢ مِّن نَّجْوَىٰهُمْ…﴾ [النساء: 114] (verset intégral, cache s4 v114) ; «المرء» (tesseract المزء) confirmé par sources.
+- Injection : tr-tmp/scripts/inject580.py → tafsir-2es.json (html 6011 ch, htmlFr 9614 ch, pdfOnly→false) + savant-registry.json hand+1 (446+51=497/950).
+- QA agent-browser : home « LEÇONS BILINGUES 987/1 152 » ✓ ; lecteur /#/livre/tafsir-2es/pdf-mut23h33-580 ✓ (FR+ع+بilingue, 11/11 drapeaux de contenu TRUE dans l'article rendu) ; console 0 erreur ; footer collant vérifié ; captures tr-tmp/qa-r93-{home,580-reader,580-mobile}.png. Viewport mobile indisponible dans cette build agent-browser (héritage des QA R76-R92 sur le même composant lecteur).
+
+Stage Summary:
+- **ÉTAT : leçon 580 livrée — 18e leçon pdf-only ; tafsir-2es 26/38 ; bilingues 987/1152 ; registre 497/950 (446 main + 51 LLM).** Dev server propre, 0 erreur console, QA navigateur passée.
+- **MÉTHODE R93 (atlas de glyphes croisé)** : quand tesseract ET VLM concordent mais qu'une contrainte externe contredit (continuité d'édition), trancher par échantillons vrais re-téléchargés du MÊME manuel (579) ; l'édition quranpedia sert de corroboration bibliographique, jamais de preuve de glyphes. VLM confirmé non fiable sur : lignes décoratives, chiffres isolés, mots à candidats donnés dans le prompt (écho) — fiable sur : crops étroits + question binaire après calibrage géométrique TSV.
+- **Divergences éditoriales découvertes** : 579 cite Ibn Kaṯīr 72/8 (v5-7) et 580 le cite 44/8 (v8-10) — éditions/paginations incohérentes entre leçons du même manuel (à signaler une fois pour toutes ; nous transcrivons tel qu'imprimé).
+- **FLAGS 580 : aucun doute résiduel.** Tous les passages contestés tranchés à double source ou pixel.
+- **idad 581 (الإعداد القبلي de 580, à vérifier en R94)** : «تَفَسَّحُوا» - «ٱنشُزُوا» - «دَرَجَٰتٍ» (les 3 = v11, cache déjà conforme) + «التأدب مع رسول الله ﷺ بعد مماته» ; Bayḍāwī attendu 195/5 (193→194→195) ; thème آداب المجالس ; s58 11-13 = Ḥafṣ 11-13 PROBABLE (v11 cache = Ḥafṣ v11 confirmé ; la fusion 21-vs-22 n'est pas avant v12 — à surveiller pour 581) ; PDF 246-?.PDF à identifier via pdfUrl JSON.
+- **Priorités R94** : (1) leçon 581 (المجادلة 11-13) ; (2) 582 (14-19), 583 (20-21), 584 فهرس, 585 مصادر → OBJECTIF tafsir-2es COMPLET (20e livre savant, 38/38) ; (3) QA globale + push GitHub dès retour du token.
+- **Risques** : push GitHub toujours suspendu (token absent) ; les formats 584 (فهرس الأعلام) et 585 (المصادر) restent inédits (pas de آيات/gloses — anticiper la structure HTML) ; eshia.ir/41713 mort (404) — quranpedia.net/surah/1/{N}/book/{345|136|78…} est le nouveau canal d'accès aux originaux (Tashīl 345, Ibn Kaṯīr 136, Ṭabarī 4).
