@@ -6136,3 +6136,90 @@ Stage Summary:
   VLM = createVision UNIQUEMENT (chat.completions standard rejette les images,
   erreur 1210) ; tesseract multi-résolutions + TESSDATA_PREFIX=/home/z/tessdata
   (recréé ce tour) ; PDF via proxy translate.goog avec chemin arabe encodé %D8%A7%D9%84...
+
+---
+Task ID: R91
+Agent: Z.ai Code (agent principal)
+Task: Livraison de la leçon 578 (سورة المجادلة 1-4 = Ḥafṣ 1-4, tafsir-2es, 16e leçon pdf-only — refonte du R88 perdu) + correction rétroactive de la leçon 577 (règle d'or reverse)
+
+Work Log:
+- **578 LIVRÉE** (الدرس 23, Leçon 31/38, 16e pdf-only) : AR 8 026 car + FR 13 139
+  car. Injectée + hand-register → **registre 495/950 (444 main + 51 LLM)**.
+- **PDF 578** (231-41.PDF, 7 pages) : 1er téléchargement a retourné une PAGE
+  D'ERREUR HTML (cas connu) → re-téléchargé avec chemin arabe explicitement
+  encodé %D8%A7%D9%84... ✓. Rendus 300+600 dpi × pages, OCR 21 variantes.
+- **BLOC آيات = basmala SÉPARÉE + v1-v4 Warš (cache s58, v1 débarrassé de son
+  préfixe basmala)** — première leçon du corpus où la basmala est détachée de
+  v1 (s57 = intégrée, R82). Marqueurs ۝١-۝٤ pixel-vérifiés (VLM 1,2,4 + TSV) :
+  **s58 n'a AUCUN offset ḥurūf** (578 = Ḥafṣ 1-4, contrairement à s57 N=N+1).
+  Label [سورة المجادلة: 4-1] ✓. Tamhīd du manuel : «إحدى وعشرون» (21 versets
+  = décompte marocain Warš vs 22 Ḥafṣ) → NdT FR ; la FUSION des versets est
+  APRÈS v7 (à surveiller en 580-583).
+- **RÈGLE D'OR REVERSE (pattern R89) — CORRECTION 577** : les 5 gloses du
+  الشرح 578 sont «سَمِعَ»: أجاب وقبل / «تُجَادِلُكَ فِي زَوْجِهَا»: تراجعك
+  الكلام في أمر زوجها / «مُنْكَرًا مِنَ الْقَوْلِ»: المنكر الذي لا تعرف له
+  حقيقة / «وَزُورًا»: كذبا / «يَتَمَاسَّا»: يجتمعا. Les idad 577 (R90,
+  confiance moyenne) tranchés RÉTROACTIVEMENT : «قَوْلَ»→«سَمِعَ» et
+  «فِي زَوْجِهَا»→«تُجَادِلُكَ فِي زَوْجِهَا» — **577 corrigée AR+FR dans le
+  livre** (vérif glyphes : lemma A = س-م-ع superposable au glose 578 en ASCII ;
+  lemma B = تُجَادِلُكَ : première lettre ت = 2 points + bol plat, PAS un ق).
+- **Réfs pixel-vérifiées (VLM+tesseract concordants)** : [تفسير البيضاوي:
+  193/5] (= intel session perdue ✓) ; [المحرر الوجيز لابن عطية: 352/2] ;
+  [أحكام القرآن لأبي بكر بن العربي: 185/4].
+- **MÉTHODES R91 consolidées** : (1) **lignes FAIBLES** (encre pâle, seuil
+  <185 vide en psm7/6/8) → le contenu est ancré à DROITE en fin de paragraphe :
+  crop serré x_des_puits + seuils 145-205 + VLM avec candidats : «الزوجة
+  بمحارمه.» (fin malikite, flag 10+ tentatives) et «يعجز عن الثاني.» (fin de
+  la hiérarchie des kafārāt) résolues ; (2) **web-search de l'ORIGINAL**
+  (eshia.ir/41713/2/351 = Tashīl d'Ibn Juzayy, texte intégral) pour décoder
+  les fragments muṣḥaf récalcitrants : «وكانت «وَتَشْتَكِي إِلَى اللَّهِ»
+  فتقول» — l'édition porte «جدالها وَتَشْتَكِي إِلَى اللَّهِ كانت تقول», le
+  manuel réarrange avec guillemets (600 dpi : «إتشتكج إلواللة») ; (3) la
+  requote muṣḥaf de la kafāra = v3 (وَٱلَّذِينَ…يَتَمَآسَّا) + v4 (فَمَن لَّمْ
+  يَجِدْ…مِسْكِينًۭا) SANS ذَٰلِكُمْ تُوعَظُونَ (quoté séparément par Bayḍāwī).
+- **Lectures fines tranchées** : «يجتمعا» (tesseract ×3 crops psm8 ; VLM
+  lisait يلتقيان — flag variante) ; «حاورت الرسول» dans le titre de section 1
+  (tesseract ×3 ; VLM جادلت rejeté) ; «رِجَالَاتِ قُرَيْش» (VLM+OCR ×3) ;
+  «لو قامت هكذا إلى الليل لقمت معها» (600 dpi q3 ×2) ; «مرونته» (nūn) ;
+  «خَبِيرٌ» dans la quote Bayḍāwī (300 dpi «حبر» + cache v3 ; un crop VLM
+  mal ciblé avait lu عَلِيمٌ — écarté).
+- **Idad 579 (المجادلة 5-7) transcrits et VLM-vérifiés (haute confiance)** :
+  «يُحَادُّونَ» - «كُبِتُوا» - «أَحْصَاهُ» - «شَهِيدٌ» + Q2 : ما هو جزاء من
+  يعاند الله ورسوله ويخالف شريعته. (La leçon 579 v1-5-7 ne présentera
+  probablement PAS d'offset non plus, mais VÉRIFIER les marqueurs.)
+- **QA navigateur (agent-browser) complète** : lecteur 578 «Leçon 31/38»,
+  badge «Traduction savante», h1 bilingue, basmala séparée + 4 versets (1)-(4)
+  + NdT 21-vs-22, 5 gloses FR, 3 réfs rendues (193/5, 352/2, 185/4), idad 579
+  (yuḥāddūna/kubitū/aḥṣāhu/šahīd) ; mode bilingue AR+FR (سَمِعَ ×3,
+  تُجَٰدِلُكَ فِى زَوْجِهَا ×2, خولة بنت ×4, يَتَمَآسَّا ×5, يُحَادُّونَ) ;
+  navigation SUIVANT→579 (PDF placeholder, Leçon 32/38) par clic JS ✓ ;
+  correction 577 vérifiée EN LIVE (samiʿa + tuǧādiluka fī zawǧihā présents
+  dans le lecteur 577) ; livre tafsir-2es **24/38 documents bilingues** ;
+  accueil **985/1152 bilingues, 64 manuels** ; mobile 390 px overflow 0 px ;
+  console 0 erreur. Captures : tr-tmp/qa-r91-{578-reader,578-mobile,home,
+  book}.png. lint 0 erreur (1 warning préexistant). dev.log propre.
+
+Stage Summary:
+- **ÉTAT : registre 495/950 (444 main + 51 LLM) ; 985/1152 bilingues ; tafsir-2es
+  24/38 (63 %) ; leçons pdf-only livrées 563-578 (16).** Dev server propre,
+  0 erreur console. Commits R91 à pousser (token GitHub TOUJOURS absent —
+  backup bundle /tmp OK).
+- **Correction rétroactive 577 intégrée** (rule d'or reverse, 1re utilisation
+  depuis R89) — le registre des idad mal transcrits se purge au fil des
+  livraisons : la glose de N+1 tranche toujours.
+- **Coquilles CMS cumulées ~68** (aucune nouvelle ce tour — 578 est propre) ;
+  FLAGS R91 : «يجتمعا» vs يلتقيان (glose 5, tesseract retenu) ;
+  «الزوجة بمحارمه» (ligne faible, best reading) ; «تشبيه الزوجة بمحارمه» vs
+  éditions «بمن تحرم عليه» (rendu as-read).
+- **Priorités R92** : (1) leçon 579 (سورة المجادلة 5-7 — PDF 245-71.PDF via
+  pdfUrl ; VÉRIFIER les marqueurs ۝ (offset probablement nul) + la glose de
+  579 contre les idad transcrits ci-dessus (يُحَادُّونَ/كُبِتُوا/أَحْصَاهُ/
+  شَهِيدٌ), pattern R78 ; versets cache s58 v5-7 ; Bayḍāwī 194/5 attendu
+  (réf consécutive 193→194, pattern R89) ; les gloses 580 de la session
+  perdue (النَّجْوَى: يتحدثون سرا / الإثم: المعصية / العدوان: الظلم /
+  يَصْلَوْنَهَا: يقاسون حرها) trancheront les idad de l'إعداد de 579) ;
+  (2) puis 580 (المجادلة 8-10 — SURVEILLER la fusion 21-vs-22 qui commence
+  probablement là), 581-583, 584 فهرس, 585 مصادر → OBJECTIF livre complet.
+- **Risques** : fusion 21-vs-22 à localiser précisément (v7/v8 boundary) ;
+  lignes faibles du scan 578 (deux résolues, d'autres possibles en 579-583) ;
+  push GitHub suspendu (token absent) ; cron 462945 actif.
