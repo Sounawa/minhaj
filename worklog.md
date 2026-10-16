@@ -6604,3 +6604,29 @@ Stage Summary:
 - **MÉTHODE (ajout R97)** : (a) le TSV tesseract sur un crop retourne des coordonnées RELATIVES au crop — toujours ajouter l'offset ; (b) une « bande » peut contenir DEUX lignes en quinconce (question y2175-2237 + «قال الله تعالى» y2277-2411) — vérifier les centroids par blocs x avant toute analyse de mots ; (c) hand-register.py prend des docIds NUS (pas bookId docId).
 - **Priorités R98** : (1) leçon 584 = فهرس الأعلام (index des noms propres — format inédit, ~pages de fin du livre) ; (2) leçon 585 = المصادر (sources bibliographiques) ; (3) tafsir-2es COMPLET — 29/38 + 584/585 + doublons 556-562 → vérifier la structure exacte des 9 restants (37 leçons listées vs «38» affiché) ; (4) push GitHub après chaque leçon.
 - **Risques** : formats 584/585 inédits (index/sources — VLM peu fiable sur les listes de noms ; privilégier tesseract + web-search croisé) ; les 7 doublons 556-562 (docIds multiples) restent à cartographier.
+
+---
+Task ID: R97 (suite — leçons 584 et 585)
+Agent: Z.ai Code (agent principal)
+Task: Continuer les traductions : leçon 584 (فهرس الأعلام) puis 585 (فهرس المصادر والمراجع) — clôture des formats de fin du livre tafsir-2es.
+
+Work Log:
+- **LEÇON 584 (فهرس الأعلام وترجمتهم) LIVRÉE** — 14 notices biographiques (Ibn Ǧuzayy, Ibn Abī Ḥātim, Ibn Ǧarīr al-Ṭabarī, Ibn ʿĀshūr, Ibn ʿAbbās, Ibn ʿAǧība, Ibn ʿAṭiyya, Ibn Kathīr, Abū Bakr Ibn al-ʿArabī, Abū Ḥayyān, al-Ālūsī, al-Zamakhsharī, Fakhr al-Dīn al-Rāzī, al-Qāḍī ʿIyāḍ).
+  - Structure identifiée : titre décoratif «فهرس الأعلام» + sous-ligne «وترجمتهم» ; notices = étiquette de marge + biographie (étiquettes flottant parfois au milieu de la notice).
+  - **Croisement corpus MASSIF** : les notices minhaj existent dans tafsir-1ep/5ep/6ep et tafsir-tanawi-2 — Ibn Ǧuzayy et Ibn ʿĀshūr VERBATIM, Ibn al-ʿArabī verbatim dans tafsir-tanawi-2 («محمد بن عبد الله بن محمد، أبو بكر بن العربي المعافري...»), Ibn Kathīr par pattern de série.
+  - **Nisbas difficiles tranchées** : Ibn ʿAṭiyya = **المحاربي** (tesseract «المخاربي» + web «الأندلسي المحاربي الغرناطي» + tafsir-6ep sources «المحاربي» = triple confirmation) ; Ibn al-ʿArabī = **المعافري** (tesseract ligne-nom) ; al-Bayhaqī (dans 585) = **الخسروجردي**.
+  - Ligne manquée par l'OCR html récupérée pixel : nom d'Ibn al-ʿArabī + sa liste de disciplines «والأصول والتفسير والأدب والتاريخ. منها: «العواصم» (psm 6 à 5x)» + mort «توفي سنة 543 ه» (p4 haut, zoom 8x). Dates toutes vérifiées : 741/327/310/1393/68 (pixel, pas 58)/1224/542/774/543/745/1270/538/606/544 H ; Ālūsī iftāʾ 1248 H (600dpi).
+  - Injection AR 4048 + FR 7228 car (QA OK : 30 guillemets) ; titre mis à jour «فهرس الأعلام»/«Personnalités citées (fihris al-aʿlām)». Registre 524/950. QA navigateur : Leçon 37/38, 14 sections, 0 console.
+- **LEÇON 585 (فهرس المصادر والمراجع) LIVRÉE** — 30 entrées bibliographiques numérotées.
+  - Entrées 1-2-9-25 aux débuts garblés reconstruits pixel : «القرآن الكريم: برواية ورش عن نافع، الطبعة الصادرة عن مؤسسة محمد السادس لطباعة المصحف الشريف، الطبعة الثالثة 2012م» (ligne par ligne + tafsir-5ep verbatim) ; «أحكام القرآن: للقاضي محمد بن عبد الله أبي بكر بن العربي المعافري الإشبيلي المالكي (المتوفى: 543ه)» (tafsir-tanawi-2 verbatim) ; «التفسير: لابن أبي حاتم عبد الرحمن بن محمد بن إدريس بن المنذر...» (VLM) ; «مسند الإمام أحمد... بن هلال بن أسد الشيباني (المتوفى: 241ه)» (ligne p6).
+  - **روح البيان résolu** : «لإسماعيل حقي بن مصطفى الإستانبولي الحنفي الخلوتي، المولى أبو الفداء (المتوفى: 1127ه)» (tafsir-5ep entry 11 verbatim — la kunya أبو الفداء d'Ismāʿīl Ḥaqqī confirmée). **الأنجري** pour Ibn ʿAǧība confirmé (tafsir-5ep identique — pas الإدريسي). **النسفي d.710** confirmé. **السجستاني** corrigé du garble السحستاني (ج→ح documenté).
+  - Dates d'édition vérifiées : 1415 (روح المعاني), 1419 (النسفي), 1416/1995 (مسند أحمد), 1412/2000 (الدارمي), 1424-2003 (السنن الكبرى), 1423/2003 (شعب الإيمان), 1406/1985 (الموطأ), etc.
+  - Injection AR 6316 + FR 9128 car (QA OK) ; registre 525/950 (474 main + 51 llm). QA navigateur : **Leçon 38/38**, 30 entrées, 0 console.
+- Commits 2fbfa0e (584) + 1c24ed2 (585) + push GitHub + backup.sh après chacun.
+
+Stage Summary:
+- **ÉTAT : registre 525/950 ; corpus 993/1854 bilingues (53,5 %) ; tafsir-2es 31/38 (intro + 30 leçons ; restent les 7 leçons de سورة فاطر 556-562) ; GitHub à jour (1c24ed2).**
+- **LES 7 RESTANTS DE tafsir-2es = سورة فاطر v1-26** (leçons 1-7 du livre : 1-3, 4-6, 7-10, 10-11, 12-14, 15-18, 19-26) — leçon-verse standard, pipeline éprouvé (ocr-one → vérif Warsh → deliver). PAS des doublons (l'étiquette «doublons 556-562» du worklog R95 était erronée).
+- **MÉTHODE (ajout)** : pour les notices biographiques et bibliographies, le CROISEMENT CORPUS (les autres livres minhaj ont les mêmes notices/index) est plus fiable que le VLM — toujours chercher d'abord une notice sœur dans tafsir-1ep/5ep/6ep, tafsir-tanawi-1/2, ulum-quran-2es avant le pixel.
+- **Priorités R98** : (1) leçons 556-562 (فاطر 1-26) → tafsir-2es COMPLET 38/38 ; (2) puis arbitrage utilisateur : (A) savant manuel vs (B) batch LLM pour les ~860 pdfOnly restants ; (3) hadith-1es 12884/12885/12889 en parallèle possible.
+- **Risques** : فاطر 1-3 (doc 556) a un pdfUrl encodé différemment (underscores) — vérifier le téléchargement ; le compte «38» de l'app = 37 lessons + intro (l'intro 18670 est déjà traduite).
