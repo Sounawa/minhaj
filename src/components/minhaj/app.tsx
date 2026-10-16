@@ -282,7 +282,7 @@ export function MinhajApp() {
         if (alive && d?.stats) {
           setFooterStats({
             docsFr: d.stats.docsFr as number,
-            docsTotal: d.stats.goalDocs as number,
+            docsTotal: d.stats.docsTotal as number,
             booksTotal: d.stats.booksTotal as number,
             docsSavant: d.stats.docsSavant as number,
           });

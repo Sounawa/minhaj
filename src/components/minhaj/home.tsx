@@ -36,12 +36,14 @@ function Hero({
   docsFr,
   docsTotal,
   goalDocs,
+  docsSavant,
   booksDownloaded,
   booksTotal,
 }: {
   docsFr: number;
   docsTotal: number;
   goalDocs: number;
+  docsSavant: number;
   booksDownloaded: number;
   booksTotal: number;
 }) {
@@ -149,26 +151,32 @@ function Hero({
             <dd className="mt-2 font-serif text-3xl font-semibold text-amber-950 dark:text-amber-50">
               {fr(docsFr)}
               <span className="mx-1.5 text-base font-normal text-muted-foreground">/</span>
-              <span className="text-lg font-normal text-muted-foreground">{fr(goalDocs)}</span>
+              <span className="text-lg font-normal text-muted-foreground">{fr(docsTotal)}</span>
             </dd>
             <Progress
-              value={goalDocs ? (docsFr / goalDocs) * 100 : 0}
+              value={docsTotal ? (docsFr / docsTotal) * 100 : 0}
               className="mt-3 h-2 bg-amber-800/10"
             />
+            <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
+              Leçons dont le texte est disponible en arabe et en français — dont{" "}
+              <strong className="text-foreground">{fr(docsSavant)}</strong> en traduction
+              savante vérifiée (citations religieuses contrôlées à la source).
+            </p>
           </div>
           <div className="rounded-2xl border border-amber-800/15 bg-card/80 p-5 shadow-sm backdrop-blur-sm">
             <dt className="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground">
               <FileTextIcon className="size-4 text-primary" aria-hidden="true" />
-              Documents référencés
+              Documents du programme
             </dt>
             <dd className="mt-2 font-serif text-3xl font-semibold text-amber-950 dark:text-amber-50">
               {fr(docsTotal)}
               <span className="ms-1.5 text-sm font-normal text-muted-foreground">
-                dont PDF officiels
+                dont {fr(docsTotal - docsFr)} en PDF seul
               </span>
             </dd>
             <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
-              Introductions, leçons intégrales et renvois vers les PDF du Ministère.
+              Introductions et leçons des 64 manuels. Celles sans texte bilingue restent
+              accessibles via le PDF officiel du Ministère (source habous.gov.ma).
             </p>
           </div>
           <div className="rounded-2xl border border-amber-800/15 bg-card/80 p-5 shadow-sm backdrop-blur-sm">
@@ -282,6 +290,7 @@ export function Home() {
         docsFr={stats.docsFr}
         docsTotal={stats.docsTotal}
         goalDocs={stats.goalDocs}
+        docsSavant={stats.docsSavant}
         booksDownloaded={stats.booksDownloaded}
         booksTotal={stats.booksTotal}
       />
