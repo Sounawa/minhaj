@@ -6346,3 +6346,22 @@ Stage Summary:
 - **idad 581 (الإعداد القبلي de 580, à vérifier en R94)** : «تَفَسَّحُوا» - «ٱنشُزُوا» - «دَرَجَٰتٍ» (les 3 = v11, cache déjà conforme) + «التأدب مع رسول الله ﷺ بعد مماته» ; Bayḍāwī attendu 195/5 (193→194→195) ; thème آداب المجالس ; s58 11-13 = Ḥafṣ 11-13 PROBABLE (v11 cache = Ḥafṣ v11 confirmé ; la fusion 21-vs-22 n'est pas avant v12 — à surveiller pour 581) ; PDF 246-?.PDF à identifier via pdfUrl JSON.
 - **Priorités R94** : (1) leçon 581 (المجادلة 11-13) ; (2) 582 (14-19), 583 (20-21), 584 فهرس, 585 مصادر → OBJECTIF tafsir-2es COMPLET (20e livre savant, 38/38) ; (3) QA globale + push GitHub dès retour du token.
 - **Risques** : push GitHub toujours suspendu (token absent) ; les formats 584 (فهرس الأعلام) et 585 (المصادر) restent inédits (pas de آيات/gloses — anticiper la structure HTML) ; eshia.ir/41713 mort (404) — quranpedia.net/surah/1/{N}/book/{345|136|78…} est le nouveau canal d'accès aux originaux (Tashīl 345, Ibn Kaṯīr 136, Ṭabarī 4).
+
+---
+Task ID: R94-transparence
+Agent: main (Z.ai Code)
+Task: Push GitHub (token fourni par l'utilisateur) + clarification de l'état réel du projet (l'utilisateur était perdu sur les compteurs).
+
+Work Log:
+- PUSH GITHUB RÉUSSI : 5e2a0a6..2a5c6b4 (R87→R93) puis 7b1fcd0 — blocage levé en retirant backup-tour/latest-bundle.bdl (220 Mo > limite GitHub 100 Mo) du commit HEAD via git rm --cached + .gitignore + amend ; le fichier reste sur disque.
+- Constat utilisateur : « je suis complètement perdu — leçons bilingues ? documents référencés ? % d'avancement ? ». Le compteur accueil « 987/1152 » (=86%) était MENSONGER : goalDocs=1152 était une vieille estimation ; la réalité est docsTotal=1854 → 987/1854 = 53%.
+- CHIFFRES RÉELS AUDITÉS (64 livres) : 1854 documents totaux (1790 leçons + intros) ; 923 leçons bilingues AR+FR + ~64 intros FR ≈ 987 docs avec FR ; 867 leçons pdfOnly (47% — aucun texte, juste le PDF officiel) ; 497 docs en traduction savante (446 hand + 51 LLM) ; 490 docs bilingues de qualité machine (GT).
+- Correctifs app (commit 7b1fcd0) : carte « Leçons bilingues » affiche 987/1 854 avec Progress sur docsTotal (au lieu de goalDocs) + sous-texte « dont 497 en traduction savante vérifiée » ; carte « Documents référencés » renommée « Documents du programme » avec « dont 867 en PDF seul » + explication de la source habous.gov.ma ; Footer corrigé (app.tsx utilisait goalDocs aussi).
+- QA agent-browser : compteurs rendus « 987/1 854 », « 497 », « 1 854 dont 867 en PDF seul » ✓ ; lint 0 erreur.
+- Leçon 581 (en cours depuis R94) : PDF 2611-1.PDF téléchargé (7 pages, proxy avec chemin URL-encodé OBLIGATOIRE — l'UTF-8 brut renvoie 400) ; OCR 21 variantes ; rosettes ۝١١ (p1, x2640-3140, VLM «11») / ۝١٢ (p2, x1060-1520, VLM «12») / ۝١₃ (p2, x1709-2099, template-matching 0.644 + VLM «13») TOUTES vérifiées → s58 v11-13 = Ḥafṣ v11-13, AUCUN offset (3e péricope consécutive) ; hadith Ibn Mājah «الأنبياء ثم العلماء ثم الشهداء» confirmé (t128 + web-search, n°4438) ; refs التحرير والتنوير 28/45 + مفاتيح الغيب 494/29 (OCR ×2-3 concordants) ; gloses الشرح : تَفَسَّحُوا=توسعوا دون قيام / ٱنشُزُوا=ارتفعوا وقوموا / تُنَاجُوهُ=أردتم مناجاته والحديث معه ; idad 582 (p7) : مستنفرين?+عتو?+كفروا+المنافقين (garbled, à re-vérifier en R95) ; PENDING : transcription AR + traduction FR + injection.
+
+Stage Summary:
+- GitHub à jour (2a5c6b4 + 7b1fcd0) ; compteur accueil honnête.
+- ÉTAT RÉEL : 53% bilingue (toutes qualités), 27% savant, 47% PDF seul. Restants par livre : tafsir-5ep 91, tafsir-3es 37, hadith-2es 30, ×22 livres ~25-30 chacun, tafsir-2es 12 (581-585 + doublons 556-562).
+- DÉCISION STRATÉGIQUE EN ATTENTE UTILISATEUR : (A) continuer traduction savante manuelle (~1-2 leçons/session, années pour tout) ; (B) pipeline LLM batch pour les 867 pdfOnly (rapide, qualité moindre) ; (C) finir d'abord tafsir-2es puis décider. Le worklog recommande (C) puis (B) avec relecture ciblée.
+- R94 en cours : leçon 581 à ~60% (vérifications faites, transcription/ traduction restantes).
