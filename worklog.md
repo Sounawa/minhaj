@@ -6578,3 +6578,29 @@ Stage Summary:
 - **DÉCOUVERTE ÉDITORIALE** : le manuel glossse كَتَبَ (قَضَى وَقَدَّرَ) dans la leçon 582 (v14-19) bien que كتب soit v21 — probable anticipation du programme (583 = v20-21) ; nous transcrivons tel qu'imprimé.
 - **Priorités R97** : (1) leçon 583 (المجادلة 20-21 — PDF à identifier via pdfUrl, gloses idad attendues : كُبِتُوا / كَتَبَ / حِزْبُ ٱللَّهِ) ; (2) 584 (فهرس الأعلام) et 585 (المصادر) — formats inédits à anticiper ; (3) OBJECTIF : tafsir-2es COMPLET 38/38 (50e-51e livre savant) ; (4) push GitHub dès retour du token.
 - **Risques** : push GitHub suspendu (bundles /tmp = seule protection) ; idad 583 termes garbled attendus ; VLM instable sur les formats 584/585 (index bibliographiques) — privilégier tesseract + web-search croisé.
+
+---
+Task ID: R97
+Agent: Z.ai Code (agent principal — session utilisateur « continue »)
+Task: (1) Pousser tous les commits sur GitHub (token fourni par l'utilisateur) ; (2) continuer les traductions → leçon 583 (المجادلة 20-21) ; (3) QA + commit + push + backup.
+
+Work Log:
+- **GITHUB** : push 0d233cc (cache OCR 583 + configs tessdata) puis 1f11287 (R97 complet) → Sounawa/minhaj à jour. Push configuré via remote avec token en URL (fetch sans token, push authentifié) ; le token n'apparaît dans AUCUN commit.
+- **LEÇON 583 (المجادلة 20-21, الدرس 28) LIVRÉE** — méthodologie Warsh e-verification :
+  - **DÉCOUVERTE STRUCTURELLE MAJEURE (fusion medinoise)** : la leçon couvre 2 versets du muṣḥaf de l'école («الآيتان») qui FUSIONNENT Ḥafṣ v20+v21 (le verset 20 de l'école = «إِنَّ ٱلَّذِينَ يُحَآدُّونَ ٱللَّهَ وَرَسُولَهُۥٓ أُو۟لَٰٓئِكَ فِى ٱلْأَذَلِّينَ كَتَبَ ٱللَّهُ لَأَغْلِبَنَّ أَنَا۠ وَرُسُلِىٓ ۚ إِنَّ ٱللَّهَ قَوِىٌّ عَزِيزٌۭ») et le verset 21 de l'école = Ḥafṣ v22. PREUVE : rosette ۝٢₀ localisée par triple signal (blob programmatique C9 + VLM lettre-à-lettre 3x) ENTRE «قَوِىٌّ عَزِيزٌ» et «لَّا تَجِدُ» ; rosette ۝٢١ à la fin de «ٱلْمُفْلِحُونَ». Comptage medinois de s58 = 21 versets (vs 22 kufan). Confirmé aussi par le titre «الآيتان : 20 - 21» (site habous + tesseract) et la glose interne «أولئك في جملة الأذلين» (Ibn Juzayy verbatim, quranpedia).
+  - **7 lignes du bloc coranique vérifiées ligne à ligne** contre le squelette tanzil (s58 v20-22 + s60 v8-9) : équivalence rasm Uthmani complète, pas de divergence Warsh dans cette péricope.
+  - **Glossaire (الشرح)** : «ٱلْأَذَلِّينَ»: أذل خلق الله / «كَتَبَ»: قضى وقدر / «بِرُوحٍ»: بلطف وهدى وتوفيق — décodé par crop 4x + tesseract + recoupement tafsīr (le garble tesseract «يزوج/بروج/بزوج» = بِرُوحٍ systématique, ر→ز ح→ج).
+  - **Question de clôture du tamhīd** (ligne manquée par l'OCR html — ligne séparée y2175-2237) reconstruite par segmentation pixel 600dpi + correction de skew + VLM : «فماذا كان جزاء المعاندين الذل والمهانة؟ وكيف تكون الغلبة لله ورسوله؟» (pas de ؟ après المعاندين — vérifié pixel ; les tokens 600dpi du TSV étaient décalés de +600 : piège identifié).
+  - **Citation Rāzī** vérifiée MOT À MOT contre quran-tafsir.net (Mafātīḥ al-Ġayb sur 58:22) : y compris «بل كان عاصيا في الله» et «إرادة منافسه دينا ودنيا» (le garble OCR était correct) ; réf 499/29 lue à 8x (cohérent avec 494/29 de 581).
+  - **FIX 582 (idad de préparation)** : les 3 termes imprimés sont «ٱلْأَذَلِّينَ»، «كَتَبَ»، «بِرُوحٍ» (garbles «[ل58يىن» w=285px et «بزوج» w=140px — la largeur invalide «كُبِتُوا»/«حِزْبُ ٱللَّهِ» transcrits par R96 par hallucination VLM). AR+FR corrigés dans tafsir-2es.json.
+  - **Tafsīr source identifié** : Ibn Juzayy (gloses «في جملة الأذلين أي معهم», «كتب الله أي قضى وقدر», «لا تجد قوما معناها...» = verbatim quranpedia/shamela) + Rāzī pour la citation longue.
+  - Injection : AR 5748 + FR 8944 car (QA OK : 0 arabe résiduel, 18 guillemets appariés, 9 balises, 0 apostrophe droite ; auto-fix NNBSP réinjecté). Registre hand +1 (après purge d'une entrée parasite «tafsir-2es» créée par mauvais usage de hand-register.py — usage correct : hand-register.py <docId> SANS bookId).
+  - **QA navigateur (agent-browser)** : leçon 583 rend intégralement (Leçon 36/38, badge «Traduction savante», 11 sections, 2 citations coraniques, AR/FR/bilingue, Rāzī 499/29, Mumtaḥana 8-9 + question de recherche) ; 0 erreur console ; compteurs accueil 991/1 854 + 523 savants ; tafsir-2es 29/38. Lint : 0 erreur (7 warnings préexistants).
+- Commits 1f11287 + push GitHub OK + backup.sh OK.
+
+Stage Summary:
+- **ÉTAT : registre 523/950 (472 hand + 51 llm) ; corpus 991/1854 bilingues (53,4 %) ; tafsir-2es 29/38 ; GitHub à jour (1f11287).**
+- **LEÇON CLÉ SUR LA NUMÉROTATION** : le muṣḥaf de l'école (Warsh, numérotation medinoise) FUSIONNE parfois des versets kufans — ici Ḥafṣ v20+v21 = école v20. La correspondance n'est PAS bijective sur la fin de s58 : toute NdT comparative Ḥafṣ reste interdite (directive Warsh-only), la transcription suit le muṣḥaf tel qu'imprimé.
+- **MÉTHODE (ajout R97)** : (a) le TSV tesseract sur un crop retourne des coordonnées RELATIVES au crop — toujours ajouter l'offset ; (b) une « bande » peut contenir DEUX lignes en quinconce (question y2175-2237 + «قال الله تعالى» y2277-2411) — vérifier les centroids par blocs x avant toute analyse de mots ; (c) hand-register.py prend des docIds NUS (pas bookId docId).
+- **Priorités R98** : (1) leçon 584 = فهرس الأعلام (index des noms propres — format inédit, ~pages de fin du livre) ; (2) leçon 585 = المصادر (sources bibliographiques) ; (3) tafsir-2es COMPLET — 29/38 + 584/585 + doublons 556-562 → vérifier la structure exacte des 9 restants (37 leçons listées vs «38» affiché) ; (4) push GitHub après chaque leçon.
+- **Risques** : formats 584/585 inédits (index/sources — VLM peu fiable sur les listes de noms ; privilégier tesseract + web-search croisé) ; les 7 doublons 556-562 (docIds multiples) restent à cartographier.
