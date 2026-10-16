@@ -6223,3 +6223,96 @@ Stage Summary:
 - **Risques** : fusion 21-vs-22 à localiser précisément (v7/v8 boundary) ;
   lignes faibles du scan 578 (deux résolues, d'autres possibles en 579-583) ;
   push GitHub suspendu (token absent) ; cron 462945 actif.
+
+---
+Task ID: R92
+Agent: Z.ai Code (agent principal)
+Task: Livraison de la leçon 579 (سورة المجادلة 5-7 = Ḥafṣ 5-7, tafsir-2es, 17e leçon pdf-only — refonte du R89 perdu)
+
+Work Log:
+- **579 LIVRÉE** (الدرس ٢٤, Leçon 32/38, 17e pdf-only) : AR 5 791 car + FR 9 985 car.
+  Injectée + pdfOnly:false (OUBLI du premier passage — le lecteur restait sur le
+  placeholder PDF tant que lessons[].pdfOnly=true ; règle : l'injection doit TOUJOURS
+  flipper pdfOnly) + hand-register → **registre 496/950 (445 main + 51 LLM)**.
+- **PDF 579** (245-71.PDF, 6 pages) : téléchargé via proxy translate.goog (chemin arabe
+  %D8%A7%D9%84... encodé). Rendus 300+600 dpi, 18 variantes OCR (t128/t200/t225 ×2x).
+- **RAPPEL STRUCTURE** : 579 = 245-71.PDF (5-7), 580 = 258-11.PDF (8-10), 581 =
+  2611-1.PDF (11-13) — l'ancien résumé de session disait « 580 = 245-71 » : FAUX,
+  le mapping du livre JSON fait foi.
+- **RÈGLE D'OR VERDICT — idad 578 ↔ gloses 579** : les 4 lemmes idad de 578
+  (يُحَادُّونَ/كُبِتُوا/أَحْصَاهُ/شَهِيدٌ) TOUS confirmés dans le الشرح de 579 + **5e glose
+  inattendue «النَّجْوَى: الكلام الخفي»** (v7). Gloses الشرح : يُحَادُّونَ: يخالفون ويعادون /
+  كُبِتُوا: هلكوا ولعنوا / أَحْصَاهُ: عده / شَهِيدٌ: مشاهد / النَّجْوَى: الكلام الخفي.
+- **Marqueurs ۝ pixel-vérifiés (VLM)** : ۝٥ (p1) + ۝٦ ۝٧ (p2), AUCUNE basmala,
+  label [سورة المجادلة: ٧-٥] → **s58 v5-7 = Ḥafṣ 5-7, AUCUN offset** (conforme 578 ;
+  la fusion 21-vs-22 est donc APRÈS v10 — probablement dans 582 (14-19) ou 583 (20-21)).
+- **Idad 580 (إعداد قبلي de 579) VLM-vérifiés** : «النَّجْوَى» - «بِالْإِثْمِ» - «الْعُدْوَانِ» -
+  «يَصْلَوْنَهَا» — l'intel de la session perdue était JUSTE mais incomplète : le 2e lemme
+  est **بِالْإِثْمِ** (avec bāʾ, v8-9) et non الإثم nu. + «أبحث فيما يجوز وما لا يجوز من
+  التناجي». Ces lemmes trancheront les gloses de 580 (pattern R78/R91).
+- **Q2 تقويم = CITATION CROISÉE s57:4** : «ما معنى قوله تعالى: وَهُوَ مَعَكُمْ أَيْنَ مَا
+  كُنتُمْ» — formulation Ḥadīd 57:4 (PAS le v7 de la leçon «مَعَهُمْ أَيْنَ مَا كَانُوا»).
+  Double VLM concordant + fragments OCR (معَكفمْ/مَاكنمٌ avec ك net). NdT FR ajouté
+  (maʿiyya par la science).
+- **Q3 = آثار (pluriel)** et non أثر : VLM 4x zoom voit 4 lettres (alif-madda + ث +
+  alif + ر) ; tesseract ×3 lisait أثر (3 lettres). Grammaire décisoire : «ما هي آثار»
+  (accord féminin pluriel). **مقاصد b1 = معارضته** (sans alif final) : 4 votes (tesseract
+  ×3 + VLM 3x neutre) vs 1 (VLM ancré candidates — rejeté).
+- **RÉF IBN KATHĪR ٧٢/٨ — bataille de glyphes** (la plus longue de la série) :
+  tesseract ×3 «72/8» vs VLM non-calibré «82/8». Résolu par CALIBRATION de la
+  police du corps : (1) label [٧-٥] du bloc āyāt = le ٧ du manuel = barre plate
+  supérieure + diagonale descendante gauche SANS base ; (2) le ٢ = crochet +
+  diagonale + BASE PLATE LARGE (marqueurs ١- ٢- ٣- de la page تقويم comme
+  références) ; (3) le «slash» du numéro = trait vertical incliné quasi-raide (x3759→
+  x3739) — pas un chiffre ! ; (4) ٨ = boucle double (2 trous, analyse de composantes
+  scipy). Ordre visuel : ] ٧ ٢ / ٨ : → **page 72, vol 8** ✓ (VLM calibré d'accord).
+  Convention de mise en page vérifiée sur Bayḍāwī : page à gauche du /, vol à droite.
+- **Bayḍāwī ١٩٤/٥ consécutif** (193/5 en 578 → 194/5 en 579, pattern R89 tenu) ;
+  citation complète «وتخصيص العددين...» (3 hypothèses : wāqiʿa munāfiqīn / witr /
+  tashāwur) rendue.
+- **Hadith Thawbān (استثمار)** : texte Ibn Mājah (Zuhd, باب ذكر الذنوب) reconstitué —
+  VLM a tranché يَأْتُونَ (vs أتون t128) et بِيضًا (pluriel adverbial, vs بيضاء) ;
+  «صفهم لنا جلهم لنا أن لا نكون منهم ونحن لا نعلم» + «أما إنهم إخوانكم ومن جلدتكم
+  يأخذون من الليل كما تأخذون ولكنهم أقوام إذا خلوا بمحارم الله انتهكوها».
+- **«والكبت وقيل: كبت الرجل إذا بقي حزينا»** : segmentation TSV (والكبت x1572 /
+  وقيل x1310 / كبت x1071 / الرجل x676) — le «الذل» vu par 2 VLM = hallucination
+  ancrée sur mes candidates (aucun mot entre وقيل et كبت) ; rejeté.
+- **QA navigateur (agent-browser) complète** : lecteur 579 «Leçon 32/38», badge
+  «Traduction savante», h1 bilingue, 3 versets (5)-(7) + NdT décompte, 5 gloses FR
+  (yuḥāddūna/kubitū/aḥṣāhu/šahīd/al-naǧwā), réfs 72/8 + 194/5 rendues, NdT s57:4
+  sur Q2, hadith Ṯawbān/Tihāma, إعداد القبلي 8-10 avec les 4 lemmes ; mode
+  bilingue AR+FR (يخالفون ويعادون، الكلام الخفي، كُبِتُوا۟ كَمَا كُبِتَ، مَا يَكُونُ مِن نَّجْوَىٰ
+  ثَلَٰثَةٍ، يَصْلَوْنَهَا، لابن كثير: 72/8) ; navigation SUIVANT→580 (placeholder, Leçon
+  33/38) par clic JS ✓ ; livre tafsir-2es **25/38 documents bilingues** ; accueil
+  **986/1152 bilingues** ; mobile 390 px overflow 0 px ; footer collé (gapBelow 0 en
+  bas de page, poussé naturellement) ; console 0 erreur. Captures : tr-tmp/
+  qa-r92-{579-reader,579-bilingual,579-mobile,home,579-bottom}.png. lint 0 erreur
+  (1 warning préexistant llm-translate.ts). dev.log propre (5× GET .../579 200).
+  Commit f3d87e2 ; push GitHub TOUJOURS impossible (token absent) — bundles
+  /tmp/minhaj-r92.bundle + backup-tour/latest-bundle.bdl créés.
+
+Stage Summary:
+- **ÉTAT : registre 496/950 (445 main + 51 LLM) ; 986/1152 bilingues ; tafsir-2es
+  25/38 (66 %) ; leçons pdf-only livrées 563-579 (17).** Dev server propre, 0 erreur
+  console. Commits R90-R92 locaux (bundles /tmp de secours).
+- **MÉTHODE R92 consolidée (calibration de police)** : pour les CHIFFRES ornementaux
+  contestés, calibrer chaque glyphe sur des références DE LA MÊME PAGE (marqueurs
+  ١-٢-٣- des questions, digits du label ٧-٥, footer) AVANT de trancher ; le VLM non
+  calibré sur des crops de chiffres isolés hallucine (82 vs 72, الذل inexistant) ;
+  tesseract ×3-seuils est le point de départ fiable, la pixel-ASCII tranche. Ordre
+  visuel des réfs : ] P A G E / V O L : (page à gauche du slash).
+- **Règle d'or tenue 2 fois de suite** (R89: glose 578→idad 577 ; R91: glose 579
+  implicite ; R92: gloses 579→idad 578 4/4 + 1 glose bonus) — le registre des idad
+  est maintenant purgé jusqu'à 579.
+- **FLAGS R92** : aucun doute résiduel sur 579. À surveiller pour 580 : gloses
+  attendues النَّجْوَى(؟: يتحدثون سرا)/الإثم/العدوان/يَصْلَوْنَهَا (intel session perdue, à
+  re-vérifier pixel), le label [١٠-٨], thème آداب التناجي, Bayḍāwī 195/5 attendu
+  (193→194→195), s58 8-10 = Ḥafṣ 8-10 (probable, à vérifier).
+- **Priorités R93** : (1) leçon 580 (سورة المجادلة 8-10 — PDF 258-11.PDF ; gloses
+  vs idad transcrits ci-dessus ; versets cache s58 v8-10 ; surveiller fusion 21-22
+  qui n'est PAS avant v11) ; (2) puis 581 (11-13), 582 (14-19), 583 (20-21), 584
+  فهرس, 585 مصادر → OBJECTIF livre tafsir-2es COMPLET (20e livre savant) ;
+  (3) QA globale app + push GitHub dès que le token revient.
+- **Risques** : push GitHub suspendu (token absent, bundles /tmp = seule protection
+  anti-rollback) ; 584 (فهرس الأعلام) et 585 (المصادر) seront des formats inédits
+  (pas de آيات/gloses) — anticiper la structure HTML.
