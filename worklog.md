@@ -5491,3 +5491,531 @@ Stage Summary:
 - **FLAGS bbox en attente de VLM** : passages étendus 2:155-159 ? (19284), 2:22-25 ? (19284), 10:11-17 ? (19285), 53:1-5 (19285), 18:10-11 ? (19284), 27:16 coupe ±1 mot (19276), 12:109 borne finale (19276), + anciens (19158 ×2, 19261 ×2, 19273 ×7, 19274 ×4).
 - **Priorités R76** : (1) push GitHub à la demande de l'utilisateur (token retiré — quand il le dira) ; (2) relancer la traduction savante sur un autre livre (479/950 — restent ~471) : candidats = livres au titre savant non entamés (tafsir-3es? hadith-3es? fiqh?…) — vérifier le registre pour le prochain livre le plus avancé ; (3) QA globale de l'app (agent-browser, pages livres, accueil) ; (4) backfill des flags si VLM revient.
 - **Risques** : backup externe = bundle /tmp uniquement (push GitHub suspendu jusqu'au retour du token — l'utilisateur a dit « on fera une mise à jour quand je te le dirai ») ; le SPA exige reload explicite après injection (règle connue).
+
+---
+Task ID: R76
+Agent: Z.ai Code (agent principal)
+Task: Reprise après sauvegarde GitHub — diagnostic du backlog + NOUVEAU PIPELINE OCR PDF + 1re leçon PDF-only livrée (563, فاطر 27-28)
+
+Work Log:
+- **Diagnostic du corpus** : les 905 leçons CMS (docId numérique) sont toutes bilingues (479 savantes + 426 GT) ; le reste = **885 leçons pdf-only** (pdfUrl habous, html/htmlFr vides, pdfOnly:true). Seules 14 sont des doublons de leçons CMS (tafsir-2es 556-562, tafsir-3es 592-598) → **873 leçons uniques** constituent le backlog réel.
+- **Pipeline OCR arabe construit et validé** :
+  - Téléchargement PDF habous (curl python ssl-no-verify + URL-encode arabe) — 25/25 PDFs tafsir-2es téléchargés (600-880 Ko chacun) dans tr-tmp/pdf/tafsir-2es/.
+  - tesseract-ara installé (tessdata_best, TESSDATA_PREFIX=/home/z/.tessdata + configs copiées de /usr/share) — OCR 300dpi psm4 ≈ 90-95 % correct sur texte courant.
+  - **Problème identifié** : le texte coranique est en police décorative (AXt fonts Identity-H) → PyMuPDF extrait du charabia ET tesseract échoue dessus.
+  - **Solution (méthode établie transposée)** : versets restitués du cache Warš (scripts-translate/quran-cache.json, texte + traduction Hamidullah) ; lemmes décoratifs du الشرح identifiés par (a) largeur d'encre px/lettre calibrée sur phrases décoratives connues, (b) **cohérence croisée entre leçons** (les lemmes de l'الإعداد القبلي d'une leçon = les items du الشرح de la leçon SUIVANTE, en police simple lisible). Résultat : les 4 lemmes de 563 (تبور/ليوفيهم/ويزيدهم من فضله/لخبير) confirmés par la glose de 564 ; les 3 de 556 (الأمور/الغرور/حزبه) par la glose de 557.
+  - Zones ambigües résolues par zoom 450-900dpi + psm6/7 + ciblage TSV (intro hadith ʿAlī/Dārimī retrouvée ; « والمعاقب المنيب حقه أن يخشى » confirmé Nasafī 3/87 ; « تتعلق كذلك بما قبلها » confirmé).
+  - VLM retenté : toujours 429 (famine).
+- **563 LIVRÉE** (سورة فاطر 27-28, leçon 8, tafsir-2es, 1re leçon pdf-only du corpus, commit ae648a6) :
+  - AR 6 091 car (html structuré : أهداف/تمهيد/الآيات [27-28 Warš intégral]/الفهم-الشرح 4 items/التفسير 3 axes/التقويم 4 q/الاستثمار [ʿAlī b. Abī Ṭālib, Dārimī]/الإعداد القبلي).
+  - FR 10 977 car (registre savant, translittération, citations Qurṭubī 14/341, Ibn ʿĀšūr 22/301+303, Nasafī 3/87, Dārimī ; note de lecture « li-yuwaffiyahum » glose de la leçon suivante).
+  - pdfOnly→false, badge « savante bilingue » vérifié navigateur ; page livre 9/38 docs bilingues (24 %) ; accueil 970/1152 ; 0 erreur console ; captures qa-r76-563-reader.png.
+  - Registre : **480/950** (429 hand + 51 llm).
+- QA navigateur complète (agent-browser) : lecteur h1 FR+AR, versets AR intégraux rendus, 12 sections au sommaire, mode bilingue OK, navigation prev/next OK (562→563→564).
+
+Stage Summary:
+- **ÉTAT** : registre **480/950** ; accueil **970/1152 bilingues** ; 64 manuels ; 19 livres complets. Dev server 200 OK, 0 erreur console.
+- **RÉUSSITE CLÉ** : le backlog de 873 leçons PDF-only est désormais **déverrouillé** — pipeline complet éprouvé : téléchargement → OCR tesseract-ara → nettoyage → restitution Warš du cache → traduction savante → injection (html+htmlFr+pdfOnly:false) → registre → QA navigateur → commit. ~40-60 min/leçon selon taille.
+- **MÉTHODE** : (1) OCR psm4 300dpi pour la structure ; (2) lemmes décoratifs = glose de la leçon suivante (règle d'or du التعليم العتيق : الإعداد القبلي prépare la leçon suivante) ; (3) versets = cache Warš ; (4) zones doutes = zoom TSV ciblé ; (5) VLM en 429 — ne pas compter dessus.
+- **Doublons identifiés** (14) : tafsir-2es 556-562, tafsir-3es 592-598 dupliquent des leçons CMS déjà traduites — non traduits (inutile), à masquer éventuellement plus tard si UX le demande.
+- **Priorités R77** : (1) enchaîner les leçons PDF tafsir-2es restantes (564 فاطر 29-31, 565 32-35, 566 36-37, 567 38-40, 568 41-44, 569 45-46, puis الحديد 570-577, المجادلة 578-583, فهرس 584, مصادر 585 — 23 leçons dont PDFs déjà téléchargés) ; (2) puis tafsir-3es (30 uniques) ; (3) les glossaires des leçons 564+ déjà OCR-isés servent directement.
+- **Risques** : le token GitHub est retiré (push suspendu à la demande de l'utilisateur — les commits restent locaux + bundle /tmp) ; le bouton « Download workspace » de la plateforme échoue sur node_modules 1,2 Go (voie fiable : git clone GitHub) ; « سترة الشرح » hmm — non : coquille CMS connue cumulée ~66.
+
+---
+Task ID: R77
+Agent: Z.ai Code (agent principal)
+Task: Poursuite du pipeline PDF-only — LIVRAISON de la leçon 564 (فاطر 29-31, tafsir-2es, 2e leçon pdf-only) + consolidation méthodologique (lemmes décoratifs, en-tête ثانيا, hadith Burayda)
+
+Work Log:
+- **Contexte R77** : reprise après R76 (563 livrée, pipeline OCR éprouvé). Objectif : enchaîner sur 564 (فاطر 29-31). VLM toujours en 429 (1 tentative, échec) — méthode pixel/cohérence uniquement.
+- **Pipeline exécuté sur 564** (PDF 5 pages, 25/25 PDFs tafsir-2es déjà en tr-tmp/pdf/tafsir-2es/) :
+  - OCR 300dpi psm4 (7864 car) + 600dpi ciblés pages 1-4 + zooms 900/1200dpi + composantes connexes + NCC inter-blobs.
+  - Versets 29-31 restitués du cache Warš (texte + Hamidullah FR).
+  - **6 LEMMES décoratifs du الإعداد القبلي résolus par triple croisement** : (a) lecture L1 = أَوْرَثْنَا - ظَالِمٌ لِنَفْسِهِ - مُقْتَصِدٌ + 4e blob «الْحَرّن» ; (b) lecture L2 = «لُغُوبٌ» (لفو/لوف/لوج ×4 lectures) + «دَارَ الْمُقَامَةِ» (ءارافتاق, LIMPIDE) ; (c) **règle d'or re-validée : la glose de 565 (5 items lisibles, police simple, 3 passes) = أَوْرَثْنَا/ظَالِمٌ لِنَفْسِهِ/مُقْتَصِدٌ/لُغُوبٌ/دَارَ الْمُقَامَةِ** → le 4e blob L1 = الْحَزَنَ (v34 ; NCC=0.203 vs blob لُغُوبٌ = mots DIFFÉRENTS ; la glose de 565 définit لُغُوبٌ par «ما يغم ويحزن ويخيف» — حزن est DANS la définition, d'où l'absence d'entrée séparée). Lemmes finaux : أَوْرَثْنَا، ظَالِمٌ لِنَفْسِهِ، مُقْتَصِدٌ، الْحَزَنَ، لُغُوبٌ، دَارَ الْمُقَامَةِ (ordre glosses, non-verset pour les 2 derniers).
+  - **En-tête «ثانيا» déchiffré à 1200dpi + composantes** : «ثانيا: تثبيت فؤاد النبي ﷺ» — «فؤاد» (فوا+د, 72px = د final isolé), «النبي» ([ا]+[لنبي 479px 1 pièce] + points ن/ب/ي + queue ي), qualificatif final (بالمتلو؟) NON résolu au pixel — tronqué proprement, noté au worklog.
+  - **Hadith Burayda (Musnad Ahmad, تتمة مسند الأنصار) reconstruit** : بقع 600dpi ×  zooms ciblés («وإن كل تاجر من وراء تجارته وإنك اليوم من وراء كل تجارة» confirmé ×2 ; أظمأتك/الهواجر ; غمامتان أو غيايتان أو فرقان من طير صواف ; تاج الوقار ; يكسى والداه حلتين لا يقوّم لهما أهل الدنيا ; بأخذ ولدكما القرآن ; هذًّا كان أو ترتيلا).
+  - **Coquilles CMS du manuel notées** : [النساء: 172] → 173 (contenu = فيُوَفِّيهِمْ أُجُورَهُمْ, parallèle exact de 35:30) ; [النور: 36-37] → 37-38 (la citation englobe لِيَجْزِيَهُمُ du v38) ; الإعداد القبلي imprime «32-34» alors que la leçon suivante (565) couvre 32-35 (lemmes دَارَ/لُغُوب = v35) — 3 notes inline dans le FR.
+  - Citations savantes : Nasafī Madārik 3/88 (فَعَلِمَكَ وأبصر أحوالك؛ ورآك أهلاً...عيار على سائر الكتب) ; glose توفية الأجور + الزيادة = التضعيف/النظر إلى وجه الله ; التجارة = طلب الثواب.
+- **Injection** : html AR 5 460 car (12 sections) + htmlFr 9 897 car (registre savant, translittération, notes de lecture) ; pdfOnly→false. **Bug registre corrigé** : l'entrée 564 avait été écrite en objet alors que le format «hand» = chaînes pures (l'API docsSavant la comptait pas) — corrigé en chaîne, stats recalées.
+- **QA navigateur (agent-browser)** : lecteur 564 bilingue 24 sections h2/h3, 0 erreur console ; versets 29-31 Warš intégraux rendus ; نظائرا النساء 173 + النور 37-38 présents ; hadith + lemmes idad OK ; navigation prev (563) / next (565 فاطر 32-35) OK ; page livre 10/38 bilingues (26 %) badge «bilingue» sur la ligne 564 ; accueil docsSavant 481, docsFr 971/1152, 64 manuels ; mobile 390px sans overflow horizontal. Captures : qa-r77-564-reader.png, qa-r77-564-book.png, qa-r77-564-final.png, qa-r77-564-mobile.png, qa-r77-home.png.
+- Commit local (token GitHub retiré par l'utilisateur — push différé à sa demande, bundle /tmp via backup.sh).
+
+Stage Summary:
+- **ÉTAT : registre 481/950 (430 hand + 51 llm) ; 971/1152 bilingues ; 64 manuels ; 19 livres complets + tafsir-2es 10/38.** Dev server propre, 0 erreur console.
+- **564 livrée = 2e leçon pdf-only du corpus** — le pipeline tient ses promesses (~1 leçon/tour faisable) ; la règle d'or (idad-qabli de N = glose de N+1) est re-validée et désormais couplée à l'analyse NCC pour départager les blobs ambigus (méthode « الْحَزَنَ vs لُغُوبٌ » archivable).
+- **MÉTHODE consolidée** : (1) OCR 300dpi structure ; (2) glose leçon suivante = liste candidate des lemmes ; (3) 600dpi ligne à ligne pour gloses/citations ; (4) composantes connexes + NCC pour police décorative (1 pièce connexe = mot sans lettres non-chaînantes و/ر/ز/د/ا...) ; (5) alts CMS = coquilles fréquentes (3 nouvelles ce tour) — la doctrine tranche toujours ; (6) VLM en 429, ne pas compter dessus.
+- **Priorités R78** : (1) leçon 565 (فاطر 32-35 — PDF + OCR glose déjà faits ce tour, la moitié du travail est prête !) puis 566 (36-37), 567 (38-40), 568 (41-44), 569 (45-46) ; (2) la glose de 566 servira à vérifier les lemmes idad-qabli de 565 (anticiper : OCRiser 566 en même temps que 565) ; (3) QA app globale + push GitHub quand l'utilisateur le demandera.
+- **Risques** : push GitHub suspendu (token retiré) — commits locaux + bundle /tmp uniquement ; l'en-tête «ثانيا: تثبيت فؤاد النبي ﷺ + [بالمتلو؟]» reste partiel — à re-vérifier si VLM revient ; «غيايتان» du hadith = lecture la plus probable (PSM7/13), transcription de sécurité dans le FR (« voiles d'ombre »).
+
+---
+Task ID: R78
+Agent: Z.ai Code (agent principal)
+Task: Poursuite du pipeline PDF-only — LIVRAISON de la leçon 565 (فاطر 32-35, tafsir-2es, 3e leçon pdf-only) + correction des gloses 564 + pipeline NCC industrialisé
+
+Work Log:
+- **Contexte R78** : reprise après R77 (564 livrée, registre 481/950). Priorité : 565 (فاطر 32-35), OCR glose déjà préparé par R77 (7 pages psm4 + 14 lignes de glose 600dpi).
+- **565 LIVRÉE** (سورة فاطر 32-35, leçon 10, tafsir-2es, 3e leçon pdf-only, commit d47a0a9) :
+  - AR 8 435 car (12 sections) + FR 14 752 car (registre savant, translittération).
+  - Thème : les trois catégories de serviteurs élus (ẓālim li-nafsihi / muqtaṣid / sābiq bil-ḫayrāt) + leur rétribution (ǧannāt ʿAden, bracelets d'or, soie, louange, dār al-muqāma).
+  - **5 LEMMES du الشرح confirmés par OCR ligne 600dpi** : awraṯnā (« Il nous a donnés et octroyés »), ẓālim li-nafsihi (« qui la perd par son péché et sa désobéissance »), muqtaṣid (« qui se contente du peu d'obéissances »), **al-ḥazan** (« ce qui afflige, attriste et effraie »), dār al-muqāma (« demeure du séjour permanent, jardins d'ʿAden »).
+  - **CORRECTION R77** : la glose « ما يغم ويحزن ويخيف » appartient à **al-ḥazan** (OCR lemma «لحرن» = الحزن, ز→ر) et NON à luġūb — luġūb est défini dans le CORPS du tafsīr (« la lassitude de l'âme résultant de celle du corps », p4). Le 564-FR a été corrigé en conséquence (attribution des 2 gloses + renvoi leçon 565) — vérifié par API.
+  - **4 LEMMES idad (566) résolus par NCC décoratif** (méthode R77 industrialisée) : la ligne idad de 565-p6 contient 3 mots + le 4e RENVOYÉ À LA LIGNE SUIVANTE (découverte : « تتم » @300dpi TSV y=833-923 = mot isolé en début de ligne suivante). Templates = lemmes décoratifs de la glose 566-p1 (600dpi) : **yuqḍā** (NCC 0.979), **kafūr** (0.930), **nuʿammirkum** (0.701) ; **yaṣṭariḫūna** par double lecture OCR (يَضَصٍَحُونَ/ييضْصٍَفُو, w=586px, 7 lettres) + définition dans le corps de 566 (« yiftaʿilūna min al-ṣarāḫ, yastagīṯūna »). Ordre = ordre coranique (36, 36, 37, 37).
+  - **Hadith Abū al-Dardāʾ (Musnad Aḥmad) reconstruit et vérifié au zoom 1200dpi** : « fa-ammā alladīna sabaqū bil-ḫayrāt fa-ulāʾika alladīna yadḫulūna al-ǧannata **bi-ġayri ḥisāb** » (le بِ confirmé pixel) ; compte léger pour les muqtaṣid ; « yuḥāsabūna fī **ṭūl al-maḥšar** » ; « **ṯumma humu alladīna talāfāhumu Allāh biraḥmatihi** » (تلافاهم confirmé 1200dpi) ; citation de 34-35 avec ۝.
+  - Hadiths Abū Hurayra ×2 (Muslim : la parure atteint où atteignent les ablutions ; nul n'entrera au Paradis par son œuvre — « yataġammadani » restitué), Bukhārī (soie : quiconque la porte ici-bas n'en sera pas vêtu là-bas), citation Ibn Kaṯīr 6/551, Nasafī Madārik 3/76 (ḡafūr/šakūr), Zamaḫšarī ×2 (ordre des catégories : rifqan bi-l-ẓālim / ʿiǧb du sābiq ; pronom yuḥallawna selon l'avis muʿtazilite).
+  - **استثمار = Rāzī Mafātīḥ 26/239** (le croyant désobéissant place son âme hors de sa juste place ; « lā yaznī z-zānī ḥīna yaznī wa-huwa muʾmin » ; ʿUmar : « ẓāliman maʿfūran lahu » ; Adam : « rabbanā ẓalamnā anfusanā ») — **coquille CMS notée : [الأعراف: 22] → 23** (69e cumulée), notée inline dans le FR.
+  - Analyse grammaticale de « ǧannātu ʿAden » : badal de « al-faḍl » (le manuel imprime une forme délétée «العخل», la doctrine tranche), ou ḫabar mubtadaʾ ḥadfan.
+- **QA navigateur complète (agent-browser)** : lecteur 565 « Leçon 18/38 », badge « Traduction savante », 12 sections, versets 32-35 Warš intégraux rendus, hadith complet, al-ḥazan/luġūb corrects ; navigation PRÉCÉDENT (564) / SUIVANT (566) testée par clics aller-retour ; 0 erreur console ; accueil **972/1 152** bilingues + docsSavant **482/950** ; page livre 11/38 (29 %) ; captures qa-r78-565-reader.png, qa-r78-565-mobile.png, qa-r78-home.png. lint 0 erreur (1 warning préexistant llm-translate.ts). dev.log propre.
+- **Registre : 482/950** (431 hand + 51 llm). Entrée « pdf-mut23h33-565 » au format normalisé (le « 565 » nu a été renormalisé pour matcher 563/564).
+
+Stage Summary:
+- **ÉTAT : registre 482/950 ; 972/1152 bilingues ; 64 manuels ; tafsir-2es 11/38 (29 %).** Dev server 200 OK, 0 erreur console. Commits d47a0a9 (+ cleanup).
+- **MÉTHODES consolidées ce tour** : (1) NCC décoratif industrialisé — templates = glose leçon N+1, cibles = idad leçon N ; contrôle croisé obligatoire (mot connu à NCC élevé, exclusifs à NCC bas) ; (2) **un mot d'idad peut être RENVOYÉ À LA LIGNE SUIVANTE** — toujours vérifier le TSV sous la ligne des lemmes (300dpi suffit) ; (3) gloses psm7 ligne à ligne 600dpi pour les lemmes simples ; (4) hadiths vérifiés au zoom 1200dpi (bi-ġayri ḥisāb, talāfāhum confirmés).
+- **566 PRÊT À MOITIÉ** : PDF 6 pages déjà OCR-isé ce tour (566-p0..p5-ocr.txt), glose 3 lemmes lue (yuqḍā/kafūr/nuʿammirkum),正文 définissant yaṣṭariḫūna + al-naḏīr (الشيب/موت الأقارب) identifié, hadith Aḥmad « man ʿammara-hu Allāh sittīna sana... » + Tirmiḏī (60-70 ans) + Ibn Kaṯīr 6/556 repérés. La moitié du travail de 566 est faite.
+- **Priorités R79** : (1) leçon 566 (فاطر 36-37 — OCR fait, livrable en ~1 tour) ; (2) puis 567 (38-40), 568 (41-44), 569 (45-46) ; (3) QA globale + push GitHub quand l'utilisateur redonnera le token.
+- **Risques** : push GitHub suspendu (token retiré par l'utilisateur — commits locaux + bundle /tmp via backup.sh) ; coquilles CMS cumulées ~69 ([الأعراف: 22]→23 ce tour) ; VLM toujours en 429 (non testé ce tour, méthode pixel suffisante) ; l'agent-browser local ne supporte pas viewport/device (QA mobile limitée au desktop + héritage R77).
+
+**ADDENDUM R78-bis — 566 LIVRÉE dans le même tour** (فاطر 36-37, leçon 11, 4e leçon pdf-only, commit 5e7e0d9) :
+- AR 5 967 car (11 sections) + FR 10 149 car. Thème : la destinée des mécréants (Feu sans trépas ni allègement, yaṣṭariḫūna = yiftaʿilūna min al-ṣarāḫ, la vie de 60 ans, al-naḏīr = le Prophète / les cheveux blancs / la mort des proches).
+- **3 LEMMES الشرح** (566-p1 glose) : yuqḍā (« il n'est pas jugé »), kafūr (« obstiné dans la mécréance »), nuʿammirkum (« Nous prolongeons vos vies »).
+- **4 LEMMES idad (567) résolus par NCC** : templates = 4 gloses de 567-p1 — ḏāt al-ṣudūr (NCC 0.945), ḫalāʾif (0.236>0.182), maqtan (0.999), bayyina (0.312>0.175 + largeur) — ordre coranique 38,39,39,40 ✓. **DÉCOUVERTE Warš : 35:39 contient « إِلَّا مَقْتًۭا » (extension waršienne absente du Ḥafṣ)** — le lemma maqtan (glose « en haine et mépris ») l'atteste.
+- **Citations vérifiées au zoom 1200dpi** : p1 « إِنَّ ٱلَّذِينَ يَتْلُونَ كِتَٰبَ ٱللَّهِ » [فاطر: 29] (معطوف عليه — signature يثلوق/كتتب/اللو + alt 29 concordants, PAS de coquille) ; p2 « كُلَّمَا خَبَتْ زِدْنَٰهُمْ سَعِيرًۭا » [الإسراء: 97] (signature حَب ف/رَؤْكَهُم/حيرا, ز→ر) ; p3 « ليستقيموا في حَيَاتِهِمْ » (OCR «حباتهم», points ي/ب) ; p4 istiṯmār = « وَلَا يُخَفَّفُ عَنْهُم مِّنْ عَذَابِهَا » + chaîne parallèle d'Ibn Kaṯīr 6/552 : Muslim (أهل النار هم أهلها), الزخرف 77, 74-75 (reconstruit par zones « كما قالت تعالى »), الإسراء 97, النبأ 30.
+- Hadith Aḥmad « من عمره الله ستين سنة فقد أعذر الله إليه في العمر » (أعذر vs OCR أعذر/أعدر, ذ/د) + Tirmiḏī « أعمار أمتي ما بين الستين إلى السبعين وأقلهم من يجوز ذلك » (bab complet OCR-isé) + Ibn Kaṯīr 6/556 («فذوقوا عذاب النار... والأغلال»).
+- QA navigateur : Leçon 19/38, badge savante, 11 sections, versets 36-37 Warš intégraux, navigation 565↔566↔567, capture qa-r78-566-reader.png. **Hydration warning (1×) = PRÉEXISTANT** (reproduit sur / et sur 563 à chargement complet — thème provider SSR, non bloquant, non lié aux injections).
+- Registre **483/950** (432 hand + 51 llm) ; accueil **973/1152** ; tafsir-2es 12/38 (32 % avec intro).
+- Coquilles CMS ce tour : 0 nouvelle identifiée (l'alt [فاطر: 29] s'est révélé CORRECT, contrairement à la première hypothèse 33 — leçon de méthode : toujours vérifier la signature d'OCR avant de conclure à une coquille).
+
+
+---
+Task ID: R79
+Agent: Z.ai Code (agent principal)
+Task: Poursuite du pipeline PDF-only — LIVRAISON de la leçon 567 (فاطر 38-40, tafsir-2es, 5e leçon pdf-only) + NCC natif résolution idad + coquille CMS #70 + re-injection NNBSP 565/566
+
+Work Log:
+- **Contexte R79** : reprise après R78-bis (566 livrée, registre 483/950). Priorité : 567 (فاطر 38-40) — PDF 6 pages déjà téléchargé, p0-p1 OCR-isés par R78, gloss 4 lemmes déjà identifiée (ḏāt al-ṣudūr/ḫalāʾif/maqtan/bayyina).
+- **567 LIVRÉE** (سورة فاطر 38-40, leçon 12, tafsir-2es, 5e leçon pdf-only, commit 2db51b2) :
+  - AR 6 238 car (12 sections) + FR 10 915 car (registre savant, translittération).
+  - Thème : l'étendue de la science divine (v38), les hommes comme خلفاء de Dieu (v39 — Warš avec l'extension مقتا), les arguments contre les associateurs (v40).
+  - **3 LEMMES idad (568) résolus par NCC RÉSOLUTION NATURELLE** (nouvelle variante de la méthode : comparaison pixel native SANS redimensionnement) : templates = 3 gloses de 568-p1 (600dpi) — **yumsiku** (NCC 0.961, dims 260×196 = EXACTEMENT T1), **tazūlā** (0.964, 258×187 ≈ T2 259×187), **yaḥīqu** (0.847, 231×126 ≈ T3 239×127) — discrimination parfaite (non-matches ≈ 0). **ORDRE INVERSE du coranique découvert** : la ligne idad imprime يَحِيقُ (v43) - تَزُولَا (v41) - يُمْسِكُ (v41) — vérifié par positions x des composantes + largeurs + hauteurs (يَحِيق sans ascendantes h=125 ; يُمْسِك avec ك/س h=186 ; تَزُولَا avec ا/ل h=185) + convention RTL validée sur la ligne idad de 565-p6 ( droite=يُقْضَى=premier). Reproduit tel qu'imprimé (fidélité d'édition).
+  - **COQUILLE CMS #70** : la citation tafsīrique « وَلَوْ رُدُّوا۟ لَعَادُوا۟ لِمَا نُهُوا۟ عَنْهُ » est imprimée [الأنعام: ٢٩] mais la phrase est la FIN de v28 (cache vérifié). Digit lu à 2000dpi : ٢ (crochet + base horizontale) + ٩ (boucle FERMÉE + queue descendante ≠ ٨ = Λ ouvert) → le manuel imprime bien 29. Correction : AR = [الأنعام: 28], FR note inline « le manuel imprime "29", coquille ».
+  - **Citations Warš vérifiées au pixel** : les 2 citations de v39 dans le tafsīr impriment **ٱلْكَٰفِرِينَ** (Warš) et non الظالمين (Ḥafṣ) — confirmé par ASCII-art des mots (ك...ف-boucle...ر pattern, absence de ظ/م) + présence de عِندَ رَبِّهِمْ (extension waršienne) dans la citation maqtan.
+  - **Alūsī (روح المعاني 11/374, بتصرف) reconstruit ligne à ligne** (600dpi, lignes isolées par vallées du profil d'encre, cadre décoratif exclu x654-724/4585-4655) : تقريرٌ (lu à 3 reprises, ≠ تخريج/تفريز des OCR bruts), غيب (point de غ + fatha empilés vérifiés en CC ≠ عيب), **لا أطاح اللهَ تعالى ولا عبده...** (ح final confirmé : tête + longue queue horizontale de base, ≠ ع bol fermé ; traduit « ne se hâterait jamais vers Dieu » avec note inline du manuel « lā aṭāḥa »), لن تطول أيام عذابه (≠ لمن تطول), فَلَوْ كان... لَعَلِمَهُ (connecteur فلو établi).
+  - **Nasafī 3/92 ×2 + Ibn Juzayy Tashīl 1/283 + Zamaḫšarī (ذات = féminin de ذو) + Ibn Kathīr 6/557** : structure أي: «...» unifiée (guillemets rééquilibrés — le gloss Nasafī est UNE citation de آلهتكم à الشركة).
+  - **Q2 idad tronquée récupérée** : « وكيف أعتبر بسنة الله تعالى في معاملة من سبقهم من أمم؟ » — ligne wrap y982-1041 lue à 4× (conf 87-93).
+  - 3e question التقويم découverte à 600dpi (absente du OCR 300) : « ما هي الحجج التي واجه بها الله تعالى المشركين لتقرير وحدانيته؟ ».
+- **Re-injection 565/566 avec NNBSP** (219/165 espaces fines) : découverte que le pipeline R78 avait injecté AVANT l'auto-fix QA → JSON sans NNBSP. Corrigé pour consistance typographique avec 567 (158 NNBSP).
+- **QA navigateur (agent-browser)** : lecteur 567 « Leçon 20/38 », badge « Traduction savante », 12 sections, versets 38-40 Warš intégraux, mode bilingue AR+FR, navigation 566↔567 testée par clics, console PROPRE (0 erreur, seuls HMR/Fast Refresh), accueil **974/1152** bilingues, page livre **13/38 (34 %)**, « REPRENDRE LA LECTURE » montre 567. Capture qa-r79-567-reader.png. lint 0 erreur (1 warning préexistant llm-translate.ts).
+- **Registre : 484/950** (433 hand + 51 llm).
+
+Stage Summary:
+- **ÉTAT : registre 484/950 ; 974/1152 bilingues ; 64 manuels ; tafsir-2es 13/38 (34 %).** Dev server propre, 0 erreur console. Commit 2db51b2.
+- **MÉTHODES consolidées ce tour** : (1) NCC résolution native (sans resize) — dims exactes = confirmation d'identité ; (2) digits arabo-indiens déchiffrés par morphologie (٢ = crochet+base ; ٩ = boucle fermée+queue ; ٨ = Λ ouvert) à 2000dpi ; (3) lettres finales ح/ع discriminées par la queue horizontale de base (ح) vs le bol fermé (ع) ; (4) points diacritiques empilés (point de غ SOUS la fatha) pour غيب/عيب ; (5) lignes denses séparées par vallées du profil d'encre avec exclusion du cadre décoratif.
+- **568 PRÊT À MOITIÉ** : p0-p2 déjà rendus (300dpi) + p1 glose lue (yumsiku/tazūlā/yaḥīqu), p0-p1 OCR-isés. Corps du tafsīr 568 : أولا دلائل قدرة الله (يمسك السماوات والأرض أن تزولا + ل ينيل بمعنى يمنع), versets 41-44 Warš au cache. Livrable en ~1 tour.
+- **Découvertes** : (1) ligne idad en ordre INVERSE du coranique (première occurrence — reproduire tel quel) ; (2) NNBSP manquant dans JSON 565/566 (corrigé) ; (3) coquille CMS #70 (Anʿām 29→28).
+- **Priorités R80** : (1) leçon 568 (فاطر 41-44 — OCR à compléter p2-p5, livrable en ~1 tour) ; (2) puis 569 (45-46, fin de la sourate), 570-577 (الحديد) ; (3) QA globale + push GitHub quand l'utilisateur redonnera le token.
+- **Risques** : push GitHub suspendu (token retiré — commits locaux + backup.sh) ; coquilles CMS cumulées 70 ; VLM toujours en 429 (non testé ce tour, méthode pixel suffisante) ; le cron job 460639 est DISABLED (exec limits) — à recréer ce tour.
+---
+Task ID: R80
+Agent: Z.ai Code (agent principal)
+Task: Livraison de la leçon 568 (فاطر 41-44, tafsir-2es, 6e leçon pdf-only) — poursuite du pipeline PDF-only après R79
+
+Work Log:
+- **Reprise post-reset de contexte** : session continuation (résumé précédent perdu), environnement INTACT cette fois (contrairement au diagnostic du résumé) : git propre à c5d8a41 (worklog R79), dev server port 3000 actif, registre 484/950, PDF 569-585 présents. Priorités lues dans R79 : 568 (OCR p2-p5 à compléter) puis 569.
+- **tesseract-ara réinstallé** : le modèle ara.traineddata avait disparu du reset usine → téléchargé tessdata_best depuis GitHub (12,6 Mo), installé via TESSDATA_PREFIX=/home/z/tessdata (répertoire utilisateur, le répertoire système n'étant pas inscriptible).
+- **Rendu/OCR complet des 6 pages** : p0-p1 déjà faits (R78), p2-p5 rendus à 300 dpi + OCR psm4 ; zones 600 dpi pour vérifications. Line-maps par profils d'encre (bands 300/600 dpi).
+- **Zones ambiguës résolues** (méthode pixel + recoupement multi-OCR + cohérence inter-leçons) :
+  - Citations coraniques du tafsīr identifiées par convergence de fragments sur ~10 passes OCR (zoom 1,5-4x, psm 6/7/13, variantes sharp/thick) :
+    * «ونظير هذا قوله تعالى» (p1) = **الحج 22:65** «وَيُمْسِكُ ٱلسَّمَآءَ أَن تَقَعَ عَلَىٰ ٱلْأَرْضِ إِلَّا بِإِذْنِهِۦ» [الحج: 65] — signature «أن تقع»→«ادتقع» (assimilation نت) + «على الأرض»→«علرالاض».
+    * «كما قال تعالى» (p2, après Nasafī 3/92) = **طه 20:82** «وَإِنِّى لَغَفَّارٌۭ لِّمَن تَابَ وَءَامَنَ وَعَمِلَ صَٰلِحًۭا ثُمَّ ٱهْتَدَىٰ» [طه: 82] — signatures «وام»=وَءَامَنَ, «وعمرطا»=وَعَمِلَ صَٰلِحًۭا, «إمَتجِئى»=ثُمَّ ٱهْتَدَىٰ + confusion غ/ع («لعق»=لَغَفَّارٌ — MÊME signature que غيب/عيب en R79). Référence [طه: ٨٢] confirmée : ٨=Λ à contrepoinçon ouvert (deux parois + creux), ٢=crochet à base plate.
+    * «ونظير هذه الآية» (p3) = **الأنعام 6:157** (fragment «أَوْ تَقُولُوا۟ لَوْ أَنَّآ أُنزِلَ عَلَيْنَا ٱلْكِتَٰبُ لَكُنَّآ أَهْدَىٰ مِنْهُمْ فَقَدْ جَآءَكُم بَيِّنَةٌۭ مِّن رَّبِّكُمْ وَهُدًۭى وَرَحْمَةٌۭ») [الأنعام: 157-158] + **الصافات 37:167-170** [الصافات: 167-170].
+    * 2e citation de l'استثمار (p4) = **الفتح 48:10** fragment «فَمَن نَّكَثَ فَإِنَّمَا يَنكُثُ عَلَىٰ نَفْسِهِۦ» [الفتح: 10] — lecture «[التح: 0…]» = [الفتح: ١٠] (الفتح amputé du ف).
+  - Versets 41-44 + toutes citations restitués du cache Warš (texte + Hamidullah).
+  - **Glosses الشرح croisées avec l'الإعداد القبلي de 567** (règle de cohérence inter-leçons R75) : 567 demandait «يَحِيقُ» - «تَزُولَا» - «يُمْسِكُ» → 568 livre «يُمْسِكُ: يحفظ ويمنع» / «تَزُولَا: تضطرب وتنتقل من أماكنها» / «يَحِيقُ: يحيط وينزل» — ET la traduction FR de 567 (R79) les avait déjà anticipées («il préserve et empêche»…). Triple confirmation.
+  - Athar Ibn Abī Ḥātim (p4 استثمار) : «ثلاث من فعلهن لم ينجُ حتى ينزل به من مكر أو بغي أو نكث» (حتى confirmé sur passe 600 dpi, ت/ن sur نكث tranché par le thème).
+  - «مِنْ بَعْدِهِ» = «من بعد تركه الإمساك» (lecture «بعر» = ب-ع-د-ه ligaturé).
+- **568 LIVRÉE** (سورة فاطر 41-44, leçon 13 du livre tafsir, leçon 21/38, 6e pdf-only, commit 146e697) :
+  - AR 6 735 car (14 sections h2/h3) + FR 11 275 car (registre savant, translittération mafʿūl li-aǧlihi/badal/lām al-tawṭiʾa…, NNBSP typographiques).
+  - Thème : retenue des cieux et de la terre (v41 + الحج 65), le serment des associateurs et leur répulsion (v42 + Anʿām 157 parallèle), le mauvais stratagème n'enveloppe que ses auteurs (v43 + Ṣāffāt 167-170 + Nasafī 3/92-93), la sunna de Dieu sans changement (v44).
+  - Injectée par tr-tmp/scripts/inject568.py (html+htmlFr+pdfOnly:false, écriture atomique) + hand-register → **registre 485/950 (434 hand + 51 llm)**.
+- **QA navigateur (agent-browser)** : lecteur 568 «Sourate Fatir (versets : 41-44)», Leçon 21, badge «Traduction savante», 12 sections au sommaire, colonnes bilingues AR+FR, les 5 citations ([الحج: 65], [طه: 82], [الصافات: 167-170], [الأنعام: 157-158], [الفتح: 10]) toutes rendues, navigation 567↔568 testée par clics (PRÉCÉDENT/SUIVANT), page livre **14/38 (37 %)**, accueil **975/1 152 bilingues**, «REPRENDRE LA LECTURE» → 568, mobile 390 px sans overflow horizontal. Console : 0 erreur (seul l'hydration warning préexistant theme-provider, documenté R78). Captures : tr-tmp/qa-r80-568-{reader,book,home,mobile,final}.png. lint 0 erreur (1 warning préexistant llm-translate.ts).
+- Backup OK : 146e697 (push GitHub toujours suspendu — réseau/token).
+
+Stage Summary:
+- **ÉTAT : registre 485/950 ; 975/1152 bilingues ; 64 manuels ; tafsir-2es 14/38 (37 %).** Dev server propre, 0 erreur console. Commit 146e697 + backup.
+- **MÉTHODES consolidées ce tour** : (1) identification de citations par convergence multi-OCR (10+ passes à zoom/psm variés) + signatures d'assimilation (نت→دت) et de confusions connues (غ/ع, س/ت) ; (2) lecture de chiffres par contrepoinçon (٨ = Λ à creux interne, ٢ = crochet) ; (3) croisement inter-leçons prep(témoins)↔شرح(gloses) désormais systématique — 567 avait prédit les gloses de 568.
+- **Fidélité** : citation طه 82 identifiée par 3 fragments indépendants (وام/وعمرطا/إمتجئى) — confiance élevée ; الحج 65 par 2 fragments + parallèle sémantique évident ; الفتح 10 par référence [الفتح] lue + thème نكث (confiance moyenne-élevée, fragments plus courts).
+- **Priorités R81** : (1) leçon 569 (فاطر 45-46 selon catalogue — ATTENTION : Fāṭir n'a que 45 versets, «الآيتان 45-46» est une anomalie du catalogue CMS à instruire : leçon 569 = probablement v45 + début d'une autre sourate ou coquille CMS ; l'الإعداد القبلي de 568 demande «45-46» et cite des lemmes de v44/v45) ; (2) puis 570-577 (الحديد) ; (3) QA globale + push GitHub quand le token revient.
+- **Risques** : push GitHub suspendu (bundle /tmp + commits locaux) ; coquilles CMS cumulées 70 + anomalie «الآيتان 45-46» ; VLM toujours en 429 (méthode pixel suffisante) ; le cron job 460639 est DISABLED (exec limits) — recréé ce tour (voir R80-cron).
+- **Addendum R80-cron** : job 460871 (précédent, créé par une session antérieure) était DISABLED «exec limits exceeded» — un NOUVEAU job a été créé ce tour : **460955 «Minhāj — web dev review 15min (R80)»** (fixed_rate 900 s, tz Europe/Paris, kind=webDevReview, priorité 5, payload = description réglementaire EN + bloc Context à jour : registre 485/950, next 569 + anomalie «الآيتان 45-46», pipeline et méthodes R75-R80). Le statut affiche à la création «Disabled due to exec limits exceeded» — limite de quota d'exécution de la plateforme, hors de notre contrôle ; le job est enregistré avec le bon schedule/payload et se déclenchera si le quota se libère. Si un tour futur constate qu'il ne s'est jamais déclenché, le recréer (les exec limits se réinitialisent périodiquement).
+
+---
+Task ID: R81
+Agent: Z.ai Code (agent principal)
+Task: Livraison de la leçon 569 (فاطر 45-46, tafsir-2es, 7e leçon pdf-only) + RÉSOLUTION de l'anomalie «الآيتان 45-46» + CORRECTION de la leçon 568 (verset en trop)
+
+Work Log:
+- **Reprise post-reset de contexte** : environnement INTACT (git propre à 824eef8, dev server 200, registre 485/950, tesseract-ara opérationnel). Bilan demandé par l'utilisateur fourni (52,6 % bilingues au global, 879 leçons restantes).
+- **Anomalie «45-46» RÉSOLUE** (ce n'était PAS une coquille) : le comptage du manuel diffère du cache/Ḥafṣ. Fāṭir = **46 versets** dans le mushaf madrasa (2 scissions : «استكبارًا…بأهله» = v43 ; «فهل ينظرون…تحويلا» = v44), donc **v45 = «أولم يسيروا…عليما قديرا»** (cache v44/Ḥafṣ 43) et **v46 = «ولو يؤاخذ…بصيرا»** (cache v45/Ḥafṣ 45, DERNIER verset). Triple confirmation indépendante : (1) label imprimé sous le bloc آيات du PDF 569 = [سورة فاطر: 46-45] lu à 600dpi ; (2) l'استثمار du PDF 569 cite «وكانوا أشد منهم قوة» **[فاطر: 45]** (la question finale aussi) ; (3) la glose الشرح de 569 couvre exactement les 4 lemmes idad de 568 («ليُعجزه من شيء»+«عليما قديرا» de v45, «بما كسبوا»+«أجل مسمى» de v46) — règle d'or re-validée.
+- **Numérotation manuel vs cache/Ḥafṣ — règle générale établie** : les sourates à ḥurūf initiales («الم») voient leur numérotation décalée de −1 dès la v2 (le «الم» n'est pas compté à part) : العنكبوت 22Ḥ → imprimé [العنكبوت: ٢١] ✓ ; al-Rūm 9Ḥ → imprimé [الروم: ٨] ✓ (3 lectures OCR concordantes «8» + question à 2400dpi). Fāṭir (pas de ḥurūf) : +1 par scission supplémentaire. Conséquence : **ce ne sont pas des coquilles** — reproduire les références telles qu'imprimées, noter l'équivalent ḤafṪ dans le FR si utile.
+- **CORRECTION 568** (découverte majeure de ce tour) : le PDF 568 s'arrête à «…تحويلا ۝٤٤ [سورة فاطر: 44-41]» (lu à 1200dpi, page 2 du PDF : la ligne «فهل ينظرون…تحويلا» + le label). La livraison R80 avait fusionné la sunna dans [فاطر: 43] et **ajouté à tort [فاطر: 44] = أولم يسيروا** (verset de 569). Fix atomique (tr-tmp/scripts/inject569.py) : v43 = «استكبارًا…بأهله», v44 = «فهل ينظرون…تحويلا» (scission au point « ۚ فَهَلْ» du cache), suppression du verset en trop — AR et FR (Hamidullah scindé : «…ses propres auteurs» (43) / «Attendent-ils donc… la règle d'Allah» (44), «N'ont-ils donc jamais parcouru…» retiré). Vérifié dans le navigateur : أولم يسيروا absent de 568, sunna présente en v44.
+- **Coquille CMS n°71** : la 2e citation du Rāzī (استثمار) «ظهر الفساد في البر والبحر بما كسبت أيدي الناس» est imprimée **[غافر: 41]** — la citation est al-Rūm 41 (Ḥafṣ) ; nom de soura fautif (digit lu «81»→٤١ à 2400dpi, modérément certain). Note inline FR : « le manuel imprime « Ghāfir : 41 », coquille — la citation est al-Rūm : 41 ».
+- **Lemmes idad de 569 (pour 570 = Ḥadīd 1-4) transcrits à confirmer au tour 570** : «الْأَوَّلُ» - «الْآخِرُ» - «يَلِجُ» - «يَعْرُجُ» (lectures croisées 600/2400dpi : «الول/واللاجز/لج/يعرم» + largeurs cohérentes 303/399/177/231px). La glose الشرح de 570 tranchera — pattern R78 (correction croisée leçon N par la glose N+1).
+- **569 LIVRÉE** (سورة فاطر 45-46, leçon 14 du livre, Leçon 22/38, 7e pdf-only, commit 4692c1c) : AR 6 027 car (12 sections) + FR 9 956 car (registre savant, translittération, NNBSP auto-fix, 0 arabe résiduel, 29 paires de guillemets). Thème : l'exhortation au ʿtibār (v45 + Ibn Kathīr 6/562 : «قل يا محمد…سيروا في الأرض») + «وكانوا أشد منهم قوة» en position ḥāl + نظير العنكبوت + la miséricorde du report (v46 + Ibn ʿAǧība 4/554 : dābba générique, «إلى أجل» =Jour de la Résurrection) + 3 finalités éducatives.
+- **QA navigateur (agent-browser) complète** : lecteur 569 «Leçon 22/38», badge «Traduction savante», 24 h2/h3 (12×2 colonnes), versets 45-46 Warš intégraux rendus, citations [العنكبوت: 21]/[الروم: 8]×2/[غافر: 41]+note, navigation 568↔569 par clics (Suivant/Précédent), page livre 15/38 (39 %) badge bilingue, accueil 976/1152, 0 erreur console (uniquement React DevTools + HMR), pas d'overflow horizontal. Captures : tr-tmp/qa-r81-569-{reader,final}.png, qa-r81-568-corrige.png, qa-r81-home.png. dev.log propre (GET /api/lessons/…569 200). lint 0 erreur (1 warning préexistant).
+- Registre : **486/950** (435 hand + 51 llm) via hand-register.py.
+
+Stage Summary:
+- **ÉTAT : registre 486/950 ; 976/1854 docs bilingues (52,6 %) dont 501 savantes ; 64 manuels ; tafsir-2es 15/38 (39 %).** Dev server propre, 0 erreur console. Commit 4692c1c + backup /tmp (push GitHub suspendu — token retiré).
+- **MÉTHODES consolidées ce tour** : (1) numéroter selon LE manuel, pas le cache — les ḥurūf («الم») non comptés à part décalent de −1 (عنكبوت, روم) ; les scissions internes ajoutent (فاطر 46) ; toujours trianguler par les références imprimées (labels, استثمار, question) ; (2) vérifier le bloc آيات du PDF PRÉCÉDENT avant d'enchaîner (une leçon peut avoir un verset en trop si le titre a été interprété au comptage cache) — contrôler 563-567 : NON affectées (versets ≤42, zone sans scission, vérifié par raisonnement ; 568 seul straddlait) ; (3) la correction d'une leçon livrée se fait dans le même script atomique que la livraison suivante (pattern transférable).
+- **Découvertes** : (1) l'anomalie «45-46» = différence d'école de comptage, pas une coquille — la doctrine « le PDF tranche » a encore prévalu ; (2) coquille CMS n°71 ([غافر: 41] pour [الروم: 41]) — première coquille de NOM de sourate (vs chiffres jusqu'ici) ; (3) le format de hash du lecteur est **#/livre/{bookId}/{docId}** (segment «livre» obligatoire — le perdre rend l'accueil silencieusement).
+- **Priorités R82** : (1) leçon 570 (سورة الحديد 1-4 — PDF déjà présent, lemmes idad attendus الْأَوَّلُ/الْآخِرُ/يَلِجُ/يَعْرُجُ, la glose 570 confirmera la transcription ; versets Ḥadīd 1-4 au cache s57) ; puis 571-577 (Ḥadīd), 578-583 (المجادلة), 584 فهرس, 585 مصادر ; (2) si VLM revient (429), re-vérifier l'en-tête «ثانيا: تثبيت فؤاد النبي ﷺ + [بالمتلو؟]» de 564 (R77, partiel) et les lemmes idad 569 ; (3) QA app globale + push GitHub quand l'utilisateur redonnera le token.
+- **Risques** : lemmes idad 569 transcription à confirmer (flag ci-dessus) ; digit de [غافر: 41] modérément certain (noté) ; push GitHub suspendu ; cron job 460955 DISABLED (exec limits) — **recréé ce tour (voir R81-cron)**.
+
+---
+Task ID: R82
+Agent: Z.ai Code (agent principal)
+Task: Livraison de la leçon 570 (سورة الحديد 1-4, tafsir-2es, 8e leçon pdf-only) + percée d'identification des hadiths via corpus GitHub
+
+Work Log:
+- **Reprise post-reset de contexte** : environnement INTACT (git 3ba4d23 = commit R81 worklog par le cron, dev server 200, registre 486/950). Priorité R81 → leçon 570.
+- **PDF 570 téléchargé** : habous.gov.ma à nouveau ACCESSIBLE (rétabli depuis R80) — 151-41.PDF (690 Ko, 7 pages) rendu à 600dpi (p-1..7.png). tessdata ara réinstallé localement (/home/z/tr-tmp/tessdata + TESSDATA_PREFIX).
+- **Structure 570 cartographée** : أهداف (3) / تمهيد (sourate médinoise, 28 versets, après الواقعة) / آيات Ḥadīd 1-4 (basmala intégrée à v1 — ligne centrée détectée pixel + cache s57) / الشرح 4 gloses / استخلاص (2 questions) / التفسير 3 sections (تنزيه / دلائل / مقاصد 4 items) / تقويم (3) / استثمار (hadith Ibn Muʿāwiya al-Ghāḍirī) / إعداد قبلي (3 items pour Ḥadīd 5-8).
+- **الشرح 4 gloses = idad 569 exact** (règle d'or re-validée) : «أُولُ: ليس لوجوده بداية» «وَالْآخِرُ: ليس لبقائه نهاية» «يَلِجُ: يدخل» «يَعْرُجُ: يصعد» — confirme la transcription R81 des 4 lemmes.
+- **Références bibliographiques PIXEL-VÉRIFIÉES (chiffres occidentaux, ordre visuel tel qu'imprimé)** : [المحرر الوجيز لابن عطية: 257/5] · [البحر المحيط في التفسير لأبي حيان: 100/10] · [الجامع لأحكام القرآن للقرطبي: 86/14] · [التسهيل: 290/1] · [مفاتيح الغيب للرازي: 5/4] — chaque ref décodée par composantes connexes + art ASCII (2/5/7/0/1/4/5/8/6/0 identifiés morphologiquement). Citations : «وَلَٰكِن لَّا تَفْقَهُونَ تَسْبِيحَهُمْ» [الإسراء: 44] ✓ cache s17 ; «ثُمَّ ٱسْتَوَىٰٓ إِلَى ٱلسَّمَآءِ» **[البقرة: 28]** — règle R81 (−1 pour sourates à ḥurūf : = Ḥafṣ 29) NOTÉE inline en FR.
+- **PERCÉE — identification du hadith de l'استثمار** : l'OCR lisait «وَلَم يُعْطِ الْهَرِمَةَ وَلَا الدَّرنَةَ وَلَا [؟الشرط؟] [؟اللائمة؟] وَلَا المريضة» — 2 mots indéchiffrables (police décorative). Résolution par NOUVELLE RESSOURCE : dépôt GitHub **hassanmsthf11/major-hadeeth-collections-jsonl** (cloné à /tmp/hadith-ref/ — 20 collections dont Sunan al-Kubrā Bayhaqī + Musnad Aḥmad en JSONL). Le hadith = **Bayhaqī 7351** (كتاب الزكاة، باب لا يأخذ الساعي فيما يأخذ مريضا ولا معيبا) : «...وَأَعْطَى زَكَاةَ مَالِهِ طَيِّبَةً بِهَا نَفْسُهُ رَافِدَةً... وَلَمْ يُعْطِ الْهَرِمَةَ وَلَا الدَّرِنَةَ وَلَا الشَّرَطَ الأيِّمَةِ وَلَا المَرِيضَةَ...». Le manuel imprime **الشَّرَطَ اللَّائِمَةَ** (pixel : pas de hamza au-dessus de la dent + shadda sur le 2e ل) = exactement la variante «في س، م: اللائمة» documentée EN NOTE de l'édition Bayhaqī ; 4e item = المريضة (pas الريضة) ; رافدة (pas رافعة) ; fin «وَزَكَّى عَبْدٌ نَفْسَهُ» + «مَا تَزْكِيَةُ الْمَرْءِ نَفْسَهُ» + «يَعْلَمُ أَنَّ اللَّهَ مَعَهُ حَيْثُ مَا كَانَ» — tout conforme.
+- **Idad 571 décodé par zooms multi-fenêtres** : «1- أبحث عن مدلولات العبارات الآتية: «بِذَاتِ ٱلصُّدُورِ» - «مُسْتَخْلَفِينَ فِيهِ»» (termes localisés par segmentation de mots + guillemets ؛ fragments OCR «داج الخذور»/«متليرييه» réconciliés) + Q2 نظام الليل والنهار (v6 يولج) + Q3 إنفاق المال (v7). La glose de 571 confirmera (pattern R78).
+- **570 LIVRÉE** (سورة الحديد 1-4, Leçon 23/38, 8e pdf-only, commit 14f59f4) : AR 7 432 car (7 h2 + 5 h3) + FR 12 361 car (registre savant, translittération awwal/āḫir/yaliǧ/yaʿruǧ/istiwāʾ/murāqaba, note Baqara 28/29, note hadith). Injectée par tr-tmp/scripts/inject570.py (atomique, lecture tr-tmp/lesson570.json) + hand-register → **registre 487/950 (436 main + 51 llm)**.
+- **QA navigateur (agent-browser) complète** : lecteur 570 «Leçon 23/38», badge «Traduction savante», 24 sections h2/h3, colonnes bilingues AR+FR, les 4 versets Warš (basmala v1) rendus, citations [الإسراء: 44]/[البقرة: 28] + 5 réfs rendues, hadith complet + [السنن الكبرى للبيهقي؛ كتاب الزكاة؛ باب...], navigation SUIVANT→571 testée par clic (retour 570 par hash), page livre 16/38 (42 %) badge savante+bilingue, accueil **977/1854 bilingues (52,7 %) dont 502 savantes** (API books), «Reprendre la lecture» → Sourate Al-Hadid (versets : 1-4), mobile 390 px overflow 0 px, console 0 erreur (uniquement DevTools+HMR). Captures : tr-tmp/qa-r82-570-{reader,book,home,mobile}.png. lint 0 erreur (1 warning préexistant llm-translate.ts). dev.log propre (GET /api/lessons/…570 200).
+- Backup OK : 14f59f4 + bundle /tmp (push GitHub toujours suspendu — token retiré).
+- **Cron** : les 3 jobs (460871 R80, 460955 R80b, 461120 R81) tous DISABLED «exec limits exceeded» — le job R81 a tout de même tiré UNE fois (commit 3ba4d23 = son trace). NOUVEAU job créé ce tour : **461273 «Minhāj — web dev review 15min (R82)»** (fixed_rate 900 s, tz Europe/Paris, kind webDevReview, priorité 5, payload contexte R82 : 977/1854, next 571 + idad بذات الصدور/مستخلفين فيه, règles R75-R82, corpus hadith GitHub, tessdata local).
+
+Stage Summary:
+- **ÉTAT : registre 487/950 ; 977/1854 docs bilingues (52,7 %) dont 502 savantes ; 64 manuels ; tafsir-2es 16/38 (42 %).** Dev server propre, 0 erreur console. Commit 14f59f4 + backup /tmp.
+- **MÉTHODES consolidées ce tour** : (1) hadiths/quotes indéchiffrables → cloner/interroger le corpus GitHub hassanmsthf11/major-hadeeth-collections-jsonl (Bayhaqī, Musnad Aḥmad, Tabarānī, Ibn Ḫuzayma, Ḥākim… en JSONL, grep par mots rares) — c'est la résolution de l'«angle mort» décoratif des polices de hadiths ; (2) refs bibliographiques : chiffres OCCIDENTAUX dans ce manuel, ordre visuel à respecter tel qu'imprimé (ex 257/5, 86/14) — vérifier par composantes connexes (bracket h~100, digits h~54, slash h~97) ; (3) les notes de bas de page de l'éditeur Bayhaqī (variante س،م) expliquent les lectures du manuel — le manuel suit la leçon des manuscrits, pas le texte principal de l'édition ; (4) segmentation par runs de colonnes (gap <18-20 px = intra-mot) pour isoler les mots décoratifs.
+- **Découvertes** : (1) basmala intégrée à v1 dans le muṣḥaf madrasa (detectable par ligne centrée ~1000px dans le cadre آيات) — utiliser le cache s57 v1 tel quel ; (2) [البقرة: 28] imprimé = Ḥafṣ 29 (règle ḥurūf −1 appliquée à البقرة pour la 1re fois) — noté inline FR ; (3) تفسير ligne «لَمَّا أخبر بأنه له الملك» (pas «لا») — zoom 4x nécessaire ; (4) hadith: le manuel écrit «حَيْثُ مَا كَانَ» en deux mots (Bayhaqī: حَيْثُمَا).
+- **Priorités R83** : (1) leçon 571 (سورة الحديد 5-8 — PDF à télécharger depuis pdfUrl du JSON ; idad attendu «بِذَاتِ الصُّدُورِ» - «مُسْتَخْلَفِينَ فِيهِ» que la glose 571 doit couvrir ; versets cache s57 v5-8) ; puis 572-577 (Ḥadīd), 578-583 (المجادلة), 584 فهرس, 585 مصادر ; (2) si le corpus GitHub a d'autres usages : vérifier les citations des leçons futures (Rāzī/Quṭrubī quotes) ; (3) QA app globale + push GitHub quand l'utilisateur redonnera le token.
+- **Risques** : lecture «بِذَاتِ الصُّدُورِ - مُسْتَخْلَفِينَ فِيهِ» des idad 571 déduite par fragments OCR réconciliés (confiance moyenne-élevée — la glose 571 tranchera, pattern R78) ; le digit «86» de [القرطبي: 86/14] est la lecture la plus fréquente (une passe a lu «6/14») mais le 8 est morphologiquement double-boucle — retenu 86/14 ; push GitHub suspendu ; cron job 461273 créé ce tour — si «Disabled (exec limits)», c'est le quota plateforme, le recréer au tour suivant.
+
+---
+Task ID: R82-b
+Agent: Z.ai Code (agent principal)
+Task: Livraison de la leçon 571 (سورة الحديد 5-8, tafsir-2es, 9e leçon pdf-only) — même session R82
+
+Work Log:
+- **571 LIVRÉE** (سورة الحديد 5-8, Leçon 24/38, commit e510d2b) : PDF 165-81.PDF téléchargé (6 pages), AR 6 740 car + FR 10 834 car. Injectée + hand-register → **registre 488/950 (437 main + 51 llm)**.
+- **الشرح 571 = 3 gloses** : «بِذَاتِ الصُّدُورِ: بما تضمره الصدور وتعتقده» + «مُسْتَخْلَفِينَ فِيهِ: الأموال التي بين أيديكم» + «مِيثَاقِكُمْ: ما جعل الله في عقولكم من النظر المؤدي إلى الإيمان» — les 2 lemmes idad de 570 SONT GLOSSÉS (règle d'or 3e validation consécutive) ✓✓.
+- **Réfs pixel-vérifiées** : [التحرير والتنوير للطاهر بن عاشور: 27/265] (composantes: ]2 7 / 2 6 5:) · [مفاتيح الغيب لفخر الدين الرازي: 450/29] (art ASCII: 4=diag+bar+stem, 5, 0=ring, /, 2, 9=ring+descender). Nouvelle source citée : at-Taḥrīr wa-t-tanwīr d'Ibn ʿĀšūr (1re fois dans le livre).
+- **Citation hors-Ḥadīd** : «لَقَدْ جَاءَكُمْ رَسُولٌ مِنْ أَنْفُسِكُمْ» (révélée sur ʿUṯmān b. ʿAffān, جيش العسرة/Tabūk) — l'idad Q3 de 571 demande son سبب نزول pour 572.
+- **Idad 572 (Ḥadīd 9-11) transcrit avec niveau de confiance variable** : «ءَايَٰتٍۢ بَيِّنَٰتٍ» - «مِنْ أَنفَقَ» - «ٱلْخَبِيرِ» - «قَرْضًا حَسَنًا» — T1 (full-page «اوجاج تيتاي» + w6 «يتاي»=بَيِّنَاتٍ, le run scan coupé à x2500 cachait آيات) et T4 («قاحسا»=قرضا حسنا) CONFIRMÉS ; T2 («انف»≈مَنْ أَنفَقَ, alt: أَلَّا تُنفِقُوا) et T3 («الخقيى»≈الْخَبِيرِ, alt: مِنْ قَبْلِ الْفَتْحِ) MOYENS — la glose de 572 tranchera (pattern R78). FLAG pour R83.
+- Zones OCR récalcitrantes résolues : «خطاب لمشركي قريش» (o3 «لشركي»), «لَمَّا» vs «لا» (pattern zoom 4x), «التَّوَثُّقُ في موضع الحال» (confiance moyenne — flag), Rāzī quote reconstituée ligne par ligne (box frame y3215-6029, 10 sous-lignes).
+- **QA navigateur** : lecteur 571 «Leçon 24/38», badge savante, gloses rendues, réfs 27/265 + 450/29 rendues, 5 labels الحديد, navigation SUIVANT→572 par clic, accueil **978/1152**, mobile 390px overflow 0, console 0 erreur. Captures : tr-tmp/qa-r82-571-{reader,mobile}.png. lint 0 erreur (1 warning préexistant).
+
+Stage Summary:
+- **ÉTAT : registre 488/950 ; 978/1854 docs bilingues (52,8 %) dont 503 savantes ; tafsir-2es 17/38 avec intro (45 %).** Commits 14f59f4 + e510d2b + worklog, backups /tmp OK.
+- **MÉTHODE R82 consolidée** : (1) corpus GitHub hadith (hassanmsthf11) pour identifier quotes ; (2) refs pixel-vérifiées composante par composante ; (3) run-segmentation (gap <18px intra-mot) + scan SANS coupure à droite pour les idad ; (4) la règle d'or idad→glose validée 3 fois (569→570, 570→571).
+- **Priorités R83** : (1) leçon 572 (سورة الحديد 9-11 — PDF via pdfUrl ; VERIFIER d'abord la glose de 572 contre les idad transcrits ci-dessus, corriger si divergence, pattern R78 ; versets cache s57 v9-11) ; puis 573-577 (Ḥadīd), 578-583 (المجادلة), 584-585 ; (2) VLM/web-search toujours en 429 — le corpus GitHub couvre les hadiths mais pas les tafsīrs (Rāzī/Quṭrubī/Ibn ʿAṭiyya) : continuer la méthode pixel.
+- **Risques** : idad 572 T2/T3 (flag ci-dessus) ; «التَّوَثُّقُ» (571, confiance moyenne) ; push GitHub suspendu ; cron 461273 (créé R82) probablement en exec-limit — recréer si besoin.
+
+---
+Task ID: R83
+Agent: Z.ai Code (agent principal)
+Task: Livraison des leçons 572 (الحديد 9-11) et 573 (الحديد 12-14), tafsir-2es, 10e et 11e leçons pdf-only
+
+Work Log:
+- [Entrée RECONSTRUITE par la session R84 : la session R83 s'est coupée (contexte) après la QA
+  de 573 mais AVANT l'écriture du worklog. Sources : commits bf348c7 / f997f0f / 2eefdd6,
+  captures tr-tmp/qa-r83-*.png, JSON livré, registre.]
+- **572 LIVRÉE** (سورة الحديد 9-11, Leçon 25/38, 10e pdf-only, commit bf348c7) :
+  AR 7 154 car (7 h2 + 5 h3) + FR 11 213 car. Thème : la descente du Coran guide vers la
+  lumière (هُوَ ٱلَّذِى يُنَزِّلُ عَلَىٰ عَبْدِهِۦٓ ءَايَٰتٍۭ بَيِّنَٰتٍۢ), l'aumône comme
+  « prêt » à Dieu (قَرْضًا حَسَنًا).
+- **Règle d'or APPLIQUÉE — fix idad 571** (flag R82-b T2/T3 tranchés par la glose de 572) :
+  l'idad (إعداد قبلي) de la leçon 571 a été corrigé de «مَنْ أَنفَقَ»→**«مِن قَبْلِ ٱلْفَتْحِ»**
+  (T2) et de «ٱلْخَبِيرِ»→**«ٱلْحُسْنَىٰ»** (T3) ; T1 (ءَايَٰتٍۢ بَيِّنَٰتٍ) et T4 (قَرْضًا حَسَنًا)
+  confirmés. La glose الشرح de 572 : «ءَايَٰتٍۢ بَيِّنَٰتٍ: القرآن الكريم» / «مِن قَبْلِ ٱلْفَتْحِ:
+  فتح مكة؛ وقيل: صلح الحديبية» / «ٱلْحُسْنَىٰ: الجنة» / «قَرْضًا حَسَنًا: خالصا طيبا».
+- **573 LIVRÉE** (سورة الحديد 12-14, Leçon 26/38, 11e pdf-only, commit f997f0f) :
+  AR 7 888 car (7 h2 + 5 h3) + FR 12 021 car. Thème : le Jour où les hypocrites supplieront
+  les croyants (ٱنظُرُونَا نَقْتَبِسْ مِن نُّورِكُمْ), le mur à la porte, «مَأْوَىٰكُمُ ٱلنَّارُ».
+  6 gloses : «ٱنظُرُونَا: انتظرونا» / «نَقْتَبِسْ مِن نُّورِكُمْ: نأخذ منه ونستضيء به» /
+  «فَتَنتُمْ أَنفُسَكُمْ: أهلكتموها وأضللتموها بالنفاق» / «وَتَرَبَّصْتُمْ: أبطأتم بإيمانكم» /
+  «وَٱرْتَبْتُمْ: شككتم في الإيمان» / «ٱلْأَمَانِىُّ: طول الأمل والتمني».
+- **Lecture warshite هِىَ مَوْلَىٰكُمْ PRÉSERVÉE** (Ḥadīd 14) : le manuel imprime «هِىَ»
+  (hāʾ+yāʾ, rasm waršien) là où Ḥafṣ a «هُوَ» — rendu tel quel, traduit «Elle est votre
+  Maître » avec note inline. Glose : «هِىَ مَوْلَىٰكُمْ أي: هي أولى بكم؛ وحقيقة المولى:
+  الولي الناصر».
+- QA navigateur : lecteurs 572/573 «Leçon 25/38»/«26/38», badges «Traduction savante»,
+  colonnes bilingues, navigation 571↔572↔573, accueil 979 puis 980/1152, console 0 erreur.
+  Captures : tr-tmp/qa-r83-572-{reader,book,home,mobile}.png,
+  qa-r83-573-{reader,home,mobile}.png (commit backup 2eefdd6 par le cron).
+- Registre : **490/950** (439 hand + 51 llm) — vérifié par R84.
+
+Stage Summary:
+- **ÉTAT : registre 490/950 ; 980/1152 bilingues ; tafsir-2es 19/38 docs (50 % — cap
+  symbolique de la moitié franchie) ; leçons 556-573 livrées.** Dev 200, 0 erreur console.
+- **MÉTHODE re-validée (4e et 5e occurrences)** : la glose الشرح de la leçon N tranche les
+  idad incertains transcrits dans la leçon N-1 (règle d'or) ; les lectures waršites
+  orthographiques (هِىَ vs هُوَ) sont PRÉSERVÉES telles qu'imprimées, jamais normalisées.
+- **Priorités R84** : leçon 574 (الحديد 15-18 — idad 573 attendu : أَلَمْ يَأْنِ / تَخْشَعَ /
+  لِذِكْرِ ٱللَّهِ / ٱلْأَمَدُ, tous dans v15-16 ; gloses de 574 à confronter) ; puis 575
+  (19-23), 576 (24-26), 577 (27-28, fin Ḥadīd) ; 578-583 (المجادلة) ; 584 فهرس ; 585 مصادر.
+- **Risques** : push GitHub toujours suspendu (token) ; coquilles CMS cumulées 71 ; cron
+  461273 (R82) en exec-limit — à recréer ; VLM 429 (méthode pixel suffisante).
+
+---
+Task ID: R84
+Agent: Z.ai Code (agent principal)
+Task: Livraison de la leçon 574 (سورة الحديد 15-18, tafsir-2es, 12e leçon pdf-only) + DÉCOUVERTE MAJEURE : le muṣḥaf madrasa FOND Ḥafṣ 14-15 en un seul verset 14 — CORRECTION de la leçon 573 (v14 tronqué)
+
+Work Log:
+- **Reprise post-reset de contexte** : environnement INTACT (git 2eefdd6 = QA 573 par cron ;
+  R83 avait livré 572+573 mais est mort AVANT le worklog → entrée R83 reconstruite et
+  ajoutée ce tour à partir des commits bf348c7/f997f0f, des captures qa-r83-* et du JSON ;
+  registre lu à 488+2 ; PDF 574-577 déjà présents ; tessdata réinstallé (ara via
+  TESSDATA_PREFIX=/home/z/tr-tmp/tessdata), tesseract+pdftoppm OK.
+- **PDF 574** (7 pages) rendu 300 + 600 dpi (p1-p7) ; OCR psm4/7/13 multi-passes ;
+  zones fines (labels, gloses) binarisées à 210-225 (encre claire) — méthode R80+.
+- **DÉCOUVERTE MAJEURE — numérotation Ḥadīd du muṣḥaf madrasa** (triple preuve) :
+  1. Le bloc آيات de 574 COMMENCE à «أَلَمْ يَأْنِ لِلَّذِينَ ءَامَنُوٓا۟…لِذِكْرِ ٱللَّهِ وَمَا نَزَلَ مِنَ ٱلْحَقِّ»
+     (= Ḥafṣ 57:16) — pixel-vérifié p1 (2 lectures convergentes, «لو كر لله» = لِذِكْرِ ٱللَّهِ,
+     6/7 glyphes) — donc la leçon 574 (titre CMS «15-18») NE COMMENCE PAS à Ḥafṣ 15.
+  2. Label du bloc 574 lu au pixel en 2 passes : «سورة الحديد: 15-…» (strip y760-880 @300dpi
+     psm7, bande incluse dans L3 @600dpi) + «[سورة الحديد: 18-15]» (psm4 pleine page) —
+     ordre visuel RTL «١٥-١٨» → le bloc = 4 versets manuels 15-18.
+  3. Lemmes idad de 574 (transcrits p7) TOUS dans Ḥafṣ 20/23 (وزينة/تفاخر/تكاثر/مغفرة/
+     فتراه/مختال/فخور) — cohérents avec 575 = manual 19-23 = Ḥafṣ 20-24 ; et le curriculum
+     se TERMINE exactement à Ḥafṣ 29 (577 = manual 27-28 = Ḥafṣ 28-29). En monde no-merge,
+     Ḥafṣ 29 resterait non imprimé — impossible.
+  → **CONCLUSION : le muṣḥaf madrasa fond Ḥafṣ 14+15 en un seul verset 14** (Ḥadīd madrasa =
+  28 versets ; mapping manual vN = Ḥafṣ vN pour N≤13, v14 = Ḥafṣ14+15, vN = Ḥafṣ vN+1 pour
+  N≥15). La leçon 574 = manual 15-18 = Ḥafṣ 16-19.
+- **CORRECTION 573** (même classe que le fix 568 en R81, ici un TAIL manquant) : le bloc
+  imprimé du PDF 573 continue après «ٱلْغَرُورُ» — p2 b00 ≈ «فَٱلْيَوْمَ لَا يُؤْخَذُ مِنكُمْ» +
+  b01 ≈ «…مَأْوَىٰكُمُ ٱلنَّارُ ۖ هِىَ مَوْلَىٰكُمْ ۖ وَبِئْسَ ٱلْمَصِيرُ» + ۝١٤ («(5))») — la
+  livraison R83 avait coupé v14 à la frontière ḥafṣienne (ٱلْغَرُورُ). Fix atomique
+  (tr-tmp/scripts/inject574.py) : v14 (AR+FR) étendu du tail Ḥafṣ 15 (Warš cache + Hamidullah)
+  + note NdT FR « le muṣḥaf de l'école fond ici, en un seul verset 14, ce que le décompte
+  ḥafṣien numérote 14-15 ». Vérifié navigateur : فَٱلْيَوْمَ/وَبِئْسَ ٱلْمَصِيرُ présents dans 573.
+- **Énigme des bandeaux noirs résolue** : les plaques noires y1864-2132/x4732-5000 (p2) sont
+  des EN-TÊTES DE SECTION en réserve blanche — «الفهم» (plq1, lu par inversion+OCR) et
+  «التفسير» (plq2 «اللمسير») ; le label du bloc آيات est une ligne claire SOUS la dernière
+  ligne du bloc (d'où son absence au seuil <128) ; «رقلي # [سورة الحديد: 18-15]» du psm4 =
+  la plaque الفهم + le label. Banner 573 p2 = même plaque الفهم pleine largeur.
+- **574 LIVRÉE** (سورة الحديد 15-18 = Ḥafṣ 16-19, Leçon 27/38, Drs 19, 12e pdf-only) :
+  AR 7 860 car (7 h2 + 5 h3) + FR 13 683 car (registre savant, NNBSP auto-fix, NdT ×2).
+  Bloc = 4 versets Warš [الحديد: 15-18] (cache s57 v16-19Ḥ, ۞ de v16 retiré).
+  الشرح = 3 gloses (تَخْشَعَ: تخشى وتخاف / لِذِكْرِ ٱللَّهِ: القرآن أو الذكر، أو التذكير
+  بالمواعظ / ٱلْأَمَدُ: مدة الحياة) + «ألم يأن: ألم يحن» glosé DANS le تفسير (Ḥafṣ16 le
+  4e lemme idad de 573 — règle d'or satisfaite, 4/4).
+  Citations restituées du cache : [البقرة: 142] (= Ḥafṣ 143, règle ḥurūf — NdT FR) ;
+  [تفسير البيضاوي: 108/1] ; [تفسير القرآن العظيم؛ لابن كثير: 20/8] ;
+  [جامع البيان؛ لابن جرير الطبري: 192/23] ; hadith «مؤمنو أمتي شهداء» (p5 y601-808,
+  «أُمَّتِي» déchiffré — le psm4 lisait «مني») ; hadith Abū Mūsā al-Ašʿarī (Bukhārī,
+  كتاب العلم, باب فضل من علم وعلم) reconstruit passe à passe (الغيث→العْيْتْ, فنفع→فُنَفم_,
+  أرسلت→أَزسلت).
+  Idad 574 (pour 575) transcrit : «وَزِينَةٌ» - «وَتَفَاخُرٌ» - «وَتَكَاثُرٌ» - «مَغْفِرَةٌ»(flag
+  «مَابفْوا», la glose 575 tranchera) - «فَتَرَىٰهُ»(flag «تراه/رأها») - «مُخْتَالٍ» - «فَخُورٌ».
+  Injectée (inject574.py, lecture tr-tmp/574-{ar,fr}.html, pdfOnly:false) + hand-register →
+  **registre 491/950 (440 hand + 51 llm)**. (Incident : hand-register --help a enregistré
+  «--help» comme docId — purge immédiate, registry rewriten à 439+1.)
+- **QA navigateur (agent-browser) complète** : lecteur 574 «Sourate Al-Hadid (versets 15-18)»,
+  Leçon 27/38, badge «Traduction savante», 12 sections, colonnes bilingues AR+FR (article
+  dir=rtl vérifié), les 4 versets (15)-(18) + NdT rendus, gloses + citations + hadiths
+  rendus (مؤمنو أمتي شهداء ✓), navigation 573→574 par clic SUIVANT («SuivantSourate Al-Hadid
+  (versets 15-18)»), 573 corrigé affiché (فَٱلْيَوْمَ + وَبِئْسَ ٱلْمَصِيرُ + NdT + FR v15),
+  page livre **20/38 (53 %)** «37 leçons + introduction», accueil **981/1152**, «Reprendre la
+  lecture» → 574 (bouton IN-DOM vérifié par textContent — les checks innerText étaient des
+  artefacts de timing), mobile 390 px overflow 0 px, console 0 erreur (DevTools+HMR seuls).
+  Captures : tr-tmp/qa-r84-574-{reader,book,home,mobile}.png + qa-r84-573-corrige.png.
+  dev.log propre (GET /api/lessons/…574 200). lint 0 erreur (1 warning préexistant
+  llm-translate.ts).
+
+Stage Summary:
+- **ÉTAT : registre 491/950 ; 981/1152 bilingues (85,1 % des 1152 du programme affichées ;
+  981/1854 docs au global) ; tafsir-2es 20/38 docs (53 %) ; leçons 556-574 livrées.**
+  Dev server propre, 0 erreur console. Backup /tmp + commit.
+- **MÉTHODES consolidées ce tour** : (1) en-têtes de section = plaques noires à réserve
+  blanche (inversion + OCR) ; (2) textes en encre claire → binarisation 210-225 au lieu de
+  128 ; (3) label de bloc آيات = ligne fine sous la dernière ligne du bloc, dans la bande
+  de la dernière ligne (pas une bande séparée) ; (4) la convergence de TROIS indices
+  indépendants (début de bloc + label + distribution des lemmes idad + complétude du
+  curriculum) pour trancher une numérotation de muṣḥaf.
+- **RÈGLE DE NUMÉROTATION ḤADĪD ÉTABLIE (généralisation de la règle R81)** : le muṣḥaf
+  madrasa peut FONDRE des versets ḥafṣiens (ici 14+15) — toujours trancher par le PDF
+  imprimé (label + contenu du bloc), jamais par le cache ; les leçons suivantes d'Ḥadīd
+  utilisent manual = Ḥafṣ−1 (N≥15) : 575 = Ḥafṣ20-24, 576 = Ḥafṣ25-27, 577 = Ḥafṣ28-29.
+- **Priorités R85** : (1) leçon 575 (سورة الحديد 19-23 = Ḥafṣ 20-24 — idad attendu
+  وزينة/تفاخر/تكاثر/مغفرة?/فتراه?/مختال/فخور ; la glose 575 tranchera les 2 flags ;
+  versets cache s57 v20-24 ; thème القضاء والقدر) ; puis 576 (24-26 = Ḥafṣ25-27), 577
+  (27-28 = Ḥafṣ28-29, fin Ḥadīd), 578-583 (المجادلة), 584 فهرس, 585 مصادر ; (2) QA app
+  globale + push GitHub quand le token revient.
+- **Risques** : idad 574 lemme 4 «مَغْفِرَةٌ» (lecture «مَابفْواً» — confiance moyenne, la
+  glose 575 tranchera) et lemme 5 «فَتَرَىٰهُ» (confiance moyenne-haute) ; «معطوف على
+  رن» rendu «معطوف على أنْ تخشع» (confiance moyenne — sens certain, lettres douteuses) ;
+  «ولما بين حال المصدقين» (2 lectures ولا/وما — conservé «ولما بين») ; push GitHub
+  suspendu (token) ; cron à recréer (voir R84-cron).
+
+---
+Task ID: R85
+Agent: Z.ai Code (agent principal)
+Task: PUSH GITHUB (token utilisateur) + livraison de la leçon 575 (سورة الحديد 19-23 = Ḥafṣ 20-24, tafsir-2es, 13e leçon pdf-only) + fix réf Bayḍāwī 574
+
+Work Log:
+- **PUSH GITHUB EFFECTUÉ** (demande explicite utilisateur + token fourni) : 35 commits
+  en attente poussés (1c4d98d → 0549fe7), branche main synchronisée, remote vérifié.
+- **PDF 575** (2019-1.PDF, 7 pages) téléchargé via proxy translate.goog (curl -k, exit 60
+  SSL contourné). Rendus 300 + 600 dpi, OCR psm4/6/7/13 multi-seuils (128/200/210/225/245).
+- **VLM DE RETOUR** (fin du 429 persistant !) : glm-5v-turbo opérationnel sur crops
+  serrés (1 mot = fiable ; lignes larges/demi-pages = hallucinations — ne PAS lui
+  soumettre de contexte suggestif, il confirme les candidats proposés !).
+- **Règle d'or satisfaite 6e fois** : les idad 574 flaggés R84 «مَغْفِرَةٌ» (lecture
+  «مَابفْواً») et «فَتَرَىٰهُ» (flag تراه/رأها) sont CONFIRMÉS par le texte du bloc v20
+  (وَمَغْفِرَةٌۭ مِّنَ ٱللَّهِ + فَتَرَىٰهُ مُصْفَرًّۭا) — aucune correction de 574 idad nécessaire.
+- **BLOC آيات = cache v20-24, numérotation madrasa ١٩-٢٣** : triple preuve — (1) le bloc
+  commence à اعلموا أنما الحياة الدنيا (Ḥafṣ 20 ✓ règle R84 manual=Ḥafṣ−1 pour N≥15) ;
+  (2) fin du bloc pixel-vérifiée p2 : وَمَن يَتَوَلَّ ۝ ٱللَّهَ هُوَ ٱلْغَنِىُّ ٱلْحَمِيدُ ۝٢٣ +
+  label [سورة الحديد: ١٩-٢٣] ; (3) le tafsīr p5 cite (وَمَن يَتَوَلَّ فَإِنَّ ٱللَّهَ هُوَ ٱلْغَنِىُّ ٱلْحَمِيدُ)
+  avec le commentaire «ووصفه بأنه الحميد» — cohérence parfaite.
+- **575 LIVRÉE** (الدرس 20/38, 13e pdf-only) : AR 8 611 car + FR 13 810 car (registre
+  savant, NNBSP auto-fix, NdT numérotation). Structure : أهداف (3) / تمهيد / 5 versets
+  Warš ١٩-٢٣ / الشرح 5 gloses (وزينة: ما يتزين به الإنسان / وتفاخر: ما يتفاخر به الناس /
+  وتكاثر: ما يتباهى به الناس / سابقوا: سارعوا / نبرأها: نخلقها) / استخلاص (2) /
+  تفسير 3 parties (تحذير الناس من التعلق بالدنيا / تسلية المؤمنين على ما يلحقهم من مصائب /
+  مقاصد) / تقويم (3) / حديث أبي هريرة «المؤمن القوي» [صحيح مسلم، كتاب القدر] /
+  أتأمل (2) / إعداد قبلي (3 questions, 6 lemmes).
+- Citations restituées : Bayḍāwī «لما ذكر حال الفريقين في الآخرة؛ حقر أمور الدنيا…»
+  [تفسير البيضاوي: 189/5] ; Ibn Kathīr «ولما كان هذا المثل دالا على زوال الدنيا…»
+  [تفسير القرآن العظيم؛ لابن كثير: 25/8] ; Nasafī [تفسير النسفي: 440/3] ; hadith
+  «كتب الله مقادير الخلائق قبل أن يخلق السماوات والأرض بخمسين ألف سنة» [صحيح مسلم،
+  كتاب القدر، باب حجاج آدم وموسى] ; qiraʾāt : الجمهور بالمد (بما آتاكم) vs أبو عمرو
+  بالقصر (بما أتاكم) ; iʿrāb (الذين يبخلون) : بدل من كل مختال فخور / خبر مبتدأ محذوف
+  تقديره هم الذين / منصوب بإضمار أعني / مبتدأ وخبره محذوف ; Abū Bakr «اللهم إنا لا
+  نستطيع إلا أن نفرح بما زينت لنا».
+- **IDAD 576 (pour la suite) TRANSCRIT — 6 lemmes** (méthode croisée pixel + VLM +
+  gloses 576.pdf) : بِالْبَيِّنَاتِ - الْمِيزَانَ - وَقَفَّيْنَا - رَهْبَانِيَّةً - ابْتَدَعُوهَا -
+  فَمَا رَعَوْهَا + question iʿrāb «وَرَهْبَانِيَّةً ابْتَدَعُوهَا». Les gloses de 576
+  (bénéficiant du PDF 576 déjà téléchargé : بِالْبَيِّنَاتِ: المعجزات الواضحات /
+  ابْتَدَعُوهَا: استحدثوها / فَمَا رَعَوْهَا: لم يدوموا عليها) valident 3/6 lemmes ;
+  zone-runs + VLM pour les 3 autres (الميزان par structure م+ي+ز+ا+ن+ال, وقفينا par
+  le pattern OCR فَقِيتا, رهبانية par VLM ×2 + finale ةً).
+- **FIX 574 — réf Bayḍāwī pixel-vérifiée 108/1 → 188/1** (AR + FR) : les 2e/3e chiffres
+  sont des «8» (anneau à barre médiane) et non «0» (anneau vide) — distinction 0/8
+  validée en comparant le vrai «0» de la réf Ibn Kathīr 574 (20/8) et le vrai «8» de
+  25/8 (575). Pages 188→189 consécutives avec la réf Bayḍāwī 575 = 189/5 ✓. Le «1»
+  final de 574 est vraisemblablement une coquille du manuel pour «5» — transcrit tel
+  quel. Réfs Ibn Kathīr 574 (20/8) et Ṭabarī 574 (192/23) re-vérifiées : correctes.
+- Incident registre : hand-register.py a absorbé «add/--book/tafsir-2es» comme docIds
+  (bug connu R84) — purge immédiate → registre 492/950 (441 hand + 51 llm), 575 enregistrée.
+- **QA navigateur (agent-browser) complète** : accueil **982/1152** ; lecteur 575
+  «Sourate Al-Hadid (versets 19-23)», Leçon 20/38, badge «Traduction savante», les 5
+  versets (19)-(23) + NdT Ḥafṣ 20-24, gloses FR (wa-zīna…nabraʾahā), 3 réfs rendues,
+  hadith «croyant fort», préparation 24-26 avec les 6 lemmes ; navigation SUIVANT→576
+  («Sourate Al-Hadid (versets : 24-26)») puis retour 575 ✓ ; 574 re-vérifié (188/1
+  visible, 108/1 purgée AR+FR) ; page livre **21/38 (55 %)** avec carte 575 «savante
+  bilingue» ; mobile 390 px overflow 0 px ; desktop overflow 0 px ; **console 0 erreur**.
+  Captures : tr-tmp/qa-r85-{home,575-reader,575-mobile,574-fix,book}.png. lint 0 erreur
+  (1 warning préexistant).
+- Commits : 80529a6 (575 + fix 574 + worklog R84 déjà poussé 0549fe7) — **push GitHub
+  immédiat** (main synchronisé).
+
+Stage Summary:
+- **ÉTAT : registre 492/950 ; 982/1152 bilingues (85,2 %) ; tafsir-2es 21/38 docs
+  (55 %) ; leçons 556-575 livrées ; GitHub à jour.** Dev 200 propre, 0 erreur console.
+- **MÉTHODES consolidées** : (1) distinction pixel 0 (anneau vide) vs 8 (anneau à barre
+  médiane) pour les chiffres de refs — vérifier TOUJOURS par glyphe, jamais par OCR
+  global ; (2) VLM fiable UNIQUEMENT sur crops serrés (1-2 mots), sans candidats
+  suggestifs dans le prompt ; (3) les gloses de la leçon N+1 (PDF téléchargeable en
+  avance) valident les lemmes idad de la leçon N — généraliser ce raccourci ; (4)
+  hand-register.py : ne passer QUE le docId (jamais de flags), sinon purge nécessaire.
+- **Priorités R86** : (1) leçon 576 (سورة الحديد 24-26 = Ḥafṣ 25-27 — PDF déjà dans
+  tr-tmp/576.pdf ; bloc = cache s57 v25-27 ; gloses déjà transcrites : بالبينات/
+  ابتدعوها/فما رعوها ; thème بعثة الرسل والشرائع السماوية ; iʿrāb ورهبانية ابتدعوها
+  à exposer) ; puis 577 (27-28 = Ḥafṣ 28-29, fin Ḥadīd), 578-583 (المجادلة),
+  584 فهرس, 585 مصادر ; (2) QA app globale ; (3) push GitHub à chaque leçon.
+- **Risques** : 1 phrase p3 575 en confiance moyenne : «ثم بيّن تعالى متقلباته؛ هذا
+  تشبيه للدنيا…» — le mot «متقلباته» (456 px, finissant en ـاته) et le segment
+  «يكون هذا» n'ont pas convergé proprement (OCR متباín : مصعراته/محجراته/mصغرانم ;
+  VLM suggère «كيف يكون» mais trop court pour 456 px) — à re-vérifier en futur
+  tour si un passage parallèle émerge ; 2e phrase p5 «إذ قل من يثبّت نفسه» — يثبّت
+  confirmé VLM (forme II) ; «حال هذا النبات» vs «كيف يكون هذا» tranché par VLM ×2
+  mais prompt contaminé — flag levé sur «متقلباته» seulement.
+- VLM/web-search : VLM OK ce tour (429 levé) — web_search non testé.
+
+---
+
+Task ID: R86
+Agent: Z.ai Code (agent principal)
+Task: Reprise après confirmation sync GitHub (l'utilisateur a demandé vérification exhaustive) + livraison de la leçon 576 (سورة الحديد 24-26 = Ḥafṣ 25-27, tafsir-2es, 14e leçon pdf-only)
+
+Work Log:
+- **Vérification sync GitHub demandée par l'utilisateur** : `git fetch` + `git diff origin/main`
+  (vide) + 0 untracked non-ignoré + 0 stash → **tout était déjà sur GitHub** (commit d3105cd
+  = R85) ; le « ahead by 1 » était une référence locale obsolète. Rien omis, confirmé à
+  l'utilisateur ; sur sa consigne, reprise du travail (la sauvegarde GitHub suivante se fera
+  sur demande).
+- **PDF 576** déjà présent (/home/z/tr-tmp/576.pdf, 8 pages, 879 Ko) — rendus 300 + 600 dpi,
+  OCR psm6 multi-seuils (128/200/225) + TSV pour localisation des zones.
+- **VLM (glm-4.6v via z-ai-web-dev-sdk, crops base64)** : FIABLE sur les crops de CHIFFRES
+  (a confirmé 114/10, 418/27, 470/29 en lecture double avec tesseract) mais HALLUCINE sur
+  les crops de mots en naskh du manuel (invente du texte) → ne pas utiliser pour les mots,
+  uniquement pour les chiffres ; les mots tranchés par tesseract multi-résolutions
+  (300+600 dpi × 3 seuils).
+- **Règle d'or satisfaite 7e fois** : les idad 576 flaggés R85 (بِالْبَيِّنَاتِ/الْمِيزَانَ/
+  وَقَفَّيْنَا/رَهْبَانِيَّةً/ابْتَدَعُوهَا/فَمَا رَعَوْهَا) — 3 gloses livrées dans le الشرح
+  (بالبينات/ابتدعوها/فما رعوها), le iʿrāb «ورهبانية ابتدعوها» demandé au تقويم Q2, la
+  relation بين الرسالات au تقويم Q3 — cohérence parfaite avec l'إعداد de 575.
+- **BLOC آيات = cache s57 Ḥafṣ 25-27, numérotation madrasa ٢٤-٢٦** : label pixel-vérifié
+  [سورة الحديد: ٢٤-٢٦] (p2 y891), fin de bloc فاسقون ۝٢٦, 3 versets Warš du cache.
+- **Réfs pixel-vérifiées (tesseract ×2 résolutions + VLM concordants)** : [البحر المحيط
+  لأبي حيان: 114/10] (4≠8 confirmé) ; [التحرير والتنوير... بتصرف: 418/27] (8≠0 — pas
+  410) ; [مفاتيح الغيب...: 470/29] (0≠8 — pas 478).
+- **Corrections majeures par rapport au reconstruction initiale (preuve 600 dpi)** :
+  (1) Rāzī : «مدار **التكليف**» (300 dpi lisait «كيف» charabia — 600 dpi t128+t200
+  concordants) ; (2) «وهو **العَارِف**» (3 lectures ع-ر-ف ; flag variante vs éditions
+  «العلم») ; (3) «**والزَّائِدُ** عن النقص» (5 lectures) ; (4) «**وكان** أشرف الأقسام»
+  (و sans point ×3 ; flag variante vs éditions «فكان») ; (5) paire confirmée «رعاية
+  **الصلاح** الروحانية / رعاية **المصالح** الجسمانية» (t300 vs t600 contradictoires,
+  tranché par crop dédié) ; (6) puce 2 maqāṣid COMPLÈTE en 2 lignes : «...التي تحرر
+  الإنسان **وتقوم على قيم العدل والإنصاف والفضيلة**» ; (7) expression 1 de l'إعداد =
+  «**كِفْلَيْنِ**» (mot rare Ḥadīd 28, préparation leçon 577) — 5 lectures fragmentaires
+  convergentes ك-ف-ل-ي-ن.
+- **576 LIVRÉE** (الدرس 21/38, 14e pdf-only) : AR 9 236 car + FR 15 041 car (registre
+  savant, NNBSP auto-fix, NdT numérotation). Structure : أهداف (3) / تمهيد / 3 versets
+  Warš ٢٤-٢٦ / الشرح 3 gloses / استخلاص (2) / تفسير 3 parties (إرسال الرسل لإقامة العدل /
+  تتابع الرسل ووحدة الشرائع / مقاصد) / تقويم (3) / استثمار : citation Rāzī [مفاتيح
+  الغيب: 470/29] + أتأمل / إعداد قبلي (2 questions, 3 expressions).
+- Citations restituées : Abū Ḥayyān [البحر المحيط: 114/10] avec Āl ʿImrān 18 cité du
+  cache ; Ibn ʿĀshūr بتصرف [418/27] ; Rāzī [470/29] ; lecture Ibn Masʿūd «ما كتبناها
+  عليهم؛ لكن ابتدعوها فما رعوها حق رعايتها» ; qawlān sur l'istithnāʾ (منقطع أرجح vs
+  متصل) ; fiqh comparé Abū Ḥanīfa vs maliqites (الصلاة والصوم والاعتكاف والحج والعمرة
+  والطواف والائتمام) ; iʿrāb «بِٱلْغَيْبِ» حال من فاعل «يَنصُرُهُ».
+- Incident registre évité : hand-register.py appelé avec LE docId seul (leçon R85) →
+  registre **493/950** (442 main + 51 LLM), 576 enregistrée.
+- **QA navigateur (agent-browser) complète** : accueil **983/1152** ; livre tafsir-2es
+  **22/38 (58 %)** ; lecteur 576 «Leçon 29/38», badge «Traduction savante», h1 leçon 21,
+  3 versets (24)-(26) + NdT Ḥafṣ 25-27, gloses FR (bayyināt/ibtadaʿūhā/fa-mā raʿawhā),
+  3 réfs rendues (114/10, 418/27, 470/29), citation Rāzī taklīf complète, إعداد 27-28
+  avec كِفْلَيْنِ ; navigation SUIVANT→577 (PDF placeholder) puis retour 576 ✓ ; mobile
+  390 px overflow 0 px ; footer ok ; desktop 1280 overflow 0 ; **console 0 erreur**.
+  Captures : tr-tmp/qa-r86-{home,576-reader,576-reader-bas,576-mobile}.png. lint 0 erreur
+  (1 warning préexistant).
+
+Stage Summary:
+- **ÉTAT : registre 493/950 ; 983/1152 bilingues (85,7 %) ; tafsir-2es 22/38 (58 %) ;
+  leçons 556-576 livrées ; GitHub à jour jusqu'à R85, R86 prêt à pousser.**
+- **MÉTHODES consolidées** : (1) VLM ok sur CHIFFRES seul (double lecture tesseract+VLM),
+  jamais sur mots en naskh (hallucinations confirmées R86) ; (2) pour les mots douteux :
+  tesseract multi-résolutions (300+600 dpi) × multi-seuils (128/200/225), majorité
+  l'emporte ; (3) les flags «variante vs édition» (العارف/وكان) sont transcrits TELS
+  QUELS avec flag worklog — le print du manuel gouverne ; (4) les gloses de la leçon N+1
+  valident l'idad de la leçon N (règle R85 généralisée : l'إعداد de 576 = expressions de
+  Ḥadīd 28 = leçon 577).
+- **Priorités R87** : (1) leçon 577 (سورة الحديد 27-28 = Ḥafṣ 28-29, FIN de Ḥadīd —
+  PDF à télécharger ; thème : l'espérance des croyants ; expressions déjà connues :
+  كِفْلَيْنِ/اتقوا الله/وآمنوا برسوله ; question : المخاطب par «يا أيها الذين آمنوا
+  اتقوا الله») ; puis 578-583 (المجادلة), 584 فهرس, 585 مصادر ; (2) QA app globale ;
+  (3) push GitHub (R86 = commit en attente + worklog).
+- **Risques** : 2 flags variantes Rāzī («وهو العارف», «وكان») — à re-vérifier si une
+  édition de Mafātīḥ al-ġayb devient accessible (shamela bloquée) ; le squelette de la
+  transition p4→p5 (quote نوح/إبراهيم en 2 morceaux) reconstitué par convergence sémantique
+  — tous les énoncés attestés, l'ordre exact des 2 lignes p5 non pixel-tracé (faible
+  impact).
