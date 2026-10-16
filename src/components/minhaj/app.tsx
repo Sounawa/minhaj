@@ -4,6 +4,7 @@ import { useEffect, useState, useSyncExternalStore } from "react";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import {
+  Bot,
   BookMarked,
   BookOpenCheck,
   Heart,
@@ -30,6 +31,7 @@ import { BookPage } from "./book-page";
 import { Reader } from "./reader";
 import { SearchDialog } from "./search-dialog";
 import { FavoritesDialog } from "./favorites-dialog";
+import { AssistantDialog } from "./assistant-dialog";
 
 const emptySubscribe = () => () => {};
 
@@ -144,10 +146,12 @@ function AboutDialog({ stats }: { stats: AboutStats | null }) {
 function Header({
   onSearch,
   onFavorites,
+  onAssistant,
   aboutStats,
 }: {
   onSearch: () => void;
   onFavorites: () => void;
+  onAssistant: () => void;
   aboutStats: AboutStats | null;
 }) {
   const { favorites } = useFavorites();
@@ -192,6 +196,15 @@ function Header({
             <kbd className="hidden rounded border border-amber-800/20 bg-amber-100/50 px-1.5 py-0.5 font-mono text-[10px] font-medium text-muted-foreground lg:inline-block dark:bg-amber-900/40">
               Ctrl K
             </kbd>
+          </Button>
+          <Button
+            variant="outline"
+            onClick={onAssistant}
+            aria-label="Assistant IA — poser une question"
+            className="h-10 gap-2.5 border-amber-800/20 bg-card/60 text-amber-900 hover:bg-amber-100/70 dark:text-amber-100 dark:hover:bg-amber-900/40"
+          >
+            <Bot className="size-4" aria-hidden="true" />
+            <span className="hidden text-sm md:inline">Assistant IA</span>
           </Button>
           <Button
             variant="outline"
@@ -257,6 +270,7 @@ export function MinhajApp() {
   } | null>(null);
   const [searchOpen, setSearchOpen] = useState(false);
   const [favOpen, setFavOpen] = useState(false);
+  const [assistantOpen, setAssistantOpen] = useState(false);
 
   // Raccourci clavier global : Ctrl+K / ⌘K → recherche
   useEffect(() => {
@@ -305,10 +319,14 @@ export function MinhajApp() {
       <Header
         onSearch={() => setSearchOpen(true)}
         onFavorites={() => setFavOpen(true)}
+        onAssistant={() => setAssistantOpen(true)}
         aboutStats={footerStats}
       />
       {searchOpen && <SearchDialog open={searchOpen} onOpenChange={setSearchOpen} />}
       {favOpen && <FavoritesDialog open={favOpen} onOpenChange={setFavOpen} />}
+      {assistantOpen && (
+        <AssistantDialog open={assistantOpen} onOpenChange={setAssistantOpen} />
+      )}
       <main id="contenu" className="flex-1">
         {route.view === "home" && <Home />}
         {route.view === "book" && <BookPage key={route.bookId} bookId={route.bookId} />}
