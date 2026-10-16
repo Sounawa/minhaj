@@ -6019,3 +6019,106 @@ Stage Summary:
   transition p4→p5 (quote نوح/إبراهيم en 2 morceaux) reconstitué par convergence sémantique
   — tous les énoncés attestés, l'ordre exact des 2 lignes p5 non pixel-tracé (faible
   impact).
+
+---
+Task ID: R90
+Agent: Z.ai Code (agent principal)
+Task: (1) INCIDENT rollback environnement — récupération depuis GitHub, fusion origin/main (R86) ; (2) re-livraison de la leçon 577 (سورة الحديد 27-28 = Ḥafṣ 28-29, tafsir-2es, 15e leçon pdf-only — refonte du R87 perdu)
+
+Work Log:
+- **INCIDENT CRITIQUE DÉCOUVERT** : l'environnement avait été ROLLBACKÉ à l'état R75
+  (worklog fini à R75, registre 479/950, commit local 83d9958 = artefact de restauration
+  post-r71 + captures QA R75). Le résumé de session hérité décrivait R86-R89 (leçons
+  576-579, registre 496/950, commit 9e4f477) mais AUCUN de ces commits n'existait
+  localement ; /home/z/tr-tmp et /home/z/tessdata effacés (ara.traineddata re-téléchargé
+  depuis tessdata_best).
+- **RÉCUPÉRATION** : `git fetch origin` → origin/main = 5e2a0a6 (R86, leçon 576,
+  registre 493/950, poussé 10-15 18:31 par la session perdue). Bundle sandbox-backup
+  = R82-b seulement (00509c0, 488/950) ; fsck → 3 commits dangling = artefacts R71,
+  rien de plus récent. `git merge origin/main` PROPRE (28 commits récupérés :
+  leçons 563-576, worklog R76-R86, registre 493/950) → **PERDUS DÉFINITIVEMENT :
+  R87 (577), R88 (578), R89 (579)** — locaux non poussés dans la session perdue.
+  Leçon 580 (المجادلة 8-10) du résumé hérité = JAMAIS entamée ici.
+- **PDF 577** re-téléchargé (2227-1.PDF, 6 pages, 610 Ko, proxy translate.goog) ;
+  rendus 300+600 dpi, OCR psm6 × seuils 128/200/225 (tessdata ara reconstruit).
+- **DÉCOUVERTE MAJEURE — INCONSISTANCE INTERNE DU MANUEL (577)** : le bloc muṣḥaf
+  porte les marqueurs ۝٢٧-۝٢٨ (décompte marocain 28 versets — VLM×2 : marker1=27,
+  marker2=28 ; glyphe-ASCII : ٢=crochet-base ×2 partagé, ٨=double anneau = comp11
+  du marqueur, identique au g6 du label) MAIS le label éditorial imprimé =
+  **[سورة الحديد: 28-29] = décompte Ḥafṣ** (tesseract ×3 «29-28» visuel + VLM
+  wide «٢٨-٢٩» ; 8 = double anneau ≠ ٧ en V, 9 = anneau+queue ≠ ٨ deux points).
+  Le titre du manuel = الآيتان ٢٧-٢٨ (marocain). Convention de rendu : label tel
+  qu'imprimé «سورة الحديد: 28-29» + tags de versets [الحديد: 27]/[الحديد: 28]
+  (marqueurs muṣḥaf, convention 576) + NdT FR explicite. NB : le label 576 (٢٤-٢٦
+  vérifié R86 + re-vérifié ce tour : tesseract «26-24» visuel) = marocain —
+  l'incohérence 577 est une coquille éditoriale du manuel lui-même.
+- **COQUILLES DU MANUEL corrigées + NdT** (méthode R72/R75 : le texte cité
+  écrase l'alt imprimée) : (1) **[الأنعام: 123] → 122** — le verset cité
+  «وَجَعَلْنَا لَهُۥ نُورًۭا يَمْشِى بِهِۦ فِى ٱلنَّاسِ» = 6:122 en Ḥafṣ ET en Warš
+  (cache ar[121]) ; (2) **[البقرة: 6] → 7** — «خَتَمَ ٱللَّهُ عَلَىٰ قُلُوبِهِمْ» =
+  2:7 dans les deux décomptes (cache ar[6]) ; la comparaison doctrinale (جهل مركب,
+  cœurs scellés) confirme 2:7.
+- **Règle d'or idad→glose satisfaite 8e fois** : les 3 idad 576 flaggés R86 sont
+  tous couverts — اتَّقُوا اللهَ (glose 1 : خافوا عقاب الله) + وَآمِنُوا بِرَسُولِهِ
+  (glose 2 : صدقوا بمحمد ﷺ واتبعوه) + كِفْلَيْنِ (inline tafsīr : «يُؤْتِكُمْ
+  كِفْلَيْنِ مِنْ رَحْمَتِهِۦ» أي نصيبين).
+- **Réfs pixel-vérifiées (tesseract multi-seuils 600 dpi + VLM concordants)** :
+  [صحيح البخاري؛ كتاب الجهاد والسير؛ باب فضل من أسلم من أهل الكتابين] ;
+  [التحرير والتنوير للطاهر بن عاشور: 433/27] ; [البحر المديد لابن عجيبة؛ 332/7].
+  Hadith Bukhārī rendu avec ellipse (...) telle qu'imprimée.
+- **Lectures fines tranchées ce tour** : «بالمغفرة» (titre de section 1 — VLM +
+  contexte des 3 promesses ; OCR lisait بالمغمرة) ; «لماذا ضاعف» (VLM + grammaire ;
+  l'OCR lisait اذا) ; «في الآيتين» dual (descendeurs ي+ن visibles sous la ligne) ;
+  «ظَهَرَتِ التربية» (pointe du ẓāʾ visible au-dessus de la tête, t200 concordant ;
+  t150/t185 lisaient طهرت) ; «فإن حط رأسه» (t185+t200, Ibn ʿAǧība éd.) ;
+  «وهو خلقهم» (2 lectures, rendu وَهُوَ خَلَقَهُمْ).
+- **577 LIVRÉE** (الدرس 22, Leçon 30/38, 15e pdf-only) : AR 5 475 car + FR 9 125
+  car. Structure : أهداف (3) / تمهيد / 2 versets Warš cache ar[27]+ar[28] /
+  الشرح 3 gloses / استخلاص (2) / تفسير 3 parties (وعد بالمغفرة ومضاعفة الأجور /
+  مضاعفة الأجور فضلا — Ibn ʿAbbās «ليعلم» vs Ibn Masʿūd «لكيلا يعلم», 2 adresses,
+  2 asbāb al-nuzūl, clôture de la sourate + taḏyīl) / مقاصد (3) / تقويم (2) /
+  استثمار Ibn ʿAǧība (išārī, wilāya) / إعداد قبلي (المجادلة 1-4).
+- **Idad 578 (المجادلة 1-4) transcrits avec confiance variable** : «وَزُورًا»
+  (élevée — وزوز ×3 lectures) ; «فِي زَوْجِهَا» (moyenne-haute) ; «قَوْلَ» /
+  «مَنْكَرًا مِنَ الْقَوْلِ» / «يَتَمَاسَّا» (moyenne — reconstruits depuis les
+  fragments OCR réconciliés + lemmes vv1-3 ; la glose de 578 tranchera, pattern R78).
+  + «أبحث في أحكام الظهار وكفارته» (préparation ẓihār).
+- **QA navigateur (agent-browser) complète** : lecteur 577 «Leçon 30/38», badge
+  «Traduction savante», h1 bilingue, 2 versets (27)-(28) + NdT décompte, gloses FR
+  (ittaqū/āminū/yuʾtikum), réfs Bukhārī/433/27/332/7 rendues, NdT coquilles
+  123→122 et 6→7, citation Ibn ʿAǧība complète, إعداد القبلي المجادلة avec les 5
+  lemmes ; mode bilingue AR+FR (كِفْلَيْنِ ×2, نصيبين, tags 27/28) ; navigation
+  SUIVANT→578 (PDF placeholder, Leçon 31/38) par clic JS puis retour 577 ✓ ;
+  livre tafsir-2es **23/38 documents bilingues** ; accueil **984/1152 bilingues,
+  64 manuels** ; mobile 390 px overflow 0 px ; footer collé au bas (gapBelow 0) ;
+  console 0 erreur. Captures : tr-tmp/qa-r90-{577-reader,577-bilingual,577-mobile,
+  577-reader-bas,book}.png. lint 0 erreur (1 warning préexistant llm-translate.ts).
+  dev.log propre (GET /api/lessons/.../577 200).
+
+Stage Summary:
+- **ÉTAT : registre 494/950 (443 main + 51 LLM) ; 984/1152 bilingues ; tafsir-2es
+  23/38 (61 %) ; leçons pdf-only livrées 563-577 (15).** Dev server propre, 0 erreur
+  console, GitHub synchronisé jusqu'à R86 puis commit R90 à pousser.
+- **INCIDENT résorbé** : rollback R75→R90 récupéré via GitHub (28 commits) ; pertes
+  définitives = R87/R88/R89 (leçons 577 refonte faite ✓, **578 et 579 à refaire**,
+  puis 580-583, 584 فهرس, 585 مصادر pour compléter le livre). Règle : PUSHER
+  GitHub à CHAQUE leçon (les commits locaux non poussés sont perdus en cas de
+  rollback).
+- **Coquilles CMS cumulées ~68** (ce tour : الأنعام 123→122, البقرة 6→7, +
+  inconsistance label 577 Ḥafṣ vs marqueurs marocains).
+- **MÉTHODE R90 consolidée** : (1) VLM fiable sur crops de CHIFFRES et de mots
+  simples avec liste de candidats (لماذا vs اذا, بالمغفرة) mais hallucine sur
+  phrases naskh complètes ; (2) analyse glyphe-ASCII (composantes, creux, points)
+  décisive pour les chiffres ornementaux (٨ = double anneau maghrébin ≠ ٨ deux
+  points) ; (3) marqueurs ۝ du muṣḥaf = décompte marocain, labels éditoriaux =
+  parfois Ḥafṣ (577) — toujours vérifier les deux ; (4) le cache Warš arbitre les
+  coquilles de réf (6:122, 2:7).
+- **Priorités R91** : (1) leçon 578 (سورة المجادلة 1-4 — PDF 231-41.PDF via
+  pdfUrl ; VÉRIFIER d'abord la glose de 578 contre les idad transcrits ci-dessus,
+  corriger si divergence, pattern R78 ; versets cache s58 v1-4) ; (2) puis 579
+  (المجادلة 5-7), 580 (8-10), 581-583, 584-585 → OBJECTIF livre tafsir-2es
+  COMPLET (20e livre savant) ; (3) QA globale app.
+- **Risques** : idad 578 moyenne confiance (قَوْلَ/مَنْكَرًا مِنَ الْقَوْلِ/
+  يَتَمَاسَّا) ; push GitHub suspendu si token absent (le token a fonctionné pour
+  le fetch ce tour — push à tenter) ; cron 461273 probablement expiré (exec
+  limits) — à recréer si besoin.
