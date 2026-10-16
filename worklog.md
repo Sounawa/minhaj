@@ -6122,3 +6122,17 @@ Stage Summary:
   يَتَمَاسَّا) ; push GitHub suspendu si token absent (le token a fonctionné pour
   le fetch ce tour — push à tenter) ; cron 461273 probablement expiré (exec
   limits) — à recréer si besoin.
+- **POST-SCRIPTUM R90 (intel récoltée du cron job 462349 de la session perdue —
+  le payload a survécu au rollback côté plateforme)** : la session perdue avait
+  livré 578 (المجادلة 1-4 = Ḥafṣ 1-4, AUCUN offset ḥurūf pour s58) et 579
+  (المجادلة 5-7 = Ḥafṣ 5-7). Pour la REFACTURE 578/579 (R91/R92) : gloses 580
+  déjà OCR-vérifiées par la session perdue : «النَّجْوَى(?): يتحدثون سرا» /
+  «الإثم: المعصية» / «العدوان: الظلم» / «يَصْلَوْنَهَا: يقاسون حرّها» (re-vérifier
+  les lemmes exacts النَّجْوَى vs التَّنَاجِي) ; label bloc 580 [سورة المجادلة:
+  ١٠-٨] aperçu ; استخلاص 580 : «ما هو الجزاء الوارد في الآيات؟» / «ما هي الآداب
+  التي تضمنتها الآيات؟» ; thème 580 = آداب التناجي ; SURVEILLER la fusion
+  21-vs-22 des versets (5-7 alignés sur Ḥafṣ, la fusion est après v7, peut
+  apparaître dans 8-10) ; refs consécutives Bayḍāwī 193/5 (578) → 194/5 (579) ;
+  VLM = createVision UNIQUEMENT (chat.completions standard rejette les images,
+  erreur 1210) ; tesseract multi-résolutions + TESSDATA_PREFIX=/home/z/tessdata
+  (recréé ce tour) ; PDF via proxy translate.goog avec chemin arabe encodé %D8%A7%D9%84...
