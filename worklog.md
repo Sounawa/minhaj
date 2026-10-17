@@ -6740,3 +6740,22 @@ Stage Summary:
 - **RÈGLE D'OR 5/5** : idad N = الشرح N+1 (556→557, 557→558, 558→559, 559→560 attendu 7/7).
 - **Priorités R101** : (1) leçon 560 (فاطر 12-14, الدرس 5 — OCR frais + glossaire déjà craqué : عذب فرات/سآئغ شرابه/ملح أجاج/لحما طريا/حِلْيَةً/مواخر/قطمير ; idad à craquer contre CMS 16839) ; (2) 561 (15-18), 562 (19-26) → tafsir-2es COMPLET 38/38 ; (3) push GitHub dès nouveau token utilisateur.
 - **Risques** : token GitHub mort (bundle /tmp seule protection — PRIORITÉ absolue d'en obtenir un nouveau) ; leçon 562 = فاطر 19-26 (8 versets — la plus longue du livre, anticiper le tamhīd) ; API z-ai 429 persistant (VLM/web-search inutilisables toute la session — la méthode pixel+tesseract+CMS suffit).
+
+---
+Task ID: R100-bis (préparation R101 — analyse leçon 560, NON livrée)
+Agent: Z.ai Code (agent principal)
+Task: Pré-analyse complète de la leçon 560 (فاطر 12-14, الدرس 5) pour accélérer R101 — OCR + CMS 16823 + structure Alūsī décodée.
+
+Work Log:
+- OCR cache 560 créé (7 pages). CMS 16823 lu intégralement (6559 car AR + 12042 FR).
+- Verses v12-14 : squelette tanzil Warsh du quran-cache (aucun décalage Fāṭir).
+- GLOSSAIRE 560 = 7 termes (DÉJÀ VÉRIFIÉS en R100 pour l'idad de 559) : عَذْبٌ فُرَاتٌ/سَآئِغٌ شَرَابُهُ/مِلْحٌ أُجَاجٌ/لَحْمًا طَرِيًّا/حِلْيَةً/مَوَاخِرَ/قِطْمِيرٍ — les 7 sous-mots imprimés p2, ink-runs mesurés (e1 [233+110+149], e2 [228+223], e3 [250+151], e4 [486], e5 [377], e6 [448], e7 [447]).
+- TAFSĪR : 3 parties — أولا (البحران + 3 أوجه الحلية من البحرين + مواخر [التسهيل: 1/423] + لتبتغوا + الليل/النهار [التسهيل: 2/140] + الشمس/القمر) ; ثانيا (ذلكم الله ربكم + قطمير + إن تدعوهم + الأحقاف 4-5 + مريم 82-83 + ولا ينبئك مثل خبير) ; ثالثا (مقاصد 2).
+- CITATIONS INTER-SOURATES de ثانيا : الأحقاف 4-5 (fragment «وقل للذين كفروا…إن أطعتم...أولئك مثل الأنعام» — garble OCR : «وقوأ لوج ْوأ وي مر تيه مزال تو الجاع َم ع شْعَيهِمْخَللوة (© وزة اش لاد ركانوالهُم اغا وَصَانوأباحَتهِم حابي» + CMS slot vide [الأحقاف: 4-5]) ; مريم 82-83 (garble «(واقتذوايى حو الله #الهة ليضونرا نهم ور[ (8 كلك مكبر بجا ةتهة كرفو َلتِهِرضناً» + CMS slot vide [مريم: 82-83]).
+- **ALŪSĪ (الاستثمار) — structure DÉCODÉE pour R101** : [روح المعاني: 353/11 بتصرف]. Le passage compare النحل 14 vs فاطر 12 sur l'ORDRE des mots : النحل = «وَتَرَى الْفُلْكَ مَوَاخِرَ فِيهِ» (تقديم مواخر) vs فاطر = «وَتَرَى الْفُلْكَ فِيهِ مَوَاخِرَ» (معكوس). 4 slots Quran du CMS identifiés via les garbles OCR p6 : (1) نحل 14 fragment «وَتَرَى الْفُلْكَ مَوَاخِرَ فِيهِ» (garble «وكرى َلك مَوَأخِرَقةة») ; (2) نحل 18 «وَإِن تَعُدُّوا۟ نِعْمَةَ ٱللَّهِ لَا تُحْصُوهَا» (garble «ولى تَحْدٌواًنمْمة الل اتتُتْحُومَاً») ; (3) le mot «فِيهِ» (garble «(8ية») après «فَقَدَّمَ فِيهِ» ; (4) نحل 14 «وَلِتَبْتَغُوا۟ مِن فَضْلِهِۦ» AVEC wāw (garble «(َلتتتَكُوا») vs فاطر «لِتَبْتَغُوا۟» SANS wāw — «بِالنَّقَلَةِ فِيهَا» = le sens نقل de فضل.
+- IDAD 560 (pour 561, فاطر 15-18) : 5 slots CMS + question recherche («أنجز بحثا يتضمن مظاهر العدالة الإلهية بين العباد يوم القيامة»). Termes attendus (CMS 16839 defs + garbles p7) : «ٱلْفُقَرَآءُ» (garble «الْجْغْراء» = ف→ج ق→غ — def المحتاجون إليه في كل حال) ; «ٱلْغَنِيُّ ٱلْحَمِيدُ» (garble «عراصي»؟ — def الغني عن سائر خلقه المحمود) ; «مُثْقَلَةٌ» (garble «متْفْلَة» = ق→ف — def مثقلة بأوزارها) ; «تَدْعُ»؟ ou «لَا يُحْمَلُ مِنْهُ شَىْءٌ»؟ (def لا تجد من يستجيب) ; «تَزَكَّىٰ» (def طهر نفسه من الشرك والمعاصي). À vérifier pixel/ink-runs en R101 (la règle d'or : idad 560 = الشرح 561 — l'OCR 561 [615-11.PDF] à produire d'abord).
+- Consignes R101 : (1) télécharger 615-11.PDF + OCR 561 → vérifier idad 560 par ink-runs ; (2) livrer 560 (deliver-560.py — le CMS 16823 donne le texte intégral propre, l'OCR croise) ; (3) QA + commit + backup + push (si nouveau token).
+
+Stage Summary:
+- Leçon 560 : 100 % préparée (texte, structure, citations décodées, idad cibles) — livraison R101 = pure exécution (~1h).
+- ÉTAT : registre 529/950 ; tafsir-2es 35/38 ; GitHub token mort ; bundle fd90240 OK.
