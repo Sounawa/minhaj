@@ -6630,3 +6630,32 @@ Stage Summary:
 - **MÉTHODE (ajout)** : pour les notices biographiques et bibliographies, le CROISEMENT CORPUS (les autres livres minhaj ont les mêmes notices/index) est plus fiable que le VLM — toujours chercher d'abord une notice sœur dans tafsir-1ep/5ep/6ep, tafsir-tanawi-1/2, ulum-quran-2es avant le pixel.
 - **Priorités R98** : (1) leçons 556-562 (فاطر 1-26) → tafsir-2es COMPLET 38/38 ; (2) puis arbitrage utilisateur : (A) savant manuel vs (B) batch LLM pour les ~860 pdfOnly restants ; (3) hadith-1es 12884/12885/12889 en parallèle possible.
 - **Risques** : فاطر 1-3 (doc 556) a un pdfUrl encodé différemment (underscores) — vérifier le téléchargement ; le compte «38» de l'app = 37 lessons + intro (l'intro 18670 est déjà traduite).
+
+---
+Task ID: R98
+Agent: Z.ai Code (agent principal)
+Task: Continuer les traductions — leçon 556 (سورة فاطر 1-3, الدرس 1 du livre tafsir-2es, 1re des 7 leçons فاطر restantes).
+
+Work Log:
+- Reprise post-compression : lecture worklog (R97 clos à 585, registre 525/950) + push du commit en attente (b86cdba) → GitHub à jour.
+- OCR cache pdf-mut23h33-556 relu intégralement (7 pages, 7173 car) ; PDF re-téléchargé (l'URL à underscores a fini par répondre après retry — 404 transitoire).
+- **Vérification Warsh du bloc coranique** :
+  - p1 : pixel-analysis (projection d'encre) = 3 lignes (basmala centrée 4,5 cm + v1 sur 2 lignes) — structure IDENTIQUE à la leçon 570 livrée (basmala dans le v1) : confirmation par croisement structurel, VLM écho-rejeté 3 fois (méthode habituelle).
+  - v1 conforme au squelette tanzil lettre à lettre (sonde VLM ligne complète).
+  - p2 : 3 lignes = v2+v3, citation imprimée [سورة فاطر: 3-1] → plage 1-3 confirmée.
+  - **DIVERGENCE Warsh/Ḥafṣ 35:3 : «غَيْرِ»** (kasra sous le rāʾ) vs tanzil Ḥafṣ «غَيْرُ» — 3 sondes VLM indépendantes (crops 1800-2400 dpi) convergent vers la kasra = lecture de Warsh 'an Nāfiʿ. Squelette adapté. AUCUNE NdT comparative (directive Warsh-only respectée).
+- **Références bibliographiques pixel-vérifiées (2400 dpi + VLM digit-shapes)** : Qurṭubī 319/14 ET 321/14 ; Abū Ḥayyān 13/9 ; Bayḍāwī 253/4 (nombre wrappé retrouvé par TSV x=4390) ; Ibn Kaṯīr 24/2 ; Nasafī 76/3.
+- **Citations vérifiées mot à mot (web)** : rapport d'Ibn ʿAbbās (les deux bédouins) contre quran.ksu.edu.sa — «حتى أتاني» (et non أتى) confirmé par zoom 2000 dpi ; hadith d'Abū Saʿīd al-Ḫudrī (duʿāʾ après rukūʿ) contre Ṣaḥīḥ Muslim 476 (muslim.lna.io + islamweb) — garbles OCR résolus (أهل الثناء والمجد / لا مانع لما أعطيت / ولا ينفع ذا الجد منك الجد).
+- **Idad craqué par croisement** : «ٱلْأُمُورُ - ٱلْغُرُورُ - «حِزْبَهُۥ» - «ٱلسَّعِيرِ» = les mots des v4/v5/v6 de فاطر, confirmés par le glossaire de la leçon 557 (règle d'or : l'idad d'une leçon = le الشرح de la suivante) + formes tanzil v4-6.
+- Glossaire : «فَاطِرِ» / «أُو۟لِىٓ أَجْنِحَةٍ» (VLM 1600 dpi ×2). Note grammaticale «(من بعده) فيه حذف مضاف» lue par VLM.
+- deliver-556.py écrit + injecté : AR 7221 car + FR 12023 car ; 1 fix guillemet (Abū Ḥayyān : « Celui qui envoie… ») ; QA OK (46 guillemets, 0 arabe, balises 9) ; hand-set → registre 526/950.
+- Commit f36ddd4 + push GitHub + backup.sh.
+- **QA navigateur (agent-browser)** : leçon /#/livre/tafsir-2es/pdf-mut23h33-556 — 12 sections, H1 FR+AR (الدرس 1), basmala+v1+v2+v3 rendus, غَيْرِ Warsh visible, 319/14 + 253/4 visibles, idad rendu, 0 erreur console, capture VLM : rendu bilingue propre, RTL correct, pas de chevauchement.
+- **DÉCOUVERTE STRUCTURELLE (correction R97)** : les leçons 556-562 SONT des doublons verse-range des leçons CMS 16797-16851 (R77 avait raison, le reversal R97 était erroné) — MAIS les versions CMS sont DÉGRADÉES : blocs coraniques vides (images minhaj.ma perdues), citations bidi-inversées («14 / 319»). La livraison pdfOnly 556 est donc strictement SUPÉRIEURE (versets Warsh complets). Décision : livrer quand même 557-562 (contenu complet) ; le masquage UX des 14 doublons dégradés reste une option ultérieure (comme le disait déjà R77).
+
+Stage Summary:
+- **ÉTAT : registre 526/950 ; tafsir-2es 32/38 (intro + 31 leçons ; restent 557-562, 6 leçons pdfOnly) ; GitHub à jour (f36ddd4) ; backup OK.**
+- **La leçon 556 est la 1re du livre (الدرس 1)** — convention de numérotation confirmée (583=28, 570=15 → 556=1).
+- **MÉTHODE (ajout)** : (a) la basmala d'ouverture de sourate se confirme par structure (ligne centrée ~4,5 cm au-dessus du 1er verset, identique à 570) — les sondes VLM de transcription restent écho-inversibles sur la basmala, le croisement structurel est la voie fiable ; (b) pour les divergences Warsh/Ḥafṣ de vocalisation (غَيْرِ/غَيْرُ), 3 sondes VLM indépendantes sur crops distincts + la grammaire du verset tranchent ; (c) les expressions de l'idad se craquent TOUJOURS par la glose de la leçon suivante (556→557 a encore fonctionné) ; (d) 404 habous.gov.ma = parfois transitoire, retry avant de croire l'URL morte.
+- **Priorités R99** : (1) leçons 557-562 (فاطر 4-6, 7-10, 10-11, 12-14, 15-18, 19-26) → tafsir-2es COMPLET 38/38 — OCR caches déjà présents pour 557-558, à produire pour 559-562 ; (2) arbitrage utilisateur : (A) savant manuel vs (B) batch LLM pour les ~860 pdfOnly restants ; (3) option UX : masquer/étiqueter les 14 doublons CMS dégradés (tafsir-2es 16797-16851, tafsir-3es 592-598).
+- **Risques** : les pdfUrl de 559-562 non testés ; la leçon 558 (فاطر 7-10 selon le livre, intitulée 7-9 côté CMS) — vérifier la vraie coupe au muṣḥaf (rosettes) avant transcription ; vocabulaire décoratif du الشرح de 557+ à craquer par l'idad de 556 (déjà fait) et la glose de 558.
