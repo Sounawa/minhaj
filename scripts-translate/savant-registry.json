@@ -488,7 +488,8 @@
     "14342",
     "14352",
     "14370",
-    "14382"
+    "14382",
+    "14417"
   ],
   "llm": {
     "13886": {
@@ -570,11 +571,6 @@
       "at": "2026-10-09T16:42:38.326Z",
       "bookId": "fiqh-6ep",
       "titleFr": "Jurisprudence : Zakat sur les marchandises commerciales"
-    },
-    "14417": {
-      "at": "2026-10-09T17:15:56.702Z",
-      "bookId": "tafsir-6ep",
-      "titleFr": "Sourate Al-Muddaththir, versets 30-31"
     },
     "14423": {
       "at": "2026-10-09T17:21:07.276Z",
