@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "قال ابن بشير رحمه الله: «وَلا خِلافٌ عِنْدَنَا فِي وُجُوبِ النِّيَّةِ فِي الصَّلَاةِ،\nوَعِنْدَ الْأَكْثَرِ أَمْرُهَا عَلَى الْعُمُومِ! وَهَلِ الْأَمْرُ لِلْعَيْنِ أَمْ لِلتَّمْيِيزِ؟ وَهَلْ يَقَعُ\nعِتَاقٌ وَعِتْقٌ، وَالنِّيَّةُ الشَّرْعِيَّةُ بِيْنَ الْعَادَاتِ وَالْعِبَادَاتِ».\n[الاستذكار لابن عبد البر ج 2 ص 747].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792342879,
+  "id": "20261019010102877bdc6f5b594484",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261019010102877bdc6f5b594484",
+  "usage": {
+    "completion_tokens": 227,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1231,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1458
+  }
+}

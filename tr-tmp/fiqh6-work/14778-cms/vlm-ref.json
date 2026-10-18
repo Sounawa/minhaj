@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "بناءً على المرشح المختار (المرجع الأول) والصورة المرفقة، إليك البيانات المستخرجة:\n\n*   **اسم الكتاب:** التنبيه على مبادئ التوجيه\n*   **الجزء:** 2 (أو ج 2)\n*   **الصفحة:** 147\n*   **عبارة «بتصرف»:** **نعم**، توجد. (حيث ورد في النص: «بتصرف — أو...»)\n\n**ملاحظة:** الصورة تُظهر جزءاً من العنوان داخل الأقواس وهو: **[التنبيه على مبادئ التوجيه؛ ج 2 ص 147]**.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792342944,
+  "id": "2026101901022123b442fa46af4b79",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "2026101901022123b442fa46af4b79",
+  "usage": {
+    "completion_tokens": 163,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 718,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 881
+  }
+}
