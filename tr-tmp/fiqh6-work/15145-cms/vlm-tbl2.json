@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "أمثلة، الحكم",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792343979,
+  "id": "202610190119351d9d5526a8a84070",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610190119351d9d5526a8a84070",
+  "usage": {
+    "completion_tokens": 8,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 4623,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4631
+  }
+}

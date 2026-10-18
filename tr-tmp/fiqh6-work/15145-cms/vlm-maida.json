@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "جَعَلَ ٱللَّهُ ٱلْكَعْبَةَ ٱلْبَيْتَ ٱلْحَرَامَ\nقِيَٰمًا لِّلنَّاسِ وَٱلشَّهْرَ ٱلْحَرَامَ وَٱلْهَدْىَ وَٱلْقَلَٰئِدَ ۚ ذَٰلِكَ\nلِتَعْلَمُوٓا۟ أَنَّ ٱللَّهَ يَعْلَمُ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ وَأَنَّ\nٱللَّهَ بِكُلِّ شَىْءٍ عَلِيمٌ\n\nعدد الأسطر: 4",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792343995,
+  "id": "20261019011949c1f6c827729c449e",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261019011949c1f6c827729c449e",
+  "usage": {
+    "completion_tokens": 246,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 614,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 860
+  }
+}
