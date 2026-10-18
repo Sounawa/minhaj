@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "IMAGE1=١ IMAGE2=٠\n\n**Explanation of digit strokes:**\n*   **١ (One):** Appears as a single, short vertical stroke or a small vertical bar. In the first image, you can see this vertical stroke on the left side.\n*   **٠ (Zero):** Appears as a solid dot or small circle. In the second image, you can see this dot on the left side.\n\nThe other digits in your candidate lists would look different: **٢** has a loop on top and a tail; **٣** looks like a mirrored '3' or a heart shape; **٤** looks like a mirrored '3' with an extra stroke or like an angular 'x'; **٥** looks like a reversed heart or an oval with a tail; **٧** is shaped like a 'V'. Neither image shows these shapes.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792339631,
+  "id": "202610190007075e565a03997b4952",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610190007075e565a03997b4952",
+  "usage": {
+    "completion_tokens": 184,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 374,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 558
+  }
+}

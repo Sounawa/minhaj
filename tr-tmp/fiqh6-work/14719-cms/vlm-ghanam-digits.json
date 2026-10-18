@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "بناءً على الصورة المرفقة، إليك الأرقام الهندية الظاهرة في عمود **عدة الغنم** من الأعلى إلى الأسفل:\n\n*   **٣٩**\n*   **٤٠**\n*   **١٢١**\n*   **٢٠١**\n\n(ملاحظة: الصورة تظهر الأرقام بالشكل التالي: 1 الى 39، 40 الى 120، 121 الى 200، 201 الى 399).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792340282,
+  "id": "202610190018001ee50f1ae58b4f17",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610190018001ee50f1ae58b4f17",
+  "usage": {
+    "completion_tokens": 119,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 281,
+    "prompt_tokens_details": {
+      "cached_tokens": 2
+    },
+    "total_tokens": 400
+  }
+}

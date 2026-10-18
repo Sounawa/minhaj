@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "DIGIT_A(image1)=٥ DIGIT_B(image2)=٥. Both images show a closed hollow oval shape.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792339758,
+  "id": "2026101900091760c06d76b4254184",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "2026101900091760c06d76b4254184",
+  "usage": {
+    "completion_tokens": 27,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 404,
+    "prompt_tokens_details": {
+      "cached_tokens": 2
+    },
+    "total_tokens": 431
+  }
+}

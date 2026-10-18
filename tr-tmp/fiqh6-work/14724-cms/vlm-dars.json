@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "الدرس 6\nالحج والعمرة وآداب زيارة قبره صلى\nالتوحيد\nبسم الله الرحمن الرحيم الحمد لله\nالكتاب المدرسي\nالفقه\nالسنة السادسة من التعليم الابتدائي",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792339435,
+  "id": "202610190003532b6a80ebf8034e34",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610190003532b6a80ebf8034e34",
+  "usage": {
+    "completion_tokens": 64,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 214,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 278
+  }
+}
