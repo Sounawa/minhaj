@@ -491,7 +491,8 @@
     "14382",
     "14417",
     "14423",
-    "14469"
+    "14469",
+    "14516"
   ],
   "llm": {
     "13886": {
@@ -573,11 +574,6 @@
       "at": "2026-10-09T16:42:38.326Z",
       "bookId": "fiqh-6ep",
       "titleFr": "Jurisprudence : Zakat sur les marchandises commerciales"
-    },
-    "14516": {
-      "at": "2026-10-09T17:41:29.407Z",
-      "bookId": "tafsir-6ep",
-      "titleFr": "Sourate Al-Qiyamah, versets 35 à 39"
     },
     "14523": {
       "at": "2026-10-09T17:43:30.637Z",
