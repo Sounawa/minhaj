@@ -7080,3 +7080,22 @@ Stage Summary:
 - **Décisions clés** : (1) promote-llm.py comble le trou du pipeline (les register existants ignoraient les docIds déjà LLM) ; (2) quand le manuel imprime une réf erronée, la doctrine du tour = contenu canonique en principal + note imprimée ; (3) les baseline LLM confondent préparation (leçon suivante) et citations courantes — toujours re-restaurer depuis le cache ; (4) « qu'Allah les agrée » (raḍiya) est réservé aux Compagnons — raḥima pour les savants.
 - **Risques** : (a) token GitHub ghp_7At… toujours actif mais appelé à expirer — bundle /tmp régénéré après chaque livraison (vérifié) ; (b) les notes qirāʾiques/grammaticales de ce tour (yuṣallā, takhnusu, ʿasʿasa contronyme, tarkhīm) sont techniques — relecture recommandée à l'occasion.
 - **Priorités suivantes** : (1) 54e livre : hadith-1es (27 leçons GT restantes sur 31, 4 main) ou tawhid-1es (29 GT, 0 main) — choisir le livre au meilleur ratio learn/GT ; (2) backlog 873 pdfOnly via OCR pipeline ; (3) éventuelle relecture qirāʾique du tour.
+
+---
+Task ID: R116
+Agent: Z.ai Code (session principale — « met à jour l'interface de minhaj pour savoir vraiment où tu en es »)
+Task: (1) Vérification push GitHub ; (2) NOUVELLE section « État des traductions » sur la home — vision honnête à 3 tiers (savant/machine/PDF) ; (3) FIX badge trompeur « traduction savante intégrale » ; (4) réponse utilisateur sur l'avancement réel
+
+Work Log:
+- **GITHUB** : vérifié synchronisé — 76b9004 (worklog R115) = origin/main, 0 commit en attente. Registre : 532 main + 0 LLM (tafsir-5ep 53e livre complet confirmé).
+- **STATS RÉELLES calculées** (API /api/books + registre) : 1854 documents au total = 532 savants (28,7 %) + 468 brouillons machine (25,2 %) + 854 PDF-only (46,1 %). Livres VRAIMENT complets (docsSavant ≥ docsTotal) : 20/64. Les 36 « complets bilingues » incluent 16 livres GT-only.
+- **NOUVEAU COMPOSANT** src/components/minhaj/translation-progress.tsx : section « Où en est le chantier ? » insérée entre le hero et la bibliothèque — grande barre empilée 3 segments (or savant / ambre clair machine / gris pierre PDF) + légende détaillée + 4 cartes métriques (livres complets 20/64, 532 traductions savantes, 468 à hisser, 854 PDF à extraire) + tableau par matière (16 matières triées, mini-barres empilées, badges livres complets) + bandeau « Les 20 livres achevés » (chips cliquables → /livre/{id}) + panneau « Le chemin qui reste ».
+- **FIX badge trompeur** home.tsx : l'ancienne définition fullSavant (docsSavant ≥ docsFr) affichait « traduction savante intégrale » sur 48 livres dont des à peine entamés (tafsir-3es 7/43, hadith-6ep 2/29…) — corrigé en docsSavant ≥ docsTotal (vraie complétude, 20 livres). Barres des cartes livres désormais empilées savant+machine sur fond PDF, libellés « X/Y savantes » honnêtes.
+- **types.ts** : stats.docsSavant ajouté au miroir client LibraryPayload.
+- **QA agent-browser** : desktop 1440px + mobile 390px — section rendue (hauteur 3010px desktop / 4761px mobile), 20 chips complets, légende 532/468/854 correcte, 0 overflow horizontal, footer sticky OK, 0 erreur console (ping volontaire seul). Lint 0 erreur (7 warnings préexistants). Captures qa-r116-etat-desktop/matieres/livres/mobile/final.png ×5.
+
+Stage Summary:
+- **ÉTAT : SAIN. L'interface reflète désormais l'avancement réel : 29 % du corpus en qualité savante (532/1854), 20/64 livres complets, reste = 468 brouillons machine à hisser + 854 PDF à extraire.**
+- **Décisions clés** : (1) définition honnête de « livre complet » = TOUS les documents (PDF-only compris) en savant — l'ancienne définition gonflait artificiellement (48 badges intégraux vs 20 réels) ; (2) le vocabulaire unifié « documents » (leçons + préfaces) dans toute la section ; (3) la barre 3 tiers est le langage visuel unique (home hero cartes, section état, cartes livres, lignes matières).
+- **Risques** : aucun nouveau. Token GitHub actif.
+- **Priorités suivantes** : (1) 54e livre : hadith-1es (27 GT restants) ou tawhid-1es (29 GT) ; (2) backlog 854 pdfOnly via OCR ; (3) réponse à l'utilisateur sur le rythme (chaque leçon savante = extraction + vérification versets/hadiths à la source, impossible à industrialiser sans perte de qualité).

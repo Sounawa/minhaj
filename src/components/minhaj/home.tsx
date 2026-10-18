@@ -26,6 +26,7 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 import { navigate, useLastDoc, useLibrary } from "./hooks";
 import { SubjectTile } from "./subject-icon";
+import { TranslationProgress } from "./translation-progress";
 import { CYCLES, type CycleId } from "./types";
 
 function fr(n: number) {
@@ -296,6 +297,8 @@ export function Home() {
       />
       {stats.booksDownloaded < stats.booksTotal && <RecoveryBanner />}
 
+      <TranslationProgress data={data} />
+
       <section
         id="bibliotheque"
         className="mx-auto max-w-7xl scroll-mt-20 px-4 py-10 sm:px-6 lg:px-8"
@@ -407,10 +410,12 @@ export function Home() {
               const level = levelById[b.level];
               const subj = subjectById[b.subject];
               const pct = b.docsTotal ? Math.round((b.docsFr / b.docsTotal) * 100) : 0;
-              const savantPct = b.docsFr ? Math.min(100, Math.round((b.docsSavant / b.docsFr) * 100)) : 0;
-              // Intégrale = toutes les traductions FR existantes sont de niveau savant
-              // (les leçons PDF-only, sans texte source, sont hors du champ de la traduction).
-              const fullSavant = b.docsFr > 0 && b.docsSavant >= b.docsFr;
+              // Livre réellement complet : TOUTES les leçons (PDF-only compris)
+              // sont couvertes par la traduction savante.
+              const fullSavant = b.docsTotal > 0 && b.docsSavant >= b.docsTotal;
+              const machine = Math.max(0, b.docsFr - b.docsSavant);
+              const savantW = b.docsTotal ? (b.docsSavant / b.docsTotal) * 100 : 0;
+              const machineW = b.docsTotal ? (machine / b.docsTotal) * 100 : 0;
               return (
                 <motion.li
                   key={b.id}
@@ -465,27 +470,44 @@ export function Home() {
                             </span>
                             <span className="font-medium text-primary">{pct}%</span>
                           </div>
-                          <Progress value={pct} className="mt-1.5 h-1.5 bg-amber-800/10" />
+                          <div
+                            role="img"
+                            aria-label={`${b.docsSavant} documents savants, ${machine} brouillons machine, ${b.docsTotal - b.docsFr} en PDF seul`}
+                            className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-amber-800/10"
+                          >
+                            <div className="flex h-full w-full">
+                              <div
+                                className="h-full bg-gradient-to-r from-amber-600 to-orange-700 dark:from-amber-500 dark:to-orange-600"
+                                style={{ width: `${savantW}%` }}
+                              />
+                              <div
+                                className="h-full bg-amber-300/80 dark:bg-amber-400/50"
+                                style={{ width: `${machineW}%` }}
+                              />
+                            </div>
+                          </div>
                           <div className="mt-1 flex items-center justify-between text-[10px]">
                             {fullSavant ? (
                               <Badge
                                 variant="outline"
-                                title={`Toutes les traductions de ce manuel (${b.docsSavant}/${b.docsFr}) sont de niveau savant (registre)`}
+                                title={`Livre achevé : les ${b.docsSavant} documents du manuel sont tous en traduction savante`}
                                 className="gap-1 rounded-full border-amber-500/50 bg-gradient-to-br from-amber-100 to-yellow-50 px-2 py-0 font-semibold text-amber-800 dark:border-amber-400/30 dark:from-amber-900/50 dark:to-amber-800/30 dark:text-amber-200"
                               >
                                 <Award className="size-3" aria-hidden="true" />
-                                traduction savante intégrale
+                                livre complet — savant
                               </Badge>
                             ) : b.docsSavant > 0 ? (
                               <span className="flex items-center gap-1 text-muted-foreground">
                                 <BookMarked className="size-3 text-amber-700 dark:text-amber-400" aria-hidden="true" />
-                                {b.docsSavant} savante{b.docsSavant > 1 ? "s" : ""}
+                                {b.docsSavant}/{b.docsTotal} savantes
                               </span>
                             ) : (
                               <span className="text-muted-foreground/70">trad. machine</span>
                             )}
-                            {b.docsSavant > 0 && !fullSavant && (
-                              <span className="font-medium text-amber-700 dark:text-amber-400">{savantPct}%</span>
+                            {!fullSavant && b.docsSavant > 0 && (
+                              <span className="font-medium text-amber-700 dark:text-amber-400">
+                                {Math.round(savantW)}% savant
+                              </span>
                             )}
                           </div>
                         </>
