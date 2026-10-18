@@ -485,7 +485,8 @@
     "13878",
     "14139",
     "14169",
-    "14342"
+    "14342",
+    "14352"
   ],
   "llm": {
     "13886": {
@@ -567,11 +568,6 @@
       "at": "2026-10-09T16:42:38.326Z",
       "bookId": "fiqh-6ep",
       "titleFr": "Jurisprudence : Zakat sur les marchandises commerciales"
-    },
-    "14352": {
-      "at": "2026-10-09T16:55:38.995Z",
-      "bookId": "tafsir-6ep",
-      "titleFr": "Sourate Al-Muzzammil, versets 9-17"
     },
     "14370": {
       "at": "2026-10-09T17:01:37.604Z",
