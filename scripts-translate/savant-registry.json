@@ -519,29 +519,13 @@
     "13897",
     "13915",
     "13920",
-    "13936"
+    "13936",
+    "13979",
+    "13992",
+    "14005",
+    "14018"
   ],
   "llm": {
-    "13979": {
-      "at": "2026-10-09T16:57:01.066Z",
-      "bookId": "tafsir-5ep",
-      "titleFr": "Sourate al-Inshiqāq, versets 10 à 15"
-    },
-    "13992": {
-      "at": "2026-10-09T17:04:42.585Z",
-      "bookId": "tafsir-5ep",
-      "titleFr": "Sourate al-Burūj, versets 1 à 9"
-    },
-    "14005": {
-      "at": "2026-10-09T17:06:05.653Z",
-      "bookId": "tafsir-5ep",
-      "titleFr": "Sourate al-Burūj, versets 10 à 16"
-    },
-    "14018": {
-      "at": "2026-10-09T17:11:49.374Z",
-      "bookId": "tafsir-5ep",
-      "titleFr": "Sourate al-Burūj, versets 17 à 22"
-    },
     "14052": {
       "at": "2026-10-09T17:16:44.084Z",
       "bookId": "tafsir-5ep",
