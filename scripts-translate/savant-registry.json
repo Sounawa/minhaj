@@ -528,29 +528,11 @@
     "14063",
     "16743",
     "16751",
-    "16757"
+    "16757",
+    "16767",
+    "16784",
+    "14604",
+    "11509"
   ],
-  "llm": {
-    "14604": {
-      "at": "2026-10-09T16:31:20.738Z",
-      "bookId": "tafsir-6ep",
-      "titleFr": "Présentation du manuel"
-    },
-    "16767": {
-      "at": "2026-10-09T17:41:38.753Z",
-      "bookId": "tafsir-5ep",
-      "titleFr": "Sourate al-Takwīr, versets 1 à 14"
-    },
-    "16784": {
-      "at": "2026-10-09T17:43:21.893Z",
-      "bookId": "tafsir-5ep",
-      "titleFr": "Sourate al-Takwīr, versets 15 à 21"
-    },
-    "11509": {
-      "at": "2026-10-14T07:38:00.000Z",
-      "bookId": "fiqh-tanawi-1",
-      "titleFr": "Présentation du manuel",
-      "note": "reconstruit post-reset sandbox (R71) — livraison worker R64"
-    }
-  }
+  "llm": {}
 }
