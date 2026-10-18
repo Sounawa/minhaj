@@ -496,7 +496,8 @@
     "14523",
     "14536",
     "14543",
-    "14555"
+    "14555",
+    "14725"
   ],
   "llm": {
     "13886": {
@@ -598,11 +599,6 @@
       "at": "2026-10-09T16:51:12.475Z",
       "bookId": "fiqh-6ep",
       "titleFr": "Jurisprudence sur le profit, la progéniture et ce qui est soumis à la zakat"
-    },
-    "14725": {
-      "at": "2026-10-09T16:52:21.734Z",
-      "bookId": "fiqh-6ep",
-      "titleFr": "Jurisprudence : ce qui est inclus dans les fonds de la zakat"
     },
     "14732": {
       "at": "2026-10-09T17:02:12.114Z",
