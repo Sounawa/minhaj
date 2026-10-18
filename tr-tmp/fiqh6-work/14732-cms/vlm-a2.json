@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "شَهْرُ رَمَضَانَ الَّذِي أُنْزِلَ فِيهِ الْقُرْآنُ هُدًى لِلنَّاسِ وَبَيِّنَاتٍ مِنَ الْهُدَىٰ\nوَالْفُرْقَانِ ۚ فَمَن شَهِدَ مِنكُمُ الشَّهْرَ فَلْيَصُمْهُ ۖ وَمَن كَانَ مَرِيضًا\nأَوْ عَلَىٰ سَفَرٍ فَعِدَّةٌ",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792341647,
+  "id": "20261019004032cf75c4db2e384cec",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261019004032cf75c4db2e384cec",
+  "usage": {
+    "completion_tokens": 171,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1823,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1994
+  }
+}
