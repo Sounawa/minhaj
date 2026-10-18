@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Voici la transcription complète et précise du texte de l'image, structurée selon les trois cas de figure présentés dans le tableau (le commerçant gérant, le commerçant stockeur avec vente, et le commerçant stockeur sans vente) :\n\n**1. Cas du commerçant gérant (*al-tājir al-mudīr*)**\n> **الإكثار التاجـر مديـراً**\n> يُقوِّم في كل عام ما عنده من عروض التجارة بما ينقص عن النصاب ويُخرج الزكاة منها في السوق، ويزكي ما نما من ماله من الربح، ويريك الصُّور.\n\n**2. Cas du commerçant stockeur après la vente (*al-tājir al-muḥtakir* - première opinion)**\n> **الإكثار التاجـر محتكراً**\n> زكى ما باعه من سلعته عند قبضه الثمن لسنة واحدة فقط من يوم ملك الأصل إذا كان قد مرّ على تجارته حول كامل ولو أقامت العروض عنده أعواماً.\n\n**3. Cas du commerçant stockeur sans vente ou stockage prolongé (*al-tājir al-muḥtakir* - deuxième opinion)**\n> **ألـك التاجـر محتكراً**\n> زكى كل مال بيده.\n> لما رأى الكتاب المدرسي أنَّ قَفْلةً تُركت في المخزن، ولم تصرف على السوق، ولا أُخذت للتجارة.\n\n---\n**Note sur la structure :** Le tableau distingue clairement entre :\n*   **Le *Mudīr* (gérant) :** Évalue annuellement tout son stock de marchandises (*ʿurūḍ al-tijāra*) et paie la zakat sur la valeur totale (capital + bénéfices).\n*   **Le *Muḥtakir* (stockeur/spéculateur) :** Selon la première règle citée dans votre fragment, il ne paie la zakat que sur le prix de vente reçu (*thaman*), pour une seule année (*hawl wahid*), à compter de la date d'acquisition du capital initial (*aṣl*), même si les marchandises sont restées en stock plusieurs années.\n*   **La troisième ligne** semble présenter une variante ou un cas particulier où le commerçant stockeur doit zaker tout l'argent qu'il a en main, notamment si les marchandises sont restées enfermées dans l'entrepôt sans être mises sur le marché.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792337936,
+  "id": "20261018233845c95cbbfcd4084b42",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018233845c95cbbfcd4084b42",
+  "usage": {
+    "completion_tokens": 607,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 4230,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4837
+  }
+}

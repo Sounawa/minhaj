@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "فإن كان الاحتكار أقلّ من ذلك نزر كلّ سنة",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792338072,
+  "id": "20261018234111ab3170034ffd4c30",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018234111ab3170034ffd4c30",
+  "usage": {
+    "completion_tokens": 18,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1263,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1281
+  }
+}
