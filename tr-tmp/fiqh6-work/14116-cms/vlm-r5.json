@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "La transcription exacte, mot à mot, des deux lignes est :\n\n**5 - مَجِيءُ السَّاعِي فِي**\n**الْمَاشِيَةِ إِن وُجِدَ.**\n\nCela correspond au **candidat A** : « *majīʾu al-sāʿī fī al-māshiya in wujida* » (l'arrivée du collecteur pour le bétail, s'il y en a un).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792336166,
+  "id": "20261018230923f278bc3d5ff841eb",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018230923f278bc3d5ff841eb",
+  "usage": {
+    "completion_tokens": 117,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1081,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1198
+  }
+}

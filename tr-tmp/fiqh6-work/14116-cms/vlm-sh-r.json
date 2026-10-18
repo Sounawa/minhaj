@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) Voici la liste complète des éléments numérotés visibles, dans l'ordre et avec leur texte arabe exact :\n\n1. **الإسلام**\n2. **مالك النصاب**\n3. **مِلكُ المال**\n4. **نَماءُ الكُلِّ في غَيْرِ الحَرْثِ وَالمَاشِيَة.**\n5. **مُضيُّ السَّنَةِ في غَيْرِ المُقَاسَمَةِ أَوْ رَبْح.**\n6. **عَدَمُ الدَّينِ في غَيْرِ عَيْنٍ.**  \n   *(Note : Le texte se poursuit sur une ligne suivante qui commence par « .الحرث والمعادن »)*\n\n(2) Il y a au total **6** éléments numérotés visibles dans cette cellule.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792335825,
+  "id": "20261018230341c91fe37f3b184928",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018230341c91fe37f3b184928",
+  "usage": {
+    "completion_tokens": 216,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1828,
+    "prompt_tokens_details": {
+      "cached_tokens": 2
+    },
+    "total_tokens": 2044
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1- النية\n2- إخراجها بعد وجوبها\n3- دفعها إلى الأصناف المستحقين\n4- الإخراج قبل غروب شمس.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792335925,
+  "id": "20261018230524f900742d8ed743b5",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018230524f900742d8ed743b5",
+  "usage": {
+    "completion_tokens": 43,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1794,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1837
+  }
+}

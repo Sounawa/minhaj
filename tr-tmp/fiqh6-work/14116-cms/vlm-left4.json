@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "4 - عدم المنّ والأذى",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792336095,
+  "id": "20261018230814441e6a59dea44493",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018230814441e6a59dea44493",
+  "usage": {
+    "completion_tokens": 9,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1203,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1212
+  }
+}

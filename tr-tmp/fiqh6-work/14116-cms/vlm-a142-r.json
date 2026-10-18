@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) Le candidat **A** correspond.\n(2) Transcription mot à mot : **وَءَاتُوا۟ حَقَّهُۥ يَوْمَ حَصَادِهِۦ**",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792335691,
+  "id": "20261018230130a4716657d8104d2c",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018230130a4716657d8104d2c",
+  "usage": {
+    "completion_tokens": 56,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1077,
+    "prompt_tokens_details": {
+      "cached_tokens": 2
+    },
+    "total_tokens": 1133
+  }
+}

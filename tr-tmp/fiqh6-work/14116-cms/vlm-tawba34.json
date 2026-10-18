@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) Transcription mot à mot du texte dans l'image :\n\nوَالَّذِينَ يَكْنِزُونَ الذَّهَبَ وَالْفِضَّةَ وَلَا يُنفِقُونَهَا فِي سَبِيلِ اللَّهِ فَبَشِّرْهُم بِعَذَابٍ أَلِيمٍ\n\n(2) Le texte correspond **entièrement** au candidat A (fin de la sourate at-Tawba, verset 34).\n\n(3) **Oui**, il y a une référence imprimée à la fin : un médaillon contenant le numéro **٣٤** (34), indiquant le numéro du verset.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792335614,
+  "id": "20261018230009a55d1c76947d4b0a",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018230009a55d1c76947d4b0a",
+  "usage": {
+    "completion_tokens": 178,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1947,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2125
+  }
+}
