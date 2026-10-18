@@ -7041,3 +7041,42 @@ Stage Summary:
 - **Décisions clés** : (1) le token GitHub expire périodiquement (2 tokens morts en 2 tours) — le bundle /tmp reste la protection systématique, régénéré après CHAQUE livraison ; (2) les hadiths de manuels sont souvent ABRÉGÉS vs canonique (ʿUmar فتؤذي الضعيف absent du manuel — restitué + note implicite via traduction intégrale après vérification web-search) ; (3) les tables d'exercice vides = bordures seules (densité d'encre ~60 px) : restituer en-têtes + étiquettes, cellules vides en <td></td> ; (4) fiqh-6ep : versets cités avec numérotation manuel ≈ cache-1 (Baqara manuel 183 = cache 184) — convention « cache en principal + le manuel imprime… » maintenue partout.
 - **Risques** : (a) token GitHub ghp_7At… expirera à terme — si push échoue « Invalid token », vérifier ~/.git-credentials + bundle ; (b) VLM volage sur poésie/versets dégradés — OCR par bandes + web-search restent la voie royale.
 - **Priorités suivantes** : (1) 53e livre : choisir le prochain livre LLM-dense (hadith-6ep 30 leçons ou fiqh-5ep — vérifier registre) ; (2) backlog 873 pdfOnly via OCR pipeline ; (3) le compte LLM global restant = 19 leçons à upgrader.
+
+---
+Task ID: R115
+Agent: Z.ai Code (session principale — « continue », trace 1a15068bd995f821)
+Task: Reprise tafsir-5ep : upgrade LLM→main des 17 leçons restantes + 2 intros (14604, 11509) → registre 0 LLM + 53e LIVRE COMPLET
+
+Work Log:
+- **ÉTAT INITIAL** : 532 savants = 513 main + 19 LLM. Objectif : promouvoir les 19 LLM en main. Diagnostic registre : 17 leçons tafsir-5ep (13886→16784) + 2 intros (14604 tafsir-6ep, 11509 fiqh-tanawi-1). Sous-agents tentés (4×) — 3 échecs (overload/context) + 1 succès (13907) ; suite du travail réalisée EN DIRECT dans la session principale, un doc à la fois.
+- **OUTIL nouveau** : scripts-translate/promote-llm.py — promotion LLM→main atomique au registre (hand-register.py et hand-set.py refusaient de promouvoir un docId déjà LLM, d'où l'impasse initiale sur 13886).
+- **19 LIVRAISONS LLM→main** (pattern : extract.py → lecture src.html+gt.html → versets vérifiés quran-cache.json → up-script tr-tmp/scripts/up-<docId>.py → exécution + promote + backup.sh) :
+  - 13886 Infiṭār 1-8 (modèle d'or : Qiyāma 13 restaurée canonique vs conflation LLM ; préparation Infiṭār 9-14 restituée ; istithmār Rāzī تسويل→embellissement, ستور مرخاة→voiles déployés)
+  - 13907 Muṭaffifīn 1-6 (livré par sous-agent : citations OCR vides restaurées, table شرح décodée par croisement 13931, 8 expressions préparation Muṭaffifīn 7-14)
+  - 13897 Infiṭār 9-19 (Qāf 17-18 restaurée — 2 scribes par personne ; préparation = Muṭaffifīn 1-6 suivante, la baseline y mettait à tort des fragments d'Infiṭār)
+  - 13915 Muṭaffifīn 7-17 (Ibn Kathīr 8/346 sijjīn ; hadith Tirmidhī rān ; badal/bayān v10-11)
+  - 13920 Muṭaffifīn 18-28 (Ibn Ǧuzayy Tashīl 2/462 ʿIlliyyūn ; Rāzī 31/90 ; ʿAbasa 38-39 span « 39-38 » inversé corrigé ; harmonisation 13931)
+  - 13936 Inshiqāq 1-9 (jawāb elidé 3 estimations + renvoi Takwīr/Infiṭār ; 2 narrations ʿĀʾisha Bukhārī riqāḥ ; span « 8-7 » corrigé)
+  - 13979 Inshiqāq 10-15 (Ḥāqqah 25-29 restituée, span « 24-29 » noté ; Ḥadīd 20 span « 19 » noté ; yuṣallā qirāʾa ḍamma/fatha/shadda ; أنْ légère de أنَّ)
+  - 13992 Burūj 1-9 (12 burūj énumérés Bélier→Poissons ; Ṭabarī 24/276 récit al-Rabīʿ ; Bayhaqī vendredi/ʿArafa Abū Mūsā ; garble « اليروج » corrigé)
+  - 14005 Burūj 10-16 (gloses Jalālayn exactes : الخلق/للمذنبين المؤمنين/ربه وخالقه ومالكه/بالرفع المجيد ; Hūd 102 ; hadith يُملي)
+  - 14018 Burūj 17-22 (فرعون وثمود بدل الجنود ; lawḥ Ibn ʿAbbās dimensions ciel-terre/Orient-Occident perle blanche ; Rāzī 31/116 3 exégèses de l'enveloppement avec Fatḥ 21/Isrāʾ 60/Yūnus 22)
+  - 14052 Ṭāriq 11-17 (rajʿ=pluie récurrente, ṣadʿ=fente ; ruwaydan diminutif de rūd/arwād par tarkhīm ; Nisāʾ 58 istithmār ; pas de الإعداد القبلي — fin du livre, doc suivant = aʿlām)
+  - 14063 aʿlām — 11 notices biographiques (Maḥallī…Qurṭubī) ; FIX baseline : « qu'Allah les agrée »→« leur fasse miséricorde » (non-Compagnons !), Manhāj→Minhāj, masticule→masse de chair, ḥabr al-umma, ouḥid zamānihi ; translittérations harmonisées sur 14067
+  - 16743 ʿAbasa 11-23 (Shūrā 3 restituée — le manuel imprime « 11 » hors sujet ; khabar thānin de tadhkira ; nuṭfa→ʿalaqa→muḍgha corrigé ; Aʿlā 18-19+Shuʿarāʾ 196)
+  - 16751 ʿAbasa 24-32 (Qurṭubī 19/220 regard du cœur ; qaḍḍ raṭb ; garble « مْلُ »=حَمْلُ fixé)
+  - 16757 ʿAbasa 33-42 (hadith Tirmidhī v37 ; récit ʿIkrima Ibn Kathīr 8/325 épouse/fils + v34-37 restitué ; FIX صاخة « Bourdonnement »→« la Clameur » avec re-livraison 16751)
+  - 16767 Takwīr 1-14 (Kahf 47 restituée — le manuel imprime « 46 » ; Nabaʾ 40 ; Naḥl 58-59 ; Isrāʾ 13-14 ; Qurṭubī 19/229+236 ; hadiths Adī b. Ḥātim + Ibn ʿUmar lire Takwīr/Infiṭār/Inshiqāq)
+  - 16784 Takwīr 15-21 (5 planètes Saturne→Mercure, takhnusu/taknusu notes vocaliques ḍamma ; contronyme عسعع ; ثمَّ fatha adverbe du lieu éminent ; Najm 5 ; Ibn Kathīr 8/338-339 بتصرف)
+  - 14604 intro tafsir-6ep (harmonisée 12609 : sommaire numéroté 30 entrées ; FIX « qu'Allah les agrée »→raḥima ; حلقة=maillon)
+  - 11509 intro fiqh-tanawi-1 (Mukhtaṣar Khalīl/Dardīr/Dasūqī ; TOC 28 leçons malikites : ǧuzāf, muzābana, kāliʾ, ʿurbūn, ʿīna, khiyār al-sharṭ, tadlīs, ghalla ; malaka=habitus juridique ; 7 compétences)
+- **CONVENTIONS affinées ce tour** : (1) références imprimées erronées → contenu canonique en principal + « — le manuel imprime « M » » (Shūrā 3/11, Ḥāqqah 25-29/24-29, Ḥadīd 20/19, Kahf 47/46) ; (2) les spans inversés (8-7, 39-38) sont des inversions d'impression, corrigés sans note quand le contenu est univoque ; (3) tables شرح dégradées = gloses seules, termes restitués des versets + note OCR ; (4) sections الإعداد القبلي = expressions de la leçon SUIVANTE, jamais de la leçon courante (erreur récurrente des baseline LLM) ; (5) les istithmār Rāzī/Qurṭubī/Ibn Kathīr citent souvent des versets de corroboration — les restituer du cache avec refs.
+- **QA navigateur ×19 + sweep ×12** : h1 enrichis partout, badge « Traduction savante », citations détectées, 0 erreur console nouvelle (hydration préexistant uniquement), 390 px 0 overflow, footer sticky OK, captures qa-r115-*.png ×4 (desktop/mobile/16767/home).
+- **COMMITS** : 84d7a3a (13886+13907) ; 0a64446 (13897+13915+13920+13936) ; b3199eb (13979+13992+14005+14018) ; 62f7878 (14052+14063+16743+16751+16757) ; 90dd67b (16767+16784+14604+11509 + FINAL) — tous poussés sur Sounawa/minhaj (origin/main = 90dd67b).
+
+Stage Summary:
+- **ÉTAT : SAIN. REGISTRE 532/532 MAIN + 0 LLM — le registre savant est désormais 100 % qualité main. 53e LIVRE COMPLET : tafsir-5ep 31/31 (14 main d'origine + 17 upgradés).** Git synchronisé (0 commit en attente). Serveur dev OK.
+- **23 livres complets en tout** (tafsir-1ep/1es/2es/3es/5ep/6ep, fiqh-1ep/5ep/6ep/tanawi-2/2es/3es, hadith-1ep/6ep, sira-1es/2es/3es, tajwid-6ep, ulum-quran-1es/2es/3es, faraid-tanawi-2, rasm-wa-dabt-5ep) + 2 intros main (14604, 11509).
+- **Décisions clés** : (1) promote-llm.py comble le trou du pipeline (les register existants ignoraient les docIds déjà LLM) ; (2) quand le manuel imprime une réf erronée, la doctrine du tour = contenu canonique en principal + note imprimée ; (3) les baseline LLM confondent préparation (leçon suivante) et citations courantes — toujours re-restaurer depuis le cache ; (4) « qu'Allah les agrée » (raḍiya) est réservé aux Compagnons — raḥima pour les savants.
+- **Risques** : (a) token GitHub ghp_7At… toujours actif mais appelé à expirer — bundle /tmp régénéré après chaque livraison (vérifié) ; (b) les notes qirāʾiques/grammaticales de ce tour (yuṣallā, takhnusu, ʿasʿasa contronyme, tarkhīm) sont techniques — relecture recommandée à l'occasion.
+- **Priorités suivantes** : (1) 54e livre : hadith-1es (27 leçons GT restantes sur 31, 4 main) ou tawhid-1es (29 GT, 0 main) — choisir le livre au meilleur ratio learn/GT ; (2) backlog 873 pdfOnly via OCR pipeline ; (3) éventuelle relecture qirāʾique du tour.
