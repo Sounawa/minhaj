@@ -498,7 +498,8 @@
     "14543",
     "14555",
     "14725",
-    "14719"
+    "14719",
+    "14718"
   ],
   "llm": {
     "13886": {
@@ -585,11 +586,6 @@
       "at": "2026-10-09T16:31:20.738Z",
       "bookId": "tafsir-6ep",
       "titleFr": "Présentation du manuel"
-    },
-    "14718": {
-      "at": "2026-10-09T16:44:02.193Z",
-      "bookId": "fiqh-6ep",
-      "titleFr": "Jurisprudence Zakat sur les chameaux, son quorum et son âge"
     },
     "14724": {
       "at": "2026-10-09T16:51:12.475Z",
