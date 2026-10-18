@@ -497,7 +497,8 @@
     "14536",
     "14543",
     "14555",
-    "14725"
+    "14725",
+    "14719"
   ],
   "llm": {
     "13886": {
@@ -589,11 +590,6 @@
       "at": "2026-10-09T16:44:02.193Z",
       "bookId": "fiqh-6ep",
       "titleFr": "Jurisprudence Zakat sur les chameaux, son quorum et son âge"
-    },
-    "14719": {
-      "at": "2026-10-09T16:45:37.709Z",
-      "bookId": "fiqh-6ep",
-      "titleFr": "Jurisprudence, décisions sur la zakat pour les vaches et les moutons"
     },
     "14724": {
       "at": "2026-10-09T16:51:12.475Z",
