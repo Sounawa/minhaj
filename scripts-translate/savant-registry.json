@@ -495,7 +495,8 @@
     "14516",
     "14523",
     "14536",
-    "14543"
+    "14543",
+    "14555"
   ],
   "llm": {
     "13886": {
@@ -577,11 +578,6 @@
       "at": "2026-10-09T16:42:38.326Z",
       "bookId": "fiqh-6ep",
       "titleFr": "Jurisprudence : Zakat sur les marchandises commerciales"
-    },
-    "14555": {
-      "at": "2026-10-09T17:54:12.724Z",
-      "bookId": "tafsir-6ep",
-      "titleFr": "Sourate Al-Insan, versets 23-28"
     },
     "14604": {
       "at": "2026-10-09T16:31:20.738Z",
