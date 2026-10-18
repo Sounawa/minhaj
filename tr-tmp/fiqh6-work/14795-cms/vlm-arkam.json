@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "إليك نص الجدول كما هو مكتوب في الصورة:\n\n| أقسام أركان الحج | حكمها |\n| :--- | :--- |\n| 1- قسم يفوت الحج بتركه ولا يترتب بسبب تركه شيء | (الإحرام) |\n| 2- قسم يفوت الحج بتركه ويؤمر فيه بالتحلل بأفعال عمرة والقضاء في قابل | (الوقوف بعرفة) |\n| 3- قسم لا يفوت الحج ولا يتخلل إلا بفعله ولو ذهب رجلاه... ليفعله | (طواف الإفاضة والسعي)<br>فدية |",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792343450,
+  "id": "20261019011048967776d51eed488d",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261019011048967776d51eed488d",
+  "usage": {
+    "completion_tokens": 159,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 303,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 462
+  }
+}
