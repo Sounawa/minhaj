@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "إليك النص الظاهر في كل صورة وعدد الأسطر:\n\n**الصورة الأولى:**\n*   **النص:** والذين هم عن اللغو معرضون\n*   **عدد الأسطر:** 1\n\n**الصورة الثانية:**\n*   **النص:** والذين لا يشهدون الزور وإذا مروا باللغو مروا كراما\n*   **عدد الأسطر:** 1\n\n**الصورة الثالثة:**\n*   **النص:** فاتقوا الله ما استطعتم واسمعوا وأطيعوا وأنفقوا خيرا لأنفسكم ومن يوق شح نفسه فأولئك هم المفلحون\n*   **عدد الأسطر:** 1",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792342386,
+  "id": "20261019005302b047a1561214448d",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261019005302b047a1561214448d",
+  "usage": {
+    "completion_tokens": 177,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5548,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5725
+  }
+}
