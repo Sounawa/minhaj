@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Étiquette du haut : **النقود**\nÉtiquette du bas : **الحبوب**",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792337180,
+  "id": "20261018232619f3ec53d93c1642ef",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018232619f3ec53d93c1642ef",
+  "usage": {
+    "completion_tokens": 26,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 831,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 857
+  }
+}

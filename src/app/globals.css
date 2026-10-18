@@ -423,6 +423,18 @@
   background: var(--muted);
   font-weight: 600;
 }
+/* Tableaux larges (grilles d'exercice à 6 colonnes) : compactage mobile —
+   le flux peut couper dans les mots pour compresser la largeur minimale. */
+@media (max-width: 640px) {
+  .lesson-content table {
+    font-size: 0.82em;
+  }
+  .lesson-content th,
+  .lesson-content td {
+    padding: 0.32em 0.42em;
+    overflow-wrap: anywhere;
+  }
+}
 .lesson-content blockquote {
   border-inline-start: 3px solid var(--primary);
   padding-inline-start: 1em;

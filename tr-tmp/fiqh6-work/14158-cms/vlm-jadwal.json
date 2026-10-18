@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Voici les réponses basées sur l'analyse de l'image :\n\n**(1) Contenu EXACT de la ligne d'en-tête (de droite à gauche) :**\nتَوْفِي النِّكَاحِ | نِصَابُه | الْوَاجِب إِخْرَاجُه | دَلِيلُه مِن الْقُرْآن | الشَّاهِد مِن نَظْم ابْن عَاشِر\n\n**(2) Étiquettes des lignes dans la première colonne (la plus à droite) :**\n*   الْحُبُوب\n*   النُّقُود\n\n**(3) État des autres cellules :**\nLes autres cellules sont **vides** (blanches). Il s'agit d'un exercice à trous (« fill-in exercise ») destiné à être complété par l'élève. Seuls l'en-tête et la première colonne contiennent du texte.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792337002,
+  "id": "202610182323145b832d7ea7574764",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610182323145b832d7ea7574764",
+  "usage": {
+    "completion_tokens": 226,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 6065,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6291
+  }
+}

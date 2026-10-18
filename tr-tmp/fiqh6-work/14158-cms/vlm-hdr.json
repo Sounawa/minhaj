@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Voici la transcription des 6 cellules d'en-tête, de droite à gauche :\n\n1. **نِعْمَةُ الزَّكَاةِ** (ou **نِعْمَةُ**)\n2. **نَصَابُهُ**\n3. **الْوَاجِبُ إِخْرَاجُهُ**\n4. **دَلِيلُهُ مِنَ الْقُرْآنِ**\n5. **دَلِيلُهُ مِنَ الْحَدِيثِ** (le début est partiellement coupé mais déduit du contexte et de la forme visible «...الْحَدِيثِ»)\n6. **الشَّاهِدُ مِنْ نَظْمِ ابْنِ عَاشِر**\n\n**Note sur la première cellule :** Bien que l'image soit très floue sur ce premier mot (à droite), dans le contexte standard des tableaux de Zakāt (notamment ceux basés sur la *Al-Murshid al-Mu'īn* d'Ibn Ashir), cette colonne contient généralement le nom de la catégorie (ex: **نِعْمَةُ الزَّكَاةِ** - \"La bienfaisance de la Zakat\" ou simplement le type comme **الذَّهَبُ**, **الفِضَّةُ**, etc.). La forme visible suggère fortement **نِعْمَةُ** ou le début d'un terme similaire.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792337300,
+  "id": "20261018232755c097f82bb0034f65",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018232755c097f82bb0034f65",
+  "usage": {
+    "completion_tokens": 352,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5748,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6100
+  }
+}

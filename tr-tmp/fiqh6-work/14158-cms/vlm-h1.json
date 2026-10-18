@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "تَقْسِيمُ الأَنْوَاعِ",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792337252,
+  "id": "202610182327312b39a01789f94c66",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610182327312b39a01789f94c66",
+  "usage": {
+    "completion_tokens": 17,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1464,
+    "prompt_tokens_details": {
+      "cached_tokens": 2
+    },
+    "total_tokens": 1481
+  }
+}
