@@ -515,29 +515,13 @@
     "pdf-mut23h33-584",
     "pdf-mut23h33-585",
     "13886",
-    "13907"
+    "13907",
+    "13897",
+    "13915",
+    "13920",
+    "13936"
   ],
   "llm": {
-    "13897": {
-      "at": "2026-10-09T16:35:23.093Z",
-      "bookId": "tafsir-5ep",
-      "titleFr": "Sourate al-Infiṭār, versets 9 à 19"
-    },
-    "13915": {
-      "at": "2026-10-09T16:44:01.308Z",
-      "bookId": "tafsir-5ep",
-      "titleFr": "Sourate al-Muṭaffifīn, versets 7 à 17"
-    },
-    "13920": {
-      "at": "2026-10-09T16:46:49.572Z",
-      "bookId": "tafsir-5ep",
-      "titleFr": "Sourate al-Muṭaffifīn, versets 18 à 28"
-    },
-    "13936": {
-      "at": "2026-10-09T17:54:32.142Z",
-      "bookId": "tafsir-5ep",
-      "titleFr": "Sourate al-Inshiqāq, versets 1 à 9"
-    },
     "13979": {
       "at": "2026-10-09T16:57:01.066Z",
       "bookId": "tafsir-5ep",
