@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Based on a close examination of the Arabic text in the image, here is the word-by-word transcription of the line fragment:\n\n**Transcription:**\n**وَأَوْجَبَ عَلَيْهِ الصَّلَاةُ وَالسَّلَامُ عَلَى الْوَاطِئِ فِي رَمَضَانَ الْكَفَّارَةُ**\n\n**Analysis of the candidates:**\n*   **(A) عليه الصلاة والسلام**: This matches the first part of the middle section exactly. The words are clearly `عليه` (upon him), `الصلاة` (the prayer), and `والسلام` (and peace).\n*   **(B) على الواطئ في رمضان والسكيران الكفارة**: This does **not** match. The text clearly reads `عليه` (with a final Ya), not `على`. Furthermore, the word after `رمضان` is `الكفارة` (the expiation/atoneement). There is **no** word `والسكيران` (and the drunkards) visible in the ink between `رمضان` and `الكفارة`.\n*   **(C) عليه بلال الصلاة والسلام**: This does **not** match. There is no name `بلال` (Bilal) present between `عليه` and `الصلاة`.\n\n**Conclusion:**\nThe actual ink matches **Candidate (A)** for the phrase \"upon him be prayer and peace,\" but the complete sentence continues with \"on the one who has intercourse in Ramadan [is] the expiation.\" The OCR reading provided in your prompt (`وأوجب عليه الصلاة والسلام على الواطئ في رمضان الكفارة`) is accurate to what is written in the image.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792334383,
+  "id": "20261018223939105a8d518a984f72",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018223939105a8d518a984f72",
+  "usage": {
+    "completion_tokens": 405,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1382,
+    "prompt_tokens_details": {
+      "cached_tokens": 2
+    },
+    "total_tokens": 1787
+  }
+}

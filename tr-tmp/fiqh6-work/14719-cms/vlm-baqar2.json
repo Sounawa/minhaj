@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Based on the image provided, here is the exact transcription of the table row by row, containing only the number ranges and the specific zakat terms for cattle (البقر):\n\n**Row 1:**\nمن 29 إلى 30 | لا شيء فيها\n\n**Row 2:**\nمن 30 إلى 39 | تبيع ذكر\n\n**Row 3:**\nمن 40 إلى 59 | تبيع أنثى أو الأربعة\n\n**Row 4:**\nمن 60 إلى 69 | مسنة\n\n**Row 5:**\nمن 70 إلى 79 | تبيعان ذكران\n\n**Row 6:**\nمن 80 إلى 89 | مسنتان\n\n**Row 7:**\nمن 90 إلى 99 | ثلاثة أتباع",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792333027,
+  "id": "20261018221701daf345ce0ad04fbd",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018221701daf345ce0ad04fbd",
+  "usage": {
+    "completion_tokens": 165,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 227,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 392
+  }
+}

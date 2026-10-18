@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Based on the image provided, here is the exact transcription of the table row by row, followed by a verification against the expected values from your lesson text.\n\n### **Exact Transcription**\n\n| Row | Column 1: Number Ranges (أعداد الغنم) | Column 2: Zakat Due (عِدّة الزكاة) |\n| :--- | :--- | :--- |\n| **1** | **١ إلى ٣٩** | **لا شيء** |\n| **2** | **شاة / جذعة (ما دخل في الثانية)** | **٤٠ إلى ١٢٠** |\n| **3** | **شاتان** | **١٢١ إلى ٢٠٠** |\n| **4** | **ثلاث شياه** | **٢٠١ إلى ٣٩٩** |\n\n---\n\n### **Verification & Analysis**\n\nHere is a comparison between the table's content and the expected values you provided:\n\n*   **Row 1 (1-39):**\n    *   **Table:** Shows \"لا شيء\" (Nothing).\n    *   **Expected:** Not explicitly mentioned in your text, but this is correct according to Islamic Fiqh (no Zakat below the Nisab of 40).\n*   **Row 2 (40-120):**\n    *   **Table:** Shows \"شاة / جذعة (ما دخل في الثانية)\".\n    *   **Expected:** \"1 sheep (شاة جذعة ما دخل في الثانية)\".\n    *   **Status:** ✅ **MATCH.** The table uses the plural/collective form \"شاة\" (sheep) and includes the specific age/type note in parentheses exactly as described.\n*   **Row 3 (121-200):**\n    *   **Table:** Shows \"شاتان\".\n    *   **Expected:** \"2 sheep (شاتان)\".\n    *   **Status:** ✅ **MATCH.**\n*   **Row 4 (201-399):**\n    *   **Table:** Shows \"ثلاث شياه\".\n    *   **Expected:** \"3 sheep (ثلاث شياه)\".\n    *   **Status:** ✅ **MATCH.**\n\n#### **⚠️ FLAGGED DIFFERENCE: Missing Data**\n\nThe table in the image is **incomplete** compared to your lesson text.\n\n*   **Missing Range:** The rule for **400+ sheep** (\"4 sheep then one per hundred\") is **not present** in this specific table image. The table cuts off at 399.\n\n**Conclusion:** All rows present in the image are accurate and match the textbook rules perfectly; however, the table itself is truncated and lacks the final row for flocks of 400 or more.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792333113,
+  "id": "202610182218268373c39177234dd5",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610182218268373c39177234dd5",
+  "usage": {
+    "completion_tokens": 591,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 262,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 853
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "| عدد الأنعام وزكاتها | النصاب الشرعي | الحكم أو إرشادات |\n| :--- | :--- | :--- |\n| ٢٥ بقرة |  |  |\n| ٥٥ بقرة |  |  |\n| ٣٧ شاة |  |  |\n| ٦٧ شاة |  |  |",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792333164,
+  "id": "20261018221922f1fda09fffbf4790",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018221922f1fda09fffbf4790",
+  "usage": {
+    "completion_tokens": 87,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 239,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 326
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Based on the image provided, here is the exact, corrected transcription of the Arabic fiqh text:\n\n**Exact Transcription:**\nقال ابن غانم في إخراج الشاة عن الإبل إذا لم تبلغ خمسا وعشرين: وكان الأصل الإخراج منها كما الشارع خفف عن المالك رفقا به؛ فإذا شدد على نفسه وأخرج منها فالأصح إجزاء البعير عن الشاة الواحدة حيث ساوت قيمته قيمة الشاة؛ فإذا زادت الإبل بحيث زادت على الأربع والعشرين زكيت من جنسها؛ لأنه كما عظمت النعم وزاد المال ينبغي الزيادة في القدر الواجب تعظيما لذلك المنعم. [الشرح الكبير 2/772]\n\n**Answers to your specific questions:**\n\n1.  **Author name after ابن:** **غانم** (The full name is ابن غانم)\n2.  **Word after كما:** **الشارع** (The draft had a typo \"الشار?ع\")\n3.  **Final reference:** **[الشرح الكبير 2/772]** (This refers to *Al-Sharh al-Kabir* by Ahmad ibn Muhammad al-Dardir)\n4.  **Other corrections made to the draft:**\n    *   **غانم** (Corrected from غا?م)\n    *   **الشاة** (Corrected from الش?اه)\n    *   **تبلغ** (Corrected from تبل?)\n    *   **كما** (Corrected from ك?ما)\n    *   **الشارع** (Corrected from الشار?ع)\n    *   **شدد** (Corrected from ش?د?د)\n    *   **فالأصح** (Corrected from فالأصح?)\n    *   **عظمت** (Corrected from عظم?ت)\n    *   **القدر** (Corrected من الق?در)\n    *   **لذلك** (Corrected from ل?ذا?ل?ك)",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792333655,
+  "id": "20261018222729c68a630b73b945f6",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018222729c68a630b73b945f6",
+  "usage": {
+    "completion_tokens": 464,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 432,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 896
+  }
+}

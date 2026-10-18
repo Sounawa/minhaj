@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Based on the image provided, the left column contains the header text \"الأُضْحِيَّةُ\" (Al-Udhiyah / The Sacrificial Animal) in the first row. The subsequent three rows in that column are **blank** (empty).\n\nThere are no numbers or animal words (بقرة or شاة) visible in the left column of this specific image crop.\n\n**Row-by-row content of the LEFT column:**\n1 | الأُضْحِيَّةُ\n2 | *(empty)*\n3 | *(empty)*\n4 | *(empty)*",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792333197,
+  "id": "20261018221955e7b573e3445b40c8",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018221955e7b573e3445b40c8",
+  "usage": {
+    "completion_tokens": 124,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2386,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2510
+  }
+}
