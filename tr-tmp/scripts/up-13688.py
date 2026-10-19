@@ -157,7 +157,7 @@ HTML_FR = """<h1>La sourate al-Isrāʾ — <em>al-Muḥarrar al-wajīz</em> d’
 <p><em>kisfan</em> (كِسَفًا — en morceaux : pluriel de <em>kusfa</em>, comme <em>qiṭʿa</em>).</p>
 <p><em>qabīlan</em> (قَبِيلًا — face à face : pour les voir de leurs yeux).</p>
 <p><em>min zukhrufin</em> (مِن زُخْرُفٍ — d’or).</p>
-<p><em>sulāman</em> (سُلَّمًا — l’échelle : monter au ciel par l’échelle).</p>
+<p><em>tarqā</em> (تَرْقَىٰ — monter au ciel par l’échelle : l’ascension).</p>
 <p>[Vedettes restituées du lexique de la leçon suivante (versets 90-93) : les emplacements imprimés sont vides — perte OCR.]</p>
 <ul>
 <li>Quel est le dessein du détournement de Dieu, le Très-Haut, des demandes des associateurs ?</li>
