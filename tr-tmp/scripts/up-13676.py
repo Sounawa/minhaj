@@ -31,7 +31,7 @@ quranpedia.net/surah/1/17/book/350 — confrontation mot à mot) :
   * la question du farḍ/mandūb : le parallèle « أقم الصلاة » (v78 lui-même
     — VÉRIFIÉ : « كخطابه في قوله ﴿أقم الصلوات﴾ » — ma première hypothèse
     d'Aḥzāb 49 corrigée par la vérification) + Mujāhid (le Prophète
-    pardonné — les mwtf نوافله des vertus ; al-Ṭabarī l'affaiblit) ;
+    pardonné — les nawāfil de vertus ; al-Ṭabarī l'affaiblit) ;
   * « عسى أن يبعثك ربك مقاما محمودا » (l'honneur : l'intercession que se
     renvoient les prophètes) + « عسى » (de Dieu : obligatoire — induit la
     certitude) + « مقاما » (naṣb de temps — VÉRIFIÉ) + la grande
