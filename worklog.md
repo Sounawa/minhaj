@@ -7497,3 +7497,22 @@ Stage Summary:
 - **Décisions clés** : (1) al-Ḍarīr identifié par la leçon suivante — le corpus se croise-référence lui-même ; (2) le pattern « bāb d'un Ṣaḥīḥ + leçon de l'autre » se CONFIRME (Asmāʾ : bāb Muslim, texte Bukhārī 6593) — 4e occurrence documentée ; (3) les pages 16785-16786 : numérotation coranique Ḥafṣ STANDARD (contrairement aux pages 16738/16741) — l'hétérogénéité est page par page.
 - **Risques** : sunnah.com en accès intermittent sur certaines pages (2292/2293) — la recherche par phrase reste la voie de repli.
 - **Priorités suivantes** : 16787 (leçon imprimée 21 — la notion de foi īmān) → 16795 → 16798 → 16800 → 16801 → 16802 → 16805 → 16806 ; QA par leçon ; worklog R128 à la fin du livre.
+
+---
+Task ID: R90
+Agent: Z.ai Code (session principale, trace 1a159074ecbf549d)
+Task: leçon 16787 (la notion de foi īmān) + vérification Abū Dāwūd + QA + push — REGISTRE 601
+
+Work Log:
+- **savant(tawhid-1es/16787)** — leçon imprimée 21, la notion de foi (īmān) et ses degrés : 7 citations restaurées — Anfāl 2-3-4 CONFORME (l'ouverture du préambule : cœurs qui s'épouvant + prières + degrés — miroir du matn) ; **Baqara 142→143 écart +1** (cible univoque par la glose imprimée « أي صلاتكم » : le verset de la qibla se clôt sur « وما كان الله ليضيع إيمانكم », l'exégèse d'Ibn ʿAbbās identifiant la foi à la prière) ; Fatḥ 4, Muddaththir 31, Tawba 124 CONFORMES (les trois versets de la croissance) ; Bayyina 5 (culte pur) ; Ḥashr 7 (obéissance au Messager) CONFORMES.
+- **Hadiths** : ʿIrbaḍ b. Sāriya VÉRIFIÉ sunnah.com = **Abū Dāwūd 4607, Kitāb al-Sunna, bāb في لزوم السنة EXACT — texte CONFORME MOT À MOT** ; le hadith de l'intention « إنما الأعمال بالنيات » (sans réf imprimée) identifié : Bukhārī 1 / Muslim 1907 (l'ouverture des deux Ṣaḥīḥs) — noté.
+- **Doctrines rendues au plus près** : la définition tripartite (parole/sincérité/œuvre) ; les quatre bénéfices du matn ; la discussion sur la parole (condition/moitié/nié — la MOITIÉ est la juste) ; les œuvres parties de la foi achevée, non de la foi absolue ; les trois positions croissance/décroissance (le pas du matn sur les fruits de la foi + la réserve rapportée de Mālik) ; Zarrūq (« l'intention est l'élixir des œuvres », Sharḥ ʿalā l-Risāla 1/61) ; la distinction īmān/islām d'al-Lawh (p. 60, adapté).
+- **OCR** : paragraphe scindé par l'extraction rejoint ; « بينهم ا » rejoint.
+- **Pipeline** : up-16787.py → main (12 641 car, 0 apostrophe droite) → registre 600→**601**.
+- **QA agent-browser** : badge « Traduction savante » + contenus clés 12/12 ; mobile 390 px overflowX = 0 ; console 0 erreur.
+- **Git** : commit 88836c3 poussé.
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 601/950. tawhid-1es : 23/30 attendu au compteur. GitHub synchronisé (origin/main = 88836c3). 8 leçons livrées cette session (16736, 16738, 16741, 16742, 16785, 16786, 16787 + l'enrichissement 16785′).**
+- **Décisions clés** : (1) la glose marginale imprimée (« أي صلاتكم ») peut livrer la cible d'une citation vide — nouvelle méthode de vérification ; (2) Abū Dāwūd vérifiable sur sunnah.com comme Bukhārī/Muslim ; (3) les hadiths sans réf de l'imprimé s'identifient par leur notoriété (le hadith de l'intention).
+- **Priorités suivantes** : 16795 (leçon imprimée 22 — l'interdiction d'excommunier) → 16798 (les anges) → 16800 → 16801 → 16802 → 16805 → 16806 ; QA par leçon ; worklog R128 à la fin du livre.
