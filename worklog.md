@@ -7464,3 +7464,20 @@ Stage Summary:
 - **Décisions clés** : (1) règle Ṭā-Hā +3 confirmée une 3e fois — quasi-loi pour les pages du cluster 16735-16738 ; (2) règle Baqara +1 par page (29→30 ET 34→35) ; (3) l'« uʿiddat » parfait passif = la clé des deux citations sans réf ; (4) sunnah.com : le bāb d'un hadith cité peut être le bāb-thème d'une narration PARALLÈLE (Bukhārī 5197/1052 vs taʿlīq ʿĀʾisha) — pattern récurrent du manuel.
 - **Risques** : aucun nouveau.
 - **Priorités suivantes** : 16741 (leçon imprimée 17 — la présentation des créatures / العرض) → 16742 → 16785 → 16786 → 16787 → 16795 → 16798 → 16800 → 16801 → 16802 → 16805 → 16806 ; QA par leçon ; worklog R128 à la fin.
+
+---
+Task ID: R88
+Agent: Z.ai Code (session principale, trace 1a159074ecbf549d)
+Task: leçons 16741 (présentation des créatures) et 16742 (Balance et feuillets) + vérifications sunnah.com + QA + push
+
+Work Log:
+- **savant(tawhid-1es/16741)** — leçon imprimée 17, la présentation des créatures (al-ʿarḍ) : 8 citations restaurées — **Fajr 24→22 écart −2** (les DEUX occurrences ; cible univoque : « وجاء ربك والملك صفا صفا » = 89:22, repris mot à mot par le matn) ; Hajj 1-2 CONFORME ; Ḥāqqa 17 CONFORME (anges/Trône par huit ; v18 تعرضون noté) ; Kahf 47 CONFORME (rassemblement « فلم نغادر منهم أحدا » ; v48 noté) ; Ghāshiya paire descendante → 25-26 CONFORME ; Āl ʿImrān 199 CONFORME (سريع الحساب) ; Qāriʿa 5-8 CONFORME. Doublons OCR MASSIFS : bloc du compte imprimé 2× (rendu une fois, version complète) ; coupe-répétition dans al-Lawh ; titre التحليل absent → restitué. Discussion ashʿarite du majīʾ (Mālik بلا كيف, taʾwīl, doctrine al-Ashʿarī) rendue au plus près. Registre 597. Commit cb2175d poussé.
+- **savant(tawhid-1es/16742)** — leçon imprimée 18, la Balance et la remise des feuillets : 7 citations restaurées — Anbiyāʾ 47 CONFORME (ونضع الموازين القسط) ; citation de MOT al-mawāzīn (le pluriel) univoque ; Takwīr 10 CONFORME ; Kahf 48→49 écart +1 (ووضع الكتاب) ; Inshiqaq série descendante de SIX versets → restituée 84:7-12 CONFORME (le matn les condense) ; 3 citations SANS réf d'al-Lawh → trio canonique de la remise (Isrāʾ 13-14 + Ḥāqqa 19 + Ḥāqqa 25). Doctrines : balance sensible (2 plateaux + langue, ijmāʾ), unicité (pluriel de majesté), tajassum des œuvres, Abū Bakr, al-Laqqānī (Sharḥ al-Jawhara), science ḍarūriyya. Registre 598. Commit b00ad96 poussé.
+- **Hadiths VÉRIFIÉS sunnah.com (curl + UA navigateur)** : (1) Muslim 182a (16736) ; (2) Bukhārī 5197/1052 + taʿlīq ʿĀʾisha Adhān 91 (16738) ; (3) Muslim 181a Ṣuhaib (16738) ; (4) Bukhārî « كلمتان خفيفتان » : **bāb imprimé ونضع الموازين القسط = Tawḥīd ch. 58 = hadith 7563 EXACT**, l'ordre imprimé suit la leçon 6682/Muslim 2694 (variante d'ordre notée) ; (5) Muslim 223 Abū Mālik (bāb فضل الوضوء EXACT, texte CONFORME mot à mot avec أو تملأ).
+- **QA agent-browser** : leçons 16741 et 16742 — badges « Traduction savante » + contenus clés 12/12 et 13/13 ; mobile 390 px overflowX = 0 ; console 0 erreur.
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 598/950. tawhid-1es : 20/30 attendu au compteur (leçons 1-19 du tableau + intro ; vérifié 18→19→20). GitHub synchronisé (origin/main = b00ad96). 4 leçons livrées cette session (16736, 16738, 16741, 16742).**
+- **Décisions clés** : (1) règle Fajr −2 (24→22) NOUVELLE — les offsets varient PAR PAGE ET PAR SURET (Ṭā-Hā +3, Baqara +1 sur 16738 ; Fajr −2, Kahf +1 sur 16741/16742) — la vérification par cible univoque reste la seule loi ; (2) les séries de versets s'écrivent en ordre descendant (Najm 15-14, Ghāshiya 26-25, Inshiqāq 12-…-7) — restituées en ordre canonique ; (3) le trio canonique des feuillets (Isrāʾ 13-14, Ḥāqqa 19, Ḥāqqa 25) pour les citations sans réf ; (4) les bāb imprimés des hadiths sont souvent EXACTS mais peuvent désigner une narration parallèle du même événement.
+- **Risques** : aucun nouveau.
+- **Priorités suivantes** : 16785 (leçon imprimée 19 — le Pont/ṣirāṭ) → 16786 (Bassin) → 16787 (īmān) → 16795 → 16798 → 16800 → 16801 → 16802 → 16805 → 16806 ; QA par leçon ; worklog R128 à la fin du livre.
