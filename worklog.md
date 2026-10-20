@@ -7344,3 +7344,79 @@ Stage Summary:
 - **Décisions clés** : (1) tawhid-1es choisi au meilleur ratio (29 GT/0 main) ; (2) DÉCOUVERTE : hétérogénéité de numérotation coranique entre pages CMS du même livre (16716 = Ḥafṣ standard ; 16715/16718 = décalage −1, dont une règle Ṭā-Hā −1 établie par cibles univoques) — chaque resta notée inline ; (3) le [طه: 107] vise Ṭā-Hā 110 « ولا يحيطون به علما » (écart 3 documenté) ; (4) [الأنعام: 4] = 6:59 (chiffre OCR perdu) ; (5) Muslim 2713a = Abū Ṣāliḥ/Abū Hurayra — l'attribution imprimée « al-Bukhārī/ʿImrān b. Ḥuṣayn » notée comme divergence imprimée ; (6) 887 apostrophes typographiques corrigées (règle corpus réaffirmée : vérifier le corpus AVANT livraison) ; (7) la clé registre « muqaddima » est partagée entre livres (collision par docId seul) — pré-existante, sans effet sur le compteur d'app, à garder en mémoire.
 - **Risques** : aucun bloquant. sunnah.com requiert un UA navigateur complet (403 sinon). SDK web_search toujours vide/429 (contourné par sunnah.com direct).
 - **Priorités suivantes** : (1) tawhid-1es : 21 docs restants (16720 أزلية صفاته → 16806 bibliographie) — le rythme 8-9/tour tient ; (2) QA navigateur de chaque leçon livrée ; (3) backlog 854 pdfOnly via OCR pipeline ; (4) éventuelle relecture croisée des notes de numérotation (règle −1 vs Ḥafṣ standard) à l'occasion du livre complet.
+
+---
+Task ID: R82′ (reprise post-rollback — à ne pas confondre avec le R82 original ci-dessus)
+Agent: Z.ai Code (session principale — reprise après rollback, trace 1a15893b2dbc9195)
+Task: REPRISE après ROLLBACK sandbox → état R81 ; diagnostic des pertes + restauration 16720 + plan de récupération
+
+Work Log:
+- **Constat de rollback** : le disque a été restauré à l'état R81 (registre 502/950 — 451 main + 51 LLM ; hadith-1es livre 49 entamé 4/32 ; dernier commit 719111b). Le travail des tours R82→R127 d'origine (~87 docs savants supplémentaires, registre 589 atteint, tawhid-1es 56e livre entamé 11/30, tafsir-tanawi-2 55e livre complet 21/21) est PERDU du disque local — cause probable des sessions interrompues (« Thought Process » puis arrêt) signalées par l'utilisateur.
+- **Récupération évaluée** : pas de remote git configuré, pas de token GitHub résiduel, /home/z/.minhaj-backup vide — les commits perdus existent DANS le dépôt GitHub distant (Sounawa/minhaj, poussés à l'époque) mais sont inaccessibles sans token. **Action utilisateur possible : fournir un token GitHub (droit read) → git fetch + reset récupère tout.**
+- **Restauration immédiate** : leçon 16720 (tawhid-1es, leçon 8 — pré-éternité des attributs + adresse à Mūsā) restituée INTÉGRALEMENT depuis la mémoire de session (12 549 car) : Nisāʾ 163→164 restauré (réf d'adjacence −1, masdar taklīman), Aʿrāf 143 ×2 CONFORME, Ḥashr 21-23 restituées, 4 doublons OCR détangles (ijmāʿ modalité, queue « min jalālihi », item d'évaluation, titre h4 soudé) — up-script tr-tmp/scripts/up-16720.py, registre 502→503.
+- **Réparation registre** : entrée parasite « --help » (effet de bord de hand-register.py --help) retirée.
+- **Règles réaffirmées** : backup.sh à CHAQUE doc (leçon des réinitialisations) ; apostrophes typographiques (16720 : 0 droite / 139 typographiques ✓).
+
+Stage Summary:
+- **État : registre 503/950 (452 main + 51 LLM). 16720 restaurée (tawhid-1es 1/29+intro côté GT restant). Dev server OK (200), lint à vérifier.**
+- **Décisions clés** : (1) reprise depuis l'état disque réel R81 ; (2) 16720 restituée depuis la mémoire de session — seule leçon récupérable intégralement (16721 : fragments insuffisants, sera retraduite) ; (3) token GitHub = voie de récupération des ~87 docs perdus, à demander à l'utilisateur ; (4) commits fréquents contre le risque de nouveau rollback.
+- **Risques** : nouveau rollback possible (instabilité infra) ; le travail R82→R127 d'origine reste sur GitHub seulement.
+- **Priorités suivantes** : (1) re-traduire tawhid-1es (contexte chaud : leçons 8-9 connues, versets déjà vérifiés) ; (2) commit+backup après chaque doc ; (3) si token fourni : récupération intégrale depuis GitHub.
+
+---
+Task ID: R83′ (reprise post-rollback)
+Agent: Z.ai Code (session principale — suite reprise, trace 1a15893b2dbc9195-b)
+Task: tawhid-1es : 5 leçons savantes (16720-16732 — leçons 8-12) + QA navigateur ; registre 502→507
+
+Work Log:
+- **Pipeline GT→main** (extract.py → traduction savante vérifiée → up-script → hand-register.py → commit) :
+  * **16720** (leçon 8, pré-éternité des attributs + adresse à Mūsā) — RESTITUÉE intégralement depuis la mémoire de session (livrée à l'origine au tour R127 perdu) : Nisāʾ 163→164 restauré (réf d'adjacence −1, masdar taklīman), Aʿrāf 143 ×2 CONFORME, Ḥashr 21-23 restituées, 4 doublons OCR détangles (ijmāʿ modalité, queue « min jalālihi », item taqwīm, titre h4 soudé) ;
+  * **16721** (leçon 9, foi au décret et à la prédestination) — tête/queue verbatim de la mémoire de session, centre traduit à l'identique : Takwīr 29 RESTAURÉ (CONFORME), hadith Jibrīl Muslim 8 (variante wa-tuʾmin notée), Tirmidhī 2144 Jābir VERBATIM (gharīb — voie ʿAbdallāh b. Maymūn — noté), doublon OCR hadith 2×, coquille titre الاستثمار→iʿdād restituée, Lisān al-ʿArab qaḍā/qadar fondation-édifice, taʿalluq tanjīzī ;
+  * **16722** (leçon 10, guidance et égarement) — 10 versets RESTAURÉS : Ḥadīd 4/Taghābun 4/Ṭalāq 12/Mulk 14/Fāṭir 8/Kahf 17/Zumar 37 CONFORMES ; Shūrā 10→12 écart +2 (série épistémologique, 42:10 lecture concurrente notée) ; Anʿām 40→39 adjacence −1 ; Ibrāhīm 29→27 écart +2 (série hidāya/ḍalāl) ; Ibn ʿAṭāʾillāh Ḥikam p. 163 VERBATIM ; titre التحليل absent de l'extrait restitué selon la série ;
+  * **16723** (leçon 11, mašīʾa/félicité/infortune) — 2 hadiths VÉRIFIÉS sunnah.com (UA navigateur + normalisation Unicode des diacritiques — la recherche directe échoue sans ça) : Bukhārī 7551 (ʿImrān, bāb « ولقد يسرنا القرآن » EXACT) VERBATIM ; Bukhārī 3333 (Anas) avec variantes de récit + réf imprimée « Kitāb al-Ḥayḍ bāb مخلقة » désignant le hadith parallèle d'Ibn Masʿūd 3208 — divergence de localisation notée ; 9 versets RESTAURÉS (Anbiyāʾ 23/Anʿām 62/Fāṭir 15+3/Naḥl 17/Takwīr 29/Yūnus 49 CONFORMES ; Raʿd 40→39 umm al-kitāb −1 ; Anʿām 103→102 khāliq kulli shayʾ −1) ; JAWHARAT AL-TAWḤĪD 5 vers en tableau — permutation des colonnes de l'imprimé pour les vers 2 et 4 (artefact OCR), ordre canonique restitué, noté ; doctrine du kasb rendue au plus près ;
+  * **16732** (leçon 12, seigneurie + envoi des messagers) — 8 versets RESTAURÉS (Ṣāffāt 96/Nahl 32/Nūḥ 4/Yūnus 49/Munāfiqūn 11/Nahl 36 CONFORMES ; Māʾida 21→19 « an taqūlū mā jāʾanā min bashīrin » écart +2 ; Aʿrāf 53→54 le verset de la rubūbiyya, règle de la leçon 7) ; kasb (contiguïté maqdūr/puissance advenue) ; rasūl/nabī (Yūshaʿ b. Nūn) ; item taqwīm fusionné rendu en deux.
+- **QA agent-browser** : 3/3 leçons échantillonnées (16720/16723/16732) — badge « Traduction savante » + contenus clés (taklīman, Nisāʾ 164, Mère du Livre, Bukhārī 7551/3333, Jawhara, Ṣāffāt 96, Aʿrāf 54, Yūshaʿ) ; page livre **« 6/30 traductions savantes »** (intro muqaddima savante — antérieure au rollback + 5 leçons du tour) ; mobile 390 px overflowX = 0 ; console 0 erreur ; lint 0 erreur (1 warning préexistant).
+- **Découverte routing** : la QA directe ?book=&doc= rend la home — l'app route par hash `#/livre/<bookId>/<docId>` (hooks.ts parseHash).
+- **Git** : 6 commits ce tour (90ac1c3 reprise+worklog R82, d08d435 16720, 7c48317 16721, 1833749 16723, c46b5d8 16732, + up-scripts) + backup.sh snapshot 20261020-093831 (26 Mo).
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 507/950 (456 main + 51 LLM). tawhid-1es : 6/30 docs savants (intro + leçons 8-12 ; leçons 1-7 perdues du disque par le rollback — récupérables via token GitHub ou re-traduisibles). Dev server OK, QA 3/3 + book + mobile + lint impeccable.**
+- **Décisions clés** : (1) 16720 restituée verbatim de la mémoire de session, 16721 en tête/queue + centre traduit à l'identique — la mémoire de session a sauvé 2 leçons ; (2) 3 NOUVELLES réf d'écart +2 documentées (Shūrā 10→12, Ibrāhīm 29→27, Māʾida 21→19 — l'imprimé SUPÉRIEUR à Ḥafṣ, sens inverse des adjacences −1 usuelles : hétérogénéité CMS confirmée dans les deux directions) ; (3) normalisation Unicode des diacritiques requise pour chercher sunnah.com (les hadiths combinants ne matchent pas en brut) ; (4) la Jawhara : permutation de colonnes OCR des vers 2/4 — ordre canonique restitué et noté ; (5) hadith Bukhārī 3333 (Anas) vs réf imprimée Kitāb al-Ḥayḍ : le bāb imprimé est celui du hadith parallèle d'Ibn Masʿūd 3208.
+- **Risques** : nouveau rollback possible (travaux commités après CHAQUE doc + backup.sh) ; le travail R82→R127 d'origine (registre 589) reste uniquement sur GitHub — un token read suffirait à tout récupérer.
+- **Priorités suivantes** : (1) tawhid-1es : leçons 1-7 (13978, 13980, 14002, 16691, 16712, 16715, 16716, 16718 — perdues, à re-traduire) OU continuer 16734→16806 puis revenir ; (2) QA navigateur de chaque leçon ; (3) token GitHub → récupération des ~87 docs perdus.
+
+---
+Task ID: R84′ (complément R83′ — reprise post-rollback)
+Agent: Z.ai Code (session principale — suite, trace 1a15893b2dbc9195-c)
+Task: tawhid-1es leçon 13 (16734) + QA + cron 15 min recréé (job 469031, contexte post-rollback)
+
+Work Log:
+- **savant(tawhid-1es/16734)** — leçon 13, la mission de Muḥammad ﷺ sceau des révélations : hadith ʿAlī « أنت مني بمنزلة هارون » VÉRIFIÉ sunnah.com = **Muslim 2404** (voie Saʿīd b. al-Musayyib ← ʿĀmir b. Saʿd ← Saʿd b. Abī Waqqās — le texte reçu porte « lā nabiyya baʿdī » SANS le « min » imprimé : variante de citation notée ; la réf imprimée Muslim/faḍāʾil ʿAlī est EXACTE ; Bukhārī 4416 = « laysa nabiyyun baʿdī ») ; 8 versets RESTAURÉS : Aḥzāb 40 (خاتم النبيين), Furqān 1 (للعالمين نذيرا), Hūd 1 (أحكمت آياته), Isrāʾ 88 (le défi), Aḥzāb 45-48 (l'istithmār — les missions du Prophète) CONFORMES ; Muddaththir 1→1-2 (قم فأنذر — la nadhāra vise le v2) ; Anʿām 20→19 (لأنذركم به ومن بلغ — l'universalité, adjacence −1) ; Shūrā 49-50→52-53 (وإنك لتهدي — le miroir exact du matn, écart +3 comme Wāqiʿa 88→85) ; objectifs doublon OCR (imprimé 2×) + items d'extraction/iʿdād fusionnés — détangles notés ; sirāj munīr vs soleil/lune (la lumière qui ne décline pas) rendu fidèlement. Registre 507→508. Commit 6226fad.
+- **QA agent-browser 16734** : badge « Traduction savante » + 7/7 contenus clés (Sceau des prophètes, Muslim 2404, Muddaththir, Furqān 1, Isrāʾ 88, Shūrā 52-53) ; mobile 390 px overflowX = 0 ; console 0 erreur.
+- **Cron 15 min** : ancien job 467669 (désactivé « exec limits exceeded », contexte pré-rollback obsolète) supprimé ; nouveau **job 469031** créé avec le contexte post-rollback (registre 508, tawhid-1es 7/30, pipeline, règles d'écarts CMS, routing hash #/livre/…, normalisation Unicode sunnah.com, priorités dont token GitHub → récupération des ~87 docs perdus).
+- **Découverte routing QA** : les query strings ?book=&doc= rendent la home — l'app route par hash `#/livre/<bookId>/<docId>` (hooks.ts parseHash) : les QA doivent utiliser ce format.
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 508/950 (457 main + 51 LLM). tawhid-1es : 7/30 docs savants (intro + leçons 8-13). Git synchronisé (7 commits ce tour), backup.sh ×2, cron 15 min actif (job 469031), QA 4 leçons + book + mobile impeccable.**
+- **Risques** : le travail R82→R127 d'origine (registre 589) reste uniquement sur GitHub — token read = récupération intégrale.
+- **Priorités suivantes** : (1) tawhid-1es : 16735 (leçon 14 — l'Heure) → 16806 ; (2) puis leçons 1-7 perdues (13978→16718) ; (3) QA de chaque leçon ; (4) token GitHub.
+
+---
+Task ID: R85 — RÉCUPÉRATION GITHUB (token fourni par l'utilisateur)
+Agent: Z.ai Code (session principale, trace 1a158e4694a70ea5)
+Task: Token GitHub fourni → synchronisation locale/GitHub, vérification doublons, fusion des deux lignes temporelles (originale R82-R127 + reprise post-rollback), push
+
+Work Log:
+- **Token GitHub** (compte Sounawa, dépôt Sounawa/minhaj) : remote configuré, fetch OK — GitHub était à **dcc177b (R127, registre 587)** : tawhid-1es 9/30 (intro + leçons 1-7 + page de titre), tafsir-tanawi-2 COMPLET 21/21, hadith-1es avancé — les leçons 8-13 (16720→16734) n'y ont JAMAIS été poussées (sessions mortes avant push).
+- **Vérification doublons (demande explicite utilisateur)** : registre remote 587 entrées, 0 doublon interne ; registre local 508 (457 hand + 51 llm) ; les 51 llm locaux déjà consolidés dans le hand remote ; union = 587 + 6 locales = **593 entrées uniques, ZÉRO doublon**. Leçons du livre : 29 docIds uniques + intro ✓.
+- **Fusion des lignes temporelles** : `git reset --hard origin/main` (récupération intégrale du travail original — 136 docs que le local avait perdus au rollback) + ré-injection des 6 leçons reprise (16720/16721/16722/16723/16732/16734 htmlFr + 16 fichiers tr-tmp restaurés depuis la branche backup-reprise-r84) + registre 587→593. Muqaddima : version REMOTE conservée (originale QA'd, h1 + style corpus, 1038 car) — la version reprise (977 car, sans h1) était une re-faite inférieure.
+- **Sécurité** : branche `backup-reprise-r84` (état local avant fusion) conservée + poussée sur GitHub ; bundle backup.sh dans /tmp.
+- **Prisma** : schéma remote apporte les modèles Conversation/Message (chat du run original) — db/custom.db tracké, venu avec le reset.
+
+Stage Summary:
+- **ÉTAT : registre 593/950. tawhid-1es 15/30 savants (intro + leçons 1-7 du remote + leçons 8-13 de la reprise). GitHub synchronisé (push de this commit). Prochaine leçon : 14 (16735 — la foi en la résurrection).**
+- **Décisions clés** : (1) remote = base de référence (travail original le plus riche), local ré-injecté par-dessus ; (2) muqaddima remote préférée à la reprise ; (3) llm consolidé dans hand (convention du run original) ; (4) worklog : sections reprise R82′-R84′ préservées ci-dessous pour la traçabilité scientifique (restaurations de versets, vérifications sunnah.com).
+- **Risques** : divergence futures si push non systématique → push APRÈS CHAQUE doc désormais ; le cron 469031 avait un contexte post-rollback obsolète (registre 508) → mis à jour vers 593.
+
+
+---
