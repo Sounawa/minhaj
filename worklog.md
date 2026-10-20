@@ -7481,3 +7481,19 @@ Stage Summary:
 - **Décisions clés** : (1) règle Fajr −2 (24→22) NOUVELLE — les offsets varient PAR PAGE ET PAR SURET (Ṭā-Hā +3, Baqara +1 sur 16738 ; Fajr −2, Kahf +1 sur 16741/16742) — la vérification par cible univoque reste la seule loi ; (2) les séries de versets s'écrivent en ordre descendant (Najm 15-14, Ghāshiya 26-25, Inshiqāq 12-…-7) — restituées en ordre canonique ; (3) le trio canonique des feuillets (Isrāʾ 13-14, Ḥāqqa 19, Ḥāqqa 25) pour les citations sans réf ; (4) les bāb imprimés des hadiths sont souvent EXACTS mais peuvent désigner une narration parallèle du même événement.
 - **Risques** : aucun nouveau.
 - **Priorités suivantes** : 16785 (leçon imprimée 19 — le Pont/ṣirāṭ) → 16786 (Bassin) → 16787 (īmān) → 16795 → 16798 → 16800 → 16801 → 16802 → 16805 → 16806 ; QA par leçon ; worklog R128 à la fin du livre.
+
+---
+Task ID: R89
+Agent: Z.ai Code (session principale, trace 1a159074ecbf549d)
+Task: leçons 16785 (le Pont) et 16786 (le Bassin) + 6+5 hadiths vérifiés sunnah.com + QA + push — REGISTRE 600 (jalon)
+
+Work Log:
+- **savant(tawhid-1es/16785)** — leçon imprimée 19, la foi au Pont (ṣirāṭ) : 2 citations restaurées (Maryam 71 CONFORME + le fragment imprimé isolé réintégré ; Kawthar 1 SANS réf — cible univoque par la leçon suivante, vérifiée sur le matn de 16786). **6 hadiths VÉRIFIÉS** : Bukhārî فيضرب الصراط = **Bukhārī 806, Adhān ch. 129 فضل السجود EXACT, texte CONFORME MOT À MOT** ; Abū Saʿīd أدق من الشعرة (notice conservée, voisinage du 183) ; Anas أليس الذي أمشاه = Muslim 2806 bāb يحشر الكافر على وجهه EXACT CONFORME ; Abū Saʿīd كطرف العين + ومخدوش مرسل = Muslim 183a bāb معرفة طريق الرؤية EXACT CONFORME ×2 ; ʿĀʾisha = al-Ḥākim Mustadrak (réf telle quelle). Titre من فوائد الدرس fondu → h2 restitué ; al-Maqqarī Īḍāʾat al-dujna 5 vers (pages descendantes 48-47, graphie أنقد/أنقذ). Registre 599. Commit 0a36770.
+- **savant(tawhid-1es/16786)** — leçon imprimée 20, la foi au Bassin : Kawthar 1 restaurée CONFORME. **5 hadiths VÉRIFIÉS** : Abū Dharr = Muslim 2300 (bāb إثبات حوض نبينا وصفاته EXACT, variantes notées) ; ʿAbd Allāh b. ʿAmr = Muslim 2292 ; Samura = Tirmidhī 2443 ; Asmāʾ = bāb EXACT (2292-2294) mais leçon mot à mot de **Bukhārī 6593 (Riqāq, bāb الحوض)** — divergence de localisation (pattern documenté) ; Abū Hurayra غرا محجلين = **Muslim 247a Ṭahāra bāb استحباب إطالة الغرة والتحجيل EXACT, CONFORME MOT À MOT**. Doctrines : tawātur, ummat al-ijāba, antériorité (l'argument de non-retour), arḍ al-mubaddala, Kawthar exclusif. **DÉCOUVERTE : al-Ḍarīr du vers d'al-Maqqarī = Abū l-Ḥajjāj Yūsuf al-Ḍarīr, m. 520 H (al-Tanbīh wa-l-irshād p. 236)** — note de 16785 enrichie et ré-injectée. Registre **600 (JALON)**. Commit b1ea0d5.
+- **QA agent-browser** : leçons 16785 et 16786 — badges « Traduction savante » + contenus clés 10/10 et 9/9 ; mobile 390 px overflowX = 0 ; console 0 erreur.
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 600/950 (JALON). tawhid-1es : 22/30 attendu au compteur (leçons 1-21 du tableau + intro). GitHub synchronisé (origin/main = b1ea0d5). 7 leçons livrées cette session (16736, 16738, 16741, 16742, 16785, 16786 + l'enrichissement 16785′).**
+- **Décisions clés** : (1) al-Ḍarīr identifié par la leçon suivante — le corpus se croise-référence lui-même ; (2) le pattern « bāb d'un Ṣaḥīḥ + leçon de l'autre » se CONFIRME (Asmāʾ : bāb Muslim, texte Bukhārī 6593) — 4e occurrence documentée ; (3) les pages 16785-16786 : numérotation coranique Ḥafṣ STANDARD (contrairement aux pages 16738/16741) — l'hétérogénéité est page par page.
+- **Risques** : sunnah.com en accès intermittent sur certaines pages (2292/2293) — la recherche par phrase reste la voie de repli.
+- **Priorités suivantes** : 16787 (leçon imprimée 21 — la notion de foi īmān) → 16795 → 16798 → 16800 → 16801 → 16802 → 16805 → 16806 ; QA par leçon ; worklog R128 à la fin du livre.
