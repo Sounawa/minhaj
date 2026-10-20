@@ -5629,3 +5629,21 @@ Stage Summary:
 - **Décisions clés** : (a) pivot faraid-tanawi-3 → hadith-1es pour les sources propres (le protocole OCR+doctrine validé sur 335/Mudawana [texte moderne ~90 %] mais les leçons manẓūma [vers corrompus à ~40 %] exigent un tour dédié — archive.org injoignable, sources web mortes) ; (b) la Mudawana 335 comme test réel de la feature pdfOnly : la Akdariyya y est imprimée AVEC ses nombres (6→9→27) — la doctrine 15857 se referme exactement (⅙ du jadd dans l'ʿawl puis 2:1) ; (c) « le manuel imprime » les numéros d'articles qui restent dans l'OCR (333, 363, 377 s., 379, 380, 298), pas de numérotation inventée ailleurs.
 - **Risques** : (a) hadith-1es : GT-ismes systématiques à corriger à chaque leçon (ex. القبلة = le baiser, pas la qibla) ; (b) le corps de la question des gharrawān (335) n'est pas lisible à l'OCR — titre seul rendu, à compléter éventuellement depuis le PDF à plus haute résolution ; (c) push GitHub toujours impossible (dépôt Sounawa/minhaj à R74, ~30 commits d'avance locale) ; (d) warning lint préexistant (llm-translate.ts).
 - **Priorités suivantes** : (1) hadith-1es leçons 4-6 (12884 فضل الوضوء والاستطابة, 12885 المسح, 12889 أحكام دم الرعاف) — le rythme 4-5/tour tient ; (2) tour dédié faraid-tanawi-3 leçons manẓūma (310-313) : tenter le rendu 400-600 dpi ciblé sur les blocs de vers + reconstruction doctrine verse par verse ; (3) si le temps le permet : deux colonnes FR/OCR pour les pdfOnly traduites (layout lg:grid) ; (4) relecture croisée des numéros Muwaṭṭaʾ du CMS (51 répété 4× dans 12883 — imprimé tel quel, source autorité).
+
+---
+Task ID: R82
+Agent: Z.ai Code (session principale — reprise après rollback, trace 1a15893b2dbc9195)
+Task: REPRISE après ROLLBACK sandbox → état R81 ; diagnostic des pertes + restauration 16720 + plan de récupération
+
+Work Log:
+- **Constat de rollback** : le disque a été restauré à l'état R81 (registre 502/950 — 451 main + 51 LLM ; hadith-1es livre 49 entamé 4/32 ; dernier commit 719111b). Le travail des tours R82→R127 d'origine (~87 docs savants supplémentaires, registre 589 atteint, tawhid-1es 56e livre entamé 11/30, tafsir-tanawi-2 55e livre complet 21/21) est PERDU du disque local — cause probable des sessions interrompues (« Thought Process » puis arrêt) signalées par l'utilisateur.
+- **Récupération évaluée** : pas de remote git configuré, pas de token GitHub résiduel, /home/z/.minhaj-backup vide — les commits perdus existent DANS le dépôt GitHub distant (Sounawa/minhaj, poussés à l'époque) mais sont inaccessibles sans token. **Action utilisateur possible : fournir un token GitHub (droit read) → git fetch + reset récupère tout.**
+- **Restauration immédiate** : leçon 16720 (tawhid-1es, leçon 8 — pré-éternité des attributs + adresse à Mūsā) restituée INTÉGRALEMENT depuis la mémoire de session (12 549 car) : Nisāʾ 163→164 restauré (réf d'adjacence −1, masdar taklīman), Aʿrāf 143 ×2 CONFORME, Ḥashr 21-23 restituées, 4 doublons OCR détangles (ijmāʿ modalité, queue « min jalālihi », item d'évaluation, titre h4 soudé) — up-script tr-tmp/scripts/up-16720.py, registre 502→503.
+- **Réparation registre** : entrée parasite « --help » (effet de bord de hand-register.py --help) retirée.
+- **Règles réaffirmées** : backup.sh à CHAQUE doc (leçon des réinitialisations) ; apostrophes typographiques (16720 : 0 droite / 139 typographiques ✓).
+
+Stage Summary:
+- **État : registre 503/950 (452 main + 51 LLM). 16720 restaurée (tawhid-1es 1/29+intro côté GT restant). Dev server OK (200), lint à vérifier.**
+- **Décisions clés** : (1) reprise depuis l'état disque réel R81 ; (2) 16720 restituée depuis la mémoire de session — seule leçon récupérable intégralement (16721 : fragments insuffisants, sera retraduite) ; (3) token GitHub = voie de récupération des ~87 docs perdus, à demander à l'utilisateur ; (4) commits fréquents contre le risque de nouveau rollback.
+- **Risques** : nouveau rollback possible (instabilité infra) ; le travail R82→R127 d'origine reste sur GitHub seulement.
+- **Priorités suivantes** : (1) re-traduire tawhid-1es (contexte chaud : leçons 8-9 connues, versets déjà vérifiés) ; (2) commit+backup après chaque doc ; (3) si token fourni : récupération intégrale depuis GitHub.
