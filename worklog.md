@@ -5669,3 +5669,19 @@ Stage Summary:
 - **Décisions clés** : (1) 16720 restituée verbatim de la mémoire de session, 16721 en tête/queue + centre traduit à l'identique — la mémoire de session a sauvé 2 leçons ; (2) 3 NOUVELLES réf d'écart +2 documentées (Shūrā 10→12, Ibrāhīm 29→27, Māʾida 21→19 — l'imprimé SUPÉRIEUR à Ḥafṣ, sens inverse des adjacences −1 usuelles : hétérogénéité CMS confirmée dans les deux directions) ; (3) normalisation Unicode des diacritiques requise pour chercher sunnah.com (les hadiths combinants ne matchent pas en brut) ; (4) la Jawhara : permutation de colonnes OCR des vers 2/4 — ordre canonique restitué et noté ; (5) hadith Bukhārī 3333 (Anas) vs réf imprimée Kitāb al-Ḥayḍ : le bāb imprimé est celui du hadith parallèle d'Ibn Masʿūd 3208.
 - **Risques** : nouveau rollback possible (travaux commités après CHAQUE doc + backup.sh) ; le travail R82→R127 d'origine (registre 589) reste uniquement sur GitHub — un token read suffirait à tout récupérer.
 - **Priorités suivantes** : (1) tawhid-1es : leçons 1-7 (13978, 13980, 14002, 16691, 16712, 16715, 16716, 16718 — perdues, à re-traduire) OU continuer 16734→16806 puis revenir ; (2) QA navigateur de chaque leçon ; (3) token GitHub → récupération des ~87 docs perdus.
+
+---
+Task ID: R84 (complément R83)
+Agent: Z.ai Code (session principale — suite, trace 1a15893b2dbc9195-c)
+Task: tawhid-1es leçon 13 (16734) + QA + cron 15 min recréé (job 469031, contexte post-rollback)
+
+Work Log:
+- **savant(tawhid-1es/16734)** — leçon 13, la mission de Muḥammad ﷺ sceau des révélations : hadith ʿAlī « أنت مني بمنزلة هارون » VÉRIFIÉ sunnah.com = **Muslim 2404** (voie Saʿīd b. al-Musayyib ← ʿĀmir b. Saʿd ← Saʿd b. Abī Waqqās — le texte reçu porte « lā nabiyya baʿdī » SANS le « min » imprimé : variante de citation notée ; la réf imprimée Muslim/faḍāʾil ʿAlī est EXACTE ; Bukhārī 4416 = « laysa nabiyyun baʿdī ») ; 8 versets RESTAURÉS : Aḥzāb 40 (خاتم النبيين), Furqān 1 (للعالمين نذيرا), Hūd 1 (أحكمت آياته), Isrāʾ 88 (le défi), Aḥzāb 45-48 (l'istithmār — les missions du Prophète) CONFORMES ; Muddaththir 1→1-2 (قم فأنذر — la nadhāra vise le v2) ; Anʿām 20→19 (لأنذركم به ومن بلغ — l'universalité, adjacence −1) ; Shūrā 49-50→52-53 (وإنك لتهدي — le miroir exact du matn, écart +3 comme Wāqiʿa 88→85) ; objectifs doublon OCR (imprimé 2×) + items d'extraction/iʿdād fusionnés — détangles notés ; sirāj munīr vs soleil/lune (la lumière qui ne décline pas) rendu fidèlement. Registre 507→508. Commit 6226fad.
+- **QA agent-browser 16734** : badge « Traduction savante » + 7/7 contenus clés (Sceau des prophètes, Muslim 2404, Muddaththir, Furqān 1, Isrāʾ 88, Shūrā 52-53) ; mobile 390 px overflowX = 0 ; console 0 erreur.
+- **Cron 15 min** : ancien job 467669 (désactivé « exec limits exceeded », contexte pré-rollback obsolète) supprimé ; nouveau **job 469031** créé avec le contexte post-rollback (registre 508, tawhid-1es 7/30, pipeline, règles d'écarts CMS, routing hash #/livre/…, normalisation Unicode sunnah.com, priorités dont token GitHub → récupération des ~87 docs perdus).
+- **Découverte routing QA** : les query strings ?book=&doc= rendent la home — l'app route par hash `#/livre/<bookId>/<docId>` (hooks.ts parseHash) : les QA doivent utiliser ce format.
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 508/950 (457 main + 51 LLM). tawhid-1es : 7/30 docs savants (intro + leçons 8-13). Git synchronisé (7 commits ce tour), backup.sh ×2, cron 15 min actif (job 469031), QA 4 leçons + book + mobile impeccable.**
+- **Risques** : le travail R82→R127 d'origine (registre 589) reste uniquement sur GitHub — token read = récupération intégrale.
+- **Priorités suivantes** : (1) tawhid-1es : 16735 (leçon 14 — l'Heure) → 16806 ; (2) puis leçons 1-7 perdues (13978→16718) ; (3) QA de chaque leçon ; (4) token GitHub.
