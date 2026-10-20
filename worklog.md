@@ -7438,3 +7438,29 @@ Stage Summary:
 - **Décisions clés** : (1) Ṭā-Hā : l'écart +3 de la leçon six se CONFIRME en la leçon quinze (109→112) — la numérotation Ṭā-Hā de ce CMS est décalée de +3, à opposer au décalage +1 de 16718 : hétérogénéité par page, vérification par cible univoque à chaque fois ; (2) sunnah.com accessible via curl + UA navigateur (Cloudflare bloque l'agent-browser en boucle) ; (3) le hadith Muslim 182a : le bāb imprimé du manuel est EXACT cette fois (contrairement aux imprécisions documentées ailleurs).
 - **Risques** : aucun nouveau ; cadence « un document = commit + push » maintenue.
 - **Priorités suivantes** : 16738 (leçon imprimée 16 — le Paradis, ses habitants et ses délices) → 16741 → 16742 → 16785 → 16786 → 16787 → 16795 → 16798 → 16800 → 16801 → 16802 → 16805 → 16806 ; QA navigateur de chaque leçon ; worklog R128 à la fin du livre.
+
+---
+Task ID: R87
+Agent: Z.ai Code (session principale, trace 1a159074ecbf549d)
+Task: leçon 16738 (tawhid-1es leçon imprimée 16 — le Paradis) + vérifications sunnah.com + QA + push
+
+Work Log:
+- **savant(tawhid-1es/16738)** — leçon imprimée 16, le Paradis, ses habitants et ses délices : 9 emplacements de citation vides/tronqués RESTAURÉS :
+  * 2 citations SANS référence (« le Paradis et le Feu sont créés et existent à présent ») — cibles univoques par le verbe أُعِدَّتْ (parfait passif = déjà advenue), fondant l'argument immédiat « rien n'est préparé sinon ce qui existe ferme » : **Āl ʿImrān 133 + 131** (paire canonique Paradis/Feu) ;
+  * Najm paire imprimée en ordre DESCENDANT « 15-14 » → restituée 53:14-15 (sidrat al-muntahā + jannat al-maʾwā) ;
+  * **Baqara 34→35 écart +1** — MÊME règle que Baqara 29→30 de cette même page (le verset du vicariat imprimé 29 = 2:30 Ḥafṣ) : cible « اسكن أنت وزوجك الجنة » (le Jardin céleste à l'article défini) ; le v34 imprimé (prosternation des anges, gens des cieux) ouvre la péricope — noté ;
+  * Fāṭir 35 CONFORME (dār al-muqāma — « Demeure de la permanence », miroir exact du propos) ;
+  * Qiyāma paire inverse « 22-21 » → restituée 75:22-23 (miroir ḍād/ẓāʾ) + **2 citations de MOTS vides (nāḍira/nāẓira)** — univoques par la glose de chaque lettre ;
+  * **Ṭā-Hā 112→115 écart +3 — TROISIÈME confirmation de la règle Ṭā-Hā du livre** (107→110 leçon six ; 109→112 leçon quinze) : « ولقد عهدنا إلى آدم من قبل فنسي » repris mot à mot dans le propos ;
+  * Baqara 29→30 écart +1 (verset du vicariat) ; Aʿrāf 22 TRONQUÉE (réf amputée du numéro) — restaurée (le recouvrement par les feuilles, repris mot à mot).
+- **Hadiths VÉRIFIÉS sunnah.com (curl + UA navigateur)** : (1) Bukhārī « إني رأيت الجنة أو أريت الجنة فتناولت منها عنقودا » — le bāb imprimé (Adhān ch. 91 « رفع البصر إلى الإمام في الصلاة ») existe À L'IDENTIQUE et abrite le taʿlīq de ʿĀʾisha sur la retraite en la prière de l'éclipse ; le texte cité = narration d'Ibn ʿAbbās **Bukhārī 5197 CONFORME mot à mot** (ou أريت + منها) ; parallèle 1052 (Kusūf) sans les deux additions — divergence de localisation notée (même pattern que Bukhārī 3333 en la leçon 16723) ; (2) **Muslim 181a** Ṣuhaib « تريدون شيئا أزيدكم... فيكشف الحجاب » — bāb إثبات رؤية المؤمنين EXACT, texte VÉRIFIÉ CONFORME mot à mot.
+- **OCR détangles** : titre « من فوائد الدرس » fondu dans le paragraphe précédent (question rhétorique) → h2 restitué ; objectifs avec &nbsp; parasites ; artefacts vides non rendus ; réf « جسوس » (Ḥikam p. 119) rendue telle quelle (graphie probablement altérée).
+- **Pipeline** : up-16738.py → main (14 939 car, 0 apostrophe droite) → hand-register.py → registre 595→**596**.
+- **QA agent-browser** : badge « Traduction savante » + contenus clés 12/12 (Āl ʿImrān 133/131, sidra, Baqara 35, Bukhārī 5197, Fāṭir 35, Qiyāma 22-23, nāḍira/nāẓira, Ṣuhaib 181, Ṭā-Hā 115, Paradis promis, vendredi) ; page livre **18/30** ; mobile 390 px overflowX = 0 ; console 0 erreur ; lint 0 erreur.
+- **Git** : commit 3ec6212 poussé (2c6cdd3→3ec6212).
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 596/950. tawhid-1es : 18/30 au compteur du livre (leçons 1-17 du tableau + intro). GitHub synchronisé (origin/main = 3ec6212). QA complète impeccable.**
+- **Décisions clés** : (1) règle Ṭā-Hā +3 confirmée une 3e fois — quasi-loi pour les pages du cluster 16735-16738 ; (2) règle Baqara +1 par page (29→30 ET 34→35) ; (3) l'« uʿiddat » parfait passif = la clé des deux citations sans réf ; (4) sunnah.com : le bāb d'un hadith cité peut être le bāb-thème d'une narration PARALLÈLE (Bukhārī 5197/1052 vs taʿlīq ʿĀʾisha) — pattern récurrent du manuel.
+- **Risques** : aucun nouveau.
+- **Priorités suivantes** : 16741 (leçon imprimée 17 — la présentation des créatures / العرض) → 16742 → 16785 → 16786 → 16787 → 16795 → 16798 → 16800 → 16801 → 16802 → 16805 → 16806 ; QA par leçon ; worklog R128 à la fin.
