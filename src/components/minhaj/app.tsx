@@ -69,6 +69,11 @@ interface AboutStats {
 
 function AboutDialog({ stats }: { stats: AboutStats | null }) {
   const fmt = (n: number) => n.toLocaleString("fr-FR");
+  // NB : suppressHydrationWarning sur le déclencheur — artefact de développement
+  // Next 16 + React 19 : l'injection des scripts HMR décale les identifiants
+  // d'arbre entre SSR et client (aria-controls radix-_R_…). Sans effet
+  // fonctionnel (l'attribut se resynchronise au premier rendu) — on supprime
+  // le bruit de console.
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -76,6 +81,7 @@ function AboutDialog({ stats }: { stats: AboutStats | null }) {
           variant="outline"
           size="icon"
           aria-label="À propos de Minhāj"
+          suppressHydrationWarning
           className="size-10 border-amber-800/20 bg-card/60 text-amber-900 hover:bg-amber-100/70 dark:text-amber-100 dark:hover:bg-amber-900/40"
         >
           <Info className="size-4.5" />
