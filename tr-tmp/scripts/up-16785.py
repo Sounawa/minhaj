@@ -106,7 +106,7 @@ HTML_FR = """<h1>Le Tawḥīd : la foi au Pont (ṣirāṭ)</h1>
 <ul>
 <li>Je transcris les vers en mon cahier et les mémorise.</li>
 <li>J’explique les vers en une explication concise, selon ce que j’ai compris de la leçon.</li>
-<li>Je présente deux savants mentionnés en ces vers. [Coquille de l’imprimé <em>al-abīt</em> pour <em>al-abyāt</em> — corrigée ; les deux savants visés : Muslim et « al-Ḍarīr » (l’Aveugle), épithète de l’imprimé conservée.]</li>
+<li>Je présente deux savants mentionnés en ces vers. [Coquille de l’imprimé <em>al-abīt</em> pour <em>al-abyāt</em> — corrigée ; les deux savants visés : Muslim, et « al-Ḍarīr » — identifié d’après la leçon suivante comme Abū l-Ḥajjāj Yūsuf al-Ḍarīr, mort en 520 H, auteur de vers de créance (<em>al-Tanbīh wa-l-irshād</em>).]</li>
 </ul>
 <h2>La préparation préalable (<em>iʿdād qablī</em>)</h2>
 <p>Je lis le <em>matn</em> de la leçon suivante et recherche ce qui suit :</p>
