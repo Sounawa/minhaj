@@ -7899,3 +7899,18 @@ Stage Summary:
 - **Calibration ḥafṣ étendue** : Shūrā école 9 = Ḥ11 [−2], Anʿām école 83 = Ḥ82 [+1] — décalages non uniformes selon les sourates, chaque point documenté dans les N.d.T.
 - **Risques** : resets sandbox multiples par jour (procédure = re-add remote + fetch + reset --hard, documentée dans le cron 470548) ; sunnah.com volatile (pages-bāb = méthode de repli fiable).
 - **Priorités suivantes** : 18579 (leçon 2 — la doctrine achʿarite) → 18586 (jugement rationnel) → 18593 (première obligation du mukallaf)… jusqu'à 19185 (25/25) ; ensuite tajwid-2es ou fiqh-tanawi-1.
+
+---
+Task ID: R143-b
+Agent: Z.ai Code (session web, trace 1a16025d5908acb5)
+Task: Suite du round 143 — 3e leçon tawhid-2es (18579, doctrine achʿarite) — registre 641.
+
+Work Log:
+- **① 18579 (leçon 2 — la doctrine achʿarite)** : page habous INDISPONIBLE (503 persistant pendant ~20 min de sondages espacés — panne serveur, pas géoblocage : le même 503 sur images et pages) ; décision : traduire SANS contre-vérification iconographique car la source JSON ne contient AUCUN emplacement coranique vide (leçon biographique/doctrinale pure, contrairement à 15384) — report documenté en N.d.T. pour contre-vérification rétroactive.
+- **② Contenu traduit** : matn des 5 vers d'ouverture du Murshid al-muʿīn en table couplet par couplet (incipit proclamant le triple ancrage credo achʿarite + fiqh mālikite + voie junaydienne) ; 4 lexiques du sharḥ (al-ʿawn, al-majīd, ʿaqd, as-sālik) ; biographie complète d'Abū l-Ḥasan al-Achʿarī (260-324 H, Baṣra → Bagdad, descendance Abū Mūsā al-Achʿarī, 6 ouvrages dont Maqālāt al-islāmiyyīn et al-Ibāna) ; 3 citations savantes intégrales : Ibn Farḥūn ad-Dībāj 2/94 + as-Subkī Ṭabaqāt 3/365 [avec adaptation] + Ibn ʿAsākir Tabyīn 1/70 ; 4 caractéristiques de la doctrine (tripartition tawḥīd dhāt/ṣifāt/afʿāl, juste milieu raison-transmission, pas de takfīr des gens de la qibla contre les khārijites, commandement des croyants + bayʿa) ; taqwīm 3 + istithmār (travail de groupe sur les constantes) + iʿdād qablī (ʿāda/waḍʿ/ʿilm naẓarī, aqṣām al-ḥukm, dalālat al-ʿaql) ; N.d.T. 4 points (chronologie achʿarite, sources biographiques, incipit, note 503).
+- **③ QA + injection + vérification** : 11 184 car, 0 arabe, 6 guillemets appariés, 12 balises → registre 641 ; navigateur (navigation via accueil pour vider le cache) : badge « Traduction savante », table matn rendue, citations complètes, 0 erreur console, overflowX 0 desktop 1280 ET mobile 390, captures qa-r143-lecon-18579(-mobile).png. Commit 5683e5a + push + backup.
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 641/950. tawhid-2es : 3/25 (présentation + leçons 1-2). 3 leçons livrées sur le round R143.**
+- **Risque nouveau** : habous.gov.ma en panne 503 (temporaire ?) — la contre-vérification iconographique de 18579 est à refaire quand le site reviendra ; les leçons suivantes du livre nécessitent les pages habous pour détecter les blocs coraniques (le JSON source est peu fiable pour cela : 15384 semblait vide mais cachait 5 versets).
+- **Priorités suivantes** : 18586 (leçon 3 — le jugement rationnel et ses catégories, 7 429 car) → 18593 (première obligation du mukallaf) ; vérifier le retour de habous.gov.ma avant chaque leçon et contre-vérifier 18579.
