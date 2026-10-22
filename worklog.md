@@ -8480,3 +8480,21 @@ Stage Summary:
 - Décisions clés : (a) le mathn traduit avec ses formes substituées (adh-dhīb, bīr, biyya, an-nasiyy) conformément à la source, les formes d'origine données en le corps ; (b) ʿĪsā = Qālūn (ʿĪsā ibn Mīnā) documenté du glose scolaire ; (c) la khaṭṭāṭa de synthèse restituée en tableau à six lignes (le seul tableau qui récapitule les 6 exceptions des deux leçons) ; (d) l'édification liée au locus même (Jacob, la crainte du loup, les yeux blanchis — Yūsuf 84).
 - Risques : habous.gov.ma toujours injoignable (4 versets en puces + le schéma de synthèse) ; le second exemple du biʾsa (la Caverne 50) reste un candidat de premier ordre.
 - Priorités suivantes : (1) R157 — leçon 18384 (les règles du naql, 2e partie du hamza simple) : le chapitre du commentaire commence à ~202 100 (« باب أحكام نقل الحركة ») — déjà partiellement lu (les 4 conditions du naql : sākin, sain, avant la hamza, séparé) ; lire la suite (~203 600+) avant rédaction ; (2) le flux continue : 18385, 18386, 18512… ; (3) le rythme de 5 leçons/session est tenable — poursuivre jusqu'à épuisement du contexte avec commit après chaque leçon.
+
+---
+Task ID: R157
+Agent: Z.ai Code (session principale)
+Task: Tajwid-2es leçon 18384 — les règles du transfert de voyelle (naql) (14e leçon) : traduction savante complète
+
+Work Log:
+- Source AR extraite (3 562 car — tamhīd narratif du professeur, mathn 2+1 vers, 3 axes, table d'exemples perdue, 1 verset d'application perdu).
+- Chapitre du commentaire lu IN EXTENSO (202 100 → 208 000 : la définition du naql, les 4 conditions avec contre-exemples et causes, la note du mīm du pluriel, le khilāf de kitābiyah et l'assimilation de māliyah, la manière de commencer par le lām de l'article, le tanbīh du madd al-badl — les deux derniers points étant la matière de 18385).
+- Mathn vérifié verbatim au matn (les 3 vers + le vers suivant « أو لام تعريف وفي كتابيه » identifié comme 18385).
+- Locus tous vérifiés au cache : la Vache 62/284/78, al-Aʿrāf 39/121, l'Aube 6-7, le Pur Monothéisme 4, Sabaʾ 16, al-Anʿām 151, les Croyants 1, l'Après-midi 4, la Démonstration claire 5.
+- tr-tmp/18384.savant.html rédigé (14 278 car — table d'exemples à 8 lignes restituée du commentaire, l'ʿilla complète du naql, les causes des 4 conditions) ; QA OK après correction d'une balise em non fermée (32+32 guillemets) ; hand-set OK (registre 677) ; navigateur : badge, sondes 12/12, bilingue 432 séquences arabes, overflowX 0 page+main en 1280 et 390, 0 erreur console, captures desktop+mobile ; commit 3b532f8 + push GitHub + backup.sh OK.
+
+Stage Summary:
+- État : registre **677/950** (+6 ce session : 18119, 18124, 18379, 18381, 18382, 18384 — tajwid-2es 15/27, plus de la moitié du livre). GitHub synchronisé (3b532f8), bundle /tmp à jour.
+- Décisions clés : (a) l'ʿilla du naql intégralement traduite (le transfert plutôt que l'atténuation ou la substitution — l'argument des deux quiescents) ; (b) la note du mīm du pluriel intégrée en N.d.T. ; (c) le khilāf de kitābiyah + l'assimilation de māliyah + le lām de l'article previewés comme matière de 18385 (le vers suivant du mathn déjà identifié au matn) ; (d) l'édification ikhlāṣ/naql (les deux allègements).
+- Risques : habous.gov.ma toujours injoignable (la table d'exemples et le verset d'application en restauration honnête) ; le lieu de al-ʾayman non déterminé.
+- Priorités suivantes : (1) R158 — leçon 18385 (le naql au lām de l'article et le mot kitābiyah) : le chapitre du commentaire est DÉJÀ LU (le khilāf de kitābiyah, la hāʾ de sakt, l'assimilation de māliyah avec l'avis d'Ibn al-Jazarī et as-Sakhāwī, le lām de l'article à l'initiale, le tanbīh du madd al-badl — 203 600 → 208 000) ; la source et le matn restent à extraire/vérifier ; (2) puis 18386 (le naql et sa justification — « نقل الحركة عند نافع وتوجيهه »), 18512… ; (3) le contexte de la session principale s'épuise — le cron 471313 relaie : chaque tour webDevReview doit suivre le pipeline documenté en tête du worklog.
