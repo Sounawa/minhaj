@@ -8150,3 +8150,16 @@ Stage Summary:
 - **ÉTAT : SAIN. Registre 657/950. tawhid-2es : 19/26. Reste 7 documents (leçons 19-25 + fin).**
 - **Cumul post-interruptions : 16 leçons (18586 → 19153) — registre 641 → 657.**
 - **URL sunnah.com complété : /bukhari/64 = maghāzī (Ḥudaybiyya/4351).**
+
+---
+Task ID: R145-i
+Agent: Z.ai Code (session web, trace 1a1631a4712429a1)
+Task: Round 145-i — leçon 19162 (preuves de l'obligatoire et de l'impossible des messagers) — registre 658. 17e leçon du cumul.
+
+Work Log:
+- **① 19162 (leçon 19 — les 3 démonstrations prophétologiques)** : matn 3 couplets + lexique 2 (muʿjizāt = signes de véracité ; wa-barr) + véracité (le miracle : réalité en rupture avec la coutume, jointe à la prétention, lancée en défi ; approuver le menteur = mentir ; règle des conditionnelles de la leçon 16) + transmission (la dissimulation deviendrait obéissance → nous l'imiterions → absurdité ; menace des dissimulateurs [candidat Baqara 159 noté] ; **chip Māʾida 67 CERTAINE + sa clausule** [« et si tu ne le fais pas, tu n'as pas transmis Son message »] — le tafsīr Qurṭubī 6/242-243 [volume d'al-Māʾida] autocertifie triple ; citation intégrale : réfutation des rāfiḍites [taqiyya], Ibn ʿAbbās [éducation des porteurs de science], hadith ʿĀʾisha/Masrūq [Muslim, Livre de l'exégèse — localisation par page-livre non aboutie, documenté] + fiabilité (l'interdit renversé en obéissance → Dieu n'interdit jamais pour licencier ; citation al-Ṭarābulusī Irshād al-murīdīn 1/96 avec la parole d'al-Junayd contre l'annulation des charges [« parvenus — mais en Enfer ; dussé-je vivre mille ans… »]) + la remarque finale (leurs actes entre obligatoire et méritoire, tout accompagné d'intention = dévotion) + taqwīm (source tronquée documentée) + iʿdād qablī (leçons contingents → 19176) + N.d.T. 7 points.
+- **② QA + injection + navigateur** : 12 094 car, 0 arabe, 11 guillemets appariés, 11 balises → **registre 657 → 658** ; navigateur : badge, **21/21 sondes réelles** (la « missente » « dévolution » = ma coquille de sonde, « dévotion » confirmé), overflowX 0 desktop 1280 ET mobile 390, 0 erreur console, captures qa-r145-lecon-19162(-mobile).png. Commit + push + backup.
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 658/950. tawhid-2es : 20/26. Reste 5 : 19176 (contingents des messagers), 19180 (kalima + marque de la foi), 19181 (islam/îman/ihsan), 19182 (activités), 19185 (sources).**
+- **Cumul post-interruptions : 17 leçons (18586 → 19162) — registre 641 → 658.**
