@@ -8253,3 +8253,21 @@ Stage Summary:
 - **ÉTAT : SAIN. Registre 664/950. tajwid-2es : 1/27. Prochaine leçon : 17893 (la hamza redoublée en un mot — interrogation + hamza de liaison : ʾa-ʾandhartahum, ʾa-ʾamintum, ʾa-ʾunkabbiʾukum ; voies Bagdadiens/Égyptiens).**
 - **ACTIF NOUVEAU : tr-tmp/nujum-durar.txt = le commentaire d'al-Marghanī INTÉGRAL (OCR 550k car) — la source de référence pour TOUTES les 27 leçons de tajwid-2es et les 28 leçons de tajwid-3es (même poème, bab-s avancés : imāla, fatḥ, rāʾāt, yāʾāt, waqf) — les exemples de versets des leçons futures sont désormais vérifiables en local.**
 - **Risques : habous 503 persistant (>48 h) — file d'attente de contre-vérifications iconographiques rétroactives (~25 versets + les 2 gloses différées de 17889) ; jobs cron désactivés par la plateforme.**
+
+---
+Task ID: R146-b
+Agent: Z.ai Code (session web, trace 1a1639db0c28eeb9)
+Task: Round 146-b — leçon 17893 (la règle des deux hamzas en un mot) — registre 665. 2e leçon de tajwid-2es.
+
+Work Log:
+- **① Source lue** (déjà en session) + approfondissement du commentaire d'al-Marghanī (tr-tmp/nujum-durar.txt) : chapitre des hamzatayn fī kalima relu en entier — définition, 3 formes (le commentary énumère 9 mots brisés-après-ouvert), Nāfiʿ atténue la seconde « selon ses deux transmetteurs », ibdāl-alif = Égyptiens / tashīl = Bagdadiens, les 2 lieux à mobile après l'alif substitué (« أألد بهود وآمنتم بالملك »), le bilan avec préférence de l'ibdāl « la plus forte du côté de la transmission ».
+- **② Découverte précieuse** : la leçon 18635 de tajwid-2es = le MATHN INTÉGRAL du poème (27e leçon, « من باب الهمز إلى آخر باب الإظهار والإدغام ») — disponible en local pour toutes les leçons futures ; elle confirme la vocalisation أءُشْهِدُوا (ḍamma) du mathn pour Zukhruf 19.
+- **③ Identifications des images du manuel** : al-Mulk 16 (ʾa-ʾamintum — CERTAINE : glose + commentary) ; Āl ʿImrān 15 (ʾa-ʾunabbiʾukum — CERTAINE : glose) ; Yūsuf 90 (ʾa-ʾinnaka — haute confiance : seul interrogatif+ʾinnaka du Coran) ; **aṭbiq RÉSOLU : an-Naml 40** (ʾa-ʾashkuru am ʾakfuru — le seul ʾa-ʾashkuru coranique : deux ouvertes, l'exercice ibdāl/tashīl porte exactement sur lui, l'alif substitué suivi du shīn quiescent → lāzim mushabaʿ) ; différées : la 2e image mafṭūḥatān et l'image mushabaʿ (candidat Baqara 6), la 2e mafsūra (famille ʾa-ʾidh/ʾa-ʾinna), la 2e place à mobile (un mot de Hūd selon le commentary — OCR rétif), 2 des 4 lieux maḍmūma (OCR dégradé ; Āl ʿImrān 15 + Zukhruf 19 attestés).
+- **④ Traduction savante + QA + injection** : 12 820 car, 0 arabe, 25 guillemets, 12 balises → **registre 664 → 665** ; citation de Shāṭibī (Ḥirz al-amānī) rendue en vers ; les deux écoles documentées (Maroc/tawassuṭ vs Tunis/qaṣr) ; note du commentary sur Qālūn (fils de la femme de Nāfiʿ, surnommé « excellent » en roman, n'entendait pas le clairon mais entendait le Coran) ; 2 anglicismes parasites (« commentary ») corrigés avant livraison.
+- **⑤ Navigateur** : badge, **17/17 sondes réelles**, overflowX 0 page (1280 ET 390), 0 erreur console, captures qa-r146-lecon-17893(-mobile).png. Commit + push + backup (3bcf9e1).
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 665/950. tajwid-2es : 2/27. Prochaine leçon : 17895 (l'insertion/idkhāl de Qālūn — l'alif interposée — et ses exceptions : les trois-hamzas ʾa-ʾāmantum [al-Aʿrāf 122, Ṭā-Hā 70, Poètes 48], ʾa-ʾālihatunā [Zukhruf 58], ʾaʾimma [5 lieux — Repentir 12, Prophètes 72, Récits 4+41, Prosternation 24], khilāf sur ʾa-ʾushhidū [Zukhruf 19]).**
+- **ACTIF : le mathn intégral du poème est en local (lesson 18635 de tajwid-2es) — toutes les vocalisations du poème désormais vérifiables sans connexion.**
+- **Cumul de la session : 2 leçons (17889, 17893) — registre 663 → 665.**
+- **Risques : habous 503 persistant — file de contre-vérifications (2 gloses de 17889 + 6 images de 17893) ; l'OCR du commentary dégrade 2 des 4 lieux maḍmūma et le mot de Hūd.**
