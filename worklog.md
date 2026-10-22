@@ -8025,3 +8025,16 @@ Stage Summary:
 - **Cumul session de rattrapage : 7 leçons (18586 → 19090) — registre 641 → 648.**
 - **Nouvelle méthode consolidée : « identification par raisonnement grammatical »** (la glose badal ishtimāl ne fonctionne que dans Qaṣaṣ 88 → identification de ses 3 segments images) — s'ajoute aux identifications par certitude doctrinale (Kursī, Anʿām 59) et par expression unique.
 - **Risques** : habous 503 (contre-vérifications rétroactives leçons 3-9) ; Nahl 17 = candidat probable pour l'image de ḥudūth, laissé en attente.
+
+---
+Task ID: R144-h
+Agent: Z.ai Code (session web, trace 1a162e5189edc051 → suite 6)
+Task: Round 144-h — leçon 19100 (impossibles suite : iḥtiyāj, mumāthala, nafy al-waḥda) — registre 649. 8e leçon de la session.
+
+Work Log:
+- **① 19100 (leçon 10 — besoin, ressemblance, pluralité)** : matn 1 couplet + lexique 3 (ʿuddah ; yumāthal actif/passif ; nafy al-waḥda) + iḥtiyāj (contradiction du ghināʾ : ni support, ni déterminant, ni obéissance, ni intermédiaires/causes — ce qu'Il cause par causes est par choix selon Sa sagesse ; **chip Maryam 24-25 IDENTIFIÉE par glose** : « sans secousse ni palmier » désigne directement le tronc du palmier de Maryam, bouche de ʿĪsā ; double lecture grammaticale de ʿuddah documentée ; candidat Fāṭir 15 pour le verset du ghināʾ noté) + mumāthala (contradiction de la mukhālafa par égalité ; conséquences : direction, temps, lieu, petitesse/grandeur, desseins ; candidats Shūrā 11 [leçon 6] ou Ikhlāṣ 4) + nafy al-waḥda (contradiction de la waḥdāniyya : kam muttaṣil → réfutation mujassima ; kam munfaṣil dhāt → réfutation majūs ; kam munfaṣil ṣifāt ; affectation d'un autre dans les actes → réfutation qadarites ; **chip Ikhlāṣ 1-2 IDENTIFIÉE par série** « un, unique, singulier, impérissable » = aḥad + ṣamad, l'exégèse prescrite par le iʿdād de la leçon 9) + fruits (l'esprit de la servitude ; l'anse solide) + taqwīm 3 (kumūm ↔ leçons 6-7) + istithmār 2 versets-images avec tasbīḥ (candidats Ḥadīd/Ḥashr 1, Aʿlā 1 — différés) + iʿdād qablī (reste des impossibles → leçon 19102) + N.d.T. 7 points.
+- **② QA + injection + navigateur** : 11 561 car, 0 arabe, 25 guillemets appariés, 11 balises → **registre 648 → 649** ; navigateur : badge, **19/19 sondes réelles**, overflowX 0 desktop 1280 ET mobile 390, 0 erreur console, captures qa-r144-lecon-19100(-mobile).png. Commit + push + backup.
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 649/950. tawhid-2es : 11/26. Prochaine : 19102 (reste des impossibles : les suppressives des attributs de sens).**
+- **Cumul session de rattrapage : 8 leçons (18586 → 19100) — registre 641 → 649.**
