@@ -8121,3 +8121,17 @@ Work Log:
 Stage Summary:
 - **ÉTAT : SAIN. Registre 655/950. tawhid-2es : 17/26. Prochaine : 19151 (preuves de l'ouïe, la vue et la parole — fin de la série des démonstrations).**
 - **Cumul post-interruptions : 14 leçons (18586 → 19143) — registre 641 → 655.**
+
+---
+Task ID: R145-g
+Agent: Z.ai Code (session web, trace 1a1631a4712429a1)
+Task: Round 145-g — leçon 19151 (preuves de samʿ, baṣar, kalām) — registre 656. 15e leçon du cumul. FIN de la série des démonstrations des attributs.
+
+Work Log:
+- **① Vérification hadith (cache b97)** : **Bukhārī 7443 VÉRIFIÉ MOT POUR MOT** (Yūsuf b. Mūsā ← Abū Usāma ← al-Aʿmash ← Khaythama ← ʿAdī b. Ḥātim ← Prophète ﷺ : « mā minkum min aḥadin illā sayukallimuhu rabbuhu… » — Livre du Tawḥīd, dans la section de la vision béatifique) ; le hadith arbaʿū (Bukhārī 7386) était déjà vérifié en leçon 11 et cité au tamhīd avec son bāb exact.
+- **② 19151 (leçon 17 — ouïe, vue, parole)** : matn 2 couplets + lexique 4 (turām ; istaḥāl ; mumkin ; qalb al-ḥaqāʾiq = renverser les catégories du jugement rationnel) + preuve transmise (chip **Mujādala 1 CERTAINE** [la glose nomme Khawla bt. Thaʿlaba et Aws b. aṣ-Ṣāmit = la cause de révélation] + candidats Ṭā-Hā 46 [Moïse ET Aaron — le seul verset aux deux frères], Nisāʾ 134 [le verset du bāb du hadith], Nisāʾ 164 [taklīm], Anbiyāʾ 23 + 2 différés) + les 2 hadiths (arbaʿū au tamhīd ET dans l'analyse ; turjumān avec bāb de la vision) + preuve rationnelle (la négation des attributs → contraires déficients → impossible ; « par Sa perfection, ils sont attestés ») + 2e partie du matn (le contingent : rendre obligatoire/impossible le faire d'un possible = renversement des réalités ; la liste des contingents reprend la leçon 12 + la vision béatifique sans direction/corps/localisation) + complémentarité raison/transmission (le programme du livre) + taqwīm 3 (avec la valeur morphologique faʿīl/faʿʿāl des noms samīʿ/baṣīr) + **istithmār chip Nisāʾ 58 haute confiance** (le verset des dépôts — le résumé demandé porte sur les amānāt) + iʿdād qablī (messagers → 19153) + N.d.T. 7 points.
+- **③ QA + injection + navigateur** : 11 893 car, 0 arabe (1 citation arabe translittérée), 23 guillemets appariés, 11 balises → **registre 655 → 656** ; navigateur : badge, **19/19 sondes réelles** (la translittération du hadith remplacée par la formule française complète, validée en contexte), overflowX 0 desktop 1280 ET mobile 390, 0 erreur console, captures qa-r145-lecon-19151(-mobile).png. Commit + push + backup.
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 656/950. tawhid-2es : 18/26. Prochaine : 19153 (ce qui est obligatoire/impossible/contingent concernant les messagers — OUVERTURE de la section risāla du programme).**
+- **Cumul post-interruptions : 15 leçons (18586 → 19151) — registre 641 → 656. La première moitié du Murshid al-muʿīn (tawḥīd, 17 leçons de doctrine) est entièrement traduite.**
