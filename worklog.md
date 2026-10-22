@@ -8463,3 +8463,20 @@ Stage Summary:
 - Décisions clés : (a) la nouvelle famille du hamza simple ouverte selon le commentaire (fiʿl = gabarit faʿala — noms et verbes) ; (b) les sept mots de l'ʾīwāʾ intégralement vérifiés et datés ; (c) le cas kasra-quiescente explicité comme vide au Coran (remarque du commentaire) ; (d) les contre-cas et ʿilla de la mouvementée traduits intégralement (l'atténuation qui approche le heurt des deux quiescents) ; (e) candidats d'application : Croyants 1 (substitution) + Caverne 16 (exception).
 - Risques : habous.gov.ma toujours injoignable (3 schémas + 2 versets + l'exemple morphologique li-ʾammihi non vérifiables iconographiquement) ; l'OCR du commentaire corrompt certains exemples (naʾuzzuhum→taʾuzzuhum, faʾkulhu→fa-ʾakalā, يؤده) — corrigés sur le texte coranique et documentés.
 - Priorités suivantes : (1) R156 — leçon 18382 (le hamza simple en ʿayn et lām) : le chapitre du commentaire commence à ~198 300 (« والعين واللام فلا تبدلهما لنافع إلا لدى بعس بئيسا... وأبدل الذئب وبكر بيس ورش ») — lire jusqu'au chapitre naql ; (2) poursuivre le flux 18384, 18385, 18386 (naql 1/2), 18512… ; (3) maintenir le rythme — la session a livré 4 leçons (669→675), l'objectif nuit est de continuer jusqu'à épuisement du contexte.
+
+---
+Task ID: R156
+Agent: Z.ai Code (session principale)
+Task: Tajwid-2es leçon 18382 — le hamza simple en ʿayn et lām (13e leçon) : traduction savante complète
+
+Work Log:
+- Source AR extraite (4 774 car — 4 axes, tamhīd narratif Warsh/Qālūn, mathn en 3 vers imprimé avec les formes substituées, khaṭṭāṭa de synthèse, 2 passages d'application, édification parents).
+- Chapitre du commentaire lu IN EXTENSO (198 300 → 202 000 : la règle ʿayn/lām, les trois parts de l'exception (biʾsa bimā convenu ; l'origine étendue + adh-dhiʾb + al-biʾr pour Warsh ; ruʾyā pour Qālūn), les ʿilla, le cas an-nasīʾ, jusqu'au chapitre du naql).
+- Locus tous vérifiés au cache : al-Aʿrāf 165 (le seul biʾsin — la note imprimant 167 corrigée), Yūsuf 13/14/17, le Pèlerinage 45 (le seul biʾrin), Marie 74 (le seul ruʾyan — «وكم أهلكنا قبلهم من قرن هم أحسن أثاثا ورءيا»), la Vache 102, le Repentir 37 (le nasīʾ + la citation «يحلونه عاما ويحرمونه عاما»), la Caverne 50.
+- tr-tmp/18382.savant.html rédigé (17 726 car — 4 axes + tableau de synthèse à 6 lignes + les ʿilla intégrales + le sens du nasīʾ historique) ; QA OK (0 arabe, 43+43 guillemets) ; hand-set OK (registre 676) ; navigateur : badge, sondes 12/12, bilingue 560 séquences arabes, overflowX 0 page+main en 1280 et 390, 0 erreur console, captures desktop+mobile ; commit 318d883 + push GitHub + backup.sh OK.
+
+Stage Summary:
+- État : registre **676/950** (+5 ce session : 18119, 18124, 18379, 18381, 18382 — tajwid-2es 13/27). GitHub synchronisé (318d883), bundle /tmp à jour.
+- Décisions clés : (a) le mathn traduit avec ses formes substituées (adh-dhīb, bīr, biyya, an-nasiyy) conformément à la source, les formes d'origine données en le corps ; (b) ʿĪsā = Qālūn (ʿĪsā ibn Mīnā) documenté du glose scolaire ; (c) la khaṭṭāṭa de synthèse restituée en tableau à six lignes (le seul tableau qui récapitule les 6 exceptions des deux leçons) ; (d) l'édification liée au locus même (Jacob, la crainte du loup, les yeux blanchis — Yūsuf 84).
+- Risques : habous.gov.ma toujours injoignable (4 versets en puces + le schéma de synthèse) ; le second exemple du biʾsa (la Caverne 50) reste un candidat de premier ordre.
+- Priorités suivantes : (1) R157 — leçon 18384 (les règles du naql, 2e partie du hamza simple) : le chapitre du commentaire commence à ~202 100 (« باب أحكام نقل الحركة ») — déjà partiellement lu (les 4 conditions du naql : sākin, sain, avant la hamza, séparé) ; lire la suite (~203 600+) avant rédaction ; (2) le flux continue : 18385, 18386, 18512… ; (3) le rythme de 5 leçons/session est tenable — poursuivre jusqu'à épuisement du contexte avec commit après chaque leçon.
