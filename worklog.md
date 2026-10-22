@@ -8428,3 +8428,20 @@ Stage Summary:
 - Décisions clés : (a) la table des 11 lieux restituée d'après la liste imprimée du commentaire (12 notes de bas de page, Nāziʿāt 10+11 = un lieu) ; (b) le verset 2 de l'application = Naml 27:67 identification CERTAINE (preuve par la consigne), le verset 1 = Raʿd 13:5 candidat de premier ordre ; (c) l'exemple du premier axe (perdu) = Aʿrāf 80-81 candidat de premier ordre ; (d) l'objection du commentaire intégralement traduite en N.d.T. avec sa résolution (al-ʿahd).
 - Risques : habous.gov.ma toujours injoignable (table des 11 lieux, 3 versets en puces — contre-vérification iconographique différée) ; cron 471313 à surveiller (la plateforme désactive les jobs) ; la prochaine leçon 18379 est une leçon d'APPLICATIONS (synthèse du hamza doublé) — attendre davantage de tableaux récapitulatifs et de versets, prévoir une lecture complète du chapitre correspondant du commentaire.
 - Priorités suivantes : (1) R154 — leçon 18379 (applications sur le hamza doublé) : lire la source + le chapitre du commentaire correspondant (probablement récapitulatif — chercher « تطبيقات » ou le saut après ~192 700) ; (2) poursuivre le flux 18381, 18382… ; (3) maintenir le rythme 1-2 leçons/tour avec commit+push après chacune (autonomie nuit).
+
+---
+Task ID: R154
+Agent: Z.ai Code (session principale)
+Task: Tajwid-2es leçon 18379 — applications sur le hamza doublé (11e leçon, synthèse) : traduction savante
+
+Work Log:
+- Source AR extraite (1 740 car — leçon courte : 2 activités, pas de mathn/tamhīd/édification, leçon de synthèse propre au manuel).
+- Collecte des locus paradigmatiques des leçons précédentes (17893→18124) depuis les traductions existantes : Vache 31 (bi-ʾasmāʾi hāʾulāʾi ʾin), Vache 133 (shuhadāʾa ʾidh), Hūd 40 (jāʾa amrunā), Aḥqāf 32 (awliyāʾa ʾawlāʾika), Aʿrāf 100 (law nashāʾu ʾaṣabnāhum), Vache 235, Jonas 25, aʾimmatan (Récits 41, Prosternation 24, Repentir 12).
+- Rédaction : 6 questions de la première activité (révision complète de la famille) + 4 versets restaurés en candidats de premier ordre ordonnés selon les quatre traitements de la consigne (tashīl / ibdāl-madd / ibdāl yāʾ-wāw voyellées / idkhāl) + 5 consignes + tableau restitué en cadre de travail (4 lignes vides, colonnes lieu/espèce/Warsh/Qālūn) + N.d.T. en 6 points (nature de la leçon, restauration des versets, restitution du tableau, correspondance questions↔leçons, valeurs, annonce du hamza simple).
+- QA OK (9 174 car, 0 arabe, 10+10 guillemets) ; hand-set OK (registre 674) ; navigateur : badge, sondes 12/12, overflowX 0 page+main en 1280 et 390, 0 erreur console, captures desktop+mobile ; commit b25208c + push GitHub + backup.sh OK.
+
+Stage Summary:
+- État : registre **674/950** (+3 ce session : 18119, 18124, 18379 — tajwid-2es 11/27). GitHub synchronisé (b25208c), bundle /tmp à jour.
+- Décisions clés : (a) leçon de synthèse traduite selon sa nature (pas de sections inventées — pas de mathn ni d'édification propre) ; (b) les 4 versets perdus restaurés en candidats de premier ordre couvrant les quatre traitements nommés par la consigne ; (c) le tableau de méditation restitué en cadre de travail (l'intention pédagogique du manuel est que l'élève le remplisse) ; (d) l'annonce documentée depuis le chapitre suivant du commentaire déjà lu partiellement.
+- Risques : habous.gov.ma toujours injoignable (4 versets + tableau non vérifiables iconographiquement — puces honnêtes) ; la leçon 18381 (hamza simple — ibdāl de la fāʾ du verbe) ouvre une NOUVELLE famille : prévoir une lecture complète du chapitre (nujum-durar.txt ~192 700 → ~205 000 ?), le genre se divisant en substitué/transféré.
+- Priorités suivantes : (1) R155 — leçon 18381 : lire le chapitre باب القول في إبدال فاء الفعل en entier (commence à ~192 700), vérifier le mathn au matn intégral, puis rédiger ; (2) poursuivre le flux 18382, 18384… ; (3) maintenir commit+push après chaque leçon (autonomie nuit — le cron 471313 relaie toutes les 15 min).
