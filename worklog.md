@@ -7979,3 +7979,19 @@ Stage Summary:
 - **Prochaine leçon : 19078 (les attributs de sens — puissance, volonté, science, vie)** — annoncée par l'iʿdād qablī de 19062 (tableau à remplir sur les attributs de la prochaine leçon).
 - **Cumul session de rattrapage : 4 leçons livrées (18586, 18593, 18630, 19062) — registre 641 → 645.**
 - **Risques** : habous.gov.ma 503 persistant — 6 versets de 19062 + ceux des leçons 3-5 en attente de contre-vérification rétroactive ; al-Fajījī bio à établir.
+
+---
+Task ID: R144-e
+Agent: Z.ai Code (session web, trace 1a162e5189edc051 → suite 3)
+Task: Round 144-e — leçon 19078 (attributs de sens : qudra, irāda, ʿilm, ḥayāt) — registre 646. 5e leçon de la session de rattrapage.
+
+Work Log:
+- **① 19078 (leçon 7 — puissance, volonté, science, vie)** : 2 identifications CERTAINES par doctrine : **Āyat al-Kursī** (Baqara 255 Ḥ [école 254, −1 calibré] — « la plus grande verset du Livre » = hadith d'Ubayy b. Kaʿb, Muslim) et **mafātiḥ al-ghayb** (Anʿām 59 Ḥ — l'expression est UNIQUE au Coran en ce verset ; école attendue 60 d'après calibration Anʿām 83=Ḥ82) ; hadith de Jibrīl (iḥsān) cité avec chapitre exact (Bukhārī 50, Livre de la foi). 6 versets-images sans référence → chips d'attente documentées.
+- **② Contenu** : matn 1 hémistiche + points (la suite = samʿ/baṣar/kalām, leçon 8) + lexique 2 (qudra = force ; irāda = qaṣd absolu) + définition des ṣifāt maʿānī (linguistique [Maqāyīs racine w-ṣ-f ; maʿnā = ce qui fait face à l'essence] + citation as-Sanūsī Sharḥ Umm al-barāhīn avec ḥāshiyyat ad-Dasūqī pp. 149-150 : attributs existant en eux-mêmes, contingents ou éternels) + qudra (production/anéantissement du possible selon la volonté ; taʿalluq tanǧīzī ḥādith + ṣalāḥī qadīm ; réfutation des qadarites — naql + ʿaql) + irāda (spécification du possible ; égalité des possibles devant la puissance, sinon impuissance ; disposal par pure volonté, sans mobile ni contrainte) + citation Mayyara ad-Durr ath-thamīn p. 37 éd. Dār al-Ḥadīth (pourquoi qudra/irāda ne se rapportent ni au nécessaire [ḥuṣūl al-ḥāṣil] ni à l'impossible [renversement de la réalité]) + ʿilm (dévoilement du connu tel quel, sans contraire ; le connu = nécessaire+impossible+contingent ; ni ignorance ni doute ni opinion ni illusion ; vigilance murāqaba → iḥsān) + ḥayāt (rend valide la perception ; éternelle [azalī, requiert validité de la science, chip Kursī] vs contingente [réceptivité sensation + mouvement volontaire] ; perception = atteinte + maîtrise + réalisation) + bienfaits (perfection divine ; attachement au Créateur Puissant ; vigilance secret/public ; créatures dans Son poing) + taqwīm 3 + istithmār (copie d'Anʿām 59 à un verset-image à identifier + 3 tâches sur mafātiḥ al-ghayb) + iʿdād qablī (samʿ, kalām, baṣar — leçon 8) + N.d.T. 7 points.
+- **③ QA + injection + navigateur** : 14 289 car, 0 arabe, 18 guillemets appariés, 13 balises → **registre 645 → 646** ; navigateur : badge, **18/18 sondes réelles**, overflowX 0 desktop 1280 ET mobile 390, 0 erreur console, captures qa-r144-lecon-19078(-mobile).png. Commit + push + backup.
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 646/950. tawhid-2es : 8/26. Prochaine : 19087 (samʿ, kalām, baṣar).**
+- **Cumul session de rattrapage : 5 leçons (18586 → 19078) — registre 641 → 646.**
+- **Méthode « identification par certitude doctrinale » consolidée** : expressions uniques au Coran (mafātiḥ al-ghayb = Anʿām 59) + hadiths consacrés (« plus grande verset » = Kursī) + gloses structurantes (tanẓīh/ithbāt = Shūrā 11) identifiées même en l'absence d'icônes ; le reste en chips d'attente honnêtes.
+- **Risques** : habous.gov.ma 503 persistant — cumul de contre-vérifications rétroactives en attente (leçons 3-7).
