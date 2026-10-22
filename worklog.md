@@ -8177,3 +8177,18 @@ Work Log:
 Stage Summary:
 - **ÉTAT : SAIN. Registre 659/950. tawhid-2es : 21/26. Reste 4 : 19180, 19181, 19182, 19185 — puis le livre est COMPLET.**
 - **Cumul post-interruptions : 18 leçons (18586 → 19176) — registre 641 → 659.**
+
+---
+Task ID: R145-k
+Agent: Z.ai Code (session web, trace 1a163467e8daff3d)
+Task: Round 145-k — leçon 19180 (la kalima, marque de la foi) — registre 660. 19e leçon du cumul. (Session interrompue pendant la correction du span — reprise.)
+
+Work Log:
+- **① Vérifications hadith (3 hadiths, 3 recueils)** : **Tirmidhī 3383 VÉRIFIÉ MOT POUR MOT** (chaîne Yaḥyā b. Ḥabīb ← Mūsā b. Ibrāhīm ← Ṭalḥa b. Khirrāsh ← Jābir : « la plus excellente évocation : lā ilāha illā Allāh » — Livre des invocations) ; **Muslim 26a VÉRIFIÉ MOT POUR MOT** (chaîne double Abū Bakr b. Abī Shayba/Zuhayr ← Ismāʿīl ← Khālid ← al-Walīd b. Muslim ← Ḥumrān ← ʿUthmān : « quiconque meurt en sachant… entre au Paradis » — bāb exact « من لقي الله بالإيمان وهو غير شاك » ; muslim/1 = Livre de la foi, /muslim/2 = tahāra — découvert) ; **Muwaṭṭaʾ Livre du pèlerinage (malik/20)** : hadith du jour de ʿArafa texte conforme — chaîne du Muwaṭṭaʾ = Talha b. ʿUbayd Allāh b. Kurrīz, le manuel cite ʿAmr b. Shuʿayb (chaîne des autres recueils, Tirmidhī 3585) — divergence de chaîne documentée, texte identique.
+- **② 19180 (leçon 21 — la kalima récapitulative)** : matn 3 couplets + lexique 2 (maʿānī ; bidh-dhakhīr avec la morphologie) + exégèse d'ilāh selon Mayyara (« Celui qui Se passe de tout ce qui n'est pas Lui, dont tout dépend » — le levier de la leçon) + la décomposition Systématique : indépendance → 8 attributs (wujūd, qidam, baqāʾ, mukhālafa, qiyām bi-nafs, samʿ, baṣar, kalām) + dépendance de tout → 5 (ḥayāt, qudra, irāda, ʿilm, waḥdāniyya) = 13 + 7 maʿnawiyya = 20 obligatoires, 20 impossibles en miroir, le contingent déduit de l'indépendance + citation as-Sanūsī (Sharḥ Umm al-barāhīn/ḥāshiyyat ad-Dasūqī p. 348 : la kalima contient les 3 sections) + « Muḥammad rasūlu-llāh » (6 subsumptions : prophètes, anges, Livres, Jour dernier, véracité/impossibilité du mensonge, impossibilité des interdits, contingence des accidents) + le mérite (les 3 hadiths + « se mêle à sa chair et à son sang ») + taqwīm 4 (schéma-image des fruits documenté) + istithmār (versets candidats Ṣāffāt 35-36 notés + 3 questions) + iʿdād qablī (islam/îman/ihsan → 19181) + N.d.T. 6 points.
+- **③ QA + injection + navigateur** : span superflu corrigé (2 passes — la 1re avait ajouté un fermant au lieu de supprimer) ; 13 422 car, 0 arabe, 29 guillemets appariés, 13 balises → **registre 659 → 660** ; navigateur : badge, **20/20 sondes réelles**, overflowX 0 desktop 1280 ET mobile 390, 0 erreur console, captures qa-r145-lecon-19180(-mobile).png. Commit + push + backup (écrase l'auto-commit 2659b54 UUID).
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 660/950. tawhid-2es : 22/26. Reste 3 : 19181 (islam/îman/ihsan), 19182 (activités), 19185 (sources) — puis LIVRE COMPLET.**
+- **Cumul post-interruptions : 19 leçons (18586 → 19180) — registre 641 → 660.**
+- **Calibration sunnah.com : muslim/1 = Livre de la foi (26a), muslim/2 = tahāra ; malik/20 = Hajj (ʿArafa).**
