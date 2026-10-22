@@ -8038,3 +8038,18 @@ Work Log:
 Stage Summary:
 - **ÉTAT : SAIN. Registre 649/950. tawhid-2es : 11/26. Prochaine : 19102 (reste des impossibles : les suppressives des attributs de sens).**
 - **Cumul session de rattrapage : 8 leçons (18586 → 19100) — registre 641 → 649.**
+
+---
+Task ID: R145
+Agent: Z.ai Code (session web, trace 1a1631a4712429a1)
+Task: Round 145 — leçon 19102 (les 7 suppressives des attributs de sens) — registre 650 (JALON : 650/950). 9e leçon du cumul post-interruptions.
+
+Work Log:
+- **① Vérifications hadith (2 pages-livres Bukhārī téléchargées)** : **Bukhārī 555 VÉRIFIÉ MOT POUR MOT** (sunnah.com/bukhari/9 = mawāqīt : la numérotation USC livre 10 de la sidebar EST le livre 9 dans l'URL — découvert en corrigeant : /bukhari/10 = Adhān) : chaîne ʿAbd Allāh b. Yūsuf al-Kalāʿī ← Mālik ← Abū az-Zinād ← al-Aʿraj ← Abū Hurayra ; bāb « فضل صلاة العصر » EXACT ; texte conforme (« يتعاقبون فيكم ملائكة بالليل… كيف تركتم عبادي فيقولون تركناهم وهم يصلون »). **Bukhārī 7386 VÉRIFIÉ** (sunnah.com/bukhari/97 = Tawḥīd) : chaîne Sulaymān b. Ḥarb ← Hammād b. Zayd ← Ayyūb ← Abū ʿUthmān ← Abū Mūsā ; version bukhārienne « تدعون سميعا بصيرا قريبا » (sans « ولكن ») + le trésor du Paradis ; la formulation du manuel = celle de Muslim 2704 (vérifié en leçon 8) — les deux transmissions documentées en N.d.T.
+- **② 19102 (leçon 11 — ʿajz, karāha, jahl, mamāt, ṣamam, bakam, ʿamā)** : matn 1 couplet + lexique 2 (mamāt = la mort ; ṣumāt = le mutisme) + ʿajz (contradiction de qudra ; nullité de la divinité des idoles par leur impuissance, candidat Ḥajj 73 noté ; pas de désespoir ; impossibilité de la lassitude, candidat Qāf 38) + karāha (LA CLÉ : aversion-contrainte [attribut d'essence, impossible : sans volonté, avec dhuhūl/ghafla/taʿlīl/ṭabʿ] vs aversion-réprouvé [interdiction, attribut des actes, COMPATIBLE : Dieu crée l'égarement tout en l'interdisant] — résout l'objection de l'origine du mal ; candidats Hūd 107/Burūj 16 et Muddaththir 31) + jahl (simple = absence de saisie ; composé = saisie contraire ; embrasse ẓann/shakk/wahm/nisyān/ʿilm naẓarī ; glose « yaʿlamu as-sirra wa akhfā » = Ṭalāq 7) + mamāt (positif selon la Sunna ; **chip al-Mulk 2 IDENTIFIÉE avec certitude par raisonnement** : la preuve « la création ne se rapporte qu'au positif » ne fonctionne QUE pour « qui a créé la mort et la vie » ; candidat Furqān 58) + les 3 derniers (ṣamam/bakam/ʿamā : attribut positif selon la Sunna [ḍiddān] vs absence selon les muʿtazilites [ʿadam/malaka] + hadith Bukhārī 7386) + **TABLEAU FINAL 13×3 RECONSTITUÉ** (l'original imprimé à compléter n'est pas transmissible — N.d.T. : ordre selon la matn, samʿ avant baṣar) + taqwīm 3 + istithmār (verset candidat Baqara 216 + hadith Bukhārī 555 avec les 2 questions dont la sagesse de l'interrogation divine) + iʿdād qablī (al-jāʾiz/mumkināt → leçon 19110) + N.d.T. 7 points.
+- **③ QA + injection + navigateur** : 17 349 car, 0 arabe, 28 guillemets appariés, 11 balises → **registre 649 → 650 (JALON)** ; navigateur : badge, **20/20 sondes réelles** (la seule « missente » = majuscule « Se succèdent… des anges », validée en contexte), 3 tables rendues (matn + 13×3 reconstitué), overflowX 0 desktop 1280 ET mobile 390, 0 erreur console, captures qa-r145-lecon-19102(-mobile).png. Commit + push + backup.
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 650/950 (68,4 %). tawhid-2es : 12/26 — LA MOITIÉ du livre. Prochaine : 19110 (al-jāʾiz — le contingent et les actes libres, annoncé par le iʿdād).**
+- **Cumul post-interruptions : 9 leçons (18586 → 19102) — registre 641 → 650.**
+- **Leçon d'API : sunnah.com USC sidebar ≠ URL** : le livre affiché « Times of the Prayers » = /bukhari/9 ; /bukhari/10 = Adhān — toujours localiser par grep, jamais par le titre du livre.
