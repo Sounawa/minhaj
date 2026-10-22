@@ -8082,3 +8082,16 @@ Stage Summary:
 - **ÉTAT : SAIN. Registre 652/950. tawhid-2es : 14/26. Prochaine : 19117 (preuves de la prééternité, permanence, dissemblance).**
 - **Cumul post-interruptions : 11 leçons (18586 → 19114) — registre 641 → 652.**
 - **Règle QA réaffirmée : aucune citation en caractères arabes dans le fichier FR — translittérer les justifications d'identification.**
+
+---
+Task ID: R145-d
+Agent: Z.ai Code (session web, trace 1a1631a4712429a1)
+Task: Round 145-d — leçon 19117 (preuves de qidam, baqāʾ, mukhālafa) — registre 653. 12e leçon du cumul.
+
+Work Log:
+- **① 19117 (leçon 14 — la cascade régressive des preuves)** : matn 2 couplets + lexique 3 (dawr = dépendance circulaire avec fin ; tasalsul = à l'infini ; inḥatam) + qidam (naql : chip Ḥadīd 3 haute confiance [le binôme Premier/Dernier nomme qidam et baqāʾ, calibré identique en leçon 5] + ʿaql : dichotomie qidam/ḥudūth ; si finie → dawr absurde [le Premier produit par un postérieur : antérieur en existence, postérieur en temps] ; si infinie → tasalsul absurde [l'illimité n'est concevable qu'en succession future : souffles des gens du Paradis, distinction aristotélicienne infini potentiel/actuel] + citation sharḥ al-Kubrā [Sanūsī] : éternité des attributs par l'argument du qābil) + baqāʾ (naql : candidats + ʿaql : la possibilité du fanāʾ rendrait l'existence contingente, contraire à la leçon 13 + 2 versets différés) + mukhālafa (chip Shūrā 11 haute confiance [verset de la dissemblance, calibré école 9=Ḥ11] + ʿaql : les semblables partagent les jugements ; or tout créé est contingent) + taqwīm 3 + istithmār citation Qurṭubī 16/8 (homonymies coraniques sans ressemblance réelle ; les attributs créés ne se dégagent pas des desseins/accidents ; renvoi à al-Asnā) + tâche 2 avec COQUILLE du manuel corrigée (« al-Amad » → al-Asnā fī sharḥ asmāʾ Allāh al-ḥusnā, documentée) + iʿdād qablī (preuves ghināʾ/waḥdāniyya + tafsīr Ikhlāṣ) + N.d.T. 6 points.
+- **② QA + injection + navigateur** : 12 939 car, 0 arabe, 15 guillemets appariés, 12 balises → **registre 652 → 653** ; navigateur : badge, **19/19 sondes réelles** (la seule « missente » = casse « des plus beaux noms », validée en contexte), overflowX 0 desktop 1280 ET mobile 390, 0 erreur console, captures qa-r145-lecon-19117(-mobile).png. Commit + push + backup.
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 653/950. tawhid-2es : 15/26. Prochaine : 19131? (preuves de ghināʾ/waḥdāniyya — vérifier le docId exact dans le JSON).**
+- **Cumul post-interruptions : 12 leçons (18586 → 19117) — registre 641 → 653.**
