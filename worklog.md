@@ -8219,3 +8219,19 @@ Work Log:
 Stage Summary:
 - **ÉTAT : SAIN. Registre 662/950. tawhid-2es : 24/26. Reste 1 : 19185 (liste des sources et références) — DERNIÈRE leçon du livre !**
 - **Cumul post-interruptions : 21 leçons (18586 → 19182) — registre 641 → 662.**
+
+---
+Task ID: R145-n (FINAL)
+Agent: Z.ai Code (session web, trace 1a163467e8daff3d)
+Task: Round 145-n — leçon 19185 (sources et références) — registre 663 — **TAWHID-2ES COMPLET 26/26 (muqaddima + 25 leçons)**. MILESTONE : 3e livre du corpus intégralement traduit (après fiqh-1es 31/31 et les 22 livres antérieurs).
+
+Work Log:
+- **① 19185 (leçon 25 — la bibliographie finale)** : les 7 entrées traduites avec translittérations, éditeurs, établisseurs, éditions et dates — Coran Warsh/Nāfiʿ décompte médinois (Fondation Muḥammad VI — la source de la numérotation « école » des chips) ; Zarrūq/Waghlīsī (Bū Krāʿ/Basaṭa, Dār Ibn Ḥazm 1431/2010) ; Dardīr/Kharīda (Shannār, Dār al-Bayrūnī 1422/2004) ; Qurṭubī/Jāmiʿ (Dār al-Kutub al-ʿIlmiyya) ; Nābulusī/Rāʾiḥat al-janna sur l'Iḍāʾat ad-dujna + aṣ-Ṣanʿānī/Fayḍ ash-shaʿʿ (al-Mizaydī, 2e éd. 2011) ; Dasūqī/Sanūsī Umm al-barāhīn (Shams ad-Dīn, al-Maktaba al-ʿAṣriyya) ; Taftāzānī/Naṣafī (Shannār, 1424/2007) + N.d.T. 5 points (rappel des leçons où chaque source a servi : leçons 2-3, 7-9, 13-14, 18-19, 21, 23 ; le même éditeur Shannār pour Dardīr et Taftāzānī).
+- **② QA + injection + navigateur** : 3 859 car, 0 arabe, 7 guillemets appariés, 5 balises → **registre 662 → 663** ; navigateur : badge, **19/19 sondes réelles**, overflowX 0 desktop 1280 ET mobile 390, 0 erreur console, captures qa-r145-lecon-19185(-mobile).png ; **compteur accueil : 663 en traduction savante vérifiée**.
+- **③ MILESTONE : tawhid-2es 26/26 COMPLET** (muqaddima + présentation + 23 leçons de la science du tawḥīd aux sources) — le Murshid al-muʿīn d'Ibn ʿĀshir avec le Mukhtaṣar de Mayyara intégralement traduit : les 13 attributs obligatoires et leurs impossibles, les preuves en cascade, la prophétologie, la kalima, les 3 degrés de la religion. Vérifications en ligne de la session : 9 hadiths mot pour mot (Bukhārī 555, 3482, 4351, 5063, 6463, 7386, 7443, 7487 ; Muslim 26a, 2704, 2713 ; Tirmidhī 3383 ; Muwaṭṭaʾ ʿArafa) + 5 versets à certitude/high confiance cette session (Māʾida 67, Mujādala 1, Nisāʾ 58/69, Aḥzāb 37, Anbiyāʾ 21-22/83-84, Ṣād 41-44, Luqmān 22).
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 663/950 (69,8 %). tawhid-2es : 26/26 COMPLET (3e livre du corpus achevé en qualité savante). 23 livres complets au total.**
+- **Cumul de la session post-interruptions (R144-R145) : 22 leçons livrées et poussées (18586 → 19185) — registre 641 → 663.**
+- **Livre suivant (pipeline) : tajwid-2es (27) ou fiqh-tanawi-1 (30) — le contexte est dans le cron 471014 (à mettre à jour à la prochaine session).**
+- **Risques : habous.gov.ma 503 persistant depuis >48 h — file d'attente de contre-vérifications iconographiques rétroactives (leçons 18579 → 19185, ~25 versets en chips d'attente avec candidats notés) ; les jobs cron restent désactivés par la plateforme.**
