@@ -8108,3 +8108,16 @@ Work Log:
 Stage Summary:
 - **ÉTAT : SAIN. Registre 654/950. tawhid-2es : 16/26. Prochaine : 19143 (preuves de la vie, volonté, science, puissance).**
 - **Cumul post-interruptions : 13 leçons (18586 → 19121) — registre 641 → 654. La série des démonstrations du Murshid al-muʿīn touche à sa fin (reste : vie/qudra/irāda/ʿilm + samʿ/baṣar/kalām puis les messagers).**
+
+---
+Task ID: R145-f
+Agent: Z.ai Code (session web, trace 1a1631a4712429a1)
+Task: Round 145-f — leçon 19143 (preuves de ḥayāt, irāda, ʿilm, qudra) — registre 655. 14e leçon du cumul.
+
+Work Log:
+- **① 19143 (leçon 16 — la chaîne des conditions)** : matn 2 couplets (avec CORRECTION DE SOURCE documentée : la 2e table de l'analyse imprimait 2 fois le même hémistiche — restitution du 2e hémistiche du matn « et puissant : tu ne verrais pas l'univers ») + lexique 3 (ʿālam ; at-tālī ; muqaddam — vocabulaire logicien des conditionnelles) + preuve transmise (7 versets-images : chip Kursī haute confiance [Baqara 255/école 254, identifié en leçon 7] + 6 différés avec candidats [Furqān 58, Hūd 107/Burūj 16, Āl ʿImrān 47, Anʿām 59/Ṭalāq 7, Ḥadīd 2]) + preuve rationnelle (l'argument de la CHAÎNE : l'effet de la puissance suppose la volonté, qui suppose la science, lesquelles supposent la vie — l'univers vu atteste toute la chaîne ; la règle logique : dans les 6 propositions conditionnelles, le conséquent faux entraîne la fausseté de l'antécédent [qāḍiyya sharṭiyya muttaṣila]) + taqwīm 3 + istithmār (3 versets cosmiques différés + tableau-image) + iʿdād qablī (samʿ/baṣar/kalām → 19151) + N.d.T. 6 points.
+- **② QA + injection + navigateur** : 9 568 car, 0 arabe, 12 guillemets appariés, 11 balises → **registre 654 → 655** ; navigateur : badge, **18/18 sondes réelles**, overflowX 0 desktop 1280 ET mobile 390, 0 erreur console, captures qa-r145-lecon-19143(-mobile).png. Commit + push + backup.
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 655/950. tawhid-2es : 17/26. Prochaine : 19151 (preuves de l'ouïe, la vue et la parole — fin de la série des démonstrations).**
+- **Cumul post-interruptions : 14 leçons (18586 → 19143) — registre 641 → 655.**
