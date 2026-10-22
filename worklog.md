@@ -8192,3 +8192,16 @@ Stage Summary:
 - **ÉTAT : SAIN. Registre 660/950. tawhid-2es : 22/26. Reste 3 : 19181 (islam/îman/ihsan), 19182 (activités), 19185 (sources) — puis LIVRE COMPLET.**
 - **Cumul post-interruptions : 19 leçons (18586 → 19180) — registre 641 → 660.**
 - **Calibration sunnah.com : muslim/1 = Livre de la foi (26a), muslim/2 = tahāra ; malik/20 = Hajj (ʿArafa).**
+
+---
+Task ID: R145-l
+Agent: Z.ai Code (session web, trace 1a163467e8daff3d)
+Task: Round 145-l — leçon 19181 (islam, îmân, iḥsān — les 3 degrés) — registre 661. 20e leçon du cumul.
+
+Work Log:
+- **① 19181 (leçon 22 — la religion tripartite)** : matn 7 couplets COMPLETS (le plus long du livre : la soumission des membres + les 5 piliers avec les 2 attestations comme condition + les 6 piliers de la foi avec les samʿiyyāt [Pont, Balance, Bassin, Paradis, Feux] + l'iḥsān « comme si tu Le voyais » + l'anse la plus solide) + lexique 3 (rafīʿ avec la morphologie ; amlāk = pluriel de paucité de malak ; ʿurāk) + islam (soumission de TOUS les membres, langue conforme au credo ; les 5 piliers) + îmân (assentiment ferme + 6 piliers avec les ajouts du matn) + iḥsān (2 états : mushāhada domine murāqaba, le premier plus élevé ; hadith de Jibrīl [Bukhārī 50, déjà vérifié en leçon 7 — versions ʿUmar/Abū Hurayra documentées]) + **chip Luqmān 22 IDENTIFIÉE haute confiance** (« l'anse la plus solide » al-ʿurwa al-wuthqā = l'expression même du verset reprise par le matn — nouvelle sourate calibrée en texte ḥafṣ) + 6 bénéfices éducatifs (édifice intégré ; la kalima clé/somme/ascension ; science ET acte, colonne la prière ; la connaissance mesure la foi ; hommes de résolution ; combat de l'âme) + taqwīm 3 + istithmār (hadith de Jibrīl version ʿUmar À COMPLÉTER par l'élève + 3 tâches dont « votre religion ») + iʿdād qablī (révision → 19182 activités) + N.d.T. 6 points.
+- **② QA + injection + navigateur** : 9 835 car, 0 arabe, 16 guillemets appariés, 13 balises → **registre 660 → 661** ; navigateur : badge, **20/20 sondes réelles** (la « missente » = casse « Le combat », validée en contexte), overflowX 0 desktop 1280 ET mobile 390, 0 erreur console, captures qa-r145-lecon-19181(-mobile).png. Commit + push + backup.
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 661/950. tawhid-2es : 23/26. Reste 2 : 19182 (activités de soutien), 19185 (sources et références).**
+- **Cumul post-interruptions : 20 leçons (18586 → 19181) — registre 641 → 661.**
