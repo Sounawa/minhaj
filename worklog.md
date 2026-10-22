@@ -8053,3 +8053,18 @@ Stage Summary:
 - **ÉTAT : SAIN. Registre 650/950 (68,4 %). tawhid-2es : 12/26 — LA MOITIÉ du livre. Prochaine : 19110 (al-jāʾiz — le contingent et les actes libres, annoncé par le iʿdād).**
 - **Cumul post-interruptions : 9 leçons (18586 → 19102) — registre 641 → 650.**
 - **Leçon d'API : sunnah.com USC sidebar ≠ URL** : le livre affiché « Times of the Prayers » = /bukhari/9 ; /bukhari/10 = Adhān — toujours localiser par grep, jamais par le titre du livre.
+
+---
+Task ID: R145-b
+Agent: Z.ai Code (session web, trace 1a1631a4712429a1)
+Task: Round 145-b — leçon 19110 (al-jāʾiz : faire/abandonner les possibles) — registre 651. 10e leçon du cumul.
+
+Work Log:
+- **① Vérifications hadith (3 hadiths Bukhārī authentifiés sur pages-livres)** : **Bukhārī 3482 VÉRIFIÉ** (femme-chatte : chaîne Juwayriyya b. Asmāʾ ← Nāfiʿ ← Ibn ʿUmar ; « عذبت امرأة في هرة سجنتها حتى ماتت فدخلت فيها النار » ; trouvé dans /bukhari/60 أحاديث الأنبياء ; le renvoi du manuel au bāb des cinq nuisibles = classement d'autres éditions — documenté) ; **Bukhārī 6463 VÉRIFIÉ** (riqāq /bukhari/81 : chaîne Ādam ← Ibn Abī Dhīʾb ← Saʿīd al-Maqburī ← Abū Hurayra ; bāb القصد والمداومة EXACT ; version du manuel = transmission conjointe, documenté) ; **Bukhārī 7487 VÉRIFIÉ MOT POUR MOT** (Tawḥīd b97 déjà en cache : chaîne Muḥammad b. Bashshār ← Ghundar ← Shuʿba ← Wāṣil ← al-Maʿrūr ← Abū Dharr ; bāb كلام الرب مع جبريل EXACT).
+- **② 19110 (leçon 12 — le contingent)** : matn 1 couplet + lexique 2 (mumkināt ; ʿadamāt = maʿdūm par métonymie) + faire les possibles (égalité des deux extrémités ; bien ou mal ; volontaire ou non ; exemple grammatical fī=lam avec hadith de la chatte ; l'article d'universalité du pluriel sain ; bi-asrihā : actes des animaux + effets-causes + envoi des messagers + états de l'au-delà + ṣalāḥ/aṣlaḥ + vision béatifique) + abandonner (anéantir ou laisser au non-être ; tout possible dans Sa puissance) + les 3 négations d'obligation (récompense/châtiment — tafaḍḍul des prophètes — ṣalāḥ/aṣlaḥ avec l'argument miḥna+taklīf « nul par l'observation ») + taqwīm 3 + istithmār (2 versets-images différés + les 2 hadiths 6463/7487 + réfutation du taḥsīn/taqbīḥ rationnels [le beau légal = ce que Dieu fait ; rétribution par grâce, non dette] + résumé de l'œuvre salutaire) + iʿdād qablī (preuves de l'existence de Dieu → leçon suivante) + N.d.T. 7 points.
+- **③ QA + injection + navigateur** : 11 170 car, 0 arabe, 17 guillemets → **registre 650 → 651** ; navigateur : badge, **20/20 sondes réelles**, overflowX 0 (1280+390), 0 console ; COQUILLE détectée et corrigée en cours de route (« leassocié » → « le monothéiste », ré-injection + re-vérification navigateur fix:true) ; captures qa-r145-lecon-19110(-mobile).png. Commit + push + backup.
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 651/950. tawhid-2es : 13/26. Prochaine : 19114 (les preuves de l'existence de Dieu — muǧādalat al-ḥudūth/āyāt ?).**
+- **Cumul post-interruptions : 10 leçons (18586 → 19110) — registre 641 → 651.**
+- **Progression URLs sunnah.com établie par sondage : /bukhari/9=mawāqīt, 10=adhān, 38=ḥawāla, 54=shurūṭ, 58=jizya, 59=bad' al-khalq, 60=aḥādīth al-anbiyāʾ, 81=riqāq, 97=tawḥīd.**
