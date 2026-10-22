@@ -8010,3 +8010,18 @@ Stage Summary:
 - **ÉTAT : SAIN. Registre 647/950. tawhid-2es : 9/26. Prochaine : 19090 (les attributs impossibles — istiḥāla).**
 - **Cumul session de rattrapage : 6 leçons (18586 → 19087) — registre 641 → 647.**
 - **Risques** : habous 503 (contre-vérifications rétroactives en attente, leçons 3-8) ; sources al-Musāmara/Ibn Qāwām citées telles qu'imprimées (identifications restent à établir).
+
+---
+Task ID: R144-g
+Agent: Z.ai Code (session web, trace 1a162e5189edc051 → suite 5)
+Task: Round 144-g — leçon 19090 (attributs impossibles : ʿadam, ḥudūth, fanāʾ) — registre 648. 7e leçon de la session de rattrapage.
+
+Work Log:
+- **① 19090 (leçon 9 — non-être, contingence, anéantissement)** : matn 2 couplets avec points + lexique 2 (yastaḥīlu ; ḍidd = les 2 significations existentielles jamais coexistantes ni annulées) + analyse (13 impossibles = contraires des 13 obligatoires, sans terme comme les perfections) + citation Mayyara (la seconde section ordonnée sur la première) + citation Ibn Ḥamdūn INTÉGRALE (ḥāshiyya 1/46 : les 4 modes d'opposition — contraires, chose + le plus général de son contradictoire [existence/non-être avec la doctrine du ḥāl et du thābit], chose + l'égal de son contradictoire [ʿadam/ḥudūth], contradictoires [Unicité/sa négation]) + ḥudūth (Ibn Abī Zayd « la primauté n'a pas de commencement » + invalidation de la divinité des idoles par leur crééité, candidat Nahl 17 documenté) + fanāʾ (structure d'al-Qaṣaṣ 88 IDENTIFIÉE PAR RAISONNEMENT GRAMMATICAL : les 3 images + la glose badal ishtimāl ne se comprennent qu'à l'intérieur du verset unique — « toute chose périt sauf Sa Face » = apposition d'inclusion de « nulle divinité autre que Lui » ; calibration Qaṣaṣ nulle) + paragraphe de clôture (l'impossibilité de ʿadam entraîne celle de ḥudūth/fanāʾ ; l'énumération détaillée évite l'ignorance — occultation des conséquences, subsumption difficile) + fruits (le Premier/le Dernier ; glorification des cieux) + taqwīm 3 (ḍidd vs naqīḍ avec la logique) + istithmār = hadith du sommeil COMPLET avec chaîne (Zuhayr ← Jarīr ← Suhayl ; déjà vérifié en leçon 5, Muslim 2713) + 4 tâches (soulignement non transmissible documenté) + iʿdād qablī (3 matn : Jawhara al-Laqqānī + Kharīda al-bahiyya ad-Dardīr m. 1201/1786 + Iḍāʾa al-Maqqarī ; tafsīr d'al-Ikhlāṣ) + N.d.T. 8 points.
+- **② QA + injection + navigateur** : 12 987 car, 0 arabe, 17 guillemets appariés, 11 balises → **registre 647 → 648** ; navigateur : badge, **19/19 sondes réelles** (la seule « missente » = casse majuscule de « La primauté », validée en contexte), overflowX 0 desktop 1280 ET mobile 390, 0 erreur console, captures qa-r144-lecon-19090(-mobile).png. Commit + push + backup.
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 648/950. tawhid-2es : 10/26 — 13 matières de tawḥīd sur 26 documents. Prochaine : 19100 (annoncée par le iʿdād : tafsīr d'al-Ikhlāṣ — probablement le verset « قل هو الله أحد » en preuve du tawḥīd).**
+- **Cumul session de rattrapage : 7 leçons (18586 → 19090) — registre 641 → 648.**
+- **Nouvelle méthode consolidée : « identification par raisonnement grammatical »** (la glose badal ishtimāl ne fonctionne que dans Qaṣaṣ 88 → identification de ses 3 segments images) — s'ajoute aux identifications par certitude doctrinale (Kursī, Anʿām 59) et par expression unique.
+- **Risques** : habous 503 (contre-vérifications rétroactives leçons 3-9) ; Nahl 17 = candidat probable pour l'image de ḥudūth, laissé en attente.
