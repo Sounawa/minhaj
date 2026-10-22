@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Le mot exact est **«نوع المال»** (Nawʿ al-Māl), ce qui signifie « Type de bien » ou « Nature du bien ».\n\nLettre par lettre, on distingue clairement :\n1.  **ن** (Nūn)\n2.  **و** (Waw)\n3.  **ع** (ʿAyn) avec un point au-dessus\n4.  **espace**\n5.  **ا** (Alif)\n6.  **ل** (Lām)\n7.  **م** (Mīm)\n8.  **ا** (Alif)\n9.  **ل** (Lām)\n\nC'est donc un mot composé de deux mots (6 lettres au total sans l'espace), qui sert parfaitement de titre pour une colonne contenant des catégories comme les céréales/fruits et la monnaie.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792337321,
+  "id": "20261018232838f617e828e1be4fd6",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018232838f617e828e1be4fd6",
+  "usage": {
+    "completion_tokens": 198,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2135,
+    "prompt_tokens_details": {
+      "cached_tokens": 2
+    },
+    "total_tokens": 2333
+  }
+}

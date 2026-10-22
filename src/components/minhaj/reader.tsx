@@ -1425,7 +1425,11 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
       });
       if (isVerse) table.classList.add("verse-table");
     });
-    const QUOTE_REF = /\([^()]{2,40},\s*[\d\s\u2013-]+\)\s*[»"]?\s*$/;
+    // Référence de verset en clôture — p.ex. (Al-Shura, 18-20) — avec suffixe
+    // facultatif « — le manuel imprime « 9-17 » » (convention corpus savant :
+    // référence du cache warsh + numérotation imprimée notée entre tirets).
+    const QUOTE_REF =
+      /\([^()]{2,40},\s*[\d\s\u2013-]+(?:\s*[—-][^()]{0,70})?\)\s*[»"]?\s*$/;
     document.querySelectorAll<HTMLElement>(".reader-col[dir='ltr'] .lesson-content > p").forEach((p) => {
       if (p.classList.contains("quran-quote")) return;
       const t = (p.innerText ?? "").trim();

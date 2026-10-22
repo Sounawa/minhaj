@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "يا أيها الذين آمنوا كتب عليكم الصيام كما كتب على الذين من قبلكم لعلكم تتقون\nأياما معدودات فمن كان منكم مريضا أو على سفر فعدة من أيام أخر",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792343144,
+  "id": "20261019010542e95129bfda314960",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261019010542e95129bfda314960",
+  "usage": {
+    "completion_tokens": 56,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2163,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2219
+  }
+}

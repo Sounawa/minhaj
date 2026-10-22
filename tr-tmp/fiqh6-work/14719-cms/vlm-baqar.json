@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "| عدد البقر | الواجب فيها زكاة | سنة |\n| :--- | :--- | :--- |\n| 29 إلى 1 | لا شيء فيها | |\n| من 30 إلى 39 | عِجْلَةُ بِنْتِ لَبُونٍ | |\n| من 40 إلى 59 | بِنْتُ لَبُونٍ | |\n| من 60 إلى 69 | حِقَّةٌ | |\n| من 70 إلى 79 | بِنْتُ مَخَاضٍ | |\n| من 80 إلى 89 | مُسِنَّةٌ | |\n| من 90 إلى 99 | عِنَاقَتَانِ | |",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792333010,
+  "id": "20261018221647988f1e6f1e1f4230",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018221647988f1e6f1e1f4230",
+  "usage": {
+    "completion_tokens": 167,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 153,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 320
+  }
+}

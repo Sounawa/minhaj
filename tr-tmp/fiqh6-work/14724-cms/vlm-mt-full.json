@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "قال مالك رحمه الله: «مَنْ أَقَامَ مُصَلَّى مُسْتَقِبِلًا مَنْ دَارِهِ أَوْ بَيْتِهِ أَوْ غَيْرِ ذَلِكَ\nمُحْدِثًا غَيْرَ قَاطِعٍ حَدَثَهُ يَجُوزُ عَلَيْهِ الْحَوْزُ مَنْ وَرَاءَ الْقِبْلَةِ، إِلَّا أَنْ يَكُونَ ال\nقَائِلُ نَاضِحًا مُسْتَقْبِلًا». [الموطأ، كتاب الزكاة ما جاء في زكاة الإبل].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792340917,
+  "id": "20261019002831e9b9f1471ea540cb",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261019002831e9b9f1471ea540cb",
+  "usage": {
+    "completion_tokens": 214,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1528,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1742
+  }
+}

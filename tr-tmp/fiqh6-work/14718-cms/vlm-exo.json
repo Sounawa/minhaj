@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "| عدد الإبل | الحكم الشرعي | القدر الواجب |\n| :---: | :---: | :---: |\n| 3 |  |  |\n| 7 |  |  |\n| 33 |  |  |\n| 47 |  |  |",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792333917,
+  "id": "20261018223156d70f1dc491864d77",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018223156d70f1dc491864d77",
+  "usage": {
+    "completion_tokens": 62,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 163,
+    "prompt_tokens_details": {
+      "cached_tokens": 4
+    },
+    "total_tokens": 225
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "بَيَّانٌ، وَأَوْجَبَ عَلَى الْوَاطِئِ فِي رَمَضَانَ وَالسَّكْرَانِ عَلَى الْإِطْلَاقِ الْكَفَّارَةَ",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792334329,
+  "id": "20261018223847020fc2ba016f4262",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018223847020fc2ba016f4262",
+  "usage": {
+    "completion_tokens": 81,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1318,
+    "prompt_tokens_details": {
+      "cached_tokens": 2
+    },
+    "total_tokens": 1399
+  }
+}

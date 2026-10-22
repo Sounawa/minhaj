@@ -30,3 +30,49 @@ model Post {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+// ─── Assistant IA (studio z-ai, fusion R95) ────────────────────────────────
+// Historique des conversations multi-tours du chat bilingue.
+
+model Conversation {
+  id        String    @id @default(cuid())
+  title     String
+  persona   String?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  messages  Message[]
+}
+
+model Message {
+  id             String       @id @default(cuid())
+  role           String // "user" | "assistant"
+  content        String
+  conversationId String
+  conversation   Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  createdAt      DateTime     @default(now())
+}
+
+model ImageGen {
+  id        String   @id @default(cuid())
+  prompt    String
+  size      String?
+  filePath  String?
+  createdAt DateTime @default(now())
+}
+
+model SpeechRecord {
+  id        String   @id @default(cuid())
+  kind      String // "tts" | "asr"
+  input     String?
+  voice     String?
+  speed     Float?
+  fileName  String?
+  duration  Float?
+  createdAt DateTime @default(now())
+}
+
+model SearchRecord {
+  id        String   @id @default(cuid())
+  query     String
+  createdAt DateTime @default(now())
+}

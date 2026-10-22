@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "قال ابن غازي في إخراج الشاة عن الإبل إذا لم تبلغ خمسا وعشرين: إنه لا يجوز كما نص عليه الشارع في الحديث، وإنما يجوز عند عدم وجود الإبل، قال ابن عبد السلام: فالأصح جواز إخراج الشاة عن الإبل مطلقاً كالمعوزة، وكذا لكل ما ذكرناه. (الشرح الصغير 2 / 772)",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792333626,
+  "id": "20261018222703915f7326a4ab450b",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018222703915f7326a4ab450b",
+  "usage": {
+    "completion_tokens": 105,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 296,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 401
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Based on the image provided, there is **no** additional word, text, verse number, or diacritic bracket after the word «بِهَا».\n\nReading the text from right to left, word by word, I see exactly:\n\n1.  **وَتُزَكِّيهِمْ** (Wa-tuzakkīhim)\n2.  **بِهَا** (Bihā)\n\nThe image ends immediately after the final letter *Hā* (ه) of the word *bihā*.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792335524,
+  "id": "202610182258420beff01e77a44bc0",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610182258420beff01e77a44bc0",
+  "usage": {
+    "completion_tokens": 114,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 818,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 932
+  }
+}

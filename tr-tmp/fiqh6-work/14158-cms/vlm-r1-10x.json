@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "الحبوب والثمار",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792337237,
+  "id": "202610182327163d0b759c04734f46",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610182327163d0b759c04734f46",
+  "usage": {
+    "completion_tokens": 7,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1052,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1059
+  }
+}

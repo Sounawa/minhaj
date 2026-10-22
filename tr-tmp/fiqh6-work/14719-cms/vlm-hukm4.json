@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Based on the image provided, here is the list of numbers and words from the right column of the table:\n\n*   **25** | **بقرة** (Cow)\n*   **55** | **شاة** (Sheep)\n*   **37** | **شاة** (Sheep)\n*   **67** | **بقرة** (Cow)",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792333250,
+  "id": "20261018222007293334fd55e546df",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018222007293334fd55e546df",
+  "usage": {
+    "completion_tokens": 79,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2365,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2444
+  }
+}

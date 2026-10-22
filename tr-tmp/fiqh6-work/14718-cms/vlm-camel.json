@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Here is the exact transcription of the two tables, row by row. I have noted where the text in the images differs from the standard Maliki values you provided.\n\n### TABLE 1 (Zakat on Camels 5–25)\n\n| عدد الإبل | الحكم الشرعي | القدر الواجب إخراجه |\n| :--- | :--- | :--- |\n| من 1 إلى 4 | -- | لا زكاة فيها |\n| من 5 إلى 9 | **زكاتها في (الغنم)** شاة | |\n| 10 إلى 14 | شاتان | |\n| 15 إلى 19 | 3 شياه | |\n| 20 إلى 24 | 4 شياه | |\n| 25 | بنت مخاض | |\n\n**Notes on differences from your provided standard:**\n*   **Row 5-9:** The image shows the legal ruling (**الحكم الشرعي**) as \"زكاتها في (الغنم)\" (Its zakat is in [sheep]), whereas the standard usually lists the specific animal (\"شاة\" - a sheep) directly in this column or the amount column.\n*   **Row 25:** The image lists the amount as \"**بنت مخاض**\". This matches the standard value you gave for this table (though Table 2 below shows a range starting at 25).\n\n---\n\n### TABLE 2 (Zakat on Camels 25–130)\n\n| عدد الإبل | الحكم الشرعي | القدر الواجب إخراجه |\n| :--- | :--- | :--- |\n| من 25 إلى 35 | بنت مخاض | |\n| من 36 إلى 45 | بنت لبون | |\n| من 46 إلى 60 | حقة | |\n| من 61 إلى 75 | جذعة | |\n| من 76 إلى 90 | بنتا لبون | |\n| من 91 إلى 120 | حقتان | |\n| من 121 إلى 129 | 3 بنات لبون أو 2 حقة | |\n| 130 | حقة و بنت لبون | |\n\n**Notes on differences from your provided standard:**\n*   **Row 91-120:** The image shows only \"**حقتان**\" (two ḥiqqa). Your standard text mentions an alternative of \"3 banāt labūn,\" which is **absent** from this image.\n*   **Row 121-129:** The image says \"**3 بنات لبون أو 2 حقة**\" (3 bint labun OR 2 hiqqa). Your standard text mentions \"2 ḥiqqa + ...\" (implying a third option or partial amount), which is **not present** in the image; the image ends cleanly with \"2 حقة\".\n*   **Row 130:** The image writes \"**حقة و بنت لبون**\" (using the conjunction 'و' for 'and'). This matches the meaning of your standard \"1 ḥiqqa + 1 bint labūn.\"",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792333586,
+  "id": "2026101822261375875f4bedb34ae4",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "2026101822261375875f4bedb34ae4",
+  "usage": {
+    "completion_tokens": 649,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 577,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1226
+  }
+}

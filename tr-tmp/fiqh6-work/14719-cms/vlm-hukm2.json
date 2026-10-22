@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "25 بقرة\n55 شاة\n37 شاة\n67 بقرة",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792333178,
+  "id": "20261018221937f4d2c736a6254908",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018221937f4d2c736a6254908",
+  "usage": {
+    "completion_tokens": 16,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 200,
+    "prompt_tokens_details": {
+      "cached_tokens": 5
+    },
+    "total_tokens": 216
+  }
+}

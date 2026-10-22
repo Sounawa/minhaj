@@ -63,3 +63,4 @@ tool-results/
 
 # archive WeTransfer de restauration (backup local, ne pas versionner)
 download/wetransfer/
+backup-tour/*.bdl

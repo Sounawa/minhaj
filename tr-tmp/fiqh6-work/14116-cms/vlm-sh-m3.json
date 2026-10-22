@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3- نفعها للفقراء",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792335980,
+  "id": "20261018230619b07b48d6753b4994",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018230619b07b48d6753b4994",
+  "usage": {
+    "completion_tokens": 10,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1173,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1183
+  }
+}

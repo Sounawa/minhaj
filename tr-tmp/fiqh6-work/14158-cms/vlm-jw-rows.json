@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Voici la confirmation et la transcription exacte des étiquettes de lignes :\n\n*   **Ligne 1 (Image du haut) :** Confirmé. La transcription exacte est : **«النقود»**\n*   **Ligne 2 (Image du bas) :** Confirmé. La transcription exacte est : **«الحبوب والثمار»**\n\n*(Note : L'ordre visuel des images correspond bien aux catégories indiquées, la première image représentant l'argent/monnaie et la seconde les grains et fruits.)*",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792337059,
+  "id": "202610182324166fdfb7b9585145a2",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610182324166fdfb7b9585145a2",
+  "usage": {
+    "completion_tokens": 122,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2790,
+    "prompt_tokens_details": {
+      "cached_tokens": 2
+    },
+    "total_tokens": 2912
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "B) «النقود»",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792337077,
+  "id": "202610182324361e823227282446fc",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610182324361e823227282446fc",
+  "usage": {
+    "completion_tokens": 9,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1410,
+    "prompt_tokens_details": {
+      "cached_tokens": 2
+    },
+    "total_tokens": 1419
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Voici la reconstruction complète du tableau, ligne par ligne et cellule par cellule, en respectant l'ordre des colonnes (de droite à gauche) et le contenu exact en arabe :\n\n| شروط الوجوب | شروط الإجزاء | الآداب |\n| :--- | :--- | :--- |\n| 1 - الإسلام | 1 - النية | 1 - الإسلام |\n| 2 - ملكية النصاب | 2 - إخراج النصاب | 2 - ملة الإسلام |\n| 3 - إخراج من خالص ماله | بني وجوبها | 3 - صحة المال |\n| 4 - تضاعف المسكين بالصدقة | 3 - تقديم الله | 4 - تعامل الفقراء في غير |\n| 5 - سرها ما عدا أعطى الدين | الإخلاص | القيصر والمعاملة. |\n| 6 - تعلق قلب في النيل الذي وضحت | النصانية | 5 - صحة المسلمين في |\n| فهو | 4 - الإحراز | المشركين أن يرضى. |\n| 7 - أن يقضي بين الأكفاء غ | من عنده ما | 6 - عدم الدين في غير |\n| 8 - دفع الصدقة قبل غروب الشمس | وحدث فيه. | القرآن والمنافقين. |\n\n**Note sur la structure :**\n*   **Colonne de droite (شروط الوجوب)** : Contient les conditions pour que la Zakat soit obligatoire (Islam, possession du Nissab, etc.).\n*   **Colonne du milieu (شروط الإجزاء)** : Contient les conditions pour que l'acte soit valide (Intention, etc.).\n*   **Colonne de gauche (الآداب)** : Contient les recommandations et règles de comportement (Secret, sincérité, choix du moment, etc.).\n\nLe texte a été retranscrit fidèlement tel qu'il apparaît dans l'image originale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792335759,
+  "id": "20261018230230a4d88c13cb464f39",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018230230a4d88c13cb464f39",
+  "usage": {
+    "completion_tokens": 448,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1362,
+    "prompt_tokens_details": {
+      "cached_tokens": 3
+    },
+    "total_tokens": 1810
+  }
+}

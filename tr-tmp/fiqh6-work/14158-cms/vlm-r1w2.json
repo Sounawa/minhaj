@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "C) «والحبوب»",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792337136,
+  "id": "20261018232535261b8491525c4604",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018232535261b8491525c4604",
+  "usage": {
+    "completion_tokens": 9,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 545,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 554
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "[القوانين الفقهية؛ الباب الثامن في لوازم الإفطار؛ ص 84]",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792343145,
+  "id": "20261019010544fdb54368fed84304",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261019010544fdb54368fed84304",
+  "usage": {
+    "completion_tokens": 26,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 707,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 733
+  }
+}

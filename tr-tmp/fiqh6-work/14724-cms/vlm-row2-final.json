@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Based on the visual analysis of the image:\n\n1.  **Glyph Identification (Left to Right):**\n    *   The first digit is a closed oval shape, which corresponds to the Arabic-Indic digit **٥** (representing 5).\n    *   The second digit is a small dot/oval shape, which corresponds to the Arabic-Indic digit **٠** (representing 0).\n\n2.  **Transcription:**\n    *   **Glyphs:** ٥ ٠\n    *   **Number:** 50",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792340117,
+  "id": "20261019001515177224771d394d15",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261019001515177224771d394d15",
+  "usage": {
+    "completion_tokens": 114,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 261,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 375
+  }
+}

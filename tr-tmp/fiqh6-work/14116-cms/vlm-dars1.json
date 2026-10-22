@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Voici la transcription complète du texte visible sur cette page de présentation, ainsi que les éléments complémentaires identifiés :\n\n### 1. Transcription de tout le texte visible\n\n**En-tête (bannière supérieure gauche) :**\n*   **الدروس 1**\n\n**Corps de la page (Titre et sous-titre principaux) :**\n*   **الزكاة والأموال التي تجب فيها**\n\n**Pied de page (bannière inférieure gauche) :**\n*   **السنة الدراسية من التربية الإسلامية**\n\n**Panneau de droite (Couverture ou page de garde) :**\n\n*   **Ministère :**\n    *   **المملكة المغربية**\n    *   **وزارة التربية الوطنية والتعليم الأولي والرياضة**\n\n*   **Matière :**\n    *   **الفقه**\n    *   **من منظومة المرشد المعين لابن عاشر بشرح ميارة**\n\n*   **Niveau / Série :**\n    *   **أولى باك**\n\n*   **Programme (dans l'image en losange) :**\n    *   **سنة التكوين الأولى** (texte partiellement visible dans le coin)\n\n*   **Établissement :**\n    *   **المدارس العصرية للتعليم الأصيل الشرعي**\n\n*   **Filière (bouton) :**\n    *   **كتلة التعليم الأصيل والدراسات الإسلامية**\n\n*   **Auteur / Référence (en bas) :**\n    *   **الأستاذ المرجو**\n\n---\n\n### 2. Contenu additionnel (Logo, numéros, etc.)\n\nOui, il y a plusieurs éléments supplémentaires visibles :\n\n*   **Numéro de leçon :** Le chiffre **« 1 »** apparaît clairement dans la bannière supérieure à côté du mot « الدروس » (Leçons), indiquant qu'il s'agit de la **première leçon**.\n*   **Logo officiel :** L'**emblème du Royaume du Maroc** (le pentagramme/étoile à cinq branches dans un cercle) est présent en haut du panneau de droite, au-dessus du nom du ministère.\n*   **Illustration photographique :** Une image en noir et blanc représentant la **Kaaba** à La Mecque entourée de pèlerins est insérée dans un cadre géométrique (losange) sur le panneau de droite. Cette illustration est thématiquement liée au sujet de la leçon (la Zakat).\n*   **Graphisme spécifique :** La page utilise une mise en page bicolore (gris foncé à gauche, gris clair à droite) avec des formes géométriques (triangles) caractéristiques des manuels scolaires marocains officiels.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792336233,
+  "id": "20261018231022246cbd1c54a64841",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018231022246cbd1c54a64841",
+  "usage": {
+    "completion_tokens": 636,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1909,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2545
+  }
+}

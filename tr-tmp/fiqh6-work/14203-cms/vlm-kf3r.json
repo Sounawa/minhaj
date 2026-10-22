@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "La bonne réponse est **A**.\n\nTranscription exacte lettre par lettre :\n\n**زَكَّى كُلَّ مَالٍ بِيَدِهِ.**\n\n(Le point final fait partie de l'image.)",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792338316,
+  "id": "20261018234513cde3d7f108d043c6",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018234513cde3d7f108d043c6",
+  "usage": {
+    "completion_tokens": 52,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1411,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1463
+  }
+}

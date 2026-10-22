@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3- دفعها إلى الأصناف المستحقين",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792336016,
+  "id": "20261018230655201bc7099aa5456a",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018230655201bc7099aa5456a",
+  "usage": {
+    "completion_tokens": 14,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1352,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1366
+  }
+}

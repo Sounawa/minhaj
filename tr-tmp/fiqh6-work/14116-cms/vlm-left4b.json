@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Voici l'analyse détaillée de la ligne :\n\n**1. Confirmation et correction de la transcription (mot par mot) :**\n\n*   **4 -** : Le chiffre « 4 » suivi d'un tiret est correct.\n*   **دَفْعُهَا** (Daf'uhā) : Le mot est correctement lu. On distingue clairement le *dal* (د), le *fa* (ف) avec un point en dessous, le *ain* (ع), le *ha* marbuta (ة) avec ses deux points au-dessus.\n*   **لِلْمَسَاكِينِ** (lil-masākīn) : La lecture est correcte. Le *lam* (ل) est bien présent, suivi de *alif-lam* (الـ), puis du radical *s-k-n* (س-ك-ي) avec les voyelles appropriées.\n*   **بِالْيَمِينِ** (bi-l-yamīn) : C'est ici que se situe la question principale.\n\n**2. Analyse du dernier mot :**\n\nOui, le dernier mot est bien **بِالْيَمِينِ** (bi-l-yamīn).\n\n*   **Preuve visuelle** : En examinant attentivement l'image agrandie, on peut identifier sans ambiguïté :\n    *   La préposition **بـ** (bi) avec sa kasra.\n    *   L'article défini **الـ** (al).\n    *   La lettre **ي** (yā') qui forme le début de la racine du mot « droite » (yamīn). Elle est clairement visible comme une petite ligne verticale avec deux points dessous, située juste après le *lam* de l'article.\n    *   La suite du mot **مِينِ** (mīn) avec le *mim*, les deux points du *ya* final et la kasra.\n\n*   **Élimination des autres options** :\n    *   L'option B (**بالميثة**) est impossible car il n'y a pas de *tha* (ث) ni de *ta* marbuta (ة) à la fin ; la forme correspond parfaitement à « yamīn ».\n    *   L'option C (**صرفها**) est incorrecte car la première lettre est clairement un *dal* (د) et non un *sad* (ص).\n\n**Conclusion :** La transcription OCR **«4 - دفعها للمساكين باليمين»** est **correcte**. Il s'agit bien de la règle de bienséance (adab) recommandant de donner l'aumône (zakat) aux pauvres avec la **main droite**.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792336117,
+  "id": "2026101823082672c73a8345e0430c",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "2026101823082672c73a8345e0430c",
+  "usage": {
+    "completion_tokens": 614,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1173,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1787
+  }
+}

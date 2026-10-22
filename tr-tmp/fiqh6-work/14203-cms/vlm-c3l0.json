@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "La bonne réponse est **B**.\n\nTranscription exacte de la première ligne :\n\n**إذا كان التاجر مديراً: قوّم كل عام.**\n\n*(L'image montre clairement le mot « مديراً » (gérant/administrateur) et non « محتكراً » (accapareur), ainsi que l'expression « قوّم كل عام » (évalue chaque année).)*",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792338075,
+  "id": "20261018234112d302fa4744024bd0",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018234112d302fa4744024bd0",
+  "usage": {
+    "completion_tokens": 95,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1205,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1300
+  }
+}

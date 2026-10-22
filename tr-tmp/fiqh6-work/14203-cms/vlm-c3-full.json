@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Voici la transcription complète du bloc, ligne par ligne :\n\n**Ligne A :**\nإذا كان التاجر محتكراً: زكّى كل مال بيده...\n\n**Ligne B :**\n...على السواء؛ أما إن كانت المدارة أكثر فإنه يزكّي الجميع في...\n\n**Ligne C :**\nأو كان الاحتكار أكثر: كل عام؛ لأن الحكم للغالب.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792338159,
+  "id": "20261018234235a414b15994144c85",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018234235a414b15994144c85",
+  "usage": {
+    "completion_tokens": 95,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 6917,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7012
+  }
+}

@@ -53,6 +53,8 @@ export interface LibraryPayload {
     docsFr: number;
     goalDocs: number;
     goalBooks: number;
+    /** Documents bénéficiant d'une traduction savante (registre). */
+    docsSavant: number;
   };
 }
 export interface LessonSummary {

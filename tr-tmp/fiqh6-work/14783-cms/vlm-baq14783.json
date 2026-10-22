@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "قُولُواْ آمَنَّا بِاللّهِ وَمَا أُنزِلَ إِلَيْنَا\nوَمَا أُنزِلَ إِلَىٰ إِبْرَاهِيمَ وَإِسْمَاعِيلَ",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792343123,
+  "id": "202610190105202b270d4e30a14952",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610190105202b270d4e30a14952",
+  "usage": {
+    "completion_tokens": 82,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2131,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2213
+  }
+}

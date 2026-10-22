@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "ROW1=١١١\nJustification: All three characters are simple vertical strokes matching the description of the Arabic-Indic digit ١.\n\nROW2=٥٠\nJustification: The first digit is a large hollow oval shape characteristic of ٥, and the second digit is a small dot characteristic of ٠.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792339740,
+  "id": "202610190008572745f6c3d65f4ad4",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610190008572745f6c3d65f4ad4",
+  "usage": {
+    "completion_tokens": 73,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 537,
+    "prompt_tokens_details": {
+      "cached_tokens": 3
+    },
+    "total_tokens": 610
+  }
+}

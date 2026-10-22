@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "La réponse est **B) «النقود»**.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792337076,
+  "id": "20261018232435bcc3cb3c5ab14713",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018232435bcc3cb3c5ab14713",
+  "usage": {
+    "completion_tokens": 15,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1410,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1425
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Voici les réponses à vos questions :\n\n**(1) Le texte candidat qui correspond à l'image est le texte A** (Coran, sourate al-Anʿām, verset 142). Il s'agit de la fin du verset commençant par « وَمِنَ الْأَنْعَامِ... ».\n\n**(2) Transcription mot à mot de ce qui est visible dans l'image :**\n\n*   **وَقُولُوا** (wa-qūlū) – « et dites »\n*   **لِلنَّاسِ** (li-n-nās) – « aux gens »\n*   **حُسْنًا** (ḥusnan) – « [de la] bonté / bien »\n*   **وَأَقِيمُوا** (wa-aqīmū) – « et établissez / accomplissez »\n*   **الصَّلَاةَ** (aṣ-ṣalāt) – « la prière »\n*   **وَآتُوا** (wa-ātū) – « et donnez »\n*   **الزَّكَاةَ** (az-zakāt) – « l'aumône légale (zakat) »\n\n*(Note : L'image montre la fin du verset 142, qui se poursuit généralement par « ...ثُمَّ تَوَلَّيْتُمْ إِلَّا قَلِيلًا مِّنكُمْ وَأَنتُم مُّعْرِضُونَ », mais cette partie n'est pas visible sur l'image fournie.)*\n\n**(3) Numéro de verset imprimé à la fin :**\n**Non**, il n'y a aucun numéro de verset imprimé à la fin de la ligne sur cette image.\n\n**(4) Nombre de lignes :**\nIl y a **une seule ligne** de texte visible.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792335639,
+  "id": "20261018230033f6b7769e6eb34cbc",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261018230033f6b7769e6eb34cbc",
+  "usage": {
+    "completion_tokens": 446,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1567,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2013
+  }
+}
