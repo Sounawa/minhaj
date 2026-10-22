@@ -7945,3 +7945,21 @@ Work Log:
 Stage Summary:
 - **ÉTAT : SAIN. Registre 643/950. tawhid-2es : 5/26. Prochaine : 18630 (attributs d'essence : existence, prééternité, permanence, distinction du contingent).**
 - **Leçon suivante annoncée par l'iʿdād qablī : divisions des attributs obligatoires selon les Achʿarites.**
+
+---
+Task ID: R144-c
+Agent: Z.ai Code (session web, trace 1a162e5189edc051 → suite)
+Task: Round 144-c — leçon 18630 (attributs obligatoires : existence, prééternité, permanence) — registre 644. Premier round avec VÉRIFICATIONS HADITH EN LIGNE réussies (pages-livres sunnah.com).
+
+Work Log:
+- **① Vérifications hadith (méthode pages-livres, UA navigateur)** : **Muslim 2713 VÉRIFIÉ MOT POUR MOT** sur sunnah.com/muslim/48 (page complète du livre, grep après strip harakat — le piège documenté) : chaîne Zuhayr b. Ḥarb ← Jarīr ← Suhayl, Abū Ṣāliḥ ← Abū Hurayra ← Prophète ﷺ ; bāb « ما يقول عند النوم وأخذ المضجع » EXACT ; les points de suspension du manuel omettent l'ouverture « Allāhumma rabba-s-samāwāt… » + le coucher sur le côté droit — documenté N.d.T. **Abū Dāwūd 466 VÉRIFIÉ MOT POUR MOT** sur sunnah.com/abudawud/2 (page livre complète 3,1 Mo) : chaîne Ismāʿīl b. Bashīr ← Ibn Mahdī ← Ibn al-Mubārak ← Ḥaywa b. Shurayḥ ← ʿUqba b. Muslim ← ʿAbd Allāh b. ʿAmr b. al-ʿĀṣ ; bāb « فيما يقوله الرجل عند دخوله المسجد » EXACT ; complément « Satan dit : il m'échappe pour le restant du jour » documenté.
+- **② NOUVEAUX POINTS DE CALIBRATION (3)** : Yā-Sīn école 38 = Ḥ39 [+1] (al-ʿurjūn al-qadīm) ; ar-Raḥmān école 24-25 = Ḥ26-27 [+2] (kullu man ʿalayhā fān / yabqā wajh rabbika) ; al-Ḥadīd 3 et al-Qaṣaṣ 88 IDENTIQUES école↔ḥafṣ. 4 chips coraniques rédigées avec gloses du manuel.
+- **③ TERME AUTHENTIFIÉ** : « al-kumūm al-khamsa » du iʿdād qablī = terme technique réel (pluriel de kumm, jonction quantitative) — les 5 déterminations quantitatives niées par l'Unicité (jonctions continue/discrète dans l'Essence, leurs semblables dans les attributs, et dans les actes) — attesté par les cours sur l'Iḍāʾat ad-dujna et la Jawharat at-tawḥīd (recherche DDG navigateur). Al-Fajījī (commentateur de la Ṣughrā d'al-Sanūsī) : aucune notice en ligne trouvée → documenté prudemment tel qu'imprimé.
+- **④ 18630 (leçon 5 — existence, prééternité, permanence)** : matn 1 vers avec points de suspension documentés (la suite « wa-mukhālafat al-ḥawādith » = leçon suivante 19062) + lexique 3 (wujūd/qidam/baqāʾ en négations) + analyse I (wujūd = ḥāl nécessaire à l'Essence, ṣifat nafsiyya selon al-Achʿarī et ses suiveurs, thubūtiyya) + analyse II (qidam : 2 sens avec chip Yā-Sīn [édifice ancien / ʿurjūn] + citation Sharḥ aṣ-Ṣughrā as-Sanūsiyya lil-Fajījī pp. 68-69 + chip Ḥadīd 3 + hadith Abū Dāwūd avec l'argument sulṭān qadīm → Dieu qadīm ; baqāʾ : chips Ḥadīd 3 + Raḥmān 24-25 ; muḥaqqiqūn : 2 ṣifāt salbiyya niant ḥudūth et fanāʾ, sans existence hors l'esprit) + conclusion transcendence (cœur/langue/actes) + taqwīm 5 + istithmār chips Qaṣaṣ 88 + Ḥadīd 3 + hadith Muslim complet + 3 tâches (verset de la tâche 2 en image, identification différée) + iʿdād qablī 2 (kumūm + mukhālafa) + N.d.T. 7 points.
+- **⑤ QA + injection + navigateur** : 11 798 car, 0 arabe, 24 guillemets appariés, 12 balises → **registre 643 → 644** ; navigateur : badge, **14/14 sondes réelles**, overflowX 0 desktop 1280 ET mobile 390, 0 erreur console, API savant 200, captures qa-r144-lecon-18630(-mobile).png. Commit + push + backup.
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 644/950. tawhid-2es : 6/26.**
+- **Prochaine leçon : 19062 (l'indépendance absolue et la dissemblance aux contingents — al-ghinā al-muṭlaq, al-mukhālafa li-l-ḥawādith)** — annoncée par le iʿdād qablī (kumūm khamsa + preuves de la mukhālafa).
+- **Calibration ḥafṣ totale : 12 points** (Baqara ×6, Aʿrāf ×2, Shūrā 1, Anʿām 1, Anbiyāʾ 2 identiques, Yā-Sīn 1, Raḥmān 1, Ḥadīd/Qaṣaṣ identiques).
+- **Risques** : habous.gov.ma toujours 503 (5 leçons en attente de contre-vérification rétroactive : 18579, 18586, 18593, 18630, et l'istithmār de 18630) ; al-Fajījī bio à établir.
