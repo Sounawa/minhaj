@@ -8068,3 +8068,17 @@ Stage Summary:
 - **ÉTAT : SAIN. Registre 651/950. tawhid-2es : 13/26. Prochaine : 19114 (les preuves de l'existence de Dieu — muǧādalat al-ḥudūth/āyāt ?).**
 - **Cumul post-interruptions : 10 leçons (18586 → 19110) — registre 641 → 651.**
 - **Progression URLs sunnah.com établie par sondage : /bukhari/9=mawāqīt, 10=adhān, 38=ḥawāla, 54=shurūṭ, 58=jizya, 59=bad' al-khalq, 60=aḥādīth al-anbiyāʾ, 81=riqāq, 97=tawḥīd.**
+
+---
+Task ID: R145-c
+Agent: Z.ai Code (session web, trace 1a1631a4712429a1)
+Task: Round 145-c — leçon 19114 (preuves de l'existence et de la contingence du monde) — registre 652. 11e leçon du cumul.
+
+Work Log:
+- **① 19114 (leçon 13 — dalīl al-ḥudūth)** : **chip Aʿrāf 185 IDENTIFIÉE avec certitude** (le verset du tamhīd : la citation de Qurṭubī commente l'ouverture même « a-wa-lam yanẓurū » — l'identification est autocertifiée par la glose imprimée du manuel ; sourate Aʿrāf déjà calibrée [138=Ḥ138 nul, 204=Ḥ204]) + citation Qurṭubī al-Jāmiʿ li-aḥkām 7/330 INTÉGRALE (regard de réflexion → les cieux support des contingents → produits → faiseur sage savant puissant voulant) + matn 3 vers (existence = besoin du produit envers le faiseur ; loi ḥadaṯat li-nafsihā → conjonction égalité/prépondérance impossible ; contingence du monde = survenance des accidents + liaison) + lexique 3 (qāṭiʿ ; tasāwī/rujhān ; aʿrāḍ = pas de vide ni subsistance par soi) + analyse I (débattu : nécessité vs caractère discursif du besoin ; l'appel coranique à la contemplation ; spécification par l'existence/le temps requiert un muḥdiṯ ; le murajjiḥ = l'Agent libre) + analyse II (inséparabilité corps/accidents ; accidents contingents par le changement ; l'éternel ne s'annule pas ; contingence des inséparables) + fruits (méthode coranique ; 680 muscles ; verset candidat Dhāriyāt 21/Fuṣṣilat 53) + taqwīm 3 + istithmār citation Ibn Juzayy al-Qawānīn al-fiqhiyya 1/9 INTÉGRALE (l'argument téléologique : les traces de la fabrique dans toutes les existants ; le voilement aux regards ; la fiṭra) + 4 tâches + iʿdād qablī (preuves qidam/baqāʾ/mukhālafa → 19117) + N.d.T. 7 points (doublet erroné de la source documenté et non traduit en double).
+- **② QA + injection + navigateur** : 12 490 car, 0 arabe (2 citations arabes du N.d.T. remplacées par translittération en 2 passes — regex arabe), 13 guillemets appariés, 11 balises → **registre 651 → 652** ; navigateur : badge, **17/17 sondes réelles**, overflowX 0 desktop 1280 ET mobile 390, 0 erreur console, captures qa-r145-lecon-19114(-mobile).png. Commit + push + backup.
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 652/950. tawhid-2es : 14/26. Prochaine : 19117 (preuves de la prééternité, permanence, dissemblance).**
+- **Cumul post-interruptions : 11 leçons (18586 → 19114) — registre 641 → 652.**
+- **Règle QA réaffirmée : aucune citation en caractères arabes dans le fichier FR — translittérer les justifications d'identification.**
