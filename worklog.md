@@ -8205,3 +8205,17 @@ Work Log:
 Stage Summary:
 - **ÉTAT : SAIN. Registre 661/950. tawhid-2es : 23/26. Reste 2 : 19182 (activités de soutien), 19185 (sources et références).**
 - **Cumul post-interruptions : 20 leçons (18586 → 19181) — registre 641 → 661.**
+
+---
+Task ID: R145-m
+Agent: Z.ai Code (session web, trace 1a163467e8daff3d)
+Task: Round 145-m — leçon 19182 (activités de soutien) — registre 662. 21e leçon du cumul.
+
+Work Log:
+- **① 19182 (leçons 23 — 4 activités de fixation)** : citation al-ʿIzz b. ʿAbd as-Salām al-Fawāʾid/al-Qawāʾid aṣ-ṣughrā pp. 145-146 (perfections + négation des déficiences + contingence des issues ; chaque connaissance → un état → des effets) + 4 tâches (notice al-ʿIzz avec le « vendeur des nuits de La Mecque » ; tableau obligatoire/impossible Coran+matn) + activité 2 (4 groupes sur les récits prophétiques : questions du tawḥīd, fondements de la daʿwa, méthode coranique, schéma des effets, synthèse) + activité 3 : citation Aḥmad Zarrūq sharḥ ar-Risāla 1/22 [avec adaptation] (la formule négation-affirmation écarte l'équivoque et dissipe les illusions ; un en essence/attributs/actes ; les 4 versets en cascade = 4 chips différées) + 3 tâches (les 3 divisions achʿarites du tawḥīd ↔ leçon 2) + activité 4 (schéma-image des visées de l'édification du credo + exposé) + N.d.T. 6 points (bios al-ʿIzz m. 660/1262 sulṭān al-ʿulamāʾ + Zarrūq m. 899/1493).
+- **② Incident qualité corrigé** : caractères chinois parasites glissés dans le N.d.T. (« le黑夜 ») — détectés à la relecture, corrigés en 2 passes (sed puis Python regex), 0 caractère chinois vérifié en navigateur.
+- **③ QA + injection + navigateur** : 6 781 car, 0 arabe, 7 guillemets appariés, 7 balises → **registre 661 → 662** ; navigateur : badge, **17/17 sondes réelles** (la missente = ponctuation différente après regex, validée en contexte), **0 caractère chinois**, overflowX 0 desktop 1280 ET mobile 390, 0 erreur console, captures qa-r145-lecon-19182(-mobile).png. Commit + push + backup.
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 662/950. tawhid-2es : 24/26. Reste 1 : 19185 (liste des sources et références) — DERNIÈRE leçon du livre !**
+- **Cumul post-interruptions : 21 leçons (18586 → 19182) — registre 641 → 662.**
