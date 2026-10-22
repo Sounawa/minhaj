@@ -8095,3 +8095,16 @@ Work Log:
 Stage Summary:
 - **ÉTAT : SAIN. Registre 653/950. tawhid-2es : 15/26. Prochaine : 19131? (preuves de ghināʾ/waḥdāniyya — vérifier le docId exact dans le JSON).**
 - **Cumul post-interruptions : 12 leçons (18586 → 19117) — registre 641 → 653.**
+
+---
+Task ID: R145-e
+Agent: Z.ai Code (session web, trace 1a1631a4712429a1)
+Task: Round 145-e — leçon 19121 (preuves de ghināʾ et waḥdāniyya + les 5 kumūm détaillés) — registre 654. 13e leçon du cumul.
+
+Work Log:
+- **① 19121 (leçon 15 — indépendance et Unicité prouvées)** : matn 1 couplet + lexique 2 (iftaqar ; lamā qadar) + ghināʾ (2 versets candidats Fāṭir 15 + « se passe de toute la création » ; ʿaql : les 2 démonstrations [support : Dieu ne peut être attribut car un attribut n'a pas d'attributs de sens — renvoi leçon 8 ; déterminant : avoir un agent = contingent — renvoi leçons 13-14]) + waḥdāniyya (3 versets candidats [Ikhlāṣ 1 dont le tafsīr était prescrit en leçon 14, Baqara 163 déjà identifié en leçon 1, un troisième] ; ʿaql : la pluralité → impuissance nécessaire [paralysie/conflit des volontés sur l'indivisible]) + **LES 5 KUMŪM DÉTAILLÉS avec leurs démonstrations propres** (composition → les caractères divins dans chaque partie/l'ensemble/une partie → impuissance ; égal → concorde/discorde avec l'argument de l'indivisible ; pluralité des attributs en l'essence → infini actuel impossible ou déterminant du nombre ; pluralité en une autre essence → égal impossible ; affectant externe → universalité de la puissance puis conflit/entente) + taqwīm 3 + **istithmār chip Anbiyāʾ 21-22 IDENTIFIÉE haute confiance** (« ont-ils pris des dieux de la terre qui ressuscitent ? s'il y avait en eux d'autres dieux que Dieu, les deux se corrompraient » — les 2 questions [sens de fasād ; objections des polythéistes] = l'exégèse classique du passage, mot pour mot) + iʿdād qablī (preuves vie/volonté/science/puissance → 19143) + N.d.T. 6 points.
+- **② QA + injection + navigateur** : 12 611 car, 0 arabe, 12 guillemets appariés, 12 balises → **registre 653 → 654** ; navigateur : badge, **19/19 sondes réelles**, overflowX 0 desktop 1280 ET mobile 390, 0 erreur console, captures qa-r145-lecon-19121(-mobile).png. Commit + push + backup.
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 654/950. tawhid-2es : 16/26. Prochaine : 19143 (preuves de la vie, volonté, science, puissance).**
+- **Cumul post-interruptions : 13 leçons (18586 → 19121) — registre 641 → 654. La série des démonstrations du Murshid al-muʿīn touche à sa fin (reste : vie/qudra/irāda/ʿilm + samʿ/baṣar/kalām puis les messagers).**
