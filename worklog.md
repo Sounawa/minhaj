@@ -7963,3 +7963,19 @@ Stage Summary:
 - **Prochaine leçon : 19062 (l'indépendance absolue et la dissemblance aux contingents — al-ghinā al-muṭlaq, al-mukhālafa li-l-ḥawādith)** — annoncée par le iʿdād qablī (kumūm khamsa + preuves de la mukhālafa).
 - **Calibration ḥafṣ totale : 12 points** (Baqara ×6, Aʿrāf ×2, Shūrā 1, Anʿām 1, Anbiyāʾ 2 identiques, Yā-Sīn 1, Raḥmān 1, Ḥadīd/Qaṣaṣ identiques).
 - **Risques** : habous.gov.ma toujours 503 (5 leçons en attente de contre-vérification rétroactive : 18579, 18586, 18593, 18630, et l'istithmār de 18630) ; al-Fajījī bio à établir.
+
+---
+Task ID: R144-d
+Agent: Z.ai Code (session web, trace 1a162e5189edc051 → suite 2)
+Task: Round 144-d — leçon 19062 (ghināʾ muṭlaq, mukhālafa li-l-ḥawādith, waḥdāniyya) — registre 645. 4e leçon de la session de rattrapage.
+
+Work Log:
+- **① 19062 (leçon 6 — indépendance absolue, dissemblance, Unicité)** : 7 versets en images SANS référence dans le JSON — méthode : identification reportée sauf certitude doctrinale ; **Shūrā 11 identifié avec certitude** (structure tanẓīh/ithbāt : ouverture rejette les mujassima, clausule rejette les muʿaṭṭila — c'est l'exégèse classique de « ليس كمثله شيء وهو السميع البصير » ; calibré école 9 = Ḥ11 [−2] dès la leçon 1 du livre) → chip avec justification complète. Les 6 autres versets : chips d'attente documentées (habous 503).
+- **② Contenu** : matn 2 couplets avec points de suspension documentés (l'hémistiche antérieur « qiyāmuhu bi-nafsih » = celui-lême que l'analyse cite comme expression du ghināʾ) + lexique 2 (wa-khulfuhu li-khalqih ; wa-ḥdat adh-dhāt wa-waṣfin wal-fiʿāl = absence d'égal/semblable/pareil/rival) + analyse I (ghināʾ = qiyām bi-nafs : a- pas de support comme l'attribut en son sujet ; b- pas de déterminant mukhaṣṣil — car qidam/baqāʾ nécessaires à l'essence, seul ce qui admet le non-être a besoin d'un déterminant ; compté ṣifa salbiyya car nie le besoin) + analyse II (mukhālafa : rien ne Lui ressemble en essence/attributs/actes + chip Shūrā 11 + doctrine : affirmation sans tashbīh/tajsīm/taʿṭīl ; tafwīḍ = première marche de l'aveu, taʾwīl = sommet de la transcendance) + analyse III (waḥdāniyya triple : essence [nie kam muttaṣil = tarkīb + kam munfaṣil = autre essence], attributs [la science connaît les objets infinis par une science une, sans second continu ou discret], actes [Lui seul Agent libre, unique en la création] + preuve des trois divisions du tawḥīd) + bienfaits (ancrage du tawḥīd dans conscience/pensée/conduite ; yaṣmidu ilayh en tout besoin ; purification du cœur) + taqwīm 4 + istithmār citation al-Bījūrī Tuḥfat al-murīd p. 70 (le chapitre de l'Unicité = le plus noble, d'où le nom de la discipline) + 4 tâches (bio al-Bījūrī satisfaite en N.d.T. ; schéma des kumūm khamsa = tâche 3) + iʿdād qablī tableau-image documenté + N.d.T. 7 points.
+- **③ QA + injection + navigateur** : 13 357 car, 0 arabe, 14 guillemets appariés, 12 balises → **registre 644 → 645** ; navigateur : badge, **15/15 sondes réelles**, overflowX 0 desktop 1280 ET mobile 390, 0 erreur console, captures qa-r144-lecon-19062(-mobile).png. Commit + push + backup.
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 645/950. tawhid-2es : 7/26.**
+- **Prochaine leçon : 19078 (les attributs de sens — puissance, volonté, science, vie)** — annoncée par l'iʿdād qablī de 19062 (tableau à remplir sur les attributs de la prochaine leçon).
+- **Cumul session de rattrapage : 4 leçons livrées (18586, 18593, 18630, 19062) — registre 641 → 645.**
+- **Risques** : habous.gov.ma 503 persistant — 6 versets de 19062 + ceux des leçons 3-5 en attente de contre-vérification rétroactive ; al-Fajījī bio à établir.
