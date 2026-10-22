@@ -7995,3 +7995,18 @@ Stage Summary:
 - **Cumul session de rattrapage : 5 leçons (18586 → 19078) — registre 641 → 646.**
 - **Méthode « identification par certitude doctrinale » consolidée** : expressions uniques au Coran (mafātiḥ al-ghayb = Anʿām 59) + hadiths consacrés (« plus grande verset » = Kursī) + gloses structurantes (tanẓīh/ithbāt = Shūrā 11) identifiées même en l'absence d'icônes ; le reste en chips d'attente honnêtes.
 - **Risques** : habous.gov.ma 503 persistant — cumul de contre-vérifications rétroactives en attente (leçons 3-7).
+
+---
+Task ID: R144-f
+Agent: Z.ai Code (session web, trace 1a162e5189edc051 → suite 4)
+Task: Round 144-f — leçon 19087 (samʿ, kalām, baṣar — suite des attributs de sens) — registre 647. 6e leçon de la session de rattrapage.
+
+Work Log:
+- **① Vérification hadith (page-livre déjà en cache /tmp/m48.html)** : **Muslim 2704 VÉRIFIÉ** (Abū Mūsā al-Ashʿarī, deux chaînes dans la page : « أيها الناس اربعوا على أنفسكم إنكم ليس تدعون أصم ولا غائبا إنكم تدعون سميعا قريبا وهو معكم » + version « إنكم لا تنادون أصم ولا غائبا ») — bāb « استحباب خفض الصوت بالذكر » (chapitre de l'abaissement de la voix) ; la version du manuel (« سميعا بصيرا ») suit une autre transmission, documenté en N.d.T. avec le trésor du Paradis « لا حول ولا قوة إلا بالله ».
+- **② 19087 (leçon 8 — ouïe, parole, vue)** : matn 1 hémistiche + points + lexique 2 (samʿ = īnās ash-shayʾ ; dhī wājibāt) + samʿ (définition [al-Musāmara p. 75] + citation Ibn Qāwām Sharḥ al-ʿaqāʾid al-ʿaḍudiyya p. 46 INTÉGRALE : appel exaucé, conscience entendue sans langue, pas de distraction, battement des oiseaux, vers dans les rochers, poissons au fond des mers ; ouïe humaine = perception à la survenue vs divine = dévoilement excédant la science) + kalām (citation Abū l-Ḥasan [Kifāyat aṭ-ṭālib avec ḥāshiyyat al-ʿAdawī 1/54-55] : Dieu parla à Moïse de Sa parole éternelle, ni son ni lettre, toute direction, toute faculté + citation al-Bījūrī Tuḥfa p. 83 : transcendance à l'antériorité/postériorité, déclinaison/construction, silence mental, mutisme) + baṣar (définition + Bījūrī Tuḥfa p. 86 [avec adaptation] : Dieu voit jusqu'aux sons, fourmi noire nuit obscure + hadith 2704 + versets-images + consensus des religions) + remarques 3 (7 maʿānī vs maʿnawiyya [négation du ḥāl selon al-Achʿarī, pas d'intermédiaire entre existence et non-être] ; quadruple classification des rapports [vie sans rapport ; qudra+irāda → possibles ; samʿ+baṣar → existants ; ʿilm+kalām → les 3 divisions] ; le rapport = ce que l'attribut requiert par soi) + 6 vers de l'Iḍāʾat ad-dujna d'al-Maqqarī pp. 38-39 en table + fruits (vigilance ; tawḥīd = science + foi + droiture) + taqwīm 2 (tableau-image + attributs non cités = maʿnawiyya) + istithmār 2 tâches + iʿdād qablī (attributs impossibles — leçon suivante 19090) + N.d.T. 7 points (sources, vérification 2704, controverse du néant pur, vision des sons, habous 503).
+- **③ QA + injection + navigateur** : 12 754 car, 0 arabe, 14 guillemets appariés, 12 balises → **registre 646 → 647** ; navigateur : badge, **18/18 sondes réelles** (la seule « missente » = artefact NNBSP sur les deux-points, validée en contexte : « se répartissent en quatre : une section sans rapport à rien — la vie… »), overflowX 0 desktop 1280 ET mobile 390, 0 erreur console, captures qa-r144-lecon-19087(-mobile).png. Commit + push + backup.
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 647/950. tawhid-2es : 9/26. Prochaine : 19090 (les attributs impossibles — istiḥāla).**
+- **Cumul session de rattrapage : 6 leçons (18586 → 19087) — registre 641 → 647.**
+- **Risques** : habous 503 (contre-vérifications rétroactives en attente, leçons 3-8) ; sources al-Musāmara/Ibn Qāwām citées telles qu'imprimées (identifications restent à établir).
