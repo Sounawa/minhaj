@@ -8445,3 +8445,21 @@ Stage Summary:
 - Décisions clés : (a) leçon de synthèse traduite selon sa nature (pas de sections inventées — pas de mathn ni d'édification propre) ; (b) les 4 versets perdus restaurés en candidats de premier ordre couvrant les quatre traitements nommés par la consigne ; (c) le tableau de méditation restitué en cadre de travail (l'intention pédagogique du manuel est que l'élève le remplisse) ; (d) l'annonce documentée depuis le chapitre suivant du commentaire déjà lu partiellement.
 - Risques : habous.gov.ma toujours injoignable (4 versets + tableau non vérifiables iconographiquement — puces honnêtes) ; la leçon 18381 (hamza simple — ibdāl de la fāʾ du verbe) ouvre une NOUVELLE famille : prévoir une lecture complète du chapitre (nujum-durar.txt ~192 700 → ~205 000 ?), le genre se divisant en substitué/transféré.
 - Priorités suivantes : (1) R155 — leçon 18381 : lire le chapitre باب القول في إبدال فاء الفعل en entier (commence à ~192 700), vérifier le mathn au matn intégral, puis rédiger ; (2) poursuivre le flux 18382, 18384… ; (3) maintenir commit+push après chaque leçon (autonomie nuit — le cron 471313 relaie toutes les 15 min).
+
+---
+Task ID: R155
+Agent: Z.ai Code (session principale)
+Task: Tajwid-2es leçon 18381 — le hamza simple : la substitution de la fāʾ du verbe chez Warsh (12e leçon) : traduction savante complète
+
+Work Log:
+- Source AR extraite (5 051 car — tamhīd Hujurāt 49:10 avec la lecture al-mūminūna, 4 vers de mathn, 3 axes, 3 khaṭṭāṭa, 2 versets d'application perdus).
+- Chapitre du commentaire lu IN EXTENSO (192 700 → 198 300 : باب القول في إبدال فاء الفعل — la définition du fiʿl/gabarit, la quiescente de Warsh avec l'extension aux deux mots et aux préfixes, l'après-hamza pour tous, l'exception de l'ʾīwāʾ avec l'objection et sa résolution, la mouvementée ouverte-après-ḍamma avec ses ʿilla et contre-cas).
+- Vérification exhaustive au cache : ~30 locus (tous confirmés) ; la trouvaille technique : les formes تؤوي/يؤوي du cache sont écrites en hamza décomposée (tatweel + U+0654) — une recherche par signature codée a résolu les deux derniers mots de l'ʾīwāʾ : تُؤْوِي = Coalisés 33:51 (وَتَأْوِي إِلَيْكَ — la vocalisation warshienne du cache !) et تُؤْوِيهِ = Degrés 70:13.
+- Résolution du premier mot de la liste des sept (« الأوى » corrompu par l'OCR) : restitué en al-maʾwā — le glose scolaire (« sept, comme al-maʾwā ») l'atteste.
+- tr-tmp/18381.savant.html rédigé (20 594 car — la leçon la plus riche de la série : 3 tableaux restitués + les ʿilla intégrales + l'objection) ; QA OK après correction d'un guillemet orphelin (61+61) ; hand-set OK (registre 675) ; navigateur : badge, sondes 13/13, bilingue 534 séquences arabes, overflowX 0 page+main en 1280 et 390, 0 erreur console, captures desktop+mobile ; commit 86956bf + push GitHub + backup.sh OK.
+
+Stage Summary:
+- État : registre **675/950** (+4 ce session : 18119, 18124, 18379, 18381 — tajwid-2es 12/27). GitHub synchronisé (86956bf), bundle /tmp à jour.
+- Décisions clés : (a) la nouvelle famille du hamza simple ouverte selon le commentaire (fiʿl = gabarit faʿala — noms et verbes) ; (b) les sept mots de l'ʾīwāʾ intégralement vérifiés et datés ; (c) le cas kasra-quiescente explicité comme vide au Coran (remarque du commentaire) ; (d) les contre-cas et ʿilla de la mouvementée traduits intégralement (l'atténuation qui approche le heurt des deux quiescents) ; (e) candidats d'application : Croyants 1 (substitution) + Caverne 16 (exception).
+- Risques : habous.gov.ma toujours injoignable (3 schémas + 2 versets + l'exemple morphologique li-ʾammihi non vérifiables iconographiquement) ; l'OCR du commentaire corrompt certains exemples (naʾuzzuhum→taʾuzzuhum, faʾkulhu→fa-ʾakalā, يؤده) — corrigés sur le texte coranique et documentés.
+- Priorités suivantes : (1) R156 — leçon 18382 (le hamza simple en ʿayn et lām) : le chapitre du commentaire commence à ~198 300 (« والعين واللام فلا تبدلهما لنافع إلا لدى بعس بئيسا... وأبدل الذئب وبكر بيس ورش ») — lire jusqu'au chapitre naql ; (2) poursuivre le flux 18384, 18385, 18386 (naql 1/2), 18512… ; (3) maintenir le rythme — la session a livré 4 leçons (669→675), l'objectif nuit est de continuer jusqu'à épuisement du contexte.
