@@ -8163,3 +8163,17 @@ Work Log:
 Stage Summary:
 - **ÉTAT : SAIN. Registre 658/950. tawhid-2es : 20/26. Reste 5 : 19176 (contingents des messagers), 19180 (kalima + marque de la foi), 19181 (islam/îman/ihsan), 19182 (activités), 19185 (sources).**
 - **Cumul post-interruptions : 17 leçons (18586 → 19162) — registre 641 → 658.**
+
+---
+Task ID: R145-j
+Agent: Z.ai Code (session web, trace 1a1631a4712429a1)
+Task: Round 145-j — leçon 19176 (démonstrations du contingent des messagers) — registre 659. 18e leçon du cumul.
+
+Work Log:
+- **① Vérification hadith (page-livre /bukhari/67 nikāḥ)** : **Bukhārī 5063 VÉRIFIÉ MOT POUR MOT** (chaîne Saʿīd b. Abī Maryam ← Muḥammad b. Jaʿfar ← Ḥumayd aṭ-Ṭawīl ← Anas b. Mālik ; le hadith des 3 hommes et des vœux excessifs + « quiconque répugne à ma Sunna n'est pas des miens » ; bāb الترغيب في النكاح, le texte arabe correspond exactement au manuel). Musnad Aḥmad 1481 (Muṣʿab b. Saʿd ← Saʿd : « les prophètes puis les plus excellents… à la mesure de sa religion ») rendu tel que cité — non contre-vérifié en ligne (Musnad non sondé), attesté par ailleurs Tirmidhī 2398/Ibn Mājah 4023, documenté.
+- **② 19176 (leçon 20 — les accidents humains)** : matn 1 couplet + lexique 2 (tasallīn = patience-consolation ; ḥikmatuhā) + preuve (la survenance OBSERVÉE ou par TAWĀTUR ; la DOCTRINE DE LA LIMITE : les accidents n'atteignent que le corps apparent, les cœurs — granulés des connaissances/lumières — intacts ; la faim/le sommeil n'en prennent rien : leurs yeux dorment non leurs cœurs) + le littéral des textes (verset candidat humanité [Kahf 110/Fuṣṣilat 6/Anbiyāʾ 7 noté] + réfutation des négateurs [Yā-Sīn 15/Ibrāhīm 10 noté]) + les 2 hadiths (5063 = la Sunna du juste milieu ; Musnad 1481 = l'épreuve des prophètes, « sans une seule faute ») + les 3 bénéfices (récompense — Sa sagesse que la raison ne circonscrit pas ; législation — l'inadvertance dans la prière apprise de la sienne ; consolation — le monde trop bas pour demeure de rétribution) + 2 vers Iḍāʾat ad-dujna d'al-Maqqarī en table + taqwīm 3 + **istithmār chips Anbiyāʾ 83-84 + Ṣād 41-44 haute confiance** (les 3 questions sur Ayyūb : résumé du tafsīr, leçons, bienséances de l'invocation — l'appel et le rappel/réponse/guérison) + iʿdād qablī (mérites et sens de lā ilāha illā Allāh → 19180) + N.d.T. 6 points.
+- **③ QA + injection + navigateur** : 11 153 car, 0 arabe, 8 guillemets appariés, 12 balises → **registre 658 → 659** ; navigateur : badge, **20/20 sondes réelles**, overflowX 0 desktop 1280 ET mobile 390, 0 erreur console, captures qa-r145-lecon-19176(-mobile).png. Commit + push + backup.
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 659/950. tawhid-2es : 21/26. Reste 4 : 19180, 19181, 19182, 19185 — puis le livre est COMPLET.**
+- **Cumul post-interruptions : 18 leçons (18586 → 19176) — registre 641 → 659.**
