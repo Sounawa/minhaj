@@ -8135,3 +8135,18 @@ Work Log:
 Stage Summary:
 - **ÉTAT : SAIN. Registre 656/950. tawhid-2es : 18/26. Prochaine : 19153 (ce qui est obligatoire/impossible/contingent concernant les messagers — OUVERTURE de la section risāla du programme).**
 - **Cumul post-interruptions : 15 leçons (18586 → 19151) — registre 641 → 656. La première moitié du Murshid al-muʿīn (tawḥīd, 17 leçons de doctrine) est entièrement traduite.**
+
+---
+Task ID: R145-h
+Agent: Z.ai Code (session web, trace 1a1631a4712429a1)
+Task: Round 145-h — leçon 19153 (l'obligatoire/l'impossible/le contingent des messagers — OUVERTURE de la section risāla) — registre 657. 16e leçon du cumul.
+
+Work Log:
+- **① Vérification hadith (page-livre /bukhari/64 maghāzī)** : **Bukhārī 4351 VÉRIFIÉ MOT POUR MOT** (l'or du Yémen d'ʿAlī distribué aux 4 hommes + « ألا تأمنوني وأنا أمين من في السماء يأتيني خبر السماء صباحا ومساء » ; chaîne Qutayba ← ʿAbd al-Wāḥid ← ʿUmāra b. al-Qaʿqāʿ ← ʿAbd ar-Raḥmān b. Abī Naʿm ← Abū Saʿīd al-Khudrī ; bāb « بعث علي بن أبي طالب... إلى اليمن » EXACT — le renvoi du manuel est celui du livre des expéditions).
+- **② 19153 (leçon 18 — prophétologie achʿarite)** : matn 5 couplets COMPLETS (ṣidq/amāna/tablīgh ; kidhb/khiyāna/ʿadam tablīgh ; les ʿawāriḍ bashariyya ; L'ARGUMENT DES MIRACLES : si les messagers mentaient, Dieu les approuverait en les corroborant — « cet esclave a dit vrai en chaque nouvelle ») + lexique 2 (ṣidq = conformité au réel ; ʿaraḍ avec les exemples rougeur de pudeur/pâleur de frayeur) + citation at-Taftāzānī Sharḥ al-ʿaqāʾid an-nasafiyya p. 160 (la risāla = ambassade levant les objections) + les 3 obligatoires (véracité — ni délibérée ni par inadvertance, consensus des muḥaqqiqūn — ; fiabilité — hadith Bukhārī 4351 ; transmission intégrale — même les reproches) avec **3 chips haute confiance/certaines : Nisāʾ 69** (l'exégèse Qurṭubī 8/288 porte sur « avec les véridiques »), **Māʾida 67** (LE verset du tablīgh), **Aḥzāb 37** (le dire de ʿĀʾisha + Qurṭubī 14/189 = volume d'al-Aḥzāb — double autocertification) + les 3 impossibles (mensonge/trahison/omission) + les contingents (maladie, pauvreté, manger/boire/mariage, oubli après transmission ou hors injunction, sommeil — les yeux dorment, non les cœurs) + l'argument des miracles développé + droits des messagers (section-image documentée) + taqwīm 3 (avec la shubha d'Ibrāhīm — candidat Anbiyāʾ 63 noté) + istithmār de groupe sur Qāḍī ʿIyāḍ ash-Shifāʾ (4 tâches) + iʿdād qablī (délails des 3 catégories → leçon suivante) + N.d.T. 7 points (bios Taftāzānī m. 793/1391 et Qāḍī ʿIyāḍ m. 544/1149).
+- **③ QA + injection + navigateur** : 14 279 car, 0 arabe, 12 guillemets appariés, 14 balises → **registre 656 → 657** ; navigateur : badge, **20/20 sondes réelles**, overflowX 0 desktop 1280 ET mobile 390, 0 erreur console, captures qa-r145-lecon-19153(-mobile).png. Commit + push + backup.
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 657/950. tawhid-2es : 19/26. Reste 7 documents (leçons 19-25 + fin).**
+- **Cumul post-interruptions : 16 leçons (18586 → 19153) — registre 641 → 657.**
+- **URL sunnah.com complété : /bukhari/64 = maghāzī (Ḥudaybiyya/4351).**
