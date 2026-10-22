@@ -7931,3 +7931,17 @@ Stage Summary:
 - **Leçon suivante : 18593 (première obligation du mukallaf et conditions du taklīf)** — annoncée par l'iʿdād qablī de 18586 (mémorisation « Awala wājibin… » jusqu'à « ḥawlan ẓahar »).
 - **Risques** : habous.gov.ma 503 persistant (>12 h) — surveiller son retour pour la contre-vérification rétroactive de 18579 ET 18586 ; les jobs cron nocturnes sont désactivés par la plateforme (« exec limits exceeded ») — le travail autonome de nuit ne peut PAS être garanti par cron, prévenir l'utilisateur en cas de demande.
 - **Priorités** : 18593 → 18630 (attributs d'essence : existence, prééternité, permanence, distinction des contingent) → 19062… jusqu'à 19185 (26/26) ; puis tajwid-2es (27) ou fiqh-tanawi-1 (30).
+
+---
+Task ID: R144-b
+Agent: Z.ai Code (session web, trace 1a162efb53f37849)
+Task: Round 144-b — leçon 18593 (première obligation du mukallaf + conditions du taklīf) — registre 643. Sessions interrompues par épuisement de contexte (l'utilisateur l'a constaté) — remède appliqué : livrer chaque leçon en petits pas, committer immédiatement.
+
+Work Log:
+- **① 18593 (leçon 4 — première obligation et conditions de la charge)** : source JSON complète lue (0 verset plein texte ; l'exploitation cite al-Ghāshiya 17-20 EN IMAGE — identifié sans ambiguïté : « أفلا ينظرون إلى الإبل… » chameaux/ciel/montagnes/terre, le passage coranique le plus célèbre sur le naẓar, exactement le thème de la tâche 2). habous.gov.ma toujours 503 → contre-vérification iconographique reportée, documentée en N.d.T. + chip avec note de calibration (aucun point pour Ghāshiya, correspondance école↔ḥafṣ présumée identique).
+- **② Contenu** : matn 4 vers (awwal wājib = maʿrifa de Dieu + des Messagers par les attributs ; taklīf conditionné par ʿaql + bulūgh : sang/grossesse/émission/poil/18 ans) + lexique 4 (kullifa, naẓar = pensée ordonnée, naṣaba al-āyāt, sharṭ avec la définition logique) + analyse I (ignorance de l'attribut = ignorance du décrit ; mort subite post-puberté sans loisir de réfléchir → non sanction ; maʿrifa = jaẓm conforme issu de dalīl ; taqlīd insuffisant + controverse + al-Āmidī Iḥkām 2/271 accord des savants sur la validité de la foi du muqallid ; attribution à al-Achʿarī ; fruit = murāqaba avec la maxime « ne se voit pas sans témoin là où Dieu a interdit / ne Le trouve pas absent là où Il a commandé ») + analyse II (4 conditions : ʿaql ; bulūgh 5 signes + Qarāfī aisselles + fente du nez/voix ; accès de l'appel non mentionné car universel ; iljāʾ/ghafla/ikrāh — impossibilité pour les 2 premiers, maintien de la charge pour le violente selon la position correcte ; silence d'Ibn ʿĀshir ET Mayyara sur la 4e) + conclusion contemplation âmes/horizon + schéma non transcrit documenté + taqwīm 4 + istithmār chip Ghāshiya 17-20 + 4 tâches + iʿdād qablī 3 questions (annonce 18630 : attributs) + N.d.T. 6 points.
+- **③ QA + injection + navigateur** : 11 797 car, 0 arabe, 2 guillemets appariés, 11 balises, auto-fix → **registre 642 → 643** ; navigateur : badge, **12/12 sondes réelles**, overflowX 0 desktop 1280 ET mobile 390, 0 erreur console, captures qa-r144-lecon-18593(-mobile).png. Commit + push + backup.
+
+Stage Summary:
+- **ÉTAT : SAIN. Registre 643/950. tawhid-2es : 5/26. Prochaine : 18630 (attributs d'essence : existence, prééternité, permanence, distinction du contingent).**
+- **Leçon suivante annoncée par l'iʿdād qablī : divisions des attributs obligatoires selon les Achʿarites.**
