@@ -8498,3 +8498,18 @@ Stage Summary:
 - Décisions clés : (a) l'ʿilla du naql intégralement traduite (le transfert plutôt que l'atténuation ou la substitution — l'argument des deux quiescents) ; (b) la note du mīm du pluriel intégrée en N.d.T. ; (c) le khilāf de kitābiyah + l'assimilation de māliyah + le lām de l'article previewés comme matière de 18385 (le vers suivant du mathn déjà identifié au matn) ; (d) l'édification ikhlāṣ/naql (les deux allègements).
 - Risques : habous.gov.ma toujours injoignable (la table d'exemples et le verset d'application en restauration honnête) ; le lieu de al-ʾayman non déterminé.
 - Priorités suivantes : (1) R158 — leçon 18385 (le naql au lām de l'article et le mot kitābiyah) : le chapitre du commentaire est DÉJÀ LU (le khilāf de kitābiyah, la hāʾ de sakt, l'assimilation de māliyah avec l'avis d'Ibn al-Jazarī et as-Sakhāwī, le lām de l'article à l'initiale, le tanbīh du madd al-badl — 203 600 → 208 000) ; la source et le matn restent à extraire/vérifier ; (2) puis 18386 (le naql et sa justification — « نقل الحركة عند نافع وتوجيهه »), 18512… ; (3) le contexte de la session principale s'épuise — le cron 471313 relaie : chaque tour webDevReview doit suivre le pipeline documenté en tête du worklog.
+
+---
+Task ID: R158
+Agent: agent principal (Z.ai Code)
+Task: Reprise après 3e reset sandbox (récup GitHub intégrale) + leçon 18385 (tajwid-2es, R158)
+
+Work Log:
+- Retour utilisateur (« TU AS PU TRAVAILLER, COMME JE LE VOULAIS? ») : bilan de la nuit rendu — le cron 471313 a relayé 6 leçons (R152-R157, registre 669→677, tajwid-2es 14/27), tout poussé sur GitHub.
+- Constat : 3e reset du sandbox (retombé à l'état R81 502/950, remote perdu) — AUCUNE PERTE : remote + insteadOf reconstruits, fetch origin, merge -X theirs → registre 677/950 récupéré, HEAD = bbf6690, backup.sh régénéré, leçon 18384 re-vérifiée au navigateur (badge, 16 404 car FR, 0 console).
+- R158 — leçon 18385 « le transfert de voyelle vers le lām de l'article défini et le mot kitābayhi » : source extrait (tr-tmp/18385.src.html, 4 025 car, trous OCR : verset du tamhīd + les 2 citations أطبق vides) ; chapitre du commentaire lu en entier (~202 400-209 300 : lām at-taʿrīf nominé expressément, kitābiyah khilāf + cause hāʾ de pause, istitrād māliyah + correction « khilāf à tous les lecteurs », manifestation = pause légère al-Dānī/Abū Shāma/Ibn al-Jazarī, as-Sakhāwī, vers du commencement + tanbīh badal + notes grammaticales, note biographique al-Dānī 371-444 H) ; mathn 2 vers vérifiés ; locus verbatim au cache : l'Inéluctable 69:19-20 et 28-29, le Très-Haut 87:16-17 ; traduction 17 776 car (0 arabe, 77+77 guillemets, anglicisme « introductory » corrigé) ; QA OK ; hand-set → registre 678 ; navigateur : badge, 3 chips, bilingue 585 séquences arabes, overflowX 0 @1280/390, 0 console, captures qa-r158-lecon-18385(-mobile).png ; commit d2df0f4 poussé + backup.
+- Découverte outil : `agent-browser set viewport <w> <h>` (pas `resize`/`viewport` seul).
+
+Stage Summary:
+- Registre 678/950 ; tajwid-2es 15/27 ; GitHub synchronisé (d2df0f4) ; le protocole de survie aux resets a fait ses preuves une 3e fois.
+- Prochaine : 18386 (R159) « le transfert de voyelle chez Nāfiʿ et sa justification » — le chapitre du commentaire EST DÉJÀ LU (radʾan/al-ʾān/al-ʾūlā, ~209 200-213 000 : les 3 mots d'accord Qālūn-Warsh, ʿilla du radʾan rdd-hamza-kanzatain, avis « ziyāda min ardā ») ; ensuite 18512 (iẓhār/idghām du dhāl de idh, chapitre à localiser).
