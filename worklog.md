@@ -8665,3 +8665,21 @@ Work Log:
 Stage Summary:
 - Registre 687/950 ; tajwid-2es 24/27 ; GitHub synchronisé (9828ed9).
 - Prochaines : 18631 (R168 — la conversion et l'occultation + les mots exceptés de l'assimilation : le chapitre continue à ~253 000 avec les vers « وقلبوهما لحرف الباء ميما / ميمًا وقالوا بعد بالإخفاء / في نحو قنوان... ») ; 18634 (R169 — applications) ; 18635 (R170 — le mathn entier, leçon finale).
+
+---
+Task ID: R168
+Agent: agent principal (Z.ai Code)
+Task: Leçon 18631 (tajwid-2es) — les règles de la nūn quiescente et du tanwīn : conversion et occultation
+
+Work Log:
+- Source extraite (7 116 car — les exemples des trois sections et les trois schémas perdus en images ; le verset d'application perdu).
+- Suite du chapitre du commentaire lue (253 200-262 400 : le vers de la conversion/occultation avec définitions et exemples, l'équivalence an būrika / man yaʿtaṣim, le moyen mnémotechnique propre du commentateur pour les 15 lettres, les 45 exemples dans l'ordre maghrébin, les avertissements des Laṭāʾif al-ishārāt, puis le vers des exceptés — les 4 mots, la restriction, la double cause, la non-confusion en deux mots, les notes grammaticales).
+- Mathn 3 vers vérifiés verbatim (matn + citation intégrale du commentaire).
+- Vérifications systématiques au cache (avec recherche brute des jonctions tanwīn+ṭāʾ/ḏāl) : toutes les unicités confirmées (ankālan 73:12, min ẓahīrin 34:22, ẓillan ẓalīlan 4:57, fa-nfalaqa 26:63, yanqalib 67:4, min qarībin 4:17, min ḍaʿfin 30:54, wa-nshaqqa al-qamaru 54:1, fa-man shahida 2:185, qawlan thaqīlan 73:5, kaʾsan dahāqan 78:34, ṣaʿīdan zalqan 18:40, wa-kullan ḍarabnā 25:39, rajulan salaman 39:29) + comptes (ghafūrun shakūrun ×3, yanṣurkum ×3, min fadlihi ×26) + les 4 exceptés (qinwān 6:99, ṣinwān 13:4, bunyān 61:4 + 9:110, ad-dunyā 42:20) + édification (2:271, 2:110, 16:97, 9:105).
+- Découverte honnête : aucune jonction tanwīn+ṭāʾ ni tanwīn+ḏāl en tout le Coran (recherche systématique négative) — les deux slots de la table restituée laissés vides avec note ; le 3e exemple du ḏāl trop altéré au scan, celui du ṭāʾ (qawman ṭāghīna) introuvable au texte de contrôle.
+- Traduction 18 668 car : 3 axes, 3 tables restituées (conversion 3 lignes ; occultation 15×3 ; exceptés 4 lignes), chip أطبق non identifiée (laissée en attente), édification sur l'occultation et l'aumône cachée.
+- QA OK (0 arabe, 79 paires) ; hand-set → registre 688 ; navigateur : badge, 1 chip, 6 tables, bilingue 563 séquences arabes, overflowX 0 @1280/390, 0 console, captures qa-r168-lecon-18631(-mobile).png ; commit c3d5472 poussé + backup.
+
+Stage Summary:
+- Registre 688/950 ; tajwid-2es 25/27 ; GitHub synchronisé (c3d5472).
+- Prochaines : 18634 (R169 — séance d'applications des règles de la nūn quiescente et du tanwīn : source = lessons[25]) ; 18635 (R170 — le mathn entier, leçon finale — le matn déjà vérifié mot à mot tout au long du livre).
