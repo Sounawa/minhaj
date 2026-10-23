@@ -8812,3 +8812,20 @@ Stage Summary:
 - Registre 696/950 ; tajwid-5ep 6/30 leçons (7/31 documents avec l'intro) ; GitHub synchronisé (a754059), backup OK.
 - Suivants : 15439 (R177 — applications sur l'ikhfāʾ de la mīm quiescente : les jonctions « lakum min », « minhum man », « aṣābahum sayyiʾāt » déjà relevées en cette leçon comme annonce) puis 15488, 15628… 24 leçons restantes.
 - Risque connu : habous.gov.ma toujours bloqué — les restaurations restent fondées sur le quran-cache local (vérifications verbatim possibles) et les honnêtes déclarations de perte au scan.
+
+---
+Task ID: R177
+Agent: agent principal (Z.ai Code)
+Task: Leçon 15439 (tajwid-5ep) — la règle de l'occultation de la mīm quiescente (ikhfāʾ shafawī)
+
+Work Log:
+- Source extraite (2 495 car html) : leçon 7 du 5ep — applications sur l'occultation labiale ; deux versets en images (références imprimées : Āl ʿImrān 3:101, an-Naml 27:80) ; le propos de l'imam an-Nawawī avec référence (at-Tibyān fī ādāb ḥamalat al-Qurʾān, p. 54) ; l'iʿdād verset Yūnus 10:40.
+- Vérifications au cache : 3:101 porte la jonction unique « yaʿtaṣim bi-llāhi » (mīm quiescente occultée devant le bāʾ) ; la marque muṣḥafique vérifiée AU CODEPOINT DU RASM — les trois mīm manifestées (antum, ʿalaykum, fīkum) portent le sukūn, la mīm cachée de yaʿtaṣim en est dépourvue : la leçon décrit exactement la convention du rasm ; + jonction de rappel « ṣirāṭin mustaqīm » (tanwīn+mīm — idghām bi-ghunna des leçons 1-6) ; 27:80 vérifié verbatim mais NE PORTE AUCUNE jonction mīm+bāʾ au texte de contrôle — référence douteuse notée honnêtement (les jonctions de la sūra : 27:3, 27:7, 27:35, 27:37, 27:78, 27:84, 27:85) ; 10:40 porte les deux « wa-minhum man » (idghām mithlayn — annonce de la leçon 8).
+- Énoncé d'introduction portant la suite « et le tanwīn » : notée comme regarde la série (leçons 1-6), la règle de la leçon étant la mīm seule.
+- Nawawī traduit avec sa référence (les ellipses = mots perdus au scan, marqués) ; édification : l'attachement caché (yaʿtaṣim = le verbe même de la jonction ; la mīm sans marque = le mérite sans ostentation ; la nasalisation tenue = la quiétude tenue).
+- Traduction 6 933 car ; QA OK (0 arabe, 29 paires de guillemets) ; hand-set → registre 697 ; navigateur : badge « Traduction savante », bilingue, overflowX 0 @1280/390, 0 erreur console, captures qa-r177-lecon-15439(-mobile).png ; commit 0a4d4d3 poussé + backup OK.
+
+Stage Summary:
+- Registre 697/950 ; tajwid-5ep 7/30 leçons ; GitHub synchronisé (0a4d4d3), backup OK.
+- Suivants : 15488 (R178 — l'assimilation des deux mīm [idghām mithlayn] : les jonctions « wa-minhum man » de Yūnus 10:40 déjà préparées) puis 15628, 15741… 23 leçons restantes.
+- Instruction utilisateur reçue ce tour : ACCÉLÉRER et travailler 24h/24 — déploiement de crons webDevReview multiples (15 min + 30 min) après ce tour ; l'ancien cron 471313 a disparu de la liste (aucun job actif).
