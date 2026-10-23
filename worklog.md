@@ -8578,3 +8578,20 @@ Work Log:
 Stage Summary:
 - Registre 682/950 ; tajwid-2es 19/27 ; GitHub synchronisé.
 - Prochaine : 18542 (R163) — le lām de « hal » et « bal » : le chapitre commence à ~232 400 au commentaire (« فصل هل وبل » — 4e chapitre, 8 lettres de l'accord [7 lues : ṭāʾ ẓāʾ tāʾ ḍād sīn zāy nūn + 1 perdu OCR], exemple « بل صب الله لا غير » — à relire et compléter).
+
+---
+Task ID: R163
+Agent: agent principal (Z.ai Code)
+Task: Leçon 18542 (tajwid-2es) — iẓhār : le lām de « hal » et de « bal »
+
+Work Log:
+- Source extrait (3 881 car ; trous OCR : les 10 exemples en images, la schéma, les 2 versets أطبق).
+- Chapitre du commentaire lu (232 300-234 900 : les 8 lettres, le partage hal/bal, les 12 notes de locus, les notes grammaticales, le début du chapitre suivant « فصل وما قرب منها أدغموا » — l'assimilation obligatoire, matière d'une leçon ultérieure).
+- Recherche systématique par mot autonome « hal »/« bal » + lettre suivante (avec exclusions des faux positifs « قبل طلوع ») — tous les comptes du manuel confirmés : ṭāʾ/ẓāʾ/thāʾ/ḍād lieux uniques, zāy les deux seuls (13:33 + 18:48), tāʾ partagé (21:40 bal + 19:65 hal), nūn partagé (21:18 bal + 34:7 hal). Une réserve honnête : « بل سوّلت » se lit aussi en Joseph 12:83 (le manuel dit « لا يوجد غيره ») — notée en N.d.T.
+- Décryptage note OCR : « 55/4 يصع الله عليها » = les Femmes 4:155 « بل طبع الله عليها ».
+- Traduction 12 744 car : 3 axes, table à 8 lignes avec colonne hal/bal, 2 chips honnêtes, édification 8 lettres / 5 prières.
+- hand-set → registre 683 ; navigateur : badge, 2 chips, 5 tables, bilingue 536 séquences arabes, overflowX 0 @1280/390, 0 console, captures qa-r163-lecon-18542(-mobile).png ; commit poussé + backup.
+
+Stage Summary:
+- Registre 683/950 ; tajwid-2es 20/27 ; GitHub synchronisé.
+- Prochaine : lessons[20] — vérifier le docId (probablement le chapitre « فصل وما قرب منها أدغموا » — l'assimilation obligatoire des lettres voisines, chapitre lu en marge : إذ ظلموا, قد تبين, قالت طائفة, همت طائفتان…).
