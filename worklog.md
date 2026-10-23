@@ -9070,3 +9070,34 @@ Stage Summary:
 - Cron 472435 actif — la boucle 24/24 est ré-armée avec auto-ré-entretien.
 - Suivants : 18697 (R186 — seconde captation de la leçon 14 : madd ṭabīʿī, twin de 15852/R184) puis
   18956 (madd muttaṣil — première leçon sans twin livré), 18962, 18987… 15 documents restants.
+
+---
+Task ID: R186
+Agent: agent principal (Z.ai Code)
+Task: Leçon 18697 (tajwid-5ep) — seconde captation de la leçon 14 : applications sur l'allongement naturel (madd ṭabīʿī)
+
+Work Log:
+- Source extraite (2 423 car html) : seconde captation de la leçon 14 (twin de 15852, livré en R184) —
+  objectifs/consignes/textes identiques ; la variante perd les références imprimées des deux passages
+  (النساء:36, مريم:55-54) et les crochets coraniques des mots à répéter (﴿﴾ absents).
+- Restitutions à double attestation (première édition = témoin documentaire, noté en N.d.T.) :
+  les Femmes 4:36 + Maryam 19:54-55 (vérifiés verbatim au cache — la référence inversée 55-54 de la
+  première édition notée) ; « uʿbudū llāha » (le wāw après le dāl tombant en liaison devant le lām
+  redoublé du Nom) ; « innahu kāna » (yāʾ de ṣila après hāʾ du pronom) + « fakhūrā » (alif du tanwīn
+  de l'accusatif à l'arrêt) ; candidats parallèles notés (bihī shayʾan, ahlahu, marḍiyyā).
+- Anomalies OCR propres à cette captation : « minḥāl » = « min ḥāl » soudé (restitué, noté) ;
+  typographie interne corrigée avant QA (Vache, aloi).
+- Corps de doctrine rétabli (définition du madd ṭabīʿī : prolongation sans cause, deux temps) ;
+  vers de la Tuḥfa restitué du mathn même du manuel (leçon 28) ; textes d'Abū ʿUthmān an-Nahdī +
+  ʿUmar/Abū Mūsā traduits avec références imprimées (Ibn ʿAsākir 32/85 ; Fatḥ al-Bārī 9/91).
+- QA OK (8 539 car, 0 arabe, 33 paires, 7 balises — les ﴿﴾ de la N.d.T. remplacés par
+  « crochets coraniques vides », précédent R183) ; hand-set → registre 706 ; navigateur : badge,
+  bilingue 234 séquences arabes, overflowX 0 @1280/390, 0 console, captures
+  qa-r186-lecon-18697(-mobile).png ; commit db5724d poussé + backup OK.
+
+Stage Summary:
+- Registre 706/950 ; tajwid-5ep 16/30 leçons (17/31 documents avec l'intro) — les deux captations
+  doubles (leçons 13/14) sont livrées.
+- Suivant : 18956 (R187 — madd muttaṣil, SANS twin livré : première leçon vierge du bloc madd ;
+  l'iʿdād de 15852/18697 prépare al-Bayyina : jazāʾan, ḥum, khayr, ʿinda) puis 18962 (munfaṣil),
+  18987 (activités madd), 19029 (badal stable, l.18), 19031 (badal changed, l.19)… 14 documents restants.
