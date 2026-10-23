@@ -8630,3 +8630,20 @@ Work Log:
 Stage Summary:
 - Registre 685/950 ; tajwid-2es 22/27 ; GitHub synchronisé (278ec14).
 - Prochaines : 18628 (R166 — séance d'applications de l'iẓhār/idghām : source = lessons[22]), 18629/18631 (nūn quiescent), 18634 (applications), 18635 (le mathn entier — leçon finale, le matn déjà vérifié mot à mot).
+
+---
+Task ID: R166
+Agent: agent principal (Z.ai Code)
+Task: Leçon 18628 (tajwid-2es) — applications de la manifestation et de l'assimilation
+
+Work Log:
+- Correction préalable de 18626 : ordre des hémistiches aligné sur la convention du livre (premier hémistiche en cellule droite), re-QA + re-capture + commit d1319c7.
+- Source extraite (2 671 car — les 4 versets de l'activité 2 perdus en images).
+- Identification des 4 passages par les énoncés mêmes : P1 = les Coalisés 33:9-10 (« les deux versets de la sūra des Coalisés », iḏ+jīm et iḏ+zāy) ; P3 = les Prophètes 21:11 (kānat ẓālimatan — jonction unique « كانت ظ ») ; P4 = les Fraudeurs 83:36 (hal thūwiba — jonction unique) ; P2 = qad+ẓāʾ (3 jonctions vérifiées : 2:231, 65:1, 38:24 — la leçon 18534 citait les deux premières ; candidat principal 65:1, restitution définitive en attente de la source officielle).
+- Éléments de correction des 5 questions établis des leçons 16-22 (définitions iẓhār/idghām, les 5 chapitres et leurs lettres [iḏ : sifflement+jadat ; qad : 6 lettres+ẓāʾ/ḍād de Qālūn ; tāʾ féminin : 5 lettres+ẓāʾ de Qālūn ; hal/bal : 8 lettres ; exceptions : 17 mots], exemples avec locus vérifiés, obligatoire vs permise, citations du Durar dans la version établie).
+- Tableau des valeurs de 33:9-10 restitué (5 lignes : gratitude, confiance, constance, certitude et bon soupçon, vigilance — lié à l'objectif 3).
+- Traduction 10 921 car ; QA OK (0 arabe, 69 paires) ; hand-set → registre 686 ; navigateur : badge, 4 chips, 1 table, bilingue 229 séquences arabes, overflowX 0 @1280/390, 0 console, captures qa-r166-lecon-18628(-mobile).png ; commit 35ccef9 poussé + backup.
+
+Stage Summary:
+- Registre 686/950 ; tajwid-2es 23/27 ; GitHub synchronisé (35ccef9).
+- Prochaines : 18629 (R167 — le nūn quiescent : le chapitre « ذكر ادغام النون والتنوين / والقلب والإخفاء والتبيين » — les vers du mathn : « ذكر ادغام النون والتنوين / عند حروف... » — localiser le chapitre du commentaire après ~242 400) ; 18631 (R168 — suite du nūn) ; 18634 (R169 — applications) ; 18635 (R170 — le mathn entier, leçon finale).
