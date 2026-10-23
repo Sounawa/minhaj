@@ -8513,3 +8513,20 @@ Work Log:
 Stage Summary:
 - Registre 678/950 ; tajwid-2es 15/27 ; GitHub synchronisé (d2df0f4) ; le protocole de survie aux resets a fait ses preuves une 3e fois.
 - Prochaine : 18386 (R159) « le transfert de voyelle chez Nāfiʿ et sa justification » — le chapitre du commentaire EST DÉJÀ LU (radʾan/al-ʾān/al-ʾūlā, ~209 200-213 000 : les 3 mots d'accord Qālūn-Warsh, ʿilla du radʾan rdd-hamza-kanzatain, avis « ziyāda min ardā ») ; ensuite 18512 (iẓhār/idghām du dhāl de idh, chapitre à localiser).
+
+---
+Task ID: R159
+Agent: agent principal (Z.ai Code)
+Task: Leçon 18386 (tajwid-2es) — le transfert de voyelle chez Nāfiʿ et sa justification
+
+Work Log:
+- Source extrait (4 572 car ; trous OCR : les 2 citations أطبق + la schéma des faces en image + la lacune de l'objectif 2).
+- Chapitre du commentaire lu intégralement (209 200-213 000 : tawjīh de rad'an [origine hamza, deux kasbras, athar, réunion des dialectes, avis du surcroît], tawjīh de al-ʾān [deux hamzas + deux quiescents], accord de Qālūn en al-ʾūlā [dialecte Zayd al-a'jamī], hamzage de la wāw, tanbīh des 12 faces de al-ʾān — hors propos du manuel, non repris).
+- Mathn 4 vers vérifiés verbatim au matn ; les 4 locus vérifiés verbatim au cache (le Récit 28:34, Jonas 10:51/91, l'Étoile 53:50).
+- Traduction 13 622 car : 3 axes (les mots d'accord + les tawjīh enrichis ; les faces de 'ādan al-ʾūlā avec table restituée à 5 lignes de la schéma perdue ; la cause de l'élision + clôture du chapitre) ; أطبق chips honnêtes (l'Étoile 53:50 candidat de premier ordre) ; édification Moïse/Pharaon/'Ād + hadith des deux Recueils.
+- Fautes corrigées avant QA finale : « le schéma » ×2, « fasse » ; QA OK (0 arabe, 65+65 guillemets).
+- hand-set → registre 679 ; navigateur : badge, 2 chips, table rendue, bilingue 647 séquences arabes, overflowX 0 @1280/390, 0 console, captures qa-r159-lecon-18386(-mobile).png ; commit 960f988 poussé + backup.
+
+Stage Summary:
+- Registre 679/950 ; tajwid-2es 16/27 ; GitHub synchronisé (960f988).
+- Prochaine : 18512 (R160) — iẓhār/idghām du dhāl de « idh » : localiser le chapitre « القول في الإظهار والإدغام » (~213 000+ dans nujum-durar.txt, le début vu en marge du matn : القول في الإظهار والإدغام / وما يليهما من الأحكام).
