@@ -9030,3 +9030,43 @@ Stage Summary:
 - Suivants : 18696 (R185 — activités d'application générales sur la mīm quiescente [titre
   générique à vérifier]) puis 18697, 18956… 16 leçons restantes.
 - iʿdād de 15852 : l'allongement connecté (muttaṣil) + la sūra al-Bayyina — matière de 18697/18956.
+
+---
+Task ID: R185
+Agent: agent principal (Z.ai Code)
+Task: Leçon 18696 (tajwid-5ep) — seconde captation de la leçon 13 : activités générales sur la mīm quiescente
+
+Work Log:
+- Reprise de session après épuisement de contexte ; question utilisateur « alors ca marche ? MEME SANS MOI ? » →
+  diagnostic : app OPÉRATIONNELLE (serveur 200, accueil complet, 0 erreur) ; boucle 24/24 MORTE (tous les crons
+  disparus de la liste — le quota amont les supprime désormais entièrement, plus seulement « disabled »).
+- Ré-armement immédiat : job unique 472435 créé (webDevReview, expression calendaire « 0 */15 * * * ? »,
+  tz Europe/Paris, priorité 10) avec PROTOCOLE DE RÉ-ARMEMENT intégré au message (chaque run vérifie son
+  job en fin de course et le recrée s'il manque — cycle auto-entretenu).
+- Découverte structurelle : 18696 = SECONDE CAPTATION de la leçon 13 (15839, livrée en R183) — mêmes
+  objectifs verbatim, mêmes trois textes des lecteurs de Médine, même consigne de tableau ; la variante
+  présente perd la référence imprimée du passage (الحجرات:14-18) et les deux mots de l'ikhfāʾ (crochets
+  entiers absents) ; son intro porte la formule d'atelier « iẓhār du nūn quiescente et tanwīn » non corrigée
+  par les éditeurs (titre/objectifs portent la mīm — anomalie notée en N.d.T., même famille que R177/R178).
+- Le livre cartographié : 30 documents = intro + leçons 1-14 + SECONDES CAPTATIONS des leçons 13/14 (18696,
+  18697) + suite du programme (muttaṣil/munfaṣil, badal stable/changed, layyin, lāzim kalimī/ḥarfī, waqf,
+  le mathn, ʿāriḍ, exceptions badal) ; les slots 17/22/25/28/30 portent de la vieille traduction machine
+  (heuristic >3000 car piégée — « prolonger la douceur »), PAS savante.
+- Restitutions à double attestation : passage 49:14-18 (vérifié verbatim au cache ; référence imprimée
+  portée par la première édition — noté honnêtement) ; deux mots « islāmakum bal » (49:17 — l'unique
+  jonction mīm+bāʾ du passage, mīm occultée sans sukūn au rasm) ; table de classement des jonctions
+  (manifestations — dont les deux cas d'avertissement wāw/fāʾ de 49:15 — assimilation yaltakum min,
+  occultation, nasalisation des redoublées) + table des lecteurs (Abū Jaʿfar → Nāfiʿ → Qālūn).
+- N.d.T. enrichie : les deux captations distinguées (ordre de publication du site vs ordre du programme —
+  la seconde vient après la leçon du madd dans le corpus) ; formule d'atelier signalée ; chaque perte
+  rétablie sourcée.
+- QA OK (10 815 car, 0 arabe, 35 paires, 11 balises) ; hand-set → registre 705 ; navigateur : badge
+  « Traduction savante », bilingue 266 séquences arabes, 2 tables rendues, overflowX 0 @1280/390,
+  0 erreur console, VLM visuel « excellent » (thème automne, deux colonnes alignées) ; captures
+  qa-r185-lecon-18696(-mobile).png ; commit accdfd2 poussé + backup OK.
+
+Stage Summary:
+- Registre 705/950 ; tajwid-5ep 15/30 leçons (16/31 documents avec l'intro).
+- Cron 472435 actif — la boucle 24/24 est ré-armée avec auto-ré-entretien.
+- Suivants : 18697 (R186 — seconde captation de la leçon 14 : madd ṭabīʿī, twin de 15852/R184) puis
+  18956 (madd muttaṣil — première leçon sans twin livré), 18962, 18987… 15 documents restants.
