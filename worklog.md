@@ -8530,3 +8530,19 @@ Work Log:
 Stage Summary:
 - Registre 679/950 ; tajwid-2es 16/27 ; GitHub synchronisé (960f988).
 - Prochaine : 18512 (R160) — iẓhār/idghām du dhāl de « idh » : localiser le chapitre « القول في الإظهار والإدغام » (~213 000+ dans nujum-durar.txt, le début vu en marge du matn : القول في الإظهار والإدغام / وما يليهما من الأحكام).
+
+---
+Task ID: R160
+Agent: agent principal (Z.ai Code)
+Task: Leçon 18512 (tajwid-2es) — iẓhār et idghām : le statut du ḏāl de « iḏ »
+
+Work Log:
+- Source extrait (3 845 car ; trous OCR : verset du tamhīd, أطبق, la schéma des espèces d'assimilation, la schéma des lettres de iḏ, les 6 exemples de l'axe 3 — tous en images).
+- Grand chapitre du commentaire localisé et lu (222 600-227 000 : les 4 objets du chapitre, définitions fines, 3 causes, division wājib/mumtaniʿ/jāʾiz, les 6 chapitres de la permise, le chapitre iḏ entier avec les notes de locus).
+- Mathn 2 vers vérifiés au matn ; les 8 locus vérifiés verbatim au cache (avec normalisation إ→ا corrigée) : al-Aḥqāf 46:29, al-Anfāl 8:48, les Coalisés 33:10, la Lumière 24:12+16 (les deux seuls sīn ✓), la Vache 2:125+166, la Table 5:23 (dāl = fa-idhā dakhaltumūhu), les Coalisés 33:9 (candidat iḏ+jīm).
+- Traduction 13 610 car : définitions + enrichissements, table des 3 espèces restituée, les 6 chapitres de l'assimilation permise, les 3 catégories du ḏāl, les 6 exemples restitués des notes du commentaire, chips honnêtes (2 seuls lieux iḏ+jīm au Coran), édification sur la véracité de la lettre + hadith khutbat al-ḥāja. Faute corrigée (« retira la shadda »).
+- hand-set → registre 680 ; navigateur : badge, 2 chips, 4 tables, bilingue 518 séquences arabes, overflowX 0 @1280/390, 0 console, captures qa-r160-lecon-18512(-mobile).png ; commit 10bb569 poussé + backup.
+
+Stage Summary:
+- Registre 680/950 ; tajwid-2es 17/27 ; GitHub synchronisé (10bb569).
+- Prochaine : 18534 (R161) — le dāl de « qad » : le chapitre est DÉJÀ LU au commentaire (227 000-229 000 : « وقد لأحرف الصفير تستبين / نم لذال ولجيم ولسمن / وزاد عيسى الظاء والضاد معا / وورش الإدغام فيهما وعسى » — les 6 lettres d'accord + ḏāʾ/ḍād propres à Qālūn ; locus : قد تبين 2:256/29:38, قد جاءكم ×13, قد زالا, قد جاءهم, قد شغفها, قد ظهر, قد ضل). Ensuite 18537 (tāʾ du féminin).
