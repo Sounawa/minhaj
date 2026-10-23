@@ -8612,3 +8612,21 @@ Work Log:
 Stage Summary:
 - Registre 684/950 ; tajwid-2es 21/27 ; GitHub synchronisé.
 - Prochaines : 18626 (R165 — les exceptions à l'idghām des lettres proches et homogènes ; le chapitre du commentaire suit à ~238 400 : « أظهرا خفف تبتب عدت… » — les mots au choix des lecteurs), 18628 (applications), 18629/18631 (nūn quiescent), 18634 (applications), 18635 (le mathn entier — leçon finale).
+
+---
+Task ID: R165
+Agent: agent principal (Z.ai Code)
+Task: Leçon 18626 (tajwid-2es) — les exceptions de l'assimilation des lettres proches et homogènes
+
+Work Log:
+- Reprise après rupture de contexte : état vérifié (R164 = 18556 livré, registre 684, origin/main b699a26 + commit auto 4677d5c contenant l'extraction src de 18626).
+- Source lue (tr-tmp/18626.src.html, 12,5k car — tous les mots coraniques perdus en images).
+- Chapitre du commentaire lu intégralement (238 600-242 400 normalisés : les 8 lieux d'accord avec gloses, les 5 de divergence, les 4 restants des 17, le tanbīh complet/incomplet, les gloses de mètre).
+- Mathn 5 vers vérifiés verbatim (18635.matn.html). Vérifications systématiques au cache (normalisation + index inter-versets) : tous les comptes du manuel confirmés — نخسف unique, فنبذتها unique, عذت 2 lieux (40:27 + 44:20 la Fumée — la note du scan ne montrait que 40:27), أورثتموها 2 (7:43 + 43:72), bāʾ+fāʾ exactement 5 (17:63, 20:97 [le « 94/20 » du scan est 20:97], 4:74, 13:5, 49:11), يرد ثوابا les 2 de 3:145, يفعل ذلك 6 lieux au jussif (2:231, 3:28, 4:30, 4:114, 25:68, 63:9 — l'indicatif de 2:85 hors chapitre), يغفر لكم 10 lieux, اصبر لحكم 3 (52:48, 68:48, 76:24), اتخذتم 8 + أخذت 22, labithtu ḍamma 2:259+10:16 / fatha 2:259×2+20:40+26:18 / pluriel 8 versets (9 jonctions), طسم 26:1+28:1, طس 27:1, نخلقكم 77:20, أفضتم 2:198+24:14, أحطت 27:22, بسطت 5:28, 20:114.
+- Décryptages : « الدال من هجاء كهيعص » = le dāl du nom de lettre ṣād (épellation) ; « المصري » = Warsh ; « إدغامهما » = أخذت + اتخذتم ; item 3 des 4 restants = rāʾ+lām (restauré des notes 46:31+52:48, lacune scan honnêtement signalée).
+- Traduction 25 436 car : 3 axes + complément des 4 restants + tanbīh complet/incomplet ; 3 tables restituées ; chip أطبق restituée de l'énoncé (la Plume 68:1) ; édification sur la science reçue et écrite + Ṭā-Hā 20:114.
+- QA OK (0 arabe, 93 paires de guillemets, auto-fix NNBSP) ; hand-set → registre 685 ; navigateur : badge, 1 chip, 9 tables, bilingue 689 séquences arabes, overflowX 0 @1280/390, 0 console, captures qa-r165-lecon-18626(-mobile).png ; commit 278ec14 poussé + backup.
+
+Stage Summary:
+- Registre 685/950 ; tajwid-2es 22/27 ; GitHub synchronisé (278ec14).
+- Prochaines : 18628 (R166 — séance d'applications de l'iẓhār/idghām : source = lessons[22]), 18629/18631 (nūn quiescent), 18634 (applications), 18635 (le mathn entier — leçon finale, le matn déjà vérifié mot à mot).
