@@ -8762,3 +8762,18 @@ Work Log:
 Stage Summary:
 - Registre 693/950 ; tajwid-5ep 3/30 ; GitHub synchronisé.
 - Suivants : 15406 (R174 — la conversion, préparée par l'أستعد), 15413, 15414… 27 leçons restantes du 5ep.
+
+---
+Task ID: R174
+Agent: agent principal (Z.ai Code)
+Task: Leçon 15406 (tajwid-5ep) — la règle de la conversion
+
+Work Log:
+- Source extraite (2 590 car — deux versets en images : Qāf 50:7, la Lune 54:28 ; hadith Tirmidhī 2910 avec référence).
+- Vérifications au cache : Qāf 50:7 porte les deux conversions de l'énoncé (« wa-anbatnā » — le texte de contrôle la porte avec la petite mīm de conversion, la marque muṣḥafique décrite par le manuel même ; « zawjin bahījin » au tanwīn) ; la Lune 54:28 porte la conversion du tanwīn (« qisamatum baynahum »), le contre-exemple de la nūn voyellée (« wa-nabbiʾhum » — identifié de l'énoncé), et l'assimilation avec nasalisation (« shirbin muḥtaḍar »).
+- Hadith Tirmidhī 2910 traduit avec sa référence (les lettres alif-lām-mīm découpées) + édification sur le salaire décuplé et la lettre changée non perdue.
+- Traduction 5 262 car ; QA OK (0 arabe) ; hand-set → registre 694 ; navigateur : badge, 2 chips, bilingue 252 séquences arabes, overflowX 0 @1280/390, 0 console, captures qa-r174-lecon-15406(-mobile).png ; commit 57ce148 poussé + backup.
+
+Stage Summary:
+- Registre 694/950 ; tajwid-5ep 4/30 ; GitHub synchronisé (57ce148).
+- Suivants : 15413 (R175 — l'occultation, préparée par l'أستعد) puis 15414, 15439… 26 leçons restantes.
