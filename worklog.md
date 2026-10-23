@@ -8546,3 +8546,19 @@ Work Log:
 Stage Summary:
 - Registre 680/950 ; tajwid-2es 17/27 ; GitHub synchronisé (10bb569).
 - Prochaine : 18534 (R161) — le dāl de « qad » : le chapitre est DÉJÀ LU au commentaire (227 000-229 000 : « وقد لأحرف الصفير تستبين / نم لذال ولجيم ولسمن / وزاد عيسى الظاء والضاد معا / وورش الإدغام فيهما وعسى » — les 6 lettres d'accord + ḏāʾ/ḍād propres à Qālūn ; locus : قد تبين 2:256/29:38, قد جاءكم ×13, قد زالا, قد جاءهم, قد شغفها, قد ظهر, قد ضل). Ensuite 18537 (tāʾ du féminin).
+
+---
+Task ID: R161
+Agent: agent principal (Z.ai Code)
+Task: Leçon 18534 (tajwid-2es) — iẓhār et idghām : le dāl de « qad »
+
+Work Log:
+- Source extrait (3 744 car ; trous OCR : les 8 exemples en images, la schéma des lettres de qad, le verset أطبق).
+- Chapitre du commentaire déjà lu (227 100-228 500 : les 6 lettres de l'accord, tustabīn = accord selon le terme absolu, ʿĪsā = Qālūn b. Mīnā, les additions ẓāʾ/ḍād, le vers mnémotechnique en initiales trop altéré).
+- Mathn 2 vers vérifiés au matn ; locus vérifiés verbatim au cache avec comptes exacts : zāy SEUL lieu (67:5), ḏāl SEUL (7:179), shīn SEUL (12:30), ṣād ×3 (17:41/89, 18:54), sīn ×7 (3:181, 5:102, 8:31, 8:38, 20:99, 37:171, 58:1), jīm ×15 environ (2:92, 40:34 + 11 « قد جاءكم »), ẓāʾ ×2 (2:231, 65:1), ḍād ×6 (2:108, 4:116, 4:136, 5:12, 33:36, 60:1) — les restrictions « لا يوجد غيره » du manuel confirmées (zāy, ḏāl, shīn).
+- Traduction 11 477 car : 3 axes, table restituée à 8 lignes, chips honnêtes (33:36/4:116), édification 17:70 + droits de l'homme. Faute corrigée (« poète »).
+- hand-set → registre 681 ; navigateur : badge, chip, 7 tables, bilingue 472 séquences arabes, overflowX 0 @1280/390, 0 console, captures qa-r161-lecon-18534(-mobile).png ; commit poussé + backup.
+
+Stage Summary:
+- Registre 681/950 ; tajwid-2es 18/27 ; GitHub synchronisé.
+- Prochaine : 18537 (R162) — le tāʾ du féminin : localiser « فصل تاء التأنيث » dans le commentaire (~229 000+ après le chapitre qad ; les vers du mathn à chercher : de تاء التأنيث devant les lettres du sifflement + la divergence du ẓāʾ).
