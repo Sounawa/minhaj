@@ -8683,3 +8683,19 @@ Work Log:
 Stage Summary:
 - Registre 688/950 ; tajwid-2es 25/27 ; GitHub synchronisé (c3d5472).
 - Prochaines : 18634 (R169 — séance d'applications des règles de la nūn quiescente et du tanwīn : source = lessons[25]) ; 18635 (R170 — le mathn entier, leçon finale — le matn déjà vérifié mot à mot tout au long du livre).
+
+---
+Task ID: R169
+Agent: agent principal (Z.ai Code)
+Task: Leçon 18634 (tajwid-2es) — applications des règles de la nūn quiescente et du tanwīn
+
+Work Log:
+- Source extraite (2 475 car — le verset d'activité 2, les deux citations d'activité 3 et le tableau des bienfaits perdus en images).
+- Éléments de correction des 5 questions établis des leçons 24-25 (définitions, lettres des 4 règles, manières d'application, les 4 exceptés avec la cause, le vers qalb/ikhfāʾ du Durar).
+- Blocs candidats des versets d'exercice (le thème = les bienfaits de Dieu envers l'homme, avec les 5 règles demandées) vérifiés verbatim : Abraham 14:32-34 (création, eau, fruits, navires, rivières, soleil/lune, nuit/jour, l'innumérable) + les Abeilles 16:78 (ouïe/yeux/cœurs — « peut-être remercierez-vous »), 16:80-81 (maisons, vêtements), 16:14 et 16:18 en appui — non identifiés avec certitude, honnêtement notés.
+- Tableau des bienfaits restitué (5 lignes avec comportements de gratitude proposés) + édification sur la gratitude (14:7, 14:34, 16:18 vérifiés).
+- Traduction 8 471 car ; QA OK (0 arabe, 9 paires) ; hand-set → registre 689 ; navigateur : badge, 1 chip, 1 table, bilingue 207 séquences arabes, overflowX 0 @1280/390, 0 console, captures qa-r169-lecon-18634(-mobile).png ; commit 6664bf9 poussé + backup.
+
+Stage Summary:
+- Registre 689/950 ; tajwid-2es 26/27 ; GitHub synchronisé (6664bf9).
+- Prochaine : 18635 (R170 — LA LEÇON FINALE : le mathn intégral du Naẓm ad-Durar — la source est le matn entier que j'ai vérifié mot à mot tout au long du livre ; il reste à traduire l'enveloppe du manuel [présentation, objectifs, exercices] autour du texte intégral bilingue).
