@@ -8792,3 +8792,23 @@ Work Log:
 Stage Summary:
 - Registre 695/950 ; tajwid-5ep 5/30 ; GitHub synchronisé (6f140ca).
 - Suivants : 15414 (R176 — la séance d'activités + la présentation d'Abū Mūsā al-Ashʿarī) puis 15439, 15488… 25 leçons restantes.
+
+---
+Task ID: R176
+Agent: agent principal (Z.ai Code)
+Task: Leçon 15414 (tajwid-5ep) — séance d'activités générales sur les règles de la nūn quiescente et du tanwīn
+
+Work Log:
+- Reprise de session après épuisement de contexte : le résumé de conversation s'arrêtait à R152 (registre 671), mais le worklog (source de vérité) montrait R175 livré, registre 695, tajwid-2es COMPLET 27/27, tajwid-5ep 5/30 — le cron a relayé le travail entre-temps. Poursuite directe à R176.
+- Source extraite (2 823 car html) : leçon 6 du 5ep — séance d'activités d'application générale ; les quatre passages coraniques en images (références imprimées : les Croyants 23:12-13, les Abeilles 16:10-11, les Coalisés 33:23-24, les Groupes 39:51-53) ; le hadith d'Abū Mūsā avec référence complète (al-Ḥākim, al-Mustadrak 5966) ; la présentation de la brochure (maṭwiyya) en 3 étapes ; l'iʿdād (mīm quiescente).
+- Les quatre passages restitués du quran-cache et vérifiés verbatim ; jonctions analysées une à une sur le texte de contrôle.
+- Table de classement RESTAURÉE : 28 jonctions claires — 5 iẓhār (minhu/wa-minhu 16:10, min hāʾulāʾi 39:51, les deux « minhum man » 33:23 portant en même temps la jonction de la mīm — objet de la leçon suivante), 7 idghām bi-ghunna (sulālatin min, qarārin makīn, sharābun wa-minhu, qawmin yatafakkarūna, man yantaẓiru, li-man yashāʾu, qawmin yuʾminūna), 5 idghām bi-ghayr ghunna (māʾan lakum, āyatan li-qawmin, ghafūran raḥīman, āyātin li-qawmin, min raḥmati — avec les formes psalmodiées), 1 qalb (yunbitu 16:11 — la petite mīm muṣḥafique vérifiée au codepoint U+06E2 du texte de contrôle, parallèle exact au Qāf 50:7 de la leçon 4), 10 ikhfāʾ (dont 2 internes au mot : anzala 16:10, yantaẓiru 33:23).
+- Les deux consignes aux exemples perdus (type de l'idghām ; exposé des règles avec taʿlīl) remplacées par les jonctions mêmes des passages + éléments de correction établis des cinq leçons précédentes (justifications : gorge loin de la nūn ; yawm partage le nasillement ; lām-rāʾ de la pointe de la langue sans ghunna ; mīm-bāʾ bilabiaux ; les 15 restantes ni gorge ni assimilation).
+- Hadith d'Abū Burda traduit avec sa référence ; brochure (éléments proposés : biographie ʿAbd Allāh b. Qays al-Ashʿarī, mérites du hadith, étapes pratiques) ; édification : 33:23 (le verset même de l'activité décrit les Compagnons), Sabaʾ 34:10 et Ṣād 38:18 (la voix de Dāwūd — vérifiés verbatim au cache), et le « mizmāran min mazāmīri » du hadith portant double assimilation avec nasalisation.
+- N.d.T. 8 points : séance sans vers nouveau ; les 4 passages vérifiés ; remplissage indicatif de la table ; consignes perdues remplacées ; jonctions de hamza de liaison hors table (mina l-muʾminīna ; jamīʿan innahu — tanwīn fondu en la nūn redoublée) + tanwīn de fin suspendus à l'arrêt ; jonctions de la mīm quiescente annonçant la leçon suivante ; hadith avec référence imprimée + le propos venu dans les deux Ṣaḥīḥ ; citations de l'édification vérifiées.
+- Traduction 14 294 car ; QA OK (0 arabe, 79 paires de guillemets, 12 balises appariées) ; hand-set → registre 696 ; navigateur : badge « Traduction savante », table 5 lignes × 2 colonnes rendue, bilingue OK (article « العربية — الأصل » 2 008 car arabes), hadith et édification affichés, overflowX 0 @1280/390, 0 erreur console, captures qa-r176-lecon-15414(-mobile).png ; page du livre : « 7/31 traductions savantes » (intro 15387 + 6 leçons) ; commit a754059 poussé + backup OK.
+
+Stage Summary:
+- Registre 696/950 ; tajwid-5ep 6/30 leçons (7/31 documents avec l'intro) ; GitHub synchronisé (a754059), backup OK.
+- Suivants : 15439 (R177 — applications sur l'ikhfāʾ de la mīm quiescente : les jonctions « lakum min », « minhum man », « aṣābahum sayyiʾāt » déjà relevées en cette leçon comme annonce) puis 15488, 15628… 24 leçons restantes.
+- Risque connu : habous.gov.ma toujours bloqué — les restaurations restent fondées sur le quran-cache local (vérifications verbatim possibles) et les honnêtes déclarations de perte au scan.
