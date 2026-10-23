@@ -8747,3 +8747,18 @@ Work Log:
 Stage Summary:
 - Registre 692/950 ; tajwid-5ep 2/30 ; GitHub synchronisé (978eed7).
 - Suivants : 15401 (R173 — l'assimilation sans nasalisation, préparation sur la sūra de la Cité déjà donnée) puis 15406, 15413… 28 leçons restantes.
+
+---
+Task ID: R173
+Agent: agent principal (Z.ai Code)
+Task: Leçon 15401 (tajwid-5ep) — la règle de l'assimilation sans nasalisation
+
+Work Log:
+- Source extraite (2 889 car — les versets en images : Muḥammad, le Fer 57:9, les Menus biens 107:4-5 ; hadith Muslim 798 avec référence).
+- Vérifications au cache : les trois rendus de l'énoncé (« millabin », « labanillam », « khamril-ladhdati li-sh-shāribīna ») tous au verset 15 de Muḥammad (la référence « 16 » = la péricope, notée) ; le Fer 57:9 porte les deux jonctions perdues (« bayyinātin li-yukhrijakum » tanwīn+lām ; « raʾūfun raḥīmun » tanwīn+rāʾ) — chips RESTAURÉES ; les Menus biens 107:4 (« waylun lil-muṣallīna ») confirmé.
+- Traduction 6 219 car : les deux espèces d'idghām distinguées, le hadith traduit avec sa référence, édification sur le maître et le trébuchant.
+- QA OK (0 arabe) ; hand-set → registre 693 ; navigateur : badge, 3 chips, bilingue 282 séquences arabes, overflowX 0 @1280/390, 0 console, captures qa-r173-lecon-15401(-mobile).png ; commit poussé + backup.
+
+Stage Summary:
+- Registre 693/950 ; tajwid-5ep 3/30 ; GitHub synchronisé.
+- Suivants : 15406 (R174 — la conversion, préparée par l'أستعد), 15413, 15414… 27 leçons restantes du 5ep.
