@@ -8562,3 +8562,19 @@ Work Log:
 Stage Summary:
 - Registre 681/950 ; tajwid-2es 18/27 ; GitHub synchronisé.
 - Prochaine : 18537 (R162) — le tāʾ du féminin : localiser « فصل تاء التأنيث » dans le commentaire (~229 000+ après le chapitre qad ; les vers du mathn à chercher : de تاء التأنيث devant les lettres du sifflement + la divergence du ẓāʾ).
+
+---
+Task ID: R162
+Agent: agent principal (Z.ai Code)
+Task: Leçon 18537 (tajwid-2es) — iẓhār et idghām : le tāʾ du féminin
+
+Work Log:
+- Source extrait (3 850 car ; trous OCR : les 10 exemples en images, la schéma, le verset أطبق).
+- Chapitre du commentaire lu intégralement (227 400-232 400 : les 5 lettres de l'accord, l'addition du ẓāʾ par Qālūn, la cause de l'assimilation de Warsh, les notes de locus — 13 versets en note de page).
+- Méthode nouvelle : recherche SYSTÉMATIQUE des locus par regex sur le cache (tāʾ quiescent de fin de mot + lettre initiale suivante) → filtrage des participules/noms — tous les comptes du manuel confirmés (ṣād ×2, zāy ×1, jīm ×2, ẓāʾ ×3 dont 2 aux Bestiaux).
+- Traduction 11 736 car : 3 axes, table restituée, chip honnête, édification sur l'injustice (les lieux du ẓāʾ = lieux d'injustice).
+- hand-set → registre 682 ; navigateur : badge, chip, 6 tables, bilingue 479 séquences arabes, overflowX 0 @1280/390, 0 console, captures qa-r162-lecon-18537(-mobile).png ; commit poussé + backup.
+
+Stage Summary:
+- Registre 682/950 ; tajwid-2es 19/27 ; GitHub synchronisé.
+- Prochaine : 18542 (R163) — le lām de « hal » et « bal » : le chapitre commence à ~232 400 au commentaire (« فصل هل وبل » — 4e chapitre, 8 lettres de l'accord [7 lues : ṭāʾ ẓāʾ tāʾ ḍād sīn zāy nūn + 1 perdu OCR], exemple « بل صب الله لا غير » — à relire et compléter).
