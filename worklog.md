@@ -8866,3 +8866,103 @@ Stage Summary:
 - Registre 699/950 ; tajwid-5ep 9/30 leçons ; GitHub synchronisé (a31ebf5), backup OK.
 - Trois leçons livrées ce tour (R177 15439, R178 15488, R179 15628) + crons 24/24 armés (472155, auto-ré-armement).
 - Suivants : 15741 (R180 — la mīm du pluriel et ses quatre états chez Warsh : matière traduite autrefois au tajwid-2es, les iʿdād de 15628 la préparent) puis 15797, 15814… 21 leçons restantes.
+
+---
+Task ID: R180
+Agent: agent principal (Z.ai Code)
+Task: Leçon 15741 (tajwid-5ep) — les règles de la mīm du pluriel (mīm al-jamʿ) chez Warsh
+
+Work Log:
+- Reprise de session après épuisement de contexte (résumé de conversation coupé) : worklog =
+  source de vérité — R179 livré, registre 699, tajwid-5ep 9/30, suivants 15741/15797/15814.
+- Instruction utilisateur : « on est trop lent » → accélération : parallélisation par subagents
+  testée (3 dispatches R180/R181/R182) — ÉCHEC INFRA (« context deadline exceeded » : le Task
+  tool n'endure pas les tâches longues ni les prompts longs) ; mitigation : fichiers
+  tr-tmp/CONVENTIONS-savant.md + TASK-R180/181/182.md créés (les relais cron pourront pointer
+  par prompts courts) ; production assurée par le pipeline principal.
+- Découverte : les fichiers savants 15741/15797 existaient déjà (session morte — timestamps
+  15:41/17:43, non livrés) : récupérés, QA repassée OK, doctrine confrontée au corpus (18384/
+  18385 tajwid-2es — « Warsh connecte d'une wāw devant la hamza de coupe ») et au scan même
+  (« بِوَاوٍ مَدِّيَّةٍ مُشْبَعَةٍ » imprimé) → validés tels quels ; 15814 produite cette session (R182).
+- Versets vérifiés verbatim : la Royauté 67:1-2 (« li-yabluwakum » + hamza de coupe de « ayyukum »
+  → warshien « li-yabluwakumū ayyukum ») ; la Vache 2:182 (« baynahum » devant fāʾ voyellée →
+  warshien « baynahumū falā », contrôle ḥafṣien à la mīm quiescente — noté) ; al-Ḥijr 15:22
+  (« fa-asqaynākumūhu » — la wāw de liaison AU RASM même du contrôle, codepoint vérifié, devant
+  le hāʾ du pronom affixe ; « antum » devant lām).
+- OCR « فورش من طريق الأزرق » rendu « selon Warsh, par la voie d'al-Azraq » (anomalie signalée
+  en N.d.T.) ; les quatre états rétablis des énoncés — mesure « mushbaʿ 4-6 » fondée sur le
+  « mushbaʿa » imprimé au scan même.
+- Hadith Jābir (Ibn Māja 1339) traduit avec sa référence imprimée — ses formes « samiʿtumūhu »/
+  « ḥasibtumūhu » portent la règle de la leçon au cœur du propos prophétique (noté en N.d.T.).
+- iʿdād : la Table 5:42 vérifiée verbatim (mīm originale devant bāʾ — occultation labiale,
+  annonce de la leçon 11).
+- QA OK (8 745 car, 0 arabe, 45 paires) ; hand-set → registre 700 ; navigateur : badge,
+  bilingue 247 séquences arabes, overflowX 0 @1280/390, 0 console, captures
+  qa-r180-lecon-15741(-mobile).png + qa-r180-livre.png.
+
+Stage Summary:
+- Registre 700/950 ; tajwid-5ep 10/30 leçons.
+- Suivants : 15797 (R181), 15814 (R182) — livrés ce même tour (voir entrées suivantes).
+
+---
+Task ID: R181
+Agent: agent principal (Z.ai Code)
+Task: Leçon 15797 (tajwid-5ep) — la règle de la mīm originale quiescente devant la hamza
+
+Work Log:
+- Fichier savant récupéré de la session morte (15:41, non livré), QA repassée OK, validé.
+- Quatre versets vérifiés verbatim : la Lumière 24:48 (double lecture honnête : la jonction
+  « am irtābū » se lit au verset 50 du contrôle, kasra portée au rasm même sur la mīm —
+  référence imprimée = tête de péricope ou décalée, les deux notées) ; l'Ornement 43:79
+  (« am abramū amran » → naql de la fatḥa : « amabramū ») ; la famille d'ʿImrān 3:1-2
+  (« alif-lām-mīm » + le Nom de majesté : fatḥa de la mīm + assimilation des deux mīm —
+  idghām mithlayn de la huitième leçon) ; l'Araignée 29:1-2 (hamza de coupe de « a-ḥasibu » —
+  naql propre à Warsh, contrôle ḥafṣien noté).
+- Terminologie alignée sur le tajwid-2es (18384/18385 : « transfert de voyelle », « rencontre
+  des deux quiescentes », « mīm du pluriel » vs « mīm originale »).
+- Hadith ʿĀʾisha/Sālim l'affranchi d'Abū Ḥudhayfa (Ibn Māja 1328) traduit avec sa référence
+  imprimée ; édification : le recueillement s'apprend à l'écoute.
+- iʿdād : Hūd 11:48 vérifié verbatim (annonce de la leçon 12 — « min-nā » nūn redoublée).
+- QA OK (8 262 car, 0 arabe, 45 paires) ; hand-set → registre 701 ; navigateur : bilingue
+  336 séquences arabes, overflowX 0 @1280/390, 0 console, captures qa-r181-lecon-15797(-mobile).png.
+
+Stage Summary:
+- Registre 701/950 ; tajwid-5ep 11/30 leçons.
+
+---
+Task ID: R182
+Agent: agent principal (Z.ai Code)
+Task: Leçon 15814 (tajwid-5ep) — la règle de la nūn et de la mīm redoublées
+
+Work Log:
+- Traduction produite CETTE SESSION (le fichier n'existait pas — la session morte n'y était
+  pas parvenue).
+- Vers de la Tuḥfat al-aṭfāl demandé par l'énoncé mais non imprimé à la leçon (corps perdu au
+  scan) : RESTAURÉ du mathn même du manuel — la leçon 28 du livre (19056) porte au chapitre
+  « Règles de la nūn et de la mīm redoublées » : « wa-simmi kullan ḥarfa ghunnatin badā /
+  wa-ghunna mīman thumma nūnan shud-didā » — rasm vocalisé localisé par recherche tatweel-
+  stripped (les tatweels du poème cassaient le grep direct) et vérifié.
+- Hūd 11:48 vérifié verbatim : les mīm redoublées consécutives « wa-umamim-mim-maʿak »
+  (transcription imprimée du manuel, rendant la fin « wa-ʿalā umamim-mim-maʿak ») — analyse :
+  tanwīn de « umamin » assimilé à la mīm de « mimman », idghām mithlayn interne à « mimman »,
+  nūn quiescente assimilée à la mīm de « maʿak » ; les shadda vérifiées au rasm du contrôle ;
+  lieux annexes notés (« bisalāmin minnā », « yamassuhum minnā »).
+- La Victoire 48:1-2 vérifiée verbatim : nūn redoublée « innā » ; mīm redoublée au tanwīn
+  assimilé « fatḥan mubīnā » (shadda au rasm) ; second lieu parallèle « ṣirāṭan mustaqīmā »
+  noté en double lecture ; « wa-yutimma » noté.
+- Hadith Ibn Masʿūd (« Lis pour moi ») : référence imprimée complète au scan (al-Bukhārī,
+  tafsīr, 4582 — diacritiques OCR du titre de chapitre corrigés) ; les Femmes 4:41 vérifié
+  verbatim ; « ḥasbuka l-āna » imprimé entier ; édification : trois mīm consécutives, chacune
+  tenant son rang sa mesure.
+- QA OK (8 034 car, 0 arabe, 34 paires) ; hand-set → registre 702 ; navigateur : bilingue
+  245 séquences arabes, hadith + référence rendus, overflowX 0 @1280/390, 0 console, captures
+  qa-r182-lecon-15814(-mobile).png.
+
+Stage Summary:
+- Registre 702/950 ; tajwid-5ep 12/30 leçons (13/31 documents avec l'intro — page du livre
+  vérifiée : « 13/31 traductions savantes »).
+- Amélioration UX du tour : titleFr des leçons 8-12 remplacés (génériques « Cours de tajwīd —
+  5ᵉ année primaire (2-6) » → titres savants consacrés conformes aux h1) — liste du livre
+  désormais explicite.
+- Suivants : 15839 (R183 — « Objectifs de la leçon », vraisemblablement la séance d'activités
+  d'application générales annoncée par l'iʿdād de 15814) puis 15852, 18696… 18 leçons restantes.
