@@ -8647,3 +8647,21 @@ Work Log:
 Stage Summary:
 - Registre 686/950 ; tajwid-2es 23/27 ; GitHub synchronisé (35ccef9).
 - Prochaines : 18629 (R167 — le nūn quiescent : le chapitre « ذكر ادغام النون والتنوين / والقلب والإخفاء والتبيين » — les vers du mathn : « ذكر ادغام النون والتنوين / عند حروف... » — localiser le chapitre du commentaire après ~242 400) ; 18631 (R168 — suite du nūn) ; 18634 (R169 — applications) ; 18635 (R170 — le mathn entier, leçon finale).
+
+---
+Task ID: R167
+Agent: agent principal (Z.ai Code)
+Task: Leçon 18629 (tajwid-2es) — les règles de la nūn quiescente et du tanwīn : manifestation et assimilation
+
+Work Log:
+- Source extraite (8 401 car — les exemples des deux sections et les deux schémas perdus en images ; le verset d'application perdu).
+- Chapitre du commentaire lu intégralement (244 800-253 000 : le vers-titre, l'objection-réponse sur la restriction « quiescente », les 4 différences, la division 4/3/5, la grammaire des termes, le vers de la manifestation [6 lettres de la gorge + mnémonique + alif + Abū Jaʿfar + tanbīh des degrés et de la ghunna], le vers de l'assimilation [5 lettres, yarmalūn/ad-Dānī, kāmil/naqis avec exemples et notes, justifications, Ḵalaf-Ḥamza, ghunna du mīm, pronom du fait]).
+- Mathn 3 vers vérifiés verbatim (18635.matn.html — convention d'hémistiches respectée).
+- Vérifications systématiques au cache : toutes les unicités du commentaire confirmées (yanʾawna 6:26, jurufin hārin 9:109, anʿamta 1:7, wa-nḥar 108:2, fa-sayunghaḍūna 17:51 [avec fāʾ], al-munkhaniqah 5:3, min khawfin 106:4, hudan lil-muttaqīn 2:2, yawmaʾidhin yafraḥu 30:4, mathalan mā 2:26, min māʾin ṣadīdin 14:16) + comptes (min hādin ×4 [13:33, 39:23, 39:36, 40:33], min ghillin ×2, ʿalīmun khabīrun ×2, man yaqūlu ×7, ʿadhābun ʿaẓīmun ×14, ʿazīzun ḥakīmun ×13) + exemples idghām (2:24, 2:2, 16:75, 2:25, 2:8, 30:4, 2:107, 14:16, 2:26) + Abū Jaʿfar (4:135 in yakun ghaniyyan) + édification (3:191, 4:36, 3:133, 10:26).
+- Décryptage : fa-sayunghaḍūna = 17:51 (avec fāʾ) ; man ḥādda = 58:22 ; min ilāhin ghayrihi = la formule des envoyés (7:59) ; la clause hamza/āmana/Warsh trop altérée — laissée de côté honnêtement.
+- Traduction 21 461 car : 3 axes, 2 tables restituées (les 4 règles ; les 2 espèces d'assimilation), exemples restitués et vérifiés, chip أطبق non identifiée (énoncé trop générique — laissée en attente), édification sur la hâte de l'âme.
+- QA OK (0 arabe, 49 paires) ; hand-set → registre 687 ; navigateur : badge, 1 chip, 7 tables, bilingue 648 séquences arabes, overflowX 0 @1280/390, 0 console, captures qa-r167-lecon-18629(-mobile).png ; commit 9828ed9 poussé + backup.
+
+Stage Summary:
+- Registre 687/950 ; tajwid-2es 24/27 ; GitHub synchronisé (9828ed9).
+- Prochaines : 18631 (R168 — la conversion et l'occultation + les mots exceptés de l'assimilation : le chapitre continue à ~253 000 avec les vers « وقلبوهما لحرف الباء ميما / ميمًا وقالوا بعد بالإخفاء / في نحو قنوان... ») ; 18634 (R169 — applications) ; 18635 (R170 — le mathn entier, leçon finale).
