@@ -8699,3 +8699,19 @@ Work Log:
 Stage Summary:
 - Registre 689/950 ; tajwid-2es 26/27 ; GitHub synchronisé (6664bf9).
 - Prochaine : 18635 (R170 — LA LEÇON FINALE : le mathn intégral du Naẓm ad-Durar — la source est le matn entier que j'ai vérifié mot à mot tout au long du livre ; il reste à traduire l'enveloppe du manuel [présentation, objectifs, exercices] autour du texte intégral bilingue).
+
+---
+Task ID: R170
+Agent: agent principal (Z.ai Code)
+Task: Leçon 18635 (tajwid-2es) — LEÇON FINALE : le mathn intégral du Naẓm ad-Durar al-lawāmiʿ
+
+Work Log:
+- Source extraite (16 360 car — le mathn intégral en une table de 61 vers, du chapitre de la hamza à la fin du chapitre de la manifestation et de l'assimilation ; pas d'exercices : leçon de mémorisation).
+- Les 61 vers extraits et mappés sur les rendus français établis aux 26 leçons précédentes (chaque vers fut vérifié verbatim au matn et expliqué du commentaire en sa leçon) : versets 1-24 le chapitre de la hamza (leçons 1-10), 25-31 l'ibdāl (leçons 11-12), 32-39 le naql (leçons 13-15), 40-61 l'iẓhār/idghām jusqu'à la clôture (leçons 16-26).
+- Traduction 11 789 car : table des 61 vers (convention du livre : premier hémistiche en cellule droite) + carte du mathn en quatre mouvements avec renvois aux leçons (aide de la traduction, honnêtement signalée).
+- QA OK (0 arabe, 23 paires de guillemets) ; hand-set → registre 690 ; navigateur : badge, 2 tables en regard (122 lignes : 61 arabes + 61 françaises), bilingue 594 séquences arabes, overflowX 0 @1280/390, 0 console, captures qa-r170-lecon-18635(-mobile).png et qa-r170-livre-complet.png (la page du livre entier : traductions attachées, 0 erreur) ; commit d30b34d poussé + backup.
+
+Stage Summary:
+- Registre 690/950 ; **LE LIVRE tajwid-2es EST COMPLET : 27/27 LEÇONS TRADUITES ET VÉRIFIÉES** ; GitHub synchronisé (d30b34d), backup OK.
+- Livraison totale de la session de reprise : R165 (18626 les exceptions), R166 (18628 applications), R167 (18629 nūn/tanwīn iẓhār/idghām), R168 (18631 qalb/ikhfāʾ), R169 (18634 applications), R170 (18635 le mathn intégral) — six leçons livrées en une session, avec la correction de l'ordre des hémistiches de 18626 (convention du livre).
+- Suivants possibles : le registre est à 690/950 — déterminer le prochain livre à traduire (les livres restants du corpus minhaj) ; surveiller le cron 471313 ; revérifier les versets reportés dès le retour de habous.gov.ma.
