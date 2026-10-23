@@ -8848,3 +8848,21 @@ Stage Summary:
 - Registre 698/950 ; tajwid-5ep 8/30 leçons ; GitHub synchronisé (a28ee9f), backup OK.
 - Crons actifs : 472143 (toutes les 15 min, webDevReview) + 472144 (toutes les 30 min, webDevReview) — travail 24h/24 assuré même sans session ouverte ; les agents-relais liront le worklog et poursuivront au docId suivant.
 - Suivants : 15628 (R179 — la manifestation de la mīm quiescente [iẓhār shafawī] : les jonctions de la Bayyina déjà relevées) puis 15741, 15797… 22 leçons restantes.
+
+---
+Task ID: R179
+Agent: agent principal (Z.ai Code)
+Task: Leçon 15628 (tajwid-5ep) — la manifestation de la mīm quiescente (iẓhār shafawī)
+
+Work Log:
+- Source extraite (2 955 car html) : leçon 9 du 5ep — applications sur la manifestation labiale ; deux versets en images (la Consultation 42:35, le Voyage nocturne 17:31) ; le hadith de Qatāda/Anas sur la récitation du Prophète (al-Bukhārī, madd al-qirāʾa, n° imprimé 4759) + le propos d'Ibn Ḥajar (Fatḥ al-Bārī 9/91) ; l'iʿdād regarde mīm al-jamʿ et ses quatre états chez Warsh (annonce de la leçon suivante).
+- Vérifications au cache : 17:31 porte quatre manifestations de la mīm quiescente (awlādakum khashiyata, narzuquhum wa-iyyākum [devant le wāw — LE cas d'avertissement], iyyākum inna, qatlahum kāna) ; 42:35 porte deux assimilations des deux mīm (lahum min, min maḥīṣ) et nulle manifestation — noté honnêtement en double lecture : contraste pédagogique pour la consigne de la marque (sukūn vs absence), ou référence douteuse à l'extraction ; la marque vérifiée au rasm : les mīm manifestées de 17:31 portent le sukūn, les assimilées de 42:35 en sont dépourvues.
+- Le hadith traduit avec sa référence imprimée (numérotation variable selon les éditions, notée) ; les mots de la basmala perdus au scan RESTAURÉS du hadith même (bismi llāhi, ar-Raḥmāni, ar-Raḥīmi) ; Ibn Ḥajar traduit avec lacunes restaurées du contexte (le lām avant le hāʾ de la Jalāla, le mīm avant le nūn de ar-Raḥmān, le ḥāʾ de ar-Raḥīm).
+- Édification : la récitation du Prophète « était un allongement » — chaque lettre à sa mesure ; la mīm manifestée tenue sans hâte ni voyellation (elle n'est point du qalqala), lettre fidèle à son rang.
+- Traduction 6 578 car ; QA OK (0 arabe, 24 paires) ; hand-set → registre 699 ; navigateur : badge, bilingue, overflowX 0 @1280/390, 0 console, captures qa-r179-lecon-15628(-mobile).png ; commit a31ebf5 poussé + backup OK.
+- CRONS : les jobs 472143/472144/472154 (créés ce tour) sont tous désactivés (« exec limits exceeded » — le quota amont se bloque quand une session agent est vivante). Solution déployée : job unique 472155 à EXPRESSION CALENDAIRE (« 0 */15 * * * ? », tz Europe/Paris — premier tir à 23:00, hors session active) avec PROTOCOLE DE RÉ-ARMEMENT intégré au message (chaque run, à sa fin, vérifie son job et le recrée s'il est désactivé — cycle 24h/24 auto-entretenu). Note pour les sessions futures : si le cycle est rompu (job absent ou désactivé), recréer le job unique à expression calendaire avec le même message (voir le protocole dans le payload du job ou cette entrée).
+
+Stage Summary:
+- Registre 699/950 ; tajwid-5ep 9/30 leçons ; GitHub synchronisé (a31ebf5), backup OK.
+- Trois leçons livrées ce tour (R177 15439, R178 15488, R179 15628) + crons 24/24 armés (472155, auto-ré-armement).
+- Suivants : 15741 (R180 — la mīm du pluriel et ses quatre états chez Warsh : matière traduite autrefois au tajwid-2es, les iʿdād de 15628 la préparent) puis 15797, 15814… 21 leçons restantes.
