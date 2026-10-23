@@ -8777,3 +8777,18 @@ Work Log:
 Stage Summary:
 - Registre 694/950 ; tajwid-5ep 4/30 ; GitHub synchronisé (57ce148).
 - Suivants : 15413 (R175 — l'occultation, préparée par l'أستعد) puis 15414, 15439… 26 leçons restantes.
+
+---
+Task ID: R175
+Agent: agent principal (Z.ai Code)
+Task: Leçon 15413 (tajwid-5ep) — la règle de l'occultation
+
+Work Log:
+- Source extraite (2 552 car — deux versets en images : les Groupes 39:9, Ghāfir 40:67 ; la section de guidée vide au scan ; l'activité Abū Mūsā al-Ashʿarī pour la leçon suivante).
+- Vérifications au cache : les Groupes 39:9 porte cinq jonctions de la nūn/tanwīn (2 iẓhār + 3 idghām-ghunna — le compte « cinq lieux » de l'énoncé s'entend des jonctions, noté honnêtement) ; Ghāfir 40:67 est le champ d'exercice de l'ikhfāʾ : six occultations (min turābin + quatre tanwīn+thumma + min qablu) + les idghām + une iẓhār — tous détaillés.
+- La convention muṣḥafique de la nūn cachée (sans sukūn) enseignée ; le mot d'exemple perdu noté ; la section de guidée vide signalée honnêtement.
+- Traduction 5 512 car ; QA OK (0 arabe) ; hand-set → registre 695 ; navigateur : badge, 2 chips, bilingue 237 séquences arabes, overflowX 0 @1280/390, 0 console, captures qa-r175-lecon-15413(-mobile).png ; commit 6f140ca poussé + backup.
+
+Stage Summary:
+- Registre 695/950 ; tajwid-5ep 5/30 ; GitHub synchronisé (6f140ca).
+- Suivants : 15414 (R176 — la séance d'activités + la présentation d'Abū Mūsā al-Ashʿarī) puis 15439, 15488… 25 leçons restantes.
