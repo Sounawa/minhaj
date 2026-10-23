@@ -8715,3 +8715,19 @@ Stage Summary:
 - Registre 690/950 ; **LE LIVRE tajwid-2es EST COMPLET : 27/27 LEÇONS TRADUITES ET VÉRIFIÉES** ; GitHub synchronisé (d30b34d), backup OK.
 - Livraison totale de la session de reprise : R165 (18626 les exceptions), R166 (18628 applications), R167 (18629 nūn/tanwīn iẓhār/idghām), R168 (18631 qalb/ikhfāʾ), R169 (18634 applications), R170 (18635 le mathn intégral) — six leçons livrées en une session, avec la correction de l'ordre des hémistiches de 18626 (convention du livre).
 - Suivants possibles : le registre est à 690/950 — déterminer le prochain livre à traduire (les livres restants du corpus minhaj) ; surveiller le cron 471313 ; revérifier les versets reportés dès le retour de habous.gov.ma.
+
+---
+Task ID: R171
+Agent: agent principal (Z.ai Code)
+Task: Leçon 15375 (tajwid-5ep) — la règle de la manifestation de la nūn quiescente et du tanwīn
+
+Work Log:
+- Après l'achèvement de tajwid-2es (R170), sélection du livre suivant : tajwid-3es écarté (28 leçons vides — PDF non extraits) ; tajwid-5ep retenu (30 leçons pleines — applications sur le Naẓm Tuḥfat al-aṭfāl d'al-Jamzūrī) pour compléter la famille tajwīd (1es ✓, 2es ✓, 6ep ✓ — le 6ep est aussi sur le Durar, le 5ep est le premier livre Tuḥfa du corpus).
+- Structure du 5ep confirmée : les références des versets (sūra:āya) imprimées en clair — pipeline direct avec le cache ; le mathn Tuḥfa non cité (récitation par cœur — instruction traduite telle quelle).
+- Versets de la leçon vérifiés verbatim : l'Abondance 108:2 (wa-nḥar — nūn+ḥāʾ en un mot), le Séisme 99:7-8 (dharraTIN khayran — tanwīn+khāʾ ; le manuel porte « 8 », la jonction au v. 7 du contrôle — noté), Luqmān 31:16 (min khardalin + laṭīfun khabīrun), les Abeilles 16:98, al-Aʿrāf 7:204, les Hypocrites 63:10 (min mā + akun mina — idghām-bi-ghunna pour la leçon suivante).
+- L'exemple « en un mot » de la 4e consigne perdu au scan : aucune jonction nūn+gorge en un mot en 31:16 — honnêtement noté, en attente.
+- Traduction 6 631 car ; QA OK (0 arabe) ; hand-set → registre 691 ; navigateur : badge, 6 chips, bilingue 251 séquences arabes, overflowX 0 @1280/390, 0 console, captures qa-r171-lecon-15375(-mobile).png ; commit 61a74cb poussé + backup.
+
+Stage Summary:
+- Registre 691/950 ; tajwid-5ep 1/30 ; GitHub synchronisé (61a74cb).
+- Suivants : 15383 (R172 — la règle de l'assimilation avec nasalisation, en continuation directe [les Hypocrites 63:10 déjà préparés]) puis 15401, 15406… 29 leçons restantes du 5ep.
