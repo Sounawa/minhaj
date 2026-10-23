@@ -8966,3 +8966,67 @@ Stage Summary:
   désormais explicite.
 - Suivants : 15839 (R183 — « Objectifs de la leçon », vraisemblablement la séance d'activités
   d'application générales annoncée par l'iʿdād de 15814) puis 15852, 18696… 18 leçons restantes.
+
+---
+Task ID: R183
+Agent: agent principal (Z.ai Code)
+Task: Leçon 15839 (tajwid-5ep) — séance d'activités d'application générales sur les règles de la mīm quiescente
+
+Work Log:
+- Source extraite (2 667 car html) : leçon 13 — activités générales ; passage coranique en image
+  (les Appartements 49:14-18) ; les deux mots de l'ikhfāʾ shafawī perdus (référence imprimée
+  [les Appartements 17]) ; les trois textes des lecteurs de Médine avec références imprimées
+  (Abū Jaʿfar lavé — Ghāyat an-Nihāya 2/384 ; le musc de Nāfiʿ — Maʿrifat al-qurrāʾ d'adh-Dhahabī
+  p. 64 ; la surdité de Qālūn — Ghāyat an-Nihāya 1/616) ; les deux tableaux en images (perdus).
+- Versets 49:14-18 vérifiés verbatim ; l'occultation labiale rétablie : « islāmakum bal » (49:17 —
+  l'unique jonction mīm+bāʾ du passage ; les « deux mots » de l'énoncé = le porteur et le bāʾ).
+- Table de classement RESTAURÉE (remplissage indicatif) : manifestations labiales (dont les deux
+  cas d'avertissement de la leçon 9 : « amwālihim wa-… », « anfusahum fī » devant wāw/fāʾ),
+  assimilation des deux mīm (« yaltakum min »), occultation labiale, nasalisation des redoublées
+  (āmannā, lammā, innamā, yamunnūna, tamunnū, yamunnu, inna — chaque ghunna à deux temps).
+- Table des lecteurs RESTAURÉE (Abū Jaʿfar → Nāfiʿ → Qālūn : la chaîne des Médinois, maîtres et
+  disciples) ; édification : trois générations reliées comme la chaîne d'une récitation.
+- QA OK (10 125 car, 0 arabe, 34 paires, 11 balises — les ﴿﴾ remplacés par « crochets coraniques
+  vides » en N.d.T.) ; hand-set → registre 703 ; titleFr générique (« Objectifs de la leçon » —
+  artefact de scan) remplacé par le titre savant ; navigateur : 2 tables (9 lignes), textes
+  Nāfiʿ/Qālūn rendus, bilingue 257 séquences arabes, overflowX 0 @1280/390, 0 console, captures
+  qa-r183-lecon-15839(-mobile).png.
+
+Stage Summary:
+- Registre 703/950 ; tajwid-5ep 13/30 leçons.
+
+---
+Task ID: R184
+Agent: agent principal (Z.ai Code)
+Task: Leçon 15852 (tajwid-5ep) — applications sur l'allongement naturel (madd ṭabīʿī)
+
+Work Log:
+- Source extraite (2 482 car html) : leçon 14 — le madd ṭabīʿī ; versets en images (les Femmes
+  4:36 ; Maryam 19:54-55 — référence imprimée inversée « 55-54 », notée) ; mots d'exercice perdus
+  (crochets vides) ; textes d'Abū ʿUthmān an-Nahdī et de ʿUmar sur Abū Mūsā avec références
+  imprimées (Ibn ʿAsākir 32/85 ; Fatḥ al-Bārī 9/91).
+- Versets vérifiés verbatim (4:36 ; 19:54-55 — « marḍiyyā » au rasm du contrôle, candidat parallèle
+  à l'arrêt noté).
+- LE MOT PERDU DU PREMIER EXERCICE IDENTIFIÉ PAR MOTIF : « uʿbudū llāha » (4:36) — le seul lieu du
+  passage où le wāw maddīya suit le DĀL (« iʿbudū ») et précède le lām redoublé du Nom de
+  majesté : en liaison le wāw tombe (la recherche programmatique دُوا۟+لّ sur le cache nul ailleurs
+  dans le Coran) — l'énoncé du manuel (« la wāw médiale après le dāl ne s'allonge point en la
+  liaison, car elle y tombe rencontrant le sukūn du lām redoublé après elle ») s'éclaire entièrement.
+- Mots du second exercice rétablis : « innahu kāna » (Maryam 54 — le yāʾ de liaison du hāʾ) et
+  « fakhūrā » (4:36 — l'alif substitué au tanwīn de l'accusatif à l'arrêt) ; parallèles notés
+  (« bihī shayʾan », « ahlahu », « marḍiyyā »).
+- Vers de la Tuḥfat al-aṭfāl (madd ṭabīʿī) restitué du mathn même du manuel (leçon 28 :
+  « al-maddu aṣliyyun wa-farʿiyyun lahū / wa-simmi awwalan ṭabīʿiyyan wa-huwa mā / lā tawaqqufun
+  lahu ʿalā sabab ») — rasm vocalisé vérifié, rendu français à la convention du corpus.
+- Édification : lien avec la sixième leçon (Abū Mūsā déjà rencontré — « sa récitation était comme
+  une flûte ») ; « Rappelle-nous notre Seigneur ».
+- QA OK (7 802 car, 0 arabe, 30 paires) ; hand-set → registre 704 ; navigateur : bilingue 232
+  séquences arabes, Tuḥfa citée, overflowX 0 @1280/390, 0 console, captures
+  qa-r184-lecon-15852(-mobile).png.
+
+Stage Summary:
+- Registre 704/950 ; tajwid-5ep 14/30 leçons (15/31 documents avec l'intro) ; quatre leçons
+  livrées ce tour (R180-R184 : 15741, 15797, 15814, 15839, 15852 — cinq en réalité).
+- Suivants : 18696 (R185 — activités d'application générales sur la mīm quiescente [titre
+  générique à vérifier]) puis 18697, 18956… 16 leçons restantes.
+- iʿdād de 15852 : l'allongement connecté (muttaṣil) + la sūra al-Bayyina — matière de 18697/18956.
