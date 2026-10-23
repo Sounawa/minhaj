@@ -8595,3 +8595,20 @@ Work Log:
 Stage Summary:
 - Registre 683/950 ; tajwid-2es 20/27 ; GitHub synchronisé.
 - Prochaine : lessons[20] — vérifier le docId (probablement le chapitre « فصل وما قرب منها أدغموا » — l'assimilation obligatoire des lettres voisines, chapitre lu en marge : إذ ظلموا, قد تبين, قالت طائفة, همت طائفتان…).
+
+---
+Task ID: R164
+Agent: agent principal (Z.ai Code)
+Task: Leçon 18556 (tajwid-2es) — l'assimilation des lettres identiques et voisines
+
+Work Log:
+- Source extrait (5 180 car — la plus riche du livre ; trous OCR : le verset du tamhīd, les 14 versets d'exemples, la schéma, les 2 versets أطبق).
+- Chapitre du commentaire lu en entier (234 800-238 400 : les causes, les exemples avec 14 notes de locus, la définition du tamāthul, les 3 conditions, la digression madd-lettre [non reprise], la question de l'objecteur).
+- Vérifications systématiques cache (avec norm إ→ا + hamza waṣl + اذ/اد) : comptes confirmés — iḏ+ẓāʾ exactement 2 lieux (4:64 + 43:39), tāʾ+dāl exactement 2 (7:189 + 10:89), bal+rāʾ exactement 3 (4:158, 21:56, 83:14). Tamhīd « بل له » → la Caverne 18:58 (le mot « lahum » même). Contre-exemples vérifiés : 25:17, 54:19, 114:5.
+- Abraham 14:7 vérifié au cache et citation alignée verbatim (fin de rédaction).
+- Traduction 15 864 car : 3 axes, table à 5 lignes, 3 chips, édification gratitude=assimilation.
+- hand-set → registre 684 ; navigateur : badge, 3 chips, 5 tables, bilingue 698 séquences arabes, overflowX 0 @1280/390, 0 console, captures qa-r164-lecon-18556(-mobile).png ; commit poussé + backup.
+
+Stage Summary:
+- Registre 684/950 ; tajwid-2es 21/27 ; GitHub synchronisé.
+- Prochaines : 18626 (R165 — les exceptions à l'idghām des lettres proches et homogènes ; le chapitre du commentaire suit à ~238 400 : « أظهرا خفف تبتب عدت… » — les mots au choix des lecteurs), 18628 (applications), 18629/18631 (nūn quiescent), 18634 (applications), 18635 (le mathn entier — leçon finale).
