@@ -8829,3 +8829,22 @@ Stage Summary:
 - Registre 697/950 ; tajwid-5ep 7/30 leçons ; GitHub synchronisé (0a4d4d3), backup OK.
 - Suivants : 15488 (R178 — l'assimilation des deux mīm [idghām mithlayn] : les jonctions « wa-minhum man » de Yūnus 10:40 déjà préparées) puis 15628, 15741… 23 leçons restantes.
 - Instruction utilisateur reçue ce tour : ACCÉLÉRER et travailler 24h/24 — déploiement de crons webDevReview multiples (15 min + 30 min) après ce tour ; l'ancien cron 471313 a disparu de la liste (aucun job actif).
+
+---
+Task ID: R178
+Agent: agent principal (Z.ai Code)
+Task: Leçon 15488 (tajwid-5ep) — l'assimilation des deux mīm (idghām mithlayn)
+
+Work Log:
+- Instruction utilisateur reçue en cours de tour : « allez continue on avance excellemment bien / tu dois encore accélérer / tu dois créer autant de cron que tu veux pour travailler 24H/24 » → déploiement des crons 472143 (15 min) + 472144 (30 min) effectuée entre R177 et R178, puis poursuite directe de la leçon suivante.
+- Source extraite (3 383 car html) : leçon 8 du 5ep — applications sur l'assimilation des deux mīm ; deux versets en images (la Caverne 18:16, Yūnus 10:40 — ce dernier préparé par l'iʿdād de la leçon 7) ; les 8 vers de l'imam aš-Šāṭibī (Ḥirz al-Amānī, vers 10-17) en table bilingue de 8 lignes ; l'iʿdād regarde l'iẓhār shafawī avec la sūra al-Bayyina.
+- Vérifications au cache : 18:16 porte EXACTEMENT les trois lieux d'assimilation annoncés par l'énoncé (« rabbukum min », « lakum min », « amrikum mirfaqan ») ; 10:40 porte les deux « wa-minhum man » ; la marque muṣḥafique vérifiée au rasm — la mīm assimilée sans sukūn et la mīm suivante portant la shadda du redoublement, contre la mīm occultée de la leçon 7 (sans sukūn, bāʾ sans redoublement) ; la sūra al-Bayyina passée en revue pour l'iʿdād (lam yakun, hum sharr, hum khayr, jazāʾuhum ʿinda — iẓhār).
+- Anomalies OCR notées honnêtement : l'énoncé d'introduction porte « la nūn quiescente et le tanwīn » (erreur de report — la règle est la mīm selon titre/objectifs/exercice) ; les items d'objectifs et d'affermissement sont identiques au scan (duplication vraisemblable, rendue telle quelle).
+- Les 8 vers de la Šāṭibiyya traduits en table à la convention du livre (premier hémistiche en cellule droite — même convention que le mathn intégral du R170) : le Coran intercesseur et compagnon, la tombe illuminée, les parents parés de robes de lumière, « que pensez-vous du fils, au jour de sa récompense ? ».
+- Édification : l'assimilation des deux mīm — deux lettres devenues une seule redoublée, comme le Livre et son récitant ; la nasalisation tenue = la compagnie qui ne lasse point.
+- Traduction 7 339 car ; QA OK (0 arabe, 34 paires de guillemets) ; hand-set → registre 698 ; navigateur : badge « Traduction savante », tables FR+AR (16 lignes), bilingue, overflowX 0 @1280/390, 0 erreur console, captures qa-r178-lecon-15488(-mobile).png ; commit a28ee9f poussé + backup OK.
+
+Stage Summary:
+- Registre 698/950 ; tajwid-5ep 8/30 leçons ; GitHub synchronisé (a28ee9f), backup OK.
+- Crons actifs : 472143 (toutes les 15 min, webDevReview) + 472144 (toutes les 30 min, webDevReview) — travail 24h/24 assuré même sans session ouverte ; les agents-relais liront le worklog et poursuivront au docId suivant.
+- Suivants : 15628 (R179 — la manifestation de la mīm quiescente [iẓhār shafawī] : les jonctions de la Bayyina déjà relevées) puis 15741, 15797… 22 leçons restantes.
