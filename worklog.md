@@ -8731,3 +8731,19 @@ Work Log:
 Stage Summary:
 - Registre 691/950 ; tajwid-5ep 1/30 ; GitHub synchronisé (61a74cb).
 - Suivants : 15383 (R172 — la règle de l'assimilation avec nasalisation, en continuation directe [les Hypocrites 63:10 déjà préparés]) puis 15401, 15406… 29 leçons restantes du 5ep.
+
+---
+Task ID: R172
+Agent: agent principal (Z.ai Code)
+Task: Leçon 15383 (tajwid-5ep) — la règle de l'assimilation avec nasalisation
+
+Work Log:
+- Source extraite (3 350 car — les versets en images, références imprimées : la Consultation, les Hypocrites 63:10, l'Homme 76:19 ; deux hadiths avec références complètes).
+- Vérifications au cache : la jonction « min waliyyin » (nūn+wāw, rendue « miwwaliyy » par l'énoncé) est au verset 44 de la Consultation dans le texte de contrôle — la référence imprimée « 6 » douteuse, honnêtement notée ; 63:10 (an yaʾtiya + wa-akun mina) et 76:19 (wildānun mukhalladūna + luʾluʾan manthūran) confirmés verbatim.
+- Les 4 exceptés rappelés avec renvoi à la leçon 25 du 2es (qinwān/dunyā/ṣinwān/bunyān) ; le temps de la nasalisation (deux voyelles) ; le chip tanwīn+wāw perdu noté.
+- Deux hadiths traduits avec références (Abū Dāwūd 1364, Bukhārī 5027) + édification (la psalmodie-échelle, la dette d'enseignement).
+- Traduction 7 067 car ; QA OK (0 arabe) ; hand-set → registre 692 ; navigateur : badge, 3 chips, bilingue 336 séquences arabes, overflowX 0 @1280/390, 0 console, captures qa-r172-lecon-15383(-mobile).png ; commit 978eed7 poussé + backup.
+
+Stage Summary:
+- Registre 692/950 ; tajwid-5ep 2/30 ; GitHub synchronisé (978eed7).
+- Suivants : 15401 (R173 — l'assimilation sans nasalisation, préparation sur la sūra de la Cité déjà donnée) puis 15406, 15413… 28 leçons restantes.
