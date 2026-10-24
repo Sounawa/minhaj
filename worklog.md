@@ -9185,3 +9185,55 @@ Stage Summary:
   19041 (lāzim kalimī), 19043 (lāzim ḥarfī), 19050 (activités lāzim+ʿāriḍ), 19055 (waqf/ibtidāʾ),
   19056 (mathn Tuḥfa complet — déjà servi de source aux restitutions), 19138 (ʿāriḍ l.21),
   19141 (exceptions du badal) → livre 50/64 complet.
+
+---
+Task ID: R190
+Agent: agent principal (Z.ai Code — session utilisateur, token GitHub rétabli)
+Task: Token GitHub reçu de l'utilisateur — sécurisation des commits en attente puis triple livraison tajwid-5ep : 18987 (activités madd), 19029 (badal hamza fixe), 19031 (badal hamza changée)
+
+Work Log:
+- **Token GitHub reçu** (« voila le token ghp_uENE… ») → configuré dans le remote
+  (https://ghp_…@github.com/Sounawa/minhaj.git — persistant en .git/config pour les tours
+  suivants et le cron) → **push immédiat des 3 commits en attente (R188-R189)** → GitHub à 976
+  commits. Le travail post-reset est sécurisé.
+- **savant(tajwid-5ep/18987)** — leçon 17, activités d'application des allongements (naturel +
+  connecté + séparé) : boucle pédagogique documentée (l'activité 2 referme la préparation de la
+  leçon 16 — mêmes exposés « Propositions et formules pratiques… ») ; instruction d'égalisation
+  rendue fidèlement + glose (séparé au degré moyen 4 temps = mesure du connecté, cohérent avec
+  les trois degrés Warsh/Azraq de 18962) ; les trois espèces du badal glosées (ouvert fatḥa
+  āmanū, fermé ḍamma ūtū, brisé kasra īmānā) ; versets + tableau d'exercice perdus SANS
+  références → non restitués (honnêteté) ; date imprimée lundi 27/11/2023 ; 4 728 car. Registre 709.
+- **savant(tajwid-5ep/19029)** — leçon 18, badal après hamza fixe : vers Tuḥfa restitué du mathn
+  même du manuel (ROW 53 vocalisé : badalun ka-āmanū wa-īmānan khudhā / aw quddima l-hamzu ʿalā
+  l-maddi wa-dhā) ; doctrine rétablie : pourquoi badal (la lettre d'allongement substitut de la
+  seconde hamza — āmanū originairement aʾmanū) ; le visage retenu Warsh/Azraq = degré moyen
+  QUATRE temps (imprimé deux fois aux exercices : « maddan mutawassitan bi-miqdāri arbaʿi
+  ḥarakātin ») ; **Nūniyya d'al-Sakhāwī vers 1-2-5** imprimée avec référence → traduite en tables
+  de vers (premier hémistiche cellule droite, convention 15488) ; le mot de rime lawāni honnêtement
+  non rendu isolément ; édification tissée des vers mêmes (marquée N.d.T.) ; 6 940 car. Registre 710.
+- **savant(tajwid-5ep/19031)** — leçon 19, badal après hamza changée : les trois espèces imprimées —
+  **naql** : هَلْ آمَنُكُمْ **Yūsuf 12:64 vérifié verbatim au cache** (قَالَ هَلْ ءَامَنُكُمْ عَلَيْهِ إِلَّا
+  كَمَا أَمِنْتُكُمْ…) → lecture هَلَامَنُكُمْ halāmanukum (fatḥa transférée au lām quiescent, hamza
+  effacée, alif substituée) ; **tashīl** : ʾanādhana (mot de base en image perdue — locus non
+  affirmé, doctrine du corpus tajwid-2es/17893 « entre et entre ») ; **ibdāl** : as-samāʾa yāyatan
+  (hamza de āyatan substituée en yāʾ, seconde alif allongée — mot de base en image perdue) ;
+  règle rétablie : degré moyen 4 temps pour les trois espèces ; vers Shāṭibiyya demandé non
+  imprimé → non cité ; section guide-et-exemple vide (image perdue) ; préparation → mustathniyāt
+  + 7e exception non mentionnée par al-Shāṭibī ; 6 277 car. **Registre 711.**
+- QA navigateur sur les trois leçons (badge, bilingue 191/226/202 séq. AR, tables de vers rendues,
+  overflowX 0 @1280/390, 0 erreur console, captures desktop+mobile ×6) ; QA script PASS ×3
+  (0 arabe résiduel) ; lint 0 erreur ; backup.sh après chaque doc (règle b) ; commits 5e5638f,
+  13e6c82, 6475eb4 poussés au fil de l'eau.
+
+Stage Summary:
+- **Registre 711/950 (+4 ce tour : 18962, 18987, 19029, 19031) ; tajwid-5ep 22/31 documents.**
+- Token GitHub opérationnel : chaque doc est poussé immédiatement — le risque de perte par reset
+  est refermé (le protocole R188 reste gravé : GitHub = source de vérité).
+- Restants tajwid-5ep : 19038 (līn), 19040 (activités badal+līn), 19041 (lāzim kalimī), 19043
+  (lāzim ḥarfī), 19050 (activités lāzim+ʿāriḍ), 19055 (waqf/ibtidāʾ), 19056 (mathn Tuḥfa —
+  déjà source des restitutions), 19138 (ʿāriḍ 2), 19141 (exceptions badal) → 9 documents.
+- Risques : (a) mots de base en images perdues (tashīl/ibdāl de 19031) — lectures imprimées
+  rendues fidèles sans identification ; (b) le push dépend du token (à re-régler si nouveau reset) ;
+  (c) warning lint préexistant (llm-translate.ts).
+- Priorités suivantes : 19038 (R191 — madd līn), 19040, 19041, 19043… jusqu'au 50ᵉ livre complet,
+  puis livre suivant selon le registre.
