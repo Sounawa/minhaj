@@ -9270,3 +9270,46 @@ Stage Summary:
 - Restants tajwid-5ep : 19040 (activités badal+līn), 19041 (lāzim kalimī), 19043 (lāzim ḥarfī),
   19050 (activités lāzim+ʿāriḍ), 19055 (waqf/ibtidāʾ), 19056 (mathn complet), 19138 (ʿāriḍ 2),
   19141 (exceptions badal) → 8 documents.
+
+---
+Task ID: R192
+Agent: agent principal (Z.ai Code — session utilisateur, suite)
+Task: Leçon 19040 (tajwid-5ep) — activités d'application générales sur le badal et le līn
+
+Work Log:
+- **savant(tajwid-5ep/19040)** — leçon 22, activités générales substitution + tendre : boucle
+  pédagogique refermée (la préparation de la leçon 21 l'annonçait : « je reviens aux deux schèmes
+  mentaux venus aux leçons 5 et 19 » — l'activité 2 l'accomplit). Instructions d'exceptions
+  rendues fidèlement + glose doctrine (badal : pas au-delà de deux temps = mesure naturelle,
+  cohérent préparation leçon 19 ; līn : aucune extension du tout = quatrième état leçon 21).
+  **Deux vers Tuḥfa restitués du mathn même du manuel** (ROWS 55/59 vérifiés vocalisés :
+  « wa-lāzimun ini s-sukūnu uṣṣalā / waṣlan wa-waqfan baʿda maddin ṭūwilā » — définition du
+  lāzim — et « fa-in bi-kalimatin sukūnun ijtamaʿa / maʿa ḥarfi maddin fa-huwa kalimiyyun
+  waqaʿa » — le kalimī) : la préparation les demande, la leçon 23 (19041) est annoncée.
+- **Cartographie des renvois croisés établie** (détermine les N.d.T. à venir) : leçon 5 =
+  15413 (iḫfāʾ — carte des vertus d'Abū Mūsā al-Ashʿarī) ; leçon 19 = 19031 (badal changé —
+  Nūniyya al-Sakhāwī) ; leçon 20 = **19141 (mustathniyāt badal, position 30, hors ordre)** ;
+  15839/15852 = doublons de captation des leçons 13/14 ; le livre = 30 docs (27 leçons + mathn
+  19056 + 2 doublons) — le dénominateur « /31 » des worklogs précédents était erroné.
+- **Correction 19038 (R191)** : N.d.T. renvoi erroné « leçons 5 et 19 (mīm quiescente et
+  substitution) » → « (l'iḫfāʾ de la nūn quiescente et la substitution) » — la leçon 5 est
+  l'iḫfāʾ (15413), la mīm est la leçon 7 (15439).
+- Normalisation typographique du pipeline : entités &nbsp; du fichier savant → NNBSP/U+00A0 du
+  corpus (18 doubles espaces avant « : » éliminés), titleFr élevé, htmlFr resynchronisé sur le
+  savant final post-auto-fix (règle : écrire « : » à espace simple, l'auto-fix fait le reste).
+- Versets d'écoute (activité 1), les deux khaṭṭāṭa (leçons 5 et 19) et le tableau à remplir :
+  images perdues SANS références → non restitués, honnêteté notée. Date : lundi 30 octobre
+  2023 (graphie fautive du mois notée). 5 315 car, 0 arabe.
+- QA : script PASS (0 arabe résiduel, guillemets/balises appariés) ; navigateur (badge
+  « Traduction savante », bilingue 157 séq. AR, substitution/tendre/lāzim/khaṭṭāṭa/Tuḥfa/N.d.T.
+  présents, overflowX 0 @1280 et @390, 0 erreur console, captures desktop+mobile) ; lint
+  0 erreur (7 warnings préexistants). Commit c0a31da poussé + backup.
+
+Stage Summary:
+- **Registre 713/950 ; tajwid-5ep 24/30 documents (le livre compte 30 docs, dénominateur
+  corrigé).** Corpus 1001/1152 bilingues.
+- Restants tajwid-5ep : 19041 (R193 — lāzim kalimī, annoncé par la préparation), 19043
+  (lāzim ḥarfī), 19050 (activités lāzim+ʿāriḍ), 19055 (waqf/ibtidāʾ), 19056 (mathn), 19138
+  (ʿāriḍ 2, leçon 25), 19141 (mustathniyāt badal, leçon 20) → 7 documents.
+- Routes QA : lecteur par hash `/#/livre/tajwid-5ep/{docId}` ; agent-browser set viewport
+  390 844 pour mobile ; API `/api/lessons/tajwid-5ep/{docId}`.
