@@ -9463,3 +9463,38 @@ Stage Summary:
 - Restants tajwid-5ep : 19055 (R197 — waqf/ibtidāʾ, leçon 27, annoncé par les vers d'Ibn
   al-Jazarī), 19141 (mustathniyāt badal, leçon 20), 19056 (mathn — 71 rangées, contrôle
   final) → 3 documents. Le livre est complet à 3 leçons.
+
+---
+Task ID: R197
+Agent: agent principal (Z.ai Code — session utilisateur, suite)
+Task: Leçon 19055 (tajwid-5ep) — les règles de l'arrêt et du commencement (waqf/ibtidāʾ)
+
+Work Log:
+- **savant(tajwid-5ep/19055)** — leçon 27, waqf/ibtidāʾ : **les trois définitions imprimées
+  MOT POUR MOT** traduites telles quelles (ḥasan : sens achevé, pause permise, rattaché au
+  suivant au sens et à la lettre — le commencement ne sied point ; tāmm : sens achevé sans
+  attachement — pause et commencement conviennent ; qabīḥ : point de sens achevé, tient au
+  suivant — interdit sauf nécessité).
+- **Fātiḥa restituée du cache coranique** : la captation l'avait perdue (span vide en la
+  source même, des deux côtés) — la Mère du Coran, sourate (1) : 1-7, rasm uthmani vérifié
+  VERBATIM verset par verset ; rendu français à la convention du corpus (première restitution
+  coranique du tour — les leçons précédentes n'avaient que des versets sans références).
+- Hadith d'Ibn ʿUmar imprimé AVEC référence (al-Mustadrak 101, rendue telle qu'imprimée —
+  numérotation selon éditions) : la narration standard sur la foi donnée avant le Coran et
+  les arrêts appris avec le Livre même — traduit intégralement. Terminologie savante notée :
+  le ḥasan du manuel répond au kāfī d'Ibn al-Jazarī (variance d'intitulé entre écoles, non
+  de doctrine). Sakta/qaṭʿ : définitions transmises signalées en N.d.T. Titre de section
+  « J'affermis » rétabli (perdu en captation). Vers d'Ibn al-Jazarī répétés selon l'item
+  (déjà traduits en 19050) + utilité des arrêts rétablie. Tableau des mots de la Fātiḥa et
+  mots d'exemple : images perdues → non restitués. Édification tissée du hadith (l'arrêt =
+  sens, la patience du sens), marquée. Aucune date ni préparation imprimées (le doc suivant
+  = le mathn). 7 336 car, 0 arabe.
+- QA : script PASS ; navigateur (badge, bilingue 261 séq. AR, waqf/ḥasan/tāmm/qabīḥ/Fātiḥa
+  restituée/sourate (1)/al-Mustadrak 101/Ibn al-Jazarī/sakta/ibtidāʾ présents, overflowX 0
+  @1280 et @390, 0 erreur console, captures desktop+mobile). Commit 2f362cb poussé + backup.
+
+Stage Summary:
+- **Registre 718/950 ; tajwid-5ep 29/30 documents.** Corpus 1006/1152 bilingues.
+- Restants tajwid-5ep : 19141 (R198 — mustathniyāt badal, leçon 20, intercalaire du bloc
+  badal) et 19056 (R199 — le mathn complet, 71 rangées, pièce de clôture et contrôle final
+  des restitutions) → 2 documents. Le 50ᵉ livre du corpus sera complet à R199.
