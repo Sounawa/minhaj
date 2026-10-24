@@ -9539,3 +9539,47 @@ Stage Summary:
   en tables de vers bilingues (convention 15488/19029), avec contrôle croisé des ROWS déjà
   utilisés pour les restitutions des leçons 16-25 (51-55, 57-64). Après R199 : LE LIVRE
   TAJWID-5EP SERA COMPLET (50ᵉ livre du corpus) — puis le livre suivant selon le registre.
+
+---
+Task ID: R199
+Agent: agent principal (Z.ai Code — session utilisateur, suite)
+Task: Leçon 19056 (tajwid-5ep) — le mathn complet de la Tuḥfat al-aṭfāl — COMPLÉTION DU LIVRE
+
+Work Log:
+- **savant(tajwid-5ep/19056)** — le 30e et dernier document : **le mathn complet de la
+  Tuḥfat al-aṭfāl** — 61 vers (version maghrébine standard, les 4 vers orientaux
+  tafkhīm/tarqīq absents de la captation, noté) en 10 sections, rasm vocalisé intégral.
+  **Traduits intégralement en table miroir : 71 rangées FR = 71 rangées AR (vérifié)** —
+  lecture bilingue alignée vers à vers, premier hémistiche en cellule droite (convention
+  15488). Terminologie alignée sur tout le corpus (manifestation/assimilation/conversion/
+  occultation/nasalisation/connecté/séparé/substitution/nécessaire).
+- Mnémoniques rendus + ciphers listés en N.d.T. : yarmalūn, yanmu, dunyā/ṣinwān, « ṣif dhā
+  thanā… », « ibghi ḥajjaka… », « ṭib thumma ṣil… », nūḥīhā, kam ʿasal naqaṣ, ḥayy ṭāhir
+  (variante ḥayyu raḥṭin du manuel de la leçon 24 notée — mêmes cinq lettres), « ṣilhu
+  suḥayran man qaṭaʿaka ». Chronogramme bushrā = 1228 H décodé. L'auteur (Sulaymān
+  al-Jamzūrī, mort 1228 H) et son maître al-Mīhī cités du préliminaire.
+- **Contrôle croisé final des restitutions** : tous les vers restitués aux leçons 16-25
+  (obligatoire, catégories, kalimī, critère idghām, ḥarfī et les huit, kam ʿasal naqaṣ, ʿayn
+  aux deux faces, accidentel taʿlamūna nastaʿīnu, substitution badalun ka-āmanū) se
+  retrouvent au rasm près dans les sections 8-9 — l'ensemble des restitutions du bloc
+  d'allongements est VALIDÉ par le mathn même.
+- QA : script PASS (12 715 car, 0 arabe résiduel) ; navigateur (badge, bilingue 627 séq. AR
+  — le mathn vocalisé entier rendu, table alignée, yarmalūn/kam ʿasal naqaṣ/bushrā/1228/
+  ḥayy ṭāhir présents, overflowX 0 @1280 et @390, 0 erreur console, captures
+  desktop+mobile). Commit e0592b0 poussé + backup.
+
+Stage Summary:
+- **🅛🅔 🅛🅘🅥🅡🅔 🅣🅐🅙🅦🅘🅓-🅕🅘🅥🅔🅟 🅔🅢🅣 🅒🅞🅜🅟🅛🅔🅣 : 30/30 documents en traduction savante.**
+- **Registre 720/950 ; corpus 1008/1152 bilingues (50ᵉ livre complet du corpus).**
+- Session de l'agent principal (R192-R199) : 8 documents livrés (+712→720), le livre
+  tajwid-5ep achevé de bout en bout — du 15e doc (18697/18696 traduits antérieurement) au
+  mathn final, avec toutes les boucles pédagogiques documentées, 3 restitutions coraniques
+  verbatim (Fātiḥa, Dhāriyāt 43-49), 12 versets Tuḥfa restitués du mathn, 5 hadiths et vers
+  à références imprimées traduits, la correction du renvoi erroné de 19038, et le contrôle
+  croisé final par le mathn même.
+- **PROCHAINE ÉTAPE (R200+)** : le livre suivant selon le registre — vérifier le registre
+  pour le prochain livre avec documents non traduits (tr-tmp/CONVENTIONS-savant.md + le
+  pipeline établi). Le corpus compte 64 livres : ~14 restent à équiper en partie ou en
+  totalité (1008/1152 → 950 savants visés).
+- Rappel protocole : cron 472776 désactivé (« exec limits exceeded ») → supprimé ce tour ;
+  RECÉER IDENTIQUEMENT en fin de run (fait ci-dessous) avec contexte actualisé.
