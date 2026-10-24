@@ -9433,3 +9433,33 @@ Stage Summary:
 - Restants tajwid-5ep : 19050 (R196 — activités lāzim+ʿāriḍ, leçon 26, annoncé par la
   préparation présente), 19055 (waqf/ibtidāʾ, leçon 27), 19141 (mustathniyāt badal, leçon 20),
   19056 (mathn — 71 rangées, contrôle final des restitutions) → 4 documents.
+
+---
+Task ID: R196
+Agent: agent principal (Z.ai Code — session utilisateur, suite)
+Task: Leçon 19050 (tajwid-5ep) — activités d'application générales lāzim + ʿāriḍ
+
+Work Log:
+- **savant(tajwid-5ep/19050)** — leçon 26, activités lāzim + ʿāriḍ : referme le bloc de la
+  quiescence (leçons 23-25). Renvoi aux espèces imprimées (kalimī + ḥarfī, chacun
+  léger/lourd) marqué ; élection d'une face parmi les trois de l'arrêt ʿāriḍ (imprimé) ;
+  fawātiḥ (leçon 24) ; toutes les règles antérieures.
+- **Deux vers d'Ibn al-Jazarī IMPRIMÉS en table vocalisée** (« wa-baʿda tajwīdika
+  li-l-ḥurūf / lā budda min maʿrifati l-wuqūf » + « wa-l-ibtidāʾi wa-hiya tuqsamu idhan /
+  thalāthatan tāmmun wa-kāfin wa-ḥasan ») — traduits tels qu'imprimés (premier hémistiche en
+  cellule droite) ; l'œuvre (la Muqaddima en vers) identifiée par nous et notée en N.d.T. —
+  le manuel ne donne que l'attribution. Annonce la leçon 27 (19055 = waqf/ibtidāʾ).
+- Objectif tiers = le degré du lecteur habile (al-qāriʾ al-māhir) : hadith bien connu (avec
+  les nobles scribes anges) NON imprimé → signalé en N.d.T. seulement. Versets de l'activité 1,
+  schéma des traits du māhir, tableau arrêt/définitions : images sans références → non
+  restitués. Édification sobre (leçon d'activités : l'activité 2 la porte — production écrite
+  sur les traits de l'habile). Aucune date imprimée. 5 745 car, 0 arabe.
+- QA : script PASS ; navigateur (badge, bilingue 213 séq. AR, māhir/Ibn al-Jazarī/tāmm/kāfī/
+  ḥasan/khaṭṭāṭa/fawātiḥ présents, overflowX 0 @1280 et @390, 0 erreur console, captures
+  desktop+mobile). Commit c852b5e poussé + backup.
+
+Stage Summary:
+- **Registre 717/950 ; tajwid-5ep 28/30 documents.** Corpus 1005/1152 bilingues.
+- Restants tajwid-5ep : 19055 (R197 — waqf/ibtidāʾ, leçon 27, annoncé par les vers d'Ibn
+  al-Jazarī), 19141 (mustathniyāt badal, leçon 20), 19056 (mathn — 71 rangées, contrôle
+  final) → 3 documents. Le livre est complet à 3 leçons.
