@@ -9498,3 +9498,44 @@ Stage Summary:
 - Restants tajwid-5ep : 19141 (R198 — mustathniyāt badal, leçon 20, intercalaire du bloc
   badal) et 19056 (R199 — le mathn complet, 71 rangées, pièce de clôture et contrôle final
   des restitutions) → 2 documents. Le 50ᵉ livre du corpus sera complet à R199.
+
+---
+Task ID: R198
+Agent: agent principal (Z.ai Code — session utilisateur, suite)
+Task: Leçon 19141 (tajwid-5ep) — les exceptions de l'allongement de substitution
+
+Work Log:
+- **savant(tajwid-5ep/19141)** — leçon 20, mustathniyāt al-badal : **les quatre causalités
+  imprimées au complet** (l'alif naturel car la hamza vient après une quiescente saine ; le
+  wāw à deux temps ; la muʾākhadha — tenue-ensemble — ; l'alif substituée du tanwīn de
+  l'accusatif, en la pause du verset précédent de la sourate de Marie) → doctrine entièrement
+  fondée sur l'imprimé. Shāṭibiyya demandée non imprimée → non citée ; la 7e exception non
+  identifiée → non affirmée (la promesse de 19031 est tenue en doctrine imprimée).
+- **Deux hadiths des chameaux imprimés AVEC références** (Bukhari 5031 — le compagnon du
+  Coran comme les chameaux entravés — et 5033 — plus prompt à échapper) : textes standards,
+  traduits tels qu'imprimés ; le thème = l'entretien (taʿāhud) = l'objectif 3.
+- **Quatre vers d'Ibn Barrī imprimés en table vocalisée** (ad-Durar al-Lawāmiʿ — le mathn du
+  tajwid-2es du corpus) : le līn+hamza allongé, la mesure moyenne et les divergences des
+  loci (sawʾāt, al-ʿayn, fiʿlāt — rendus littéralement en translit, sans commentaire imprimé),
+  le qaṣr de mawʾilan et al-mawʾūda (« l'état perdu »), les trois faces à l'arrêt
+  (sawfa/rayb) — 5e rang vide (vers perdu) noté. **La boucle du livre se referme** : c'est
+  l'autorité même que la leçon 21 (19038) demandait sans qu'elle y fût imprimée.
+- **Dhāriyāt 43-49 restitués du cache** (référence imprimée au manuel — rasm vérifié
+  verbatim ; les lieux du līn : bi-ayyin v47, shayʾ v49, zawjayn). 2e restitution coranique
+  du tour. Versets d'écoute du corps et mots d'exercice : images sans références → non
+  restitués. Édification tissée des hadiths mêmes (l'exception qui lit court = la retenue),
+  marquée. Position 30 de la collection / leçon 20 imprimée — ordre de lecture par numéros,
+  noté. Aucune date imprimée. 9 219 car, 0 arabe.
+- QA : script PASS ; navigateur (badge, bilingue 332 séq. AR, mustathniyāt/chameaux/5031/
+  5033/Ibn Barrī/ad-Durar/sourate (51)/al-mawʾūda/muʾākhadha/tanwīn accusatif présents,
+  overflowX 0 @1280 et @390, 0 erreur console, captures desktop+mobile). Commit 58f70ee
+  poussé + backup.
+
+Stage Summary:
+- **Registre 719/950 ; tajwid-5ep 29/30 documents traduits — RESTE UN SEUL : 19056, le mathn
+  complet de la Tuḥfat al-aṭfāl (71 rangées, la pièce de clôture du livre).** Corpus
+  1007/1152 bilingues.
+- R199 = le mathn 19056 : la plus grosse pièce du livre (71 rangées vocalisées) — le traduire
+  en tables de vers bilingues (convention 15488/19029), avec contrôle croisé des ROWS déjà
+  utilisés pour les restitutions des leçons 16-25 (51-55, 57-64). Après R199 : LE LIVRE
+  TAJWID-5EP SERA COMPLET (50ᵉ livre du corpus) — puis le livre suivant selon le registre.
