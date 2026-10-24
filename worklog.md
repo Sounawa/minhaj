@@ -9716,3 +9716,30 @@ Stage Summary:
 - Prochaine leçon main : 19030 (l'ouverture du poème par les règles religieuses — GT-exempte à
   vérifier) ; ordre du livre : 19030, 19039, 19042, 19045, 19046, 19051, 19145, 19146, 19159,
   19160, 19205, 19209, 19210, 19220, 19282, 19291, 19318, 19356, 19481, + intro 20326.
+---
+Task ID: R204
+Agent: agent principal (Z.ai Code — session web-394d04d3, suite objectif « 279 brouillons → savants »)
+Task: Leçon 19030 (qiraat-tanawi-1) + RÉPARATION DU PIPELINE LLM (le goulot d'étranglement)
+
+Work Log:
+- **DIAGNOSTIC PIPELINE LLM** : 94 rejets / 0 livraison depuis le lancement — la validation du
+  ratio FR/AR (borne haute 0,95) rejetait 100 % des sorties sur les livres tanawī, dont les
+  sources arabes sont courtes (ratios observés : 1,10-1,78). Or le pipeline MAIN lui-même
+  produit des ratios 1,27 (18964) à 1,99 (18965) : la borne était fausse.
+- **FIX v3** (commit dc85bb1) : borne haute 0,95→2,10 calibrée sur le corpus main + quoteFix
+  étendu aux paires de guillemets coupées par un retour à la ligne + apostrophes droites→U+2019.
+  Testé sur 11962 : LIVRÉE (ratio 1,17, 13 866 car, registre 724). Workers redémarrés.
+- **Le superviseur produit désormais** : 4 livraisons LLM en ~20 min (hadith-tanawi-1/12610,
+  fiqh-tanawi-1/11905, rasm-wa-dabt-4ep/18961 et 19722) — commits automatiques « Minhāj LLM »,
+  ~1,8 min/doc en turbo. 3 workers actifs.
+- savant(qiraat-tanawi-1/19030) : leçon 1 — l'ouverture du poème, 20 457 car : les 9 premiers
+  vers de la Shāṭibiyya en table miroire, 4 versets restitués ((93):5, (3):103, (16):120,
+  (3):185 — 4 refs imprimées alignées sur std), le hadith du cédrat (Muslim) intégralement,
+  Ibn Khallikān + Ibn al-Abbār + la bio d'al-Shāṭibī rendues. QA PASS + navigateur.
+- Vague poussée : dc85bb1..65142a3 (6 commits : 19030 + fix pipeline + 4 LLM).
+
+Stage Summary:
+- **Registre 728/950** (724 main + 4 LLM). qiraat-tanawi-1 4/22 + intro.
+- Le goulot LLM est RÉPARÉ : le rythme de croisière (~3 docs/15 min × 3 workers si quota tient)
+  rend l'objectif « 262 docs » atteignable en heures, pas en jours.
+- Prochaine leçon main : 19039 (les mérites du Coran et ses effets sur son récitant).
