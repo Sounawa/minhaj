@@ -279,8 +279,12 @@ function clean(raw: string): string {
   const last = s.lastIndexOf(">");
   if (last !== -1 && last < s.length - 1) s = s.slice(0, last + 1);
   // Guillemets droits appariés → guillemets français, UNIQUEMENT dans les nœuds
-  // texte (jamais dans les attributs des balises)
-  const quoteFix = (txt: string) => txt.replace(/"([^"\n]{1,300}?)"/g, "« $1 »");
+  // texte (jamais dans les attributs des balises). Paires multi-lignes tolérées
+  // (v3 : la v2 échouait sur les citations coupées par un retour à la ligne).
+  const quoteFix = (txt: string) => txt
+    .replace(/"([^"\n]{1,300}?)"/g, "« $1 »")
+    .replace(/"((?:[^"\n]|\n){1,600}?)"/g, (m) => m.replace(/"/g, "").length ? "« " + m.slice(1, -1) + " »" : m)
+    .replace(/'/g, "\u2019");
   let out = "";
   let rest = s;
   const tagRe = /<[^>]*>/;
@@ -316,8 +320,12 @@ function validate(fr: string, srcHtml: string, t: Target): { ok: boolean; errors
   if (straightQuotes) errors.push("guillemets droits \" dans le texte (utiliser « »)");
   const ratio = fr.length / srcHtml.length;
   // Documents courts (intros « muqaddima », présentations) : seuils adaptés
+  // v3 (R203) : borne haute portée à 2,10 pour les leçons — calibrée sur le corpus
+  // de traductions savantes « main » (18964 : 1,27 ; 18965 : 1,99). L'ancienne borne
+  // 0,95 rejetait 100 % des livraisons LLM sur les livres tanawī (sources arabes
+  // courtes, traduction savante enrichie de restitutions).
   const tiny = Buffer.byteLength(srcHtml, "utf-8") < 2500 || t.kind === "intro";
-  if (ratio < (tiny ? 0.1 : 0.25) || ratio > (tiny ? 6 : 0.95)) errors.push(`ratio longueur FR/AR anormal : ${ratio.toFixed(2)} (attendu ${tiny ? "0,10-6,00" : "0,30-0,90"})`);
+  if (ratio < (tiny ? 0.1 : 0.25) || ratio > (tiny ? 6 : 2.1)) errors.push(`ratio longueur FR/AR anormal : ${ratio.toFixed(2)} (attendu ${tiny ? "0,10-6,00" : "0,25-2,10"})`);
   const h2 = (fr.match(/<h2/g) || []).length;
   if (h2 < (tiny ? 1 : 4)) errors.push(`trop peu de sections h2 (${h2})`);
   // Versets : si le source a une section الآيات (tatweel neutralisés), la traduction doit citer les versets
