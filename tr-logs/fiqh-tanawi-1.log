@@ -3006,3 +3006,56 @@ error: API request failed with status 429: {"error":"Too many requests, please t
    ✗ 11935 REJETÉ après 4 passes : ratio longueur FR/AR anormal : 1.79 (attendu 0,30-0,90)
 
 ━━━ fiqh-tanawi-1/11936 (leçon 15/30) — La vente muzābana, la vente kalīʾ bi-kalīʾ et l'acompte (ʿurbūn) [turbo]
+   ↻ passe 4 de correction : guillemets droits " dans le texte (utiliser « ») ; ratio longueur FR/AR anormal : 1.54 (attendu 0,30-0,90)
+   ✗ 11936 REJETÉ après 4 passes : guillemets droits " dans le texte (utiliser « ») ; ratio longueur FR/AR anormal : 1.54 (attendu 0,30-0,90)
+
+━━━ fiqh-tanawi-1/11945 (leçon 16/30) — Les ventes proscrites [turbo]
+Failed to make API request:  98 |                 headers: headers,
+ 99 |                 body: JSON.stringify(requestBody),
+100 |             });
+101 |             if (!response.ok) {
+102 |                 const errorBody = await response.text();
+103 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createChatCompletion (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:103:27)
+      at async callLLM (/home/z/my-project/scripts-translate/llm-translate.ts:251:53)
+      at async processTarget (/home/z/my-project/scripts-translate/llm-translate.ts:422:25)
+      at async <anonymous> (/home/z/my-project/scripts-translate/llm-translate.ts:561:14)
+
+   ⚠︎ tentative 1/8 échouée [429] : API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make API request:  98 |                 headers: headers,
+ 99 |                 body: JSON.stringify(requestBody),
+100 |             });
+101 |             if (!response.ok) {
+102 |                 const errorBody = await response.text();
+103 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createChatCompletion (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:103:27)
+      at async callLLM (/home/z/my-project/scripts-translate/llm-translate.ts:251:53)
+      at async processTarget (/home/z/my-project/scripts-translate/llm-translate.ts:422:25)
+      at async <anonymous> (/home/z/my-project/scripts-translate/llm-translate.ts:561:14)
+
+   ⚠︎ tentative 2/8 échouée [429] : API request failed with status 429: {"error":"Too many requests, please try again later"}
+   ↻ passe 4 de correction : guillemets droits " dans le texte (utiliser « ») ; ratio longueur FR/AR anormal : 1.44 (attendu 0,30-0,90)
+   ✗ 11945 REJETÉ après 4 passes : guillemets droits " dans le texte (utiliser « ») ; ratio longueur FR/AR anormal : 1.44 (attendu 0,30-0,90)
+
+━━━ fiqh-tanawi-1/11946 (leçon 17/30) — Les effets de la vente nulle et ses empêchements [turbo]
+   ↻ passe 4 de correction : caractères arabes hors attributs (translittérer en DIN 31635) ; ratio longueur FR/AR anormal : 1.78 (attendu 0,30-0,90)
+   ✗ 11946 REJETÉ après 4 passes : caractères arabes hors attributs (translittérer en DIN 31635) ; ratio longueur FR/AR anormal : 1.78 (attendu 0,30-0,90)
+
+━━━ fiqh-tanawi-1/11948 (leçon 18/30) — Les ventes à terme : conditions, figures et statut [turbo]
+   ↻ passe 4 de correction : caractères arabes hors attributs (translittérer en DIN 31635) ; ratio longueur FR/AR anormal : 1.39 (attendu 0,30-0,90)
+   ✗ 11948 REJETÉ après 4 passes : caractères arabes hors attributs (translittérer en DIN 31635) ; ratio longueur FR/AR anormal : 1.39 (attendu 0,30-0,90)
+
+━━━ fiqh-tanawi-1/11950 (leçon 19/30) — Les ventes à terme : conditions, figures et statut — suite [turbo]
+   ↻ passe 4 de correction : ratio longueur FR/AR anormal : 1.54 (attendu 0,30-0,90)
+   ✗ 11950 REJETÉ après 4 passes : ratio longueur FR/AR anormal : 1.54 (attendu 0,30-0,90)
+
+━━━ fiqh-tanawi-1/11951 (leçon 20/30) — Les règles de la vente à réméré (bayʿ al-ʿīna) [turbo]
+   ↻ passe 4 de correction : ratio longueur FR/AR anormal : 1.75 (attendu 0,30-0,90)
+   ✗ 11951 REJETÉ après 4 passes : ratio longueur FR/AR anormal : 1.75 (attendu 0,30-0,90)
+
+━━━ fiqh-tanawi-1/11962 (leçon 21/30) — Conditions de vente d'une condition d'option [turbo]
+   ↻ passe 4 de correction : ratio longueur FR/AR anormal : 1.10 (attendu 0,30-0,90)
