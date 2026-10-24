@@ -725,7 +725,8 @@
     "18964",
     "18965",
     "19030",
-    "19039"
+    "19039",
+    "19042"
   ],
   "llm": {
     "11905": {
@@ -742,6 +743,11 @@
       "at": "2026-10-24T12:24:10.850Z",
       "bookId": "fiqh-tanawi-1",
       "titleFr": "Provisions pour ventes groupées"
+    },
+    "11912": {
+      "at": "2026-10-24T12:26:25.807Z",
+      "bookId": "fiqh-tanawi-1",
+      "titleFr": "Les règles de la vente après inspection, sur plan et sur description"
     },
     "11962": {
       "at": "2026-10-24T12:12:22.952Z",
