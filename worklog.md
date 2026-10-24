@@ -9353,3 +9353,48 @@ Stage Summary:
   leçons du bout.
 - Le mathn 19056 (ROWS 44-64 = tout le chapitre du madd) sert désormais de source systématique
   des restitutions Tuḥfa — vérifier ROWS 65+ pour le waqf (leçon 27, 19055).
+
+---
+Task ID: R194
+Agent: agent principal (Z.ai Code — session utilisateur, suite)
+Task: Leçon 19043 (tajwid-5ep) — l'allongement obligatoire de la lettre (madd al-lāzim al-ḥarfī)
+
+Work Log:
+- **savant(tajwid-5ep/19043)** — leçon 24, lāzim ḥarfī : **quatre vers Tuḥfa restitués du mathn
+  même** (ROWS 60/62/63/64 : les noms de trois lettres, l'allongement au milieu = ḥarfī ; aux
+  ouvertures des sourates, enfermé en huit ; « kam ʿasal naqaṣ » les rassemble, le ʿayn de deux
+  faces, la satiation la plus particulière ; hors le nom triple, allongement naturel). Les
+  mnémoniques **imprimés** rendus : « kam ʿasalin naqaṣ » (kāf, mīm, ʿayn, sīn, lām, nūn, qāf —
+  mukhaffaf, six temps) et « ḥayyu raḥṭin » (ḥāʾ, yāʾ, rāʾ, hāʾ, ṭāʾ — naturel, deux temps ;
+  variante mnémonique marocaine notée en rnotes) + l'alif sans lettre d'allongement (point
+  d'extension).
+- Catégorie muthaqqal rétablie (l'assimilation des noms de lettres — alif-lām-mīm : le mīm
+  final de « lām » rejoint le mīm initial de « mīm ») du critère ROW 61 + la préparation de
+  19041 (« ses deux types, le léger et le lourd ») — marquée, les exercices présents ne
+  l'impriment point. **Doctrine de l'ʿayn imprimée** (deux faces — moyen et satiation —, la
+  satiation choisie) appuyée du ROW 63 et cohérente avec le līn (leçon 21 : le nom ʿayn porte
+  le yāʾ de tendresse suivi du nūn quiescent).
+- Exercices rendus fidèlement : alif/lām/rā (glosé = l'ouverture alif-lām-rā, en N.d.T.),
+  l'ouverture de Marie (kāf hā yā ʿayn ṣād — kāf/ṣād saturés six temps, ʿayn deux faces
+  satiation choisie, hā/yā naturels), yā-sīn (yā naturel + sīn long six), qāf (six temps —
+  fusion OCR « min bimiqdāri » notée, l'exemple imprimé fixant le mot).
+- **Hadith d'Ibn Masʿūd — la prière de la détresse — imprimé AVEC référence** (Musnad de
+  l'imām Aḥmad, 4318) : numérotation variant selon les éditions → rendue telle qu'imprimée
+  (double lecture honnête, convention) ; texte conforme à la récitation standard, traduit
+  intégralement (« Ô Allah, je suis Ton serviteur… que Tu fasses du Coran le printemps de mon
+  cœur, la lumière de ma poitrine… »). Édification tissée (les ouvertures des sourates ↔ le
+  Coran printemps/ouverture du cœur — objectif 3 de la leçon), marquée N.d.T. Versets d'écoute :
+  images sans références → non restitués. Aucune date imprimée. 9 389 car, 0 arabe.
+- QA : script PASS ; navigateur (badge, bilingue 354 séq. AR, ḥarfī/kam ʿasalin naqaṣ/ḥayyu
+  raḥṭin/ʿayn/kāf/yā-sīn/qāf/Aḥmad 4318/printemps de mon cœur/mukhaffaf/muthaqqal présents,
+  overflowX 0 @1280 et @390, 0 erreur console, captures desktop+mobile). Commit 4c05f7c poussé
+  + backup.
+
+Stage Summary:
+- **Registre 715/950 ; tajwid-5ep 26/30 documents.** Corpus 1003/1152 bilingues.
+- Restants tajwid-5ep : 19050 (activités lāzim+ʿāriḍ, leçon 26), 19055 (waqf/ibtidāʾ, leçon
+  27), 19056 (mathn), 19138 (ʿāriḍ 2, leçon 25 — annoncé par la préparation présente via
+  al-Fātiḥa), 19141 (mustathniyāt badal, leçon 20) → 5 documents.
+- Ordre logique de la prochaine : 19138 (ʿāriḍ — annoncé par la préparation de 19043) puis
+  19050 (les activités referment le bloc lāzim+ʿāriḍ), 19055, 19141, 19056 (mathn en dernier —
+  sa table de 71 rangées servira de contrôle final des restitutions).
