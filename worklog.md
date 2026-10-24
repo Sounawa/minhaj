@@ -9855,3 +9855,28 @@ Stage Summary:
 - La chaîne disciplinaire R207→R208→R209 a fonctionné de bout en bout : alignement GitHub (session-start.sh exit 0) AVANT le travail — conformément à la règle utilisateur renforcée du 24 oct.
 - Machines : superviseur LLM 3 workers actif (fiqh-tanawi-1, hadith-tanawi-1, tafsir-tanawi-1), cron relais 473054 armé (15 min, étape zéro alignement).
 - Prochaines leçons main : 19046 (voies et symboles), puis 19051, 19145, 19146, 19159, 19160, 19205, 19209, 19210, 19220, 19282, 19291, 19318, 19356, 19481 + intro 20326.
+
+---
+
+Task ID: R210
+Agent: Z.ai Code (agent principal — session web-394d04d3, « continue »)
+
+Task: Livraison de la leçon qiraat-tanawi-1/19046 (voies de lecture et symboles individuels des lecteurs) — 8ᵉ leçon du livre, la plus technique de la préface du poème (vers 42-48).
+
+Work Log:
+- Étape zéro tenue : session-start.sh AVANT tout travail → exit 0 (aligné GitHub 592dcbd).
+- Anomalie registre élucidée : la clé « llm » du registre est un OBJET (pas un tableau) — les compteurs naïfs la manquent ; registre réel vérifié 727 hand + 12 llm = 739/950. Workers LLM bridés en 429 amont (quota) — le superviseur encaisse par retries (conception voulue), 0 leçon perdue.
+- Source extraite (18,3 Ko) : vers 42-48 + doctrine Ibn al-Qāṣiḥ (règle qirāʾa/riwāya/ṭarīq, abjad oriental/maghrébin/poète, méthode du symbole, dispenses et répétitions).
+- DEUX tables du manuel perdues à l'extraction (balises vides) — RESTITUTIONS honnêtes signalées en place + N.d.T. : (a) les 14 ṭuruq — partielles (certitudes : Abū Nashīṭ/Qālūn [exemple du manuel], al-Azraq/Warsh, les deux aṣ-Ṣabbāḥ/Ḥafṣ ; le reste suit les isnāds du Taysīr) ; (b) le jardé des symboles — INTÉGRALE (21 entrées en 7 triades lecteur+transmetteurs, croisée avec la règle « le premier pour le premier » du v. 45, l'ordre de présentation du poème leçons 3-4, et l'exemple rāʾ=Kisāʾī/nūn=ʿĀṣim imprimé par le manuel).
+- Vocabulaire technique rendu en translittération (zéro caractère arabe) : les séquences abjad, les fragments du poème à hémistiches élidés (« ḥulan ḥalā », « yuʿadhdhib samā l-ʿulā »…) conservent les initiales que la doctrine discute.
+- Deux auto-corrections avant QA : suppression d'une spéculation non sourcée (autres poèmes non nommés par le manuel) + coquille.
+- QA script : PASS — 20 888 car, 0 arabe, 79 guillemets, 13 balises.
+- Injection hand-set.py : 1 emplacement, registre → **740/950**.
+- QA navigateur : badge Traduction savante, sommaire 14 sections, contenu vérifié (rast, Abū Nashīṭ présents), 0 overflow document @1280 ET @390, 0 erreur console. Capture tr-tmp/qa-r210-19046.png.
+- Règle de vague tenue : commit 3de61fe + push + backup 27 Mo + la présente entrée.
+
+Stage Summary:
+- **Registre 740/950** (+1 : 19046). qiraat-tanawi-1 : 8/22 leçons + intro (18645, 18964, 18965, 19030, 19039, 19042, 19045, 19046).
+- Leçon la plus doctrine-dense de la préface : la règle qirāʾa/riwāya/ṭarīq et le système des symboles d'Abū Jād sont désormais rendus en français — socle pour tout le farsh (détail des lettres) qui suit dans le livre.
+- Machines : superviseur 3 workers actif mais bridé 429 amont (retries) ; cron relais 473054 armé.
+- Prochaines leçons main : 19051, 19145, 19146, 19159, 19160, 19205, 19209, 19210, 19220, 19282, 19291, 19318, 19356, 19481 + intro 20326.
