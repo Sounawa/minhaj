@@ -6,6 +6,32 @@
 
 ---
 
+## ⚠️ PROTOCOLE DE DÉBUT DE SESSION — OBLIGATOIRE (règle utilisateur, 24 oct. 2026)
+
+**AVANT TOUT TRAVAIL, TOUJOURS, À CHAQUE SESSION (utilisateur ou relais cron) :**
+
+```bash
+bash /home/z/my-project/scripts-recovery/session-start.sh
+```
+
+Ce script compare le bac local à **GitHub = SOURCE DE VÉRITÉ UNIQUE**
+(`github.com/Sounawa/minhaj`, branche `main`). La plateforme restaile parfois le bac à un
+vieux point (R0, R57, R75, R81→R200…) — **NE JAMAIS re-travailler depuis un état local
+sans l'avoir comparé à GitHub d'abord, et ne JAMAIS réinitialiser/refaire ce qui est déjà
+poussé.**
+
+- **Script dit « EN RETARD de N commits »** → récupérer immédiatement, sans rien refaire :
+  `git branch -f local-stale-$(date +%m%d) HEAD && git reset --hard origin/main`
+  (+ `bun run db:push` si le schéma Prisma a bougé) — puis lire les 2-3 dernières entrées
+  de CE worklog et reprendre exactement là où GitHub s'est arrêté.
+- **Script dit « N commits à pousser »** → `git push origin main` (si token absent du bac :
+  le demander à l'utilisateur — lecture publique sans token, pousse = token requis).
+- **Règle de vague (absolue)** : chaque leçon livrée = commit + `git push origin main` +
+  `bash scripts-recovery/backup.sh` + entrée worklog ci-dessous. Jamais accumuler plus
+  d'1 leçon non poussée.
+
+---
+
 Task ID: R0
 Agent: agent principal (Z.ai Code)
 Task: Reprise après réinitialisation totale du sandbox — diagnostic et plan de reconstruction
@@ -9583,3 +9609,64 @@ Stage Summary:
   totalité (1008/1152 → 950 savants visés).
 - Rappel protocole : cron 472776 désactivé (« exec limits exceeded ») → supprimé ce tour ;
   RECÉER IDENTIQUEMENT en fin de run (fait ci-dessous) avec contexte actualisé.
+---
+Task ID: R200 (reconstruit)
+Agent: agent principal (Z.ai Code — session précédente, coupée avant l'entrée worklog)
+Task: Leçon 18645 (qiraat-tanawi-1) — préface et index des thèmes — OUVERTURE DU DOMAINE QIRĀʾĀT
+
+Work Log:
+- (Entrée reconstruite depuis le message du commit 63f4658 — la session s'est coupée
+  juste après le commit/push, avant l'append worklog.)
+- savant(qiraat-tanawi-1/18645) : 1er doc du livre 51 — hamdala en sajʿ rendue (aise/facilité,
+  bloc/détail, élévation/préférence, psalmodie — sourate (73):4 notée) ; les deux titres savants
+  en apposition (Ḥirz al-Amānī = sauvegarde des espérances ; Sirāj al-qāriʾ = lampe du lecteur
+  débutant) ; dates imprimées (al-Shāṭibī 590 H, Ibn al-Qāṣiḥ 801 H, al-Dānī 444 H) ; 1er tiers =
+  182 vers, chapitres énumérés ; terminologie du domaine ÉTABLIE (rumūz, iṣṭilāḥāt, farsh vs
+  uṣūl, riwāyāt, ṭuruq, hāʾ al-kināya) ; index 26 thèmes + 12 compétences ; 8 851 car, 0 arabe ;
+  QA navigateur (badge, bilingue, overflowX 0 @1280/390, 0 console).
+
+Stage Summary:
+- Registre 721/950. qiraat-tanawi-1 = 1/22. Prochaine leçon : 18964 (idġām kabīr 1).
+---
+Task ID: R201
+Agent: agent principal (Z.ai Code — session utilisateur web-394d04d3, message « tu as fait un reset? regarde sur github »)
+Task: RÉCUPÉRATION POST-RESTAURATION + MÉCANISME ANTI-PERTE « session-start » (demande utilisateur explicite)
+
+Work Log:
+- Message utilisateur : le bac paraissait reparti en arrière (« tu as fait un reset ? ») et
+  demande expresse d'un code qui vérifie à chaque session où on en est sur GitHub.
+- Diagnostic : le bac local avait été restauré au point R81 (33f9598, registre 504, 429 commits)
+  tandis que GitHub main = 63f4658 (R200, registre 721, 999 commits). Ni 63f4658 ni la branche
+  backup-reprise-r84 n'existaient localement. CE N'ÉTAIT PAS UN RESET DE TRAVAIL : la plateforme
+  a restauré le bac à un vieux snapshot pendant la coupure de contexte ; tout R82→R200 était
+  sain et sécurisé sur GitHub.
+- Vérification anti-perte : les 2 seuls commits locaux non poussés (7bd711f leçon 12884,
+  33f9598 leçon 12885) — leurs docs SONT déjà sur GitHub main (refaits par la lignée R82+),
+  donc **AUCUNE perte de contenu, AUCUN travail à refaire**.
+- RÉCUPÉRATION : `git fetch origin main` → `git branch local-r81-stale` (archive du vieux
+  point) → `git reset --hard origin/main` → `bun run db:push` (schéma Prisma +46 lignes des
+  R82-R200 synchronisé). Serveur dev jamais redémarré (règle absolue) — GET / 200 confirmé.
+- **MÉCANISME ANTI-PERTE (la demande) — 3 couches** :
+  1. `scripts-recovery/session-start.sh` (NOUVEAU) : fetch GitHub (lecture publique, sans
+     token), compare HEAD ↔ origin/main, affiche retard/avance, registre savant (721/950),
+     dernière entrée worklog, disponibilité du token de pousse ; si EN RETARD → bannière
+     rouge avec les commandes de récupération exactes (branch backup + reset --hard +
+     db:push) ; exit codes 0/2/3/4 pour automatisation. Testé : ✅ « À JOUR, R199, 721/950 ».
+  2. Bannière « PROTOCOLE DE DÉBUT DE SESSION — OBLIGATOIRE » en TÊTE de worklog.md (première
+     chose lue par tout agent/relais) avec les commandes de récupération et la règle de vague :
+     1 leçon livrée = commit + push + backup.sh + entrée worklog, jamais plus d'1 leçon non poussée.
+  3. Message du relais cron 15 min réécrit : « RUN session-start.sh FIRST » en préambule +
+     protocole de ré-armement conservé.
+- Remote `origin` → https://github.com/Sounawa/minhaj.git configuré en dur dans le bac.
+- ⚠️ Token GitHub : ABSENT de ce bac (pas de ~/.git-credentials) → pousse impossible pour
+  l'instant ; la lecture/sync fonctionne sans token (dépôt public). L'utilisateur doit
+  re-coller le token une fois pour rétablir la pousse automatique.
+
+Stage Summary:
+- **Bac aligné sur GitHub (registre 721/950, R200). Aucune perte, aucun travail refait.**
+- Le mécanisme « où on en est sur GitHub » est codé, testé et documenté en 3 couches
+  (script + worklog + cron) : toute session future, même après restauration platforme,
+  se synchronise en ~10 s au lieu de perdre du temps.
+- Prochaine étape : leçon 18964 (qiraat-tanawi-1, idġām kabīr 1) — pipeline CONVENTIONS-savant.
+- Risque résiduel : token GitHub manquant (pousse bloquée) — à faire re-fournir par
+  l'utilisateur ; en attendant, commits locaux + backup.sh multi-emplacements.

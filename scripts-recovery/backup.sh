@@ -53,4 +53,20 @@ SIZE=$(du -h "$PRIMARY/minhaj-latest.tar.gz" 2>/dev/null | cut -f1)
 echo "✅ Sauvegarde $STAMP → $PRIMARY/minhaj-latest.tar.gz ($SIZE)"
 echo "   + copie secondaire : $SECONDARY/minhaj-latest.tar.gz"
 echo "   Snapshots conservés : $(ls -1 "$PRIMARY/snapshots/" 2>/dev/null | wc -l)"
+
+# 5) Pousse GitHub (règle de vague R201 : GitHub = source de vérité, jamais >1 leçon non poussée)
+cd "$PROJ"
+if git remote get-url origin >/dev/null 2>&1; then
+  UNPUSHED=$(git rev-list --count origin/main..HEAD 2>/dev/null || echo "?")
+  if [ "${UNPUSHED:-0}" != "0" ] && [ "${UNPUSHED:-0}" != "?" ]; then
+    if timeout 90 git push origin main 2>/dev/null; then
+      echo "   ✅ Pousse GitHub : ${UNPUSHED} commit(s) → origin/main"
+    else
+      echo "   ⚠️  Pousse GitHub IMPOSSIBLE (${UNPUSHED} commit(s) en attente) — token absent/révoqué ?"
+      echo "       → demander le token à l'utilisateur ; lecture/sync restent possibles sans token."
+    fi
+  else
+    echo "   ✅ GitHub déjà à jour (origin/main)."
+  fi
+fi
 echo "   ⚠️  Rappel : le commit git reste la protection n°1 (lancer si modifications en cours)."
