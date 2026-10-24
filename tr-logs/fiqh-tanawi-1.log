@@ -3135,3 +3135,11 @@ error: API request failed with status 429: {"error":"Too many requests, please t
    ✓ commit
 
 ━━━ fiqh-tanawi-1/11911 (leçon 4/30) — Provisions pour ventes groupées [turbo]
+   ✓ fusion OK — htmlFr 13 787 car (source 7 628, ratio 1.81)
+   ✓ commit
+
+━━━ fiqh-tanawi-1/11912 (leçon 5/30) — Les règles de la vente après inspection, sur plan et sur description [turbo]
+   ✓ fusion OK — htmlFr 14 375 car (source 8 329, ratio 1.73)
+   ✓ commit
+
+━━━ fiqh-tanawi-1/11920 (leçon 6/30) — Arrêts sur l'usure de l'argent et de la nourriture [turbo]

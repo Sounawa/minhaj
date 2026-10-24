@@ -3164,3 +3164,11 @@ error: API request failed with status 429: {"error":"Too many requests, please t
    ✓ commit
 
 ━━━ rasm-wa-dabt-4ep/19724 (leçon 5/29) — La méthode du poète dans ʿUmdat al-Bayān — suite [turbo]
+   ✓ fusion OK — htmlFr 7 545 car (source 6 775, ratio 1.11)
+   ✓ commit
+
+━━━ rasm-wa-dabt-4ep/19725 (leçon 6/29) — L’écriture et la vocalisation : le chapitre de la hamza [turbo]
+   ↻ passe 4 de correction : caractères arabes hors attributs (translittérer en DIN 31635)
+   ✗ 19725 REJETÉ après 4 passes : caractères arabes hors attributs (translittérer en DIN 31635)
+
+━━━ rasm-wa-dabt-4ep/19726 (leçon 7/29) — Dessiner et ajuster le chapitre Ba [turbo]
