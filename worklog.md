@@ -9670,3 +9670,29 @@ Stage Summary:
 - Prochaine étape : leçon 18964 (qiraat-tanawi-1, idġām kabīr 1) — pipeline CONVENTIONS-savant.
 - Risque résiduel : token GitHub manquant (pousse bloquée) — à faire re-fournir par
   l'utilisateur ; en attendant, commits locaux + backup.sh multi-emplacements.
+---
+Task ID: R202
+Agent: agent principal (Z.ai Code — session utilisateur web-394d04d3, objectif « 279 brouillons machine en documents savants »)
+Task: Leçon 18964 (qiraat-tanawi-1) — la grande assimilation (idghām kabīr) (1) + lancement production 24/7
+
+Work Log:
+- Token GitHub configuré (credential store) — pousse rétablie : 3de7980 (anti-perte) puis cf611ae (18964) → origin/main.
+- Sous-agent pour 18964 tenté 2× → dépassé (deadline) → **traduite par l'agent principal lui-même** (pipeline main).
+- savant(qiraat-tanawi-1/18964) : leçon 15, l'ouverture du chapitre idghām kabīr — 19 777 car, 17 versets
+  restitués verbatim (4 mappings warsh→standard épinglés par le mot-cas : 199→200, 114→115, 41→42,
+  22→23), mathn 116-122 en table miroire, les 4 empêchements, l'iḍhār du kāf fondé sur l'occultation
+  du nūn, le texte d'al-Dānī contre les négateurs, doublons OCR dédupliqués, passage de la transmission
+  rendu tel qu'imprimé + N.d.T. QA script PASS ; QA navigateur (badge, bilingue 1002 séq. AR,
+  overflowX 0 @1280/390, 0 console, captures desktop+mobile). Rapport : tr-tmp/rnotes-18964.md.
+- **SUPERVISEUR 24/7 RELANCÉ** (setsid, démon détaché) : 3 workers LLM (llm-translate.ts v2,
+  passes traduction→relecture→polissage→correction, validation, fusion agent-merge, registre llm)
+  sur rasm-wa-dabt-4ep (29 docs), fiqh-tanawi-1 (30), hadith-tanawi-1 (31). 429 encaissés par
+  retries ×8. Livraisons auto-committées par les relais cron 15 min (règle de vague).
+- Objectif du jour (utilisateur) : les ~262-279 brouillons GT → savants, puis les 854 pdfOnly.
+  Plan : superviseur LLM en masse + agent principal en pipeline main (qualité philologique),
+  livres disjoints (aucun conflit de fichier : registre + livres distincts).
+
+Stage Summary:
+- **Registre 722/950.** qiraat-tanawi-1 2/22. Pousse GitHub opérationnelle (token OK).
+- Superviseur actif (3 workers) + cron 472904 armé (sync GitHub en étape zéro).
+- Prochaine leçon main : 18965 (idghām kabīr 2) ; le superviseur avale rasm/fiqh/hadith-tanawi-1.
