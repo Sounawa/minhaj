@@ -9237,3 +9237,36 @@ Stage Summary:
   (c) warning lint préexistant (llm-translate.ts).
 - Priorités suivantes : 19038 (R191 — madd līn), 19040, 19041, 19043… jusqu'au 50ᵉ livre complet,
   puis livre suivant selon le registre.
+
+---
+Task ID: R191
+Agent: agent principal (Z.ai Code — session utilisateur, suite)
+Task: Leçon 19038 (tajwid-5ep) — l'allongement tendre (madd al-līn)
+
+Work Log:
+- **savant(tajwid-5ep/19038)** — leçon 21, madd al-līn : les QUATRE états rétablis des exercices
+  imprimés au complet (connexion sans hamza : point d'allongement ; arrêt : les trois degrés
+  imprimés nommément — qaṣr, tawassuṭ, ishbāʿ ; hamza suivie : moyen en connexion, moyen ou
+  satiation à l'arrêt ; exceptions : point d'allongement malgré la hamza). Définition rétablie
+  (lettre de tendresse = wāw/yāʾ quiescent après fatḥa, tel nastaʿīnu) + vers Tuḥfa du mathn même
+  du manuel (ROW 52 vocalisé : « wa-mithlu dhā in ʿaraḍa s-sukūn / waqfan ka-taʿlamūna
+  nastaʿīnu » — nastaʿīnu = l'exemple līn du mathn même). Citation d'Ibn Barrî demandée par
+  l'item SANS être imprimée → non citée (honnêteté ; Ibn Barrî = l'auteur du mathn ad-Durar du
+  corpus tajwid-2es). **An-Nawawī at-Tibyān p. 50 imprimé AVEC référence → traduit intégralement**
+  (éthiques du porteur du Coran : avidité d'apprendre, assiduité, ni contentement du peu ni
+  surcharge de l'âme, effort au temps de la vigueur avant les accidents de l'oisiveté) ;
+  édification tissée du texte même (marquée N.d.T.) : les trois degrés ↔ les trois allures
+  d'acquisition. Mots d'exemple des 4 items + tableau à remplir + mots d'exception : images
+  perdues → doctrine rendue intégralement, mots non restitués. Graphie fautive « octobre » du
+  document notée. 8 513 car, 0 arabe. QA script PASS ; QA navigateur (badge, bilingue 327 séq.
+  AR, qaṣr/tawassuṭ/ishbāʿ/nastaʿīnu/at-Tibyān présents, overflowX 0 @1280/390, 0 console,
+  captures desktop+mobile). titleFr élevé (« allongement tendre », « mollesse » du GT écarté).
+  Commit 96daae5 poussé + backup.
+
+Stage Summary:
+- **Registre 712/950 ; tajwid-5ep 23/31 documents.** Corpus 1000/1152 bilingues.
+- Session complète : 5 leçons livrées (18962, 18987, 19029, 19031, 19038 — +707→712), token
+  GitHub opérationnel, chaque doc poussé immédiatement.
+- Restants tajwid-5ep : 19040 (activités badal+līn), 19041 (lāzim kalimī), 19043 (lāzim ḥarfī),
+  19050 (activités lāzim+ʿāriḍ), 19055 (waqf/ibtidāʾ), 19056 (mathn complet), 19138 (ʿāriḍ 2),
+  19141 (exceptions badal) → 8 documents.
