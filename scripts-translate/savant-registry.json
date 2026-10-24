@@ -725,5 +725,11 @@
     "18964",
     "18965"
   ],
-  "llm": {}
+  "llm": {
+    "11962": {
+      "at": "2026-10-24T12:12:22.952Z",
+      "bookId": "fiqh-tanawi-1",
+      "titleFr": "Conditions de vente d'une condition d'option"
+    }
+  }
 }
