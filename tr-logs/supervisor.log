@@ -18,3 +18,8 @@
 [2026-10-14 17:50:01] worker lancé : fiqh-tanawi-1 (passe 1, 30 docs restants, actifs≈3)
 [2026-10-14 19:34:26] worker lancé : tajwid-5ep (passe 2, 30 docs restants, actifs≈3)
 [2026-10-14 21:46:52] worker lancé : rasm-wa-dabt-4ep (passe 2, 29 docs restants, actifs≈3)
+[2026-10-24 10:56:40] superviseur v3 démarré (MAX=3, file=62 livres)
+[2026-10-24 10:56:40] livre TERMINÉ : tajwid-5ep (0 doc restant)
+[2026-10-24 10:56:40] worker lancé : rasm-wa-dabt-4ep (passe 2, 29 docs restants, actifs≈1)
+[2026-10-24 10:57:05] worker lancé : fiqh-tanawi-1 (passe 2, 30 docs restants, actifs≈2)
+[2026-10-24 10:57:30] worker lancé : hadith-tanawi-1 (passe 1, 31 docs restants, actifs≈3)

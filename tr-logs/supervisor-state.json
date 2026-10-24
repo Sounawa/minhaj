@@ -13,14 +13,14 @@
  },
  "tajwid-5ep": {
   "passes": 2,
-  "done": false
+  "done": true
  },
  "tajwid-6ep": {
   "passes": 0,
   "done": true
  },
  "rasm-wa-dabt-4ep": {
-  "passes": 1,
+  "passes": 2,
   "done": false
  },
  "fiqh-1ep": {
@@ -64,6 +64,10 @@
   "done": true
  },
  "fiqh-tanawi-1": {
+  "passes": 2,
+  "done": false
+ },
+ "hadith-tanawi-1": {
   "passes": 1,
   "done": false
  }

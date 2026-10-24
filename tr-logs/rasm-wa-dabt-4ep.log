@@ -2793,3 +2793,200 @@ error: API request failed with status 429: {"error":"Too many requests, please t
       at async <anonymous> (/home/z/my-project/scripts-translate/llm-translate.ts:561:14)
 
    ⚠︎ tentative 7/8 échouée [429] : API request failed with status 429: {"error":"Too many requests, please try again later"}
+Pipeline LLM Minhāj v2 — 29 document(s) ciblé(s) [thinking].
+
+━━━ rasm-wa-dabt-4ep/13995 (leçon 1/29) — Rasm et ḍabṭ — l’arjūza ʿUmdat al-Bayān d’al-Wadghīrī (présentation) [turbo]
+   ↻ passe 4 de correction : ratio longueur FR/AR anormal : 1.43 (attendu 0,30-0,90) ; trop peu de sections h2 (1)
+   ✗ 13995 REJETÉ après 4 passes : ratio longueur FR/AR anormal : 1.43 (attendu 0,30-0,90) ; trop peu de sections h2 (1)
+
+━━━ rasm-wa-dabt-4ep/18961 (leçon 2/29) — Dessin et réglage : une introduction à la science du dessin et du réglage [turbo]
+   ↻ passe 4 de correction : caractères arabes hors attributs (translittérer en DIN 31635) ; ratio longueur FR/AR anormal : 1.10 (attendu 0,30-0,90)
+   ✗ 18961 REJETÉ après 4 passes : caractères arabes hors attributs (translittérer en DIN 31635) ; ratio longueur FR/AR anormal : 1.10 (attendu 0,30-0,90)
+
+━━━ rasm-wa-dabt-4ep/19722 (leçon 3/29) — Aux origines de la science du rasm et du ḍabṭ [turbo]
+   ↻ passe 4 de correction : ratio longueur FR/AR anormal : 1.04 (attendu 0,30-0,90)
+   ✗ 19722 REJETÉ après 4 passes : ratio longueur FR/AR anormal : 1.04 (attendu 0,30-0,90)
+
+━━━ rasm-wa-dabt-4ep/19723 (leçon 4/29) — La finalité du poème ʿUmdat al-Bayān sur l'élision coranique, et sa méthode [turbo]
+   ↻ passe 4 de correction : ratio longueur FR/AR anormal : 1.08 (attendu 0,30-0,90)
+   ✗ 19723 REJETÉ après 4 passes : ratio longueur FR/AR anormal : 1.08 (attendu 0,30-0,90)
+
+━━━ rasm-wa-dabt-4ep/19724 (leçon 5/29) — La méthode du poète dans ʿUmdat al-Bayān — suite [turbo]
+   ↻ passe 4 de correction : ratio longueur FR/AR anormal : 1.04 (attendu 0,30-0,90)
+   ✗ 19724 REJETÉ après 4 passes : ratio longueur FR/AR anormal : 1.04 (attendu 0,30-0,90)
+
+━━━ rasm-wa-dabt-4ep/19725 (leçon 6/29) — L’écriture et la vocalisation : le chapitre de la hamza [turbo]
+   ↻ passe 4 de correction : caractères arabes hors attributs (translittérer en DIN 31635) ; ratio longueur FR/AR anormal : 1.06 (attendu 0,30-0,90)
+   ✗ 19725 REJETÉ après 4 passes : caractères arabes hors attributs (translittérer en DIN 31635) ; ratio longueur FR/AR anormal : 1.06 (attendu 0,30-0,90)
+
+━━━ rasm-wa-dabt-4ep/19726 (leçon 7/29) — Dessiner et ajuster le chapitre Ba [turbo]
+   ↻ passe 4 de correction : caractères arabes hors attributs (translittérer en DIN 31635) ; ratio longueur FR/AR anormal : 1.34 (attendu 0,30-0,90)
+   ✗ 19726 REJETÉ après 4 passes : caractères arabes hors attributs (translittérer en DIN 31635) ; ratio longueur FR/AR anormal : 1.34 (attendu 0,30-0,90)
+
+━━━ rasm-wa-dabt-4ep/19743 (leçon 8/29) — Dessin et réglage chapitre B suite [turbo]
+   ↻ passe 4 de correction : caractères arabes hors attributs (translittérer en DIN 31635) ; ratio longueur FR/AR anormal : 1.01 (attendu 0,30-0,90)
+   ✗ 19743 REJETÉ après 4 passes : caractères arabes hors attributs (translittérer en DIN 31635) ; ratio longueur FR/AR anormal : 1.01 (attendu 0,30-0,90)
+
+━━━ rasm-wa-dabt-4ep/19750 (leçon 9/29) — Dessin et réglage, chapitre T [turbo]
+   ↻ passe 4 de correction : caractères arabes hors attributs (translittérer en DIN 31635) ; ratio longueur FR/AR anormal : 1.03 (attendu 0,30-0,90)
+   ✗ 19750 REJETÉ après 4 passes : ratio longueur FR/AR anormal : 1.04 (attendu 0,30-0,90)
+
+━━━ rasm-wa-dabt-4ep/19754 (leçon 10/29) — Dessin et réglage, chapitre T, suite [turbo]
+   ↻ passe 4 de correction : ratio longueur FR/AR anormal : 1.05 (attendu 0,30-0,90)
+   ✗ 19754 REJETÉ après 4 passes : ratio longueur FR/AR anormal : 1.05 (attendu 0,30-0,90)
+
+━━━ rasm-wa-dabt-4ep/19759 (leçon 11/29) — Dessin et réglage, chapitre 3 [turbo]
+Failed to make API request:  98 |                 headers: headers,
+ 99 |                 body: JSON.stringify(requestBody),
+100 |             });
+101 |             if (!response.ok) {
+102 |                 const errorBody = await response.text();
+103 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createChatCompletion (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:103:27)
+      at async callLLM (/home/z/my-project/scripts-translate/llm-translate.ts:251:53)
+      at async processTarget (/home/z/my-project/scripts-translate/llm-translate.ts:422:25)
+
+   ⚠︎ tentative 1/8 échouée [429] : API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make API request:  98 |                 headers: headers,
+ 99 |                 body: JSON.stringify(requestBody),
+100 |             });
+101 |             if (!response.ok) {
+102 |                 const errorBody = await response.text();
+103 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createChatCompletion (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:103:27)
+      at async callLLM (/home/z/my-project/scripts-translate/llm-translate.ts:251:53)
+      at async processTarget (/home/z/my-project/scripts-translate/llm-translate.ts:422:25)
+
+   ⚠︎ tentative 2/8 échouée [429] : API request failed with status 429: {"error":"Too many requests, please try again later"}
+   ↻ passe 4 de correction : caractères arabes hors attributs (translittérer en DIN 31635) ; ratio longueur FR/AR anormal : 1.20 (attendu 0,30-0,90)
+   ✗ 19759 REJETÉ après 4 passes : caractères arabes hors attributs (translittérer en DIN 31635) ; ratio longueur FR/AR anormal : 1.20 (attendu 0,30-0,90)
+
+━━━ rasm-wa-dabt-4ep/19762 (leçon 12/29) — Cours de gymnastique de dessin et de réglage [turbo]
+   ↻ passe 4 de correction : caractères arabes hors attributs (translittérer en DIN 31635) ; ratio longueur FR/AR anormal : 1.32 (attendu 0,30-0,90)
+   ✗ 19762 REJETÉ après 4 passes : caractères arabes hors attributs (translittérer en DIN 31635) ; ratio longueur FR/AR anormal : 1.32 (attendu 0,30-0,90)
+
+━━━ rasm-wa-dabt-4ep/19768 (leçon 13/29) — Chapitre H de dessin et de réglage [turbo]
+   ↻ passe 4 de correction : ratio longueur FR/AR anormal : 1.10 (attendu 0,30-0,90)
+   ✗ 19768 REJETÉ après 4 passes : ratio longueur FR/AR anormal : 1.10 (attendu 0,30-0,90)
+
+━━━ rasm-wa-dabt-4ep/19769 (leçon 14/29) — Dessiner et ajuster le chapitre Kha [turbo]
+   ↻ passe 4 de correction : caractères arabes hors attributs (translittérer en DIN 31635) ; ratio longueur FR/AR anormal : 1.03 (attendu 0,30-0,90)
+   ✗ 19769 REJETÉ après 4 passes : caractères arabes hors attributs (translittérer en DIN 31635) ; ratio longueur FR/AR anormal : 1.03 (attendu 0,30-0,90)
+
+━━━ rasm-wa-dabt-4ep/19771 (leçon 15/29) — Dessiner et ajuster le chapitre Dal [turbo]
+Failed to make API request:  98 |                 headers: headers,
+ 99 |                 body: JSON.stringify(requestBody),
+100 |             });
+101 |             if (!response.ok) {
+102 |                 const errorBody = await response.text();
+103 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createChatCompletion (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:103:27)
+      at async callLLM (/home/z/my-project/scripts-translate/llm-translate.ts:251:53)
+      at async processTarget (/home/z/my-project/scripts-translate/llm-translate.ts:422:25)
+      at async <anonymous> (/home/z/my-project/scripts-translate/llm-translate.ts:561:14)
+
+   ⚠︎ tentative 1/8 échouée [429] : API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make API request:  98 |                 headers: headers,
+ 99 |                 body: JSON.stringify(requestBody),
+100 |             });
+101 |             if (!response.ok) {
+102 |                 const errorBody = await response.text();
+103 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createChatCompletion (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:103:27)
+      at async callLLM (/home/z/my-project/scripts-translate/llm-translate.ts:251:53)
+      at async processTarget (/home/z/my-project/scripts-translate/llm-translate.ts:422:25)
+      at async <anonymous> (/home/z/my-project/scripts-translate/llm-translate.ts:561:14)
+
+   ⚠︎ tentative 2/8 échouée [429] : API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make API request:  98 |                 headers: headers,
+ 99 |                 body: JSON.stringify(requestBody),
+100 |             });
+101 |             if (!response.ok) {
+102 |                 const errorBody = await response.text();
+103 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createChatCompletion (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:103:27)
+      at async callLLM (/home/z/my-project/scripts-translate/llm-translate.ts:251:53)
+      at async processTarget (/home/z/my-project/scripts-translate/llm-translate.ts:422:25)
+      at async <anonymous> (/home/z/my-project/scripts-translate/llm-translate.ts:561:14)
+
+   ⚠︎ tentative 3/8 échouée [429] : API request failed with status 429: {"error":"Too many requests, please try again later"}
+   ↻ passe 4 de correction : caractères arabes hors attributs (translittérer en DIN 31635) ; ratio longueur FR/AR anormal : 1.02 (attendu 0,30-0,90)
+   ✗ 19771 REJETÉ après 4 passes : caractères arabes hors attributs (translittérer en DIN 31635) ; ratio longueur FR/AR anormal : 1.02 (attendu 0,30-0,90)
+
+━━━ rasm-wa-dabt-4ep/19774 (leçon 16/29) — Le dessin et le réglage sont séparés [turbo]
+   ↻ passe 4 de correction : ratio longueur FR/AR anormal : 1.01 (attendu 0,30-0,90)
+   ✗ 19774 REJETÉ après 4 passes : ratio longueur FR/AR anormal : 1.01 (attendu 0,30-0,90)
+
+━━━ rasm-wa-dabt-4ep/19776 (leçon 17/29) — Dessin et réglage, chapitre R [turbo]
+   ↻ passe 4 de correction : ratio longueur FR/AR anormal : 0.98 (attendu 0,30-0,90)
+   ✗ 19776 REJETÉ après 4 passes : ratio longueur FR/AR anormal : 0.98 (attendu 0,30-0,90)
+
+━━━ rasm-wa-dabt-4ep/19785 (leçon 18/29) — Dessin et réglage, chapitre R, suite [turbo]
+   ↻ passe 4 de correction : ratio longueur FR/AR anormal : 1.08 (attendu 0,30-0,90)
+   ✗ 19785 REJETÉ après 4 passes : ratio longueur FR/AR anormal : 1.08 (attendu 0,30-0,90)
+
+━━━ rasm-wa-dabt-4ep/19798 (leçon 19/29) — Dessin et réglage, chapitre 3 [turbo]
+   ↻ passe 4 de correction : ratio longueur FR/AR anormal : 1.00 (attendu 0,30-0,90)
+Failed to make API request:  98 |                 headers: headers,
+ 99 |                 body: JSON.stringify(requestBody),
+100 |             });
+101 |             if (!response.ok) {
+102 |                 const errorBody = await response.text();
+103 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createChatCompletion (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:103:27)
+      at async callLLM (/home/z/my-project/scripts-translate/llm-translate.ts:251:53)
+      at async processTarget (/home/z/my-project/scripts-translate/llm-translate.ts:447:29)
+      at async <anonymous> (/home/z/my-project/scripts-translate/llm-translate.ts:561:14)
+
+   ⚠︎ tentative 1/8 échouée [429] : API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make API request:  98 |                 headers: headers,
+ 99 |                 body: JSON.stringify(requestBody),
+100 |             });
+101 |             if (!response.ok) {
+102 |                 const errorBody = await response.text();
+103 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createChatCompletion (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:103:27)
+      at async callLLM (/home/z/my-project/scripts-translate/llm-translate.ts:251:53)
+      at async processTarget (/home/z/my-project/scripts-translate/llm-translate.ts:447:29)
+      at async <anonymous> (/home/z/my-project/scripts-translate/llm-translate.ts:561:14)
+
+   ⚠︎ tentative 2/8 échouée [429] : API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make API request:  98 |                 headers: headers,
+ 99 |                 body: JSON.stringify(requestBody),
+100 |             });
+101 |             if (!response.ok) {
+102 |                 const errorBody = await response.text();
+103 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createChatCompletion (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:103:27)
+      at async callLLM (/home/z/my-project/scripts-translate/llm-translate.ts:251:53)
+      at async processTarget (/home/z/my-project/scripts-translate/llm-translate.ts:447:29)
+      at async <anonymous> (/home/z/my-project/scripts-translate/llm-translate.ts:561:14)
+
+   ⚠︎ tentative 3/8 échouée [429] : API request failed with status 429: {"error":"Too many requests, please try again later"}
+   ✗ 19798 REJETÉ après 4 passes : ratio longueur FR/AR anormal : 1.00 (attendu 0,30-0,90)
+
+━━━ rasm-wa-dabt-4ep/19799 (leçon 20/29) — Chapitre Dessin et réglage [turbo]
+   ↻ passe 4 de correction : ratio longueur FR/AR anormal : 1.07 (attendu 0,30-0,90)
+   ✗ 19799 REJETÉ après 4 passes : ratio longueur FR/AR anormal : 1.07 (attendu 0,30-0,90)
+
+━━━ rasm-wa-dabt-4ep/19800 (leçon 21/29) — Dessin et contrôle, chapitres Taa et Daa [turbo]
+   ↻ passe 4 de correction : caractères arabes hors attributs (translittérer en DIN 31635) ; ratio longueur FR/AR anormal : 1.14 (attendu 0,30-0,90)
+   ✗ 19800 REJETÉ après 4 passes : caractères arabes hors attributs (translittérer en DIN 31635) ; ratio longueur FR/AR anormal : 1.14 (attendu 0,30-0,90)
+
+━━━ rasm-wa-dabt-4ep/19805 (leçon 22/29) — Dessiner et ajuster le chapitre CAF [turbo]
