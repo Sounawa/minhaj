@@ -9789,3 +9789,26 @@ Stage Summary:
 - Risques : (a) quota LLM 429 — le superviseur encaisse par retries ; (b) exec limits du cron
   — protocole de ré-armement en fin de chaque run ; (c) restauration du bac — session-start.sh
   la détecte et la répare en ~10 s.
+
+---
+
+Task ID: R207
+Agent: Z.ai Code (agent principal — session web-394d04d3, check utilisateur + récupération reset)
+
+Task: RÉCUPÉRATION APRÈS RESET BAC (2ᵉ reset confirmé par l'utilisateur) — bac restauré au snapshot R81 (24 oct. ~13:44) SANS remote git NI credential store ; GitHub était à R206 (2ebc381).
+
+Work Log:
+- Check utilisateur : « tu as pu avancer ou pas ? » puis « il y a eu un reset, regarde par rapport à GitHub ».
+- Diagnostic : local HEAD = 719111b (R81), `git remote -v` VIDE, ~/.git-credentials absent, cron relais 472974 « Disabled (exec limits exceeded) », superviseur LLM mort, tr-logs arrêtés à 12:14.
+- Récupération : `git remote add origin https://github.com/Sounawa/minhaj.git` → fetch OK (lecture publique sans token) → `git branch -f local-stale-1024 HEAD` + `git reset --hard origin/main` (596 commits récupérés, 0 perdu, HEAD ancêtre d'origin/main vérifié).
+- État restauré vérifié : registre 737/950 (726 hand + 11 LLM), corpus 936/1790 leçons bilingues htmlFr + 64/64 intros, 34 livres complets au JSON, app GET / et /api/books 200.
+- Superviseur relancé : `setsid -f python3 scripts-translate/supervisor.py` → v3 démarré, MAX=3, file=62 livres, workers actifs fiqh-tanawi-1 / hadith-tanawi-1 / tafsir-tanawi-1.
+- Cron relais ré-armé : job 472974 (mort exec limits) supprimé → recréé à l'identique = job 473049 (15 min, webDevReview, protocole session-start.sh en étape zéro, auto-ré-armement).
+- QA navigateur : home 26 livres achevés affichés, leçon 19042 (dernière livrée main) lecteur complet (bilingue/FR/AR, sommaire 13 sections, écouter, notes, marque lue, favoris) — 0 erreur console, capture tr-tmp/qa-r207-recovery-19042.png.
+- session-start.sh exécuté en validation : ✅ À JOUR, exit 0.
+
+Stage Summary:
+- **Récupération complète en ~10 min, ZÉRO travail perdu** (tout était sur GitHub). Local = 2ebc381 = origin/main.
+- **BLOCKER POUSSÉE : le token GitHub du credential store a été EFFACÉ par le reset** (le snapshot R81 prédate son installation). Lecture OK (dépôt public), ÉCRITURE impossible → il faut redemander le token à l'utilisateur. En attendant : commits locaux + backup.sh (règle d'accumulation suspendue faute de token, repousser dès réception).
+- Machines relancées : superviseur 3 workers + cron 15 min (473049).
+- Prochaine leçon main (reprise exacte) : qiraat-tanawi-1/19045 (sept lecteurs 2), puis 19046, 19051, 19145, 19146, 19159, 19160, 19205, 19209, 19210, 19220, 19282, 19291, 19318, 19356, 19481 + intro 20326.
