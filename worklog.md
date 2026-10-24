@@ -9743,3 +9743,22 @@ Stage Summary:
 - Le goulot LLM est RÉPARÉ : le rythme de croisière (~3 docs/15 min × 3 workers si quota tient)
   rend l'objectif « 262 docs » atteignable en heures, pas en jours.
 - Prochaine leçon main : 19039 (les mérites du Coran et ses effets sur son récitant).
+---
+Task ID: R205
+Agent: agent principal (Z.ai Code — session web-394d3, suite objectif « 279 brouillons → savants »)
+Task: Leçon 19039 (qiraat-tanawi-1) — les mérites du Coran et ses effets sur son récitant
+
+Work Log:
+- savant(qiraat-tanawi-1/19039) : leçon 2 — 17 126 car : les vers 10-19 du mathn en table
+  miroire, 6 versets restitués verbatim ((39):22, (7):170, (83):22, (2):195 imprimée 194,
+  (3):146, (45):18), 5 hadiths imprimés avec référence traduits intégralement (Muslim ×3,
+  Abū Dāwūd, al-Nasāʾī), les 4 traits du vers 18 avec leurs versets, la doctrine de
+  l'intercession préventive, la tombe illuminée (sanā apocopé/prolongé), l'annonce aux
+  parents, l'exhortation finale. QA PASS + navigateur (badge, overflowX 0, 0 console).
+  Commit 434e047 poussé.
+- Le superviseur livre en continu : registre 733/950 au moment de l'injection de 19039
+  (725 main + 8 LLM) — les workers enchaînent rasm/fiqh/hadith-tanawi-1.
+
+Stage Summary:
+- **Registre 733/950.** qiraat-tanawi-1 5/22 + intro. GitHub à jour (434e047).
+- Prochaine leçon main : 19042 (les sept lecteurs et leurs transmetteurs 1).
