@@ -9142,3 +9142,46 @@ Stage Summary:
   fetch + reset --hard origin/main AVANT toute autre action.
 - Risque : push requiert un token (perdu au reset, remote anonyme) — tester ; si échec, conserver
   les commits locaux et redemander le token à l'utilisateur.
+
+---
+Task ID: R189
+Agent: agent principal (Z.ai Code — session utilisateur, reprise post-incident R188)
+Task: Reprise du travail réel après réalignement — leçon 18962 (tajwid-5ep) : applications sur l'allongement séparé (madd munfaṣil)
+
+Work Log:
+- Lecture worklog + conventions (tr-tmp/CONVENTIONS-savant.md) + gabarit 18956.savant.html (R187).
+- Source extraite (1 768 octets html AR) : seizième leçon — munfaṣil. Anomalies : versets d'écoute
+  en images perdues à l'extraction CMS (section vide), PAS de références imprimées ; seconde partie
+  « Je m'exerce » absente ; sections guide-et-exemple et édification absentes ; le « (2) » du titre
+  = artefact du site (aucune première captation de munfaṣil dans le livre — vérifié sur les 31 docs).
+- Vers de la Tuḥfa restitué du mathn même du manuel (19056, tableau vocalisé, ROW 51 apparié
+  right-cell = premier hémistiche) : « wa-jāʾizun maddun wa-qaṣrun in fuṣil / kullun bi-kalimatin
+  wa-dhā al-munfaṣil » — demandé par l'item 2 des apprentissages.
+- Doctrine rétablie et marquée : (1) définition + trois degrés permis chez Warsh par al-Azraq
+  (qaṣr 2 / tawassuṭ 4 / ṭūl 6 temps) ; (2) pourquoi jāʾiz (divergence des lecteurs, par contraste
+  avec l'unanimité du muttaṣil — lien explicite à la leçon 15) et munfaṣil (hamza séparée, un autre
+  mot) ; (3) item ḥaḍr maqbūl rétabli (l'objectif 3 l'exige) : ḥaḍr = la plus véloce des trois
+  allures, acceptable seulement si toutes les règles restent entières (ghunna/idghām/ikhfāʾ
+  accomplis, allongements obligatoires intacts, munfaṣil au degré court) ; les trois allures
+  s'accordent aux trois degrés (taḥqīq↔ṭūl, tadwīr↔tawassuṭ, ḥaḍr↔qaṣr).
+- Honnêteté philologique : les versets d'écoute ne sont PAS restitués — aucune référence imprimée
+  ne survit (à la différence de 18956/18697) ; note explicite en N.d.T. (9 notes numérotées).
+- QA script : PASS (6 629 car, 0 arabe résiduel — seule ﷺ exemptée, 12 guillemets appariés,
+  7 balises appariées, auto-fix NNBSP appliqué).
+- hand-set.py → registre **708/950** ; titleFr élevé (le « (2) » retiré).
+- QA navigateur : badge « Traduction savante », bilingue 155 séquences arabes, marqueurs doctrinaux
+  présents (qaṣr/tawassuṭ/ṭūl, ḥaḍr, Tuḥfa, N.d.T.), overflowX 0 @1280 et @390, 0 erreur console,
+  captures qa-r189-lecon-18962(-mobile).png. API stats : docsSavant 708, docsFr 1000.
+- Commit + backup.sh (snapshot 2). Push impossible : token GitHub perdu au reset (fatal :
+  « could not read Username ») — commits en attente locale (8b0418b R188 + présent).
+
+Stage Summary:
+- **Registre 708/950 ; tajwid-5ep 19/31 documents.** Corpus : 1000/1152 docs bilingues.
+- Le protocole post-reset est validé (GitHub = source de vérité) et gravé dans le cron 472776.
+- **Bloqueur : token GitHub requis pour pousser** — à redemander à l'utilisateur (perdu au reset
+  du 24/10 ; le dépôt Sounawa/minhaj est public en lecture mais l'écriture exige le token).
+- Suivant : 18987 (R190 — activités générales madd : naturel + connecté + séparé), puis 19029
+  (badal stable l.18), 19031 (badal changed l.19), 19038 (līn), 19040 (activités badal+līn),
+  19041 (lāzim kalimī), 19043 (lāzim ḥarfī), 19050 (activités lāzim+ʿāriḍ), 19055 (waqf/ibtidāʾ),
+  19056 (mathn Tuḥfa complet — déjà servi de source aux restitutions), 19138 (ʿāriḍ l.21),
+  19141 (exceptions du badal) → livre 50/64 complet.
