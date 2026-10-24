@@ -9762,3 +9762,30 @@ Work Log:
 Stage Summary:
 - **Registre 733/950.** qiraat-tanawi-1 5/22 + intro. GitHub à jour (434e047).
 - Prochaine leçon main : 19042 (les sept lecteurs et leurs transmetteurs 1).
+---
+Task ID: R206
+Agent: agent principal (Z.ai Code — session utilisateur web-394d04d3, « l'objectif d'aujourd'hui : toute la section des brouillons machine en documents savants »)
+Task: Leçons 19042 (qiraat-tanawi-1) + bilan de session — production de masse en place
+
+Work Log:
+- savant(qiraat-tanawi-1/19042) : leçon 3 — 15 759 car : les vers 20-31 en table miroire,
+  les 3 premiers lecteurs avec leurs chaînes imprimées complètes (Nāfiʿ/Ibn Kathīr/Abū ʿAmr),
+  2 hadiths imprimés (al-Baghawī, aṭ-Ṭaḥāwī), l'istithmār Mālik/al-Layth/Ibn Mujāhid/al-Qāḍī.
+  QA PASS + navigateur. Commit f6f44dd poussé.
+- BILAN DE SESSION (R201-R206) : 5 leçons main livrées (18964, 18965, 19030, 19039, 19042 —
+  qiraat-tanawi-1 passe de 1/22 à 6/22 + intro) ; PIPELINE LLM RÉPARÉ (ratio 0,95→2,10 :
+  100 % de rejets → livraisons continues) ; superviseur 24/7 actif sur 3 livres
+  (rasm-wa-dabt-4ep, fiqh-tanawi-1, hadith-tanawi-1) ; mécanisme anti-perte session-start.sh ;
+  pousse GitHub rétablie (token) ; cron 15 min armé avec sync GitHub en étape zéro.
+- Registre au bilan : 737/950 (726 main + 11 LLM) — +16 depuis le début de session (721).
+
+Stage Summary:
+- **Registre 737/950 (+16).** GitHub à jour (f6f44dd). Backup 27 Mo.
+- La suite est AUTONOME : superviseur (3 workers LLM ~1,8 min/doc, commits auto) + relais
+  cron 15 min (sync GitHub d'abord, QA navigateur, commit+push+backup, leçons main suivantes
+  du livre qiraat : 19045, 19046, 19051, 19145, 19146, 19159, 19160, 19205, 19209, 19210,
+  19220, 19282, 19291, 19318, 19356, 19481, + intro 20326).
+- Reste : ~213 docs (registre 950) + les pdfOnly (mission suivante : OCR + traduction).
+- Risques : (a) quota LLM 429 — le superviseur encaisse par retries ; (b) exec limits du cron
+  — protocole de ré-armement en fin de chaque run ; (c) restauration du bac — session-start.sh
+  la détecte et la répare en ~10 s.
