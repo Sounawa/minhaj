@@ -9880,3 +9880,29 @@ Stage Summary:
 - Leçon la plus doctrine-dense de la préface : la règle qirāʾa/riwāya/ṭarīq et le système des symboles d'Abū Jād sont désormais rendus en français — socle pour tout le farsh (détail des lettres) qui suit dans le livre.
 - Machines : superviseur 3 workers actif mais bridé 429 amont (retries) ; cron relais 473054 armé.
 - Prochaines leçons main : 19051, 19145, 19146, 19159, 19160, 19205, 19209, 19210, 19220, 19282, 19291, 19318, 19356, 19481 + intro 20326.
+
+---
+Task ID: R211
+Agent: Z.ai Code (agent principal — session web-394d04d3, « continue »)
+
+Task: Livraison de la leçon qiraat-tanawi-1/19051 (symboles de lecture collective et leur usage) — 9ᵉ leçon du livre, vers 49-56 de la Shāṭibiyya : les six lettres collectives (thakhadh ẓaghash) et les huit symboles-mots.
+
+Work Log:
+- Étape zéro tenue : session-start.sh AVANT tout travail → exit 0, aligné GitHub 461f4a6 (R210).
+- Anomalie d'emblée élucidée : le registre « llm » est un dictionnaire (12) — 728 hand + 12 llm = 740/950 confirmé avant reprise.
+- Source extraite (9 344 car) : vers 49-56 + doctrine Ibn al-Qāṣiḥ (six lettres collectives restantes de l'abjad, huit mots-symboles ṣuḥba/ṣiḥāb/ʿamma/samā/ḥaqq/nafar/ḥirmī/ḥiṣn, méthode d'ordre lettre/mot du vers 56).
+- Vérifications préalables : numérotation du manuel par docId confirmée par grep (19030=1 … 19046=5, 19051=6) ; convention « table miroire » des hémistiches re-vérifiée sur 19046 (td droite = 1er hémistiche).
+- Traduction savante tr-tmp/19051.savant.html (16 536 car) : mathn vers 49-56 en table miroire, tables d'analyse avec élisions imprimées par le manuel (« … » en lieu d'hémistiche, signalées en N.d.T.), six lettres + huit mots définis avec leurs exemples farsh translittérés, méthode du vers 56 avec les trois ordres (wa-ʿamma fatan / naʿam ʿamma / ṣafwu ḥirmiyyihi riḍan).
+- TROISIÈME table du manuel perdue à l'extraction (le table-modèle de l'exercice de groupe, paragraphe vide) — signalée en place + N.d.T. avec restitution PROPOSÉE (colonnes inférées de la consigne, ligne d'exemple = premier exemple du manuel même) — honnêteté maintenue.
+- Variance imprimée par le manuel : préambule « thakhadh ṭaghash » [sic] vs analyse « thakhadh ẓaghash » — les deux rendus tels qu'imprimés + N.d.T. tranchant pour ẓāʾ (ṭāʾ = symbole individuel d'al-Sūsī ; arithmétique 28 − wāw = 27 = 21 individuelles + 6 collectives = les deux dernières triades).
+- N.d.T. (7 notes) : table-modèle, variance, fragments translittérés avec identification des lettres par le jardé de la leçon précédente, épithètes (fatā al-ʿalā/Ibn al-ʿAlāʾ = Abū ʿAmr, Yaḥṣubite = Ibn ʿĀmir, ḥirmī = Ibn Kathīr), aucun verset coranique autonome, terminologie, numérotation.
+- QA script : PASS — 16 536 car, 0 caractère arabe, 75 guillemets appariés, 13 balises appariées, 0 apostrophe droite.
+- Injection hand-set.py : 1 emplacement, registre → **741/950**.
+- QA navigateur : badge Traduction savante ✓, tous marqueurs de contenu (Vers 49-56, thāʾ triplé, thakhadh, ṣuḥba, ṣiḥāb, Yaḥṣubite, N.d.T. ×2) ✓, 0 overflow document @1280 ET @390, 0 erreur console (après filtre Fast Refresh). Captures tr-tmp/qa-r211-19051-{desktop,mobile}.png. Vérification API : htmlFr 16 535 car servis.
+- Règle de vague tenue : commit b39c6c3 + push GitHub + backup 27 Mo + la présente entrée.
+
+Stage Summary:
+- **Registre 741/950** (+1 : 19051). qiraat-tanawi-1 : 9/22 leçons + intro (18645, 18964, 18965, 19030, 19039, 19042, 19045, 19046, 19051).
+- Le système complet des symboles du poème est désormais rendu en français : individuels (R210) + collectifs lettres + collectifs mots (R211) — socle terminologique pour tout le farsh al-ḥurūf (leçons 19220-19356).
+- Machines : superviseur LLM actif (3 workers, retries 429 amont), cron relais 473054 armé.
+- Prochaines leçons main : 19145 (conventions du poète 1), 19146, 19159, 19160, 19205, 19209, 19210, 19220, 19282, 19291, 19318, 19356, 19481 + intro 20326.
