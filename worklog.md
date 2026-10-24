@@ -9101,3 +9101,44 @@ Stage Summary:
 - Suivant : 18956 (R187 — madd muttaṣil, SANS twin livré : première leçon vierge du bloc madd ;
   l'iʿdād de 15852/18697 prépare al-Bayyina : jazāʾan, ḥum, khayr, ʿinda) puis 18962 (munfaṣil),
   18987 (activités madd), 19029 (badal stable, l.18), 19031 (badal changed, l.19)… 14 documents restants.
+
+---
+Task ID: R188
+Agent: agent principal (Z.ai Code — session utilisateur + relais 24/24)
+Task: Incident critique — nouveau reset usine du sandbox (nuit du 23 au 24/10) : diagnostic GitHub, réalignement local sur origin/main, ré-armement cron, reprise
+
+Work Log:
+- **Incident** : reset usine du sandbox dans la nuit (fichiers recréés 24/10 07:09). La restauration
+  automatique a repris un backup PÉRIMÉ du 15/10 (état R81, registre 502) alors que le vrai état —
+  R186/R187, registre 707 — vivait sur GitHub (Sounawa/minhaj, dernier push 23/10 19:54).
+- **Conséquence** : le cron de 07:30 a travaillé sur la base stale et re-traduit 3 leçons déjà
+  livrées (12884/12885/12889 — versions plus courtes que le remote : 11 456 vs 12 443 car etc.).
+  Registre local affichait 505 au lieu de 707. AUCUNE perte réelle : le travail de R82-R187
+  est intact sur GitHub (972 commits).
+- **Réalignement** : git remote add origin https://github.com/Sounawa/minhaj.git → fetch
+  (origin/main + backup-reprise-r84) → vérifications (registre remote 707 hand/0 llm ;
+  hadith-1es 32/32 ; worklog tail R186 ; 12884/12885/12889 présents en versions meilleures) →
+  branche de sûreté backup-local-241024 → **git reset --hard origin/main** (local = 972 commits,
+  registre 707/950, docsFr 1000/1152). Le commit cron redondant 9bd1843 conservé sur la branche
+  de sûreté uniquement.
+- **Vérifications post-reset** : /api/books → docsSavant 707, docsFr 1000 ✓ ; dev.log que des 200,
+  0 erreur ✓ ; hadith-1es 32/32 ✓.
+- **Cron** : ancien job 472435 trouvé DISABLED (« exec limits exceeded ») → supprimé et recréé
+  (job **472776**, priorité 10, contexte mis à jour : R187 livré, next 18962 ; protocole
+  d'auto-ré-armement inchangé + instruction nouvelle : EN CAS DE FUTUR RESET, réaligner sur
+  GitHub AVANT tout travail, ne jamais faire confiance aux backups locaux).
+- **R187 (retro-documentation)** : la leçon 18956 (madd muttaṣil) avait été livrée et poussée
+  (commit cdb82a1, registre 707) mais son entrée worklog manquait (session morte avant l'écriture) —
+  détails complets dans le message du commit : madd wājib/muttaṣil 4-5 temps, ishbāʿ/tamkīn,
+  vers Tuḥfa du mathn l.28, muttaṣil d'al-Bayyina relevés, anomalie éditoriale (applications
+  clonées de la l.14 — rendues telles quelles avec note), QA navigateur complète.
+
+Stage Summary:
+- **État rétabli : registre 707/950 ; corpus 1000/1152 docs bilingues ; 972 commits alignés sur GitHub.**
+- tajwid-5ep : 18/31 documents (17/30 leçons + intro) ; 13 documents restants → 18962 (madd
+  munfaṣil 2), 18987 (activités madd), 19029 (badal stable), 19031 (badal changed), 19038 (līn),
+  19040 (activités badal+līn), 19041 (lāzim kalimī), 19043 (lāzim ḥarfī)…
+- **Règle nouvelle GRAVÉE (cron + worklog)** : après tout reset, GitHub = source de vérité ;
+  fetch + reset --hard origin/main AVANT toute autre action.
+- Risque : push requiert un token (perdu au reset, remote anonyme) — tester ; si échec, conserver
+  les commits locaux et redemander le token à l'utilisateur.
