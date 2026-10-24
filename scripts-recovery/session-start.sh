@@ -2,14 +2,24 @@
 # ============================================================================
 # Minhāj — session-start.sh — PROTOCOLE ANTI-PERTE (OBLIGATOIRE)
 # ----------------------------------------------------------------------------
-# LA RÈGLE (demande utilisateur explicite, 24 oct. 2026) :
+# LA RÈGLE (demande utilisateur explicite, 24 oct. 2026, renforcée le même jour) :
 #   « arrêter les resets et mettre un code pour regarder à chaque session
-#     où on en est sur GitHub ».
+#     où on en est sur GitHub » PUIS
+#   « tu dois vérifier tout le temps si tu es en accord avec GitHub ;
+#     tu ne peux pas relancer le cron sans vérifier — sinon travail inutile
+#     en double de ce qui est déjà fait ».
 #
-# CE SCRIPT DOIT ÊTRE LANCÉ EN PREMIER, À CHAQUE SESSION / CHAQUE RELAYS CRON,
-# AVANT TOUT TRAVAIL. GitHub (github.com/Sounawa/minhaj, branche main) EST LA
-# SOURCE DE VÉRITÉ UNIQUE. Le bac local peut être restauré à un vieux point
-# par la plateforme à tout moment (c'est arrivé : R0, R57, R75, R81→R200).
+# CE SCRIPT DOIT ÊTRE LANCÉ EN PREMIER, À CHAQUE SESSION / CHAQUE RELAIS CRON,
+# AVANT TOUT TRAVAIL ET AVANT TOUT RÉ-ARMEMENT DU CRON OU RELANCE DU SUPERVISEUR.
+# GitHub (github.com/Sounawa/minhaj, branche main) EST LA SOURCE DE VÉRITÉ
+# UNIQUE. Le bac local peut être restauré à un vieux point par la plateforme à
+# tout moment (c'est arrivé : R0, R57, R75, R81→R200, R81→R206).
+#
+# ⛔ ORDRE IMPOSÉ (règle utilisateur) :
+#   1. CE SCRIPT (exit 0) → 2. seulement alors travail / relance machines / cron.
+#   Si exit 3 (EN RETARD) : récupérer, REJOUER ce script jusqu'à exit 0/4.
+#   Si exit 4 (EN AVANCE) : pousser, rejouer ce script jusqu'à exit 0.
+#   JAMAIS de travail sur un bac non aligné — risque de refaire du déjà-fait.
 #
 # Usage :  bash /home/z/my-project/scripts-recovery/session-start.sh
 # Sortie  : 0 = à jour / 3 = EN RETARD (récupération requise) / 4 = en avance (push requis)

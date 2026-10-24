@@ -9812,3 +9812,24 @@ Stage Summary:
 - **BLOCKER POUSSÉE : le token GitHub du credential store a été EFFACÉ par le reset** (le snapshot R81 prédate son installation). Lecture OK (dépôt public), ÉCRITURE impossible → il faut redemander le token à l'utilisateur. En attendant : commits locaux + backup.sh (règle d'accumulation suspendue faute de token, repousser dès réception).
 - Machines relancées : superviseur 3 workers + cron 15 min (473049).
 - Prochaine leçon main (reprise exacte) : qiraat-tanawi-1/19045 (sept lecteurs 2), puis 19046, 19051, 19145, 19146, 19159, 19160, 19205, 19209, 19210, 19220, 19282, 19291, 19318, 19356, 19481 + intro 20326.
+
+---
+
+Task ID: R208
+Agent: Z.ai Code (agent principal — session web-394d04d3, token GitHub fourni par l'utilisateur)
+
+Task: RÉINSTALLATION DU TOKEN + RENFORCEMENT DU PROTOCOLE D'ALIGNEMENT GITHUB (règles utilisateur explicites : « vérifier tout le temps l'accord avec GitHub » ; « ne jamais relancer le cron sans vérifier, sinon travail inutile en double »)
+
+Work Log:
+- Token GitHub fourni par l'utilisateur → credential store reinstallé (`git config --global credential.helper store` + ~/.git-credentials chmod 600, utilisateur Sounawa).
+- session-start.sh rejoué AVANT push : exit 4 (2 commits en avance : R207 + checkpoint superviseur) → push immédiat 2ebc381..0bd52f5 → rejeu : exit 0 ✅ À JOUR.
+- session-start.sh RENFORCÉ (règle utilisateur 24 oct., 2ᵉ formulation) : ordre imposé documenté en tête — (1) ce script jusqu'à exit 0 AVANT tout travail, toute relance de machines et tout ré-armement cron ; (2) exit 3 = récupérer puis rejouer ; (3) exit 4 = pousser puis rejouer ; (4) JAMAIS de travail sur un bac non aligné (risque de refaire du déjà-fait, faute relevée par l'utilisateur). L'historique des resets documenté : R0, R57, R75, R81→R200, R81→R206.
+- Cron relais REMPLACÉ : 473049 supprimé → 473054 recréé avec le message renforcé — l'étape zéro cite mot pour mot la règle utilisateur ; le ré-armement du cron lui-même n'est autorisé qu'après un session-start.sh exit 0 ; conduite à tenir si le token est révoqué (demander à l'utilisateur, jamais de force-push).
+- Superviseur vérifié vivant (3 workers : fiqh-tanawi-1, hadith-tanawi-1, tafsir-tanawi-1 — checkpoints tr-logs committés automatiquement).
+
+Stage Summary:
+- **Token GitHub opérationnel : lecture + écriture vérifiées (push 2ebc381..0bd52f5 réussi).**
+- **La règle d'alignement est maintenant gravée à trois niveaux** : (1) session-start.sh (script, exit codes 0/2/3/4, ordre imposé documenté) ; (2) le message du cron relais 473054 (étape zéro obligatoire, ré-armement conditionné à l'alignement) ; (3) le worklog (la présente entrée, traçabilité de la faute corrigée).
+- Aucune leçon refaite en double pendant la récupération R207 : le reset avait ramené le bac à R81, tout le travail R82→R206 était déjà sur GitHub et a été récupéré par reset --hard — 0 leçon red traduite.
+- Prochaine leçon main (reprise exacte) : qiraat-tanawi-1/19045 (sept lecteurs 2), puis 19046, 19051, 19145, 19146, 19159, 19160, 19205, 19209, 19210, 19220, 19282, 19291, 19318, 19356, 19481 + intro 20326.
+- Registre : 737/950 (726 hand + 11 LLM). Machines : superviseur 3 workers + cron 473054 (15 min).
