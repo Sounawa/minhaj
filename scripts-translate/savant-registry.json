@@ -723,7 +723,8 @@
     "19056",
     "18645",
     "18964",
-    "18965"
+    "18965",
+    "19030"
   ],
   "llm": {
     "11905": {
@@ -745,6 +746,11 @@
       "at": "2026-10-24T12:16:28.160Z",
       "bookId": "rasm-wa-dabt-4ep",
       "titleFr": "Dessin et réglage : une introduction à la science du dessin et du réglage"
+    },
+    "19722": {
+      "at": "2026-10-24T12:18:32.626Z",
+      "bookId": "rasm-wa-dabt-4ep",
+      "titleFr": "Aux origines de la science du rasm et du ḍabṭ"
     }
   }
 }
