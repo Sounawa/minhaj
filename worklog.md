@@ -9833,3 +9833,25 @@ Stage Summary:
 - Aucune leçon refaite en double pendant la récupération R207 : le reset avait ramené le bac à R81, tout le travail R82→R206 était déjà sur GitHub et a été récupéré par reset --hard — 0 leçon red traduite.
 - Prochaine leçon main (reprise exacte) : qiraat-tanawi-1/19045 (sept lecteurs 2), puis 19046, 19051, 19145, 19146, 19159, 19160, 19205, 19209, 19210, 19220, 19282, 19291, 19318, 19356, 19481 + intro 20326.
 - Registre : 737/950 (726 hand + 11 LLM). Machines : superviseur 3 workers + cron 473054 (15 min).
+
+---
+
+Task ID: R209
+Agent: Z.ai Code (agent principal — session web-394d04d3)
+
+Task: Livraison de la leçon qiraat-tanawi-1/19045 (les sept lecteurs et leurs transmetteurs 2) — reprise exacte du pipeline main après la récupération R207/R208.
+
+Work Log:
+- Source extraite (8 Ko) : vers 32-41 de la Shāṭibiyya + notices Ibn al-Qāṣiḥ (4 lecteurs restants : Ibn ʿĀmir, ʿĀṣim, Ḥamza, al-Kisāʾī) + vers 41 lignée.
+- Aucun verset coranique en la leçon (vérifié) — aucune restitution d'image nécessaire (noms propres imprimés).
+- Traduction savante tr-tmp/19045.savant.html (12 620 car) : table miroire FR des vers 32-41, 4 notices avec chaînes imprimées rendues telles quelles (y compris les 4 voies de Ḥamza), glosses ×5, N.d.T. 7 notes (double kunya Abū Bakr, al-Dūrī transmetteur de deux lecteurs — item 3 de l'évaluation, mawālī vs ṣarīḥ au vers 41, Khallād via Sulaym).
+- QA script : PASS — 0 caractère arabe, 25 guillemets appariés, 13 balises appariées, 0 apostrophe droite.
+- Injection hand-set.py : 1 emplacement, registre → **739/950**.
+- QA navigateur : badge Traduction savante, sommaire 15 sections, écouter/notes/export/marque lue/favoris/surlignage présents, 0 overflow document @1280 ET @390 (l'écart 4px sw/cw sur reader-col est préexistant — identique sur 19042 livrée en R206 — lettrine/ornement, sans défilement), 0 erreur console. Capture tr-tmp/qa-r208-19045.png.
+- Règle de vague tenue : commit a004590 + push GitHub + backup 27 Mo + la présente entrée.
+
+Stage Summary:
+- **Registre 739/950** (+1 : 19045). qiraat-tanawi-1 : 7/22 leçons + intro (18645, 18964, 18965, 19030, 19039, 19042, 19045).
+- La chaîne disciplinaire R207→R208→R209 a fonctionné de bout en bout : alignement GitHub (session-start.sh exit 0) AVANT le travail — conformément à la règle utilisateur renforcée du 24 oct.
+- Machines : superviseur LLM 3 workers actif (fiqh-tanawi-1, hadith-tanawi-1, tafsir-tanawi-1), cron relais 473054 armé (15 min, étape zéro alignement).
+- Prochaines leçons main : 19046 (voies et symboles), puis 19051, 19145, 19146, 19159, 19160, 19205, 19209, 19210, 19220, 19282, 19291, 19318, 19356, 19481 + intro 20326.
