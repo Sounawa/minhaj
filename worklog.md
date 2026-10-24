@@ -9313,3 +9313,43 @@ Stage Summary:
   (ʿāriḍ 2, leçon 25), 19141 (mustathniyāt badal, leçon 20) → 7 documents.
 - Routes QA : lecteur par hash `/#/livre/tajwid-5ep/{docId}` ; agent-browser set viewport
   390 844 pour mobile ; API `/api/lessons/tajwid-5ep/{docId}`.
+
+---
+Task ID: R193
+Agent: agent principal (Z.ai Code — session utilisateur, suite)
+Task: Leçon 19041 (tajwid-5ep) — l'allongement obligatoire du mot (madd al-lāzim al-kalimī)
+
+Work Log:
+- **savant(tajwid-5ep/19041)** — leçon 23, lāzim kalimī : **cinq vers Tuḥfa restitués du mathn
+  même du manuel** (ROWS 55/57/58/59/61 vérifiés vocalisés : définition — sukūn originel,
+  liaison et arrêt, après la lettre d'allongement — ; les quatre catégories kalimī+ḥarfī ;
+  chacun léger et lourd ; le kalimī — sukūn et lettre d'allongement en un même mot — ; le
+  critère idghām = lourd / sans idghām = léger). Mesure de six temps imprimée DEUX fois aux
+  exercices + satiation nommée → corps de doctrine rétabli sur fondement imprimé (six temps à
+  l'unanimité de tous les lecteurs — opposée à la divergence du séparé/badal, leçons 16-19).
+- **Hadith Bukhari 5026 AVEC référence imprimée au manuel** (livre des mérites du Coran,
+  chapitre de l'envie louable ighṭibāṭ du compagnon du Coran) : texte conforme à la récitation
+  standard — traduit intégralement tel qu'imprimé (« Nulle envie n'est permise sinon en deux
+  choses… Puissé-je recevoir ce qu'un tel a reçu… »).
+- Exemple lourd <em>aḍ-ḍāllīna</em> (alif + lām reduplicé) rétabli de l'enseignement classique,
+  marqué ; exemple léger NON affirmé (mots du manuel en images perdues, corpus muet — critère
+  seul rendu, ROW 61). Versets d'écoute, mots d'exercice (×2) et ouvertures (fawātiḥ) de la
+  préparation : images sans références → non restitués. Édification tissée du hadith même
+  (satiation = plénitude sans partage ; égalité des allongements = le pas régulier de qui
+  récite aux veilles de la nuit et du jour), marquée N.d.T. Préparation annonce le ḥarfī
+  (leçon 24 = 19043) avec deux vers restitués (ROWS 60/62). Aucune date imprimée. 9 081 car,
+  0 arabe.
+- QA : script PASS ; navigateur (badge « Traduction savante », bilingue 258 séq. AR,
+  lāzim/six temps/Bukhārī 5026/ḍāllīn/mukhaffaf/muthaqqal/Tuḥfa/N.d.T. présents, overflowX 0
+  @1280 et @390, 0 erreur console, captures desktop+mobile). Pipeline propre : 0 artefact
+  d'espacement (espaces simples écrites dès le départ — leçon R192 appliquée). Commit a20e462
+  poussé + backup.
+
+Stage Summary:
+- **Registre 714/950 ; tajwid-5ep 25/30 documents.** Corpus 1002/1152 bilingues.
+- Restants tajwid-5ep : 19043 (R194 — lāzim ḥarfī, annoncé, vers ROWS 60-64 déjà identifiés),
+  19050 (activités lāzim+ʿāriḍ), 19055 (waqf/ibtidāʾ), 19056 (mathn), 19138 (ʿāriḍ 2, leçon 25),
+  19141 (mustathniyāt badal, leçon 20) → 6 documents. Après le 25ᵉ doc : livre complet à 6
+  leçons du bout.
+- Le mathn 19056 (ROWS 44-64 = tout le chapitre du madd) sert désormais de source systématique
+  des restitutions Tuḥfa — vérifier ROWS 65+ pour le waqf (leçon 27, 19055).
