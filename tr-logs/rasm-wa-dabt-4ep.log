@@ -3071,3 +3071,64 @@ Pipeline LLM Minhāj v2 — 29 document(s) ciblé(s) [thinking].
    ✗ 13995 REJETÉ après 4 passes : ratio longueur FR/AR anormal : 1.81 (attendu 0,30-0,90)
 
 ━━━ rasm-wa-dabt-4ep/18961 (leçon 2/29) — Dessin et réglage : une introduction à la science du dessin et du réglage [turbo]
+   ↻ passe 4 de correction : caractères arabes hors attributs (translittérer en DIN 31635) ; ratio longueur FR/AR anormal : 1.12 (attendu 0,30-0,90)
+Failed to make API request:  98 |                 headers: headers,
+ 99 |                 body: JSON.stringify(requestBody),
+100 |             });
+101 |             if (!response.ok) {
+102 |                 const errorBody = await response.text();
+103 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createChatCompletion (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:103:27)
+      at async callLLM (/home/z/my-project/scripts-translate/llm-translate.ts:251:53)
+      at async processTarget (/home/z/my-project/scripts-translate/llm-translate.ts:447:29)
+      at async <anonymous> (/home/z/my-project/scripts-translate/llm-translate.ts:561:14)
+
+   ⚠︎ tentative 1/8 échouée [429] : API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make API request:  98 |                 headers: headers,
+ 99 |                 body: JSON.stringify(requestBody),
+100 |             });
+101 |             if (!response.ok) {
+102 |                 const errorBody = await response.text();
+103 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createChatCompletion (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:103:27)
+      at async callLLM (/home/z/my-project/scripts-translate/llm-translate.ts:251:53)
+      at async processTarget (/home/z/my-project/scripts-translate/llm-translate.ts:447:29)
+      at async <anonymous> (/home/z/my-project/scripts-translate/llm-translate.ts:561:14)
+
+   ⚠︎ tentative 2/8 échouée [429] : API request failed with status 429: {"error":"Too many requests, please try again later"}
+   ✗ 18961 REJETÉ après 4 passes : caractères arabes hors attributs (translittérer en DIN 31635) ; ratio longueur FR/AR anormal : 1.12 (attendu 0,30-0,90)
+
+━━━ rasm-wa-dabt-4ep/19722 (leçon 3/29) — Aux origines de la science du rasm et du ḍabṭ [turbo]
+Pipeline LLM Minhāj v2 — 29 document(s) ciblé(s) [thinking].
+
+━━━ rasm-wa-dabt-4ep/13995 (leçon 1/29) — Rasm et ḍabṭ — l’arjūza ʿUmdat al-Bayān d’al-Wadghīrī (présentation) [turbo]
+   ↻ passe 4 de correction : trop peu de sections h2 (1)
+   ✗ 13995 REJETÉ après 4 passes : trop peu de sections h2 (1)
+
+━━━ rasm-wa-dabt-4ep/18961 (leçon 2/29) — Dessin et réglage : une introduction à la science du dessin et du réglage [turbo]
+   ✓ fusion OK — htmlFr 7 437 car (source 6 720, ratio 1.11)
+   ✓ commit
+
+━━━ rasm-wa-dabt-4ep/19722 (leçon 3/29) — Aux origines de la science du rasm et du ḍabṭ [turbo]
+   ✓ fusion OK — htmlFr 10 050 car (source 9 554, ratio 1.05)
+   ✓ commit
+
+━━━ rasm-wa-dabt-4ep/19723 (leçon 4/29) — La finalité du poème ʿUmdat al-Bayān sur l'élision coranique, et sa méthode [turbo]
+Failed to make API request:  98 |                 headers: headers,
+ 99 |                 body: JSON.stringify(requestBody),
+100 |             });
+101 |             if (!response.ok) {
+102 |                 const errorBody = await response.text();
+103 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createChatCompletion (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:103:27)
+      at async callLLM (/home/z/my-project/scripts-translate/llm-translate.ts:251:53)
+      at async processTarget (/home/z/my-project/scripts-translate/llm-translate.ts:424:24)
+      at async <anonymous> (/home/z/my-project/scripts-translate/llm-translate.ts:569:14)
+
+   ⚠︎ tentative 1/8 échouée [429] : API request failed with status 429: {"error":"Too many requests, please try again later"}

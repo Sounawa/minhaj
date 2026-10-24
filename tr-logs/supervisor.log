@@ -24,3 +24,6 @@
 [2026-10-24 10:57:05] worker lancé : fiqh-tanawi-1 (passe 2, 30 docs restants, actifs≈2)
 [2026-10-24 10:57:30] worker lancé : hadith-tanawi-1 (passe 1, 31 docs restants, actifs≈3)
 [2026-10-24 12:06:56] worker lancé : rasm-wa-dabt-4ep (passe 3, 29 docs restants, actifs≈3)
+[2026-10-24 12:13:21] worker lancé : rasm-wa-dabt-4ep (passe 4, 29 docs restants, actifs≈1)
+[2026-10-24 12:13:46] worker lancé : fiqh-tanawi-1 (passe 3, 29 docs restants, actifs≈2)
+[2026-10-24 12:14:11] worker lancé : hadith-tanawi-1 (passe 2, 31 docs restants, actifs≈3)

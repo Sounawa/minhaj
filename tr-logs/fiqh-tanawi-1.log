@@ -3059,3 +3059,44 @@ error: API request failed with status 429: {"error":"Too many requests, please t
 
 ━━━ fiqh-tanawi-1/11962 (leçon 21/30) — Conditions de vente d'une condition d'option [turbo]
    ↻ passe 4 de correction : ratio longueur FR/AR anormal : 1.10 (attendu 0,30-0,90)
+   ✗ 11962 REJETÉ après 4 passes : ratio longueur FR/AR anormal : 1.10 (attendu 0,30-0,90)
+
+━━━ fiqh-tanawi-1/11963 (leçon 22/30) — Qu'est-ce qui invalide et contre-indique le concombre [turbo]
+Failed to make API request:  98 |                 headers: headers,
+ 99 |                 body: JSON.stringify(requestBody),
+100 |             });
+101 |             if (!response.ok) {
+102 |                 const errorBody = await response.text();
+103 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createChatCompletion (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:103:27)
+      at async callLLM (/home/z/my-project/scripts-translate/llm-translate.ts:251:53)
+      at async processTarget (/home/z/my-project/scripts-translate/llm-translate.ts:422:25)
+
+   ⚠︎ tentative 1/8 échouée [429] : API request failed with status 429: {"error":"Too many requests, please try again later"}
+Failed to make API request:  98 |                 headers: headers,
+ 99 |                 body: JSON.stringify(requestBody),
+100 |             });
+101 |             if (!response.ok) {
+102 |                 const errorBody = await response.text();
+103 |                 throw new Error(`API request failed with status ${response.status}: ${errorBody}`);
+                                ^
+error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+      at createChatCompletion (/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js:103:27)
+      at async callLLM (/home/z/my-project/scripts-translate/llm-translate.ts:251:53)
+      at async processTarget (/home/z/my-project/scripts-translate/llm-translate.ts:422:25)
+
+   ⚠︎ tentative 2/8 échouée [429] : API request failed with status 429: {"error":"Too many requests, please try again later"}
+   ↻ passe 4 de correction : caractères arabes hors attributs (translittérer en DIN 31635) ; ratio longueur FR/AR anormal : 1.20 (attendu 0,30-0,90)
+   ✗ 11963 REJETÉ après 4 passes : caractères arabes hors attributs (translittérer en DIN 31635) ; ratio longueur FR/AR anormal : 1.20 (attendu 0,30-0,90)
+
+━━━ fiqh-tanawi-1/11965 (leçon 23/30) — King, garantie et photos au choix dans l'option [turbo]
+Pipeline LLM Minhāj v2 — 29 document(s) ciblé(s) [thinking].
+
+━━━ fiqh-tanawi-1/11905 (leçon 1/30) — La vente, ses piliers, ses conditions et ses sections [turbo]
+   ✓ fusion OK — htmlFr 12 771 car (source 11 509, ratio 1.11)
+   ✓ commit
+
+━━━ fiqh-tanawi-1/11908 (leçon 2/30) — Conditions et conditions de vente [turbo]
+   ↻ passe 4 de correction : caractères arabes hors attributs (translittérer en DIN 31635)
