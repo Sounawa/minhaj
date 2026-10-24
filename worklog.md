@@ -9696,3 +9696,23 @@ Stage Summary:
 - **Registre 722/950.** qiraat-tanawi-1 2/22. Pousse GitHub opérationnelle (token OK).
 - Superviseur actif (3 workers) + cron 472904 armé (sync GitHub en étape zéro).
 - Prochaine leçon main : 18965 (idghām kabīr 2) ; le superviseur avale rasm/fiqh/hadith-tanawi-1.
+---
+Task ID: R203
+Agent: agent principal (Z.ai Code — session web-394d04d3, suite objectif « 279 brouillons → savants »)
+Task: Leçon 18965 (qiraat-tanawi-1) — la grande assimilation (idghām kabīr) (2)
+
+Work Log:
+- savant(qiraat-tanawi-1/18965) : leçon 16 — 23 637 car, 21 versets restitués verbatim
+  (6 mappings warsh→std épinglés par le mot-cas), mathn 123-131 en table miroire, les lieux à
+  deux faces (yabtaghi/in-yaku/yakhlū), la pratique du Maghreb imprimée, āl-Lūṭ et ses deux
+  étymologies, le wāw de hū (13 lieux), le naqd du madd (yātiya-yawm 42:47), l'iḍhār de allāʾī,
+  les vers d'Ibn al-Qāḍī. Rapport : tr-tmp/rnotes-18965.md. QA PASS + navigateur (badge,
+  overflowX 0 @1280/390, 0 console, captures). Commit 5ae0f4f poussé.
+- Superviseur 24/7 : 3 workers actifs (rasm-wa-dabt-4ep, fiqh-tanawi-1, hadith-tanawi-1) —
+  LLM en régime 429-avec-retries ; aucune livraison llm encore (à surveiller au prochain tour).
+
+Stage Summary:
+- **Registre 723/950.** qiraat-tanawi-1 3/22. GitHub à jour (5ae0f4f).
+- Prochaine leçon main : 19030 (l'ouverture du poème par les règles religieuses — GT-exempte à
+  vérifier) ; ordre du livre : 19030, 19039, 19042, 19045, 19046, 19051, 19145, 19146, 19159,
+  19160, 19205, 19209, 19210, 19220, 19282, 19291, 19318, 19356, 19481, + intro 20326.
