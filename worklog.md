@@ -9398,3 +9398,38 @@ Stage Summary:
 - Ordre logique de la prochaine : 19138 (ʿāriḍ — annoncé par la préparation de 19043) puis
   19050 (les activités referment le bloc lāzim+ʿāriḍ), 19055, 19141, 19056 (mathn en dernier —
   sa table de 71 rangées servira de contrôle final des restitutions).
+
+---
+Task ID: R195
+Agent: agent principal (Z.ai Code — session utilisateur, suite)
+Task: Leçon 19138 (tajwid-5ep) — l'allongement accidentel de la quiescence (madd ʿāriḍ li-s-sukūn)
+
+Work Log:
+- **savant(tajwid-5ep/19138)** — leçon 25, ʿāriḍ : les trois faces (naturel / moyen
+  <em>mutawassiṭ</em> / satiation <em>ishbāʿ</em>) imprimées DEUX fois aux exercices (item alifs
+  + item yāʾ) → définition et faces rétablies sur fondement imprimé (quiescence d'arrêt non
+  originelle ; retour au naturel en la liaison). Vers Tuḥfa restitué du mathn (ROW 53
+  vocalisé : « wa-mithlu dhā in ʿaraḍa s-sukūn / waqfan ka-taʿlamūna nastaʿīnu » — le même
+  vers servit la leçon 21 : la quiescence d'arrêt régit līn et ʿāriḍ, noté en N.d.T.).
+- **Cinq vers de clôture de la Shāṭibiyya IMPRIMÉS en table vocalisée avec référence**
+  (Ḥirz al-amānī, vers 1121-1125 : le rappel de Dieu abreuvant le cœur ; l'eau douce du Coran
+  préférée aux récits transmis ; nulle œuvre ne sauve comme le rappel, en don agréé ; la
+  langue occupée du Coran ; l'œuvre parfaite de l'ouverture à l'achèvement, haltes et marche
+  d'un seul tenant) — traduits tels qu'imprimés en table de vers (premier hémistiche en
+  cellule droite, convention 15488/19029).
+- L'égalité des allongements « en chaque face » imprimée (le pas égal) — liée à l'édification
+  tissée des vers mêmes (les trois faces = trois tempos de la marche « d'un seul tenant »),
+  marquée N.d.T. Versets d'écoute et mots d'exercice (alifs, yāʾ, les deux mots de la parole
+  de Dieu sans référence imprimée) : images → non restitués. Aucune date imprimée. 7 226 car,
+  0 arabe.
+- QA : script PASS ; navigateur (badge, bilingue 229 séq. AR, ʿāriḍ/tawassuṭ/ishbāʿ/al-Shāṭibī
+  1121-1125/verger des rappelants/égalité des allongements/taʿlamūna présents, overflowX 0
+  @1280 et @390, 0 erreur console, captures desktop+mobile). Commit 88af9db poussé + backup.
+- **Cron 472776 trouvé désactivé (« exec limits exceeded ») → supprimé** ; recréé en fin de
+  tour avec le contexte actualisé (protocole d'auto-ré-armement).
+
+Stage Summary:
+- **Registre 716/950 ; tajwid-5ep 27/30 documents.** Corpus 1004/1152 bilingues.
+- Restants tajwid-5ep : 19050 (R196 — activités lāzim+ʿāriḍ, leçon 26, annoncé par la
+  préparation présente), 19055 (waqf/ibtidāʾ, leçon 27), 19141 (mustathniyāt badal, leçon 20),
+  19056 (mathn — 71 rangées, contrôle final des restitutions) → 4 documents.
