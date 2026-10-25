@@ -82,5 +82,9 @@
  "taqtit-tanawi-1": {
   "passes": 1,
   "done": false
+ },
+ "qiraat-tanawi-1": {
+  "passes": 1,
+  "done": false
  }
 }
