@@ -69,4 +69,27 @@ if git remote get-url origin >/dev/null 2>&1; then
     echo "   ✅ GitHub déjà à jour (origin/main)."
   fi
 fi
+# 6) Bundle de récupération EXTERNE (leçon des resets des 24-25 oct. :
+#    /home/z/my-project est restauré à un état ancien à chaque réinitialisation
+#    du bac à sable, mais /tmp/my-project a SURVÉCU — c'est lui qui a permis
+#    la restauration R213/R216). Bundle git complet + worklog + registre,
+#    régénéré seulement si HEAD est plus récent que le bundle existant.
+BUNDLED=/tmp/my-project/backup-tour
+if mkdir -p "$BUNDLED" 2>/dev/null && [ -d "$PROJ/.git" ]; then
+  HEAD_TS=$(git -C "$PROJ" log -1 --format=%ct 2>/dev/null || echo 0)
+  BDL_TS=0
+  [ -f "$BUNDLED/latest-bundle.bdl" ] && BDL_TS=$(stat -c %Y "$BUNDLED/latest-bundle.bdl" 2>/dev/null || echo 0)
+  if [ "${HEAD_TS:-0}" -gt "${BDL_TS:-0}" ]; then
+    if git -C "$PROJ" bundle create "$BUNDLED/latest-bundle.bdl" HEAD main >/dev/null 2>&1; then
+      cp -f "$PROJ/worklog.md" "$BUNDLED/worklog.md" 2>/dev/null || true
+      cp -f "$PROJ/scripts-translate/savant-registry.json" "$BUNDLED/savant-registry.json" 2>/dev/null || true
+      echo "   ✅ Bundle de récupération externe → $BUNDLED/latest-bundle.bdl (+ worklog + registre)"
+    else
+      echo "   ⚠️  Bundle externe impossible à créer (espace disque ?)"
+    fi
+  else
+    echo "   ✅ Bundle de récupération externe déjà à jour ($BUNDLED/latest-bundle.bdl)"
+  fi
+fi
+
 echo "   ⚠️  Rappel : le commit git reste la protection n°1 (lancer si modifications en cours)."
