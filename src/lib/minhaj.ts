@@ -117,6 +117,9 @@ export interface LibraryPayload {
     goalBooks: number;
     /** Documents bénéficiant d'une traduction savante (registre). */
     docsSavant: number;
+    /** Manuels affichant le badge « Traduction savante intégrale »
+     *  (docsFr > 0 && docsSavant >= docsFr — même critère que la page livre). */
+    booksSavantComplete: number;
   };
 }
 
@@ -297,6 +300,10 @@ export async function getLibrary(): Promise<LibraryPayload> {
     }
   }
   const docsSavant = savantWithFr.size;
+  // Manuels « Traduction savante intégrale » — critère identique au badge de la
+  // page livre (fullSavant) : toutes les traductions publiées du manuel sont
+  // de niveau savant. Auto-cohérence accueil ↔ page livre.
+  const booksSavantComplete = books.filter((b) => b.docsFr > 0 && b.docsSavant >= b.docsFr).length;
   const stats = {
     booksTotal: manifest.books.length,
     booksDownloaded: books.filter((b) => b.downloaded).length,
@@ -305,6 +312,7 @@ export async function getLibrary(): Promise<LibraryPayload> {
     goalDocs: manifest.program.goalDocs,
     goalBooks: manifest.program.goalBooks,
     docsSavant,
+    booksSavantComplete,
   };
   return { program: manifest.program, levels: manifest.levels, subjects, books, stats };
 }

@@ -40,6 +40,7 @@ function Hero({
   docsSavant,
   booksDownloaded,
   booksTotal,
+  booksSavantComplete,
 }: {
   docsFr: number;
   docsTotal: number;
@@ -47,6 +48,7 @@ function Hero({
   docsSavant: number;
   booksDownloaded: number;
   booksTotal: number;
+  booksSavantComplete: number;
 }) {
   const lastDoc = useLastDoc();
   return (
@@ -143,6 +145,19 @@ function Hero({
                 sur 3 cycles scolaires
               </span>
             </dd>
+            <Progress
+              value={booksTotal ? (booksSavantComplete / booksTotal) * 100 : 0}
+              className="mt-3 h-2 bg-amber-800/10"
+              aria-label="Part des manuels en traduction savante intégrale"
+            />
+            <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
+              <span className="inline-flex items-center gap-1">
+                <Award className="size-3.5 text-amber-600 dark:text-amber-400" aria-hidden="true" />
+                <strong className="text-foreground">{booksSavantComplete}</strong>{" "}
+                manuels en traduction savante intégrale — dont toutes les traductions
+                publiées sont de niveau savant.
+              </span>
+            </p>
           </div>
           <div className="rounded-2xl border border-amber-800/15 bg-card/80 p-5 shadow-sm backdrop-blur-sm">
             <dt className="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground">
@@ -294,6 +309,7 @@ export function Home() {
         docsSavant={stats.docsSavant}
         booksDownloaded={stats.booksDownloaded}
         booksTotal={stats.booksTotal}
+        booksSavantComplete={stats.booksSavantComplete}
       />
       {stats.booksDownloaded < stats.booksTotal && <RecoveryBanner />}
 

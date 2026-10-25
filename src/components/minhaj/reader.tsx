@@ -360,6 +360,29 @@ function DocHeader({ doc }: { doc: DocPayload }) {
       <p dir="rtl" lang="ar" className="mt-2 text-right font-arabic text-xl leading-relaxed text-primary">
         {doc.titleAr}
       </p>
+      {/* Barre de progression dans le manuel : position du document courant
+          (index + 1 / count) — miroir visuel du badge « Leçon N / M ». */}
+      <div className="no-print mt-5">
+        <div className="flex items-center justify-between gap-3 text-[10px] font-medium uppercase tracking-[0.14em] text-muted-foreground/80">
+          <span>Progression dans le manuel</span>
+          <span className="tabular-nums">
+            {doc.count > 0 ? Math.round(((doc.index + 1) / doc.count) * 100) : 0}%
+          </span>
+        </div>
+        <div
+          className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-amber-800/10 dark:bg-amber-200/10"
+          role="progressbar"
+          aria-valuemin={1}
+          aria-valuemax={Math.max(doc.count, 1)}
+          aria-valuenow={doc.index + 1}
+          aria-label={`Document ${doc.index + 1} sur ${doc.count} dans ce manuel`}
+        >
+          <div
+            className="h-full rounded-full bg-gradient-to-r from-amber-500 to-amber-700 transition-[width] duration-500 ease-out dark:from-amber-400 dark:to-amber-600"
+            style={{ width: doc.count > 0 ? `${((doc.index + 1) / doc.count) * 100}%` : "0%" }}
+          />
+        </div>
+      </div>
     </div>
   );
 }
