@@ -9953,3 +9953,25 @@ Stage Summary:
 - **Sécurité rétablie** : remote + credentials + backup.sh opérationnels ; GitHub = base de vérité, pousser après CHAQUE leçon (règle b).
 - **Supervisor actif** : 5 livres LLM en parallèle (fiqh-tanawi-1, tafsir-tanawi-1, hadith-tanawi-1, mantiq-tanawi-1, rasm-wa-dabt-4ep) — veiller à git pull/rebase avant push si divergence.
 - **Priorités suivantes** : 19220 (Umm al-Qurʾān — déjà extraite : tr-tmp/19220.src.html + gt), 19282, 19291, 19318, 19356, 19481, intro 20326 → qiraat-tanawi-1 complet ; puis le prochain livre au registre le plus avancé.
+
+---
+Task ID: R214
+Agent: Z.ai Code (session web-394d04d3 — reprise après reset, suite de R213)
+Task: Vague de production savante — six leçons de qiraat-tanawi-1 (19210, 19220, 19282, 19291, 19318, 19356) : la basmala, Umm al-Qurʾān, la série idġām (1-4).
+
+Work Log:
+- 19210 « La basmala » (leçon 13, vers 100-107) : 22 565 car, 3 paires de liaison restituées par doctrine (at-Tīn 8–al-ʿAlaq 1, al-Kawthar 3–al-Kāfirūn 1, al-Kāfirūn 6–an-Naṣr 1), la sakta de Khalaf perdue-documentée, préparation tronquée restituée (išmām de ṣirāṭ confirmé par 19220). Fix : format « [verset reproduit…] » pour activer les chips. QA navigateur : 3 verse-notes, 0 overflow 390.
+- 19220 « La sourate Umm al-Qurʾān » (leçon 14, vers 108-115) : 17 923 car, 11 versets restitués avec écarts documentés (māliki Fātiḥa 3 = numérotation Nāfiʿ ; Shūrā 49→52 ; Baqara 165→166 ; étiquette « Baqara 244 » → Nisāʾ 4:77). QA : 11 verse-notes, 0 overflow.
+- 19282 « L'idġām des proches (1) » (leçon 17, vers 132-138) : 17 314 car, la qāf-kāf et ses 2 conditions, 10 versets restitués (wāthaqakum = 5:7 imprimé 8, khalaqakum = 2:21 imprimé 20, mīthāqakum = 2:63 imprimé 62, narzuquka = 20:132 imprimé 131), les 16 lettres de « shifā », ṭallaqakunna (Ibn Mujāhid/al-Dānī, pratique marocaine). QA : 10 verse-notes, 0 overflow.
+- 19291 « L'idġām des proches (2) » (leçon 18, vers 139-143) : 12 693 car, 12 versets restitués (ḥāʾ-ʿayn 3:185/3:45, qāf-kāf Furqān 2/10, iẓhār 12:76/7:156 « ilayka qāla », jointe Maʿārij 3-4, Fatḥ 29, Isrāʾ 42, Nūr 60, Takwīr 7, Maryam 19:4 imprimé 3), exploitation al-Jaʿbarī (Kanz al-maʿānī II/269). QA : 11 verse-notes, 0 overflow.
+- 19318 « L'idġām des proches (3) » (leçon 19, vers 144-149) : 21 054 car, la leçon la plus dense : 30 versets restitués (dāl 10 lettres + exception tāʾ la-qad tāba/baʿda tawkīdihā, tāʾ 11 lettres + les 6 lieux divergents d'Abū ʿAmr + Maryam 26, thāʾ 5 lettres, dhāl 2), exploitation Ibn Khālawayh (al-Ḥujja p. 178). QA : 43 verse-notes, 0 overflow.
+- 19356 « L'idġām des proches (4) » (leçon 20, vers 150-157) : 21 499 car, l'achèvement de l'idġām kabīr : lām/rāʾ/nūn + mīm-bāʾ/bāʾ-mīm + les 3 règles générales (imāla, ishmām/rumm, lettre après quiescente saine), 20+ versets restitués (naḥnu = 2:133 imprimé 132 : off-by-one documenté), hadith de Muslim. QA : 32 verse-notes, 0 overflow.
+- Commits poussés : 49a4273, 82240a2, 04fc994, 2b4ab52, 65caf9a, a2b6d57 — backup.sh après CHAQUE leçon (règle b respectée).
+- Le supervisor LLM tourne en parallèle (5 livres : fiqh-tanawi-1, tafsir-tanawi-1, hadith-tanawi-1, mantiq-tanawi-1, rasm-wa-dabt-4ep) : ses commits s'intercalent, le registre commun a progressé de 747 à 798+.
+
+Stage Summary:
+- **État** : registre 798/950 (et croissant avec le supervisor). qiraat-tanawi-1 : 21/22 leçons savantes — reste 19481 (« Lectures E. métonymie », dernière leçon) et l'intro 20326 pour le 50ᵉ livre complet.
+- **Méthode rodée** : extraction → rédaction avec restitution par doctrine des versets-image (le cache coranique local sert de référence) → qa-lesson.py (0 arabe, guillemets appariés) → hand-set.py → QA navigateur avec cache-busting (?nc=TS) → commit+push+backup.
+- **Conventions établies** pour les versets-image perdus : « [verset reproduit en image dans le manuel : « … » — Sūra (n) : v, extrait] » avec écarts d'étiquetage documentés en N.d.T. (off-by-one récurrents : 2:20→21, 5:8→7, 20:131→132, 2:132→133, 19:3→4, 42:49→52, 2:165→166, 2:62→63, « Baqara 244 »→4:77) ; les tables miroir du mathn : td droit = premier hémistiche, numéros en gras ; guillemets du vers-citation ouverts au début (droite) et fermés à la fin (gauche).
+- **Risques** : (a) la limite de contexte de la session approche — le worklog est à jour pour la reprise ; (b) le supervisor LLM commite en parallèle : tirer (git pull --rebase) avant tout push en cas de divergence ; (c) 19481 a un titleFr atypique (« Lectures E. métonymie ») : vérifier le titre canonique à l'extraction.
+- **Priorités suivantes** : (1) 19481 (dernière leçon de qiraat-tanawi-1) ; (2) l'intro 20326 → 50ᵉ livre savant COMPLET (23/23) ; (3) ensuite : choisir le prochain livre au registre le plus avancé (hadith-tanawi-2 ? tafsir-tanawi-2 ? — vérifier /api/books) ; (4) ~150 traductions savantes restantes pour 950 (le supervisor LLM en livre aussi).
