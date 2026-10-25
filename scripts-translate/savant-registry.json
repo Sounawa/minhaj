@@ -735,7 +735,8 @@
     "19159",
     "19160",
     "19205",
-    "19209"
+    "19209",
+    "19210"
   ],
   "llm": {
     "11905": {
@@ -763,10 +764,20 @@
       "bookId": "fiqh-tanawi-1",
       "titleFr": "Conditions de vente d'une condition d'option"
     },
+    "12580": {
+      "at": "2026-10-25T00:54:44.204Z",
+      "bookId": "tafsir-tanawi-1",
+      "titleFr": "Présentation du manuel"
+    },
     "12610": {
       "at": "2026-10-24T12:15:35.991Z",
       "bookId": "hadith-tanawi-1",
       "titleFr": "Présentation du manuel"
+    },
+    "12925": {
+      "at": "2026-10-25T00:55:10.924Z",
+      "bookId": "hadith-tanawi-1",
+      "titleFr": "Décision sur les fiançailles"
     },
     "12934": {
       "at": "2026-10-24T12:21:47.315Z",
@@ -777,6 +788,71 @@
       "at": "2026-10-24T12:23:10.846Z",
       "bookId": "hadith-tanawi-1",
       "titleFr": "Jugement sur le mariage temporaire"
+    },
+    "13372": {
+      "at": "2026-10-25T00:56:53.021Z",
+      "bookId": "tafsir-tanawi-1",
+      "titleFr": "Sourate An-Nahl, versets 1 à 4"
+    },
+    "13459": {
+      "at": "2026-10-25T01:02:32.761Z",
+      "bookId": "tafsir-tanawi-1",
+      "titleFr": "Sourate An-Nahl, versets 10-14"
+    },
+    "13494": {
+      "at": "2026-10-25T01:13:57.070Z",
+      "bookId": "tafsir-tanawi-1",
+      "titleFr": "Sourate An-Nahl, versets 30-35"
+    },
+    "16115": {
+      "at": "2026-10-25T00:56:31.243Z",
+      "bookId": "mantiq-tanawi-1",
+      "titleFr": "Introduction de l'auteur"
+    },
+    "16116": {
+      "at": "2026-10-25T00:57:21.161Z",
+      "bookId": "mantiq-tanawi-1",
+      "titleFr": "L'importance de la science de la logique"
+    },
+    "16119": {
+      "at": "2026-10-25T00:58:36.610Z",
+      "bookId": "mantiq-tanawi-1",
+      "titleFr": "Présentation du mathn al-Sullam et de sa valeur scientifique"
+    },
+    "16120": {
+      "at": "2026-10-25T00:59:46.216Z",
+      "bookId": "mantiq-tanawi-1",
+      "titleFr": "Le statut de l'étude de la logique"
+    },
+    "16129": {
+      "at": "2026-10-25T01:04:48.206Z",
+      "bookId": "mantiq-tanawi-1",
+      "titleFr": "Les espèces de la science occasionnée — suite"
+    },
+    "16136": {
+      "at": "2026-10-25T01:05:51.074Z",
+      "bookId": "mantiq-tanawi-1",
+      "titleFr": "La signification lexicale posée (dalāla lafẓiyya waḍʿiyya)"
+    },
+    "16146": {
+      "at": "2026-10-25T01:13:34.343Z",
+      "bookId": "mantiq-tanawi-1",
+      "titleFr": "Les chapitres des termes (fin)"
+    },
+    "16150": {
+      "at": "2026-10-25T01:14:12.203Z",
+      "bookId": "mantiq-tanawi-1",
+      "titleFr": "Activités d’exploitation et de consolidation des apprentissages"
+    },
+    "16156": {
+      "at": "2026-10-25T01:15:27.781Z",
+      "bookId": "mantiq-tanawi-1",
+      "titleFr": "Les cinq universaux (al-kulliyyāt al-khamsa)"
+    },
+    "16160": {
+      "at": "2026-10-25T01:20:57.287Z",
+      "bookId": "mantiq-tanawi-1",
+      "titleFr": "Le rapport des termes aux significations (fin)"
     },
     "18961": {
       "at": "2026-10-24T12:16:28.160Z",
