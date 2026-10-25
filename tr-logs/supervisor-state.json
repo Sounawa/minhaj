@@ -68,11 +68,15 @@
   "done": false
  },
  "hadith-tanawi-1": {
-  "passes": 3,
+  "passes": 4,
   "done": false
  },
  "tafsir-tanawi-1": {
-  "passes": 1,
+  "passes": 2,
+  "done": false
+ },
+ "mantiq-tanawi-1": {
+  "passes": 2,
   "done": false
  }
 }
