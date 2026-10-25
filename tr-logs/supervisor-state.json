@@ -78,5 +78,9 @@
  "mantiq-tanawi-1": {
   "passes": 4,
   "done": false
+ },
+ "taqtit-tanawi-1": {
+  "passes": 1,
+  "done": false
  }
 }
