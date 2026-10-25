@@ -9931,3 +9931,25 @@ Stage Summary:
 - La PRÉFACE ENTIÈRE du poème (vers 1-94) est désormais couverte en traduction savante, plus le premier chapitre (istiʿādha) et la leçon d'activités. Trois restitutions coraniques honnêtes ce jour (ʿĀl ʿImrān 41, an-Naḥl 98 — certaines ; ʿĀl ʿImrān 173 identifiée en note), une validation interne d'identification (Abū Bakr = Shuʿba), seize hadiths rendus avec références traduites.
 - Prochaines leçons main : 19210 (la basmala — versets 100+), puis 19220 (la Fātiḥa), 19282, 19291, 19318, 19356, 19481 + intro 20326.
 - Risques : aucune anomalie ouverte ; le registre « llm » (dictionnaire de 12) reste à part du compteur « hand » — le total réel 747 est celui affiché par session-start (729 hand + 12 llm + 6 du jour).
+
+---
+Task ID: R213
+Agent: Z.ai Code (session web-394d04d3 — reprise après reset sandbox)
+Task: Récupération complète depuis GitHub (base de vérité utilisateur) puis reprise de la production savante — leçon 19210 (la basmala), qiraat-tanawi-1.
+
+Work Log:
+- RESET SUBI le 25/10 à 00:32 : sandbox écrasé (git 427 commits = état 18/10, registre 502/950, remote et credentials effacés). Diagnostic rapide : /tmp/my-project contenait un snapshot partiel (bundle 24/10 10:32 = 429 commits) — mais GitHub était plus avancé.
+- Token fourni par l'utilisateur → /home/z/.git-credentials (chmod 600, credential.helper store, URL du remote propre) ; remote origin → github.com/Sounawa/minhaj (PUBLIC).
+- git fetch origin : 1039 commits, HEAD 895f4ab = worklog R212 (registre 747/950, qiraat-tanawi-1 15/22). Local 719111b vérifié ancêtre → git reset --hard origin/main : restauration INTÉGRALE du travail perdu (R211+R212 : 19145, 19146, 19159, 19160, 19205, 19209).
+- Découverte : le supervisor LLM (PID 2994, relancé automatiquement à 00:52) tourne avec 3 workers (hadith-tanawi-1, tafsir-tanawi-1, mantiq-tanawi-1) — il a validé 20+ leçons (fiqh-tanawi-1 5, tafsir-tanawi-1 4, hadith-tanawi-1 7, mantiq-tanawi-1 13, rasm-wa-dabt-4ep 4) et committe en parallèle.
+- LEÇON 19210 « La basmala » (13e du livre, mathn vers 100-107) : extract → traduction savante 22 565 car (0 arabe, 77 guillemets) — 8 vers du mathn en tables miroir ; écoles des lecteurs (basmelants b-r-n-d = Qālūn/Kisāʾī/ʿĀṣim/Ibn Kathīr, Ḥamza waṣl par le f de faṣāḥa, choix waṣl/sakta des k-j-ḥ, double lecture du vers 102, divergence de Warsh Abū Ghānim/al-Azraq) ; les 4 sourates lumineuses az-zuhr ; Barāʾa sans basmala (hadith Ibn ʿAbbās/ʿAlī, al-Mustadrak) ; obligation à l'ouverture des sourates et choix aux débuts de sections ; les 4 voies de la basmala (la 4e interdite : « ne t'arrête pour jamais sur elle ») ; 3 paires de liaison RESTITUÉES PAR DOCTRINE (images non extraites : at-Tīn 8–al-ʿAlaq 1, al-Kawthar 3–al-Kāfirūn 1, al-Kāfirūn 6–an-Naṣr 1) ; exemple de la sakta de Khalaf perdu à l'extraction (N.d.T. honnête) ; exploitation = 3 vers du Tamhīd aṭ-ṭarīq p. 94 (pratique maghrébine) ; préparation tronquée restituée (išmām de ṣirāṭ par Khalaf/Ḥamza, confirmé par 19220).
+- Fix format : « [extraits reproduits…] » → « [verset reproduit en image dans le manuel : …, extrait] » pour activer les chips VERSE_NOTE_RE.
+- QA navigateur : h1 ✓, badge « Traduction savante » + ≈ 15 min ✓, 16 tables, Notes du traducteur ✓, 3 verse-notes cliquables ✓, 0 overflow desktop et 390 px, 0 erreur console. (Note : cache navigateur => ajouter ?nocache=TS lors des vérifications après réinjection.)
+- Commits 49a4273 + 82240a2 poussés (GitHub à jour), backup.sh OK, registre → 770+.
+
+Stage Summary:
+- **Récupération totale** : 747/950 restaurés depuis GitHub + travail du supervisor en live (770+ au dernier comptage). Aucune perte définitive.
+- **19210 livrée** : qiraat-tanawi-1 16/22.
+- **Sécurité rétablie** : remote + credentials + backup.sh opérationnels ; GitHub = base de vérité, pousser après CHAQUE leçon (règle b).
+- **Supervisor actif** : 5 livres LLM en parallèle (fiqh-tanawi-1, tafsir-tanawi-1, hadith-tanawi-1, mantiq-tanawi-1, rasm-wa-dabt-4ep) — veiller à git pull/rebase avant push si divergence.
+- **Priorités suivantes** : 19220 (Umm al-Qurʾān — déjà extraite : tr-tmp/19220.src.html + gt), 19282, 19291, 19318, 19356, 19481, intro 20326 → qiraat-tanawi-1 complet ; puis le prochain livre au registre le plus avancé.
