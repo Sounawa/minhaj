@@ -737,7 +737,8 @@
     "19205",
     "19209",
     "19210",
-    "19220"
+    "19220",
+    "19282"
   ],
   "llm": {
     "11905": {
@@ -929,6 +930,11 @@
       "at": "2026-10-25T01:57:47.883Z",
       "bookId": "mantiq-tanawi-1",
       "titleFr": "L’énoncé informatif (khabar) et l’énoncé injonctif (ṭalab)"
+    },
+    "16167": {
+      "at": "2026-10-25T02:07:05.664Z",
+      "bookId": "mantiq-tanawi-1",
+      "titleFr": "Le tout et la totalité (al-kull et al-kulliyya)"
     },
     "16168": {
       "at": "2026-10-25T01:25:38.304Z",
