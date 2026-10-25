@@ -9975,3 +9975,21 @@ Stage Summary:
 - **Conventions établies** pour les versets-image perdus : « [verset reproduit en image dans le manuel : « … » — Sūra (n) : v, extrait] » avec écarts d'étiquetage documentés en N.d.T. (off-by-one récurrents : 2:20→21, 5:8→7, 20:131→132, 2:132→133, 19:3→4, 42:49→52, 2:165→166, 2:62→63, « Baqara 244 »→4:77) ; les tables miroir du mathn : td droit = premier hémistiche, numéros en gras ; guillemets du vers-citation ouverts au début (droite) et fermés à la fin (gauche).
 - **Risques** : (a) la limite de contexte de la session approche — le worklog est à jour pour la reprise ; (b) le supervisor LLM commite en parallèle : tirer (git pull --rebase) avant tout push en cas de divergence ; (c) 19481 a un titleFr atypique (« Lectures E. métonymie ») : vérifier le titre canonique à l'extraction.
 - **Priorités suivantes** : (1) 19481 (dernière leçon de qiraat-tanawi-1) ; (2) l'intro 20326 → 50ᵉ livre savant COMPLET (23/23) ; (3) ensuite : choisir le prochain livre au registre le plus avancé (hadith-tanawi-2 ? tafsir-tanawi-2 ? — vérifier /api/books) ; (4) ~150 traductions savantes restantes pour 950 (le supervisor LLM en livre aussi).
+
+---
+Task ID: R215
+Agent: Z.ai Code (session web-394d04d3 — reprise après reset, suite de R214)
+Task: Achèvement de qiraat-tanawi-1 — leçons 19481 (hāʾ al-kināya) et intro 20326 → 50ᵉ livre savant complet.
+
+Work Log:
+- 19481 « La hāʾ de la métonymie » (leçon 21, vers 158-167) : 20 241 car — l'accord (2 états : pas de ṣila devant quiescent, ṣila devant voyelle), la divergence (Ibn Kathīr ṣila après quiescent + Ḥafṣ en « muhānan » ; les mots-vedettes en quiescence pour Ḥamza/Shuʿba/Abū ʿAmr ; yattaqih avec la divergence de Khallād ; yaʾtih d'al-Sūsī ; Qālūn brièveté/esquissement, Hishām 2 voies ; yarḍahu [Zumar imprimé 8 = 39:7] ; yarahu ×2 [Zalzala 99:7-8, Hishām] ; arjih [imprimés 7:110/26:35 = 7:111/26:36 : hamza quiescente + les 4 écoles de la hāʾ]) — titleFr corrigé : « Lectures E. métonymie » (artefact de décodage) → « Les qirāʾāt : la hāʾ de la métonymie ». QA navigateur : 15 verse-notes, 0 overflow 390.
+- 20326 « Présentation du manuel » (intro) : 6 584 car — hamdala en écho, le couple Shāṭibiyya/Ibn al-Qāṣiḥ, le tiers premier (182 vers), la méthodologie, le ToC des 24 leçons avec concordance docIds + N.d.T. (le site n'extrait que 22 des 24 leçons : madd 1-2 absents du corpus électronique). QA : 0 arabe.
+- API vérifiée : qiraat-tanawi-1 docsSavant 23/23 (intro + 22 leçons) — 50ᵉ livre savant COMPLET.
+- Commits : ec0b114, ccc8df6 — poussés, backup.sh OK.
+
+Stage Summary:
+- **État** : registre 800/950 — 50 livres savants complets (qiraat-tanawi-1 est le dernier en date : intro + 22 leçons, de la préface au mathn jusqu'à la hāʾ al-kināya).
+- **Session totale (R213-R215)** : récupération GitHub complète après reset (1039 commits restaurés, remote + credentials rétablis) + 8 documents savants livrés (19210, 19220, 19282, 19291, 19318, 19356, 19481, 20326) — 6e vague continue, chaque leçon : extraction → rédaction avec restitutions par doctrine → QA 0 arabe → injection → QA navigateur (0 overflow, verse-notes) → commit+push+backup.
+- **Le supervisor LLM** tourne en parallèle sur 5 livres (fiqh-tanawi-1, tafsir-tanawi-1, hadith-tanawi-1, mantiq-tanawi-1, rasm-wa-dabt-4ep) : le registre commun progresse au-delà de 800.
+- **Risques** : (a) limite de contexte atteinte — ce worklog est le point de reprise ; (b) divergence git possible avec le supervisor : git pull --rebase avant push ; (c) les leçons 22-23 du manuel imprimé (madd) ne sont pas au corpus du site — signalement en N.d.T. de l'intro.
+- **Priorités suivantes** : (1) vérifier /api/books et choisir le prochain livre au registre le plus avancé ; (2) poursuivre la cadence : le corpus de versets restitués (cache coranique local + conventions documentées) rend chaque leçon plus rapide ; (3) ~150 traductions restantes pour 950 ; (4) maintenir la règle b : commit+push+backup après CHAQUE document.
