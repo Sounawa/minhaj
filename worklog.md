@@ -11096,5 +11096,5 @@ Work Log:
 Stage Summary:
 - fiqh-tanawi-1 : 23/31 leçons couvertes (badge Leçon 24/31, progression 77 %), 8 leçons GT restantes.
 - Registre : 869/950 (hand 812 + llm 57) — 81 leçons restantes pour l'objectif 950 ; solde total à livrer inchangé dans sa structure.
-- worklog.md : ~11 120 lignes ; plancher suivant ≥ R263 / ≥ 869 / ≥ 11 120 — jamais régresser.
+- worklog.md : 11 100 lignes ; plancher suivant ≥ R263 / ≥ 869 / ≥ 11 100 — jamais régresser.
 - Prochain tour : 11966 lessons[23] « أسباب رد بيع الخيار » (les causes du retour de la vente à faculté, badge « Leçon 25 / 31 ») — VÉRIFIER le docId dans le JSON avant entame ; vigilance : l'الإعداد القبلي de 11965 annonce le khiyār de la naqīṣa et ses causes — hadith possible sur le khiyār du défaut, quran-cache à sonder si texte révélé ; l'anticipation de R262 (« la leçon qui refermera le chapitre ») est CORRIGÉE dans les N.d.T. de R263 : le chapitre du khiyār se poursuit (11966, puis 11967 « موانع الرد بالخيار » = les empêchements du retour, selon les titres du JSON).
