@@ -10222,7 +10222,26 @@ Stage Summary:
 - **Priorités suivantes** : (1) continuer hadith-tanawi-1 : **12967 « طلاق المُمَلَّكة » (le divorce donné en propriété / at-tamlīk, leçon 12, 9 966 car — Muwaṭṭaʾ 1733-1734 : Ibn ʿUmar « le sort est ce qu'elle en décidera », l'homme de Thaqīf et bi-fīki al-ḥajr, le jugement de Marwān ibn al-Ḥakam)** puis 12971 (l'īlāʾ), 12981 (le ẓihār)… ; (2) surveiller habous.gov.ma ; (3) re-fetch systématique avant commit (chevauchement cron).
 
 ---
-Task ID: R226
+Task ID: R226-a
+Agent: agent principal (Z.ai Code — session web-394d04d3 « refais les crons / accélère / sois méticuleux »)
+
+Task: Refonte des crons (×2, toutes les 15 min) + supervision conformité GitHub / anti-reset + consolidation 12967 après délégation R225.
+
+Work Log:
+- **Conformité GitHub vérifiée en ouverture** (règle « avant toute traduction ») : fetch + rev-list `0 0` — Local = GitHub = ef7475b (R224, worklog 10 201 lignes, registre 831/950). **Aucun reset** : planchers respectés, en avant uniquement (R224 > R-222, 831 > 821).
+- **Crons reconstruits** : ancien job 474337 (désactivé « exec limits ») supprimé → **474620** « Minhāj — revue webDev + continuation savante (v2) » (webDevReview, minutes 0/15/30/45, description système + addendum Minhāj : conformité GitHub avant traduction, anti-reset ≥ R224 / 831/950 / 10 201 lignes, file hadith-tanawi-1) et **474619** « Minhāj — garde-fou GitHub/anti-reset + continuation (v2) » (agentTurn, minutes 7/22/37/52) — cadence effective ~7 min 30 s, tz Europe/Paris.
+- **Délégation R225** (subagent + crons en parallèle) : 12966 livrée (24 008 car, 2 versets restaurés Tahrīm 66:1 + Māʾida 5:89 — registre 832) puis 12967 livrée (18 413 car, 3 hadiths Muwaṭṭaʾ 1733/1735/1738, titleFr corrigé — registre 833). Incident d'exécution parallèle documenté en R225 (self-healed).
+- **Crons vérifiés EN ACTIVITÉ** : webDevReview run_count 3 (10:00 Paris), garde-fou « started » (10:07 Paris) ; le garde-fou a livré en parallèle c8cadb4 (12967 « leçon 12 » conforme au الدرس 12 de la source, 18 364 car, titleFr harmonisé) pendant ma QA navigateur — coopération propre : mon commit 071cc23 (captures QA + consolidation) passé en fast-forward sur c8cadb4, **zéro conflit, zéro perte**.
+- **Consolidation 12967** (ce tour) : qa-lesson.py **exit 0** (18 365 car, 0 arabe, 8 guillemets appariés, 8 balises, 0 apostrophe droite) ; QA navigateur agent-browser : h1 « Le divorce de la femme investie du commandement d'elle-même (ṭalāq al-mumallaka) » (diacritique savante ✓ dans le contenu rendu), badge « Traduction savante », **0 overflow 1280 ET 390**, **0 erreur console**, U+202F rendu ✓ ; captures qa-r226-12967-{desktop,mobile}.png ; commit 071cc23 poussé (fast-forward sur c8cadb4).
+
+Stage Summary:
+- **État** : sain. GitHub = base de vérité (HEAD 071cc23 = origin/main, poussé). Registre **833/950** (hand 776 + llm 57 — +2 ce tour). hadith-tanawi-1 : **13/31** au comptage global (5 leçons hand : 12957, 12959, 12966, 12967 + GT remplacée). **117 traductions savantes restantes pour 950.**
+- **Infrastructure** : 2 crons actifs toutes les 15 min (décalés 7 min) avec vérifications GitHub/anti-reset intégrées — la continuité ne dépend plus des seules sessions interactives (l'incident 474337 « exec limits » est contourné par la redondance des 2 jobs).
+- **Risques** : (a) chevauchements d'exécutions parallèles (cron/cron, cron/session) — observés ×2 (R225, R226), self-healed à chaque fois via fast-forward ; protocole : re-fetch avant commit ; (b) le token GitHub circule en clair (remote + credential store) — **révocation recommandée après la campagne de finition** ; (c) habous.gov.ma en maintenance (OCR ~300 pdfOnly bloqué) ; (d) /tmp/my-project copie passive sans .git ; (e) certains commits parallèles utilisent la translittération ASCII dans le MESSAGE (le contenu livré, lui, porte la diacritique savante — vérifié au rendu h1).
+- **Priorités suivantes** : (1) **12971 (l'īlāʾ) puis 12981 (le ẓihār)**… 18 documents pour clore le 52ᵉ livre (~9 tours) ; (2) surveiller habous.gov.ma ; (3) clôtures comptables llm bon marché ; (4) re-fetch systématique avant commit (chevauchement cron).
+
+---
+Task ID: R226-b
 Agent: agent principal (Z.ai Code — cron garde-fou 16:52, Job 474619)
 
 Task: Garde-fou conformité GitHub (fetch, anti-reset) puis rédaction savante 12967 « Le divorce de la femme investie du commandement d'elle-même » (ṭalāq al-mumallaka / at-tamlīk, hadith-tanawi-1, leçon 12) — 5ᵉ leçon hand du 52ᵉ livre. 2ᵉ incident d'exécution parallèle géré.
