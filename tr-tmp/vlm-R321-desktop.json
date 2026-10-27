@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "```json\n{\n  \"verdict\": \"LAYOUT OK\",\n  \"details\": [\n    \"La mise en page bilingue (Français à gauche, Arabe à droite) est respectée.\",\n    \"La direction du texte arabe est correcte (RTL).\",\n    \"Aucun texte tronqué ou chevauchement n'est visible.\",\n    \"Les titres de sections sont bien alignés horizontalement entre les deux colonnes.\",\n    \"L'espacement interligne et les marges sont cohérents et lisibles.\",\n    \"Aucune image cassée ou tableau débordant n'a été détecté.\"\n  ]\n}\n```",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793135091,
+  "id": "20261028050445bad2824872e542c1",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261028050445bad2824872e542c1",
+  "usage": {
+    "completion_tokens": 142,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5388,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5530
+  }
+}
