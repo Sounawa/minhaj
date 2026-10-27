@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "```json\n{\n  \"verdict\": \"LAYOUT OK\",\n  \"details\": [\n    \"La mise en page est propre et bien structurée pour une vue mobile.\",\n    \"Le texte arabe (RTL) et le texte français (LTR) sont correctement alignés et ne se chevauchent pas.\",\n    \"Aucun débordement horizontal n'est visible ; le contenu reste dans les limites de l'écran (390px).\",\n    \"Les titres de sections sont clairement distingués du corps du texte.\",\n    \"La barre de progression en haut de page est correctement affichée.\",\n    \"Les éléments d'interface (icônes, boutons d'action) sont visibles et non tronqués.\"\n  ]\n}\n```",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793133942,
+  "id": "20261028044536cde40d4d50064295",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261028044536cde40d4d50064295",
+  "usage": {
+    "completion_tokens": 164,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5501,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5665
+  }
+}
