@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "LAYOUT OK\n\n**Détails de la vérification :**\n1.  **H1 visible :** Le titre principal « La jurisprudence est un moyen de prouver la qualité du failli » (équivalent au sujet demandé) est bien présent en haut de page.\n2.  **Sections présentes :** Toutes les sections listées sont visibles et structurées (Le texte, La compréhension, L'analyse, Le contrôle, L'exploitation, La préparation préalable, Le sens de cette leçon, Notes du traducteur).\n3.  **Citations :** Des références coraniques en français avec parenthèses sont présentes (ex: « (Sourate al-Hadîd, verset 8) »).\n4.  **Langue :** La colonne de gauche (français) ne contient aucun caractère arabe résiduel ; l'arabe est strictement confiné à la colonne de droite.\n5.  **Mise en page :** Le layout est propre, utilisant une disposition bipage (français à gauche, arabe à droite) sans chevauchement de texte ni débordement apparent des conteneurs.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793109162,
+  "id": "202610272152333d88a62affa049c9",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610272152333d88a62affa049c9",
+  "usage": {
+    "completion_tokens": 263,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 6114,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6377
+  }
+}
