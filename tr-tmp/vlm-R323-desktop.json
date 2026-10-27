@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1) **Alignement et débordement** : Le texte français est bien aligné à gauche. Il n'y a pas de débordement visible ni de chevauchement entre les colonnes (français à gauche, arabe à droite). La mise en page est propre et lisible.\n\n2) **Titres hiérarchiques** : Les titres sont clairs, bien structurés et utilisent une hiérarchie visuelle cohérente (taille et gras) pour distinguer les sections principales (Le texte, La compréhension, L'analyse, etc.) des sous-sections.\n\n3) **Caractères arabes et défauts** : Aucun caractère arabe ne parasite le texte français. La colonne de droite est entièrement en arabe, ce qui est normal pour une page bilingue. Pas de défaut de mise en page constaté.\n\n**LAYOUT OK**",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793137345,
+  "id": "202610280542186cf079d53b9045ed",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610280542186cf079d53b9045ed",
+  "usage": {
+    "completion_tokens": 195,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 6111,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6306
+  }
+}
