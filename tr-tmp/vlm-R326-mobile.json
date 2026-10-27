@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Cette page mobile présente un index détaillé des figures citées dans un ouvrage de jurisprudence islamique, avec une hiérarchie claire (en-tête, barre de progression, liste numérotée à puces, notes du traducteur en fin de page, puis commentaires en arabe et navigation), le tout sur fond beige avec typographie lisible. LAYOUT OK",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793140764,
+  "id": "20261028063919c595348bd23b4825",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261028063919c595348bd23b4825",
+  "usage": {
+    "completion_tokens": 84,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5862,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5946
+  }
+}
