@@ -1,0 +1,192 @@
+#!/usr/bin/env python3
+# build-13636.py — leçon 13636 « Sourate An-Nahl, versets 104 à 109 » (tafsir-tanawi-1, lessons[24], badge Leçon 26/32)
+# Trame 13631 (R285). ZÉRO script arabe dans tout le htmlFr (auto-vérif ; U+FDFA exempté — convention du fil).
+# DIX-SEPT emplacements perdus (cache) : bloc principal 104-109 (section vide entière, 16ᵉ cas) + 16 emplacements
+# (DEUX avec span subsistant : aṣ-Ṣaff 5 — correct (note 7417) ; an-Nisāʾ 170 — ERRONÉ tranché à 171 (note 7418 + cache) —
+# 9ᵉ cas du fil (aa) ; QUATORZE sans span) ; SEIZE citations coraniques + UNE prétention NON coranique restaurée
+# d'après la lettre du Muḥarrar (« إنما أنت مفتر ») ; Muḥarrar original consulté en ligne (sura16 aya104..109 —
+# fetch 6/6 OK) ; hadith d'ʿAmmār b. Yāsir (aṭ-Ṭabarī 17/304) SUBSISTANT ; hadith d'Ibn ʿAbbās (Bayhaqī) SUBSISTANT
+# entier diacrité ; gloses du الشرح AVEC leurs mots (aucune règle (y)) ; iʿdād perdue (14ᵉ occurrence — 3 p vides) ;
+# fente dl/dt/dd vide (18ᵉ) ; tatwīl فـي (16ᵉ leçon consécutive) ; écart numérotation leçon 24 vs badge 26/32 (17ᵉ).
+import json, os, re
+
+FR1 = '''<h1>La sourate an-Naḥl — <em>al-Muḥarrar al-wajīz</em> d'Ibn ʿAṭiyya, versets 104 à 109</h1>
+<p>Leçon de tafsīr — sourate an-Naḥl, versets (104-109) — tirée du livre <em>al-Tafsīr min khilāl al-Muḥarrar al-wajīz fī tafsīr al-Kitāb al-ʿazīz</em> d'Ibn ʿAṭiyya, au profit des élèves de la première année de l'enseignement secondaire ancien, première étape (leçon 24 du manuel — la vingt-quatrième du fil consacré au Naḥl).</p>
+<ol>
+<li>Me familiariser avec le sens des mots des āyāt, et en déterminer les contenus.</li>
+<li>Mesurer la gravité de la forgerie du mensonge contre Allah, le Très-Haut.</li>
+<li>Tirer leçon de la menace d'Allah, le Très-Haut, contre quiconque préfère le bas monde à l'au-delà.</li>
+</ol>
+<h2>Introduction</h2>
+<p>Il convient, selon la sunna d'Allah, le Très-Haut, en matière de guidance et d'égarement, que la guidance de la réussite et de la fermeté ne soit inscrite que pour celui qui a pris les causes de la guidance de l'indication et de la clarification. Quant à celui qui a fermé son cœur à la guidance de la clarification, fermé ses yeux à la lumière du Coran et n'a point répondu à l'appel du Miséricordieux — Allah, le Puissant et le Glorieux, l'augmente dans l'éloignement et l'égarement, et le menace, au jour de la Résurrection, de perdition. Les āyāt de cette leçon embrassent des exemples de ces mécréants détournés, et la mention de certaines de leurs qualités viles et de leurs actes hideux, par lesquels ils ont mérité la colère d'Allah et Son châtiment grand au jour de la Résurrection.</p>
+<p>Quelles sont donc les qualités de ces démenteurs des āyāt d'Allah — et quels sont leurs actes ? Et quelle est leur rétribution ? Et quel est le jugement de celui que l'on a contraint à prononcer par sa langue le mot de la mécréance, sans qu'aucun doute ne se soit infiltré dans sa foi ?</p>
+'''
+
+FR2 = '''<h2>Les versets</h2>
+<p>Allah, le Très-Haut, a dit :</p>
+<p>« Ceux qui ne croient pas aux versets d'Allah — Allah ne les guide pas, et ils ont un châtiment douloureux. Seuls forgent le mensonge ceux qui ne croient pas aux versets d'Allah ; et tels sont les menteurs. Quiconque a renié Allah après avoir cru — sauf celui qui y a été contraint alors que son cœur demeure plein de la sérénité de la foi — mais ceux qui ouvrent délibérément leur cœur à la mécréance, ceux-là ont sur eux une colère d'Allah, et ils ont un châtiment terrible. Il en est ainsi, parce qu'ils ont aimé la vie présente plus que l'au-delà. Et Allah, vraiment, ne guide pas les gens mécréants. Voilà ceux dont Allah a scellé les cœurs, l'ouïe et les yeux. Ce sont eux les insouciants. Et nul doute que dans l'au-delà, ils seront les perdants. » (an-Naḥl, 104-109)</p>
+<p>[Citation coranique (an-Naḥl, 104-109 — le bloc entier des versets de la leçon) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : la section imprimée « Les versets » est vide dans la source numérisée, le bloc versical tout entier ayant disparu à la numérisation — perte OCR — seizième cas consécutif du fil ; l'étiquette subsistante « an-Naḥl : 104 - 109 » est correcte et suivie telle quelle.]</p>
+<p><span>an-Naḥl : 104 - 109</span></p>
+<h3>L'explication des mots</h3>
+<p>[Les six explications subsistantes de la source numérisée portaient TOUTES leurs mots-têtes — exception favorable du fil : à la différence des trois occurrences de la règle (y) (leçons 13537, 13585 et 13587), aucune tête ne manque ici ; les mots expliqués ont été appariés à l'ordre des versets et au commentaire du manuel et du <em>Muḥarrar</em> original consulté en ligne.]</p>
+<ul>
+<li>« forgent le mensonge » (<em>yaftarī</em>) : ils inventent le mensonge.</li>
+<li>« y a été contraint » (<em>ukriha</em>) : on l'a forcé.</li>
+<li>« ouvrent » (<em>šaraḥa</em>) : il a donné foi et apaisé son âme.</li>
+<li>« ils ont aimé » (<em>istaḥabbū</em>) : ils ont choisi.</li>
+<li>« a scellé » (<em>ṭabaʿa</em>) : il a apposé le sceau.</li>
+<li>« nul doute » (<em>lā ǧarama</em>) : ni doute ni soupçon.</li>
+</ul>
+<h3>L'extraction des contenus des versets</h3>
+<ol>
+<li>Déduis des āyāt la fin de ceux qui démentent les āyāt d'Allah.</li>
+<li>Précise le jugement de celui que l'on a contraint à prononcer le mot de la mécréance.</li>
+<li>Expose, à travers les āyāt, l'état des apostats en ce bas monde et leur rétribution dans l'au-delà.</li>
+</ol>
+'''
+
+FR3 = '''<h2>Le commentaire</h2>
+<p>Les āyāt ont comporté ce qui suit :</p>
+<h3>Premièrement : le sort de ceux qui démentent les āyāt d'Allah</h3>
+<p>Après qu'Allah, le Très-Haut, eut répondu à la forgerie des associateurs, démenti leur prétention et réfuté leur argumentation dans les āyāt précédentes, le Puissant et le Glorieux les menace, dans ces āyāt, à tout cela, et le Très-Haut dit :</p>
+<p>« Ceux qui ne croient pas aux versets d'Allah — Allah ne les guide pas, et ils ont un châtiment douloureux. » (an-Naḥl, 104)</p>
+<p>[Citation coranique (an-Naḥl, 104) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après « et le Très-Haut dit : » est vide dans la source numérisée, SANS span subsistant — perte OCR ; l'āya retenue est celle que la glose imprimée du manuel commente — l'absence de guidance et le châtiment douloureux.]</p>
+<p>c'est-à-dire : ceux qui ne donnent pas foi à ce que ces āyāt viennent d'Allah — mais tiennent à leur sujet ce qu'ils tiennent, tantôt que ce sont des forgeries, tantôt que ce sont les fables des anciens — Allah ne les guide pas vers la connaissance du vrai qui les sauverait du châtiment du Feu, en raison de ce qu'Il sait de leur mauvaise disposition face aux mauvaises actions qu'ils ont commises ; et ils auront, dans l'au-delà, lorsqu'ils reviendront à leur Seigneur, un châtiment douloureux et cuisant — rétribution de ce qu'ils portaient comme hostilité envers Son noble Messager, et de leur démenti aux āyāt du noble Coran.</p>
+<p>L'implicite de la formulation est que ceux qu'Allah ne guide pas ne croient pas à Ses āyāt ; mais Il a placé l'un des deux termes en tête et renvoyé l'autre à la fin, en signe du blâme de leur acte et du dénigrement de leur adressage — comme la parole du Très-Haut :</p>
+<p>« Puis quand ils dévièrent, Allah fit dévier leurs cœurs » (aṣ-Ṣaff, 5 — le tronçon cité)</p>
+<p>[Citation coranique (aṣ-Ṣaff, 5 — le tronçon cité) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après « comme la parole du Très-Haut : » est vide dans la source numérisée ; le span subsistant « aṣ-Ṣaff : 5 » est CORRECT et suivi tel quel — le <em>Muḥarrar</em> original cite MOT POUR MOT le tronçon (« puis quand ils dévièrent, Allah fit dévier leurs cœurs »), l'édition en ligne portant expressément « de l'āya (5) de la sourate aṣ-Ṣaff ».]</p>
+<p>et l'on entend ce que nous avons mentionné. Comme s'Il disait : ceux qui n'ont pas cru, Il ne les a pas guidés.</p>
+<p>Et Sa parole, le Très-Haut :</p>
+<p>« Seuls forgent le mensonge ceux qui ne croient pas aux versets d'Allah » (an-Naḥl, 105 — le tronçon de l'information)</p>
+<p>[Citation coranique (an-Naḥl, 105 — le tronçon de l'information) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après « Et Sa parole, le Très-Haut : » est vide dans la source numérisée, SANS span subsistant — perte OCR ; le tronçon retenu est celui que le <em>Muḥarrar</em> original cite MOT POUR MOT (« <em>innamā yaftarī l-kad̲h̲ba</em> »), à propos duquel il dit : « au sens : ils mentent ».]</p>
+<p>est la réponse à leur propos tenu sur le Prophète, que la bénédiction d'Allah et la paix soient sur lui :</p>
+<p>« Tu n'es qu'un forgeur de mensonge ! » — la prétention des associateurs</p>
+<p>[Restauration NON coranique, d'après la lettre du <em>Muḥarrar</em> original : l'emplacement imprimé après « leur propos tenu sur le Prophète, que la bénédiction d'Allah et la paix soient sur lui : » est vide dans la source numérisée ; le <em>Muḥarrar</em> porte expressément que cette āya est « une résistance à ceux qui dirent à Muḥammad, que la bénédiction d'Allah et la paix soient sur lui : Tu n'es qu'un forgeur de mensonge » — prétention des associateurs rapportée par Ibn ʿAṭiyya, non citation coranique, et restituée ici telle quelle.]</p>
+<p>c'est-à-dire : seuls ceux qui démentent Allah et Son Messager, que la bénédiction d'Allah et la paix soient sur lui — ceux qui ne donnent pas foi à Ses preuves et à Ses āyāt qui attestent Son unicité — forgent le mensonge ; ils n'espèrent, en retour du sincère, aucune récompense, et ne craignent, en retour du mensonge, aucun châtiment. Puis Allah les a jugés menteurs d'un jugement explicite, et dit :</p>
+<p>« et tels sont les menteurs » (an-Naḥl, 105 — le tronçon de l'attribut)</p>
+<p>[Citation coranique (an-Naḥl, 105 — le tronçon de l'attribut) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après « et dit : » est vide dans la source numérisée, SANS span subsistant ; le tronçon retenu est celui que le <em>Muḥarrar</em> cite comme le jugement explicite du démenti — « le sens y a été répété dans Sa parole : <em>et tels sont les menteurs</em> ».]</p>
+<p>et il est visé par là les mécréants de Qurayš qui ont accusé le Messager d'Allah, que la bénédiction d'Allah et la paix soient sur lui, de forgerie.</p>
+<p>Le mot « seuls » (<em>innamā</em>) vient toujours restrictif ; mais sa restriction varie selon les sens où il se rencontre : tantôt la restriction est réelle — comme la parole du Très-Haut :</p>
+<p>« Allah n'est qu'un Dieu unique » (an-Nisāʾ, 171 — le tronçon cité)</p>
+<p>[Citation coranique (an-Nisāʾ, 171 — le tronçon cité) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après « comme la parole du Très-Haut : » est vide dans la source numérisée ; le span subsistant « an-Nisāʾ : 170 » s'est révélé ERRONÉ et a été tranché — le <em>Muḥarrar</em> original cite l'exemple du <em>innamā</em> au sens réel MOT POUR MOT (« <em>innamā llāhu ilāhun wāḥid</em> »), l'édition en ligne portant expressément « de l'āya (171) de la sourate an-Nisāʾ » — l'āya 170 ne porte AUCUN vocable de restriction ; SPAN ERRONÉ signalé, neufᵉ cas du fil.]</p>
+<p>tantôt elle est excessive et emphatique — comme il en est dans cette āya.</p>
+<p>Et le sens a été répété dans Sa parole :</p>
+<p>« et tels sont les menteurs » (an-Naḥl, 105 — le tronçon de l'attribut, cité derechef)</p>
+<p>[Citation coranique (an-Naḥl, 105 — le tronçon de l'attribut, cité derechef) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après « Et le sens a été répété dans Sa parole : » est vide dans la source numérisée, SANS span subsistant ; le tronçon retenu est celui que le <em>Muḥarrar</em> cite MOT POUR MOT à cet endroit même (« le sens a été répété dans Sa parole : <em>et tels sont les menteurs</em> »).]</p>
+<p>, pour le profit que procure l'apposition de l'attribut du mensonge sur eux : car apposer un attribut à une chose est plus éloquent que d'en faire information, l'attribut impliquant la permanence plus que l'information ne l'implique. Il a donc commencé, dans cette āya, par l'information, puis a confirmé par l'attribut.</p>
+'''
+
+FR4 = '''<h3>Deuxièmement : le jugement de celui que l'on contraint à prononcer le mot de la mécréance</h3>
+<p>Après que le Très-Haut, dans les āyāt qui précèdent, eut mentionné que Qurayš avait méconnu le Messager d'Allah, que la bénédiction d'Allah et la paix soient sur lui, et proféré sur lui les propos les plus divers — le dépeignant comme un forgeur de mensonge, et le Livre qu'il apportait comme des paroles d'humains, non comme venant d'Allah —, puis les eut menacés pour cela de la plus redoutable des menaces, Il enchaîne par l'exposé de l'état de celui qui mécroit PAR SA LANGUE tandis que son cœur est plein de foi, et le Très-Haut dit :</p>
+<p>« Quiconque a renié Allah après avoir cru — sauf celui qui y a été contraint alors que son cœur demeure plein de la sérénité de la foi » (an-Naḥl, 106 — le tronçon de la contrainte)</p>
+<p>[Citation coranique (an-Naḥl, 106 — le tronçon de la contrainte) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après « et le Très-Haut dit : » est vide dans la source numérisée, SANS span subsistant — perte OCR ; le tronçon retenu est celui que la glose imprimée du manuel (« c'est-à-dire : celui qui mécroit en Allah après la foi et la vision claire... sauf s'il y a été contraint, son cœur étant plein de la foi ») et le <em>Muḥarrar</em> commentent ensemble.]</p>
+<p>c'est-à-dire : celui qui mécroit en Allah après la foi et la vision claire encourra la colère d'Allah — sauf s'il y a été CONTRAINT, son cœur étant plein de la foi en Allah et de la croyance en Son Messager : alors aucune remontrance ne lui sera faite — comme l'a fait ʿAmmār b. Yāsir. En effet, les mécréants de la Mecque, aux débuts de l'islam, maltraitaient quiconque se soumettait parmi les faibles ; ils les torturaient pour les faire faire défection de leur islam, et il arrivait que l'un d'eux prononçât le mot de l'association par crainte du préjudice.</p>
+<p>On rapporte que les associateurs saisirent ʿAmmār b. Yāsir et le torturèrent jusqu'à le faire fléchir vers une partie de ce qu'ils voulaient ; il s'en plaint au Prophète, que la bénédiction d'Allah et la paix soient sur lui, et le Prophète, que la bénédiction d'Allah et la paix soient sur lui, dit : « Comment trouves-tu ton cœur ? » — Il dit : « Serein par la foi. » — Le Prophète, que la bénédiction d'Allah et la paix soient sur lui, dit : « S'ils reviennent, reviens. » [le Tafsīr d'aṭ-Ṭabarī, 17/304]</p>
+<p>Le cadi Abū Muḥammad Ibn ʿAṭiyya dit : cette āya touche une part des questions de la contrainte. Quant à celui qu'un mécréant capable de le faire torture pour qu'il mécroie par sa langue — la torture devant conduire à sa mort —, il lui est permis de répondre par sa langue.</p>
+<h3>Troisièmement : la fin de l'apostasie de la religion de l'islam</h3>
+<p>Le Très-Haut dit :</p>
+<p>« mais ceux qui ouvrent délibérément leur cœur à la mécréance, ceux-là ont sur eux une colère d'Allah, et ils ont un châtiment terrible. » (an-Naḥl, 106 — la fin de l'āya)</p>
+<p>[Citation coranique (an-Naḥl, 106 — la fin de l'āya) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après « Le Très-Haut dit : » est vide dans la source numérisée, SANS span subsistant — perte OCR ; le tronçon retenu est celui que la glose imprimée du manuel (« c'est-à-dire : mais la colère d'Allah et Son châtiment sévère frapperont celui dont l'âme s'est apaisée dans la mécréance, de son plein gré et par choix ») commente.]</p>
+<p>c'est-à-dire : mais la colère d'Allah et Son châtiment sévère frapperont celui dont l'âme s'est apaisée dans la mécréance, de son plein gré et par choix. Sa parole :</p>
+<p>« ceux qui ouvrent délibérément leur cœur à la mécréance » (an-Naḥl, 106 — le tronçon de l'expansion)</p>
+<p>[Citation coranique (an-Naḥl, 106 — le tronçon de l'expansion) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après « Sa parole : » est vide dans la source numérisée, SANS span subsistant ; le tronçon retenu est celui que le <em>Muḥarrar</em> explique MOT POUR MOT — « ouvrir son cœur à la mécréance a pour sens : s'étendre vers la mécréance par son propre choix », le mot « plein » étant à l'accusé de distinction.]</p>
+<p>a pour sens : il s'est incliné vers la mécréance par son propre choix.</p>
+<p>Et Sa parole, le Très-Haut :</p>
+<p>« Il en est ainsi, parce qu'ils ont aimé la vie présente plus que l'au-delà » (an-Naḥl, 107 — le tronçon de la cause)</p>
+<p>[Citation coranique (an-Naḥl, 107 — le tronçon de la cause) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après « Et Sa parole, le Très-Haut : » est vide dans la source numérisée, SANS span subsistant — perte OCR ; le tronçon retenu est celui que la glose imprimée du manuel (« cette colère d'Allah et ce châtiment grand [leur viennent] de ce qu'ils ont préféré la vie d'ici-bas... ») commente.]</p>
+<p>c'est-à-dire : cette colère d'Allah et ce châtiment grand [leur viennent] de ce qu'ils ont préféré la vie d'ici-bas et sa parure au bonheur de l'au-delà ; et de ce qu'Allah ne donne pas la réussite à qui méconnaît Ses āyāt et persévère dans leur démenti — car il a perdu la disposition à suivre les voies du bien, s'étant embelli à lui-même son âme de la désobéissance : son cœur est devenu plein de ce qui le détourne de la foi, par suite de ce que le démon lui souffle.</p>
+<p>Et Sa parole :</p>
+<p>« Et Allah, vraiment, ne guide pas les gens mécréants » (an-Naḥl, 107 — le tronçon de la clôture)</p>
+<p>[Citation coranique (an-Naḥl, 107 — le tronçon de la clôture) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après « Et Sa parole : » est vide dans la source numérisée, SANS span subsistant ; le tronçon retenu est celui que le <em>Muḥarrar</em> explique MOT POUR MOT (« et Sa parole : et qu'Allah ne guide pas — signale l'établissement de la mécréance dans leurs cœurs »).]</p>
+<p>signale la volonté d'Allah, le Très-Haut, [d'établir] la mécréance dans leurs cœurs ; et nul doute que la mécréance du mécréant, à laquelle le châtiment se rattache, procède à la fois de la volonté d'Allah, le Très-Haut, et de l'acquisition du mécréant : l'āya a donc uni les deux ordres [de choses].</p>
+'''
+
+FR5 = '''<h3>Quatrièmement : l'état des apostats en ce bas monde et leur rétribution dans l'au-delà</h3>
+<p>Le Très-Haut dit :</p>
+<p>« Voilà ceux dont Allah a scellé les cœurs, l'ouïe et les yeux. Ce sont eux les insouciants. » (an-Naḥl, 108)</p>
+<p>[Citation coranique (an-Naḥl, 108) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après « Le Très-Haut dit : » est vide dans la source numérisée, SANS span subsistant — perte OCR ; l'āya retenue est celle que la glose imprimée du manuel commente — le sceau des cœurs, des ouïes et des regards.]</p>
+<p>c'est-à-dire : ceux qui ont été décrits comme il précède sont ceux dont Allah a scellé les cœurs : ils ne croient pas et ne se trouvent pas guidés ; Il a rendu sourdes leurs ouïes : ils n'entendent pas celui qui les appelle d'Allah vers la guidance ; Il a rendu aveugles leurs regards : ils ne voient pas, par eux, les preuves d'Allah, d'une vision qui considère et tire leçon ; et ce sont eux les distraits de ce qui est préparé pour leurs semblables parmi les gens de la mécréance. Comme s'Il avait, par là, obstrué les voies de ces sens, pour que ces gens n'en tirent aucun profit en considération et en méditation.</p>
+<p>Et Sa parole, le Très-Haut :</p>
+<p>« dont Allah a scellé les cœurs » (an-Naḥl, 108 — le tronçon du sceau)</p>
+<p>[Citation coranique (an-Naḥl, 108 — le tronçon du sceau) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après « Et Sa parole, le Très-Haut : » est vide dans la source numérisée, SANS span subsistant ; le tronçon retenu est celui que la glose imprimée du manuel (« est tiré du <em>ṭabʿ</em>, qui est le sceau... ») explique.]</p>
+<p>est tiré du <em>ṭabʿ</em>, qui est le sceau, et le <em>ṭābiʿ</em> est celui qui scelle. Une troupe des exégètes a jugé que le sens y est ici pris À LA LETTRE ; d'autres ont dit : il est métaphorique — et ce qu'Il a suscité dans leurs cœurs de mécréance, d'égarement et de détournement de la foi, Il l'a nommé « sceau ».</p>
+<p>Et Sa parole :</p>
+<p>« Et nul doute que dans l'au-delà, ils seront les perdants. » (an-Naḥl, 109)</p>
+<p>[Citation coranique (an-Naḥl, 109) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après « Et Sa parole : » est vide dans la source numérisée, SANS span subsistant — perte OCR ; l'āya retenue est celle que la glose imprimée du manuel (« c'est-à-dire : en vérité, dans l'au-delà, ce sont eux les perdus... ») commente.]</p>
+<p>c'est-à-dire : en vérité, dans l'au-delà, ce sont eux les perdus — ceux qui se sont lésés eux-mêmes et ont dépensé leurs vies en ce qui les conduit au châtiment.</p>
+<p>Allah a jugé ces mécréants de TROIS choses :</p>
+<ol>
+<li>Ils ont mérité la colère d'Allah et Son châtiment grand.</li>
+<li>Ils ont préféré la vie d'ici-bas, et Allah les a privés de la guidance.</li>
+<li>Il a scellé leurs cœurs, leurs ouïes et leurs regards, et les a mis parmi les distraits.</li>
+</ol>
+<p>Les āyāt signifient la réalisation du dessein de l'adoration d'Allah, le Très-Haut, dans la vie, en rappelant le sort des démenteurs dans l'au-delà, et ce dont Allah, le Très-Haut, les menace de châtiment douloureux ; elles ont signalé que la question de la foi et de l'unicité est une question qui ne souffre ni inattention ni légèreté — car celui dont Allah a aplanies les voies de la guidance, et qui s'est détourné de la guidance d'Allah, est près de voir Allah, le Très-Haut, sceller son cœur, de sorte qu'il ne se trouvera jamais guidé, et sera, dans l'au-delà, parmi les perdants.</p>
+<h2>L'évaluation</h2>
+<ol>
+<li>Détermine la relation des āyāt faisant l'objet de cette leçon avec ce qui les précède parmi les āyāt.</li>
+<li>Quel est le sort de ceux qui démentent les āyāt d'Allah ? Et de quoi Allah les menace-t-Il ?</li>
+<li>Quel est le jugement de celui que l'on contraint à la mécréance, le cœur demeurant serein par la foi ?</li>
+<li>Par quoi Allah, le Très-Haut, a-t-Il décrit les démenteurs apostats en ce bas monde ?</li>
+</ol>
+<h2>L'exploitation</h2>
+<p>D'après Ibn ʿAbbās, qu'Allah l'agrée, au sujet de Sa parole :</p>
+<p>« Quiconque a renié Allah après avoir cru — sauf celui qui y a été contraint alors que son cœur demeure plein de la sérénité de la foi — mais ceux qui ouvrent délibérément leur cœur à la mécréance, ceux-là ont sur eux une colère d'Allah, et ils ont un châtiment terrible. » (an-Naḥl, 106)</p>
+<p>[Citation coranique (an-Naḥl, 106 — l'āya commentée dans l'exploitation) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après « au sujet de Sa parole : » est vide dans la source numérisée, SANS span subsistant — perte OCR ; l'āya retenue est celle que le propos d'Ibn ʿAbbās commente mot à mot, lui qui tient : « Allah, le Sublime, a informé que quiconque mécroit après sa foi... ».]</p>
+<p>Il a dit : Allah, le Sublime, a informé que quiconque mécroit après sa foi encourra la colère d'Allah et aura un châtiment grand ; quant à celui qui a été contraint — il parle par sa langue, son cœur lui contredisant par la foi, pour échapper ainsi à son ennemi : point de péché sur lui ; Allah, le Sublime, ne saisit les serviteurs que selon ce que leurs cœurs ont contracté. [le <em>Sunan al-kubrā</em> d'al-Bayhaqī, livre de l'apostat, chapitre du contraint à l'apostasie]</p>
+<ul>
+<li>Détermine, à partir de ce texte, le châtiment de l'apostat de sa religion dans l'au-delà.</li>
+<li>Précise les bornes de ce que la contrainte peut autoriser parmi les actes qui contredisent la foi.</li>
+</ul>
+'''
+
+FR6 = '''<h2>La préparation préalable</h2>
+<p>Lis les āyāt (110-114) de la sourate an-Naḥl, et réponds à ce qui suit :</p>
+<ul>
+<li>Explique les mots suivants :</li>
+</ul>
+<p>[Liste de la préparation préalable restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus — an-Naḥl, 110-114 : la liste imprimée des mots à expliquer est perdue dans la source numérisée (TROIS emplacements vides à la suite de « Explique les mots suivants : ») — quatorzième occurrence du fil ; conformément à la convention du fil, elle n'est JAMAIS reconstituée par conjecture.]</p>
+<ul>
+<li>Déduis la parabole qu'Allah, le Très-Haut, a frappée de la cité qui était sûre et tranquille.</li>
+<li>Déduis des āyāt la rétribution de la reconnaissance des bienfaits, et la fin de leur mécréance.</li>
+</ul>
+<p>N.d.T. — Le <em>Muḥarrar</em> original d'Ibn ʿAṭiyya, consulté en ligne (collation des six āyāt 104-109, réussite six sur six), comporte pour ces versets des matières que le manuel n'a pas retenues, et qui complètent utilement la leçon. Pour l'āya 104 : l'implicite y est formulé au type « le commun des tournures » — celui qu'Allah ne guide pas ne croit pas à Ses āyāt —, le renversement de l'ordre étant visé par le blâme, et l'illustration en est le tronçon d'aṣ-Ṣaff, 5. Pour l'āya 105 : la restriction du <em>innamā</em> est illustrée d'un exemple de langue — « seul le brave est ʿAntara » — pour l'emploi excessif et emphatique ; az-Zaǧǧāǧ dit : cette classe forge le mensonge, car lorsqu'ils voient les āyāt que nul ne saurait produire sinon Allah, ils les démentent — et c'est là le mensonge le plus éhonté ; et Ibn ʿAṭiyya relève que Makkī a objecté ce raisonnement de la répétition de l'information puis de l'attribut — objection, juge-t-il, qui n'est pas forte. Pour l'āya 106 : « quiconque mécroit » est une suppléance de « et tels sont les menteurs », az-Zaǧǧāǧ n'admettant que ce seul mode d'attache — il voyait l'énoncé, jusqu'à la fin de l'exception, comme incomplet ; le cadi juge cette réticence admissible d'après ce qu'il rapporte ; l'attribut « les menteurs » y vise ʿAbdallāh b. Abī Sarḥ et Muqīs b. Ṣabāba et leurs semblables — qui avaient cru au Messager d'Allah puis avaient apostasié ; l'āya, en définissant les menteurs comme ceux qui mécroient après la foi, sort de cet attribut les croyants torturés de la Mecque — Bilāl, ʿAmmār, Sumayya leur mère, Ḫabbāb, Ṣuhayb et leurs semblables ; une troupe lit « quiconque » comme début d'énoncé et « qui ouvre » comme spécification, l'exception intervenant pour l'exclusion de ʿAmmār et ses semblables, la reprise par « mais » étant un correctif revenant au premier sens, et « sur eux » portant comme prédicat des deux « quiconque » — un seul au sens ; le cadi y objecte que l'affaire de Ibn Abī Sarḥ et des siens eut lieu auprès du Prophète, que la bénédiction d'Allah et la paix soient sur lui, À MÉDINE, tandis que l'apparent de cette āya est qu'elle est MECQUOISE ; et le <em>Muḥarrar</em> porte la version PLUS LONGUE du rapport d'ʿAmmār — « réponds-leur par ta langue, elle ne te nuira pas ; et s'ils reviennent, reviens » — que le manuel abrège. La FIQH de la contrainte, consignée au nom du cadi Abū Muḥammad, est considérable et le manuel n'en garde que l'ouverture : au contraint qui répond par un ACTE — comme la prosternation vers un simulacre — la majorité tient qu'il répond selon la dissimulation, une troupe qu'il refuse et livre son âme, une troupe que s'il se prosternait vers la <em>qibla</em> il répondrait, l'intention étant pour Allah — et le cadi de noter qu'il lui est loisible alors de se prosterner pour Allah où qu'il se tourne, licite en voyage par la fatigue de descendre de la monture pour la surérogation : « et qu'en est-il de ceci ! » ; à la maxime d'Ibn Masʿūd — « point de parole que deux coups de fouet d'un détenteur d'autorité peuvent écarter de moi sans que je l'aie prononcée » — le cadi objecte que ce n'est pas une preuve, le discours pouvant y être donné en exemple, l'acte valant alors autant que lui ; quant à la contrainte sur VENTE, SERMENT, DIVORCE, AFFRANCHISSEMENT, RUPTURE DU JEÛNE ET VIN — rien n'en incombe au contraint, au dire de Muṭarrif, transmis par Mālik, et d'Ibn ʿAbd al-Ḥakam, d'Aṣbaġ, et d'après Ibn al-Qāsim d'après Mālik ; Ibn ʿAbbās distinguait la PAROLE — l'affranchissement et le divorce, où la dissimulation s'admet — de l'ACTE — le vin et la rupture du jeûne, nullement licites au contraint ; le contraint forcé de vendre : vente nulle, son bien lui reste dû sans prix, et il poursuit l'acheteur par le prix — sinon par la valeur augmentée du préjudice — si l'acheteur ignorait la contrainte, et Muṭarrif ajoute que l'acheteur sachant garantit comme l'usurpateur ; la contrainte à TUER un musulman, à le frapper, à prendre son bien ou à vendre le sien : aucun prétexte — nulle contrainte dans la montée d'une désobéissance atteignant le seuil du châtiment légal, et nul ne le fait, fût-il tué ; s'il le fait, il est pécheur et subit le châtiment et le talion ; Mālik tient la chaîne, la prison et la menace terrifiante pour contrainte avérée quand l'iniquité de l'agresseur et son pouvoir d'exécution sont certains ; et le SERMENT du contraint n'engage pas — Ibn al-Māǧišūn : qu'il ait juré ce qui est obéissance d'Allah, désobéissance, ou chose indifférente, le serment tombe — sauf le serment extorqué dans la voie de l'obéissance, qui engage ; la dissimulation porte sur le corps, non sur le bien — on écarte par le serment ce qui menace son corps, non son bien ; et le critère final du cadi : on apprécie la contrainte selon la résolution du contraint, sa force dans la religion et la gravité de la chose exigée — le coup de fouet peut contraindre en ceci et pas en cela, et « pour ces aléas, la fiqh est celle de la situation ». Pour l'āya 107 : « ce » renvoie à la colère et au châtiment menacés en l'āya précédente — une autre lecture, consignée par l'édition en ligne, en fait un renvoi à l'apostasie et à l'audace dans la mécréance, pour la préférence du bas monde et parce que Allah ne les avait pas guidés à la foi ; la prédilection de la parure du bas monde et des douceurs de la mécréance est l'acquisition [du mérite], et l'āya a suspendu le châtiment à leur acquisition ; « et qu'Allah ne guide pas » signale l'INVENTION par Allah, le Très-Haut, de la mécréance dans leurs cœurs — la mécréance à laquelle le châtiment se rattache procède de l'invention d'Allah ET de l'acquisition du mécréant, et « c'est sur cela que passa la croyance des gens de la Sunna » ; l'édition en ligne consigne en note : « en ce propos, une réfutation claire de Ibn Taymiyya, qui accusait Ibn ʿAṭiyya de mutazilisme ». Pour l'āya 108 : sceller leurs cœurs y est paraphrasé du détournement d'Allah de la voie de la guidance, de l'invention de la ténébreuse mécréance dans leurs cœurs et de la prévalence du dédain de la considération sur leur regard ; le propos du <em>ṭabʿ</em> et du sceau — à la lettre ou au figuré — a été mené en amont, dans la Vache ; « l'ouïe » y est nom d'espèce et masdar à l'origine, d'où l'accord au singulier ; et le cadi y relève l'acquisition de leur dédain de la considération, d'où la description finale par « la distraction ». Pour l'āya 109 : « nul soupçon » (<em>lā ǧarama</em>) a reçu son exposé en amont dans cette même sourate — lors de l'exposé de « nul soupçon : le Feu leur est dû, et ils sont en faute » (an-Naḥl, 62).</p>
+<p>N.d.T. — État de la source numérisée de cette leçon : la section « Les versets » est vide entière — seizième cas consécutif du fil ; DIX-SEPT emplacements porteurs de citations perdues — le bloc principal (portant son étiquette subsistante « an-Naḥl : 104 - 109 », correcte et suivie telle quelle) et SEIZE emplacements du commentaire et de l'exploitation : DEUX avec span subsistant (aṣ-Ṣaff 5 — CORRECT, l'édition en ligne du <em>Muḥarrar</em> confirmant « de l'āya (5) de la sourate aṣ-Ṣaff » ; an-Nisāʾ 170 — ERRONÉ et tranché à 171, l'édition en ligne portant expressément « de l'āya (171) de la sourate an-Nisāʾ » et l'āya 170 ne portant AUCUN vocable de restriction) et QUATORZE sans aucun span — perte OCR ; SEIZE restitutions coraniques et UNE restauration NON coranique — la prétention des associateurs « Tu n'es qu'un forgeur de mensonge », restituée d'après la lettre exprès du <em>Muḥarrar</em> (« ceux qui dirent à Muḥammad... : Tu n'es qu'un forgeur de mensonge »), précédent inédit du fil (première restauration d'une citation NON coranique dans un emplacement vide). Exceptions favorables marquantes du fil : le hadith d'ʿAmmār b. Yāsir — « Comment trouves-tu ton cœur ? — Serein par la foi. — S'ils reviennent, reviens » — subsiste ENTIER et diacrité [le Tafsīr d'aṭ-Ṭabarī, 17/304], et le hadith d'Ibn ʿAbbās sur le contraint à l'apostasie subsiste ENTIER et diacrité [le <em>Sunan al-kubrā</em> d'al-Bayhaqī, livre de l'apostat, chapitre du contraint à l'apostasie] ; les SIX gloses de l'explication des mots subsistaient TOUTES avec leurs mots-têtes — aucune occurrence de la règle (y) dans cette leçon. La liste des mots de la préparation préalable est perdue — quatorzième occurrence (TROIS emplacements vides) ; la fente liminaire <em>dl/dt/dd</em> est vide — dix-huitième ; le tatwīl du <em>fī</em> court à travers le titre — seizième leçon consécutive ; l'OCR altère le nom de l'enseignement secondaire ancien (alef dédoublé) et l'étiquette d'adresse du tutoiement (<em>yāʾ</em> dénaturé dans « Lis ») — connus du fil ; l'écart de numérotation persiste — leçon 24 au manuel, badge 26/32 du fil — dix-septième occurrence ; des <em>div</em> de fermeture subsistent en queue.</p>
+<p>N.d.T. — Précisions de restitution : le tronçon d'aṣ-Ṣaff 5, les deux tronçons de l'āya 105 (information et attribut), le tronçon d'an-Nisāʾ 171, le tronçon de l'expansion de l'āya 106, les deux tronçons de l'āya 107 et le tronçon du sceau de l'āya 108 ont été restitués d'après la lettre EXACTE des commentaires du <em>Muḥarrar</em> en ligne, qui citent chacun le fragment qu'il explique ; les āyāt entières (104, 106, 108, 109, et l'āya 106 de l'exploitation) d'après les gloses imprimées du manuel qui les commentent ; la prétention des associateurs d'après la lettre du <em>Muḥarrar</em> — NON coranique, signalée à son emplacement ; le SPAN ERRONÉ « an-Nisāʾ : 170 » tranché au <em>Muḥarrar</em> lui-même (note de l'édition en ligne) ET au cache coranique — l'écart signalé en note, jamais corrigé dans le sens d'une lecture canonique inventée.</p>
+'''
+
+html = FR1 + FR2 + FR3 + FR4 + FR5 + FR6
+html = html.replace("'", chr(0x2019))
+
+issues = []
+AR = re.compile('[' + ''.join(chr(a) + '-' + chr(b) for a, b in [(0x0600, 0x06FF), (0x0750, 0x077F), (0x08A0, 0x08FF), (0xFB50, 0xFDF9), (0xFDFB, 0xFDFF), (0xFE70, 0xFEFF)]) + ']')
+ar = AR.findall(html)
+if ar:
+    issues.append("caractères arabes résiduels: " + str(len(ar)) + " : " + ''.join(sorted(set(ar)))[:50])
+if html.count("«") != html.count("»"):
+    issues.append(f"guillemets non appariés: {html.count('«')} / {html.count('»')}")
+if "'" in html:
+    issues.append(f"apostrophes droites restantes: {html.count(chr(39))}")
+for cp, name in [(0x0430, 'cyrillique'), (0xFD3E, 'crochet ornement gauche'), (0xFD3F, 'crochet ornement droit')]:
+    if chr(cp) in html:
+        issues.append(f'{name} présent')
+bal = ['h1', 'h2', 'h3', 'p', 'ol', 'ul', 'li', 'em', 'span']
+types = sum(1 for b in bal if f'<{b}>' in html)
+n_notes = html.count('[Citation coranique') + html.count('[Liste de la préparation') + html.count('[Restauration NON coranique')
+n_ndt = html.count('N.d.T.')
+print(f'caractères: {len(html)}')
+print(f'types de balises: {types}/9')
+print(f'notes de restauration: {n_notes}')
+print(f'paragraphes N.d.T.: {n_ndt}')
+print(f'guillemets: {html.count("«")}/{html.count("»")}')
+if issues:
+    print('PROBLÈMES:')
+    for i in issues:
+        print(' -', i)
+    raise SystemExit(1)
+if len(html) < 12000:
+    print('TROP COURT (< 12 000 car) — rédaction insuffisante')
+    raise SystemExit(1)
+
+out = '/home/z/my-project/tr-tmp/13636.html'
+open(out, 'w').write(html)
+print('écrit:', out)
