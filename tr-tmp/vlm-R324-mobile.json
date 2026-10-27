@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Verdict: LAYOUT OK. The page content fits within the 390px width without horizontal overflow or overlapping elements, and the bilingual heading hierarchy is clearly structured.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793138397,
+  "id": "2026102805595216d7d9efee1242d6",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "2026102805595216d7d9efee1242d6",
+  "usage": {
+    "completion_tokens": 35,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5061,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5096
+  }
+}
