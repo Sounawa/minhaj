@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Verdict: LAYOUT OK. The page displays a clean two-column layout with no visible horizontal overflow, cut-off text, or overlapping elements, and the headings hierarchy is clearly structured.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793139203,
+  "id": "20261028061318be95c3a153964af9",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261028061318be95c3a153964af9",
+  "usage": {
+    "completion_tokens": 38,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5253,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5291
+  }
+}
