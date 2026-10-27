@@ -3,8 +3,8 @@ import ZAI from 'z-ai-web-dev-sdk';
 import fs from 'fs';
 
 const shots = [
-  '/home/z/my-project/tr-tmp/qa-R293-14661-desktop.png',
-  '/home/z/my-project/tr-tmp/qa-R293-14661-mobile.png',
+  '/home/z/my-project/tr-tmp/qa-R294-15355-desktop.png',
+  '/home/z/my-project/tr-tmp/qa-R294-15355-mobile.png',
 ];
 
 const prompt = `Tu es contrôleur qualité d'un site de lecture académique bilingue (français/arabe). Voici une capture d'écran pleine page d'une leçon. Réponds en français, brièvement, avec ce format strict :
