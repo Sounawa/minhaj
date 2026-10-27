@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "LAYOUT OK: Single-column academic text with Arabic and French sections, readable on mobile without overlap or clipping.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793107536,
+  "id": "20261027212531f5fd974f1c604126",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261027212531f5fd974f1c604126",
+  "usage": {
+    "completion_tokens": 23,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5582,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5605
+  }
+}
