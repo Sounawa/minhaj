@@ -1,27 +1,61 @@
 #!/usr/bin/env python3
 # build-16211.py — 16211 « Compétences visées par l'enseignement du fiqh »
-# (fiqh-tanawi-3, lessons[1], badge Leçon 3/33) — DOCUMENT COURT (832 car AR,
-# GT 1 251) : page de compétences de l'année (phrase d'ouverture + 7 items).
-# Protocole adapté aux documents courts : ZÉRO āyāt, ZÉRO hadith → AUCUN cache
-# coranique, AUCUN Muḥarrar (3e application du protocole adapté du fil).
-# ≥ 12k car par l'enrichissement N.d.T. et la mise en contexte du livre.
-# Découvertes : fente liminaire NON VIDE (date lundi 22 janvier 2024) — 26e du
-# fil, 1re portant contenu depuis l'ouverture du livre ; tatwīl : ZÉRO tatweel
-# (la série de 24 consécutifs s'interrompt) ; 1re compétence = 2 énoncés cousus
-# dans un seul li ; 7e item SANS point final ; GT erronée (tanzīl → « Télé-
-# chargez », ḥukm sharʿī → « décision de justice ») — corrigée.
+# (fiqh-tanawi-3, lessons[1], badge « Leçon 3 / 33 » — règle f : lesson_index+2).
+# DEUXIÈME document du livre, premier après la présentation liminaire (14661, R293) ;
+# précédé de la première leçon 15355 (R294). Nature : CADRE DES COMPÉTENCES de la
+# discipline — document programmatique COURT (832 car AR) : titre + fente liminaire
+# (dt VIDE 26e du fil, dd portant une DATE — lundi 22 janvier 2024, cas rare) +
+# paragraphe vide + paragraphe d'attente (« l'apprenant(e) ... capable de : ») +
+# ul de SEPT li (le PREMIER fusionne DEUX compétences — point sans espace à l'imprimé).
+# ZÉRO āyāt, ZÉRO hadith → protocole documents programmatiques : AUCUN cache coranique,
+# AUCUN Muḥarrar (3e application après les index R291/R292 et la muqaddima R293 ;
+# R294 prévoyait « ≥ 12k par l'enrichissement N.d.T. et la mise en contexte du livre »).
+# Découvertes de l'état de la source : fente au terme vide mais DATÉE (fait rare ;
+# lundi 22 janvier 2024 = un lundi authentique) ; fusion de deux compétences au
+# premier item (restitution de l'espace, fusion signalée) ; mot du 3e item (rendu
+# « édifiantes ») = altération probable de leçon (hamza réduite) — lecture
+# conjecturale suivie, signalée sans trancher (méthode R291) ; kasra déplacée au
+# mot « émergentes » du 7e item ; dernier item sans point final ; div vides en queue ;
+# AUCUN tatwīl au titre — la série de 24 leçons consécutives S'INTERROMPT.
+# Conventions de la FAMILLE fiqh-tanawi (h1 du contenu = source h1 rendue ;
+# titleFr « Compétences visées par l'enseignement du fiqh » en en-tête de page) ;
+# N.d.T. RICHES (ère R291-R294) : état de la source / nature et structure (les huit
+# compétences graduées) / le genre du cadre de compétences dans le corpus /
+# conventions et correspondances — ZÉRO arabe (règle g), crochets pour restitutions.
 import re
 
-parts = []
-for i in range(1, 6):
-    parts.append(open(f'/home/z/my-project/tr-tmp/fr16211_{i}.html').read())
-html = ''.join(parts).strip()
+FR1 = '''<h1>Les compétences requises pour l’enseignement de la discipline du fiqh en troisième année de l’enseignement secondaire traditionnel (<em>ʿatīq</em>)</h1>
+<p>[Cadre des compétences de la discipline du fiqh pour la troisième année de l’enseignement secondaire traditionnel (<em>ʿatīq</em>) : deuxième document du livre, premier après la présentation liminaire, il précède la première leçon consacrée au failli. Document programmatique, il ne porte point de matière juridique mais la mesure du terme : ce qui est attendu de l’apprenant et de l’apprente à l’issue de l’année scolaire tout entière. La fente liminaire porte cette fois une date — lundi 22 janvier 2024 —, fait rare en cette place ; un unique paragraphe d’attente introduit ensuite la liste : HUIT capacités réparties en SEPT items imprimés, dont le premier en réunit deux. De la restitution du texte (<em>matn</em>) prescrit au traitement des questions contemporaines émergentes des transactions financières, la liste déroule l’arc complet de l’année : du mot au concept, du concept à la règle, de la règle à l’habitus jurisprudentiel (<em>malaka fiqhiyya</em>), et de l’habitus au cas nouveau — la même promesse que celle tenue par la présentation liminaire du manuel, qui vouait le livre à rendre les élèves maîtres du style juridique et qualifiés pour l’habitus jurisprudentiel en fiqh des transactions financières.]</p>
+<p>[Lundi 22 janvier 2024.]</p>
+<p>À l’issue de l’année scolaire, il est attendu que l’apprenant(e) soit capable de :</p>
+<ul>
+<li>Restituer le texte (<em>matn</em>) prescrit au besoin. Expliciter la signification des vocables du <em>matn</em>, la portée de ses mots et de ses termes.</li>
+<li>Délimiter les termes et les concepts fiqhiques énoncés dans le <em>matn</em>.</li>
+<li>Manier les gloses du <em>Mukhtaṣar</em> du shaykh Khalīl édifiantes pour la connaissance fiqhique.</li>
+<li>S’approprier les statuts légaux en leurs règles globales, et les règles fiqhiques dérivées qui touchent aux transactions financières.</li>
+<li>Mettre en application (<em>tanzīl</em>) les règles et les garde-fous fiqhiques propres à faire acquérir l’habitus jurisprudentiel (<em>malaka fiqhiyya</em>) en fiqh des transactions financières.</li>
+<li>Exprimer le statut légal (<em>ḥukm sharʿī</em>) en langue fiqhique, avec précision et clarté.</li>
+<li>Traiter les questions contemporaines émergentes en matière de transactions financières, et en rechercher les solutions en considérant la réalité changeante, dans le temps et dans l’espace.</li>
+</ul>
+'''
+
+FR2 = '''<p>N.d.T. — État de la source numérisée de ce document : la fente liminaire de listes présente son terme vide — VINGT-SIXIÈME fente au terme vide du fil —, mais son champ, loin d’être vide comme aux occurrences précédentes répertoriées, porte une date : lundi 22 janvier 2024 — jour concordant, un lundi en vérité, que ce 22 janvier de l’an 2024. Un paragraphe imprimé vide suit la fente liminaire ; des éléments de fermeture vides subsistent en queue du document, résidus de la structure de la page numérisée — deux récipients vides en fin de course, déjà rencontrés aux documents précédents du livre. Le premier item de la liste fusionne DEUX compétences distinctes : le point qui les sépare est imprimé sans espace — l’espace typographique est restitué, la fusion elle-même étant signalée sans être corrigée sur le fond ; les HUIT capacités se lisent donc en SEPT items, comptage rendu explicite à la note de nature. Le mot rendu par « édifiantes » au troisième item imprime une forme vraisemblablement altérée de la leçon attendue — réduction du hamza en lettre simple — ; la lecture conjecturale est suivie, la forme imprimée étant signalée sans être tranchée, selon la méthode des tours précédents. Au septième item, le mot « émergentes » porte un signe vocalique déplacé d’une lettre à l’autre — sans conséquence lexicale ; le même item s’achève sans point final, la ponctuation étant restituée au fil de la traduction. Aucun tatwīl ne court dans le titre : la série des allongements de plume, ininterrompue depuis vingt-quatre leçons consécutives, s’interrompt à ce document programmatique. Ni verset coranique ni hadith ne figurent au cadre des compétences — aucune vérification au cache coranique n’étant requise pour ce document, selon le protocole des documents programmatiques déjà appliqué aux deux index et à la présentation liminaire du livre.</p>
+'''
+
+FR3 = '''<p>N.d.T. — Nature et structure : ce document est programmatique — il ne porte point de matière juridique, mais la mesure du terme. SEPT items imprimés énoncent HUIT capacités, la première en réunissant deux : restituer le texte prescrit ; expliciter ses vocables ; délimiter les termes et concepts fiqhiques ; manier les gloses du <em>Mukhtaṣar</em> ; s’approprier les statuts globaux et les règles dérivées ; mettre en œuvre les règles et garde-fous jusqu’à l’habitus ; exprimer le statut en langue fiqhique ; traiter les questions émergentes. La liste est graduée : elle part de la mémoire — restituer le <em>matn</em> au besoin —, monte à la compréhension — expliciter la signification des vocables, la portée des mots et des termes —, puis au concept — délimiter les notions fiqhiques énoncées dans le texte —, puis à l’appareil des sources — manier les gloses du <em>Mukhtaṣar</em> du shaykh Khalīl —, puis à l’appropriation — les statuts légaux globaux et les règles dérivées —, puis à l’application — la mise en œuvre des règles et garde-fous —, puis à l’expression — énoncer le statut légal en langue fiqhique, avec précision et clarté —, et s’achève sur l’ouverture : traiter les questions contemporaines émergentes des transactions financières, en rechercher les solutions en égard à la réalité changeante, dans le temps et dans l’espace. L’arc ainsi déroulé va du mot au concept, du concept à la règle, de la règle à l’habitus, de l’habitus au cas nouveau : c’est la définition même de l’habitus jurisprudentiel (<em>malaka fiqhiyya</em>) que la cinquième capacité nomme en son rang — possession maîtrisée de l’esprit de la loi, qui rend capable de juger le cas survenu, fût-il survenu d’hier. La cinquième capacité est le cœur du cadre : elle reprend le but même que la présentation liminaire promettait aux élèves — l’habitus jurisprudentiel en fiqh des transactions financières, dont les deux années précédentes avaient déjà abordé certains chapitres et certaines règles. La quatrième pose la double assise du fiqh de l’année : les statuts légaux globaux — les règles universelles de la loi —, et les règles fiqhiques dérivées qui touchent aux transactions financières — les déterminations particulières du domaine. La sixième vise la langue des juristes : la présentation promettait de rendre les élèves « maîtres du style juridique » ; le cadre en fait une capacité expressément attendue — énoncer le statut légal en langue fiqhique, avec précision et clarté. La huitième, enfin, ouvre sur le temps : la présentation disait du fiqh des transactions financières qu’il est un domaine « où ne cessent d’apparaître de nouvelles transactions financières » ; le cadre charge l’apprenant d’en traiter les questions émergentes — avec l’égard dû à la réalité changeante, dans le temps et dans l’espace.</p>
+'''
+
+FR4 = '''<p>N.d.T. — Le genre du cadre de compétences dans le corpus : le titre parle des compétences de l’ENSEIGNEMENT — du côté du maître —, tandis que le corps formule les acquis de l’APPRENANT, au masculin repris de la parenthèse féminine : le document dit de l’élève, fils ou fille, ce qui est attendu de lui au terme de l’année. Le double destinataire est la règle du genre : le cadre sert au maître à régler les étapes de son enseignement, et à l’élève à connaître la mesure où son travail sera apprécié. La salutation de la présentation liminaire — « À vous, nos élèves, fils et filles » — trouve ici sa contrepartie programmatique : l’apprentissage de l’année est attendu de l’un et de l’autre, indifféremment. La collection reproduit d’ailleurs le même appareil d’ouverture d’un livre à l’autre : présentation liminaire, cadre des compétences, glossaire, leçons, index — l’architecture relevée aux tours précédents, que tenait déjà le livre de tafsīr achevé au terme du tour précédent, et que tient ici le livre de fiqh en sa troisième année. Ce qui distingue le présent cadre, c’est sa DATE : imprimée en la fente liminaire, lundi 22 janvier 2024 — l’année scolaire 2023-2024 ; les documents programmatiques du corpus portent rarement une date en cette place, et la fente liminaire, vide aux occurrences précédentes répertoriées du fil, porte ici la sienne. Le document a un JUMEAU au registre du livre : la deuxième entrée du sommaire déroulé à la présentation — les compétences de l’enseignement du fiqh en troisième année — couvre DEUX documents distincts ; le présent cadre, général à la discipline, ouvre la paire ; le cadre propre au <em>Mukhtaṣar</em> du shaykh Khalīl la clôt. La paire fut signalée à la présentation liminaire : le présent document en est la première moitié, la seconde suivant immédiatement au registre. Le genre relève du programmatique, non du juridique : aucun verset, aucun hadith ne soutient le cadre — c’est le document qui fixe la mesure, non celui qui porte la matière ; aux leçons qui suivent qu’il reviendra de convoquer le Livre et la Sunna, et c’est là que s’exercera, tour après tour, la vérification aux sources.</p>
+'''
+
+FR5 = '''<p>N.d.T. — Conventions et correspondances : la terminologie suit celle du fil — « apprenant(e) » pour l’élève au masculin et au féminin ; « texte » et « <em>matn</em> » pour le texte-source du <em>Mukhtaṣar</em> ; « gloses » pour les commentaires qui l’accompagnent ; « statut légal » pour le statut légal (<em>ḥukm sharʿī</em>) ; « règles globales » et « règles dérivées » pour les statuts universels et les déterminations particulières ; « habitus jurisprudentiel » pour l’habitus (<em>malaka fiqhiyya</em>), le mot latin reçu dès la présentation liminaire et la première leçon du livre ; « transactions financières » pour le domaine de la troisième année ; « mise en application » pour la descente des règles sur les cas — mot à mot la « descente » (<em>tanzīl</em>). Le nom du shaykh Khalīl, d’al-Dardīr et d’al-Dasūqī, les mots <em>Mukhtaṣar</em>, <em>ḥāshiya</em>, <em>malaka fiqhiyya</em>, suivent les conventions de la famille des livres de fiqh du corpus, où le même binôme — le <em>Mukhtaṣar</em> du shaykh Khalīl, le commentaire d’al-Dardīr et la ḥāshiya d’al-Dasūqī — servait déjà de source au livre de première année. Correspondances avec la première leçon du livre, livrée au tour précédent : la capacité de restituer le texte prescrit s’est vue à l’œuvre au chapitre de l’interdit au failli — le <em>matn</em> du shaykh Khalīl rendu in extenso, avec ses restitutions entre crochets ; la capacité d’expliciter les vocables, aux cinq gloses lexicales de la rubrique de compréhension ; la capacité de manier les gloses, au commentaire et à la ḥāshiya convoqués au fil de l’analyse en ses quatre axes ; la capacité de traiter les questions émergentes, à la rubrique d’exploitation qui convoquait les prémisses d’Ibn Rushd sur l’insolvabilité ; la langue fiqhique, enfin, au style elliptique du <em>Mukhtaṣar</em>, dont la leçon proposait la paraphrase méthodique — chaque capacité se trouve déjà illustrée par la leçon qui ouvrait le registre. La structure même des leçons du manuel incarne le cadre : la rubrique d’ouverture — descripteur et objectifs — dit les capacités visées par la leçon ; la rubrique du texte restitue le <em>matn</em> prescrit ; la rubrique de compréhension — gloses lexicales puis extraction des contenus — exerce l’explicitation des vocables et la délimitation des concepts ; la rubrique d’analyse, en ses axes, conduit de la règle globale à la règle dérivée ; la rubrique de contrôle vérifie l’appropriation ; la rubrique d’exploitation convoque les sources sur les questions de l’heure ; la préparation préalable, enfin, attelle l’élève au texte de la leçon suivante — l’architecture pédagogique du livre est le cadre des compétences mis en régime, leçon après leçon. Annonce du registre : le document jumeau — le cadre des compétences propre au <em>Mukhtaṣar</em> du shaykh Khalīl — suit immédiatement ; puis le glossaire des termes du shaykh Khalīl ; puis les leçons en l’ordre du registre, chaque verset — quand il s’en rencontrera — vérifié au cache coranique, chaque citation confrontée aux sources le cas échéant, selon le protocole rodé au fil des tours.</p>
+'''
+
+html = FR1 + FR2 + FR3 + FR4 + FR5
 html = html.replace("'", chr(0x2019))
 
 issues = []
-AR = re.compile('[' + ''.join(chr(a) + '-' + chr(b) for a, b in [
-    (0x0600, 0x06FF), (0x0750, 0x077F), (0x08A0, 0x08FF),
-    (0xFB50, 0xFDF9), (0xFDFB, 0xFDFF), (0xFE70, 0xFEFF)]) + ']')
+AR = re.compile('[' + ''.join(chr(a) + '-' + chr(b) for a, b in [(0x0600, 0x06FF), (0x0750, 0x077F), (0x08A0, 0x08FF), (0xFB50, 0xFDF9), (0xFDFB, 0xFDFF), (0xFE70, 0xFEFF)]) + ']')
 ar = AR.findall(html)
 if ar:
     issues.append("caractères arabes résiduels: " + str(len(ar)) + " : " + ''.join(sorted(set(ar)))[:50])
@@ -32,18 +66,23 @@ if "'" in html:
 for cp, name in [(0x0430, 'cyrillique'), (0xFD3E, 'crochet ornement gauche'), (0xFD3F, 'crochet ornement droit')]:
     if chr(cp) in html:
         issues.append(f'{name} présent')
-for tag in ['h1', 'h2', 'h3', 'h4', 'p', 'ul', 'li', 'em', 'span']:
+for tag in ['h1', 'h3', 'p', 'ul', 'li', 'em', 'br']:
     o, c = html.count(f'<{tag}'), html.count(f'</{tag}>')
+    if tag == 'p':
+        o = len(re.findall(r'<p>', html))
+        c = html.count('</p>')
     if o != c:
         issues.append(f'balises {tag} non appariées: {o} / {c}')
-n_li = html.count('<li>')
+n_li = len(re.findall(r'<li>', html))
 n_ndt = html.count('N.d.T.')
-n_em = html.count('<em>')
 print(f'caractères: {len(html)}')
 print(f'entrées li: {n_li}')
-print(f'occurrences N.d.T.: {n_ndt}')
-print(f'em: {n_em}')
+print(f'paragraphes N.d.T.: {n_ndt}')
 print(f'guillemets: {html.count("«")}/{html.count("»")}')
+if n_li != 7:
+    issues.append(f'entrées attendues 7, trouvées {n_li}')
+if n_ndt != 4:
+    issues.append(f'N.d.T. attendues 4, trouvées {n_ndt}')
 if issues:
     print('PROBLÈMES:')
     for i in issues:
