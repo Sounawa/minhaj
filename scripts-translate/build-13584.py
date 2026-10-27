@@ -1,0 +1,183 @@
+#!/usr/bin/env python3
+# build-13584.py — leçon 13584 « Sourate An-Nahl, versets 81-85 » (tafsir-tanawi-1, lessons[14], badge Leçon 16/32)
+# Trame 13547 (R279). ZÉRO script arabe dans tout le htmlFr (auto-vérif ; U+FDFA exempté — convention du fil).
+# QUATORZE restaurations coraniques (cache) : bloc principal 81-85 (section vide entière, 10e cas) + 12 emplacements
+# + 1 emplacement sans appel (83b — classe rare) ; span erroné tranché : Zalzala « 8-9 » -> 7-8 (3e cas du fil,
+# la sourate comptant 8 ayat) ; crochet ornement orphelin au bilan -> كذلك يُتم نعمته عليكم لعلكم تسلمون (caution) ;
+# Muḥarrar original consulté en ligne (quran-tafsir.net/atia, sura16 aya81-85 — fetch 5/5 OK).
+import json, os, re
+
+FR1 = '''<h1>La sourate an-Naḥl — <em>al-Muḥarrar al-wajīz</em> d'Ibn ʿAṭiyya, versets 81 à 85</h1>
+<p>Leçon de tafsīr — sourate an-Naḥl, versets (81-85) — tirée du livre <em>al-Tafsīr min khilāl al-Muḥarrar al-wajīz fī tafsīr al-Kitāb al-ʿazīz</em> d'Ibn ʿAṭiyya, au profit des élèves de la première année de l'enseignement secondaire ancien, première étape (leçon 18 du manuel — la quatorzième du fil consacré au Naḥl).</p>
+<ol>
+<li>Me familiariser avec le sens des mots des versets et en déterminer les contenus.</li>
+<li>Déduire des versets certains des bienfaits d'Allah, le Très-Haut, sur l'homme dans la vie.</li>
+<li>Ressentir la grandeur d'Allah, le Très-Haut, à travers l'étendue de Sa création sous Ses bienfaits.</li>
+</ol>
+<h2>Introduction</h2>
+<p>Lorsque Allah, le Très-Haut, a démontré dans les versets précédents ce dont Il a honoré Ses serviteurs, parmi les bienfaits par lesquels s'obtiennent la quiétude et la sérénité dans la vie, et par lesquels il s'assure de lui-même contre les terreurs et les épreuves, sont venus ces versets dans le même contexte, pour établir un surcroît de Ses bienfaits, à Lui le Très-Haut, sur Ses serviteurs. Et les versets ont rapporté un ensemble de bienfaits qui réalisent pour l'homme la quiétude, le repos, la protection et la sécurité ; et les versets ont établi de même que Allah, le Très-Haut, a dressé ces bienfaits comme preuve contre l'homme, afin qu'il connaisse Celui qui l'a gratifié d'eux, et qu'il acquitte alors le droit de la gratitude par la pureté de l'adoration et le suivi des messagers.</p>
+<p>Et les versets ont aussi signalé la condition de celui qui a méconnu ces bienfaits et les a niés, et que son sort au jour de la Résurrection est un sort mauvais, et que le châtiment d'Allah pour lui est un châtiment sévère.</p>
+<p>Quelles sont donc les manifestations des bienfaits dont Il a gratifié Ses serviteurs dans ces versets ? Et quel est le warning d'Allah, le Très-Haut, aux mécréants en ces bienfaits ? Et comment réalisons-nous la gratitude envers Allah, le Très-Haut, pour Ses bienfaits ?</p>
+'''
+
+FR2 = '''<h2>Les versets</h2>
+<p>Allah, le Très-Haut, a dit :</p>
+<p>« (81) Et de ce qu'Il a créé, Allah vous a procuré des ombres. Et Il vous a procuré des abris dans les montagnes. Et Il vous a procuré des vêtements qui vous protègent de la chaleur, ainsi que des vêtements [cuirasses, armures] qui vous protègent de votre propre violence. C'est ainsi qu'Allah parachève sur vous Son bienfait, peut-être que vous vous soumettez. (82) S'ils se détournent... il ne t'incombe que la communication claire. (83) Ils reconnaissent le bienfait d'Allah ; puis, ils le renient. Et la plupart d'entre eux sont des ingrats. (84) (Et rappelle-toi) le jour où de chaque communauté Nous susciterons un témoin, on ne permettra pas aux infidèles (de s'excuser), et on ne leur demandera pas de revenir [sur ce qui a provoqué la colère d'Allah]. (85) Et quand les injustes verront le châtiment, on ne leur accordera ni allégement ni répit. » (an-Naḥl, 81-85)</p>
+<p>[Citation coranique (an-Naḥl, 81-85 — le bloc entier des versets de la leçon) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : la section imprimée « Les versets » est vide dans la source numérisée, le bloc versical tout entier ayant disparu à la numérisation — perte OCR — dixième cas consécutif du fil.]</p>
+<p><span>an-Naḥl : 81 - 85</span></p>
+<h3>L'explication des mots</h3>
+<ul>
+<li>« des ombres » (<em>ẓilālan</em>) : pluriel de <em>ẓill</em> — ce dont on s'abrite, parmi les nuages, les arbres et les montagnes.</li>
+<li>« des abris » (<em>aknānan</em>) : pluriel de <em>kun</em> — ce qui garde de la pluie, du vent et autre.</li>
+<li>« des vêtements » (<em>sarābīl</em>) : pluriel de <em>sirbāl</em> — la chemise, faite de coton, de lin et de laine.</li>
+<li>« peut-être que vous vous soumettez » (<em>laʿallakum tuslimūna</em>) : vous vouez à Allah le culte exclusif.</li>
+<li>« on ne leur demandera pas de revenir » (<em>yustaʿtabūna</em>) : il ne leur est pas demandé le repentir, c'est-à-dire le retour vers ce qui satisfait Allah.</li>
+<li>« ni répit » (<em>yunẓarūna</em>) : on ne les demeure pas et ne les retarde pas.</li>
+</ul>
+<h3>L'extraction des contenus des versets</h3>
+<ol>
+<li>Quels sont les bienfaits dont Allah, le Très-Haut, a gratifié Ses serviteurs dans les versets ?</li>
+<li>Quelle est la finalité de l'achèvement, par Allah, du bienfait sur les serviteurs ?</li>
+<li>Expose la position des associateurs envers les bienfaits dont Allah les avait gratifiés.</li>
+<li>Extrais des versets le warning d'Allah, le Très-Haut, aux mécréants au jour de la Résurrection.</li>
+</ol>
+'''
+
+FR3 = '''<h2>Le tafsīr</h2>
+<p>Les versets ont comporté ce qui suit :</p>
+<h3>Premièrement : certaines manifestations de l'achèvement du bienfait d'Allah sur Ses serviteurs par l'habitation et le repos</h3>
+<p>Allah, le Très-Haut, a dit :</p>
+<p>« Et de ce qu'Il a créé, Allah vous a procuré des ombres » (an-Naḥl, 81 — le tronçon des ombres)</p>
+<p>[Citation coranique (an-Naḥl, 81 — le tronçon des ombres) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après l'appel de citation est vide dans la source numérisée — perte OCR.]</p>
+<p>Autrement dit : et parmi Ses bienfaits, à Lui le Très-Haut, sur vous, est qu'Il a établi pour vous, parmi ce qu'Il a créé — les arbres et autres —, des ombres dont vous vous abritez de l'âpreté de la chaleur.</p>
+<p>« Et Il vous a procuré des abris dans les montagnes » (an-Naḥl, 81 — le tronçon des montagnes)</p>
+<p>[Citation coranique (an-Naḥl, 81 — le tronçon des montagnes) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après le commentaire des ombres est vide dans la source numérisée — perte OCR.]</p>
+<p>Autrement dit : et Il a établi pour vous, parmi les montagnes, des demeures où vous habitez, comme les grottes et les cavernes et pareil.</p>
+<p>« Et Il vous a procuré des vêtements qui vous protègent de la chaleur » (an-Naḥl, 81 — le tronçon des vêtements)</p>
+<p>[Citation coranique (an-Naḥl, 81 — le tronçon des vêtements) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après le commentaire des montagnes est vide dans la source numérisée — perte OCR.]</p>
+<p>Autrement dit : et Il a établi pour vous des vêtements de coton, de lin et de laine et pareil, qui vous gardent de l'âpreté de la chaleur qui est dans vos pays.</p>
+<p>« ainsi que des vêtements [cuirasses, armures] qui vous protègent de votre propre violence » (an-Naḥl, 81 — le tronçon des armures)</p>
+<p>[Citation coranique (an-Naḥl, 81 — le tronçon des armures) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après le commentaire des vêtements est vide dans la source numérisée — perte OCR ; le tronçon est apparié au <em>Muḥarrar</em> original — « les <em>sarābīl</em> qui gardent du <em>baʾs</em> sont les armures » — le <em>baʾs</em> étant « le fer du métal dans la guerre ».]</p>
+<p>Autrement dit : et Il a établi pour vous des cuirasses qui vous gardent du fléau des armes et de leur nuisance, au temps de la guerre.</p>
+<p>« C'est ainsi qu'Allah parachève sur vous Son bienfait » (an-Naḥl, 81 — le tronçon de l'achèvement)</p>
+<p>[Citation coranique (an-Naḥl, 81 — le tronçon de l'achèvement) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après le commentaire des armures est vide dans la source numérisée — perte OCR.]</p>
+<p>Autrement dit : de même qu'Il a créé ces choses pour vous et vous a gratifiés d'elles, Il achève sur vous le bienfait du monde et de la religion, et Il fait de vous des rois et des émirs dans ce que vous ouvrez des pays et des contrées, et Il fait que votre guide, en ce que vous savez, soit le visage d'Allah et la réforme des nations et des peuples — comme dit le Très-Haut :</p>
+<p>« Et ils jurent par Allah en serments solennels que si tu le leur ordonnais, ils sortiraient à coup sûr (au combat). Dis : Ne jurez donc pas. [Votre] obéissance [verbale] est bien connue. Allah est Parfaitement Connaisseur de ce que vous faites. » (an-Nūr, 53)</p>
+<p>[Citation coranique (an-Nūr, 53) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après l'appel de citation est vide dans la source numérisée, le span d'attribution « an-Nūr, 53 » subsistant — perte OCR.]</p>
+<p>Et la parole du Très-Haut :</p>
+<p>« peut-être que vous vous soumettez » (an-Naḥl, 81 — la clôture)</p>
+<p>[Citation coranique (an-Naḥl, 81 — la clôture) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après l'appel de citation est vide dans la source numérisée — perte OCR.]</p>
+<p>Le <em>laʿall</em> exprime ici l'anticipation — autrement dit : l'anticipation de considérer ce qu'Il a étendu sur vous, parmi les bienfaits, afin que vous connaissiez le droit de Celui qui les a accordés, que vous croyiez en Lui seul et que vous abandonniez ce en quoi vous Lui associez, et que vous soyez ainsi sauvés de Son châtiment. Car l'homme doué de raison, à qui l'on fait le bien, rend grâce à celui qui l'a gratifié.</p>
+<p>Et dans cette āya se trouve le dénombrement des bienfaits d'Allah sur eux selon leurs conditions et leurs pays ; et ce sont les choses qui leur sont immédiatement proches, car leurs pays, par l'âpreté de la chaleur, les astreignent à l'ombre dont Allah les a gratifiés. Cela tient à ce que les pays des Arabes, étant d'une chaleur âpre et leur besoin de l'ombre obligatoire, la garde contre la chaleur fut mentionnée au sein des bienfaits les plus grands — jusqu'à ce que ce qui garde de la chaleur garde du froid aussi : la mention de l'une dispensait ainsi de la mention de l'autre. Et les <em>sarābīl</em> qui gardent du <em>baʾs</em> sont les armures. Et le <em>baʾs</em> : le fer du métal dans la guerre.</p>
+'''
+
+FR4 = '''<h3>Deuxièmement : la négation, par les associateurs, du bienfait d'Allah sur eux, par l'acheminement du Message, après qu'ils l'ont connue</h3>
+<p>Lorsque Allah a dénombré ce qu'Il avait étendu sur eux, parmi les bienfaits, Il a mentionné ce qui s'ensuit si ceux-là s'obstinaient dans leur entêtement et leur orgueil, sans que la rappelation ne leur profite. Il a dit, le Très-Haut :</p>
+<p>« S'ils se détournent... il ne t'incombe que la communication claire. » (an-Naḥl, 82)</p>
+<p>[Citation coranique (an-Naḥl, 82) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après l'appel de citation est vide dans la source numérisée — perte OCR.]</p>
+<p>Autrement dit : s'ils persistent dans leur détour, et n'acceptent pas ce qui leur est lancé des preuves, cela ne nuit point à toi, et ne consume point ton âme pour eux en deuil et en regret ; car tu as déjà acquitté ta mission, complète, non entamée — et elle n'est que la communication manifeste des desseins de la religion, la clarification de ses secrets et de sa sagesse ; et tu l'as accomplie en sorte que nul surcroît ne la porte. Tu n'es donc pas en pouvoir de les guider, ni de créer la foi dans leurs cœurs.</p>
+<p>Et Sa parole :</p>
+<p>« Ils reconnaissent le bienfait d'Allah ; puis, ils le renient. » (an-Naḥl, 83 — l'ouverture)</p>
+<p>[Citation coranique (an-Naḥl, 83 — l'ouverture) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après l'appel de citation est vide dans la source numérisée — perte OCR.]</p>
+<p>Autrement dit : ils savent que tous ces bienfaits sont d'Allah, puis ils les nient par leurs actes, dès lors qu'ils n'ont pas réservé à Celui qui les a accordés l'adoration et la gratitude, mais ont rendu grâce à autre que Lui avec Lui, disant que ces bienfaits ne s'obtiennent que par l'intercession de ces idoles.</p>
+<p>Ibn ʿAṭiyya, qu'Allah lui fasse miséricorde, a dit : et le bienfait ici est Muḥammad ﷺ, comme l'a dit as-Suddī ; et Allah, le Très-Haut, a décrit les associateurs comme connaissant ses miracles et les signes de sa prophétie, et niant cela par le démenti — et aṭ-Ṭabarī a préféré ce dire. Et Allah les a nommés niants le bienfait par tolérance, leurs actes de négation relevant de la mécréance envers le Seigneur du bienfait, et leur association dans le bienfait des idoles étant, d'une certaine façon, ce qu'ils croyaient aux idoles du mal et du bien.</p>
+<p>« Et la plupart d'entre eux sont des ingrats. » (an-Naḥl, 83 — la clôture)</p>
+<p>[Citation coranique (an-Naḥl, 83 — la clôture) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé est vide dans la source numérisée et resté SANS appel de citation subsistant — perte OCR ; le tronçon est apparié au commentaire qui l'expose (« la plupart d'entre eux : contestataire obstiné ») et au <em>Muḥarrar</em> original — « puis Il les a frappés et les a blâmés... puis Il les a jugés mécréants en leur majorité, et ce sont les gens de la Mecque ».]</p>
+<p>Autrement dit : la plupart d'entre eux sont contestataires obstinés, qui savent la véracité du messager et n'y croient point, par entêtement et orgueil ; et un petit nombre d'entre eux ignorait sa véracité, et ne s'était pas manifesté à eux comme prophète véritable de la part d'Allah, parce qu'il n'avait pas considéré les preuves par la considération droite qui mène au but, ou n'avait pas connu la vérité pour un déficit de la raison, de sorte qu'il ne suive pas sa voie, ou n'était pas parvenu au seuil de la charge, de sorte que la preuve ne s'établisse pas contre lui.</p>
+'''
+
+FR5 = '''<h3>Troisièmement : le warning d'Allah aux mécréants au jour de la Résurrection, par la hâte du châtiment et l'absence de répit</h3>
+<p>Lorsque Allah a mentionné la condition de ces associateurs, et qu'ils avaient connu le bienfait d'Allah puis l'avaient nié, Il a suivi cela par Son warning à leur encontre, et a mentionné leur condition au jour de la Résurrection : qu'ils seront humiliés, auxquels il ne sera pas donné la permission de parler pour innocenter leurs personnes, et auxquels on ne fera pas de répit, mais ils seront saisis au châtiment sans délai. Il a dit, le Très-Haut :</p>
+<p>« (Et rappelle-toi) le jour où de chaque communauté Nous susciterons un témoin, on ne permettra pas aux infidèles (de s'excuser), et on ne leur demandera pas de revenir [sur ce qui a provoqué la colère d'Allah]. » (an-Naḥl, 84)</p>
+<p>[Citation coranique (an-Naḥl, 84 — le verset entier, à double exposition) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après l'appel de citation est vide dans la source numérisée — perte OCR ; le commentaire du manuel expose le verset en deux mouvements consécutifs — l'ouverture (le témoin) puis la clôture (la permission refusée) — sans appel intermédiaire subsistant.]</p>
+<p>Autrement dit : au jour où Nous susciterons, de chaque communauté, un témoin qui atteste d'elle ce qu'elle a répondu à celui qui l'appelait vers Allah — son messager qu'Il lui avait envoyé — : soit par la foi et l'obéissance à Allah, soit par la mécréance et la désobéissance.</p>
+<p>Autrement dit : puis la parole des mécréants ne sera plus écoutée après le témoignage de leurs prophètes, ni accueillie — car dans ce témoignage se trouve ce qui suffit au jugement de leur affaire et à la sentence prononcée sur eux. Et Allah sait ce qu'ils faisaient. Mais dans ce témoignage se trouve le reproche fait à eux, et le blâme pour ce qu'ils avaient commis de dépravation et de désobéissance, et de mécréance envers leur Seigneur qui les avait gratifiés — et analogue à cet āya est Sa parole :</p>
+<p>« Ce sera le jour où ils ne [peuvent] pas parler, et point ne leur sera donné permission de s'excuser. » (al-Mursalāt, 35-36)</p>
+<p>[Citation coranique (al-Mursalāt, 35-36) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après l'appel de citation est vide dans la source numérisée, le span d'attribution « al-Mursalāt, 35 - 36 » subsistant — perte OCR.]</p>
+<p>Et il ne leur sera pas demandé de dissiper le blâme de leur Seigneur et Sa colère par le repentir et l'œuvre salutaire : l'au-delà est la demeure de la rétribution, non la demeure de l'œuvre ; et le retour au monde est de ce qui ne saurait être.</p>
+<p>Et Sa parole :</p>
+<p>« Et quand les injustes verront le châtiment, on ne leur accordera ni allégement ni répit. » (an-Naḥl, 85)</p>
+<p>[Citation coranique (an-Naḥl, 85) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après l'appel de citation est vide dans la source numérisée — perte OCR ; le commentaire du manuel expose le verset en mélangeant sa pensée à celle de la clôture du verset 84 (la permission refusée, l'allégement, le répit), le <em>Muḥarrar</em> original appariant ici mot pour mot — « le dessein de l'āya est la différence entre ce qui s'abat sur eux et ce qui les atteint des épouvantes du monde ».]</p>
+<p>Autrement dit : et lorsque ces gens qui ont démenti et méconnu la prophétie des prophètes verront le châtiment d'Allah, rien ne les en sauvera, car il ne leur sera pas donné la permission de s'excuser pour qu'ils s'excusent — et l'on allégerait ainsi pour eux cet excuse qu'ils prétendent —, ni ne leur sera fait de répit au châtiment, car le temps du repentir et du retour est passé, et le temps d'alors n'est que celui de la rétribution des œuvres :</p>
+<p>« Quiconque fait un bien fût-ce du poids d'un atome, le verra, et quiconque fait un mal fût-ce du poids d'un atome, le verra. » (az-Zalzala, 7-8)</p>
+<p>[Citation coranique (az-Zalzala, 7-8) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après l'appel de citation est vide dans la source numérisée, le span d'attribution subsistant portant « az-Zalzala, 8 - 9 » — référence erronée, l'āya 9 n'existant pas (la sourate compte huit āyāt) ; la formule illustrant le moment de la rétribution des œuvres est le couple des deux āyāt de l'atome, la 7 (le bien) et la 8 (le mal) — troisième cas du fil après le « 237/2 » et le « 252 » — perte OCR.]</p>
+<p>et analogue à cet āya est la parole du Très-Haut :</p>
+<p>« Et le jour où Il dira : Appelez ceux que vous prétendiez être Mes associés. Ils les invoqueront ; mais eux ne leur répondront pas, Nous aurons placé entre eux une vallée de perdition. » (al-Kahf, 52)</p>
+<p>[Citation coranique (al-Kahf, 52) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après l'appel de citation est vide dans la source numérisée, le span d'attribution « al-Kahf, 52 » subsistant — perte OCR.]</p>
+<p>, et Sa parole :</p>
+<p>« Et quand on les y aura jetés, dans un étroit réduit, les mains liées derrière le cou, ils souhaiteront alors leur destruction complète. Aujourd'hui, ne souhaitez pas la destruction une seule fois, mais souhaitez-en plusieurs. » (al-Furqān, 13-14)</p>
+<p>[Citation coranique (al-Furqān, 13-14) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé après l'appel de citation est vide dans la source numérisée, le span d'attribution « al-Furqān, 13 - 14 » subsistant — perte OCR.]</p>
+<p>Et l'āya fait savoir que les injustes, lorsque Allah leur montre le châtiment du Feu et qu'ils le côtoient et vérifient la réalité de son âpreté, ce qui leur descend alors de l'horreur ne s'allège en aucune façon et ne se retarde pas sur eux. Et le dessein de l'āya est l'établissement de la différence entre ce qui s'abat sur eux dans l'au-delà et ce qui les atteint des épouvantes du monde : l'homme, en effet, n'attend rien des troubles du monde sans avoir l'espoir qu'il s'en retarde, et qu'il lui vienne dans la forme la plus légère de ce qu'il espère ; et de même, dès qu'il s'abat sur lui, il est avide qu'il s'allège — et cela advient souvent dans les troubles du monde. Allah, le Très-Haut, a donc informé que le châtiment de l'au-delà, lorsque le mécréant l'aura vu, ne comporte nul espoir, ni d'allégement ni de retard.</p>
+<p>Et les versets signalent la réalisation de deux desseins fondamentaux : un dessein de munificence, qui se manifeste dans ce qu'Allah, le Très-Haut, a prodigué sur Ses serviteurs de bienfaits différents, que rassemble la réalisation de la quiétude, du repos, de la guidance et de la clarté ; et un dessein existentiel, qui se manifeste dans la crainte d'Allah, le Très-Haut, et la préparation à Sa rencontre au jour de la Résurrection.</p>
+<p>N.d.T. — Le dénombrement des bienfaits est ici calé sur l'économie géographique du texte : aṭ-Ṭabarī rapporte, d'après ʿAṭāʾ al-Khurāsānī, que la garde contre la chaleur seule fut mentionnée parce qu'elle est la plus pressante dans les pays du Ḥijāz, le froid y étant absent en sa plupart — et Ibn ʿAbbās disait de la neige : « c'est une chose blanche qui descend du ciel, je ne l'ai jamais vue » ; Ibn ʿAṭiyya conclut : « la mention de l'une dispense de l'autre ». Le <em>Muḥarrar</em> conserve, et le manuel omet, les divergences de lecture : <em>yutim</em> de la majorité face au <em>tutim</em> d'Ibn ʿAbbās — « le bienfait est un achèvement » —, et le <em>tuslimūn</em> de l'islam face à son <em>tuslamūna</em> de la sauvegarde — « la parole serait alors spécifique au fléau de la guerre » ; de même l'abrogation, par l'āya du sabre, d'une matière de la parole « il ne t'incombe que la communication claire », et l'argument du « toute âme viendra, disputant pour elle-même » contre la permission de s'excuser. Le <em>Muḥarrar</em> expose aussi le « témoin » comme « attestant de leur mécréance et de leur foi », et rapporte d'aṭ-Ṭabarī que le témoin les démente — contenus absents du manuel.</p>
+'''
+
+FR6 = '''<h2>Le bilan</h2>
+<ul>
+<li>Expose ce dont Allah, le Très-Haut, a gratifié Ses serviteurs, parmi les bienfaits.</li>
+<li>Déduis des versets la finalité de l'achèvement, par Allah, le Très-Haut, du bienfait sur les serviteurs.</li>
+<li>Que retires-tu de la parole du Très-Haut : « C'est ainsi qu'Allah parachève sur vous Son bienfait, peut-être que vous vous soumettez » ?</li>
+</ul>
+<p>[Citation coranique (an-Naḥl, 81 — le tronçon de l'achèvement et sa clôture, appelée au sein du troisième item du bilan) restaurée d'après le corpus canonique et vérifiée au cache coranique du corpus : l'emplacement imprimé était un crochet ornemental orphelin (le crochet fermant seul subsistant, la citation ayant disparu à la numérisation) — perte OCR ; le tronçon retenu est le tronçon-clôture du Temple de l'āya 81, que la leçon expose en ses deux visages — l'achèvement du bienfait et le dessein de la soumission —, identification raisonnable soumise à caution quant à l'étendue exacte de la citation perdue.]</p>
+<ul>
+<li>Quel est le warning d'Allah, le Très-Haut, aux mécréants démentant l'appel du Prophète ﷺ ?</li>
+</ul>
+<h2>L'exploitation</h2>
+<p>Le Rāzī a dit : et dans ce que vise ce bienfait se trouvent des visages. Le premier : le qāḍī a dit — ce qui est visé par lui, c'est tout ce qu'Allah, le Très-Haut, a mentionné dans les āyāt précédentes, de tous les genres de bienfaits ; et le sens de leur négation, c'est qu'ils ne l'ont pas réservé, à Lui le Très-Haut, à la gratitude et à l'adoration, mais ont rendu grâce, sur ces bienfaits, à autre qu'Allah, le Très-Haut — et parce qu'ils ont dit : ces bienfaits ne s'obtiennent que par l'intercession de ces idoles. Et le second : que ce qui est visé est qu'ils ont su que la prophétie de Muḥammad ﷺ est vérité, puis ils la nient — et sa prophétie est un bienfait immense, comme dit le Très-Haut : « Et Nous ne t'avons envoyé qu'en miséricorde pour l'univers. » [<em>Mafātīḥ al-ghayb</em> du Rāzī, 20/255]</p>
+<ul>
+<li>Médite le texte et réponds à ce qui suit :</li>
+<li>Compare le premier sens et le second, et expose certaines des préférences entre eux à travers le contexte des āyāt.</li>
+<li>Quelle est, en ta pensée, la cause de la négation du bienfait d'Allah après qu'on l'a connue ?</li>
+</ul>
+<p>N.d.T. — La référence d'attribution « az-Zalzala, 8 - 9 » subsistante dans la source numérisée porte une référence erronée : la sourate le Séisme compte huit āyāt, et l'āya 9 n'existe pas ; la formule que le commentaire glose — le moment où les œuvres, fût-ce du poids d'un atome, sont montrées — est le couple des āyāt 7 (le bien) et 8 (le mal), tel que restitué ci-dessus. C'est le troisième cas du fil d'attribution erronée subsistante, après le « 237/2 » de la leçon précédente du même manuel et le « la Vache, 252 » de la leçon d'avant elle ; la méthode constante est de vérifier chaque span contre la formule glosée par le commentaire, au cache coranique et au <em>Muḥarrar</em> original, et de signaler le résultat en note. De même, la citation perdue du bilan (un seul crochet ornemental fermant subsistant) n'est rétablie qu'à titre raisonnable, l'identité exacte du tronçon perdu demeurant soumise à caution.</p>
+<h2>La préparation préalable</h2>
+<p>Lis les versets (86-89) de la sourate an-Naḥl et réponds à ce qui suit :</p>
+<ul>
+<li>Explique les propositions suivantes :</li>
+</ul>
+<p>[Liste de la préparation préalable perdue à la numérisation : les quatre emplacements imprimés sous « Explique les propositions suivantes » sont vides dans la source numérisée — huitième occurrence du fil ; d'après les versets 86-89, annoncés par la consigne, la liste proposait les propositions du repas des bienfaits — la nourriture, l'eau, la lumière et le navire —, mais aucun indice subsistant n'en permet le rétablissement.]</p>
+<ul>
+<li>Extrais des versets les conditions des associateurs au jour de la Résurrection.</li>
+<li>Extrais des versets la finalité de la descente du Coran généreux.</li>
+</ul>
+'''
+
+# === ASSEMBLAGE ===
+html = FR1 + FR2 + FR3 + FR4 + FR5 + FR6
+
+# Post-traitement : apostrophes droites -> courbes (convention chantier)
+html = html.replace("'", "\u2019")
+
+# Auto-vérifs pré-QA
+AR = re.compile(r"[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDF9\uFDFB-\uFDFF\uFE70-\uFEFF]")
+issues = []
+if AR.search(html):
+    issues.append('ARABE résiduel: ' + repr(AR.findall(html)[:5]))
+if html.count('«') != html.count('»'):
+    issues.append(f"guillemets non appariés: {html.count('«')}/{html.count('»')}")
+if "'" in html:
+    issues.append(f"apostrophes droites restantes: {html.count(chr(39))}")
+for ch, name in [('\u0430', 'cyrillique'), ('\uFD3E', 'crochet ornement gauche'), ('\uFD3F', 'crochet ornement droit')]:
+    if ch in html:
+        issues.append(f'{name} présent')
+bal = ['h1', 'h2', 'h3', 'p', 'ol', 'ul', 'li', 'em', 'span']
+types = sum(1 for b in bal if f'<{b}>' in html)
+n_notes = html.count('[Citation coranique') + html.count('[Liste de la préparation')
+n_ndt = html.count('N.d.T.')
+print(f'caractères: {len(html)}')
+print(f'types de balises: {types}/9')
+print(f'notes de restauration: {n_notes}')
+print(f'paragraphes N.d.T.: {n_ndt}')
+print(f'guillemets: {html.count("«")}/{html.count("»")}')
+if issues:
+    print('PROBLÈMES:')
+    for i in issues:
+        print(' -', i)
+    raise SystemExit(1)
+if len(html) < 12000:
+    print('TROP COURT (< 12 000 car) — rédaction insuffisante')
+    raise SystemExit(1)
+
+out = '/home/z/my-project/tr-tmp/13584.html'
+open(out, 'w').write(html)
+print('écrit:', out)
