@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "LAYOUT OK\n\n**Détails :**\n*   **(1) Chevauchements :** Aucun détecté. Le texte français (colonne de gauche) et le texte arabe (colonne de droite) sont bien séparés et ne se superposent pas.\n*   **(2) Débordements :** Aucun débordement horizontal. Les longs paragraphes arabes passent correctement à la ligne dans leur colonne.\n*   **(3) Hiérarchie :** Les titres (Le texte, La compréhension, L'analyse, etc.) sont clairement visibles, en gras et bien espacés.\n*   **(4) Citations :** Les blocs de citation (texte arabe à droite) sont bien alignés et lisibles.\n*   **(5) Lisibilité :** Excellente. La police est claire, l'espacement entre les lignes est suffisant pour faciliter la lecture bilingue côte à côte.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793127234,
+  "id": "202610280253466e432b0c721d496b",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610280253466e432b0c721d496b",
+  "usage": {
+    "completion_tokens": 222,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 6153,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6375
+  }
+}
