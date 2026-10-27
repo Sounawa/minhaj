@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Le texte français et arabe est bien contenu dans ses colonnes respectives sans débordement ni chevauchement. Les titres, listes à puces et paragraphes sont correctement alignés et lisibles sur toute la hauteur de la page. LAYOUT OK",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793117642,
+  "id": "20261028001357336bdf1d83f34823",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261028001357336bdf1d83f34823",
+  "usage": {
+    "completion_tokens": 57,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5599,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5656
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1) Le texte ne déborde pas horizontalement et ne chevauche aucun élément.\n2) Aucun bloc n'est coupé à droite, la mise en page est bien contenue.\n3) Tout le contenu est parfaitement lisible sur cette largeur. LAYOUT OK",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793117655,
+  "id": "20261028001408ca17f436e16f464a",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261028001408ca17f436e16f464a",
+  "usage": {
+    "completion_tokens": 61,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5132,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5193
+  }
+}
