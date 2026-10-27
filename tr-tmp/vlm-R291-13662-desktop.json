@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Voici la vérification QA point par point de la capture d'écran :\n\n1.  **Le badge d'en-tête :** Oui, le premier badge en haut à gauche affiche bien **« Leçon 31 / 32 »**.\n2.  **Le badge « Traduction savante » :** Oui, il est bien visible à côté des autres badges (Enregistrer, Enseigne canonique, etc.) dans l'en-tête.\n3.  **La colonne française :** Oui, elle contient une liste d'entrées biographiques (ex: *Umar b. al-Khattāb*, *Abū Bakr*, etc.). Les noms sont en **italique coloré**, les entrées sont séparées par des **filets pointillés** et il n'y a pas de puces visibles, conformément au style académique demandé.\n4.  **Intégrité visuelle :** Aucun débordement horizontal n'est visible sur les côtés. Le texte semble complet et ne présente pas de coupures évidentes. Il n'y a pas de chevauchement entre les deux colonnes ou avec les éléments d'interface.\n5.  **La lettrine :** Oui, une grande capitale initiale (**I**) est bien présente au tout début du premier paragraphe de la colonne française (« Index des figures citées... »).\n\n**Conclusion :** Le rendu est **impeccable**. L'interface respecte fidèlement les spécifications de mise en page bilingue, la typographie soignée et l'absence de défauts techniques apparents.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793096915,
+  "id": "202610271828246087c6741e124bed",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610271828246087c6741e124bed",
+  "usage": {
+    "completion_tokens": 356,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5563,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5919
+  }
+}

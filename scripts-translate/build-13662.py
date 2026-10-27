@@ -1,0 +1,107 @@
+#!/usr/bin/env python3
+# build-13662.py — doc 13662 « Index des figures citées » (tafsir-tanawi-1, lessons[29], badge Leçon 31/32)
+# PREMIER INDEX du fil : document de clôture du manuel — AVANT-DERNIER doc du livre (le dernier est l'index
+# des sources et références). VINGT-HUIT notices biographiques (aʿlām), ordonnées par année de décès, des
+# Compagnons (ʿUmar b. al-Khaṭṭāb, 23 H) à Ibn ʿĀšūr (1393 H). PAS d'āyāt — protocole ADAPTÉ conformément
+# à la consigne du worklog R290 : sans cache coranique ni collation du Muḥarrar ; rendu selon la convention
+# lexicale du fil (ul.lexique « terme : définition », têtes en italique coloré, filets pointillés entre
+# entrées). ZÉRO script arabe dans tout le htmlFr (auto-vérif ; U+FDFA exempté — convention du fil).
+#
+# État de la source numérisée (consigné en N.d.T.) : fente liminaire dl/dt/dd VIDE (22e fente du fil) ;
+# tatwīl dans le titre (21e leçon consécutive) ; CINQ entrées sans marqueur de tête (Ǧābir b. ʿAbd Allāh,
+# as-Suddī, aḍ-Ḍaḥḥāk, al-Qurṭubī, al-Marāġī) ; l'entrée d'al-Ḥasan imprimée au SEUL gentilé « al-Baṣrī » ;
+# la génération d'al-ʿAbbās MANQUANTE à la généalogie d'Ibn ʿAbbās (restituée entre crochets) ; lettre
+# intervertie au nom de ʿUmar b. ʿAbd al-ʿAzīz ; groupe verbal parasite à la notice d'Ibn Masʿūd ; « douze »
+# avec sīn pour šīn (Abū Saʿīd) ; Ubayy b. Kaʿb altéré dans la chaîne de ʿĀṣim ; Abū Ǧaʿfar al-Qāriʾ altéré
+# dans la notice de Nāfiʿ ; guillemet renversé devant le titre d'al-Qurṭubī ; l'année de décès ABSENTE de la
+# notice de Ḥafṣ (naissance 90 H seule) ; l'appel imprime « enseignement primaire ancien » contre « cycle
+# secondaire » de la présentation du manuel — suivi tel qu'imprimé, divergence signalée.
+import json, os, re
+
+FR1 = '''<h1>Index des figures citées du livre de tafsīr — <em>al-Muḥarrar al-wajīz fī tafsīr al-Kitāb al-ʿazīz</em> d'Ibn ʿAṭiyya</h1>
+<p>Index des figures (aʿlām) du livre <em>al-Tafsīr min khilāl al-Muḥarrar al-wajīz fī tafsīr al-Kitāb al-ʿazīz</em> d'Ibn ʿAṭiyya, au profit de la première année de l'enseignement primaire ancien [désignation imprimée — voir N.d.T.].</p>
+<p>[Nature du document : avant-dernier du livre. Après la dernière leçon de commentaire (sourate an-Naḥl, versets 125 à 128), le manuel se clôt sur deux index : le présent index des figures citées, puis l'index des sources et références. L'index recense VINGT-HUIT figures, ordonnées selon l'année du décès — des Compagnons (ʿUmar b. al-Khaṭṭāb, mort en 23 de l'Hégire) aux auteurs contemporains (Ibn ʿĀšūr, mort en 1393) : Compagnons et Mère des croyants, Successeurs, lecteurs canoniques et transmetteurs de lectures, imams fondateurs d'écoles, exégètes classiques puis modernes — soit, de part en part, la chaîne des autorités que les leçons du livre ont convoquées, du hadith rapporté au commentaire collationné. Chaque notice suit le genre des aʿlām des répertoires biographiques traditionnels : le nom développé, la généalogie et les attaches tribales, les titres et surnoms, les maîtres et les rapporteurs, les charges acceptées ou refusées, l'œuvre, l'année du décès.]</p>
+'''
+
+FR2 = '''<ul class="lexique">
+<li><em>ʿUmar b. al-Khaṭṭāb</em> : il est Abū Ḥafṣ ʿUmar b. al-Khaṭṭāb b. Nufayl, le Qurashite ʿAdawite, second des califes bien guidés et premier qui fut investi du titre de Commandeur des croyants, parangon de la justice. Il embrassa l'islam cinq ans avant l'Hégire, assista aux grandes rencontres et tenait commerce entre al-Shām et le Ḥijāz. L'allégeance du califat lui fut prêtée après la mort d'Abū Bakr — qu'Allah l'agrée. Il mourut en l'an 23 de l'Hégire.</li>
+<li><em>ʿAbd Allāh b. Masʿūd</em> : il est ʿAbd Allāh b. Masʿūd b. Ghāfil b. Ḥabīb, le Hudhalite, l'un des plus grands des Compagnons et des plus proches du Messager d'Allah, que la bénédiction d'Allah et la paix soient sur lui, et l'un des premiers venus à l'islam. Il fut le domestique du Messager d'Allah et le confident de son secret. Il mourut à Médine en l'an 32 de l'Hégire.</li>
+<li><em>ʿAlī b. Abī Ṭālib</em> : il est Abū al-Ḥasan ʿAlī b. Abī Ṭālib b. ʿAbd al-Muṭṭalib, le Hāshimite Qurashite, Commandeur des croyants et quatrième des califes bien guidés, l'un des Dix auxquels le Paradis fut annoncé, cousin germain du Prophète, que la bénédiction d'Allah et la paix soient sur lui, et son gendre. Il mourut en l'an 40 de l'Hégire.</li>
+<li><em>Abū Saʿīd al-Khudrī</em> : il est Abū Saʿīd Saʿd b. Mālik b. Sinān al-Khudrī, l'Anṣārite Khazraǧite, Compagnon. Il fut de ceux qui demeuraient sans cesse auprès du Prophète, que la bénédiction d'Allah et la paix soient sur lui, rapporta de lui maints hadiths et prit part à douze campagnes. Il mourut à Médine en l'an 51 de l'Hégire.</li>
+<li><em>ʿAmmār b. Yāsir</em> : il est Abū al-Yaqẓān ʿAmmār b. Yāsir b. ʿĀmir, le Kinānite Madhḥiǧite ʿAnsīte Qaḥṭanide, Compagnon ; il est l'un des premiers venus à l'islam, et le Prophète, que la bénédiction d'Allah et la paix soient sur lui, le surnommait « le Pur, paré de pureté » (aṭ-ṭayyib al-muṭayyab) ; et il est rapporté dans le hadith : « jamais on ne laissa ʿAmmār choisir entre deux choses sans qu'il choisît la plus droite des deux ». Il mourut en l'an 57 de l'Hégire.</li>
+<li><em>ʿĀʾiša, la Mère des croyants</em> : elle est Umm ʿAbd Allāh ʿĀʾiša, fille d'Abū Bakr aṣ-Ṣiddīq ʿAbd Allāh, la plus jurisconsulte des femmes des musulmans et la plus savante d'entre elles en religion et en adab. Le Prophète, que la bénédiction d'Allah et la paix soient sur lui, l'épousa avant l'Hégire et consomma le mariage en la seconde année après l'Hégire ; elle fut, des femmes, celle qui rapporta de lui le plus de hadiths. Elle mourut en l'an 58 de l'Hégire.</li>
+<li><em>Abū Hurayra</em> : il est Abū Hurayra ʿAbd al-Raḥmān b. Ṣakhr ad-Dawsī, Compagnon célèbre, celui des Compagnons qui abonda le plus en mémorisation et en narration du hadith. Il embrassa l'islam en la septième année de l'Hégire, fut investi du gouvernement de Médine, et ʿUmar — qu'Allah l'agrée — l'établit sur le Baḥrayn. Il mourut à Médine en l'an 59 de l'Hégire.</li>
+<li><em>Ibn ʿAbbās</em> : il est Abū al-ʿAbbās ʿAbd Allāh b. [al-ʿAbbās b.] ʿAbd al-Muṭṭalib, le Qurashite Hāshimite, le savant (ḥabr), fils de l'océan, cousin germain du Messager d'Allah, que la bénédiction d'Allah et la paix soient sur lui. Il naquit trois ans avant l'Hégire et fut surnommé le savant de la Communauté et l'interprète du Coran. Le Prophète, que la bénédiction d'Allah et la paix soient sur lui, invoqua en sa faveur, en ces termes : « Ô Allah, donne-lui l'intelligence de la religion et enseigne-lui l'interprétation. » Il mourut à aṭ-Ṭāʾif en l'an 68 de l'Hégire.</li>
+'''
+
+FR3 = '''<li><em>Ǧābir b. ʿAbd Allāh</em> : il est Ǧābir b. ʿAbd Allāh b. ʿAmr b. Ḥarām, le Khazraǧite Anṣārite Sulamite, Compagnon, de ceux dont la narration d'après le Prophète, que la bénédiction d'Allah et la paix soient sur lui, est la plus abondante. Il mourut en l'an 78 de l'Hégire.</li>
+<li><em>Ḥafṣ b. Sulaymān</em> : il est Abū ʿUmar Ḥafṣ b. Sulaymān b. al-Mughīra b. Abī Dāwūd, l'Asadite, le Kūfite, le marchand d'étoffes (bazzāz) ; Ḥafṣ était le beau-fils (rabīb) de ʿĀṣim, fils de son épouse. Il était sûr (thiqa), ferme (thabt), précis (ḍābiṭ), accompli (mutqin) et mémorisateur (ḥāfiẓ) ; il enseigna la récitation à Bagdad, à La Mecque et à Kūfa. Il naquit en l'an 90 de l'Hégire [la notice imprimée ne porte point d'année de décès — voir N.d.T.].</li>
+<li><em>Anas b. Mālik</em> : il est Abū Ḥamza Anas b. Mālik b. an-Naḍr, l'Anṣārite, Compagnon, domestique du Messager d'Allah, que la bénédiction d'Allah et la paix soient sur lui. Le Prophète, que la bénédiction d'Allah et la paix soient sur lui, invoqua en sa faveur, en ces termes : « Ô Allah, multiplie son bien et sa descendance, et bénis-le en ce que Tu lui as donné » — et Allah le bénit en le bien et la descendance. Il mourut en l'an 93 de l'Hégire.</li>
+<li><em>ʿUmar b. ʿAbd al-ʿAzīz</em> : il est Abū Ḥafṣ ʿUmar b. ʿAbd al-ʿAzīz b. Marwān b. al-Ḥakam, l'Umayyade. Il fut investi du gouvernement après Sulaymān b. ʿAbd al-Malik, et fut un calife vertueux et juste ; on le surnommait le cinquième des califes bien guidés. Il mourut en l'an 101 de l'Hégire.</li>
+<li><em>Muǧāhid</em> : il est Muǧāhid b. Ǧabr, le shaykh des lecteurs et des exégètes. Il rapporta d'Ibn ʿAbbās, d'Abū Hurayra, de ʿĀʾiša, de Saʿd b. Abī Waqqāṣ, de ʿAbd Allāh b. ʿAmr, de Ǧābir b. ʿAbd Allāh, d'Abū Saʿīd al-Khudrī et d'autres qu'eux. Il mourut — qu'Allah lui fasse miséricorde — en l'an 104 de l'Hégire.</li>
+<li><em>al-Ḥasan al-Baṣrī</em> : il est al-Ḥasan b. Yasār al-Baṣrī [la tête imprimée porte le seul gentilé « al-Baṣrī », le nom propre n'étant porté que par le corps de la notice], Successeur (tābiʿī). Il fut l'imam des gens de Baṣra et le savant de la Communauté en son temps ; il est l'un de ces savants jurisconsultes, éloquents, courageux et ascètes. Il naquit à Médine et grandit à l'ombre de ʿAlī b. Abī Ṭālib. Il mourut à Baṣra en l'an 110 de l'Hégire.</li>
+<li><em>Qatāda</em> : il est Qatāda b. Diʿāma, le modèle des exégètes et des traditionnistes. Il rapporta de ʿAbd Allāh b. Sarǧis, d'Anas b. Mālik, d'Abū aṭ-Ṭufayl al-Kanānī et de Saʿīd b. al-Musayyab. Il mourut — qu'Allah lui fasse miséricorde — en l'an 118 de l'Hégire.</li>
+<li><em>as-Suddī</em> : il est Abū Muḥammad Ismāʿīl b. ʿAbd al-Raḥmān b. Abī Karīma as-Suddī, le Kūfite. Il est compté de la quatrième classe des rapporteurs du hadith prophétique. Il mourut en l'an 127 de l'Hégire.</li>
+<li><em>ʿĀṣim b. Abī an-Naǧūd</em> : il est Abū Bakr ʿĀṣim b. Abī an-Naǧūd, l'Asadite, l'imam, le Successeur sûr, vertueux, ferme et loyal. Il lut sur Abū ʿAbd Allāh Ḥabīb as-Sulamī et sur Zirr b. Ḥubaysh al-Asadī, lesquels lurent sur Ubayy b. Kaʿb et Zayd b. Ṯābit — qu'Allah les agrée —, lesquels lurent sur le Prophète, que la bénédiction d'Allah et la paix soient sur lui ; il est l'un des Sept Lecteurs. Il mourut en l'an 127 de l'Hégire.</li>
+<li><em>al-Aʿmaš</em> : il est Abū Muḥammad Sulaymān b. Mihrān al-Asadite al-Kāhilite al-Aʿmaš. Sa naissance fut au mois de Muḥarram de l'an soixante de l'Hégire, et les maîtres des classes le comptent de la quatrième classe des Successeurs. Il vécut à Kūfa, dont il fut le traditionniste ; il était sûr, mémorisateur et connaisseur des lectures. Il mourut en l'an 147 — ou 148 — de l'Hégire.</li>
+'''
+
+FR4 = '''<li><em>Nāfiʿ</em> : il est Abū Ruʾaym Nāfiʿ b. ʿAbd al-Raḥmān b. Abī Nuʿaym, le Laythite, leur protégé (mawlāhum). Il est l'un des Sept Lecteurs éminents, sûr et droit. Il reçut la récitation de vive voix des Successeurs des gens de Médine : ʿAbd al-Raḥmān b. Hurmuz et Abū Ǧaʿfar le Lecteur, entre autres. Il mourut en l'an 165 de l'Hégire.</li>
+<li><em>Mālik b. Anas</em> : il est Abū ʿAbd Allāh Mālik b. Anas, l'imam de la Demeure de l'Hégire (Dār al-Hijra) et le maître de l'école dont relève la masse de la Communauté au Ḥijāz, à Baṣra et en ce qui les avoisine, en Ifrīqiya, au Maghrib, en al-Andalus et en Égypte ; ses partisans sont en très grand nombre. Il mourut en l'an 179 de l'Hégire.</li>
+<li><em>aḍ-Ḍaḥḥāk</em> : il est Abū al-Qāsim aḍ-Ḍaḥḥāk b. Muzāḥim al-Hilālī ; il avait en le tafsīr et les récits une longue maîtrise. Il fut rapporté de lui qu'il dit : « il est un devoir à quiconque apprend le Coran d'être jurisconsulte. » Il mourut en l'an 202 de l'Hégire.</li>
+<li><em>Ibn Ǧarīr aṭ-Ṭabarī</em> : il est Abū Ǧaʿfar Muḥammad b. Ǧarīr b. Yazīd aṭ-Ṭabarī, le jurisconsulte, l'exégète, l'historien. Il se fixa à Bagdad et y vécut ; on lui offrit le cadicat et la charge des griefs (wilāyat al-maẓālim), et il s'y refusa. De ses livres les plus célèbres : « al-Ǧāmiʿ al-bayān fī tafsīr al-Qurʾān ». Il mourut en l'an 310 de l'Hégire.</li>
+<li><em>az-Zamaḫšarī</em> : il est Abū al-Qāsim Maḥmūd b. ʿUmar b. Aḥmad az-Zamaḫšarī, surnommé Ǧār Allāh — le Voisin de Dieu. Il fut un imam en le tafsīr, la grammaire, la lexicographie et l'adab. Il composa maints livres, dont le plus célèbre est « al-Kaššāf », en le commentaire du Coran. Il mourut en l'an 538 de l'Hégire.</li>
+<li><em>Ibn ʿAṭiyya</em> : il est Abū Muḥammad ʿAbd al-Ḥaqq b. Ghālib b. ʿAbd al-Raḥmān b. Ghālib b. ʿAbd al-Raʾūf b. ʿAbd Allāh b. Tamām b. ʿAṭiyya, le Muḥāribite, le Grenadan, le mālikite andalou, jurisconsulte et exégète. Il reçut la science des shaykhs d'al-Andalus. Il laissa maints ouvrages, dont « al-Muḥarrar al-wajīz ». Il mourut en l'an 542 de l'Hégire.</li>
+<li><em>al-Qurṭubī</em> : il est Abū ʿAbd Allāh Muḥammad b. Aḥmad b. Abī Bakr b. Farḥ, l'Anṣārite Khazraǧite, l'andalou Cordouan, l'exégète. De ses ouvrages les plus importants : le livre « al-Ǧāmiʿ li-aḥkām al-Qurʾān ». Il mourut en l'an 671 de l'Hégire.</li>
+<li><em>Ibn Kaṯīr</em> : il est Abū al-Fidāʾ ʿImād al-Dīn Ismāʿīl b. ʿUmar b. Kaṯīr, le Damascène shāfiʿite, l'imam, le mémorisateur (ḥāfiẓ), le traditionniste, l'historien. De ses ouvrages : <em>Tafsīr al-Qurʾān al-ʿaẓīm</em>, <em>Sharḥ Ṣaḥīḥ al-Bukhārī</em>, <em>Ikhtiṣār ʿulūm al-ḥadīth</em> et d'autres. Il mourut en l'an 750 de l'Hégire.</li>
+<li><em>al-Marāġī</em> : il est Aḥmad b. Muṣṭafā al-Marāġī, l'Égyptien. Il enseignait la Loi islamique à Dār al-ʿUlūm, en Égypte. Il a le livre « Tafsīr al-Qurʾān », connu sous le nom de Tafsīr al-Marāġī. Il mourut au Caire en l'an 1371 de l'Hégire.</li>
+<li><em>Ibn ʿĀšūr</em> : il est Muḥammad aṭ-Ṭāhir b. ʿĀšūr, le Tunisien, chef des muftis mālikites de Tunis et shaykh de la mosquée az-Zaytūna et de ses dépendances en Tunis. Il laissa des ouvrages, dont le plus célèbre est « al-Taḥrīr wa-l-tanwīr », en le commentaire du Coran. Il mourut en l'an 1393 de l'Hégire.</li>
+</ul>
+'''
+
+FR5 = '''<p>N.d.T. — Nature et structure du document : le présent index est l'avant-dernier du livre. Après la dernière leçon de commentaire (sourate an-Naḥl, versets 125 à 128) viennent les deux index qui ferment le manuel : celui des figures citées, ici traduit, puis l'index des sources et références. L'index recense VINGT-HUIT figures, ordonnées selon l'année du décès — des Compagnons (ʿUmar b. al-Khaṭṭāb, mort en 23 de l'Hégire) aux auteurs contemporains (Ibn ʿĀšūr, mort en 1393) : Compagnons et Mère des croyants, Successeurs, lecteurs canoniques et transmetteurs de lectures, imams fondateurs d'écoles, exégètes classiques et modernes — la chaîne des autorités que les leçons du livre ont convoquées, du hadith rapporté au commentaire collationné. La notice suit le genre des aʿlām des répertoires biographiques : nom développé, généalogie et attaches tribales, titres et surnoms, maîtres et rapporteurs, charges refusées ou acceptées, œuvre, année du décès. On notera que l'appel du présent index imprime « la première année de l'enseignement primaire ancien », tandis que la présentation du manuel et les leçons dites « la première année du cycle secondaire de l'enseignement traditionnel » — la désignation imprimée est suivie telle quelle, la divergence étant signalée ici sans être tranchée.</p>
+<p>N.d.T. — État de la source numérisée : la fente liminaire de listes est vide — vingt-deuxième fente vide du fil ; le tatwīl court à travers le titre — vingt-et-unième leçon consécutive ; un espacement imprimé vide suit le titre. Les têtes de notices sont imprimées sous marqueur d'étiquette, CINQ entrées en étant dépourvues (Ǧābir b. ʿAbd Allāh, as-Suddī, aḍ-Ḍaḥḥāk, al-Qurṭubī, al-Marāġī) — la tête est alors portée par le corps même de la notice, et la convention lexicale du fil rend toutes les têtes d'égale façon ; l'entrée d'al-Ḥasan est imprimée au seul gentilé « al-Baṣrī », le nom propre n'étant porté que par le corps de la notice — restitution signalée entre crochets ; la génération d'al-ʿAbbās manque à la généalogie imprimée d'Ibn ʿAbbās (« ʿAbd Allāh fils de ʿAbd al-Muṭṭalib ») — restituée entre crochets d'après la généalogie reçue. Des altérations typographiques de la numérisation, sans effet sur le sens : une lettre intervertie au nom de ʿUmar b. ʿAbd al-ʿAzīz ; un reste verbal parasite précède le décès d'Ibn Masʿūd (« il assuma — il mourut à Médine » imprimé d'un seul tenant) ; « douze » imprimé avec un sīn pour un šīn à la notice d'Abū Saʿīd al-Khudrī ; le nom d'Ubayy b. Kaʿb altéré dans la chaîne de lecture de ʿĀṣim ; le nom d'Abū Ǧaʿfar le Lecteur altéré à la notice de Nāfiʿ ; un guillemet renversé devant le titre de l'ouvrage d'al-Qurṭubī ; des deux-points parasites après le mot de l'année, aux entrées datées ; l'année de décès manque à la notice de Ḥafṣ b. Sulaymān, qui ne porte que l'année de naissance (90) — signalée entre crochets à son emplacement ; des éléments de fermeture vides subsistent en queue. Les noms propres et gentilés sont rendus selon la translittération du fil, les titres d'ouvrages en translittération italique, les guillemets suivant l'imprimé.</p>
+<p>N.d.T. — Datations imprimées : les années de décès sont suivies telles quelles, sans correction. Quelques-unes divergent des datations les plus communément transmises dans les répertoires biographiques : ʿAmmār b. Yāsir, imprimé 57, tombe selon la transmission dominante à Ṣiffīn en 37 ; Abū Saʿīd al-Khudrī, imprimé 51, y est ordinairement daté de 63 à 74 ; aḍ-Ḍaḥḥāk b. Muzāḥim, imprimé 202, y est ordinairement daté d'environ 105 ; Ibn Kaṯīr, imprimé 750, y est ordinairement daté de 774 ; al-Marāġī, imprimé 1371, y est ordinairement daté de 1364 (1945 de l'ère chrétienne) ; Ḥafṣ b. Sulaymān, dont la notice imprimée ne porte que la naissance (90), y est ordinairement daté de 180. Ces divergences sont signalées sans être tranchées : le manuel est un livre scolaire, et ses datations suivent la vulgate scolaire telle que l'imprime le texte — le traducteur n'altère point l'imprimé.</p>
+<p>N.d.T. — Conventions et correspondances : la translittération suit les conventions du fil (ǧ du ǧīm, ḫ du khāʾ, š du šīn : Muǧāhid, az-Zamaḫšarī, aṭ-Ṭāhir) ; les paroles rapportées et invocations sont traduites entre guillemets français. Observation d'ensemble : l'index couvre exactement les autorités dont les leçons du livre ont usé — les Compagnons dont les hadiths furent traduits in extenso (Abū Hurayra, Anas b. Mālik, ʿĀʾiša, Abū Saʿīd al-Khudrī) ; les lecteurs canoniques de la chaîne de récitation, dont la notice d'ʿĀṣim déploie la chaîne entière — Ḥabīb as-Sulamī et Zirr b. Ḥubaysh, sur Ubayy b. Kaʿb et Zayd b. Ṯābit, sur le Prophète — et dont Ḥafṣ, le beau-fils de ʿĀṣim, porte la lecture de la vulgate ; Nāfiʿ, dont le nom revint en la dernière leçon du livre, la kasra du mot de l'angoisse y étant transmise de lui — « erreur du transmetteur » selon le cadi Ibn ʿAṭiyya ; les exégètes dont les œuvres font la matière du manuel (Ibn ʿAṭiyya, l'auteur du <em>Muḥarrar</em>, dont la notice andalose est ici à son tour portée par le livre même qu'elle fonde ; aṭ-Ṭabarī, al-Qurṭubī, az-Zamaḫšarī, Ibn Kaṯīr, Ibn ʿĀšūr) ; et l'inscription, au fil des décès, de l'histoire du tafsīr entière — de Médine à Kūfa, de Baṣra à Grenade, de Cordoue à Damas, du Caire à Tunis. La double dénomination du « savant de la Communauté » — Ibn ʿAbbās en son absolu, al-Ḥasan al-Baṣrī « en son temps » — dit seule l'échelle des deux figures.</p>
+'''
+
+html = FR1 + FR2 + FR3 + FR4 + FR5
+html = html.replace("'", chr(0x2019))
+
+issues = []
+AR = re.compile('[' + ''.join(chr(a) + '-' + chr(b) for a, b in [(0x0600, 0x06FF), (0x0750, 0x077F), (0x08A0, 0x08FF), (0xFB50, 0xFDF9), (0xFDFB, 0xFDFF), (0xFE70, 0xFEFF)]) + ']')
+ar = AR.findall(html)
+if ar:
+    issues.append("caractères arabes résiduels: " + str(len(ar)) + " : " + ''.join(sorted(set(ar)))[:50])
+if html.count("«") != html.count("»"):
+    issues.append(f"guillemets non appariés: {html.count('«')} / {html.count('»')}")
+if "'" in html:
+    issues.append(f"apostrophes droites restantes: {html.count(chr(39))}")
+for cp, name in [(0x0430, 'cyrillique'), (0xFD3E, 'crochet ornement gauche'), (0xFD3F, 'crochet ornement droit')]:
+    if chr(cp) in html:
+        issues.append(f'{name} présent')
+bal = ['h1', 'p', 'ul', 'li', 'em']
+types = sum(1 for b in bal if f'<{b}' in html)
+n_entries = html.count('<li><em>')
+n_ndt = html.count('N.d.T.')
+n_guillemets = html.count('«')
+print(f'caractères: {len(html)}')
+print(f'types de balises: {types}/5')
+print(f'notices (li à tête em): {n_entries}')
+print(f'paragraphes N.d.T.: {n_ndt}')
+print(f'guillemets: {html.count("«")}/{html.count("»")}')
+if issues:
+    print('PROBLÈMES:')
+    for i in issues:
+        print(' -', i)
+    raise SystemExit(1)
+if len(html) < 12000:
+    print('TROP COURT (< 12 000 car) — rédaction insuffisante')
+    raise SystemExit(1)
+if n_entries != 28:
+    print(f'NOTICES != 28 ({n_entries})')
+    raise SystemExit(1)
+
+out = '/home/z/my-project/tr-tmp/13662.html'
+open(out, 'w').write(html)
+print('écrit:', out)
