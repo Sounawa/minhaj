@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "```json\n{\n  \"verdict\": \"OK\",\n  \"details\": \"La mise en page est conforme aux standards QA pour une vue mobile 390px. (1) Aucun texte n'est tronqué ou chevauchant, y compris le texte arabe vocalisé dense qui s'ajuste correctement à la largeur. (2) Pas de débordement horizontal (pas de barre de défilement horizontale). (3) La hiérarchie des titres est clairement visible et structurée. (4) Aucun bloc vide anormal détecté en dehors de la fente liminaire prévue.\"\n}\n```",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793130034,
+  "id": "20261028034028cfa707ef53214ec3",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261028034028cfa707ef53214ec3",
+  "usage": {
+    "completion_tokens": 145,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 4914,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5059
+  }
+}
