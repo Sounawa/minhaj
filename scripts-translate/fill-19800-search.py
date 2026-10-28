@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
-"""R345 — Script 1 : inventaire corpus pour 19800 (فصلا الطاء والظاء).
-Ṭāʾ : طائ/طئ/حطم/شيطان/سطع/طاغوت/ناشط/طاغين/طاغون/خطيا/خطيئ/خطا/سلطان/طاع/استطاع
-Ẓāʾ : حافظ/ظالمين/ظالمي construct/ظالمون/ظاهر/عظام/عظام
-Ṭarf : mots finissant طا/ظا/ضا (alif ṭarf après ṭ/ẓ)
-Istitimār ad-Dānī : صالحات/حافظات/صافات/تائب/سائح
-Iʿdād (sonde) : شركاء
-"""
+"""R345 — Fente-filling 19800 (les chapitres du ṭāʾ et du ẓāʾ).
+Squelettes nus, comparaisons élidé/constant systématiques, finales (maqṣūra/alif),
+boundary lexicale pour les squelettes à collisions (ظلم, عظم, صفت...).
+Familles : I.a ṭāʾ élidées (ṭāġūn/ṭ-w-ʿ/ḥuṭāma/šayṭān/ṭāʾir/ḫaṭayā/sulṭān/ṭāġūt/ṭāʾif),
+I.b našīṭāt ; I.t ṭāġīn ; II finales ṭāʾ ; III ẓāʾ élidées (ḥāfiẓāt/ẓālimīn/ẓālimī/ẓālim/
+ẓāhir/ʿiẓām) ; IV finales ẓāʾ (laẓā) ; Istitmār ad-Dānī (ṣāliḥāt/ṣāffāt/tāʾibat/sāʾiḥat) ;
+Iʿdād šurakāʾ."""
 import json, re
-from collections import Counter
 
 CACHE = "/home/z/my-project/scripts-translate/quran-cache.json"
 data = json.load(open(CACHE))
@@ -16,112 +15,199 @@ corpus = [(int(k), a[0], a[1]) for k in sorted(data, key=int) for a in data[k]["
 def bare(t):
     return re.sub(r'[\u064B-\u065F\u0670\u06D6-\u06ED\u0640\u0610-\u061A]', '', t).replace('\u0671', '\u0627')
 
-bc = [(s, a, bare(tx)) for (s, a, tx) in corpus]
-
-def find_all(skel, limit=40):
+def find_all(skel, limit=60, bnd=False):
+    """bnd=True : occurrence délimitée par espaces/debord (mot entier)."""
     out = []
-    for (sn, an, b) in bc:
+    for (sn, an, tx) in corpus:
+        b = bare(tx)
         start = 0
         while True:
             i = b.find(skel, start)
             if i < 0:
                 break
-            lo = max(0, i-42); hi = min(len(b), i+len(skel)+42)
-            out.append((sn, an, b[lo:hi]))
+            ok = True
+            if bnd:
+                ok = (i == 0 or b[i-1] == ' ') and (i+len(skel) == len(b) or b[i+len(skel)] == ' ')
+            if ok:
+                lo = max(0, i-45); hi = min(len(b), i+len(skel)+45)
+                out.append((sn, an, b[lo:hi]))
+                if len(out) >= limit:
+                    return out
             start = i + 1
-            if len(out) >= limit:
-                return out
     return out
 
-def word_final(suffixes):
-    """Mots uniques finissant par l'un des suffixes (après bare, sans clitics ـه/ـك ?) : garde tout, trie par fréquence."""
-    cnt = Counter()
-    ex = {}
-    for (sn, an, b) in bc:
-        for w in b.split():
-            core = w
-            # retire pronoms suffixés courants pour classifier ? on garde les 2 : mot brut + mot réduit
-            for suf in suffixes:
-                if w.endswith(suf) and len(w) >= len(suf)+2:
-                    cnt[w] += 1
-                    if w not in ex:
-                        i = b.find(w)
-                        lo = max(0, i-30); hi = min(len(b), i+len(w)+30)
-                        ex[w] = (sn, an, b[lo:hi])
-    return cnt, ex
+def finale(skel, limit=60):
+    """Occurrences en FIN de mot (suffixe)."""
+    out = []
+    for (sn, an, tx) in corpus:
+        b = bare(tx)
+        start = 0
+        while True:
+            i = b.find(skel, start)
+            if i < 0:
+                break
+            j = i + len(skel)
+            if j == len(b) or b[j] == ' ':
+                lo = max(0, i-45); hi = min(len(b), j+45)
+                out.append((sn, an, b[lo:hi]))
+                if len(out) >= limit:
+                    return out
+            start = i + 1
+    return out
 
-print("=========== ṬĀʾ : SQUELETTES ===========")
-for skel in ["طائ", "طئ", "حطم", "سطع", "طاغوت", "ناشط", "طاغين", "طاغون",
-             "خطيا", "خطيئ", "استطاع", "طوع", "اطع", "طوي", "مطا", "وطا"]:
-    r = find_all(skel, 25)
-    print(f"\n[{skel}] : {len(r)} pos (plafonné à 25)")
-    for (sn, an, ctx) in r:
-        print(f"   {sn}:{an}  {ctx}")
+def compare(label, eli, con, bnd=False):
+    r1 = find_all(eli, 60, bnd)
+    r2 = find_all(con, 60, bnd)
+    print(f"\n=== {label} : ÉLIDÉ [{eli}] = {len(r1)} | CONSTANT [{con}] = {len(r2)} ===")
+    for (sn, an, ctx) in r1[:25]:
+        print(f"  E {sn}:{an}  {ctx}")
+    for (sn, an, ctx) in r2[:10]:
+        print(f"  C {sn}:{an}  {ctx}")
+    return r1, r2
 
-print("\n[خطا] avec frontière de mot :")
-n = 0
-for (sn, an, b) in bc:
-    start = 0
-    while True:
-        i = b.find("خطا", start)
-        if i < 0: break
-        okb = (i == 0 or b[i-1] == ' ') and (i+3 == len(b) or b[i+3] == ' ')
-        if okb:
-            n += 1
-            if n <= 12:
-                lo = max(0, i-40); hi = min(len(b), i+44)
-                print(f"   {sn}:{an}  {b[lo:hi]}")
-        start = i + 1
-print("   total:", n)
+print("############ A. FAMILLES DU ṬĀʾ ############")
 
-print("\n[شيطان] décompte global :", len(find_all("شيطان", 10**6)))
-print("[شياطين] décompte global :", len(find_all("شياطين", 10**6)))
-print("[سلطان] décompte global :", len(find_all("سلطان", 10**6)))
-print("[اطيع] décompte :", len(find_all("اطيع", 10**6)))
-print("[اطاع] décompte :", len(find_all("اطاع", 10**6)))
+# 1) pluriels masc sains du ṭāʾ : ṭāġūn/ṭāġīn
+compare("A1 ṭāġūn (pluriel masc sain, wāw)", "طغون", "طاغون")
+compare("A1b ṭāġīn (pluriel masc sain, yāʾ)", "طغين", "طاغين")
 
-print("\n=========== ẒĀʾ : SQUELETTES ===========")
-for skel in ["حافظ", "ظالمين", "ظالمون", "ظالموا", "ظاهر", "يظهر", "اظهر", "عظام", "ظهرا", "اظلم"]:
-    r = find_all(skel, 20)
-    print(f"\n[{skel}] : {len(r)} pos (plafonné à 20)")
-    for (sn, an, ctx) in r:
-        print(f"   {sn}:{an}  {ctx}")
-
-print("\n[ظالمي] construct (non suivi de ن) :")
-n = 0
-for (sn, an, b) in bc:
-    start = 0
-    while True:
-        i = b.find("ظالمي", start)
-        if i < 0: break
-        j = i + len("ظالمي")
-        if j < len(b) and b[j] != 'ن' and (j == len(b) or b[j] in ' ا'):
-            n += 1
-            if n <= 12:
-                lo = max(0, i-40); hi = min(len(b), j+42)
-                print(f"   {sn}:{an}  {b[lo:hi]}")
-        start = i + 1
-print("   total:", n)
-
-print("\n=========== ṬARF : mots finissant طا / ظا / ضا ===========")
-for suf in ["طا", "ظا", "ضا", "طى", "ظى", "ضى"]:
-    cnt, ex = word_final([suf])
-    print(f"\n--- suffixe [{suf}] : {len(cnt)} mots uniques ---")
-    for w, c in cnt.most_common(20):
-        sn, an, ctx = ex[w]
-        print(f"   {w} ×{c}   → {sn}:{an}  {ctx}")
-
-print("\n=========== ISTIMĀR AD-DĀNĪ : les cinq vedettes ===========")
-for skel in ["صالحات", "حافظت", "حافظات", "صافات", "تائب", "تائبت", "سائح", "توب", "صلحت"]:
+# 2) racine Ṭ-W-ʿ (l'obéissance)
+print("\n=== A2 RACINE Ṭ-W-ʿ ===")
+for skel in ["أطع", "أطاع", "أطوع", "أطيعوا", "أطيعن", "مطيع", "أطعوا", "أطعت", "أطعتم", "أطاعوا", "أطاعن", "أطاع"]:
     r = find_all(skel, 15)
-    print(f"\n[{skel}] : {len(r)} pos")
-    for (sn, an, ctx) in r:
-        print(f"   {sn}:{an}  {ctx}")
+    print(f"  [{skel}] : {len(r)}")
+    for (sn, an, ctx) in r[:6]:
+        print(f"     {sn}:{an}  {ctx}")
 
-print("\n=========== IʿDĀD (sonde) : شركاء ===========")
-r = find_all("شركاء", 12)
-print(f"[شركاء] : {len(r)} pos")
+# 3) ḥuṭāma
+compare("A3 ḥuṭāma (ḥuṭāman élidé)", "حطمى", "حطامى")
+for skel in ["حطم", "حطام", "حطمت", "حطمنا"]:
+    r = find_all(skel, 12)
+    print(f"  [{skel}] : {len(r)}")
+    for (sn, an, ctx) in r[:8]:
+        print(f"     {sn}:{an}  {ctx}")
+
+# 4) šayṭān
+compare("A4 šayṭān (élidé)", "شيطن", "شيطان", bnd=True)
+
+# 5) ṭāʾir
+compare("A5 ṭāʾir (élidé)", "طئر", "طاير")
+r = find_all("طا", 60, bnd=True)
+print(f"\n  [طا] mot entier : {len(r)}")
+for (sn, an, ctx) in r[:20]:
+    print(f"     {sn}:{an}  {ctx}")
+
+# 6) ḫaṭayā
+print("\n=== A6 ḫaṭayā ===")
+for skel in ["خطيا", "خطايا", "خطي", "خطايا"]:
+    r = find_all(skel, 12)
+    print(f"  [{skel}] : {len(r)}")
+    for (sn, an, ctx) in r[:8]:
+        print(f"     {sn}:{an}  {ctx}")
+
+# 7) sulṭān
+compare("A7 sulṭān", "سلطن", "سلطان", bnd=True)
+
+# 8) ṭāġūt
+compare("A8 ṭāġūt", "طغوت", "طاغوت")
+
+# 9) ṭāʾif
+compare("A9 ṭāʾif (élidé)", "طئف", "طايف")
+
+# 10) našīṭāt
+print("\n=== A10 našīṭāt ===")
+for skel in ["نشطت", "نشط", "النشطت"]:
+    r = find_all(skel, 12)
+    print(f"  [{skel}] : {len(r)}")
+    for (sn, an, ctx) in r[:8]:
+        print(f"     {sn}:{an}  {ctx}")
+
+print("\n############ B. FINALES DU ṬĀʾ ############")
+r = finale("طى")
+print(f"\n=== B1 finale طى (maqṣūra) : {len(r)} ===")
 for (sn, an, ctx) in r:
-    print(f"   {sn}:{an}  {ctx}")
-r2 = find_all("شركا", 20)
-print(f"[شركا large] : {len(r2)} pos")
+    print(f"     {sn}:{an}  {ctx}")
+r = finale("طا")
+print(f"\n=== B2 finale طا (alif constante) : {len(r)} ===")
+for (sn, an, ctx) in r:
+    print(f"     {sn}:{an}  {ctx}")
+
+print("\n############ C. FAMILLES DU ẒĀʾ ############")
+
+# 11) ḥāfiẓāt
+print("\n=== C1 ḥāfiẓāt ===")
+for skel in ["حفظت", "حافظت", "حفظ"]:
+    r = find_all(skel, 12)
+    print(f"  [{skel}] : {len(r)}")
+    for (sn, an, ctx) in r[:8]:
+        print(f"     {sn}:{an}  {ctx}")
+
+# 12) pluriels de ẓālim
+compare("C2 ẓālimīn (yāʾ)", "ظلمين", "ظالمين", bnd=True)
+compare("C2b ẓālimūn (wāw)", "ظلمون", "ظالمون", bnd=True)
+compare("C3 ẓālimī (iḍāfa sans nūn)", "ظلمي", "ظالمي")
+compare("C4 ẓālim (mufrad)", "ظلمى", "ظالمى")
+r = find_all("ظلمى", 30)
+print(f"\n  [ظلمى] nu : {len(r)}")
+for (sn, an, ctx) in r[:12]:
+    print(f"     {sn}:{an}  {ctx}")
+
+# 13) ẓāhir
+print("\n=== C5 ẓāhir ===")
+for skel, bnd in [("ظهر", False), ("ظهرة", False), ("ظاهر", True), ("ظاهرة", False), ("الظهر", True)]:
+    r = find_all(skel, 30, bnd)
+    print(f"  [{skel}] bnd={bnd} : {len(r)}")
+    for (sn, an, ctx) in r[:10]:
+        print(f"     {sn}:{an}  {ctx}")
+
+# 14) ʿiẓām
+compare("C6 ʿiẓām (pluriel takṯīr)", "عظمى", "عظام")
+r = find_all("عظام", 20)
+print(f"\n  [عظام] : {len(r)}")
+for (sn, an, ctx) in r:
+    print(f"     {sn}:{an}  {ctx}")
+r = find_all("عظم", 60, bnd=True)
+print(f"\n  [عظم] bnd : {len(r)}")
+for (sn, an, ctx) in r[:20]:
+    print(f"     {sn}:{an}  {ctx}")
+
+print("\n############ D. FINALES DU ẒĀʾ ############")
+r = finale("ظى")
+print(f"\n=== D1 finale ظى : {len(r)} ===")
+for (sn, an, ctx) in r:
+    print(f"     {sn}:{an}  {ctx}")
+r = finale("ظا")
+print(f"\n=== D2 finale ظا : {len(r)} ===")
+for (sn, an, ctx) in r:
+    print(f"     {sn}:{an}  {ctx}")
+
+print("\n############ E. L'ISTITIMĀR D'AD-DĀNĪ ############")
+compare("E1 ṣāliḥāt", "صلحت", "صالحات", bnd=True)
+compare("E2 ṣāffāt", "صففت", "صاففات")
+r = find_all("صففت", 15)
+print(f"\n  [صففت] : {len(r)}")
+for (sn, an, ctx) in r[:10]:
+    print(f"     {sn}:{an}  {ctx}")
+compare("E3 tāʾibat", "تئبت", "تائبت")
+r = find_all("تائبت", 15)
+print(f"\n  [تائبت] : {len(r)}")
+for (sn, an, ctx) in r[:10]:
+    print(f"     {sn}:{an}  {ctx}")
+compare("E4 sāʾiḥat", "سئحت", "سائحت")
+r = find_all("سائحت", 15)
+print(f"\n  [سائحت] : {len(r)}")
+for (sn, an, ctx) in r[:10]:
+    print(f"     {sn}:{an}  {ctx}")
+
+print("\n############ F. L'I'DĀD (šurakāʾ, pour 19805) ############")
+compare("F1 šurakāʾ", "شركؤ", "شركاء", bnd=True)
+
+print("\n############ G. TEXTES COMPLETS DES CIBLES ############")
+for (sn, an) in [(36,19),(36,18),(79,39),(70,15),(36,78),(79,11),(17,5),(20,24),(79,17),(2,256),
+                 (4,51),(4,60),(5,60),(16,36),(39,17),(4,76),(9,53),(4,152),(37,1)]:
+    t = "?"
+    for (s, a, tx) in corpus:
+        if s == sn and a == an:
+            t = bare(tx); break
+    print(f"--- {sn}:{an} ---")
+    print(t)
