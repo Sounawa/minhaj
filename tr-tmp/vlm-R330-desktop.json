@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "LAYOUT OK\n\n**Détails :**\n1.  **Lisibilité et mise en page :** La page est très lisible, avec une structure claire (en-tête, barre de progression, contenu principal à gauche et texte arabe/matn à droite). Les polices sont bien choisies.\n2.  **Texte tronqué/débordant :** Aucun débordement ou troncature visible. Le texte s'adapte bien aux colonnes.\n3.  **Balises HTML :** Aucune balise HTML brute n'est visible.\n4.  **Caractères arabes :** Il y a bien des caractères arabes visibles, mais ils sont tout à fait pertinents car il s'agit d'une leçon bilingue (français/arabe) sur un texte religieux/académique (le matn est en arabe).\n5.  **Tableau du matn :** Le tableau présentant le \"matn\" (texte de référence) est propre, avec une bonne alignement du texte arabe et de sa translittération/traduction.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793152040,
+  "id": "202610280947093f44d364cff642fa",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610280947093f44d364cff642fa",
+  "usage": {
+    "completion_tokens": 240,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5970,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6210
+  }
+}

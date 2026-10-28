@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "LAYOUT OK\n\n**Détails :**\n1.  **Largeur :** Le contenu (texte, titres, tableaux) est bien contenu dans la largeur de 390px. Il n'y a pas de barre de défilement horizontal visible.\n2.  **Texte :** Aucun chevauchement ou troncature majeure détectée. Les retours à la ligne sont gérés correctement.\n3.  **Balises HTML :** Aucune balise brute (`<div>`, `<p>`, etc.) n'est visible à l'écran.\n4.  **Tableau du Matn :** La structure en deux colonnes (Arabe / Français) est lisible, bien que le texte arabe et les translittérations soient parfois serrés, ils restent compréhensibles sans déborder.\n\n*Note : L'image est très longue (scroll important), mais la mise en page mobile est techniquement correcte.*",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793152056,
+  "id": "20261028094729474d530b0b1b44ec",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261028094729474d530b0b1b44ec",
+  "usage": {
+    "completion_tokens": 208,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 4418,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4626
+  }
+}
