@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "```json\n{\n  \"layout\": \"PROBLEME\",\n  \"details\": \"L'image fournie est une capture d'écran de très grande hauteur (format 'long scroll' ou capture complète de page) et non une vue mobile standard (390px). Concernant les critères demandés : 1. **Deux colonnes** : Le contenu textuel dense est présenté en une seule colonne centrale étroite, bien que l'en-tête comporte des éléments côte à côte, la mise en page principale n'est pas clairement une grille à deux colonnes équilibrée. 2. **Aucune balise visible** : Confirmé, le rendu est du texte brut sans code HTML. 3. **Aucun débordement** : Problème détecté. L'image montre un contenu extrêmement long qui dépasse largement les limites d'un viewport mobile standard (390x844), suggérant soit une capture de la totalité de la page (scroll complet) soit un problème de gestion de la hauteur. 4. **Badge** : Aucun badge 'Leçon 11 / 30' n'est visible dans la portion supérieure de l'image ; il est possible qu'il soit situé en dehors de la zone capturée ou masqué.\"\n}\n```",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793162359,
+  "id": "202610281239111eeac403ebc446db",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610281239111eeac403ebc446db",
+  "usage": {
+    "completion_tokens": 285,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 4410,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4695
+  }
+}

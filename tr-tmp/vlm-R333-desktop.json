@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "```json\n{\n  \"layout\": \"OK\",\n  \"details\": {\n    \"columns\": \"Deux colonnes distinctes (français à gauche, arabe à droite) correctement alignées.\",\n    \"html_tags\": \"Aucune balise HTML visible dans le contenu textuel.\",\n    \"overflow\": \"Pas de débordement horizontal ou vertical problématique.\",\n    \"overlap\": \"Aucun chevauchement entre les colonnes ou les éléments de l'interface.\",\n    \"title\": \"Le titre « Dessin et réglage, chapitre T, suite » (correspondant au sujet demandé) et le badge « Leçon 11 / 30 » sont parfaitement lisibles en haut de page.\",\n    \"tables\": \"Les tableaux de vocabulaire (Matn) et les listes sont propres et bien formatés.\"\n  }\n}\n```",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793162345,
+  "id": "20261028123858f98bda59e79d4381",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261028123858f98bda59e79d4381",
+  "usage": {
+    "completion_tokens": 186,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5423,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5609
+  }
+}
