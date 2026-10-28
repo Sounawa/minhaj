@@ -1,175 +1,143 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-r"""Vérifications coraniques du doc 19762 (rasm-wa-dabt-4ep, chapitre du jīm).
-
-Le doc enseigne :
-  (1) élidées après le jīm : وجعِلُ اليْلِ (jaʿala + iḥtirāz al-layl), جَعِلُونَ,
-      جَهِلُونَ, جَثِمِينَ, māḏat al-ǧihād (māḍin/muḍāriʿ/ism fāʿil), māḏat
-      al-ǧidāl (māḍin/muḍāriʿ/amr), دَرَجَتٍ (pl. fém. salim), الجَرِيَتِ,
-      زَوْجَنِ + يُخْرِجَكُمْ (duel médian), الجَهِلِيَّةِ, وَجَوَزْنَا,
-      تِجَرَةٌ, يُجَزَى
-  (2) thubūt à l'extrémité : نجَا (mot) + l'aṣl du duel + le reste du mutarraf
-      au yāʾ ; CLÔTURE : النَّجَاة rasmée au wāw
-  (3) ISTITIMĀR d'al-Ḫarrāz (Mawrid aẓ-ẓamʾān p. 32, abiyāt 391-394) :
-      les wāw-graphies — الغدوة, مشكوة, الصلوة, الزكوة, الربوا, الحيوة,
-      المنوة, النجوة — restreintes par « ما لم تضفهن إلى ضمير ».
-Tous les motifs arabes sont écrits en échappements \u pour éviter toute faute de saisie.
+"""R335 — Vérification coranique étendue pour doc 19762 (chapitre du ǧīm).
+Contrôle au muṣḥaf (quran-cache.json) :
+  A. Inventaire systématique : ǧīm + alif SUSCRITE (جَٰ) vs ǧīm + alif PLEINE (جَا)
+  B. Lexèmes de la leçon : ǧaʿala/ǧaʿilūna (+ iḥtirāz al-ayl), māddat al-ǧihād,
+     māddat al-ǧidāl, ǧahlūna, al-ǧāhiliya, darāǧāt, al-ǧāriya, zawǧāni (duel),
+     tiǧāra, yuǧzā, ǧaṯīm, mutabarriǧa, mutaǧāwira, wa-ǧawaznā, yuḫriǧakum
+  C. najā (kalima du taḥlīl) + an-naǧāta dessinée à la wāw
+  D. ISTITMĀR al-Ḫarrāz (bayts 391-394) : alif dessinée WĀW —
+     ṣalawa, zakawa, ḥayawa, ribā, miškāwa, ġadāwa, manawa, naǧawa
+     + la condition « mā lam tuḍifhuwa ilā ḍamīr » (annexé → alif)
+Chaque sonde imprime : sūra:āya — rasm brut (contexte ± 25 car).
 """
-import json
-import re
+import json, re, sys
+from collections import Counter
 
-C = json.load(open("/home/z/my-project/scripts-translate/quran-cache.json"))
-HARAKAT = re.compile(r"[\u064B-\u0652\u0653-\u0655\u0670\u06D6-\u06ED\u08F0-\u08F3]")
-ALIF_S = "\u0670"  # alif suscrite (dagger alif)
+CACHE = "/home/z/my-project/scripts-translate/quran-cache.json"
+data = json.load(open(CACHE))
+corpus = []  # (sura, aya, texte)
+for k in sorted(data, key=int):
+    s = data[k]
+    for a in s["ar"]:
+        corpus.append((int(k), a[0], a[1]))
 
-def strip(s):
-    return HARAKAT.sub("", s).replace("\u0640", "")
-
-def plain_search(pat, label, limit=14, ctx=34, wb=False):
-    """recherche sur texte sans harakat ; wb=True : motif entier (frontières de mots)."""
+def find(pat, label, note="", maxprint=60):
+    rx = re.compile(pat)
     hits = []
-    for s, obj in C.items():
-        for n, t in obj["ar"]:
-            st = strip(t)
-            if wb:
-                if re.search(r"(?<![\u0621-\u064A])" + pat + r"(?![\u0621-\u064A])", st):
-                    hits.append((s, n, t, st))
-            else:
-                if pat in st:
-                    hits.append((s, n, t, st))
-    print(f"[{label}] {len(hits)} hit(s) :")
-    for s, n, t, st in hits[:limit]:
-        idx = st.find(pat)
-        print(f"   [{s}:{n}] {t[:110]}")
+    for (sn, an, tx) in corpus:
+        for m in rx.finditer(tx):
+            st = max(0, m.start()-25); en = min(len(tx), m.end()+25)
+            hits.append((sn, an, tx[st:en]))
+    print(f"\n=== {label} — {len(hits)} occ. {note}")
+    for (sn, an, ctx) in hits[:maxprint]:
+        print(f"  {sn}:{an} | {ctx}")
+    if len(hits) > maxprint:
+        print(f"  ... +{len(hits)-maxprint} autres")
     return hits
 
-def raw_refs(refs, label):
-    print(f"[{label}] formes harakatées :")
-    for s, n in refs:
-        try:
-            for nn, t in C[s]["ar"]:
-                if nn == n:
-                    print(f"   [{s}:{n}] {t[:130]}")
-        except KeyError:
-            print(f"   [{s}:{n}] introuvable")
+def stat(pat, label):
+    rx = re.compile(pat)
+    full = sus = 0
+    for (sn, an, tx) in corpus:
+        for m in rx.finditer(tx):
+            seg = m.group(0)
+            if "ٰ" in seg: sus += 1
+            elif "ا" in seg: full += 1
+    print(f"### {label}: pleine={full} suscrite={sus}")
 
-print("=" * 72)
-print("A. LA FAMILLE DE JAʿALA — وجعِلُ اليْلِ et l'iḥtirāz")
-print("=" * 72)
-h = plain_search("\u0648\u062C\u0639\u0644", "وجعل (wāw+jaʿl, tout)")
-plain_search("\u062C\u0639\u0644 \u0627\u0644\u064A\u0644", "جعل اليل (jaʿala l-layla)")
-plain_search("\u062C\u0639\u0644\u0627", "جعلا (duel jaʿalāni ?)")
-print()
-print("=" * 72)
-print("B. LES ÉLIDÉES DU JĪM — jamʿ mudakkar sālim")
-print("=" * 72)
-a = plain_search("\u062C\u0639\u0644\u0648\u0646", "جعلون (ÉLIDÉ ǧaʿilūn)")
-plain_search("\u062C\u0627\u0639\u0644\u0648\u0646", "جاعلون (PLEINE ǧāʿilūn — iḥtirāz)")
-b = plain_search("\u062C\u0647\u0644\u0648\u0646", "جهلون (ÉLIDÉ ǧāhilūn)")
-plain_search("\u062C\u0627\u0647\u0644\u0648\u0646", "جاهلون (PLEINE)")
-c = plain_search("\u062C\u062B\u0645\u064A\u0646", "جثمين (ÉLIDÉ ǧāthimīn)")
-plain_search("\u062C\u0627\u062B\u0645\u064A\u0646", "جاثمين (PLEINE)")
-print()
-print("=" * 72)
-print("C. MĀḎAT AL-ǦIHĀD — élision MUtlaqa ? (māḍin / muḍāriʿ / ism fāʿil)")
-print("=" * 72)
-d = plain_search("\u062C\u0647\u062F", "جهد (SANS alif : élidé ou forme I)")
-e = plain_search("\u062C\u0627\u0647\u062F", "جاهد (AVEC alif : ǧāhad — dague ?)")
-print()
-print("=" * 72)
-print("D. MĀḎAT AL-ǦIDĀL — élision mUtlaqa ? (māḍin / muḍāriʿ / amr)")
-print("=" * 72)
-f = plain_search("\u062C\u062F\u0644", "جذل ? NON — ج‌د‌ل (SANS alif : جَدِلْ élidé)")
-g = plain_search("\u062C\u0627\u062F\u0644", "جادل (AVEC alif — dague ?)")
-print()
-print("=" * 72)
-print("E. LES PLURIELS FÉMININS SALIM ET DIVERS")
-print("=" * 72)
-plain_search("\u062F\u0631\u062C\u062A", "درجت (ÉLIDÉ darajāt)")
-plain_search("\u062F\u0631\u062C\u0627\u062A", "درجات (PLEINE)")
-plain_search("\u0627\u0644\u062C\u0631\u064A\u062A", "الجريت (ÉLIDÉ al-ǧāriyāt)")
-plain_search("\u0627\u0644\u062C\u0627\u0631\u064A\u0627\u062A", "الجاريات (PLEINE)")
-plain_search("\u062C\u0627\u0631\u064A\u0627\u062A", "جاريات (sans ال)")
-plain_search("\u0627\u0644\u062C\u0647\u0644\u064A\u062A", "الجهليت (ÉLIDÉ)")
-plain_search("\u0627\u0644\u062C\u0627\u0647\u0644\u064A\u062A", "الجاهليت (PLEINE)")
-plain_search("\u0627\u0644\u062C\u0627\u0647\u0644\u064A\u0629", "الجاهلية (avec tāʾ marbūṭa)")
-plain_search("\u062A\u062C\u0631\u062A", "تجرت (ÉLIDÉ tiǧāra)")
-plain_search("\u062A\u062C\u0627\u0631\u062A", "تجارت (PLEINE)")
-plain_search("\u062A\u062C\u0627\u0631\u0629", "تجارة (PLEINE tāʾ marbūṭa)")
-plain_search("\u064A\u062C\u0632\u0649", "يجزى (yāʾ maqṣūra — yuǧzā)")
-plain_search("\u064A\u062C\u0632\u0627", "يجزا (ALIF PLEINE — divergence ?)")
-print()
-print("=" * 72)
-print("F. LE DUEL MÉDIAN : زَوْجَنِ — et يُخْرِجَكُمْ")
-print("=" * 72)
-plain_search("\u0632\u0648\u062C\u0646", "زوجن (ÉLIDÉ zawǧāni)")
-plain_search("\u0632\u0648\u062C\u064A\u0646", "زوجين (au yāʾ)")
-plain_search("\u0632\u0648\u062C\u0627\u0646", "زوجان (alif pleine)")
-plain_search("\u064A\u062E\u0631\u062C\u0643\u0645", "يخرجكم (rasm — 71:18 ?)")
-plain_search("\u0645\u062A\u0628\u0631\u062C", "متبرج (étiquette ?)")
-plain_search("\u0645\u062A\u062C\u0648\u0631", "متجور (étiquette ?)")
-plain_search("\u0645\u062A\u062C\u0627\u0648\u0631", "متجاور (étiquette ?)")
-print()
-print("=" * 72)
-print("G. THUBŪT À L'EXTRÉMITÉ : نجَا + l'aṣl du duel + النجوة au wāw")
-print("=" * 72)
-plain_search("\u0646\u062C\u0627", "نجا (mot entier — alif du thubūt)", wb=True)
-plain_search("\u0646\u062C\u0649", "نجى (au yāʾ)", wb=True)
-plain_search("\u0646\u062C\u0627\u0629", "نجاة (an-naǧāh — alif)")
-plain_search("\u0646\u062C\u0648\u0629", "نجوة (WĀW — an-naǧawa !)")
-plain_search("\u0627\u0644\u0646\u062C\u0648\u0629", "النجوة (WĀW — la clôture)")
-h = plain_search("\u062C\u0627(?![\u0621-\u064A])", "…جا (mots finissant جا)", wb=False)
-plain_search("\u062C\u0627\u0646(?![\u0621-\u064A])", "…جان (mots finissant جان)")
-plain_search("\u064A\u062C\u0631\u0649", "يجرى (yāʾ — le mutarraf)")
-plain_search("\u064A\u062C\u0631\u0627", "يجرا (alif — divergence ?)")
-print()
-print("=" * 72)
-print("H. ISTITIMĀR D'AL-ḪARRĀZ — les WĀW-GRAPHIES")
-print("=" * 72)
-plain_search("\u0635\u0644\u0648\u0629", "صلوة (wāw — ṣalāh)", limit=8)
-p1 = plain_search("\u0635\u0644\u0648\u062A", "صلوت (wāw+tāʾ)", limit=4)
-p2 = plain_search("\u0635\u0644\u0627\u062A", "صلات (alif : صلاه + suffixes)", limit=10)
-plain_search("\u0635\u0644\u0648\u062A\u0647", "صلوته (wāw+pronom — attendu 0)")
-plain_search("\u0635\u0644\u0648\u0627\u062A", "صلوات (pluriel, wāw+alif)", limit=6)
-plain_search("\u0632\u0643\u0648\u0629", "زكوة (wāw — zakāh)")
-plain_search("\u0632\u0643\u0648\u062A", "زكوت (wāw+tāʾ)")
-plain_search("\u0632\u0643\u0627\u062A", "زكات (alif + suffixes)", limit=8)
-plain_search("\u0632\u0643\u0648\u062A\u0647", "زكوته (wāw+pronom — attendu 0)")
-plain_search("\u062D\u064A\u0648\u0629", "حيوة (wāw — ḥayāh)", limit=8)
-plain_search("\u062D\u064A\u0648\u062A", "حيوت (wāw+tāʾ)")
-plain_search("\u062D\u064A\u0627\u062A", "حيات (alif + suffixes)", limit=10)
-plain_search("\u062D\u064A\u0648\u062A\u0647", "حيوته (wāw+pronom — attendu 0)")
-plain_search("\u0631\u0628\u0648\u0627", "ربوا (wāw — ar-ribā)")
-plain_search("\u0631\u0628\u0627", "ربا (alif — r-ribā/r-riban)", limit=8)
-plain_search("\u0645\u0646\u0648\u0629", "منوة (wāw — maniyah)", limit=4)
-plain_search("\u0645\u0646\u0648\u062A", "منوت (wāw+tāʾ)")
-plain_search("\u0645\u0646\u064A\u0629", "منية (yāʾ — maniyah classique)", limit=6)
-plain_search("\u0645\u0646\u064A", "مني (racine — maniyy)", limit=6)
-plain_search("\u0627\u0644\u063A\u062F\u0648\u0629", "الغدوة (wāw — al-ḡadāh)", limit=4)
-plain_search("\u0627\u0644\u063A\u062F\u0648\u062A", "الغدوت (wāw+tāʾ)")
-plain_search("\u0627\u0644\u063A\u062F\u0627\u0629", "الغداة (alif)")
-plain_search("\u063A\u062F\u0627\u0629", "غداة (sans ال)", limit=6)
-plain_search("\u0645\u0634\u0643\u0648\u0629", "مشكوة (wāw — miškāh 24:35)")
-plain_search("\u0645\u0634\u0643\u0627\u0629", "مشكاة (alif)")
-plain_search("\u0643\u064A\u0641\u0645\u0627", "كيفما (étiquette du bayt ?)")
-print()
-print("=" * 72)
-print("I. FORMES BRUTES CLÉS (dagues \u0670, maddas)")
-print("=" * 72)
-raw_refs([(2, 3), (2, 43), (2, 277)], "صلوة — échantillons")
-raw_refs([(24, 35)], "مشكوة 24:35")
-raw_refs([(40, 41)], "40:41 النجاة/النجوة ?")
-raw_refs([(2, 275), (2, 276), (3, 130)], "ربوا")
-raw_refs([(71, 18)], "يخرجكم 71:18")
-for s, n, t, st in e[:14]:
-    print(f"   [جاهد-brut {s}:{n}] {t[:120]}")
-for s, n, t, st in d[:14]:
-    print(f"   [جهد-brut {s}:{n}] {t[:120]}")
-for s, n, t, st in g[:10]:
-    print(f"   [جادل-brut {s}:{n}] {t[:120]}")
-for s, n, t, st in f[:10]:
-    print(f"   [جدل-brut {s}:{n}] {t[:120]}")
-for s, n, t, st in h[:14]:
-    print(f"   […جا-brut {s}:{n}] {t[:110]}")
-print()
-print("=== fin des vérifications 19762 ===")
+print("■■■ R335 — VERIFICATIONS 19762 (chapitre du ǧīm) ■■■")
+
+# ── A. INVENTAIRE SYSTÉMATIQUE ──────────────────────────────────────
+print("\n────── A. INVENTAIRE ǧīm+alif ──────")
+inv_sus = Counter(); inv_full = Counter()
+for (sn, an, tx) in corpus:
+    for m in re.finditer(r"جَٰ(\S{0,10})", tx):
+        inv_sus[m.group(0)[:8]] += 1
+    for m in re.finditer(r"جَا(\S{0,10})", tx):
+        inv_full[m.group(0)[:8]] += 1
+print("— ǧīm+SUSCRITE (جَٰ) — lexèmes distincts:", len(inv_sus))
+for w, c in inv_sus.most_common(40):
+    print(f"   {c:3d}× {w}")
+print("— ǧīm+PLEINE (جَا) — lexèmes distincts:", len(inv_full))
+for w, c in inv_full.most_common(40):
+    print(f"   {c:3d}× {w}")
+
+# ── B1. ǧaʿala / ǧaʿilūna ───────────────────────────────────────────
+print("\n────── B1. ǧaʿala / ǧaʿilūna ──────")
+find(r"جَٰعَل[^ ]{0,5}", "ǧaʿala SUSCRITE جَٰعَل")
+find(r"جَاعَل[^ ]{0,5}", "ǧaʿala PLEINE جَاعَل")
+find(r"جْعَل[^ ]{0,5}", "ǧaʿala SUKŪN جْعَل (skeleton sans alif)")
+find(r"جَٰعِلُون[^ ]{0,3}", "ǧaʿilūna SUSCRITE جَٰعِلُون")
+find(r"جَاعِلُون[^ ]{0,3}", "ǧaʿilūna PLEINE جَاعِلُون")
+find(r"جَٰعِل[^ ]{0,3}", "ǧaʿil (toutes formes) SUSCRITE")
+find(r"جَاعِل[^ ]{0,3}", "ǧaʿil (toutes formes) PLEINE")
+# iḥtirāz al-ayl : ǧaʿala suivi de al-ayl
+find(r"[جج][َٰ]?عَلَ [اأٱ]لَّيْل[^ ]{0,3}", "ǧaʿala + AL-AYL (toutes graphies)")
+find(r"جَعَل[^ ]{0,4}", "ǧaʿala fatḥa simple جَعَل (échantillon)", maxprint=25)
+
+# ── B2. māddat al-ǧihād (ǧ-ā-h-d) ───────────────────────────────────
+print("\n────── B2. māddat al-ǧihād ──────")
+find(r"وَجَٰهِد[^ ]{0,4}", "wa-ǧāhid SUSCRITE وَجَٰهِد")
+find(r"وَجَاهِد[^ ]{0,4}", "wa-ǧāhid PLEINE وَجَاهِد")
+find(r"وَجْهِد[^ ]{0,4}|وَجَهِد[^ ]{0,4}", "wa-ǧahid ELIDÉE وَجْهِد/وَجَهِد")
+find(r"يُجَٰهِد[^ ]{0,4}", "yuǧāhid SUSCRITE")
+find(r"يُجَاهِد[^ ]{0,4}", "yuǧāhid PLEINE")
+find(r"يُجْهِد[^ ]{0,4}|يُجَهِد[^ ]{0,4}", "yuǧahid ELIDÉE")
+find(r"جَٰهِدُون|جَٰهِدِين", "ǧāhidūna/ǧāhidīna SUSCRITE")
+find(r"جَاهِدُون|جَاهِدِين", "ǧāhidūna/ǧāhidīna PLEINE")
+find(r"جَٰهِد[^ ]{0,6}", "ǧihād mādda TOUTES suscrites (balayage)", maxprint=40)
+find(r"جَاهِد[^ ]{0,6}", "ǧihād mādda TOUTES pleines (balayage)", maxprint=40)
+
+# ── B3. māddat al-ǧidāl (ǧ-ā-d-l) ───────────────────────────────────
+print("\n────── B3. māddat al-ǧidāl ──────")
+find(r"وَجَادِل[^ ]{0,4}", "wa-ǧādil PLEINE وَجَادِل")
+find(r"وَجَٰدِل[^ ]{0,4}", "wa-ǧādil SUSCRITE")
+find(r"وَجْدِل[^ ]{0,4}|وَجَدِل[^ ]{0,4}", "wa-ǧadil ELIDÉE")
+find(r"يُجَادِل[^ ]{0,4}|يُجَٰدِل[^ ]{0,4}|يُجْدِل[^ ]{0,4}", "yuǧādilu (toutes)")
+find(r"جَادِل[^ ]{0,4}|جَٰدِل[^ ]{0,4}|جْدِل[^ ]{0,4}", "ǧidāl mādda TOUTES", maxprint=40)
+
+# ── B4. lexèmes divers de la leçon ──────────────────────────────────
+print("\n────── B4. lexèmes divers ──────")
+find(r"جَٰهِلُون|جَٰهِلِين", "ǧāhilūna/ǧāhilīna SUSCRITE")
+find(r"جَاهِلُون|جَاهِلِين", "ǧāhilūna/ǧāhilīna PLEINE")
+find(r"جَٰهِلِيَّة|جَاهِلِيَّة", "al-ǧāhiliya (les deux)")
+find(r"جَٰثِم[^ ]{0,4}|جَاثِم[^ ]{0,4}|جْثِم[^ ]{0,4}", "ǧaṯīm (toutes)")
+find(r"دَرَجَٰت[^ ]{0,4}", "darāǧāt SUSCRITE دَرَجَٰت")
+find(r"دَرَجَات[^ ]{0,4}", "darāǧāt PLEINE دَرَجَات")
+find(r"[اأٱ]لْجَٰرِيَة[^ ]{0,3}|الْجَارِيَة[^ ]{0,3}|[اأٱ]لْجَارِيَة[^ ]{0,3}", "al-ǧāriya (les deux)")
+find(r"زَوْجَٰنِ|زَوْجَانِ", "zawǧāni DUAL marfūʿ (suscrite/pleine)")
+find(r"زَوْجَيْنِ", "zawǧayni DUAL oblique")
+find(r"يُخْرِجَكُم", "yuḫriǧakum (documenté)")
+find(r"وَجَوَزْنَا|جَوَزْنَا", "wa-ǧawaznā (le mot du bayt)")
+find(r"تِجَٰرَة|تِجَارَة", "tiǧāra (les deux)")
+find(r"مُتَبَرِّج", "mutabarriǧa (24:60 ?)")
+find(r"مُتَجَوِر|مُتَجَاوِر", "mutaǧāwira")
+find(r"يُجْزَى|يُجَٰزَى|يُجَزَى", "yuǧzā (toutes graphies)", maxprint=40)
+
+# ── C. najā + an-naǧāta à la wāw ────────────────────────────────────
+print("\n────── C. najā / an-naǧāta ──────")
+find(r"(^|\s)نَجَا(\s|$|هَ?ٰ?[^م])", "najā (verbe simple)")
+find(r"نَجَاة|نَجْوَة|نَجَوَة|النَّجَو", "naǧāta/naǧawa (les deux graphies)")
+
+# ── D. ISTITMĀR al-Ḫarrāz : alif dessinée WĀW ───────────────────────
+print("\n────── D. ISTITMĀR — wāw remplace l'alif ──────")
+find(r"الصَّلَو[^ ]{0,4}|صَلَوَٰة[^ ]{0,4}|صَّلَٰوَٰة", "ṣalāt à la WĀW (ṣalawa)")
+find(r"الصَّلَاة[^ ]{0,3}|صَلَاة[^ ]{0,3}", "ṣalāt à l'ALIF (ṣalāt)")
+find(r"صَلَوَٰت[^ ]{0,4}|صَلَٰوَٰت[^ ]{0,4}", "ṣalawāt pluriel")
+find(r"صَلَ[^ ]{0,3}[هك][مي]?[^ ]{0,2}", "ṣalāt + PRONOM (annexé)", maxprint=30)
+find(r"الزَّكَو[^ ]{0,4}|زَكَوَٰة[^ ]{0,4}|زَّكَوَٰة", "zakāt à la WĀW (zakawa)")
+find(r"الزَّكَاة[^ ]{0,3}|زَكَاة[^ ]{0,3}", "zakāt à l'ALIF")
+find(r"زَكَ[^ ]{0,3}[هك][مي]?[^ ]{0,2}", "zakāt + PRONOM", maxprint=20)
+find(r"الْحَيَو[^ ]{0,4}|حَيَوَٰة[^ ]{0,4}", "ḥayāt à la WĀW (ḥayawa)")
+find(r"الْحَيَاة[^ ]{0,3}|حَيَاة[^ ]{0,3}", "ḥayāt à l'ALIF", maxprint=25)
+find(r"حَيَ[^ ]{0,3}[هك][مي]?[^ ]{0,2}", "ḥayāt + PRONOM", maxprint=20)
+find(r"الرِّبَو[^ ]{0,3}|الرِّبَٰو[^ ]{0,3}|رِبَو", "ribā à la WĀW (ribaw)")
+find(r"الرِّبَا|رِبًا|رِبًى|رِّبًا", "ribā à l'ALIF/tanwīn")
+find(r"مِشْكَو[^ ]{0,3}|مِشْكَوَٰة|مِشْكَٰوة", "miškāwa à la WĀW")
+find(r"مِشْكَاة", "miškāt à l'ALIF")
+find(r"الْغَدَو[^ ]{0,3}|غَدَوَٰة|الْغَدَوَة", "ġadāwa à la WĀW")
+find(r"الْغَدَاة|غَدَاة", "ġadāt à l'ALIF")
+find(r"مَنَوَة|مَنَاة", "manawa")
+find(r"النَّجَو[^ ]{0,3}|نَجَوَة", "naǧawa à la WĀW")
+print("\n■■■ FIN VERIFICATIONS 19762 ■■■")
