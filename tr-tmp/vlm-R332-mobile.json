@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "```json\n{\n  \"layout\": \"PROBLEME\",\n  \"details\": {\n    \"badge\": \"OK\",\n    \"columns\": \"OK\",\n    \"overflow\": \"PROBLEME\",\n    \"tags\": \"OK\",\n    \"notes\": \"Le contenu textuel est extrêmement long et dépasse largement la hauteur d'un écran mobile standard (390px de large). Bien que la mise en page utilise bien deux colonnes pour le vocabulaire, la quantité de texte (notamment les sections 'L'explication', 'Analyse', 'Notes du traducteur' et le texte arabe en bas) provoquerait un défilement vertical très important. Aucune balise HTML n'est visible.\"\n  }\n}\n```",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793160661,
+  "id": "20261028121057ae3d422eaba84d6a",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261028121057ae3d422eaba84d6a",
+  "usage": {
+    "completion_tokens": 159,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 4739,
+    "prompt_tokens_details": {
+      "cached_tokens": 2
+    },
+    "total_tokens": 4898
+  }
+}
