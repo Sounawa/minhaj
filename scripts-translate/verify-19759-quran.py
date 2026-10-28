@@ -1,140 +1,94 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Vérifications coraniques du doc 19759 (rasm-wa-dabt-4ep, chapitre du thāʾ).
-
-Le doc enseigne :
-  (1) élidées MÉDIANES après le thāʾ : أَثَرَة (aṯara), مِيثَاق (mīṯāq),
-      أَوْثَان (awṯān), أَثَرَ + هُم (ḍamma — le verbe « suivre derrière »)
-  (2) le pluriel féminin salim élidé : نَفَّاثَاتٍ (113:4), الْخَبِيثَاتُ (8:37 ?)
-  (3) les DUELS élidées : يَسْتَغِيثَانِ, ثُلُثَانِ (4:176 ?)
-  (4) أَثَبْ (mot du vers deux — exemple en image)
-  (5) أَمْثَل — élidé DEPUIS MARYAM jusqu'à la fin du Coran ; AVANT Maryam :
-      alif maintenue sur le qiyās (règle positionnelle !)
-  (6) أَثَاثًا (aṯāṯan)
-  (7) l'alif après thāʾ à l'EXTRÉMITÉ → yāʾ, SAUF le duel (alif maintenue) —
-      ثَاءٌ مُثَنَّى مُتَطَرِّفَةٌ بِالْأَلِفِ en UNE SEULE position (image)
-  (8) l'élidée MUMĀLA : أَثَرِ + هِمْ (kasra — إِثْرِهِمْ) ḥaḏf SANS yāʾ ;
-      iḥtirāz contre l'ajouté au DUEL (qiyās)
-  (9) ISTITIMĀR d'Abū Wakīl : l'alif ḥamrāʾ (maqṣūra) — yāʾ, sukūn, نَرَى اللهَ, ذِكْرَى الدَّارِ
+"""R334 — Vérification coranique étendue pour doc 19759 (fiche du thāʾ).
+Contrôle au muṣḥaf (quran-cache.json) :
+  mīthāq, awthān, aṯara(t), formes d'aṯar (+hum/-him), naffāṯāt,
+  ḫabīṯ (sing./pluriel), yastaġīṯ (toutes formes), ṯulūth,
+  amṯal (de Maryam au sceau vs avant Maryam), aṯaba, aṯāth,
+  anṯā (duel/sing.), duel de thāʾ à l'alif fixe (le mot unique).
+Chaque sonde imprime : sūra:āya — rasm brut (contexte ± 25 car).
 """
-import json
-import re
+import json, re, sys
 
-C = json.load(open("/home/z/my-project/scripts-translate/quran-cache.json"))
-HARAKAT = re.compile(r"[\u064B-\u0652\u0653-\u0655\u0670\u06D6-\u06ED\u08F0-\u08F3]")
+CACHE = "/home/z/my-project/scripts-translate/quran-cache.json"
+data = json.load(open(CACHE))
+corpus = []  # (sura, aya, texte)
+for k in sorted(data, key=int):
+    s = data[k]
+    for a in s["ar"]:
+        corpus.append((int(k), a[0], a[1]))
 
-def strip(s):
-    return HARAKAT.sub("", s).replace("\u0640", "")
-
-def plain_search(pat_plain, label, limit=12, ctx=32):
+def find(pat, label, note=""):
+    rx = re.compile(pat)
     hits = []
-    for s, obj in C.items():
-        for n, t in obj["ar"]:
-            st = strip(t)
-            if pat_plain in st:
-                hits.append((s, n, t, st, st.find(pat_plain)))
-    print(f"   [{label}] {len(hits)} hit(s) :")
-    for s, n, t, st, idx in hits[:limit]:
-        print(f"     [{s}:{n}] …{st[max(0,idx-ctx):idx+len(pat_plain)+ctx]}…")
+    for (sn, an, tx) in corpus:
+        for m in rx.finditer(tx):
+            st = max(0, m.start()-25); en = min(len(tx), m.end()+25)
+            hits.append((sn, an, tx[st:en]))
+    print(f"\n=== {label} — {len(hits)} occ. {note}")
+    for (sn, an, ctx) in hits:
+        print(f"  {sn}:{an} | {ctx}")
     return hits
 
-def raw_show(refs, label):
-    print(f"   [{label}] formes harakatées :")
-    for s, n in refs:
-        try:
-            for nn, t in C[s]["ar"]:
-                if nn == n:
-                    print(f"     [{s}:{n}] {t[:200]}")
-        except KeyError:
-            print(f"     [{s}:{n}] — introuvable")
+def stat_alif(pat, label):
+    """Répartition alif pleine / suscrite / yāʾ dans le rasm du lexème trouvé."""
+    rx = re.compile(pat)
+    full = sus = ya = none = 0
+    for (sn, an, tx) in corpus:
+        for m in rx.finditer(tx):
+            seg = m.group(0)
+            if "ٰ" in seg: sus += 1
+            elif "ا" in seg: full += 1
+            elif "ى" in seg or "ي" in seg: ya += 1
+            else: none += 1
+    print(f"\n### {label}: pleine={full} suscrite={sus} yāʾ={ya} sans trace={none}")
 
-def raw_search(pat_harak, label, limit=10, ctx=30):
-    hits = []
-    for s, obj in C.items():
-        for n, t in obj["ar"]:
-            if pat_harak in t:
-                idx = t.find(pat_harak)
-                hits.append((s, n, t, idx))
-    print(f"   [{label}] {len(hits)} hit(s) — formes harakatées :")
-    for s, n, t, idx in hits[:limit]:
-        print(f"     [{s}:{n}] …{t[max(0,idx-ctx):idx+ctx+len(pat_harak)]}…")
-    return hits
+print("■■■ R334 — VERIFICATIONS 19759 (chapitre du thāʾ) ■■■")
 
-print("=" * 70)
-print("A. أَثَرَة — aṯara (la dot). Élidée médiane ?")
-hits = plain_search("ثرة", "…ثرة (stripped)")
-for s, n, t, st, idx in hits:
-    print(f"      RAW [{s}:{n}] : …{t[max(0,t.find('ثرة')-40):t.find('ثرة')+40] if 'ثرة' in t else t[:120]}…")
-raw_search("أَثَٰرَة", "أَثَٰرَة (susCRITE)")
-raw_search("أَثَرَة", "أَثَرَة (PLEINE ?)")
+# 1. MĪTHĀQ — alif élidée après ṯāʾ en milieu de mot ?
+h = find(r"مِيث[^ ]{0,6}", "MĪTHĀQ مِيثَاق")
+stat_alif(r"مِيث[^ ]{0,6}", "mīthāq")
 
-print("=" * 70)
-print("B. مِيثَاق — mīṯāq. « لفظه كله محذوف » = TOUTES occurrences élidées ?")
-plain_search("ميثاق", "مِيثَاق (stripped)")
-raw_search("مِيثَٰق", "مِيثَٰق (susCRITE)")
-raw_search("مِيثَاق", "مِيثَاق (PLEINE)")
+# 2. AWTHĀN
+h = find(r"[اأ]وْثَان[^ ]{0,4}", "AWTHĀN أَوْثَان")
+stat_alif(r"[اأ]وْثَان[^ ]{0,4}", "awthān")
 
-print("=" * 70)
-print("C. أَوْثَان — awṯān (les idoles).")
-plain_search("وثان", "…وثان (stripped)")
-raw_search("أَوْثَٰن", "أَوْثَٰن (susCRITE)")
-raw_search("أَوْثَان", "أَوْثَان (PLEINE)")
+# 3. AṮARA(t) — أَثَرَة (mot du poème)
+h = find(r"[اأ]ثَرَة[^ ]{0,4}", "AṮARA(t) أَثَرَة")
 
-print("=" * 70)
-print("D. أَثَرَ / إِثْر + هُم — le verbe et le nom avec le suffixe.")
-plain_search("ثرهم", "…ثرهم (stripped)")
-plain_search("ثرهما", "…ثرهما (stripped)")
-raw_search("أَثَرَهُمْ", "أَثَرَهُمْ (dhamma)")
-raw_search("إِثْرِهِمْ", "إِثْرِهِمْ (kasra)")
-raw_search("إِثْرِهِمَا", "إِثْرِهِمَا (kasra + DUEL)")
-plain_search("اثر", "…اثر (stripped, large)")
+# 4. Formes d'AṮAR (le verbe/nom) — toutes graphies أ/ا + ث + ر
+h = find(r"[اأ]ث[َٰ]?ر[^ ]{0,8}", "formes d'AṮAR أَثَر (toutes)")
 
-print("=" * 70)
-print("E. نَفَّاثَاتٍ — 113:4. Élidée au corpus ?")
-raw_search("نَفَّاثَ", "نَفَّاثَ (raw)")
-plain_search("نفاث", "نَفَّاثَ (stripped)")
+# 5. NAFFĀṮĀT
+h = find(r"نَفَّاث[^ ]{0,5}", "NAFFĀṮĀT نَفَّاثَات")
+stat_alif(r"نَفَّاث[^ ]{0,5}", "naffāṯāt")
 
-print("=" * 70)
-print("F. الْخَبِيثَاتُ — pluriel féminin salim élidé.")
-plain_search("خبيث", "…خبيث (stripped)")
-raw_search("خَبِيثَٰت", "خَبِيثَٰت (susCRITE)")
-raw_search("خَبِيثَات", "خَبِيثَات (PLEINE)")
+# 6. ḪABĪṮ — singulier + pluriel
+h = find(r"[اأ]ل?ْ?خَبِيث[^ ]{0,5}", "ḪABĪṮ خَبِيث (sing. + pluriel)")
+stat_alif(r"خَبِيث[^ ]{0,5}", "ḫabīṯ")
 
-print("=" * 70)
-print("G. يَسْتَغِيثَانِ — le duel.")
-plain_search("ستغيث", "…ستغيث (stripped)")
-raw_search("يَسْتَغِيثَٰن", "يَسْتَغِيثَٰن (susCRITE)")
-raw_search("يَسْتَغِيثَان", "يَسْتَغِيثَان (PLEINE)")
+# 7. YASTAĠĪṮ — toutes formes (sing., pluriel, duel ?)
+h = find(r"سْتَغِيث[^ ]{0,5}", "YASTAĠĪṮ سْتَغِيث (toutes formes)")
+stat_alif(r"سْتَغِيث[^ ]{0,5}", "yastaġīṯ")
 
-print("=" * 70)
-print("H. ثُلُثَا / ثُلُثَانِ / الثُّلُثِ — tous les ثلث du corpus (raw).")
-plain_search("ثلث", "…ثلث (stripped)")
-raw_search("ثُلُثَٰ", "ثُلُثَٰ (susCRITE)")
-raw_search("ثُلُثَا", "ثُلُثَا (PLEINE)")
+# 8. ṮULŪTH
+h = find(r"ثُلُث[^ ]{0,5}", "ṮULŪTH ثُلُث")
+stat_alif(r"ثُلُث[^ ]{0,5}", "ṯulūth")
 
-print("=" * 70)
-print("I. أَثَبْ — le mot du vers deux.")
-plain_search("اثب", "…اثب (stripped)")
+# 9. AMṮAL (le mot) vs AMṮĀL (pluriel de maṯal — autre mot)
+h = find(r"[اأ]مْثَل[^ ا]{0,4}", "AMṮAL أَمْثَل (le mot)")
+h2 = find(r"[اأ]مْثَال[^ ]{0,4}", "AMṮĀL أَمْثَال (pluriel de maṯal, autre mot)")
 
-print("=" * 70)
-print("J. أَمْثَل — la règle positionnelle (avant/après Maryam).")
-plain_search("امثل", "…امثل (stripped, large — à classer)")
+# 10. AṮABA
+h = find(r"[اأ]ثَ?ب[^ ]{0,6}", "AṮABA أَثَب (toutes formes d'أ-ث-ب)")
 
-print("=" * 70)
-print("K. أَثَاثًا — aṯāṯan.")
-plain_search("اثاث", "…اثاث (stripped)")
-raw_search("أَثَٰث", "أَثَٰث (susCRITE)")
-raw_search("أَثَاث", "أَثَاث (PLEINE)")
+# 11. AṮĀṮ
+h = find(r"[اأ]ثَا?ث[^ ]{0,5}", "AṮĀṮ أَثَاث")
+stat_alif(r"[اأ]ثَا?ث[^ ]{0,5}", "aṯāth")
 
-print("=" * 70)
-print("L. ISTITIMĀR Abū Wakīl — نَحْوَ الْهُدَى / نَرَى اللهَ / ذِكْرَى")
-plain_search("نحو الهد", "نَحْوَ الْهُدَى")
-plain_search("رى الله", "نَرَى اللهَ")
-plain_search("ذكرى", "ذِكْرَى")
-raw_search("ذِكْرَى", "ذِكْرَى (raw)")
+# 12. ANṮĀ — singulier + duel
+h = find(r"[اأ]نْث[^ ]{0,5}", "ANṮĀ أُنْثَى (toutes formes)")
+stat_alif(r"[اأ]نْث[^ ]{0,5}", "anṯā")
 
-print("=" * 70)
-print("M. iʿdād — الصَّلَوْة (l'alif dessinée WĀW) + أَثْل (34:16 ?)")
-plain_search("صلوة", "…صلوة (stripped)")
-raw_search("صَلَو", "…صَلَو (raw)")
-plain_search("اثل", "…اثل (stripped)")
+# 13. LE DUEL DE THĀʾ À L'ALIF FIXE — noms au duel finissant -ṯāni/-ṯayni
+h = find(r"ثَانِ|ثَانَا|ثَانَ |ثَانَ$|ثَيْنِ", "DUEL DE THĀʾ (ثَانِ/ثَانَا/ثَيْنِ)")
+h = find(r"[^ا]ثَانِ|[ا-ي]ثَانِ", "…ṯāni en fin/flux (2ᵉ passe)")

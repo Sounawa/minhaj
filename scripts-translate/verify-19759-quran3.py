@@ -1,66 +1,79 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Vérifications coraniques du doc 19759 — passe 3 (raws دقيقة)."""
-import json
-import re
+"""R334 — Passe 3 : bytes des rasm critiques, racines exhaustives, lacunes 19759."""
+import json, re, unicodedata
 
-C = json.load(open("/home/z/my-project/scripts-translate/quran-cache.json"))
-HARAKAT = re.compile(r"[\u064B-\u0652\u0653-\u0655\u0670\u06D6-\u06ED\u08F0-\u08F3]")
+CACHE = "/home/z/my-project/scripts-translate/quran-cache.json"
+data = json.load(open(CACHE))
+corpus = []
+for k in sorted(data, key=int):
+    s = data[k]
+    for a in s["ar"]:
+        corpus.append((int(k), a[0], a[1]))
+IDX = {(sn, an): tx for (sn, an, tx) in corpus}
 
-def strip(s):
-    return HARAKAT.sub("", s).replace("\u0640", "")
+def hexspan(sura, aya, needle, width=14):
+    """Affiche le rasm et le codepoint de chaque char autour de needle."""
+    tx = IDX[(sura, aya)]
+    i = tx.find(needle)
+    if i < 0:
+        print(f"  {sura}:{aya} — '{needle}' ABSENT"); return
+    lo = max(0, i-width); hi = min(len(tx), i+len(needle)+width)
+    seg = tx[lo:hi]
+    print(f"  {sura}:{aya} | {seg}")
+    print("    cps:", " ".join(f"{ord(ch):04X}" for ch in tx[i:i+len(needle)]))
 
-print("=" * 70)
-print("A. RAW des 12 positions أَمْثَل / أَمْثَال (dessins)")
-pats = ("أمثل", "ءمثل")
-for s, obj in C.items():
-    for n, t in obj["ar"]:
-        st = strip(t)
-        if any(p in st for p in pats):
-            # extraire le mot porteur
-            idx = min((st.find(p) for p in pats if p in st), key=abs)
-            print(f"   [{s}:{n}] …{st[max(0,idx-20):idx+24]}…")
-            print(f"      RAW: …{t[max(0,idx-30):idx+40]}…")
+print("■■■ RASM BYTES CRITIQUES ■■■")
+print("46:17 يَسْتَغِيثَانِ :"); hexspan(46, 17, "سْتَغِيثَ")
+print("4:176 ٱلثُّلُثَانِ :"); hexspan(4, 176, "ثُّلُثَ")
+print("4:11 ثُلُثَا :"); hexspan(4, 11, "ثُلُثَا")
+print("73:20 ثُلُثَىِ :"); hexspan(73, 20, "ثُلُثَى")
+print("22:30 أَوْثَٰنِ :"); hexspan(22, 30, "أَوْثَ")
+print("113:4 نَّفَّٰثَٰتِ :"); hexspan(113, 4, "نَّفَّ")
+print("24:26 خَبِيثَٰتُ :"); hexspan(24, 26, "خَبِيثَ")
+print("2:27 مِيثَٰقِهِۦ :"); hexspan(2, 27, "مِيثَ")
+print("12:91 ءَاثَرَكَ :"); hexspan(12, 91, "ءَاثَ")
+print("79:38 ءَاثَرَ :"); hexspan(79, 38, "ءَاثَ")
+print("20:104 أَمْثَلُهُمْ :"); hexspan(20, 104, "أَمْثَل")
+print("4:11 أُنثَيَيْنِ :"); hexspan(4, 11, "أُنث")
+print("4:176 أُنثَيَيْنِ :"); hexspan(4, 176, "أُنث")
 
-print("=" * 70)
-print("B. مِيثَاق — la LISTE COMPLÈTE des 16 (suscrites toutes ?)")
-cnt = 0
-for s, obj in C.items():
-    for n, t in obj["ar"]:
-        if "مِيثَٰق" in t:
-            cnt += 1
-            print(f"   {cnt:2d}. [{s}:{n}] مِيثَٰق présent — suscrite")
-        elif strip(t).find("ميثاق") >= 0:
-            cnt += 1
-            print(f"   {cnt:2d}. [{s}:{n}] مِيثَاق — PLEINE ?! RAW: {t[:80]}")
-print(f"   TOTAL: {cnt}")
+print("\n■■■ RACINES EXHAUSTIVES (avec diacritiques entre lettres) ■■■")
+def root(a, b, c, label, extra=""):
+    """Cherche X ... Y ... Z avec 0-2 diacritiques entre chaque lettre racine."""
+    D = "[َُِّْٰٰۭۣٓ۟ۨۖۗۘۚۛۜۢۖ۟۠ۥۦٰ'ʾ]*"
+    pat = re.compile(f"{a}{D}{b}{D}{c}{D}{extra}")
+    hits = []
+    for (sn, an, tx) in corpus:
+        for m in pat.finditer(tx):
+            st = max(0, m.start()-18); en = min(len(tx), m.end()+18)
+            hits.append((sn, an, m.group(0), tx[st:en]))
+    print(f"\n=== racine {label} — {len(hits)} occ.")
+    for (sn, an, g, ctx) in hits:
+        print(f"  {sn}:{an} [{g}] | {ctx}")
 
-print("=" * 70)
-print("C. أثب — racine ء-ث-ب : zéro ancrage ? (patterns larges)")
-pats2 = ("أتب", "ءتب", "أثب", "ءثب", "اثب", "يؤثب", "أتثب")
-for s, obj in C.items():
-    for n, t in obj["ar"]:
-        st = strip(t)
-        for p in pats2:
-            if p in st:
-                print(f"   [{s}:{n}] «{p}» — {st[max(0,st.find(p)-25):st.find(p)+25]}")
-print("   (fin recherche أثب)")
+# أ-ث-ر : toutes formes (آ أ ء initiales couvertes via a=أ? non — chercher 3 passes)
+for init in "اأءآ":
+    root(init, "ث", "ر", f"{init}-ث-ر")
+# م-ث-ل
+root("م", "ث", "ل", "م-ث-ل")
+# أ-ن-ث / ا-ن-ث
+for init in "اأ":
+    root(init, "ن", "ث", f"{init}-ن-ث")
+# أ-ث-ب / ا-ث-ب
+for init in "اأ":
+    root(init, "ث", "ب", f"{init}-ث-ب")
+# أ-ث-ث / ا-ث-ث
+for init in "اأ":
+    root(init, "ث", "ث", f"{init}-ث-ث")
 
-print("=" * 70)
-print("D. ثَاء + dual + extrémité — recontrôle complet des ثلث raws")
-for s, obj in C.items():
-    for n, t in obj["ar"]:
-        st = strip(t)
-        if "ثلث" in st and ("ثلثا" in st or "ثلثان" in st):
-            idx = st.find("ثلث")
-            print(f"   [{s}:{n}] …{st[max(0,idx-18):idx+22]}…")
-            print(f"      RAW: …{t[max(0,idx-25):idx+35]}…")
-
-print("=" * 70)
-print("E. Les 6 positions kasra de ءَاثَٰرِهِم — dessin hamza-alif COMPLET partout ?")
-for s, n in (("5", 46), ("18", 6), ("37", 70), ("43", 22), ("43", 23), ("57", 27)):
-    for nn, t in C[s]["ar"]:
-        if nn == n:
-            seg = "ءاث" 
-            i = t.find(seg)
-            print(f"   [{s}:{n}] RAW word: {t[i:i+14]}")
+print("\n■■■ LACUNES DE 19759 (comptage des emplacements d'exemples) ■■■")
+src = open("/home/z/my-project/tr-tmp/19759.src.html", encoding="utf-8").read()
+print("img vides:", src.count("<img"))
+print("مِثْلَ:", src.count("مِثْلَ") + src.count("مِثْلِ"))
+print("تَعَالَى:", src.count("تَعَالَى"))
+print("قَوْلِهِ تَعَالَى:", src.count("قَوْلِهِ تَعَالَى"))
+print("وَكَذا:", src.count("وَكَذا") + src.count("وَكَذَا"))
+print("الْقِيَاس (règle du qiyās):", src.count("الْقِيَا"))
+# Position des trous : afficher chaque occurrence de مثلا/مثل avec 15 car après
+for m in re.finditer(r".{0,30}مِثْل[َِ]?[:.]?\s*.{0,25}", src):
+    print("  [مثل] …", m.group(0).replace("\n", " ")[:80])
