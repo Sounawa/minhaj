@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "VERDICT OK\n\n**Détails :**\n\n1.  **Titre principal visible :** OUI. Le titre « Dessin et réglage, chapitre R » est clairement affiché en haut de la page.\n2.  **Badge 'Leçon 18 / 30' présent :** OUI. Le badge est bien visible juste en dessous du titre principal (à côté du grand « L »).\n3.  **Tableaux translittérés lisibles :** OUI. Les tableaux (notamment sous les sections \"Le matn\" et \"Al-Istilmār\") sont parfaitement alignés et le texte arabe translittéré est lisible.\n4.  **Caractères tofu/manquants :** AUCUN. Tous les caractères arabes, latins et spéciaux s'affichent correctement sans carré vide.\n5.  **Débordement horizontal :** NON. La mise en page est propre, le texte se adapte à la largeur et il n'y a pas de barre de défilement horizontale indésirable.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793212044,
+  "id": "20261029022719d3878843c0e343aa",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261029022719d3878843c0e343aa",
+  "usage": {
+    "completion_tokens": 236,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 6140,
+    "prompt_tokens_details": {
+      "cached_tokens": 2
+    },
+    "total_tokens": 6376
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "VERDICT: **KO**\n\n**Détails de l'analyse (Capture 390px) :**\n\n1.  **Titre visible :** ✅ **OK** – Le titre principal « Dessin et réglage, chapitre R » est parfaitement visible en haut de page.\n2.  **Badge 'Leçon 18 / 30' :** ✅ **OK** – Le badge est présent et lisible sous le titre, avec l'icône du livre.\n3.  **Tableaux lisibles sans coupure :** ⚠️ **PARTIEL / KO** – Les tableaux de vocabulaire (ex: sous *Le matn*) sont **cassés horizontalement**. Les colonnes se chevauchent ou sont tronquées sur la droite (ex: les traductions françaises sont coupées ou illisibles car la grille dépasse la largeur de 390px). Il manque une propriété `overflow-x: auto` ou un redimensionnement en `display: block` pour le mobile.\n4.  **Caractères tofu (carrés vides) :** ❌ **KO** – De nombreux caractères **tofu (□)** sont visibles dans la section arabe en bas de page (ex: □□□□□□ □□□□□). Cela indique que la police système utilisée ne contient pas les glyphes nécessaires pour ces caractères arabes spécifiques.\n5.  **Débordement horizontal / texte coupé :** ❌ **KO** – \n    *   **Débordement majeur :** Les longs mots arabes non espacés (ex: dans les titres de section comme *Al-Fahm* ou *As-Sari*) provoquent un **débordement horizontal total** de la mise en page, créant une barre de défilement en bas et cachant le contenu à droite.\n    *   **Texte coupé :** Certaines notes de bas de page et références bibliographiques (longues chaînes de caractères latins/arabes) sont tronquées brutalement à droite de l'écran sans retour à la ligne automatique (`word-break: break-word` manquant).\n\n**Résumé des corrections prioritaires :**\n*   Ajouter `overflow-x: auto` ou passer les tableaux en layout vertical (stacked) pour mobile.\n*   Intégrer une police web (webfont) prenant en charge l'arabe complet pour éliminer les tofu.\n*   Appliquer `word-break: break-word` ou `overflow-wrap: break-word` sur les contenus textuels et les titres pour éviter le débordement horizontal.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793212067,
+  "id": "2026102902273264e927ea4dc24553",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "2026102902273264e927ea4dc24553",
+  "usage": {
+    "completion_tokens": 588,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5024,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5612
+  }
+}
