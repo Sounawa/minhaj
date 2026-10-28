@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Voici la relecture QA de cette capture mobile (390px) :\n\n1. **Débordement horizontal ?** Non, le contenu semble bien contenu dans les 390px sans barre de défilement horizontale visible.\n2. **Tableau du matn ?** Oui, le tableau bilingue (arabe/français) est parfaitement contenu, avec retour à la ligne automatique pour les mots longs.\n3. **Panneaux AR/FR verticaux ?** Oui, l'alternance est claire et lisible : en-tête AR → traduction FR → tableau du verset → explications FR → notes AR en bas.\n4. **Chevauchements ?** Aucun détecté. Les sections sont bien séparées par des espacements verticaux suffisants.\n5. **Badge de leçon ?** Oui, visible en haut à gauche (badge orange « MINHÂJ » avec indicateur de progression).\n6. **Mise en page globale ?** **Correcte** pour un format mobile 390px. La typographie arabe et française est bien rendue, la hiérarchie des titres (Le chapitre, Le matn, La compréhension, L'analyse, etc.) est claire, et la densité d'information reste lisible malgré la longueur du contenu.\n\n**Note mineure :** Les listes numérotées très longues (sections L'analyse et Lexique) pourraient bénéficier d'un espacement légèrement plus généreux entre les paragraphes pour améliorer la lisibilité sur petit écran, mais cela reste acceptable.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793190722,
+  "id": "20261028203152869d2e63b3a647ef",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261028203152869d2e63b3a647ef",
+  "usage": {
+    "completion_tokens": 351,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 4863,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5214
+  }
+}
