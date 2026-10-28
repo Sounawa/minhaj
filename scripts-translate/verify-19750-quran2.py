@@ -1,112 +1,133 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Compléments 19750 : recherches par squelettes consonantiques (suscrites incluses)."""
+"""Suivi des vérifications 19750 : متع, Kahf exact, 16:120, مستنس, ئب forms, طائف."""
 import json
 import re
 
 C = json.load(open("/home/z/my-project/scripts-translate/quran-cache.json"))
-HARAKAT = re.compile(r"[\u064B-\u0652\u0653-\u0655\u06D6-\u06ED\u08F0-\u08F3]")
+HARAKAT = re.compile(r"[\u064B-\u0652\u0653-\u0655\u0670\u06D6-\u06ED\u08F0-\u08F3]")
 
-def light(s: str) -> str:
-    """Strip harakat mais GARDE ٰ (suscrite) et les bases."""
+def strip(s):
     return HARAKAT.sub("", s).replace("\u0640", "")
 
-def bare(s: str) -> str:
-    """Strip tout (y compris ٰ et سuscrits) — squelette pur."""
-    return HARAKAT.sub("", s).replace("\u0670", "").replace("\u0640", "").replace("\u0653", "")
+def raw_hits(pat_harakat, pat_plain=None, limit=25):
+    out = []
+    for s, obj in C.items():
+        for n, t in obj["ar"]:
+            if pat_harakat in t:
+                out.append((s, n, t))
+    return out
 
-def scan_raw(pat, label, maxp=15):
-    rx = re.compile(pat)
-    hits = []
-    for s in range(1, 115):
-        for n, t in C[str(s)]["ar"]:
-            for m in rx.finditer(t):
-                a, b = max(0, m.start() - 30), min(len(t), m.end() + 30)
-                hits.append((f"{s}:{n}", t[a:b]))
-    print(f"--- {label} : {len(hits)} occurrence(s)")
-    for ref, ctx in hits[:maxp]:
-        print(f"    {ref}  …{ctx}…")
-    if len(hits) > maxp:
-        print(f"    … +{len(hits)-maxp} autres")
-    return hits
+print("=" * 70)
+print("A. LEXÈME مَتَاع / مَتَّع — toutes formes (recherche HARAKATÉE)")
+hits = raw_hits("مت")
+for s, n, t in hits:
+    st = strip(t)
+    if re.search(r"مت", st):
+        idx = st.find("مت")
+        # ne garder que متع / متتن
+        if re.search(r"مت", st) and ("متع" in st or "متن" in st):
+            print(f"   [{s}:{n}] {t[:130]}")
+print("   --- via stripped : مَتَاع (متاع) déjà = 0 ; chercher متع nu ---")
+cnt = 0
+for s, obj in C.items():
+    for n, t in obj["ar"]:
+        st = strip(t)
+        for m in re.finditer("متع", st):
+            print(f"   [stripped متع] [{s}:{n}] {st[max(0,m.start()-18):m.start()+20]}")
+            cnt += 1
+            break
+print(f"   total stripped متع : {cnt}")
 
-print("=== A. مَتَٰع / متاع (suscrites incluses) ===")
-scan_raw(r"مَتَٰع|مَتَاع|مَتَٰٓع", "متاع raw (suscrite/madda)")
-hits = []
-for s in range(1, 115):
-    for n, t in C[str(s)]["ar"]:
-        for w in t.split():
-            b = bare(w)
-            if "متع" in b:
-                hits.append((f"{s}:{n}", w))
-print("--- squelette متع (mots entiers) :", len(hits))
-for ref, w in hits[:15]:
-    print(f"    {ref}  {w}")
+print("=" * 70)
+print("B. KAHF — TOUTES les occurrences كِتَ+ (harakaté) sūra 18")
+for s, obj in C.items():
+    if s != "18":
+        continue
+    for n, t in obj["ar"]:
+        if "كِتَ" in t or "كتب" in strip(t):
+            print(f"   [18:{n}] {t[:110]}")
 
-print("")
-print("=== B. مَرَّت dual de مَرَّة ===")
-hits = []
-for s in range(1, 115):
-    for n, t in C[str(s)]["ar"]:
-        for w in t.split():
-            b = bare(w)
-            if b.startswith("مرت") or "مرتين" in b or "مرتان" in b:
-                hits.append((f"{s}:{n}", w))
-print("--- squelette مرت* :", len(hits))
-for ref, w in hits[:12]:
-    print(f"    {ref}  {w}")
+print("=" * 70)
+print("C. 16:120 قَانِتًا — forme exacte")
+obj = C["16"]
+for n, t in obj["ar"]:
+    if n == 120:
+        print(f"   [16:120] {t}")
 
-print("")
-print("=== C. plurals du Dānī : تابعين / تائبون / قانتات / طائفات ===")
-for sk, lab in (("تابعين", "تابعين"), ("تبعين", "تبعين"), ("تائبون", "تائبون"),
-                ("تاوبون", "تاوبون"), ("قانيت", "قانيت(ت)"), ("قانتات", "قانتات"),
-                ("طايف", "طايف"), ("طايفات", "طايفات")):
-    hits = []
-    for s in range(1, 115):
-        for n, t in C[str(s)]["ar"]:
-            for w in t.split():
-                if sk in bare(w):
-                    hits.append((f"{s}:{n}", w))
-    print(f"--- {lab} : {len(hits)}")
-    for ref, w in hits[:8]:
-        print(f"    {ref}  {w}")
+print("=" * 70)
+print("D. مُسْتَنِس / أَسْتَأْنَس — recherche large")
+for pat in ["مستنس", "أستأنس", "استأنس", "يستنس", "يستأنس"]:
+    cnt = 0
+    for s, obj in C.items():
+        for n, t in obj["ar"]:
+            if pat in strip(t):
+                print(f"   [{pat}] [{s}:{n}] {strip(t)[:80]}")
+                cnt += 1
+    print(f"   → {pat} : {cnt}")
 
-print("")
-print("=== D. hamza warš : مستأخر / مستأنس / امتاز / استأنس ===")
-for sk, lab in (("مستاىخر", "مستاىخر(suscrite)"), ("مستاخر", "مستاخر"), ("مستخر", "مستخر"),
-                ("مستانيس", "مستانيس"), ("مستنيس", "مستنيس"), ("استانيس", "استانيس"),
-                ("امتياز", "امتياز"), ("امتيز", "امتيز"), ("امتيزو", "امتيزو"), ("متيز", "متيز")):
-    hits = []
-    for s in range(1, 115):
-        for n, t in C[str(s)]["ar"]:
-            for w in t.split():
-                if sk in bare(w):
-                    hits.append((f"{s}:{n}", w))
-    print(f"--- {lab} : {len(hits)}")
-    for ref, w in hits[:8]:
-        print(f"    {ref}  {w}")
+print("=" * 70)
+print("E. Forms ء-ب (ئب) et ت-ب-و-ن : تَائِب lexical")
+for pat in ["ئبت", "ئبون", "تبون", "ئبن"]:
+    cnt = 0
+    for s, obj in C.items():
+        for n, t in obj["ar"]:
+            if pat in strip(t):
+                idx = strip(t).find(pat)
+                print(f"   [{pat}] [{s}:{n}] {strip(t)[max(0,idx-20):idx+25]}")
+                cnt += 1
+    print(f"   → {pat} : {cnt}")
 
-print("")
-print("=== E. يَتَمَى : squelettes تمي / تما / تتم ===")
-for sk, lab in (("تمي", "تمي"), ("تماى", "تماى"), ("تمان", "تمان"), ("يتم", "يتم"), ("تتم", "تتم")):
-    hits = []
-    for s in range(1, 115):
-        for n, t in C[str(s)]["ar"]:
-            for w in t.split():
-                if sk in bare(w):
-                    hits.append((f"{s}:{n}", w))
-    print(f"--- {lab} : {len(hits)}")
-    for ref, w in hits[:10]:
-        print(f"    {ref}  {w}")
+print("=" * 70)
+print("F. طَائِف — lexème")
+for pat in ["طائف", "طئف"]:
+    cnt = 0
+    for s, obj in C.items():
+        for n, t in obj["ar"]:
+            if pat in strip(t):
+                idx = strip(t).find(pat)
+                print(f"   [{pat}] [{s}:{n}] {strip(t)[max(0,idx-20):idx+28]}")
+                cnt += 1
+    print(f"   → {pat} : {cnt}")
 
-print("")
-print("=== F. خانتا (dual verbal bayt 4) ===")
-hits = []
-for s in range(1, 115):
-    for n, t in C[str(s)]["ar"]:
-        for w in t.split():
-            if "خانتا" in bare(w) or "خانت" in bare(w):
-                hits.append((f"{s}:{n}", w))
-print("--- خانت* :", len(hits))
-for ref, w in hits[:10]:
-    print(f"    {ref}  {w}")
+print("=" * 70)
+print("G. 34:15 جَنَّتَانِ — contexte (Saba)")
+obj = C["34"]
+for n, t in obj["ar"]:
+    if n == 15:
+        print(f"   [34:15] {t[:120]}")
+
+print("=" * 70)
+print("H. Élue التَّالِيَٰت 37:3 — forme exacte")
+obj = C["37"]
+for n, t in obj["ar"]:
+    if n == 3:
+        print(f"   [37:3] {t}")
+
+print("=" * 70)
+print("I. خَتَم/خِتَام — l'išāra : la lecture خَاتَمُهُ (fatha) n'est PAS au corpus ;")
+print("   le rasm 83:26 = خِتَٰمُهُ (suscrite). Verbes ختم ci-dessus (2:7, 6:46, 36:65, 42:24, 45:23).")
+
+print("=" * 70)
+print("J. Recompte GLOBAL كِتَ+ par sourate (suscrite vs pleine) — sommet")
+sus_by, full_by = {}, {}
+for s, obj in C.items():
+    for n, t in obj["ar"]:
+        for m in re.finditer(r"كِتَ", t):
+            j = m.end()
+            ch = t[j] if j < len(t) else ""
+            tail = t[j+1] if j+1 < len(t) else ""
+            if ch == "\u0670" and tail == "ب":
+                sus_by[s] = sus_by.get(s, 0) + 1
+            elif ch in "\u0627\u0671" and tail == "ب":
+                full_by[s] = full_by.get(s, 0) + 1
+print(f"   total suscrite {sum(sus_by.values())} | pleine {sum(full_by.values())} : {full_by}")
+
+print("=" * 70)
+print("K. المُتَتَابِعين (4:92/58:4) — le seul « tābiʿīn » du corpus")
+for s, n in (("4", 92), ("58", 4)):
+    obj = C[s]
+    for nn, t in obj["ar"]:
+        if nn == n:
+            idx = strip(t).find("تابعين")
+            print(f"   [{s}:{n}] …{strip(t)[max(0,idx-30):idx+15]}…")
