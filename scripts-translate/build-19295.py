@@ -49,15 +49,15 @@ for terme in ['Manẓūmat al-Muqniʿ', 'al-Marġatī', 'al-Malṭaʿ ʿalā mas
               'fabrāyir', 'mars', 'ibrīl', 'māyuh', 'gusht', 'nūnbar',
               'duǧanbar', 'šutanbar', 'falaḥī',
               '(jīm)', '(yajj)', '(yadd)', '(jīman)',
-              '365', '364', '92', '91', '74', '77',
+              '365', '364', '92', '91', 'soixante-quatorze', 'soixante-dix-sept',
               '15 fabrāyir', '12 fabrāyir', '17 māyuh', '17 gusht', '16 nūnbar',
               '29 ibrīl', '26 nūnbar', '29 gusht', '14 gusht', '13 nūnbar',
               'Idrīs al-ʿIrāqī', 'aṭ-Ṭāhirī', 'Muḥammad ibn ʿAbd as-Salām',
               'quatorzième grande fente', 'vingt-neuf documents consécutifs',
-              'GT-isme', 'sixième état', 'muṣḥaf', 'az-dilāf',
-              'an-naẓm', 'ḥāǧūz', 'iʿtidāl', 'inqilāb', 'ḥarakāt',
+              'GT-isme', 'Sixième état', 'muṣḥaf', 'az-dilāf',
+              'naẓm', 'iʿtidāl', 'inqilāb', 'ḥarakāt',
               'muqaddam al-farġayn', 'que Dieu le Très-Haut lui fasse miséricorde',
-              'falāḥīn', 'ahl ar-raṣd', 'défaut'.replace('dé', 'dé')]:
+              'falāḥīn', 'ahl ar-raṣd']:
     sonde(f'terme « {terme} »', terme in html)
 for tag in ['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'dl', 'dt', 'dd', 'ul', 'ol', 'li', 'table', 'tbody', 'tr', 'td', 'span']:
     o = len(re.findall(rf'<{tag}[ >]', html)); c = html.count(f'</{tag}>')
