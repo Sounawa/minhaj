@@ -1,67 +1,62 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Vérification quran-cache 19807 — v2 (sondes calibrées sur le DESSIN).
-bare(): dépouille diacritiques + khanjariyya + tatweel ; normalise أ/إ/آ/ٱ -> ا
- mais garde ء/ؤ/ئ (dessins distincts)."""
-import json, re
+"""verify-19807-quran.py — sondes coraniques pour 19807 (le lām, R348)."""
+import json, re, unicodedata
+from collections import Counter
 
-CACHE = '/home/z/my-project/scripts-translate/quran-cache.json'
-with open(CACHE, encoding='utf-8') as f:
-    Q = json.load(f)
+data = json.load(open('/home/z/my-project/scripts-translate/quran-cache.json', encoding='utf-8'))
 
-def bare(s):
-    s = re.sub(r'[\u064B-\u0652\u0670\u0640\u0653-\u0655\u08F0-\u08F3\u06D6-\u06ED]', '', s)
-    s = s.replace('\u0671', '\u0627').replace('\u0623', '\u0627').replace('\u0625', '\u0627').replace('\u0622', '\u0627')
-    return s
+def bare(t):
+    return ''.join(c for c in t if not unicodedata.category(c).startswith('M') and c != '\u0640').replace('\u0671', '\u0627')
 
-def find(pat, exact=True, suras=None):
-    hits = []
-    sk = [str(s) for s in suras] if suras else [str(i) for i in range(1, 115)]
-    for sk1 in sk:
-        if sk1 not in Q: continue
-        for a in Q[sk1]['ar']:
-            for w in a[1].split():
-                b = bare(w)
-                if (b == pat) if exact else (pat in b):
-                    hits.append((int(sk1), a[0], w))
-    return hits
+corp = {}
+for s in range(1, 115):
+    corp[s] = [(i+1, bare(p[1]), p[1]) for i, p in enumerate(data.get(str(s), {}).get('ar', []))]
 
-def show(label, hits, lim=16):
-    print(f'== {label} : {len(hits)} positions')
-    for s, a, w in hits[:lim]:
-        print(f'   {s}:{a}  {w}')
-    if len(hits) > lim:
-        print(f'   ... (+{len(hits)-lim})')
+W = lambda s: re.split(r'[\s\u00a0]+', s.strip())
 
-print('====== SECTION I : WASATAN ======')
-show('ءالاء (fente 1)', find('ءالاء'))
-show('جلاء (fente 2)', find('جلاء'))
-show('هؤلاء (fente 3, hāʾ tanbīh)', find('هؤلاء'))
-show('اولاء (fente 4, مجرد)', find('اولاء'))
-show('اولئكم (fente 5, kāf -> ḥaḏf)', find('اولئكم'))
-show('هانتم (glose اولاء)', find('هانتم'))
-print('--- al-Ǧinn (72) : tout mot avec ان/لان ---')
-for a in Q['72']['ar']:
-    for w in a[1].split():
-        b = bare(w)
-        if 'لان' in b or b == 'ان' or b == 'الان':
-            print(f'   72:{a[0]}  {w}  (bare={b})')
-show('الان (constant, tout muṣḥaf)', find('الان'))
-show('بل : sūras 2,7,8,14,37,44', find('بل', exact=False, suras=[2,7,8,14,37,44]))
-show('لات (al-Lāt)', find('لات', exact=False))
-show('اخلا (aḫillāʾ)', find('اخلا', exact=False))
-show('بلغا (constante بلاغ?)', find('بلغا', exact=False))
-show('خلا exact', find('خلا'))
-show('خلاا contains (خلئف?)', find('خلاا', exact=False))
-show('خئف contains', find('خئف', exact=False))
+def hunt(sk, show=8, whole=False):
+    out = []
+    for s in range(1, 115):
+        for a, t, raw in corp[s]:
+            if whole:
+                hit = any(w == sk for w in W(t))
+            else:
+                hit = sk in t
+            if hit:
+                wraw = next((w for w in W(raw) if (bare(w) == sk if whole else sk in bare(w))), '')
+                out.append((s, a, wraw))
+    tag = 'WORD' if whole else 'SUB'
+    print(f'\n== [{sk}] {tag} = {len(out)}')
+    for s, a, w in out[:show]:
+        print(f'   {s}:{a} «{w}»')
+    if len(out) > show:
+        cnt = Counter(x[0] for x in out)
+        print(f'   …+{len(out)-show} ; sūras: {dict(sorted(cnt.items()))}')
+    return out
 
-print()
-print('====== SECTION II : TARAFAN ======')
-show('الا nu (إلا+ألا+ألا un dessin)', find('الا'), lim=45)
-show('لولا', find('لولا'), lim=6)
-show('رسول + fin ا (duel?)', [(s,a,w) for s,a,w in find('رسول', exact=False) if bare(w).endswith('ا')])
-show('سبيل + fin ا (duel?)', [(s,a,w) for s,a,w in find('سبيل', exact=False) if bare(w).endswith('ا')])
-show('علا exact', find('علا'))
-print('--- 18:61 (duel) ---')
-print('   ', Q['18']['ar'][60][1][:130])
-show('على (particule, yāʾ) ex.', find('على'), lim=3)
+# A. mot du naẓīm kālān (élidé au milieu) — kāla, kālāt ?
+hunt('كالن'); hunt('كالت'); hunt('كلت'); hunt('قالتا'); hunt('قالن')
+# B. ālāna — le lexème élidé partout SAUF sūra al-Jinn (72) constante
+hunt('الان'); hunt('الاا')
+# C. balāʾ — constant hors 44, élidé ×2 (Ṣāffāt 37 + Ḫān 44) ?
+hunt('بلاء'); hunt('بلء'); hunt('بلوا'); hunt('بلا')
+# D. hāʾulāʾi élidée
+hunt('هولاء'); hunt('هولء')
+# E. ulālikum (conjoint au kāf élidé) / ūlāʾi sans kāf
+hunt('اوللكم'); hunt('اولاء')
+# G-H. ālāʾa / jalāʾa élidées
+hunt('الاء'); hunt('الااء'); hunt('جلا')
+# I. lāta constante
+hunt('لات'); hunt('لاة'); hunt('لاات'); hunt('الاط')
+# J. aḫillāʾu constante
+hunt('اخلاا'); hunt('اخلا'); hunt('اخلاء')
+# K-L. les deux duels constantes
+hunt('رسولا'); hunt('رسولن'); hunt('سبيلن'); hunt('سبيلي')
+# M. ʿalā verbale (word) — contrast sur ʿalā préposition
+hunt('علا', whole=True, show=14); hunt('علي', whole=True, show=6)
+# N. particules constantes (comptes)
+hunt('لولا', whole=True, show=4); hunt('خلا', whole=True, show=4); hunt('كلا', whole=True, show=4)
+hunt('الا', whole=True, show=5)
+# O. iḥtirāz : إلا Allah / إلا الذين
+hunt('الله', whole=True, show=0)
+print('\nDONE verify-19807')
