@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""build-19295.py — assemblage de la leçon 19295 (le processus d'extraction de la manzila du Soleil) + sondes."""
+"""build-19295.py — assemblage de la leçon 19295 (la manzila du Soleil) + sondes."""
 import re, sys
 
 HOME = '/home/z/my-project'
@@ -26,33 +26,40 @@ sonde('h4 x5', html.count('<h4>') == 5, f"({html.count('<h4>')})")
 sonde('h5 x2', html.count('<h5>') == 2, f"({html.count('<h5>')})")
 sonde('ul x5', html.count('<ul>') == 5, f"({html.count('<ul>')})")
 sonde('ol x1 (N.d.T.)', html.count('<ol>') == 1)
-sonde('li total x27 (15 corps + 12 notes)', html.count('<li>') == 27, f"({html.count('<li>')})")
-sonde('table x2 (matn + poème)', html.count('<table') == 2, f"({html.count('<table')})")
-sonde('fente <p></p> x2 (répartition + exemple a)', html.count('<p></p>') == 2, f"({html.count('<p></p>')})")
-sonde('fente <p><span></span></p> x1 (exemple b)', html.count('<p><span></span></p>') == 1)
+sonde('li total x27 (14 corps + 13 notes)', html.count('<li>') == 27, f"({html.count('<li>')})")
+sonde('tables x4 (1 matn + 2 citations + 1 poème)', html.count('<table') == 4, f"({html.count('<table')})")
+sonde('matn-table x3 (dir=ltr)', html.count('<table dir="ltr" class="matn-table">') == 3)
+sonde('poème sans dir x1', html.count('<table>\n<tbody>') == 1 or re.search(r'<table>\s*<tbody>', html) is not None)
+sonde('tr x9', html.count('<tr>') == 9, f"({html.count('<tr>')})")
+sonde('td x27', html.count('<td>') == 27, f"({html.count('<td>')})")
+sonde('1 fente <p></p> stricte (exemple a)', html.count('<p></p>') == 1, f"({html.count('<p></p>')})")
+sonde('3 fentes <p><span></span></p>', html.count('<p><span></span></p>') == 3, f"({html.count('<p><span></span></p>')})")
 sonde('0 arabe residuel', not ARABIC.search(html))
 g1, g2 = html.count('«'), html.count('»')
 sonde('guillemets appariés', g1 == g2, f'({g1}/{g2})')
 sonde('0 apostrophe droite', "'" not in html)
 for terme in ['Manẓūmat al-Muqniʿ', 'al-Marġatī', 'al-Malṭaʿ ʿalā masāʾil al-Muqniʿ',
               'ad-dars ar-rābiʿ ʿašar', 'quatre-vingt-unième', 'Leçon 16 / 28',
-              'al-iʿdād al-qiblī', 'Notes du traducteur', 'at-tamhīd', 'al-matn',
-              'al-fahm', 'aš-šarḫ', 'istiḫlāṣ maḍāmīn', 'at-taḥlīl', 'at-taqwīm',
-              'al-istitmār', 'manzila', 'manāzil', 'faṣl', 'burj', 'burūj',
-              'ǧummal', 'ǧīm', 'yaǧǧ', 'yadd', 'muntahā', 'taqaddamā',
-              'an-naṭḥ', 'al-buṭayn', 'aṯ-ṯurayyā', 'ad-dabarān', 'al-haqʿa',
-              'al-hanʿa', 'aḏ-ḏirāʿ', 'nathra', 'aṭ-ṭarf', 'al-ǧabha', 'az-zubra',
-              'aṣ-ṣarfa', 'al-ʿawwā', 'as-simāk', 'al-ġafr', 'az-zabnān', 'al-iklīl',
-              'al-qalb', 'aš-šawla', 'an-naʿāʾim', 'al-balda', 'ḏābiḥ', 'bulaʿ',
-              'saʿūd', 'aḫbīya', 'farġ', 'baṭn al-ḥūt', 'fallāḥīn', 'raṣd',
-              'kawākib siyāra', 'buyūt', 'aṭ-Ṭāhirī', 'al-ʿIrāqī',
-              'rabīʿ', 'ṣayf', 'ḫarīf', 'aš-šitāʾ', 'falaḥī',
-              'mars', 'ibrīl', 'māyy', 'yūnyū', 'yūlyūz', 'ġust',
-              'šutanbir', 'uktūbar', 'nūnbar',
+              'al-iʿdād al-qiblī', 'Notes du traducteur',
+              'manzila', 'manāzil', 'faṣl', 'burj', 'burūǧ', 'falak',
+              'al-jabha', 'la Jabha', 'aṯ-ṯurayyā', 'les Pléiades', 'an-naʿāʾim',
+              'al-ʿawwā', 'farġ al-muqaddam', 'farġ al-muʾaḫir', 'baṭn al-ḥūt',
+              'an-naṭḥ', 'al-buṭayn', 'ad-dabarān', 'al-haqʿa', 'aš-šawla',
+              'aṣ-ṣarfa', 'al-qalb', 'al-iklīl', 'al-balda', 'al-aḫbiya',
+              'fabrāyir', 'mars', 'ibrīl', 'māyuh', 'gusht', 'nūnbar',
+              'duǧanbar', 'šutanbar', 'falaḥī',
+              '(jīm)', '(yajj)', '(yadd)', '(jīman)',
+              '365', '364', '92', '91', '74', '77',
+              '15 fabrāyir', '12 fabrāyir', '17 māyuh', '17 gusht', '16 nūnbar',
+              '29 ibrīl', '26 nūnbar', '29 gusht', '14 gusht', '13 nūnbar',
+              'Idrīs al-ʿIrāqī', 'aṭ-Ṭāhirī', 'Muḥammad ibn ʿAbd as-Salām',
               'quatorzième grande fente', 'vingt-neuf documents consécutifs',
-              'GT-isme', 'sixième état', 'déroulé de la garde', 'p. 102']:
+              'GT-isme', 'sixième état', 'muṣḥaf', 'az-dilāf',
+              'an-naẓm', 'ḥāǧūz', 'iʿtidāl', 'inqilāb', 'ḥarakāt',
+              'muqaddam al-farġayn', 'que Dieu le Très-Haut lui fasse miséricorde',
+              'falāḥīn', 'ahl ar-raṣd', 'défaut'.replace('dé', 'dé')]:
     sonde(f'terme « {terme} »', terme in html)
-for tag in ['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'dl', 'dt', 'dd', 'ul', 'ol', 'li', 'table', 'tbody', 'tr', 'td', 'strong', 'em']:
+for tag in ['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'dl', 'dt', 'dd', 'ul', 'ol', 'li', 'table', 'tbody', 'tr', 'td', 'span']:
     o = len(re.findall(rf'<{tag}[ >]', html)); c = html.count(f'</{tag}>')
     sonde(f'balise {tag} appariée', o == c, f'({o}/{c})')
 sonde('fentes documentées', html.count('fente') >= 5, f"({html.count('fente')})")
