@@ -55,12 +55,12 @@ if f"Task ID: R{N}" in content:
     die(f"garde absolue : R{N} déjà présent.")
 
 # 3. Canaris (règle cx' — R433 : portail d'abord, 311 ensuite)
-r = run("cd /home/z/my-project && bash scripts-translate/veille-portail.sh 2>&1 | tail -1")
-portail = r.stdout.strip()
-print("PORTAIL :", portail)
-if "OUVERTE" in portail and "FERMÉE" not in portail:
-    print(f"PORTE|OUVERTE → lancer bash scripts-translate/reprise-portail.sh puis re-mapping des 853. Sortie: {portail}")
+r = run("cd /home/z/my-project && bash scripts-translate/veille-portail.sh 2>&1")
+portail = r.stdout
+if "PORTE|OUVERTE" in portail:
+    print(f"PORTE|OUVERTE → lancer bash scripts-translate/reprise-portail.sh puis re-mapping des 853. Sortie: {portail[-300:]}")
     sys.exit(3)
+print("PORTAIL : PORTE|FERMÉE" if "PORTE|FERMÉE" in portail else "PORTAIL : sortie inattendue — " + portail[-120:])
 r = run("cd /home/z/my-project && bash scripts-translate/veille-311.sh 2>&1 | tail -2")
 out = r.stdout.strip()
 print("311 :", out.splitlines()[-1] if out else "?")
