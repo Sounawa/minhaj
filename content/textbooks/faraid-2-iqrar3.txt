@@ -1,0 +1,41 @@
+SOURCE VERSIONNÉE — Minhāj R448 (leçon 321, pdf-mut23h2v-321)
+Manuel : kitāb al-farāʾiḍ 2 ṯānawī (item miroir archive.org 1_20220304_20220304_2251, enseignement traditionnel marocain)
+Chapitre : ad-dars 24 (al-iqrār) — clôture du chapitre, imprimé p. 176 ; pont vers ad-dars 25 (at-tanāzuʿ fī l-istihlāl), p. 176 bas – 177.
+Extraction : couche pdftotext (faraid-2-iqrar-raw.txt, lignes 706-813) + passe image 300 dpi (p. 176-177 : faraid2-p-176.png, faraid2-p-177.png) pour le bornage et les rasm.
+Portée : ثانيا تمارين (les deux exercices laissés à l'élève), la consigne de mémorisation du matn du cours prochain, les objectifs du dars 25 portés au bord du chapitre, l'ouverture du dars 25 (objectifs + tamhīd + matn d'ouverture «ولو أقرت زوجة حامل...»).
+
+=== p. 176 (couche texte, ordre du print) ===
+
+ثانيا: تمارين
+
+أنجز المسألتين الآتيتين:
+
+1- زوج، وأم، وأخ شقيق، أقر الزوج ببنت، وأنكرت الأم والأخ.
+
+2- زوج، وابن، وبنت، أقر الابن بابنين آخرين، وأقرت البنت ببنت أخرى.
+
+أحفظ متن الدرس القادم، وأستعد [للأهداف الآتية]
+
+[objectifs du dars 25, portés à la marge du bas de page :]
+- 1 أبين علاقة التنازع في الاستهلال بأسباب الإرث وشروطه وموانعه.
+- 2 أميز بين التنازع في الاستهلال ومسائل الإقرار.
+- 3 ألخص الخطوات العملية لتصحيح مسائل التنازع في الاستهلال.
+
+=== p. 177 (couche texte, ouverture du dars 25 — pont) ===
+
+التنازع في الاستهلال
+
+[objectifs :]
+- أن أتعرف مفهوم التنازع في الاستهلال وعلاقته بالإقرار.
+- أن أتبين طريقة تصحيح مسائل التنازع في الاستهلال.
+- أن أتمثل قيمة الاعتراف بالحق ولو على نفسي.
+
+[tamhīd :] إذا هلك هالك وترك امرأة حاملا بمن يرث فيه توقف التركة إلى حين وضع الحمل، فإذا ولد المولود حيا ورث لتحقق سبب الإرث وشروطه. وإذا ولد ميتا لا يرث لوجود المانع وهو عدم الاستهلال، أما إذا اختلف الورثة في استهلاله فذلك ما يعني بالتنازع في الاستهلال.
+[question d'ouverture :] فما حكم ميراث من تنازع الورثة في استهلاله؟ وكيف يتم احتساب التركة في هذه الحالة؟
+
+[matn d'ouverture :] قال الشيخ خليل رحمه الله: «ولو أقرت زوجة حامل وأحد أخويه أنها وضعت [ابنا] حيا... فالإنكار من ثمانية كالإقرار، وفريضة الابن من ثلاثة تضرب في ثمانية».
+
+=== NOTES DE BORNAGE (garde) ===
+- Les deux exercices sont laissés SANS SOLUTION par le print («أنجز المسألتين الآتيتين» — accomplis les deux problèmes suivants) ; la correction savante est portée par la leçon (précédent R441 des activités corrigées), chaque pas suivant la méthode du chapitre (cinq étapes + quatre regards).
+- Le matn d'ouverture du dars 25 reprend la continuation canonique du passage de l'aveu («wa-law aqarrat zawǧatu ḥāmilun wa-aḥadu aḫaway-hi...» — présente dans les éditions du Muḫtaṣar : al-eman.com باب الميراث, feqhweb (numéroté), taghrib.org, édition al-Mawwāq), le print la portant à la p. 177 comme matn du chapitre suivant.
+- Aucune table (dubl) dans ce périmètre : le passage ne porte que les deux énoncés.
