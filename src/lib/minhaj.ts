@@ -503,7 +503,14 @@ async function getSearchIndex(): Promise<IndexEntry[]> {
           levelShortFr: level?.shortFr ?? "",
         };
         const docs: Array<{ docId: string; titleAr: string; titleFr?: string; html?: string; htmlFr?: string; isIntro: boolean }> = [];
-        if (file.intro) docs.push({ ...file.intro, isIntro: true });
+        // Jumeaux intro/leçon (même docId — constat R90 : hadith-1ep/12583,
+        // hadith-1es/13014, fiqh-1es/11505, tafsir-1es/13360, tajwid-6ep/17502,
+        // ulum-quran-1es/15373) : l'entrée leçon suffit — l'intro jumelle est
+        // écartée de l'index de recherche, sinon deux entrées partagent la même
+        // clé (bookId, docId) et la boîte de recherche rend deux résultats
+        // identiques → « duplicate key » React (précédent hadith-1ep/12583).
+        const lessonIds = new Set((file.lessons ?? []).map((l) => String(l.docId)));
+        if (file.intro && !lessonIds.has(String(file.intro.docId))) docs.push({ ...file.intro, isIntro: true });
         for (const l of file.lessons ?? []) docs.push({ ...l, isIntro: false });
         for (const d of docs) {
           const plainFr = stripHtml(d.htmlFr || "");
@@ -609,7 +616,12 @@ export async function getDoc(bookId: string, docId: string): Promise<DocPayload 
   if (file.intro) seq.push({ doc: file.intro, isIntro: true });
   for (const l of file.lessons ?? []) seq.push({ doc: l, isIntro: false });
 
-  const idx = seq.findIndex((s) => s.doc.docId === docId);
+  // Jumeaux intro/leçon (même docId — constat R90) : la LEÇON gagne, sinon
+  // l'intro (résolue en premier) masque la leçon numérotée — le badge afficherait
+  // « Introduction » au lieu de « Leçon N / total » et la navigation précédent/
+  // suivant partirait de l'intro au lieu de la séquence des leçons.
+  const lessonIdx = seq.findIndex((s, i) => !s.isIntro && s.doc.docId === docId);
+  const idx = lessonIdx !== -1 ? lessonIdx : seq.findIndex((s) => s.doc.docId === docId);
   if (idx === -1) return null;
   const cur = seq[idx];
   const prev = idx > 0 ? seq[idx - 1] : null;

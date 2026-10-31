@@ -262,7 +262,11 @@ export async function GET(
     const bookTitleFr = (file.titleFr && file.titleFr.trim()) || bookDef.titleFr;
 
     const seq: BundleDoc[] = [];
-    if (file.intro) {
+    // Jumeaux intro/leçon (même docId — constat R90, cf. src/lib/minhaj.ts) :
+    // l'intro dont le docId existe aussi dans lessons[] est écartée, sinon
+    // l'export contient deux chapitres identiques (intro.xhtml + leçon).
+    const lessonIds = new Set((file.lessons ?? []).map((l) => String(l.docId)));
+    if (file.intro && !lessonIds.has(String(file.intro.docId))) {
       seq.push({
         docId: file.intro.docId,
         titleAr: file.intro.titleAr,
