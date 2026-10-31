@@ -32,6 +32,7 @@ interface PipelineData {
     titleFr?: string;
     direct?: string;
     wayback?: string;
+    collection?: string;
     detail?: string;
   } | null;
   lastAutoCommit: { ts: string; subject: string } | null;
@@ -172,10 +173,10 @@ export function PipelineStatus() {
               <span className="font-medium text-amber-950 dark:text-amber-50">Canari portail :</span>{" "}
               {data.portal ? `${portalLabel(data.portal.state)} — sondé ${fmtAge(Math.max(0, Math.round((Date.now() - Date.parse(data.portal.ts)) / 1000)))}` : "pas encore sondé"}
             </p>
-            <p>
+            <p className="sm:col-span-2">
               <span className="font-medium text-amber-950 dark:text-amber-50">Chasse aux sources :</span>{" "}
               {data.sourceHunt?.book
-                ? `${data.sourceHunt.book}/${data.sourceHunt.docId} — arbre ${data.sourceHunt.direct}, Wayback ${data.sourceHunt.wayback}`
+                ? `${data.sourceHunt.book}/${data.sourceHunt.docId} — arbre ${data.sourceHunt.direct}, Wayback ${data.sourceHunt.wayback}${data.sourceHunt.collection ? `, miroir ${data.sourceHunt.collection.replace(/^collection:/, "")}` : ""}`
                 : "aucune leçon vide à sonder"}
             </p>
             <p className="sm:col-span-2">
