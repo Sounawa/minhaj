@@ -1,0 +1,128 @@
+SOURCE VERSIONNÉE — Minhāj R451 (leçon 323, pdf-mut23h2v-323)
+Manuel : kitāb al-farāʾiḍ 2 ṯānawī (item miroir archive.org 1_20220304_20220304_2251, enseignement traditionnel marocain)
+Chapitre : ad-dars 25 (at-tanāzuʿ fī l-istihlāl — le différend sur l'istihlāl), imprimé p. 177-183.
+Extraction : couche pdftotext -layout page à page (recalage R450 : le folio imprimé coïncide avec la page du fichier, décalage nul — chaque pied de page porte son propre folio) + passe image 600 dpi (f2-p-181/182.png) avec vérifications VLM binaires par zoom cellulaire (doctrine R450/R62 : le VLM libre transcrit mal ce scan — 2 hallucinations documentées ce tour — mais le zoom cellulaire binaire est fiable, ×2 à ×5 duels cohérents).
+Portée : le chapitre entier — objectifs, tamhīd, matn d'ouverture, définition, distinction d'avec l'aveu (4 faces), méthode de correction (trois farāʾiḍa + jāmiʿa + juzʾ as-sahm + distribution), le modèle d'Asbaġ résolu intégralement, le tableau pratique p. 181, les deux applications corrigées p. 182, les deux exercices p. 183, la consigne de clôture.
+
+=== p. 177 (ouverture du dars) ===
+
+التنازع في الاستهلال
+
+[objectifs :]
+- أن أتعرف مفهوم التنازع في الاستهلال وعلاقته بالإقرار.
+- أن أتبين طريقة تصحيح مسائل التنازع في الاستهلال.
+- أن أتمثل قيمة الاعتراف بالحق ولو على نفسي.
+
+[tamhīd :] إذا هلك هالك وترك امرأة حاملا بمن يرث فيه توقف التركة إلى حين وضع الحمل، فإذا ولد المولود حيا ورث لتحقق سبب الإرث وشروطه. وإذا ولد ميتا لا يرث لوجود المانع وهو عدم الاستهلال، أما إذا اختلف الورثة في استهلاله فذلك ما يعني بالتنازع في الاستهلال.
+[question d'ouverture :] فما حكم ميراث من تنازع الورثة في استهلاله؟ وكيف يتم احتساب التركة في هذه الحالة؟
+
+[matn d'ouverture :] قال الشيخ خليل رحمه الله: «ولو أقرت زوجة حامل وأحد أخويه أنها وضعت حيا... فالإنكار من ثمانية كالإقرار، وفريضة الابن من ثلاثة تضرب في ثمانية».
+
+[lexique de marge :] الإقرار: فريضة إقرار الأخ باستهلال المولود. الإنكار: فريضة إنكار الجميع استهلال المولود.
+
+=== p. 178 (définition et distinction, 1) ===
+
+يتضمن هذا الدرس تعريف التنازع في الاستهلال وتمييزه عن الإقرار، ثم طريقة تصحيح مسائل التنازع في الاستهلال.
+
+أولا: تعريف التنازع في الاستهلال وتمييزه عن الإقرار
+
+1. تعريف التنازع في الاستهلال
+
+الاستهلال أن يستهل المولود صارخا أو يصدر عنه ما يدل على حياته، والتنازع في الاستهلال [هي المسألة] التي يموت فيها شخص ويترك امرأة حاملا بمن قام به سبب الإرث [النسب] عند الفقهاء [و] في الهالك، ثم تلد هذه المرأة ولدا ويموت عند الولادة، فيختلف الورثة في استهلاله، ويترتب عن ذلك أن الذي أقر باستهلاله يحاسب بإقراره، فيعد المستهل وارثا معه، والذي أنكر استهلاله لا يحاسب به، ولا يعد وارثا معه.
+
+2. الفرق بين التنازع في الاستهلال والإقرار
+
+مسألة التنازع في الاستهلال متفرعة عن الإقرار، لكن الفرق بينهما يظهر من وجوه، منها:
+- أن مسائل الإقرار يقع التنازع فيها في ثبوت سبب الإرث، وأن التنازع في الاستهلال فسبب الإرث ثابت لا نزاع فيه وهو النسب، والنزاع واقع في شرط استحقاق الإرث الذي هو تحقق حياة الوارث، حيث يقر أحد الورثة باستهلال المولود، وتصدقه المرأة التي وضعته؛ وينكر بعض الورثة الآخرين أنه ولد حيا.
+- أن مسائل التنازع في الاستهلال تجمع بين عمل الإقرار وعمل المناسخة؛ لأن هذا المولود المستهل قد توفي وورثه غيره، فيستحق نصيبه من مسألة الإقرار، ثم يوزع على من يرث فيه، فالمقر به هنا سيصبح موروثا في النهاية.
+- أن مسائل التنازع في الاستهلال لا بد أن يوجد فيها حمل من بين الورثة المحتملين، وهو المتنازع في استهلاله، وهذا غير لازم في الإقرار.
+- وإقرار الزوجة في الاستهلال -كما في المتن- لا يعتبر إقرارا في الاصطلاح؛ لأنها ستستفيد منه، فهي في اصطلاح الفرضيين مصدقة، وليست مقرة؛ لأن من شرط المقر أن يتضرر بإقراره.
+
+=== p. 179 (distinction, 2 + la méthode) ===
+
+والمقر الحقيقي هو الأخ؛ لأنه يتضرر بإقراره، ولذلك فالأخ مقر والزوجة [التي لا تتضرر] مصدقة له.
+
+ثانيا: طريقة تصحيح مسائل التنازع في الاستهلال
+
+لتصحيح مسائل التنازع في الاستهلال ينبغي أن نسلك نفس طريقة تصحيح مسائل الإقرار، مع إضافة ما تفرضه المناسخة الواقعة في المسألة، وقد أشار المصنف إلى طريقة العمل من خلال يقول رحمه الله «وإن أقرت زوجة حامل وأحد خويه... [وُلدت] حيا» [ثم:] «فالإنكار من ثمانية كالإقرار وفريضة الابن من ثلاثة تضرب في ثمانية»، هذه المسألة التي ذكرها المصنف رحمه الله سئل عنها أصبغ فقال: هي من أربعة وعشرين. وصورتها: هلك هالك وترك: أخوين شقيقين أو لأب، وزوجة حامل، فأقرت الزوجة أنها ولدت ولدا ذكرا مستهلا، وصدقها أحد الأخوين [أقر بأنها ولدت ابنا حيا]، وأنكر ذلك الأخ الآخر بأن قال: ولدته ميتا.
+
+والعمل في ذلك أن يتم تصحيح ثلاث فرائض:
+
+- الفريضة الأولى: فريضة الإنكار من أربعة للزوجة الربع واحد، وثلاثة على الأخوين الشقيقين أو لأب، منكسرة عليهما، فتضرب عدد رؤوسهما اثنين في أصل الفريضة أربعة، فيكون الخارج ثمانية.
+- الفريضة الثانية: فريضة الإقرار بالولد المستهل؛ أي إقرار الزوجة وأحد الأخوين أنها ولدت ابنا حيا مستهلا، للم [الزوجة] ثمنها واحد، والباقي سبعة للولد المقر باستهلاله.
+- الفريضة الثالثة: فريضة الولد المعترف باستهلاله في الإقرار بمناسختها، فتكون فريضته من ثلاثة، واحد لكل واحد من أمه وعميه، ثم ينظر بين هذه الثلاثة أصل فريضة المستهل وسهامه سبعة، حيث يوجد بينهما التباين، فتضع الثلاثة فوق أصل مسألته التي هي ثمانية، وتضربها فيها، الخارج أربعة وعشرون، وهي جامعة المناسخة.
+- تحدد الجامعة المشتركة، وذلك بالنظر بين الفرائض الثلاث (فريضة الإنكار التي هي ثمانية، وفريضة الإقرار التي هي ثمانية أيضا، وفريضة الولد المستهل بمناسختها التي هي أربعة وعشرون) بالأنظار الأربعة حيث توجد بين فريضتي الإقرار والإنكار التماثل ثمانية، وبينها وبين الأربعة والعشرين التداخل، فتكتفي بالأكبر، وهو أربعة وعشرون، وهي الجامعة المشتركة بين الفرائض الثلاث.
+
+=== p. 180 (la méthode, suite : juzʾ as-sahm et distribution) ===
+
+- يحدد جزء السهم للفرائض الثلاث وذلك على الشكل الآتي:
+أما فريضتا الإقرار والإنكار فجزء سهمهما هو ثلاثة، حاصلة من قسمة الجامعة على كل واحد منهما.
+وأما فريضة المستهل، فتحصل على جزء سهمها بضرب نصيبه في مسألة الإقرار الذي هو سبعة، في جزء سهمها الذي هو ثلاثة، يخرج لك واحد وعشرون، تقسمها على أصل فريضته الذي هو ثلاثة [فسبعة لكل سهم].
+
+- توزع الجامعة، وذلك على الشكل الآتي:
+أما الأخ المنكر فيعطى نصيبه في فريضة الإنكار [ثلاثة] مضروبا في جزء سهمها وهو ثلاثة بتسعة، يأخذها من الجامعة، ولا يستحق شيئا في مسألة المستهل؛ لأنه منكر له.
+وأما الزوجة المصدقة فتستحق في الإنكار اثنين مضروبة في جزء السهم ثلاثة [الخارج ستة]، [والفرق الذي كان يستحقها الأخ المقر في الإنكار وهو اثنان،] يضاف للزوجة المصدقة التي أخذت ستة، فيصبح مجموع نصيبها ثمانية من الجامعة المشتركة.
+وأما الأخ المقر فلا يستحق شيئا في الإقرار؛ لأنه محجوب بالابن، ولكنه يستحق في مسألة المستهل بمناسختها واحدا في جزء سهمها الذي هو سبعة، الخارج سبعة، هي التي يستحقها من الجامعة المشتركة.
+وبذلك يصير للزوجة من الجامعة المشتركة ثمانية، وللأخ المقر سبعة، وللأخ المنكر تسعة.
+ولا تأخذ الأم من فريضة الإقرار، ولا من فريضة ابنها شيئا؛ لإنكار الأخ الآخر؛ إذ لو أقر الأخ الآخر لكان [أخذت أم الولد الثمن والسدس من فريضة ابنها بمناسختها].
+
+=== p. 181 (le tableau pratique + l'explication du matn) ===
+
+وتصحيح المسألة عمليا يكون كالآتي:
+
+[jāmiʿa 24 ; colonnes : parts finales — جزء السهم (inkār 3, iqrār 3, mustahalla 7) — bases (8, 8, 3) ; lignes :]
+- الزوجة (المصدقة) : inkār 2، iqrār 1، [mustahalla: أم 1]، الجامعة 8
+- الأخ المنكر : inkār 3، [iqrār —]، [mustahalla — (منكر)]، الجامعة 9
+- الأخ المقر : inkār 3، [iqrār — (محجوب بالابن)]، mustahalla: عم 1، الجامعة 7
+- المستهل : iqrār 7
+
+وإلى هذا يشير المصنف رحمه الله بقوله: «وإن أقرت زوجة حامل وأحد أخويه أنها ولدت حيا، فالإنكار من ثمانية كالإقرار وفريضة الابن من ثلاثة تضرب في ثمانية»، فقوله: «وأحد أخويه»؛ أي الميت وهما عما الولد، وقوله: «من ثمانية»؛ أي تصحيحا، وقوله: «كالإقرار»؛ أي [مسألة] ثمانية لكن تأصيلا [مختلفا].
+
+[consigne de clôture du cours :]
+- 1 أعرف التنازع في الاستهلال وأميز بينه وبين الإقرار.
+- 2 أبين الخطوات العملية لتصحيح مسائل التنازع في الاستهلال.
+- 3 أعطي مثالا آخر للتنازع في الاستهلال وأنجزه عمليا.
+
+=== p. 182 (أولا: تطبيقات وحلول — les deux applications corrigées) ===
+
+1- هلك هالك وترك: أخوين شقيقين، وزوجة حامل، ولما ولدت هذه الزوجة أقر أحد الأخوين بأنها ولدت بنتا مستهلة، وصدقته الزوجة، وأنكر الأخ الآخر.
+وتنجز هكذا:
+[jāmiʿa 48 ; جزء السهم : inkār 6, iqrār 3, mustahalla 8 ; bases : inkār 8 (زوجة 2، أخوان 3+3)، iqrār 16 (زوجة 2، مستهلة 8، أخوان 3+3)، فريضة المستهلة 3 (أم 1، عم 1، عم 1) ; parts finales :]
+- الزوجة (المصدقة) : 13
+- الأخ المقر : 17
+- الأخ المنكر : 18
+- المستهلة : iqrār 8
+[NB : les nombres à deux chiffres du print sont composés en ordre visuel inversé — voir les notes de bornage.]
+
+2- هلك هالك وترك: أخوين شقيقين، وأختا شقيقة، وزوجة حامل، ولما ولدت الزوجة أقرت الأخت الشقيقة بأنها وضعت ذكرا مستهلا، وأنكر الأخوان الشقيقان.
+وتنجز هكذا:
+[jāmiʿa 120 ; bases : inkār 20 (زوجة 5، أخوان 6+6، أخت 3)، iqrār 8 (زوجة 1، مستهل 7)، فريضة المستهل 15 (أم 5، عم 4، عم 4، عمة 2) ; parts finales imprimées :]
+- الزوجة (المصدقة) : 31 [imprimé]
+- الأخ الشقيق (أول) : 35 [imprimé]
+- الأخ الشقيق (ثاني) : 36 [imprimé]
+- الأخت الشقيقة (المقرة) : 18 [imprimé]
+- المستهل : iqrār 7
+[NB : voir la note de bornage — la colonne imprimée des finales (31/35/36/18) est internement incohérente (deux négateurs identiques inégaux) ; la dérivation par la méthode même du chapitre donne 34/36/36/14 ; TOUTES les autres cellules du tableau imprimé (bases 20/8/15, parts d'inkār 5/6/6/3, part du fils 7, jāmiʿa 120) concordent exactement avec la dérivation.]
+
+=== p. 183 (ثانيا: تمارين + la clôture) ===
+
+ثانيا: تمارين
+أنجز المسألتين الآتيتين:
+
+1- هلك هالك وترك: ثلاثة إخوة أشقاء، وزوجة حامل، ولما ولدت الزوجة أقر أحد الإخوة بأنها ولدت أنثى مستهلة، وصدقته الزوجة، وأنكر الأخوان الآخران.
+
+2- هلك هالك وترك: ثلاثة إخوة لأب، وزوجة حامل، ولما ولدت الزوجة أقر أخوان بأنها ولدت أنثى مستهلة، وصدقتهما الزوجة، وأنكر الأخ الثالث.
+
+أحفظ متن الدرس القادم وأجيب عن الآتي:
+[1- أراجع...] درس الفقه المالكي وأستخرج الفرق بين ما يأتي:
+- وصية النظر ووصية المال.
+[2-] ألخص الخطوات العملية لمسائل الوصية.
+
+=== NOTES DE BORNAGE (garde) ===
+- Le mot « استهلال » (istihlāl) est ici le premier cri du nouveau-né (la marque de vie), NON pas l'observation du croissant lunaire : le titleFr du portail (« La contestation en matière d'observation du croissant ») est un contresens de la couche de mapping ; le titre scholarly rendu : « La contestation en matière d'observation du premier cri ». titleAr (التنازع في الاستهلال) = ancre lettre à lettre.
+- Nombres à deux chiffres du print composés en ordre visuel inversé (le BIDI du compositeur) : la colonne des finales de l'application 1 se lit 13/17/18 (somme 48 = la jāmiʿa ✓ ; l'ordre visuel des glyphes « 31/71/81 » sommerait à 183 ✗) ; celle de l'application 2 se lit 31/35/36/18 (somme 120 ✓ ; l'ordre visuel « 13/53/63/81 » sommerait à 210 ✗). L'arbitre est la somme sur la jāmiʿa. Vérifié par zooms cellulaires VLM binaires (×2 à ×5 duels cohérents par cellule).
+- L'application 2 (p. 182) : le mot ذَكَرًا (mâle) vérifié lettre à lettre (ذ@x350 ك@x345 ر@x340 ا@x335, p. 182 y=437) ; la colonne iqrār du tableau (base 8, part du fils 7) confirme le mâle. La colonne imprimée des finales (31/35/36/18) est incompatible avec l'égalité stricte des deux négateurs (parts d'inkār identiques 6/20 → 36/120 chacun) : la dérivation par la méthode du chapitre donne 34/36/36/14 — rendue en note du traducteur, la « double vérité » étant documentée (précédent R448-R449).
+- Le genre de l'enfant reconnu dans chaque cas détermine toute la colonne iqrār : fils (7/8, exclut toute la fratrie) aux deux applications p. 182 (exo 1 : بنتا — NON, exo 1 = بنتا مستهلة : FILLE, les frères restant ʿaṣaba maʿa l-ghayr) ; exo 2 = ذكرا : FILS. Les exercices p. 183 portent tous deux أنثى (fille).
+- La femme qui accouche est toujours la مصدقة (confirmatrice — son aveu la profitant) ; le parent qui reconnaît l'istihlāl au détriment de sa part est le مقر (avouant — la condition étant qu'il s'y lèse). Dans l'application 2, l'avouante est la SŒUR (exclue par le fils dans l'iqrār, tante dans la manāsakha).
+- Aucun fragment coranique dans le chapitre : le matn et la méthode n'en portent pas (le verset des parts n'est pas cité p. 177-183) — pas de passe verify-quran requise pour la leçon 323.
+- Le modèle du matn (2 oncles) : فريضة الابن من ثلاثة، واحد لكل واحد من أمه وعميه — la mère au TIERS (l'enfant ne laisse ni descendant ni fratrie) et les oncles aux deux tiers (chacun un tiers à deux oncles). Avec TROIS oncles : mère au tiers, oncles aux deux tiers soit deux neuvièmes chacun — base neuf (ceci corrige l'activité III.4 de la leçon 322, livrée R450 avec « base quatre, un quart chacun » : erreur arithmétique, corrigée au même tour R451).

@@ -64,12 +64,19 @@ assert 60000 * F(1,6) == 10000
 assert 60000 * F(2,3) / 4 == 10000  # part suspendue de la disparue
 #     si décès avéré AVANT sa mère : 3 filles 2/9 (13 333 1/3 chacune)
 assert 60000 * F(2,3) / 3 == F(40000, 3)
-# q4 : méthode d'Asbagh (dars 25) — 3 farīḍa + jāmiʿa 32 :
-#     déni base 4 (épouse 1, chaque frère 1) ; aveu base 8 (épouse 1, garçon 7) ;
-#     mināsakha base 4 (mère 1, chaque oncle 1) ; nieurs : 8/32 chacun,
-#     admettant : 7/32, épouse : 8/32 + 1/32 (résidu de l'admettant) = 9/32
-check("III.4 aveu de l'istihlāl (jāmiʿa 32)",
-      F(8,32)*2 + F(7,32) + F(9,32))
+# q4 : méthode d'Asbagh (dars 25) — 3 farīḍa + jāmiʿa 72 (CORRECTION R451 :
+#     la mère de l'enfant prend le TIERS — l'enfant ne laisse ni descendant ni
+#     fratrie — et les 3 oncles les deux tiers, 2/9 chacun : mināsakha base 9,
+#     non 4 ; déni base 4 (épouse 1, chaque frère 1) ; aveu base 8 (épouse 1,
+#     garçon 7) ; nieurs : 18/72 chacun (1/4), admettant : 14/72 (2×7),
+#     épouse : 18/72 + 4/72 (résidu de l'admettant) = 22/72
+check("III.4 aveu de l'istihlāl (jāmiʿa 72)",
+      F(18,72)*2 + F(14,72) + F(22,72))
+assert F(18,72) == F(1,4)      # chaque nieur : son quart exact
+assert F(14,72) == F(7,36)     # l'avouant : deux neuvièmes portés par sept
+assert F(22,72) == F(11,36)    # l'épouse : 18 + le reliquat 4 de l'avouant
+#     la version erronée de R450 (base 4, jāmiʿa 32 : 8/8/7/9) posait la mère
+#     de l'enfant au quart — fraction illicite ; corrigée au tour R451.
 # q5 : legs 1/6 + 1/7 = 13/42 (< 1/3 ✓) ; net 29/42 ;
 #     époux 1/2 du net, mère 1/6 du net, frère+soeur لأب 2:1 sur le tiers du net
 check("III.5 deux legs (sixième+septième)",
