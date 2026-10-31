@@ -73,7 +73,7 @@
  },
  "tafsir-tanawi-1": {
   "passes": 3,
-  "done": false
+  "done": true
  },
  "mantiq-tanawi-1": {
   "passes": 4,
@@ -81,7 +81,7 @@
  },
  "taqtit-tanawi-1": {
   "passes": 2,
-  "done": false
+  "done": true
  },
  "qiraat-tanawi-1": {
   "passes": 1,
@@ -133,6 +133,121 @@
  },
  "fiqh-tanawi-3": {
   "passes": 1,
-  "done": false
+  "done": true
+ },
+ "startedAt": "2026-10-31T15:29:57Z",
+ "cycles": 1,
+ "wakeCount": 0,
+ "tafsir-tanawi-3": {
+  "passes": 0,
+  "done": true
+ },
+ "hadith-tanawi-3": {
+  "passes": 0,
+  "done": true
+ },
+ "faraid-tanawi-3": {
+  "passes": 0,
+  "done": true
+ },
+ "usul-fiqh-tanawi-3": {
+  "passes": 0,
+  "done": true
+ },
+ "ulum-hadith-tanawi-3": {
+  "passes": 0,
+  "done": true
+ },
+ "qiraat-tanawi-3": {
+  "passes": 0,
+  "done": true
+ },
+ "taqtit-tanawi-3": {
+  "passes": 0,
+  "done": true
+ },
+ "fikr-islami-tanawi-3": {
+  "passes": 0,
+  "done": true
+ },
+ "hadith-1es": {
+  "passes": 0,
+  "done": true
+ },
+ "fiqh-1es": {
+  "passes": 0,
+  "done": true
+ },
+ "tafsir-1es": {
+  "passes": 0,
+  "done": true
+ },
+ "tawhid-1es": {
+  "passes": 0,
+  "done": true
+ },
+ "sira-1es": {
+  "passes": 0,
+  "done": true
+ },
+ "ulum-quran-1es": {
+  "passes": 0,
+  "done": true
+ },
+ "sira-2es": {
+  "passes": 0,
+  "done": true
+ },
+ "tajwid-2es": {
+  "passes": 0,
+  "done": true
+ },
+ "ulum-quran-2es": {
+  "passes": 0,
+  "done": true
+ },
+ "tawhid-2es": {
+  "passes": 0,
+  "done": true
+ },
+ "tafsir-2es": {
+  "passes": 0,
+  "done": true
+ },
+ "fiqh-2es": {
+  "passes": 0,
+  "done": true
+ },
+ "hadith-2es": {
+  "passes": 0,
+  "done": true
+ },
+ "ulum-quran-3es": {
+  "passes": 0,
+  "done": true
+ },
+ "usul-fiqh-waraqat": {
+  "passes": 0,
+  "done": true
+ },
+ "sira-3es": {
+  "passes": 0,
+  "done": true
+ },
+ "tafsir-3es": {
+  "passes": 0,
+  "done": true
+ },
+ "fiqh-3es": {
+  "passes": 0,
+  "done": true
+ },
+ "hadith-3es": {
+  "passes": 0,
+  "done": true
+ },
+ "tajwid-3es": {
+  "passes": 0,
+  "done": true
  }
 }

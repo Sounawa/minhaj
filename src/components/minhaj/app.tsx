@@ -32,6 +32,7 @@ import { Reader } from "./reader";
 import { SearchDialog } from "./search-dialog";
 import { FavoritesDialog } from "./favorites-dialog";
 import { AssistantDialog } from "./assistant-dialog";
+import { PipelineStatus } from "./pipeline-status";
 
 const emptySubscribe = () => () => {};
 
@@ -237,29 +238,32 @@ function Header({
 function Footer({ docsFr, docsTotal }: { docsFr?: number; docsTotal?: number }) {
   return (
     <footer className="no-print mt-auto border-t border-amber-800/15 bg-secondary/60">
-      <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
-        <div className="space-y-1">
-          <p className="flex items-center gap-2 font-serif text-sm font-semibold text-amber-950 dark:text-amber-50">
-            <Leaf className="size-4 text-primary" aria-hidden="true" />
-            Minhāj — Taʿlīm ʿatīq
-          </p>
-          <p className="text-xs leading-relaxed text-muted-foreground">
-            Programme officiel — ministère des Habous et des Affaires islamiques, Royaume du
-            Maroc · المنهاج النموذجي للتعليم العتيق
-          </p>
-        </div>
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-foreground sm:flex-col sm:items-end">
-          {typeof docsFr === "number" && typeof docsTotal === "number" ? (
+      <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-6 sm:px-6 lg:px-8">
+        <PipelineStatus />
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div className="space-y-1">
+            <p className="flex items-center gap-2 font-serif text-sm font-semibold text-amber-950 dark:text-amber-50">
+              <Leaf className="size-4 text-primary" aria-hidden="true" />
+              Minhāj — Taʿlīm ʿatīq
+            </p>
+            <p className="text-xs leading-relaxed text-muted-foreground">
+              Programme officiel — ministère des Habous et des Affaires islamiques, Royaume du
+              Maroc · المنهاج النموذجي للتعليم العتيق
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-foreground sm:flex-col sm:items-end">
+            {typeof docsFr === "number" && typeof docsTotal === "number" ? (
+              <span className="flex items-center gap-1.5">
+                <BookOpenCheck className="size-3.5 text-primary" aria-hidden="true" />
+                {docsFr.toLocaleString("fr-FR")} / {docsTotal.toLocaleString("fr-FR")} documents
+                bilingues
+              </span>
+            ) : null}
             <span className="flex items-center gap-1.5">
-              <BookOpenCheck className="size-3.5 text-primary" aria-hidden="true" />
-              {docsFr.toLocaleString("fr-FR")} / {docsTotal.toLocaleString("fr-FR")} documents
-              bilingues
+              <Heart className="size-3.5 text-primary" aria-hidden="true" />
+              Traductions françaises soignées, fidèles au programme
             </span>
-          ) : null}
-          <span className="flex items-center gap-1.5">
-            <Heart className="size-3.5 text-primary" aria-hidden="true" />
-            Traductions françaises soignées, fidèles au programme
-          </span>
+          </div>
         </div>
       </div>
     </footer>

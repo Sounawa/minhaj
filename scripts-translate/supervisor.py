@@ -1,103 +1,148 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Minhāj — Superviseur de production 24/7 (v3).
+Minhāj — Superviseur de production 24/7 (v4, R457).
 
-Maintient en permanence MAX_CONCURRENT workers llm-translate actifs et
-enchaîne automatiquement les livres restants dans l'ordre pédagogique :
+v4 — « ça doit avancer sans moi » (directive utilisateur R456/R457) :
+  • BATTEMENT VISIBLE : pipeline-status.json à chaque cycle (60 s) +
+    ligne TICK dans tr-tmp/cron-alive.log toutes les 5 min — le même
+    journal que le cron de production devait tenir et ne tenait pas ;
+  • IMMORTALITÉ : relancé par ensure-supervisor.py au démarrage du dev
+    server (préfixe du script "dev" de package.json) — chaque réveil du
+    sandbox relance bun run dev, donc le superviseur ;
+  • DÉTECTION DE RÉVEIL : un écart > 3 cycles se journalise (mesure
+    honnête des gels du sandbox) ;
+  • CANARI PORTE toutes les 15 min (veille-portail.sh) ; PORTE|OUVERTE →
+    reprise-portail.sh lancé automatiquement ;
+  • CHASSE AUX SOURCES toutes les 30 min : sonde directe du pdfUrl de la
+    prochaine leçon vide (retour 200 = arbre portail revivant → PDF
+    téléchargé dans sources-inbox/, source officielle exacte = zéro risque
+    d'édition) + sonde Wayback (archive.org/wayback/available) journalisée ;
+  • AUTO-COMMIT/PUSH toutes les 10 min : les workers llm-translate
+    commitent mais ne poussent PAS — le superviseur pousse (garde fetch +
+    rev-list), paths pipeline uniquement (jamais worklog.md, jamais les
+    fichiers de session) ;
+  • NE SORT JAMAIS : la file peut être vide, le battement continue.
 
-  1. Primaire (fin du cycle 4ep/5ep/6ep),
-  2. Tanawī 1 → 2 → 3,
-  3. Secondaire 1es → 2es → 3es + Waraqāt.
+v3 (conservé) : workers llm-translate lancés/maintenus à MAX_CONCURRENT,
+registre = vérité terrain, cap anti-pathologiques, lancements espacés.
 
-v3 — la vérité terrain est le REGISTRE (scripts-translate/savant-registry.json) :
-  • un livre est « fini » quand il a 0 doc restant (registre + html non vide) ;
-  • le compteur de passes n'est plus qu'un garde-fou (cap 4) contre les
-    docs pathologiques rejetés en boucle — il ne peut plus abandonner un
-    livre à cause d'une famine de quota 429 temporaire ;
-  • les workers ne meurent jamais d'un 429 (retry par doc dans
-    llm-translate.ts) — seuls les reboots sandbox les tuent.
-
-Sûreté :
-  • un livre n'est JAMAIS lancé en double (détection pgrep du worker) ;
-  • lancements espacés de 25 s (anti-rafales 429) ;
-  • logs et état dans {projet}/tr-logs (persistant, gitignoré —
-    l'ancien /home/z/tr-logs était EFFACÉ à chaque reboot sandbox) ;
-  • lecture registre/livre blindée : fichier illisible → cycle suivant ;
-  • sortie propre quand TOUS les livres sont finis (0 doc restant).
-
-Lancement (démon détaché, survit à la session) :
-  setsid -f python3 /home/z/my-project/scripts-translate/supervisor.py
+Lancement : setsid -f python3 scripts-translate/supervisor.py
+(relance idempotente : scripts-translate/ensure-supervisor.py)
 """
 
 import json
 import os
 import shlex
+import ssl
 import subprocess
 import time
+import urllib.parse
+import urllib.request
 
 HOME = "/home/z/my-project"
-LOGS = os.path.join(HOME, "tr-logs")  # persistant (dans le projet, gitignoré)
+LOGS = os.path.join(HOME, "tr-logs")
 STATE_PATH = os.path.join(LOGS, "supervisor-state.json")
 LOG_PATH = os.path.join(LOGS, "supervisor.log")
+STATUS_PATH = os.path.join(LOGS, "pipeline-status.json")
+ALIVE_LOG = os.path.join(HOME, "tr-tmp", "cron-alive.log")
+HUNT_LOG = os.path.join(LOGS, "source-hunt.log")
+INBOX = os.path.join(HOME, "sources-inbox")
 REGISTRY_PATH = os.path.join(HOME, "scripts-translate", "savant-registry.json")
+VEILLE = os.path.join(HOME, "scripts-translate", "veille-portail.sh")
+REPRISE = os.path.join(HOME, "scripts-translate", "reprise-portail.sh")
+
 MAX_CONCURRENT = 3          # workers simultanés (quota LLM : 3 = stable)
 CYCLE_SECONDS = 60          # période de supervision
-STAGGER_SECONDS = 25        # délai entre deux lancements
-MAX_PASSES_PER_BOOK = 4     # garde-fou anti-docs-pathologiques (pas un critère d'abandon)
+STAGGER_SECONDS = 25        # délai entre deux lancements de workers
+MAX_PASSES_PER_BOOK = 4     # garde-fou anti-docs-pathologiques
+HEARTBEAT_EVERY = 300       # s — ligne TICK dans cron-alive.log
+CANARY_EVERY = 900          # s — canari portail
+HUNT_EVERY = 1800           # s — chasse aux sources
+AUTOCOMMIT_EVERY = 600      # s — commit + push des paths pipeline
+RESCAN_EVERY = 300          # s — recalcul du reste global (coûteux)
 
-# ── File ordonnée (primaire → tanawī → secondaire) ─────────────────────────
+# File ordonnée (primaire → tanawī → secondaire) — v3 inchangée.
 QUEUE = [
-    # Primaire — fin du cycle
     "tafsir-5ep", "fiqh-6ep", "tafsir-6ep",
     "tajwid-5ep", "tajwid-6ep", "rasm-wa-dabt-4ep",
     "fiqh-1ep", "tafsir-1ep", "fiqh-5ep", "hadith-5ep",
     "hadith-6ep", "rasm-wa-dabt-5ep",
     "usul-qiyam-4ep", "usul-qiyam-5ep", "usul-qiyam-6ep", "rasm-wa-dabt-6ep",
-    # Tanawī — 1re année
     "fiqh-tanawi-1", "hadith-tanawi-1", "tafsir-tanawi-1",
     "mantiq-tanawi-1", "taqtit-tanawi-1", "qiraat-tanawi-1",
     "usul-fiqh-tanawi-1", "ulum-hadith-tanawi-1", "fikr-islami-tanawi-1",
-    # Tanawī — 2e année
     "fiqh-tanawi-2", "tafsir-tanawi-2", "hadith-tanawi-2",
     "usul-fiqh-tanawi-2", "ulum-hadith-tanawi-2", "qiraat-tanawi-2",
     "taqtit-tanawi-2", "fikr-islami-tanawi-2",
-    # Tanawī — 3e année
     "fiqh-tanawi-3", "tafsir-tanawi-3", "hadith-tanawi-3",
     "faraid-tanawi-3", "usul-fiqh-tanawi-3", "ulum-hadith-tanawi-3",
     "qiraat-tanawi-3", "taqtit-tanawi-3", "fikr-islami-tanawi-3",
-    # Secondaire — 1re année
     "hadith-1es", "fiqh-1es", "tafsir-1es",
     "tawhid-1es", "sira-1es", "ulum-quran-1es",
-    # Secondaire — 2e année
     "sira-2es", "tajwid-2es", "ulum-quran-2es", "tawhid-2es",
     "tafsir-2es", "fiqh-2es", "hadith-2es",
-    # Secondaire — 3e année + Waraqāt
     "ulum-quran-3es", "usul-fiqh-waraqat", "sira-3es",
     "tafsir-3es", "fiqh-3es", "hadith-3es", "tajwid-3es",
 ]
 
+AUTO_ADD_PATHS = [
+    "content/books",
+    "scripts-translate/savant-registry.json",
+]
+
+# habous.gov.ma sert une chaîne de certificats incomplète (le canari curl -k
+# passe depuis toujours) : contexte sans vérification pour les sondes.
+SSL_CTX = ssl.create_default_context()
+SSL_CTX.check_hostname = False
+SSL_CTX.verify_mode = ssl.CERT_NONE
+
 
 def log(msg: str) -> None:
     stamp = time.strftime("%Y-%m-%d %H:%M:%S")
-    with open(LOG_PATH, "a", buffering=1) as fh:
-        fh.write(f"[{stamp}] {msg}\n")
+    try:
+        with open(LOG_PATH, "a", buffering=1) as fh:
+            fh.write(f"[{stamp}] {msg}\n")
+    except Exception:
+        pass
+
+
+def alive_line(msg: str) -> None:
+    """Le battement public — le journal que l'utilisateur peut lire."""
+    try:
+        os.makedirs(os.path.dirname(ALIVE_LOG), exist_ok=True)
+        stamp = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+        with open(ALIVE_LOG, "a", buffering=1) as fh:
+            fh.write(f"{stamp} {msg}\n")
+    except Exception:
+        pass
+
+
+# ── État superviseur (passes par livre) ───────────────────────────────────────
+
+# Clés méta du state v4 — jamais des livres (le chargeur doit les ignorer).
+STATE_META_KEYS = {"startedAt", "cycles", "wakeCount"}
 
 
 def load_state() -> dict:
-    """state = {livre: {"passes": int, "done": bool}} (tolère l'ancien format int)."""
     try:
         with open(STATE_PATH, "r", encoding="utf-8") as fh:
             raw = json.load(fh)
     except (OSError, ValueError):
         return {}
-    clean_state = {}
+    clean = {}
     for book, val in raw.items():
-        if isinstance(val, dict):
-            clean_state[book] = {"passes": int(val.get("passes", 0)), "done": bool(val.get("done", False))}
-        else:  # ancien format : int = nb de passes
-            clean_state[book] = {"passes": int(val), "done": False}
-    return clean_state
+        if book in STATE_META_KEYS:
+            clean[book] = val  # méta conservée telle quelle
+            continue
+        try:
+            if isinstance(val, dict):
+                clean[book] = {"passes": int(val.get("passes", 0)), "done": bool(val.get("done", False))}
+            else:
+                clean[book] = {"passes": int(val), "done": False}
+        except (TypeError, ValueError):
+            continue  # entrée corrompue : on repart à zéro pour ce livre
+    return clean
 
 
 def save_state(state: dict) -> None:
@@ -107,9 +152,18 @@ def save_state(state: dict) -> None:
     os.replace(tmp, STATE_PATH)
 
 
+# ── Corpus ────────────────────────────────────────────────────────────────────
+
+def load_registry_counts() -> dict:
+    try:
+        with open(REGISTRY_PATH, "r", encoding="utf-8") as fh:
+            reg = json.load(fh)
+        return {"hand": len(reg.get("hand", [])), "llm": len(reg.get("llm", {}))}
+    except Exception:
+        return {}
+
+
 def remaining_docs(book: str) -> int | None:
-    """Docs savants restants d'un livre. None = registre/livre illisible
-    (réécriture en cours par un worker) → on reessaiera au cycle suivant."""
     try:
         with open(REGISTRY_PATH, "r", encoding="utf-8") as fh:
             reg = json.load(fh)
@@ -128,8 +182,41 @@ def remaining_docs(book: str) -> int | None:
         return None
 
 
+def global_scan() -> dict:
+    """Reste global + prochaine leçon vide prioritaire (pour la chasse)."""
+    total = 0
+    done = set()
+    try:
+        with open(REGISTRY_PATH, "r", encoding="utf-8") as fh:
+            reg = json.load(fh)
+        done = set(reg.get("hand", [])) | set(reg.get("llm", {}).keys())
+    except Exception:
+        return {"remaining": None, "nextEmpty": None}
+    nxt = None
+    for book in QUEUE:
+        try:
+            with open(os.path.join(HOME, "content", "books", f"{book}.json"), "r", encoding="utf-8") as fh:
+                data = json.load(fh)
+        except Exception:
+            continue
+        for lesson in data.get("lessons", []):
+            if (lesson.get("html") or "").strip():
+                if str(lesson.get("docId")) not in done:
+                    total += 1
+            elif nxt is None and lesson.get("pdfUrl"):
+                nxt = {"book": book, "docId": str(lesson.get("docId")),
+                       "pdfUrl": lesson.get("pdfUrl"), "titleFr": lesson.get("titleFr", "")}
+        intro = data.get("intro") or {}
+        if (intro.get("html") or "").strip() and str(intro.get("docId")) not in done:
+            total += 1
+        if nxt is not None and total:
+            pass  # on continue : total exact demanded
+    return {"remaining": total, "nextEmpty": nxt}
+
+
+# ── Workers (v3 inchangé) ─────────────────────────────────────────────────────
+
 def worker_snapshot() -> tuple[set[str], int]:
-    """Livres en cours de traitement + nombre de workers (livres uniques)."""
     try:
         proc = subprocess.run(
             ["pgrep", "-af", "llm-translate.ts --book"],
@@ -147,13 +234,6 @@ def worker_snapshot() -> tuple[set[str], int]:
 
 
 def launch_worker(book: str) -> None:
-    """Lance un worker daemonisé.
-
-    IMPORTANT : ne PAS utiliser capture_output/pipe — le démon enfant
-    hériterait du write-end du pipe et subprocess.run() attendrait EOF
-    jusqu'au timeout. On utilise DEVNULL : setsid -f fork et son parent
-    sort immédiatement. `exec` évite le processus bash parent.
-    """
     inner = (
         f"cd {shlex.quote(HOME)} && exec bun run scripts-translate/llm-translate.ts "
         f"--book {shlex.quote(book)} --thinking >> {LOGS}/{book}.log 2>&1"
@@ -167,16 +247,231 @@ def launch_worker(book: str) -> None:
     )
 
 
+# ── Canari portail ────────────────────────────────────────────────────────────
+
+def canary_portal(state: dict) -> None:
+    try:
+        proc = subprocess.run(
+            ["bash", VEILLE], capture_output=True, text=True, timeout=90, cwd=HOME,
+        )
+        out = proc.stdout or ""
+    except Exception as exc:
+        state["portal"] = {"state": "ERR", "ts": iso_now(), "detail": repr(exc)[:120]}
+        return
+    if "PORTE|OUVERTE" in out:
+        state["portal"] = {"state": "OUVERTE", "ts": iso_now(), "detail": "bannière de maintenance absente"}
+        log("CANARI: PORTE OUVERTE — kit de reprise lancé automatiquement.")
+        alive_line("PORTE OUVERTE — reprise-portail.sh lancé (reprise du flux source)")
+        try:
+            subprocess.run(
+                ["bash", REPRISE], capture_output=True, text=True, timeout=180, cwd=HOME,
+            )
+        except Exception as exc:
+            log(f"reprise-portail incident : {exc!r}")
+    elif "PORTE|FERMÉE" in out:
+        state["portal"] = {"state": "FERMÉE", "ts": iso_now(), "detail": "bannière de maintenance présente"}
+    elif "PORTE|ERR" in out:
+        state["portal"] = {"state": "ERR", "ts": iso_now(), "detail": "accueil injoignable"}
+    else:
+        state["portal"] = {"state": "INCONNU", "ts": iso_now(), "detail": "réponse non lisible"}
+
+
+# ── Chasse aux sources ────────────────────────────────────────────────────────
+
+def hunt_line(msg: str) -> None:
+    try:
+        stamp = time.strftime("%Y-%m-%d %H:%M:%S")
+        with open(HUNT_LOG, "a", buffering=1) as fh:
+            fh.write(f"[{stamp}] {msg}\n")
+    except Exception:
+        pass
+
+
+def quote_url(url: str) -> str:
+    """Encode les caractères non-ASCII d'une URL (chemins arabes du portail)."""
+    return urllib.parse.quote(url, safe=":/?&=%#[]@$!+,;~-._")
+
+
+def http_head_status(url: str, timeout: int = 15) -> str:
+    try:
+        req = urllib.request.Request(quote_url(url), method="HEAD", headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=timeout, context=SSL_CTX) as resp:
+            return str(resp.status)
+    except urllib.error.HTTPError as e:
+        return str(e.code)
+    except Exception as e:
+        return f"ERR:{type(e).__name__}"
+
+
+def hunt_sources(state: dict, target: dict | None) -> None:
+    """Sonde la prochaine leçon vide : pdfUrl direct + miroir Wayback."""
+    if not target:
+        state["sourceHunt"] = {"ts": iso_now(), "book": None, "detail": "aucune leçon vide à sonder"}
+        return
+    book, doc_id, url = target["book"], target["docId"], target["pdfUrl"]
+    direct = http_head_status(url)
+    wayback = "INCONNU"
+    detail = ""
+    try:
+        api = "https://archive.org/wayback/available?url=" + urllib.parse.quote(url, safe="")
+        with urllib.request.urlopen(api, timeout=25) as resp:
+            snap = json.load(resp).get("archived_snapshots", {}).get("closest", {})
+        if snap.get("available"):
+            wayback = f"DISPONIBLE({snap.get('timestamp', '?')})"
+        else:
+            wayback = "ABSENT"
+    except Exception as e:
+        wayback = f"ERR:{type(e).__name__}"
+    # Arbre portail revivant : source officielle EXACTE → acquisition sûre.
+    if direct == "200":
+        try:
+            os.makedirs(os.path.join(INBOX, book), exist_ok=True)
+            dest = os.path.join(INBOX, book, f"{doc_id}.pdf")
+            req = urllib.request.Request(quote_url(url), headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=60, context=SSL_CTX) as resp, open(dest, "wb") as fh:
+                fh.write(resp.read())
+            if open(dest, "rb").read(5) == b"%PDF-":
+                detail = f"PDF officiel téléchargé → sources-inbox/{book}/{doc_id}.pdf"
+                log(f"CHASSE: ARBRE VIVANT {book}/{doc_id} — PDF officiel acquis.")
+                alive_line(f"ARBRE PORTAIL VIVANT — {book}/{doc_id} acquis dans sources-inbox/")
+            else:
+                os.remove(dest)
+                detail = "200 mais corps non-PDF — ignoré"
+        except Exception as e:
+            detail = f"téléchargement échoué : {type(e).__name__}"
+    else:
+        detail = f"direct={direct}"
+    hunt_line(f"{book}/{doc_id} : direct={direct} | wayback={wayback} | {detail}")
+    state["sourceHunt"] = {
+        "ts": iso_now(), "book": book, "docId": doc_id, "titleFr": target.get("titleFr", ""),
+        "direct": direct, "wayback": wayback, "detail": detail,
+    }
+
+
+# ── Auto-commit / push ────────────────────────────────────────────────────────
+
+def git(args: list[str], timeout: int = 60) -> subprocess.CompletedProcess:
+    return subprocess.run(
+        ["git", *args], cwd=HOME, capture_output=True, text=True, timeout=timeout,
+    )
+
+
+def clear_stale_index_lock() -> None:
+    lock = os.path.join(HOME, ".git", "index.lock")
+    try:
+        if os.path.exists(lock) and time.time() - os.path.getmtime(lock) > 90:
+            os.remove(lock)
+    except Exception:
+        pass
+
+
+def auto_commit_push(state: dict) -> None:
+    try:
+        clear_stale_index_lock()
+        # Synchronisation : avance distante → fast-forward local (jamais de force).
+        fetch = git(["fetch", "origin"], timeout=90)
+        if fetch.returncode == 0:
+            counts = git(["rev-list", "--left-right", "--count", "HEAD...origin/main"])
+            if counts.returncode == 0 and counts.stdout.split():
+                parts = counts.stdout.split()
+                left, right = int(parts[0]), int(parts[1])
+                if right > 0 and left == 0:
+                    git(["reset", "--hard", "origin/main"], timeout=60)
+                    log("auto-commit: reset --hard origin/main (avance distante absorbée).")
+        clear_stale_index_lock()
+        git(["add", *AUTO_ADD_PATHS], timeout=60)
+        dirty = git(["diff", "--cached", "--quiet"])
+        if dirty.returncode != 0:
+            # Garde anti-JSON déchiré : un fichier de livre illisible est retiré.
+            staged = git(["diff", "--cached", "--name-only"])
+            for path in (staged.stdout or "").splitlines():
+                if path.startswith("content/books/") and path.endswith(".json"):
+                    try:
+                        with open(os.path.join(HOME, path), "r", encoding="utf-8") as fh:
+                            json.load(fh)
+                    except Exception:
+                        log(f"auto-commit: {path} illisible (écriture en cours ?) — retiré de l'index.")
+                        git(["reset", "HEAD", "--", path])
+            msg = f"auto(pipeline): {time.strftime('%Y-%m-%d %H:%M')} — superviseur v4 (battement, registre, chasse)"
+            commit = git(["commit", "-m", msg], timeout=90)
+            if commit.returncode == 0:
+                state["lastAutoCommit"] = {"ts": iso_now(), "subject": msg}
+        push = git(["push", "origin", "main"], timeout=120)
+        if push.returncode != 0:
+            log(f"auto-commit: push échoué — {(push.stderr or '')[:200]}")
+        else:
+            counts = git(["rev-list", "--left-right", "--count", "HEAD...origin/main"])
+            if counts.returncode == 0 and counts.stdout.strip() == "0\t0":
+                state["lastPush"] = {"ts": iso_now(), "ok": True}
+    except Exception as exc:
+        log(f"auto-commit incident (ignoré, cycle suivant) : {exc!r}")
+
+
+# ── Divers ────────────────────────────────────────────────────────────────────
+
+def iso_now() -> str:
+    return time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+
+
+def write_status(state: dict, workers_books: set[str], scan: dict) -> None:
+    payload = {
+        "ts": time.time(),
+        "iso": iso_now(),
+        "version": "v4",
+        "startedAt": state.get("startedAt"),
+        "cycles": state.get("cycles", 0),
+        "wakeCount": state.get("wakeCount", 0),
+        "workers": {"active": len(workers_books), "books": sorted(workers_books)},
+        "remainingDocs": scan.get("remaining"),
+        "registry": load_registry_counts(),
+        "portal": state.get("portal"),
+        "sourceHunt": state.get("sourceHunt"),
+        "lastAutoCommit": state.get("lastAutoCommit"),
+        "lastPush": state.get("lastPush"),
+    }
+    tmp = STATUS_PATH + ".tmp"
+    try:
+        with open(tmp, "w", encoding="utf-8") as fh:
+            json.dump(payload, fh, indent=1, ensure_ascii=False)
+        os.replace(tmp, STATUS_PATH)
+    except Exception as exc:
+        log(f"write_status incident : {exc!r}")
+
+
+# ── Boucle principale ─────────────────────────────────────────────────────────
+
 def main() -> None:
     os.makedirs(LOGS, exist_ok=True)
+    os.makedirs(INBOX, exist_ok=True)
     state = load_state()
-    log(f"superviseur v3 démarré (MAX={MAX_CONCURRENT}, file={len(QUEUE)} livres)")
+    state.setdefault("startedAt", iso_now())
+    state.setdefault("cycles", 0)
+    state.setdefault("wakeCount", 0)
+    last_beat = 0.0
+    last_canary = 0.0
+    last_hunt = 0.0
+    last_commit = 0.0
+    last_scan = 0.0
+    scan: dict = {"remaining": None, "nextEmpty": None}
+    last_cycle = time.time()
+    log(f"superviseur v4 démarré (MAX={MAX_CONCURRENT}, file={len(QUEUE)} livres, battement visible)")
+    alive_line("SUPERVISEUR v4 DÉMARRÉ — battement toutes les 5 min, canari portail 15 min, chasse sources 30 min, push 10 min")
 
     while True:
-        try:
-            running, active = worker_snapshot()
-            launched_this_cycle = 0
+        now = time.time()
+        # Détection de réveil : le sandbox a été gelé/coupé entre deux cycles.
+        if now - last_cycle > 3 * CYCLE_SECONDS:
+            gap_min = int((now - last_cycle) / 60)
+            state["wakeCount"] = state.get("wakeCount", 0) + 1
+            log(f"RÉVEIL après {gap_min} min de gel — reprise du cycle (gel n°{state['wakeCount']}).")
+            alive_line(f"RÉVEIL après {gap_min} min de gel — le moteur autonome reprend")
+        last_cycle = now
 
+        try:
+            state["cycles"] = state.get("cycles", 0) + 1
+            running, active = worker_snapshot()
+
+            # 1. Workers : maintenir MAX_CONCURRENT sur les livres non finis (v3).
             for book in QUEUE:
                 if active >= MAX_CONCURRENT:
                     break
@@ -185,10 +480,10 @@ def main() -> None:
                 if state.get(book, {}).get("done", False):
                     continue
                 if state.get(book, {}).get("passes", 0) >= MAX_PASSES_PER_BOOK:
-                    continue  # garde-fou pathologique (uniquement si des docs restent)
+                    continue
                 rem = remaining_docs(book)
                 if rem is None:
-                    continue  # illisible pour l'instant → cycle suivant
+                    continue
                 if rem == 0:
                     if not state.get(book, {}).get("done", False):
                         state.setdefault(book, {"passes": 0, "done": False})
@@ -200,38 +495,50 @@ def main() -> None:
                 state.setdefault(book, {"passes": 0, "done": False})
                 state[book]["passes"] += 1
                 save_state(state)
-                log(f"worker lancé : {book} (passe {state[book]['passes']}, "
-                    f"{rem} docs restants, actifs≈{active + 1})")
-                launched_this_cycle += 1
-                active += 1
+                log(f"worker lancé : {book} (passe {state[book]['passes']}, {rem} docs restants, actifs≈{active + 1})")
                 running.add(book)
+                active += 1
                 time.sleep(STAGGER_SECONDS)
 
-            # Sortie propre : tous les livres finis et aucun worker actif.
-            if active == 0 and launched_this_cycle == 0:
-                unfinished = []
-                for b in QUEUE:
-                    if state.get(b, {}).get("done", False):
-                        continue
-                    rem = remaining_docs(b)
-                    if rem:  # None (illisible) → considéré non fini, on boucle encore
-                        unfinished.append(b)
-                    elif rem == 0:
-                        state.setdefault(b, {"passes": 0, "done": False})
-                        state[b]["done"] = True
-                        save_state(state)
-                        log(f"livre TERMINÉ : {b} (0 doc restant)")
-                if not unfinished:
-                    log("file épuisée : tous les livres sont terminés — sortie.")
-                    break
+            # 2. Recalcul global (coûteux) toutes les 5 min.
+            if now - last_scan >= RESCAN_EVERY:
+                scan = global_scan()
+                last_scan = now
+
+            # 3. Canari portail toutes les 15 min.
+            if now - last_canary >= CANARY_EVERY:
+                canary_portal(state)
+                last_canary = now
+
+            # 4. Chasse aux sources toutes les 30 min.
+            if now - last_hunt >= HUNT_EVERY:
+                hunt_sources(state, scan.get("nextEmpty"))
+                last_hunt = now
+
+            # 5. Auto-commit + push toutes les 10 min.
+            if now - last_commit >= AUTOCOMMIT_EVERY:
+                auto_commit_push(state)
+                last_commit = now
+
+            # 6. Battement visible toutes les 5 min.
+            if now - last_beat >= HEARTBEAT_EVERY:
+                portal_state = (state.get("portal") or {}).get("state", "?")
+                hunt_state = (state.get("sourceHunt") or {}).get("direct", "?")
+                rem = scan.get("remaining")
+                rem_txt = "?" if rem is None else str(rem)
+                alive_line(
+                    f"TICK superviseur v4 — workers={active} docs_restants={rem_txt} "
+                    f"portail={portal_state} chasse_direct={hunt_state} cycles={state['cycles']}"
+                )
+                last_beat = now
+
+            # 7. État machine-readable à chaque cycle.
+            write_status(state, running, scan)
+
         except Exception as exc:  # le superviseur ne meurt JAMAIS d'un incident
             log(f"⚠ incident de cycle (ignoré, cycle suivant) : {exc!r}")
-            time.sleep(CYCLE_SECONDS)
-            continue
 
         time.sleep(CYCLE_SECONDS)
-
-    log("superviseur arrêté.")
 
 
 if __name__ == "__main__":

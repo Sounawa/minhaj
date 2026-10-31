@@ -1,0 +1,36 @@
+{
+ "ts": 1793461367.303163,
+ "iso": "2026-10-31T15:42:47Z",
+ "version": "v4",
+ "startedAt": "2026-10-31T15:29:57Z",
+ "cycles": 10,
+ "wakeCount": 0,
+ "workers": {
+  "active": 0,
+  "books": []
+ },
+ "remainingDocs": 0,
+ "registry": {
+  "hand": 944,
+  "llm": 57
+ },
+ "portal": {
+  "state": "FERMÉE",
+  "ts": "2026-10-31T15:34:44Z",
+  "detail": "bannière de maintenance présente"
+ },
+ "sourceHunt": {
+  "ts": "2026-10-31T15:34:45Z",
+  "book": "tafsir-5ep",
+  "docId": "pdf-mut23h3c-709",
+  "titleFr": "Sourate Al-Isra (verset : 1)",
+  "direct": "404",
+  "wayback": "DISPONIBLE(20261013031750)",
+  "detail": "direct=404"
+ },
+ "lastAutoCommit": null,
+ "lastPush": {
+  "ts": "2026-10-31T15:34:47Z",
+  "ok": true
+ }
+}
