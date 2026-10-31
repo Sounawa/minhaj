@@ -3,7 +3,7 @@
 """Minhāj R86 — Cross-check des numéros Muwaṭṭaʾ (src arabe vs rendu final)."""
 import re
 
-IDS = ["12986", "12987", "12995", "12998", "13001", "13002"]
+IDS = ["12986", "12987", "12995", "12998", "13001", "13002", "13004", "13005"]
 TMP = "/home/z/my-project/tr-tmp"
 
 for did in IDS:
