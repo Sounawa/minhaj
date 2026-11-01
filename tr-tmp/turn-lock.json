@@ -1,7 +1,1 @@
-{
-  "utc": "2026-11-01T10:47:00Z",
-  "trace": "web-394d04d3 (tour 492688 — pivot 724/R469, production lancée)",
-  "job": 492688,
-  "note": "Prise de verrou à 10:47Z. État au départ : R468 poussé (aeb8fa5), leçon 723 en livre, REGISTRE 1046 (989 hand + 57 llm), tafsir-5ep 76/122. Ce tour produit la LEÇON 724 (Isrāʾ 61-65, p.118-124, isra-map leçon 16, slot pdf-mut23h3c-724) et apposera R469. Matière déjà extraite par le tour précédent : tr-tmp/isra-l16-readable.txt (10:33Z). Le verrou précédent (10:32:51Z) n'était plus actif : dernier commit du tour principal poussé, aucune activité fichier depuis 10:36Z, job production unique 492688 (492680 supprimé).",
-  "expires_hint": "rafraîchir avant les phases longues (rédaction, QA, commit)"
-}
+{"utc": "2026-11-01T11:12:30Z", "trace": "web-394d04d3 (tour 492688 v3, trace 202611011907 — 724 rédigée, QA+verify PASS, injection en cours)", "job": 492688, "expires_hint": "rafraîchir avant les phases longues"}
