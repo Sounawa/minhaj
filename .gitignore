@@ -63,3 +63,8 @@ tool-results/
 
 # archive WeTransfer de restauration (backup local, ne pas versionner)
 download/wetransfer/
+
+# R96 : manuels officiels archive.org (tafsir-3es 78 Mo, fiqh-3es 160 Mo, waraqat 50 Mo)
+# — PDF hors git (re-téléchargeables idempotemment via scripts-translate/dl-books-r96.py) ;
+# les couches texte _djvu.txt restent versionnées (fiabilisation).
+tr-tmp/books/*.pdf
