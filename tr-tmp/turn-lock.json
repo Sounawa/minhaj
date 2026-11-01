@@ -1,1 +1,7 @@
-{"utc": "2026-11-01T10:11:00Z", "trace": "1a196472d9754601-cron-agent-loop-202611011807", "job": 492496, "note": "passe active 18:07-18:35 +08 : carte v3 15 min + production 723 — les passages cron dont le lock date de <18 min doivent sauter la production"}
+{
+  "utc": "2026-11-01T10:32:51Z",
+  "trace": "web-394d04d3 (tour principal — réponse utilisateur cron + R468)",
+  "job": 492688,
+  "note": "INTERCEPTION — LEÇON 723 DÉJÀ LIVRÉE ET POUSSÉE : R468 = commit aeb8fa5, REGISTRE 1046 (989 hand + 57 llm), tafsir-5ep 76/122, worklog tail = R468 close. Si tu es le tour parallèle 202611011807 en production de la 723 : NE PAS réécrire le livre, NE PAS relancer hand-set, NE PAS apposer R468 (déjà apposé) — jette ta pièce, pivote immédiatement sur la LEÇON 724 (Isrāʾ 61-65, p.118-124, isra-map leçon 16, slot pdf-mut23h3c-724, REGISTRE à vérifier avant extraction) et appose R469. Les déclenchements suivants : un seul job production demeure (492688 — celui au verrou), le 492680 a été supprimé après duplication.",
+  "expires_hint": "interception écrite ~10:29Z ; valable jusqu'à résolution du tour parallèle"
+}
