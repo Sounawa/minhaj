@@ -15,9 +15,15 @@ SONDAGE R487 : p.5-8 = préface + compétences ; p.9 = fihris du livre ; la leç
 (Kahf v1-5, slot pdf-mut23h3c-739) commence p.10 (objectifs « أن أتعرف سورة
 الكهف وفضلها وسبب نزولها ») et s'achève p.16 ; la leçon 2 (v6-9) ouvre p.17
 (objectifs « مناظر النبي ﷺ » sondés R487) et s'achève p.22 (استثمار + invocations,
-sondés R488) ; la leçon 3 ouvre p.23 — son en-tête porte « (الآيات: 10-14) »
-contre (10-12) à la grille du portail : périmètre à trancher PAR LE CONTENU au
-moment de la livraison (précédent de la leçon 28 d'Isrāʾ), jamais deviné.
+sondés R488) ; la leçon 3 ouvre p.23.
+
+SONDAGE R491 : en-têtes imprimés du livre TRANCHÉS PAR LE CONTENU (précédent de
+la leçon 28 d'Isrāʾ, jamais deviné) : p.23 porte « أهداف الدرس (الكهف: الآيات
+10-14) » — la leçon 3 couvre donc les āyāt 10 à 14 (contre (10-12) à la grille
+du portail, divergence documentée) et s'achève avant p.29 ; p.29 porte « أهداف
+الدرس (الكهف: الآيات 15-16) » — la leçon 4 couvre les āyāt 15 à 16 (contre
+(13-16) à la grille du portail, divergence documentée) et ouvre p.29 ; sa borne
+supérieure à trancher par sondage à l'armement de la leçon 4.
 
 Usage :
   python3 scripts-translate/kahf-map.py            # imprime la carte
@@ -32,7 +38,7 @@ PDF = "/home/z/my-project/content/textbooks-src/tafsir-3-thanawi_text.pdf"
 # Vrais départs (fixes) : leçon i = pages STARTS[i] .. STARTS[i+1]-1
 # p5-9 = matière liminaire (préface, compétences, fihris) — la leçon 1 RÉELLE
 # commence p10 ; leçon 2 ouvre p17 (objectifs sondés R487).
-STARTS = [10, 17, 23]
+STARTS = [10, 17, 23, 29]
 # bornes des annexes (à trancher par sondage quand la leçon 26 sera atteinte)
 ACTIVITES = None   # slot 765
 FIHRIS = None      # slot 766
@@ -42,12 +48,15 @@ SOURCES = None     # slot 767
 # 766 fihris, 767 sources)
 SLOTS = {i: 738 + i for i in range(1, 27)}   # leçon i -> docId slot
 VERSE_RANGE = {
-    1: "v1-5", 2: "v6-9", 3: "v10-12", 4: "v13-16", 5: "v17-18", 6: "v19-20",
+    1: "v1-5", 2: "v6-9", 3: "v10-14", 4: "v15-16", 5: "v17-18", 6: "v19-20",
     7: "v21-24", 8: "v25-27", 9: "v28-29", 10: "v30-31", 11: "v32-35",
     12: "v36-43", 13: "v44-45", 14: "v46-48", 15: "v49-52", 16: "v53-55",
     17: "v56-58", 18: "v59-64", 19: "v65-72", 20: "v73-77", 21: "v78-81",
     22: "v82-84", 23: "v85-91", 24: "v92-97", 25: "v98-101", 26: "v102-105",
 }
+# R491 : plages 3-4 tranchées par les en-têtes imprimés du livre (p.23 : 10-14 ;
+# p.29 : 15-16) — la grille du portail (10-12 / 13-16) diverge, documenté ; les
+# plages 5+ restent celles de la grille, à trancher par sondage à chaque armement.
 
 
 def fix_line(s: str) -> str:

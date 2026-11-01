@@ -1,6 +1,6 @@
 {
- "utc": "2026-11-01T21:03:01Z",
+ "utc": "2026-11-01T21:04:55Z",
  "trace_id": "cron-agent-loop-202611020452",
  "job": 492688,
- "action": "passe R490 : lecon 740 (Kahf v6-9, p.17-22) LIVREE — redaction FR-seule 14623 car, qa-lesson PASS, verify-740-quran PASS, hand-set REGISTRE 1063 (1006 hand + 57 llm), tafsir-5ep 93/122, navigateur desktop/mobile PASS — commit et push en cours ; seconde lecon du tour (741) si la passe le porte, sinon armer 741 (Kahf 10+, p.23+, borne a trancher par le contenu)"
+ "action": "passe R490+R491 : lecon 740 LIVREE et PUSHEE (6913d7a) — SECONDE LEÇON DU TOUR armee : lecon 741 (Kahf v10-14 TRANCHE par les en-tetes imprimes du livre p.23/p.29 contre la grille du portail 10-12, divergence documentee — precedent lecon 28 d'Isra, jamais devine) — carte kahf-map mise a jour (STARTS [10,17,23,29], VERSE_RANGE 3: v10-14, 4: v15-16), extraction kahf-l3-readable.txt (12302 o, p.23-28) committée — livraison a la passe suivante de la meme chaine sous garde-doublon (Task ID R492), verrou rafraichi avant toute phase longue"
 }
