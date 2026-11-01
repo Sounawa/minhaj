@@ -1,6 +1,6 @@
 {
- "utc": "2026-11-01T18:38:00Z",
+ "utc": "2026-11-01T18:46:00Z",
  "trace_id": "cron-agent-loop-202611020222",
  "job": 492688,
- "action": "passe R484 - continuation meme session (chaine 0037->0100->0122->0137->0222) : lecon 736 redigee (18 814 car) - qa-lesson PASS + verify-736-quran PASS - HAND-SET registre engage (pdf-mut23h3c-736, Isra 109-110) - verrou rafraichi avant hand-set/commit"
+ "action": "passe R484 TERMINÉE - leçon 736 (Isra 109-110 + ahya 111 conclusion du hamd) livrée, poussée (b988557), worklog R484 appendé - SOURATE AL-ISRA CLOSE (28 leçons, slots 709-736) - PROCHAINE PASSE R485 : leçon 737 (fihris - index des figures citées, p.209-214, slot pdf-mut23h3c-737, htmlFr vide, extraction isra-fihris à faire) - prochaine passe: lire le tail du worklog, garde-doublon REGISTRE (737 ABSENT), verrou propre trace, PUIS extraction"
 }
