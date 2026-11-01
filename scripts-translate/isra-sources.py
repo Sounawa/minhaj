@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Minhāj — Extracteur PDF→slot, annexe fihris (p.209-214) → tr-tmp/isra-sources-readable.txt
+Minhāj — Extracteur PDF→slot, annexe sources et références (p.214-220)
+→ tr-tmp/isra-sources-readable.txt
 
 Même mécanique que isra-readable.py (R458-R462) : décodage mot-à-mot (fix_line
 d'isra-map.py) puis ré-inversion de la séquence des mots de chaque ligne.
-Le fihris est un index de noms propres (figures citées) — pas de carte
-STARTS pour lui : pages FIHRIS (209-214) du miroir tafsir-2-thanawi_text.pdf.
+R485 : la page imprimée 214 ouvre déjà la rubrique المصادر والمراجع (tranchage
+par le contenu) — périmètre du slot pdf-mut23h3c-738 = pages 214 à 220.
 """
 import importlib.util
 
@@ -16,7 +17,9 @@ _spec = importlib.util.spec_from_file_location(
     "isra_map", "/home/z/my-project/scripts-translate/isra-map.py")
 isra_map = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(isra_map)
-PDF, SOURCES, fix_line = isra_map.PDF, isra_map.FIHRIS, isra_map.fix_line
+PDF, fix_line = isra_map.PDF, isra_map.fix_line
+
+RANGE = (214, 220)   # p.214 = début de la rubrique (matière du slot 738)
 
 
 def readable(fixed: str) -> str:
@@ -29,7 +32,7 @@ def readable(fixed: str) -> str:
 
 def main() -> None:
     doc = fitz.open(PDF)
-    lo, hi = SOURCES
+    lo, hi = RANGE
     lines = [f"SOURCES — les sources et références — slot pdf-mut23h3c-738 — pages {lo}-{hi}",
              "=" * 70, ""]
     for p in range(lo, hi + 1):
