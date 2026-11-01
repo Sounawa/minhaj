@@ -1,6 +1,6 @@
 {
- "utc": "2026-11-01T17:14:00Z",
+ "utc": "2026-11-01T17:18:00Z",
  "trace_id": "cron-agent-loop-202611020037",
  "job": 492688,
- "action": "passe R482 - lecon 734 LIVREE (hand-set REGISTRE 1057, qa-lesson PASS, verify-734-quran PASS, navigateur desktop/mobile PASS) - commit detaille et push en cours, puis worklog R482"
+ "action": "passe R482 - lecon 734 livree et poussee (592ce8e/208b326) - seconde leçon du tour engagee : extraction isra-readable 27 pour lecon 735 (Isra 105-108, carte leçon 27, p.195-201) - verrou rafraichi avant extraction, GARDE-DOUBLON à re-verifier sur le REGISTRE avant production"
 }
