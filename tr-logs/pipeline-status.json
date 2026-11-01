@@ -1,9 +1,9 @@
 {
- "ts": 1793540803.62401,
- "iso": "2026-11-01T13:46:43Z",
+ "ts": 1793541226.2929006,
+ "iso": "2026-11-01T13:53:46Z",
  "version": "v4",
  "startedAt": "2026-10-31T15:29:57Z",
- "cycles": 110,
+ "cycles": 117,
  "wakeCount": 0,
  "workers": {
   "active": 0,
@@ -34,7 +34,7 @@
   "subject": "auto(pipeline): 2026-11-01 13:38 — superviseur v4 (battement, registre, chasse)"
  },
  "lastPush": {
-  "ts": "2026-11-01T13:38:42Z",
+  "ts": "2026-11-01T13:48:46Z",
   "ok": true
  }
 }
