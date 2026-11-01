@@ -14,8 +14,10 @@ compétences p.8 « تحصيل معاني سورة الكهف ».
 SONDAGE R487 : p.5-8 = préface + compétences ; p.9 = fihris du livre ; la leçon 1
 (Kahf v1-5, slot pdf-mut23h3c-739) commence p.10 (objectifs « أن أتعرف سورة
 الكهف وفضلها وسبب نزولها ») et s'achève p.16 ; la leçon 2 (v6-9) ouvre p.17
-(objectifs « مناظر النبي ﷺ » visibles) — les STARTS suivants se tranchent passe
-après passe par sondage des objectifs, jamais devinés.
+(objectifs « مناظر النبي ﷺ » sondés R487) et s'achève p.22 (استثمار + invocations,
+sondés R488) ; la leçon 3 ouvre p.23 — son en-tête porte « (الآيات: 10-14) »
+contre (10-12) à la grille du portail : périmètre à trancher PAR LE CONTENU au
+moment de la livraison (précédent de la leçon 28 d'Isrāʾ), jamais deviné.
 
 Usage :
   python3 scripts-translate/kahf-map.py            # imprime la carte
@@ -30,7 +32,7 @@ PDF = "/home/z/my-project/content/textbooks-src/tafsir-3-thanawi_text.pdf"
 # Vrais départs (fixes) : leçon i = pages STARTS[i] .. STARTS[i+1]-1
 # p5-9 = matière liminaire (préface, compétences, fihris) — la leçon 1 RÉELLE
 # commence p10 ; leçon 2 ouvre p17 (objectifs sondés R487).
-STARTS = [10, 17]
+STARTS = [10, 17, 23]
 # bornes des annexes (à trancher par sondage quand la leçon 26 sera atteinte)
 ACTIVITES = None   # slot 765
 FIHRIS = None      # slot 766
