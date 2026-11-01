@@ -1,0 +1,1 @@
+{"utc": "2026-11-01T10:11:00Z", "trace": "1a196472d9754601-cron-agent-loop-202611011807", "job": 492496, "note": "passe active 18:07-18:35 +08 : carte v3 15 min + production 723 — les passages cron dont le lock date de <18 min doivent sauter la production"}
