@@ -86,3 +86,8 @@
 [2026-10-31 15:29:57] livre TERMINÉ : tajwid-3es (0 doc restant)
 [2026-10-31 15:34:43] superviseur v4 démarré (MAX=3, file=62 livres, battement visible)
 [2026-10-31 16:12:07] superviseur v4 démarré (MAX=3, file=62 livres, battement visible)
+[2026-11-01 11:58:05] superviseur v4 démarré (MAX=3, file=62 livres, battement visible)
+[2026-11-01 11:58:09] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-01 12:08:10] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
