@@ -25,6 +25,11 @@ du portail, divergence documentée) et s'achève avant p.29 ; p.29 porte « أه
 (13-16) à la grille du portail, divergence documentée) et ouvre p.29 ; sa borne
 supérieure à trancher par sondage à l'armement de la leçon 4.
 
+SONDAGE R492 : p.37 porte « أهداف الدرس » — la leçon 5 ouvre p.37, la leçon 4
+s'achève donc p.36 ; p.44 porte « أهداف الدرس » — la leçon 6 ouvre p.44, la
+leçon 5 s'achève p.43 (p.44 sondant « مشهد استغراب أصحاب الكهف بعد اليقظة »,
+conforme à la grille v19-20). Bornes 5+ restant à trancher à chaque armement.
+
 Usage :
   python3 scripts-translate/kahf-map.py            # imprime la carte
   python3 scripts-translate/kahf-map.py 1          # extrait la leçon 1 (p.10-16)
@@ -38,7 +43,7 @@ PDF = "/home/z/my-project/content/textbooks-src/tafsir-3-thanawi_text.pdf"
 # Vrais départs (fixes) : leçon i = pages STARTS[i] .. STARTS[i+1]-1
 # p5-9 = matière liminaire (préface, compétences, fihris) — la leçon 1 RÉELLE
 # commence p10 ; leçon 2 ouvre p17 (objectifs sondés R487).
-STARTS = [10, 17, 23, 29]
+STARTS = [10, 17, 23, 29, 37, 44]
 # bornes des annexes (à trancher par sondage quand la leçon 26 sera atteinte)
 ACTIVITES = None   # slot 765
 FIHRIS = None      # slot 766
@@ -57,6 +62,7 @@ VERSE_RANGE = {
 # R491 : plages 3-4 tranchées par les en-têtes imprimés du livre (p.23 : 10-14 ;
 # p.29 : 15-16) — la grille du portail (10-12 / 13-16) diverge, documenté ; les
 # plages 5+ restent celles de la grille, à trancher par sondage à chaque armement.
+# R492 : départs sondés p.37 (leçon 5) et p.44 (leçon 6) — en-têtes أهداف الدرس.
 
 
 def fix_line(s: str) -> str:
