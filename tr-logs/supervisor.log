@@ -96,3 +96,6 @@
 [2026-11-01 12:28:17] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
 
 [2026-11-02 06:54:29] superviseur v4 démarré (MAX=3, file=62 livres, battement visible)
+[2026-11-02 07:05:13] auto-commit: push échoué — remote: error: Trace: 98150590991bffdf452cb47958bda750eadcb47c1cbfc9acb05b813f6df0a27c        
+remote: error: See https://gh.io/lfs for more information.        
+remote: error: File download/minhaj-fo
