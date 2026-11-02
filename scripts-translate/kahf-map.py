@@ -47,13 +47,15 @@ PDF = "/home/z/my-project/content/textbooks-src/tafsir-3-thanawi_text.pdf"
 # Vrais départs (fixes) : leçon i = pages STARTS[i] .. STARTS[i+1]-1
 # p5-9 = matière liminaire (préface, compétences, fihris) — la leçon 1 RÉELLE
 # commence p10 ; leçon 2 ouvre p17 (objectifs sondés R487).
-STARTS = [10, 17, 23, 29, 37, 44, 50, 58, 65, 73, 79, 87, 96, 102]
+STARTS = [10, 17, 23, 29, 37, 44, 50, 58, 65, 73, 79, 87, 96, 102, 110]
 # +96 : borne leçon 13 tranchée par sondage R511 (kahf-probe-l12.py + rendu
 # image p87 « (الآيات: 36-43) » badge 12 et p96 « (الآيات: 44-45) » badge 13)
 # — la leçon 12 couvre p.87-95, JAMAIS devinée.
 # +102 : borne leçon 14 tranchée par sondage R512 (kahf-probe-l13.py, texte
 # brut : « أهداف الدرس » p.102 — objectifs « مشاهد القيامة / إحصاء الأعمال /
 # يوم العرض » conformes au slot -752 v46-48) — la leçon 13 couvre p.96-101.
+# +110 : borne leçon 15 tranchée par sondage R512 (sonde textuelle p.105-113 :
+# « أهداف الدرس » p.110) — la leçon 14 couvre p.102-109.
 # bornes des annexes (à trancher par sondage quand la leçon 26 sera atteinte)
 ACTIVITES = None   # slot 765
 FIHRIS = None      # slot 766
