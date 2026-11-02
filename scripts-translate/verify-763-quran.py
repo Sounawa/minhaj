@@ -2,14 +2,16 @@
 # -*- coding: utf-8 -*-
 """Minhāj — contrôle coranique et de contenu de la leçon 763 (tafsir-5ep,
 sūrat al-Kahf v98-101 de l'imprimé warš — vingt-cinquième leçon du second
-livre, pages 188-194 du manuel miroir tafsir-3-thanawi). La plage imprimée
-(98-101) correspond aux āyāt 102-105 du cache canonique ḥafṣ (décalage de
-quatre, tranché R526 : médaillon (98) relu sur crops 300/500 dpi ouvrant sur
-« a-fa-ḥasiba lladhīna kafarū … innā aʿtadnā » ; cache 100-101 réunies par le
-fendo warš sous le (97) de la leçon 24). Les quatre āyāt sont rendues du cache
-(présence vérifiée) ; la cache 99 (leçon 762) et la cache 106-107 (leçon 26,
-spillover déclaré) sont interdites de double rendu ; le rasm nu du cache
-interdit au corps (0 arabe — FR-seule)."""
+livre, pages 188-194 du manuel miroir tafsir-3-thanawi). Décalage
+imprimé→cache de un des leçons 12 à 23 (R511), de deux dans la zone de la
+leçon 24 (R523), puis de QUATRE en cette zone (tranché R526 sur le contenu :
+la boîte de p.188 ouvre à la cache 102 sous médaillon (98), le commentaire
+p.189-193 ne glossant que les āyāt cache 102-105). Les quatre āyāt sont
+rendues du cache (présence vérifiée, le guillemet fermant parasite noyé dans
+le cache 105 étant normalisé — « vaines». » → « vaines. », déclaré) ; les
+āyāt 1-101 (leçons 739-762, cache 100-101 réunies par le fendo warš à la zone
+finale de la leçon 24) et la cache 106 (leçon suivante) sont interdites de
+double rendu ; le rasm nu du cache interdit au corps (0 arabe — FR-seule)."""
 import json
 import re
 
@@ -24,15 +26,16 @@ for frag in [
     "Vingt-cinquième leçon du second livre du parcours",
     "pages 188 à 194 de l’imprimé miroir",
     "1_20220304_20220304_2251",
-    "sonde kahf-probe-l25.py de R526",
-    "sūrat al-Kahf (al-āyāt : 98-101)",
-    "la plage imprimée (98-101) correspond aux āyāt 102 à 105 du cache canonique",
-    "décalage de quatre",
-    "fendo warš déclaré",
-    "SPILLOVER DÉCLARÉ",
-    "réservée à la leçon 26",
-    "interdites de double rendu",
-    "jamais devinée",
+    "l’ʾiʿdād qiblī de p.187 porte la révision de l’exégèse des āyāt de la leçon au NUM relu sur image (98-101)",
+    "p.188 ouvre la leçon 25 au badge relu sur rendu image",
+    "les objectifs de la leçon 26 ouvrent p.195",
+    "sūrat al-Kahf (al-āyāt : 102 – 105)",
+    "le badge relu résout le NB laissé par R523",
+    "convergence quadruple",
+    "la grille « v102-105 » CONFIRMÉE PAR SONDAGE",
+    "DÉCOUVERTE DE DÉCALAGE",
+    "la leçon 25 rend les āyāt 102 à 105 du cache aux numéros imprimés (98)-(101)",
+    "fendo de la numérotation warš déclaré",
     "Les objectifs de la leçon",
     "Le tamhīd",
     "Le commentaire",
@@ -42,10 +45,13 @@ for frag in [
     "Deuxièmement",
     "Troisièmement",
     "Quatrièmement",
+    "Les subtilités et les bienfaits",
     "L’évaluation",
     "L’exploitation",
     "la page imprimée 194",
-    "la leçon suivante ouvre en la page 195",
+    "jamais devinée",
+    "interdites de double rendu",
+    "passe de deux (fin de la leçon 24, R523) à quatre",
 ]:
     if frag.lower() not in norm.lower():
         errors.append(f"fragment attendu absent : {frag[:55]}")
@@ -53,7 +59,12 @@ for frag in [
 # 2. les āyāt 102-105 rendus du cache — présence (4 rendus + numéros imprimés 98-101)
 cache = json.load(open("scripts-translate/quran-cache.json", encoding="utf-8"))
 fr18 = {n: t for n, t in cache["18"]["fr"]}
-rendus = [fr18[n] for n in (102, 103, 104, 105)]
+rendus = []
+for n in (102, 103, 104, 105):
+    t = fr18[n]
+    if n == 105:
+        t = t.replace("»", "")  # guillemet fermant parasite du cache normalisé (déclaré)
+    rendus.append(t)
 rendus_norm = [r.replace("'", "’").replace(" ", "") for r in rendus]
 compact = norm.replace(" ", "")
 for r in rendus_norm:
@@ -63,78 +74,89 @@ for num in ("(98)", "(99)", "(100)", "(101)"):
     if num not in norm:
         errors.append(f"numéro imprimé absent : {num}")
 
-# 3. interdits de double rendu (leçon 762 : cache 99 ; leçon 26 : cache 106-107)
-for interdit, n in [("Nous les laisserons, ce jour-là, déferler comme les flots", 99),
-                    ("C'est que leur rétribution sera l'Enfer, pour avoir mécru et pris en raillerie", 106),
-                    ("Ceux qui croient et font de bonnes œuvres auront pour résidence les Jardins", 107)]:
-    if interdit.replace("'", "’").replace(" ", "") in compact:
+# 3. interdits de double rendu (leçons 739-762 et leçon suivante)
+interdits = [
+    ("Puis, il suivit (une autre) voie.", 92),
+    ("aquel Récit 99", 0),  # placeholder évité — voir liste ci-dessous
+]
+interdits = [
+    (fr18[99].replace("'", "’"), 99),
+    (fr18[100].replace("'", "’"), 100),
+    (fr18[101].replace("'", "’"), 101),
+    (fr18[106].replace("'", "’"), 106),
+    (fr18[110].replace("'", "’"), 110),
+]
+for interdit, n in interdits:
+    if interdit.replace(" ", "") in compact:
         errors.append(f"āya interdite de double rendu présente (cache {n})")
 
 # 4. contenu attendu (confrontation au manuel — glose, lectures, exégètes)
+# (les textes des āyāt sont déjà contrôlés en 2 — présence exacte du cache)
 contenu = [
-    "l’histoire de Dū l-Qarnayn et ce qu’elle contient de merveilles",
-    "ceux qui échangèrent la loyauté envers Dieu et Ses messagers",
-    "les plus grands perdants en leurs œuvres",
-    "se moquent du Livre de Dieu",
-    "Nous disposâmes et Nous apprêtâmes",
-    "la valeur, la rétribution et la récompense",
-    "Quelle est la destinée de la mécréance et de l’association",
-    "interrogation de dénégation et de reproche",
-    "le blâme des idolâtres en leurs croyances vaines",
-    "offrandes votives et les sacrifices",
-    "au kasr du sīn, au sens de : supputer",
-    "Ibn Kaṯīr et Yaʿqūb",
-    "af-ḥasub",
-    "a-fa-ẓanna lladhīna kafarū",
-    "lecture dérogatoire (šāḏḏa)",
+    "l’interrogation y est de reproche et d’humiliation",
+    "dénigrement des associateurs dans leurs croyances vaines",
+    "par serments et offrandes",
+    "lecture anomale à portée exégétique",
+    "Ibn Masʿūd",
+    "les démons",
+    "les idoles, parce qu’elles sont leur création et leur possession",
     "Abū Ḥayyān",
-    "qu’il y a en la phrase une élision",
-    "la réponse à l’interrogation",
-    "le repas d’hospitalité",
-    "métaphore ironique (istīʿāra tahakkumiyya)",
-    "nom de supériorité (ism tafḍīl)",
-    "complément d’espèce (tamyīz)",
-    "les œuvres des idolâtres diffèrent en la corruption",
-    "Nāfiʿ, Ibn Kaṯīr, Abū ʿAmr et al-Kisāʾī",
-    "yaḥsibūna",
-    "le fatḥ étant le plus fréquent et le plus conforme à l’analogie",
-    "crièrent au mensonge les signes, les messagers et les prophètes",
-    "Muǧāhid, d’Ibn Muḥiṣin et de Yaʿqūb",
-    "la pesée des œuvres relève des articles de la foi",
-    "al-ʾAnbiyāʾ : 47",
-    "de poids profitable",
-    "nul degré pour eux auprès de Lui",
-    "Aṭ-Ṭabarī",
-    "les balances ne s’alourdissent que des œuvres salutaires",
-    "Jāmiʿ al-Bayān : 16/35",
-    "la nullification de leurs œuvres",
-    "la moquerie, la dérision, le mépris et la plaisanterie",
-    "al-Ǧāṯiya : 8",
-    "muḥassināt lafẓiyya",
+    "métaphore ironique",
+    "la lexie du marécage",
+    "l’augmentatif venant de la lexie de la perte",
+    "à l’accusatif de spécification",
+    "les œuvres des associateurs, en la prière et ailleurs, sont variées",
+    "Nāfiʿ, Ibn Kathīr, Abū ʿAmr et al-Kisāʾī lurent au kasr",
+    "les autres lecteurs lurent au faṭḥ",
+    "l’aïne médiane cassée",
+    "le faṭḥ étant le plus fréquent et le plus analogue",
+    "ceux qui ont nié les signes, la rencontre et le Jour du relèvement",
+    "la bāʾ de « en avoir mécru » est de causalité",
+    "les āyāt de la Révélation",
+    "les miracles des prophètes",
+    "la dérision, l’ironie, le mépris et la plaisanterie",
+    "la pesée des œuvres est des dogmes de la foi",
+    "Al-Ṭabarī",
+    "les balances ne s’alourdissent que par les œuvres salutaires",
+    "al-Ǧāmiʿ li-aḥkām al-Qurʾān : 61/53",
+    "l’élision de l’épithète",
+    "al-Anbiyāʾ : 47",
+    "aucune bonne œuvre à être pesée dans les balances",
+    "quiconque n’a point de bonne œuvre est au Feu",
+    "ʿUbayd b. ʿUmayr",
+    "Muǧāhid, d’Ibn Muḥayṣin et de Yaʿqūb",
+    "toutes lectures anomalies, excepté celle de la masse",
     "l’aile d’un moustique",
-    "Ṣaḥīḥ al-Bukhārī",
-    "pièce 2544",
+    "Ṣaḥīḥ al-Buẖārī",
+    "chapitre « Ceux-là qui ont nié les signes de leur Seigneur et Sa rencontre",
+    "l’avertissement de la moquerie envers les āyāt d’Allah et Ses messagers",
     "l’expédition de Tabūk",
-    "at-Tawba : 66",
-    "magnifier Sa parole",
+    "al-Tawba : 65-66",
+    "la magnification de Sa parole",
     "Ibn al-ʿArabī",
+    "les mécréants en Allah, au Jour dernier, aux prophètes et à l’obligation",
     "l’interprétation corrompue",
-    "l’ostentation et dilapidèrent leurs états par l’insouciance",
+    "corrompu leurs œuvres par le fait de montrer",
+    "à la quête du plus vil",
     "Aḥkām al-Qurʾān : 3/442",
-    "ʿĀʾiša",
-    "Ibn Ǧudʿān",
-    "entretenait les liens de parenté et nourrissait l’indigent",
+    "le seul jeu des points séparant le bāʾ du nūn",
+    "« ils s’imaginent » et « ils font bien »",
+    "l’annulation étant la contrepartie de l’association",
+    "ʿAbdallāh b. Ǧudʿān",
+    "nourrissait le démuni",
+    "Seigneur, pardonne-moi ma faute au Jour de la religion",
     "Ṣaḥīḥ Muslim",
-    "pièce 214",
-    "couche texte miroir « 201-501 »",
-    "la clôture de sūrat al-Kahf",
-    "convergence quadruple",
+    "celui qui meurt en mécréant ne tire nul profit de son œuvre",
+    "les Jardins de Firdaws",
+    "cache 106 et suivantes",
+    "la leçon suivante ouvre en la page 195",
+    "sonde kahf-probe-l25.py",
 ]
 for c in contenu:
     if c.lower() not in norm.lower():
         errors.append(f"contenu attendu absent : {c[:60]}")
 
-# 5. 0 arabe au corps
+# 5. 0 arabe au corps (le rasm nu du cache interdit hors citations déclarées)
 arabe = re.findall(r"[\u0600-\u06FF\u0750-\u077F]", norm)
 arabe = [a for a in arabe if a not in "\u061f"]
 if arabe:
@@ -146,4 +168,4 @@ if errors:
         print("  -", e)
     raise SystemExit(1)
 print("VERIFY PASS — leçon 763 : 4 rendus cache 102-105 présents, numéros imprimés (98)-(101),",
-      "interdits absents (cache 99/106/107),", len(contenu), "contrôles de contenu, 0 arabe au corps.")
+      "interdits absents (cache 99-101, 106, 110),", len(contenu), "contrôles de contenu, 0 arabe au corps.")
