@@ -1,9 +1,9 @@
 {
- "ts": 1793630112.1614373,
- "iso": "2026-11-02T14:35:12Z",
+ "ts": 1793630295.166188,
+ "iso": "2026-11-02T14:38:15Z",
  "version": "v4",
  "startedAt": "2026-10-31T15:29:57Z",
- "cycles": 260,
+ "cycles": 263,
  "wakeCount": 0,
  "workers": {
   "active": 0,
@@ -11,7 +11,7 @@
  },
  "remainingDocs": 0,
  "registry": {
-  "hand": 1031,
+  "hand": 1032,
   "llm": 57
  },
  "portal": {
@@ -29,9 +29,12 @@
   "collection": "collection:DÉJÀ-EN-CACHE(tafsir-2-thanawi_text.pdf)",
   "detail": "direct=404"
  },
- "lastAutoCommit": null,
+ "lastAutoCommit": {
+  "ts": "2026-11-02T14:37:12Z",
+  "subject": "auto(pipeline): 2026-11-02 14:37 — superviseur v4 (battement, registre, chasse)"
+ },
  "lastPush": {
-  "ts": "2026-11-02T14:27:10Z",
+  "ts": "2026-11-02T14:37:15Z",
   "ok": true
  }
 }
