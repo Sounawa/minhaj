@@ -48,7 +48,7 @@ PDF = "/home/z/my-project/content/textbooks-src/tafsir-3-thanawi_text.pdf"
 # p5-9 = matière liminaire (préface, compétences, fihris) — la leçon 1 RÉELLE
 # commence p10 ; leçon 2 ouvre p17 (objectifs sondés R487).
 STARTS = [10, 17, 23, 29, 37, 44, 50, 58, 65, 73, 79, 87, 96, 102, 110, 118, 125,
-          132, 142, 150]
+          132, 142, 150, 157]
 # +96 : borne leçon 13 tranchée par sondage R511 (kahf-probe-l12.py + rendu
 # image p87 « (الآيات: 36-43) » badge 12 et p96 « (الآيات: 44-45) » badge 13)
 # — la leçon 12 couvre p.87-95, JAMAIS devinée.
@@ -95,6 +95,14 @@ STARTS = [10, 17, 23, 29, 37, 44, 50, 58, 65, 73, 79, 87, 96, 102, 110, 118, 125
 # au contenu des āyāt 74-78 ; p.149 porte l'إعداد القبلي de la leçon 20
 # (« أرجع تفسير الآيات » NUM « 7 » dégradé) — CONVERGENCE QUADRUPLE, la leçon 19
 # couvre p.142-149, JAMAIS devinée.
+# +157 : borne leçon 20 tranchée par sondage R520 (kahf-probe-l20.py texte
+# brut : p.156 porte l'إعداد القبلي de la leçon 21 NUM « أرجع تفسير الآيات
+# من 78 - 81 » (imprimé 78-81 = cache 79-82, conforme à la grille VERSE_RANGE[21])
+# et p.157 ouvre « أهداف الدرس » — objectifs « تأويل أفعال الخضر والحكمة منها /
+# رفعت الله عباده المؤمنين وحفظهم / التزام أوامر الله » conformes aux āyāt
+# 78-81 (meurtre du garçon, mur et trésor) ; p.151 cite « [الكهف: 73 _ 77] »
+# confirmant la plage de la leçon 20 imprimée 73-77 = cache 74-78 — CONVERGENCE
+# DOUBLE إعداد+أهداف+NUM, la leçon 20 couvre p.150-156, JAMAIS devinée.
 # bornes des annexes (à trancher par sondage quand la leçon 26 sera atteinte)
 ACTIVITES = None   # slot 765
 FIHRIS = None      # slot 766
