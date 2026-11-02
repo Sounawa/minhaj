@@ -48,7 +48,7 @@ PDF = "/home/z/my-project/content/textbooks-src/tafsir-3-thanawi_text.pdf"
 # p5-9 = matière liminaire (préface, compétences, fihris) — la leçon 1 RÉELLE
 # commence p10 ; leçon 2 ouvre p17 (objectifs sondés R487).
 STARTS = [10, 17, 23, 29, 37, 44, 50, 58, 65, 73, 79, 87, 96, 102, 110, 118, 125,
-          132, 142, 150, 157]
+          132, 142, 150, 157, 165]
 # +96 : borne leçon 13 tranchée par sondage R511 (kahf-probe-l12.py + rendu
 # image p87 « (الآيات: 36-43) » badge 12 et p96 « (الآيات: 44-45) » badge 13)
 # — la leçon 12 couvre p.87-95, JAMAIS devinée.
@@ -103,6 +103,23 @@ STARTS = [10, 17, 23, 29, 37, 44, 50, 58, 65, 73, 79, 87, 96, 102, 110, 118, 125
 # 78-81 (meurtre du garçon, mur et trésor) ; p.151 cite « [الكهف: 73 _ 77] »
 # confirmant la plage de la leçon 20 imprimée 73-77 = cache 74-78 — CONVERGENCE
 # DOUBLE إعداد+أهداف+NUM, la leçon 20 couvre p.150-156, JAMAIS devinée.
+# +165 : borne leçon 21 tranchée par sondage R521 (kahf-probe-l21.py + rendus
+# image relus par vision : p.164 porte l'إعداد القبلي de la leçon 22 relu sur
+# image « أرجع تفسير الآيات من 82 - 84 من سورة الكهف » (couche texte propre
+# « 82 - 84 », chiffres latins intacts) et p.165 ouvre « أهداف الدرس » avec
+# badge relu sur image « سورة الكهف الآيات: ٨٢ – ٨٤ » (couche texte « 89 -
+# 64 », corruption des chiffres arabes-indiens ٨٢-٨٤) — objectifs « قصة ذي
+# القرنين من خلال آيات القرآن الكريم / ما أعطاه الله لذي القرنين من الملك
+# والوسع / قيمة العدل أساس ملك ذي القرنين » conformes au contenu des āyāt
+# imprimées 82-84 = cache 83-85 (ويسألونك عن ذي القرنين…) ; p.165 cite «
+# [الكهف: 82 _ 84] » et p.171 ouvre أهداف الدرس de la leçon 23 badge « (الكهف:
+# الآيات 85-91) » (couche « 55 - 91 », le 8 lu « 5 », corruption connue
+# +157) ; départ confirmé : badge p.157 relu sur image « سورة الكهف (الآيات:
+# ٧٨ – ٨١) ٢١ » — CONVERGENCE QUINTUPLE badge p.157 + iʿdād qiblī p.164 +
+# badge p.165 + citation p.165 + objectifs leçon 23 p.171, la grille
+# VERSE_RANGE[22] « v82-84 » CONFIRMÉE PAR SONDAGE (imprimé 82-84 = cache
+# 83-85, décalage +1 tranché R511), JAMAIS devinée — la leçon 21 couvre
+# p.157-164, la leçon 22 couvre p.165-170.
 # bornes des annexes (à trancher par sondage quand la leçon 26 sera atteinte)
 ACTIVITES = None   # slot 765
 FIHRIS = None      # slot 766
