@@ -47,7 +47,7 @@ PDF = "/home/z/my-project/content/textbooks-src/tafsir-3-thanawi_text.pdf"
 # Vrais départs (fixes) : leçon i = pages STARTS[i] .. STARTS[i+1]-1
 # p5-9 = matière liminaire (préface, compétences, fihris) — la leçon 1 RÉELLE
 # commence p10 ; leçon 2 ouvre p17 (objectifs sondés R487).
-STARTS = [10, 17, 23, 29, 37, 44, 50, 58, 65, 73, 79, 87, 96, 102, 110, 118, 125]
+STARTS = [10, 17, 23, 29, 37, 44, 50, 58, 65, 73, 79, 87, 96, 102, 110, 118, 125, 132]
 # +96 : borne leçon 13 tranchée par sondage R511 (kahf-probe-l12.py + rendu
 # image p87 « (الآيات: 36-43) » badge 12 et p96 « (الآيات: 44-45) » badge 13)
 # — la leçon 12 couvre p.87-95, JAMAIS devinée.
@@ -65,6 +65,13 @@ STARTS = [10, 17, 23, 29, 37, 44, 50, 58, 65, 73, 79, 87, 96, 102, 110, 118, 125
 # imprimé = cache 57-59 versets de la leçon 17 ; p.125 ouvre « أهداف الدرس »
 # objectifs « صفات الكافرين المعرضين / سعة رحمة الله في تأخير العقوبة »
 # conformes au slot -755) — la leçon 16 couvre p.118-124, JAMAIS devinée.
+# +132 : borne leçon 18 tranchée par sondage R515 (kahf-probe-l18.py, texte
+# brut : p.132 porte « أهداف الدرس (الكهف: الآيات 59-64) » — objectifs « تفاصيل
+# قصة موسى والعبد الصالح / أهمية الرحلة في طلب العلم وآدابها » conformes au
+# slot -756 ; p.133 commentaire de v60 cache « و موسى وهو موسى بن عمران » ;
+# badge p.132 conforme à la grille v59-64 imprimé = cache 60-65, moins un
+# depuis leçon 12, et à la continuité v58→v59) — la leçon 17 couvre p.125-131,
+# JAMAIS devinée.
 # bornes des annexes (à trancher par sondage quand la leçon 26 sera atteinte)
 ACTIVITES = None   # slot 765
 FIHRIS = None      # slot 766
