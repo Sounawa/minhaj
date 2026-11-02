@@ -99,3 +99,10 @@
 [2026-11-02 07:05:13] auto-commit: push échoué — remote: error: Trace: 98150590991bffdf452cb47958bda750eadcb47c1cbfc9acb05b813f6df0a27c        
 remote: error: See https://gh.io/lfs for more information.        
 remote: error: File download/minhaj-fo
+[2026-11-02 09:05:36] superviseur v4 démarré (MAX=3, file=62 livres, battement visible)
+[2026-11-02 09:05:39] auto-commit: push échoué — fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
