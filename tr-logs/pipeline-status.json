@@ -1,9 +1,9 @@
 {
- "ts": 1793630355.1698313,
- "iso": "2026-11-02T14:39:15Z",
+ "ts": 1793631565.467993,
+ "iso": "2026-11-02T14:59:25Z",
  "version": "v4",
  "startedAt": "2026-10-31T15:29:57Z",
- "cycles": 264,
+ "cycles": 284,
  "wakeCount": 0,
  "workers": {
   "active": 0,
@@ -11,16 +11,16 @@
  },
  "remainingDocs": 0,
  "registry": {
-  "hand": 1032,
+  "hand": 1033,
   "llm": 57
  },
  "portal": {
   "state": "FERMÉE",
-  "ts": "2026-11-02T14:32:12Z",
+  "ts": "2026-11-02T14:47:16Z",
   "detail": "bannière de maintenance présente"
  },
  "sourceHunt": {
-  "ts": "2026-11-02T14:17:07Z",
+  "ts": "2026-11-02T14:47:18Z",
   "book": "tafsir-5ep",
   "docId": "pdf-mut23h3c-709",
   "titleFr": "Sourate al-Isrāʾ, verset 1",
@@ -30,11 +30,11 @@
   "detail": "direct=404"
  },
  "lastAutoCommit": {
-  "ts": "2026-11-02T14:37:12Z",
-  "subject": "auto(pipeline): 2026-11-02 14:37 — superviseur v4 (battement, registre, chasse)"
+  "ts": "2026-11-02T14:57:22Z",
+  "subject": "auto(pipeline): 2026-11-02 14:57 — superviseur v4 (battement, registre, chasse)"
  },
  "lastPush": {
-  "ts": "2026-11-02T14:37:15Z",
+  "ts": "2026-11-02T14:57:25Z",
   "ok": true
  }
 }
