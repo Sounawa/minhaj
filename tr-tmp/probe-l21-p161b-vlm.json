@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "كَذِرْ، فَقَالَ التُّورَاتِيُّونَ فِي الَّذِينَ هَادُوا: «مَا أَخْبَرَنَا مُوسَىٰ أَنَّ لِلشَّيْطَانِ بَيْتًا، مَا لَهُ إِلَّا الْأَعْدَاءُ مِنَ الَّذِينَ كَفَرُوا، وَفِي الَّذِينَ آمَنُوا قَالَ: لَا مَسَاكَنَ لَهُ فِيهِمْ». [إِحْصَاءُ السُّبُولِ: 6/16]",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793645414,
+  "id": "202611030250077e826176a1414c03",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202611030250077e826176a1414c03",
+  "usage": {
+    "completion_tokens": 197,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 4301,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4498
+  }
+}
