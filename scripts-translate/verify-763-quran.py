@@ -10,8 +10,10 @@ p.189-193 ne glossant que les āyāt cache 102-105). Les quatre āyāt sont
 rendues du cache (présence vérifiée, le guillemet fermant parasite noyé dans
 le cache 105 étant normalisé — « vaines». » → « vaines. », déclaré) ; les
 āyāt 1-101 (leçons 739-762, cache 100-101 réunies par le fendo warš à la zone
-finale de la leçon 24) et la cache 106 (leçon suivante) sont interdites de
-double rendu ; le rasm nu du cache interdit au corps (0 arabe — FR-seule)."""
+finale de la leçon 24) sont interdites de double rendu ; la cache 106 est
+RÉUNIE au (101) par le fendo warš (R529 : la boîte de la leçon 26 ouvre (102) sur
+la cache 107, R528) — son texte fait partie du rendu du (101) ; le rasm nu du
+cache interdit au corps (0 arabe — FR-seule)."""
 import json
 import re
 
@@ -34,7 +36,8 @@ for frag in [
     "convergence quadruple",
     "la grille « v102-105 » CONFIRMÉE PAR SONDAGE",
     "DÉCOUVERTE DE DÉCALAGE",
-    "la leçon 25 rend les āyāt 102 à 105 du cache aux numéros imprimés (98)-(101)",
+    "la leçon 25 rend les āyāt 102 à 106 du cache aux numéros imprimés (98)-(101), le numéro imprimé (101) réunissant",
+    "fendo warš [R529, amendé",
     "fendo de la numérotation warš déclaré",
     "Les objectifs de la leçon",
     "Le tamhīd",
@@ -60,11 +63,11 @@ for frag in [
 cache = json.load(open("scripts-translate/quran-cache.json", encoding="utf-8"))
 fr18 = {n: t for n, t in cache["18"]["fr"]}
 rendus = []
-for n in (102, 103, 104, 105):
+for n in (102, 103, 104, 105, 106):
     t = fr18[n]
     if n == 105:
         t = t.replace("»", "")  # guillemet fermant parasite du cache normalisé (déclaré)
-    rendus.append(t)
+    rendus.append(t)  # cache 106 : réunie au (101) par le fendo warš (R529)
 rendus_norm = [r.replace("'", "’").replace(" ", "") for r in rendus]
 compact = norm.replace(" ", "")
 for r in rendus_norm:
@@ -83,7 +86,7 @@ interdits = [
     (fr18[99].replace("'", "’"), 99),
     (fr18[100].replace("'", "’"), 100),
     (fr18[101].replace("'", "’"), 101),
-    (fr18[106].replace("'", "’"), 106),
+    (fr18[107].replace("'", "’"), 107),
     (fr18[110].replace("'", "’"), 110),
 ]
 for interdit, n in interdits:
@@ -167,5 +170,6 @@ if errors:
     for e in errors:
         print("  -", e)
     raise SystemExit(1)
-print("VERIFY PASS — leçon 763 : 4 rendus cache 102-105 présents, numéros imprimés (98)-(101),",
-      "interdits absents (cache 99-101, 106, 110),", len(contenu), "contrôles de contenu, 0 arabe au corps.")
+print("VERIFY PASS — leçon 763 : 5 rendus cache 102-106 présents ((101) = fendo 105+106, R529),",
+      "numéros imprimés (98)-(101), interdits absents (cache 99-101, 107, 110),", len(contenu),
+      "contrôles de contenu, 0 arabe au corps.")
