@@ -48,7 +48,7 @@ PDF = "/home/z/my-project/content/textbooks-src/tafsir-3-thanawi_text.pdf"
 # p5-9 = matière liminaire (préface, compétences, fihris) — la leçon 1 RÉELLE
 # commence p10 ; leçon 2 ouvre p17 (objectifs sondés R487).
 STARTS = [10, 17, 23, 29, 37, 44, 50, 58, 65, 73, 79, 87, 96, 102, 110, 118, 125,
-          132, 142, 150, 157, 165, 171, 179, 188, 195]
+          132, 142, 150, 157, 165, 171, 179, 188, 195, 202]
 # +96 : borne leçon 13 tranchée par sondage R511 (kahf-probe-l12.py + rendu
 # image p87 « (الآيات: 36-43) » badge 12 et p96 « (الآيات: 44-45) » badge 13)
 # — la leçon 12 couvre p.87-95, JAMAIS devinée.
@@ -186,7 +186,51 @@ STARTS = [10, 17, 23, 29, 37, 44, 50, 58, 65, 73, 79, 87, 96, 102, 110, 118, 125
 # (le تمهيد de p.195 mentionne le البحر مدادا des كلمات = cache 109 ET
 # « والثاني بالرسول ومهمته » = cache 110 : la (105) pourrait réunir 109+110) — à
 # trancher PAR LE CONTENU, jamais deviné.
-# bornes des annexes (à trancher par sondage quand la leçon 26 sera atteinte)
+# +202 : borne leçon 26 tranchée par sondage R527 (kahf-probe-l26.py texte
+# brut p.195-212 + rendus image 300-600 dpi relus par VLM glm-5v-turbo, slot
+# 764) : badge p.195 relu sur crop 500 dpi « سورة الكهف (الآيات: ١٠٢ – ١٠٥) »
+# + leçon ٢٦ (couche texte « 109 - 105 », corruption des chiffres connue) —
+# la grille VERSE_RANGE[26] « v102-105 » CONFIRMÉE PAR SONDAGE ; p.201 porte
+# le التقويم de la leçon 26 (3 questions ciblant les āyāt du leçon : « بماذا
+# ضرب الله المثل لسعة كلماته » = cache 109, « بم يستعد المؤمن للقاء ربه » =
+# cache 110) + الاستثمار (استقرئ الآيات + شروط قبول العمل + أرجع دروسك
+# السابقة) — la p.202 OUvre l'annexe « أنشطة الإثراء والتعمق » (أهداف
+# الأنشطة sur les méthodes d'étude, نصّ عبارات التفصيل والتركيب — style
+# d'annexe, aucune أهداف الدرس entre p.196 et p.212, annexe slot 765) —
+# CONVERGENCE QUADRUPLE badge p.195 + iʿdād p.194 + médaillons p.195 +
+# تقويم p.201, JAMAIS devinée — la leçon 26 couvre p.195-201, DERNIÈRE
+# LEÇON du tafsīr ; les p.202+ = أنشطة الإثراء (slot 765), puis المعجم
+# (biographies p.208+), المصادر — bornes à trancher quand leurs slots
+# seront revendiqués.
+# DÉCALAGE TRANCHÉ PAR LE CONTENU (R527, slot 764) : le décalage +4 tient
+# sur (102)-(104) et la (105) RÉUNIT cache 109+110 — PREUVES : (a) médaillons
+# p.195 relu sur crop 400 dpi par le protocole calibré sur p.188 (le VLM
+# glm-5v-turbo lit EXACTEMENT 98/99/100/101 sur la boîte de la leçon 25,
+# R526) → boîte p.195 = médaillons 102/103/104/105 (4 médaillons) + REF
+# [الكهف: 102-105] ; (b) 5 āyāt cache restantes inédites (106-110 : la
+# cache 1-105 déjà rendue leçons 739-763) sous 4 médaillons → UNE réunion ;
+# (c) le تمهيد p.195 « لتختم السورة بأمرين موجهين للنبي... الأول يتعلق
+# بكلمات الله والثاني بالرسول ومهمته. وتختم برسم سبيل النجاة لمن يريد لقاء
+# الله » = cache 109 (قل لو كان البحر مدادا لكلمات ربي) + cache 110 (قل
+# إنما أنا بشر مثلكم... فمن كان يرجو لقاء ربه) SOUS LA (105) qui clôt la
+# sūra ; (d) le tafsīr أولا (جزاء المؤمنين المصدقين) cite cache 107
+# (إنا الذين آمنوا وعملوا الصالحات... fragment عَنْهَا relu = cache 108) et
+# glose خالدين/الحول/لا يريدون p.197 = cache 108 ; ثانيا (سعة كلمات الله)
+# cite cache 109 + قراءات لكلماتِي/لربي + جناس مدادا/ممدا p.200 ; ثالثا
+# (توحيد الله والعمل الصالح) cite cache 110 + جُنْدُب بن زُهير العامري +
+# طاوس بن كيسان (أسباب النزول de فليرجو لقاء ربه) ; (e) le شرح p.196
+# glossant positionnellement الفردوس (107) → لا يحبون ولا يرضون (108,
+# يَبْغُونَ) → مدادا حبرا للكتابة به (109) → يرجو يؤمن ويوقن (110) EN ORDRE
+# MONOTONE = la boîte court cache 106→110 ; (f) AUCUNE glose de la cache
+# 106 dans le tafsīr (elle clôt la phrase de la cache 105, leçon 25) mais
+# elle OUvre la boîte sous (102) — le تباين « في مقابل ما تقدم من ذكره
+# لجزاء الأخسرين أعمالا الكافرين » p.196-197 renvoie à la leçon 25. MAPPING
+# FINAL : (102)=cache 106 (ذالك جزاؤهم جهنم), (103)=cache 107 (إنا الذين
+# آمنوا... نزلا), (104)=cache 108 (خالدين فيها لا يبغون عنها حولا),
+# (105)=cache 109+110 RÉUNIES (قل لو كان البحر مدادا + قل إنما أنا بشر) —
+# décalage +4 maintenu sur (102)-(104), la réunion de la (105) clôturant
+# la sūra au dernier médaillon — la leçon 26 rend la cache 106-110 (cinq
+# āyāt), JAMAIS deviné, tranché par le contenu.
 ACTIVITES = None   # slot 765
 FIHRIS = None      # slot 766
 SOURCES = None     # slot 767
