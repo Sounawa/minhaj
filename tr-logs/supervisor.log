@@ -113,3 +113,10 @@ and the repository exists.
 [2026-11-02 09:35:48] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
 
 [2026-11-02 10:15:24] superviseur v4 démarré (MAX=3, file=62 livres, battement visible)
+[2026-11-02 16:26:09] superviseur v4 démarré (MAX=3, file=62 livres, battement visible)
+[2026-11-02 16:26:14] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-02 16:36:15] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-02 16:46:18] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
