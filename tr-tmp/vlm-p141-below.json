@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1 - ما القرآن الذي ذُكر في قوله تعالى: (لَقَدْ أَنزَلْنَا إِلَيْكُمْ)؟\n2 - ما المكتبة التي من خلالها الخدمة المستفيدة؟\n3 - أَحِصِ عدد ملايين الكلمات الإنجيلية: رُشَى – قُرُوء – قُرُوءَات.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793632876,
+  "id": "20261102232113cc354319aa9d4558",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261102232113cc354319aa9d4558",
+  "usage": {
+    "completion_tokens": 106,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1512,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1618
+  }
+}

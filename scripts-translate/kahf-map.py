@@ -47,7 +47,7 @@ PDF = "/home/z/my-project/content/textbooks-src/tafsir-3-thanawi_text.pdf"
 # Vrais départs (fixes) : leçon i = pages STARTS[i] .. STARTS[i+1]-1
 # p5-9 = matière liminaire (préface, compétences, fihris) — la leçon 1 RÉELLE
 # commence p10 ; leçon 2 ouvre p17 (objectifs sondés R487).
-STARTS = [10, 17, 23, 29, 37, 44, 50, 58, 65, 73, 79, 87, 96, 102, 110, 118, 125, 132]
+STARTS = [10, 17, 23, 29, 37, 44, 50, 58, 65, 73, 79, 87, 96, 102, 110, 118, 125, 132, 142]
 # +96 : borne leçon 13 tranchée par sondage R511 (kahf-probe-l12.py + rendu
 # image p87 « (الآيات: 36-43) » badge 12 et p96 « (الآيات: 44-45) » badge 13)
 # — la leçon 12 couvre p.87-95, JAMAIS devinée.
@@ -72,6 +72,20 @@ STARTS = [10, 17, 23, 29, 37, 44, 50, 58, 65, 73, 79, 87, 96, 102, 110, 118, 125
 # badge p.132 conforme à la grille v59-64 imprimé = cache 60-65, moins un
 # depuis leçon 12, et à la continuité v58→v59) — la leçon 17 couvre p.125-131,
 # JAMAIS devinée.
+# +142 : borne leçon 19 tranchée par sondage R517 (kahf-probe-l19.py + rendu
+# image relu p.141-143, texte brut : p.142 porte « سورة الكهف (الآيات: 65-72) »
+# (couche texte « 65 - 295 », fin corrompue, début « 65 » propre) + « أهداف
+# الدرس » — objectifs « قواعد الصحبة وآداب التعلم خلال قصة موسى والخضر »
+# conformes au slot -757 ; l'iʿdād qiblī de p.141 porte le NUM « أرجع تفسير
+# الآيات: 65 – 72 من سورة الكهف » (couche texte « 5 - 72 », le « 6 » perdu,
+# relu sur image zoomée) ; p.143 cite « [الكهف: 65 _ 72] » (couche texte
+# « 65 172 », tiret lu « 1 ») ; p.146 tafsir clos sur « لا تواخذني » = imprimé
+# 72 = cache 73, et p.150 ouvre أهداف الدرس (leçon 20, intro citant le refus
+# du poisson puis le سكّت de la navire) — CONVERGENCE QUADRUPLE badge p.142 +
+# iʿdād qiblī p.141 + citation p.143 + contenu, la grille VERSE_RANGE[19]
+# « v65-72 » CONFIRMÉE PAR SONDAGE (imprimé 65-72 = cache 66-73, décalage +1
+# tranché R511), JAMAIS devinée — la leçon 18 couvre p.132-141, la leçon 19
+# couvre p.142-149.
 # bornes des annexes (à trancher par sondage quand la leçon 26 sera atteinte)
 ACTIVITES = None   # slot 765
 FIHRIS = None      # slot 766
