@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Based on the image provided, here is the transcription of the requested information:\n\n**Header Badge/Line:**\n*   **Lesson Number (Badge):** **20** (Western digits)\n*   **Verse Range Text:** `(الآيات: ٧٣ – ٨٨)`\n*   **Exact Arabic Digits Transcribed:** **٧٣** (73) and **٨٨** (88)\n*   **Numerical Verse Range:** 73 – 88\n\n**First Line Under Header:**\n*   **Text:** **أهداف الدرس**\n\n**Numbered Objectives:**\nThe image cuts off immediately after the \"أهداف الدرس\" header, and **no numbered objectives are visible** in the provided image.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793639014,
+  "id": "202611030103299967dfb109114c67",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202611030103299967dfb109114c67",
+  "usage": {
+    "completion_tokens": 159,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 3104,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3263
+  }
+}

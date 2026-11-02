@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Based on the visual analysis of the provided images and the specific characteristics of the Arabic-Indic digits described:\n\n**(1) First Image (Left Part):**\nThe two-digit number is **٧٧**.\n*   **Digit 1:** ARABIC-INDIC DIGIT SEVEN (U+06F7) – Characterized by the V-shape with a horizontal crossbar.\n*   **Digit 2:** ARABIC-INDIC DIGIT SEVEN (U+06F7) – Identical to the first digit.\n\n**(2) Second Image (Right Part):**\nThe two-digit number is **٧٣**.\n*   **Digit 1:** ARABIC-INDIC DIGIT SEVEN (U+06F7).\n*   **Digit 2:** ARABIC-INDIC DIGIT THREE (U+06F3) – Characterized by the \"two teeth\" or humps at the top and a curved tail at the bottom, distinguishing it from the heart-shaped five (٥).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793639055,
+  "id": "202611030104113de4715717ad44d1",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202611030104113de4715717ad44d1",
+  "usage": {
+    "completion_tokens": 218,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2006,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2224
+  }
+}

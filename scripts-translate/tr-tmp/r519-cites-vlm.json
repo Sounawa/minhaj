@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1. [المسند: 114]\n2. [الصحيح لابن حزم: 3 / 240]\n3. [القرآن - سورة الكهف - بَقِيَّةٌ فَاطْلُبْ مَصْرِيًّا.. حديث 4449]\n4. [حَجَّةُ الْإِسْلَامِ: 9 / 283]\n5. [حديث الصحيح من مسود عوامل السلك، حديث 3220]\n6. [لاَحِمَةُ الْقُرْآن: 6 / 15]\n7. [ور - باب إنما نَشَأَ في الْأَصْلِ، حديث 6295]\n8. [مُعْجَزَةُ الْقُرْآن: 21 / 484]",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793639808,
+  "id": "2026110301163926663f66542642eb",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "2026110301163926663f66542642eb",
+  "usage": {
+    "completion_tokens": 213,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8518,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8731
+  }
+}
