@@ -48,7 +48,7 @@ PDF = "/home/z/my-project/content/textbooks-src/tafsir-3-thanawi_text.pdf"
 # p5-9 = matière liminaire (préface, compétences, fihris) — la leçon 1 RÉELLE
 # commence p10 ; leçon 2 ouvre p17 (objectifs sondés R487).
 STARTS = [10, 17, 23, 29, 37, 44, 50, 58, 65, 73, 79, 87, 96, 102, 110, 118, 125,
-          132, 142, 150, 157, 165, 171]
+          132, 142, 150, 157, 165, 171, 179, 188]
 # +96 : borne leçon 13 tranchée par sondage R511 (kahf-probe-l12.py + rendu
 # image p87 « (الآيات: 36-43) » badge 12 et p96 « (الآيات: 44-45) » badge 13)
 # — la leçon 12 couvre p.87-95, JAMAIS devinée.
@@ -130,6 +130,32 @@ STARTS = [10, 17, 23, 29, 37, 44, 50, 58, 65, 73, 79, 87, 96, 102, 110, 118, 125
 # badge p.165 + badge p.171 + objectifs p.165 et p.171, la grille
 # VERSE_RANGE[23] « v85-91 » CONFIRMÉE PAR SONDAGE (imprimé 85-91 = cache
 # 86-92), JAMAIS devinée — la leçon 22 couvre p.165-170.
+# +179 et +188 : bornes leçons 24-25 tranchées par sondage R523
+# (kahf-probe-l24.py texte brut + rendus image 200 dpi relu par vision, slot
+# 762) : p.178 porte l'iʿdād qiblī de la leçon 24 relu sur image « أرجع تفسير
+# الآيات من 92 - 97 من سورة الكهف وأجب عن... » (couche texte « 97 ل نع », fin
+# de ligne, le NUM 92-97 relu sur crop) et p.179 ouvre « أهداف الدرس » avec
+# badge relu sur image « 24 — سورة الكهف (الآيات: 92 - 97) » — objectifs
+# « عمل ذي القرنين لبناء الردم / أهمية التعاون واكتمال الجهد / العمل الصالح
+# وتجنب الإفساد » et تمهيد « وصول ذي القرنين إلى القوم الذين دون السدين,
+# فساد يأجوج ومأجوج, طلب الردم » conformes au contenu des āyāt imprimées
+# 92-97 = cache 93-98 (بين السدين، زبر الحديد، دكاء) ; p.180-186 commentaire
+# (زبر الحديد/نحاس, أفرغ عليه قطرا, فما استطاعوا أن يظهره, دكاء, ينفقون) ;
+# ANOMALIE DOCUMENTÉE : la boîte des āyāt de p.179 porte en coquille du livre
+# un fragment de sūrat an-Nabāʾ (ألم نجعل الأرض مهادا... وجعلنا سراجا وهاجا)
+# avec cercles 92/93/94 CORRECTS pour la numérotation imprimée — coquille du
+# muṣḥaf crop, les cercles confirmant la plage imprimée 92-97 ; p.187 porte
+# l'iʿdād qiblī de la leçon 25 NUM relu sur image « أرجع تفسير الآيات من 98 -
+# 101 » et p.188 ouvre « أهداف الدرس » avec badge relu sur image « 25 — سورة
+# الكهف (الآيات: 98 - 101) », boîte clôturée par « [الكهف: 98 - 101] » imprimé,
+# objectifs « جزاء المستهزئين بآيات الله / الإخلاص و الرياء » conformes au
+# cache 99-102 (جهنم العرض، الأخسرين أعمالا) — CONVERGENCE QUADRUPLE badge
+# p.179 + iʿdād p.178 + objectifs/تمهيد + commentaire, la grille
+# VERSE_RANGE[24] « v92-97 » CONFIRMÉE PAR SONDAGE (imprimé 92-97 = cache
+# 93-98, décalage +1 tranché R511), JAMAIS devinée — la leçon 23 couvre
+# p.171-178, la leçon 24 couvre p.179-187, la leçon 25 ouvre p.188. NB :
+# badge leçon 26 p.195 couche texte « 105 - 109 » à revoir sur image (grille
+# « v102-105 ») — au prochain ouvrier du slot 764.
 # bornes des annexes (à trancher par sondage quand la leçon 26 sera atteinte)
 ACTIVITES = None   # slot 765
 FIHRIS = None      # slot 766
