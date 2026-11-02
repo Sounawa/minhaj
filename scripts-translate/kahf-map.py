@@ -48,7 +48,7 @@ PDF = "/home/z/my-project/content/textbooks-src/tafsir-3-thanawi_text.pdf"
 # p5-9 = matière liminaire (préface, compétences, fihris) — la leçon 1 RÉELLE
 # commence p10 ; leçon 2 ouvre p17 (objectifs sondés R487).
 STARTS = [10, 17, 23, 29, 37, 44, 50, 58, 65, 73, 79, 87, 96, 102, 110, 118, 125,
-          132, 142, 150, 157, 165, 171, 179, 188]
+          132, 142, 150, 157, 165, 171, 179, 188, 195]
 # +96 : borne leçon 13 tranchée par sondage R511 (kahf-probe-l12.py + rendu
 # image p87 « (الآيات: 36-43) » badge 12 et p96 « (الآيات: 44-45) » badge 13)
 # — la leçon 12 couvre p.87-95, JAMAIS devinée.
@@ -153,13 +153,47 @@ STARTS = [10, 17, 23, 29, 37, 44, 50, 58, 65, 73, 79, 87, 96, 102, 110, 118, 125
 # p.179 + iʿdād p.178 + objectifs/تمهيد + commentaire, la grille
 # VERSE_RANGE[24] « v92-97 » CONFIRMÉE PAR SONDAGE (imprimé 92-97 = cache
 # 93-98, décalage +1 tranché R511), JAMAIS devinée — la leçon 23 couvre
-# p.171-178, la leçon 24 couvre p.179-187, la leçon 25 ouvre p.188. NB :
-# badge leçon 26 p.195 couche texte « 105 - 109 » à revoir sur image (grille
-# « v102-105 ») — au prochain ouvrier du slot 764.
+# p.171-178, la leçon 24 couvre p.179-187, la leçon 25 ouvre p.188.
+# +195 : borne leçon 25 tranchée par sondage R526 (kahf-probe-l25.py texte
+# brut + rendus image 150/300/500 dpi relus par vision, slot 763) :
+# p.194 porte l'iʿdād qiblī de la leçon 26 NUM relu sur image « راجع تفسير
+# الآيات من 102 - 105 » (couche texte miroir « 201 - 501 » = 102-105 inversés)
+# et p.195 ouvre « أهداف الدرس » avec badge relu sur image « سورة الكهف
+# (الآيات: 102 – 105) » (couche texte « 109 - 105 », le ٠٢ lu « ٩ », corruption
+# connue) — objectifs « جزاء الذي أعدّه الله لأولياء المؤمنين / الاستعداد
+# للقاء الله / سعة كلمات الله في المثل » et تمهيد « أمران موجّهان للنبي :
+# الأول بكلمات الله والثاني بالرسول ومهمته، لتختم السورة » conformes aux āyāt
+# imprimées 102-105 = cache 106-110 (الجزاء جهنم/الفردوس، البحر مداد، قل إنما
+# أنا بشر) ; p.194 استثمار clôturant la leçon 25 (Jundub + حديث لا ينفع عمل)
+# — CONVERGENCE QUADRUPLE badge p.188 + iʿdād p.194 + badge p.195 + contenu,
+# la grille VERSE_RANGE[25] « v98-101 » CONFIRMÉE PAR SONDAGE, JAMAIS
+# devinée — la leçon 25 couvre p.188-194, la leçon 26 ouvre p.195.
+# DÉCOUVERTE DE DÉCALAGE (R526, slot 763) : la boîte des āyāt de p.188 (lue
+# sur crops 300/500 dpi) OUvre sur « أَفَحَسِبَ الَّذِينَ كَفَرُوا... إِنَّا
+# أَعْتَدْنَا » sous médaillon (98) = cache 102, et le commentaire p.189-193
+# glose EXCLUSIVEMENT les āyāt cache 102 (قراءات أفحسب/عبادي/نُزُلًا p.190),
+# 103 (قل هل ننبئكم بالأخسرين p.190-191), 104 (ضل سعيهم... يحسبون p.191), 105
+# (أولئك الذين كفروا... فلا نقيم لهم وزنا + حديث البخاري باب « أولئك الذين »
+# p.191-193) — AUCUNE glose des cache 100-101 dans la leçon 25 : le décalage
+# imprimé→cache passe donc de +2 (fin de la leçon 24, R523) à +4 (médaillon
+# (98) = cache 102) — la leçon 25 rend la cache 102-105 aux numéros imprimés
+# (98)-(101) ; les āyāt cache 100-101 (عرضنا جهنم / غطاء عن ذكري) sont
+# réunies par la numérotation warš dans la zone de la leçon 24 (gloses
+# « يومئذ/عرضنا جهنم » p.185-186 documentées R523, réservées puis couvertes
+# par le numéro (97) de la leçon 24) — aucun vide ni doublon, fendo warš
+# déclaré. NB au prochain ouvrier du slot 764 (leçon 26) : le décalage +4
+# tient-il sur toute la zone (102)-(105) = cache 106-109, ou croît-il encore
+# (le تمهيد de p.195 mentionne le البحر مدادا des كلمات = cache 109 ET
+# « والثاني بالرسول ومهمته » = cache 110 : la (105) pourrait réunir 109+110) — à
+# trancher PAR LE CONTENU, jamais deviné.
 # bornes des annexes (à trancher par sondage quand la leçon 26 sera atteinte)
 ACTIVITES = None   # slot 765
 FIHRIS = None      # slot 766
 SOURCES = None     # slot 767
+# NB R526 : après la leçon 26 (p.195-200, dernière leçon du tafsīr), les
+# p.201+ portent التقويم النهائي / أنشطة إثرائية / المعجم / المصادر (annexes
+# slots 765-767) — bornes à trancher par sondage quand leurs slots seront
+# revendiqués.
 
 # slots tafsir-5ep dans l'ordre (739..764 = leçons 1..26, 765 activités,
 # 766 fihris, 767 sources)
