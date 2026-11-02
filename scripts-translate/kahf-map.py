@@ -48,7 +48,7 @@ PDF = "/home/z/my-project/content/textbooks-src/tafsir-3-thanawi_text.pdf"
 # p5-9 = matière liminaire (préface, compétences, fihris) — la leçon 1 RÉELLE
 # commence p10 ; leçon 2 ouvre p17 (objectifs sondés R487).
 STARTS = [10, 17, 23, 29, 37, 44, 50, 58, 65, 73, 79, 87, 96, 102, 110, 118, 125,
-          132, 142, 150, 157, 165]
+          132, 142, 150, 157, 165, 171]
 # +96 : borne leçon 13 tranchée par sondage R511 (kahf-probe-l12.py + rendu
 # image p87 « (الآيات: 36-43) » badge 12 et p96 « (الآيات: 44-45) » badge 13)
 # — la leçon 12 couvre p.87-95, JAMAIS devinée.
@@ -120,6 +120,16 @@ STARTS = [10, 17, 23, 29, 37, 44, 50, 58, 65, 73, 79, 87, 96, 102, 110, 118, 125
 # VERSE_RANGE[22] « v82-84 » CONFIRMÉE PAR SONDAGE (imprimé 82-84 = cache
 # 83-85, décalage +1 tranché R511), JAMAIS devinée — la leçon 21 couvre
 # p.157-164, la leçon 22 couvre p.165-170.
+# +171 : borne leçon 22 tranchée par sondage R522 (kahf-probe-l22.py texte
+# brut p.158-180 + badges relus sur rendus image 3,2× par la présente passe :
+# p.165 badge relu « سورة الكهف : الآيات 82 – 84 » badge 22 (converge avec la
+# sonde indépendante du R521 — même borne +165) et p.171 badge relu « سورة
+# الكهف (الآيات) : 85 – 91 » badge 23, objectifs « تفاصيل أخرى من قصة ذي
+# القرنين / أهمية الصالح والإصلاح في الأرض » conformes aux āyāt 85-91 (les
+# deux levers et le milieu, le peuple de Gog-Magog à venir) — CONVERGENCE
+# badge p.165 + badge p.171 + objectifs p.165 et p.171, la grille
+# VERSE_RANGE[23] « v85-91 » CONFIRMÉE PAR SONDAGE (imprimé 85-91 = cache
+# 86-92), JAMAIS devinée — la leçon 22 couvre p.165-170.
 # bornes des annexes (à trancher par sondage quand la leçon 26 sera atteinte)
 ACTIVITES = None   # slot 765
 FIHRIS = None      # slot 766
