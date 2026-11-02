@@ -67,3 +67,7 @@ backup-tour/*.bdl
 backup-tour/*.tar.gz
 sources/
 download/*.bundle
+
+# bundles de sécurité locaux (trop gros pour GitHub, >100 Mo — préservés sur disque)
+download/minhaj-*.bdl
+download/minhaj-*.bundle

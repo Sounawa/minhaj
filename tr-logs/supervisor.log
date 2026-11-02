@@ -95,3 +95,4 @@
 
 [2026-11-01 12:28:17] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
 
+[2026-11-02 06:54:29] superviseur v4 démarré (MAX=3, file=62 livres, battement visible)
