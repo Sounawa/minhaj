@@ -194,14 +194,27 @@ STARTS = [10, 17, 23, 29, 37, 44, 50, 58, 65, 73, 79, 87, 96, 102, 110, 118, 125
 # le التقويم de la leçon 26 (3 questions ciblant les āyāt du leçon : « بماذا
 # ضرب الله المثل لسعة كلماته » = cache 109, « بم يستعد المؤمن للقاء ربه » =
 # cache 110) + الاستثمار (استقرئ الآيات + شروط قبول العمل + أرجع دروسك
-# السابقة) — la p.202 OUvre l'annexe « أنشطة الإثراء والتعمق » (أهداف
-# الأنشطة sur les méthodes d'étude, نصّ عبارات التفصيل والتركيب — style
-# d'annexe, aucune أهداف الدرس entre p.196 et p.212, annexe slot 765) —
-# CONVERGENCE QUADRUPLE badge p.195 + iʿdād p.194 + médaillons p.195 +
-# تقويم p.201, JAMAIS devinée — la leçon 26 couvre p.195-201, DERNIÈRE
-# LEÇON du tafsīr ; les p.202+ = أنشطة الإثراء (slot 765), puis المعجم
-# (biographies p.208+), المصادر — bornes à trancher quand leurs slots
-# seront revendiqués.
+# السابقة) — la p.202 ouvre l'annexe « أنشطة التثبيت والتعمق » (badge relu
+# image 150 dpi R529, la couche OCR portant « والكعم التثييت أنشاحة »
+# corrompue ; sous-badge « أهداف الأنشطة » — style d'annexe, aucune
+# أهداف الدرس entre p.196 et p.212) — CONVERGENCE QUADRUPLE badge p.195 +
+# iʿdād p.194 + médaillons p.195 + تقويم p.201, JAMAIS devinée — la leçon 26
+# couvre p.195-201, DERNIÈRE LEÇON du tafsīr.
+# R529 (annexes sondées, badges relus image 150 dpi, OCR absent/garanti) :
+#   765 أنشطة التثبيت والتعمق p.202-207 (النشاط الأول p.203, الثاني p.204,
+#       الثالث p.205, الرابع p.206 + أنشطة الإعداد p.206 + مرحلة العرض
+#       والاستثمار p.207) — grille portail « Activités de consolidation
+#       et de soutien » ;
+#   766 فهرس الأعلام p.208-213 (badge relu image, la couche OCR ne porte
+#       AUCUN titre — biographies : ابن أبي السعود، ابن البري، ابن الجوزي،
+#       ابن مجاهد، ابن عبد البر، ابن عبد الحكم، ابن العربي، أبو بكر بن
+#       العربي، نصر القشيري، الجوهري، النحاس، هارون بن موسى) — grille
+#       portail « Index des figures citées » ;
+#   767 فهرس المصادر والمراجع p.214-222 (badge relu image ; liste
+#       bibliographique p.214-221 + tableau كفايات تدريس المادة p.222 avec
+#       les plages « سورة الكهف (الآيات ١-٥)/(٦-٩)/… ») — grille portail
+#       « Index des sources et références » ; p.223-224 vierges (fin du
+#       manuel 224 p.).
 # DÉCALAGE TRANCHÉ PAR LE CONTENU (R527, slot 764) : le décalage +4 tient
 # sur (102)-(104) et la (105) RÉUNIT cache 109+110 — PREUVES : (a) médaillons
 # p.195 relu sur crop 400 dpi par le protocole calibré sur p.188 (le VLM
@@ -231,9 +244,24 @@ STARTS = [10, 17, 23, 29, 37, 44, 50, 58, 65, 73, 79, 87, 96, 102, 110, 118, 125
 # décalage +4 maintenu sur (102)-(104), la réunion de la (105) clôturant
 # la sūra au dernier médaillon — la leçon 26 rend la cache 106-110 (cinq
 # āyāt), JAMAIS deviné, tranché par le contenu.
-ACTIVITES = None   # slot 765
-FIHRIS = None      # slot 766
-SOURCES = None     # slot 767
+# R529 : bornes annexes TRANCHÉES (badges relus image 150 dpi, convergence
+# badge + contenu + grille portail — jamais devinées).
+ACTIVITES = (202, 207)   # slot 765 — أنشطة التثبيت والتعمق (badge p.202 relu image)
+FIHRIS = (208, 213)      # slot 766 — فهرس الأعلام (badge p.208 relu image, OCR muet)
+SOURCES = (214, 222)     # slot 767 — فهرس المصادر والمراجع (badge p.214 relu image)
+
+
+def extract_annex(docid: int) -> dict:
+    """Extraction d'une annexe tafsir-5ep (765 activités / 766 fihris al-aʿlām /
+    767 fihris al-maṣādir) — même décodage fix_line que extract()."""
+    lo, hi = {765: ACTIVITES, 766: FIHRIS, 767: SOURCES}[docid]
+    doc = fitz.open(PDF)
+    pages = {}
+    for p in range(lo, hi + 1):
+        raw = doc[p - 1].get_text()
+        pages[p] = {"raw": raw, "fixed": "\n".join(fix_line(l) for l in raw.split("\n"))}
+    return {"docid": docid, "slot": f"pdf-mut23h3c-{docid}",
+            "pages": (lo, hi), "content": pages}
 # NB R526 : après la leçon 26 (p.195-200, dernière leçon du tafsīr), les
 # p.201+ portent التقويم النهائي / أنشطة إثرائية / المعجم / المصادر (annexes
 # slots 765-767) — bornes à trancher par sondage quand leurs slots seront
