@@ -47,7 +47,7 @@ PDF = "/home/z/my-project/content/textbooks-src/tafsir-3-thanawi_text.pdf"
 # Vrais départs (fixes) : leçon i = pages STARTS[i] .. STARTS[i+1]-1
 # p5-9 = matière liminaire (préface, compétences, fihris) — la leçon 1 RÉELLE
 # commence p10 ; leçon 2 ouvre p17 (objectifs sondés R487).
-STARTS = [10, 17, 23, 29, 37, 44, 50, 58, 65, 73, 79, 87, 96, 102, 110, 118]
+STARTS = [10, 17, 23, 29, 37, 44, 50, 58, 65, 73, 79, 87, 96, 102, 110, 118, 125]
 # +96 : borne leçon 13 tranchée par sondage R511 (kahf-probe-l12.py + rendu
 # image p87 « (الآيات: 36-43) » badge 12 et p96 « (الآيات: 44-45) » badge 13)
 # — la leçon 12 couvre p.87-95, JAMAIS devinée.
@@ -60,6 +60,11 @@ STARTS = [10, 17, 23, 29, 37, 44, 50, 58, 65, 73, 79, 87, 96, 102, 110, 118]
 # « أهداف الدرس » p.118, badge « (الكهف: 55-35…) » inversé = (الكهف: 53-55)
 # imprimé = cache 54-56, objectifs « الأمثال / إرسال الرسل / الجدال بالباطل »
 # conformes) — la leçon 15 couvre p.110-117, JAMAIS devinée.
+# +125 : borne leçon 17 tranchée par sondage R514 (sonde textuelle p.122-128 :
+# p.124 porte l'إعداد القبلي de la leçon 16, NUM inversé « 85-65 » = (56-58)
+# imprimé = cache 57-59 versets de la leçon 17 ; p.125 ouvre « أهداف الدرس »
+# objectifs « صفات الكافرين المعرضين / سعة رحمة الله في تأخير العقوبة »
+# conformes au slot -755) — la leçon 16 couvre p.118-124, JAMAIS devinée.
 # bornes des annexes (à trancher par sondage quand la leçon 26 sera atteinte)
 ACTIVITES = None   # slot 765
 FIHRIS = None      # slot 766
