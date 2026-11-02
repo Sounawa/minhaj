@@ -1,9 +1,9 @@
 {
- "ts": 1793625944.4374459,
- "iso": "2026-11-02T13:25:44Z",
+ "ts": 1793626307.9907944,
+ "iso": "2026-11-02T13:31:47Z",
  "version": "v4",
  "startedAt": "2026-10-31T15:29:57Z",
- "cycles": 191,
+ "cycles": 197,
  "wakeCount": 0,
  "workers": {
   "active": 0,
@@ -16,7 +16,7 @@
  },
  "portal": {
   "state": "FERMÉE",
-  "ts": "2026-11-02T13:16:41Z",
+  "ts": "2026-11-02T13:31:47Z",
   "detail": "bannière de maintenance présente"
  },
  "sourceHunt": {
@@ -31,7 +31,7 @@
  },
  "lastAutoCommit": null,
  "lastPush": {
-  "ts": "2026-11-02T13:16:44Z",
+  "ts": "2026-11-02T13:26:46Z",
   "ok": true
  }
 }
