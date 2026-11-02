@@ -47,7 +47,7 @@ PDF = "/home/z/my-project/content/textbooks-src/tafsir-3-thanawi_text.pdf"
 # Vrais départs (fixes) : leçon i = pages STARTS[i] .. STARTS[i+1]-1
 # p5-9 = matière liminaire (préface, compétences, fihris) — la leçon 1 RÉELLE
 # commence p10 ; leçon 2 ouvre p17 (objectifs sondés R487).
-STARTS = [10, 17, 23, 29, 37, 44, 50]
+STARTS = [10, 17, 23, 29, 37, 44, 50, 58, 65, 73, 79]
 # bornes des annexes (à trancher par sondage quand la leçon 26 sera atteinte)
 ACTIVITES = None   # slot 765
 FIHRIS = None      # slot 766
@@ -68,6 +68,10 @@ VERSE_RANGE = {
 # plages 5+ restent celles de la grille, à trancher par sondage à chaque armement.
 # R492 : départs sondés p.37 (leçon 5) et p.44 (leçon 6) — en-têtes أهداف الدرس.
 # R497 : départ de la leçon 7 sondé p.50 — la leçon 6 couvre p.44-49 (v19-20).
+# R500ter/R508 : départs sondés p.58 (leçon 8), p.65 (leçon 9), p.73 (leçon 10) —
+# NUM p.66 «92-82» inversé = 28-29 ; R509 : borne de la leçon 10 tranchée p.78
+# (الإعداد القبلي NUM «23-53» inversé = 32-35) — la leçon 11 ouvre p.79
+# (أهداف الدرس sondé, NUM p.79).
 
 
 def fix_line(s: str) -> str:

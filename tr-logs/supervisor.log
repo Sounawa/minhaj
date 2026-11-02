@@ -106,3 +106,7 @@ fatal: Could not read from remote repository.
 Please make sure you have the correct access rights
 and the repository exists.
 
+[2026-11-02 09:15:42] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-02 09:25:44] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
