@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "L'image fournie est entièrement blanche : aucun texte n'y est visible.\n\nJe ne peux donc transcrire aucun texte عن نافع, aucun renvoi [الموطأ رقم : N], ni l'encadré ترجمة الراوية — il n'y a rien de lisible à transcrire. Merci de fournir l'image réelle du manuel.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793737758,
+  "id": "202611040429142569e5503c854ecc",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611040429142569e5503c854ecc",
+  "usage": {
+    "completion_tokens": 79,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8192,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8271
+  }
+}

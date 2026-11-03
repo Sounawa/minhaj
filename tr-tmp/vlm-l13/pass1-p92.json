@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**(1) Suite du premier hadith :**\n\nنَلَاتُهَا، أَوْ خَمْسًا، أَوْ أَكْثَرَ مِنْ ذَلِكَ بِمَاءِ وَسْدَرٍ، وَاجْعَلْنَ فِي الْآخِرَةِ كَافُورًا، أَوْ شَيْئًا مِنْ كَافُورٍ، فَإِذَا فَرَغْتُنَّ فَأَذِنِّي». فَلَمَّا فَرَغْنَا أَتَيْنَاهُ، فَأَعْطَانَا حُقُّوَهُ، فَقَالَ:\n\n«أَشْعِرْنَهَا إِيَّاهُ». تَغْنَى بِحَقِّهِ: إِزَارَهُ [الموطأ رقم: 595].\n\n**Glose en petit caractère sous le hadith :** (absente de cette page — aucun texte « أشرنا إليها... » n'est visible)\n\n**(2) Deuxième hadith (كفّنوني...)** : absent de cette page. Le deuxième hadith visible est :\n\nـ مَالِكٌ، عَنْ هِشَامٍ بْنِ عُرْوَةَ، عَنْ أَبِيهِ، عَنْ عَائِشَةَ زَوْجِ النَّبِيِّ ﷺ: «أَنَّ رَسُولَ اللهِ ﷺ كُفِّنَ فِي ثَلَاثَةِ أَثْوَابٍ بِيضٍ سَحُولِيَّةٍ، لَيْسَ فِيهِمَا قَمِيصٌ وَلَا عِمَامَةٌ» [الموطأ رقم: 599].\n\n**(3) Troisième citation :**\n\nـ مَالِكٌ، عَنْ نَافِعٍ: «أَنَّ عَبْدَ اللهِ بْنَ عُمَرَ كَانَ لَا يُقْرَأُ فِي الصَّلَاةِ عَلَى الْجَنَازَةِ» [الموطأ رقم: 614].\n\npuis :\n\nـ مَالِكٌ، عَنْ نَافِعٍ: «أَنَّ عَبْدَ اللهِ بْنَ عُمَرَ كَانَ إِذَا صَلَّى عَلَى الْجَنَازَةِ، يُسَلِّمُ حَتَّى يَنْصَرِفَ مِنْ يَلِيهِ» [الموطأ رقم: 620].\n\n**(4) Encadré ترجمة الراوي :**\n\n**ترجمة الراوية**\n\nـ أُمُّ عَطِيَّةُ الْأَنْصَارِيَّةُ رَضِيَ اللهُ عَنْهَا: هي نسيةُ بنْتِ الحارثِ، وقيل: نسيبةُ بنتُ كعب، من فُقهاءِ الصحابةِ، هي الّتي غسلتْ زينبَ بنتَ النبيِّ ﷺ. حدّث عنها محمدُ بنُ سيرينَ، وأخذتْه عنه حَفْصَةُ بنْتُ سيرينَ، وأمُّ شراحيلَ، وعليُّ بنُ الأقمرِ، وعبدُ الملكِ بنُ عمر، وإسماعيلُ بنُ عبدِ الرحمنِ، وعُدَة. عاشتِ إلى حدودِ سنةِ سبعينَ.\n\n**الشرح / الفهم :**\n\nالفَائِدَتَانِ : أَشْعِرْنَهَا: أَعْلِمْنَهَا بِالِانْتِهَاءِ مِنَ الْغُسْلِ.\n\nأَشْعِرْنَهَا إِيَّاهُ: إِجْعَلْنَهُ شِعَارَهَا، أَيِ الثَّوْبَ الَّذِي يُلِي جَسَدَهَا تَبْرُكُا.\n\n⚠️ Remarque : les éléments demandés « hadith كفّنوني », citation « عبد الله بن عمر » comme renvoi séparé, et glose « أشرنا إليها... » ne figurent pas tels quels sur cette page ; je n'ai transcrit que le texte réellement visible.",
+        "reasoning_content": "Note: the image shows hadiths but the question asks for a second hadith \"كفّنوني\" and third \"عبد الله بن عمر\" and a ترجمة الراوي box for أم عطية — none of which appear on this page. Must transcribe only what's visible; state absent items.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793737093,
+  "id": "202611040417489b82829679744aac",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611040417489b82829679744aac",
+  "usage": {
+    "completion_tokens": 1228,
+    "completion_tokens_details": {
+      "reasoning_tokens": 69
+    },
+    "prompt_tokens": 8353,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9581
+  }
+}

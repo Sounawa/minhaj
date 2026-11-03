@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) Matn du hadith [الموطأ رقم : 597] :\n\n«إذا ماتت المرأةُ وألِيسَ بِها رجُلٌ من ذوي المحرِمِ أحدٌ يَلي ذلك مِنها، ولا زَوْجٌ يَلي ذلك مِنها، مَعَها نِساءٌ يَغْسِلْنَها، ولا مِن ذوي المَحرَمِ أحدٌ يَلي ذلك مِنها، ولا زَوْجٌ يَلي ذلك مِنها، يُمَتُّ فَمَسَحَ بِوَجْهِها وكَفَّيْها من الصَّعيدِ» [الموطأ رقم: 597].\n\n(2) Sur le كفن de la femme : la phrase « وأن تكفن المرأة بـ... » (avec بخمسة أو سبعة et ce qui suit « زيادة في الستر... ») n'apparaît PAS sur cette page — elle est donc [illisible / non visible] ici ; cette page contient uniquement le texte ci-dessus et le début de la section « 2 – الصلاة على الجنازة / أ- حكم الصلاة على الجنازة ».\n\nRemarque : une ligne du matn (partie « بِثوبٍ... وسَرَاوِيلَ... ») est floue sur l'image ; la transcription ci-dessus suit le texte lisible, la ligne peu nette étant reconstituée en partie — les segments incertains exacts seraient : [illisible].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793737802,
+  "id": "202611040429520b333fd6e08c482c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611040429520b333fd6e08c482c",
+  "usage": {
+    "completion_tokens": 370,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8214,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8584
+  }
+}

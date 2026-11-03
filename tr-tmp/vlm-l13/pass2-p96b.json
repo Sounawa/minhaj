@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "L'image fournie est entièrement blanche : aucun texte imprimé n'y est visible.\n\nJe ne peux donc transcrire aucun des éléments demandés. Pour (1), (2) et (3), la réponse est : [illisible] — aucune donnée visible dans l'image.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793737836,
+  "id": "20261104043032692ac3d6e6e24be7",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261104043032692ac3d6e6e24be7",
+  "usage": {
+    "completion_tokens": 60,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8259,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8319
+  }
+}

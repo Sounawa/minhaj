@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Je dois être honnête : **l'image fournie ne contient ni h616 ni h618**. Il n'y a aucun isnād complet, aucun matn de hadith avec « إذا صلّيـ... », aucun renvoi rouge numéroté sur cette bande. Je ne peux donc pas transcrire ces éléments — ils ne sont pas présents, et je refuse d'en inventer de mémoire.\n\nVoici la transcription EXACTE de ce qui est réellement visible sur la page (évaluation, puis début d'une citation dans un encadré, coupée par le bord de l'image) :\n\n**التقويم**\n\n1 - أبين كيفية غسل الميت وكفنه.\n\n2 - ما حكم الصلاة على الجنازة؟\n\n3 - أبين كيفية صلاة الجنازة.\n\n**الاستثمار**\n\n— مَالِك، عَنْ نَافِع: أَنَّ عَبْدَ اللهِ بْنَ عُمَرَ قَالَ: «يُصَلِّي عَلَى الْجَنَازَةِ بِغَدِ الْعَصِرِ [illisible — la ligne est coupée par le bas de l'image]\n\n---\n\nConcernant vos questions précises :\n- **fin du matn après إذا صلّيـ** : absent de l'image → [illisible / non visible]\n- **h616 renvoi rouge** : absent de l'image\n- **h618** (صَلَّيْتُ / صُلِّيَ على عمر بن الخطاب...) : absent de l'image\n- **renvoi h618** : absent de l'image\n\nPour répondre à la QUESTION, il faudrait la page contenant les hadiths numérotés 616 et 618 (avec leurs renvois en rouge), pas cette page d'exercices (« التقويم / الاستثمار »).",
+        "reasoning_content": "The image doesn't contain hadiths h616/h618, isnads, or red references. Transcribe what's visible.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793738214,
+  "id": "20261104043643032eb755b6d744b3",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261104043643032eb755b6d744b3",
+  "usage": {
+    "completion_tokens": 463,
+    "completion_tokens_details": {
+      "reasoning_tokens": 27
+    },
+    "prompt_tokens": 8197,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8660
+  }
+}

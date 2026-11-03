@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**(1) En-tête :**\n\nالدرس ١٢\n\nأحكام الجنائز\n\n- غسل الميت وكفنه والصلاة عليه -\n\n**(2) Citation coranique en rouge (transcription du texte imprimé, partiellement dégradé) :**\n\n...خَلَفَ اللهُ عَزَّ وَجَلَّ الإِنْسَانَ وَكَرَّمَهُ، مَحَدَّثًا لَقَوْلِهِ تَعَالَى : ﴿وَلَقَدْ كَرَّمْنَا بَنِي آدَمَ وَحَمَلْنَاهُمْ فِي الْبَرِّ وَالْبَحْرِ وَرَزَقْنَاهُمْ مِنَ الطَّيِّبَاتِ وَفَضَّلْنَاهُمْ عَلَى كَثِيرٍ مِمَّنْ خَلَقْنَا تَفْضِيلًا﴾\n\n[سورة الإسراء الآية : 70]\n\n**(3) Isnād du premier hadith :**\n\nمَالِكٌ، عَنْ أَيُّوبَ بْنِ أَبِي تَمِيمَةَ السَّخْتَيَانِيِّ، عَنْ مُحَمَّدِ بْنِ سِيرِينَ، عَنْ أُمِّ عَطِيَّةَ\n\n*Remarque : la numérotation de l'en-tête est partiellement masquée par le fond rouge ; elle semble être ١٢ (les deux chiffres imprimés se chevauchent, possiblement ١٣).*",
+        "reasoning_content": "Header says الدرس ١٢ (or 13?). Looks like \"١٢\" printed over red... it shows \"الدرس ١٢\"? The image shows \"12\"/\"13\". It appears \"١٢\". I'll transcribe ١٢.\n\nQuranic verse partially degraded; transcribe visible: وَلَا تَقْرَبُوا... actual: \"إِلَّا مُحَصَنَاتٍ... وَلَا تَقْرَبُوا الْأَسْمَاءَ...\" Just transcribe as printed, mark illisible parts.\n\nIsnad: مَالِكٌ، عَنْ أَيُّوبَ بْنِ أَبِي تَمِيمَةَ السَّخْتَيَانِيِّ، عَنْ مُحَمَّدِ بْنِ سِيرِينَ، عَنْ أُمِّ عَطِيَّةَ.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793737739,
+  "id": "20261104042845d43b9edd27c5482c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261104042845d43b9edd27c5482c",
+  "usage": {
+    "completion_tokens": 661,
+    "completion_tokens_details": {
+      "reasoning_tokens": 227
+    },
+    "prompt_tokens": 8208,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8869
+  }
+}
