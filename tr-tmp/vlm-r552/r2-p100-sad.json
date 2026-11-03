@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "حدثنا سعد بن أبي وقاص، قال في مرضه الذي تُوفي فيه: ائتوا لي بلبن، فأصبوا عليه اللبن نصبًا، كما صنع به رسول الله ﷺ [صحيح مسلم]",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793724457,
+  "id": "20261104004731a4207c8f30e943c5",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261104004731a4207c8f30e943c5",
+  "usage": {
+    "completion_tokens": 61,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8138,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8199
+  }
+}

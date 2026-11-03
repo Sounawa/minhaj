@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "الشرح:\n\n**خَمْسٌ ذَوْدٍ:** الذود من الثلاثة إلى العشرة من الإبل لا واحد له من لقطه.\n\n**أَوَاقٍ:** جمع أُوقِيَّة، وهي أربعون درهما من الفضة الخالصة، والدرهم الشرعي خمسون وخمُسا حبة من مطلق الشعير. وهي: تسعة عشر وأمانة غرام بناءً على أن الدرهم يزن 2,975 غرام.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793723819,
+  "id": "202611040036551c2ede6367d24e1d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611040036551c2ede6367d24e1d",
+  "usage": {
+    "completion_tokens": 126,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 4670,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4796
+  }
+}

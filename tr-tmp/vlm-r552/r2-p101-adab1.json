@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "راجِح.\n\nثانيا: من الآداب المتعلقة بالجنازة\n\nهناك مجموعة من الآداب تُجب مراعاتها مع جنازة الميت، وهي:\n\n1 - عدم البكاء والنياحة عليه\n\nيُحرم البكاء المصحوب برفع الصوت والنياحة على الميت ولَطْم الخدود، وشنق الجيوب؛ لما جاء في الموطأ من حديث جابر بن عَبْدِ الله بن ثابت، فاستُرْجِع رسول الله ﷺ وقال: «غُلِبنا عليك يا أَبَا الرَّبِيع»\n\nPage number: [illisible]",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793724489,
+  "id": "20261104004802383f1479988a47e2",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261104004802383f1479988a47e2",
+  "usage": {
+    "completion_tokens": 163,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8321,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8484
+  }
+}

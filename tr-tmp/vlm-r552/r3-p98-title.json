@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "D'après l'image fournie, je ne peux transcrire que ce qui est visible : le bandeau orange montre partiellement **أحكام الجنائز** (les mots après الجنائز ne sont pas visibles dans cette image — ils sont coupés/hors cadre).\n\n- Mots après أحكام الجنائز : **[illisible]** (non visibles)\n- Numéro du الدرس : **[illisible]** (non visible)\n\nSur le bandeau rouge à droite, on distingue partiellement le mot **الدرس** mais son numéro n'est pas lisible.",
+        "reasoning_content": "Image only shows \"أحكام الجنائز\" partially. Header words not visible.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793724973,
+  "id": "202611040056083b17b47990ce4613",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611040056083b17b47990ce4613",
+  "usage": {
+    "completion_tokens": 148,
+    "completion_tokens_details": {
+      "reasoning_tokens": 19
+    },
+    "prompt_tokens": 8209,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8357
+  }
+}

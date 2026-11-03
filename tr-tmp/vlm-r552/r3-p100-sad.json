@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Sur cette image, le hadith de Saʿd avec la formule « ففي صحيح مسلم عن ... » n'apparaît pas : la page visible est un passage du commentaire (Šarḥ az-Zarqānī). Le texte imprimé visible est le suivant :\n\n« بيان دُفنها مَحارَ مَها، ويسدر على قَبرها ويسدر على قَبر بنتُها، ويوضع النعش في موضع القبر، بحيث يكون رأسُ الميت، بارَض موضع قدميه من القبر، ثم يسل من قبل رأسه، ويوضع على شقه الأيمن مَوْجَها إلى القِبْلَة، ويقُول من ينولي إضجاعه: بسم الله وعلى سُنّة رسول الله ﷺ، ويعادل رجليه برُكن، ويجعل التراب خلفه وأمامه، ويحُل عقد كفنه، وبعد الفراغ يُنصب عليه اللَّبْنُ وهو الطوب الذي يُمصنوع من الطين؛ ففي صحيح »\n\n(N.B. : conformément à la consigne, « إضجاعه » est transcrit tel quel, bien que l'imprimé semble porter cette forme ; la phrase est coupée en bas de page au mot « صحيح », et la suite du hadith avec le renvoi [صحيح مسلم] se trouve sur la page suivante, non visible ici.)",
+        "reasoning_content": "This page is Sharh Zarqani commentary, not the hadith text with \"ففي صحيح مسلم عن\". The asked formula isn't visible here. I should transcribe what's visible or state it's not on this page. The page shows commentary text. Answer honestly.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793725037,
+  "id": "20261104005703e203198d496546f0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261104005703e203198d496546f0",
+  "usage": {
+    "completion_tokens": 411,
+    "completion_tokens_details": {
+      "reasoning_tokens": 59
+    },
+    "prompt_tokens": 8237,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8648
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**(1) En-tête de section et objectifs :**\n\nأهداف الدرس\n\n1 - أن أتعرف مفهوم الزكاة وحكمها وشروط وجوبها.\n2 - أن أدرك حكمة من الزكاة.\n3 - أن أمتثل سنة رسول الله ﷺ في أحكام الزكاة.\n\n→ **3 objectifs numérotés.**\n\n**(2) Tamhīd :**\n\nتمهيد\n\nتعد الزكاة ركنا عظيما من أركان الإسلام، نزلت في شأنها آيات، ووردت في أهميتها أحاديث متضافرة؛ وقد فرضت بعد الهجرة في السنة الثانية على المشهور، وأوجبها الله تعالى في أموال مخصوصة بشروط مخصوصة تحققا للعدالة الاجتماعية والاستقرار الاقتصادي.\n\nفما هي أحكام الزكاة؟ ومتى تجب؟ وما الحكمة من إخراجها؟\n\n**(3) Badge/en-tête de page :** aucun numéro de leçon ni numéro de page n'est visible en haut de l'image — seule une bande décorative orangée/rouge apparaît, sans texte imprimé lisible dessus. [illisible / absent]",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793723797,
+  "id": "2026110400362919ef7436c70e4bdc",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110400362919ef7436c70e4bdc",
+  "usage": {
+    "completion_tokens": 276,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 4097,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4373
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) En-tête : « أهداف الدرس »\n\n(2) Trois objectifs, transcrits token par token :\n1 - أن أُعرف زكاة المعدن والركاز.\n2 - أن أُبين الأموال التي تخرج منها الزكاة لِوَصفِها.\n3 - أن أُتزّم سنة رسول الله ﷺ في إخراج الزكاة.\n\nSujet : la zakât de l'or/argent (les métaux) et du minerai (riqāz).\n\n(3) Badge de leçon : le numéro de leçon n'est pas visible sur cette image — [illisible] / non visible.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793723941,
+  "id": "202611040038542d309ab6d8134917",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611040038542d309ab6d8134917",
+  "usage": {
+    "completion_tokens": 151,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 3214,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3365
+  }
+}

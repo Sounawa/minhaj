@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "L'encadré « ترجمة الراوي (عمرة بنت عبد الرحمن...) » n'apparaît pas sur cette page. Cette page ne contient que le شرح المتن :\n\n« ...بن زرارة الانصارية المدينية التابعية، قال ابن أبي مريم عن ابن معين: ثقة حجة، وقال العجلي: مدينية تابعية ثقة، وقال أبو حسان الزيادي: بقال مائت سنة ثمان وتسعين، وقل: مائت سنة ست ومائة، وهو بنت سبع وسبعين. »\n\n**الفهم**\n**الشرح:**\nالعُقْبِيُّ : موضع بقرب المدينة.\nيُخْتِبُّ : يصبر رضاينا بقضاء الله، راجيا فضله.",
+        "reasoning_content": "No such box on page.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793725023,
+  "id": "20261104005655592e34a081994069",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261104005655592e34a081994069",
+  "usage": {
+    "completion_tokens": 201,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6
+    },
+    "prompt_tokens": 8099,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8300
+  }
+}
