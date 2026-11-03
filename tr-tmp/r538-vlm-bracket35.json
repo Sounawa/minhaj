@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "BRACKET=[الموطأ رقم: 453], BEFORE=[«الموطأ»]",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793669786,
+  "id": "2026110309362568507e3739e3412b",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "2026110309362568507e3739e3412b",
+  "usage": {
+    "completion_tokens": 21,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 286,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 307
+  }
+}

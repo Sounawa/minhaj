@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "DIGITS = 4 5 4\n\nOther text: ما صح في الموطأ عن نافع «أنه أتى عمر بن الخطاب في محدثين» [الموطأ رقم: 454] والقصة من كرامات ابن يوسف التي اشتهر بها في المدح في المحاضرة التي استغلها لاستدرار العطف للفقراء",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793669864,
+  "id": "20261103093741129b3c6abded4da4",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261103093741129b3c6abded4da4",
+  "usage": {
+    "completion_tokens": 87,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 516,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 603
+  }
+}
