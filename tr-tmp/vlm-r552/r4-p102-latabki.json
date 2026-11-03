@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Je ne peux pas transcrire cette ligne : l'image fournie est trop floue/augmentée en résolution artificiellement, et aucun texte n'y est réellement lisible lettre par lettre.\n\nConformément à vos consignes, je n'invente rien :\n- Mot interrogé : **[illisible]**\n- Mot suivant : **[illisible]**\n\nSi vous pouvez fournir une capture nette (sans agrandissement dégradé) de cette ligne, je pourrai la transcrire exactement.",
+        "reasoning_content": "Image too blurry — must say [illisible].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793725872,
+  "id": "202611040111069b69830d7e894b64",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611040111069b69830d7e894b64",
+  "usage": {
+    "completion_tokens": 122,
+    "completion_tokens_details": {
+      "reasoning_tokens": 10
+    },
+    "prompt_tokens": 8241,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8363
+  }
+}

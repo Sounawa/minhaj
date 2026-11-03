@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "La ligne est tronquée en haut de l'image (partie supérieure des lettres coupée), je ne peux transcrire que ce qui est visible :\n\n- فجعل جابر : **[illisible]** — le mot suivant « جابر » est coupé verticalement, seuls les bas de lettres apparaissent.\n- Ensuite on lit partiellement : **فَقَالَ** (avec fatha visible sous/entre les lettres), puis **[illisible]** pour le reste de la ligne (رَسُول/partie suivante coupés).\n\nJe ne peux pas transcrire lettre par lettre avec certitude le verbe recherché : il est hors champ ou tronqué dans l'image fournie.",
+        "reasoning_content": "The image shows a partial line, cut off at top. The visible text includes \"...فجعل\" but the verb after جابر isn't fully visible. Honest answer: the line is cut; transcribe what's visible partially.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793726186,
+  "id": "20261104011616fa79fb0dbb7e4433",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261104011616fa79fb0dbb7e4433",
+  "usage": {
+    "completion_tokens": 205,
+    "completion_tokens_details": {
+      "reasoning_tokens": 47
+    },
+    "prompt_tokens": 8043,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8248
+  }
+}

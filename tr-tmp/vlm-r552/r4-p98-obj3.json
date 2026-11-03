@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Objectif 3 : « 3- أن أحرص على فضل المشاركة في دفن الميت وتلقيه. »\n\nLe dernier mot est (a) وتلقيه :\n\nو — ت — ل — ق — ي — هِ (donc وتلقيه، sans ن ni yāʾ doublée).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793725783,
+  "id": "20261104010938ab36468b793f411d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261104010938ab36468b793f411d",
+  "usage": {
+    "completion_tokens": 77,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8095,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8172
+  }
+}
