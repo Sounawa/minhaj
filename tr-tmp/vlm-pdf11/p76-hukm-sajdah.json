@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Remarque importante :** l'image fournie ne contient pas l'en-tête « ثانيا: سجود تلاوة القرآن » ni la numérotation « ١- حكمه » demandés. Je ne peux donc les transcrire que d'après ce qui est réellement imprimé — les éléments visibles sont :\n\n**1) Titres visibles (et non ceux demandés) :**\n- **1 - حكمه**\n- **2 - عدد سجدات التلاوة ووقتها**\n- **أ - عدد سجدات التلاوة**\n\n**2) La phrase اختلاف المالكية :**\nاختلف المالكية في حكم سجود التلاوة، هل هو سُنّة أو فضيلة وهما قولان مشهوران في المذهب، واستدلوا بما أخرجه البخاري: عن عطاء بن يسار، أنه أخبره:\n\n**3) Le hadith — la couche est CORRECTE mot à mot :**\nأنه سال زيد بن ثابت رضي الله عنه، فزعم «أنه قرأ على النبيّ ﷺ سورةَ النّجم فلم يسجد فيها»، [صحيح البخاري]، وقال عمر: «ربّا أيّها الناس إنّا نقرأ بالسجود، فمن سجد فقد أصاب، ومن لم يسجد، فلا إثم عليه» [أخرجه البخاري].\n\n**4) Le dire d'عمر tel qu'imprimé :**\n«ربّا أيّها الناس إنّا نقرأ بالسجود، فمن سجد فقد أصاب، ومن لم يسجد، فلا إثم عليه»\n\nJe n'ai ajouté aucun texte de mémoire ; tout ce qui précède est une transcription de ce qui est visible sur l'image.",
+        "reasoning_content": "The image doesn't contain the asked headers; transcribe what's visible and note.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793700287,
+  "id": "202611031804335d9353782f1441ce",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611031804335d9353782f1441ce",
+  "usage": {
+    "completion_tokens": 423,
+    "completion_tokens_details": {
+      "reasoning_tokens": 17
+    },
+    "prompt_tokens": 8258,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8681
+  }
+}

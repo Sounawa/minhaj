@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Réponse :**\n\n(1) En-tête (الفهم / الشرح) et (2) les définitions (حزبه من الليل / عزائم سجود القرآن / تجادل) : **non visibles sur cette image** — je ne peux donc ni confirmer ni corriger, car je dois transcrire uniquement le texte imprimé visible.\n\n(3) Texte visible sur l'image, transcrit exactement :\n\n**تجادل** : تحاجج وتدافع.\n\n**استخلاص المضامين:**\n\n١- أذكر حكم مس المصحف من غير وضوء.\n\n٢- أستخرج من الأحاديث أحكام سجود التلاوة.\n\n→ Tes items ١ et ٢ sont **conformes mot à mot** au texte visible. La ligne « ورده من القرآن الذي يقرؤه بالليل » n'apparaît pas dans cette image.",
+        "reasoning_content": "Image doesn't show header or definitions. Transcribe only visible.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793700222,
+  "id": "20261103180335d7a61fb6b60745f6",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103180335d7a61fb6b60745f6",
+  "usage": {
+    "completion_tokens": 215,
+    "completion_tokens_details": {
+      "reasoning_tokens": 13
+    },
+    "prompt_tokens": 8284,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8499
+  }
+}

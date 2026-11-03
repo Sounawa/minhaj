@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) [الموطأ رقم: 556].\n\n(2) La phrase ووجه هذه الرواية n'est pas visible dans l'image ; on y voit seulement « وجه هذه الرواية » dans : « وجه هذه الرواية أن هذه صلاة نافلة فضعت بعد الصبح والعصر كسنتر النوافل. »",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793700950,
+  "id": "202611031815422f45b1630e2b4786",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611031815422f45b1630e2b4786",
+  "usage": {
+    "completion_tokens": 74,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8213,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8287
+  }
+}

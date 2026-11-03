@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) الاستئثار\n\n(2) – قال الله تعالى : ﴿هٰذَانِ خَصْمَانِ اخْتَصَمُوا فِي رَبِّهِمْ﴾ [سورة الواقعة الآية: 82] .",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793700954,
+  "id": "2026110318155073cc3dcac5164c60",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110318155073cc3dcac5164c60",
+  "usage": {
+    "completion_tokens": 71,
+    "completion_tokens_details": {
+      "reasoning_tokens": 70
+    },
+    "prompt_tokens": 8202,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8273
+  }
+}

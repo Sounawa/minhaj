@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**(1) Titre de la section :** الاستثار\n\n**(2) Citation coranique et phrase d'introduction :**\n\n— قال الله تعالى: ﴿أَيَتَّسْدُونَ إِلَى الَّذِي خَلَقَ سَمْوَتِ﴾ [سورة الواقعة الآية: 82].\n\n(Nota : le texte imprimé comporte visiblement ﴿أَيَتَّسْدُونَ إِلَى الَّذِي خَلَقَ سَمْوَتِ﴾ — la transcription exacte du verset tel qu'imprimé semble présenter [illisible] pour la fin du verset, l'image étant dégradée.)\n\n**(3) Isnād et matn :**\n\n— مالك، عن هشام بن عروة، عن أبيه، عن عائشة زوج النبي صلَّى الله عليه وسلَّم قالت: أنَّ الحارث بن هشام، سأل رسول الله صلَّى الله عليه وسلَّم كيف يأتيك الوحي؟ فقال رسول الله صلَّى الله عليه وسلَّم: «أحياناً يأتيني مثل صلة الجرس، وهو أشده عليّ، فيفصم عني وقد وعيت ما قال، وأحياناً يتمثل لي الملك رجلاً فيكلمني فأعي ما يقول». قالت عائشة: ولقد رأيته ينزل عليه البرد في اليوم الشديد البرد، فيفصم عنه، وإن جبينه ليتفصد عرقاً. [الموطأ رقم: 544]\n\n**Correction par rapport à votre citation :** le texte imprimé ne comporte pas « البرد الشديد فيفصم عنه وإن جبينه ليتفصد حرقاً » mais : « ينزل عليه البرد في اليوم الشديد البرد، فيفصم عنه، وإن جبينه ليتفصد **عرقاً** ». L'isnād est : مالك عن هشام بن عروة **عن أبيه** (donc via عروة, par la couche « عن أبيه »).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793700347,
+  "id": "202611031805330fe9abd64c704ee4",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611031805330fe9abd64c704ee4",
+  "usage": {
+    "completion_tokens": 510,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8339,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8849
+  }
+}

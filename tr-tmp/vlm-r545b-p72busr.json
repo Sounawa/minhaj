@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "السطر كما هو مطبوع:\n\n**— مَالِكً، أنه بُلغه، عن بُسْر بن سَعِيدٍ، أنَّ رَسُولَ اللهِ صلَّى اللهُ عَلَيْهِ وَسَلَّمَ [...]**\n\nواسم الراوي هو **«بُسْر»** (باء مهملة بلا نقطة تحتها، وسين مضمومة) — وليس «بُشْر»، إذ لا تظهر أي نقاط للشين المعجمة في الكلمة.",
+        "reasoning_content": "The name: \"بُسر\" appears — in the image \"بْن بُسر\" — the word after عن is بُسر with a dot under? The image shows \"بُسر\" — likely بُسر (Busrah). The text: \"— مَالِكً، أنه بلَغه، عن بُسر بن سعيد، أن رسول الله ﷺ...\" The word appears \"بُسْر\" with single dot? Looking: \"بُسْر بن سَعِيد\" — yes بُسر (باء بدون نقطة، سين بنقطة واحدة).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701482,
+  "id": "20261103182435e2ae6c8876f64fea",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103182435e2ae6c8876f64fea",
+  "usage": {
+    "completion_tokens": 270,
+    "completion_tokens_details": {
+      "reasoning_tokens": 132
+    },
+    "prompt_tokens": 4416,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4686
+  }
+}

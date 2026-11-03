@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "والمقصد من هذا التحويل الجمال الجمعة، كما عُدَّ ذلك من خَصائصه ﷺ.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701753,
+  "id": "202611031829090f455817ad934499",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611031829090f455817ad934499",
+  "usage": {
+    "completion_tokens": 33,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 7953,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7986
+  }
+}

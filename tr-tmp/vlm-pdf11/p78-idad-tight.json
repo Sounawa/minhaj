@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Transcription exacte du texte visible :**\n\n1. La question ١- ما معنى قوله تعالى... : non visible sur l'image.\n\n2. L'en-tête الإعداد القبلي et la phrase أحفظ أحاديث الدرس المقبل وأجيب عن الآتي : non visibles sur l'image.\n\n3. Item ١ :\n١ - أَشْرَحْ : عَدْل عَشَر ــ رِقَاب ــ حِرْزًا مِنَ الشَّيْطَانِ ــ يَبْتَدِرُونَهَا.\n\n4. Item ٢ :\n٢ - أَسْتَخْرِجُ مِنْ أَحَادِيثِ الدَّرْسِ الْمُقْبِلِ فَضَائِلَ الذِّكْرِ وَالدُّعَاءِ.\n\nAinsi que la ligne supérieure coupée en haut de page :\n... اَحْفَظْ أَحَادِيثَ الدَّرْسِ الْمَاضِي وَأَجِيبْ عَلَى الآتِي.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793700973,
+  "id": "202611031816049873f92183074344",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611031816049873f92183074344",
+  "usage": {
+    "completion_tokens": 282,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8280,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8562
+  }
+}
