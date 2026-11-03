@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Introduction :** أحفظ أحاديث الدرس المُقبل وأجيب عن الآتي:\n\n**Item 1 :** ١- أشرح: خمس ذود – أولاق – أوسق.\n\n(lexie 1 : **خمس ذود** — خ-م-س ذ-و-د, non « خس نود » ni « الحصيد » ; lexie 2 : **أولاق** — أ-و-ل-ا-ق ; lexie 3 : **أوسق** — أ-و-س-ق)\n\n**Item 2 :** ٢- أعرف الزكاة وأبين حكمها وشروطها.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793725101,
+  "id": "202611040058137655dcbbbcba4a06",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611040058137655dcbbbcba4a06",
+  "usage": {
+    "completion_tokens": 150,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8250,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8400
+  }
+}
