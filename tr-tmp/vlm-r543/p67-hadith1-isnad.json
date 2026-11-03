@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "- مالك، عن إسحاق بن عبد الله بن أبي طلحة، أنه سمع أنس بن مالك، يقول: كان رسول الله ﷺ يكثر أن يقول: «اللهم إني أعوذ بك من الهم والحزن، والعجز والكسل، والبخل والجبن، وضلع الدين وغلبة الرجال».\n- قال مالك: والضلع الثقل.\n- وحدثني عن مالك، عن أبي الزناد، عن الأعرج، عن أبي هريرة، أن رسول الله ﷺ كان يقول: «اللهم إني أعوذ بك من الفقر، والقلة والذلة، وأعوذ بك من أن أظلم أو أُظلم».",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793692000,
+  "id": "20261103154633cc2ec8fd5ae54e10",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261103154633cc2ec8fd5ae54e10",
+  "usage": {
+    "completion_tokens": 173,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 6225,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6398
+  }
+}

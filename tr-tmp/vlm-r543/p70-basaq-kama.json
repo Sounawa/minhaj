@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) «إذا كان أحدكم يصلي فلا يبصقن قبل وجهه فإن الله قبل وجهه إذا صلى»\n(2) «أن رسول الله ﷺ رأى في جدار القبلة قذراً أو بصاقاً أو مخاطاً فحكه» [الموطأ رقم: 525]",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793692088,
+  "id": "202611031548024de3c9a8a3e7469b",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202611031548024de3c9a8a3e7469b",
+  "usage": {
+    "completion_tokens": 82,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 6075,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6157
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) Les trois objectifs :\n1- أن يتعرف على آداب القبلة عند دخول الحمام.\n2- أن يستنبط من الدروس التي سبقت تدور القبلة وفضل المسجد والنظافة.\n3- أن يحرص التلميذ من الأماكن المقدسة في الشريعة الإسلامية.\n\n(2) Phrase d'introduction :\nتلك القبلة التي قال عنها الحق سبحانه : (فِي بُيُوتٍ أَذِنَ اللَّهُ أَنْ تُرْفَعَ وَيُذْكَرَ فِيهَا اسْمُهُ)\n\n(3) Renvoi coranique et texte :\nسورة النور الآية 36\nيُسْبِحُ لَهُ فِيهَا بِالْغُدُوِّ وَالْآصَالِ",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793691993,
+  "id": "20261103154613cbcccc451b304a80",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261103154613cbcccc451b304a80",
+  "usage": {
+    "completion_tokens": 211,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5986,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6197
+  }
+}

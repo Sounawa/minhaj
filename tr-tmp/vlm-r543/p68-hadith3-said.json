@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) Isnād : مالك عن يحيى بن سعيد عن سعيد بن المسيب أنه قال\n\n(2) Matn : صلى رسول الله ﷺ بعد أن قدم المدينة ستة عشر شهراً نحو بيت المقدس ثم حولت القبلة قبل بدر بشهرين [الموطأ رقم: ٧٢٥]\n\nConfirmation : Le numéro est bien **٧٢٥** (725) et le mot est bien imprimé **بدر**.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793692013,
+  "id": "202611031546483a9acf08818c4cb2",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202611031546483a9acf08818c4cb2",
+  "usage": {
+    "completion_tokens": 118,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 6082,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6200
+  }
+}
