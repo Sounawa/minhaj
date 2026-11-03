@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "وسيطرت بالتدريج على معظم ، شكل يهودي ، هالة الاستيطان اليهودي فلسطين ، وأصبحت للاستعمار الرأسمالي ، أن يساهموا في استغلال وحيازة الأراضي",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793688040,
+  "id": "20261103144037b57b8b2dbd874097",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261103144037b57b8b2dbd874097",
+  "usage": {
+    "completion_tokens": 62,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 4685,
+    "prompt_tokens_details": {
+      "cached_tokens": 2
+    },
+    "total_tokens": 4747
+  }
+}

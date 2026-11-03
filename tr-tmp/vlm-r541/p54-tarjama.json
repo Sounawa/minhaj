@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "– عائشة أم المؤمنين رضي الله عنها : زوج النبي ﷺ محمد صلى الله عليه وسلم ، وابنة أبي بكر الصديق\nالمصادر رضي الله عنهما ، التقيّة القرشية التيمية ، من المهاجرات الأولات ، من المكيرات من الدرجة الأولى ، قالت لها عروة :\nما رأيت أحدا أعلم بفقه ولا شعر من عائشة ، توفيت رضي الله عنها سنة 57 أو 58 هـ.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793687972,
+  "id": "2026110314392427314ab4fc51420d",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "2026110314392427314ab4fc51420d",
+  "usage": {
+    "completion_tokens": 126,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5945,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6071
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "فصلى رسول الله ﷺ\nقام فأطال القيام، ثم ركع فأطال الركوع، وهو دون القيام الأول\nدون الركوع الأول، ثم سجد، ثم فعل في الركعة الآخرة مثل ذلك.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793688301,
+  "id": "202611031444560c984f87034545c4",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202611031444560c984f87034545c4",
+  "usage": {
+    "completion_tokens": 62,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 6029,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6091
+  }
+}
