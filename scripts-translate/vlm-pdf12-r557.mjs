@@ -4,9 +4,9 @@ import ZAI from 'z-ai-web-dev-sdk';
 import fs from 'fs';
 
 const OUT = '/home/z/my-project/tr-tmp/vlm-pdf12-r557.json';
-const BASE = ("Tu lis une image d'un manuel scolaire marocain de hadith (Muwaṭṭa' Mālik / "
-  "Šarḥ az-Zarqānī, 2e année collégiale). Réponds UNIQUEMENT à la question posée, "
-  "par transcription EXACTE du texte imprimé visible. Si tu n'es pas sûr d'un mot ou d'un chiffre, "
+const BASE = ("Tu lis une image d'un manuel scolaire marocain de hadith (Muwaṭṭa' Mālik / " +
+  "Šarḥ az-Zarqānī, 2e année collégiale). Réponds UNIQUEMENT à la question posée, " +
+  "par transcription EXACTE du texte imprimé visible. Si tu n'es pas sûr d'un mot ou d'un chiffre, " +
   "écris [illisible]. N'invente AUCUN texte, ne complète jamais de mémoire.");
 
 const shots = [
