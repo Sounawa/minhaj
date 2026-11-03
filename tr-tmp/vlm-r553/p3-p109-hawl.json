@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) En-tête : 2 – مرور الحول\n\n(2) أ – شرط مرور الحول في العين : أجمع العلماء على انشراط الحول في الصائنة والنقد دون الحبوب والنمار ، فقد كان ابن عمر رضي الله عنهما يقول : «لا تجب في مال زكاة حتى يحول عليه الحول» [الموطأ ، رقم : 660].\n\n(3) Citation : «لا تجب في مال زكاة حتى يحول عليه الحول» — renvoi : [الموطأ ، رقم : 660] (chiffres : 6-6-0).\n\n(4) Autres nombres : le seul autre chiffre est le « 2 » du titre en haut à droite de la bande.\n\n(5) ب – حول الفائدة والربح : la définition de la فائدة (فائدة من فائدة أو…) n'est pas visible sur cette image ; elle [illisible] / non affichée.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793718556,
+  "id": "202611032309082b0190ef8d59496d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611032309082b0190ef8d59496d",
+  "usage": {
+    "completion_tokens": 229,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8290,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8519
+  }
+}

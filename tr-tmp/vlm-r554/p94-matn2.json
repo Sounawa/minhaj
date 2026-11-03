@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**(1)** Phrases visibles dans l'image :\n\n- Deuxième غسلة :\n« وفي الغسلة الثانية يضع في الماء صابونا أو سدرا، فيغسله مثل الغسلة الأولى من غير أن يعيد له الوضوء. »\n\n- Troisième غسلة :\n« أما الغسلة الثالثة فيضع في الماء شيئا من الطيب مثل الزهر أو الكافور أو الورد، »\n\n**(2)** La citation de أمّ عطية (أنِّي... بمائها؟...) et la fin de phrase (لقول النبي ﷺ...) **ne sont pas visibles dans cette image** : la page s'arrête après « أو الورد، » et je ne peux donc pas les transcrire sans inventer.",
+        "reasoning_content": "The image doesn't show أمّ عطية quote or لقول النبي part — only visible text. I must transcribe only what's visible; parts not visible: say not visible.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793717622,
+  "id": "20261103225336e264461acdb74ebf",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103225336e264461acdb74ebf",
+  "usage": {
+    "completion_tokens": 212,
+    "completion_tokens_details": {
+      "reasoning_tokens": 39
+    },
+    "prompt_tokens": 6001,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6213
+  }
+}

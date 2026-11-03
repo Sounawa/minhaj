@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "L'image ne montre qu'une seule ligne, sans le mot « استفتى » ni aucun chiffre en exposant. Le texte imprimé visible est :\n\n« كان أَبُو بَكْرٍ اليد أَعْطَى النَّاسِ أَعْطاهُم بِسال »\n\n— soit approximativement : كان أبو بكر ... أعتى الناس أعتاهم ... (certains mots sont partiellement tronqués/illibles en bord de ligne : je transcris « [illisible] » pour les débuts de mots coupés).\n\nAucun petit nombre (note de bas de page) n'est visible sur cette ligne, donc je ne peux pas en indiquer la position.",
+        "reasoning_content": "The image shows only one line: «كان أبو بكر اليد أعتى الناس أعتاهم بسال» — actually text: \"كان أبو بكر أعتى الناس أعتاهم بإسلام\". No \"استفتى\" and no number visible.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793717285,
+  "id": "2026110322475799e7b5e220d24800",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110322475799e7b5e220d24800",
+  "usage": {
+    "completion_tokens": 218,
+    "completion_tokens_details": {
+      "reasoning_tokens": 56
+    },
+    "prompt_tokens": 5246,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5464
+  }
+}

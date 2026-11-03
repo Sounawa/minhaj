@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "mot=ملونًا، lettres : م-ل-و-ن-ًا (la lettre centrale est **ن**, donc « ملونًا »).\n\nItem د- : le verbe imprimé est **ينشرح**، lettres : ي-ن-ش-ر-ح (« فالغني عندما يقوم بحق الله عليه **ينشرح** بامتداد في نفسه وانتساع في صدره »).",
+        "reasoning_content": "Item ج: \"يعله ملونًا\"? The text reads \"يجعله ملونًا لا يطهر إلا بإخراجه منه\". The image shows \"ملونًا\"? Question asks whether ن or ث. The printed word appears \"ملوثًا\"? I must transcribe exact — I see \"ملونًا\". Actually in the image: \"تعلق حق الغير به يجعله ملونًا لا يطهر\". I'll say ملونًا.\n\nItem د: \"فالغني عندما يقوم بحق الله عليه يشرع بامتداد في نفسه\" — image shows \"ينشرح\"? It reads \"يَنْشَرَح\"? The text: \"يشرح بامتداد\"? Image shows \"ينشرح\"? Looking: \"يـ... بامتداد في نفسه\" — likely \"ينشرح\". The visible word after يـ: \"شرح\"? printed \"ينشرح\". I'll answer يشرح? The image line: \"ينشرح وانتساع في صدره\". Yes it's \"ينشرح\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793719313,
+  "id": "202611032321426e1d06fd633b4d0b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611032321426e1d06fd633b4d0b",
+  "usage": {
+    "completion_tokens": 337,
+    "completion_tokens_details": {
+      "reasoning_tokens": 238
+    },
+    "prompt_tokens": 8209,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8546
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "فأذني: أشرني بالانتهاء من الغسل.\n\nأَشْعَرْنَها إياه: اجعلنه شعارها، أي النّوب الذي يلي جسدها نبرًا.\n\n(ملاحظة: الكلمات النوب، نبر، إزار، حقوق لا تظهر في الصورة.)",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793718099,
+  "id": "20261103230134a54fa782edf34a62",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103230134a54fa782edf34a62",
+  "usage": {
+    "completion_tokens": 83,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8113,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8196
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**(1) Phrases doctrinales (transcription exacte) :**\n\nرحل أجنبي، فإذا لم يوجد تغسله امرأة من محارمه، فإن لم توجد امرأة من محارمه،\nتيّممه امرأة أجنبية، فتمسح له على وجمه، ويديه إلى مرافقيه، ويكتفِ بذلك.\n\nوكذلك المرأة إذا لم يوجد من يغسلها على الترتيب الذي تتقدم في الرجل، يكتفِ\nبتيمّمها؛ لما في الموطأ عن مالك، أنه سمع أهل العلم يقولون : «إذا ماتت المرأة ولُبِّس\nمعها نساء يغسلنها، ولا من ذوي المحرم أحد يلي ذلك منها، ولا زَوْجٌ يلي ذلك منها،\n\n**(2) Isnād :** Il n'apparaît pas sur cette page (la page commence par « رحل أجنبي ») ; le seul passage transmis est : « لما في الموطأ عن مالك، أنه سمع أهل العلم يقولون » — transcription lettre à lettre :\nلما في الموطأ عن مالك، أنه سمع أهل العلم يقولون\n\n**(3) Citation entre chevrons (mot à mot) avec renvoi rouge :**\n«يُمَدُّ فمسح بوجهها وكفّيها من الصعيد» [الموطأ رقم: 597].",
+        "reasoning_content": "The question asks for isnād \"لما في الموطأ عن مالك عن...\" but that doesn't appear on this page. Only the doctrinal phrases and the quote. Answer with what's visible; note isnād not visible.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793718176,
+  "id": "20261103230240d9b1e8b725e64d47",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103230240d9b1e8b725e64d47",
+  "usage": {
+    "completion_tokens": 384,
+    "completion_tokens_details": {
+      "reasoning_tokens": 50
+    },
+    "prompt_tokens": 8207,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8591
+  }
+}

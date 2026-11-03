@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**(1) Premier mot du bloc** : مَالِك — lettre par lettre : م / ا / ل / ك — ce n'est donc ni (a), ni (b), ni (c) ; c'est **(d) autre** (le bloc commence par مالك، pas par الخدري/أبو سعيد).\n\n**(2) Matn** (entre guillemets, ordre exact tel qu'imprimé) :\n\n«لَيْسَ فِيمَا دُونَ خَمْسٍ نُوَدٍ صَدَقَةٌ، وَلَيْسَ فِيمَا دُونَ خَمْسٍ نُوَدٍ صَدَقَةٌ، وَلَيْسَ فِيمَا دُونَ خَمْسَةٍ أَوَاقٍ صَدَقَةٌ»\n\n(remarque : l'imprimé semble répéter deux fois «خمس ذود صدة» et le troisième membre est «خمسة أواق صدة» — je transcris tel quel, sans corriger) — plus précisément, mot à mot :\n\nلَيْسَ فِيمَا دُونَ خَمْسٍ ذَوْدٍ صَدَقَةٌ ، وَلَيْسَ فِيمَا دُونَ خَمْسٍ ذَوْدٍ صَدَقَةٌ ، وَلَيْسَ فِيمَا دُونَ خَمْسَةٍ أَوَاقٍ صَدَقَةٌ\n\n**(3) Isnād** (après le matn, jusqu'à سمعت أبا سعيد) :\n\nقَالَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ — puis, en tête du bloc : مَالِكٌ بْنُ أَنَسٍ، عَنْ عُمَرَو بْنِ يَحْيَى الْمَازِنِيِّ، عَنْ أَبِيهِ أَنَّهُ قَالَ : سَمِعْتُ أَبَا سَعِيدٍ الْخُدْرِيِّ يَقُولُ\n\n**(4) Renvoi** : [الموطأ رقم : ٦٥٥] — chiffre par chiffre : ٦ / ٥ / ٥.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793717549,
+  "id": "20261103225214e81c4962f3f24078",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103225214e81c4962f3f24078",
+  "usage": {
+    "completion_tokens": 593,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8230,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8823
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**(1) أهداف الدرس :**\n\nأهداف الدرس\n\n1 - أن أتعرّف مفهوم الزكاة وحكمها وشرط وجوبها.\n\n2 - أن أدرك حكمة من الزكاة.\n\n3 - أن أُمثّل سنّة رسول الله ﷺ في أحكام الزكاة.\n\nLe verbe du 3ᵉ objectif est : **أُمثّلَ**.\n\n**(2) Tamhīd :** Le paragraphe de présentation (et la structure finale des trois questions) n'apparaît pas sur l'image fournie — seule la page avec l'en-tête أهداف الدرس et les trois objectifs est visible. Je ne peux donc pas le transcrire sans inventer de texte.",
+        "reasoning_content": "Only objectives visible; tamhīd not in image.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793717555,
+  "id": "20261103225229d9db32d0ddd14c57",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103225229d9db32d0ddd14c57",
+  "usage": {
+    "completion_tokens": 183,
+    "completion_tokens_details": {
+      "reasoning_tokens": 12
+    },
+    "prompt_tokens": 8261,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8444
+  }
+}

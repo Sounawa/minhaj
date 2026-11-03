@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) فإذا لم يوجد تعسله امرأة من محارمه، فإن لم يوجد امرأة من محارمه، تيممه امرأة أجنبية، فتمسح له على وجهه، ويديه إلى مرقصيه، ويكتفي بذلك.\n\nوكذلك المرأة إذا لم يوجد من يعسلها على الترتيب الذي تقدم في الرجل، يكتفي بتميمها؛ لما في المواطن عن مالك...\n\n(2) «إذا ماتت المرأة وليس معها نساء يعسلنها، ولا من ذوي المحرم أحد يلي ذلك منها، ولا زوج يلي ذلك منها، يتممها نساؤها بوجهها وكفيناها من الصعيد»\n\nالموطأ رقم: [597]\n\n(3) L'isnād n'apparaît pas sur cette page (l'image s'arrête avant) — visible uniquement : « لما في المواطن عن مالك » ; la suite « عن [?] بن [؟] » est [illisible] / hors cadre.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793717651,
+  "id": "202611032254035ce8d03c824e48db",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611032254035ce8d03c824e48db",
+  "usage": {
+    "completion_tokens": 242,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 7435,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7677
+  }
+}

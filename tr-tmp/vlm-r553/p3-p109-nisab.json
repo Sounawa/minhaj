@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Transcription de ce qui est visible sur l'image :\n\n(1) غراما)؛ لأن وزن الدينار 4,25 غراما، قال مالك: «السنة التي لا اختلاف فيها عندنا\n\n(2) أن الزكاة تجب في عشرين دينارا عينا كما تجب في ما انتهى درهم» [الموطأ رقم: 662]، والله\n\nNotes :\n- La citation de مالك commence par «السنة التي لا اختلاف فيها عندنا» (et non «الأمر الذي لا اختلاف فيه عندنا»).\n- Renvoi : [الموطأ رقم : 662] — chiffres 6, 6, 2.\n- Nombre visible : 4,25 (chiffres 4, 2, 5).\n- Les phrases وأدنى حد / النصاب / وهو في العين / خمس أواق / وإليه ذهب الأئمة / لأن وزن الدينار... ne figurent PAS dans cette image (seul «لأن وزن الدينار» apparaît en début de ligne, suivi de 4,25 غراما).\n- Aucun chiffre exposant de note visible sur l'image.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793717652,
+  "id": "20261103225403d861f4bac6b94aa7",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103225403d861f4bac6b94aa7",
+  "usage": {
+    "completion_tokens": 272,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8294,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8566
+  }
+}

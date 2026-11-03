@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "استخلاص المضامين :\n\n1 - ما هي الزكاة؟ وما حكمتها؟\n\n2 - أستخلص شروط زكاة العين.\n\n3 - كيف يُزَكِّي شرَّكاءَ الوَرَق أموَالَهم؟",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793717603,
+  "id": "202611032253191cad8b0d2ff846f0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611032253191cad8b0d2ff846f0",
+  "usage": {
+    "completion_tokens": 66,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8215,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8281
+  }
+}

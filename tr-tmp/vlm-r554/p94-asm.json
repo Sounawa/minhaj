@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) Titre de la section :\n« ثالثا– من يتولى غسل الميت »\n\n(2) Citation d'après مالك : Le texte visible sur cette page ne contient pas « بنت ... زوج أبي بكر الصديق ... توفيّت/عسلت ... غسّلها » ; ce qui est imprimé, mot à mot, est :\n\n«أن امرأة بنت عميس مات زوجها، فلا خلاف في جواز تغسيل المرأة لزوجها، بل يقدّم الزوجان على الإقارب؛ لما روى مالك في الموطأ عن عَبْد الله بن أبي بَكْر : «أن أسماءَ بنت عميس مَرَّةٌ إلى بكر الصدّيق، غسّلت أبَا بكر الصدّيق حين توفّى» [الموطأ رقم: 596].\n\n(3) Renvoi rouge : [ الموطأ رقم : 596 ] — chiffre : 5 – 9 – 6.",
+        "reasoning_content": "The image shows title \"الثالثا – من يتولى غسل الميت\" and the citation \"وأن امرأة بنت عميس مات زوجها...\" — but the question asks about \"أن ... بنت ... زوج أبي بكر الصديق توفت...\" Hmm, this page doesn't show that. Actually the question seems mismatched; but transcribe what's visible: the citation from مالك is \"أن امرأة بنت عميس مات زوجها، فلا خلاف في جواز تغسيل المرأة لزوجها...\". The question mentions بنت زوج أبي بكر — not on this page. I should answer based on the image: transcribe title and the citation as visible, noting no such \"زوج أبي بكر\" text appears. The red reference: [الموطأ رقم: 596].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793717635,
+  "id": "202611032253422273dddf6a2d40ea",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611032253422273dddf6a2d40ea",
+  "usage": {
+    "completion_tokens": 430,
+    "completion_tokens_details": {
+      "reasoning_tokens": 186
+    },
+    "prompt_tokens": 8272,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8702
+  }
+}

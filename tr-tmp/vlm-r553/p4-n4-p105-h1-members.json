@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Transcription mot à mot de l'imprimé :\n\n- Membre 1 : « ليس فيما دون خمس ذود صدقة » — après « خمس » : **ذود**\n- Membre 2 : « وليس فيما دون خمس دَور صدقة » — après « خمس » : **دَور** (l'imprimé porte bien « دَور », pas « أوسق ») ; il ne contient pas « من الورق »\n- Membre 3 : « وليس فيما دون خمسة أوراق صدقة » — après « خمسة » : **أوراق**\n\nmembre1=ليس فيما دون خمس ذود صدقة, membre2=وليس فيما دون خمس دَور صدقة, membre3=وليس فيما دون خمسة أوراق صدقة",
+        "reasoning_content": "The printed text: «ليس فيما دون خمس ذود صدقة، وليس فيما دون خمس دَور صدقة، وليس فيما دون خمسة أوراق صدقة»\n\nWait the image shows \"ليس فيما دون خمس دَور صدقة\" — second word appears \"دور\" (dawr)? In Muwaṭṭa it's \"أوسق\". The image: \"دون خمس دور صدقة\" — printed \"دَور\". Transcribe exactly.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793719255,
+  "id": "2026110323204854b7c4d5018e404c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110323204854b7c4d5018e404c",
+  "usage": {
+    "completion_tokens": 303,
+    "completion_tokens_details": {
+      "reasoning_tokens": 111
+    },
+    "prompt_tokens": 8197,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8500
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "قَالَ مَالِكٌ فِي الذَّهَبِ وَالوَرِقِ يَكُونُ بَيْنَ الشَّرِكَاءِ: «إِذَا كَانَ مِنْهُ حَصَّتُهُ مِنْهُمْ عِشْرِينَ دِينَارًا عِنْدَهُ [illisible] مَا نِصْفُهُ [illisible] نِصَابٌ، وَمِنْ نِصَابِهِ فِيهَا الزَّكَاةُ، وَمَا نِقَصَّتْ حَصَّتُهُ مِنْ مَا نِصَابِهِ فِيهِ الزَّكَاةُ، فَلَا زَكَاةَ عَلَيْهِ، وَإِنْ بَلَغَتْ حَصَصُهُمْ جَمِيعًا مَا نِصَابٌ فِيهِ الزَّكَاةُ، وَكَانَ بَعْضُهُمْ فِي ذَلِكَ أَفْضَلُ نَصِيبًا مِنْ بَعْضٍ، أَخَذَ مِنْ كُلِّ إِنْسَانٍ بِقَدْرِ مِنْهُ [illisible] كَانَ [illisible] نِصَابِهِ [illisible] الزَّكَاةُ [illisible] [illisible] رَسُولِ اللَّهِ [illisible]",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793717568,
+  "id": "2026110322523557ef87e05c3c408c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110322523557ef87e05c3c408c",
+  "usage": {
+    "completion_tokens": 415,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8239,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8654
+  }
+}

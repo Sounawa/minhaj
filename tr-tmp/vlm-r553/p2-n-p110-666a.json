@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Transcription : [الموطأ رقم : 999] — le nombre est 999, chiffre par chiffre : 9, 9, 9 (sans virgule ni point).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793717288,
+  "id": "202611032248058535dabedf7a4447",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611032248058535dabedf7a4447",
+  "usage": {
+    "completion_tokens": 43,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 4596,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4639
+  }
+}

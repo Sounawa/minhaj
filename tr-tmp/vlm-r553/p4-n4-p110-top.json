@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) Premier mot (lettre par lettre) : فـ يـ سـ دـ قـ بـ لـ هـ ا → **فيسدق بها** ; rien ne le précède (ce n'est pas استفتى, la page commence par ce mot).\n\n(2) Aucun chiffre exposant (note de bas de page) n'est visible sur ces lignes.\n\n(3) Chaîne des rapporteurs (mot à mot) : لا — ce n'est pas sur ces lignes ; le texte visible est :\n\nفيسدق بها، قال القاسم بن محمد: «وكان أبو بكر إذا أُعطي النّاس أعطينهم بسائل الرَّجُلُ: هل عندك من مالٍ وجبَتْ عليك فيه الزكاة؟ فان قال: نعم، أخذ من عطائِهِ زكاة ذلك المال، وإن قال: لا، أخلع عليه عطاءَه ولو باخذ منه شبَانا» [الموطأ، رقم: 658].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793719273,
+  "id": "20261103232104a1daeb2a02764ce0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103232104a1daeb2a02764ce0",
+  "usage": {
+    "completion_tokens": 232,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8277,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8509
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) ١- أشرح: العفّةَ – يحتسب – جنبة من النار – أجزني في مصيبتي.\n\n(2) ٢- أبين كيفية دفن الميت.\n\n(3) [illisible] (l'item 3- n'est pas visible sur l'image)",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793718267,
+  "id": "20261103230422d0e43d0391a1463c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103230422d0e43d0391a1463c",
+  "usage": {
+    "completion_tokens": 74,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8203,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8277
+  }
+}

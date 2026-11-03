@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "renvoi=666 (الموطأ رقم : 666), autre_nombre=1, 2, 3, contexte=numéros des questions « 1 - أذكر الأموال التي… », « 2 - ما هو الوقص؟… », « 3 - لماذا فرق مالك… » ; aucun « 0035 » ni « دينار » n'est visible sur l'image.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793719283,
+  "id": "202611032321205edd10500b9f47c8",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611032321205edd10500b9f47c8",
+  "usage": {
+    "completion_tokens": 91,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8278,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8369
+  }
+}

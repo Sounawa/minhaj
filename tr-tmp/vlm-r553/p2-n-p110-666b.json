@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "chiffre1=6, chiffre2=6, chiffre3=6, numéro=666\n\nMots juste avant le crochet : « ، رَقَم : » (avec « • » avant) — le texte visible imprimé en rouge se lit « ... ، رقم : [666 » en partant de la droite ; le mot juste avant le crochet est « رقَم » précédé de « ، » et « • ».",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793717291,
+  "id": "20261103224808eb58ac20150243af",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103224808eb58ac20150243af",
+  "usage": {
+    "completion_tokens": 100,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1784,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1884
+  }
+}

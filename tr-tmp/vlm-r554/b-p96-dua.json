@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Réponse (strictement d'après l'image fournie) :**\n\n**(1) L'isnād demandé :** Aucune chaîne du type « عن سعيد بن سعيد ... عن أبي هريرة » n'apparaît comme isnād introductif d'une grande citation sur cette page. Le seul texte d'attribution visible avant la citation est :\n\n« قالَ رَسُولُ اللهِ ﷺ : »\n\nLa citation citée est : « إِذا صَلَّيْتُمْ عَلَى الْمَيِّتِ فَاخْلِصُوا لَهُ الدُّعَاءَ » suivie du renvoi rouge : [ سَنَنْ أَبِي دَاوُدَ ]\n\nLe nom après « سعيد بن » n'est donc pas visible dans un isnād sur cette page : je ne peux ni confirmer « أبي سعيد » ni « العاص » — [illisible / non présent]. Aucun mot n'apparaît avant « عن أبي هريرة » sous forme d'isnād imprimé ; le nom أَبِي هُرَيْرَةَ apparaît seulement dans le récit : « عَنْ سَعِيدِ بْنِ أَبِي سَعِيدِ الْمُقْبُرِيِّ، عَنْ أَبِيهِ، أَنَّهُ سَأَلَ أَبَا هُرَيْرَةَ ».\n\n**(2) Le matn (transcription mot à mot, depuis « فقال أبو هريرة ») :**\n\nفَقَالَ أَبُو هُرَيْرَةَ : « إِنَّا لَعَمْرُ اللهِ أَخْبِرُكَ، أَتْبَعُهَا مِنْ أَهْلِهَا، فَإِذَا وَضَعْتَ كَفَّنْتَ وَحَمَلْتَهَا، وَصَلَّيْتَ عَلَى نَبِيهِ، ثُمَّ أُقِيلَ : اللَّهُمَّ إِنَّهُ عَبْدُكَ، وَابْنُ أَمَتِكَ، كَانَ يَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ، وَأَنَّ مُحَمَّدًا عَبْدُكَ وَرَسُولُكَ، وَأَنَّتَ أَعْلَمُ بِهِ، اللَّهُمَّ إِنْ كَانَ مُحْسِنًا فَزِدْ فِي إِحْسَانِهِ، وَإِنْ كَانَ مُسِيئًا فَتَجَاوَزْ عَنْ سَيِّئَاتِهِ، اللَّهُمَّ لَا تَحْرِمْنَا أَجْرَهُ وَلَا تَفْتِنَّا بَعْدَهُ »\n\n**(3) Le renvoi rouge, chiffre par chiffre :** [ المَوْطَأْ رَقْم : 612 ]\n\n**(4) La phrase imprimée après le renvoi :** وتَحْوُلُ الْحَضْمَائِرُ بِحَسَبِ الْجِنَازَةِ، جَمْعًا وَتَنْثِيَةً وَتَأْنِيثًا كَبِيرًا وَصَغِيرًا.",
+        "reasoning_content": "The image contains no isnād chain like \"عن سعيد بن سعيد عن...\" — the user's question doesn't match. There's a quote from النبي ﷺ: «إذا صليتم علي الميت فاخضصوا له الدعاء» [سنن أبي داود]. Then the matn from أبي هريرة? Actually there's a hadith of أبو هريرة narrated via المروطة عن مالك... \"عن سعيد بن أبي سعيد المقبري، عن أبيه، أنه سأل أبا هريرة...\" That's within the page text. Answer honestly what's visible.\n\nThe question asks isnād of the grande citation: not visible on this page. I should transcribe what's visible without inventing.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793718235,
+  "id": "2026110323032869e8e3e9d7d24f05",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110323032869e8e3e9d7d24f05",
+  "usage": {
+    "completion_tokens": 1093,
+    "completion_tokens_details": {
+      "reasoning_tokens": 165
+    },
+    "prompt_tokens": 8251,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9344
+  }
+}
