@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) Isnād : عن يحيى بن سعيد عن عمرو بن شعيب (Non, il n'y a pas de « عن أبيه عن جده » entre *ʿAmr b. Shuʿayb* et le matn dans le texte imprimé).\n\n(2) Matn : اللهم إني أسألك الهدى والتقى والعفاف والغنى\n\n(3) Numéro : 513",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793690413,
+  "id": "20261103152006efd3bbdc722844b5",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261103152006efd3bbdc722844b5",
+  "usage": {
+    "completion_tokens": 99,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5994,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6093
+  }
+}

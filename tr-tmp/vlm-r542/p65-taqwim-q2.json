@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1 - اذكر شروط صلاح الاستسقاء.\n2 - اذكر كيفية صلاة الاستسقاء.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793690477,
+  "id": "202611031521145eb85a06e72641aa",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202611031521145eb85a06e72641aa",
+  "usage": {
+    "completion_tokens": 27,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 4199,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4226
+  }
+}

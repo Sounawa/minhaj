@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "أكرحه الخاری کے هة کن أس بن مالك أن عفر ن الخطاب...",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793690469,
+  "id": "20261103152106c1808a4496744324",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261103152106c1808a4496744324",
+  "usage": {
+    "completion_tokens": 23,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 4789,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4812
+  }
+}

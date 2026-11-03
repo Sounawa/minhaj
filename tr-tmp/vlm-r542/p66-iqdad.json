@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "أحفظ أحاديث الدرس القادم وأجيب عن الآتي : ١- أستخرج من أحاديث الدرس المقبل آداب القبلة. ٢- أبحث عن السبب في تحويل القبلة",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793690495,
+  "id": "2026110315213091e51a6bdd1b4c8e",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "2026110315213091e51a6bdd1b4c8e",
+  "usage": {
+    "completion_tokens": 59,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 6091,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6150
+  }
+}

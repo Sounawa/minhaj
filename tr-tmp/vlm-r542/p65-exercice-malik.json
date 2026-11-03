@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) قال مالك: هو من ذلك في سعة إن شاء الله أو في المسجد أو في بيته إذا رجع\n(2) ١- أستخرج من الحديث الآتي الأحكام التالية:",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793690490,
+  "id": "20261103152125557c89549d6c439d",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261103152125557c89549d6c439d",
+  "usage": {
+    "completion_tokens": 54,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 6188,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6242
+  }
+}
