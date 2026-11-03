@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "الحد الأدنى الذي تجب فيه الزكاة هو الذي يسميه الفقهاء نصابا، ويختلف باختلاف الأموال. وهو في العين خمس أوق، ويساوي عشرين دينارا من الذهب (خمسة وأربعون [illisible] ومئتان [illisible] من الفضة)",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793730647,
+  "id": "20261104023042a47b6a37a8464501",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261104023042a47b6a37a8464501",
+  "usage": {
+    "completion_tokens": 78,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8164,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8242
+  }
+}

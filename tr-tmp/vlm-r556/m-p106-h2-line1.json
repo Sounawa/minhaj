@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Réponse :** Les éléments demandés ne figurent PAS dans l'image visible. Il n'y a ni « عشرين دينارا », ni « مائتي/مائتين », ni « إن/إنّ من بلغت حصته » dans les lignes affichées — je ne peux donc pas transcrire ces mots sans les inventer.\n\nTranscription exacte du texte imprimé visible :\n\nعَشْرِينَ دِينَارًا عَبْنَا، أَوْ مَالَ بِي دُرْهَمٍ، فَعَلَيْهِ فِيهَا الزَّكَاةُ، وَمِنْ نَقْصِتِ حَصَّتُهُ\nمِنْ مَا تَجِبُ فِيهِ الزَّكَاةُ، فَلَا زَكَاةَ عَلَيْهِ، وَإِنْ بَلَغَتْ حَصَّصُوهُمْ جَمِيعًا مَا تَجِبُ فِيهِ\nالزَّكَاةُ، وَكَانَ بِقَصْوُهُمْ فِي ذَلِكَ أَفْضَلُ نَصِيبَا مِنْ بَعْضٍ، أَحَدُ مِنْ كُلِّ إِنسَانٍ بِقَدْرِ\nحَصَّتِهِ، إِذَا كَانَ فِي حَصَّةٍ كُلِّ إِنسَانٍ مِنْهُمْ مَا تَجِبُ فِيهِ الزَّكَاةُ، وَذَلِكَ أَنَّ رَسُولَ اللهِ\n\n⚠️ **Avertissement important :** cette transcription est donnée avec une confiance limitée — la résolution et les diacritiques de l'image rendent plusieurs mots incertains (par ex. « عَبْنَا », « حَصَّصُوهُم », « نَصِيبَا », « أَحَدُ » sont douteux). En cas de doute sur un mot, il faut le considérer comme [illisible]. Ce qui est **certain**, c'est que la citation contenant « عشرين دينارا » suivie de « عينًا/حونًا/عنده » et « مائتي درهم/درهمًا » ne se trouve pas sur cette portion d'image.",
+        "reasoning_content": "The image doesn't contain عشرين دينارا etc. It's a passage from Zarqānī about preemptive right (šufʿa). I must state that the asked elements are not visible. Transcribe visible text.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793730979,
+  "id": "2026110402360314ad2e60dfdf4281",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110402360314ad2e60dfdf4281",
+  "usage": {
+    "completion_tokens": 661,
+    "completion_tokens_details": {
+      "reasoning_tokens": 50
+    },
+    "prompt_tokens": 8284,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8945
+  }
+}

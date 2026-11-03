@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "ترجمة الراوي\n\n– أبو سعيد الخدري رضي الله عنه: هو سعد بن مالك بن سنان الأنصاري أبو سعيد الخدري. استصغر يوم أحد، وغزا بعد ذلك اثنتي عشرة غزوة. روى عن النبي ﷺ وأبي بكر وعمر وعثمان وعلي وغير هم. مات سنة 74 وقيل 64 وقيل 65هـ.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793730625,
+  "id": "20261104023019e858c9be28ad4851",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261104023019e858c9be28ad4851",
+  "usage": {
+    "completion_tokens": 105,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8243,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8348
+  }
+}

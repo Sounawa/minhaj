@@ -25,14 +25,39 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Separator } from "@/components/ui/separator";
+import dynamic from "next/dynamic";
 import { navigate, useFavorites, useHashRoute } from "./hooks";
 import { Home } from "./home";
-import { BookPage } from "./book-page";
-import { Reader } from "./reader";
-import { SearchDialog } from "./search-dialog";
-import { FavoritesDialog } from "./favorites-dialog";
-import { AssistantDialog } from "./assistant-dialog";
 import { PipelineStatus } from "./pipeline-status";
+
+// Découpage à la demande (diagnostic perf.) : lecteur, pages de livre et
+// dialogs ne servent qu’à la navigation — ils quittent le bundle initial.
+const Pulse = () => (
+  <div
+    aria-hidden="true"
+    className="mx-auto mt-12 size-9 animate-pulse rounded-full bg-primary/15"
+  />
+);
+const BookPage = dynamic(
+  () => import("./book-page").then((m) => m.BookPage),
+  { ssr: false, loading: Pulse }
+);
+const Reader = dynamic(
+  () => import("./reader").then((m) => m.Reader),
+  { ssr: false, loading: Pulse }
+);
+const SearchDialog = dynamic(
+  () => import("./search-dialog").then((m) => m.SearchDialog),
+  { ssr: false, loading: Pulse }
+);
+const FavoritesDialog = dynamic(
+  () => import("./favorites-dialog").then((m) => m.FavoritesDialog),
+  { ssr: false, loading: Pulse }
+);
+const AssistantDialog = dynamic(
+  () => import("./assistant-dialog").then((m) => m.AssistantDialog),
+  { ssr: false, loading: Pulse }
+);
 
 const emptySubscribe = () => () => {};
 

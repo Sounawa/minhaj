@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { motion } from "framer-motion";
 import {
   ArrowLeft,
   Award,
@@ -303,11 +302,8 @@ export function BookPage({ bookId }: { bookId: string }) {
         </Button>
       </nav>
 
-      <motion.header
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, ease: "easeOut" }}
-        className="pattern-islamic relative overflow-hidden rounded-2xl border border-amber-800/15 bg-card/70 shadow-sm"
+      <header
+        className="pattern-islamic anim-rise relative overflow-hidden rounded-2xl border border-amber-800/15 bg-card/70 shadow-sm"
       >
         <div className="hero-glow absolute inset-0" aria-hidden="true" />
         <div className="relative flex flex-col gap-5 p-6 sm:flex-row sm:items-start sm:p-8">
@@ -423,16 +419,14 @@ export function BookPage({ bookId }: { bookId: string }) {
             )}
           </div>
         </div>
-      </motion.header>
+      </header>
 
       {book.downloaded ? (
         <>
           {data.intro && (
-            <motion.section
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.1 }}
-              className="mt-6"
+            <section
+              className="anim-rise mt-6"
+              style={{ animationDelay: "0.1s" }}
               aria-labelledby="titre-intro"
             >
               <button
@@ -475,7 +469,7 @@ export function BookPage({ bookId }: { bookId: string }) {
                   </Badge>
                 )}
               </button>
-            </motion.section>
+            </section>
           )}
 
           <section className="mt-8" aria-labelledby="titre-lecons">

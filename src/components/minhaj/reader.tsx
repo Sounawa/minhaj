@@ -2,7 +2,6 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { ArrowLeft, ArrowRight, BookMarked, BookmarkCheck, Check, ChevronLeft, ChevronRight, Clock3, Columns2, Download, Eraser, ExternalLink, FileQuestion, FileText, Headphones, Heart, Highlighter, Hourglass, Languages, ListTree, Loader2, Pause, Play, Printer, Quote, ScanText, Sigma, Square, StickyNote } from "lucide-react";
-import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -123,10 +122,8 @@ function PdfOnlyNotice({ doc }: { doc: DocPayload }) {
 
   useEffect(() => {
     let cancelled = false;
-    setOcrHtml(null);
-    setOcrPages(0);
-    setOcrError(null);
-    setOcrFromCache(false);
+    // Réinitialisation via remontage (key={docId} au site d'appel) :
+    // jamais de setState synchrone dans l'effet (cascades de rendu).
     fetch(`/api/ocr/${doc.bookId}/${doc.docId}`)
       .then((r) => (r.ok ? r.json() : null))
       .then((data: { cached?: boolean; pages?: number; html?: string | null } | null) => {
@@ -180,12 +177,9 @@ function PdfOnlyNotice({ doc }: { doc: DocPayload }) {
   }, [doc.bookId, doc.docId, ocrBusy, toast]);
 
   return (
-    <motion.section
+    <section
       key={`${doc.docId}-pdf`}
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, ease: "easeOut" }}
-      className="no-print mx-auto mt-2 max-w-2xl"
+      className="anim-rise no-print mx-auto mt-2 max-w-2xl"
     >
       <div className="rounded-2xl border border-amber-800/15 bg-gradient-to-b from-amber-100/70 to-card p-8 text-center shadow-sm dark:border-amber-200/15 dark:from-amber-900/30">
         <span className="mx-auto flex size-14 items-center justify-center rounded-2xl border border-amber-800/20 bg-card shadow-sm">
@@ -266,7 +260,7 @@ function PdfOnlyNotice({ doc }: { doc: DocPayload }) {
           />
         </div>
       )}
-    </motion.section>
+    </section>
   );
 }
 
@@ -1831,12 +1825,9 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
            *  lecture principale ; le PDF officiel et l'OCR (texte arabe)
            *  restent accessibles par le panneau dédié ci-dessous. */}
           {data.hasFr && data.htmlFr && (
-            <motion.article
+            <article
               key={`${docId}-fr-pdfonly`}
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.35, ease: "easeOut" }}
-              className="reader-col mx-auto max-w-3xl"
+              className="anim-rise reader-col mx-auto max-w-3xl"
               dir="ltr"
               lang="fr"
               aria-label="Traduction française de la leçon"
@@ -1846,17 +1837,14 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
                 className={cn("lesson-content text-foreground/90", TEXT_SIZE_CLASS[textSize])}
                 dangerouslySetInnerHTML={frHtml ?? undefined}
               />
-            </motion.article>
+            </article>
           )}
-          <PdfOnlyNotice doc={data} />
+          <PdfOnlyNotice key={`${data.bookId}-${data.docId}`} doc={data} />
         </>
       ) : (
-        <motion.div
+        <div
           key={`${docId}-${mode}`}
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.35, ease: "easeOut" }}
-          className={cn("grid gap-6", mode === "both" ? "lg:grid-cols-2" : "grid-cols-1")}
+          className={cn("anim-rise grid gap-6", mode === "both" ? "lg:grid-cols-2" : "grid-cols-1")}
         >
           {showFr &&
             (data.hasFr ? (
@@ -1879,7 +1867,7 @@ export function Reader({ bookId, docId }: { bookId: string; docId: string }) {
               />
             </article>
           )}
-        </motion.div>
+        </div>
       )}
 
       {!data.pdfOnly && singleCol && (

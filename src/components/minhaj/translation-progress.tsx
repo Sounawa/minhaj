@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo } from "react";
-import { motion } from "framer-motion";
 import { Award, BookOpenCheck, FileWarning, Layers, Loader2, ScanText } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
@@ -294,16 +293,12 @@ export function TranslationProgress({ data }: { data: LibraryPayload }) {
             Avancement par matière
           </h3>
           <ul className="mt-4 space-y-3">
-            {subjects.map((s, i) => {
+            {subjects.map((s) => {
               const savantP = pct(s.savant, s.total);
               return (
-                <motion.li
+                <li
                   key={s.id}
-                  initial={{ opacity: 0, x: -8 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-30px" }}
-                  transition={{ duration: 0.3, delay: Math.min(i, 6) * 0.04 }}
-                  className="rounded-2xl border border-amber-800/10 bg-background/50 p-3.5 transition hover:border-amber-800/25 sm:p-4"
+                  className="anim-reveal-side rounded-2xl border border-amber-800/10 bg-background/50 p-3.5 transition hover:border-amber-800/25 sm:p-4"
                 >
                   <div className="flex items-center gap-3">
                     <SubjectTile subjectId={s.id} className="size-9" iconClassName="size-4" />
@@ -354,7 +349,7 @@ export function TranslationProgress({ data }: { data: LibraryPayload }) {
                       </p>
                     </div>
                   </div>
-                </motion.li>
+                </li>
               );
             })}
           </ul>

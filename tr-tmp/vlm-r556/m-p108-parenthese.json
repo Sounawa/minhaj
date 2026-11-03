@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "السطر الظاهر في الصورة هو:\n\nوهو في العين خمس أوق، ويساوي عشرين دينارا من الذهب (خمسة وثمانين [illisible])\n\nحرفاً بحرف للمحتوى داخل القوسين: **(خمسة وثمانين** — العدد المطبوع بعده غير واضح في الصورة: [illisible] — والقوس لم يُغلق في السطر المرئي.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793731004,
+  "id": "2026110402363925fdc1c6ff474268",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110402363925fdc1c6ff474268",
+  "usage": {
+    "completion_tokens": 109,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8248,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8357
+  }
+}

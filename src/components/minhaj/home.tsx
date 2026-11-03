@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { motion } from "framer-motion";
 import {
   ArrowRight,
   Award,
@@ -26,8 +25,20 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 import { navigate, useLastDoc, useLibrary } from "./hooks";
 import { SubjectTile } from "./subject-icon";
-import { TranslationProgress } from "./translation-progress";
+import dynamic from "next/dynamic";
 import { CYCLES, type CycleId } from "./types";
+
+// Sous le pli (section « Avancement ») : chargé à la demande pour
+// alléger le bundle initial (diagnostic perf.).
+const TranslationProgress = dynamic(
+  () => import("./translation-progress").then((m) => m.TranslationProgress),
+  {
+    ssr: false,
+    loading: () => (
+      <div aria-hidden="true" className="mx-auto mt-10 size-9 animate-pulse rounded-full bg-primary/15" />
+    ),
+  }
+);
 
 function fr(n: number) {
   return n.toLocaleString("fr-FR");
@@ -55,12 +66,7 @@ function Hero({
     <section className="pattern-islamic relative overflow-hidden border-b border-amber-800/15">
       <div className="hero-glow absolute inset-0" aria-hidden="true" />
       <div className="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          className="max-w-3xl"
-        >
+        <div className="anim-rise max-w-3xl">
           <Badge
             variant="outline"
             className="mb-4 gap-1.5 rounded-full border-amber-800/25 bg-amber-100/60 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.14em] text-amber-900 dark:border-amber-200/20 dark:bg-amber-900/30 dark:text-amber-100"
@@ -100,13 +106,11 @@ function Hero({
             </Button>
           </div>
           {lastDoc && (
-            <motion.button
+            <button
               type="button"
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.3 }}
               onClick={() => navigate(`/livre/${lastDoc.bookId}/${lastDoc.docId}`)}
-              className="group mt-5 flex max-w-2xl items-center gap-3 rounded-2xl border border-amber-800/20 bg-card/60 px-4 py-3 text-left shadow-sm backdrop-blur-sm transition hover:border-amber-700/35 hover:bg-card/85 hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+              style={{ animationDelay: "0.3s" }}
+              className="anim-rise group mt-5 flex max-w-2xl items-center gap-3 rounded-2xl border border-amber-800/20 bg-card/60 px-4 py-3 text-left shadow-sm backdrop-blur-sm transition hover:border-amber-700/35 hover:bg-card/85 hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
             >
               <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-amber-600/15 to-orange-800/15 text-primary">
                 <History className="size-5" aria-hidden="true" />
@@ -124,15 +128,13 @@ function Hero({
                 className="size-4.5 shrink-0 text-primary transition-transform group-hover:translate-x-1"
                 aria-hidden="true"
               />
-            </motion.button>
+            </button>
           )}
-        </motion.div>
+        </div>
 
-        <motion.dl
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.15, ease: "easeOut" }}
-          className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
+        <dl
+          className="anim-rise mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
+          style={{ animationDelay: "0.15s" }}
         >
           <div className="rounded-2xl border border-amber-800/15 bg-card/80 p-5 shadow-sm backdrop-blur-sm">
             <dt className="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground">
@@ -209,7 +211,7 @@ function Hero({
               Corpus officiel en cours de reconstitution après un incident technique.
             </p>
           </div>
-        </motion.dl>
+        </dl>
       </div>
     </section>
   );
@@ -422,7 +424,7 @@ export function Home() {
           </div>
         ) : (
           <ul className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {books.map((b, i) => {
+            {books.map((b) => {
               const level = levelById[b.level];
               const subj = subjectById[b.subject];
               const pct = b.docsTotal ? Math.round((b.docsFr / b.docsTotal) * 100) : 0;
@@ -433,13 +435,7 @@ export function Home() {
               const savantW = b.docsTotal ? (b.docsSavant / b.docsTotal) * 100 : 0;
               const machineW = b.docsTotal ? (machine / b.docsTotal) * 100 : 0;
               return (
-                <motion.li
-                  key={b.id}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-40px" }}
-                  transition={{ duration: 0.35, delay: Math.min(i % 8, 5) * 0.04 }}
-                >
+                <li key={b.id} className="anim-reveal">
                   <button
                     type="button"
                     onClick={() => navigate(`/livre/${b.id}`)}
@@ -535,7 +531,7 @@ export function Home() {
                       )}
                     </div>
                   </button>
-                </motion.li>
+                </li>
               );
             })}
           </ul>

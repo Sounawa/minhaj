@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "غَرَاما(؛ لَأَنَّ وَزْنَ الدِّينَارِ 4,25 غراما، فَقَالَ مَالِكٌ: «السُّنَّةُ الَّتِي لَا اخْتِلَافَ فِيهَا عِنْدَنَا أَنَّ الزَّكَاةَ تُجْبَى فِي عِشْرِينَ دِينَارًا عِنْدَ كَمَالِ النِّصَابِ فِي مَائِتَيْ دِرْهَمٍ»، [الموطأ رقم: 662]، وَالَّذِي\n\nRenvoi rouge : [الموطأ رقم : 662] — six, six, deux.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793730452,
+  "id": "20261104022724b88691d987bf42db",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261104022724b88691d987bf42db",
+  "usage": {
+    "completion_tokens": 202,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8228,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8430
+  }
+}

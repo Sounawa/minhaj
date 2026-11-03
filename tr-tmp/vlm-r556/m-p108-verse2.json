@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Verset coranique imprimé (entre parenthèses coraniques) :**\n\n﴿وَتُّخِذُ مِنْهُمْ صَدَقَةً تُطَهِّرُهُمْ وَتُزَكِّيهِم بِهَا﴾\n\n**Renvoi rouge imprimé :**\n\nسورة التوبة ، الآية : 104\n\n*(Remarque : le renvoi figure dans le texte en rouge, sous la forme « [سورة التوبة ، الآية : 104] » — transcription lettre par lettre du nom de sourate : س-و-ر-ة ا-ل-ت-و-ب-ة، et le numéro chiffre par chiffre : 1-0-4)*\n\n*(Précision : le verset imprimé est partiellement déformé par la résolution ; les mots sont transcrits tels qu'ils apparaissent visuellement : ﴿وَتُّخِذُ...﴾ — si un mot paraît fautif dans l'imprimé, il est laissé tel quel conformément aux consignes.)*",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793731059,
+  "id": "2026110402372932242293a5514deb",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110402372932242293a5514deb",
+  "usage": {
+    "completion_tokens": 260,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8237,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8497
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) Verset : ﴿ مَنْ أَمْوَالِهِمْ حَقٌّ مَعْلُومٌ لِلسَّائِلِ وَالْمَحْرُومِ ﴾ [illisible par endroits ; transcription telle que visible : « مَنْ أَمْوَالِهِمْ حَقٌّ مَعْلُومٌ لِلسَّائِلِ وَالْمَحْرُومِ »]\n\n(2) Renvoi rouge : [سورة الذوبية، الآية: 104] — nom imprimé tel quel : الذوبية (semble être une coquille d'impression pour التوبة) ; chiffres : ١٠٤.\n\n(3) Phrase après le renvoi : وهي تجب في العين والأنعام والحبوب والثمار.\n\n(4) En-tête + première ligne : ثانيا: شروط وجوب الزكاة — (la suite de la ligne n'est pas visible sur l'image).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793730642,
+  "id": "202611040230324ba45d3e11824e49",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611040230324ba45d3e11824e49",
+  "usage": {
+    "completion_tokens": 244,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8299,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8543
+  }
+}

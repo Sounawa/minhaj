@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Le renvoi rouge visible est : **[السواط، رقم: 666]**\n\nLecture du nombre chiffre par chiffre, de droite à gauche : ٦ (six), ٦ (six), ٦ (six) → le nombre imprimé est ٦٦٦, pas 658.\n\nRéponse : **(b) autre** — c'est 666, composé de trois chiffres « ٦ » identiques ; aucun « ٥ » ni « ٨ » n'apparaît.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793731049,
+  "id": "2026110402372378ed042c98d14b41",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110402372378ed042c98d14b41",
+  "usage": {
+    "completion_tokens": 114,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8203,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8317
+  }
+}

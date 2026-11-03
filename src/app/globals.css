@@ -1088,3 +1088,57 @@ table.daira-table {
 .md-chat > *:last-child {
   margin-bottom: 0;
 }
+
+/* ============================================================
+   Animations d'entrée pures CSS — remplacent framer-motion
+   (diagnostic R<n> : allège le bundle client de ~820 Ko)
+   ============================================================ */
+@keyframes minhaj-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes minhaj-slide-start {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apparition au montage (fade + montée). fill-mode « both » :
+   l'état initial est maintenu pendant l'éventuel délai. */
+.anim-rise {
+  animation: minhaj-rise 0.4s ease-out both;
+}
+
+/* Révélation à l'entrée dans le viewport — amélioration progressive :
+   sans support des scroll-driven animations, la règle
+   animation-timeline est ignorée et l'animation se joue au montage
+   (jamais d'élément bloqué invisible). */
+.anim-reveal {
+  animation: minhaj-rise 0.35s ease-out both;
+  animation-timeline: view();
+  animation-range: entry 0% entry 60%;
+}
+.anim-reveal-side {
+  animation: minhaj-slide-start 0.3s ease-out both;
+  animation-timeline: view();
+  animation-range: entry 0% entry 60%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-rise,
+  .anim-reveal,
+  .anim-reveal-side {
+    animation: none;
+  }
+}
