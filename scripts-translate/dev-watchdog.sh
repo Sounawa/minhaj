@@ -15,7 +15,11 @@ while true; do
     pkill -f "next dev -p 3000" 2>/dev/null; pkill -f "next-server" 2>/dev/null; sleep 2
     fi
   fi
-  if false; then
+  # R577 : branche de RÉINSTALLATION + RELANCE réarmée (elle était sous
+  # `if false` depuis R573 — le watchdog pkillait le serveur en pleine
+  # compile Turbopack à froid puis ne le relançait JAMAIS : portail 000
+  # récurrent entre les ticks). v4 sans effacement, bun idempotent.
+  if true; then
     for t in 1 2 3; do
       if ! HEALTHY; then
         SWEEPS=$((SWEEPS+1)); echo "$(date -u +%H:%M:%SZ) balayage n°$SWEEPS — réinstallation (v4 sans effacement)" >> $LOG
