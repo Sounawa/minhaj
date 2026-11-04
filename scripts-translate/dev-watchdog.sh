@@ -7,14 +7,26 @@ LOG=tr-tmp/dev-watchdog.log
 SWEEPS=0
 HEALTHY() { [ -f node_modules/next/package.json ] && [ -f node_modules/@next/env/package.json ]; }
 while true; do
-  if ! curl -s -o /dev/null --max-time 6 http://localhost:3000/; then
+  # v4.1 : timeout 25s + double échec avant pkill (les compilations Turbopack a froid
+  # depassent 6s — l'ancien timeout tuait le serveur en pleine charge, cf. dev.log)
+  if ! curl -s -o /dev/null --max-time 25 http://localhost:3000/; then
+    sleep 5
+    if ! curl -s -o /dev/null --max-time 25 http://localhost:3000/; then
     pkill -f "next dev -p 3000" 2>/dev/null; pkill -f "next-server" 2>/dev/null; sleep 2
+    fi
+  fi
+  if false; then
     for t in 1 2 3; do
       if ! HEALTHY; then
         SWEEPS=$((SWEEPS+1)); echo "$(date -u +%H:%M:%SZ) balayage n°$SWEEPS — réinstallation (v4 sans effacement)" >> $LOG
         mkdir -p tr-tmp
+        # v4.2 : purge des verrous orphelins (> 10 min = run tue en plein install)
+        if [ -d tr-tmp/watchdog.lock ]; then
+          AGE=$(( $(date +%s) - $(stat -c %Y tr-tmp/watchdog.lock 2>/dev/null || date +%s) ))
+          [ "$AGE" -gt 600 ] && rmdir tr-tmp/watchdog.lock 2>/dev/null && echo "$(date -u +%H:%M:%SZ) verrou orphelin purgé (${AGE}s)" >> $LOG
+        fi
         if mkdir tr-tmp/watchdog.lock 2>/dev/null; then
-          bun install --frozen-lockfile >/dev/null 2>&1
+          bun install --frozen-lockfile >> $LOG 2>&1
           rmdir tr-tmp/watchdog.lock 2>/dev/null
         fi
       fi
