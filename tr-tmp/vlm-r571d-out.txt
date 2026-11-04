@@ -1,0 +1,26 @@
+=== q3-p181-ayat-bas.png ===
+AYA1: مُّؤْمِنًا ۝ (fin du verset visible en haut à droite, lecture warš de Q 4:92 ; le début de la citation est coupé hors image)
+NUM1: 4
+
+AYA2: — (non visible : l'image s'arrête au commentaire «فإن أخذه انقطع الثانع، ومثل المرض الحبيس بالنسبة للذرّة، لا جذب وجدب عليه صيام شهرين متتابعين في كثّاب الله، إن يفطر إلا…») ; la citation de la Mujādila et son crochet ne figurent pas sur cette zone
+NUM2: —
+
+Remarque : le crochet lisible est « [سورة النساء، الآية: 4] » (en rouge) ; le second crochet [سورة المجادلة...] n'apparaît pas dans le fragment fourni. Si vous disposez de la suite de la page, je pourrai transcrire AYA2/NUM2 exactement.
+
+=== q3-p178-tarjama-bas.png ===
+Je ne peux pas transcrire la notice : l'image fournie apparaît entièrement blanche, sans aucun texte lisible (ni rubrique ترجمة الراوي ni notice). Si vous pouvez fournir une image de meilleure qualité ou correctement recadrée, je pourrai alors transcrire le texte mot à mot.
+
+=== q3-p182-fin-malade-bas.png ===
+FIN: ما المرأ بقاله ﷺ: «إنّي أطعم وأشفي؟»
+
+=== q3-p177-ziyad.png ===
+TEXTE: «أن أبنا أتى النبيَّ صلى الله عليه وسلم... على قاعدٍ وامرأةً تنبّهان فسألَهُ النبيُّ صلى الله عليه وسلم: ما هذا؟ قالا: بَيْعٌ...
+
+أن أنتُمل مقاصد الشَّرع في منع الصيام في بعض الأيام.
+
+**نصٌّ الحديث**
+
+عن زيد بن جَبِير قال: جاء رجلٌ إلى ابن عمر رضي الله عنهما، فقال: إني نذرتُ أن أصوم يومًا، فوقعُ ذلك يومُ أضحى أو فطرٍ، فقال ابن عمر رضي الله عنهما: «أمر اللهُ بوفاء النذر، ونهى رسولُ الله...»
+
+(Remarque : le haut et le bas de l'image sont rognés ; les lignes coupées ont été restituées uniquement à partir de ce qui est lisible/imprimé, la fin est tronquée sur l'image elle-même.)
+
