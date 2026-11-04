@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Voici la transcription exacte de la page 107 telle qu'imprimée :\n\n---\n\n**أَوسَقَ** : جَمْع وَسْق، وهو ستّون صاعًا، والصاعُ أَربعةُ أَمدادٍ، والمدُّ مِلءُ اليدين المتوسّطين لا مقبوضتين ولا مَبسوطتين. والوسق 6.130 كيلو غرام.\n\n**استخلاص المضامين:**\n\n1 - ما هي الزَّكاة؟ وما حُكْمُها؟\n\n2 - استَخْلِص شروط زكاة العين.\n\n3 - كيف يُزَكِّي شرَكاءُ الوَرَقِ أموالَهم؟\n\n**التحليل**\n\n**أولا: مفهوم الزكاة وحكمها وحُكْمُ مَنْ تركها**\n\n**1 – مفهومها**\n\n**أَ- الزكاة لغة:** يراد بها في اللغة أحد معنيين: النماء، والطُّهارة. قال ابن فارس: «الزاي والكاف والحرف المعْتَلّ أصلٌ يدلّ على نَماءٍ وزيادة. ويقال: الطُّهارة زكاة المال» [معجم مقاييس اللغة].\n\n**ب- الزكاة شرعا:** الزكاة اسم: جزء من المال شرط وجوبه لمستحقه بلوغِ المالِ نصابا. [شرح حدود ابن عرفة، 1/71]\n\nوتستعمل شرعا بمعنى النماء، وبمعنى الطهارة؛ أما الأوّل فلأنّ إخراجها سبب النماء في المال، فسميت زكاة بما يؤول إليه إخراجها. وأما الثاني؛ فلأنّها طهرةٌ للنفس من رذيلة البخل، وتطهير من الذنوب.\n\n107\n\n---\n\n**Remarque importante :** La page 107 fournie (visible dans l'image) **ne contient pas** la fin de la section «الشرح» sur les أوسق avec les poids détaillés en grammes/kilogrammes au-delà de la première ligne, ni la section «الشرط الأول: النصاب» (avec أوقات، دنانير، مثاقيل، دراهم). Ces sections se trouvent sur d'autres pages du manuel. La seule mention chiffrée ici est «والوسق 6.130 كيلو غرام» en haut de page. Transcrire les sections demandées à partir de cette image serait donc les inventer, ce que je refuse de faire. Si vous fournissez les pages concernées, je les transcrirai avec plaisir.",
+        "reasoning_content": "The image doesn't contain the الشرح section with أوسق weights nor الشرط الأول النصاب. The user asks to transcribe what's on the page — but the page shown doesn't include those sections. I should transcribe exactly what's visible and note that the requested sections are absent.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793781053,
+  "id": "202611041630346fb510d4131a44ee",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611041630346fb510d4131a44ee",
+  "usage": {
+    "completion_tokens": 693,
+    "completion_tokens_details": {
+      "reasoning_tokens": 61
+    },
+    "prompt_tokens": 4397,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5090
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) Titre du bloc : « الأحاديث »\n\n(2) Numéro de hadith : aucun numéro imprimé visible dans l'image.\n\n(3) Isnād : « — مَالِكٍ، عَنْ سُمَيٍّ مَوْلَى أَبِي بَكْرٍ، عَنْ أَبِي صَالِحٍ السَّمَّانِ، عَنْ أَبِي هُرَيْرَةَ »\n\n(4) Matn, mot à mot :\n«مَنْ قَالَ لَا إِلَهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، فِي يَوْمٍ مَائَةَ مَرَّةٍ، كَانَتْ لَهُ عَدْلَ عَشْرِ رِقَابٍ، وَكُتِبَتْ لَهُ مِائَةُ\n\n(la portion visible s'arrête ici — la suite est coupée hors cadre)",
+        "reasoning_content": "No number visible, title = الأحاديث, isnad: مالك، عن سَمِيّ... actually \"عَنْ سُمَيٍّ مولى أبي بكر، عن أبي صالح السمان، عن أبي هريرة\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793781272,
+  "id": "20261104163418676cdbf684784f80",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261104163418676cdbf684784f80",
+  "usage": {
+    "completion_tokens": 382,
+    "completion_tokens_details": {
+      "reasoning_tokens": 60
+    },
+    "prompt_tokens": 8200,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8582
+  }
+}

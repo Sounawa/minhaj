@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "الإعداد القبلي\n\nأحفظ أحاديث الدرس المقبل وأعد ما يأتي:\n\n1- أيين النصاب في المعادن والركاز.\n\n2- أستخرج الأموال التي لا تجب فيها الزكاة.\n\n3- أبحث عن حكم من مات ولم يخرج زكاة ماله.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793781472,
+  "id": "20261104163748d5fbab4846394f9e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261104163748d5fbab4846394f9e",
+  "usage": {
+    "completion_tokens": 79,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 4323,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4402
+  }
+}
