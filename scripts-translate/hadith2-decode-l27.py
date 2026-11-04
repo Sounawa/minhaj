@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""R573 — décodage lisible de l'extraction l27 (mots inversés → lisibles)."""
+"""R572 — décodage lisible de l'extraction l27 (mots inversés → lisibles).
+Re-création post-recyclage n°6."""
 import importlib.util
 
 _spec = importlib.util.spec_from_file_location(

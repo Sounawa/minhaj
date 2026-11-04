@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
-"""Minhāj — Extraction leçon 27 hadith-2es (slot pdf-28, R573).
+"""Minhāj — Extraction leçon 27 hadith-2es (slot pdf-28, R572).
 Bornes (hadith2-map.py + sondage) : l27 p.184-191 القضاء والفدية في الصيام ;
 bannière أهداف leçon 27 = p.184 ; أهداف leçon 28 (فضل الصيام) = p.192.
-Extraction large p.183-192 pour preuve des bornes (jamais devinées)."""
+Extraction large p.183-192 pour preuve des bornes (jamais devinées).
+Re-création post-recyclage n°6 (les adjudications image tiennent au journal de session)."""
 import fitz
 
 PDF = "/home/z/my-project/content/textbooks-src/hadith-2-iadadi_text.pdf"
