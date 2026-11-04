@@ -1,0 +1,46 @@
+# map-tafsir1-iadadi — STARTS officiel (R577)
+
+# 28 en-têtes « أهداف الدرس » LUS (200 dpi intégral + 300 dpi bannières),
+# JAMAIS devinés. Numéros de leçons non affichés par l'OCR (bannières
+# ornées) → ordre séquentiel 1..28 provisoire, numéro de chaque leçon à
+# lire lors de SA production (crops 600 dpi, méthode hadith-2es).
+# Plages de versets = OCR brut NON ADJUDIQUÉ (inversions par paires
+# documentées, ex. «94-25»=49-52) → à trancher à la production.
+
+## Structure lue : سورة لقمان → السجدة (p.47) → المعارج (p.77) → ق (p.111)
+## Fin de livre : glosses + annexe bibliographique p.144-148 (Qurṭubī,
+## Ǧalālayn, Muslim…) — pas de fihrist numéroté ; p.150 vide.
+
+## DÉBUTS DE LEÇONS (STARTS) — versets OCR bruts :
+  L 1  p. 11  (الآياى: 4-1)   [brut: | « ...ا (الآياى: 4-1)]
+  L 2  p. 15  (الأيا>: 5 - 10)   [brut: | | (الأيا>: 5 - 10)]
+  L 3  p. 20  (الآياة: !11 - +14)   [brut: | | (الآياة: !11 - +14)]
+  L 4  p. 25  (الآبا>: 15 - 15)   [brut: | | (الآبا>: 15 - 15)]
+  L 5  p. 30  (الآياى: 19 - 40)   [brut: ض وجوج ج227 (الآياى: 19 - 40)]
+  L 6  p. 34  (الآياى: 41 - 45)   [brut: | | (الآياى: 41 - 45)]
+  L 7  p. 38  (الآيا>: 46 -351)   [brut: | | (الآيا>: 46 -351)]
+  L 8  p. 43  (الأباى: 34 - 53)   [brut: ض موموووصع ج2222 (الأباى: 34 - 53)]
+  L 9  p. 47  (الآباى: 1 - 5)   [brut: ض سورلة السجكة (الآباى: 1 - 5)]
+  L10  p. 52  (الآياىك: + - 5)   [brut: ض سورلة السجكة (الآياىك: + - 5)]
+  L11  p. 57  (الآباىك: 9 - 14)   [brut: ض سورلة السجكة (الآباىك: 9 - 14)]
+  L12  p. 62  (الآياى: 15 - 44)   [brut: | | مورة السجدة (الآياى: 15 - 44) 55 )يك ‎ ))]‏ 0]
+  L13  p. 67  (الأياى: 43 - 45)   [brut: | | مور السجدة (الأياى: 43 - 45)]
+  L14  p. 72  (الآبا>: 46 - 350)   [brut: ض سورة السجكة (الآبا>: 46 - 350)]
+  L15  p. 77  (الاباى: 1 - 5)   [brut: ض مورة المجراة (الاباى: 1 - 5) 7 يت )يك )) ا 0]
+  L16  p. 82  (الآبا>: 6 - 5)   [brut: ض مورة الجر (الآبا>: 6 - 5)]
+  L17  p. 87  (الآياىك: 9 - 10)   [brut: ض مورة العجراج (الآياىك: 9 - 10)]
+  L18  p. 92  (الية:‎ ‎)   [brut: | | )11 ‏(الية:‎ ‎)!! * 0 2 ---]
+  L19  p. 97  (الآية: 14)   [brut: | مورة التجراك (الآية: 14)]
+  L20  p.102  (الآية: 15)   [brut: ض مورة التجراك (الآية: 15)]
+  L21  p.106  (الآياك : +1 - 15)   [brut: ض مورة التجراك (الآياك : +1 - 15)]
+  L22  p.111  (ق*‎ )   [brut: | | ‏ا‎ "١ ‏سور (ق*‎ )5 - ‏(الآياىك:1‎]
+  L23  p.115  (ق» (الآياى: 6 - 11)   [brut: ‎"١‏ ا | ض مور (ق» (الآياى: 6 - 11)]
+  L24  p.119  (ق» (الآياك: 14 - 15 )   [brut: | | سور (ق» (الآياك: 14 - 15 )]
+  L25  p.125  (ق» (الآياك: 19 - 46 )   [brut: | | سور #(ق» (الآياك: 19 - 46 )]
+  L26  p.129  (ق» (الآياىك: 47 - 55)   [brut: | | سور #(ق» (الآياىك: 47 - 55)]
+  L27  p.134  (ق» (الآيا>: 36 - 40)   [brut: | | سور (ق» (الآيا>: 36 - 40)]
+  L28  p.139  (ق» (الأياى: 1+ - 45)   [brut: | | سور (ق» (الأياى: 1+ - 45)]
+
+## p.5 = mention pédagogique de l'introduction (PAS une leçon).
+## Couche texte du PDF = mojibake AAT (0 arabe exploitable) → production
+## par OCR local 300 dpi + crops image (chaîne tessdata du dépôt validée).
