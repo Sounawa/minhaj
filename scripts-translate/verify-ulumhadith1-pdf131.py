@@ -2,7 +2,15 @@
 # -*- coding: utf-8 -*-
 """
 Minhāj — Vérification de la leçon ulum-hadith-tanawi-1 / pdf-mut23h2q-131
-(le ḥadīṯ fard et le ḥadīṯ muʿallal, p.99-103 du manuel ulum-hadith-1-thanawi.pdf) :
+(le ḥadīṯ fard et le ḥadīṯ muʿallal, p.99-103 du manuel ulum-hadith-1-thanawi.pdf) —
+ERRATUM R597-ter appliqué (passe parallèle même trace 2119, défauts PROUVÉS réparés) :
+«aw ḫafan»→«aw ḫafā» (rime ʿurifā, OCR ×4) ; nasakh «ʿillah/fa-ǧnaḫ lah» (rime,
+lām-hāʾ imprimé tesseract ×2, compZ-bayt, glose «il a penché vers sa parole» —
+l'initiale «fa-ǧtuthhu»/«retranche-le» récusée) ; muʿaḍḍal supprimé (tamhīd
+OCR ×2 = fard+muʿallal seuls ; leçon suivante = muḍṭarib p.104) ; natte→Ṣafiyya ;
+Suhayl/Wuhayb/ʿAwn/al-Kudrī ; ﷺ réplacé après rasūl Allāh (l'initiale le plaçait
+après le Compagnon) ; divergence furridatuhu consignée (qāf ×5 lectures vs fāʾ ×2,
+forme livrée tenue). Passes antérieures conservées :
 bannière « ad-dars 20 » tranchée image (cache p.99) ; bornes p.99-103 par DOUBLE
 sondage (bannière ad-dars 21 + objectifs المضطرب lus à l'OCR p.104, concordants
 avec l'iʿdād qablī p.103) ; bayts — « wa-l-fardu mā furridatuhu bi-thiqatin »
@@ -48,6 +56,7 @@ def chk(label, cond):
 
 h = open(HTML, encoding="utf-8").read()
 plain = h.replace("&nbsp;", " ").replace("\u202f", " ").replace("\u00a0", " ")
+plain = re.sub(r" {2,}", " ", plain)
 
 # 1. h1 aligné au titleFr pré-mappé du registre
 tf = [l for l in json.load(open(REG, encoding="utf-8"))["lessons"]
@@ -65,22 +74,22 @@ chk("double sondage (jamais deviné)", "double sondage" in plain and "jamais dev
 chk("concordance iʿdād qablī p.103", "concors" in plain or "concordants" in plain)
 chk("zéro inversion numéro", "zéro inversion" in plain)
 
-# 3. tamhīd — fard, muʿallal, muʿaḍḍal ×2
+# 3. tamhīd — fard, muʿallal (erratum R597-ter : muʿaḍḍal récusé)
 chk("tamhīd : sciences du ḥadīṯ", "Parmi les types des sciences du ḥadīṯ" in plain)
-chk("tamhīd : muʿaḍḍal (1re phrase)", "du ḥadīṯ muʿaḍḍal" in plain)
+chk("tamhīd : fard et muʿallal seuls (erratum)", "du ḥadīṯ fard et du ḥadīṯ muʿallal" in plain and "et du ḥadīṯ muʿaḍḍal" not in plain)
 chk("tamhīd : tafarrud maẓinna", "le tafarrud est le plus souvent le lieu soupçonné" in plain)
 chk("tamhīd : condition ṣaḥīḥ non muʿallal", "ne soit point muʿallal" in plain)
-chk("tamhīd question triple", "chacun du ḥadīṯ fard, du ḥadīṯ muʿallal et du ḥadīṯ muʿaḍḍal" in plain)
+chk("tamhīd question double (erratum)", "chacun du ḥadīṯ fard et du ḥadīṯ muʿallal" in plain)
 chk("tamhīd question types ʿilla", "quels sont les types de la ʿilla" in plain)
+chk("erratum muʿaḍḍal documenté (RÉCUSÉE)", "la lecture « al-ḥadīṯ al-muʿaḍḍal » du tamhīd est RÉCUSÉE" in plain)
 
 # 4. bayts du nāẓim
 chk("bayt 1 : wa-l-fardu mā furridatuhu bi-thiqatin", "wa-l-fardu mā furridatuhu bi-thiqatin" in plain)
 chk("bayt 1 : aw ǧamʿin aw qaṣrin ʿalā riwāyatin", "aw ǧamʿin aw qaṣrin ʿalā riwāyatin" in plain)
-chk("bayt 2 : wa-mā bi-ʿillatin ġumūḍin aw ḫafan", "wa-mā bi-ʿillatin ġumūḍin aw ḫafan" in plain)
+chk("bayt 2 : wa-mā bi-ʿillatin ġumūḍin aw ḫafā", "wa-mā bi-ʿillatin ġumūḍin aw ḫafā" in plain)
 chk("bayt 2 : muʿallalun ʿindahum qad ʿurifā", "muʿallalun ʿindahum qad ʿurifā" in plain)
-chk("furridatuhu tranché image 3600 dpi", "3600 dpi" in plain)
-chk("forme imprimée furridatuhu tenue (écart canon)", "furidahu" in plain and "jamais substitué" in plain)
-chk("aw ḫafan imprimé tenu (écart canon)", "aw ḫafan" in plain and "aw ḫifāʾin" in plain)
+chk("furridatuhu : divergence consignée (R597-ter)", "la divergence consignée — jamais tranchée sans preuve" in plain)
+chk("erratum ḫafā : récusée + rime (R597-ter)", "aw ḫafā" in plain and "est RÉCUSÉE — elle rompait la rime du bayt" in plain)
 chk("tanwīn bannière vs cas direct commentaire", "riwāyati" in plain and "bi-ʿillati" in plain)
 chk("séparateurs * * * tenus", "* * *" in plain)
 chk("traduction bayt", "transmission seule par un homme de confiance" in plain)
@@ -105,7 +114,8 @@ chk("réf. Sunan Abī Dāwūd aliments", "Sunan Abī Dāwūd" in plain and "livr
 chk("ne le transmet que Wāʾil/Ibn ʿUyayna", "ne le transmet donc de Bakr que Wāʾil" in plain)
 chk("ḥadīṯ ṣaḥīḥ", "c’est un ḥadīṯ ṣaḥīḥ" in plain)
 chk("type 2 ǧamʿ + al-Ḥākim", "restreint par un groupe (ǧamʿ)" in plain and "al-Ḥākim" in plain)
-chk("al-Kuḏrī", "Abū Saʿīd al-Kuḏrī" in plain)
+chk("al-Kudrī", "Abū Saʿīd al-Kudrī" in plain and "al-Kuḏrī" not in plain)
+chk("natte réparée en Ṣafiyya (erratum ×2)", plain.count("un repas de noces pour Ṣafiyya") == 2 and "une natte" not in plain)
 chk("ḥadīṯ fātiḥa", "l’ouverture du Livre et ce qui est aisé" in plain)
 chk("Basrites seuls", "les gens de Baṣra sont seuls" in plain)
 chk("type 3 riwāya", "restreint par une voie de transmission (riwāya)" in plain)
@@ -129,15 +139,15 @@ chk("ʿilla apparente", "tel le transmetteur faible, ou le confus" in plain)
 
 # 9. exemple muʿallal — kaffārat al-maǧlis
 chk("Ibn Ǧurayǧ + Mūsā b. ʿUqba", "Ibn Ǧurayǧ" in plain and "Mūsā b. ʿUqba" in plain)
-chk("Suḥayl b. Abī Ṣāliḥ", "Suḥayl b. Abī Ṣāliḥ" in plain)
+chk("Suhayl b. Abī Ṣāliḥ", "Suhayl b. Abī Ṣāliḥ" in plain)
 chk("d’Abū Hurayra élevé", "d’Abū Hurayra, élevé à lui" in plain)
 chk("ḥadīṯ kaffārat al-maǧlis", "quiconque s’assied dans une séance" in plain)
 chk("formule سبحانك... translittérée traduite", "pureté à Toi, ô Dieu, et louange à Toi" in plain)
 chk("réf. Sunan at-Tirmiḏī invocations", "Sunan at-Tirmiḏī" in plain and "chapitres des invocations" in plain)
-chk("Mūsā b. Ismāʿīl + Wahb b. Ḫālid", "Mūsā b. Ismāʿīl" in plain and "Wahb b. Ḫālid al-Bāhilī" in plain)
-chk("ʿŪn b. ʿAbd Allāh muwaqqaf", "ʿŪn b. ʿAbd Allāh, arrêté à lui" in plain)
+chk("Mūsā b. Ismāʿīl + Wuhayb b. Ḫālid", "Mūsā b. Ismāʿīl" in plain and "Wuhayb b. Ḫālid al-Bāhilī" in plain)
+chk("ʿAwn b. ʿAbd Allāh muwaqqaf", "ʿAwn b. ʿAbd Allāh, arrêté à lui" in plain)
 chk("iʿlāl al-Buḫārī", "al-Buḫārī l’a rendu défectueux" in plain)
-chk("pas d’audition de Suḥayl", "on ne lui connaît pas d’audition" in plain)
+chk("pas d’audition de Suhayl", "on ne lui connaît pas d’audition" in plain)
 
 # 10. aqsām al-ʿilla
 chk("ʿilla sanad : irsāl waqf tadlīs inqiṭāʿ", "l’irsāl, l’arrêt (al-waqf), le tadlīs, la rupture (al-inqiṭāʿ)" in plain)
@@ -157,8 +167,10 @@ chk("TQ3 site + qādiha", "selon son site et selon le fait qu’elle porte attei
 
 # 12. istiṯmār — al-ʿIrāqī
 chk("al-ʿIrāqī alfiyya", "Al-Ḥāfiẓ al-ʿIrāqī dit dans son alfiyya" in plain)
-chk("bayt : wa-n-nasḫa sammā t-Tirmiḏī ʿillatan", "wa-n-nasḫa sammā t-Tirmiḏī ʿillatan" in plain)
-chk("bayt : fa-in yurd fī ʿamalin fa-ǧtuthhu", "fa-in yurd fī ʿamalin fa-ǧtuthhu" in plain)
+chk("bayt : wa-n-nasḫa sammā t-Tirmiḏī ʿillah", "wa-n-nasḫa sammā t-Tirmiḏī ʿillah" in plain and "ʿillatan" not in plain)
+chk("bayt : fa-in yurd fī ʿamalin fa-ǧnaḫ lah", "fa-in yurd fī ʿamalin fa-ǧnaḫ lah" in plain)
+chk("traduction réparée : incline-toi vers lui", "si donc cela est entendu de l’acte, incline-toi vers lui" in plain)
+chk("erratum nasakh documenté (rime + lām-hāʾ + glose)", "ERRATUM R597-ter : le second hémistiche" in plain and "paraphrase ǧanaḫa — pencher vers —, jamais extirper" in plain)
 chk("nasḫ tranché image côte à côte", "confrontation côte à côte" in plain and "at-tasḫ" in plain and "récusée" in plain)
 chk("ellipse (...) imprimée tenue", "(...)" in plain and "s’imprime dans le manuel" in plain)
 chk("réf. Šarḥ at-tabṣira 1/290", "Šarḥ at-tabṣira wa-t-taḏkira d’al-ʿIrāqī, 1/290" in plain)
@@ -171,9 +183,9 @@ chk("préparation muḍṭarib", "je connais la signification du ḥadīṯ mu�
 chk("conditions + divisions muḍṭarib", "j’en précise les conditions, j’expose ses divisions" in plain)
 chk("leçon suivante interdite de double rendu", "interdite de double rendu" in plain)
 
-# 14. ﷺ tenu, sic al-Kuḏrī, zéro āya, zéro résidu
-chk("ﷺ tenu (U+FDFA ×7)", h.count("\ufdfa") == 7)
-chk("sic ﷺ après al-Kuḏrī documenté", "la forme attendue pour un Compagnon serait" in plain)
+# 14. ﷺ tenu (réplacé), zéro āya, zéro résidu
+chk("ﷺ tenu (U+FDFA ×5 : 3 contenu + 2 notes, Compagnon réparé)", h.count("\ufdfa") == 5)
+chk("erratum ﷺ du Compagnon (RÉPARÉ)", "RÉPARÉ, l’imprimé ne le" in plain and "porte point" in plain)
 chk("doc mentionne aucune āya", "aucune āya" in plain)
 residus = ["TODO", "XXX", "undefined", "NaN", "【", "____", "recycle", "takeover", "mtime"]
 chk("zéro résidu technique", not any(r in plain for r in residus))
