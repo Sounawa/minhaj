@@ -62,3 +62,22 @@ To https://github.com/Sounawa/minhaj.git
 
 [2026-11-04 19:45:49] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
 
+[2026-11-05 04:18:56] superviseur v4 démarré (MAX=3, file=62 livres, battement visible)
+[2026-11-05 04:18:59] auto-commit: push échoué — fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+[2026-11-05 04:29:00] auto-commit: push échoué — fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+[2026-11-05 04:39:01] auto-commit: push échoué — fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
