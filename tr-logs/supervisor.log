@@ -137,3 +137,12 @@ To https://github.com/Sounawa/minhaj.git
  ! [remote rejected]   main -> main (fatal error in commit_refs_rules
 )
 error: failed to push some refs to 'ht
+[2026-11-05 18:33:23] superviseur v4 démarré (MAX=3, file=62 livres, battement visible)
+[2026-11-05 18:33:48] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-05 18:43:49] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-05 18:53:51] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-05 19:03:56] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+

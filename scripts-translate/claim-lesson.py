@@ -41,8 +41,10 @@ BOOKS = {
     "hadith-2es": {"registry": "hadith-2es.json", "doc_prefix": "pdf-",
                    "claim_prefix": "hadith2-", "numeric": False},
     # extension v4 R589 (ouvrier C) : ulum-hadith-tanawi-1 — docIds pdf-mut23h2q-N
+    # R602 (ouvrier D) : préfixe élargi « pdf-mut23h2 » — les docIds ≥136 passent
+    # en pdf-mut23h2r-N (leçon 25+) ; slot = docId COMPLET (jamais numérique).
     "ulum-hadith-tanawi-1": {"registry": "ulum-hadith-tanawi-1.json",
-                             "doc_prefix": "pdf-mut23h2q-", "claim_prefix": "uh1-",
+                             "doc_prefix": "pdf-mut23h2", "claim_prefix": "uh1-",
                              "numeric": False},
 }
 DEFAULT_BOOK = "tafsir-5ep"
