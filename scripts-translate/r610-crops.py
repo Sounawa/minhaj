@@ -34,9 +34,9 @@ def lines_of(page):
     png300 = page_png(f'tsv-{page}')
     tsv = png300.replace('.png', '.tsv')
     if not os.path.exists(tsv):
-        subprocess.run(['TESSDATA_PREFIX=/tmp/tessdata', 'tesseract', png300, tsv[:-4],
-                        '-l', 'ara', '--psm', '6', 'tsv'], check=True,
-                       capture_output=True)
+        subprocess.run(['tesseract', png300, tsv[:-4], '-l', 'ara', '--psm', '6', 'tsv'],
+                       check=True, capture_output=True,
+                       env=dict(os.environ, TESSDATA_PREFIX='/tmp/tessdata'))
     rows = []
     with open(tsv, encoding='utf-8') as f:
         next(f)
