@@ -120,7 +120,7 @@ chk("2 questions examen", "Lequel des deux dires" in plain)
 chk("Q ḫuṭabāʾ", "al-ḫuṭabāʾ" in plain)
 
 # 10. iʿdād qablī + bornes
-chk("iʿdād qablī 3 questions", "trois questions, toutes recouvrées" in plain)
+chk("iʿdād qablī 3 questions", "3 questions, toutes recouvrées" in plain)
 chk("Q prép 1 mudallas", "qu’est-ce que le ḥadīṯ mudallas" in plain)
 chk("Q prép 2 tadlīs isnād/shuyūḫ", "tadlīs de l’isnād et du tadlīs des shaykhs" in plain)
 chk("Q prép 3 motivations", "motivations qui portent au tadlīs" in plain)
