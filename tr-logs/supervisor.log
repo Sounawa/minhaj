@@ -105,3 +105,4 @@ and the repository exists.
 
 [2026-11-05 06:39:37] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
 
+[2026-11-05 08:00:14] auto-commit: push échoué — remote: error: unable to write file /data/repositories/7/nw/7b/b0/f1/1273986031/1419745871.git/objects/ghq_9UY57wIOrvM/pack/pack-11632c3a1e6aa84e373eed11cd9878c4fbe70da9.pack: No such file or director
