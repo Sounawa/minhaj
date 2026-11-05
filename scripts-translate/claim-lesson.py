@@ -40,6 +40,10 @@ BOOKS = {
                    "claim_prefix": "", "numeric": True},
     "hadith-2es": {"registry": "hadith-2es.json", "doc_prefix": "pdf-",
                    "claim_prefix": "hadith2-", "numeric": False},
+    # extension v4 R589 (ouvrier C) : ulum-hadith-tanawi-1 — docIds pdf-mut23h2q-N
+    "ulum-hadith-tanawi-1": {"registry": "ulum-hadith-tanawi-1.json",
+                             "doc_prefix": "pdf-mut23h2q-", "claim_prefix": "uh1-",
+                             "numeric": False},
 }
 DEFAULT_BOOK = "tafsir-5ep"
 
