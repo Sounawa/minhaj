@@ -46,6 +46,12 @@ BOOKS = {
     "ulum-hadith-tanawi-1": {"registry": "ulum-hadith-tanawi-1.json",
                              "doc_prefix": "pdf-mut23h2", "claim_prefix": "uh1-",
                              "numeric": False},
+    # extension v4 R613 (ouvrier C) : ulum-hadith-tanawi-2 — docIds pdf-mut23h2u-255..281
+    # (livre 2 secondaire : Naḫbat al-fikr d'Ibn Ḥaǧar, PDF ulum-hadith-2-thanawi_text.pdf,
+    # registre pré-mappé 27 entrées) ; slot = docId COMPLET.
+    "ulum-hadith-tanawi-2": {"registry": "ulum-hadith-tanawi-2.json",
+                             "doc_prefix": "pdf-mut23h2u-", "claim_prefix": "uh2-",
+                             "numeric": False},
 }
 DEFAULT_BOOK = "tafsir-5ep"
 

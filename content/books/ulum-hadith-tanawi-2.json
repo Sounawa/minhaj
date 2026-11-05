@@ -1,262 +1,262 @@
 {
- "id": "ulum-hadith-tanawi-2",
- "subject": "ulum-hadith",
- "level": "tanawi-2",
- "subjectAr": "علوم-الحديث",
- "levelAr": "علوم-الحديث-الثانوي-الثاني",
- "titleAr": "علوم الحديث",
- "titleFr": "Sciences du ḥadīth — 2ᵉ lycée",
- "pdfUrl": null,
- "intro": {
-  "docId": "18677",
-  "titleAr": "علوم الحديث من متن نخبة الفكر بشرح نزهة النظر لابن حجر العسقلاني للسنة الثانية الثانوي العتيق",
-  "titleFr": "Présentation du manuel",
-  "html": "<h1> علوم الحديث من متن نخبة الفكر بشرح نزهة النظر لابن حجر العسقلاني س 2 ثا</h1>\n <dl>\n <dt></dt>\n <dd>\n \n </dd>\n </dl>\n <p></p>\n <p>يتوخى عرض كتاب علوم الحديث من متن نخبة الفكر بشرح نزهة النظر للحافظ ابن حجر العسقلاني، تمكين المتعلم من فهم مضامين هذا المتن، وجعله مدركا لأهمية وفوائد علم مصطلح الحديث، وجهود العلماء فيه، عارفا باصطلاحات المحدثين ومعاني إطلاقاتهم الخاصة على الأحاديث والرواة، قادرا على التعامل مع المصادر الحديثية، متمثلا القيم الخلقية من علوم الحديث مهتديا ومقتديا بها في حياته العملية، معتزا بالسنة النبوية، عاملا بها وداعيا إليها.</p>\n <p>الكتاب مقدم لفائدة تلاميذ السنة الثانية من التعليم الثانوي العتيق.</p>\n \n <p>&nbsp;الحمد لله رب العالمين، والصلاة والسلام على أشرف المرسلين وعلى آله وأصحابه أجمعين، وعلى من تبعهم بإحسان إلى يوم الدين.</p>\n <p>وبعد، فيسرنا أن نقدم لأبنائنا التلاميذ والتلميذات كتاب مادة علوم الحديث للسنة الثانية من التعليم الثانوي العتيق، وقد اعتمدنا في تأليفه نخبة الفكر بشرحها نزهة النظر للحافظ ابن حجر العسقلاني رحمه الله. ولما كان منهج الحافظ ابن حجر في كتابه مبنيا على الاختصار سعينا إلى مزيد بيان وتوضيح لبعض المسائل من خلال المصادر والمراجع المعتمدة في علوم الحديث، مراعين في ذلك التدرج المعرفي للتلاميذ ومستحضرين ما اكتسبوه من معارف أساسية متعلقة بالمادة في السنة الأولى من التعليم الثانوي العتيق.</p>\n <p>وسلكنا في إعداد الكتاب منهجا موحدا بين جميع الدروس محققا لمقاصد المادة وأهدافها، وذلك بذكر عنوان الدرس، وبيان أهدافه، ثم التمهيد له بما يضع الدرس في سياقه، وأتبعنا ذلك بذكر متن نخبة الفكر، وشرح المفردات والعبارات، ووضع أسئلة توجيهية تساعد على استخلاص مضمون المتن، ثم تحليل ومناقشة محاوره، وإيراد نصوص مختارة من كلام الأئمة الأعلام للاهتداء والاقتداء بما تتضمنه من قيم خلقية رفيعة، وتقويم مكتسبات المتعلمين، وإغناء معارفهم وتثبيتها بإيراد نقول نفيسة من أقوال العلماء في نصوص الاستثمار، ثم وضع أسئلة معينة على الإعداد القبلي للدرس المقبل.</p>\n <p>ونسأل المولى عز وجل أن نكون قد وفقنا في تقريب هذه المادة للمتعلمين، وأن يمن على الجميع بالفتح والفهم لتحصيل العلم النافع والعمل الصالح.</p>\n <p>والله الموفق والهادي إلى سبيل الرشاد.</p>\n <h2>&nbsp;الكتاب</h2>\n <ul>\n <li>كيف أستعمل كتابي</li>\n <li>كفايات تدريس مادة علوم الحديث</li>\n <li>التوزيع الدوري والأسبوعي</li>\n <li>الدرس 1 : التعريف بالحافظ ابن حجر وكتابه نخبة الفكر</li>\n <li>الدرس 2 : الخبر والحديث والأثر</li>\n <li>الدرس 3 : المتواتر والآحاد</li>\n <li>الدرس 4 : الحديث المشهور</li>\n <li>الدرس 5 : العزيز والغريب</li>\n <li>الدرس 6 : الحديث الصحيح ومراتبه</li>\n <li>الدرس 7 : الحديث الحسن</li>\n <li>الدرس 8 : زيادة الثقة والمحفوظ والشاذ</li>\n <li>الدرس 9 : الحديث المعروف والمنكر</li>\n <li>الدرس 10 : الاعتبار والمتابعات والشواهد</li>\n <li>الدرس 11 : محكم الحديث ومختلفه</li>\n <li>الدرس 12 : الناسخ والمنسوخ</li>\n <li>الدرس 13 : أنشطة تطبيقية</li>\n <li>الدرس 14 : المردود وأقسامه</li>\n <li>الدرس 15 : الحديث المرسل</li>\n <li>الدرس 16 : المعضل والمنقطع</li>\n <li>الدرس 17 : السقط الظاهر والخفي</li>\n <li>الدرس 18 : أسباب الطعن في الراوي</li>\n <li>الدرس 19 : الموضوع والمتروك</li>\n <li>الدرس 20 : الحديث المعلل</li>\n <li>الدرس 21 : المدرج والمقلوب</li>\n <li>الدرس 22 : المزيد في متصل الأسانيد والمضطرب</li>\n <li>الدرس 23 : المصحف والمحرف</li>\n <li>الدرس 24 : الاختصار في الحديث وروايته بالمعنى</li>\n <li>الدرس 25 : أنشطة تطبيقية</li>\n <li>الدرس 26 : ورشات عمل للدعم والتطبيق</li>\n <li>تراجم الأعلام</li>\n <li>غلاف الكتاب",
-  "htmlFr": "<h1>Les sciences du ḥadīth : le matn Nukhbat al-fikar avec le commentaire Nuzhat al-naẓar d’Ibn Ḥaǧar al-ʿAsqalānī — 2ᵉ année de l’enseignement secondaire traditionnel</h1>\n<p>L’exposé du livre de sciences du hadith, fondé sur le matn <em>Nuḫbat al-Fikr</em> [« Le choix des pensées »] avec le šarḥ <em>Nuzhat al-Naẓar</em> [« La promenade du regard »] du ḥāfiẓ Ibn Ḥaǧar al-ʿAsqalānī — que Dieu lui fasse miséricorde —, vise à rendre l’apprenant capable de comprendre le contenu de ce matn, de saisir l’importance et les bienfaits de la science de la terminologie du hadith (muṣṭalaḥ al-ḥadīth) ainsi que les efforts des savants en la matière, de connaître les termes conventionnels des traditionnistes et le sens de leurs désignations propres aux hadiths et aux transmetteurs, de savoir mobiliser les sources de la discipline, de s’approprier les valeurs morales issues des sciences du hadith — en s’y guidant (ihtidāʾ) et en les prenant pour modèle (iqtidāʾ) dans sa vie pratique —, d’être fier de la Sunna prophétique, de la mettre en œuvre et d’appeler à elle.</p>\n<p>Le livre est proposé à l’usage des élèves de la deuxième année de l’enseignement secondaire traditionnel.</p>\n<p>Louange à Dieu, Seigneur des mondes, prière et salut sur le plus noble des messagers, sur sa famille et l’ensemble de ses compagnons, et sur quiconque les suit avec bienfaisance jusqu’au Jour de la religion.</p>\n<p>Après quoi, c’est avec joie que nous présentons à nos enfants — élèves garçons et filles — le livre de la matière de sciences du hadith de la deuxième année de l’enseignement secondaire traditionnel. Nous avons fondé sa composition sur le <em>Nuḫbat al-Fikr</em> et son commentaire le <em>Nuzhat al-Naẓar</em>, du ḥāfiẓ Ibn Ḥaǧar al-ʿAsqalānī — que Dieu lui fasse miséricorde. La méthode du ḥāfiẓ Ibn Ḥaǧar dans son livre étant fondée sur la concision, nous avons recherché un surcroît d’explicitation et d’éclairage pour certaines questions au moyen des sources et références faisant autorité en sciences du hadith, en observant la gradation cognitive des élèves et en tenant pour acquis ce qu’ils ont déjà retenu de connaissances fondamentales dans la matière au cours de la première année de l’enseignement secondaire traditionnel.</p>\n<p>Dans la préparation du livre, nous avons suivi une méthode unifiée pour l’ensemble des leçons, réalisant les finalités et les objectifs de la matière : énoncer le titre de la leçon et expliciter ses objectifs ; l’introduire par une mise en contexte qui la situe dans son cadre ; citer ensuite le matn du <em>Nuḫbat al-Fikr</em> ; expliquer les mots et les expressions ; poser des questions d’orientation aidant à dégager le contenu du matn ; analyser et discuter ses axes ; rapporter des textes choisis des paroles des imams éminents, pour s’éclairer et prendre pour modèle les valeurs morales élevées qu’ils renferment ; évaluer les acquis des apprenants ; enrichir et consolider leurs connaissances par des citations précieuses des paroles des savants dans les textes d’exploitation (istiẓmār) ; enfin, formuler des questions aidant à la préparation préalable de la leçon suivante.</p>\n<p>Nous demandons à Dieu — puissance et gloire à Lui — de nous avoir accordé de rendre cette matière accessible aux apprenants, et d’octroyer à tous l’ouverture de l’esprit et l’intelligence nécessaires pour acquérir la science profitable et accomplir l’œuvre salutaire.</p>\n<p>Dieu est celui qui donne la réussite et qui guide vers la voie de la rectitude.</p>\n<h2>Table des matières</h2>\n<ul>\n<li>Leçon 1 : Présentation du ḥāfiẓ Ibn Ḥaǧar et de son ouvrage Nuḫbat al-Fikr</li>\n<li>Leçon 2 : Le ḫabar, le hadith et l’aṯar</li>\n<li>Leçon 3 : Le massivement transmis (mutawātir) et le singulier (āḥād)</li>\n<li>Leçon 4 : Le hadith célèbre (mašhūr)</li>\n<li>Leçon 5 : Le rare (ʿazīz) et l’insolite (ġarīb)</li>\n<li>Leçon 6 : Le hadith authentique (ṣaḥīḥ) et ses degrés</li>\n<li>Leçon 7 : Le hadith satisfaisant (ḥasan)</li>\n<li>Leçon 8 : L’ajout du transmetteur fiable, le retenu (maḥfūẓ) et l’anomal (šāḏḏ)</li>\n<li>Leçon 9 : Le hadith reconnu (maʿrūf) et le méconnu (munkar)</li>\n<li>Leçon 10 : La prise en compte (iʿtibār), les chaînes concordantes (mutābaʿāt) et les témoins (šawāhid)</li>\n<li>Leçon 11 : Le hadith concordant (muḥkam) et le divergent (muḫtalif)</li>\n<li>Leçon 12 : L’abrogeant (nāsiḫ) et l’abrogé (mansūḫ)</li>\n<li>Leçon 13 : Activités pratiques</li>\n<li>Leçon 14 : Le hadith rejeté (mardūd) et ses catégories</li>\n<li>Leçon 15 : Le hadith à transmetteur omis (mursal)</li>\n<li>Leçon 16 : Le hadith à double rupture (muʿḍal) et à rupture simple (munqaṭiʿ)</li>\n<li>Leçon 17 : L’omission apparente et cachette dans la chaîne (saqṭ)</li>\n<li>Leçon 18 : Les motifs de discrédit du transmetteur</li>\n<li>Leçon 19 : Le fabriqué (mawḍūʿ) et le délaissé (matrūk)</li>\n<li>Leçon 20 : Le hadith défectueux (maʿlūl)</li>\n<li>Leçon 21 : L’interpolé (mudraǧ) et l’inversé (maqlūb)</li>\n<li>Leçon 22 : L’adjonction dans les chaînes continues (mazīd) et l’incohérent (muḍṭarib)</li>\n<li>Leçon 23 : Le hadith altéré dans la graphie (muṣaḥḥaf) ou la vocalisation (muḥarrif)</li>\n<li>Leçon 24 : L’abrègement du hadith et sa transmission selon le sens</li>\n<li>Leçon 25 : Activités pratiques</li>\n<li>Leçon 26 : Ateliers de consolidation et d’application</li>\n<li>Notices biographiques des savants</li>\n</ul>"
- },
- "lessons": [
-  {
-   "docId": "pdf-mut23h2u-255",
-   "titleAr": "الدرس 1 : التعريف بالحافظ ابن حجر وكتابه نخبة الفكر",
-   "titleFr": "Leçon 1 : Présentation du ḥāfiẓ Ibn Ḥaǧar et de son ouvrage Nuḫbat al-Fikr",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/19DDA1.PDF",
-   "pdfOnly": true
+  "id": "ulum-hadith-tanawi-2",
+  "subject": "ulum-hadith",
+  "level": "tanawi-2",
+  "subjectAr": "علوم-الحديث",
+  "levelAr": "علوم-الحديث-الثانوي-الثاني",
+  "titleAr": "علوم الحديث",
+  "titleFr": "Sciences du ḥadīth — 2ᵉ lycée",
+  "pdfUrl": null,
+  "intro": {
+    "docId": "18677",
+    "titleAr": "علوم الحديث من متن نخبة الفكر بشرح نزهة النظر لابن حجر العسقلاني للسنة الثانية الثانوي العتيق",
+    "titleFr": "Présentation du manuel",
+    "html": "<h1> علوم الحديث من متن نخبة الفكر بشرح نزهة النظر لابن حجر العسقلاني س 2 ثا</h1>\n <dl>\n <dt></dt>\n <dd>\n \n </dd>\n </dl>\n <p></p>\n <p>يتوخى عرض كتاب علوم الحديث من متن نخبة الفكر بشرح نزهة النظر للحافظ ابن حجر العسقلاني، تمكين المتعلم من فهم مضامين هذا المتن، وجعله مدركا لأهمية وفوائد علم مصطلح الحديث، وجهود العلماء فيه، عارفا باصطلاحات المحدثين ومعاني إطلاقاتهم الخاصة على الأحاديث والرواة، قادرا على التعامل مع المصادر الحديثية، متمثلا القيم الخلقية من علوم الحديث مهتديا ومقتديا بها في حياته العملية، معتزا بالسنة النبوية، عاملا بها وداعيا إليها.</p>\n <p>الكتاب مقدم لفائدة تلاميذ السنة الثانية من التعليم الثانوي العتيق.</p>\n \n <p>&nbsp;الحمد لله رب العالمين، والصلاة والسلام على أشرف المرسلين وعلى آله وأصحابه أجمعين، وعلى من تبعهم بإحسان إلى يوم الدين.</p>\n <p>وبعد، فيسرنا أن نقدم لأبنائنا التلاميذ والتلميذات كتاب مادة علوم الحديث للسنة الثانية من التعليم الثانوي العتيق، وقد اعتمدنا في تأليفه نخبة الفكر بشرحها نزهة النظر للحافظ ابن حجر العسقلاني رحمه الله. ولما كان منهج الحافظ ابن حجر في كتابه مبنيا على الاختصار سعينا إلى مزيد بيان وتوضيح لبعض المسائل من خلال المصادر والمراجع المعتمدة في علوم الحديث، مراعين في ذلك التدرج المعرفي للتلاميذ ومستحضرين ما اكتسبوه من معارف أساسية متعلقة بالمادة في السنة الأولى من التعليم الثانوي العتيق.</p>\n <p>وسلكنا في إعداد الكتاب منهجا موحدا بين جميع الدروس محققا لمقاصد المادة وأهدافها، وذلك بذكر عنوان الدرس، وبيان أهدافه، ثم التمهيد له بما يضع الدرس في سياقه، وأتبعنا ذلك بذكر متن نخبة الفكر، وشرح المفردات والعبارات، ووضع أسئلة توجيهية تساعد على استخلاص مضمون المتن، ثم تحليل ومناقشة محاوره، وإيراد نصوص مختارة من كلام الأئمة الأعلام للاهتداء والاقتداء بما تتضمنه من قيم خلقية رفيعة، وتقويم مكتسبات المتعلمين، وإغناء معارفهم وتثبيتها بإيراد نقول نفيسة من أقوال العلماء في نصوص الاستثمار، ثم وضع أسئلة معينة على الإعداد القبلي للدرس المقبل.</p>\n <p>ونسأل المولى عز وجل أن نكون قد وفقنا في تقريب هذه المادة للمتعلمين، وأن يمن على الجميع بالفتح والفهم لتحصيل العلم النافع والعمل الصالح.</p>\n <p>والله الموفق والهادي إلى سبيل الرشاد.</p>\n <h2>&nbsp;الكتاب</h2>\n <ul>\n <li>كيف أستعمل كتابي</li>\n <li>كفايات تدريس مادة علوم الحديث</li>\n <li>التوزيع الدوري والأسبوعي</li>\n <li>الدرس 1 : التعريف بالحافظ ابن حجر وكتابه نخبة الفكر</li>\n <li>الدرس 2 : الخبر والحديث والأثر</li>\n <li>الدرس 3 : المتواتر والآحاد</li>\n <li>الدرس 4 : الحديث المشهور</li>\n <li>الدرس 5 : العزيز والغريب</li>\n <li>الدرس 6 : الحديث الصحيح ومراتبه</li>\n <li>الدرس 7 : الحديث الحسن</li>\n <li>الدرس 8 : زيادة الثقة والمحفوظ والشاذ</li>\n <li>الدرس 9 : الحديث المعروف والمنكر</li>\n <li>الدرس 10 : الاعتبار والمتابعات والشواهد</li>\n <li>الدرس 11 : محكم الحديث ومختلفه</li>\n <li>الدرس 12 : الناسخ والمنسوخ</li>\n <li>الدرس 13 : أنشطة تطبيقية</li>\n <li>الدرس 14 : المردود وأقسامه</li>\n <li>الدرس 15 : الحديث المرسل</li>\n <li>الدرس 16 : المعضل والمنقطع</li>\n <li>الدرس 17 : السقط الظاهر والخفي</li>\n <li>الدرس 18 : أسباب الطعن في الراوي</li>\n <li>الدرس 19 : الموضوع والمتروك</li>\n <li>الدرس 20 : الحديث المعلل</li>\n <li>الدرس 21 : المدرج والمقلوب</li>\n <li>الدرس 22 : المزيد في متصل الأسانيد والمضطرب</li>\n <li>الدرس 23 : المصحف والمحرف</li>\n <li>الدرس 24 : الاختصار في الحديث وروايته بالمعنى</li>\n <li>الدرس 25 : أنشطة تطبيقية</li>\n <li>الدرس 26 : ورشات عمل للدعم والتطبيق</li>\n <li>تراجم الأعلام</li>\n <li>غلاف الكتاب",
+    "htmlFr": "<h1>Les sciences du ḥadīth : le matn Nukhbat al-fikar avec le commentaire Nuzhat al-naẓar d’Ibn Ḥaǧar al-ʿAsqalānī — 2ᵉ année de l’enseignement secondaire traditionnel</h1>\n<p>L’exposé du livre de sciences du hadith, fondé sur le matn <em>Nuḫbat al-Fikr</em> [« Le choix des pensées »] avec le šarḥ <em>Nuzhat al-Naẓar</em> [« La promenade du regard »] du ḥāfiẓ Ibn Ḥaǧar al-ʿAsqalānī — que Dieu lui fasse miséricorde —, vise à rendre l’apprenant capable de comprendre le contenu de ce matn, de saisir l’importance et les bienfaits de la science de la terminologie du hadith (muṣṭalaḥ al-ḥadīth) ainsi que les efforts des savants en la matière, de connaître les termes conventionnels des traditionnistes et le sens de leurs désignations propres aux hadiths et aux transmetteurs, de savoir mobiliser les sources de la discipline, de s’approprier les valeurs morales issues des sciences du hadith — en s’y guidant (ihtidāʾ) et en les prenant pour modèle (iqtidāʾ) dans sa vie pratique —, d’être fier de la Sunna prophétique, de la mettre en œuvre et d’appeler à elle.</p>\n<p>Le livre est proposé à l’usage des élèves de la deuxième année de l’enseignement secondaire traditionnel.</p>\n<p>Louange à Dieu, Seigneur des mondes, prière et salut sur le plus noble des messagers, sur sa famille et l’ensemble de ses compagnons, et sur quiconque les suit avec bienfaisance jusqu’au Jour de la religion.</p>\n<p>Après quoi, c’est avec joie que nous présentons à nos enfants — élèves garçons et filles — le livre de la matière de sciences du hadith de la deuxième année de l’enseignement secondaire traditionnel. Nous avons fondé sa composition sur le <em>Nuḫbat al-Fikr</em> et son commentaire le <em>Nuzhat al-Naẓar</em>, du ḥāfiẓ Ibn Ḥaǧar al-ʿAsqalānī — que Dieu lui fasse miséricorde. La méthode du ḥāfiẓ Ibn Ḥaǧar dans son livre étant fondée sur la concision, nous avons recherché un surcroît d’explicitation et d’éclairage pour certaines questions au moyen des sources et références faisant autorité en sciences du hadith, en observant la gradation cognitive des élèves et en tenant pour acquis ce qu’ils ont déjà retenu de connaissances fondamentales dans la matière au cours de la première année de l’enseignement secondaire traditionnel.</p>\n<p>Dans la préparation du livre, nous avons suivi une méthode unifiée pour l’ensemble des leçons, réalisant les finalités et les objectifs de la matière : énoncer le titre de la leçon et expliciter ses objectifs ; l’introduire par une mise en contexte qui la situe dans son cadre ; citer ensuite le matn du <em>Nuḫbat al-Fikr</em> ; expliquer les mots et les expressions ; poser des questions d’orientation aidant à dégager le contenu du matn ; analyser et discuter ses axes ; rapporter des textes choisis des paroles des imams éminents, pour s’éclairer et prendre pour modèle les valeurs morales élevées qu’ils renferment ; évaluer les acquis des apprenants ; enrichir et consolider leurs connaissances par des citations précieuses des paroles des savants dans les textes d’exploitation (istiẓmār) ; enfin, formuler des questions aidant à la préparation préalable de la leçon suivante.</p>\n<p>Nous demandons à Dieu — puissance et gloire à Lui — de nous avoir accordé de rendre cette matière accessible aux apprenants, et d’octroyer à tous l’ouverture de l’esprit et l’intelligence nécessaires pour acquérir la science profitable et accomplir l’œuvre salutaire.</p>\n<p>Dieu est celui qui donne la réussite et qui guide vers la voie de la rectitude.</p>\n<h2>Table des matières</h2>\n<ul>\n<li>Leçon 1 : Présentation du ḥāfiẓ Ibn Ḥaǧar et de son ouvrage Nuḫbat al-Fikr</li>\n<li>Leçon 2 : Le ḫabar, le hadith et l’aṯar</li>\n<li>Leçon 3 : Le massivement transmis (mutawātir) et le singulier (āḥād)</li>\n<li>Leçon 4 : Le hadith célèbre (mašhūr)</li>\n<li>Leçon 5 : Le rare (ʿazīz) et l’insolite (ġarīb)</li>\n<li>Leçon 6 : Le hadith authentique (ṣaḥīḥ) et ses degrés</li>\n<li>Leçon 7 : Le hadith satisfaisant (ḥasan)</li>\n<li>Leçon 8 : L’ajout du transmetteur fiable, le retenu (maḥfūẓ) et l’anomal (šāḏḏ)</li>\n<li>Leçon 9 : Le hadith reconnu (maʿrūf) et le méconnu (munkar)</li>\n<li>Leçon 10 : La prise en compte (iʿtibār), les chaînes concordantes (mutābaʿāt) et les témoins (šawāhid)</li>\n<li>Leçon 11 : Le hadith concordant (muḥkam) et le divergent (muḫtalif)</li>\n<li>Leçon 12 : L’abrogeant (nāsiḫ) et l’abrogé (mansūḫ)</li>\n<li>Leçon 13 : Activités pratiques</li>\n<li>Leçon 14 : Le hadith rejeté (mardūd) et ses catégories</li>\n<li>Leçon 15 : Le hadith à transmetteur omis (mursal)</li>\n<li>Leçon 16 : Le hadith à double rupture (muʿḍal) et à rupture simple (munqaṭiʿ)</li>\n<li>Leçon 17 : L’omission apparente et cachette dans la chaîne (saqṭ)</li>\n<li>Leçon 18 : Les motifs de discrédit du transmetteur</li>\n<li>Leçon 19 : Le fabriqué (mawḍūʿ) et le délaissé (matrūk)</li>\n<li>Leçon 20 : Le hadith défectueux (maʿlūl)</li>\n<li>Leçon 21 : L’interpolé (mudraǧ) et l’inversé (maqlūb)</li>\n<li>Leçon 22 : L’adjonction dans les chaînes continues (mazīd) et l’incohérent (muḍṭarib)</li>\n<li>Leçon 23 : Le hadith altéré dans la graphie (muṣaḥḥaf) ou la vocalisation (muḥarrif)</li>\n<li>Leçon 24 : L’abrègement du hadith et sa transmission selon le sens</li>\n<li>Leçon 25 : Activités pratiques</li>\n<li>Leçon 26 : Ateliers de consolidation et d’application</li>\n<li>Notices biographiques des savants</li>\n</ul>"
   },
-  {
-   "docId": "pdf-mut23h2u-256",
-   "titleAr": "الدرس 2 : الخبر والحديث والأثر",
-   "titleFr": "Leçon 2 : Le ḫabar, le hadith et l'aṯar",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/217751.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-257",
-   "titleAr": "الدرس 3 : المتواتر والآحاد",
-   "titleFr": "Leçon 3 : Le massivement transmis (mutawātir) et le singulier (āḥād)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/3D9841.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-258",
-   "titleAr": "الدرس 4 : الحديث المشهور",
-   "titleFr": "Leçon 4 : Le hadith célèbre (mašhūr)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/4A9F51.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-259",
-   "titleAr": "الدرس 5 : العزيز والغريب",
-   "titleFr": "Leçon 5 : Le rare (ʿazīz) et l'insolite (ġarīb)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/570901.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-260",
-   "titleAr": "الدرس 6 : الحديث الصحيح ومراتبه",
-   "titleFr": "Leçon 6 : Le hadith authentique (ṣaḥīḥ) et ses degrés",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/62A541.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-261",
-   "titleAr": "الدرس 7 : الحديث الحسن",
-   "titleFr": "Leçon 7 : Le hadith satisfaisant (ḥasan)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/731801.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-262",
-   "titleAr": "الدرس 8 : زيادة الثقة والمحفوظ والشاذ",
-   "titleFr": "Leçon 8 : L'ajout du transmetteur fiable, le retenu (maḥfūẓ) et l'anomal (šāḏḏ)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/831F61.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-263",
-   "titleAr": "الدرس 9 : الحديث المعروف والمنكر",
-   "titleFr": "Leçon 9 : Le hadith reconnu (maʿrūf) et le méconnu (munkar)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/9C9351.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-264",
-   "titleAr": "الدرس 10 : الاعتبار والمتابعات والشواهد",
-   "titleFr": "Leçon 10 : La prise en compte (iʿtibār), les chaînes concordantes (mutābaʿāt) et les témoins (šawāhid)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/1098501.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-265",
-   "titleAr": "الدرس 11 : محكم الحديث ومختلفه",
-   "titleFr": "Leçon 11 : Le hadith concordant (muḥkam) et le divergent (muḫtalif)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/115B2E1.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-266",
-   "titleAr": "الدرس 12 : الناسخ والمنسوخ",
-   "titleFr": "Leçon 12 : L'abrogeant (nāsiḫ) et l'abrogé (mansūḫ)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/121AF11.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-267",
-   "titleAr": "الدرس 13 : أنشطة تطبيقية",
-   "titleFr": "Leçon 13 : Activités pratiques",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/1340A31.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-268",
-   "titleAr": "الدرس 14 : المردود وأقسامه",
-   "titleFr": "Leçon 14 : Le hadith rejeté (mardūd) et ses catégories",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/14F8B11.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-269",
-   "titleAr": "الدرس 15 : الحديث المرسل",
-   "titleFr": "Leçon 15 : Le hadith à transmetteur omis (mursal)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/15DA281.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-270",
-   "titleAr": "الدرس 16 : المعضل والمنقطع",
-   "titleFr": "Leçon 16 : Le hadith à double rupture (muʿḍal) et à rupture simple (munqaṭiʿ)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/1648A61.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-271",
-   "titleAr": "الدرس 17 : السقط الظاهر والخفي",
-   "titleFr": "Leçon 17 : L'omission apparente et cachette dans la chaîne (saqṭ)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/17B3511.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-272",
-   "titleAr": "الدرس 18 : أسباب الطعن في الراوي",
-   "titleFr": "Leçon 18 : Les motifs de discrédit du transmetteur",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/18BE471.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-273",
-   "titleAr": "الدرس 19 : الموضوع والمتروك",
-   "titleFr": "Leçon 19 : Le fabriqué (mawḍūʿ) et le délaissé (matrūk)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/19C3F31.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-274",
-   "titleAr": "الدرس 20 : الحديث المعلل",
-   "titleFr": "Leçon 20 : Le hadith défectueux (maʿlūl)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/20BFB01.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-275",
-   "titleAr": "الدرس 21 : المدرج والمقلوب",
-   "titleFr": "Leçon 21 : L'interpolé (mudraǧ) et l'inversé (maqlūb)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/21E8681.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-276",
-   "titleAr": "الدرس 22 : المزيد في متصل الأسانيد والمضطرب",
-   "titleFr": "Leçon 22 : L'adjonction dans les chaînes continues (mazīd) et l'incohérent (muḍṭarib)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/22A2D41.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-277",
-   "titleAr": "الدرس 23 : المصحف والمحرف",
-   "titleFr": "Leçon 23 : Le hadith altéré dans la graphie (muṣaḥḥaf) ou la vocalisation (muḥarrif)",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/2354B21.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-278",
-   "titleAr": "الدرس 24 : الاختصار في الحديث وروايته بالمعنى",
-   "titleFr": "Leçon 24 : L'abrègement du hadith et sa transmission selon le sens",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/2483E11.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-279",
-   "titleAr": "الدرس 25 : أنشطة تطبيقية",
-   "titleFr": "Leçon 25 : Activités pratiques",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/25-21.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-280",
-   "titleAr": "الدرس 26 : ورشات عمل للدعم والتطبيق",
-   "titleFr": "Leçon 26 : Ateliers de consolidation et d'application",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/2660911.PDF",
-   "pdfOnly": true
-  },
-  {
-   "docId": "pdf-mut23h2u-281",
-   "titleAr": "تراجم الأعلام",
-   "titleFr": "Notices biographiques des savants",
-   "html": "",
-   "htmlFr": "",
-   "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/تراجم_الأعلام.pdf",
-   "pdfOnly": true
-  }
- ]
+  "lessons": [
+    {
+      "docId": "pdf-mut23h2u-255",
+      "titleAr": "الدرس 1 : التعريف بالحافظ ابن حجر وكتابه نخبة الفكر",
+      "titleFr": "Leçon 1 : Présentation du ḥāfiẓ Ibn Ḥaǧar et de son ouvrage Nuḫbat al-Fikr",
+      "html": "",
+      "htmlFr": "<h1>Leçon 1&nbsp; : Présentation du ḥāfiẓ Ibn Ḥaǧar et de son ouvrage Nuḫbat al-Fikr&nbsp; : le livre des sciences du ḥadīṯ de deuxième année de l’enseignement secondaire — l’ouverture du manuel, l’imām aš-Šayḫ al-islām Ibn Ḥaǧar al-ʿAsqalānī et la naissance de la Naḫba</h1>\n<dl class=\"lesson-meta\">\n<dt>Source du cours</dt>\n<dd>Première leçon du livre des sciences du ḥadīṯ de deuxième année secondaire (le commentaire de la Naḫbat al-fikr d’Ibn Ḥaǧar — pages 11 à 16 de l’imprimé du miroir archive.org [item 1_20220304_20220304_2251], source locale content/textbooks-src/ulum-hadith-2-thanawi_text.pdf), porteuse de la bannière calligraphique « &nbsp;ad-dars 1&nbsp; : at-taʿrīf bi-l-ḥāfiẓ Ibn Ḥaǧar wa-kitābihi Nuḫbat al-fikr&nbsp; » (titleAr pré-mappé du registre pdf-mut23h2u-255)&nbsp; ; elle fait suite aux pages liminaires du manuel (préface, références du cours, cahier des charges annuel et répartition périodique — pages 5 à 10, non touchées) et précède immédiatement la leçon 2 « &nbsp;Le ḫabar, le ḥadīṯ et l’aṯar&nbsp; » (bannière de la page 17, docId pdf-mut23h2u-256 pré-mappé, non touché&nbsp; ; double rendu interdit). Les bornes furent tranchées par le DOUBLE sondage, jamais devinées&nbsp; : la page 11 s’ouvre sur les objectifs puis le tamhīd de la leçon 1 (la bannière calligraphique d’ouverture, muette pour tesseract comme au livre 1, est tenue par la couche texte incorporée du PDF concordante au titleAr pré-mappé — triple concordance documentée)&nbsp; ; la page 16 se termine par l’al-iʿdād al-qablī (la préparation de la leçon suivante « &nbsp;al-ḫabar wa-l-ḥadīṯ wa-l-aṯar&nbsp; », trois consignes)&nbsp; ; la page 17 s’ouvre sur les objectifs de la leçon 2 — la borne supérieure de la leçon 1 est donc la page 16, confirmée par le sondage de la page d’ouverture ET de la page suivante. La matière fut extraite de la couche texte incorporée (pdftotext, cache tr-tmp/r613-uh2-fulltext.txt), recoupée par l’OCR tesseract arabe local à 300 dpi des pages 11 à 17 (caches tr-tmp/r613/p-011.txt à p-017.txt, tessdata ara retéléchargé après le recyclage du bac à sable)&nbsp; ; TRAITS SPÉCIFIQUES DU LIVRE 2, documentés&nbsp; : (1) les NOMBRES de la couche texte sont PORTÉS EN ORDRE INVERSÉ (le piège documenté du protocole)&nbsp; : la couche écrit « &nbsp;258&nbsp; » pour la mort d’Ibn Ḥaǧar, « &nbsp;364&nbsp; » pour 463 (al-Ḫaṭīb, Ibn ʿAbd al-Barr), « &nbsp;504&nbsp; » pour 405 (al-Ḥākim), « &nbsp;034&nbsp; » pour 430 (Abū Nuʿaym), « &nbsp;445&nbsp; » pour 544 (al-Qāḍī ʿIyāḍ), « &nbsp;142/1&nbsp; » pour 1/421, « &nbsp;659/2&nbsp; » pour 2/956 — chaque nombre fut tranché par l’OCR 300 dpi, qui les rend tous CORRECTS (852, 463, 405, 430, 544, 643, 743, 773, 777, 785, 797), concordants au canon — jamais devinés&nbsp; ; (2) la couche dégrade le texte vocalisé du muṣḥaf d’ouverture (« &nbsp;al-ḥamdu li-llāhi ll-aḏī lā yazālu ʿāliman qadīran&nbsp; » rendu « &nbsp;nmar ʿalā iqdirā&nbsp; »)&nbsp; : le texte exact est tenu par l’OCR 300 dpi de la page 11&nbsp; ; (3) les références bibliographiques imprimées « &nbsp;1/421&nbsp; » et « &nbsp;2/956&nbsp; » (al-Ǧawāhir wa-d-durar d’as-Saḫāwī) sont tranchées par la lecture OCR inversement ordonnée et par le canon&nbsp; ; (4) le TROISIÈME PASSAGE de la citation d’as-Saḫāwī de l’exploitation (« &nbsp;si j’avais reçu… restreint à aḏ-Ḏahabī… livre original…&nbsp; ») est muette pour la couche ET pour tesseract psm 6 à 300 dpi&nbsp; : tranchée par RECADRAGE 600 dpi de la page 16 (tr-tmp/r613/crop-p16-sakawi.png) et lecture image intégrale — le texte en est rendu tel qu’imprimé, la référence imprimée « &nbsp;2/956&nbsp; » confirmée par la même image. Les dates hégériennes sont celles de l’imprimé&nbsp; ; les équivalents grégoriens, donnés « &nbsp;vers&nbsp;…&nbsp; », sont ajoutés par le traducteur d’après la correspondance usuelle, à titre indicatif. Aucune āya rendue&nbsp; ; aucun ḥadīṯ prophétique cité dans la leçon (les citations du muṭūn sont des paroles d’auteurs)&nbsp; ; zéro caractère arabe résiduel, zéro apostrophe droite, zéro doublon (htmlFr de pdf-mut23h2u-255 unique, jamais touché pour 256 ni pour le livre 1).</dd>\n</dl>\n<h2>Les objectifs de la leçon</h2>\n<p>Le manuel ouvre sa deuxième année sur quatre objectifs annoncés en tête de leçon&nbsp; : que l’élève reconnaisse les compilateurs (al-muṣannifūn) en la science de la terminologie du ḥadīṯ et leurs ouvrages&nbsp; ; qu’il connaisse la vie du ḥāfiẓ Ibn Ḥaǧar&nbsp; ; qu’il saisisse la raison de la composition de la « &nbsp;Nuḫbat al-fikr&nbsp; » et de son commentaire la « &nbsp;Nuzhat an-naẓar&nbsp; »&nbsp; ; et qu’il purifie l’intention (al-niyya) en la demande de la science et prenne les manières (ādāb) du muḥaddiṯ et de l’étudiant — le manuel place la formation morale au même rang que la maîtrise technique, conformément à son cahier des charges annuel.</p>\n<h2>Le tamhīd (l’introduction)</h2>\n<p>L’introduction du manuel rappelle que les compositions (at-taṣānīf) en la terminologie du ḥadīṯ se sont multipliées, inégales entre elles en ordre, en épuration (taḥḏīb) et en facilitation (taysīr)&nbsp; ; cela a porté le ḥāfiẓ Ibn Ḥaǧar — que Dieu lui fasse miséricorde — à composer un résumé de l’essentiel des questions de la science du ḥadīṯ, qu’il nomma « &nbsp;Nuḫbat al-fikr fī muṣṭalaḥ ahl al-aṯar&nbsp; » (l’élite de la contemplation en la terminologie des gens de la tradition), sur un ordre qu’il inventa et une voie qu’il traça, y rattachant les perles éparses (šawārid al-farāʾid) et les surcroîts d’utilités (zawāʾid al-fawāʾid)&nbsp; ; puis il composa pour son résumé un commentaire qui résout ses symboles et ouvre ses trésors, qu’il nomma « &nbsp;Nuzhat an-naẓar šarḥ Nuḫbat al-fikr&nbsp; » (la promenade de la contemplation, commentaire de l’élite de la contemplation).</p>\n<p>De là les trois questions qui orientent la leçon&nbsp; : quelle est l’importance du livre « &nbsp;Nuzhat an-naẓar šarḥ Nuḫbat al-fikr&nbsp; » parmi les efforts des savants en la compilation en la science du ḥadīṯ&nbsp; ? Et en quoi se distingua-t-il&nbsp; ? Et quel est l’effet de son auteur en cette science et en d’autres&nbsp; ?</p>\n<h2>Le texte&nbsp; : la muqaddima de la Naḫba</h2>\n<p>Le texte de la leçon est l’ouverture même de la Naḫba, citée du ḥāfiẓ Ibn Ḥaǧar — que Dieu lui fasse miséricorde&nbsp; : « &nbsp;Louange à Dieu qui ne cesse d’être savant et puissant&nbsp; ; que Dieu prie notre maître Muḥammad, qu’il a envoyé à l’ensemble des hommes en annonciateur et en avertisseur, ainsi que la famille de Muḥammad et ses Compagnons, et qu’il leur donne salut abondant. Les compositions en la terminologie des gens du ḥadīṯ se sont multipliées, étendues et abrégées&nbsp; ; certains de mes frères m’a demandé d’en résumer l’essentiel&nbsp; ; je lui répondis à sa question, dans l’espérance de figurer parmi ces voies.&nbsp; »</p>\n<h2>Le commentaire</h2>\n<h3>L’extraction des thèmes</h3>\n<p>Le manuel extrait les termes du texte&nbsp; : « &nbsp;at-taṣānīf&nbsp; » (les compositions) est le pluriel de « &nbsp;taṣnīf&nbsp; », et le visé est les ouvrages que les savants ont composés&nbsp; ; l’élève tire du texte la raison de la composition de la Naḫba, à savoir l’abondance des œuvres des muḥaddiṯūn&nbsp; ; « &nbsp;al-iṣṭilāḥ&nbsp; » (la terminologie) est l’accord d’un groupe consécré sur une affaire consacrée entre eux&nbsp; ; et « &nbsp;baʿḍ al-iḫwān&nbsp; » (certains de mes frères), le frère demandeur, n’est pas nommé par Ibn Ḥaǧar&nbsp; : les vérificateurs ont dit&nbsp; : c’est ʿIzz ad-Dīn ibn Ǧamāʿa&nbsp; ; d’autres ont dit&nbsp; : Šams ad-Dīn az-Zarkašī&nbsp; ; d’autres ont dit autre chose — le manuel tient les trois opinions telles quelles, sans trancher.</p>\n<h3>L’analyse</h3>\n<p>L’analyse relève que, suivant la voie des savants en les manières de la composition (ādāb at-taʾlīf), le ḥāfiẓ Ibn Ḥaǧar ouvre son ouvrage par le éloge de Dieu — par un égard d’étiquette (adab) avec Sa majesté qu’Il soit exalté, en reconnaissance de Sa grâce et de Son bienfait, et en attestation de Sa science absolue et de Sa puissance dépassante sur l’ensemble de Sa création&nbsp; ; et par la prière et le salut sur le plus noble des créés, notre maître Muḥammad, et sur sa famille — que la satisfaction de Dieu soit sur eux — qui portèrent l’héritage de la prophétie après lui.</p>\n<h2>1 — La présentation du ḥāfiẓ Ibn Ḥaǧar (mort en 852 H / vers 1448 apr. J.-C.)</h2>\n<h3>a) Son nom, sa filiation, sa naissance et sa jeunesse</h3>\n<p>Sa naissance advint en Šaʿbān 773 H / vers 1371 apr. J.-C. sur la rive du Nil, à la vieille Le Caire (Miṣr al-Qadīma)&nbsp; ; il grandit orphelin&nbsp; : son père mourut en Raǧab 777 H / vers 1375 apr. J.-C., et sa mère était morte avant lui, alors qu’il était enfant&nbsp; ; son père l’avait recommandé à deux hommes entre lesquels et lui il y avait affection, dont Zakī d-Dīn Abū Bakr ibn Nūr ad-Dīn ʿAlī — celui qui gardait sur lui par son père un droit particulier. Il mémorisa le Coran alors qu’il avait neuf ans, et pria à la tête des gens la prière du tarāwīḥ en imam dans la Mosquée sacrée, à La Mecque, alors qu’il avait douze ans, pendant son séjour (muǧāwara) avec son exécuteur testamentaire (waṣiyy) al-Ḫuraybī, l’an 785 H / vers 1383 apr. J.-C.</p>\n<h3>b) Ses voyages en la demande de la science</h3>\n<p>Šams ad-Dīn as-Saḫāwī raconte, dans son livre « &nbsp;al-Ǧawāhir wa-d-durar fī tarǧamat šayḫ al-islām Ibn Ḥaǧar&nbsp; » (les joyaux et les perles sur la biographie du šayḫ de l’islam Ibn Ḥaǧar), les voyages du ḥāfiẓ Ibn Ḥaǧar en la demande de la science&nbsp; ; ils sont nombreux et abondants&nbsp; : le premier voyage le porta — comme le livre le mentionne — à la fin de l’an 797 H / vers 1394 apr. J.-C. vers Alexandrie&nbsp; ; puis il voyagea au Ḥiǧāz et au Yémen, et rencontra, à La Mecque et à Mina et Médine, une assemblée de savants et de maîtres de la transmission&nbsp; ; puis, quand il approcha de l’accomplissement et de la maîtrise du possible dans les contrées égyptiennes, il voyagea vers les pays de la Syrie pour prendre de ses hommes&nbsp; ; et dans ses voyages il rencontra des assemblées de savants, tira profit d’eux et leur fit profiter&nbsp; ; as-Saḫāwī a donné — dans sa traduction d’Ibn Ḥaǧar — les détails de son voyage et de sa vie [al-Ǧawāhir wa-d-durar, 1/421].</p>\n<h3>c) Ses ouvrages</h3>\n<p>Les compositions du ḥāfiẓ Ibn Ḥaǧar sont nombreuses, parmi elles&nbsp; : « &nbsp;Fatḥ al-bārī bi-šarḥ Ṣaḥīḥ al-Buḫārī&nbsp; » (la victoire du Créateur, commentaire du Ṣaḥīḥ d’al-Buḫārī), le plus noble de ses ouvrages, le plus célèbre et le plus vaste&nbsp; ; « &nbsp;al-Iṣāba fī tamyīz aṣ-ṣaḥāba&nbsp; » (la juste évaluation en le discernement des Compagnons), où il a donné la notice des Compagnons de l’envoyé de Dieu, que la prière et le salut soient sur lui&nbsp; ; « &nbsp;Inbāʾ al-ġumr bi-abnāʾ al-ʿumr&nbsp; » (l’information des enchantés sur les fils des vies), rangé par années, où il expose chaque année les états des États et les événements et les décès des notables, englobant les rapporteurs du ḥadīṯ&nbsp; ; « &nbsp;Tabsīr al-muntabih wa-taḥrīr al-muštabih&nbsp; » (l’ouverture de l’œil vigilant et l’épuration du confus), où il a épuré le livre du confus d’aḏ-Ḏahabī, précisé les noms par les lettres, et comblé ce qui avait manqué à aḏ-Ḏahabī de noms&nbsp; ; « &nbsp;Taʿǧīl al-manfaʿa bi-zawāʾid rijāl al-aʾimma al-arbaʿa&nbsp; » (la hâte du profit en les surcroîts des hommes des quatre imams) — c’est-à-dire les hommes du Muwaṭṭaʾ et du Musnad d’Abū Ḥanīfa et du Musnad aš-Šāfiʿī et du Musnad d’Aḥmad&nbsp; ; « &nbsp;Taġlīq at-taʿlīq ʿalā Ṣaḥīḥ al-Buḫārī&nbsp; » (la liaison du suspendu sur le Ṣaḥīḥ d’al-Buḫārī), qui contient le rattachement des ḥadīṯ suspendus (muʿallaq) remontés et des traditions arrêtées (mawqūf) et tronquées (maqtūʿ) qui sont dans le Ṣaḥīḥ d’al-Buḫārī&nbsp; ; « &nbsp;Tahḏīb at-tahḏīb&nbsp; » (l’épuration de l’épuration), où il a résumé le Tahḏīb al-kamāl fī asāmī ar-riǧāl d’al-Mizzī, avec de nombreux surcroîts qu’il y a ajoutés&nbsp; ; et « &nbsp;Taqrīb at-tahḏīb&nbsp; » (l’approximation de l’épuration), son abrégé de son Tahḏīb at-tahḏīb, qui contient les notices des hommes des Six livres. Le ḥāfiẓ Ibn Ḥaǧar mourut — que Dieu lui fasse miséricorde — au mois de Dhū l-ḥiǧǧa 852 H / vers 1448 apr. J.-C. [date imprimée dégradée dans la couche (« &nbsp;258&nbsp; »), tranchée par l’OCR 300 dpi de la page 15, concordante au canon et aux notices du livre 1].</p>\n<h2>2 — L’importance et la raison de la composition de la « &nbsp;Nuḫbat al-fikr&nbsp; » et de son commentaire la « &nbsp;Nuzhat an-naẓar&nbsp; »</h2>\n<p>Le livre « &nbsp;Nuḫbat al-fikr&nbsp; » compte parmi les ouvrages importants de la terminologie du ḥadīṯ en son chapitre, abondants en leur matière&nbsp; ; il y a réuni — que Dieu lui fasse miséricorde — la quintessence des livres de cet art et sa moelle&nbsp; ; et les savants et les étudiants, anciens et modernes, s’en sont occupés&nbsp; : ils l’ont enseigné et commenté, posé des gloses à son flanc, et l’ont versifié — entre autres manières d’égard et d’intérêt&nbsp; ; il devint ainsi le pivot de leur appui en cet art.</p>\n<p>Ibn Ḥaǧar a explicité la raison de la composition de son livre par ses propres paroles&nbsp; : « &nbsp;Les compositions en la terminologie des gens du ḥadīṯ se sont multipliées chez les imams, en l’ancien temps et en le moderne&nbsp; ; certains de mes frères m’a demandé d’en résumer l’essentiel&nbsp; ; je l’ai donc résumé en des feuillets fins&nbsp; ; je les nommai&nbsp; : Nuḫbat al-fikr fī muṣṭalaḥ ahl al-aṯar (l’élite de la contemplation en la terminologie des gens de la tradition).&nbsp; »</p>\n<h3>Je m’inspire et j’inspire (ahtadī wa-aqtadī)</h3>\n<p>La leçon se clôt par une parole d’al-Ḫaṭīb al-Baġdādī — que Dieu lui fasse miséricorde — offerte à l’élève comme un vivier de guidance&nbsp; : « &nbsp;Et je te recommande, ô demandeur de science, de purifier l’intention en sa demande, et d’astreindre l’âme à l’action selon elle&nbsp; ; car la science est un arbre, et l’action est son fruit&nbsp; ; et n’est pas compté savant celui dont la science n’est pas suivie d’action&nbsp; ; on a dit&nbsp; : la science est un père et l’action un enfant né&nbsp; ; et la science avec l’action, la transmission avec la compréhension&nbsp; ; ne t’attache donc pas à l’action tant que tu es en exil de la science, et ne t’attache pas à la science tant que tu es court en l’action&nbsp; ; mais rassemble les deux, fût ton lot des deux mince&nbsp; ; et rien n’est plus faible qu’un savant qui a délaissé la science des gens au point d’abîmer leur voie, et un ignorant qui a séduit les gens par son ignorance, à cause de leur regard tourné vers son adoration.&nbsp; » [Iqtidāʾ al-ʿilm al-ʿamal (la nécessité de la science de l’action) d’al-Ḫaṭīb al-Baġdādī, p.&nbsp;14]</p>\n<h2>L’évaluation</h2>\n<p>Le manuel convoque quatre activités&nbsp; : (1) citer quelques compositions en la science du ḥadīṯ&nbsp; ; (2) rattacher chacun des deux livres suivants à son auteur et exposer ce qui le distingue&nbsp; : « &nbsp;Ǧāmiʿ bayān al-ʿilm wa-faḍlihi&nbsp; » (la compilation de l’exposé de la science et de son mérite) et « &nbsp;al-Iʿlām ilā maʿrifat uṣūl ar-riwāya wa-taqyīd as-samāʿ&nbsp; » (la conduite à la connaissance des fondements de la transmission et la qualification de l’audition) — l’élève les rapportera aux deux références présentées en la préface du manuel&nbsp; ; (3) citer quelques œuvres du ḥāfiẓ Ibn Ḥaǧar en la science du ḥadīṯ&nbsp; ; (4) citer les fruits de la sincérité (al-iḫlāṣ) en la demande de la science.</p>\n<h2>L’exploitation</h2>\n<p>Le manuel livre ensuite un récit d’as-Saḫāwī&nbsp; : le ḥāfiẓ Ibn Ḥaǧar a dit — qu’il l’ait entendu de lui&nbsp; : « &nbsp;Je ne suis satisfait d’aucune de mes compositions&nbsp; ; car je les ai faites au commencement de l’affaire, puis ne s’est point trouvé pour moi celui qui les épure avec moi, sauf pour le « &nbsp;commentaire d’al-Buḫārī&nbsp; », et « &nbsp;sa muqaddima&nbsp; », et « &nbsp;al-Muštabih&nbsp; », et « &nbsp;at-Tahḏīb&nbsp; », et « &nbsp;Lisān al-mīzān&nbsp; ». Mais il disait à ce propos&nbsp; : si j’avais reçu en mon affaire ce qui m’est venu tard, je ne me serais point restreint à aḏ-Ḏahabī, et j’en aurais fait un livre original (mubtakar), mais je le vois au rang où il a fait l’éloge du « &nbsp;commentaire d’al-Buḫārī&nbsp; », du « &nbsp;Taġlīq&nbsp; » et de « &nbsp;la Naḫba&nbsp; ».&nbsp; » [al-Ǧawāhir wa-d-durar fī tarǧamat šayḫ al-islām Ibn Ḥaǧar, as-Saḫāwī, 2/956 — référence imprimée dégradée dans la couche (« &nbsp;659/2&nbsp; »), tranchée par recadrage 600 dpi de la page 16, lecture image intégrale documentée] — l’élève lira le texte et en extraira les valeurs morales (al-qiyam al-ḫuluqiyya)&nbsp; : l’humilité du savant devant son œuvre, l’exigence de la vérification jusqu’à la fin, et le prix du temps de la maturité scientifique.</p>\n<h2>La préparation de la leçon suivante</h2>\n<p>La leçon 2 est « &nbsp;Le ḫabar, le ḥadīṯ et l’aṯar&nbsp; » (al-ḫabar wa-l-ḥadīṯ wa-l-aṯar)&nbsp; ; l’élève la préparera d’avance et recherchera&nbsp; : (1) déterminer le concept du ḫabar et de l’aṯar&nbsp; ; (2) rechercher la relation entre le ḫabar et le ḥadīṯ&nbsp; ; (3) revenir au « &nbsp;Muwaṭṭaʾ de l’imām Mālik&nbsp; » et en extraire un exemple de ḥadīṯ et un exemple d’aṯar (quand on voit la différence entre eux).</p>",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/19DDA1.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-256",
+      "titleAr": "الدرس 2 : الخبر والحديث والأثر",
+      "titleFr": "Leçon 2 : Le ḫabar, le hadith et l'aṯar",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/217751.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-257",
+      "titleAr": "الدرس 3 : المتواتر والآحاد",
+      "titleFr": "Leçon 3 : Le massivement transmis (mutawātir) et le singulier (āḥād)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/3D9841.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-258",
+      "titleAr": "الدرس 4 : الحديث المشهور",
+      "titleFr": "Leçon 4 : Le hadith célèbre (mašhūr)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/4A9F51.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-259",
+      "titleAr": "الدرس 5 : العزيز والغريب",
+      "titleFr": "Leçon 5 : Le rare (ʿazīz) et l'insolite (ġarīb)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/570901.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-260",
+      "titleAr": "الدرس 6 : الحديث الصحيح ومراتبه",
+      "titleFr": "Leçon 6 : Le hadith authentique (ṣaḥīḥ) et ses degrés",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/62A541.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-261",
+      "titleAr": "الدرس 7 : الحديث الحسن",
+      "titleFr": "Leçon 7 : Le hadith satisfaisant (ḥasan)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/731801.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-262",
+      "titleAr": "الدرس 8 : زيادة الثقة والمحفوظ والشاذ",
+      "titleFr": "Leçon 8 : L'ajout du transmetteur fiable, le retenu (maḥfūẓ) et l'anomal (šāḏḏ)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/831F61.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-263",
+      "titleAr": "الدرس 9 : الحديث المعروف والمنكر",
+      "titleFr": "Leçon 9 : Le hadith reconnu (maʿrūf) et le méconnu (munkar)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/9C9351.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-264",
+      "titleAr": "الدرس 10 : الاعتبار والمتابعات والشواهد",
+      "titleFr": "Leçon 10 : La prise en compte (iʿtibār), les chaînes concordantes (mutābaʿāt) et les témoins (šawāhid)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/1098501.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-265",
+      "titleAr": "الدرس 11 : محكم الحديث ومختلفه",
+      "titleFr": "Leçon 11 : Le hadith concordant (muḥkam) et le divergent (muḫtalif)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/115B2E1.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-266",
+      "titleAr": "الدرس 12 : الناسخ والمنسوخ",
+      "titleFr": "Leçon 12 : L'abrogeant (nāsiḫ) et l'abrogé (mansūḫ)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/121AF11.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-267",
+      "titleAr": "الدرس 13 : أنشطة تطبيقية",
+      "titleFr": "Leçon 13 : Activités pratiques",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/1340A31.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-268",
+      "titleAr": "الدرس 14 : المردود وأقسامه",
+      "titleFr": "Leçon 14 : Le hadith rejeté (mardūd) et ses catégories",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/14F8B11.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-269",
+      "titleAr": "الدرس 15 : الحديث المرسل",
+      "titleFr": "Leçon 15 : Le hadith à transmetteur omis (mursal)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/15DA281.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-270",
+      "titleAr": "الدرس 16 : المعضل والمنقطع",
+      "titleFr": "Leçon 16 : Le hadith à double rupture (muʿḍal) et à rupture simple (munqaṭiʿ)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/1648A61.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-271",
+      "titleAr": "الدرس 17 : السقط الظاهر والخفي",
+      "titleFr": "Leçon 17 : L'omission apparente et cachette dans la chaîne (saqṭ)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/17B3511.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-272",
+      "titleAr": "الدرس 18 : أسباب الطعن في الراوي",
+      "titleFr": "Leçon 18 : Les motifs de discrédit du transmetteur",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/18BE471.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-273",
+      "titleAr": "الدرس 19 : الموضوع والمتروك",
+      "titleFr": "Leçon 19 : Le fabriqué (mawḍūʿ) et le délaissé (matrūk)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/19C3F31.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-274",
+      "titleAr": "الدرس 20 : الحديث المعلل",
+      "titleFr": "Leçon 20 : Le hadith défectueux (maʿlūl)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/20BFB01.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-275",
+      "titleAr": "الدرس 21 : المدرج والمقلوب",
+      "titleFr": "Leçon 21 : L'interpolé (mudraǧ) et l'inversé (maqlūb)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/21E8681.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-276",
+      "titleAr": "الدرس 22 : المزيد في متصل الأسانيد والمضطرب",
+      "titleFr": "Leçon 22 : L'adjonction dans les chaînes continues (mazīd) et l'incohérent (muḍṭarib)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/22A2D41.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-277",
+      "titleAr": "الدرس 23 : المصحف والمحرف",
+      "titleFr": "Leçon 23 : Le hadith altéré dans la graphie (muṣaḥḥaf) ou la vocalisation (muḥarrif)",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/2354B21.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-278",
+      "titleAr": "الدرس 24 : الاختصار في الحديث وروايته بالمعنى",
+      "titleFr": "Leçon 24 : L'abrègement du hadith et sa transmission selon le sens",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/2483E11.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-279",
+      "titleAr": "الدرس 25 : أنشطة تطبيقية",
+      "titleFr": "Leçon 25 : Activités pratiques",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/25-21.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-280",
+      "titleAr": "الدرس 26 : ورشات عمل للدعم والتطبيق",
+      "titleFr": "Leçon 26 : Ateliers de consolidation et d'application",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/2660911.PDF",
+      "pdfOnly": true
+    },
+    {
+      "docId": "pdf-mut23h2u-281",
+      "titleAr": "تراجم الأعلام",
+      "titleFr": "Notices biographiques des savants",
+      "html": "",
+      "htmlFr": "",
+      "pdfUrl": "https://www.habous.gov.ma/images/2024/التعليم-العتيق/دروس-التعليم-العتيق/علوم-الحديث-الثانية-ثانوي/تراجم_الأعلام.pdf",
+      "pdfOnly": true
+    }
+  ]
 }
