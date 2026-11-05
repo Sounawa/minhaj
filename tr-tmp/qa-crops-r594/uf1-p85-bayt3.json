@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "VERSES= وَاللَّذَانْ لَا يُسْقِطَهُ الْكَأْنْ يَصِفْ ۞ ۞ ۞ أَوْ صَافَهُ بِمَا بِهِ لَا يَنْعَرِفْ\n\nMOTS= premier mot commençant par يـ : يُسْقِطَهُ → ي، س، ق، ط، ه\ndernier mot : يَنْعَرِفْ → ي، ن، ع، ر، ف",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793863030,
+  "id": "2026110515170581ee305d92444ebe",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110515170581ee305d92444ebe",
+  "usage": {
+    "completion_tokens": 137,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2220,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2357
+  }
+}

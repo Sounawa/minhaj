@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "VERSES=وَالْثَّانُ لا يَسْقُطُهُ الْكَنْ يَصِفُ ۞ ۞ ۞ أُوصَافُهُ مَا بَيْنَهُ لا يَتَعَرَّفُ\n\nMOTS=\n- Premier mot commençant par يـ : **يَسْقُطُهُ** → lettres : ي / س / ق / ط / هُ (avec la voyelle ُ sur le ق, le سukūn سْ, et le pronom suffixe ـهُ)\n- Dernier mot : **يَتَعَرَّفُ** → lettres : ي / ت / ع / ر / ر / فُ (préfixe يَـ avec fatha, ع au milieu, شدّة sur le deuxième ر, damma finale)",
+        "reasoning_content": "The nāẓim verse is the third line: وَالثَّانُ لا يَسْقُطُهُ الْكَنُ يَصِفُ ... أُوصافُهُ مَا بَيْنَهُ لا يَتَعَرَّفُ\n\nFull: وَالْثَّانِ لا يَسْقُطُهُ الْكَنْ يَصِفْ *** أَوْصَافُهُ مَا بَيْنَهُ لا يَتَعَرَّفُ\n\nTranscribe exactly as printed (fully vocalized).\n\nFirst word starting with يـ: يَسْقُطُهُ — letters: ي س ق ط ه. Last word: يَتَعَرَّفُ — letters ي ت ع ر ر ف.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793863055,
+  "id": "20261105151719a6a1419287534357",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105151719a6a1419287534357",
+  "usage": {
+    "completion_tokens": 402,
+    "completion_tokens_details": {
+      "reasoning_tokens": 196
+    },
+    "prompt_tokens": 1920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2322
+  }
+}

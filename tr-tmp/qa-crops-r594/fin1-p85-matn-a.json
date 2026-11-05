@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "لم يقتصر اهتمام المحذّثين في نقدهم على الأحاديث المكنوبة، بل تعدى ذلك إلى الأحاديث  — (سطر كامل، نصّ متّصل)\n\nالتي فيها نوع من الإيهام، وعدم التصريح سواء أكان ذلك في صيغ الرواية أو في أسماء الشيوع  — (سطر كامل، نصّ متّصل)\n\nوهو من التدليس في الحديث.  — (سطر كامل، نصّ متّصل)\n\nفما هو الحديث المدلس؟ وهل التدليس يقتضي ضعف الحديث؟  — (سطر كامل، نصّ متّصل)",
+        "reasoning_content": "This is prose commentary, not verse. Transcribe lines.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793862701,
+  "id": "20261105151135eea7e27ff696445d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105151135eea7e27ff696445d",
+  "usage": {
+    "completion_tokens": 172,
+    "completion_tokens_details": {
+      "reasoning_tokens": 12
+    },
+    "prompt_tokens": 2207,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2379
+  }
+}

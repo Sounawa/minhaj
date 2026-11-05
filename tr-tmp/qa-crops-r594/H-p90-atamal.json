@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "٣ - أيّن حكم التدليس مع الترجيح.\n\nالإعداد القبلي\n\nأحفظ متن الدرس القادم، وأطلع شرحه، وأجيب عن الآتي:\n\n١ - أعرف الحديث الشاذ.\n\n٢ - ما الفرق بينه وبين الحديث المنكر؟\n\n٣ - أيّن حكم الحديث الشاذ من حيث القبول والرد.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793862554,
+  "id": "202611051509049906447c400b4e97",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051509049906447c400b4e97",
+  "usage": {
+    "completion_tokens": 93,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1591,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1684
+  }
+}

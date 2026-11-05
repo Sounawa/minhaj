@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "وهو شر أنواع التدليس؛ لأنّ النقّة الأولى (شيخ المدلس) قد لا يكون معروفا بالتليس ويجده\n\nالواقع على السند بعد التسوية قد رواه عن النقّة الآخر فيحكم له بالصحة وفيه غدر شديد.\n\nوممن كان يفعله ذلك بقية بن الوليد الحمصي كما ذكره ابن أبي حاتم، والوليدُ بن مسلم كما\n\nقال أبو مسهر الدمشقي.\n\nالنوع الثاني: تدليس الشيوخ؛",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793862850,
+  "id": "20261105151405440aa661c51e4775",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105151405440aa661c51e4775",
+  "usage": {
+    "completion_tokens": 130,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1915,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2045
+  }
+}

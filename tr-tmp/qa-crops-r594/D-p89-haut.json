@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "صغّرُ سنه: وقد يكون الحامل على ذلك كون المروي عنه أصغر سنا من المدلس أو أكبر لكن بسيبر.\n\nإبهامُ كثرة الشيخ: بأن يروي عن الشيخ الواحد في مواضع بصفة، وفي أخرى بصفة أخرى يوهم أنه غيره، وكان الخطيب البغدادي يفعل هذا في مصنفاته.\n\nثالثا: حكم رواية المدلس؛\n\n1 - حكم تدليس الإسناد؛",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793862431,
+  "id": "202611051507053144526d9c0d4949",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051507053144526d9c0d4949",
+  "usage": {
+    "completion_tokens": 119,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1458,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1577
+  }
+}

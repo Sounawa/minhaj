@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "صَغْرُ سَنَه: وَقْدَ يَكُونُ الحَامِلُ عَلَى ذَلِكَ كَوْنُ المَرْوِيِّ عِنْدَهُ أَصْغَرَ سِنًّا مِنَ المُدَلَّسِ أَوْ أَكْبَرَ لَكِنْ بِسِيرٍ.\n\nإِيْهَامٌ كَثْرَةُ الشَّيْوخ: بَأَنْ يَرْوِيَ عَنِ الشَّيْخِ الوَاحِدِ فِي مَوَاضِعَ بِصِفَةٍ، وَفِي أُخْرَى بِصِفَةِ أُخْرَى",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793863266,
+  "id": "20261105152050350ec54303db4cfb",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105152050350ec54303db4cfb",
+  "usage": {
+    "completion_tokens": 216,
+    "completion_tokens_details": {
+      "reasoning_tokens": 215
+    },
+    "prompt_tokens": 1383,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1599
+  }
+}

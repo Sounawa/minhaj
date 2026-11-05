@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "النوعُ الثاني: تدليس الشيوخ،\n\nوهو أنْ لا يسقّط شيخه، ولكن يصفه بوصف أو لقب أو نسب أو كنية لا يُعرف بها ولام يتنهّر\nعند الرواية بها، وهذا ما يُشير إليه الناظم بقوله:\n\nوَالثّانِ لا يَسْقُطْهُ لِكِنْ يَصِفْ * * * أَوْ ضَافَهُ بِمَا بِهِ لا يَنْصَرِفْ\n\nهذا إذا همز من تَوْلِدِ ال... [illisible]",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793862845,
+  "id": "202611051513581db5b1f1dd76437b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051513581db5b1f1dd76437b",
+  "usage": {
+    "completion_tokens": 161,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2248,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2409
+  }
+}

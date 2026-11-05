@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "VERSES= وَمَا أَنْتِ مُؤْمِنًا نَوْعَانُ — يُفْلُ عُمْرُهُ فَوْقَ بُرْنَانِ وَآنُ\n\nMOTS= premier mot commençant par يـ : يُفْلُ (ي + ف + ل، préfixe يُـ avec ḍamma) ; dernier mot : وَآنُ (و + ا + ن).\n\nRemarque : l'image est en résolution limitée et une partie du bas du second hémistich est coupée ; la transcription est donnée telle que visible, sans correction. Si tu peux fournir un scan à plus haute résolution ou complet, je peux affiner les voyelles (surtout autour de ع/ص).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793863039,
+  "id": "202611051517112475938ac68c4c92",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051517112475938ac68c4c92",
+  "usage": {
+    "completion_tokens": 189,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2786,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2975
+  }
+}

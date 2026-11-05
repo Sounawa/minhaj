@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "الشرح {\n\nالمُدَلَّس: مشتقّ من الدَّلس وهو الظلمة، ويطلق «التدليس» على إخفاء عيب في السلعة على المشتري.\n\nاستخلاص المضامين:\n\n1- ما هو المدلس وما هي أنواعه؟",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793863162,
+  "id": "202611051519174ee1d7552ef44f55",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051519174ee1d7552ef44f55",
+  "usage": {
+    "completion_tokens": 73,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2317,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2390
+  }
+}

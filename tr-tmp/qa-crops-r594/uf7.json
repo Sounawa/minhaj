@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "سَنَا مِنَ الْمَدْلَسِ أَوْ أَكْبَرِ\n\n(Note : le texte imprimé ne porte que la fatha sur «أو» ; les autres voyelles ne sont pas visibles à cette résolution.)",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793863327,
+  "id": "202611051522034c293b84a8774c78",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051522034c293b84a8774c78",
+  "usage": {
+    "completion_tokens": 66,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1499,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1565
+  }
+}
