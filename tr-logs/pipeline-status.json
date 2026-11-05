@@ -1,9 +1,9 @@
 {
- "ts": 1793911049.2255409,
- "iso": "2026-11-05T20:37:29Z",
+ "ts": 1793915091.4944522,
+ "iso": "2026-11-05T21:44:51Z",
  "version": "v4",
  "startedAt": "2026-10-31T15:29:57Z",
- "cycles": 125,
+ "cycles": 192,
  "wakeCount": 0,
  "workers": {
   "active": 0,
@@ -11,30 +11,30 @@
  },
  "remainingDocs": 0,
  "registry": {
-  "hand": 1103,
+  "hand": 1104,
   "llm": 57
  },
  "portal": {
   "state": "FERMÉE",
-  "ts": "2026-11-05T20:34:23Z",
+  "ts": "2026-11-05T21:34:44Z",
   "detail": "bannière de maintenance présente"
  },
  "sourceHunt": {
-  "ts": "2026-11-05T20:34:26Z",
+  "ts": "2026-11-05T21:34:46Z",
   "book": "tafsir-5ep",
   "docId": "pdf-mut23h3c-709",
   "titleFr": "Sourate al-Isrāʾ, verset 1",
   "direct": "404",
-  "wayback": "DISPONIBLE(20261013031750)",
+  "wayback": "ERR:HTTPError",
   "collection": "collection:DÉJÀ-EN-CACHE(tafsir-2-thanawi_text.pdf)",
   "detail": "direct=404"
  },
  "lastAutoCommit": {
-  "ts": "2026-11-05T20:34:27Z",
-  "subject": "auto(pipeline): 2026-11-05 20:34 — superviseur v4 (battement, registre, chasse)"
+  "ts": "2026-11-05T21:44:48Z",
+  "subject": "auto(pipeline): 2026-11-05 21:44 — superviseur v4 (battement, registre, chasse)"
  },
  "lastPush": {
-  "ts": "2026-11-05T20:34:29Z",
+  "ts": "2026-11-05T21:44:51Z",
   "ok": true
  }
 }
