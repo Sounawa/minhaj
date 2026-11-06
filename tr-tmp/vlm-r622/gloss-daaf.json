@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "الضعف: الخَفْض، والضعيف: خَفْض المَقُوّ",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976592,
+  "id": "202611062249468ad8de26e1fc4ee8",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062249468ad8de26e1fc4ee8",
+  "usage": {
+    "completion_tokens": 27,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 7758,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7785
+  }
+}

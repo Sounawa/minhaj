@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Le crochet : [مقاييس اللغة، ابن فارس، 5/476]\n\nChiffres de gauche à droite : 5/476",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976618,
+  "id": "202611062250139985c3823d434862",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062250139985c3823d434862",
+  "usage": {
+    "completion_tokens": 36,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8187,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8223
+  }
+}

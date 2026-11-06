@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "أن أتبين المكانة العلمية للإمام [illisible]",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976570,
+  "id": "20261106224928647238b6344240d6",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106224928647238b6344240d6",
+  "usage": {
+    "completion_tokens": 19,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 6965,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6984
+  }
+}

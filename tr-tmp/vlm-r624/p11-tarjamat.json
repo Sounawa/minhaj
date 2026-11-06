@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "- عطاء بن أبي رباح: بفتح الراء والموحدة، أسلم الفرسني أبو محمد مولى المخيمي، فقيه نجلة فاضل كثير الإرسال، مات عام 114هـ على المشهور.\n\n- عبد الله بن عمر رضي الله عنهما: هو عبد الله بن عمر بن الخطاب القرشي العدوي أبو عبد الرحمن المكي، أسلم مع أبيه وهو صغير، وهو أول مولود في الإسلام،، توفي عام 73 أو 74هـ.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976658,
+  "id": "20261106225052cde75b61c6754ba4",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106225052cde75b61c6754ba4",
+  "usage": {
+    "completion_tokens": 124,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8190,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8314
+  }
+}

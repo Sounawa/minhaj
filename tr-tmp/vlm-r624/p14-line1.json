@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**التسليم:** «يبسل رأسه وهو محرم إلا من الأذىlam» — لا؛ النص الصحيح للسطر هو:\n\n**يبسل رأسه وهو محرم إلا من الأذى » [الموطأ رقم : 907]**\n\nالرقم كما هو مطبوع، من اليمين إلى اليسار: **7** ثم **0** ثم **9**، أي **907** (والأرقام تُقرأ في العربية من اليسار إلى اليمين كما تُطبع).",
+        "reasoning_content": "Number reads right-to-left: digits printed \"907\"? As printed left-to-right it shows 907, but Arabic numbers read left-to-right anyway: ٩٠٧? Image shows \"907\" but rightmost digit is 7? Printed left to right: 9 0 7? Actually it appears \"907\". Hmm, digit-by-digit right to left: 7,0,9 → number 709? In Arabic script numbers written left-to-right, so as printed it's 907... but wait image shows \"907\" with 9 leftmost. Typically Zarqani Muwatta numbering: hadith of \"religion is advice\" is Muwatta 1562? The famous \"دين النصيحة\" hadith in Muwatta... hmm. Trust image: printed left-to-right digits ٩ ٠ ٧ = 907.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977004,
+  "id": "202611062256366609af6883604ab0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062256366609af6883604ab0",
+  "usage": {
+    "completion_tokens": 309,
+    "completion_tokens_details": {
+      "reasoning_tokens": 187
+    },
+    "prompt_tokens": 1179,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1488
+  }
+}

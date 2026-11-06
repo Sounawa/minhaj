@@ -52,6 +52,12 @@ BOOKS = {
     "ulum-hadith-tanawi-2": {"registry": "ulum-hadith-tanawi-2.json",
                              "doc_prefix": "pdf-mut23h2u-", "claim_prefix": "uh2-",
                              "numeric": False},
+    # extension v4 R624 (22:37, tick principal) : hadith-3es — docIds pdf-mut23h2x-390..418
+    # (livre 3 collège : Muwaṭṭaʾ/Zarqānī 3ᵉ année, PDF hadith-3-iadadi_text.pdf 196 p.,
+    # registre pré-mappé 29 entrées, titres portail complets) ; slot = docId COMPLET.
+    "hadith-3es": {"registry": "hadith-3es.json",
+                   "doc_prefix": "pdf-mut23h2x-", "claim_prefix": "hadith3-",
+                   "numeric": False},
 }
 DEFAULT_BOOK = "tafsir-5ep"
 

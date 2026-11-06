@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Je ne peux pas répondre à cette question telle qu'elle est posée : l'image fournie ne contient aucun des éléments demandés. Elle ne montre que :\n\n- **استخلاص الضامن :**\n- **1 -** أعرف الحج لغة واصطلاحا.\n- **2 -** أبين حكم الاغتسال للإحرام ومقاصده.\n- bouton « **فقه الحديث** »\n- et un début de phrase en rouge coupé en bas (« أقسّمُ فقهَ الحديثِ حَسبَ ما... »)\n\nOn n'y trouve ni définition d'ابن عرفة entre « », ni renvoi entre [ ] avec numéro de page, ni phrase sur الاقتصار على عرفة, ni citation «الحج عرفة» avec sa source. Je refuse donc d'inventer ces éléments ou leurs numéros de page : il faudrait la page du manuel contenant effectivement ces passages.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977014,
+  "id": "2026110622564759bc264a94c1478e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110622564759bc264a94c1478e",
+  "usage": {
+    "completion_tokens": 212,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 6553,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6765
+  }
+}

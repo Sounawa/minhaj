@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "[ صحيح مسلم مع شرح النووي : 1/65 ].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976630,
+  "id": "20261106225027ba70a9d5f1224f18",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106225027ba70a9d5f1224f18",
+  "usage": {
+    "completion_tokens": 20,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8156,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8176
+  }
+}

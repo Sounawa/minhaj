@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) Ce qui précède « الخليلي » : **وقال** (donc : « وقال الخليلي »)\n\n(2) Le mot entre « حديثه في » et « في رمضان » : le texte imprimé montre **المواقيت** (avec qāf et yāʾ, pas un ḍād) — donc « حديثه في المواقيت في رمضان ».",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976613,
+  "id": "20261106225007b9964fcfb5644c9d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106225007b9964fcfb5644c9d",
+  "usage": {
+    "completion_tokens": 96,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8162,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8258
+  }
+}

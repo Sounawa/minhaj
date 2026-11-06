@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "D'après ce qui est imprimé sur la deuxième ligne, la suite après « كذلك » est :\n\n**» عَلَى وِلَادَتِهِ غَيْرُهُ مِنْ أَهْلِ الْحِفْظِ وَالرِّوَايَةِ وَالْعِلْمِ وَأَنْتُمْ أَوْلَى النَّاسِ بِذَلِكَ «**\n\nC'est-à-dire, mot à mot d'après les points visibles sur l'image : « على ولادته غيره من أهل الحفظ والرواية والعلم وأنتم أولى الناس بذلك ».",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977736,
+  "id": "20261106230848c5f06ce2722144ad",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106230848c5f06ce2722144ad",
+  "usage": {
+    "completion_tokens": 166,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 7190,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7356
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Le texte demandé ne figure pas sur cette image. Les notices biographiques (عبد الله بن عمر بن الخطاب, années de vie) et le bloc الشرح commençant par « البَيْدَاء ثم طُوّى ثم الثنيّتان » n'y sont pas visibles.\n\nLa page contient uniquement la suite d'un lexique (شرح الألفاظ), dont voici la transcription exacte :\n\n- تَهَلَّلَ: تحرّم وتلَبّى.\n- أن تَجْعَلَها بَيْنَ: أي تَجْعَلَني أفتيك وتنحّي الفتيا عن نفسك إن كان في هذا الفدية.\n- طَوى: ود بفرب مكة.\n- شَعْثًا: تلبدا واغبرارا.\n- بين الثَنِيَّتَيْنِ: مَثنى ثنية وهي الكادية.",
+        "reasoning_content": "The requested text isn't on this page; the page shows glossary items only. Must say so, transcribe nothing invented.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976669,
+  "id": "202611062250585c484ce768294fa6",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062250585c484ce768294fa6",
+  "usage": {
+    "completion_tokens": 246,
+    "completion_tokens_details": {
+      "reasoning_tokens": 26
+    },
+    "prompt_tokens": 8076,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8322
+  }
+}

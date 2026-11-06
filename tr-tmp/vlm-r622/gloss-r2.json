@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "الشرح:\nالراجح: الصنف والصنفَا: خلفا -\nالراجح: القوّي الوالّدن، وارجح الـ...",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977813,
+  "id": "20261106231009518a6017981f40f7",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106231009518a6017981f40f7",
+  "usage": {
+    "completion_tokens": 44,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8140,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8184
+  }
+}

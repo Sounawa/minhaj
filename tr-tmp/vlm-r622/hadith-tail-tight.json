@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Transcription (ce que je vois, mot à mot) :\n\nوقري الصيف دخل الجنة» ، [الصلح لابن أبي حاتم: 5/359]\n\nDétail du crochet, tel qu'imprimé :\n- premier mot : « الصلح » — les lettres visibles sont alif-saad-lam-ha ([illisible] sur la voyellation ; l'OCR hésite et je ne peux pas trancher avec certitude sur un titre précis)\n- puis : « لابن أبي حاتم »\n- puis : « : »\n- puis les chiffres, chiffre par chiffre de gauche à droite tels qu'imprimés : 3 5 9 / 5\n- fermeture : « ] »\n\nNote : je ne vois pas « وصام » dans cette image ; le texte visible commence par « وقرى/وقري الصيف دخل الجنة » — les lettres visibles sont و-ق-ر-ي suivi de الصيف، donc je tranche pour « وقري الصيف » (sans diacritiques visibles).",
+        "reasoning_content": "Image shows: وقري الصيف دخل الجنة» ، [المتلف لابن أبي حاتم: 5/359]؟ Actually visible: [المتلبي... transcription: «وقري الصيف دخل الجنة»] — visible text: \"وقري الصيف دخل الجنة\". Bracket: [الصلح لابن أبي حاتم: 5/359]? Likely \"المعجم\" ... I must transcribe what I see: green text \"[المسل لابن أبي حاتم: 5/359]\" — I'll transcribe [المتلب...]. Careful: reads \"[المسلل لابن أبي حاتم: 5/359]\" hmm. I'll write [الصلح لابن أبي حاتم: ٥/٣٥٩] but digits: \"5/359\" appears Latin? Image shows \"359/5\" Latin digits? Looks like \"359/5\" in Latin. In RTL it's [المسند لابن أبي حاتم: 5/359]? Text visible: \"الصلل لابن أبي حاتم\" – safest: [المسند لابن أبي حاتم: 5/359]? Don't invent. The glyphs: \"المتلل\"? I'll transcribe as [الصلح لابن أبي حاتم: 5/359]—uncertain. Given uncertainty, mark word: I see \"الصلح\". Actually Musnad Ibn Hibban? Book \"صحيح ابن حبان\". Common citation: [صحيح ابن حبان]. But letters show لابن أبي حاتم. I'll output what I see.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976548,
+  "id": "2026110622484872678ee2ed954b9d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110622484872678ee2ed954b9d",
+  "usage": {
+    "completion_tokens": 621,
+    "completion_tokens_details": {
+      "reasoning_tokens": 377
+    },
+    "prompt_tokens": 8204,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8825
+  }
+}

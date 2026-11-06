@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**أهداف الدرس**\n\n1- أن أعرف مفهوم الحج وحكمه.\n2- أن أدرک أحکام أنواع غسل المحرم.\n3- أن أدرک مقاصد الغسل للإحرام.\n\n**تمهيد**\n\nالحج خامس أرکان الإسلام، والجمهور علی أنه فُرض سنة ست من الهجرة، وللحج ميزة خاصة عن باقي الأرکان؛ لأنه عبادة مالية وبدنية، وله مجموعة من المقاصد تتحقق بمراعاة أحکامه منها الغسل.\n\nفما هو الحج؟ وما حکم اغتسال الحاج للإحرام؟",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976629,
+  "id": "202611062250240003ee8bff304104",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062250240003ee8bff304104",
+  "usage": {
+    "completion_tokens": 151,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5670,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5821
+  }
+}
