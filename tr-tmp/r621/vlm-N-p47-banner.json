@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) Bannière : « الدرس / 8 » — le numéro de leçon est 8. Titre imprimé : زيامة الثقة والمحفوظ والشاذ — plus exactement, tel qu'imprimé : « زيامة الثقة والمحفوظ والشاذ » [le premier mot apparaît imprimé ainsi ; transcription exacte de l'image : زيامة الثقة والمحفوظ والشاذ].\n\n(2) Aucune ligne « أن أتعرف ... » n'est visible en bas de l'image (le texte en bas est tronqué/illisible : [illisible]).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793962350,
+  "id": "20261106185227198ad6a98fe444a5",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106185227198ad6a98fe444a5",
+  "usage": {
+    "completion_tokens": 137,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1037,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1174
+  }
+}

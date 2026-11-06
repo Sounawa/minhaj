@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) Colonne droite (الشرح):\n\nالثقة: هو المؤتمن، وهو مصدر وثق به يثق ثقة، ويجمع على ثقات.\n\nالمحفوظ: قصد به في المتن: ما رواه الأوثق مخالفا لمن دونه من الثقات\n\n(2) Colonne gauche (استخلاص المضامين):\n\n1. استخلص من المتن زيادة الثقة.\n2. استخلص من المتن تعريف المحفوظ والشاذ.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793962360,
+  "id": "202611061852370741c8f53c394958",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611061852370741c8f53c394958",
+  "usage": {
+    "completion_tokens": 118,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1299,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1417
+  }
+}

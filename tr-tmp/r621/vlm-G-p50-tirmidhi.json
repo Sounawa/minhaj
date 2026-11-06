@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) Isnād : حدثنا بشر بن معاذ العقدی ، حدثنا عبد الواحد بن زياد قال : حدثنا الأعمش ، عن أبي صالح ، عن أبي هريرة رضي الله عنه ، قال : قال رسول الله صلی الله عليه وسلم\n\n(2) Matn : «إذا صلی أحدكم ركعتين الفجر فيضطجع علي يمينه»\n\n(3) Référence : [سنن الترمذي ، أبواب الصلاة ، باب ما جاء في الانضباع]",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793962387,
+  "id": "20261106185302113d055ea6a14d03",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106185302113d055ea6a14d03",
+  "usage": {
+    "completion_tokens": 131,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 721,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 852
+  }
+}

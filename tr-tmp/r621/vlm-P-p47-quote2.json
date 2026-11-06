@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Transcription exacte de ce qui est visible dans l'image :**\n\n**Moitié droite (haut) :**\nقال الحافظ ابنُ حجر رحمه الله تعالى: \"وَزِيَادَةُ رَاوٍ أَوْثَقُ؛ فَإِنْ خُلِّفَ بِأَرْجَحِ فَالرَّاجِحُ الْمَحْفُوظُ، وَمُقَابِلُهُ الشَّاذُ\n\n**Moitié gauche (bas) :**\n\"وَزِيَادَةُ رَاوِيهِمَا مَقْبُولَةٌ مَا لَمْ تَنْقَضْ مَنَافِيَةُ لِبْنُ هُوَ وَمُقَابِلُهُ الشَّاذُ\".\n\n**Réponses précises :**\n\n(a) Après « ما لم تنـ » le texte imprimé lit : **تنقض منافية** (et non « تنافئ من هو أوثق » ni « مناط العدل ») — suivi de ce qui semble imprimé « لِبْنُ هُوَ » (le texte est coupé à droite ; la fin du segment n'est pas visible sur l'image).\n\n(b) Entre « فالراجح المحفوظ » et « الشاذ » on lit exactement : **وَمُقَابِلُهُ** (ومقابله).\n\n(c) Après « وزيادة » (2e occurrence) le mot imprimé est : **رَاوِيهِمَا** (راويهما, avec ي).\n\n⚠️ Je ne transcris que ce qui est visible : la fin de la citation n'apparaît pas dans l'image (elle est coupée après « لِبْنُ هُوَ »), donc je ne peux pas la compléter.",
+        "reasoning_content": "The image shows only the beginning: «قال الحافظ ابن حجر... تعالي: \"وزيادة راوٍ أَوثق؛ فإن خلف بأرجح فالراجح المحفوظ، ومقابله الشاذ\"...» — the rest of the citation isn't visible. The user asks about parts not in the image. Must report only what's visible.\n\nVisible text: قال الحافظ ابنُ حجر رحمه الله تعالى: \"وزيادة راوٍ أَوثق؛ فإن خُلِّف بأرجح فالراجح المحفوظ، ومقابله الشاذ\"، ووزيادة راويهما مقبولة ما لم تنفخ منافيه لبن هو... hmm the second box: \"وزيادة راويهما مقبولة ما لم تنقض منافيه لبن هو\" — unclear. Actually reads: «وزيادة راويهما مقبولة ما لم تنقض منافية لبن هو ومقابله الشاذ».\n\nAnswer questions: (a) after ما لم تنافئ — image seems \"منافيه\" then \"لبن هو\" [likely \"لن هو\" but must transcribe]. (b) between المحفوظ and الشاذ: ومقابله. (c) راويهما.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793962661,
+  "id": "20261106185723f6369ea8a3d44298",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106185723f6369ea8a3d44298",
+  "usage": {
+    "completion_tokens": 726,
+    "completion_tokens_details": {
+      "reasoning_tokens": 281
+    },
+    "prompt_tokens": 3668,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4394
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1. أذكر أنواع زيادة الثقة باعتبار موطن الزيادة.\n2. أبين الفرق بين الشاذ والحفوظ.\n3. أستحضر مثالا للحديث الشاذ وآخر للحديث الحفوظ.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793962404,
+  "id": "2026110618532278073f5fb6aa4cf6",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110618532278073f5fb6aa4cf6",
+  "usage": {
+    "completion_tokens": 57,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 801,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 858
+  }
+}

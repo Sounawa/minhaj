@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "قال الخطيب البغدادي رحمه الله: «قل ما يتمهر في علم الحديث، ويقع على غوامضه، ويستثير الخفي من فوائده، إلا من جمع بين متفرقه، وألّف متشتنته، وضع بعضه إلى بعض،",
+        "reasoning_content": "Transcribe exactly.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793962394,
+  "id": "2026110618531117b487e5b60a4da6",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110618531117b487e5b60a4da6",
+  "usage": {
+    "completion_tokens": 70,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4
+    },
+    "prompt_tokens": 706,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 776
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) لغة: هو الأسيءُ للحسن البابي على حادث، وهو ما حُوِد من خطأ، وهو ما اصطلح عليه\n\n(2) 87/2 — chiffres: 87 / 2 (imprimé : [مقاييس اللغة، ابان فارس، 2/87])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793962377,
+  "id": "2026110618525550e849a84dbf4424",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110618525550e849a84dbf4424",
+  "usage": {
+    "completion_tokens": 79,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 475,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 554
+  }
+}

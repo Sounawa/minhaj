@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "ال Bukhārī في صحيحه قال: حدثنا عبد الله بن يزيد، حدثنا سعيد بن أبي أيوب، قال: حدثي أبا هرمرة عن عروة بن الزبير، عن عائشة رضي الله عنها، قالت: «كان النبيُّ صلِّى الله عَلَيْهِ وَسَلَّمَ إذا صلى ركعتيِ الفجرِ اضطجعَ على شقهِ الأيمن». [صحيح البخارى، كتاب الجمع، باب الضحة على",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793962391,
+  "id": "202611061853073dca05a4e7104b17",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611061853073dca05a4e7104b17",
+  "usage": {
+    "completion_tokens": 136,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 710,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 846
+  }
+}

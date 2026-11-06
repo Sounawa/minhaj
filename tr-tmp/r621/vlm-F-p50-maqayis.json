@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Transcription exacte de la ligne :\n\nأ— لغة: الانفراد والخارقة، يقال: شد النَّبيء شذّ شذوذا [مقوليس للفء، ابن فارس، 3/180 بتصرف].\n\n**Chiffres de la référence, un par un :** 3 / 180 (ordre : 3 puis 180) — mot après le crochet : بتصرف.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793962381,
+  "id": "2026110618525849886da37dc14b38",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110618525849886da37dc14b38",
+  "usage": {
+    "completion_tokens": 95,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 416,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 511
+  }
+}
