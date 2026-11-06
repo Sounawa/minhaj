@@ -1,9 +1,9 @@
 {
- "ts": 1794006172.614346,
- "iso": "2026-11-06T23:02:52Z",
+ "ts": 1794006235.4500115,
+ "iso": "2026-11-06T23:03:55Z",
  "version": "v4",
  "startedAt": "2026-10-31T15:29:57Z",
- "cycles": 141,
+ "cycles": 142,
  "wakeCount": 0,
  "workers": {
   "active": 0,
@@ -11,7 +11,7 @@
  },
  "remainingDocs": 0,
  "registry": {
-  "hand": 1123,
+  "hand": 1124,
   "llm": 57
  },
  "portal": {
@@ -30,8 +30,8 @@
   "detail": "direct=404"
  },
  "lastAutoCommit": {
-  "ts": "2026-11-06T22:03:29Z",
-  "subject": "auto(pipeline): 2026-11-06 22:03 — superviseur v4 (battement, registre, chasse)"
+  "ts": "2026-11-06T23:03:53Z",
+  "subject": "auto(pipeline): 2026-11-06 23:03 — superviseur v4 (battement, registre, chasse)"
  },
  "lastPush": {
   "ts": "2026-11-06T22:53:51Z",
