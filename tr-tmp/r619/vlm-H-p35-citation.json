@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# (1) Citation d'الحافظ ابن حجر\n\nMalheureusement, la citation demandée **n'apparaît pas dans cette image**. L'image commence seulement par :\n\n> قال الحافظ ابن حَر رَحِمَه الله: «وخِبْرُ الأحاد؛ بنقل عَدلٍ تام الضبط، مُتَّصِل السَّنَد،\n\nLa suite (« ومن ثم قدّم القومُ... ») se trouve sur la partie de la page **coupée en bas de l'image** — le texte visible s'arrête là, le reste est tronqué. Je ne peux donc pas transcrire ce qui suit « متصل السند » sans inventer, ce que je refuse de faire.\n\n# (2) Colonne de gauche de الشرح / استخلاص المضامين\n\nLes définitions demandées (عَدل، تام الضبط، معلل، شاذ) **ne figurent pas non plus** dans cette image. La zone de الشرح visible (en haut, partiellement coupée) ne montre que :\n\n> • أن يميز بين العلماء الشرعيين بالحديث والشعراء بالجاهلية.\n> • أن أسلك منهج الحديث في معرفة الصحيح من الأحاديث.\n\nLes quatre définitions doivent se trouver sur une autre page de la boîte الشرح, non visible ici.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793953293,
+  "id": "20261106162122c9ae37c0f3c94d8f",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106162122c9ae37c0f3c94d8f",
+  "usage": {
+    "completion_tokens": 311,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2028,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2339
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) Isnād : حدثنا العباس بن الفضل، حدثنا أبو تميم بن عبيد الله اليديني، حدثنا عبد العزيز بن محمد، عن كثير بن زيد، عن أبي عبد الله القرط، عن ابن عمر\n\n(2) Matn : «إذا توضأ أحدكم فأحسن وضوءه، ثم خرج إلى المسجد لا يخرجه إلا الصلاة، لم تزل رجله البسرى تمحو سيئة وتكتب الأخرى حسنة حتى يدخل المسجد»\n\n(3) [المعجم الكبير للطبراني، 12/355]\n\n(4) إسناد هذا الحديث حسن، لأنه خفة ضبط أحد رواته، وهو كثير بن زيد الأسلمي [التهذيب: 8/341]",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793952848,
+  "id": "202611061613500002eb83afbc4b88",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611061613500002eb83afbc4b88",
+  "usage": {
+    "completion_tokens": 190,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2625,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2815
+  }
+}

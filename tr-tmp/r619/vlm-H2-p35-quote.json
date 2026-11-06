@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Je ne peux pas répondre à votre question : l'image fournie ne contient pas la citation cherchée. Aucun texte entre chevrons « ... » n'y figure, ni les passages « وخبر الآحاد » ni « ومن ثم قدّم القومُ ».\n\nL'image ne montre que :\n- Un encadré jaune : « أن أسلك منهج الحديث في معرفة الصحيح من الأحديث. »\n- Une section **تمهيد** : « وضع العلماء شروطا لقبول الحديث ورده، وهي غاية في الدقة، منها ما يتعلق بالراوي، ومنها ما يتعلق بالروي، وبناء على ذلك قسما الحديث إلى مقبول، و مردود، وكل منهما أقسام ومراتب، تختلف باختلاف شروط القبول وجودا وعدما. »\n- La question : « فما هي شروط قبول الحديث؟ وما مراتبه؟ »\n- Le début d'une section **المتّن** (coupée en bas de l'image).\n\nLa citation demandée se trouve probablement sur une autre page du manuel. Si vous pouvez fournir l'image contenant ce passage, je pourrai le transcrire mot à mot.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793953507,
+  "id": "2026110616245573521503e00e4b83",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110616245573521503e00e4b83",
+  "usage": {
+    "completion_tokens": 275,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1627,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1902
+  }
+}

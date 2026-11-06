@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Transcription exacte du texte visible :**\n\n**(1) Chaîne avec محمد بن إسحاق :**\n\n« كمحمد بن إسحاق، عن عاصم بن عمر، عن جابر. »\n\nLe nom entre عن et عن جابر est imprimé **عاصم بن عمر** (avec hamza sur أ et sans le ر de عمرو) — c'est « عمر », pas « عمرو » ni « عمران » ni « عمّار ».\n\n**(2) Chaîne avec عمرو بن شعيب :**\n\n« وعمرى بن شعيب، عن أبيه، عن جده. »\n\n(Le nom apparaît sous la forme **عمرو بن شعيب** : « وعمرو بن شعيب، عن أبيه، عن جده. »)\n\n**(3) Phrases visibles autour de ces chaînes :**\n\n- Avant la première chaîne : « وهو -أي الثالثة- مقدمة على رواية من بعيد ما ينفرد به حسبنا : »\n\n- Après les deux chaînes : « فإن الجميع شملهم اسم «العدالة والضبط»، إلا أن المرتبة الأولى فهيم من الصفات المرتبة ما يقتضي تقديم رواتهم على التي تليها، وفي التي تليها من قوة الضبط ما يقتضي تقديمها على الثالثة، »\n\n**(Remarque : les autres chaînes visibles en haut de page, partiellement coupées, se lisent « ...سلم بن أبي حصان، عن أبيه، عن أبي هريرة » et « وكاللاء بن عبد الرحمن، عن أبيه، عن أبي هريرة » ; le début de la première ligne est coupé : [illisible].)**",
+        "reasoning_content": "The image: top line partially cut: \"...مسلم بن إبي حصان، عن أبيه، عن أبي هريرة\" then \"وكاللاء بن عبد الرحمن، عن أبيه، عن أبي هريرة\". But question asks عن جابر chain with محمد بن إسحاق — that's the first line: \"كسلم بن أبي حصان، عن أبيه، عن أبي هريرة\"? Actually the cut line reads \"سلم بن أبي حصان، عن أبيه، عن أبي هريرة\" — likely \"عيسى بن...?\" Hmm. Question (1) asks chain with محمد بن إسحاق — عن جابر. Not visible in this image? The visible chains: كمحمد بن إسحاق، عن عاصم بن عمر، عن جابر — that's the line \"كمحمد بن إسحاق، عن عاصم بن عمر، عن جابر.\" Wait, first cut line: \"سلم بن أبي حصان، عن أبيه، عن أبي هريرة\" — maybe it's \"عيسى بن حمام\"? Actually image top: \"كسلم بن أبي حصان، عن أبيه، عن أبي هريرة.\" Second: \"وكاللاء...\" Hmm the second visible line is \"وكاللاء بن عبد الرحمن، عن أبيه، عن أبي هريرة\" — probably \"كعلاء بن عبد الرحمن\". And question mentions محمد بن إسحاق — عن جابر chain — I don't see it clearly; maybe first line is \"كمحمد بن إسحاق، عن عاصم بن عمر، عن جابر\"! Yes! \"سلم بن أبي حصان\" could be misread; but the cut line... Actually the visible first line ends \"عن أبي هريرة\". Hmm.\n\nTranscribe honestly:\n\nTop line: \"سلم بن أبي حصان، عن أبيه، عن أبي هريرة.\" [illisible début]\nLine2: \"وكاللاء بن عبد الرحمن، عن أبيه، عن أبي هريرة.\"\n\nNo محمد بن إسحاق or عمرو بن شعيب chains visible; the visible chains are كمحمد بن إسحاق، عن عاصم بن عمر، عن جابر and وعمرو بن شعيب، عن أبيه، عن جده. Yes! Those ARE visible: line after حسبنا: \"كمحمد بن إسحاق، عن عاصم بن عمر، عن جابر.\" and \"وعمرو بن شعيب، عن أبيه، عن جده.\"\n\nSo answers:\n(1) كمحمد بن إسحاق، عن عاصم بن عمر، عن جابر.\n(2) وعمرو بن شعيب، عن أبيه، عن جده.\n(3) فإن الجميع شملهم اسم «العدالة والضبط»، إلا أن المرتبة الأولى فهيم من الصفات المرتبة...",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793953281,
+  "id": "20261106162054fadf5e17adfb4936",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106162054fadf5e17adfb4936",
+  "usage": {
+    "completion_tokens": 1042,
+    "completion_tokens_details": {
+      "reasoning_tokens": 650
+    },
+    "prompt_tokens": 2238,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3280
+  }
+}
