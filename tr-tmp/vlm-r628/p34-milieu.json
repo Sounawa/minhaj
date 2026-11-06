@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Transcription exacte du texte visible sur l'image :\n\nوصلت وعاين وليدنا وذ、مهره في حجة الوداع على نويرهم، فتم في حجة الوِداع على رأيهم\n\nالصحابة سيفقا لحدثِ حجة الوداع، فإنه ذكرها من حِين خروج النبي ﷺ من المدينة إلى آخرها فَوَ أضبط لها من غيره.\n\nوأما ابن عمر فصح عنه أنه كان أخذنا بخطام ناقة النبي ﷺ في حجة الوداع وأنكر على من رجح قول أنس عليه [illisible] وفقال: كان أنس يدخل على النساء وهن مكشفات الرؤوس وإِني كنت تحت ناقة النبي ﷺ بمسني لعبابها أسمعه يلبي بالحج. وأما عائشة فقربها من رسول الله ﷺ معروف وكذلك اطلاعها على باطن أمره وظاهره وفعلته في خلوه وعلاقته مع كثرة فقهها وعظيم فضلها. وأما ابن عباس فمحله من العلم والفقه في الدين والفهم الناقب معرف مع كثرة بحته وحفظه أحواله ﷺ التي لم يحفظها غيره وأخذه إياه من كبار الصحابة، وبان الخلفاء الراشدين واظبوا على الإِفراد بعد الذي ﷺ حج، أبو بكر وعمر وعثمان، واختلف عن علي، فلو لم يكن أفضل وعلموا أنّه ﷺ صح\n\n[Note : le texte visible sur cette page ne contient que partiellement les passages demandés ; certains mots sont coupés en haut, en bas ou illisibles, notamment la ligne supérieure tronquée et le début de la dernière ligne.]",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983560,
+  "id": "20261107004535a5493100c9054945",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107004535a5493100c9054945",
+  "usage": {
+    "completion_tokens": 428,
+    "completion_tokens_details": {
+      "reasoning_tokens": 427
+    },
+    "prompt_tokens": 8295,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8723
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "قال يحيى، فخرج علىّ مِضراب وهو يقول ليك ليكم لبّيك بِحِجَّة وعمرة معا»\n\n[الموطأ رقم: 949]\n\n– قال يحيى: قال مالك: «من اعتمر في شوال أو ذي القعدة أو ذي الحجّة، ثم رجع إلى أهله ثم حجّ من عامme ذلك، فليس عليه هدي، إنما الهدي على من اعتمر في أشهر الحجّ ثم أقام حتّى حجّ ثم حجّ» [الموطأ رقم: 986].\n\n– مالك عن ابن شهاب، عن عروة بن الزبير، عن عائشة أمّ المؤمنين",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983921,
+  "id": "20261107005152334b67b3b10a44cf",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107005152334b67b3b10a44cf",
+  "usage": {
+    "completion_tokens": 171,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8132,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8303
+  }
+}

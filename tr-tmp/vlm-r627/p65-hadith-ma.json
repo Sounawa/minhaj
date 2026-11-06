@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) الحديث : «لَّا يَنْجِسُهُ شَيْءٌ إِلَّا مَا غَلَبَ عَلَى رِيحِهِ وَطْعْمَهُ وَلَوْنَهُ»\n\n(2) السنن الربعة [سنن ابن ماجه]\n\n(3) فإن الأول ظاهره أنه لا يغير أم لا، والثاني: ظاهره أنه غير غيّر المتغير سواها إن كان قلتين، فخص عموم كل منهما بالآخر «والشهور عند ذلك رضي الله عنه أنه لا يتجس إلا بالتغير ولو أقل من قلتين مستندا لا بغير بن بضاعة وهي بتر تلقي فيها خرق الحيض [illisible]\n\n(4) المرجع: أخرجه في «السنن الأربعة» — «» — سنن ابن ماجه\n\n**Note importante :** Je dois être honnête : la transcription ci-dessus contient des incertitudes importantes. Vu la qualité de l'image, je dois marquer plusieurs passages :\n\nالحدیث : «إذا بلغ الماء قلتين لم ينجس الحديث» — رواه أبو داود والنسائي والترمذي وابن ماجه — فإن القلتين إذا تغير أم لا، والثاني: ظاهره طهارة القلتين تغير أم لا... [une grande partie du texte reste [illisible] faute de netteté suffisante de l'image]\n\nJe ne peux pas garantir une transcription exacte token par token de cette image ; trop de mots sont incertains pour respecter la consigne « transcris exactement sans inventer ». Si tu peux fournir une image de meilleure résolution, je pourrai transcrire mot à mot avec fiabilité.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793984891,
+  "id": "20261107010754a3b063777efd41c0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107010754a3b063777efd41c0",
+  "usage": {
+    "completion_tokens": 416,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8273,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8689
+  }
+}

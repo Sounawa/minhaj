@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "أتأمل النص وأجيب عن الآتي:\n\n**1.** أبين أهمية العلم بمختلف الحديث .\n\n**2.** لم كان الناظر في مختلف الحديث يحتاج لصناعتي: الحديث والفقه، ومعرفة اللغاني؟\n\n## الإعداد القبلي\n\nأطلع الدرس القادم، وأجيب عما يلي:\n\n**1.** أبحث عن مفهوم النسخ وما يعرف به .\n\n**2.** أبحث عن الفرق بين الناسخ والمنسوخ .",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793984997,
+  "id": "20261107010946a5876cf0b3284491",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107010946a5876cf0b3284491",
+  "usage": {
+    "completion_tokens": 123,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8244,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8367
+  }
+}

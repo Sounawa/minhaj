@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Transcription (de droite à gauche) :**\n\nوفي رواية التنيسي: لا يلبس بالرفع على الأشهر، خبر عن حكم الله تعالى\n\n**Tranchement des mots incertains :**\n\n1. **Après رواية** : c'est bien **«التنيسي»** (at-Tanīsī). La graphie montre الت + نيسي — le nom du grammairien/commentateur connu. Ce n'est ni «التنيشي» (pas de ش visible, seulement un sin avec point) ni «المتنبهي» (pas de م ni de ميم initiale ; la première lettre est un tāʾ, pas un mīm).\n\n2. **Après بالرفع على** : c'est **«الأشهر»** (al-ašhar). La hamza est portée par un alif, et la racine est ش-ه-ر. Ce n'est pas «الأفصح» (pas de faʾ ni de ṣād dans la graphie ; la lettre médiane est clairement un hāʾ médian, pas un ṣād).\n\n**Fragment complet :**\n\n« وفي رواية **التنيسي** : لا يلبس بالرفع على **الأشهر** ؛ خبر عن حكم الله تعالى »",
+        "reasoning_content": "Transcription: وفي رواية التنيسي: لا يلبس بالرفع على الأشهر، خبر عن حكم الله تعالى.\n\nLe mot est التنيسي (connu: التنيسي, grammairien). Après بالرفع على: الأشهر.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793981529,
+  "id": "20261107001158dda1b2cdf2174cca",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107001158dda1b2cdf2174cca",
+  "usage": {
+    "completion_tokens": 354,
+    "completion_tokens_details": {
+      "reasoning_tokens": 59
+    },
+    "prompt_tokens": 4735,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5089
+  }
+}

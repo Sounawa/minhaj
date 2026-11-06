@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "الصلات بحديث: «لا عَدْوى ولا طِيرة»، مع حديث: «فرّ من المُجْذوم فرارك من الأسد»، وكلاهما في الصحيح وظاهرهما التعارض، ووجه الجمع بينهما أن هذه الأمراض لا تعدي بطبعها، لكن الله سبحانه وتعالى جعل مخالطة المريض بها الصحيح سببا لإعدائه مرضه، ثم قد يتخلف ذلك عن سببه؛ كما في غيره من الأسباب، كذا جمع بينهما ابن الصلاح، تبعا لعبيره.\n\n**Note** : les éléments demandés ((1) النوع الأول، (2) النوع الثاني، (3) «والتعارض بين الحديثين هو بحسب ما ظهر للناظر...», et la mention «الشؤم في ثلاث...» ou «ابن الصلاح») ne figurent pas tous dans l'image fournie ; seul le passage ci-dessus est visible, et je ne transcris que ce qui y est imprimé. Le numéro de page imprimé est [6][5] (chiffre partiellement illisible : [6][illisible]).",
+        "reasoning_content": "Only one passage visible; transcribe exactly.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793984933,
+  "id": "2026110701084289585fec2a4c4e60",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110701084289585fec2a4c4e60",
+  "usage": {
+    "completion_tokens": 281,
+    "completion_tokens_details": {
+      "reasoning_tokens": 9
+    },
+    "prompt_tokens": 8193,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8474
+  }
+}
