@@ -1,3 +1,13 @@
+
+# R619-FINAL — GARDE (posée par la passe de finalisation 09:07Z) : l'entrée « ## R619 »
+# figure DÉJÀ au worklog (ligne 16412) ainsi que l'entrée de finalisation « R619 — » ;
+# ce script est désormais un NO-OP pour empêcher tout double append d'un ouvrier
+# détaché resurgissant. Ne pas ré-exécuter.
+import sys
+wl = open("/home/z/my-project/worklog.md", encoding="utf-8").read()
+if "## R619 — Worker A tick 15:52" in wl and "R619 — leçon 6 ulum-hadith-tanawi-2 (pdf-mut23h2u-260, p.35-40, الدرس 6" in wl:
+    print("GARDE : entrées R619 déjà présentes — NO-OP, rien n'est appendé.")
+    sys.exit(0)
 # -*- coding: utf-8 -*-
 # R619 — append de l'entrée worklog (leçon 6 ulum-hadith-tanawi-2, pdf-mut23h2u-260)
 ENTRY = """
