@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Transcription exacte de la ligne visible (de droite à gauche) :\n\n«...عَبْدِ اللهِ بن عَمْرَو أَنَّ النَّبِيَّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ قَالَ: مَا أَ...»\n\nCette ligne ne contient pas la séquence «مُحَمَّد بن» suivie d'un nom : elle commence (à droite) par «عَبْدِ اللهِ بن عَمْرَو». Je ne peux donc pas épeler un nom après «محمد بن» à partir de cette image sans inventer.",
+        "reasoning_content": "Read right-to-left: \"عِمرَو أَنَّ النَّبِيَّ صَلَّى اللهُ عَلَيهِ وَسَلَّمَ قالَ: ما أَ-na...\" The name after محمد بن appears to be... wait, the line shown starts differently. The question says line contains \"من رواية محمد بن ... عن ابن عباس بلفظ\". The visible text: \"...عَن عَبدِ الله بن عَمرَو أَنَّ النَّبِيَّ...\" Hmm, actually reading: \"عَبدِ الله بن عَمرَو أَنَّ النَّبِيَّ صَلَّى اللهُ عَلَيهِ وَسَلَّمَ قالَ: ما أَ\" — so no \"محمد بن\" here. But question asks the name after محمد بن — perhaps it's \"إسحاق\" from this hadith narration (عبد الله بن عمرو, via ابن عباس بلفظ — this is البخاري from محمد بن إسحاق?). Actually Abu Zur'a? The hadith \"ما أنا بمخاطل...\" narrated by محمد بن إسحاق? I must not invent. The visible text doesn't contain \"محمد بن\". Answer honestly.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793975584,
+  "id": "2026110622325140b66646f16a4c46",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110622325140b66646f16a4c46",
+  "usage": {
+    "completion_tokens": 435,
+    "completion_tokens_details": {
+      "reasoning_tokens": 281
+    },
+    "prompt_tokens": 8145,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8580
+  }
+}

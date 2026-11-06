@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**أ- الشاهد اللفظي:** وهو الذي يحرز الإسناد في لفظه ومعناه جميعا. مثاله: ما رواه النسائي من رواية محمد بن حنين عن ابن عباس بالفظ «إذا رأيتم الهلال فصوموا، وإذا رأيتموه فأفطروا، فإن غم عليكم فأكملوا العدة ثلاثين». [سنق النسائي، كتاب الصيام، باب ذكر الاختلاف على عمر وابن دينار في حديث ابن عباس فيه] فذكر مثل حديث عبد الله بن دينار عن ابن عمر سواه، فهذا شاهد باللفظ.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793975649,
+  "id": "20261106223402f773eec1d7854f11",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106223402f773eec1d7854f11",
+  "usage": {
+    "completion_tokens": 157,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 7376,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7533
+  }
+}
