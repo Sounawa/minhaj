@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "قال الإمام الذهبي رحمه الله: «ثم لا تظنن أن الحسن قاعدة تندرج كل الأحاديث الحسان فيها، فأنا على إياس من ذلك! فكر من حديث ترده فيه الحفاظ: هل هو حسن؟ أو ضعيف؟ أو صحيح؟ بل الحافظ الواحد يتغير اجتهاده في الحديث الواحد: فيوما يصفه بالصحة، ويوما يصفه بالحسن، وربما استضعفه!» [الوقفة في علم مصطلح الحديث، للذهبي، ص: 29-28]",
+        "reasoning_content": "Transcribe exactly.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793959114,
+  "id": "20261106175829a8dcfd08dba94db3",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106175829a8dcfd08dba94db3",
+  "usage": {
+    "completion_tokens": 147,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4
+    },
+    "prompt_tokens": 1392,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1539
+  }
+}

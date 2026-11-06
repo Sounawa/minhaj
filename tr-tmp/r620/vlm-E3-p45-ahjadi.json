@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) Après « فسئل عن ذلك فقال : أمرني رسول الله ﷺ » on lit exactement :\n\n« قال أبو مصعب : كان مالك بن أنس ﷺ يُحَبَّك بحديث رسول الله ﷺ؟ [illisible]\nإلا وهو على وضوء، إجلاً له ...، وقال مصعب بن عبد الله : كان مالك بن أنس إذا حدث عن\nرسول الله صلى الله عليه وسلم توضأ و تهأً، و لم يُثبه، ثم يحدث . قال مصعب: فسأل عن\nذلك، فقال: إنه حديث رسول الله ﷺ»\n\n(2) Référence : [الشفا بتعريف حقوق المصطفى، للقاضي عياض، 2/45].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793959108,
+  "id": "2026110617582089ff563f4bdf4648",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110617582089ff563f4bdf4648",
+  "usage": {
+    "completion_tokens": 185,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1306,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1491
+  }
+}

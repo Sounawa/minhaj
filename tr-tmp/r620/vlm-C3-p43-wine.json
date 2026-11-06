@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**(1) Isnād :**\nما رواه عيسى بن يونس عن مجالد عن أبي الوضاك عن أبي سعيد الخدري\n\n**(2) Matn :**\n«كانَ عِنْدَنا خَمْرُ يَتامى فَلَمَّا رَتِ الحائِضُ قُلْتُ: لَنَبْتَدِمَنْهُ خَمْرًا قَالَ: قُلْ أَهْرِيقُوهُ»\n\nAprès « كانَ عِنْدَنا خَمْرُ يَتامى » on lit : **فَلَمَّا رَتِ الحائِضُ** (avec leق de قُلْتُ probablement rattaché). Le dernier mot du matn est **أَهْرِيقُوهُ**.\n\n**(3) Référence :**\n[سنن الترمذي، أبواب البيوع، باب ما جاء في النهي للمسلم أن يدفع إلى الذمي الخمر يبيعها له].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793959065,
+  "id": "202611061757334e68d24df88c4add",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611061757334e68d24df88c4add",
+  "usage": {
+    "completion_tokens": 259,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1050,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1309
+  }
+}

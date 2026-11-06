@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "القسم الثاني: أن يكون راويه من الشهورين بالصدق والأمانة، غير أنه لم يبلغ درجة رجال الصحيح لأنه يقع عنهم في الحفظ والإتقان، وهو مع ذلك يتفق عن حال من بعد ما انفرد به من حديثه منكرا، ويعتبر في كل هذا – مع سلامة الحديث من أن يكون شاذا ومنكرا – سلامته من\n\nAucune référence entre crochets n'est visible à la fin de l'image.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793959041,
+  "id": "20261106175716411ce1c419554d65",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106175716411ce1c419554d65",
+  "usage": {
+    "completion_tokens": 118,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 713,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 831
+  }
+}

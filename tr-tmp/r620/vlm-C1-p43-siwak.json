@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) Matn après « قال » : « أَنْ أَشْقَ عَلَى أُمَّتِي لَا مَرْتُهُمْ بِالسِّوَاكِ عِنْدَ كُلِّ صَلَاةٍ ».\n\n(2) Référence : [سَنَنُ التِّرْمَذِي، كِتَابُ الطَّهَارَة، بَاب مَا جَاءَ فِي السِّوَاكِ].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793959046,
+  "id": "202611061757216bcb3632cd34467c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611061757216bcb3632cd34467c",
+  "usage": {
+    "completion_tokens": 133,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1016,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1149
+  }
+}

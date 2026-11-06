@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Le paragraphe « حكم الحديث الحسن » demandé n'apparaît pas dans cette image.\n\nL'image contient uniquement (transcription exacte) :\n\n« الحديث الحسن بقسميه (لذاته ولغيره) من قبل المقبول يتحج به، وهو متقاوت؛ فالحسن لداته أقوى من الحسن لغيره، وهو مشارك للصحيح في الاحتجاج به، وإن كان دونه، ومشابه له في انفسامه إلى مراتب بعضها فوق بعض. »\n\n« معنى قولهم \"حديث حسن صحيح\": إن جمعا (الصحيح والحسن) في وصف واحد، كقول الترمذي وغيره: \"حديث حسن صحيح\" فلأنرد الحاصل من الجهتين في الراوي: هل اجتمع فيه »\n\n(Remarque : « متقاوت » est transcrit tel qu'il apparaît, et « انفسامه » tel qu'imprimé.)",
+        "reasoning_content": "The image doesn't contain that paragraph (حكم الحديث الحسن). Report absence.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793959082,
+  "id": "202611061757553f1e116dff2a43b6",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611061757553f1e116dff2a43b6",
+  "usage": {
+    "completion_tokens": 239,
+    "completion_tokens_details": {
+      "reasoning_tokens": 18
+    },
+    "prompt_tokens": 1121,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1360
+  }
+}
