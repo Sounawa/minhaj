@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Transcription du bloc :\n\n« قال ﷺ:)، إنّ ما للهِ مِن قَلْبٍ [الأم؛ للشافعي: 2/301]\n\nDe gauche à droite, les chiffres se lisent : « 103 » (avant le slash), puis « /2 ».\n\nLe TROISIÈME chiffre (dernier avant le slash) est un **3** : il a la forme de **deux bosses arrondies** (partie supérieure et inférieure), et non d'un trait vertical simple comme un 1.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793975329,
+  "id": "2026110622284684766f94000c4b67",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110622284684766f94000c4b67",
+  "usage": {
+    "completion_tokens": 126,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8200,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8326
+  }
+}

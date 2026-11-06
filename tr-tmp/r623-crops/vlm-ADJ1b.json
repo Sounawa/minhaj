@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "الدرس 10: المتبعات والملاحق\n\n(Le texte visible est « الدرس 10 » suivi de « المتبعات والملاحق » ; le numéro apparaît en chiffres « 10 » et non en toutes lettres sur cette bannière.)",
+        "reasoning_content": "Text: \"الدرس العاشر: المتبعات والملاحق\" — banner reads \"الدرس 10 المتبعات والملاحق\". The visible: \"الدرس 10\" then \"المتبعات والملاحق\". Number appears as \"10\" digits, not letters. Transcribe exactly.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793974773,
+  "id": "20261106221926ce0704065c7d4d34",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106221926ce0704065c7d4d34",
+  "usage": {
+    "completion_tokens": 127,
+    "completion_tokens_details": {
+      "reasoning_tokens": 67
+    },
+    "prompt_tokens": 4911,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5038
+  }
+}

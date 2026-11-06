@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Transcription de gauche à droite :\n\n1. Un crochet ouvrant « [ » (trait vertical avec petit empattement supérieur horizontal).\n2. Un « 3 » (deux bosses arrondies ouvertes à gauche).\n3. Un « 6 » (boucle fermée en bas avec arc supérieur).\n4. Un « 3 » identique au deuxième glyphe.\n5. Un « 6 » identique au troisième glyphe.\n6. Un « / » (barre oblique montant de gauche à droite, sans traverse horizontale — ce n'est donc pas un « 1 »).\n7. Un « 1 » (trait vertical avec drapeau/empattement en haut à gauche, distinct de la barre oblique par l'absence d'inclinaison).\n\nChaîne exacte : **« [3636/1 »** — quatre chiffres avant le slash (3, 6, 3, 6), pas trois. Ce n'est ni « 363/1 » ni « 3663/1 » : les glyphes 2 et 4 sont des « 3 » (ouverts à gauche) et les glyphes 3 et 5 des « 6 » (boucle basale fermée), alternance clairement visible. La barre oblique se trouve après les quatre chiffres et avant le « 1 » final, suivi d'une virgule.",
+        "reasoning_content": "Describe glyphs: bracket \"[\", then 3, 6, 3, 6, slash, 1 → «[3636/1».",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793975117,
+  "id": "20261106222509350f4077d9104b82",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106222509350f4077d9104b82",
+  "usage": {
+    "completion_tokens": 339,
+    "completion_tokens_details": {
+      "reasoning_tokens": 32
+    },
+    "prompt_tokens": 2229,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2568
+  }
+}

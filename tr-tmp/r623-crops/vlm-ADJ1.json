@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**(1) Bannière :** الدرس / 10 — الاعتبار والتأويل والتوثيق\n\n**(2) أهداف الدرس :**\n1. أن أتعرف مفهوم التتابع وأنواعه.\n2. أن أدرك معنى الشاهد.\n3. أن أميز بين التابعات والتواfox… \n\nPrécisément :\n1. أن أتعرف مفهوم التتابع وأنواعه.\n2. أن أدرك معنى الشاهد.\n3. أن أميز بين التابعات والتواابع والإعتبار. *(texte imprimé : « أن أميز بين التابعات والتوا… » — точное printed text: أن أميز بين التابعات والتوابع والاعتبار)*\n4. أن أحرص على حفظ العلم ومذاكرته.\n\nTranscription exacte des trois premiers objectifs tels qu'imprimés :\n- أن أتعرف مفهوم التتابع وأنواعه.\n- أن أدرك معنى الشاهد.\n- أن أميز بين التابعات والتوابع والاعتبار.\n- أن أحرص على حفظ العلم ومذاكرته.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793974749,
+  "id": "202611062219004ce80b37858646ee",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062219004ce80b37858646ee",
+  "usage": {
+    "completion_tokens": 243,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8117,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8360
+  }
+}

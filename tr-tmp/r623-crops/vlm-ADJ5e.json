@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Transcription de la zone visible :\n\n« حيُّ تولّد الولدُ، ولا يقطرُوابِ حيِّ ترزوه، فإن غمَّ عليكم فأكملوا العدة ثلاثة [10\n\nConcernant la question sur la référence entre crochets :\n\n- Je ne vois pas de référence complète de type « صفحه/رقم » (avec slash) après le passage « فأكملوا العدة ثلاثين » dans cette zone d'image. Le hadith est coupé en fin de ligne et seul un début de crochet apparaît à droite : **[10** (crochet ouvrant suivi de « 10 » en vert, à la marge).\n- Glyphes de « 10 » de gauche à droite : un « 1 » puis un « 0 » — soit deux chiffres, sans slash visible.\n- Je ne peux donc pas confirmer de dernier chiffre avant un slash : il n'y a pas de slash visible, et aucun chiffre après. Si un chiffre isolé doit être caractérisé, le « 1 » est bien un 1 (non un 3).\n\nToute référence complète (volume/page) ne figure pas dans la portion d'image fournie ; je ne peux pas l'inventer.",
+        "reasoning_content": "No bracketed reference visible; only \"[10\" partially. Transcribe text and answer honestly.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793975266,
+  "id": "2026110622273638f97508bd5d4de2",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110622273638f97508bd5d4de2",
+  "usage": {
+    "completion_tokens": 293,
+    "completion_tokens_details": {
+      "reasoning_tokens": 19
+    },
+    "prompt_tokens": 8154,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8447
+  }
+}
