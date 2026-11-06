@@ -158,3 +158,31 @@ error: failed to push some refs to 'ht
 To https://github.com/Sounawa/minhaj.git
  ! [remote rejected] main -> main (failure)
 error: failed to push some refs to 'https://github.com/Sounawa/minhaj.gi
+[2026-11-06 03:39:52] superviseur v4 démarré (MAX=3, file=62 livres, battement visible)
+[2026-11-06 03:40:09] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-06 03:50:10] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-06 04:00:13] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-06 04:10:16] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-06 04:20:18] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-06 04:30:20] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-06 04:40:24] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-06 04:50:25] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-06 05:00:27] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-06 05:10:32] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-06 05:20:33] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-06 05:30:36] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-06 05:37:36] write_status incident : OSError(28, 'No space left on device')
+[2026-11-06 05:40:45] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
