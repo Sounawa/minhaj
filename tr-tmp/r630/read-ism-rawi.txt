@@ -1,0 +1,19 @@
+## Transcription de la bande
+
+> نقل الحافظ العراقي عن ابن حبان قوله: طريق الاعتبار في الأخبار مثاله: أن يروي **أبو بكر** بن أبي سيرين، عن أبي هريرة، عن النبي ﷺ، فينظر: هل روي ذلك ثقة غير أبي بكر، عن أبي سيرين؟ فإن وجد علمٌ أن الخبر أصلا يروج إليه، وإن لم يوجد ذلك، فثقة غيره روى مثله، لا يصح خبره لنفسه، ولا يثبت... (la bande se coupe ici)
+
+## Le nom propre après « أن يروي »
+
+Le nom est **أبو بكر** (Abū Bakr), avec « بن أبي سيرين » qui suit. Il s'agit d'un nom composé de deux mots :
+
+**1er mot : أبو**
+- **أ** : ʾalif madda (أ ligature ʾalif + ḥamza au-dessus), point absent
+- **ب** : bāʾ avec **un point en dessous**
+- **و** : wāw, sans point
+
+**2e mot : بكر**
+- **ب** : bāʾ avec **un point en dessous**
+- **ك** : kāf avec **une hamza-like marque** — plus précisément, dans cette écriture, le kāf médian/forme simple porte son trait oblique interne (le « fāṣila »), sans point isolé
+- **ر** : rāʾ, sans point
+
+Aucun point n'est suscrit au-dessus de ces lettres ; les seuls diacritiques sont les deux points sous les deux bāʾ. (Remarque : si l'on avait lu « عبد » ou « حسين », on verrait un point unique sous la nūn, ou un point sur le ḥāʾ/ʿayn — ce n'est pas le cas ici.)

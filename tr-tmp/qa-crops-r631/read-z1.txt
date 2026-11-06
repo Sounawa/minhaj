@@ -1,0 +1,23 @@
+Voici la transcription fidèle de ce qui est réellement visible sur l'image fournie — avec une remarque importante : l'image ne contient que **UN SEUL** encadré graphique (le cartouche vert en haut), pas deux. Il n'y a pas de second encadré. Je ne peux donc transcrire qu'un seul encadré, et je marque [?] ce qui est incertain.
+
+## 1) Encadré (le seul visible) + numéro
+
+وَلِيَقْطَعْهَا أَسْفَلُ مِنَ الْكَعِبَيْنِ، وَلَا تَلْبَسُوا مِنَ الثِّيَابِ شَيْئًا مِسْهَ الزِّعْفَرَانِ وَلَا الْوَرْسِ»
+
+الموطأ رقم: [909]
+
+— مالك عن نافع: «أَنَّ عَبْدَ اللَّهِ بْنَ عُمَرَ كَانَ يَكْرَهُ لِبْسَ النَّضْرَةِ المُحَرَّمِ»
+
+(Remarque sur le numéro : sur l'image, les chiffres dans le crochets bleus se lisent « 909 », le dernier chiffre étant un peu flou [?].)
+
+## 2) Bande B (commentaires)
+
+⚠️ Sur l'image, je ne distingue clairement qu'**un seul** commentaire continu ; je n'y vois pas de transition explicite vers le الحافظ ni de mention visible d'ابن المنذر dans cette bande. Je transcris le texte visible, en signalant les incertitudes :
+
+قال الحضبي [?]. بجر البعضة، وابترسن مع بيمن على انه لا يجوز لبعتيه البراص [?] لا بالعتاد ولا بالناذر، ومنه المكنل بحمله على رأسه وما يشبهه. قال الحافظ: إن أراد لبسه كالقبع صح ما قال، وإلا فمجرد ضعه على رأسه على هيئة الحامل له لا بضر في ذهبه كالانغماس في الماء، فإنه لا يسمى لابسا، وكلذا ستر الرأس باليد. وأجمعوا على اختصاص النهي بالرجل، فيجوز للمرأة لبس جميع ما ذكر حكاه ابن المنذر.
+
+### Points d'incertitude signalés
+- Le mot après ومنه : la graphie ressemble à **المكنل** [?] — il pourrait s'agir de المكتل ou d'un autre mot ; je ne peux pas trancher caractère par caractère, la résolution de cette zone est insuffisante.
+- Le nom du commentateur au début : la graphie ressemble à **الحضبي** [?] au lieu de الخطابي ; je ne confirme pas la lettre ث.
+- Les passages marqués [?] sont illisibles ou déformés (bout de ligne coupé par l'empilement des bandes).
+- Les phrases attribuées au الحافظ au-delà de « قال الحافظ: إن أراد... » ainsi que la fin « حكاه ابن المنذر » sont visibles, mais je n'ai pas trouvé dans cette bande de second commentaire séparé identifiable comme celui du الحافظ — il est possible que la bande B soit tronquée.

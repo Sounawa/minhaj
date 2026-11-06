@@ -1,0 +1,14 @@
+Dans cette image, la seule référence chiffrée visible est la marque verte « [١٠ » (renvoi de page), et non une référence de la forme [الأم؛ للشافعي : N/M] — aucun texte « الأم » ni « للشافعي » avec barre oblique n'apparaît ici.
+
+**Épellation glyphique des chiffres, de GAUCHE à DROITE :**
+
+1. **1** = ١ : trait vertical simple, légèrement penché, sans drapeau ni point (chiffre arabe « un »)
+2. **0** = ٠ : petit cercle plein (chiffre arabe « zéro »)
+
+**Suite exacte des glyphes imprimés (en vert) :**
+
+- Avant les chiffres : un crochet ouvrant « [ » (crochet en forme de L couché)
+- Puis : ١ (trait vertical penché)
+- Puis : ٠ (cercle)
+
+Le texte arabe environnant est en noir ; le point médian « · » noir précède le crochet vert à droite de la ligne. Le crochet fermant et la fin de la référence sont coupés hors du cadre de l'image.
