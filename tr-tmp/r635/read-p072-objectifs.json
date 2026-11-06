@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "أchildhood العرض الأول — [ILLISIBLE]\n\nVoici la transcription exacte de ce qui est visible sur l'image :\n\n**العرض 13 / أنشطة تطبيقية**\n\nL'image montre un bandeau/encadré vert (en-tête de chapitre d'un manuel arabe) contenant :\n- À droite : **العرض 13** (avec le nombre « 13 » dans un triangle vert séparé par une barre diagonale)\n- À gauche : **أنشطة تطبيقية**",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793999018,
+  "id": "2026110705033338c02cacc0014684",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110705033338c02cacc0014684",
+  "usage": {
+    "completion_tokens": 112,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8018,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8130
+  }
+}

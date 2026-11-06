@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "الإعداد التقيدي\n\nأقرأ متن الدرس التقييلي ، وأجيز أسئلة ققرة «استخلاص الفصاريم».",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793999430,
+  "id": "202611070510267a3ac3e10d874eed",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070510267a3ac3e10d874eed",
+  "usage": {
+    "completion_tokens": 39,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 7988,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8027
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "تكوين مجموعات عمل تحت إشراف الأستاذ(ة) تقوم كل مجموعة بما يأتي:\n\n- تحديد مصدر من المصادر لإنجاز البحث فيه.\n\n- تحديد المطلعات موضوع البحث والدراسة (الصحيح/الحسن/مختلف الحديث. . .)\n\n- استثمار المكتسبات السابقة من البيقونية ومن نخبة الفكر.\n\n- إحضار نسخة للانتقال عليها (المكنتة المدرسية).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793999127,
+  "id": "202611070505210a1d6b0f495c49ee",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070505210a1d6b0f495c49ee",
+  "usage": {
+    "completion_tokens": 115,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 7922,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8037
+  }
+}

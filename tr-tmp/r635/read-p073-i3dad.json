@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "[ILLISIBLE]\n\nL'image ne contient aucun texte visible — la bande est entièrement blanche, il n'y a donc rien à transcrire.",
+        "reasoning_content": "Blank image.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793999415,
+  "id": "20261107051011247221d71fff41db",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107051011247221d71fff41db",
+  "usage": {
+    "completion_tokens": 35,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3
+    },
+    "prompt_tokens": 8045,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8080
+  }
+}

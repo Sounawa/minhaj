@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2. أن نُمي مكتسباتي من خلال التطبيقات العملية.\n\n3. أن أتعاون مع أصدقائي في تطوير مهاراتي وقدراتي في علوم الحديث.\n\n[داخل زر أخضر] مجال الانشطة\n\nتطبيقات في مصادر الحديث وعلومه\n\n[داخل زر أخضر] أنشطة الإعداد",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793999121,
+  "id": "202611070505150204c2c940df46b3",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070505150204c2c940df46b3",
+  "usage": {
+    "completion_tokens": 90,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 7922,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8012
+  }
+}

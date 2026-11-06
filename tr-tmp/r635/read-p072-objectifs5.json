@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "أهداف الانشطة\n\n.1. أن أنبتماراري واستثمر مكسباني في مصطلح الحديث . [بعض الكلمات غير واضحة]\n\n.2. أن أنمي مكسباتي من خلال التطبيقات العملية .\n\n.3. أن أتعاون مع أصدقائي في تطوير مهاراتي وقدراتي في علوم الحديث .",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793999093,
+  "id": "20261107050446c207a72a62de4f51",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107050446c207a72a62de4f51",
+  "usage": {
+    "completion_tokens": 87,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8071,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8158
+  }
+}

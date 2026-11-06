@@ -1,0 +1,10 @@
+IMAGE: tr-tmp/r635/p074-top-1500.png
+CONSIGNE: Transcris EXACTEMENT ce que montre cette image, lettre par lettre, ligne par ligne, sans compléter, sans corriger, sans traduire. Si certains mots sont illisibles, écris [ILLISIBLE]. C'est une page d'un manuel en arabe.
+---
+المراجعة
+
+الحرس / 14
+
+• أن أتعرف أسبابرد الحديث .
+
+[ملاحظة: يبدو أن الكلمة "أسبابرد" قد تكون "أسباب رد"، ويوجد نص مقتطع باللون الأصفر في أسفل يمين الصفحة غير قابل للقراءة: [ILLISIBLE]]

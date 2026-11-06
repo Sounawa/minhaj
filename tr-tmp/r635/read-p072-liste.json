@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "– إجراع بحث عملي في المدرار التعرف علي طريقة الحكم علي الحديث.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793999344,
+  "id": "20261107050859127d5cd96a134dfd",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107050859127d5cd96a134dfd",
+  "usage": {
+    "completion_tokens": 24,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8009,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8033
+  }
+}

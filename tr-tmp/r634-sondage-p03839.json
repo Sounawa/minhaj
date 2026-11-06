@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**IMAGE 1 (bas de page 38) :** Pas de bannière de début de leçon. On voit la fin de la leçon précédente : la section « أتأمل النص وأجيب عن الآتي مع التعبيل » avec deux questions numérotées, puis la section « الإعداد القبلي » avec la consigne « أحفظ أحاديث الدرس المقبل وأجيب عن الآتي » et deux points (1. أبحث عن مفهوم التلبية، 2. أوضح عبارات التلبية). Numéro de page 38 en bas.\n\n**IMAGE 2 (haut de page 39) :** Oui, bannière de début de leçon présente.\n- Titre arabe : **أحكام الإهلال بالتلبية**\n- Numéro du disque : **5** (avec le mot « الدرس » au-dessus du disque)\n\nSous la bannière : section « أهداف الدرس » avec trois objectifs, puis le début de la section « تمهيد ».",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794000041,
+  "id": "202611070520341d6970a30e3d4aca",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070520341d6970a30e3d4aca",
+  "usage": {
+    "completion_tokens": 235,
+    "completion_tokens_details": {
+      "reasoning_tokens": 234
+    },
+    "prompt_tokens": 16048,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 16283
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## Description de la mise en page\n\n**Non, ce n'est pas un tableau.** Il n'y a ni colonnes, ni titres de colonnes, ni grilles. La zone est une page de manuel scolaire en arabe (texte aligné à droite), structurée en :\n\n1. **Deux lignes de texte numérotées** en haut (items 2 et 3 d'une liste).\n2. **Un bouton graphique** vert arrondi, centré, avec texte blanc.\n3. **Une ligne de titre centrée** (texte noir).\n4. **Un deuxième bouton vert** centré.\n5. **Une phrase introductive** puis **quatre lignes de liste** précédées de tirets.\n6. **Un troisième bouton vert**, coupé en bas de page.\n\n## Transcription exacte\n\n**Ligne numérotée 2 :**\n> 2. أن يكون أي مكاسباني من خلال التطبيقات العملية.\n> *(note : le premier mot semble être « أي » suivi d'un mot peu clair ; transcription au plus près : « أن أي مكاسباني من خلال التطبيقات العملية. »)*\n\n**Ligne numérotée 3 :**\n> 3. أن أتعاون مع أصدقائي في تطوير مهاراتي وقدراتي في علوم الحديث.\n\n**Bouton 1 :**\n> مجال الانشطة\n> *(avec chadda visible sur le ن : « مجال الإنشطة » tel qu'écrit, la graphie semble être « مجال الانشطة »)*\n\n**Titre centré :**\n> تطبيقات في مصادر الحديث وعلومه\n\n**Bouton 2 :**\n> انشطة الاعداد\n\n**Phrase introductive :**\n> تكوين مجموعات عمل تحت إشراف الأستاذ(ة) تقوم كل مجموعة بما يأتي :\n\n**Liste à tirets :**\n> - تحديد مصدر من المصادر لإنجاز البحث فيه.\n> - تحديد المطلبات موضوع البحث و الدراسة (الصحيح /الحسن /مختلف الحديث . . . )\n> - استثمار المكتسبات السابقة من الببقونية ومن نخبة الفكر.\n> - إعداد نسخة للانشغال عليها (الكتبة المدرسية).\n\n**Bouton 3 (coupé en bas) :**\n> انشطة [ILLISIBLE — mot coupé : « انشطة الـ... »]\n\n## Remarque\nCertains mots sont flous ou inhabituels (ex. « مكاسباني », « الببقونية ») ; je les ai transcrits littéralement sans les corriger, conformément à la consigne.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793999265,
+  "id": "2026110705072680b3d25613984c6c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110705072680b3d25613984c6c",
+  "usage": {
+    "completion_tokens": 608,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8043,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8651
+  }
+}

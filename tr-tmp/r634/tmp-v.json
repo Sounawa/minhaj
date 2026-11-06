@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "[سطر علوي مقتطع: [ILLISIBLE]\n\nلكن يُخرم عليه الحاقُ حرفٍ من الحج وعليه الهدي، فلو حاق وبجب عليه هدي (?)\n\nوفدبه. وقاله: «الشُّعَبُكُم أَي أوجِبُّ الحج منه العُمرة» يعني أنه أدخل الحج على العُمرة",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794001940,
+  "id": "20261107055216ff32aa60e91e4184",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107055216ff32aa60e91e4184",
+  "usage": {
+    "completion_tokens": 99,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 6780,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6879
+  }
+}

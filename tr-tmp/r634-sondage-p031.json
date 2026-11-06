@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Transcription de ce qui est visible sur l'image :\n\n1) **Titre du dars (bannière verte) :**\nأنواع الإحرام\n\n2) **Numéro du dars (dans le disque bleu) :**\n4\n\n3) **Objectifs / أنشطة sous la bannière :**\nNon visibles sur cette image — seule l'amorce d'une bannière suivante apparaît en bas (partiellement coupée, texte illisible), et aucun texte d'objectifs n'est imprimé dans la zone montrée.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794000025,
+  "id": "2026110705202115e82d763bb24dfb",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110705202115e82d763bb24dfb",
+  "usage": {
+    "completion_tokens": 122,
+    "completion_tokens_details": {
+      "reasoning_tokens": 121
+    },
+    "prompt_tokens": 8015,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8137
+  }
+}

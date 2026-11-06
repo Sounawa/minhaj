@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "المراجعة\n\nالحرس / 14\n\n• أن أتعرف أسبابرد الحديث .\n\n[ملاحظة: يبدو أن الكلمة \"أسبابرد\" قد تكون \"أسباب رد\"، ويوجد نص مقتطع باللون الأصفر في أسفل يمين الصفحة غير قابل للقراءة: [ILLISIBLE]]",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793998818,
+  "id": "20261107050011475bb6ae970b4058",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107050011475bb6ae970b4058",
+  "usage": {
+    "completion_tokens": 84,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 7922,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8006
+  }
+}

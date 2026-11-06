@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**أنشطة العرض**\n\nعرض نتائج البحث والدراسة في القسم:\n\nـ التعريف بالمصدر وصاحبه.\n\nـ عرض نموذج تطبيقي لنهج العلماء في دراسة سند الحديث والحكم عليه بأحد الاصطلاحات العلمية التي تمت دراستها.\n\n**الإعداد التالي**\n\nأقرأ متن الدرس المقبل، وأنجز أسئلة فقرة «استخلص المضامين».\n\n73",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793998942,
+  "id": "202611070502152b0322e3f7994d2f",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070502152b0322e3f7994d2f",
+  "usage": {
+    "completion_tokens": 107,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8062,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8169
+  }
+}

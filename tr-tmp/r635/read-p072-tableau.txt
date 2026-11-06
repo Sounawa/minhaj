@@ -1,0 +1,47 @@
+IMAGE: tr-tmp/r635/p072-tableau-1200.png
+CONSIGNE: Décris la MISE EN PAGE exacte de cette zone : s'agit-il d'un tableau ? Combien de colonnes ? Quels sont les titres de colonnes/boutons (texte exact) ? Transcris chaque cellule exactement, lettre par lettre, sans compléter ; écris [ILLISIBLE] si nécessaire.
+---
+## Description de la mise en page
+
+**Non, ce n'est pas un tableau.** Il n'y a ni colonnes, ni titres de colonnes, ni grilles. La zone est une page de manuel scolaire en arabe (texte aligné à droite), structurée en :
+
+1. **Deux lignes de texte numérotées** en haut (items 2 et 3 d'une liste).
+2. **Un bouton graphique** vert arrondi, centré, avec texte blanc.
+3. **Une ligne de titre centrée** (texte noir).
+4. **Un deuxième bouton vert** centré.
+5. **Une phrase introductive** puis **quatre lignes de liste** précédées de tirets.
+6. **Un troisième bouton vert**, coupé en bas de page.
+
+## Transcription exacte
+
+**Ligne numérotée 2 :**
+> 2. أن يكون أي مكاسباني من خلال التطبيقات العملية.
+> *(note : le premier mot semble être « أي » suivi d'un mot peu clair ; transcription au plus près : « أن أي مكاسباني من خلال التطبيقات العملية. »)*
+
+**Ligne numérotée 3 :**
+> 3. أن أتعاون مع أصدقائي في تطوير مهاراتي وقدراتي في علوم الحديث.
+
+**Bouton 1 :**
+> مجال الانشطة
+> *(avec chadda visible sur le ن : « مجال الإنشطة » tel qu'écrit, la graphie semble être « مجال الانشطة »)*
+
+**Titre centré :**
+> تطبيقات في مصادر الحديث وعلومه
+
+**Bouton 2 :**
+> انشطة الاعداد
+
+**Phrase introductive :**
+> تكوين مجموعات عمل تحت إشراف الأستاذ(ة) تقوم كل مجموعة بما يأتي :
+
+**Liste à tirets :**
+> - تحديد مصدر من المصادر لإنجاز البحث فيه.
+> - تحديد المطلبات موضوع البحث و الدراسة (الصحيح /الحسن /مختلف الحديث . . . )
+> - استثمار المكتسبات السابقة من الببقونية ومن نخبة الفكر.
+> - إعداد نسخة للانشغال عليها (الكتبة المدرسية).
+
+**Bouton 3 (coupé en bas) :**
+> انشطة [ILLISIBLE — mot coupé : « انشطة الـ... »]
+
+## Remarque
+Certains mots sont flous ou inhabituels (ex. « مكاسباني », « الببقونية ») ; je les ai transcrits littéralement sans les corriger, conformément à la consigne.

@@ -190,3 +190,22 @@ error: failed to push some refs to 'https://github.com/Sounawa/minhaj.gi
 
 [2026-11-06 19:26:00] auto-commit: push échoué — fatal: unable to access 'https://github.com/Sounawa/minhaj.git/': The requested URL returned error: 403
 
+[2026-11-06 20:42:59] superviseur v4 démarré (MAX=3, file=62 livres, battement visible)
+[2026-11-06 20:43:10] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-06 20:53:11] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-06 21:03:13] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-06 21:13:18] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-06 21:23:19] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-06 21:33:21] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-06 21:43:26] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-06 21:53:27] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-06 22:03:29] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
