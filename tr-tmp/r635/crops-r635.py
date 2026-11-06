@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
-"""R635 — crops uh2 leçon 13 : pleines pages 900 dpi + zones ciblées 1200-1500 dpi."""
+"""R635 — crops uh2 leçon 13 : sondage bornes 150 dpi + zones ciblées 1500 dpi."""
 import fitz
 
 PDF = "content/textbooks-src/ulum-hadith-2-thanawi_text.pdf"
 OUT = "tr-tmp/r635"
 doc = fitz.open(PDF)
 
-def full(p, dpi=900):
+def full(p, dpi=150, tag=""):
     pg = doc[p - 1]
     pm = pg.get_pixmap(matrix=fitz.Matrix(dpi / 72, dpi / 72))
-    f = f"{OUT}/p{p:03d}-full{dpi}.png"
+    f = f"{OUT}/p{p:03d}-survey{tag}-{dpi}.png"
     pm.save(f)
     return f
 
-def zone(p, y0, y1, dpi=1500, tag="", x0=0.0, x1=1.0):
+def zone(p, x0, y0, x1, y1, dpi=1500, tag=""):
     pg = doc[p - 1]
     W, H = pg.rect.width, pg.rect.height
     clip = fitz.Rect(W * x0, H * y0, W * x1, H * y1)
@@ -23,28 +23,24 @@ def zone(p, y0, y1, dpi=1500, tag="", x0=0.0, x1=1.0):
     return f
 
 jobs = [
-    # p.71 : bas = i3dad (fin leçon 12) — contrôle
-    ("p071-bas-900",    lambda: zone(71, 0.55, 1.00, 900, "bas")),
-    # p.72 : bannière leçon 13 + objectifs + tableau
-    ("p072-top-1500",   lambda: zone(72, 0.00, 0.20, 1500, "top")),
-    ("p072-banniere-900", lambda: zone(72, 0.00, 0.14, 900, "banniere")),
-    ("p072-tableau-1200", lambda: zone(72, 0.30, 0.75, 1200, "tableau")),
-    ("p072-bas-900",    lambda: zone(72, 0.75, 1.00, 900, "bas")),
-    # p.73 : ancha al-ard + istidadat qibliya
-    ("p073-top-1500",   lambda: zone(73, 0.00, 0.45, 1500, "top")),
-    ("p073-bas-1500",   lambda: zone(73, 0.45, 1.00, 1500, "bas")),
-    ("p073-full900",    lambda: full(73)),
-    # p.74 : bannière leçon 14 ?
-    ("p074-top-1500",   lambda: zone(74, 0.00, 0.22, 1500, "top")),
-    ("p074-full900",    lambda: full(74)),
-    # p.75-78 : sondage hauts de page (bannières éventuelles)
-    ("p075-top-900",    lambda: zone(75, 0.00, 0.20, 900, "top")),
-    ("p076-top-900",    lambda: zone(76, 0.00, 0.20, 900, "top")),
-    ("p077-top-900",    lambda: zone(77, 0.00, 0.20, 900, "top")),
-    ("p078-top-900",    lambda: zone(78, 0.00, 0.20, 900, "top")),
-    ("p079-top-900",    lambda: zone(79, 0.00, 0.20, 900, "top")),
+    # sondage bornes (150 dpi, léger)
+    ("survey-p72", lambda: full(72)),
+    ("survey-p73", lambda: full(73)),
+    ("survey-p74", lambda: full(74)),
+    # p.72 : bande verte verticale « تطبيقات في ... » (bord droit, zone مجال الأنشطة)
+    ("p72-band",   lambda: zone(72, 0.55, 0.10, 1.00, 0.42, 1500, "band")),
+    # p.72 : objectifs (haut de page)
+    ("p72-objectifs", lambda: zone(72, 0.0, 0.02, 1.0, 0.16, 1500, "obj")),
+    # p.72 : أنشطة الإعداد (4 puces, zones corrompues)
+    ("p72-i3dad",  lambda: zone(72, 0.0, 0.42, 1.0, 0.72, 1500, "i3dad")),
+    # p.72 : أنشطة الإنجاز (2 puces, liste des termes + bas de page)
+    ("p72-injaz",  lambda: zone(72, 0.0, 0.72, 1.0, 1.00, 1500, "injaz")),
+    # p.73 : أنشطة العرض + bande rotée
+    ("p73-3ard",   lambda: zone(73, 0.0, 0.02, 1.0, 0.50, 1500, "3ard")),
+    # p.73 : الإعداد القبلي (ligne corrompue)
+    ("p73-i3dad-q", lambda: zone(73, 0.0, 0.50, 1.0, 0.95, 1500, "i3dqd")),
+    # p.74 : bannière leçon 14 (borne sup)
+    ("p74-banner", lambda: zone(74, 0.0, 0.0, 1.0, 0.35, 1200, "banner")),
 ]
 for name, fn in jobs:
     print(fn())
-for p in (72, 74):
-    print(full(p))

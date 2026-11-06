@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1. أن أثبت مهاري واستثمر مكتسباتي في مصطلح الحديث.\n\n2. أن أنمي مكتسباتي من خلال التطبيقات العملية.\n\n3. أن أتعاون مع أصدقائي في تطوير مهاراتي وقدراتي في علوم الحديث.\n\n[زر أخضر:] مجال الانشطة\n\nتطبيقات في مجالات الحديث عامة تم",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794004214,
+  "id": "202611070630099a941d1af1b64c55",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070630099a941d1af1b64c55",
+  "usage": {
+    "completion_tokens": 95,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 7930,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8025
+  }
+}

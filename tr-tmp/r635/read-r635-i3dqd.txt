@@ -1,0 +1,10 @@
+IMAGE: tr-tmp/r635/p073-i3dqd-1500.png
+CONSIGNE: Transcris EXACTEMENT le titre du bouton vert et la phrase complète avec guillemets, lettre par lettre, sans corriger. Précise le mot entre guillemets mot à mot. Si illisible, écris [ILLISIBLE].
+---
+L'image est presque entièrement blanche et ne contient ni bouton vert, ni phrase avec guillemets, ni texte lisible. Seuls des fragments de chiffres (« 7 » et « 3 ») apparaissent coupés en bas de l'image.
+
+- Titre du bouton vert : [ILLISIBLE] / absent
+- Phrase avec guillemets : [ILLISIBLE] / absente
+- Mot entre guillemets : aucun mot identifiable
+
+Si vous avez une autre capture d'écran montrant le bouton et la phrase, je pourrai la transcrire exactement.

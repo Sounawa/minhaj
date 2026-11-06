@@ -1,0 +1,12 @@
+IMAGE: tr-tmp/qa-crops-r633/n919-a.png
+CONSIGNE: Transcris EXACTEMENT le texte arabe imprimé visible sur cette image. C'est un zo
+---
+**(1) Numéro chiffre par chiffre : 919** (9, 1, 9)
+
+**(2) Transcription de la zone visible :**
+
+أَخْبَرَنَا رَوْحُ بْنُ عُمَرَ، قَالَ: حَدَّثَنَا زَكَرِيَّا بْنُ إِدْرِيسَ، قَالَ: حَدَّثَنِي عَطَاءُ بْنُ أَبِي رَبَاحٍ، عَنْ نَافِعٍ، ...
+
+بِالْحَجَفَةِ مُفْرِقًا، وَخَمْرَ رَسُولُ اللَّهِ ﷺ وَوَجْهَهُ وَقَالَ: «لَوْلَا أَنَّ أَخِي حُرْمُزٌ لَطِيبُكَ».
+
+**[الموطأ رقم: 919]**

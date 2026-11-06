@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) Numéro chiffre par chiffre : 9 - 1 - 5\n\n(2) Transcription de la zone visible :\n\n- مَالِكٌ عَنْ نَافِعٍ: «أَنَّ عَبْدَ اللَّهِ بْنَ عُمَرَ كَانَ يُكْرِهُ أَنْ يُسَامَى النَّبَطَةُ الْمُنْتَظِرُمْ»\n\n[الموطأ رقم: 915]\n\n(En haut, partiellement visible d'une ligne précédente : «... الموطأ رقم: 909 .» — illisible en partie)",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794004124,
+  "id": "20261107062835c205b1a44dbf41a4",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107062835c205b1a44dbf41a4",
+  "usage": {
+    "completion_tokens": 163,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8097,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8260
+  }
+}

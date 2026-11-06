@@ -1,0 +1,8 @@
+IMAGE: tr-tmp/qa-crops-r633/h-916-p22.png
+CONSIGNE: Transcris EXACTEMENT le texte arabe imprimé visible sur cette image. C'est un zo
+---
+**(1) Numéro chiffre par chiffre :** 916
+
+**(2) Transcription de la zone visible :**
+
+... بِنْ قَالَ مَالِكٍ : وَهَذَا أَحَبُّ مَا سَمِعْتُ الْيَوْمَ فِي ذَلِكَ » [الموطأ رقم : 916] . قَالَ أَبُو عَبْدِ اللَّهِ : ...

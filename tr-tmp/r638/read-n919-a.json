@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**(1) Numéro chiffre par chiffre : 919** (9, 1, 9)\n\n**(2) Transcription de la zone visible :**\n\nأَخْبَرَنَا رَوْحُ بْنُ عُمَرَ، قَالَ: حَدَّثَنَا زَكَرِيَّا بْنُ إِدْرِيسَ، قَالَ: حَدَّثَنِي عَطَاءُ بْنُ أَبِي رَبَاحٍ، عَنْ نَافِعٍ، ...\n\nبِالْحَجَفَةِ مُفْرِقًا، وَخَمْرَ رَسُولُ اللَّهِ ﷺ وَوَجْهَهُ وَقَالَ: «لَوْلَا أَنَّ أَخِي حُرْمُزٌ لَطِيبُكَ».\n\n**[الموطأ رقم: 919]**",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794004238,
+  "id": "20261107063029ca1124f9676e47c4",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107063029ca1124f9676e47c4",
+  "usage": {
+    "completion_tokens": 255,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8100,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8355
+  }
+}

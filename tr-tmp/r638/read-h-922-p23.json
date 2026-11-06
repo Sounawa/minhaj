@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) Numéro, chiffre par chiffre : 9 – 2 – 2\n\n(2) Transcription littérale de la zone visible :\n\n**[الموطأ رقم: 922]**\n\n(Précédé d'une puce « • » à gauche du crochet d'ouverture.)",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794004252,
+  "id": "202611070630498f726635cc69479e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070630498f726635cc69479e",
+  "usage": {
+    "completion_tokens": 67,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 4639,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4706
+  }
+}

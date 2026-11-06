@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""R635 — extraction multicouche uh2 leçon 13 (pages 71-79), méthode r632."""
-import os, subprocess, sys
+"""R635 — extraction multicouche uh2 leçon 13 (pages 72-74), modèle r632."""
+import os, subprocess
 
 PDF = "content/textbooks-src/ulum-hadith-2-thanawi_text.pdf"
 OUT = "tr-tmp/r635"
-PAGES = range(71, 80)  # 71..79 inclus
+PAGES = range(72, 75)  # 72..74 inclus (p.74 = sondage borne sup)
 os.makedirs(OUT, exist_ok=True)
 env = dict(os.environ, TESSDATA_PREFIX="scripts-translate/tessdata")
 
@@ -15,8 +15,7 @@ for p in PAGES:
 import fitz
 doc = fitz.open(PDF)
 for p in PAGES:
-    pg = doc[p - 1]
-    txt = pg.get_text("text")
+    txt = doc[p - 1].get_text("text")
     with open(f"{OUT}/p{p:03d}-pymu.txt", "w", encoding="utf-8") as fh:
         fh.write(txt)
 

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "– تحديد الصطلات موضوع البحث والدراسة (الصحيح/الحسن/مختلف الحديث ... .)\n\n– استثمار الكتبت السابقة من الببقونة ومن نخبة الفكر.\n\n– إحصار نسخة الاشتغال عليها (الكتبة المدرسية).\n\n[زر أخضر:] انطة الانجاز\n\n– إعداد بطاقة تتعلق باسم المصدر وعنوانه ومؤلفه ومنهجية البحث فيه.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794003281,
+  "id": "20261107061436c177eb6492854b38",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107061436c177eb6492854b38",
+  "usage": {
+    "completion_tokens": 112,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 7958,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8070
+  }
+}

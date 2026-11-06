@@ -1,0 +1,6 @@
+IMAGE: tr-tmp/qa-crops-r633/b-p17-1.png
+CONSIGNE: Transcris EXACTEMENT ce que montre cette image, lettre par lettre, ligne par lig
+---
+[ERREUR LECTURE: [Errno 2] No such file or directory: 'tr-tmp/r638/read-b-p17-1.json'] stdout=🚀 Initializing Z-AI SDK...
+ stderr=❌ Unable to read image file: tr-tmp/qa-crops-r633/b-p17-1.png
+

@@ -1,0 +1,10 @@
+IMAGE: tr-tmp/r635/p073-quote2-1296.png
+CONSIGNE: Transcris EXACTEMENT le ou les mots arabes imprimés dans cette image, lettre par lettre, de droite à gauche, sans compléter. Si illisible: [ILLISIBLE].
+---
+[ERREUR LECTURE: [Errno 2] No such file or directory: 'tr-tmp/r635/read-r635-quote2.json'] stdout=🚀 Initializing Z-AI SDK...
+🚀 Sending vision chat request...
+ stderr=t async handleVision (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:579:52)
+      at async main (/home/z/.bun/install/global/node_modules/z-ai-web-dev-sdk/dist/cli.js:1068:23)
+
+❌ Error: API request failed with status 429: {"error":"Too many requests, please try again later"}
+

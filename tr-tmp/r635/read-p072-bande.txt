@@ -1,0 +1,6 @@
+IMAGE: p072-adj-bande.png
+CONSIGNE: Transcris EXACTEMENT, lettre par lettre, ligne par ligne, tout ce qui est visible sur cette bande d'image (texte arabe et éventuel bouton vert). N'ajoute rien. Si un mot est illisible, écris [ILLISIBLE].
+---
+– انتثار الكتّبات السابقة من البيقوينة ومن نخبة الفكر.
+
+– إحصار نسخة الاشتغال عليها (الكتبة المد رسيّة).

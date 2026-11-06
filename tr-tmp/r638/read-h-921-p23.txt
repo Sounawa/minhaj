@@ -1,0 +1,8 @@
+IMAGE: tr-tmp/qa-crops-r633/h-921-p23.png
+CONSIGNE: Transcris EXACTEMENT le texte arabe imprimé visible sur cette image. C'est un zo
+---
+(1) Numéro, chiffre par chiffre : 9 / 2 / 1 — soit **921**
+
+(2) Transcription littérale de la zone visible :
+
+« ولا تُبِسُ القفارِينَ » [الموطأ رقم : 921]. مالِكٌ و عَنْ فاطِمةَ بِنْتِ الْمَنْذِرِ، أَنَّها قَالَتْ : «كُنَّا

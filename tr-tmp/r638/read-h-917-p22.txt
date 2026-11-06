@@ -1,0 +1,13 @@
+IMAGE: tr-tmp/qa-crops-r633/h-917-p22.png
+CONSIGNE: Transcris EXACTEMENT le texte arabe imprimé visible sur cette image. C'est un zo
+---
+(1) Numéro chiffre par chiffre : **917**
+
+(2) Transcription de la zone visible :
+
+» [...] يقضي وجعه وهو مريض » [الموطأ رقم : 917] أما الرسول صلا بحروف ثم يقضيه إن شاء»
+
+Précisément, la partie centrale imprimée en bleu : **[الموطأ رقم : 917]**
+
+Texte visible à droite : « ... وهو مريض »
+Texte visible à gauche : « أما الرسول صلا ... فلا يحوز ... يقضيه إن شاء » — les extrémités de la ligne (mots coupés en haut de l'image) sont partiellement [ILLISIBLE]s car coupés par le cadrage du zoom.

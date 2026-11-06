@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "13 / الدرس",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794004191,
+  "id": "20261107062946313a84f016094d6a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107062946313a84f016094d6a",
+  "usage": {
+    "completion_tokens": 6,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8064,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8070
+  }
+}

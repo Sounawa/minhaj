@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "تكوين مجموعات عمل تحت إشراف الأستاذ(ة) تقوم كل مجموعة بما يأتي :\n\n- تحديد مصدر من المصادر لإنجاز البحث فيه .\n\n- تحديد المطلومات موضوع البحث والدراسة (الصحيح/الحسن/مختلف الحديث... .)\n\n- استثمار الكتبات السابقة من البيبوقنية ومن نخبة الفكر .\n\n- اضواء نسخة الاثتخلال عابها (الكتاية الادبية) [ILLISIBLE]",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794003267,
+  "id": "20261107061420bc68c3a54caf428e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107061420bc68c3a54caf428e",
+  "usage": {
+    "completion_tokens": 119,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 7958,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8077
+  }
+}

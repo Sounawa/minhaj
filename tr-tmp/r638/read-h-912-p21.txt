@@ -1,0 +1,17 @@
+IMAGE: tr-tmp/qa-crops-r633/h-912-p21.png
+CONSIGNE: Transcris EXACTEMENT le texte arabe imprimé visible sur cette image. C'est un zo
+---
+(1) Le numéro, chiffre par chiffre : **912** (imprimé « 912 » en chiffres, suivis d'un deux-points).
+
+(2) Transcription littérale de la zone visible :
+
+Ligne du haut (partiellement coupée) :
+« ... فَإِنَّهَا لَا يَصِلُّ ذَلِكَ الْحَرَارَى فِي شَرِيكِ الْمُعَامَلَةِ وَهَذَا إِسْنَادِي عَنِ ابْنِ... » [partiellement illisible/rogne en haut]
+
+Ligne du bas :
+« الْإِحْرَامِ، فَإِذَا تَلَبَّسَ أَحَدُكُمُ الْإِحْرَامَ فَهَذَا الْجَبَابِ الصَّافِيَّةِ » [الموطأ رقم : 912] . وَأَنْصَحَ كَانَ »
+
+Plus exactement, la partie clairement lisible :
+« ...الْإِحْرَامِ، فَإِذَا تَبَلَّغَ أَحَدُكُمُ الرَّجُلُ الْمُحْرِمَةُ... [الموطأ رقم : 912] . وَأَنْصَحَ كَانَ »
+
+⚠️ Remarque : la résolution de l'image étant faible et le texte tronqué en haut, la ligne supérieure est partiellement [ILLISIBLE]. La zone fiable est : **[الموطأ رقم : 912]** — soit le numéro 9–1–2 tel qu'imprimé.

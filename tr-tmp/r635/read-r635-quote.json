@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Transcription exacte :** له فقرة «الانخراص الحضامين».\n\n**Épellation du dernier mot** (الحضامين) :\n- ا : alif\n- ل : lām\n- ح : ḥā'\n- ض : ḍād\n- ا : alif\n- م : mīm\n- ي : yā'\n- ن : nūn",
+        "reasoning_content": "Text: \"له قرة «الانخراص الحضامين».\" — first word likely \"لـ\" cut off. Visible: \"له فقرة «الانخراص الحضامين».\" Hmm \"الانخراص\" — actually \"الانخلاص\"? Letters: ا ل ا ن خ ر ا ص. Spelled: alif, lām, alif, nūn, khā', rā', alif, ṣād. Last word \"الحضامين\": alif, lām, ḥā', ḍād, alif, mīm, yā', nūn.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794004293,
+  "id": "20261107063127bd640d2bf5f84bf8",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107063127bd640d2bf5f84bf8",
+  "usage": {
+    "completion_tokens": 239,
+    "completion_tokens_details": {
+      "reasoning_tokens": 142
+    },
+    "prompt_tokens": 2251,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2490
+  }
+}

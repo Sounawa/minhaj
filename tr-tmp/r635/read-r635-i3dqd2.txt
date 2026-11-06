@@ -1,0 +1,6 @@
+IMAGE: tr-tmp/r635/p073-i3dqd-exact-864.png
+CONSIGNE: Transcris EXACTEMENT ce qui est visible : 1) le texte du bouton vert 2) la phrase complète avec ses guillemets, lettre par lettre, sans compléter ni corriger. Si un mot est illisible, écris [ILLISIBLE].
+---
+1) Texte du bouton vert : **الإعداد التقلي**
+
+2) Phrase : « أقرأُ متّ الدرس المقبل، وأنجز أسئلة فقرة »استخلاص المضمون«.

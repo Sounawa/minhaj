@@ -1,0 +1,12 @@
+IMAGE: tr-tmp/qa-crops-r633/n915-a.png
+CONSIGNE: Transcris EXACTEMENT le texte arabe imprimé visible sur cette image. C'est un zo
+---
+(1) Numéro chiffre par chiffre : 9 - 1 - 5
+
+(2) Transcription de la zone visible :
+
+- مَالِكٌ عَنْ نَافِعٍ: «أَنَّ عَبْدَ اللَّهِ بْنَ عُمَرَ كَانَ يُكْرِهُ أَنْ يُسَامَى النَّبَطَةُ الْمُنْتَظِرُمْ»
+
+[الموطأ رقم: 915]
+
+(En haut, partiellement visible d'une ligne précédente : «... الموطأ رقم: 909 .» — illisible en partie)

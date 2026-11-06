@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "– انتثار الكتّبات السابقة من البيقوينة ومن نخبة الفكر.\n\n– إحصار نسخة الاشتغال عليها (الكتبة المد رسيّة).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794003443,
+  "id": "20261107061718a477d3fd263b4a1b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107061718a477d3fd263b4a1b",
+  "usage": {
+    "completion_tokens": 46,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8047,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8093
+  }
+}

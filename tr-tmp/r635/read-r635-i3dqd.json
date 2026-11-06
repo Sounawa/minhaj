@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "L'image est presque entièrement blanche et ne contient ni bouton vert, ni phrase avec guillemets, ni texte lisible. Seuls des fragments de chiffres (« 7 » et « 3 ») apparaissent coupés en bas de l'image.\n\n- Titre du bouton vert : [ILLISIBLE] / absent\n- Phrase avec guillemets : [ILLISIBLE] / absente\n- Mot entre guillemets : aucun mot identifiable\n\nSi vous avez une autre capture d'écran montrant le bouton et la phrase, je pourrai la transcrire exactement.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794004222,
+  "id": "20261107063014a6aff54d610143e7",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107063014a6aff54d610143e7",
+  "usage": {
+    "completion_tokens": 128,
+    "completion_tokens_details": {
+      "reasoning_tokens": 127
+    },
+    "prompt_tokens": 8025,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8153
+  }
+}
