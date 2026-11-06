@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## Transcription de la référence verte (ligne du haut)\n\n**Mot à mot, ordre visuel gauche → droite :**\n\n1. **.** (point final)\n2. **[**\n3. **125/1**\n4. **،** (virgule arabe)\n5. **القـيـروانـي** (al-Qayrawānī)\n6. **زيـد** (Zīd)\n7. **ابـي** (Abī)\n8. **ابن** (Ibn)\n9. **رسـالـة** (Risāla)\n10. **على** (ʿalā)\n11. **الدواوي** (al-Dawawī)\n\n**Lu en sens arabe (droite → gauche), la référence se lit donc :**\n\nالدواوي على رسالة ابن أبي زيد القيرواني ، 1/125 [\n\n## Réponses à vos questions précises\n\n- **Premier mot (visuellement à droite)** : **الدواوي** — ce n'est **pas** الفتاوى. Il sagit du *hāshiya* (glose) d'al-Dawawī (Abū al-Ḥasan ʿAlāʾ al-Dīn al-Dawāwī, m. 968 H).\n- **Nom du livre** : **رسالة ابن أبي زيد** (la Risāla d'Ibn Abī Zayd).\n- **Auteur** : **ابن أبي زيد القيرواني** — c'est donc bien **القيرواني** (le Qayrawānī), et non « ابن أبي زيد » seul comme nom d'auteur de la glose : le مالكي Malikite du Kairouan, auteur de la Risāla.\n- **Nombre — suite de chiffres dans l'ordre visuel gauche → droite** : **1 2 5 / 1**\n- **Lecture en sens arabe (droite → gauche)** : **1/125** — c'est-à-dire le volume **1**, page **125** (écrit « ١/١٢٥ », format standard « tome/page » inversé par rapport à la lecture latine).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793985823,
+  "id": "2026110701233268f092150f514d7d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110701233268f092150f514d7d",
+  "usage": {
+    "completion_tokens": 489,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8171,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8660
+  }
+}

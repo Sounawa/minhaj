@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Constat important :** l'expression « ولا يعارض هذا... » n'apparaît **nulle part** dans cette image. Je ne peux donc pas la transcrire, conformément à la consigne de ne rien inventer.\n\nVoici la transcription exacte du texte visible :\n\n**Ligne verte (référence, en haut à droite) :**\nالدواوي على رسالة ابن أبي ريد الحيراوي، 1/125 [\n(le crochet ouvrant « [ » est visible avant « 125/1 » ; l'ordre imprimé des chiffres est « 125/1 », lu de droite à gauche « 1/125 »)\n\n**Corps du texte :**\n\nالثاني من القسمين: ما لا يمكن الجمع فيه، وهذا يدخل تحته نوعان:\n\nالأول: أن يعرض للتقدم من الثانخر، فأن كان ذلك كان الثانخر ناسخا المتقدم.\n(mot à mot : « الثانخر » semble imprimé ainsi ; probablement [illisible] pour « الثاني »)\n\nالثاني: أن لا يعلم للتقدم من الثانخر فحينئذ نسلك مسلك التراجيح فنأخذ بالراجح ونندع المرجوح.\n(« يعلم » semble imprimé ainsi)\n\nوالتعارض بين الحديثين إنما هو بحسب ما ظهر للناظر فيها، وقد يمكن الجمع بين حديثين لدى\n(la ligne est coupée en bas de l'image ; le texte se poursuit sur la page suivante, non visible)\n\n**Note :** le passage demandé « ولا يعارض هذا... » avec sa référence entre crochets ne figure pas dans la portion visible de cette page. Il se trouve vraisemblablement sur une autre partie de la page (coupée ou sur la page suivante).",
+        "reasoning_content": "The image doesn't contain « ولا يعارض هذا » apparently. Visible: reference in green top. Must transcribe what's visible and note absence.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793985414,
+  "id": "202611070116414183181db8d74bda",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070116414183181db8d74bda",
+  "usage": {
+    "completion_tokens": 429,
+    "completion_tokens_details": {
+      "reasoning_tokens": 31
+    },
+    "prompt_tokens": 8175,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8604
+  }
+}

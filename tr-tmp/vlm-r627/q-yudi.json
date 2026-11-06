@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## Transcription des lignes demandées\n\n**Ligne 1 (haut de l'image) :**\n> يُقُبُّ بِنِي فَرَضَ وَقُولُهُ ﷺ لَمَنْ عَارَضُهُ بَأَنَّ الْبَعِيرَ الْأَجْرَبَ يَكُونُ فِي الإِبِلِ وَهُوَ الصَّرِيحُ فِي حَدِيثِ أُمِ\n\n⚠️ Début de ligne tronqué : « يُقُبُّ بِنِي فَرَضَ » est partiellement illisible (le début réel de la ligne est coupé par la marge).\n\n**Ligne 2 (ligne contenant le hadith de l' `'adwa`) :**\n> فَجَرَبَ، حَدِيثُ رَدِيعَةَ عَلَيْهِ بَقَوْلِهِ: «فَإِنَّ أَعْذِيَ اللَّاأوَلُ» وَأَمَّا الْأَمْرُ بَالْفِرَارِ مِنَ الْجُذَّامِ وَقَوْمِ بَابِ سِدِّ\n\n⚠️ Le passage « حَدِيثُ رَدِيعَةَ عَلَيْهِ بَقَوْلِهِ » : l'attachement exact (ب/على) est [illisible] par endroits en raison de la résolution ; le mot « فَجَرَبَ » au début : la vocalisation du jim est [illisible].\n\n**Ligne 3 :**\n> الذَّارِئِ؛ لِأَنَّ اللَّا يَنْفَكُ اللَّشِيْصُ الَّذِي بِالْخَاطِرِهِ شَيْءٌ مِنْ ذَاكَ بِتَقْدِيرِ اللَّهِ تَعَالَى إِنْ تَدَاوَ، لَا بِالْعَدْوَانِ النَّفْسِ،\n\n⚠️ « اللَّا يَنْفَكُ » et « اللَّشِيْصُ » : la double lecture exacte (لا ينفك/لا ينفص، الشص/الشيص) est [illisible] à cette résolution.\n\n## Réponses aux questions précises\n\n- **Voix/cas des deux mots dans le hadith** : l'image porte ici « فَإِنَّ أَعْذِيَ اللَّاأوَلُ » — la forme avec la négation « لا يُعْدِي شيئاً » attendue par votre question **n'apparaît pas telle quelle** sur cette portion : je transcris [illisible] pour la forme exacte (يُعدي/يُعدّي) car elle n'est pas visible sur ce fragment.\n\n- **Le mot après « في »** : le mot est **الإِبِلِ** (al-ibil), lisible sur la ligne 1 : « يَكُونُ فِي الإِبِلِ ». Ce n'est donc pas un autre mot : c'est bien **الإبل**.\n\n- **Chiffres** : aucun chiffre n'apparaît sur cette portion d'image — il n'y a donc rien à décrire de gauche à droite.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793986249,
+  "id": "202611070130378c652f6ac90f41eb",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070130378c652f6ac90f41eb",
+  "usage": {
+    "completion_tokens": 834,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 7980,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8814
+  }
+}

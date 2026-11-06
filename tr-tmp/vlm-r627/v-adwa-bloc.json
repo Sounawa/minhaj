@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Transcription ligne par ligne (d'après l'image uniquement) :\n\n**Ligne 1 (partiellement coupée en haut) :**\n« ...وهو الصريح في حديث [illisible] ... » — fragment supérieur coupé : [illisible]\n\n**Ligne 2 :**\nيَعْدِي نَسِيءُ نَسْئًا» وَقَوْلُه ﷺ لِمَنْ عَارَضَهُ بِأَنَّ الْبَعِيرَ الْأَجْرَبَ يَكُونُ فِي الْإِبِلِ الصَّحِيحَةِ فَخَافَ الْطَعْنُ\n\n**Ligne 3 :**\nفَجَرَبَ، حَيْثُ رَدَّ عَلَيْهِ بِقَوْلِهِ: «فَمَنْ أَعْدَى الْأَوَّلَ». وَأَمَّا الْأَمْرُ بِالْفِرَارِ مِنَ الْمَجُذُومِ فَمِنْ بَابِ سَدِّ\n\n**Ligne 4 :**\nالذَّرَائِعِ؛ لِأَنَّهُ يَتَوَقَّعُ التَّخَصُّ الَّذِي بِخَالِطِهِ شَيْءٌ مِنْ ذَلِكَ بِتَقْدِيرِ اللهِ تَعَالَى ابْتِدَاءً، لَا بِعَدْوَى التَّقْدِيرِ،\n\n**Ligne 5 :**\nفَإِذَنْ أَنَّ ذَلِكَ بِسَبَبِ مُخَالِطَتِهِ، فَيُعْتَقَدُ صِحَّةُ الْعَدْوَى؛ فَيَقَعُ فِي الْحَرَجِ؛ فَأُمِرَ بِتَجْنُبِهِ حَسْبًا لِمَا ادَّعَاهُ،\n\n**Notes :**\n- (1) forme de « لا يُعدي شيئاً شيئاً » : dans cette image, la première partie de la formule (« وقد صح قوله ﷺ: لا يعدّي... ») est sur la ligne coupée du haut, donc [illisible] ; seul « يَعْدِي نَسِيءُ نَسْئًا » est visible en début de ligne 2 (lecture incertaine : le premier mot pourrait être يُعْدِي).\n- (2) transcrit intégralement ligne 2.\n- (3) ordre exact : « فَجَرَبَ » précède « حَيْثُ رَدَّ عَلَيْهِ بِقَوْلِهِ: «فَمَنْ أَعْدَى الْأَوَّلَ» » (ligne 3).\n- (4) « وهو الصريح في حديث... » : ligne 1 coupée, suite [illisible].\n- (5) transcrit lignes 3–4.\n- Aucune référence verte entre crochets n'est visible sur cette image.",
+        "reasoning_content": "Transcribe visible lines. No green brackets visible; the \"وهو الصريح في حديث\" fragment appears at top partially cut. Transcribe as visible, mark uncertain.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793986636,
+  "id": "202611070136553f40a69ff0d143cd",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070136553f40a69ff0d143cd",
+  "usage": {
+    "completion_tokens": 861,
+    "completion_tokens_details": {
+      "reasoning_tokens": 36
+    },
+    "prompt_tokens": 8230,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9091
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## Transcription exacte (token par token, d'après l'image uniquement)\n\n**Ligne de la citation :**\n\nقال الإمام سفيان الثوري رحمه الله: «تعلّموا هذا الحديث فإذا علمتموه فاحفظوه؛ فإذا\n\n**Suite (ligne suivante) :**\n\nحفظتموه؛ فأعطوه؛ فإذا عملتم به فانشروه».\n\n### Les verbes « فإذا ... فـ... » mot à mot :\n- **فإذا علمتموه** → « فإذا » + verbe **علمتموه** (.savoir, au 2e pl. + suffixe ـه)\n- **فاحفظوه** → verbe **احفظوه** (impératif de حفظ + suffixe ـوه)\n- **فإذا حفظتموه** → « فإذا » + verbe **حفظتموه**\n- **فأعطوه** → verbe **أعطوه** (impératif de أعطى)\n- **فإذا عملتم به** → « فإذا » + verbe **عملتم** + **به**\n- **فانشروه** → verbe **انشروه** (impératif of انشرى/نشرى + suffixe ـوه)\n\n⚠️ Note : dans l'image, le mot après « تعلّموا » est **هذا** — la question proposait « هذا الحديث » mais je ne transcris que ce qui est visible : « تعلّموا هذا الحديث » apparaît bien tel quel sur la ligne.\n\n## Référence verte (entière)\n\n**فتح المغيث بشرح الفية الحديث للعراقي، السخاوي، 3/220**\n\n### Lecture des nombres :\n- **Ordre visuel gauche→droite** : la suite apparaît ainsi : « 3/220 »\n- **Lue en sens arabe** (droite→gauche) : on lit **220/3**, c'est-à-dire : **tome 3, page 220** — « ثلاثة / مئتان وعشرون » (le tome 3 précède la page 220 dans la convention arabe مج/صفحة).",
+        "reasoning_content": "Transcribe exactly.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793985906,
+  "id": "20261107012452cb45c272da90427d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107012452cb45c272da90427d",
+  "usage": {
+    "completion_tokens": 508,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4
+    },
+    "prompt_tokens": 8093,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8601
+  }
+}

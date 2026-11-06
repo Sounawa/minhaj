@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**الاستنتاجار**\n\nقال الحافظ السخاوي في بيان أهمية مخالفة الحديث: «وهو من أهم الأنواع، تضطر\nإله جميع الطوائف من العلماء، وإنما يكمل به من كان إماما جامعا لصناعتي: الحديث والفقه،\nغاصا على المعاني الدقيقة؛ ولذا كان إمام الأئمة أبو بكر بن خزيمة من أحسن الناس فيه كلاما\nلكنه توسع حيث قال: لا أعرف حديثين صحيحين متضادين؛ فمن كان عنده شيء من ذلك\nفلينأتي به لأؤلف بينهما، وانتقد عليه بعض صنيعه في توسعه؛ فقال البقيني: إنه لو فتحنا باب\nالتأويلات لانفتحت أكثر الباب» [فتح المغيث شرح الفية الحديث، السخاوي، 3/81].\n\nأتأمل النص وأجيب عن الآتي:\n\n**1** أبد. أهمية العلم بمخالفة الحديث.\n\n---\n\n**Notes :**\n- (1) Le texte imprimé comporte une forme inhabituelle en tête : « إله » (probablement « إليه » mal imprimé, signalé tel quel sans correction).\n- (2) « البقيني » est transcrit tel qu'imprimé (l'orthographe usuelle est « البلقيني »).\n- (3) Référence, chiffres dans l'ordre imprimé de droite à gauche : **فتح المغيث شرح الفية الحديث، السخاوي، 3/81** — soit « 3/81 » tel qu'imprimé.",
+        "reasoning_content": "Transcribe the Arabic text exactly.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793985495,
+  "id": "2026110701180135a0ef0e53e6444b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110701180135a0ef0e53e6444b",
+  "usage": {
+    "completion_tokens": 388,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7
+    },
+    "prompt_tokens": 8179,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8567
+  }
+}

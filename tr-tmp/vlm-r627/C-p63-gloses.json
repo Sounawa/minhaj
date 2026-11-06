@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Je ne peux pas transcrire ces gloses : l'image fournie **ne contient pas de section الشرح** avec les passages « عُرِض بمثله: ... » ni « المعارضة: ... ».\n\nCe qui est visible sur l'image est uniquement :\n\n- **النصّ** : « قال الحافظ ابن حجر رحمه الله تعالى: \"ثم القبول: إن سلم من العارضة فله التحكم، وإن عوض بمثله: فان أμكان الجمع فمختلف الحديث\". »\n- Le début d'un encadré **الفهم** (titre seul, le contenu est coupé en bas de l'image).\n\nLes gloses demandées se trouvent vraisemblablement dans la partie الشرح de la page, qui n'est pas visible dans cette capture. Je refuse d'ailleurs de les reconstituer de mémoire (même si le texte d'an-Nukhba / son commentaire est connu), conformément à votre consigne de ne rien inventer. Merci de fournir la section de l'image contenant الشرح.",
+        "reasoning_content": "L'image ne montre pas le الشرح ; je dois le signaler.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793985337,
+  "id": "20261107011526dac57c3785bd4162",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107011526dac57c3785bd4162",
+  "usage": {
+    "completion_tokens": 251,
+    "completion_tokens_details": {
+      "reasoning_tokens": 15
+    },
+    "prompt_tokens": 8029,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8280
+  }
+}

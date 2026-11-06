@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## Transcription de la page (64)\n\n**Ligne partiellement coupée en haut :**\n... مَنْ ... [illisible — ligne tronquée en haut de page]\n\n**Corps du texte :**\n\nمسلم، باب لا تدخل الملائكة بيتا فيه كلب]، وحديث: «لا يقبض الله صلاة بغيز طهور، ولا صدقة من غلول».\n[صحيح مسلم في أول كتاب الطهارة، باب وجوب الطهارة للصلاة]، وحديث: «إذا وضع العشاء، وأقيمت الصلاة\nفأنذرُوا باالعشاء» [صحيح البخاري، كتاب الصلاة، باب إذا حضر الطعام وأقيمت الصلاة]، وحديث: «لا شغار\nفي الإسلام» [مصنف عبد الرزاق، كتاب النكاح، باب الشغار]. فهذه أحاديث محكمة ليس لها ما يعارضها،\nوغيرها كثير.\n\n## ثانيا: مختلف الحديث\n\n**1. تعريفه:**\n\nمختلف الحديث في الاصطلاح: هو الحديث المقبول المعارض بمثله مع إمكان الجمع، ويختلف\nالمراد بمختلف الحديث في الاصطلاح باختلاف ضبط كلمة «مختلف»، فمن الحديثين من ضبطها\nبكسر اللام على وزن اسم فاعل، ومنهم من ضبطها بفتح اللام على أنه مصدر ميمي؛ أي أنه\nالحديث الذي وقع فيه الاختلاف؛ فإما على أنه اسم فاعل من اختلف فيعرف بما يأتي: «أن يوجد\n\n---\n\n**Remarques :**\n- La toute première ligne en haut de la page est tronquée/rognée : [illisible].\n- Les références entre crochets (en vert dans l'original) sont transcrites telles qu'imprimées.\n- Le passage demandé « ضبطها بكسر اللام / بفتح اللام » et « مصدر ميمي » figure bien dans le texte : « فمن الحديثين من ضبطها بكسر اللام على وزن اسم فاعل، ومنهم من ضبطها بفتح اللام على أنه مصدر ميمي ».\n- Le paragraphe de définition se poursuit à la page suivante (« أن يوجد... »).",
+        "reasoning_content": "The green bracketed references are visible. Transcribe exactly what's visible, marking [illisible] where unclear. The green text: \"لا تدخل الملائكة بيتا فيه كلب]\" — first line partially cut. Transcribe visible text.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793985388,
+  "id": "20261107011609d0876a149a86445a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107011609d0876a149a86445a",
+  "usage": {
+    "completion_tokens": 599,
+    "completion_tokens_details": {
+      "reasoning_tokens": 52
+    },
+    "prompt_tokens": 8191,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8790
+  }
+}

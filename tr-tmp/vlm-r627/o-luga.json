@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## Transcription exacte de ce qui est VISIBLE dans l'image\n\n**Ligne 1 (rose/magenta, en haut à droite) :**\n> أولا: المحكم\n\n**Ligne 2 (bleue) :**\n> 1. تعريف المحكم:\n\n**Ligne 3 (noir/vert, partiellement coupée en bas) — transcription visible token par token, de droite à gauche :**\n> أ- لغة: المحكم من [أحكم؟] الشيءَ: من [أتقنتُه؟]، والمحكمة: [إتقانُ؟] [الكلام؟]، [والمحكَمة؟]، [الكلام؟]...\n\n⚠️ Cette dernière ligne est **très fortement coupée verticalement** (seule la moitié supérieure des lettres est visible). Je transcris donc avec prudence :\n\n> **أ- لغة: المحكم من أحكمتُ الشيءَ [أتقنتُه — illisible/coupé] ، والمحكمة: [illisible] ، [illisible] الكلام [illisible] ...**\n\n## Réponses aux points demandés\n\n1. **Mot après «الشيء»** : la ligne étant tronquée, je ne peux confirmer ni «أتقنتُه» ni «أنقتُه» avec certitude → **[illisible]** (graphiquement la hamza + ت + ق sont plausibles, donc «أتقنتُه» est la lecture la plus probable, mais non vérifiable).\n\n2. **Mot après «الكلام»** : **non visible** dans l'image (la ligne est coupée avant) → **[illisible]**.\n\n3. **«المحكم: الذي لا اختلاف فيه ولا اضطراب»** : cette portion **n'apparaît pas** dans l'image fournie → **[absent de l'image]**.\n\n4. **Référence verte [ ]** : **aucune référence entre crochets ni chiffre n'est visible** dans l'image. Impossible de décrire des chiffres → **[absent]**.\n\nSeul «أولا: المحكم» et «1. تعريف المحكم:» sont parfaitement lisibles. Le chiffre «1» : un seul chiffre, à gauche du point dans l'ordre visuel (avant «تعريف» en RTL), valeur = un.",
+        "reasoning_content": "Image shows title lines and only the first truncated line of the definition. Much of what the question asks is not visible. Report exactly what's visible.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793986216,
+  "id": "2026110701300652388008f08246f1",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110701300652388008f08246f1",
+  "usage": {
+    "completion_tokens": 552,
+    "completion_tokens_details": {
+      "reasoning_tokens": 30
+    },
+    "prompt_tokens": 8163,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8715
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Je ne peux pas répondre à votre question telle que posée, car l'image ne contient pas les lignes demandées.\n\n**Ce que montre réellement l'image :** uniquement un bandeau vert (en-tête de section) portant le mot **« الإِحْكَام »** en calligraphie blanche, sur fond blanc. Il n'y a :\n\n- aucune ligne de définition لغة,\n- aucun texte contenant « اسم مفعول من أحكمتُ الشيء... »,\n- aucune ligne « وأحكمَ الكلامَ... »,\n- aucun chiffre à transcrire.\n\n**Réponse à la question posée :** [illisible] — le mot recherché (أتقنته ou أنقته) n'est tout simplement pas présent dans cette image, et je ne peux pas le deviner « de mémoire » comme vous l'exigez à juste titre.\n\nPour que je puisse faire la transcription token par token demandée, merci de fournir la page (ou la zone de page) contenant le corps de la définition sous ce titre الإحكام.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793985744,
+  "id": "20261107012219175585d99e0d4d65",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107012219175585d99e0d4d65",
+  "usage": {
+    "completion_tokens": 234,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8175,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8409
+  }
+}

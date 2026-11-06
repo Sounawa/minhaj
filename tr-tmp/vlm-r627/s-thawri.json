@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## Transcription exacte\n\n**Ligne 1 :**\nـ كتاب «مشكل الحديث وبيانه» للإمام أبي bkac... wait — exactement : « لكتاب «مشكل الحديث وبيانه» للإمام أبي بكa — non, transcription exacte :\n\n« ـ كتاب «مشكل الحديث وبيانه» للإمام أبي bkac » — [illisible partiel : «للإمام أبي بكر محمد بن الحسن بن فورك»]\n\n**Ligne 2 :**\nوهو من الكتبلفيدة في هذا الفن ، وغيرها كثير .\n\n**Titre (rose) :**\nأهميّي وأقتدي — exact : **أهميّ وأقتدي** (titre en rose)\n\n**Citation de سفيان الثوري (noir, mot à mot) :**\n\nقال الإمام سفيان الثوري رحمه الله : «انثموا هذا الحديث فإذا علمتموه فتعلّموه؛ فإذا حفظتموه؛ فاعملوا به؛ فإذا عملتم به فانشروه».\n\nDétail des segments « فإذا ... فـ... » tels qu'ils apparaissent :\n1. «انثموا هذا الحديث فإذا علمتموه **فتعلّموه**؛» — (doute possible sur انثموا : pourrait être انشروا)\n2. «فإذا حفظتموه؛» — [suite de la phrase : ilisible entre les deux lignes]\n3. «فاعملوا به؛»\n4. «فإذا عملتم به **فانشروه**». — verbe exact : **فانشروه**\n\n⚠️ Les verbes **فاحفظوه** et **فأعطوه** n'apparaissent pas ; on lit فتعلّموه، فاعملوا به، فانشروه. Le verbe après «فإذا حفظتموه» est partiellement coupé par le saut de ligne [illisible].\n\n**Référence verte (mot à mot) :**\n\n[فتح المغيث بشرح الفيّة الحديث للعراقي ، السخاوي ، 3/220]\n\n**Chiffres de gauche à droite :**\n- « 3 » : chiffre 3 → valeur trois (numéro du tome, à gauche du slash)\n- « 2 » : chiffre 2\n- « 2 » : chiffre 2\n- « 0 » : chiffre 0 → le nombre à droite du slash se lit **220** (page 220)\n\nDonc la référence est : السخاوي، فتح المغيث بشرح الفية الحديث للعراقي، tome **3**, page **220**.\n\n*(Note : certaines lettres du titre du livre ligne 1 sont floues et marquées [illisible] ; le nom « فورك » est probable mais non garanti.)*",
+        "reasoning_content": "Transcribe the quote. Verbs: فاحفظوه، فاتقوا (هل الله?) Actually text: «انثموا هذا الحديث فإذا علمتموه فاحفظوه؛ فإذا حفظتموه؛ فاتقوا الله? Let me read: «انشروا هذا الحديث فإذا علمتموه فتعلّموه؛ فإذا... hmm.\n\nText: «انثموا هذا الحديث فإذا علمتموه فتعلّموه؛ فإذا حفظتموه فاتقوا...» Actually shown: «انثموا هذا الحديث فإذا علمتموه فاحفظوه؛ فإذا حفظتموه فاتقوا الله? Then «فإذا عملتم به؛ فإذا عملتم به فانشروه». Segments: فإذا علمتموه فتعلّموه؛ فإذا حفظتموه... Given lines: \"فتعلّموه؛ فإذا\" then \"حفظتموه؛ فاعملوا به؛ فإذا عملتم به فانشروه\".\n\nReference green: [فتح المغيث بشرح الفيّة الحديث للعراقي، السخاوي، 3/220]. Digits left→right: 2, 2, 0 → 220; 3.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793986292,
+  "id": "202611070131073f75028f0c2d407f",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070131073f75028f0c2d407f",
+  "usage": {
+    "completion_tokens": 953,
+    "completion_tokens_details": {
+      "reasoning_tokens": 298
+    },
+    "prompt_tokens": 8067,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9020
+  }
+}
