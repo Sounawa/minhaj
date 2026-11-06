@@ -44,19 +44,38 @@ def acquire_lock() -> None:
     raise RuntimeError("verrou registre occupé après 10 s")
 
 
-def set_book_doc(book_id: str, doc_id: str, html_fr: str) -> int:
-    """Écrit htmlFr pour intro et/ou lessons portant docId. Retourne le nb d'écrits."""
+def set_book_doc(book_id: str, doc_id: str, html_fr: str, force: bool = False) -> int:
+    """Écrit htmlFr pour intro et/ou lessons portant docId. Retourne le nb d'écrits.
+
+    GARDE-DOUBLON (R622-correctif) : si une htmlFr NON VIDE existe déjà pour ce
+    docId et diffère de la nouvelle, REFUS (leçon déjà livrie par un autre
+    ouvrier) sauf --force (reprise explicite) ou contenu identique
+    (re-pose idempotente). Prévient l'écrasement d'une livraison commise."""
     path = f"{HOME}/content/books/{book_id}.json"
     with open(path, "r", encoding="utf-8") as fh:
         data = json.load(fh)
     n = 0
     intro = data.get("intro") or {}
     if str(intro.get("docId")) == doc_id:
+        old = str(intro.get("htmlFr") or "").strip()
+        if old and old != html_fr and not force:
+            raise SystemExit(
+                f"✗ GARDE-DOUBLON : {book_id}/{doc_id} possède déjà une htmlFr "
+                f"livrée ({len(old)} car) différente de la nouvelle "
+                f"({len(html_fr)} car) — livrie par un autre ouvrier. "
+                f"Passe --force uniquement en reprise documentée.")
         intro["htmlFr"] = html_fr
         data["intro"] = intro
         n += 1
     for l in data.get("lessons", []):
         if str(l.get("docId")) == doc_id:
+            old = str(l.get("htmlFr") or "").strip()
+            if old and old != html_fr and not force:
+                raise SystemExit(
+                    f"✗ GARDE-DOUBLON : {book_id}/{doc_id} possède déjà une "
+                    f"htmlFr livrée ({len(old)} car) différente de la nouvelle "
+                    f"({len(html_fr)} car) — livrie par un autre ouvrier. "
+                    f"Passe --force uniquement en reprise documentée.")
             l["htmlFr"] = html_fr
             n += 1
     if n == 0:
@@ -85,14 +104,16 @@ def register_hand(doc_id: str, title: str) -> int:
 
 
 def main() -> None:
-    if len(sys.argv) != 4:
-        print("Usage: hand-set.py <bookId> <docId> <fichier.html>")
+    args = [a for a in sys.argv[1:] if a != "--force"]
+    force = "--force" in sys.argv
+    if len(args) != 3:
+        print("Usage: hand-set.py <bookId> <docId> <fichier.html> [--force]")
         sys.exit(1)
-    book_id, doc_id, src = sys.argv[1], sys.argv[2], sys.argv[3]
+    book_id, doc_id, src = args
     with open(src, "r", encoding="utf-8") as fh:
         html_fr = fh.read().strip()
 
-    n = set_book_doc(book_id, doc_id, html_fr)
+    n = set_book_doc(book_id, doc_id, html_fr, force=force)
     acquire_lock()
     try:
         total = register_hand(doc_id, book_id)
