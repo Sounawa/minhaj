@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Ligne 1 :**\n\nأهدي أفردي\n\n**Ligne 2 :**\n\nقال الإمام سفيان الثوري رحمه الله :learned انتظموا هذا الحديث فإنما علمنموه فأفشوه فإنما...\n\nTranscription exacte :\n\nقالَ الإمامُ سفيانُ الثوريِّ رحمهُ اللهُ: «انتظموا هذا الحديثَ فإنما علمتموه فأفشوه فإنما عملتم به فانشروه».\n\n**Ligne 3 (référence verte) :**\n\nفتح المغيث بشرح الفية الحديث للعراقي، الشاوي 3/220\n\n---\n\n⚠️ **Réserve méthodologique** : l'image est de faible résolution ; plusieurs points de diacritiques sont incertains. Les verbes de la citation de سفيان الثوري visibles sont exactement :\n\n1. **علمتموه** (…فإنما علمتموه…)\n2. **فأفشوه** (fashsha – répandre)\n3. **عملتم به** (…فإنما عملتم به…)\n4. **فانشروه** (anshara – publier)\n\nLa référence verte finale se lit : **[فتح المغيث بشرح الفية الحديث للعراقي، الشاوي 3/220]** — le \"3/220\" et le nom «الشاوي» (édition) sont les segments les moins certains, à vérifier sur l'exemplaire papier.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793987159,
+  "id": "202611070145486f2071dd7d924cf1",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070145486f2071dd7d924cf1",
+  "usage": {
+    "completion_tokens": 335,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 7060,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7395
+  }
+}
