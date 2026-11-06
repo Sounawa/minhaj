@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "قال البحاظ بن حجير: ذكر أبو عوانة في حديثه حديث هشام بن سعد هذا وقال: غلط هشام بن سعد، وأو رده ابن أبي عدي في ترجمة هشام بن سعد، وعه ده من مناكيره، وقال أبو بعبتي اللخلي: «ذكر الحفاظ حديثه في الموضع من حديث الزهري عن علي سلمة وقالوا: إنما",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793967566,
+  "id": "20261106201921d0f631cc6e4e4e98",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106201921d0f631cc6e4e4e98",
+  "usage": {
+    "completion_tokens": 109,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8058,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8167
+  }
+}

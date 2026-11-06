@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "الذكر هو الذي يوجد في إطلاق كثير من أهل الحديث، وإإن خلف بهذا فصل المذكر من الشاذ وأن كلا منهما يجمعها مطلق التفرد أو مع قيد الخلاف « » [النكت على كتاب ابن الصلاح، لابن حجرب: 2/675].\n\n3. أقسامه:\n\nالنكارة قد تقع في الإسناد، وقد تقع في المتن، بيان ذلك في الآتي:",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793967343,
+  "id": "202611062015371085c434d9284a41",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062015371085c434d9284a41",
+  "usage": {
+    "completion_tokens": 113,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2297,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2410
+  }
+}

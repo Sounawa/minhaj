@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "تخلّف عن الخلفة بين ضعيف وثقة.\n\nفماذا تسمى رواية القبول للخلفة لرواية الضعف؟ وماذا تسمى رواية الضعف التي خالف فيها القبول؟ وما فائدة التمييز بينهما؟\n\n**النص**\n\nقال الحافظ ابن حجر رحمه الله: «وَمَعُ الضَّعِيفِ فَالرَّاجِحُ المَعْرُوفُ، وَمُقَابِلُهُ المُنكَرُ».\n\n**النصم**",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793966910,
+  "id": "20261106200825ddc1f971346c433d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106200825ddc1f971346c433d",
+  "usage": {
+    "completion_tokens": 146,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3066
+  }
+}

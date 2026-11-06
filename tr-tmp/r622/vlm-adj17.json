@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "هنه عن الزهري عن أبي هربرة رضي الله عنه\nنرى على هشام بن سعد إسقاط أبي سلمة، إ انك",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793967705,
+  "id": "20261106202142bd622f4f68cd4d09",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106202142bd622f4f68cd4d09",
+  "usage": {
+    "completion_tokens": 43,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 3926,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3969
+  }
+}

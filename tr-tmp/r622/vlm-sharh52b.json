@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "النقل ب vocalisation حسبما يظهر في الصورة:\n\n**١. اليَطْصَنُ مِنَ المَتْعِ: تَعْرِيبُهُ الحَادِيثُ** (بداية الغloss الأولى، والباقي محجوز بالصورة)\n\n**٢. أَبِينَ الفَرْقَ بَيْنَهُمَا.**\n\nوفي العمود الأيمن تظهر غloss أخرى:\n\n**الرَّاجِحُ: القَوِيُّ الوَازِنُ، وَرَجَّحَ الشَّيْءَ: بَيَّنَ وَزْنَهُ، وَنَظَرَ مَا نُقِلَهُ.**\n\nملاحظة: الكلمة الأولى في أعلى العمود الأيمن مشطوبة جزئيًا بالصورة، فلا يمكن الجزم بحرفها الأول بدقة، لكن سياقها يقابل «الضَّعْف» في اللّاميّة (الضَّعْف: اليَطْصَنُ...).",
+        "reasoning_content": "Glosses: \"١. اليَطْصَن مِن المَتْع: تعريبه...\" wait, question says \"الضَّعْف... ثم الراجِح...\" Hmm. The visible glosses: line right: \"الضَّعْف: اليَطْصَن...\" Actually asked to transcribe the two lexical glosses: \"١. اليَطْصَن من المَتْع: تعريبه الحاديث\" — hmm but user says \"الضَّعْف... ثم الراجِح\". The image text: right column: \"الطَّبْ:...\" Left: \"١. اليَطْصَن من المتع: تعريبه الحاديث\" and \"٢. أبين الفرق بينهما.\"\n\nBut user explicitly asks for \"الضَّعْف... ثم الراجِح...\" Maybe they refer to \"الراجح: القوي الوازن، ورجّح الشيءَ: بيّنه وزنه\" and \"وضعر ما نُقله\"? The right column reads: \"الرَّاجِحُ: القَوِيُّ الوَازِنُ، وَرَجَّحَ الشَّيْءَ: بَيَّنَ وَزْنَهُ وَنَظَرَ مَا نُقَلَه.\" Hmm \"ونظر ما نقله\" — likely \"ونظَر ما نُقِلَه\".\n\nThe user wants only the two glosses starting with \"الضَّعْف\" — but image shows \"الطَّبْ\"? Actually first word green: \"الطَّبْ: اليَطْصَن والمِرَاة\"? The right top: \"الطَّبْ: اليَطْصَن والصِّفَة\"? Hard. Given user instruction, transcribe:\n\n١. اليَطْصَن مِن المَتْعِ: تَعْرِيبُهُ الحَادِثِ...\n\nHonestly best: transcribe as asked:\n\nالضَّعْف: ...\n\nI'll transcribe two glosses visible:\n\n١. اليَطْصَنُ مِنَ المَتْعِ: تَعْرِيبُهُ الحَادِثُ\n\nActually the user's framing may be wrong; provide faithful transcription of the two glosses:\n\nRight column gloss: \"الرَّاجِحُ: القَوِيُّ الوَازِنُ، وَرَجَّحَ الشَّيْءَ: بَيَّنَ وَزْنَهُ، وَنَظَرَ مَا نُقِلَه.\"\nLeft: \"١. اليَطْصَنُ مِنَ المَتْعِ: تَعْرِيبُهُ الحَادِثُ... ٢. أَبِينَ الفَرْقَ بَيْنَهُمَا.\"\n\nBut user wants only the two glosses \"الضَّعْف... ثم الراجِح\". Give:\n\nالضَّعْفُ: اليَطْصَنُ...\n\nI'll answer with the two glosses as legible:\n\n١. اليَطْصَنُ مِنَ المَتْعِ: تَعْرِيبُهُ الحَادِثُ\n٢. أَبِينَ الفَرْقَ بَيْنَهُمَا\n\nHmm. Given ambiguity, provide what's visible with vocalization, noting.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793967042,
+  "id": "202611062010244a019451b4464706",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062010244a019451b4464706",
+  "usage": {
+    "completion_tokens": 1086,
+    "completion_tokens_details": {
+      "reasoning_tokens": 816
+    },
+    "prompt_tokens": 8049,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9135
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "الحرس/ 9\n\nأحاديث المرفوض والمنكر\n\nأهداف الدرس:\n• أن أتعرّف مفهوم الحديث المذكور والمرفوض وأقسامهما وحكمهما.\n• أن أبيّن العلاقة بين المذكور والمنكّر.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793966804,
+  "id": "20261106200640e92ae6f157e84663",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106200640e92ae6f157e84663",
+  "usage": {
+    "completion_tokens": 72,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2767,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2839
+  }
+}
