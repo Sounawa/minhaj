@@ -1,0 +1,27 @@
+## Titre exact (copie lettre par lettre)
+
+**بande de droite (n° de partie) :**
+- « 12 »
+- « الجزء » (al-juzʾ) — lettre par lettre : ا ل ج ز ء
+
+**Bande principale (titre de la leçon) :**
+« الانشغال المنشوفة » telle qu'imprimée, lettre par lettre :
+
+ا – ل – ا – ن – ش – غ – ا – ل | ا – ل – م – ن – ش – و – ف – ة
+
+Donc graphiquement : **الانشغال المنشوفة**
+
+## Lectures alternatives possibles (lettres ambiguës)
+
+1. **الناشفة / الانشغال** : le mot « الانشغال » pourrait en réalité être **الاشتغال** (al-ischghāl, « l'occupation / l'empêchement », terme technique du fiqh/ousoul). Dans les bandeaux calligraphiques, l'ordre des points peut sembler inversé : la séquence imprimée ن–ش–غ pourrait correspondre à la lecture attendue ا–ش–ت–غ... mais telle qu'imprimée on lit bien **الانشغال** ; la lecture standard attendue serait **الاشتغال**.
+
+2. **المنشوفة** : le mot pourrait être une forme altérée de :
+   - **المنصوصة** (al-manṣūṣa, « textuellement établie ») — le و/و de « شوف » pourrait être un ص déformé ;
+   - **المشروعة** (al-mashrūʿa, « légale/prescrite ») ;
+   - **المنقوصة** (al-manqūṣa).
+
+3. **الجزء 12** : lecture certaine — « Partie 12 ».
+
+## Lecture la plus probable dans son contexte (manuels de fiqh malikite)
+
+Le titre voulu est très probablement : **« الاشتغال المنصوصة »** ou plutôt **« الاشتغال الموصوف »**, mais selon la copie graphique stricte : **الانشغال المنشوفة — الجزء 12**.

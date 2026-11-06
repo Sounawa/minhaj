@@ -1,0 +1,16 @@
+Voici les cases visibles sur la moitié droite de l'organigramme (de droite à gauche) :
+
+## Niveau principal (cases filles d'une case mère non visible en haut) :
+
+1. **بحال المراعي** (case la plus à droite) — pas de sous-cases visibles
+2. **بطريقة تخصله** — pas de sous-cases visibles
+3. **بكيفية الرواية** — possède une case fille :
+   - Case fille (jaune, partiellement coupée à gauche) : « مثل ترجيح المروي بالل... على المروي بالمضي » (texte tronqué sur le bord gauche)
+4. **بوقت الورود** (case la plus à gauche visible) — pas de sous-cases visibles
+
+## Case mère :
+En haut, une grande case verte est partiellement visible (bord inférieur coupé) — son texte n'est pas lisible.
+
+## Remarque :
+- Un numéro « 0 » en vert apparaît en bas à gauche de l'image (hors organigramme).
+- La case jaune fille est coupée par le bord gauche de l'image ; son texte est incomplet.

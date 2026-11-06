@@ -1,0 +1,15 @@
+Voici les 7 cases vertes, lues **de droite à gauche** (ordre de lecture arabe) :
+
+1. **بحال الراوي** — avec une case jaune fille ? **Non** (aucune case jaune ne descend de cette case)
+2. **بطريقة تحمله** — **Pas de case jaune fille**
+3. **بكيفية الرواية** — **A une case jaune fille** : « مثل ترجيح المروي باللفتط على المروي بالمعنى »
+4. **بوقت الورود** — **Pas de case jaune fille**
+5. **بلفظ الخبر** — (lue lettre par lettre : ب - ل - ف - ظ - ا - ل - خ - ب - ر) — **A une case jaune fille** : « مثل ترجيح المحفوظة على المجاز »
+6. **بالحكم** — (ب - ا - ل - ح - ك - م) — **Pas de case jaune fille**
+7. **بأمر خاص** — **A une case jaune fille** : « مثل ترجيح ما وافق ظاهر القرآن »
+
+**Remarque importante sur les cases 5 et 6 :** en lisant très attentivement lettre par lettre, la 5e case (2e depuis la droite) contient bien **بطريقة تحمله** et non « بحفظ الحديث », et la case suivante contient **بكيفية الرواية**. Le texte « بحفظ الحديث / بلفظ الخبر » que vous mentionnez **n'apparaît pas** dans cette image : les mots réels sont différents. Je vous invite donc à vérifier avec une image de meilleure résolution si ces formulations existent ailleurs dans le document, car sur cette image les libellés exacts sont ceux listés ci-dessus.
+
+**Résumé :**
+- Cases vertes **avec** case jaune fille : بكيفية الرواية، بلفظ الخبر (celle du milieu « بلفظ الخبر »), بأمر خاص
+- Cases vertes **sans** case jaune fille : بحال الراوي، بطريقة تحمله، بوقت الورود، بالحكم

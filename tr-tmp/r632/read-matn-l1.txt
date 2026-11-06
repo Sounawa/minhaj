@@ -1,0 +1,17 @@
+## Lecture lettre par lettre de la ligne arabe
+
+Le bouton vert contient un seul mot, qui se lit **« تَحْمِيل »** (taḥmīl, « chargement/téléchargement »). Voici la décomposition de droite à gauche :
+
+1. **ت (tāʾ)** — lettre initiale : forme isolée/médiale en bâtonnet avec **deux points placés AU-DESSUS** (..).
+2. **ح (ḥāʾ)** — première radicale : **aucun point** (le ḥāʾ se distingue du jīm par l'absence totale de point ; un jīm aurait un point *sous* la panse, ici rien).
+3. **م (mīm)** — lettre médiane : petite boucle fermée, **aucun point**.
+4. **ي (yāʾ)** — dent avec **deux points EN DESSOUS** (visibles sous la ligne d'écriture).
+5. **ل (lām)** — lettre finale : grand hampes verticale sans point.
+
+## Réponse à votre question de discrimination
+
+- Le mot **ne commence ni par واو (و), ni par فاء (ف)** : il commence par une **تاء (ت)**, reconnaissable à ses **deux points au-dessus**. Donc ce n'est ni « وتثبت », ni « وثبت », ni « فتثبت ».
+- Il n'y a **aucune واو** (pas de boucle ronde fermée type wāw) au début du mot.
+- Quant à la **3ᵉ radicale** : si votre question porte sur ce mot, la lettre correspondante (le mīm de تَحْمِيل) n'a **aucun point** ; les seuls points observés sont : **2 au-dessus sur le ت initial** et **2 en-dessous sur le ي**.
+
+⚠️ Note : le texte « أو لا » que vous mentionnez n'apparaît nulle part dans cette image — il n'y a qu'un seul mot sur le bouton. Si « أو لا » vient d'une autre capture, il faudra me montrer cette partie-là pour trancher entre تاء (2 points au-dessus) et ثاء (3 points au-dessus).

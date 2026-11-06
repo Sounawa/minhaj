@@ -1,0 +1,20 @@
+# Cases visibles (moitié gauche)
+
+## Cases vertes (niveau principal)
+
+1. **بأمر خاص**
+2. **بالتحكيم**
+3. **بلفظ الخبر**
+4. Une case partiellement coupée à droite (texte tronqué, on voit « ت... / ود... »)
+
+## Cases jaunes (sous-cases)
+
+- **مثل ترجيح ما وافق ظاهر القرآن** → rattachée à la case verte **« بأمر خاص »**
+
+- **مثل ترجيح الحقيقية على المجاز** → rattachée à la case verte **« بلفظ الخبر »**
+
+- **روي باللفظ ... بالمعنى** → rattachée à la case verte **« بلفظ الخبر »** (case coupée à droite ; on lit « ...روي باللفظ / ...بالمعنى »)
+
+## Autre élément
+
+- Numéro de page en bas à droite : **70**

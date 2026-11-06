@@ -1,0 +1,10 @@
+**CHIFFRES (drt→gch) = 0, 1, 9 ; NOMBRE = 910**
+
+Description de chaque chiffre (tels qu'affichés, de gauche à droite dans l'image) :
+- **9** : boucle fermée en haut, avec une descente courbe vers la gauche en bas.
+- **1** : simple trait vertical avec un petit empattement/serif en haut et à la base.
+- **0** : un ovale/rond fermé, sans trait interne.
+
+Lu de droite à gauche dans l'image (sens de lecture arabe) : rond (0), trait vertical (1), boucle haute avec descente (9).
+
+Le nombre est donc bien **910** (الموطأ رقم [910]) — pas 911, 912, 913, 916 ni 110. Aucun chiffre n'est ambigu à ce grossissement : le « 9 » a clairement sa boucle en haut, le « 0 » est un rond vide, et le « 1 » un trait vertical.

@@ -1,0 +1,8 @@
+CHIFFRES (drt→gch) = 1, 1, 9 ; NOMBRE = 911
+
+Formes observées :
+- Chiffre de droite (unités) : **1** — simple trait vertical avec empattements (serifs) en haut et à la base, aucune boucle.
+- Chiffre du milieu (dizaines) : **1** — même trait vertical avec empattements, identique au premier.
+- Chiffre de gauche (centaines) : **9** — boucle fermée en HAUT avec une descente courbe vers le bas à gauche.
+
+Trois chiffres au total. Le nombre lu est donc **911** (pas 910, 912, 913, 916 ni 110/116) : le crochet ouvrant « [ » est à gauche, suivi de 9, puis 1, puis 1 avant les deux-points.

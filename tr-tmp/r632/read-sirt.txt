@@ -1,0 +1,26 @@
+## Transcription de la ligne concernée
+
+La ligne (la troisième, en bas de l'image) se lit — dans la mesure où la résolution le permet — :
+
+> **أن من وقف على شرط المتأخر عن متابعة الترجمة الناطقة بأخبارها، وما اقتصر على نقل الترجمة منها، وبشرط أن يكون المتأخر... لم يتحمل**
+
+⚠️ **Réserve importante** : la ligne est coupée par le bord inférieur de l'image et les mots sont en partie masqués ; je ne peux garantir la fin de la phrase.
+
+## Analyse lettre par lettre du verbe après «لم»
+
+En décomposant les deux candidats :
+
+- **يتحلّم / يتحمّل** : ي + ت + ح + م + ل — les dents **ت** et le **م** médian sont présents.
+- **يحصل** : ي + ح + ص + ل — comporterait un **ص** (lettre à trois points au-dessus), forme nettement plus courte.
+
+Dans l'image, après **لم** on observe bien **quatre lettres avec un ت** (deux points au-dessus) et un **م** médian, donc :
+
+### ✅ Il s'agit de **يتحمّل** (ya-ta-ḥam-mal), et non يحصل
+
+## Points diacritiques observés
+
+- Sur **يتحمّل** : un **chadda** ( ─ّ ) visible sur le **م** médian (redoublement), la finale **ل** sans voyelle notée (sukūn implicite).
+- Sur **لم** : sukūn implicite sur le **م**, aucun point.
+- Les autres diacritiques de la ligne sont trop peu nets à cette résolution pour être affirmés (le fatha sur **قف** de «وقف» et le shadda de «المتأخّر» sont plausibles mais non vérifiables lettre par lettre).
+
+Si tu peux fournir l'image en meilleure résolution ou la ligne complète (non coupée), je pourrai confirmer les voyelles brèves.

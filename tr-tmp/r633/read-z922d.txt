@@ -1,0 +1,22 @@
+**Réponse à la question fermée : « autre ».** Aucun nom propre de fille (ni حفصة، ni فاطمة) n'apparaît sur cette ligne. La séquence « وعن بنت المنذر » citée dans votre énoncé n'est pas visible ici : l'image montre un fragment différent (fin de la ligne précédente en haut, et la ligne principale en dessous), sans motif onomastique.
+
+**Description des glyphes de la ligne principale** (de droite à gauche) :
+
+1. **نَـ** : nūn initial avec fatha, suivi d'une boucle montante ;
+2. **ضَرَّ** : ḍād médial (boucle oblique avec dent ascendant) + point isolé au-dessous, puis rā avec **shadda + fatha** (le doublement est net : petit tā marbūṭa-like « ۲ »-forme au-dessus du rā) ;
+3. **وَجْهَنَا** : wāw conjonctif (fatha), jīm médial (hampe descendante, point unique sous la panse), hā médial en forme de « ۸ » soudé au nūn final avec ālif : ـهنا ;
+4. **وَنَـ** : wāw + nūn initial ;
+5. **ضَرَّ** : même séquence ḍād + rā shaddé qu'en (2) ;
+6. **مِنْ** : mīm initiale (kāsra), nūn final avec sukūn (jāzma visible au-dessus) ;
+7. **مَـاءٍ** : mīm + ālif-hamza (ء sur l'assise), yā finale avec **tanwīn kasr** (trait oblique sous la yā sans points) ;
+8. **وَنَضَرَّ مَـعْ / مَعَ** : wāw, nūn, ḍād, rā shaddé, puis mīm + ʿayn final (panse ouverte, hampe courte ; diacritique au-dessus).
+
+**Transcription exacte de la ligne visible :**
+
+> نَضَرَّ وَجْهَنَا وَنَضَرَّ مِنْ مَاءٍ وَنَضَرَّ مَعْ[ـ…] 
+
+**(lecture incertaine du 1er mot : نَضَرَّ ou نَضَحَّ — le ḍād/ṣād est ambigu à cette résolution ; la fin de ligne est coupée)**
+
+Ligne supérieure partielle : « …وَ بِنْ [ـ…] أَبْيَضَ [illisible] [21.…] » — en bleu, chiffres de renvoi « 21 » dans des crochets.
+
+Si vous disposez de la ligne contenant réellement « وعن بنت المنذر أنها قالت », merci de la fournir : elle n'est pas sur cette bande.

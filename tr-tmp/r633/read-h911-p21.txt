@@ -1,0 +1,9 @@
+NUMÉRO = 116 (chiffres lus : ١، ١، ٦ — lu de droite à gauche dans le crochet : « ١١٦ »)
+
+Crochet bleu : [الموطأ رقم: ١١٦]
+
+Texte arabe de la ligne :
+
+المُحْرِمُ نُوَابا مِضْبُوغا بِزِ عَقْرَانِ أَوْ وَرَسٍ ». [الموطأ رقم: ١١٦] . وَالْوَرَسُ نِبَاتٌ أَحْمَرُ طَائِبُ
+
+Remarque : la ligne étant en arabe classique non vocalisé partiellement et l'image un peu compressée, la lecture exacte de certains mots (ex. « مِضْبُوغا » / « بِزِ عَقْرَانِ ») reste ambiguë ; je n'invente pas de correction.
