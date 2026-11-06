@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "La référence entre crochets visible est : [281 / 3،\n\nLe séparateur entre les chiffres est la barre oblique « / ».\n\nLigne complète : ، ابن فارس، 3 / 281[ .",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793948878,
+  "id": "2026110615075588717694f3ce4ab9",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110615075588717694f3ce4ab9",
+  "usage": {
+    "completion_tokens": 54,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1164,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1218
+  }
+}

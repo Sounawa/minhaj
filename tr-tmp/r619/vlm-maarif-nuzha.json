@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Image 1 :** [فه علوم الحديثت، ص: 59] — plus précisément la référence visible : **[فه معرفة علوم الحديثت، ص: 59]**. Le numéro imprimé est « 59 » (le 5 et le 9 sont séparés visuellement : « 5 9 »), suivi de « ص: » (page).\n\n**Image 2 :** [نزهة النظر ، ص: 35]. Le numéro imprimé, lu gauche-à-droite tel qu'imprimé, est « 35 » — visuellement « 3 5 », précédé de « ص: ».\n\n⚠️ Remarque : dans les deux images, le numéro de page est imprimé avec les chiffres séparés (ex. « 5 9 » pour 59, « 3 5 » pour 35), et le crochet fermant de l'image 1 est coupé par le recadrage.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793948976,
+  "id": "2026110615092320fb301959d8466b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110615092320fb301959d8466b",
+  "usage": {
+    "completion_tokens": 212,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 3790,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4002
+  }
+}
