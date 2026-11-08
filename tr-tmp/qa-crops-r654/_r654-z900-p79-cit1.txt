@@ -1,0 +1,28 @@
+## (1) Transcription of the ornate calligraphic line (as printed, right to left):
+
+**﴿ذَلِكَ وَمَن يُعَظِّمْ شَعَائِرَ اللَّهِ فَإِنَّهَا مِنْ تَقْوَى الْقُلُوبِ وَمَا بِهَا مِنْ خَلَفٍ وَقَالَ قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ تَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَى وَاعْتَصِمُوا بِحَبْلِ اللَّهِ جَمِيعًا وَلَا تَفَرَّقُوا﴾**
+
+**Wait — let me re-read carefully, because this strip shows only the END of the ornate citation:**
+
+Reading the visible thuluth line exactly as printed (right → left):
+
+ذَلِكَ وَمَن يُعَظِّمْ شَعَائِرَ اللَّهِ فَإِنَّهَا مِنْ تَقْوَى الْقُلُوبِ وَمَا بِهَا مِنْ خَلَفٍ … ﴾
+
+I must be honest: at 900 dpi narrow strip resolution I can make out the general clusters but cannot guarantee every diacritic. What is clearly legible:
+
+- **ذَلِكَ وَمَن يُعَظِّمْ شَعَائِرَ اللَّهِ** — clear
+- **فَإِنَّهَا مِنْ تَقْوَى الْقُلُوبِ** — clear
+- A closing ornate bracket **﴾** [؟ — possibly absent, the line may continue on the next page]
+
+**The LAST TWO WORDS of the calligraphic line as printed:** — I can only state what is reliably visible; please confirm with a larger image. Based on the cluster shapes, the final words appear to be **تَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَى** [؟] — I cannot definitively identify the final two words without a higher-resolution or wider image, so I mark this **[؟] Uncertain**.
+
+## (2) The blue 2-digit number:
+
+- **First digit:** Yes — it is **٣** (three teeth/three horizontal strokes stacked). 
+- **Second digit:** It is a **closed small oval** — therefore **٠** (zero), NOT a ٢ (open hook).
+
+**Number reads: ٣٠ (30).**
+
+## (3) Sura name in the blue label:
+
+**[سورة الحج الآية : ٣٠]** — the sura name is clearly **الحج** (Al-Hajj). This is consistent, since ﴿…ذَلِكَ وَمَن يُعَظِّمْ شَعَائِرَ اللَّهِ فَإِنَّهَا مِنْ تَقْوَى الْقُلُوبِ…﴾ is indeed Quran 22:30–32 (Surat al-Ḥajj).
