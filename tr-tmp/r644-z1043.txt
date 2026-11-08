@@ -1,0 +1,20 @@
+**Note importante :** Aucune marque de type **[الموطأ رقم: N]** n'apparaît sur cette image, et il n'y a pas de chaîne de transmission (إسناد) visible — le texte commence directement par « مالك » suivi immédiatement de « بأنه » (et non « عن أن »).
+
+Voici la transcription exacte, ligne par ligne :
+
+**Ligne 1 :**
+ـ مالك أنه بلغه أن رسول الله ﷺ صلى الله عليه و سلم : « حل هو وأصحابه
+
+**Ligne 2 :**
+بالحيّة، فتحروا الهدبي، وحلقوا الرؤوسهم، وحلوا من كل شيءٍ قبل أن
+
+**Ligne 3 :**
+يطوفوا بالبيت، وقال أن يصل اليهودي، لم يعلمن رسول الله صلى
+
+**Ligne 4 :**
+الله عليه و سلم أمر أحدا من أصحابه، ولا من كان معه أن يقضوا شينا ولا
+
+**Remarques :**
+- [flou] : la marque numérique (N) n'est pas visible sur l'image.
+- Le début du hadith diffère de la formulation attendue : l'image montre « مالك أنه بلغه » au lieu de « مالك عن أن رسول الله ﷺ ».
+- Certains mots en fin de ligne 3 (يصل اليهودي / يُشِرّ اليهودي) sont [flou] en raison de la résolution de l'image.
