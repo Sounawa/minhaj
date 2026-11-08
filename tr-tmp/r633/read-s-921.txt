@@ -1,8 +1,0 @@
-CHIFFRES (gch→drt) = 9, 2, 1 ; NOMBRE = 921
-
-Description de chaque chiffre :
-- **9** : boucle supérieure fermée, queue descendante incurvée vers la gauche, en bleu.
-- **2** : boucle supérieure arrondie, diagonale descendante, base horizontale.
-- **1** : trait vertical avec empattement (serif) en haut à gauche et base horizontale.
-
-Le crochet ouvrant « [ » est bien visible à gauche du nombre ; le point médian et le م (mîm) en partie droite confirment le contexte « الموطأ … [921] ». Le nombre est 921 — il figure dans votre liste de candidats.

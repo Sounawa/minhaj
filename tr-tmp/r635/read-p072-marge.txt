@@ -1,9 +1,0 @@
-IMAGE: p072-adj-marge-gauche.png
-CONSIGNE: Que montre cette image ? Si du texte est visible (y compris vertical ou tourné), transcris-le EXACTEMENT lettre par lettre sans compléter. Sinon réponds: RIEN.
----
-L'image montre une page essentiellement blanche, avec seulement deux fragments de texte arabe coupés aux bords (droite et gauche) :
-
-- Fragment du haut (bord droit) : « ث ( . . . »
-- Fragment du bas (bord gauche) : « ة . (المتواثر / »
-
-Il s'agit apparemment d'un scanned de fin et de début de pages d'un livre en arabe, dont le texte est presque entièrement coupé/incomplet.

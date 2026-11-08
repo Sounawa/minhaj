@@ -1,4 +1,0 @@
-IMAGE: tr-tmp/r635/p072-band-1500.png
-CONSIGNE: Transcris EXACTEMENT le texte visible dans le bouton/bande verte de cette image, lettre par lettre, sans compléter, sans corriger. Le texte peut être vertical ou incliné. Si illisible, écris [ILLISIBLE].
----
-13 / الدرس

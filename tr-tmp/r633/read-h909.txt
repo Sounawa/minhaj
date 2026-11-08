@@ -1,3 +1,0 @@
-NUMÉRO = 909 (chiffres lus : 9-0-9)
-
-Texte arabe de la ligne : « الموطَّأ » [الموطأ رقم: 909] •

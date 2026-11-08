@@ -1,8 +1,0 @@
-CHIFFRES (gch→drt) = 9, 1, 7 ; NOMBRE = 917
-
-Description :
-- **9** : boucle supérieure fermée, queue descendante recourbée vers la gauche, en bleu.
-- **1** : fût vertical avec empattement (serif) en haut à gauche et base horizontale large.
-- **7** : barre horizontale supérieure avec fût oblique descendant vers la gauche, sans barre médiane.
-
-Le crochet ouvrant « [ » est bien visible avant le nombre, suivi de la fin du mot ثم رقم à droite. Le nombre est 917 (pas 916, 919, 920, 921 ou 922).

@@ -1,7 +1,0 @@
-CHIFFRES (gch→drt) = 9 2 2 ; NOMBRE = 922
-
-- **9** : boucle supérieure fermée ronde, avec une queue qui descend puis se courbe vers la gauche.
-- **2** : arc supérieur ouvert, descend en diagonale, base horizontale.
-- **2** : identique au précédent — même arc, même base horizontale.
-
-Le crochet croissant [ est visible à gauche du nombre, et la fin de « الموطأ » avec les deux points « : » apparaît à droite. Le nombre n'est donc ni 916, 917, 919, 920 ni 921 : c'est bien **922**.

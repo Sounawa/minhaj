@@ -1,8 +1,0 @@
-CHIFFRES (drt→gch) = 2, 1, 9 ; NOMBRE = 912
-
-Formes :
-- Chiffre de droite : un « 2 » — boucle supérieure ouverte avec base horizontale.
-- Chiffre du milieu : un « 1 » — trait vertical avec petit empattement en haut.
-- Chiffre de gauche : un « 9 » — boucle fermée en haut avec descente incurvée vers le bas à gauche.
-
-Lecture gauche→droite : 9, 1, 2. Le nombre est donc bien **912** (pas 910, 911, 913, 916 ni 110/116). Le crochet carré ouvrant « [ » est visible à gauche du nombre, avant le « 9 ».

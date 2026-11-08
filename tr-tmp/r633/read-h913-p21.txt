@@ -1,5 +1,0 @@
-NUMÉRO = 913 (chiffres lus : 9, 1, 3)
-
-Texte arabe de la ligne : وَهْيَ مُجْرَمَةُ لَدَيْنَا فِيَا زَعْقَانِ » [الموطأ رقم: 913]. فَمَحْمُولٌ عَلَى التَّثَابِ الْمُصِرِّبَةِ
-
-Remarque : le crochet bleu/vert est bien lisible : [الموطأ رقم: 913]. En revanche, la qualité de l'image (bande très aplatie, traits déformés) rend la transcription exacte du reste de la ligne incertaine par endroits ; je n'invente pas de lecture plus précise que ce qui est visible.

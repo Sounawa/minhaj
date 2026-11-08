@@ -1,9 +1,0 @@
-**NOMBRE = 919**
-
-Description de chaque chiffre, de gauche à droite :
-
-1. **9** — boucle supérieure fermée ronde, avec une descenderie (jambage) qui descend verticalement et se termine par un léger crochet vers la gauche.
-2. **1** — trait vertical simple avec un petit drapeau/empattement oblique en haut à gauche ; pied sans empattement serif marqué.
-3. **9** — identique au premier : boucle ronde en haut, hampe descendante terminée par une petite courbe vers la gauche.
-
-Le nombre est imprimé en bleu, entre un crochet ouvrant « [ » et suivi de « : », conformément au format الموطأ ثم رقم du manuel. Aucun autre chiffre n'est visible.

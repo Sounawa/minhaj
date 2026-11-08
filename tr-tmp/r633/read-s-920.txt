@@ -1,7 +1,0 @@
-CHIFFRES (gch→drt) = 9, 2, 0 ; NOMBRE = 920.
-
-- « 9 » : boucle supérieure fermée avec une queue descendante courbée vers la gauche, typique du 9 imprimé.
-- « 2 » : arc supérieur ouvert, diagonale descendante vers la gauche, base horizontale.
-- « 0 » : ovale fermé, sans barre ni point.
-
-Le nombre est donc bien 920 (pas 916, 917, 919, 921 ni 922).

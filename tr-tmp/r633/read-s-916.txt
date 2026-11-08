@@ -1,7 +1,0 @@
-CHIFFRES (gch→drt) = 9, 1, 6 ; NOMBRE = 916
-
-- **9** : boucle supérieure fermée avec descendante incurvée vers la gauche (queue du 9), bien net.
-- **1** : fût vertical avec l'emblématique empattement/serif supérieur incliné et base élargie.
-- **6** : boucle inférieure ronde avec fût supérieur courbé vers la droite.
-
-Le nombre n'est ni 917, ni 919, ni 920–922 : le dernier chiffre montre clairement une boucle fermée en bas (6), sans barre (1) ni crochet (7/9/2). Lecture de gauche à droite dans l'image : « 916 » précédé du crochet ouvrant « [ ».
