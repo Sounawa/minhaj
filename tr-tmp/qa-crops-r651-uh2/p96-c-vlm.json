@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Voici d'abord la transcription mot à mot de ce qui est visible sur l'image :\n\n**الإعداد القبلي** (encadré vert)\n\n**Item ١ :**\nأعد ورقة مختصرة عن جهود علماء الحديث في حفظ السنة منطقاً من كون كثرة لغفلة من أسباب رد الحديث.\n\n**Item ٢ :**\nأبحث عن الفرق بين الحديث الموضوع والمترك.\n\n---\n\n**Concernant votre question sur « وأثر ذلك في » :**\n\nJe dois être honnête avec vous : **l'expression « وأثر ذلك في » n'apparaît nulle part dans cette image**. Je ne peux donc pas épeler « تقويم » / « عدة » / « من عدده » ou « تقويته », car aucun de ces mots n'est présent ici, et je refuse d'inventer une transcription que je ne vois pas.\n\nIl est possible que :\n- vous vous référiez à une autre page/image que celle-ci ;\n- ou que le passage attendu ait été coupé du zoom.\n\nSi vous me fournissez l'image ou la zone contenant « وأثر ذلك في », je vous épellerai lettre par lettre le passage qui suit, avec des points d'interrogation sur toute lettre incertaine.",
+        "reasoning_content": "The image does not contain the phrase «وأثر ذلك في». The user asks about a passage not present. I should transcribe the two items and note the phrase doesn't appear.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794142094,
+  "id": "20261108204801d66d43f79d844a93",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261108204801d66d43f79d844a93",
+  "usage": {
+    "completion_tokens": 321,
+    "completion_tokens_details": {
+      "reasoning_tokens": 37
+    },
+    "prompt_tokens": 8043,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8364
+  }
+}

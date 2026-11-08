@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Voici la transcription exacte, mot à mot, de droite à gauche :\n\n**(a) Numéro et titre de l'item :**\n\n**٥. سوء حفظـه**\n\n- Numéro : ٥ (cinq)\n- Titre épelé lettre par lettre : **سوء** = س + و + ء ; **حفظـه** = ح + ف + ظ + ه\n- Donc ce n'est **ni «نوع حفظه» ni «سوء الحفظ»** : le titre est **«سوء حفظـه»** (avec le pronom suffixe ه), en bleu.\n\n**(b) Phrase complète qui suit :**\n\nوهو أن لا يكون خطـه أقل من إصابتـه سواء كان مساويا، أو أكثـر، وأما إذا كان خطـه أقل من الإصابة، أو قليلا بالنسبة إليها، فهو مقبول. والفرق بينه وبين فحش الغلط أن فحش الغلط محمول على كثرتـه، وسوء الحفظ على أن لا يكون الغلط أقل من الإصابة.\n\n**(c) Phrase «والفرق بينه وبين فحش الغلط» mot à mot :**\n\nوالفرق (الواو + الفرق) — بينه (بين + ه) — وبين (و + بين) — فحش — الغلط — أن — فحش — الغلط — محمول — على — كثرتـه — وسوء — الحفظ — على — أن — لا — يكون — الغلط — أقل — من — الإصابة.\n\n**Remarques :**\n- Aucune lettre n'est incertaine à un point de devoir être notée [؟] ; les mots en bleu (سوء حفظـه) et les mots avec ــ (خطـه، إصابتـه، أكثـر، كثرتـه) ont des liaisons typographiques rendues telles quelles.\n- Le reste de la page est un organigramme («أسباب الطعن في الراوي»...) qui ne fait pas partie du paragraphe demandé.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794143911,
+  "id": "202611082118204ad552f29c164310",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611082118204ad552f29c164310",
+  "usage": {
+    "completion_tokens": 485,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 4460,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4945
+  }
+}

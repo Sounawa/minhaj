@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Transcription (exactly as visible in the image):**\n\n**Line 1** (fully visible):\nـ أَنَاخَ : الإِبِل ، أَبْرَكَها فَبَرَكَت .\n\n- «أَنَاخَ» — ألف + نون + ألف + خاء مرفوعة، avec fatha sur l'alif et fatha au-dessus de la hamza ; il s'agit bien de **أَنَاخَ** (et non أناغ/أناخ final [؟] sur la lettre finale — la graphie ressemble à un خ avec fatha : خ [؟]).\n- «الإِبِل» — alif-lam + hamza sous-alif + باء + yāʾ + lām, avec kasra sous la hamza et sous le yāʾ.\n- «أَبْرَكَها» — hamza + fatha, باء + sukūn, راء + fatha, kāf + fatha, hāʾ + fatha + alif.\n- «فَبَرَكَت» — fāʾ + fatha, باء + fatha, راء + fatha, kāf + fatha, tāʾ mabniyya, suivie d'un point final.\n- Le trait introducteur est un tiret (hyphen) « ـ » au début de la ligne.\n\n**Line 2** : la ligne commençant par بذي طوى / مُثلث الطاء / موضع قرب مكة n'est **pas visible** dans ce recadrage — seuls des fragments de diacritiques (petits traits et points, ex. des ḍamma/šadda orphelins) apparaissent au bord inférieur. Je ne peux donc pas en transcrire les glyphes : [؟] pour toute la ligne 2.\n\n**Notes (FR) :**\n1. Seule la première entrée lexicale est nette et complète.\n2. Le mot final est فَبَرَكَت (avec tāʾ), pas فَبَرَكَتْ [؟] — aucun sukūn visible sur le tāʾ final.\n3. La ponctuation utilisée est « : » après le mot-vedette et « ، » (virgule arabe) entre les compléments, avec un point « . » final.\n4. Le pied de page bleu et le décor (motif hachuré) occupent le tiers supérieur de l'image.",
+        "reasoning_content": "The image shows only line 1 visible: \"- أَنَاخَ : الإِبِل ، أَبْرَكَها فَبَرَكَت .\" Line 2 is cut off at bottom (partial diacritics only). Provide transcription with French notes.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794128748,
+  "id": "202611081705313588ff79fab34617",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611081705313588ff79fab34617",
+  "usage": {
+    "completion_tokens": 637,
+    "completion_tokens_details": {
+      "reasoning_tokens": 64
+    },
+    "prompt_tokens": 8148,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8785
+  }
+}

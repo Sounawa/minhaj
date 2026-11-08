@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription\n\n## PARTIE HAUTE (fin de la leçon précédente)\n\nأبحثُ في شرحِ الزرقانيِّ وأجيبُ عن الأسئلةِ:\n\n**1** - أشرحُ: وهيَ في مُحْفَظَتِها - فأخَذْتُ بِضَبْعِي ضَبْعِيًّا.\n\n**2** - أُبيِّنُ حُكْمَ حَجْ الصَّبِيِّ.\n\n### الإعداد القبلي\n\n**1** - أُعرِّفُ بعدَ الرَّحمنِ بنِ عِبدِ القاري.\n\n**2** - أبحثُ عن حُكْمِ من طلَفَ بالبِيِّتِ بعضِ أَشْوَاطِ الطَّوَافِ، ثُمَّ أقيمتْ عليه صلاةُ العصرِ.\n\n*(Bas de page : numéro de page dans un médaillon bleu — chiffre peu lisible, environ 77 [؟])*\n\n---\n\n## PARTIE BASSE (haut de la page suivante)\n\n**Bandeau décoratif :** médaillon bleu circulaire avec le chiffre **10** ; au-dessus, en petit : **الدرس** (libellé partiellement visible : « الدرس » — comparer avec **التمرين** demandé : sur l'image on lit **الدرس** [؟]) ; à gauche, en petit italique : **التمرين** [؟] au-dessus du médaillon.\n\n# أَحْكَامُ الطَّوَافِ (1)\n\n### أهدافُ الدرسِ\n\n**1** - أنْ أتعرِّفَ أحكامَ استلامِ الحجرِ الأسودَ.\n\n**2** - أنْ أتعرِّفَ حُكْمَ وقفتِ صلاةِ ركعتَيِ الطَّوَافِ.\n\n**3** - أنْ أُدرِكَ عظمةَ عبادةِ الطَّوَافِ، والغايةَ من استلامِ الركنِ الأسودَ.\n\n### تمهيدٌ\n\nالطَّوَافُ عبادةٌ يقومُ بها المُحرِمُ، فيُطوفُ بالكعبَةِ المشرَّفةِ قِبَلَةَ المسلمينَ سبعَةً\n\n---\n\n## Notes (français)\n\n- **Question 1 de la rubrique الزرقاني** : le texte semble légèrement endommagé/flou ; « فأخَذْتُ بِضَبْعِي ضَبْعِيًّا » est la lecture la plus probable, mais « ضَبْعِيًّا » final reste incertain [؟].\n- **Médaillon de page** (partie haute) : le numéro est flou ; il pourrait se lire 77 [؟].\n- **Étiquette du médaillon du bas** : la petite inscription au-dessus du « 10 » se lit le plus probablement **الدرس** (leçon) ; l'hypothèse **التمرين** (exercice) n'est pas confirmée par l'image [؟].\n- Les numéros 1, 2, 3 sont transchrits chiffre par chiffre comme imprimés (1, 10).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794122679,
+  "id": "202611081524218ef87530a293440c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611081524218ef87530a293440c",
+  "usage": {
+    "completion_tokens": 769,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8085,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8854
+  }
+}

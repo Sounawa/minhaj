@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Voici exactement ce que contient l'image — et elle ne contient **que deux lignes** :\n\n**أسباب رد الحديث .**\n\n**2. أبحث عن الفرق بين الحديث الموضع والمترولك .**\n\nConcernant vos demandes précises :\n\n1. **Ligne de référence** : aucune ligne de référence entre crochets (titre, auteur, numéro de page) n'est visible sur cette image.\n2. **Item 1 du bloc 1-2** : non visible (aucun texte contenant «الغفلة» ni «من ...»).\n3. **Item 2 du bloc** : c'est la ligne visible : «أبحث عن الفرق بين الحديث الموضع والمترولك .» — notez que le dernier mot est écrit **«المترولك»** (apparemment une coquille pour المتروك), tel qu'il apparaît lettre par lettre : ا ل م ت ر و ل ك.\n4. **Section «الإعداد القبلي»** : absente de l'image.\n5. L'item demandé au point (5) correspond à la seule ligne numérotée visible (item 2), dont le dernier mot est «المترولك» avec و [؟] (le د attendu n'apparaît pas clairement — l'image semble montrer و).\n\nJe ne peux rien transcrire de plus : le reste de la page est vide dans cette image, et je refuse d'inventer le contenu manquant. Si vous disposez de la moitié haute de la page 96, je pourrai transcrire les éléments (2), (3) et (4).",
+        "reasoning_content": "The image shows only two lines; none of the requested elements appear. I must not invent.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794144363,
+  "id": "2026110821255167bcc1840a1d487f",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110821255167bcc1840a1d487f",
+  "usage": {
+    "completion_tokens": 380,
+    "completion_tokens_details": {
+      "reasoning_tokens": 19
+    },
+    "prompt_tokens": 8255,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8635
+  }
+}

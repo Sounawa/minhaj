@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Voici la transcription, mot à mot, d'après ce qui est visible sur l'image :\n\n**Bandeau vert (titre) :**\nالتطيل\n\n**(1) Titre de section :**\nأولا : أسباب الرد التصلة بالعدالة\n\n→ Le mot après « أسباب » est **« الرد »** (ni « الطعن » ni autre). Il est écrit en couleur, suivi de « التصلة بالعدالة ».\n\n**(2) Item 1 complet :**\n1. الكذب، وهو وليم كان يندرج في الفسق فإنه أشد أنواعه، وأقبح أسباب الطعن، وأفرده المصف وجعله كأنه جنس آخر، وقدمه على الكل لشناعته.\n\n**(3) Item 2 (partiellement coupé en bas de l'image) :**\n2. التصمة بالكذب، ... اسمه حديث « ال... » ... بك، و... سأل...\n\nConcernant le mot entre guillemets dans l'item 2 : **il est coupé par le bord inférieur de l'image** — on ne voit que le début « الـ... » et je ne peux pas épeler les lettres ال-م-ر-ت-؟-؟ avec certitude. Il n'est ni lisible comme « المرتُم » ni comme « المرتوك » sur cette capture. Je n'invente rien : pour trancher, il faudrait la suite de l'image (frame suivante).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794141665,
+  "id": "20261108204052c798718589704017",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261108204052c798718589704017",
+  "usage": {
+    "completion_tokens": 336,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8068,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8404
+  }
+}

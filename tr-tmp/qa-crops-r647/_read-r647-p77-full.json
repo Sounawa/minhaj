@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription of the page (reading order, right → left)\n\n**1 -** أستخرج من الحديث الحكمة من امتناع النبي ﷺ عن بناء الكعبة على قواعد إبراهيم\n\nإبراهيم.\n\n**2 -** لماذا لم يكن النبي ﷺ يستلم الركنين الشاميين؟\n\n**Green rubric above the numbered items:** There is **no rubric** (no الاستثمار / الأسئلة) above items 1 and 2 — the two questions begin directly at the top of the page. The only green rubric on the page is the pill **below** the questions (see point 2).\n\n## Green pill rubric\nالإعداد القبلي\n(ال + إ + ع + د + ا + د / الق + ب + ل + ي — exact wording: **الإعداد القبلي**)\n\n## Instruction line (exact)\nأحفظ أحاديث الدرس المقبل وأستعين بالزرقاني للإجابة عن الآتي:\n\n## Numbered question 1\n1 - أشرح: مُرَاهَفًا – لا يَصُدَّرَنَّ – مَحَلُّها.\n\n**The word after أشرح:** مُرَاهَفًا\nLetter by glyph (right → left): م [؟ shadda-like diacritic] ر [fatḥa] ا ه [؟ diacritic] ف [fatḥa] ا ً (tanwīn fatḥ on the alif)\n— i.e. م – ر – ا – ه – ف – ا with tanwīn; it reads **مُرَاهَفًا** (from the Zirqānī text on the tawāf duʿāʾ «رَبَّنا آتِنا مُرَاهَفًا» = aḥrānā/ātinā murāhafan). No normalization applied; uncertain diacritics marked [؟].\n\n## Numbered question 2\n2 - أبحث عن حكم طواف الحائض.\n\n## French notes\nThere are **no French words** on the page. (Only the ﷺ ligature and a page-number blue circle at bottom left, with a blue horizontal rule.)",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794130320,
+  "id": "202611081731448713bcb79a414193",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611081731448713bcb79a414193",
+  "usage": {
+    "completion_tokens": 519,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8295,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8814
+  }
+}

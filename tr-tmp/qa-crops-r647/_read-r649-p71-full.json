@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Page transcription (Arabic, right-to-left reading order):**\n\n**أهداف الدرس**\n\n1 - أن أتعرف أحكام استلام الحجر الأسود.\n2 - أن أتعرف حكم ووقت صلاة ركعتَي الطواف.\n3 - أن أدرك عقبة عبادة الطواف، والغاية من استلام الركن الأسود.\n\n**تمهيد**\n\nالطواف عبادة يقوم بها المحرم، فيطوف بالكعبة المشرفة قِبلة المسلمين سبعة أشواط، وفق كيفية خاصة، امتثالاً لأمر الله عز وجل وتعظيماً لشعائره، ويختلف حكمه باختلاف موقعه من النسك، ويمكن للمحرر بالحج التطوع بما شاء منه.\n\nفما هي أحكام الطواف؟ وكيف يستلم الركن الأسود والركن اليماني؟\n\n**الأحاديث**\n\n- مَالكٌ عَنْ جَعْفَرٍ بْنِ مُحَمَّدٍ، عَنْ أَبِيهِ عَنْ جَابِرِ بْنِ عَبْدِ اللهِ، أَنَّهُ قَالَ: «رَأَيْتُ رَسُولَ اللهِ ﷺ رَمَلَ مِنَ الحَجْرِ الأَسْوَدِ حَتَّى انْتَهَى إِلَيْهِ، ثَلاثَةَ أَطْوَافٍ» فَقَالَ مَالِكٌ: «وَذَلِكَ الأَمَرُ الَّذِي لَمْ يَزَلْ عَلَيْهِ اهْلُ العِلْمِ بِلَدِنَا» [الموطأ رقم: 1059].\n\n---\n\n**French notes:**\n\n⚠️ Note: le contenu réel de la page diffère de la description donnée dans la demande. Il n'y a pas de paragraphe \"الطواف عبادة يقوم بها المحرم...\" suivi d'une phrase en gras après \"سبعة أشواط\" — le tamrid est un paragraphe normal. Le hadith n'est pas celui de \"رَمَل\" attribué comme indiqué : c'est bien le hadith de Malik (الموطأ) via Ja'far ibn Muhammad → son père → Jabir ibn Abd Allah, sur le ramal lors de trois tours, avec la référence bleue **[الموطأ رقم: 1059]** (chiffres : 1، 0، 5، 9). La question d'ouverture est : «فما هي أحكام الطواف؟ وكيف يستلم الركن الأسود والركن اليماني؟». Aucun texte illisible détecté ; rien marqué [؟]. Le titre duçon est «أحكام الطواف (1)» — الدرس 10.",
+        "reasoning_content": "Note: the page actually shows different content than the prompt suggests (no raml hadith; hadith about ramal for three rounds). Transcribe what's seen.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794128453,
+  "id": "20261108170033d3a27f60c2084b0a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261108170033d3a27f60c2084b0a",
+  "usage": {
+    "completion_tokens": 732,
+    "completion_tokens_details": {
+      "reasoning_tokens": 34
+    },
+    "prompt_tokens": 8193,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8925
+  }
+}

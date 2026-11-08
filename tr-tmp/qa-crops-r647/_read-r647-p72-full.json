@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription de la page\n\n## Texte principal (encadré vert)\n\n**—** مالك، عن هشام بن عروة، عن أبيه، أنه قال: قال رسول الله ﷺ لعبد الرحمن بن عوف: «كيف صنعتَ يا أبا محمد في استلام الركن؟» فقال عبد الرحمن: استلمتُ وتركت. فقال له رسول الله ﷺ: «أصبتَ». [الموطأ رقم: 1065] •\n\n**—** مالك، عن هشام بن عروة، عن أبيه، أن عمر بن الخطاب قال وهو يطوف بالبيت للركن الأسود: «إنما أنت حجر، ولولا أني رأيت رسول الله ﷺ قبّلك ما قبّلتُك، ثم قبّله». [الموطأ رقم: 1067] •\n\n**—** مالك، عن ابن شهاب، عن حميد بن عبد الرحمن بن عوف: أن عبد الرحمن بن عوف أخبره «أنه طاف بالبيت مع عمر بن الخطاب بعد صلاة الصبح، فلمّا قضى عمر طوافه نظر فلم ير الشمس، فركب حتى أتاخ بني طوى، فصلى ركعتين». [الموطأ رقم: 1075] •\n\n## ترجمة الراوي\n\n**جابر بن عبد الله رضي الله عنه**: هو جابر بن عبد الله بن عمرو بن حرام بن ثعلبة الأنصاري، الخزرجي، صاحب رسول الله ﷺ، وابن صاحبه. أحد المكرزين. وفي الصحيح عنه أنه كان مع من شهد العقبة. توفي سنة 78 هـ—\n\n## الفهم\n\n**الشرح:**\n\n— **استلام**: افتعال من السّلام، وهو التحية، وقيل: من التسليم، وهي الحجارة.\n\n— **رَمَل**: أسرع في المشي مع تقارب الخطى.\n\n---\n\n## Notes (français)\n\n- La page provient d'un manuel scolaire (édition du *Muwaṭṭa'* de Mālik avec explications).\n- **Hadith 1** : la référence bleue se lit chiffre par chiffre : ١٠٦٥ = **1065**.\n- **Hadith 2** : le texte vu est « إنما أنت حجر، ولولا أني رأيت رسول الله ﷺ قبّلك ما قبّلتُك، ثم قبّله » — il n'y a **pas** de « لا يحجن / لا يضر / لا ينفع » sur cette page, et l'année se termine par « ما قبّلتُك » (sans « ولولا أن رسول الله ﷺ قبّلَكَ ? » formulé en question). Référence : ١٠٦٧ = **1067**.\n- **Hadith 3** : « بني طوى » (بذي طوى selon votre lecture) — ici on lit **أتاخ بني طوى** ; référence : ١٠٧٥ = **1075**.\n- **Biographie de Jābir** : il n'y a **pas** de nombre de hadiths « dans le Sahih » indiqué sur cette page ([؟]) ; l'année de mort lue est **78** (٧٨), chiffre par chiffre : ٧, ٨ — et non 87.\n- Les deux lignes de glossaire sont transcrites mot à mot ci-dessus.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794130261,
+  "id": "20261108173037c4d6cb64337e4d98",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261108173037c4d6cb64337e4d98",
+  "usage": {
+    "completion_tokens": 805,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8406,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9211
+  }
+}

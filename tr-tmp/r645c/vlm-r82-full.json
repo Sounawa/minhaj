@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**الأعداد التقبلي**\n\n1. لم اعتبر الحديث المضاف أشد ضعفا من المنقطع والمرسل؟\n\n2. بم يوصف الإسناد في الصورتين التاليتين؟:\n- ما رواه التابعي الصغير عن رسول الله ﷺ.\n- ما رواه تابع التابعي عن رسول الله ﷺ.\n\n82",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794117190,
+  "id": "2026110813530548a3ff747be745a4",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110813530548a3ff747be745a4",
+  "usage": {
+    "completion_tokens": 87,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8197,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8284
+  }
+}

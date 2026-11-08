@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## Transcription de la page\n\n**1) Ligne du haut (référence entre crochets) :**\n\nLe crochet se lit exactement : **[فتح الباري لابن حجر]** (mot à mot : ف-ت-ح / ا-ل-ب-ا-ر-ي / ل-ا-ب-ن / ح-ج-ر) — écrit en bleu : «فتح الباري لابن حجر».\n\nLes mots qui précèdent la citation «ليس هو بسنة...» sont exactement : **قالَ**: (non pas «قال ابن الباري» ni «قال ابن حجر», et non «عنهم الله» — c'est bien **«قالَ»** seul, suivi de la citation entre guillemets).\n\n**Texte intégral du passage initial :**\n\n> الله عزهما، قال: «ليس هو بسُنَّة، مَن شاء رَمَل ومن شاء لم يرمُلْ» [فتح الباري لابن حجر /4/270]، ويستثنى من ذلك من أحرِم من مكة فلا يستحب له الرمل، فعن نافع أن عبد الله بن عمر رضي الله عنه: «كان لا يرمُلْ إلا طَوَافَ حَوْلَ البَيْتِ إذَا أحرِم من مكة» [الموطأ رقم: 1063].\n\nLes chiffres de [الموطأ رقم: 1063], un à un : **1 – 0 – 6 – 3**.\n\n**2) Titre vert :**\n\n> ثانيا: الاستلام في الطواف\n\n**3) Item 1 :**\n\n> 1 - تقبيل الركن الأسود عند الاستلام\n\n**Paragraphe :**\n\n> يسن تقبيل الركن الأسود لمن قدر عليه مع اعتقاد أنه مخلوق لا يضر ولا ينفع، قال عمر رضي الله عنه وهو يطوف بالبيت للركن الأسود: «إنما أنت حجرٌ، وَلَوْلا رَأيْتُ رسول الله ﷺ قَبَّلْكَ ما قَبَّلْتُكَ، ثُمَ قَالَ»: لأنّ متابعته ﷺ مطلوبة وإن لم يعقّل معناها، وفيها نفع وثواب، وهذا يدل على الحرص التّدَيّد من عمر رضي الله عنه على العمل بكل ما ورد من نص أو فعل، وعله يراجع كل ما ينسَب إليه من اجتهادات يُدَّعى أنها مخالفة، فالصواب أنه يجهده وقع قواعد شرعية، لا عِبرة بكلام من لا يفقُهها.\n\n> أما الركن اليماني فلا يقبّل بالفم، وإنما توضع اليد عليه ثم توضع على الفم دون تقبيل، قال مالك: «سمعتُ بعض أهل العلم يستحبُّ إذا رفعَ الذي يطوُف بالبيت يدَه عن الركن اليماني، أن يضعها على فيه» [الموطأ رقم: 1068].\n\nChiffres du premier [الموطأ رقم: 1063] : **1 – 0 – 6 – 3** ; du deuxième : **1 – 0 – 6 – 8**.\n\n**4) Item 2 :**\n\n> 2 - المزاحمة على استلام الركن\n\n**Paragraphe :**\n\n> المراد باستلام الركن تقبيله، فإن زَحَمْ عن تقبيله لمسه بيده ثم وضعها على فيه من غير تقبيل، فإن لم تصل يده فبعُود إن كان لا يؤذِي به أحدا، ولا يزاحم على استلام الركن، فعدّ كان عبد الرحمن بن عوف إذا أتى الركن فوجدهم يزدحمون عليه استقلّه وكبر ودعا، فإن إذا وجد خلوة استلمه، قال عروة: قال رسول الله ﷺ لعبد الرحمن بن\n\n**[؟]** — la page se termine ici (phrase inachevée en bas de page, le reste est à la page suivante).\n\n---\n\n### Notes (français)\n\n- Le crochet bleu du haut est bien **[فتح الباري لابن حجر]** avec la référence de volume/page **/4/270** juste après.\n- Le mot avant la première citation est **«قالَ»** seul (repris de la fin de la page précédente) — pas d'attribution «ابن الباري» ni «ابن حجر» sur cette ligne.\n- La numérotation des hadiths du Mouwatta : **1063** et **1068**.\n- La page contient deux sections : le point **1- تقبيل الركن الأسود عند الاستلام** (avec les paroles de عمر et de مالك) et le point **2- المزاحمة على استلام الركن** (avec le récit d'عبد الرحمن بن عوف et le propos d'عروة), la phrase finale étant coupée en bas de page.\n- Le titre «ثانيا: الاستلام في الطواف» figure en rouge (et non vert) sur cette page.",
+        "reasoning_content": "Transcribe page. Note: no عبد الرحمن بن عوف story visible; page ends at قال رسول الله ﷺ لعبد الرحمن بن. Provide as-is with [؟] where needed.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794130286,
+  "id": "202611081731019b31f47a7c8c4adc",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611081731019b31f47a7c8c4adc",
+  "usage": {
+    "completion_tokens": 1252,
+    "completion_tokens_details": {
+      "reasoning_tokens": 44
+    },
+    "prompt_tokens": 8388,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9640
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Description of the top strip:**\n\nYes, there is a decorative banner: a blue ornamental band across the very top, followed by a repeating geometric lace/zigzag pattern strip in blue. Below it sits a large green rounded banner with a blue circular medallion overlapping its right end, encircled by an open blue ring.\n\n**1) Small word above/left of the medallion:**\nThe word is **الدرس**, letter by letter: ا ل د ر س\n(it sits just above the medallion, in small blue script).\n\n**2) Digit inside the medallion:**\n**11** — digit by digit: 1, 1 (white numerals on a blue circle).\n\n**3) Main title inside the green banner (in blue Arabic script):**\n**أحكام الطواف (2)**\n\n**Rubric (green pill, right side, blue text, with a blue dot bullet):**\n**أهداف الدرس**\n\n**Numbered objectives (reading order):**\n\n1- أن أتعرف حكم طواف القصم والوداع.\n*(note: the second word appears as «أتعرف» and the text reads «حكم» — likely intended «حكمَ»; the word القصم is probably a misprint/scan of القصر)*\n\n2- أن أتعرف أحكام طواف الحاضض.\n\n**French notes:**\n- «الدرس» = \"la leçon\"; the medallion shows lesson number 11.\n- The parenthesized (2) in the title indicates this is part 2 of the lesson \"Les règles du tawaf\".\n- No hadith quotes or [الموطأ رقم: NNN] references appear on this page; no illegible text requiring [؟].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794128105,
+  "id": "20261108165453a3b459fd612247f0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261108165453a3b459fd612247f0",
+  "usage": {
+    "completion_tokens": 376,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8138,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8514
+  }
+}

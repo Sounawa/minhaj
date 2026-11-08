@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription\n\n**1) Lignes d'introduction (إحصار بغير عدو) :**\n\nومن صور الإحصار بغير عدو: الخطأ في العدد، وخفاء الهلال، وكسر بعض الأعضاء، وإسهال البطن، ووجع الولادة، ومن أصابه أمر منعه من الوقوف بمعرفة، ومن فاتته الحج فأتى يوم النحر. قال مالك: «رُوِيَدْ أَمْرٌ عَمْرٌ بْنُ الْخَطَّابِ أَبَا أَيُوبَ الْأَنْصَارِيَّ وَهَارُونَ بْنَ الْأَسْوَدِ، حِينَ فَاتَهُمَا الْحَجُّ، وَأَتَيَا يَوْمَ النَّحْرِ أَنْ يُصَلِّيَا بِعَمْرَةٍ، ثُمَّ يُرِجِعَانِ حَالَ لَا، ثُمَّ يُحْجُنَّ عَامًا قَبْلَهُ وَيُهْدِيَانِ، فَمِنْ لَمْ يَجِدْ فَصِيَامُ ثَلَاثَةِ أَيَّامٍ فِي الْحَجِّ وَسَبْعَةٍ إِذَا رَجَعَ إِلَى أَهْلِهِ» [الموطأ رقم: 1051]، وقال أيضًا: «وَكُلٌّ مِنْ حَبْسٍ عَنِ الْحَجِّ بَعْدَ مَا يُحْرِمُ، لِمَا مَرَضَ أَوْ بَعِيرَهُ، أَوْ بِخَطْطٍ مِنَ الْعَدْوِ، أَوْ خَفِيَ عَلَيْهِ الْهِلَالُ، فَهُوَ مُحْصِرٌ، عَلَيْهِ مَا عَلَى الْمُحْصَرِ» [الموطأ رقم: 1052].\n\n**2) Citation 1 (encadré vert, en gras) :**\n\nمَالِكٌ، عَنْ إِبْرَاهِيمَ بْنِ عُقْبَةَ، عَنْ كُرَيْبٍ مَوْلَى ابْنِ عَبَّاسٍ أَنَّ رَسُولَ اللَّهِ ﷺ مَرَّ بِأُمِّ زَرْعٍ وَهِيَ فِي مَحْفَنَهَا، فَقِيلَ لَهَا: هَذَا رَسُولُ اللَّهِ، فَأَخَذَتْ بِصَنَائِقِهَا كَانَ مَعَهَا فَقَالَتْ: الْحَجُّ يَا رَسُولَ اللَّهِ؟ فَقَالَ: «نَعَمْ وَلَكِ أَجْرٌ» [الموطأ رقم: 1269].\n\n---\n\n**Notes (en français) :**\n\n- Page 26 d'un manuel scolaire (Maliki fiqh, chapitre du Hajj) ; bandeau bleu décoratif en haut.\n- Section verte « التقويم » : deux questions numérotées 1 et 2 (méthode malikite du report et de la contrainte ; jugement sur le pèlerin empêché).\n- Section verte « الاستثمار » suivie du hadith encadré avec la sourate/basmala en médaillon.\n- Références en bleu : [الموطأ رقم: 1051]، [1052]، [1269].\n- La citation de Malik sur Omar et Abû Ayyûb contient quelques mots incertains : « رُوِيَدْ أَمْرٌ » pourrait être « رُوِيَ أَنَّ أَمَرَ » [؟], et « وَهَارُونَ بْنَ الْأَسْوَدِ » [؟] (peut-être « وهبان »). De même « أَوْ بِخَطْطٍ » pourrait se lire « أَوْ بِخَطْمٍ » [؟].\n- Numéro de page 26 dans un cercle bleu en bas à gauche.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794122661,
+  "id": "2026110815240770eb30051e004944",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110815240770eb30051e004944",
+  "usage": {
+    "completion_tokens": 1143,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8241,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9384
+  }
+}

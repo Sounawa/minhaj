@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "D'après l'image, l'orthographe correcte est **« المترُوك »** (et non « المرتُم » ni « المرتوك »).\n\n**Épellation lettre par lettre :**\n- ا (alif)\n- ل (lām)\n- م (mīm)\n- ت (tā')\n- ر (rā')\n- و (wāw) ← visible entre le rā' et le kāf\n- ك (kāf)\n\nVoyelles visibles : un **ḍamma** sur le tā' final avant le wāw (تُ), le reste du mot n'a pas de voyelles visibles à cette résolution.\n\nDonc : **ا + ل + م + تُ + ر + و + ك** = « المترُوك » (celui qu'on a abandonné/délaissé — terme employé pour un rapporteur délaissé à cause de ses hadiths).\n\n**Phrase complète de l'item 2 :**\n\n« **2. التهمة بالكذب، ويسمى حديثه «المتروك» وسيأتي.** »\n\n(Item 2 : « L'accusation de mensonge, et son hadith est appelé \"al-matrouk\" et cela viendra [plus loin]. »)\n\n**Début de l'item 3 :**\n\n« **3. الفسق، وفسق الراوي قد يكون بالقول أو الفعل** ... »\n(le mot après الفسق dans la ligne suivante est : **ولأدله**... plus précisément la phrase continue : « لأن الكلام في الراوي المرسل ينصرف إلى الفسق، ولأدله... »)",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794141689,
+  "id": "20261108204117b8863b007caa441b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261108204117b8863b007caa441b",
+  "usage": {
+    "completion_tokens": 381,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8004,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8385
+  }
+}

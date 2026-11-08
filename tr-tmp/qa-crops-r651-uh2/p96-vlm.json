@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## الاستنتاج\n\nقال الإمام النووي رحمه الله تعالى: «إذا روي الحديث من وجهه ضعيفة لا يلزم أن يحصل من مجموعها حسن، بل ما كان ضعفه لضعف حفظ راويه الصدوق الأمن زال بمجيئه من وجه آخر، وصار حسنا، وكذا إذا كان ضعفه بالإرسال زال بمجيئه من وجه آخر، وأما الضعف لفسق الراوي فلا يؤثر فيه موافقة غيره، والله أعلم».\n\n[التقريب والتيسير لمعرفة سنن البشير النذير في أصول الحديث، يحبي بن شرف النووي، ص 31].\n*(renvoi : [3-1] — les chiffres « 31 » se lisent : trois, un)*\n\n1. أبين أهمية معرفة سبب ضعف الحديث، وأثر ذلك في تقويته من عددها.\n\n2. أعد ملخصا عن أهمية وأثر التزام القيم الخلقية في حياة طالب العلم.\n\n## الإعداد القبلي\n\n1. أعد ورقة مختصرة عن جهود علماء الحديث في حفظ السنة منطقًا من كون كثرة الغفلة من أسباب رد الحديث.\n\n2. أبحث عن الفرق بين الحديث الموضوع والمتروك.\n\n---\n\n**Rubrique التقويم :** non, elle n'apparaît pas sur cette page. Les titres visibles sont الاستنتاج et الإعداد القبلي. (Le mot « منطقًا » dans l'item 1 de الإعداد القبلي semble inhabituel ; je l'ai transcrit tel que visible — il pourrait s'agir d'une coquille pour « منعًا ».)",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794141881,
+  "id": "202611082044275ce23d924e894a31",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611082044275ce23d924e894a31",
+  "usage": {
+    "completion_tokens": 407,
+    "completion_tokens_details": {
+      "reasoning_tokens": 406
+    },
+    "prompt_tokens": 7183,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7590
+  }
+}
