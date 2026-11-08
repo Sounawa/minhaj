@@ -1,0 +1,37 @@
+## Transcription complète (lignes dans l'ordre, telles qu'affichées)
+
+– مَالِك، عَنْ هِشَام بْن عُرْوَة: «أَنَّ سَوْدَةَ بِنْت عَبْد اللَّهِ بْن عَمْر كَانَتْ
+
+عِنْد عُرْوَة بْن الزَّبِير، فَخَرَجَتْ تَطُوف بَيْنَ الصَّفَا وَالْمَرْوَةَ فِي حَيْج أَعْرَةْ
+
+مَاشِيَةً، وَكَانَتْ امْرَأَة ثَقِلَةً، فَجَاءَتْ حِينَ انْصَرَفَ النَّاس مِنَ الْعِشَاءِ، فَلَمْ
+
+تَقْضِ طَوَافهَا حَتَّى نَوَى بِالْأَوَّلِ مِنَ الصَّبِيحِ، فَقَصَدَتْ طَوَافهَا فِيمَا بَيْنَهَا وَبَيْنِهِ،
+
+وَكَانَ عُرْوَة إِذَا رَأَهُمْ يَطُوفُونَ عَلَى الدَّوَاب يَنْهَاهُمْ أَنْ يَفْعَلُوا، فَعَتَّلُونَ لَهُ
+
+بِالْمَرْأَة ضَحِيَاء مِنْهُ، فَيَقُولُ لَنَا فِيمَا بَيْنَنَا وَبَيْنَهُ: لَقَدْ حَابَ هُوَ لَاءَ وَخَسَرَوَا»
+
+[الموطحأ رقم: 1094].
+
+## Réponses aux questions sur la partie centrale (mot pour mot)
+
+- **Oui**, après فَجَاءَتْ la séquence contient حِينَ انْصَرَفَ النَّاس مِنَ الْعِشَاءِ (avec النَّاس sans la voyelle finale apparente, mais la séquence de lettres est identique).
+- **Non**, نُودِيَ بِالأُولَى n'apparaît **nulle part** dans le texte affiché.
+- Après فَلَمْ: **Oui**, on lit تَقْضِ طَوَافهَا حَتَّى نَوَى بِالْأَوَّلِ مِنَ الصَّبِيحِ — mais attention : ce n'est pas exactement « بِاللَّيْلِ مِنَ الصَّبِيحِ » ; le texte affiché porte حَتَّى نَوَى بِالْأَوَّلِ مِنَ الصَّبِيحِ.
+- **Non**, فَلَمْ تَصْبَحْ مِنَ الْأَنْصَارِ n'apparaît pas.
+- **Non**, فَقَصَتْ طَوَافَهَا فِيمَا بَيْنَهَا وَبَيْنَ الصَّبَاحِ n'apparaît pas sous cette forme ; on lit فَقَصَدَتْ طَوَافهَا فِيمَا بَيْنَهَا وَبَيْنِهِ (avec د).
+
+## Incertitudes mot-à-mot [?]
+
+- عَمْر [?] — voc. incertaine (عَمْر/عُمَار)
+- أَعْرَةْ [?] — graphie/vocalisation ambiguë (peut-être أَهْلَة ou أَعْرَاب?)
+- النَّاس [?] — voyelle finale non lisible
+- نَوَى [?] — possible نَوَى أو نُودِيَ (résolution de ligature incertaine)
+- بِالْأَوَّلِ [?] — sens/lecture incertaine (variante attendue : بِالْفَجْر?)
+- فَعَتَّلُونَ [?] — vocalisation incertaine (فَيَتَعَلَّلُونَ?)
+- فَعَتَّلُونَ لَهُ [?] — le mot لَهُ après فَعَتَّلُونَ est douteux
+- حَابَ هُوَ لَاءَ وَخَسَرَوَا [?] — séquence très douteuse ; attendu quelque chose comme هَلَّا وَخَسِرَتْ ou وَخَسَرَتْ (ligatures résolues avec incertitude)
+- ضَحِيَاء مِنْهُ [?] — lecture de ضَحِيَاء incertaine (ضَحِيكَ?)
+- امْرَأَة [?] — vocalisation (امْرَأَة/امْرَأَتُ?)
+- الموطحأ [؟] — graphie du mot الموطأ dans le renvoi semble déformée par la police (الموطحأ) ; attendu الموطأ.

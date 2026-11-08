@@ -1,0 +1,36 @@
+# Transcription du hadith (Muwaṭṭaʾ, p. 84)
+
+Voici la transcription ligne par ligne du texte visible sur l'image, avec la vocalisation telle qu'elle apparaît :
+
+**Ligne 1 :**
+مَالِكٌ عَنْ هِشَامِ بْنِ عُرْوَةَ عَنْ أَبِيهِ أَنَّهُ قَالَ: «قُلْتُ لِعَائِشَةَ أُمِّ الْمُؤْمِنِينَ
+
+**Ligne 2 :**
+وَأَنَا بِوَادِي حَدِيثِ النَّاسِ: أَرَأَيْتِ قَوْلَ اللَّهِ تَبَارَكَ وَتَعَالَى: ⟪إِنَّ الصَّفَا وَالْمَرْوَةَ
+
+**Ligne 3 :**
+مِنْ شَعَائِرِ اللَّهِ فَمَنْ حَجَّ الْبَيْتَ أَوِ اعْتَمَرَ فَلَا جُنَاحَ عَلَيْهِ أَنْ يَطَّوَّفَ بِهِمَا⟫ [سُورَةُ الْبَقَرَةِ]
+
+**Ligne 4 :**
+الآيَةُ: ١٥٧] فَهَلْ عَلَى الرَّجُلِ شَيْءٌ أَنْ لَا يَطُّوفَ بِهِمَا. قَالَتْ عَائِشَةُ: كَلَا. لَوْ كَانَ
+
+**Ligne 5 :**
+كَمَا تَقُولُ، لَكَانَتْ فَلَا جُنَاحَ عَلَيْهِ أَلَّا يَطُّوفَ بِهِمَا، إِنَّمَا نَزَلَتْ هَذِهِ الْآيَةُ فِي
+
+**Ligne 6 :**
+الْأَنْصَارِ، كَانُوا يَهْلُونَ لِمَنَاةَ، وَكَانَتْ مَنَاةُ حُنْفَا قَدِيدًا، وَكَانُوا يَتَحَرَّجُونَ أَنْ
+
+**Ligne 7 :**
+يَطُّوفُوا بَيْنَ الصَّفَا وَالْمَرْوَةِ، فَلَمَّا جَاءَ الْإِسْلَامُ سَأَلُوا رَسُولَ اللَّهِ ﷺ عَنْ ذَلِكَ،
+
+---
+
+## Les deux « mots douteux » identifiés lettre par lettre
+
+**1. Premier mot (ligne 2) — ce que vous soupçonniez d'être douteux :**
+Ce n'est pas حديث de manière douteuse : le texte lit clairement **حَدِيثِ** (ḥāʾ + dāl + yāʾ + thāʾ, avec kasra sur le ḥāʾ) dans **بِوَادِي حَدِيثِ النَّاسِ** — « dans la vallée du Ḥadīth des gens ». C'est le texte standard du Muwaṭṭaʾ (version Yaḥyā). Lettre à lettre : **ب ـ و ـ ا ـ د ـ ي + ح ـ د ـ ي ـ ث + ا ـ ل ـ ن ـ ا ـ س**.
+
+**2. Deuxième mot (ligne 6) — le mot après مَنَاة :**
+Le texte lit sans ambiguïté **حُنْفًا** (ḥāʾ + wāw avec ḍamma + nūn + fāʾ + tanwīn fath) — lettre à lettre : **ح ـ و ـ ن ـ ف ـ ا** avec tanwīn **ً**.
+
+Ce n'est donc ni حند ni كند : c'est bien **حُنْفًا قَدِيدًا** (« en forme de rocher dur coulé »), qui correspond exactement à la leçon canonique du Muwaṭṭaʾ : وَكَانَتْ مَنَاةُ حُنْفًا قَدِيدًا. Le mot قَدِيدًا (qāf + dāl + yāʾ + dāl + tanwīn fath) est également clair sur l'image.

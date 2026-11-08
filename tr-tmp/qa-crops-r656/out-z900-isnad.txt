@@ -1,0 +1,24 @@
+## Transcription de la ligne
+
+**السَّطر (isnad + début du matn) :**
+
+> ... عَنْ عَامِرِ بْنِ سَعْدٍ عَنْ أُمِّ الْحَسَنِ عَنْ عَائِشَةَ أُمَّ الْمُؤْمِنِينَ **مِنَ اللَّهِ فِي أَيَّامٍ عَالِمَةً وَأَنَّ جَبْرِيلَ عَلَيْهِ السَّلَامُ** حَدَّثَ النَّاسَ ...
+
+⚠️ **Réponse à votre question précise** : le segment entre « قلت لعائشة أم المؤمنين » et « حديث الناس » n'est **ni** وَأَنَا بِوَادِي، **ni** وَأَنَا بُوْمَدْ، **ni** وَأَنَا يَوْمَئِذْ.
+
+On y lit, lettre par lettre :
+
+1. م (mīm, bāʾ finale de « لِعَائِشَةَ » précédente)
+2. **مِ** (mīm + kasra) — **نَ** (nūn + fatḥa) = مِنَ
+3. **اَلْ** (alif + lām + sukūn) — **لَ** (lām + fatḥa) — **لَ** (lām + fatḥa) — **هِ** (hāʾ + kasra) = اللَّهِ
+4. **فِ** (fāʾ + kasra) — **يْ** (yāʾ + sukūn) = فِي
+5. **أَ** (alif + fatḥa) — **يَّ** (yāʾ + shadda + fatḥa) — **ا** (alif) — **مٍ** (mīm + kasratan) = أَيَّامٍ
+6. **عَ** (ʿayn + fatḥa) — **ا** (alif) — **لِ** (lām + kasra) — **مَ** (mīm + fatḥa) — **ةً** (tāʾ marbūṭa + tanwīn fatḥ) = عَالِمَةً
+7. **وَ** (wāw + fatḥa) — **أَ** (alif + fatḥa) — **نَّ** (nūn + shadda + fatḥa) = وَأَنَّ
+8. **جَ** (jīm + fatḥa) — **بْ** (bāʾ + sukūn) — **رِ** (rāʾ + kasra) — **يْ** (yāʾ + sukūn) — **لَ** (lām + fatḥa) = جَبْرِيلَ
+9. **عَ** (ʿayn + fatḥa) — **لَ** (lām + fatḥa) — **يْ** (yāʾ + sukūn) — **هِ** (hāʾ + kasra) = عَلَيْهِ
+10. **اَلْ** — **سَّ** (sīn + shadda + fatḥa) — **لَ** — **ا** — **مُ** = السَّلَامُ
+
+**Conclusion** : le mot-clé suspect se lit **أَيَّامٍ** (a-y-y-ā-mīn, avec yāʾ+shadda au milieu), suivi de **عَالِمَةً** — pas « بوادي », « بومد » ni « يومئذ ».
+
+*Remarque* : la photo est floue ; certains points (notamment la vocalisation finale de عَالِمَةً) méritent vérification sur une édition claire de la Muwaṭṭaʾ.

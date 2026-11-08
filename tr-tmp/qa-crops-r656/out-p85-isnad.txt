@@ -1,0 +1,27 @@
+# Transcription exacte de la page
+
+## Fin du commentaire (haut de page) :
+
+**فأنزل الله نباءك وتعالي: «إِنَّ اللَّهَ وَالمَلائِكَةَ مُوصَلِّونَ عَلَى النَّبِيِّ فَقَدْ صَلَّوْا عَلَيْهِ** — hmm, corrigeons plutôt ligne par ligne :
+
+**فأنزل الله نباءك وتعالى: {إِنَّ اللَّهَ وَمَلائِكَتَهُ يُصَلُّونَ عَلَى النَّبِيِّ فَقَدْ صَلَّى عَلَيْهِ**...
+
+**أَيْتَمَّرُوا وَلَا جَنَاحَ عَلَيْهِمْ أَنْ يَطَّوَّفُوا بِهِمَا** « [**السواط رقم: 1093**].
+
+## Début du hadith 1093 :
+
+**ـ مالك، عن هشام بن عروة، قال: «أن سودة بنت عبد الله بن عمرو كانت غَرَاءَ عند عروة بن الزبير، فخرجت تطوف بين الصفا والمروة في حج أو عمرة، ماشية، وكانت امرأة ثقيلة، فجاءت حين انصرف الناس من العشاء، فلَم تَقْصِ طَوَافَهَا حَتَّى نَوَى بِالْأَوَّلِ مِنَ الصَّبْحِ، فَقَصَّتْ طَوَافَهَا فِيمَا بَيْنَهَا وَبَيْنَهُ، وَكَانَ عُرْوَةُ إِذَا رَاهِمْ يَطُّوفُونَ عَلَى الدَّوَابِّ يَنْهَاهُمْ أَنْ يَدْ النَّهَى، فَيَعْتَلُونَ لَهُ**
+
+---
+
+## Réponses précises à vos deux questions :
+
+1. **Le nom après عروة بن** : c'est clairement **الزبير** (al-Zubayr). Les lettres sont bien : ا + ل + ظ/ز + ب + ي + ر — on lit **عروة بن الزبير**, ce qui est d'ailleurs historiquement correct (c'est le frère et le fils d'Ibn al-Zubayr qui rapportent ce hadith ; le texte se trouve dans al-Muwatta', Livre du Hajj).
+
+2. **Le mot après كانت** : on lit bien **غَرَاءَ** (gharā'a) avec un **غ** (ghayn) initial — le point unique est visible au-dessus de la lettre. Le mot signifie « servante/affranchie (mawlāt) » d'Urwa.
+
+**Transcription littérale du passage demandé :**
+
+> ...عن هشام بن عروة قال: «أن سودة بنت عبد الله بن عمرو كانت **غَرَاءَ** عند عروة بن **الزبير**، فخرجت تطوف بين الصفا والمروة في حج أو عمرة ماشية...
+
+**Remarque critique** : dans le Muwatta' (version de Yahyā b. Yahyā), on trouve la leçon **«كانت غَرْمَاءَ»** ou selon certains rapports «كانت غُرَاءً» ; il serait prudent de vérifier la lecture diacritique exacte du manuscrit à plus haute résolution pour la vocalisation, mais les consonnes **غ-ر-ا** sont certaines.

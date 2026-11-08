@@ -1,0 +1,23 @@
+## Analyse du mot entre وَأَنَا et حَدِيث
+
+Le mot s'écrit **ب-و-م-د** sans alif, c'est le nom propre **Būmad** (بومد, nom d'un traditionniste — Buwayh/Būmad, connu dans les isnāds du Muwaṭṭaʾ).
+
+**Lecture des diacritiques dans l'image :**
+
+1. **ب (bāʾ)** : le point est **sous** la lettre (un seul point en dessous → bāʾ, pas yāʾ dont le double point serait sous les deux dents). Au-dessus, on voit un **ḍamma (u)** → **بُ**
+
+2. **و** : sans vocalisation explicite de ḍamma dans cette main, mais la lecture est **ū** (wāw de prolongation) → **وُو/وْو** graphiquement rendu بُو
+
+3. **م** : porte une **fatḥa (a)** visible au-dessus → **مَ**
+
+4. **د (dāl)** : **aucun point** (la dāl n'en a jamais), et **pas de sukun marqué au-dessus**, **pas de tanwin** non plus — la lettre est close en fin de mot sans signe de tanwin visible.
+
+## Verdict
+
+C'est **بُوْمَدْ** (*Būmad*) — **ni** بِوَمْدٍ (le point serait différent, tanwin absent, et cela donnerait un mot arabe « bimad » sans rapport), **ni** بِوَمْدِ (pas de kasra sous le bāʾ ni kasra finale).
+
+## Segment complet transcrit
+
+**وَأَنَا بُوْمَدْ حَدِيثُ النَّاسِ: أَرَأَيْتِ قَوْ...**
+
+(à noter : حَدِيثُ ici sans alif, orthographe maghribine ; *wa-ana Būmad* — « quant à moi, Būmad, [...] le récit des gens »)
