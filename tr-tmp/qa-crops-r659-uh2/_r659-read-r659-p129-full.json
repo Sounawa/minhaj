@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription (reading order, RTL)\n\n## 1) Bannière verte supérieure (médaillon + bandeau)\n- Médaillon : **الدرس / 25** (numéro lu chiffre par chiffre : ٢٥ — imprimé en chiffres latins « 25 »)\n- Bandeau : **أنشطة تطبيقية**\n\n## 2) Rubric : **أهداف الأنشطة**\n1. **أن أثبت معارفي النظرية السابقة.**\n2. **أن أنمي مهاراتي النظرية في البحث التطبيقي العملي.**\n3. **أن أدرك الغاية من ضبط المصطلحات الحديثة وأهمية ذلك في مجال التطبيقات.**\n4. **أن أتمرن على دراسة الأحاديث دراسة تطبيقية عملية.**\n\n## 3) Rubric : **أقرأ:**\nعرّفت فيما سلف الكثير من الجوانب النظرية المتعلقة بعلم الحديث، واكتسبت جملة من المعارف الأساسية التي تحتاجها في التطبيق العملي لدراسة الحديث، والتي تعين طالب الحديث على التوصصل ببحثه الخاص إلى التمييز بين الصحيح والضعيف.\n\nوتقريبا للتطبيقات العملية رأينا أن نضع هذه الخطوات الأولية التي تعين على الوصول إلى القصود، ويراعينا فيها الاقتصار على الضروري والمهم. وغرضنا من هذا مباشرة الجانب التطبيقي لهذا العلم، وأن تكون هذه التجربة مفتاحا عناية بالتطبيقات والتوسع فيها.\n\n## 4) Rubric : **أطبق:**\n(Flèche : خطوات دراسة وتخريج حديث)\n- **أولا : تقديم الحديث المراد دراسته، واستخراجه من مخاطنه الأصلية** [؟ «مصادره الأصلية» — كلمة غير واضحة تماما]\n- **ثانيا : البحث عن طرق الحديث ورواه**\n- **ثالثا : دراسة سند الحديث الأصلي (اتصال السند، عدالة الرواة، ضبط الرواة...)**\n- **رابعا : دراسة طرق ورواه الحديث** [؟ حرف الراء مطبوع «رابثا» [؟]]\n- **خامسا : التحكم الكلي على الحديث الأصلي (بعد دراسة طرقه وشواهده)** [؟ «الحكم الكلي على» — تركيب مطبوع كما هو]\n\n## 5) Pied de page\n**129** (واحد، اثنان، تسعة — ١٢٩)\n\n---\n\n## Notes (français)\n- La bannière du haut existe bien : médaillon vert « الدرس 25 » + bandeau « أنشطة تطبيقية ». Le titre attendu « الدرس 25 : أنشطة تطبيقية » est réparti graphiquement entre le médaillon et le bandeau.\n- Les quatre objectifs commencent bien par « أن » et correspondent sémantiquement aux indices donnés, mais la formulation réelle diffère des suggestions de la couche texte (ex. objectif 1 : « معارفي النظرية السابقة » et non « النظريات المفاهيم السابقة »).\n- Le paragraphe « أقرأ » est plus court que suggéré ; il n'y a pas de paragraphe séparé sous « أطبق », mais un organigramme de 5 étapes encadrées (plus un en-tête « خطوات دراسة وتخريج حديث »).\n- Deux ou trois mots du paragraphe « أقرأ » (notamment « التوصصل », probablement coquille pour « التوصل ») sont transcrits tels qu'imprimés.",
+        "reasoning_content": "The user's \"text layer\" suggestions don't match the actual image; I should transcribe what's actually printed. Banner: الدرس / 25 / أنشطة تطبيقية. Objectives as shown. أقرأ paragraph as shown. أطبق section with flowchart boxes. Footer 129.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794201727,
+  "id": "2026110913214802f1941c31964a86",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110913214802f1941c31964a86",
+  "usage": {
+    "completion_tokens": 925,
+    "completion_tokens_details": {
+      "reasoning_tokens": 64
+    },
+    "prompt_tokens": 8454,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9379
+  }
+}
