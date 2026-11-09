@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "L'item أستخلص من النص n'apparaît pas sur cette image, ni le titre الإعداد القبلي ni ses items numérotés. La seule ligne visible est :\n\n2. ابحث عن الفروق بين رواية الحديث باللفظ وروايته بالمعنى، وما يترتب على ذلك.\n\n124",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794193179,
+  "id": "20261109105934723b16a4e5c34c66",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261109105934723b16a4e5c34c66",
+  "usage": {
+    "completion_tokens": 76,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 6103,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6179
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) La section « 2. الفرق بين المصحف والتحريف » n'apparaît pas dans l'image fournie ; je ne peux donc pas la transcrire.\n\n(2) Section visible :\n\n3. حكم التصحيف والتحريف:\n\nإذا وقع التصحيف أو التحريف من الراوي نادرا فإنه لا يقدح في ضبطه؛ لأن الخطأ اليسير لا يسلم منه أحد، وإذا كثر التصحيف منه، وقدح في ضبطه، فيكون الراوي خفيف الضبط، والقدر المصف أو المحرف مردود؛ لوروده على غير أصله.\n\nأهتدي وأقتدي\n\nقال يحيى بن معين رحمه الله: «آلة الحدث الصدق» [التمهيد: 1/70].\n\n(Remarque : dans l'image, le titre imprimé semble être « أهتدي وأقتدي » ; transcrit tel quel. La question portait sur « 3. حكم التصحيف والتحريف », qui figure ci-dessus telle qu'imprimée.)",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794193164,
+  "id": "20261109105916078e77d51b5a4017",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261109105916078e77d51b5a4017",
+  "usage": {
+    "completion_tokens": 244,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2817,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3061
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Je ne peux pas transcrire les passages demandés : dans l'image fournie, l'item « تصحيف السمع » (avec les noms عاصم الأحول, واضل الأحذب...) et le titre « ج- باعتبار لفظه أو معناه » n'apparaissent nulle part. Cette page montre un autre passage.\n\nSeul élément partiellement apparent : le titre « جـ- باعتبار لفظه أو معناه » (ligne 2) existe bien, mais la suite des items correspondants n'est pas visible sur cette image (la page est coupée).\n\nVoici ce qui est effectivement visible et transcribable sur cette image :\n\n- لَا يَشْتَبِهُ مِنْ حَدِيثِ الْكَاتِبَةِ وَإِنَّمَا أَخْطَأَ فِيهِ سَمْعٌ مِنْ رِوَاهِ. [مقدمة ابن الصلاح، ص 389].\n\n- جـ- باعِتبار لَفْظِهِ أَوْ مَعْنَاهُ وَيَنْقَسِمُ باعتبار لفظه أو معناه إلى قسمين، وهما :\n\n- تصحيف في اللَفْظِ: «وَهُوَ الأَكْثَرُ»، وذَلِكَ كَالَا مِثْلُ السَّابِقَةِ.\n\n- تَصْحِيفٌ فِي المَعْنَى: بحيث يبقى الراوي المُصْحِفُ اللفظ على حاله، لكن يفسّره تفسيرًا يدل على أنه فهم معناه غير مراد، ومثاله: قال أَبِي موسى العنزَيِّ: «نحن قوم لنا شرف، نحن من عزّة، صلى إِلَيْنَا رسول الله ﷺ» يريد بذلك حديث «أَنَّ النَّبِيَّ ﷺ صَلَّى إِلَى عَزَّةَ...» [لسنه، أحمد بن حنبل، حديث 1876] فتوهم أنه صلى إلى قبيلتهم، وإِنَّمَا العَزَّةُ هنا الحربة تنصب بين يدي الإمامِ\n\nLes passages demandés (تصحيف السمع avec عاصم الأحول، واضل الأحذب et son renvoi, ainsi que le début des deux items sous ج- باعتبار لفظه أو معناه) ne figurent pas sur cette image ; je refuse de les restituer de mémoire.",
+        "reasoning_content": "The image shown doesn't contain تصحيف السمع or ج- باعتبار لفظه أو معناه — the image shows a different part. I should say these are not visible; transcribe what's visible? The question asks to transcribe items not present in this image. I must not invent. Report that they're not on this page.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794193137,
+  "id": "202611091058386e74460309574dbb",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611091058386e74460309574dbb",
+  "usage": {
+    "completion_tokens": 702,
+    "completion_tokens_details": {
+      "reasoning_tokens": 72
+    },
+    "prompt_tokens": 2842,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3544
+  }
+}

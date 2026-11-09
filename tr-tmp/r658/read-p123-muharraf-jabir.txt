@@ -1,0 +1,4 @@
+IMAGE: p123-muharraf-jabir.png
+CONSIGNE: Transcris EXACTEMENT, ligne par ligne : (1) ب- اصطلاحا (la définition d'ابن حجر) mot à mot — y compris tout numéro de page (ص ...) chiffre par chiffre qui la suit ; (2) l'exemple : le hadith de جابر (avec ses voyelles lettre par lettre), le renvoi [صحيح مسلم...] livre/chapitre, la note (حرفه غندر...) et la glose والأكحل ENTIERES.
+---
+(1) ب- اصطلاحا: الحرف: عرفه ابن حجر بأنه ما كان التغيير فيه بالنسبة إلى شكل الحرف، مع بقاء صورة الخط. ومثّله حديث جابر رضي الله عنه: «رَمَى أَبَى يَوْمَ الأَحْزَابِ عَلَى أَكْحَلَهُ فَكَأَنَّمَا زَسُولُ اللهِ ضَلَّى اللهُ عَلَيْهِ وَسَلَّمَ» [صحيح مسلم، كتاب السلام، باب لكل ذي دعاء واستجابة التوابي] حرفه غندر وقال فيه: أَبِي، وإنما هو أبي بن كعب، وأبو جابر كان قد استُشهد قبل ذلك بأحد. [مقدمة ابن الصلاح، ص 385] والأكحل: عرق في اليد وسط الذراع.

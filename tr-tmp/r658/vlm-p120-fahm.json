@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**الفهم**\n\n**الشرح:**\n\nأَوْ بَتْقِيرِ: أولَن كانت الخالِقة بتغيير حرف أو حروف مع بقاء صورة الخط.\n\nالسِّياقُ: أي سياق اللفظ، والسياق يُقصد به: القرينة الدالة على المقصود.\n\n**استخلاص المضامين:**\n\nأستخلص من النّص تعريف المصحف والحرف.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794193081,
+  "id": "20261109105757c30907bb5dd6441a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261109105757c30907bb5dd6441a",
+  "usage": {
+    "completion_tokens": 107,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 3446,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3553
+  }
+}

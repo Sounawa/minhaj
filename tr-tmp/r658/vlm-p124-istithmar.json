@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "الاستتمار\n\nقال الإمام ابن الصلاح رحمه الله: «وأما التصحيف فسبيل السلامة منه الأخذ من أفواه أهل العلم، والضبط، فإن من حرِم ذلك، وكان أخذه وتعلمه من بطون الكتب، كان من شأنه التحريف، ولم يفلت من التبديل، والتصحيف». [مقدمة ابن الصلاح، ص 218].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794193174,
+  "id": "20261109105928b30d9f1874c54d6c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261109105928b30d9f1874c54d6c",
+  "usage": {
+    "completion_tokens": 101,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 4162,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4263
+  }
+}
