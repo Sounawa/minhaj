@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**1) Bannière de leçon :** Non — il n'y a pas de bannière verte de titre de leçon avec médaillon circulaire (pas de « الدرس الرابع عشر »). En haut de page, on voit seulement une bande décorative bleue avec frise géométrique. La seule bannière verte est une capsule de rubrique intitulée **الإعداد القبلي** (avec pastille bleue circulaire à droite), sans numéro de leçon.\n\n**2) Transcription des lignes (ordre de lecture RTL) :**\n\n- أقرأ الحديث وأستخلص منه فضل يوم عرفة وأنسبُ ذلك بين عائلتي.\n\n- **الإعداد القبلي** ← (bannière de rubrique verte)\n\n- أحفظ أحاديث الدرس المفل وأجيب عن الآتي: *(lu : « أحفظ أحاديث الدرس المفل » — probablement المفضّل/المفظّل, impression floue ; ou [المفظّل] [؟])*\n\n- **1** - أبحث عن حكم المبيت والوقوف بمزدلفة. *(chiffre lu : ١ = « un »)*\n\n- **2** - أبيّن الفضل العظيم... *(ligne coupée en bas de l'image, fin illisible : [؟])*\n\n**Notes (français) :**\n- La page correspond à la rubrique « الإعداد القبلي » (préparation préalable) d'une leçon de hadith ; le titre de leçon avec médaillon se trouverait sur la page précédente.\n- Le chiffre « 1 » (١) est imprimé en bleu, suivi d'un tiret, style typique des manuels scolaires.\n- Les diacritiques sont partiellement lisibles ; « المفل » est probablement « المفضّل » (nom de l'imam al-Mufaddal), marqué [؟] par prudence.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794182945,
+  "id": "20261109080852b65cdc1a34744867",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261109080852b65cdc1a34744867",
+  "usage": {
+    "completion_tokens": 441,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8037,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8478
+  }
+}

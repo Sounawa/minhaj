@@ -1,8 +1,0 @@
-IMAGE: tr-tmp/qa-crops-r633/h-909-p18.png
-CONSIGNE: Transcris EXACTEMENT le texte arabe imprimé visible sur cette image. C'est un zo
----
-(1) Numéro chiffre par chiffre : 9 – 0 – 9, soit « 909 »
-
-(2) Transcription littérale de la zone visible :
-
-« الْقُرْآنِ » [المُوَطَّأُ رَقْمِ: 909].

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription of the top band\n\n## 1) Decorative banner and medallion\n- Yes: a **green rounded banner** at the top, with a **blue circular medallion** on its right end.\n- Medallion word above the number: **الدرس** (clearly \"الدرس\", not \"التمرين\").\n- Number, digit by digit: **١ / 4** → Western digits \"1\" then \"4\" = **14** (i.e., الرابع عشر).\n- Banner text (in blue, on green): **أحكام مبيت** — wait, reading carefully: **أحكام مبيت مزكاة**… the visible wording is:\n\n> **أحكام مبيت مزكاة** [؟] — actually reads **أحكام مبيت مزدلفة** with the last letters partially blurred: **أحكام مبيت مـ[زدلفة] [؟]**\n\nBest reading: **أحكام مبيت مزدلفة** — so this is **الدرس الرابع عشر = Lesson 14** (not an exercise).\n\n## 2) Main title under the banner\nThe title itself is inside the green banner (no separate second title in this crop):\n> **أحكام مبيت مزدلفة** [؟] (end of the last word slightly blurred)\n\n## 3) Rubric and objectives\nRubric (green pill with blue dot): **أهداف الدرس**\n\nObjective lines visible in this crop — only one:\n- **1 -** (leading digit read digit-by-digit: \"1\" with a hyphen, i.e., \"١ -\") →\n> **أن أتعرف أحكام ليلة العاشر من ذي الحجة.**\n\n(Other numbered objectives, if any, are below the crop: [؟])\n\n## 4) Tamrīd/تمهيد paragraph\nNot visible in this crop — the band ends after objective 1. First lines: [؟]\n\n---\n**Notes (français) :**\n- Bande supérieure d'une page de manuel scolaire arabophone : bandeau vert avec médaillon bleu circulaire portant « الدرس 14 » → Leçon 14 (et non « التمرين »).\n- Titre : « أحكام مبيت مزدلفة » (règles de la nuit passée à Mouzdalifa) ; dernière partie du mot légèrement floue.\n- Rubrique « أهداف الدرس » (objectifs de la leçon) ; un seul objectif lisible : « أن أتعرف أحكام ليلة العاشر من ذي الحجة ».\n- Bordure ornementale géométrique bleue sous la bande bleue supérieure.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794182957,
+  "id": "20261109080905a2d1ef89c3414594",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261109080905a2d1ef89c3414594",
+  "usage": {
+    "completion_tokens": 606,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8047,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8653
+  }
+}
