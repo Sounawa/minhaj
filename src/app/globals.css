@@ -1,5 +1,11 @@
-@import "tailwindcss";
+@import "tailwindcss" source(none);
 @import "tw-animate-css";
+
+/* R662 — confinement des sources Tailwind : l'auto-détection balayait
+   tr-tmp/ (pages HTML de preuve suivies par git) et générait des classes
+   arbitraires importées (ex. bg-[url("/images/popup-bg.png")] des pages
+   tafsir sauvegardées), cassant le build dev. Sources explicites src/ seul. */
+@source "../";
 
 @custom-variant dark (&:is(.dark *));
 
