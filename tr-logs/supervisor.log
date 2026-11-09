@@ -410,3 +410,8 @@ error: failed to push some refs to 'https://github.com/Sounawa/minhaj.gi
 [2026-11-09 11:34:07] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
 
 [2026-11-09 11:37:13] superviseur v4 démarré (MAX=3, file=62 livres, battement visible)
+[2026-11-09 21:25:07] superviseur v4 démarré (MAX=3, file=62 livres, battement visible)
+[2026-11-09 21:25:13] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-09 21:35:15] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
