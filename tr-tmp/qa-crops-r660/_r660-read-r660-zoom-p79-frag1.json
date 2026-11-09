@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## Transcription\n\nIl s'agit du candidat **(a)** — sourate al-Ḥağğ, verset 32.\n\n**Nombre de mots visibles : 8**\n\n**Transcription mot par mot :**\n1. ﴿وَمَن\n2. يُعَظِّمْ\n3. شَعَائِرَ\n4. اللَّهِ\n5. فَإِنَّهَا\n6. مِنْ\n7. إِتَّقَى\n8. الْقُلُوبِ﴾\n\n## Étiquette bleue\n\n**[سورة الحج الآية : 30]**\n\nChiffre par chiffre : **3** — **0** (soit 30, numéro du verset)",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794205072,
+  "id": "20261109141747c2b82bd32cc947b6",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261109141747c2b82bd32cc947b6",
+  "usage": {
+    "completion_tokens": 181,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8252,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8433
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription\n\n## 1) Paragraphe courant (nasch), de droite à gauche, haut → bas\n\n« أَوْلَا: طواف الوداع\n\n1 - حكم طواف الوداع\n\nطواف الوداع مستحب عند مالك؛ لقول عمر رضي الله عنه: «لا يَحُلُّ أحدٌ من الحاج حتى يطوف بالبيت، فإِن أخّر النُّسُك الطَّوَافَ بالبَيْت»، قسَماه نسكاً لكونه عبادة، وذكر مالك أن ذلك مأخوذ من قوله تعالى: [fragment calligraphique 1]، [étiquette bleue]، وَقَوْلِهِ: [fragment calligraphique 2] [étiquette bleue]، قال مالك: «فَمَحَلُّ الشَّعَائِرِ كُلُّهَا وَانْقِضَاؤُهَا إِلَى الْبَيْتِ الْعَتِيقِ»، [étiquette bleue] والمرد بالشعائر أعلام الحج وأفعاله. »\n\n## 2) Fragments calligraphiques (thuluth), mot par mot, ornements exclus\n\n**Fragment 1** (mot par mot) :\n- وَمَا (؟ la lecture precise est délicate) — transcription exacte visible : « وَمَا يَعْقِلُهُمْ مِنْ شَعَائِرِ اللهِ »\n  - Mot par mot : وَمَا / يَعْقِلُهُمْ (?) / مِنْ (?) / شَعَائِرِ / اللهِ\n  - ⚠️ Le texte est déformé par la calligraphie ; lecture la plus probable d'après le contexte coranique (Sourate al-Hajj, verset 32) : « وَمَن يُعَظِّمْ شَعَائِرَ اللهِ »\n  - Mot par mot : وَمَنْ / يُعَظِّمْ / شَعَائِرَ / اللهِ\n- Étiquette bleue immédiatement après : **[سورة الحج الآية: ٣ ٠]** → chiffre par chiffre : 3, 0 (trente)\n\n**Fragment 2** (mot par mot) :\n- « ثُمَّ مَوْعِلَهَا إِلَى الْبَيْتِ الْعَتِيقِ »\n  - Mot par mot : ثُمَّ / مَوْعِلَهَا / إِلَى / الْبَيْتِ / الْعَتِيقِ\n  - (variante possible : ثُمَّ مَحِلُّهَا — le trait calligraphique du mot rend [؟] la lecture certaine entre موعلهها / محلهها)\n- Étiquette bleue immédiatement après : **[سورة الحج الآية: ٣ ١]** → chiffre par chiffre : 3, 1 (trente et un)\n\n## 3) Ordre respecté\n\nFragments traités de haut en bas : fragment 1 (بعد « مأخوذ من قوله تعالى »), puis fragment 2 (بعد « وَقَوْلِهِ »).\n\n## 4) Cas de la parole de Mâlik\n\n**« قال مالك: فمحل الشعائر كلها وانقضاؤها إلى البيت العتيق » : oui, elle est immédiatement suivie d'une étiquette bleue : [سورة الحج الآية: ٣١] (le même renvoi que le fragment 2, la parole de Mâlik paraphrasant ce verset).**\n\n**Dernière ligne du paragraphe : « والمرد بالشعائر أعلام الحج وأفعاله. »**",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794204875,
+  "id": "20261109141412bc77b04c38644ade",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261109141412bc77b04c38644ade",
+  "usage": {
+    "completion_tokens": 942,
+    "completion_tokens_details": {
+      "reasoning_tokens": 941
+    },
+    "prompt_tokens": 8254,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9196
+  }
+}
