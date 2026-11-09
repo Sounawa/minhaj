@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription de la page (leçon 24, p. 125)\n\n## 1) Bandeau vert + médaillon\n- Médaillon : **الدرس / 24** — chiffre occidental « 24 » (soit ٢٤).\n- Titre imprimé : **الاختصار في الحديث وروايته بالمعنى** ✔ conforme à l'attendu.\n\n## 2) Rubrique أهداف الدرس (quatre puces, exactes)\n1. أن أتعرف حكم رواية الحديث بالمعنى.\n2. أن أميز بين من يجوز له رواية الحديث بالمعنى ومن لا يجوز له ذلك.\n3. أن أحرص على حفظ الحديث ونقله بلفظه كما هو.\n4. أن أتخلق بأخلاق العلماء في التبليغ عن رسول الله ﷺ.\n\n## 3) Rubrique تمهيد — paragraphe\nالأصل فيمن سمع الحديث أن يقيده ويحفظه، وحفظ الحديث بعد سماعه صدرا أو كتابة يحفظ على النص المروي كما هو، وقد ينسى الراوي، فيروي الحديث بالمعنى عندما لا يستطيع أداءه كما سمعه، وقد تتوفر فيه شروط الرواية بالمعنى وقد لا تتوفر فيه؛\n\nفما حكم اختصار الحديث أو روايته بالمعنى؟\n\n## 4) Encadré المتن — قال الحافظ ابن حجر رحمه الله\n**«ولا يحوزُ تعمُّدُ التغييرِ والمرادَفِ إلا لعالمٍ بما يُحيلُ المعاني؛ فإن حيفَ المعنى احتاجَ إلى شرحِ الغريبِ وبيانِ المشكِل».**\n\n⚠️ **Important — l'attendu ne correspond pas au texte imprimé.** La page réelle porte :\n- ولا **يحوز** (et non « لا يجوز ») تعمد **التغيير والمرادف** (et non « ترك اللفظ ») إلا لعالم **بما** يحيل المعاني (et non « به ») ;\n- « فإن **حيفَ** المعنى **احتاج** إلى شرح الغريب **وبيان المشكل** » — et non « حفي… حاج » ;\n- Les derniers mots sont **وبيان المشكل** — ni « وما المشكل » ni « وما أشكل ». Le mot المشكل est bien vocalisé المشكِل.\n\n## 5) Rubrique الفهم / الشرح\nPanneau الشرح :\n- **الغريب**: الغريب: البعيد عن وطنه، وغريب الحديث: ما غَمُضَ وخفي معناه.\n- **المشكِل**: المُقصود به في المتن: ما التبَسَ وأشكَل معناه بسبب تعارض ظاهر.\n\nPanneau استخلاص المضامين :\n1. أستخلص من المتن حكم اختصار الحديث.\n2. أستخرج من النص حكم رواية الحديث بالمعنى لتغير العالم بالمعنى.\n\n## Notes (français)\n- Aucun encadré de définition séparé (فقه اللغة) n'apparaît sur cette page : la définition de الغريب/المشكل est intégrée au panneau الشرح. Les fragments attendus « وأشكل معد / بسبب تعارض ظاهر » correspondent en réalité à « وأشكَل معناه / بسبب تعارض ظاهر » ✔.\n- Le texte d'Ibn Hajar cité diffère de votre « attendu » : l'édition imprimée dit ولا يحوز تعمد التغيير والمرادف … وبيان المشكل. Les lectures « حفي/حاج » et « وما المشكل/وما أشكل » de la consigne ne se trouvent pas sur cette page ; je n'ai donc marqué aucun [؟], le texte est net.",
+        "reasoning_content": "Transcribe what's actually visible; the image shows the printed page. Note deviations from user's \"expected\" text. The banner reads الاختصار في الحديث وروايته بالمعنى, الدرس 24. Objectives four. Tamhid paragraph. Matn of Ibn Hajar: actual text reads «ولا يحوزُ تعمُّدُ التَّغييرِ المُرَادَفِ إلا لعالمٍ بمأ يحيلُ المعاني؛ فإن حيفَ المعنى احتاج إلى شرح الغريب وبيان المشكل» — last words وبيان المشكل. Note that page differs from expected. Also no boxed definition of الغريب على هذه الصفحة beyond الشرح column.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794195435,
+  "id": "20261109113647126dfa3e441345c2",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261109113647126dfa3e441345c2",
+  "usage": {
+    "completion_tokens": 1047,
+    "completion_tokens_details": {
+      "reasoning_tokens": 153
+    },
+    "prompt_tokens": 8439,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9486
+  }
+}

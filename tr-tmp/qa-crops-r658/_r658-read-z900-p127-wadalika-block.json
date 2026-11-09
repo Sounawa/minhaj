@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## Transcription (page 127)\n\n**Ligne 1 (haut de page, partiellement coupé) :**\n« [؟] اللفظ، والمقصود بالرواية حفظ الحديث وسمعه ولا يجوز لعامي أن يرويه [؟]\n\n**Ligne 2 :**\nكنجم، ونقل الحافظ ابن حجر عن القاضي عياض رحمه الله قوله: «ولابغي سد باب الرواية\n\n**Ligne 3 :**\nبالعني لذلا بتسليط من لا يحسن ممه يظن أنه يحسن». وقدم القاضي عياض في كتابه «الإلماع\n\n**Ligne 4 :**\nإلى معرفة أصول الرواية وتقويد السماع» بما عنوأنه: «باب تحرى الرواية واللجاز باللفظ ومن\n\n**Ligne 5 :**\nرخص للعلماء في اللفظ ومن منع»، وختم به إلى أن «السدحب الحجى بنفس اللفظ ما استطيع»\n\n**Pied de page (en vert, partiellement coupé) :**\n١٧: الحديث [؟] فصل [؟] صحيح للإمام مسلم [؟] فصل [؟] مسلم [؟] [؟]\n\n## Notes françaises\n\n1. **Ligne 1** : coupée en haut ; début manquant. On lit « ...اللفظ » — probablement la fin du paragraphe de l'image précédente (conforme au point (1) demandé : « عالما بالألفاظ ومقاصدها »).\n\n2. **Vérification point (2)** — la citation d'Ibn Ḥajar se lit ici : **«ولابغي سد باب الرواية بالعني لذلا بتسليط من لا يحسن ممه يظن أنه يحسن»**. ⚠️ La graphie « العني » semble être **العني/العني = العَمَى** (par l'aveuglement) — lecture incertaine : [؟] **العني ou العمى**. Et « لذلا » paraît être **ليذلا** [؟]. Le mot **المتن** n'apparaît pas dans cette portion : ni « بالنقص والمرادف » ni « بالنقص والزيادة » ni « اللفظ والمرادف » ne sont visibles sur cette image ; il faudrait la page/le paragraphe contenant la citation complète de الفاتح بشرح صحيح مسلم.\n\n3. **Point (4)** : la ligne 1 finit par « ولا يجوز لعامي أن يرويه » — conforme au sens « ولا يغيروها », mais la formulation exacte « في كتبهم » n'est pas visible ici.\n\n4. Lignes 4–5 : les guillemets arabes « » sont rendus « [؟] » là où la résolution de la césure rend la ponctuation douteuse ; la phrase « وختم به إلى أن » semble être **وختم بها إلى أن** [؟].\n\nSi vous pouvez fournir l'image à plus fort contraste (les mots لذلا/العني/ممه sont flous), je compléterai lettre par lettre.",
+        "reasoning_content": "Transcribe the image. Line 1 (top, partially cut): «...اللفظ، والمقصود بالرواية حفظ الحديث وسمعه ولا يجوز لعامي أن يرويه...». Lines 2-6 transcribe.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794196028,
+  "id": "2026110911463268b4f846060d4bcf",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110911463268b4f846060d4bcf",
+  "usage": {
+    "completion_tokens": 783,
+    "completion_tokens_details": {
+      "reasoning_tokens": 53
+    },
+    "prompt_tokens": 8211,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8994
+  }
+}

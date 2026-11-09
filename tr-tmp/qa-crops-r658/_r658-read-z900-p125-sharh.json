@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription — page 125 (الشرح + استخلاص المضامين)\n\n## العنوان (panneau vert)\n**الشرح**\n\n## panneau الشرح (colonne droite)\n\n**الشرح:**\n\n**الغريب:** الغريب: البعيد عن وطنه، وغريب الحديث: ما غَمُضَ وخفي معناه.\n\n**المُشْكَل:** المقصود به في المتن: ما التبس وأشكل معناه بسبب تعارض ظاهر.\n\n## panneau استخلاص المضامين (colonne gauche)\n\n**استخلاص المضامين:**\n\n1. أستخلص من المتن حكم اختصار الحديث.\n2. أستخرج من النص حكم رواية الحديث بالمعني لغير العالم بالمعني.\n\n**125**\n\n---\n\n## Notes (vérification, FR)\n\n- **الغريب (fin de la définition du ghrib al-hadith):** le texte porte bien **«ما غَمُضَ وخفي معناه»** — la variante attendue «ما ضع معناها» est *absente* de cette page. Vérifié lettre par lettre : ما / غَمُضَ (avec fatha et damma visibles) / وخفي / معناه. [؟] aucune ambiguïté.\n- **المشكل:** confirmé intégralement : «المقصود به في المتن: ما التبس وأشكل معناه بسبب تعارض ظاهر.» — chaque mot est net à 900 dpi ; «تعارض» avec fatha sur le 'ain ; «ظاهر» final sans point d'interrogation (affirmatif, pas «؟»).\n- **Item 2 — transcription complète :** «أستخرج من النص حكم رواية الحديث بالمعني لغير العالم بالمعني.» Le texte se termine donc sur **«بالمعني»** (avec la lettre ن portant le tanwin kasra visible). La fin attendue «لتغير العالم بالمعنى؟ أو غير ذلك؟» ne figure pas dans l'image ; la lecture réelle est **«لغير العالم بالمعني»** — noter la graphie avec **ي** finale (المعني) plutôt que 所 attendu «المعنى» [؟ possible variante d'impression], et «لغير» (avec ghayn) et non «لتغير» [؟].\n- Mise en page : الشرح à droite (cadre vert interne), استخلاص المضامين à gauche, séparés par un double filet vert ; numéros 1./2. en vert ; titres de panneaux en magenta.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794195710,
+  "id": "20261109114132b407a89dce18470f",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261109114132b407a89dce18470f",
+  "usage": {
+    "completion_tokens": 604,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8152,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8756
+  }
+}

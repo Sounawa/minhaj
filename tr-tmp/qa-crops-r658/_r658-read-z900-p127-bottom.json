@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## Transcription (extrait visible — bas de page 127)\n\nLe fragment ne contient que la fin du paragraphe et la note de référence. Voici exactement ce qui est visible :\n\n**Ligne 1 :**\nبالمعنى إلا يتساط من لا يحسن ممن يظن أنه يحسن». و قد عقد القاضي عياض في كتابه «الإملاء\n\n**Ligne 2 :**\nإلى معرفة أصول الرواية و تقييد السماع» بابا عنوانه: «باب تحريي الرواية و المجيء باللفظ و من\n\n**Ligne 3 :**\nرخص للعما في المعنى و منع» و خلص فيه إلى أن «المستحب المجيء بنفس اللفظ ما استطيع»\n\n**Note de bas de page (en vert) :**\n[الإملاء إلى معرفة أصول الرواية و تقييد السماع، القاضي عياض، ص 179].\n\n**Numéro de page :** 127\n\n---\n\n## Réponses point par point\n\n**(2) Citation d'Ibn Ḥajar (fin du fragment précédent) :** la citation elle-même n'est pas visible sur ce fragment (elle se termine par «…يحسن»). D'après le contexte et la note, la formulation correcte est la **deuxième** : ولا يجوز تعمد تغيير اللفظ بالنقص والزيادة إلا لعالم بما يحيل المعاني [؟ — à vérifier sur la page précédente].\n\n**(6) Titre du livre :** sur l'image, le titre se lit clairement **«الإملاء»** (avec م — «al-Imlāʾ»), confirmé deux fois : dans le corps du texte et dans la note verte. **Ce n'est pas «الإلماع»**. [Le titre réel de l'ouvrage d'Iyaḍ est «الإلماع إلى معرفة أصول الرواية وتقييد السماع», mais le livre imprimé ici écrit الإملاء — probablement coquille de l'éditeur.]\n\n**(7) Numéro de page bleu/vert :** lu chiffre par chiffre : **1 7 9** → **179** confirmé.\n\n**(7) Clause مفتاح… :** non visible sur ce fragment [؟ — se trouve sur la page précédente].\n\n**(3), (4), (5) :** les clauses وما سلف من الأقوال… / والذي جرى به عمل أهل العلم… / ونقل الحافظ ابن حجر عن القاضي عياض… ne figurent **pas** sur ce fragment ; seule la toute fin de la citation («…من لا يحسن ممن يظن أنه يحسن») apparaît en haut de la première ligne.\n\n---\n\n## Notes françaises\n\n- **Orthographe du manuscrit imprimé** : «يتساط» (l. 1) semble être une coquille pour «يتسلّط» [؟].\n- «عنوانه» écrit «عنوانه» avec hamza initiale visible «عنوانه» — graphie correcte attendue : عنوانه.\n- «للعما» (l. 3) : coquille apparente pour «للعلماء» [؟].\n- «تحريي» (l. 2) : écrit avec ي double pour «تحري».\n- Le pied de page est en **vert** (non bleu), entre crochets, avec point final.\n- La page 127 se termine ici ; la suite (phrase sur سد باب الرواية… etc.) doit être sur la page suivante.",
+        "reasoning_content": "The image only contains the tail of the paragraph. Transcribe what's visible; note items 3–7 not present on this page fragment.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794195757,
+  "id": "20261109114214660bf5281e214f71",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261109114214660bf5281e214f71",
+  "usage": {
+    "completion_tokens": 834,
+    "completion_tokens_details": {
+      "reasoning_tokens": 29
+    },
+    "prompt_tokens": 8297,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9131
+  }
+}
