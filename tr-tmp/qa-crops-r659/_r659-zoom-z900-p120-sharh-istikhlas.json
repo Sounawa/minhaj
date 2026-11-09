@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## Transcription (bottom block)\n\n**Green rubric (right):** الشرح\n\n- **أو بتغيير:** أول إن كانت المخالفة بتغيير حرف أو حروف مع بقاء صورة الخط.\n- **السِّياق:** أي سياق اللفظ، والسياق يقصد به: القرينة الدالة على المقصود.\n\n**Green rubric (left):** استخلاص المضامين\n\n- أستخلص من المتن تعريف المصحف والمحرف.\n\n---\n\n## Answers to your verification questions\n\n1. **First gloss ending:** It reads **«مع بقاء صورة الخط»** only — there is **no «واللحرف»** at the end. (The line ends with الخط followed by a period.) Note also that the gloss begins **أول إن كانت** (with أول), not «أو إن كانت» as in your candidate text.\n\n2. **Second gloss:** Matches your candidate exactly: السِّياق: أي سياق اللفظ، والسياق يقصد به: القرينة الدالة على المقصود. — no continuation.\n\n3. **استخلاص المضامين:** There is only **one item** (no numbering visible, no list of several items). It reads: **أستخلص من المتن تعريف المصحف والمحرف** — so yes, **«والمحرف» is present** at the end, but **«مع بقاء صورة الخط» does not appear** here. No [؟] marks needed; the text is fully legible.\n\nPage number below: **120**",
+        "reasoning_content": "The image shows شرح rubric green, glosses: أو بتغيير: أول إن كانت المخالفة بتغيير حرف أو حرفوف مع بقاء صورة الخط. السِّياق: أي سياق اللفظ، والسياق يقصد به: القرينة الدالة على المقصود. استخلاص المضامين: أستخلص من المتن تعريف المصحف والمحرف. Correct the user's expectations.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794198216,
+  "id": "20261109122322f3d171e471614fef",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261109122322f3d171e471614fef",
+  "usage": {
+    "completion_tokens": 444,
+    "completion_tokens_details": {
+      "reasoning_tokens": 98
+    },
+    "prompt_tokens": 8166,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8610
+  }
+}

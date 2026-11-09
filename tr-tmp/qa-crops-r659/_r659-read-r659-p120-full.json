@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription (top → bottom, RTL)\n\n## 1) Banner & medallion\n- Medallion digit-by-digit: **٢ / ٣** → lesson **٢٣** (i.e. \"23\")\n- Title: **المصحف والمحرف**\n\n## 2) أهداف الدرس\n1. أن أتعرف مفهومي المصحف والمحرف.\n2. أن أميّز بين المصحف والمحرف.\n3. أن أجتنب التصحيف والتحريف في الكتابة والنقل.\n4. أن أتخلق بخلق الأمانة وقيم الصدق في تحصيل العلم وتبليغه.\n\n## 3) تمهيد\nبذل علماء الحديث جهودا لحفظ الأحاديث النبوية وصونها من التبديل والتغيير، ويبنيونا ما وقع من التحريف في الألفاظ والأسماء، وميزوا بين ما كانت الخلافته فيه بتغيير حرف أو حروف، مع بقاء صورة الخط، وبين ما كان التغيير فيه بالنسبة إلى شكل الحروف، مع بقاء صورة الخط؟ وأطلقوا على كل منها اسما خاصا.\n\nفماذا يسمى النوع الأول؟ وماذا يسمى النوع الثاني؟ وما فائدة معرفة كل منهما؟\n\n*(The classification word reads letter-by-letter: ا-س-م-ا خ-ا-ص-ا = **اسما خاصا** — not \"خادعا\"/\"خاضا\".)*\n\n## 4) Boxed matn (النصّ)\n**قال الحافظ ابن حجر رحمه الله: «... أوْ بِتَغْيِيرٍ مَعْ بِقَاءِ السِّيَاقِ: فَالْمُصَحَّفُ وَالْمُحَرَّفُ».**\n\n*(Begins with the ellipsis and opening bracket as printed; the word before بقاء is **السِّيَاق** with شين — \"السياق\", not \"الساق\".)*\n\n## 5) الفهم / الشرح — استخلاص المضامين\n\n**الشرح:**\n- **أوْ بِتَغْيِير:** أولًا كانت الخلافُة بتغيير حرف أو حروف مع بقاء صورة الخط.\n- **السِّياق:** أي سياق اللفظ، والسياق يُقصد به: القرينة الدالة على المقصود.\n\n**استخلاص المضامين:**\n1. استخلص من المتن تعريف المصحف والمحرف.\n\nPage number: **120**\n\n---\n\n## Notes (French)\n- «... أو بتغيير م بقاء الساق» du calque texte est bien une erreur : l'image porte **«... أو بتغيير مع بقاء السِّياق»** (avec باء dans بقاء et شين dans السياق).\n- Le mot classant dans le tamhid est **اسما خاصا** (« un nom propre/spécifique »), et non خادعا/خاضا.\n- Le texte du hadith est volontairement tronqué (début par « ... أو بتغيير... »), extrait de Fatḥ al-Bārī d'Ibn Ḥajar.\n- Points ambigus : vocalisation de الخلافَة [؟] (voyelle brève peu lisible en 300 dpi) ; le chapeau التمّهيد/الفهم/النصّ en vert est stylisé mais lisible.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794197686,
+  "id": "20261109121431cee6430992d446a4",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261109121431cee6430992d446a4",
+  "usage": {
+    "completion_tokens": 798,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8426,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9224
+  }
+}
