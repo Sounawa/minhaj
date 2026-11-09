@@ -1,0 +1,4 @@
+IMAGE: z900-p123-top.png
+CONSIGNE: Transcris EXACTEMENT tout le texte visible ligne par ligne : le titre magenta ب- اصطلاحا s'il est visible, la définition المحرف (عرفه ابن حجر بأنه ما...) mot à mot, et TOUT numéro de page ou renvoi visible (ex. ص 53 ou un crochet [ص ...]) chiffre par chiffre. Y a-t-il un crochet de source après la définition ? Transcris-le en entier.
+---
+ب- اصطلاحا: المحرف : عرفه ابن حجر بأنه ما كان التغيير فيه بالنسبة إلى شكل الحرف، مع بقاء صوته الخط. ومنـه حديث جابر رضي الله عنه: «اذرمي أبي يؤم الإمام زائد حتى أكَهُ فكَرَه رسول الله صلَّى الله عليه وسلَّم» [صحيح مسلم، كتاب المساجد ومواضع الصلاة] صرفـه

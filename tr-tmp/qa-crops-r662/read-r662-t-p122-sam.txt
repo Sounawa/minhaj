@@ -1,0 +1,23 @@
+IMAGE: t-p122-sam.png
+CONSIGNE: Transcris EXACTEMENT le bloc تصحيف السمع MOT À MOT : (1) la définition قد يكون سببه ضعف السمع... ; (2) le nom du narrateur du حديث : عاصم الأحول ? LETTRE PAR LETTRE ; (3) la version fausse entre guillemets : عن واضل الأحذب ou عن واصل الأحدب ou autre ? LETTRE PAR LETTRE (ض = 1 point au dessus, ص = 3 dents, د vs ذ) — décris les points de chaque lettre ; (4) la phrase فذكر الدارقطني... jusqu'au crochet final chiffre par chiffre.
+---
+**Transcription exacte du bloc تصحيف السمع :**
+
+**(1) Définition :**
+
+ـ تصحيف السمع: وَقَدْ يكون بسبب ضعف السمع، أو بعده، أو غَيْرِ ذلكَ، فَتُشْبِهُ عَلَيْهِ بِمَضْ الكلمات، فَأَحْدَبُ...
+
+**(2) Narrateur :** «عاصم الأحول» — lettre par lettre : ع-ا-ص-م (ص = 3 dents) الأ-ح-و-ل.
+
+**(3) Version fausse entre guillemets :** «عن واصل الأحدب» — lettre par lettre :
+- ع-ن
+- و-ا-س-ل : **س** (3 dents au-dessus, et non ض qui a 1 point)
+- الأ-ح-د-ب : **د** (point unique au-dessus, et non ذ qui aurait 2 points)
+
+Donc c'est bien واصل الأحدب (avec س à trois dents et د à un seul point).
+
+**(4) Phrase finale :**
+
+الدارقطني قال هذا من تصحيف السمع لامن تصحيف البصر، كانته ذهب -والله اعلم- إلى أن ذلك مِمّا لا يُشتبه من حديث الكثابة، وإنما أخطأ فيه سمع من رواه. [مقدمة ابن الصلاح، ص 389]".
+
+Note : le nombre à la fin lu digit par digit : **3** puis **8** puis **9** = 389.

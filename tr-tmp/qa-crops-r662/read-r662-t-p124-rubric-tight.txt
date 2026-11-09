@@ -1,0 +1,17 @@
+IMAGE: t-p124-rubric-tight.png
+CONSIGNE: Image zoom MAXIMUM sur la rubrique verte. Transcris LETTRE PAR LETTRE avec description des dents de chaque lettre : الاستثمار (ث à 3 dents) ou الاستتمار (ت à 2 dents) ou الاستتمام ? Décris puis conclus.
+---
+**Lecture lettre par lettre (de droite à gauche) :**
+
+- **ا** : alif isolé, sans dent, hampe verticale nue.
+- **ل** : lam, sans dent (elle n'en porte jamais), avec sa partie ascendante.
+- **ا** : alif médian sans dents.
+- **س** : sīn, **3 dents** (trois crêtes ondulées clairement visibles).
+- **ت/ث** : la lettre porte **trois points au-dessus** — on distingue nettement trois points disposés en triangle (pas deux).
+- **م** : mīm médian, sans dent, forme ronde fermée.
+- **ا** : alif sans dent.
+- **ر** : rāʾ final, sans dent, avec descente courbe vers la gauche.
+
+**Transcription :** الاستثمار
+
+**Conclusion :** le glyphe porte trois points sur la lettre en question (ث à trois points, distincts même si le flou de l'image les fait paraître légèrement fusionnés), donc il s'agit de **الاستثمار** (avec ث à 3 dents pour le sīn précédent et ث à 3 points), et non الاستتمار ni الاستتمام.

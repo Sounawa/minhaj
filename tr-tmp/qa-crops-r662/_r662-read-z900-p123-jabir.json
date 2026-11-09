@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Remarque préalable :** l'image fournie ne contient PAS le hadith de جابر, ni le crochet [صحيح مسلم...] correspondant, ni la note « حرفه غندر... », ni la glose « والأكحل ». Je ne peux donc pas les transcrire — je n'invente rien. Voici uniquement le texte réellement visible :\n\nمع بفاء صواره الخط. وقاله حديث جابر رضي الله عنه: «رَمَيْتِ [؟] بِي يَوْمَ الأَحْرَبِ عَلَى ا ل ح ص ب\n\nفَكَاوَهُ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ» [صحيح مسلم، كتاب السلام، باب كراهية دواء واستحباب النداوي] حرفـه\n\nغندر وقال فيه: أبي، وإِنَّما هو أبي بِن كَعْب، وأبو جابر كان قد استَشهد قبل ذلك بأحد. [مقدمة ابن\n\nالصلاح، ص 385] وَالأَكَحَلُ: عَرَقٌ فِي اللَّيْدِ وَسَطِ الذَّرَاعِ.\n\n**2. الفرق بين المصحف والمحرف:**\n\nالمصفف يكون التغيير فيه بتغيير حرف أو حروف مع بقاء صورة الخط، والمحرف يكون\n\nالتغيير فيه بالنسبة إلى شكل الحرف مع بقاء صورة الخط، وكلاهما يجمعهما التغيير ويتفاوتان فِي\n\n*(Vocabulaire)*",
+        "reasoning_content": "The image doesn't contain the جابر hadith — the question asks about it but the image shows different text. The question seems mismatched. I should transcribe what's actually visible and note the requested elements aren't present. But instructions say answer only the question, transcribe exactly visible. The visible text is about مع بفاء صوار... Let me transcribe visible lines.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794214778,
+  "id": "2026110916591872305112010a4b86",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110916591872305112010a4b86",
+  "usage": {
+    "completion_tokens": 478,
+    "completion_tokens_details": {
+      "reasoning_tokens": 78
+    },
+    "prompt_tokens": 8357,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8835
+  }
+}

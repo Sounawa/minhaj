@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) Numéro : 23\n(2) Titre : المصحف والمحرف (c'est bien المصحف والمحرف, pas الصحف والتحريف)\n(3) Label أهداف الدرس : non visible dans cette image.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794214819,
+  "id": "202611091700108c8b21602b8f414c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611091700108c8b21602b8f414c",
+  "usage": {
+    "completion_tokens": 56,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8254,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8310
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "تصحيف في الإسناد: ومثاله: حديث شعبة عن العوام بن مراجم، عن أبي عثمان النهدي\n\n(الجزء السفلي من السطر محجوز في الصورة؛ لا أستطيع قراءة نص حديث عثمان بن عفان ولا مرجع علل الدارقطني — غير ظاهرين في الصورة المقدمة.)",
+        "reasoning_content": "Transcribe the تصحيف في الإسناد example line.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794214914,
+  "id": "20261109170148adc3798b7683452e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261109170148adc3798b7683452e",
+  "usage": {
+    "completion_tokens": 108,
+    "completion_tokens_details": {
+      "reasoning_tokens": 13
+    },
+    "prompt_tokens": 8150,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8258
+  }
+}

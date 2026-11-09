@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "ب- اصطلاحا: المحرف: عرفه ابن حجر بأنه ما كان التغيير فيه بالنسبة إلى شكل الحروف، مع بقاء صورة الخط. ومن المثال عليه حديث جابر رضي الله عنه: «درءَي أبي يوُم الأحزابِ عَلَى أكَحلٍ فكوَاه رَسولُ اللهِ صَلَّى اللهُ عَلَيه وَسَلَّمَ» [صحيح مسلم، كتاب السلام، باب لكل داء دواء واستشباب النوَي] حرفَ ب– عرف، والحرف كتاب في.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794214979,
+  "id": "2026110917025082d65ed3288644f6",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110917025082d65ed3288644f6",
+  "usage": {
+    "completion_tokens": 155,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8259,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8414
+  }
+}

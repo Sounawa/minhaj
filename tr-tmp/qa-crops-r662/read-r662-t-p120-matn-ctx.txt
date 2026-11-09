@@ -1,0 +1,8 @@
+IMAGE: t-p120-matn-ctx.png
+CONSIGNE: Transcris EXACTEMENT la citation encadrée en entier avec ses voyelles : قال الحافظ ابن حجر رحمه الله: «... puis les mots suivants MOT À MOT jusqu'au guillemet final. Le mot après بقاء est-il السياق ou السُّباق ou الساق ? LETTRE PAR LETTRE (ش a 3 dents, ب a 1 point en dessous).
+---
+النص المكتوب في الإطار هو:
+
+قال الحافظ ابن حجر رحمه الله: «... . . . أوْ بِتَغْيِيرِ مَعِ بَقاءِ السِّياقِ: فالحَذْفُ وَالحَرْفُ».
+
+أما الكلمة بعد «بقاء» فهي **السِّياق** — حرفاً بحرف: ا ل س ي ا ق، مع الشين التي لها ثلاث أسنان (سـيـاق)، وليست السُّباق (لا توجد نقطة تحت الحرف الثاني كما في الباء) ولا الساق.

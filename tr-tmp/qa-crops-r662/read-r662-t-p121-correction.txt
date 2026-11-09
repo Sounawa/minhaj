@@ -1,0 +1,4 @@
+IMAGE: t-p121-correction.png
+CONSIGNE: Transcris EXACTEMENT la phrase de correction MOT À MOT : صحف فيه يحيى بن معين، فقال: «ابن مزاحم» — puis la parenthèse (بالزاي والحاء ?) — puis le verbe après la parenthèse : فرد عليه ou فردّه ou autre ? LETTRE PAR LETTRE (y a-t-il une شدة sur la ر du verbe ? un ياء final ?) — puis وإنما هو: «ابن مراجم» — puis la parenthèse suivante — puis le crochet final chiffre par chiffre.
+---
+صحّف فيه يحيى بن معين، فقال: «ابن مزاحم» (بالزاي والحاء [؟] فردّ عليه، وإنما هو: «ابن مراجم» — بالراء [؟] والجيم [مراجم [؟]، ص[؟]
