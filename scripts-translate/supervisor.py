@@ -627,6 +627,55 @@ def write_status(state: dict, workers_books: set[str], scan: dict) -> None:
 
 # ── Boucle principale ─────────────────────────────────────────────────────────
 
+# ── Garde mémoire (consigne utilisateur 09-11 : « vérifier/libérer la mémoire
+#    à chaque cron, JAMAIS de crash RAM » — sandbox 4 Go, zéro swap) ──────────
+MEM_GUARD_LOG = os.path.join(HOME, "tr-tmp", "memory-guard.log")
+MEM_GUARD_THRESHOLD_MB = 900  # marge avant OOM pour les workers VLM/OCR 1200 dpi
+
+
+def memory_guard() -> None:
+    """Vérifie MemAvailable à CHAQUE cycle (60 s). Si < seuil : purge sûre —
+    chrome agent-browser résiduels + doublons next-server. Ne touche JAMAIS
+    le next-server unique, le superviseur, la gateway, ni les workers python."""
+    try:
+        with open("/proc/meminfo", encoding="utf-8") as fh:
+            info = fh.read()
+        avail_kb = int(re.search(r"MemAvailable:\s+(\d+)", info).group(1))
+    except Exception:
+        return
+    avail_mb = avail_kb // 1024
+    if avail_mb >= MEM_GUARD_THRESHOLD_MB:
+        return
+    stamp = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+    def mem_log(msg: str) -> None:
+        try:
+            os.makedirs(os.path.dirname(MEM_GUARD_LOG), exist_ok=True)
+            with open(MEM_GUARD_LOG, "a", encoding="utf-8") as fh:
+                fh.write(f"{stamp} SUPERVISEUR: {msg}\n")
+        except Exception:
+            pass
+    mem_log(f"MemAvailable={avail_mb}Mo < {MEM_GUARD_THRESHOLD_MB}Mo — purge engagée")
+    # 1) chrome agent-browser résiduels (QA navigateur — relançables à volonté)
+    try:
+        subprocess.run(["agent-browser", "close"], capture_output=True, timeout=20)
+        subprocess.run(["pkill", "-f", "/home/z/.agent-browser/browsers/"],
+                       capture_output=True, timeout=15)
+        mem_log("chromes agent-browser fermés")
+    except Exception:
+        pass
+    # 2) doublons next-server : garder le plus ancien (celui qui sert :3000)
+    try:
+        out = subprocess.run(["pgrep", "-f", "next-server"],
+                             capture_output=True, text=True, timeout=15)
+        pids = sorted(int(p) for p in out.stdout.split() if p.isdigit())
+        for pid in pids[1:]:
+            subprocess.run(["kill", str(pid)], capture_output=True, timeout=10)
+            mem_log(f"doublon next-server {pid} tué (gardé {pids[0]})")
+    except Exception:
+        pass
+    mem_log("purge mémoire effectuée")
+
+
 def main() -> None:
     os.makedirs(LOGS, exist_ok=True)
     os.makedirs(INBOX, exist_ok=True)
@@ -656,6 +705,7 @@ def main() -> None:
 
         try:
             state["cycles"] = state.get("cycles", 0) + 1
+            memory_guard()  # consigne utilisateur 09-11 : jamais de crash mémoire
             running, active = worker_snapshot()
 
             # 1. Workers : maintenir MAX_CONCURRENT sur les livres non finis (v3).
