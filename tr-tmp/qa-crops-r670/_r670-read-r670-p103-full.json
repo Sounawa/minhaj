@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription de la page (ordre de lecture, de droite à gauche)\n\n## Ligne d'évaluation (encadré haut de page)\nأتأمل النص وأقارن معنى الرفث والفسوق والجدال في الحج بما ورد عند المالكية من خلال كتب الأحكام\n\n## Titre de section (pastille verte)\nالإعداد القبلي\n\n## Consigne et éléments numérotés\nأحفظ أحاديث الدرس المقبل وأجيب عن الآتي:\n\n1 - أبحث عن حكم الصيام أيام منى.\n\n2 - أبحث عن صفة التكبير أيام منى.\n\n3 - أبحث عن حكم قصر الصلاة بمنى.\n\n## Autres éléments\n- Ligne décorative géométrique bleue en haut de page.\n- Ligne horizontale bleue en bas de page.\n- Numéro de page (médaillon bleu, en bas à gauche) : 103\n\n## Notes (français)\n- Page 103 d'un manuel scolaire arabe (éducation islamique), mise en page épurée : en-tête décoratif bleu, pastille verte pour le titre « الإعداد القبلي », chiffres 1-2-3 en bleu.\n- La consigne introduit des recherches préparatoires sur les règles du jeûne, du takbîr et de la prière abrégée à Mina (jours du pèlerinage).\n- Aucun texte illisible détecté ; tout est transcrit tel quel.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794241293,
+  "id": "2026111000212634dad1ef4f904217",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026111000212634dad1ef4f904217",
+  "usage": {
+    "completion_tokens": 344,
+    "completion_tokens_details": {
+      "reasoning_tokens": 343
+    },
+    "prompt_tokens": 8189,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8533
+  }
+}

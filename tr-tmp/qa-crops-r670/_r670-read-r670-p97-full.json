@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription — Lesson 14: أحكام مزدلفة\n\n## 1) Banner and medallion\n\n- Blue medallion: **الدرس** / **14**\n- Green banner: **أحكام مزدلفة**\n\n## أهداف الدرس\n\n**1** - أن أتعرّف أحكام ليلة العاشر من ذي الحجة.\n\n**2** - أن أتعرّف حكم الدعاء والذكر ليلة المزدلفة، وعند الوقوف بالمشعر الحرام.\n\n*Note: In objective 2, ليلة is followed by **المزدلفة** (ليلة المزدلفة) — not ليلة العاشر.*\n\n## 2) تمهيد (intro paragraph)\n\nمن مناسك الحجّ النزول بالمزدلفة وهي موضع بين عرفات ومنى؛ وسميت بذلك لأنّه يُنقَرَب فيها إلى الله تعالى، أو لاقتراب الناس إلى منى بعد الإفاضة، أو لمجيء الناس إليها في زلف من الليل، أو لأنها أرض مستويّة مكتنسة، وهذا اقترب. وترلُفوا: تقدموا، وتقرّبوا.\n\n⚠️ **Caveat on the reason clause:** the diacritics are heavily stylized and several words in the clause after لِأنّـ are only partially legible at this resolution. What is clearly readable: «...أو لاقتراب الناس إلى منى بعد الإفاضة، أو لمجيء الناس إليها في زِلف من الليل، أو لأنها أرض مستويّة مكتنسة...» — the reading **مستويّة مكتنسة** before \"وهذا اقترب\" is the most probable but some vowel marks are [؟]. The final sentence (وترلفوا: تقدموا، وتقرّبوا) is partially blurred: \"وترلفوا\" may actually read **وتزلفوا** (matching زِلف earlier) — mark [؟] on that verb.\n\n## 3) Guiding questions\n\nفما هي صفة السير إلى المزدلفة؟ وما أحكام المبيت والصلاة بها؟ وما حكم الوقوف بالمشعر الحرام؟\n\n## 4) الأحاديث — first hadith\n\nـ مالك، عن هشام بن عروة، عن أبيه، أنه قال: «سألتُ أسامةَ بن زيدٍ وأنا جالسٌ معه: كيف كان يسير رسول الله ﷺ في حجة الوداع، حين دفع؟» فقال: كان يسير العَنق، فإذا وجد فُجوَة نصّ. قال مالك: «قال هشام: والنَّصّ فوق العَنق» [الموطأ رقم: **1165**].\n\n**Number check, digit by digit:** 1 – 1 – 6 – 5 → **1165** ✅ (not another value).\n\n### Notes (French)\n- Page numérotée 97 (en bas à gauche, médaillon bleu).\n- Le hadîth est celui de Mâlik dans le Muwaṭṭaʾ, via Hishâm b. ʿUrwa, sur Usâma b. Zayd — numéroté 1165.\n- Zone décorative géométrique bleue en haut de page (non textuelle).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794241130,
+  "id": "20261110001826a618f2e2fcc84994",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261110001826a618f2e2fcc84994",
+  "usage": {
+    "completion_tokens": 768,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8392,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9160
+  }
+}
