@@ -1,9 +1,9 @@
 {
- "ts": 1794224906.9690864,
- "iso": "2026-11-09T11:48:26Z",
+ "ts": 1794225690.9598408,
+ "iso": "2026-11-09T12:01:30Z",
  "version": "v4",
  "startedAt": "2026-10-31T15:29:57Z",
- "cycles": 13,
+ "cycles": 26,
  "wakeCount": 0,
  "workers": {
   "active": 0,
@@ -11,12 +11,12 @@
  },
  "remainingDocs": 0,
  "registry": {
-  "hand": 1143,
+  "hand": 1144,
   "llm": 57
  },
  "portal": {
   "state": "FERMÉE",
-  "ts": "2026-11-09T11:37:14Z",
+  "ts": "2026-11-09T11:52:28Z",
   "detail": "bannière de maintenance présente"
  },
  "sourceHunt": {
@@ -29,9 +29,12 @@
   "collection": "collection:DÉJÀ-EN-CACHE(tafsir-2-thanawi_text.pdf)",
   "detail": "direct=404"
  },
- "lastAutoCommit": null,
+ "lastAutoCommit": {
+  "ts": "2026-11-09T11:57:28Z",
+  "subject": "auto(pipeline): 2026-11-09 11:57 — superviseur v4 (battement, registre, chasse)"
+ },
  "lastPush": {
-  "ts": "2026-11-09T11:47:26Z",
+  "ts": "2026-11-09T11:57:30Z",
   "ok": true
  }
 }
