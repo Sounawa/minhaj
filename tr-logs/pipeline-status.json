@@ -1,9 +1,9 @@
 {
- "ts": 1794209937.6042638,
- "iso": "2026-11-09T07:38:57Z",
+ "ts": 1794210840.205455,
+ "iso": "2026-11-09T07:54:00Z",
  "version": "v4",
  "startedAt": "2026-10-31T15:29:57Z",
- "cycles": 496,
+ "cycles": 511,
  "wakeCount": 0,
  "workers": {
   "active": 0,
@@ -16,7 +16,7 @@
  },
  "portal": {
   "state": "FERMÉE",
-  "ts": "2026-11-09T07:24:49Z",
+  "ts": "2026-11-09T07:39:58Z",
   "detail": "bannière de maintenance présente"
  },
  "sourceHunt": {
