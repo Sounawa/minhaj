@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "بـ- مكان رمي جمرة العقبة: عن مالك أنه سأل عبد الرحمن بن القاسم بن أبي كان\n\nالقاسم يرمي جمرتها؟ فقال: «رمى حبيباً نثيّر» [الموطأ رقم: 1217]، وقد صرح أنه عليه الصلاة",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794350219,
+  "id": "20261111063655bf1c20a408f3494b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261111063655bf1c20a408f3494b",
+  "usage": {
+    "completion_tokens": 80,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 7772,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7852
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1 - أبين حكم الميت بمنى أيام الرمي.\n\n2 - أبين صفة الرمي وآدابه.\n\n3 - أبين حكم تأخير الرمي.\n\n● فقه الحديث",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794349521,
+  "id": "2026111106251858dc3d73f41848dd",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026111106251858dc3d73f41848dd",
+  "usage": {
+    "completion_tokens": 51,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2307,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2358
+  }
+}

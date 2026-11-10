@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "وأَنْ أَقَامُوا إِلَى الْغَدِ، رَمَوْا مَعَ النَّاسِ يَوْمَ النَّفْرِ الْآخِرِ وَنَفَرُوا» [الموطأ رقم: 1223]، ويُلحق برعايه الإبل أهل الأعذار الأخرى غير الرعى.\n\nثانياً: رمي الجمار\n\n1 - مكان وزمان الرمي\n\nأ- وقت رمي الجمار: لا ترمي الجمار في الأيام الثلاثة لغير المتعجل، واليومين",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794349577,
+  "id": "20261111062545e11da03908a848eb",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261111062545e11da03908a848eb",
+  "usage": {
+    "completion_tokens": 153,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2307,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2460
+  }
+}

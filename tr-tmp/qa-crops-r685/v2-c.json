@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "رماها من بطن الوادي، وتمتاز جمرة العقبة بأربع Mention: اختصاصها بيوم النحر، وأخرى...\n\nلا أوفق عندها، وترمي ضحى إن أمكن، ومن أسفلها ندبا عند الإمكان.\n\n**Correction** — transcription exacte :\n\nرماها من بطن الوادي، وتمتاز جمرة العقبة بأربع أنثياء: اختصاصها بيوم النحر، وأخرى لا أوفق عندها، وترمي ضحى إن أمكن، ومن أسفلها ندبا عند الإمكان.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794350119,
+  "id": "20261111063515ff79f068785441c8",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261111063515ff79f068785441c8",
+  "usage": {
+    "completion_tokens": 137,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2728,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2865
+  }
+}

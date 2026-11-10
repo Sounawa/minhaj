@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "أولا: المبيت بمنى أيام الرمي\n\n1 - حكم المبيت بمنى أيام الرمي\n\nالمبيت بمنى أيام الرمي ثَلاَث ليلَ لمن لم يتَعجل، وللثَلثين للمتَعجل واجب من واجبات الحجّ، فمن تركه رأسا أو جل ليلة فعليه الدَّم هدًى عن كل ليلة، ويدل للوجوب ما رواه مالك عن هشام بن عروة عن أبيه أنه قال في البيتوثة بمكة ليلَا منَ: «لا\n\n(ملاحظة: النسخة المطبوعة مقطوعة في نهاية السطر الأخير؛ لم أُغير شيئًا ولا أُكمل النص.)",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794349526,
+  "id": "202611110625216ff03bd7d7f645b9",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611110625216ff03bd7d7f645b9",
+  "usage": {
+    "completion_tokens": 194,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2307,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2501
+  }
+}

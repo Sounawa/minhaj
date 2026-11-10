@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "– مَالِكٌ، عَنْ عَبْدِ اللَّهِ بْنِ أَبِي بَكْرِ بْنِ حَزْمٍ، عَنْ أَبِيهِ، عَنْ أَبَا الْبَجَاجِ\n\nعَاصِمِ بْنِ عُمَرَ بْنِ خَرَّهَ، عَنْ أَبِيهِ: «أَنَّ رَسُولَ اللهِ صَلَّى اللهُ وَسَلَّمَ أَرْخَصَ لِرُعَاةِ الْإِبِلِ فِي الْبِيْتُوْتَةِ خَارِجَتِهَا، وَبِرْمَوْنَ يُوْمَ التَّحْرُرِ... لَحْمَ يَرْمُوْنَ التَّقْدَ... الْمُتَ...",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794348904,
+  "id": "20261111061457128b5f3ad8c048dd",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261111061457128b5f3ad8c048dd",
+  "usage": {
+    "completion_tokens": 255,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8120,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8375
+  }
+}

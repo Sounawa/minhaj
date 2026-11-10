@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "ترجمة الراوي\n\n**ناقع:** هو أبو عبد الله نافع مولى عبد الله بن عمر وراويته، من أنمة التابعين بالمدينة، ديلمي الأصل، كان علامة في الفقه، كثير الرواية للحديث، ثقة، ويعد مالك بن أنس أشهر من لزمه وحذّت عنه، قال عنه مالك: «إذا قال نافعٌ شِدًّا فاحتم عليه». وقال البخاري: أصح الأسانيد كلها مالك عن نافع عن ابن عمر. ولاه عمر بن عبد العزيز بـ",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794349417,
+  "id": "202611110623335357ba9dbef5445b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611110623335357ba9dbef5445b",
+  "usage": {
+    "completion_tokens": 144,
+    "completion_tokens_details": {
+      "reasoning_tokens": 143
+    },
+    "prompt_tokens": 2307,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2451
+  }
+}

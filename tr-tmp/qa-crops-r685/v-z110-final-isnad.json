@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "عاصم بن عبد الله، عن يحيى: «إن رسول الله ﷺ ازجحص برعاو الأبل في\n\nاللَّيْلَةِ ذِي حُجَةٍ دَأْبَفَا الْقَذِرَةِ قَيْرُمِ\n\nNote : la deuxième ligne est très coupée et illisible par endroits ; la transcription ci-dessus est le meilleur déchiffrage possible. La première ligne correspond vraisemblablement à : « عاصم بن عبد الله، عن يحيى: أنَّ رسول الله ﷺ ازدحم برعيّ الأبل في... » (formule classique du Muwaṭṭaʾ).",
+        "reasoning_content": "Line 1: عاصم بن عبد الله، عن يحيى: «إن رسول الله ﷺ ازرجحص برعامو الأبل في...» Actually text: \"عاصم بن عبد الله، عن يحيى: «إن رسول الله ﷺ ازجحص برعامو الأبل في...\" Hmm. Known Muwaṭṭaʾ: عاصم بن عمر? Likely \"عاصم بن عبد الله، عن يحيى: أن رسول الله ﷺ ازدحم برعام الأبل في...\" Hard. Read: \"عاصم بن عبد الله، عن يحيى: إن رسول الله ﷺ ازجحص برعاو الأبل في\" — actual Muwaṭṭaʾ hadith: \"أن رسول الله ﷺ أهدر عن بُرَيدة...\" Not sure. Transcribe literally: عاصم بن عبد الله عن يحيى أن رسول الله ﷺ ازدحم برعام الأبل في. Second line partial: \"الليلةِ ذي حجةٍ...\" hmm visible: \"ابن عمر دأبفا الليرة قذربةل قيرم\" unclear. Given low quality, transcribe best: \"الليلةَ ذي حجةٍ قليس...\" I'll give best effort.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794349259,
+  "id": "2026111106205170df8db2a3564b2a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026111106205170df8db2a3564b2a",
+  "usage": {
+    "completion_tokens": 464,
+    "completion_tokens_details": {
+      "reasoning_tokens": 278
+    },
+    "prompt_tokens": 4785,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5249
+  }
+}

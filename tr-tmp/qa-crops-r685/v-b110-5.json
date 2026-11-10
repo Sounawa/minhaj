@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "عَاصِم بْن عَدِيِّ أَخِيرَهُ، عَنْ أَبِيهِ: »أَنَّ رَسُولَ اللهِ ﷺ أَرْخَصَ لِرَعَاءِ الْإِبِلِ فِي الْبَيْتُونَةُ خَارِجِينَ عَنْ مَنِي، يُرْمُونَ يَوْمَ النَّحْرِ، ثُمَّ يُرْمُونَ الْغَدَ، وَمِنْ بَعْدِ الْغَدِ لَيُوْمِينَ، ثُمَّ يُرْمُونَ يَوْمُ النَّفْرِ» [الموطأ رقم: 1221].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794348819,
+  "id": "20261111061334bdfb3e30e5fe4d59",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261111061334bdfb3e30e5fe4d59",
+  "usage": {
+    "completion_tokens": 213,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2409,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2622
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "- مَالِكٍ، عَنْ نَافِعٍ: »أَنَّ عَبْدَ اللَّهِ بْنَ عُمَرَ كَانَ يَقْفُ عِنْدَ الْجُمَرَةِ الْأُولَيْنِ\n- وَقُوفًا طَوِيلًا، يُكْبِرُ اللَّهَ، وَيُسَبِّحُهُ وَيَحْمَدُهُ، وَيِدْعُو اللَّهَ، وَلَا يَقْفُ عِنْدَ جَمْرَةِ\n- الْعَقَبَةِ» [الموطأ رقم: 1212].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794349406,
+  "id": "202611110623224de60e5b458440de",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611110623224de60e5b458440de",
+  "usage": {
+    "completion_tokens": 199,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2307,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2506
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "البيتوتة خارِجين عَنْ مَنْى، يَرْمُون يومَ النَّحْر، ثُمَّ يَرْمُونَ الغَدَ، ومن بَعْدَ الغَدِ\nلبواحٍ، ثُمَّ يَرْمُونَ يومَ النَّفْرِ» [الموطأ رقم: 1221].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794348887,
+  "id": "2026111106144235fc7e35fea84c14",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026111106144235fc7e35fea84c14",
+  "usage": {
+    "completion_tokens": 102,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 7949,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8051
+  }
+}
