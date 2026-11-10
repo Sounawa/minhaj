@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## Transcription (exact, RTL)\n\n**1) Green sub-heading:**\n\n> **٢ - العمل في الهدي**\n\n**2) Quote from عبد الله بن عمر — full matn:**\n\n> عَنْ عَبْدِ اللهِ بْنِ عُمَرَ: «اَنَّهُ كَانَ إِذَا أَهْدَى هَذِيَا مِنَ الْمَدِينَةِ قَالَ: وَاَلشَّعْرَهُ بِذِي الْحُلَيْفَةِ، يُقَلِّدُهُ اَنْ يُشْعِرَهُ، وَذَلِكَ فِي مَكَانٍ وَاحِدٍ، وَهُوَ مَوْجِهُ لِلْقَبَلَةِ، يُقَلِّدُهُ بِعَقْلِينَ، وَيُشْعِرُهُ مِنَ الثَّنَا اَلْاَبْسَرِ، نَمْ يُسَاوِقُ مَعَهُ حَتَّى يَوْقِفَ بِهِ مَعَ النَّاسِ بِعَرَفَهُ، نَمْ يَدْفَعُ بِهِ مَعَهُمُ اِذَا دَفَعُوا، فَاِذَا قَدِمَ مِنِى عَذَاةَ النَّحْرِ نَحَرَهُ قَبْلَ اَنْ يَخْلُقَ اَوْ يَصْبِرَ، وَكَانَ هُوَ يَنْحَرُ هَدْيِهِ بِيَدِهِ يُصَدِّغُهُمَا، وَيُوَجِّهُهُنَّ لِلْقَبَلَةِ، نُمْ يُاَكُلُ وَيُطْعِمُ»، وَعَنْ نَافِعٍ: «اَنَّ عَبْدَ اللهِ بْنَ عُمَرَ كَانَ…\n\n**Réponses aux questions précises:**\n- «قَبْلَ اَنْ يَخْلُقَ اَوْ يَصْبِرَ» — c'est bien **يَخْلُقَ** (pas «يَدْ» ni «قُدّه» attendu ailleurs) ; le mot transcrit est **بِذِي الْحُلَيْفَةِ** (avec ال), et **بِعَقْلِينَ** — conformes à vos hypothèses.\n- **Ce passage n'a PAS de crochet bleu [الموطأ رقم: NNN]** : le seul crochet bleu visible est celui du hadith précédent (au-dessus de l'interligne vert) : **[الموطأ رقم: ١١٢٠] = 1120**.\n- Le matn se poursuit avec **وَعَنْ نَافِعٍ: «اَنَّ عَبْدَ اللهِ بْنَ عُمَرَ كَانَ…** — la suite (طعن في سنام هديه… بسم الله وله أكبر) est **hors de cette image** : [؟]. Le crochet bleu 1114 attendu n'est pas visible ici [؟].\n- La phrase «لقوله تعالى: «لِتُكَبِّرُوا اللهَ عَلَى مَا هَدَاكُمْ» [سورة الحج الآية: …]» n'est **pas visible** sur cette capture : [؟] — ni le nom de la sourate ni le numéro de l'ayah.\n\n**Notes:**\n- Le texte est en méthode d'enseignement «القراءة الد''الية»? non — c'est un manuel de fiqh du hadî avec vocalisation complète (tashkīl intégral).\n- «نم» apparaît deux fois pour «ثُمَّ» — coquille typographique de l'imprimeur (sīn au lieu de thā'), signalée telle quelle dans la transcription.\n- Crochet bleu vérifié : **١١٢٠ → 1,1,2,0** (al-Muwaṭṭaʾ).",
+        "reasoning_content": "The image shows text. Green heading: ٢ - العمل في الهدي. First quote (عن عبد الله بن عمر): «إنّ اهدي هذين اهدي...\" — transcribe. Second quote وعن نافع... on next page presumably; but only this image provided — the image shows only first part. The user asks for items 2-4 not fully visible. I should transcribe what's visible and mark rest [؟].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794270357,
+  "id": "2026111008252452516e6a39c442e7",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026111008252452516e6a39c442e7",
+  "usage": {
+    "completion_tokens": 1178,
+    "completion_tokens_details": {
+      "reasoning_tokens": 95
+    },
+    "prompt_tokens": 8258,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9436
+  }
+}

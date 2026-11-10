@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription — Page 2, Lesson 17: أحكام الهدي (الموطأ)\n\n## 1) الأول أثر\n\nـ مالك، عن جعفر بن محمدٍ عن أبيه عن عليِّ بن أبي طالبٍ كان يقول: «ما استَقْبَلَ من المُهْدي شاةٌ» [الموطأ رقم: 1141].\n\n*(Note: the isnād in the image reads عن جعفر بن محمد عن أبيه عن علي بن أبي طالب — not \"محمد بن جعفر\" as queried; the text layer digits 1411 are reversed → printed as 1141.)*\n\n## 2) الثاني أثر\n\nـ مالك، عن نافعٍ عن عبد الله بن عمرَ: «أنه كان إذا أهدي هديًا من المدينة قَدَه وأشعَره بذي الحليفة، يُقَلِّده قبل أن يُشعِرَه، وذَلِك في مكانٍ واحد، وهو مُوَجَّهٌ للقِبلة، يُقَلِّده بِعَلْين، ويُشعِرُه من الشق الأيسر، ثم يَسُوقُ معه، حتى يوقِف به مع الناس بعرفة، ثم يَدْفَعُ به معهم إذا دَفَعوا، فإذا قَدِم منى غَدَاةَ النحر نحَرَه قبل أن يحلِقَ أو يقصِر، وكان هو يَنْحَر هديَه بيده يصفهن قيامًا ويُوَجِّهُهُنَّ ثم يأكل ويُطعِم» [الموطأ رقم: 1113].\n\n*(Text layer 3111 → printed 1113.)*\n\n## 3) الثالث أثر\n\nـ مالك، عن نافعٍ عن عبد الله بن أبي بكرٍ بن محمد بن عمرو بن حزم: «أن رسول الله ﷺ أهدي جَمَلًا كان لأبي جَهْلٍ بن هشامٍ في حَجٍّ أو عمرةٍ» [الموطأ رقم: 1106].\n\n*(Text layer 6011 → printed 1106.)*\n\n## ترجمة الراوية\n\nـ **علي بن أبي طالب رضي الله عنه:** هو علي بن أبي طالب، ابن عم رسول الله ﷺ وزوج ابنته فاطمة رضي الله عنها، الخليفة الرابع لرسول الله ﷺ، ذو المناقب الكثيرة، والمواقف العظيمة، توفي في عام: 40 هـ.\n\nـ **عبد الله بن أبي بكر:** هو عبد الله بن أبي بكر بن محمد بن عمرو بن حزم الأنصاري المدني، تابعي، روى عنه الزهري وابن جريج وابن إسحاق ومالك بن أنس وغيرهم. كان من الرواة الأوائل الذين اهتمّوا برواية الأحاديث المتعلقة بالسير، حتى عُده النهبي من أصحاب المغازي. توفي في سنة 135 هـ.\n\n---\n\n## Notes (français)\n\n1. **Numérotation du Mowatta** : les numéros bleus imprimés sont 1141, 1113, 1106 ; la couche texte OCR les inverse (1411, 3111, 6011) — lecture chiffre par chiffre confirmée sur l'image.\n2. **Premier athar** : l'isnād imprimé est *جعفر بن محمد عن أبيه* (Ja'far b. Muhammad, i.e. al-Sādiq, de son père) et non « محمد بن جعفر » — la version de la requête est à corriger.\n3. **Troisième athar** : le transmis est عبد الله بن أبي بكر بن محمد بن عمرو بن حزم (et non « علي بن أبي طالب » ni simplement « ابن حزم ») ; la particule رَسولُ الله porte le symbole calligraphique ﷺ.\n4. **Biographies** : année de mort d'Ali = **40 هـ** (lisiblement « 40 هـ— » avec tiret) ; année de mort de ʿAbd Allāh b. Abī Bakr = **135 هـ** (et non 131 comme suggéré).\n5. Quelques diacritiques incertains dans le long matn n° 2 marqués selon le contexte ; aucun mot entièrement illisible [؟] n'a été nécessaire.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794269534,
+  "id": "20261110081156d054db376d034f3f",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261110081156d054db376d034f3f",
+  "usage": {
+    "completion_tokens": 1064,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8717,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9781
+  }
+}

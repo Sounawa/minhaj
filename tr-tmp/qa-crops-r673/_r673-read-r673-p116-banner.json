@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Transcription (right-to-left, as printed):**\n\n1) **Medallion:** No round blue medallion with a lesson number is visible on this page — the expected medallion \"17\" is absent. → medallion: [؟] (non visible sur cette page)\n\n2) **Calligraphic lesson title:** Not present on this page. The expected title (أحكام الهدي أو الحج وفتدل) does not appear; this is evidently the *preparation* page preceding the opening banner. → [؟]\n\n3) **Rubric line:**\n**أحفظ أحاديث الدرس المقبل وأجيب عن الآتي:**\n(confirmed word by word: أحفظ / أحاديث / الدرس / المقبل / وأجيب / عن / الآتي — with the colon at the end)\n\n4) **Numbered questions:**\n- **1 - أشرح: نُثْرِيَّةُ – التقليد – الإشعار.**\n  (word order RTL: أشرح : نُثْرِيَّةُ – التقليد – الإشعار — note: the first word after أشرح is **نُثْرِيَّةُ** with vocalization, *not* الإشعار first; الإشعار comes last, with a final period)\n- **2 - أبحث عن معنى المستيسر من الهدي.**\n  (أبحث / عن / معنى / المستيسر / من / الهدي)\n\n5) **Other printed text:**\n- Green banner header, top right: **الإعداد التقبلي** (with a blue dot/circle at its right edge)\n- No page number visible on this page → [؟]\n- Decorative blue geometric frieze along the top edge (no text)\n\n**Notes (français):**\n- Cette page n'est **pas** la bannière d'ouverture avec médaillon ; c'est la page « الإعداد التقبلي » (préparation) qui la précède probablement.\n- Le médaillon « 17 » et le titre calligraphié attendus sont absents : notés [؟].\n- Question 1 : l'ordre réel des mots est « نُثْرِيَّةُ – التقليد – الإشعار », l'OCR attendu inversait l'ordre.\n- Aucun numéro de page imprimé visible.",
+        "reasoning_content": "The image doesn't show a medallion or title—it's the \"الإعداد التقبلي\" page. Report honestly.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794269337,
+  "id": "2026111008084453091839cfd64724",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026111008084453091839cfd64724",
+  "usage": {
+    "completion_tokens": 548,
+    "completion_tokens_details": {
+      "reasoning_tokens": 27
+    },
+    "prompt_tokens": 8187,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8735
+  }
+}

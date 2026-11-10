@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription de la page 3 — الدرس ١٧: أحكام الهدي\n\n---\n\n## 1) Rubrique du haut\n\n**الشرح:**\n\n- **تُجِتْ**: وضَعَتْ.\n- **قُدَّه**: علق في عنق الهدي نعلين من النعال التي تُلبس في الإحرام.\n- **أَشْعَرَه**: شق سنامه.\n\n(Note : la ligne attendue « المجزئة البدنة… شق سنامة… » ne figure pas sur cette page ; le premier point du الششر commence par تُجِتْ [؟].)\n\n---\n\n## 2) استخلاص المضامين:\n\n1 - أَبْين ما يَجْزِئُ مِنَ السَّن في الهدي.\n2 - أَستخلص مِنَ الأحاديث صفة سَوْقِ الهدي.\n3 - أَبين حُكْم الانتفاع بالهدي.\n\n---\n\n## 3) فقّه الحديث\n\nالحج من شَعَائِر الحج العظيمة التي يجب على الحاج معرفة أحكامها وإدراك حُكْمها ومقاصدها، والهدي لغير ترك واجب خاص بالتمتع والقران، فليس على الحاج بالإفراد إلا لترك واجب، ولا لمن أهله حاضر المسجد الحرام.\n\n---\n\n## 4) Titre de section\n\n**أولا: ما يَجُوزُ مِنَ الهدي**\n\n**1 - السن المَجْزِئُ في الهدي**\n\n---\n\n## 5) Citation du Muwaṭṭa\n\nعن نافع: «أَنَّ عَبْدَ اللهِ بْنَ عُمَرَ كَانَ يَقُولُ: فِي الضَّحَايَا وَالْبُدْنِ الثَّنِيَّ فَمَا فَوْقَهُ»، وتفصيل ذلك عند المالكية كالآتي:\n\n**[الموطأ رقم: 1118]** — lu chiffre par chiffre : ١١١٨ (واحد، واحد، واحد، ثمانية) ; le calque du texte donne « 8111 », ordre inversé → **1118**.\n\n---\n\n## 6) Ligne de glose\n\nLa ligne « وتفصيل ذلك عند المالكية كالآتي: » sert de transition ; pas d'autre glose visible sous la citation [؟].\n\n---\n\n## Notes (français)\n\n- La page commence par un paragraphe de **الشرح** (glossaire de termes), non par un commentaire sur المجزئة البدنة ; le contenu demandé en (1) semble se trouver sur une autre page [؟].\n- Le رقم الموطأ bleu : couche texte « 8111 », lecture visuelle digit-by-digit → **1118** (numérotation standard du Muwaṭṭa de Maliki).\n- Numéro de page en bas : **111** (bleu).\n- Mots illégaux/incertains marqués [؟].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794269548,
+  "id": "20261110081214938c72bd71b1437b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261110081214938c72bd71b1437b",
+  "usage": {
+    "completion_tokens": 732,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8432,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9164
+  }
+}
