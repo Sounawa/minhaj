@@ -1,40 +1,37 @@
 {
- "ts": 1794313444.4772863,
- "iso": "2026-11-10T12:24:04Z",
+ "ts": 1794313778.386367,
+ "iso": "2026-11-10T12:29:38Z",
  "version": "v4",
  "startedAt": "2026-10-31T15:29:57Z",
- "cycles": 540,
+ "cycles": 3,
  "wakeCount": 0,
  "workers": {
   "active": 0,
   "books": []
  },
- "remainingDocs": 0,
+ "remainingDocs": 567,
  "registry": {
   "hand": 1151,
   "llm": 57
  },
  "portal": {
   "state": "FERMÉE",
-  "ts": "2026-11-10T12:11:02Z",
+  "ts": "2026-11-10T12:28:35Z",
   "detail": "bannière de maintenance présente"
  },
  "sourceHunt": {
-  "ts": "2026-11-10T11:55:58Z",
-  "book": "tafsir-5ep",
-  "docId": "pdf-mut23h3c-709",
-  "titleFr": "Sourate al-Isrāʾ, verset 1",
+  "ts": "2026-11-10T12:28:36Z",
+  "book": "hadith-5ep",
+  "docId": "pdf-1",
+  "titleFr": "Présentation de l'auteur et de l'ouvrage",
   "direct": "404",
-  "wayback": "DISPONIBLE(20261013031750)",
-  "collection": "collection:DÉJÀ-EN-CACHE(tafsir-2-thanawi_text.pdf)",
+  "wayback": "DISPONIBLE(20251117191829)",
+  "collection": "collection:DÉJÀ-EN-CACHE(hadith-5-ibtidai_text.pdf)",
   "detail": "direct=404"
  },
- "lastAutoCommit": {
-  "ts": "2026-11-10T09:25:08Z",
-  "subject": "auto(pipeline): 2026-11-10 09:25 — superviseur v4 (battement, registre, chasse)"
- },
+ "lastAutoCommit": null,
  "lastPush": {
-  "ts": "2026-11-10T12:16:04Z",
+  "ts": "2026-11-10T12:28:38Z",
   "ok": true
  }
 }

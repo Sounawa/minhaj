@@ -236,17 +236,27 @@ def global_scan() -> dict:
         except Exception:
             continue
         for lesson in data.get("lessons", []):
-            if (lesson.get("html") or "").strip():
-                if str(lesson.get("docId")) not in done:
-                    total += 1
-            elif nxt is None and lesson.get("pdfUrl"):
-                nxt = {"book": book, "docId": str(lesson.get("docId")),
+            did = str(lesson.get("docId"))
+            # R681 : comptage UNIQUEMENT pour le battement/statut (le lancement
+            # des workers v3 reste régi par remaining_docs, html-only — les
+            # leçons pdfOnly sont la matière du flux savant v4 par les ticks
+            # cron). Un doc RESTE s'il n'est pas livré (registre ni htmlFr)
+            # et qu'il a une matière : source html (flux llm) OU pdf (pdfOnly).
+            delivered = did in done or bool((lesson.get("htmlFr") or "").strip())
+            has_html_src = bool((lesson.get("html") or "").strip()) and not lesson.get("pdfOnly")
+            has_pdf_src = bool(lesson.get("pdfUrl"))
+            if not delivered and (has_html_src or has_pdf_src):
+                total += 1
+            if nxt is None and not delivered and has_pdf_src and not has_html_src:
+                nxt = {"book": book, "docId": did,
                        "pdfUrl": lesson.get("pdfUrl"), "titleFr": lesson.get("titleFr", "")}
         intro = data.get("intro") or {}
-        if (intro.get("html") or "").strip() and str(intro.get("docId")) not in done:
+        idid = str(intro.get("docId"))
+        intro_delivered = idid in done or bool((intro.get("htmlFr") or "").strip())
+        if not intro_delivered and ((intro.get("html") or "").strip() or intro.get("pdfUrl")):
             total += 1
         if nxt is not None and total:
-            pass  # on continue : total exact demanded
+            pass  # on continue : total exact demandé
     return {"remaining": total, "nextEmpty": nxt}
 
 
