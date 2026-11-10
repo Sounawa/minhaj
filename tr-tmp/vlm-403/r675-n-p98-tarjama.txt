@@ -1,0 +1,22 @@
+Transcription ligne par ligne :
+
+**Ligne 1 :**
+بَامَهِ، ما طَلَبْتُهُ مِنْكَ [؟] يَسْبِقُ بِيَطِيبَتِهِ إِلَّا احْصَرْتُهُ عَلَيْكَ. قَالَ رَسُولُ اللهِ ﷺ عَلَى جَبِينِ
+
+**Ligne 2 :**
+فَيْهِ أَبُو بَكْرٍ وَعُمَرُ بْنُ الْخَطَّابِ. تَوُفِّي بِالْمَدِينَةِ سَنَةَ ٥٩هـ عَلَى بَعْضِ الْأَقْوَالِ.
+
+**Encadré (vert) :**
+الفهم
+
+---
+
+Renvois numériques visibles :
+-NUM: 59 (pour « سَنَةَ ٥٩هـ » : ٥=5, ٩=9)
+
+---
+
+Remarques importantes :
+- Aucune notice biographique complète « أسامة بن زيد… » ni année de mort « توفي بالمدينة سنة Nه » d'أسامة بن زيد n'est visible dans cette image : le seul renvoi d'année visible est « سَنَةَ ٥٩هـ » qui termine la notice de l'imam **مالك بن أنس** (mort en 179 H dans certaines sources, mais le texte affiche ici ٥٩ — probablement ١٧٩ dont le chiffre ١٧ serait coupé en haut de ligne).
+- Aucun renvoi de la forme [الموطأ رقم: N] ni [سورة X الآية: N] n'est visible sur cette zone.
+- Le mot marqué [؟] en ligne 1 est partiellement illisible ; la numérisation est fortement compressée et les diacritiques ne sont pas tous distinguables individuellement, donc je n'ai pas deviné ceux qui n'étaient pas clairement apparents.

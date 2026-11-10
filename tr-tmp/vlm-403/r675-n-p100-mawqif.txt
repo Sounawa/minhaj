@@ -1,0 +1,23 @@
+# Transcription
+
+**العنوان:**
+
+٢ - الوقوف بمزدلفة
+
+**النص:**
+
+مزدلفة كلها موقف إلا بطن محسر، قال عليه الله: «والمزدلفة كلها موقف وأرن نَفَوا عز بطن محسر» [الموطأ رقم: 1152]، وفي حديث جابر: «قد وقَّفتُ هنا والمزدلفة كلها موقف» [سن أبي داود]، ولسنمر عليه العمل، وحكم هذا الوقف يدور في المدى [?]،
+
+---
+
+**NUM (chiffre par chiffre):**
+
+[الموطأ رقم: 1152] → NUM: 1 1 5 2
+
+---
+
+**Remarques:**
+- Le renvoi visible est « [الموطأ رقم: 1152] » ; les chiffres sont imprimés en chiffres latins (1152), transcrits chiffre par chiffre : **1 1 5 2**.
+- Le renvoi « [سن أبي داود] » est visible mais le numéro n'apparaît pas dans la zone (coupé/tronqué).
+- La fin de ligne (« ...المدى [?] ») est partiellement coupée en bas de la zone ; le dernier mot est incertain.
+- Certaines diacritiques du texte calligraphié sont floues à ce zoom ; la transcription reflète au mieux ce qui est lisible.
