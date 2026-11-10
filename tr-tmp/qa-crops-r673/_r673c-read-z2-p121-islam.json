@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Transcription (bande inférieure-médiane de la page) :**\n\n**1) Phrase et verset cité :**\nامتثالا لقوله تعالى: ﴿**وَلْيُكَبِّرُوا اللهَ عَلَى مَا هَدَاكُمْ**﴾\n\n- Texte exact du verset, lettre par lettre : وَلْيُكَبِّرُوا اللهَ عَلَى مَا هَدَاكُمْ\n- Note : le verbe est **يُكَبِّرُوا** (avec ي, non ن ni ت). Aucun des deux candidats proposés n'est exact : ce n'est ni « لِتُكَبِّرُوا » ni « وَلْيَتَكَبِّرُوا », mais « وَلْيُكَبِّرُوا ».\n\n**2) Crochet bleu (référence coranique) :**\n[سورة البقرة: **184**]\n- Sourate : **البقرة** (donc pas الحج)\n- Numéro du verset, chiffre par chiffre : **1 – 8 – 4** → 184 (pas 37)\n\n**3) Rubrique rouge (pas verte sur cette image) :**\n**ثالثًا: الانتقاء بالهدي**\n- La sous-ligne « 1- ركوب الهدي » n'est **pas visible** dans cette bande — elle se trouve probablement sous la coupure. → [؟]\n- Nuance de couleur : le titre apparaît en rouge/rose dégradé, non vert.\n\n**4) Citation « عن أبي هريرة ... اركبها ويلك » :**\nNon présente dans cette portion d'image. Le texte visible se termine à « ثالثًا: الانتقاء بالهدي ». La citation d'Abû Hurayra (avec « اركبها ويلك ») ne figure pas ici → [؟]. Par conséquent, **aucun crochet bleu ne suit cette citation dans cette zone** (le seul crochet bleu visible est la référence [سورة البقرة: 184]).\n\n**Remarques françaises :**\n- Texte principal en noir (naskh voyellé), références coraniques en bleu, titres en rouge dégradé.\n- Orthographe calligraphique usuelle : « البقر ة » avec espace typographique dans le crochet bleu.",
+        "reasoning_content": "Transcribe visible: verse is ولْيُكَبِّرُوا اللهَ عَلَى مَا هَدَاكُمْ — actually shown \"وَلْنُكَبِّرُوا اللهَ عَلَى مَا هَدَاكُمْ\"? Image shows \"وَلْنُكَبِّرُوا\"? Actually reads وَلْيُكَبِّرُوا اللهَ عَلَى مَا هَدَاكُمْ. Bracket: سورة البقرة: 184. Green rubric ثالثا: الانتقاء بالهدي. No Hadith quote / أبو هريرة visible in this band; sub-line 1- ركوب الهدي not visible (below).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794275249,
+  "id": "202611100946579fbe6cc6c35e4272",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611100946579fbe6cc6c35e4272",
+  "usage": {
+    "completion_tokens": 734,
+    "completion_tokens_details": {
+      "reasoning_tokens": 174
+    },
+    "prompt_tokens": 8195,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8929
+  }
+}

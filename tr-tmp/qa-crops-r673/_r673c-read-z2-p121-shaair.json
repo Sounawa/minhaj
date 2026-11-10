@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription du bloc de commentaire (bande médiane)\n\n## 1) Début du commentaire\n\n**والشعائر: الهدي والأنعام المشعرة، وتعظيمها وتسمينها والمغالاة بها، وكان عن عروة يقول:**\n\n- والشعائر — puis : الهدي والأنعام المشعرة ✓ (conforme à votre hypothèse 1)\n-Suite : **وتعظيمها وتسمينها والمغالاة بها** ✓ (les trois verbes attendus sont bien présents : « les glorifier, les engraisser, y montrer du zèle »)\n\n## 2) Nom cité + formule d'introduction\n\n**وكان عن عروة يقول** — le nom est donc **عروة** (Urwa), introduit par **وكان عن ... يقول** (« et 'Urwa avait coutume de dire ») — pas « وقال ».\n\n## 3) Citation, lettre par lettre\n\n**«يا بني لا يهدينَ أن يهدِيَهُ اللهُ، فليكن من كريمه أكرمُه»**\n\nDétail relevé sur l'image :\n- يا بني\n- لا يهدِينَ أن يهدِيَهُ اللهُ (avec Allah en vert)\n- فليكن من كريمه\n- أكرمُه ← ⚠️ le dernier mot est **أكرمُه** (et non « أكرم اختير له ») : « que le plus noble de sa générosité soit [son geste] ».\n\n## 4) Crochet bleu\n\n**[الموطأ رقم: 1120]** — chiffres vérifiables un à un : **1 – 1 – 2 – 0** ✓ (confirmé : 1120, pas 30 — le [30] bleu plus haut renvoie à la sourate).\n\n## Notes françaises\n\n- **Structure** : la guillemette en épi (❁...❁) encadre le texte prophétique ; la citation d'Urwa est un *athar* de compagnon, sourcé du Muwaṭṭaʾ (n° 1120).\n- **Variante lexique** : votre souvenir « فليكن من كريمه أكْرَمُ اختير له » est erroné ; l'image porte clairement **أكرمُه** avec ḍamma sur le mīm.\n- **Noms** : عروة confirmé (ʿUrwa b. al-Zubayr implicitement) ; ni عمر ni زيد sur cette ligne.\n- Aucun mot illisible dans ce bloc ; tout est résoluble — pas de [؟] nécessaire.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794275217,
+  "id": "202611100946407820d36f4dff4144",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611100946407820d36f4dff4144",
+  "usage": {
+    "completion_tokens": 606,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8227,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8833
+  }
+}
