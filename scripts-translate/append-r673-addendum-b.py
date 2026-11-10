@@ -1,0 +1,8 @@
+# -*- coding: utf-8 -*-
+"""Minhāj — Addendum R673-b : récupération R508 post-recyclage + mode production."""
+ADD = """
+- **Addendum R673-b (récupération et clôture)** : recyclage sandbox traversé APRÈS le push de livraison (8ᵉ occurrence documentée) — .git restauré à l’instantané R104 (2026-11-01), origin effacé, .auth/token effacé, tr-tmp vidé, node_modules amputé, dev:3000 tué ; recette R508 SANS PERTE exécutée au complet : sauvegarde hors arbre (/home/z/save-worklog-r104-plus-addendum.md, /home/z/save-append-r673-addendum.py), git remote add origin + git fetch --depth=1 origin main (origin/main = 6d76e055 — LA LIVRAISON R673 EST INTACTE SUR LE DISTANT), git checkout -f -B main origin/main (= « Reset branch ’main’ » vu au chat = réalignement sur l’autorité distante, aucun reset destructif du distant) ; vérifications post-checkout : registre 406 = 42 789 car, verify-hadith3-pdf406.py et commit-push.py restaurés, worklog R673 intact ; relance superviseur (pid nouveau), dev:3000 OOM-killé par Turbopack (sandbox 4 Go, next-server tué à 13,4 Go virtuel — quatre tentatives dont cap NODE_OPTIONS) → bascule en PRODUCTION : npx next build --webpack (cap 2,5 Go, réussi) + npx next start -p 3000 (cap 1 Go) — portail HTTP 200, API leçon 406 répondante ; QA navigateur 1280/390 relancée sur le serveur de production ; shims machine (symlinks tailwindcss/@tailwindcss/tw-animate-css dans /home/z/node_modules global) documentés, hors dépôt ; addendum initial ré-apposé puis le présent addendum commités.
+"""
+with open("/home/z/my-project/worklog.md", "a", encoding="utf-8") as fh:
+    fh.write(ADD)
+print("addendum-b appended —", len(ADD), "car")

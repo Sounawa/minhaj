@@ -417,3 +417,10 @@ error: failed to push some refs to 'https://github.com/Sounawa/minhaj.gi
 
 [2026-11-09 22:05:37] auto-commit: push échoué — To https://github.com/Sounawa/minhaj.git
  ! [remote rejected]   main -> main (cannot lock ref 'refs/heads/main': is at 5a369bc8528d5d06034cb6ef06107d71d6ee6706 but expected 1952684b0d783e12c184f2a4022
+[2026-11-10 03:22:22] superviseur v4 démarré (MAX=3, file=62 livres, battement visible)
+[2026-11-10 03:22:57] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-10 03:32:59] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
+[2026-11-10 03:43:02] auto-commit: push échoué — fatal: could not read Username for 'https://github.com': No such device or address
+
