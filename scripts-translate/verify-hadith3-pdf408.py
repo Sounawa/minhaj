@@ -88,7 +88,7 @@ chk("tamhīd lectures divergentes récusées (4)", "Ṭā-Hā" in hn and "ne t�
 chk("tamhīd questions ×2", "fa-mā hiya aʿmālu yawmi n-naḥr" in hn and "wa-matā yataḥallalu l-muḥrimu bi-n-nuski fī hāḏā l-yawm" in hn)
 
 # --- 4) les trois textes ---
-chk("texte 1173 Mālik + ḥattā yanḥura hadyah", "n° 1173" in hn and "lā yaǧūzu li-aḥdin an yaḥliqa raʾsahu ḥattā yanḥura hadyah" in hn)
+chk("texte 1173 Mālik + ḥattā yanḥura hadyah", "n° 1173" in hn and "lā yaǧūzu li-aḥadin an yaḥliqa raʾsahu ḥattā yanḥura hadyah" in hn)
 chk("1173 l’œuvre entière + liste", "wa-innamā l-ʿamalu kulluhu yawmu n-naḥr" in hn and "aḍ-ḏabḥu" in hn and "wa-lubsu ṯ-ṯiyāb" in hn and "wa-ilqāʾu t-tafṯi wa-l-ḥalāq" in hn)
 chk("texte 1267 ʿĪsā b. Ṭalḥa + isnād complet", "n° 1267" in hn and "ʿĪsā b. Ṭalḥa" in hn and "ʿAbd Allāh b. ʿAmr b. al-ʿĀṣ" in hn)
 chk("1267 waqafa bi-Minā + anḥur/irmi/ifʿal", "waqafa rasūlu llāhi ﷺ li-n-nāsi bi-Minā" in hn and "an-ḥur wa-lā ḥaraǧ" in hn and "irmi wa-lā ḥaraǧ" in hn and "ifʿal wa-lā ḥaraǧ" in hn)
@@ -117,7 +117,7 @@ chk("1226 discours de ʿUmar à ʿArafa", "ḫaṭaba n-nāsa bi-ʿArafah" in hn
 chk("1226 nul ne touche avant le ṭawāf", "lā yamassa aḥadun nisāʾahu wa-lā ṭīban ḥattā yaṭūfa bi-l-bayt" in hn)
 chk("fiqh2 restes + fin de la délivrance", "illā n-nisāʾa wa-ṭ-ṭība wa-ṣ-ṣayd" in hn and "nihāyatu t-taḥallul" in hn and "wa-karraha-hu Mālik faqaṭ" in hn)
 chk("fiqh2 āya al-Māʾida 95 / imprimé 97 (+2 consigné)", "lā taqtulū ṣ-ṣayda wa-antum ḥurum" in hn and "al-Māʾida 95 du cache ḥafṣ" in hn and "l’āya 97" in hn and "+2" in hn)
-chk("fiqh2 majeure par l’Ifāḍa seul", "at-taḥallulu l-akbaru min ǧamīʿi maḥẓūrāti l-iḥrām" in hn and "fa-lā yaḥṣulu illā bi-ṭawāfi l-ifāḍah" in hn)
+chk("fiqh2 majeure par l’Ifāḍa seul", "wa-ammā t-taḥallulu l-akbaru min ǧamīʿi maḥẓūrāti l-iḥrām" in hn and "fa-lā yaḥṣulu illā bi-ṭawāfi l-ifāḍah" in hn)
 chk("fatwā 1140 règle connectée (oubli + nisāʾ + ʿumra + hady)", "n° 1140" in hn and "nasiya ṭawāfa l-ifāḍah" in hn and "aṣāba n-nisāʾ" in hn and "l-yaʿtamir wa-l-yuhd" in hn and "règle connectée" in hn)
 chk("fatwā 1140 provenance p.128 consignée (jamais re-numérotée)", "p.128" in hn and "jamais re-numérotée" in hn)
 chk("fiqh2 1186 triade + consensus", "n° 1186" in hn and "man ʿaqaṣa raʾsahū aw ḍafara aw labbada" in hn and "fa-qad waǧabat ʿalayhi l-ḥalāq" in hn and "l-ǧumhūr" in hn)
