@@ -11,6 +11,15 @@ import type { NextConfig } from "next";
 // Retour à la recette R603 : deps à /home/z/node_modules (installées depuis une
 // copie de package.json/bun.lock à /home/z) + turbopack.root=/home/z. Le script
 // dev pointe déjà PATH vers /home/z/node_modules/.bin.
+// R676 (ouvrier D, tick 499559) : l'évinceur balaye AUSSI .next entre le build
+// webpack et le démarrage (« Could not find a production build ») et distDir
+// hors-arbre est refusé par Next (invalid-dist-dir) — la parade définitive est
+// le mode standalone : build webpack → copie de .next/standalone + .next/static
+// + public vers /home/z/standalone-minhaj (zone stable hors évinceur, même
+// recette d'esprit que R603 pour node_modules) → lancement
+// « cd /home/z/my-project && PORT=3000 node /home/z/standalone-minhaj/server.js »
+// (cwd au projet pour content/ ; le serveur en mémoire survit aux vidages).
+// Prisma client généré vers /home/z/node_modules/.prisma/client (remontée d'arbre).
 const nextConfig: NextConfig = {
   output: "standalone",
   turbopack: {
