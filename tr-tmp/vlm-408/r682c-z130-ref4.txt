@@ -1,0 +1,33 @@
+# Analyse de la bande (de droite à gauche)
+
+## 1) Fin de la citation coranique (en noir, calligraphie naskh)
+
+Transcription des derniers mots du verset :
+
+**«...خَيْرٌ اللَّهُ شَكِيرٌ كَبِيرٌ»**
+
+Il s'agit de la fin d'un verset (style typique de la finale : «وَاللَّهُ خَيْرٌ...» puis «الله شكير كبير»). Les mots lisibles sur la bande sont :
+- **كَبِيرٌ** (kabīr, avec tanwīn ʿammā above la rā finale)
+- **شَكِيرٌ** (shakīr)
+- **اللَّهُ** (Allāh, avec shadda et damma)
+- le début de **خَيْرٌ** (khayr) à l'extrême droite.
+
+## 2) Ornement de fermeture
+
+**Oui**, il y a un ornement : une **parenthèse/deux-points décoratifs bleu moyen (bleu-gris)** « ❁ ) » — un crochet courbe fermant (en forme de grande parenthèse ) tournée vers la gauche), surmonté/accroché d'une **rosace à 6 lobes** (fleuron étoilé bleu) placée en son milieu. Forme : arc fin avec flocon central symétrique. Couleur : **bleu** (même bleu que le renvoi). C'est la marque graphique de fermeture de la citation coranique.
+
+## 3) Renvoi entre crochets [ ... ] (en bleu)
+
+Transcription exacte de droite à gauche :
+
+**[سورة التوبة]**
+
+Mot par mot :
+- **سورة** (sūra)
+- **التوبة** (al-Tawba)
+
+### Questions explicites :
+- **Y a-t-il le mot «الآية» imprimé ? → NON.** Seuls les mots «سورة التوبة» figurent dans les crochets ; aucun mot «الآية» n'apparaît.
+- **Y a-t-il des chiffres imprimés à l'intérieur des crochets ? → NON.** Aucun numéro de verset ni de sourate n'est imprimé ; le contenu est exclusivement textuel : «سورة التوبة» (la sourate du Repentir, sourate 9).
+
+Le crochet fermant «]» bleu (à gauche du renvoi) ferme l'ensemble.

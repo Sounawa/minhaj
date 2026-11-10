@@ -1,0 +1,34 @@
+**Transcription (ligne par ligne, avec diacritiques) :**
+
+**Ligne 1 (verset coranique, noir, avec ornements bleus ﴿ ﴾) :**
+
+﴿ لَا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا ﴾
+
+- Mot 1 : لَا — lisible clairement (lam-alef, alef avec fatha… la première partie est coupée à droite de l'image, seule la fin du mot est visible : «ـلَـ...» ; transcrit comme لَا)
+- Mot 2 : تَحْزَنْ — lisible (ta, ha sukun, za fatha, noun sukun)
+- Mot 3 : إِنَّ — lisible
+- Mot 4 : اللَّهَ — lisible
+- Mot 5 : مَعَنَا — lisible
+
+**Renvoi imprimé (en bleu, entre crochets) :**
+
+[سورة التوبة]
+
+- Nom de la sourate transcrit lettre par lettre : التَوْبَة (التوبة) — lisible : ا ل ت و ب ة, avec fatha sur الت et diacritiques visibles sur الـ[ت]وبَة.
+- **Aucun numéro de verset n'est imprimé** dans cette zone (pas de «: N» après le nom de la sourate) → aucun chiffre arabe à transcrire, donc aucune conversion NUM:.
+
+**Ligne 2 (fin de phrase de question, noir) :**
+
+حَرَمَ الْنِسَاكَ فِي هَذَا الْيَوْمِ؟
+
+- Mot 1 (coupé à droite) : [?]…حَرَمَ — lettres lisibles : ح ر م (ḥarāma… le début du mot est hors du cadre)
+- Mot 2 : الْنِسَاكَ — lettres lisibles : ا ل ن س ا ك (avec sukun sur lam… transcrit [?]الْنِسَاكَ si l'on veut être prudent : «النِّسَاكَ» ou «النِّسُكَ» — les voyelles internes sont partiellement floues : [?]الن[?]سا[?]ك)
+- Mot 3 : فِي — lisible
+- Mot 4 : هَذَا — lisible
+- Mot 5 : الْيَوْمِ — lisible (ا ل ي و م, sukun sur waw)
+- Signe : ؟ (point d'interrogation arabe inversé)
+
+**Chiffres imprimés :**
+- Aucun chiffre arabe (٠–٩) n'apparaît dans cette zone d'image. Le renvoi se limite à : [سورة التوبة] sans numéro d'ayah visible.
+
+**Forme des chiffres :** néant — aucun chiffre à décrire.

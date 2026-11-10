@@ -1,9 +1,9 @@
 {
- "ts": 1794313838.3908746,
- "iso": "2026-11-10T12:30:38Z",
+ "ts": 1794325549.1527736,
+ "iso": "2026-11-10T15:45:49Z",
  "version": "v4",
  "startedAt": "2026-10-31T15:29:57Z",
- "cycles": 4,
+ "cycles": 198,
  "wakeCount": 0,
  "workers": {
   "active": 0,
@@ -16,11 +16,11 @@
  },
  "portal": {
   "state": "FERMÉE",
-  "ts": "2026-11-10T12:28:35Z",
+  "ts": "2026-11-10T15:44:49Z",
   "detail": "bannière de maintenance présente"
  },
  "sourceHunt": {
-  "ts": "2026-11-10T12:28:36Z",
+  "ts": "2026-11-10T15:29:45Z",
   "book": "hadith-5ep",
   "docId": "pdf-1",
   "titleFr": "Présentation de l'auteur et de l'ouvrage",
@@ -31,7 +31,7 @@
  },
  "lastAutoCommit": null,
  "lastPush": {
-  "ts": "2026-11-10T12:28:38Z",
+  "ts": "2026-11-10T15:39:48Z",
   "ok": true
  }
 }

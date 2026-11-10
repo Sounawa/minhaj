@@ -1,0 +1,16 @@
+## Transcription
+
+- **A** : n'est pas un chiffre — c'est un ornement calligraphique (rose/fleuron avec une longue virgule recourbée). Il ne se transcrit pas en chiffre ; si on force, on pourrait y voir un ٤ très décoré (ou un ه de renvoi).
+- **B** : ١١٨… (affiché « 118 » — le ٣ attendu est coupé/hors cadre ; on voit surtout les deux ١ du nombre 1183).
+- **C** : ١ + ٤ (le « 1 » suivi du ٤ arabe, partiellement coupé, avec un bout de lettre à droite).
+
+## Analyse de A
+
+- **Nombre de dents/points en haut** : pas des dents nettes comme un ٣, mais une **rosette à ~5 lobes** autour d'un anneau central.
+- **Boucle** : il possède une **boucle fermée** (l'anneau central et les lobes se referment), surmontée d'une longue **queue ouverte** qui monte vers la droite.
+- Le ٣ (B) est constitué de dents ouvertes, **sans aucune boucle**.
+- Le ٤ (C) est construit autour d'une **boucle fermée**.
+
+## Conclusion
+
+**A ressemble à C (le ٤)** plutôt qu'à B : comme le ٤, il présente une structure à boucle fermée, alors que le ٣ n'a que des dents ouvertes sans boucle. Cela dit, A est si orné (fleuron coranique) qu'il s'agit vraisemblablement d'un signe décoratif de renvoi coranique dérivé d'un ٤ ou d'un ه stylisé, et non d'un chiffre au sens strict.
