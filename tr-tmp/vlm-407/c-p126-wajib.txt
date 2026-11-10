@@ -1,0 +1,23 @@
+Transcription ligne par ligne :
+
+**Ligne 1 :**
+مِنهَ صَاحِبَهُ وَاللَّاعِنُ؛ لِأَنَّ صَاحِبَهُ بِضِمِهِ لِنَعْلَةِ بِذِمَّتِهِ، قَالَ ابْنُ شِهَابٍ: «مِنْ أَهْدِي
+
+**Ligne 2 :**
+بِدِنَهَا جَزَاءٌ وَنِذْرٌ أَوْ هَدِيِّ تَمَتَّعِ فَاضِرِبِيبًا فِي الطَّرِيقِ فَعَلَيْهِ البَدَلُ» [الموطأ رقم: 1124].
+
+**Ligne 3 (vert, en-tête de section) :**
+2 - ضِيَاعُ الهَدْيِ
+
+---
+
+**Nom du rapporteur cité, glyphe par glyphe :**
+ا – ب – ن – (espace) – ش – ه – ا – ب
+(اِبْنُ شِهَابٍ — « Ibn Shihab »)
+
+**NUM, chiffre par chiffre :** 1 – 1 – 2 – 4
+(الموطأ رقم: [1124])
+
+Notes :
+- Le mot فَاضِرِبِيبًا sur la ligne 2 est déformé/flou [?] — il s'agit vraisemblablement de « فَأَصِيبَ فِي الطَّرِيقِ » dans le texte standard du Muwaṭṭaʾ, mais je transcris ce qui est visible avec [?] sur la partie illisible.
+- « ابن شهاب » désigne Ibn Shihāb al-Zuhrī (ابن شهاب الزهري).
