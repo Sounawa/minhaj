@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "- قال مَالِكٌ: »لَا يَجُوزُ لِأَحَدٍ أَنْ يَحْلِفَ رَأْسَ\nلَا حِدَ أَنْ يَنْحَرَ فِي لِ الفَجْرِ يَوْمَ النَّحْرِ، وَإِنَّمَا العَمَلُ\nالتَّثْلَابُ، وَالِقَائُعُ النَّفْثُ، وَالصَّلَاةُ، وَلَا يَكُونُ شَ\n\nRemarque : le texte est rogné sur les bords gauche et bas de l'image ; les débuts de lignes 2, 3 et 4 sont incomplets, transcrits tels que visibles ([?] pour les parties coupées).",
+        "reasoning_content": "Transcribe visible text, edges cut off.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794336424,
+  "id": "20261111024659ac068184c5ed45b5",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261111024659ac068184c5ed45b5",
+  "usage": {
+    "completion_tokens": 220,
+    "completion_tokens_details": {
+      "reasoning_tokens": 9
+    },
+    "prompt_tokens": 1141,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1361
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Transcription (colonne droite) :**\n\n**Rubrique colorée :** bandeau vert arrondi avec pastille bleue à droite, titre en bleu :\n- الاِسْتِشَار\n\n**Encadré** (fond gris-bleu clair, bordure verte avec coins arrondis, trait vert épais en haut et sur le côté droit) :\n\nعَنْ عَبْدِ اللهِ بْنِ عُمَرَ: «آنَهُ لَقِيَ رَجُلًا مِنْ\nوَلَمْ يَحْلُقْ وَلَمْ يَقْصُرْ، جَهِلَ ذلِكَ، فَأَمَرَهُ عَبْدُ اللهِ\nيُرْجِعُ إلَى الْبَيْتِ فَيُفِيضَ» [الموطأ رقم: 1183].\n\n**Texte noir (sous l'encadré) :**\n\nأَسْتَعِينُ بِشرح الزرقاني لأبين حكم من أفاض و [?]\n\n---\n\n**Notes :**\n- Le renvoi bleu [الموطأ رقم: 1183] figure avec le chiffre 1183 en chiffres arabes (١١٨٣ rendus ici en chiffres occidentaux comme dans l'original, qui utilise « 1183 »).\n- La première ligne du hadith est coupée à gauche par le bord de l'image (début de phrase incomplet) ; j'ai transcrit ce qui est visible.\n- La dernière ligne est également coupée à gauche : le mot final est incomplet, d'où [?].\n- Le titre du bandeau semble être « الاِسْتِشَار » (début d'un mot comme الاستشارة), coupé par la décoration [?].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794336745,
+  "id": "2026111102521213a146f730ca41c6",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026111102521213a146f730ca41c6",
+  "usage": {
+    "completion_tokens": 438,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2217,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2655
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Transcription (fragments visibles, texte tronqué au bord droit — la colonne est coupée) :\n\n**Ligne 1 :** ...ض ولم يحقق ولم يقصر جاهلا.\n\n**Ligne 2 (en retrait, après espace) :** ...لَائِتِي :\n\n**Ligne 3 (après espace) :** ...لَا.\n\nRemarques :\n- Seuls les fragments gauches (fins de lignes) sont visibles ; le reste de chaque ligne est coupé hors de l'image.\n- Ligne 1 : le mot « جاهلا » et une partie du texte sont en vert.\n- Aucun renvoi bleu [الموطأ رقم: N] ni liste numérotée n'est visible sur cette portion.\n- « لَائِتِي » [?] : la lecture du fragment est incertaine (début du mot coupé, probablement « ...تَائِتِي » ou « الْآتِي »).",
+        "reasoning_content": "Left column cropped — lines are cut off. Transcribe visible fragments.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794336777,
+  "id": "20261111025251dad6d42dc48b400e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261111025251dad6d42dc48b400e",
+  "usage": {
+    "completion_tokens": 241,
+    "completion_tokens_details": {
+      "reasoning_tokens": 14
+    },
+    "prompt_tokens": 1751,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1992
+  }
+}

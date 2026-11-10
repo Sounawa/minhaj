@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Voici la transcription fidèle du texte visible dans l'image :\n\n**Titre de la leçon (bandeau vert) :**\n- التهيئة [؟ — mot partiellement visible au-dessus du numéro]\n- **19**\n- ما بفعل الـ [؟ — mot coupé à gauche : « ما بفعل ال... »]\n\n**أهداف الدرس** (les objectifs de la leçon) :\n\n1 - أن أتعرف أعمال يوم النحر.\n\n2 - أن أدرك أحكام التحلل من النسك.\n\n3 - أن التزم سنة النبي ﷺ في أداء أعمال يـ [؟ — texte coupé à droite]\n\n---\n\n**Remarques :**\n- L'image ne montre pas la zone du تمهيد avec le verset coranique entre ornements ﴿ ﴾ ni les deux questions ; elle montre le titre de la leçon 19 et les أهداف الدرس (objectifs), dont la troisième ligne est coupée en bas de page.\n- Le mot « الـ » du titre et la fin de la ligne 3 sont tronqués hors du cadre : transcrits partiellement avec [؟].",
+        "reasoning_content": "Image shows lesson title, objectives, not tamhīd verse. Transcribe visible text.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794336018,
+  "id": "202611110240135ace487677cc4292",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611110240135ace487677cc4292",
+  "usage": {
+    "completion_tokens": 273,
+    "completion_tokens_details": {
+      "reasoning_tokens": 19
+    },
+    "prompt_tokens": 2428,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2701
+  }
+}

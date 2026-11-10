@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## Transcription du segment\n\nLes mots visibles, de droite à gauche après l'ornement bleu ﴿ :\n\n**وَأَذِّنْ** — puis **مِنْ** (partiellement visible avec sa syllabe) — puis **مُّنِيبٍ** / un mot commencant par م... — et en haut à droite des fragments d'une ligne supérieure (ن / م avec diacritiques).\n\n## Analyse du premier mot, lettre par lettre\n\n1. **وَ (waw)** : le petit waw en position initiale, avec un **fatha** au-dessus.\n2. **أَ (alef avec hamza)** : l'alef verticale, portant un **fatha** (le petit trait horizontal oblique bien visible au-dessus).\n3. **ذِّ (dhal)** : la lettre suivante porte un **point unique au-dessus** (caractéristique du dhal, et non deux points comme le zāy), et on voit nettement la **shadda (petit ـّ en forme de w concentré) POSÉE SUR LE DHAL**, accompagnée de la **kasra** en dessous (le trait court sous la lettre).\n4. **نْ (noun)** : la forme finale en coupe (بـ/ن-like bowl) **sans point visible** — ici le noun final est dépourvu de point dans ce style calligraphique — et surtout un **sukun** (petit cercle/« head of ḥā » ـْ) est clairement visible **au-dessus** du noun.\n\n## Conclusion\n\nLe premier mot est **وَأَذِّنْ** (*wa-adhdhin*, impératif : « et proclame/annonce ») :\n- ✅ dhal avec **shadda + kasra** (seddah visible sur la lettre)\n- ✅ noun final avec **sukun**\n- ❌ ce n'est PAS « وَأَذَانٌ » : il n'y a pas de second alef après le dhal, pas de tanwin, et le trait au-dessus de la dernière lettre est un sukun (cercle), pas un tanwin double-fatha.\n\nC'est le début du verset (S. 39:33 ou ailleurs selon le manuel) : ﴿وَأَذِّنْ ...﴾",
+        "reasoning_content": "The image shows ﴿ وَأَذِّنْ ... likely \"وَأَذِّنِ النَّاسَ\"? Actually visible: وَأَذِّنْ مُّنِيبًا? \"وَأَذِّن فِي النَّاسِ...\"? The text shows وَأَذِّنْ with shadda over dhal and sukun over noun. First word: وَأَذِّنْ. Describe letters.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794336358,
+  "id": "20261111024545248cabfcd5b84ee8",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261111024545248cabfcd5b84ee8",
+  "usage": {
+    "completion_tokens": 633,
+    "completion_tokens_details": {
+      "reasoning_tokens": 105
+    },
+    "prompt_tokens": 2350,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2983
+  }
+}

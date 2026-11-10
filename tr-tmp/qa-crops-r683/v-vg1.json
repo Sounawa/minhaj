@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Transcription (de droite à gauche, ligne par ligne) :**\n\n**Ligne 1 :**\nمِنْ إِلَٰهٍ إِلَّا هُوَ ۚ لَهُ الْمَشْرِقُ وَالْمَغْرِبُ ۗ فِدْ سِمَا [?]\n\n**Ligne 2 :**\nأَيْنَ مَا تَكُونُوا وَرَبُّكَ وَلِمَا تَعْمَلُونَ مِنْ شَيْءٍ يَشْهَدُهُ [?]\n\n---\n\n**Remarques :**\n- La première ligne commence au milieu d'un verset (coupé en haut de page) : « ...مِنْ إِلَٰهٍ إِلَّا هُوَ ۚ لَهُ الْمَشْرِقُ وَالْمَغْرِبُ » — il s'agit apparemment de **سورة اليونس، الآية: 3** (ou verset proche), mais l'ornement ﴿ ﴾ et le renvoi bleu ne sont pas visibles dans cette tranche.\n- À la fin de la ligne 1, le fragment « فِدْ سِمَا [?] » est coupé/tronqué sur le bord droit de l'image ; je ne peux pas l'identifier avec certitude.\n- La fin de la ligne 2 est également coupée sur le bord gauche (image incomplète).\n- Il y a des annotations/manuscrits bleus visibles (marques de lecture), mais aucun renvoi de type « [سورة X الآية: N] » n'apparaît imprimé dans cette tranche.\n\nSi vous pouvez fournir la tranche complète (bords inclus), je pourrai compléter les segments tronqués.",
+        "reasoning_content": "This is verse from Yunus 10:61 \"...وَعِندَهُ مَفَاتِحُ الْغَيْبِ...\" Actually \"مِنْ إِلَٰهٍ إِلَّا هُوَ ۚ لَهُ الْمَشْرِقُ\"? The text: \"مِنْ إِلَٰهٍ إِلَّا هُوَ ۚ لَهُ الْمَشْرِقُ وَالْمَغْرِبُ ۗ\" — second line: \"وَعِندَهُ مَفَاتِحُ الْغَيْبِ\"? No: \"وَعِندَهُ ... الْمُهْيِطُ بِالْمَحْفُوظَاتِ\"? Line 2 reads: \"وَعِندَهُ وَرَبُّكَ وَلِمَا... \" hmm. Actually the verse: 10:61 \"...لَا يَعْزُبُ عَنْهُ...\" no. The visible: \"أَيْنَ مَا كُنتُمْ وَرَبُّكَ وَلِمَا تَعْمَلُونَ مِنْ شَيْءٍ يَشْهَدُهُ\"? Wait that's verse 10:61: \"وَعِندَهُ مَفَاتِحُ... أَيْنَ مَا تَكُونُوا يَشْهَدُ اللَّهُ...\" Hmm line: \"وَعِنْدَهُ وَرَبُّكَ...\" Actually looks like \"أَيْنَ مَا كُنْتُمْ وَرَبُّكَ وَلِمَا تَعْمَلُونَ مِنْ شَيْءٍ يَشْهَدُهُ\" — but visible \"أَيْنَ مَا تَكُونُوا وَرَبُّكَ وَلِمَا تَعْمَلُونَ مِنْ شَيْءٍ يَشْهَدُهُ\"? I'll transcribe what's visible.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794336671,
+  "id": "20261111025053cb580b99e67046dc",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261111025053cb580b99e67046dc",
+  "usage": {
+    "completion_tokens": 987,
+    "completion_tokens_details": {
+      "reasoning_tokens": 550
+    },
+    "prompt_tokens": 8083,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9070
+  }
+}

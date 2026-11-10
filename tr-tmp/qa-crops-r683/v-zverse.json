@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## Transcription (avec réserves importantes)\n\n⚠️ **Avertissement préalable** : l'image est **rognée sur les deux bords** (gauche et droit). Une partie de la première ligne manque à gauche, et les deux lignes sont coupées verticalement. Je ne peux donc pas transcrire le texte complet, et je ne devine rien.\n\n### Titre (bandeau vert, en bleu)\n**تَمْرِين** (le ر final est partiellement coupé/estompé [?])\n\n### Première ligne (partie visible, coupée à droite et à gauche)\nمَـنْ أَبَامَ الْحَجَّ الْمَشْهُودَ بِوَمِ النَّهْرِ؛ فَقَدْ سِيمَا ا[؟]\n\n- Le texte est tronqué à droite (avant « مَـنْ » il pourrait y avoir autre chose) et à gauche (après « ا » le mot continue hors champ).\n- Je lis « أَبَامَ » [?] et « بِوَمِ » [?] : ces graphies sont inhabituelles et la résolution/flou ne permet pas de garantir les diacritiques. Cela pourrait être « أَتَامَ » / « بِوَادِي » ou similaire — je ne tranche pas.\n\n### Deuxième ligne (coupée des deux côtés)\n[...]قَالَ رَسُولُ اللَّهِ ﷺ وَ[...]مِهَا اللَّبِ[؟]...[؟]ا الْبَائِ سَبِيقًا يَوْمَ الْقِيَامَةِ أَتَاهُ[...]\n\n- De nombreux mots sont incomplets ou flous ; je signale [?] partout où la lettre n'est pas certaine.\n\n### Premier mot demandé : وَأَذَانٌ ou وَأَذِّنْ ?\n\nSur la deuxième ligne, on distingue un mot commençant par **وَأَ** suivi d'une lettre à point unique. Le diacritique au-dessus ressemble à une **fatha sur le dhal** (donc **وَأَذَانٌ**), mais le mot est partiellement coupé et le rendu est flou : je ne peux pas l'affirmer à 100 %. **Lecture la plus probable : وَأَذَانٌ** (avec [?] de réserve), **pas** وَأَذِّنْ (pas de shadda visible sur le dhal).\n\n### Renvoi bleu [سورة ... الآية: N]\n❌ **Aucun renvoi bleu entre crochets n'est visible** dans cette image, et les ornements ﴿ ﴾ n'entourent pas le texte : le texte ne présente pas les caractéristiques d'un verset coranique — il ressemble plutôt à un **hadith** (présence de « قَالَ رَسُولُ اللَّهِ ﷺ »). Il n'y a donc ni sourate ni numéro de verset à transcrire.\n\n### Ligne noire suivant le renvoi\n❌ Absente de l'image.\n\n**Conclusion** : je ne peux fournir qu'une transcription partielle et incertaine ; merci de fournir une image complète et non rognée pour une transcription fiable.",
+        "reasoning_content": "The image shows a heading \"تمرين\" and Quran verse: \"مَنْ أَبَامَ الْحَجَّ الْمَشْهُودَ بِوَمِ النَّهْرِ؛ فَقَدْ سَمَا...\" Actually the verse seems to be from a hadith? \"مَن أَبَامَ الحَجَّ المشهود بِوَمِ النهر فقد سما...\" Hmm. Actually it looks like: \"مَنْ أَبَامَ الْحَجَّ الْمَشْهُودَ بِوَمِ النَّهْرِ؛ فَقَدْ سَمَا\" — no, cut off at right side. Wait right side cut: text reads right-to-left, \"مَنْ أَبَامَ الْحَجَّ...\" but the image is cut on both sides — left side shows continuation \"...فَقَدْ سِيمَا\"? Actually first line: \"مَنْ أَبَامَ الْحَجَّ الْمَشْهُودَ بِوَمِ النَّهْرِ؛ فَقَدْ سِيمَا ا\" cut at left edge. Second line cut: \"...وَأَذَانٌ مُؤَذِّنٌ...\" reads \"قَالَ رَسُولُ اللَّهِ ﷺ: وَزْشُ مِهَا...\" hmm.\n\nI cannot reliably transcribe. The question asks about first word وَأَذَانٌ vs وَأَذِّنْ — visible in second line? The second line contains \"وَأَذَانٌ\" likely (\"وَأَذَانٌ مُؤَذِّنٌ\" — actually \"لبيك لا شريك له لك الحمد والنعمة والملك ولا شريك لك\" that's talbiyah). Hmm second line: \"قَالَ رَسُولُ اللَّهِ ﷺ وَ...مِهَا اللَّبِ...الْبَائِ سَبِيقًا يَوْمَ الْقِيَامَةِ أَتَاهُ...\" Not sure.\n\nI must be honest: parts cut off. Provide transcription of visible parts with [?]. The verse seems actually hadith-like, not Quran. The visible second line begins with \"وَأَ\" — could be وَأَذَانٌ. Given \"مُؤَذِّنٌ\" visible with shadda on ذ? The word after: \"مُؤَذِّنٌ\"? There's \"مُؤَذِّنٌ\" plausible: \"وَأَذَانٌ مُؤَذِّنٌ\" — this appears in hadith about Hajj \"وَأَذَانٌ مُؤَذِّنٌ...\"? Hmm.\n\nGiven uncertainty, transcribe cautiously.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794336099,
+  "id": "202611110241107f524dc0bacd4011",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611110241107f524dc0bacd4011",
+  "usage": {
+    "completion_tokens": 1445,
+    "completion_tokens_details": {
+      "reasoning_tokens": 674
+    },
+    "prompt_tokens": 6455,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7900
+  }
+}

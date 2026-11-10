@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Transcription (de droite à gauche, ligne par ligne) :\n\n**Ligne 1** (haut, coupée — seules les parties inférieures des lettres sont visibles) :\n…رْيَا [?] … فِي زَ [?] … الَّذِي [?] … زَوَاجَ [?] …(mots tronqués, illisibles avec certitude)\n\n**Ligne 2** :\nالآية: 3[ يَقُومُ فِيهِ الصَّاجُّ بِمَجْمُوعَةٍ مِنْ مَنَايَا الْحَجَّ [?]\n\n**Remarques :**\n- La première ligne est coupée horizontalement : seuls les bas de lettres apparaissent (on devine des jalas, un مَجْمَوْع-type « ع », mais les mots complets ne sont pas identifiables — je ne devine donc rien au-delà de ce qui est sûr).\n- « الآية: 3 » est le renvoi bleu, entre crochets, précédant le texte.\n- Le premier mot après le renvoi semble être « يَقُومُ فِيهِ », suivi de « الصَّاجُّ » (ou « الصِّيَاحُ [?] » — les points et la hamza sont ambigus sur cette ligne).\n- Le dernier mot visible est tronqué : « الْحَجَّ [?] » (peut-être « الْحَجِّ » ou « الْحَجَّاجِ », incompréhensible avec certitude).\n\nSi vous pouvez fournir une tranche plus haute (incluant la ligne 1 complète), je pourrai compléter la transcription.",
+        "reasoning_content": "Two partial lines. Line 1 mostly cut off at top. Line 2: \"الآية: 3[ يَقُومُ فِيهِ الصَّاجُّ بِمَجْمَوْعَةٍ مِنْ مَنَايَا الْحَجَّ...\" Hmm likely \"الصَّاعَة\"? Text: \"يَقُوْمُ فِيْهِ الصَّاجُّ بِمَجْمُوْعَةٍ مِنْ مَنَايَا الْحَجَّ...\" Actually likely \"الصِّيَاح\"? Best transcription with care.\n\nLine 2: \"الآية: 3] يَقُومُ فِيهِ الصَّاجُّ بِمَجْمُوعَةٍ مِنْ مَنَايَا الْحَجْ...\" First word blue \"الآية:\" then bracket with 3. Word after: يَقُومُ فِيهِ الصَّاجُّ — could be \"الصِّيَاح\". I'll transcribe with [?] where unsure.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794336685,
+  "id": "20261111025112a14cba1d36cd469e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261111025112a14cba1d36cd469e",
+  "usage": {
+    "completion_tokens": 650,
+    "completion_tokens_details": {
+      "reasoning_tokens": 261
+    },
+    "prompt_tokens": 8083,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8733
+  }
+}

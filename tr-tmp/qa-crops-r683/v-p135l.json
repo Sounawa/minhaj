@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "D'après cette image (agrandissement), voici ce qui est réellement visible — et je ne peux pas inventer le reste.\n\n**Ligne 1 (fin visible) :**\n« ... »أنهُ لقِي رَجُلاً مـ...\n- Après «لقِي» : ر ج لاً (rajulān, mais en fait **رَجُلاً** — ر، ج، ل، ا avec tanwīn fatha)\n- Le lieu après «من أهله بـ» **n'apparaît pas** dans cette image : on voit seulement le début d'un mot qui commence par **مـ** (mīm isolé en début de mot, coupé par le bord droit). Impossible de lire le lieu → **[?]**\n\n**Ligne 2 (fin visible) :**\n« ...ذلِكَ، فأمرَهُ عَبدُ ا...\n- On lit : ...ذلِكَ ، فامرهُ عبدُ ا...\n- Le nom continue après «عبدُ ا...» (probablement الله + un nom, ex. الله بن...) mais la suite est coupée → **[?]** pour la fin exacte (ا-ل-ل-ه visibles partiellement, le reste hors image)\n\n**Ligne 3 :**\n❌ **Non visible dans cette image.** Seules deux fins de lignes apparaissent. Le renvoi [الموطأ رقم: N] ne peut donc pas être transcrit — il faudrait l'agrandissement de la ligne suivante.\n\n**Note :** si la première ligne est «أنه لقي رجلا من أهله بـ[مكة/المدينة]», le mot commençant par مـ pourrait être «مكة» (م، ك، ة) mais les lettres après le mīm ne sont pas lisibles ici → je maintiens **[?]** conformément à votre consigne de ne rien deviner.\n\nMerci de fournir l'agrandissement couvrant le bord gauche complet (y compris la 3e ligne) pour compléter la transcription.",
+        "reasoning_content": "The image shows two lines partially: «أنه لقي رجلا م... (cut) and ...ذالك، فمره عبد ا... (cut). Only two lines visible; third line not visible. Report honestly.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794336862,
+  "id": "202611110254104b250cda56ac4602",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611110254104b250cda56ac4602",
+  "usage": {
+    "completion_tokens": 511,
+    "completion_tokens_details": {
+      "reasoning_tokens": 47
+    },
+    "prompt_tokens": 3571,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4082
+  }
+}

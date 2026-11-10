@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Transcription mot à mot (portion visible) :**\n\nÀ l'extrême gauche : un trait vertical tronqué = le début de la **bordure** de l'encadré (pas une lettre).\n\nEnsuite, le premier fragment de mot imprimé, coupé par le bord :\n\n**« بِقَا ــ »** (se poursuit hors champ)\n\nÉnumération lettre par lettre :\n1. **ب** (bāʾ) — partiellement coupée au bord\n2. **ِ** (kasra sous le bāʾ)\n3. **ق** (qāf)\n4. **َ** (fatḥa sur le qāf)\n5. **ا** (alif)\n\nPuis, après un espace, le mot suivant visible : **« قَا[...] / [...]قَالَ ــ »** — on distingue clairement :\n1. **ق** (qāf)\n2. **َ** (fatḥa)\n3. **ا** (alif)\n4. **ل** (lām)\n5. **َ** (fatḥa)\n\n— suivi de lettres tronquées vers la droite [?].\n\n⚠️ Réserves : les extrémités droites et gauches des mots sont coupées par les bords de l'image ; je n'ai transcrit que ce qui est nettement visible. La lecture « بِقَا… » est cohérente avec l'image, mais la fin du premier mot est hors champ [?].",
+        "reasoning_content": "Image shows partially cut text: rightmost cut word \"…قَا\" ending with قا? Visible: a cut letter on right edge, then \"قَالَ\" partially, and \"بِقَا\" fragment at left edge? Actually visible: \"بِقَا[...]\" at left margin cut, then \"قَالَ\"? Let's read: at far left there's a cut vertical stroke (border) and part of letter. Middle shows \"قَالَ\"? There is \"ـالَـ\" ... The visible glyphs: left edge: partial letter; then \"قَا\" with damma? then \"ـقَالَ\". Hmm.\n\nWhat I see: a word cut at left edge showing tail, then \"قَا\" ... Actually the picture shows: left: cut stroke + \"بِقَـ\"? The middle: \"قَا\" no... The large word center is \"قَا\" with alif and ل? It looks like \"ـقَا\" then \"ـلَـ\". Likely the line reads \"بِقَاهِرَةَ، قَدْ أَفَاضَ...\" with visible \"بِقَا\" and \"قَدْ\" ... The visible: \"بِقَا\" at left (ب with kasra, ق, ا), then \"قَدْ\"? Center word looks like \"قَا\" with damma over ق? There's a damma above. Then \"ـلَهْ\"?\n\nHonestly describe: visible letters: at left edge a truncated stroke (possibly border + letter tail), then \"بِقَا\" not fully... The rightmost cut shows \"ـقَا\" with dots below (two dots = ق final? shows dots under right edge letter — قـ? two dots visible bottom right). So rightmost word ends \"...قّ\" maybe.\n\nI'll transcribe conservatively: visible: \"بِقَا[...]\" then \"[...]قَالَ[...]\"? Give letter enumeration for first clear word \"قَا...\" Hmm.\n\nThe prompt expects first word \"بِقَا...\". Enumerate: ب، ِ، ق، َ، ا... The image indeed left shows partial ب? Leftmost is a cut stroke—could be the border. Then letters: ب (cut), kasra? Actually I see \"ـقَا\" mid and \"ـلَهـ\". Let me just answer: visible portion reads \"...قَا... ـقَالَ\" ... I'll give: بِقَا with enumeration, noting uncertainty.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794337171,
+  "id": "20261111025910d36653a4def646ee",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261111025910d36653a4def646ee",
+  "usage": {
+    "completion_tokens": 899,
+    "completion_tokens_details": {
+      "reasoning_tokens": 559
+    },
+    "prompt_tokens": 1719,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2618
+  }
+}

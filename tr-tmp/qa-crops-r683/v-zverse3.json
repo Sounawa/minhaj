@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription mot à mot\n\n**Ligne du verset (haut de l'image) :**\n\n﴿وَأَذَانٌ مِّنَ اللَّهِ وَرَسُولِهِ إِلَى الَّذِينَ... (suite coupée hors zone) سَيَبْلُغُهُ الَّذِينَ... إِلَىٰ كُلِّ جَارِ...﴾\n\n**Renvoi (bleu) :**\n[الآية: ٣] — lu chiffre par chiffre : ٣ (trois, un seul chiffre visible)\n\n**Phrase suivante (bas de l'image) :**\nيَقُومُ فِيهِ الْحَاجُّ بِمَجْمُوعِ مِنْ مَنَاسِكِ الْحَجِّ\n\n---\n\n# Analyse détaillée\n\n1. **Début du verset** : on lit clairement après le ﴿ bleu : **وَأَذَانٌ مِّنَ اللَّهِ وَرَسُولِهِ** (avec tanwīn-kasra sur وَأَذَانٌ, sukūn sur le مّ de مِّنَ).\n   - **Verdict : وَأَذَانٌ** ✅ — ce n'est **pas** وَأَذِّنْ (pas de shadda ni de forme impérative ici ; la graphie avec tanwīn est nette).\n\n2. **Suite du verset** : **إِلَى الَّذِينَ** puis le texte sort du cadre haut de l'image ; on retrouve en fin de ligne : **سَيَبْلُغُهُ الَّذِينَ... إِلَىٰ كُلِّ جَارِ...** — la fin de ligne est coupée, je signale **[?]** sur les mots tronqués (notamment le mot après جَارِ, hors zone).\n\n3. **Renvoi bleu** : crochets [ ], contient **الآية: ٣**. Le chiffre est **٣** (un seul chiffre arabe oriental, correspondant à la sourate/verset). Je ne vois qu'un seul chiffre imprimé [?].\n\n4. **Phrase suivante** : يَقُومُ فِيهِ الْحَاجُّ بِمَجْمُوعِ مِنْ مَنَاسِكِ الْحَجِّ — diacritiques visibles : ضمة sur يَقُومُ, sukūn sur فِيهِ, ضمة sur الْحَاجُّ, ضمّتان (tanwīn dhamm) sur بِمَجْمُوعِ, sukūn sur مِنْ et مَنَاسِكِ.\n\n⚠️ La partie gauche de la ligne du verset est tronquée par le bord de l'image : je ne transcris que ce qui est réellement visible et je ne reconstitue pas le verset complet.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794336176,
+  "id": "202611110242417fbc80372dbb46f5",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611110242417fbc80372dbb46f5",
+  "usage": {
+    "completion_tokens": 713,
+    "completion_tokens_details": {
+      "reasoning_tokens": 712
+    },
+    "prompt_tokens": 5080,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5793
+  }
+}

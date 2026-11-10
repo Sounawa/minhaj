@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription de la colonne droite\n\n**Ligne 1** (texte noir, coupé à droite) :\nاستعين بشرح الزرقاني لايين حكم من لافض [?]\n\n**Rubrique encadrée** : bandeau vert à extrémités arrondies, bordure vert clair, avec un point/disque bleu foncé à droite du titre. Titre en bleu, gras :\n**الإعداد القبلي**\n\n**Texte noir** (mot souligné) :\n<span style=\"text-decoration:underline\">أحفظ</span> أحاديث الدرس المقبل وأجيب عن الآتي\n\n**Liste numérotée** (chiffres bleus en chiffres arabes/occidentaux) :\n\n1 - أحمد نوعي التحل، وأذكر ميقاتهما.\n\n2 - أبين حكم الحلاق والتقصير وصفتهما.\n\n---\n\n*Note : la première ligne est tronquée sur le bord droit de l'image ; le texte complet est incertain, signalé par [?]. Les mots « ميقاتهما » et « التحل » sont transcrits tels qu'ils apparaissent, avec [?] sur les diacritiques peu lisibles.*",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794336752,
+  "id": "202611110252251b3d989d780243cc",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611110252251b3d989d780243cc",
+  "usage": {
+    "completion_tokens": 270,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2217,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2487
+  }
+}

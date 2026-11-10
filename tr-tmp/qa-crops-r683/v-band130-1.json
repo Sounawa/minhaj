@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "أهداف الدرس\n\n1 - أن أُتعرِف أعمال يوم النحر.\n\n*(Partie de ligne coupée en bas de l'image, illisible : [?])*",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794336394,
+  "id": "2026111102463273e55b6cd0ed49b9",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026111102463273e55b6cd0ed49b9",
+  "usage": {
+    "completion_tokens": 41,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1145,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1186
+  }
+}

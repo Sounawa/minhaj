@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Transcription mot à mot (de droite à gauche) :**\n\n1. يُرْحَمُ\n2. اللَّهُ\n3. ابْنَ\n4. فِيضٍ\n5. «\n6. [الْمُوَطَّأْ\n7. رَقِمْ\n8. :\n9. 1183]\n\n**Ligne complète :**\nيُرْحَمُ اللَّهُ ابْنَ فِيضٍ « [الْمُوَطَّأْ رَقِمْ : 1183]\n\n**Remarques :**\n- Le point noir à l'extrême gauche est un signe de fin de texte (ارنب / point final).\n- La tāʾ marbūṭa de « فِيضٍ » porte un tanwīn kasr visible.\n- Le guillemet ouvrant « précède le crochet bleu [ de la référence.\n\n**LIEU après « مِنْ أَهْلِهِ بِـ » :** ⚠️ cette séquence « مِنْ أَهْلِهِ بِـ » n'est **pas visible** sur cette ligne — la ligne ne contient que ce qui est transcrit ci-dessus. Le seul nom propre potentiellement géographique/nisba est « فِيضٍ » dans le nom de l'athar lui-même :\n- ف (fāʾ) avec un point unique au-dessus\n- ي (yāʾ) médiane, avec deux points sous la lettre\n- ض (ḍād) finale, avec un point unique au-dessus\n- tanwīn kasr (deux kasra, ou kasra + fatha inversé) au-dessus du ض\n\nSi vous avez une autre ligne contenant « مِنْ أَهْلِهِ بِـ », merci de la fournir pour la description lettre par lettre.",
+        "reasoning_content": "Line reads: يُرْحَمُ اللَّهُ ابْنَ فِيضٍ « [الموطأ رقم : 1183]\n\nNote no \"من أهلها بـ\" visible; place word \"فِيضٍ\"? The athar text: ابن فضيل? Actually Muwaṭṭaʾ: \"يرحم الله ابن فيض\"؟ Hmm, likely \"عبد الله بن فيض\". Transcribe.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794337016,
+  "id": "202611110256416e6e4c289b9f47a6",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611110256416e6e4c289b9f47a6",
+  "usage": {
+    "completion_tokens": 542,
+    "completion_tokens_details": {
+      "reasoning_tokens": 97
+    },
+    "prompt_tokens": 7968,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8510
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Je ne peux pas effectuer cette transcription : l'image ne contient aucun texte arabe. Elle montre uniquement une page essentiellement blanche, avec une simple ligne horizontale bleue en bas (probablement un élément décoratif de bord de page ou de pied de page).\n\nIl n'y a donc ni rubriques colorées, ni texte noir, ni athars/hadiths, ni renvois [الموطأ رقم: N] à transcrire. Si vous disposez de l'image correcte de la colonne droite du manuel, envoyez-la et je transcrirai fidèlement ligne par ligne.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794336756,
+  "id": "20261111025232c69a68220920410b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261111025232c69a68220920410b",
+  "usage": {
+    "completion_tokens": 136,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2165,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2301
+  }
+}

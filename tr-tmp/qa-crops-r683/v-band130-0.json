@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription\n\n**Titre de la rubrique (bandeau vert, texte bleu) :**\n\nمَا بَفْعَلُ الـ[؟] *(texte coupé à gauche — probablement « ما بفعل النـ[؟] » ou similaire ; suite non visible)*\n\n**Élément décoratif central (médaillon bleu) :**\n\nالْمُدَرِّس (partiellement coupé : « الـمدرس »)\n\n**Nombre dans le médaillon :**\n\n19\n\n*(Aucun texte noir courant, aucun verset coranique, aucun renvoi [سورة ... الآية: ...] ni [الموطأ رقم: ...], aucune note de bas de page visible sur cette bande d'image.)*",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794336392,
+  "id": "2026111102462600716011aeea47a0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026111102462600716011aeea47a0",
+  "usage": {
+    "completion_tokens": 172,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1145,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1317
+  }
+}
