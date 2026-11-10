@@ -1,0 +1,34 @@
+# Transcription
+
+## Colonne de DROITE (haut en bas) :
+
+البخاري: أصح الأسانيد كلها مالك عن نافع عن ابن عمر. ولاه عمر بن عبد العزيز
+
+صعدقات اليمن، وأرسله إلى مصر ليعلم أهلها السن. توفي سنة ١١٧هـ.
+
+● **الفهم**
+
+الشرح:
+
+## Colonne de GAUCHE (haut en bas) :
+
+– **التعقّبة**: مكان مباعدة الأنصار للنبِيّ ﷺ على، الهجرة.
+
+---
+
+## Renvois [الموطأ رقم: N] :
+
+Aucun renvoi [الموطأ رقم: N] n'apparaît sur cette bande. Le seul chiffre présent est :
+
+- **١١٧** (dans « توفي سنة ١١٧هـ »)
+  - Chiffre par chiffre : ١=1, ١=1, ٧=7 → **117**
+  - Tel qu'imprimé : **١١٧**
+
+---
+
+## Remarques :
+
+- La transcription respecte la disposition en deux colonnes, lue de droite à gauche.
+- Le texte de cette bande correspond à la fin de la biographie de Mālik (ce passage semble sortir du cadre strict du Šarḥ az-Zarqānī classique, ou être une note marginale/glose de l'éditeur).
+- « الهجرة » dans la dernière ligne : [?] — il est possible qu'un mot suive avant « الهجرة » (le texte semble tronqué en bas de page : « على، الهجرة » — lecture incertaine, peut-être « على [رأس] الهجرة » ou similaire).
+- Le symbole ﷺ (صلى الله عليه وسلم) figure sur le Nom du Prophète ﷺ dans la dernière ligne.
