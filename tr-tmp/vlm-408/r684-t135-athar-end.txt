@@ -1,0 +1,12 @@
+Voici la transcription de la dernière ligne de l'athar dans l'encadré (page 135) :
+
+يَرْجِعُ إِلَى الْبَيْتِ فَيُطِيفُ» [الْمُوَطَأُ رَقْم: NUM: 1183].
+
+Détail de ce que je vois, lettre par lettre :
+- **يَرْجِعُ** (avec fatha sur le rāʾ, kasra sous le jīm, ḍamma sur le ʿayn) — pas «ثُمَّ», la ligne commence bien par «يَرْجِعُ»
+- **إِلَى**
+- **الْبَيْتِ**
+- **فَيُطِيفُ** (fatha sur le fāʾ, ḍamma sur le yāʾ, ḍamma sur le ṭāʾ) — le mot se termine en apparence par «فُ» ; la forme «فِيفِضْ» que vous mentionnez n'est pas visible : je lis «فيطيف», pas «يفيض»
+- Renvoi en bleu entre crochets : **[الْمُوَطَأُ رَقْم: ١١٨٣]** → NUM: 1183 (chiffres ١=1, ١=1, ٨=8, ٣=3, chiffres occidentaux imprimés «1183»)
+
+Je ne vois pas dans cette ligne les mots «البيت ... الذي قد أفاض ...» ; la ligne visible est courte et se termine par la référence. Aucun mot n'est illisible ici.

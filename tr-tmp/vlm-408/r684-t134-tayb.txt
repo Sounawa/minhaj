@@ -1,0 +1,12 @@
+Transcription de la zone visible (l'image ne montre pas la ligne «وكذلك الطيب عند ابن عمر...», elle montre un autre passage) :
+
+**Ligne 1 :**
+فَطْ. ويَحْرُمُ الصَّيْدُ؛ لِقَوْلِهِ تَعَالَى: ﴿لَا تَقْتُلُوا الصَّيْدَ وَأَنْتُمْ حُرُمٌ﴾ [سورة المائدة الآية: ٩٥] → NUM: 95
+
+**Ligne 2 :**
+وَأَمَّا الظَّلُّ الأَكْبَرُ مِنْ جِنْبِ مُحَظَّرَاتِ الإِحْرَامِ فَلَا يَحْصُلُ إِلَّا بِطَوَافِ الإِفَاضَةِ.
+
+**Ligne 3 (partiellement coupée en bas, en vert) :**
+٢ - خَطَبَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ [fin de ligne illisible/coupée]
+
+⚠️ Remarque : le renvoi coranique visible ici est [سورة المائدة الآية: ٩٥], soit NUM: 95, et ce qui précède est «ويحرم الصيد؛ لقوله تعالى» — mais ce n'est pas la ligne «وكذلك الطيب عند ابن عمر، وكرهه مالك» demandée, qui n'apparaît pas dans cette image.
