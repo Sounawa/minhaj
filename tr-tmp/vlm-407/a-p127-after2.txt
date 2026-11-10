@@ -1,0 +1,22 @@
+Voici la transcription exacte du passage :
+
+**Transcription complète :**
+
+وإن باشر الحاج زوجته بعد رمي جمرة العقبة وقبل طواف الإفاضة فاعتبره العُمرة واللذين، وليس عليه حجّ قال، وحاجه الأول صحيح؛ لوقوعه بعد التحلل، غايته أنه وقع فيه نقص جبر بالعُمرة واللذّي، ووجبت عليه العُمرة؛ لأن عليه أن يأتي بطواف الإفاضة في نُسك لم يدخل عليه نقص بالوُطوء، ولا حج عليه فتعيّنت العُمرة. قال مالك
+
+**Réponse à votre question glyphique :**
+
+Après « صحيح؛ لوقوعه بعد التحلل », le texte porte bien **« غايته أنه وقع »** (avec غايته : غ + ا + ي + ت + ه), et non « غير أنه وقع ».
+
+On le vérifie glyphe par glyphe :
+- **غ** (ghayn avec point supérieur)
+- **ا** (alif)
+- **ي** (yā’ — point **sous** la lettre, deux points en dessous)
+- **ت** (tā’ — **deux** points au-dessus)
+- **ه** (hā’ finale)
+
+S'il s'agissait de « غير », on aurait vu un point **au-dessus** du yā’ et un shadda/point sur le rā’ final (ر), ce qui n'est pas le cas ici. La leçon correcte est donc **غايته** (= « son aboutissement / au plus il y eut »).
+
+**Dernière ligne transcrite :**
+
+الإفاضة في نُسك لم يدخل عليه نقص بالوُطوء، ولا حج عليه فتعيّنت العُمرة. قال مالك

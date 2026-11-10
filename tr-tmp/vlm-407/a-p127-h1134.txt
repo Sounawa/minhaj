@@ -1,0 +1,24 @@
+**Transcription ligne par ligne (exactement ce qui est visible) :**
+
+Ligne 1 :
+لَمْ يَجِدْ هَذَا فَعَلَيْهِ صِيَامُ ثَلَاثَةِ أَيَّامٍ فِي الْحَجِّ، وَسَبْعَةٍ إِذَا رَجَعَ إِلَى أَهْلِهِ، فَقَدْ ثَبَتَ: «دَانْ
+
+Ligne 2 :
+أَبَا أَيُّوبَ الْأَنْصَارِيِّ خَرَجَ حَاجَّاً، حَنِثَ [؟] إِذَا كَانَ بِالنَّازِيَةِ مِنْ طَرِيقِ مَكَّةَ أَضَلَّ رَوَاحِلَهُ،
+
+Ligne 3 :
+وَإِنَّهُ قَدِّمَ عَلَى عُمَرَ بْنِ الْخَطَّابِ يَوْمُ النَّحْرِ، فَذَكَرَ ذَلِكَ لَهُ، فَقَالَ عُمَرُ: اصْنَعْ مَا يَصْنَعُ
+
+Ligne 4 :
+الْمُعْتَمِرُ، ثُمَّ قَدْ [؟] حَلُّتْ، فَإِذَا أَدْرَكْتَ الْحَجَّ فَابْلَغْ فَالْحَجَّ، وَأَهْدِ مَا اسْتَيْسِرَ مِنَ الْهَدْيِ»
+
+Ligne 5 :
+[الموطّأ رقم: 1134]، وَرَوَى مِثْلَهُ عَنْ هَبَارْ، كَمَا فِي أَحَادِيثِ الدَّرْسِ.
+
+**Points à trancher :**
+
+- **Rapporteur :** le nom visible en début de ligne 2 est « أَبَا أَيُّوبَ الْأَنْصَارِيِّ » (Abû Ayyûb al-Anṣârî). Le connecteur de début de ligne n'est pas visible (coupé par la coupe d'image) — [?] sur la première lettre/le mot introducteur.
+- **Nom de lieu :** la ligne 2 porte bien **بِالنَّازِيَةِ** — c'est lisible tel quel.
+- **Paroles dʿUmar :** mot pour mot visibles : « اصْنَعْ مَا يَصْنَعُ الْمُعْتَمِرُ، ثُمَّ قَدْ [؟] حَلُّتْ، فَإِذَا أَدْرَكْتَ الْحَجَّ فَابْلَغْ فَالْحَجَّ، وَأَهْدِ مَا اسْتَيْسِرَ مِنَ الْهَدْيِ » — la graphie visible sur « ما استيسر » est **اسْتَيْسِرَ** (avec ي médiane visible). Le passage « ثُمَّ قَدْ [؟] حَلُّتْ » est partiellement flou entre « قَدْ » et « حَلُّتْ » — le mot intermédiaire n'est pas certain, marqué [؟] sans restitution.
+- **Fin :** « وَرَوَى مِثْلَهُ عَنْ هَبَارْ » — le nom est lisible **هَبَارْ** (avec tanwīn apparent en fin de mot).
+- **NUM, chiffre par chiffre :** **1 1 3 4** (الموطّأ رقم: 1134).
