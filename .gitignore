@@ -72,3 +72,5 @@ download/*.bundle
 download/minhaj-*.bdl
 download/minhaj-*.bundle
 .auth/
+books-enriched/
+__pycache__/
