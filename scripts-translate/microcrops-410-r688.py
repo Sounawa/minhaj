@@ -1,17 +1,9 @@
 # -*- coding: utf-8 -*-
-"""Minhāj — micro-crops leçon 410 hadith-3es (à RÉGLER après lecture des calibrations).
-
-Doctrine (R685/R687) : 1) lire d'abord les calibrations pleine page 300 dpi
-tr-tmp/qa-crops-r687/cal410-p141-142.png … cal410-p147-148.png et les sondes de
-borne borne410-p147-haut.png / borne410-p148-haut.png (médaillon 22 à localiser) ;
-2) AJUSTER les bandes ci-dessous au layout réel de chaque page (fractions y) ;
-3) exécuter : python3 scripts-translate/microcrops-410-r688.py
-4) lire les crops, trancher les numéros chiffre par chiffre (couches OCR
-inversées : «0421»=1240, «2421»=1242, «3421»=1243, «4421»=1244, «5421»=1245,
-«8421»=1248, «0621»=1260), adjudiquer à 900-1200 dpi les mots litigieux.
-"""
+"""Minhāj — micro-crops ajustés leçon 410 hadith-3es (R688, canal principal).
+Bandes cadrées sur les calibrations 300 dpi lues au tour."""
 import fitz
 from PIL import Image
+import os
 
 PDF = "/home/z/my-project/content/textbooks-src/hadith-3-iadadi_text.pdf"
 OUT = "/home/z/my-project/tr-tmp/qa-crops-r688"
@@ -34,7 +26,7 @@ def composite(name, bands, width=1500):
         imgs.append(im.resize((width, int(im.height * r)), Image.LANCZOS))
     sep = 14
     H = sum(im.height for im in imgs) + sep * (len(imgs) - 1)
-    sheet = Image.new("RGB", (width, H), (255, 210, 210))
+    sheet = Image.new("RGB", (width, H), (255, 215, 215))
     y = 0
     for im in imgs:
         sheet.paste(im, (0, y))
@@ -44,19 +36,14 @@ def composite(name, bands, width=1500):
     print(f"OK {path} — {sheet.width}x{sheet.height}")
 
 
-# ⚠︎ BANDES PROVISOIRES (trois tiers par page) — À AJUSTER après calibrations
-SHEETS = [
-    ("m-A-p141-medaillon-tamhid", [(141, 0.0, 0.35), (141, 0.33, 0.68)]),
-    ("m-B-p141-textes", [(141, 0.60, 1.0), (142, 0.0, 0.20)]),
-    ("m-C-p142-textes-notice", [(142, 0.18, 0.60), (142, 0.55, 1.0)]),
-    ("m-D-p142-gloses-p143", [(143, 0.0, 0.35)]),
-    ("m-E-p143-fiqh", [(143, 0.30, 0.70), (143, 0.65, 1.0)]),
-    ("m-F-p144-fiqh", [(144, 0.0, 0.40), (144, 0.35, 0.75)]),
-    ("m-G-p145-fiqh", [(145, 0.0, 0.40), (145, 0.35, 0.80)]),
-    ("m-H-p146-tail", [(146, 0.0, 0.45), (146, 0.40, 0.90)]),
-]
-
-import os
 os.makedirs(OUT, exist_ok=True)
-for name, bands in SHEETS:
-    composite(name, bands)
+
+composite("m410-A-p141-haut", [(141, 0.00, 0.45)])
+composite("m410-B-p141-cadre", [(141, 0.40, 0.85)])
+composite("m410-C-p142-cadre", [(142, 0.00, 0.50)])
+composite("m410-D-p142-notice-gloses", [(142, 0.45, 1.00)])
+composite("m410-E-p143-fiqh1", [(143, 0.00, 0.55)])
+composite("m410-F-p143-fiqh2", [(143, 0.50, 1.00)])
+composite("m410-G-p144-fiqh", [(144, 0.00, 0.60)])
+composite("m410-H-p144-145", [(144, 0.55, 1.00), (145, 0.00, 0.45)])
+composite("m410-I-p145-146", [(145, 0.40, 1.00), (146, 0.00, 0.90)])
