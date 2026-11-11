@@ -73,8 +73,11 @@ def main() -> None:
         print("auto-fix typographique appliqué (NNBSP, apostrophes, doubles espaces)")
 
     errors = []
-    # 1. arabe résiduel
-    m = ARABIC.findall(out)
+    # 1. arabe résiduel — convention phonétique R685 : l'écriture arabe est
+    #    licite dans <span dir="rtl" lang="ar">…</span> (enrichissement
+    #    enrich-layout.py, commit 548880f) ; elle reste interdite HORS de ces spans.
+    body_no_ar_spans = re.sub(r'<span dir="rtl" lang="ar">[^<]*</span>', '', out)
+    m = ARABIC.findall(body_no_ar_spans)
     if m:
         ctx = []
         for x in ARABIC.finditer(out):
