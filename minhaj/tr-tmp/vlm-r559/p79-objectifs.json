@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Titre du bloc : **أهداف الدرس**\n\nItems visibles (un seul est imprimé sur cette page) :\n1 - أن أتعرف فضل الذكر ومكانه.\n\nLes items 2 et 3 ne figurent pas sur l'image fournie.",
+        "reasoning_content": "Only item 1 visible.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793781249,
+  "id": "2026110416340362b28ca712da4c34",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110416340362b28ca712da4c34",
+  "usage": {
+    "completion_tokens": 64,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6
+    },
+    "prompt_tokens": 6317,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6381
+  }
+}

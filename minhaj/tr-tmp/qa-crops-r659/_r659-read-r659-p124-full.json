@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription — page 124 (lesson 23 closing)\n\n## 1) Green rubric (top)\n**الاستثمار**\n(د hiệu letter-by-letter: ا ل س ت ث م ا ر — with shadda on ث. Confirmed الاستثمار, matching R658 p.128; the text-layer الاستتمار is an error.)\n\n## 2) Quote box\nقال الإمام ابن الصلاح رحمه الله: «وأما التصحيف فسبيل السلامة منه الأخذ من أفواه أهل العلم، والضبط، فإن من حرم ذلك، وكان أخذه وتعلمه من بطون الكتب، كان من شأنه التحريف، ولم يُفلت من التبديل، والتصحيف». [مقدمة ابن الصلاح، ص 218].\n\n- Note: the printed text reads كان من شأنه التحريف (not عُرَّض لأخطاء الكتّاب كما قد يُتوقع). The middle of the quote is NOT garbled in this image; it reads smoothly.\n- Reference digits: 218 (ص ٢١٨) — not 812.\n\n## 3) Extraction sentence\nأستخلص من النص أهمية التحلي بقيمة الصبر لتلقي العلم من أفواه الرجال وأثر ذلك في الضبط والإتقان.\n\n## 4) Rubric الإعداد القبلي — 2 items (exactly two, no more)\n1. أُعدّ بحثاً مركزاً عن مذهب الإمام مالك في حكم رواية الحديث بالمعنى.\n2. أبحث عن الفروق بين رواية الحديث باللفظ وروايته بالمعنى، وما يترتب على ذلك .\n\nLeading digits read digit-by-digit: ١ , ٢ — no third item visible on the page.\n\nPage number: 124.\n\n---\n\n### Notes (français)\n- Rubrique verte : الاستثمار (« l'investissement »), confirmée par l'image et concordante avec R658 p.128 ; la couche texte الاستتمار est fautive.\n- La citation d'Ibn al-Salâh est complète et lisible ; la portion centrale réelle est «كان من شأنه التحريف» et non la variante attendue «عُرَّض لأخطاء الكتّاب».\n- Référence : [مقدمة ابن الصلاح، ص 218] — chiffres 2-1-8.\n- Rubrique الإعداد القبلي : exactement deux items numérotés ١ et ٢.\n- Rien d'illisible : aucun [؟] nécessaire.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794197883,
+  "id": "202611091217535d14c0832d4b4d4a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611091217535d14c0832d4b4d4a",
+  "usage": {
+    "completion_tokens": 577,
+    "completion_tokens_details": {
+      "reasoning_tokens": 576
+    },
+    "prompt_tokens": 8399,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8976
+  }
+}

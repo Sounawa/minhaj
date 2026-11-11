@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) **الاستئناس**\n\n(2) **أَلَا مَسَاجِدُ اللَّهِ** «لَا تَمْنَعُوا إِمَاءَ اللَّهِ مَسَاجِدَ اللَّهِ» **[الموطأ رقم: 532]**\n\n(3) **أَخْبَرَنِي مَالِكٌ الْعَتِيقُ، عَنْ بِشْرِ بْنِ سَعِيدٍ، أَنَّ رَسُولَ اللَّهِ ﷺ قَالَ: إِذَا شَهِدْتَ الْعِشَاءَ فَلَا تَمَسَّنَّ طِيبًا» **[الموطأ رقم: 533]**",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793692123,
+  "id": "2026110315483530da15f4301748f6",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "2026110315483530da15f4301748f6",
+  "usage": {
+    "completion_tokens": 205,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 6177,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6382
+  }
+}

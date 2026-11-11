@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Dans cette image, il n'y a en réalité **pas de rubriques en gros caractères ni de titre** : l'encadré vert ne contient qu'une seule ligne de texte (apparemment un hadîth).\n\nTranscription de cette unique ligne :\n\n**سَلُّوا مالِكُمْ عَنْ نَسَبِكُمْ جَمِيرَةً مِنَ الْجِمارِ في بَعْضِ الأيامِ مِنى حَذْيٌ يُنسي**\n\nIl s'agit de la première partie d'un hadîth (rapporté notamment par Ibn ʿAdiyy et al-Bayhaqî) dont le sens est : « Empêchez votre argent de vous exposer à cause de votre lineage, [en le dépensant] comme des braises qu'on jette, car il viendra des jours où un oublieux fera oublier [les siens] » — une mise en garde sur les aléas de la richesse et de la parenté.\n\nSi vous pensiez voir des mots isolés en gros caractères, il se peut que l'image ne montre que le corps du texte, sans le titre de la rubrique.",
+        "reasoning_content": "The image shows only one line of hadith text, no separate headings. It's a hadith: \"سَلُّوا مَالَكُمْ عَنْ نَسَبِكُمْ جَمِيرَةً مِنَ الْجِمَارِ...\" Actually the known phrase: \"تسلّوا مالك عن نسبيكم جميرة من الجمار في بعرض الأيام منى حذي يشبي\" — the actual hadith: \"تسلّوا مالَكُم عن نَسَبِكُم جَميرَةً من الجِمار في بَعْضِ الأيامِ منى حَذْيٌ يُنسي\" — The known hadith: \"تسلوا مالكم عن نسبيكم جميرة من الجمار\" (his lineage obscured). The text reads: \"سلّوا مالِكُم عن نَسَبِكُم جَمِيرَةً مِنَ الجِمارِ في بَعْضِ الأيامِ منى حَذْيٌ يُنسي\". Explain no headings present.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794350024,
+  "id": "2026111106333530587fb634044938",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026111106333530587fb634044938",
+  "usage": {
+    "completion_tokens": 537,
+    "completion_tokens_details": {
+      "reasoning_tokens": 263
+    },
+    "prompt_tokens": 7235,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7772
+  }
+}

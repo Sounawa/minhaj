@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**(1) Phrase :**\n\nحديثان أو أكثر متضادان في العني ظاهرا، فيوافق بينهما، أو يعتبر أحدهما ناسخا للآخر، أو برجيح أحدهما على الآخر»\n\n**Remarque :** le mot « برجيح » apparaît tel qu'imprimé (probablement coquille pour « بترجيح ») — je le transcris tel quel.\n\n**(2) Référence :**\n\n[التقريب والتيسير، للنووي، ص: 20]\n\n- Livre : التقريب والتيسير\n- Auteur : النووي\n- Page : **20** (imprimé « 2 0 » chiffre par chiffre en ordre gauche-droite, soit ٢٠)",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793985399,
+  "id": "202611070116307f165e2d6f99478a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070116307f165e2d6f99478a",
+  "usage": {
+    "completion_tokens": 183,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8171,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8354
+  }
+}

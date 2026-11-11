@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) «إذا صلّيتم على الميّت فأخلصوا له الدعاء» [سنن أبي داود].\n\n(2) La ligne d'introduction (عن ... بن ... عن أبيه...) n'apparaît pas sur cette image — elle est donc [illisible] / non visible.\n\n(3) Les premiers mots du récit visibles sont : «ومن نرك الدعاء أصلًا والي بين التكبيرات...» (suite visible : «بطله صلاته، واعيّدت، وأقل ما يكفي في الدعاء ما يسمى دعاء مثل: اللهم اغفر له، أو اللهم ارحمه، وقد استحب الإمام...»)",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793718913,
+  "id": "202611032315061311b670b9604e01",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611032315061311b670b9604e01",
+  "usage": {
+    "completion_tokens": 169,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8173,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8342
+  }
+}

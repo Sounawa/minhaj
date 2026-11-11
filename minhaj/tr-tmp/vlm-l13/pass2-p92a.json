@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**(1) Fin du matn du premier hadith :**\n\n«فَإِذَا فَرَغْتَنَّ، فَأَنَا فَرَغْتُ فَأَعْطِنَا حَقَّكَ، فَقَالَ: شَيْئًا مِنْ كَافُورٍ، فَأَظَعْنَا (أظلنا) حَقُّهُ، فَقَالَ: قَالَ: \"أَشْعَرْنَهَا إِيَّاهُ\" تَعْنِي بِحَقِّهِ: إِذَارَةُ [الموطأ رقم : 595].\n\n*Remarque d'honnêteté : la glose visible sous le hadith est « تَعْنِي بِحَقِّهِ : إِذَارَةُ (إِزَارُهُ) » — l'édition attendue (أشعرنها... تعني...) ne figure pas telle quelle ; je ne transcris que ce qui est imprimé.*\n\nRenvoi rouge : **[الموطأ رقم : 595].**\n\n**(2) Deuxième hadith (entier, tel qu'imprimé) :**\n\n— مَالِكٌ، عَنْ هِشَامِ بْنِ عُرْوَةَ، عَنْ أَبِيهِ، عَنْ عَائِشَةَ زَوْجِ النَّبِيِّ ﷺ: «أَنَّ رَسُولَ اللهِ ﷺ كُفِّنَ فِي ثَلَاثَةِ أَثْوَابٍ بِيضِ سَحُولِيَّةٍ، لَيْسَ فِيهَا قَمِيصٌ وَلَا عِمَامَةٌ».\n\n**[الموطأ رقم : 599].**\n\n*Remarque : le texte « كُفِّن... أو كُفِّنوني... » mentionné dans la question ne figure pas sur cette page ; je ne peux donc pas le transcrire sans inventer. Le hadith suivant imprimé est :*\n\n— مَالِكٌ، عَنْ نَافِعٍ: «أَنَّ عَبْدَ اللهِ بْنَ عُمَرَ كَانَ لَا يُقَرَّأُ فِي الصَّلَاةِ عَلَى الْجَنَازَةِ» [الموطأ رقم : 614].\n\n— مَالِكٌ، عَنْ نَافِعٍ: «أَنَّ عَبْدَ اللهِ بْنَ عُمَرَ كَانَ إِذَا صَلَّى عَلَى الْجَنَازَةِ، يَسْلَمُ حَتَّى يَسْمَعَ مِنْ يَلِيهِ» [الموطأ رقم : 620].",
+        "reasoning_content": "Note: the image doesn't match exactly the question's expected text (كُفِّن... not present). Transcribe what's visible.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793737754,
+  "id": "20261104042859bbf85aa2e87d4615",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261104042859bbf85aa2e87d4615",
+  "usage": {
+    "completion_tokens": 774,
+    "completion_tokens_details": {
+      "reasoning_tokens": 29
+    },
+    "prompt_tokens": 8192,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8966
+  }
+}

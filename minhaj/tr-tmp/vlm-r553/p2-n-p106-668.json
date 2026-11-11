@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "chiffre1=8, chiffre2=6, chiffre3=6, numéro=668\n\nMots visibles avant le crochet (partiellement coupés à droite de l'image) : « ...ار فِيم » — la phrase de Mālik n'est pas complète dans l'image ; on lit « فِيم » [illisible].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793717243,
+  "id": "202611032247204cb25dbac2894bc5",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611032247204cb25dbac2894bc5",
+  "usage": {
+    "completion_tokens": 79,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1423,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1502
+  }
+}

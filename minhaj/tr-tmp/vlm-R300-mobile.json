@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "LAYOUT OK: Readable single-column mobile layout with long-form French and Arabic text, no visible overlapping or clipping.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793106231,
+  "id": "20261027210347c0f3a43efc0145f0",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261027210347c0f3a43efc0145f0",
+  "usage": {
+    "completion_tokens": 25,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5722,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5747
+  }
+}

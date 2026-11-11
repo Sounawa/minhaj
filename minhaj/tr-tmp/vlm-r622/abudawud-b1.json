@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Transcription de la bande (de droite à gauche) :\n\n**جعفر بن مسافر، قال: حدثنا أبي في فدك، قال: حدثنا هشام بن سعيد عن ابن ثابت**\n\nRemarques :\n- La bande ne contient pas la séquence « عن أبي هريرة قال: جاء رجل إلى النبي ﷺ » mentionnée dans votre question ; il s'agit ici d'une chaîne de transmission (isnad) : « جعفر بن مسافر، قال: حدثنا أبي في فدك، قال: حدثنا هشام بن سعيد عن ابن ثابت ».\n- « فدك » : le point unique sous la lettre confirme ف (et non ق).\n- « ثابت » : les trois points confirment ث (et non ت/ب).",
+        "reasoning_content": "The band shows: جعفر بن مسافر، قال: حدثنا أبي في فدك، قال: حدثنا هشام بن سعيد عن أبي ثابت... wait \"عن ابن ثابت\"? Text: \"جعفر بن مسافر ، قال : حدثنا أبي في فدك ، قال : حدثنا هشام بن سعيد عن أبي ثابت\". Hmm \"عن أبي ثابت\" ends \"ثابت\". The image ends \"عن ابن ثابت\"? Words: \"عن أبي ثابت\" — last shows \"ابن ثابت\"? It reads \"...سعيد عن ابن ثابت\". Actually shown \"عن ابن ثابت\" without أبي? Visible: \"عن ابن ثابت\". I'll transcribe: جعفر بن مسافر، قال: حدثنا أبي في فدك، قال: حدثنا هشام بن سعيد عن ابن ثابت",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977669,
+  "id": "20261106230739ab0df80a185f46ad",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106230739ab0df80a185f46ad",
+  "usage": {
+    "completion_tokens": 388,
+    "completion_tokens_details": {
+      "reasoning_tokens": 204
+    },
+    "prompt_tokens": 3888,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4276
+  }
+}

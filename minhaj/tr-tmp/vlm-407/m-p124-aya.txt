@@ -1,0 +1,7 @@
+Transcription du texte coranique visible (entre ornements ﴿ ﴾) :
+
+﴿ فَكَأَيِّنَ مِنْ قَرْيَةٍ أَهْلَكْنَاهَا وَهِيَ ظَالِمَةٌ فَهِيَ [؟] خَاوِيَةٌ عَلَىٰ عُرُوشِهَا ﴾
+
+Notes :
+- Après « فَهِيَ », quelques lettres sont floues/coupées → [؟] (le texte attendu serait « فَهِيَ خَاوِيَةٌ », mais la liaison exacte est partiellement illisible).
+- **NUM: 26** (numéro bleu entre crochets, avec la référence « سورة الحج : 26 » apparente — sourate Al-Hajj).

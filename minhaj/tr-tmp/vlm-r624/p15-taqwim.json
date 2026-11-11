@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "التقويم\n\n1- أستدل من القرآن الكريم على حكم الحج مع بيان وجه الاستدلال.\n\n2- أبين حكم الاغتسال للإحرام، وحكم اغتسال المحرم للجنابة والتبرد مع الاستدلال.\n\n3- أستخرج من الدرس قواعد أصولية مع توضيحها بالأمثلة المناسبة.\n\n4- ما حكم الصورَتين الآتيتين مع الاستدلال والتعليل:\n\n- رجل أحرم ولم يغتسل.\n\n- امرأة نفساء لم تغتسل للدخول مكة.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976729,
+  "id": "2026110622520674f69d704e98459a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110622520674f69d704e98459a",
+  "usage": {
+    "completion_tokens": 145,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8082,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8227
+  }
+}

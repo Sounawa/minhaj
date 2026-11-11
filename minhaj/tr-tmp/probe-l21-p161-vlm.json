@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Voici les réponses point par point basées sur le contenu de l'image :\n\n**(1) Référence du hadith de Sunan Abi Dawud :**\n[سنن أبي داود: كتاب الوصايا باب في ميراث اليتيم حديث 2873]\n\n**(2) Référence de Jami' al-Bayan en bas de page :**\n[جامع البيان: 16/6]\n\n**(3) Texte exact du hadith cité (sur l'appellation de l'orphelin) :**\n«لا يُنْتَزَعُ اليتيم من ماله» قال أبو داود: يعني إذا بلغ، وإنما قيل له يتيمٌ رحمةً له\n\n**(4) Lectures (Qira'at) du mot «رُحْما» :**\n*   **Ibn ʿĀmir :** بضم الراء ويسكن الحاء (ou **رُحْمًا**)\n*   **Les autres lecteurs (Baqiyyat al-Qurra') :** بكسرها وفتح الحاء (أي **رِحَمًا**)",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793645324,
+  "id": "20261103024835ace2482e46124cc1",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261103024835ace2482e46124cc1",
+  "usage": {
+    "completion_tokens": 263,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5341,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5604
+  }
+}

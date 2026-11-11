@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "- **العَقِبَةُ**: مكان مباعدة الأنصار للنبي ﷺ على الهجرة.\n\n- **البَطْحَاءُ**: جمع جَمْرَة، وهي الحجر الصغير، وهي اسم لمجتمع الحصى.\n\n- **نُفَسْتُ**: ونُفَسْت ولدت، وأما بمعنى حاضت فيضمن النون فقطط.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794349424,
+  "id": "20261111062341205257bca27b4619",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261111062341205257bca27b4619",
+  "usage": {
+    "completion_tokens": 105,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2396,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2501
+  }
+}

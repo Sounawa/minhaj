@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Il n'y a pas de texte arabe imprimé sur cette image. Le seul élément visible est une ligne bleue horizontale et, à son extrémité droite, un cercle bleu contenant le numéro de page « 116 ».",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794349740,
+  "id": "202611110628589ec1659c7864497e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611110628589ec1659c7864497e",
+  "usage": {
+    "completion_tokens": 55,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2402,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2457
+  }
+}

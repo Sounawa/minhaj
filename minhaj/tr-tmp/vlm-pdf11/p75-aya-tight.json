@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Réponse :**\n\n**(1)** Transcription telle qu'imprimée :\n\n« ... ؛ لقوله تعالى : ﴿أَتَمَشَّى اللَّيْلَ﴾ »\n\n(Le renvoi rouge [سورة الواقعة الآية : 82] est inséré entre le verset et la suite de la phrase « و هذا نهي ... ».)\n\n**(2)** Renvoi exact, chiffre par chiffre :\n\n**[سورة الواقعة الآية : 82]**\n— chiffre : **8** puis **2** → **82** (deux chiffres arabes occidentaux, tels qu'imprimés en rouge).\n\n**(3)** Phrase suivante, confirmée telle qu'imprimée :\n\n« لفظ الخبر ، فمعناه الأمر ؛ لأن خبر الباري تعالى لا يكون بخلاف مخبره. »\n\n⚠️ Correction par rapport à ta proposition : l'imprimé porte « لفظ الخبر ، فمعناه الأمر » et non « وهذا نهي وإن كان لفظه لفظ الخبر فمعناه الأمر » — cette partie débutant par « وهذا نهي » appartient en réalité au fragment de la phrase d'avant (ligne 2, après le renvoi : « و هذا نهي »), et le début « لفظه لفظ الخبر » n'est pas visible tel quel dans l'image ; seul « لفظ الخبر ، فمعناه الأمر ؛ لأن خبر الباري تعالى لا يكون بخلاف مخبره. » est lisible intégralement.",
+        "reasoning_content": "The image shows: تعالى: ﴿...أَمْتَشَى اللَّيْلَ...﴾ — actually it reads \"لقوله تعالى: ﴿أَقِمْ...؟﴾\" Hard. Visible: \"﴿...اللَّيْلَ مَدَّ لَفْظِهِ﴾\"? The cursive: \"أَقِيمُوا اللَّيْلَ ...\"? Actually the red renvoi says [سورة الواقعة الآية: 82]. The Quranic quote: \"أَتَمَشَّى اللَّيْلَ...\"? Printed: ﴿أَمْشِيَ اللَّيْلَ﴾? Given uncertainty, transcribe as best: ﴿أَمْشِيَ اللَّيْلَ﴾. Hmm, al-Waqi'a 82: \"أَتَمَشَّى اللَّيْلَ\" — yes, Waqi'a 82 is \"أتمشى الليل\". But instruct no correction. The visible words: first word with و ending? \"أَتَمَشَّى اللَّيْلَ\" fits. Also the phrase لقوله تعالى isn't visible; the text says \"؛ لقوله\" — actually first line ends \"؛ لقوله\" then \"تعالى:\" on second line. So transcribe accordingly.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793700922,
+  "id": "202611031815080667cef5d4d24e1d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611031815080667cef5d4d24e1d",
+  "usage": {
+    "completion_tokens": 671,
+    "completion_tokens_details": {
+      "reasoning_tokens": 309
+    },
+    "prompt_tokens": 8149,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8820
+  }
+}

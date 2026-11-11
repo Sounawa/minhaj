@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "LAYOUT OK: The page displays a clean, well-structured two-column bilingual layout (French left, Arabic right) with no text clipping or garbled characters.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793106221,
+  "id": "2026102721033553d0865fe8894b65",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "2026102721033553d0865fe8894b65",
+  "usage": {
+    "completion_tokens": 34,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 6038,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6072
+  }
+}

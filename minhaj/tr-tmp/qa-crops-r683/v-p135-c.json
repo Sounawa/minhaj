@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## Transcription de la ligne (tronquée — seule la moitié supérieure des lettres est visible)\n\nLa ligne est coupée horizontalement ; les jambages inférieurs manquent. Je transcris mot à mot, de droite à gauche, uniquement ce qui est visible, sans deviner :\n\n1. **مَا [؟]** — à l'extrême droite : un mīm avec un trait suscrit (probablement مَا ou مَا [؟]), un point circulaire au-dessus.\n2. **عَنْ [؟]** — ʿayn fatha + nūn sukūn visibles (le trait du nūn est coupé).\n3. **رَسُولِ [؟]** — rāʾ fatha, sīn ḍamma, wāw ḍamma visible ; la suite coupée.\n4. **اللَّهِ [؟]** — lām-lām-shadda, trait final coupé ; possible ligature ﷺ juste après (fragment en diagonale).\n5. Fragment non identifié : **[؟]** (traits obliques courts — possiblement fin de mot ou virgule).\n6. **مَالِكٌ [؟]** — mīm fatha, ālif, līm, kāf avec tanwin (deux traits suscrits visibles à gauche du mot) — mais coupé : [?].\n7. **أَنَّ [؟]** — hamza fatha + nūn avec shadda (trait suscrit double) — [?].\n8. **أَنَّ/عَلَى [؟]** — à gauche : hamza + nūn/ḥā finale avec fatha suscrit ; fin coupée : [?].\n\n## Lieu après « مِنْ أَهْلِهِ بِـ »\n\n**Aucun lieu n'est visible** sur cette ligne : la séquence « مِنْ أَهْلِهِ بِـ » n'apparaît pas dans la portion visible.\n\n## Caractères lettre par lettre (aucun lieu identifié)\n\nNéant — je ne devine rien au-delà de ce qui est ci-dessus.\n\n**Note :** la coupe empêche toute lecture fiable des fins de mots ; les diacritiques indiqués sont ceux effectivement visibles en haut des lettres. Une vue de la ligne complète serait nécessaire pour confirmer (notamment si le mot 6 est مَالِكٌ).",
+        "reasoning_content": "The line is mostly cut off; only tops of letters visible. Reading right to left from fragments: possible \"عَنْ ... رَسُولِ اللَّهِ ﷺ ... مَالِكٌ ... أَثَرًا\"? Hard. Visible fragments: rightmost \"مَا\" with tanwin? Then \"عَنْ رَسُولِ اللَّهِ ﷺ\" then \"بْنِ أَنَسٍ\"? Then \"أَنَّ ... عَلَى\"? Then \"مَالِكٌ أَنَّ\"? Actually standard Muwaṭṭaʾ athar: \"قَالَ مَالِكٌ أَنَّ رَسُولَ اللَّهِ ﷺ...\" Line reads left part \"…ابْنِ أَنَسٍ؟\". Must transcribe word by word with [?].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794337001,
+  "id": "20261111025619ff621e8b252a420e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261111025619ff621e8b252a420e",
+  "usage": {
+    "completion_tokens": 764,
+    "completion_tokens_details": {
+      "reasoning_tokens": 204
+    },
+    "prompt_tokens": 7968,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8732
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Voici la transcription des lignes arabes visibles :\n\n1. لَا يَوْقَفُ عَنْهَا، وَيُرْمِي صِيَادٌ إِنْ أَمْكَنَ، وَمَنْ أَسْلَمَا نَدْبًا عِنْدَ الْإِمَامِ. (fin de la section précédente)\n\n2. **٢ - صفة الرمي والدابه**\n\n3. **أَ - صفة الرمي:** الَّذِي تَصِرُ إِلَيْهِ اللُّؤْمُ، ثُمَّ أَلْقَى النَّهْرُ بِنَحْوِ الْحَاجِ مَاشِيًا مَتَى خَضَا قَالَ...\n\nConcernant votre demande sur « فقال: يرمي من حيث ... » : cette formule **n'apparaît pas dans cette image**. Le texte visible ne contient pas ce passage. La dernière ligne se termine par « قالَ » et la suite (la réponse de Mālik) est coupée sur cette page — je ne peux donc pas lire le mot après « حيث » lettre par lettre, car il n'est pas présent dans l'image fournie. Si vous avez la page suivante, je pourrai la transcrire.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794350015,
+  "id": "20261111063327e62f75668ce941a6",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261111063327e62f75668ce941a6",
+  "usage": {
+    "completion_tokens": 325,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8019,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8344
+  }
+}

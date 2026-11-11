@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## Transcription (right-to-left, as actually visible in the image)\n\n**Note importante :** l'image fournie ne correspond pas au contenu décrit dans votre demande (pas de sous-ligne verte « شرب لبن الهدي », pas de « الرجوع في... », pas de hadith de Hisham ibn 'Urwa). Voici la transcription exacte de ce qui est visible :\n\n---\n\n**1) Titre vert (en haut à droite) :**\n\n٢ - شرابِ لبنِ الهدي\n\n---\n\n**2) Paragraphe principal :**\n\nكرهه مالكٌ في الاختيار ولو فضّل عن رَيِّ فصيلِه؛ لأنه نوعٌ من\nالصدقة، ومصل الكراهةِ حبيتٌ لا ضررَ، وإلا غَرَم؛ فَعِنْ هشامٍ بنِ عروةَ\n«إذًا اضطررت إلى بَدَنِك فاذْكِها رُكُوبًا غَيْرَ فاجِح، وإذًا اضطررت إلى\nبَعْضِ ما بَرَؤي فصيلِها، فإذا نحرتها فاجْعَلْ فصيلَها مَعَها» [الموطة رقم: 1112].\n\n---\n\n**3) Titre vert (milieu de page) :**\n\n٣ - أكل صاحبِ الهدي من هديه\n\n---\n\n**4) Paragraphe suivant :**\n\nعن مالك: أنه سُمِّع أهلَ العَلم يَقولون: «لا بَأَكَلَ صاحبُ الهَدي\nوَالنَّسْك» [الموطة رقم: 1126]، والمَشهور من المَذْهَب أنه بَأَكَل من كل هَدي\n\n---\n\n## Notes (français)\n\n- **Références bleues visibles :** الموطة رقم: **1112** (un, un, un-deux) et الموطة رقم: **1126** — chiffres en chiffres occidentaux (1112, non en chiffres arabes orientaux).\n- **Mot après « لأنه » :** c'est **نوعٌ من** qui apparaît, et le mot suivant la structure attendue « من » est **الصدقة** (pas الهدي) dans le texte visible — mais la phrase diffère de celle citée dans votre demande.\n- **Isnad :** le nom lisible est **هشام بن عروة** (avec فَعِنْ/عَنْ devant, partiellement flou) — mais le matn visible ne correspond pas au matn que vous décrivez (pas de « يُرَوَّفُ », « فَصِيلُهَا » dans cet ordre).\n- **Mots incertains/flous :** « حبيتٌ » (lecture douteuse, probablement « حيثُ لا » [؟]) ; « فاذْكِها » (probablement « فَارْكَيْهَا » [؟]) ; « بَرَؤي » [؟].\n- La mise en page : deux sections numérotées (٢ et ٣) avec titres en vert, texte en noir, références du Muwatta' en bleu — typique d'un manuel de fiqh malikite scolaire.\n- La dernière ligne est coupée en bas de page (phrase inachevée).",
+        "reasoning_content": "The image doesn't match the user's described content (lesson 17, شرب لبن الهدي, etc.). The visible image shows different text: section 2 شراب لبن الهدي with a different passage, and section 3. I should transcribe what's actually visible and note discrepancies.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794270413,
+  "id": "20261110082631e2e2f17bab554926",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261110082631e2e2f17bab554926",
+  "usage": {
+    "completion_tokens": 852,
+    "completion_tokens_details": {
+      "reasoning_tokens": 60
+    },
+    "prompt_tokens": 8256,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9108
+  }
+}

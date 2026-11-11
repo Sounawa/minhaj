@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "chiffre1=6, chiffre2=6, chiffre3=4, numéro=664\nMots avant le crochet : « الموطأ رقم : »",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793717272,
+  "id": "20261103224750a49423445a4744bf",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103224750a49423445a4744bf",
+  "usage": {
+    "completion_tokens": 39,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1809,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1848
+  }
+}

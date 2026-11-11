@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "والرَّعدُ والنَّخلِ والإسراءِ ومريمُ والحجِّ أولهَا والفرقانِ وطبسِ [illisible] وتنزيلِ [illisible] [illisible] وحَمْ [illisible] [illisible]\n\nالسَّجدةِ إحدى عَشَرَةَ سَجدةٍ، قالا: وليسَ في المفصَلِ منها شيءٍ» [مصنف عبد الرزاق]",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793700942,
+  "id": "20261103181534675500114c694339",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103181534675500114c694339",
+  "usage": {
+    "completion_tokens": 113,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8341,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8454
+  }
+}

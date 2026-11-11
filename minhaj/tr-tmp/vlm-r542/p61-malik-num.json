@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) ركعتان ولكن يبدأ الإمام بالصلاة قبل الخطبة، ثم يخطب قائماً.\n(2) Oui, le numéro exact est : **514** (texte visible : [الموطأ رقم: 514]).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793690421,
+  "id": "202611031520166fab600fdbf24adb",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202611031520166fab600fdbf24adb",
+  "usage": {
+    "completion_tokens": 61,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 6172,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6233
+  }
+}

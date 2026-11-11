@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**التقويم**\n\n1. أذكر أنواع التصحيف.\n\n2. أبين الفرق بين تصحيف الاسم وتصحيف البصر.\n\n3. أطلق من كلام يحيى بن معين، وأبين أهمية الصدق لطالب الحديث.\n\n123\n\n(Les éléments (1) et (2) demandés — حكم التصحيف والتحريف et أهتدي وأقتدي — ne sont pas visibles sur cette image.)",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794193168,
+  "id": "20261109105924633151bebb2c4779",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261109105924633151bebb2c4779",
+  "usage": {
+    "completion_tokens": 106,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 4449,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4555
+  }
+}

@@ -1,0 +1,16 @@
+IMAGE: p122-maani-thaniya-lugha.png
+CONSIGNE: Transcris EXACTEMENT, ligne par ligne : (1) l'item تصحيف في المعنى ENTIER mot à mot (le récit d'أبي موسى العنزي, le renvoi [المسند...] chiffre par chiffre, la glose sur العنزة الحربة) et le renvoi [مقدمة ابن الصلاح] chiffre par chiffre ; (2) le titre ثانيا : الحديث المحرف et 1. تعريفه أ- لغة (le renvoi [مقاييس اللغة...] chiffre par chiffre).
+---
+Les éléments demandés ne figurent PAS sur cette image. La page visible (p. 122) contient : la fin d'un schéma « أقسام المصحف » (avec [مقدمة ابن الصلاح، ص 387]) et le début de « ثانيا: الحديث المحروف » avec « 1. تعريفه: أ- لغة: اسم مفعل من التحريف، وهو التغيير، »و تحريف الكلام: عدله عن جهته« [مقاييس اللغة، ابن فارس، 2/43]. »
+
+Concrètement :
+- (1) L'item « تصحيف في المعنى » avec le récit d'أبي موسى العنزي, le renvoi [المسند...] et la glose sur العنزة الحربة, ainsi que le renvoi [مقدمة ابن الصلاح] : **non visibles sur cette page**.
+- (2) Le titre « ثانيا: الحديث المحروف » et « 1. تعريفه أ- لغة » : visibles, transcription exacte :
+
+ثانيا: الحديث المحروف
+
+1. تعريفه:
+
+أ- لغة: اسم مفعل من التحريف، وهو التغيير، «و تحريف الكلام: عدله عن جهته» [مقاييس اللغة، ابن فارس، 2/43].
+
+(Note : le titre imprimé est « المحروف », avec un wāw — je ne corrige pas.)

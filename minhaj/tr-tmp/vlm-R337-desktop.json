@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "```json\n{\n  \"titre_principal\": \"Dessiner et ajuster le chapitre Khia\",\n  \"badge_visible\": {\n    \"texte\": \"BIOGRAPHIE\",\n    \"contexte\": \"Badge orange situé en haut à gauche, au-dessus du titre de la leçon.\"\n  },\n  \"debordements_ou_chevauchements\": \"Aucun débordement, chevauchement ou zone illisible n'est visible. La mise en page est propre et la lisibilité est excellente.\",\n  \"table_des_vers_matn\": \"Oui, la table des vers (matn) est bien rendue. Elle est présentée dans une colonne dédiée à droite avec une typographie arabe claire et un espacement correct entre les lignes.\",\n  \"verdict_global\": \"OK\"\n}\n```",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793191550,
+  "id": "20261028204537a7f3f2c60a584966",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261028204537a7f3f2c60a584966",
+  "usage": {
+    "completion_tokens": 179,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5865,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6044
+  }
+}

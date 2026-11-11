@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "تَعْتَسِلُ ثُمَّ تَهُلُّ «» [الموطأ رقم ٢]",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976996,
+  "id": "20261106225634d3b1e5508e324a28",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106225634d3b1e5508e324a28",
+  "usage": {
+    "completion_tokens": 33,
+    "completion_tokens_details": {
+      "reasoning_tokens": 32
+    },
+    "prompt_tokens": 749,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 782
+  }
+}

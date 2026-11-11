@@ -1,0 +1,27 @@
+# Transcription
+
+**Ligne 1 (partiellement coupée en haut) :**
+...ودنييا [؟] وتم سياق... (ligne tronquée, illisible par endroits)
+
+**Ligne 2 :**
+
+لَبِثْتُ رَأْسِي وَقَلَدْتُ هَذِي فَلَا أَحْلُ حَتَّى أَنْحَرَ» [الموطأ رقم: ١١٦٩].
+
+NUM: 1169
+
+**Titre (en vert) :**
+
+ترجمة الراوي
+
+**Texte (ترجمة الراوي) :**
+
+**حَفْصَةُ رَضِي اللهُ عَنْهَا:** أَمُ الْمُؤْمِنِينَ بِنْتُ عُمَرَ بْنِ الْخَطَّابِ أَمِيرِ الْمُؤْمِنِينَ، وَشَقِيقَةُ الصَّحَابِي الْجَلِيلِ عَبْدِ اللهِ بْنِ عُمَرِ رَضِي اللهُ عَنْهُمَا، أَسْلَمَتْ رَضِي اللهُ عَنْهَا فِي مَكَّةَ،
+
+ثُمَّ هَاجَرَتْ مَعْ زَوْجِهَا الْأَوَّلِ خُنَيْسِ بْنِ حُذَافَةَ السَّهْمِيِّ إِلَى الْمَدِينَةِ الْمَنُورَةِ، ثُمَّ تَزَوَّجَهَا النَّبِيُّ رَحْمَةَ اللهِ (عليه) بَعْدَ وَفَاةِ زَوْجِهَا الْأَوَّلِ لَنْتَ حُ... حِ... أَصَابَتْهُ فِي غَزْوَةِ أُحُدٍ، وَتُوُفِّيَتْ سَنَةَ 4١ هِـ...
+
+---
+
+**Notes de transcription :**
+- NUM: 1169 — chiffre par chiffre : ١=1، ١=1، ٦=6، ٩=9
+- Le « 4 » dans « سَنَةَ 4١ » apparaît déjà sous forme de chiffre latin dans l'image (numérotation hybride), donc 41.
+- Certaines lignes en haut et en bas sont coupées par le cadre de l'image ; les mots tronqués sont transcrits tels que visibles sans deviner la fin.

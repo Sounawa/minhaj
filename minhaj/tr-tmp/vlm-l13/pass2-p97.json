@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) Premier hadith :\n« مَالِك، عن نافع، عن عَبْد الله بن عُمَر قال: «يُصَلَّى على الجَنازة بَعْدَ العَصْر وبَعْدَ الصُّبْحِ إِذا صَلَّيْتَها لِوَقْتِهَا» [الموطأ رقم: 616]\n\n(2) Deuxième hadith :\n« مَالِك، عن نافع، عن عَبْد الله بن عُمَر، أَنَّهُ قال: «صَلَّيْتُ على عُمَر بن الخَطَّابِ في المُصَلَّى» [الموطأ رقم: 618]\n\n(3) Item 1 de الإعداد القبلي :\nالعَقِيق – يَحْتَسِب – جَنَةٌ مِنَ النَّار – أَجْرَانِي فِي مُصِيبَتِي.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793737844,
+  "id": "2026110404303667c5b46271e64a20",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110404303667c5b46271e64a20",
+  "usage": {
+    "completion_tokens": 256,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8304,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8560
+  }
+}

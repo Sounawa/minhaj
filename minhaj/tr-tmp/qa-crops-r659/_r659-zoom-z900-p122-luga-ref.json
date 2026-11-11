@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription\n\n**1) Green rubric (from the previous page area, not visible in this crop):**\nثانياً: الحديث المحرف — *not present in this image crop* [؟] (this crop begins at item 1; the rubric ثانياً would be on the preceding portion of the page).\n\n**2) Numbered item, word by word:**\n\n1. تعريفه:\n\nأ- لغة: اسم مفعول من التحريف، وهو التغيير، «وتحريف الكلام: عدله عن جهته»\n\n**Bracketed reference, word by word:**\n- اللغة\n- ،\n- ابن\n- فارس\n- ،\n- 2/43\n- ]\n\n**Digit-by-digit reading of the reference:** The glyphs read \"43/2\" in visual left-to-right order (i.e., RTL volume/page = volume 2, page 43). First digit is a closed **4** (٤ shape \"4\"), second digit a clear **3** with two bowls — not a 3-then-4; the \"3\" is unmistakable, and no digit resembling \"3\" appears before the \"4\". So the reference is **2/43**, matching [مقاييس اللغة، ابن فارس، 2/43].\n\n**Volume/page digit by digit:** volume = ٢ (2); page = ٤ (4) then ٣ (3) → 43.\n\n---\n\n**Notes:**\n- The green text on this crop reads: «اللغة، ابن فارس، 2/43] .» with a leading bracket [ appearing at the end of the previous line (visible as «[مقاييس» partially clipped at the left of line 1 — the word مقاييس is cut off at the image edge, so [مقاييس is reconstructed [؟]).\n- The first line's leftmost green fragment is clipped; it reads «...فاييس]» visually, consistent with مقاييس.\n- Page number at bottom: 122 (green, Western digits, digit by digit: 1-2-2).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794198907,
+  "id": "20261109123454fe8b45706e064f80",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261109123454fe8b45706e064f80",
+  "usage": {
+    "completion_tokens": 450,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8132,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8582
+  }
+}

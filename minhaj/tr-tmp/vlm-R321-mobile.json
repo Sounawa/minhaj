@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "```json\n{\n  \"verdict\": \"LAYOUT OK\",\n  \"details\": [\n    \"La direction RTL (Right-to-Left) est correctement appliquée pour les sections en arabe.\",\n    \"Le texte est bien contenu dans la largeur de l'écran mobile (390px), sans débordement horizontal visible.\",\n    \"Les titres et sous-titres sont clairement distingués et alignés.\",\n    \"Aucun chevauchement de texte ou d'éléments n'est détecté.\",\n    \"La mise en page bilingue alterne logiquement entre le français et l'arabe selon les sections.\"\n  ]\n}\n```",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793135095,
+  "id": "20261028050452fa09a03c9c1a4404",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261028050452fa09a03c9c1a4404",
+  "usage": {
+    "completion_tokens": 143,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 4869,
+    "prompt_tokens_details": {
+      "cached_tokens": 2
+    },
+    "total_tokens": 5012
+  }
+}

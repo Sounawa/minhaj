@@ -1,0 +1,19 @@
+Voici la transcription exacte de ce qui est visible, ligne par ligne :
+
+**Ligne 1 :**
+قُدِّمَ وَلاَ أَخَّرَ إِلاَّ قَالَ: «اقْبَلْ وَلاَ حَرَّج». [المُوَطَّأَ رِوَايَة: NUM: 1267].
+
+**Ligne 2 :**
+— مَالِكٌ عَنْ نَافِعٍ عَنْ عَبْدِ اللهِ بْنِ عُمَرَ عَنْ حَفْصَةَ أُمِّ الْمُؤْمِنِينَ أَنَّهَا قَالَتْ:
+
+**Ligne 3 :**
+لِرَسُولِ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: مَا شَأْنُ النَّاسِ حَلُّوا [حَلُوا] وَلَمْ تَحِلُّ النَّسَاءُ مِنْ عُمْرَتِكُمْ؟ فَقَالَ: «إِنِّي
+
+**Notes sur les points demandés :**
+- Le verbe : transcrit « حَلُّوا » (avec shadda visible sur ل ; la diacritique semble حَلُّوا).
+- La négation/pronom : « وَلَمْ تَحِلُّ » (le fatha sur لِ est visible, point flou → [تَحِلُّ]).
+- Le mot final de la question de Hafsa : « عُمْرَتِكُمْ » (تنوين الكسر apparent sous م — pluriel « votre 'umra », non « عُمْرَتِكَ »).
+- Numéro : NUM: 1267.
+- La dernière ligne est coupée : « إِنِّي... » (suite hors zone visible).
+
+⚠️ Je ne devine rien au-delà des lettres lisibles ; les diacritiques incertaines sont signalées.

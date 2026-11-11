@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Verdict: LAYOUT OK. The bilingual content is well-structured with clear headings and no visible overflow or overlapping elements.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793138387,
+  "id": "2026102805594357519c5fe3d14038",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "2026102805594357519c5fe3d14038",
+  "usage": {
+    "completion_tokens": 26,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5445,
+    "prompt_tokens_details": {
+      "cached_tokens": 5
+    },
+    "total_tokens": 5471
+  }
+}

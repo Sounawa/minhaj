@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "```json\n{\n  \"lisible\": \"oui\",\n  \"problemes\": [\n    \"Le texte arabe est aligné à droite mais le contenu français est très dense\",\n    \"La mise en page en deux colonnes (français/arabe) est respectée\"\n  ],\n  \"balises_visibles\": \"non\",\n  \"debordement\": \"non\",\n  \"chevauchements\": \"non\",\n  \"verdict\": \"LAYOUT OK\"\n}\n```",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793156762,
+  "id": "202610281105535279b218f9d546df",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610281105535279b218f9d546df",
+  "usage": {
+    "completion_tokens": 101,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5904,
+    "prompt_tokens_details": {
+      "cached_tokens": 2
+    },
+    "total_tokens": 6005
+  }
+}

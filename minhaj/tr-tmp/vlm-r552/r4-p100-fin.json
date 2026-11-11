@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**(1)** ثم يصبّ التراب على القبر في سهولة وتقريبٍ،\n\n→ le mot imprimé est **تَقْرِيبٍ** (et non تقريق/تفريق/ترقيق/تفريج).\n\n**(2)** دون ذلك الأَرْضَ بشدةٍ بالأقدام.\n\n→ la formule exacte est : **دُونَ ذلِكَ الأَرْضَ** (pas de دكّ/قرع/قبرها).\n\n**(3)** فإذا فرغ الناس من الدفن يُندب أن يبقى أحدهم عند القبر، ويدعو للميّت بالمغفرة والتثبيت عند السؤال.\n\n→ **عَنْدَ القَبْرِ** (et non قريبا من رأس القبر) ; **التَّثْبِيتِ** ; **عِنْدَ السُّؤَالِ**.",
+        "reasoning_content": "Transcribe the passages.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793725861,
+  "id": "202611040110533a7f891b0781426d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611040110533a7f891b0781426d",
+  "usage": {
+    "completion_tokens": 223,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5
+    },
+    "prompt_tokens": 8223,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8446
+  }
+}

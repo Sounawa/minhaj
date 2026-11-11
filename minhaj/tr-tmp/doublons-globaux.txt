@@ -1,0 +1,33 @@
+=== DOUBLONS URL-EXACTS GLOBAUX (bloqué <-> déjà traduit ailleurs) ===
+tafsir-5ep/pdf-mut23h3c-768 | Sourate Fatir, versets : 1-3 ← tafsir-2es/pdf-mut23h33-556
+tafsir-5ep/pdf-mut23h3c-769 | Sourate Fatir (versets : 4-6) ← tafsir-2es/pdf-mut23h33-557
+tafsir-5ep/pdf-mut23h3c-770 | Sourate Fatir (versets : 7-10) ← tafsir-2es/pdf-mut23h33-558
+tafsir-5ep/pdf-mut23h3c-771 | Sourate Fatir (versets 10-11) ← tafsir-2es/pdf-mut23h33-559
+tafsir-5ep/pdf-mut23h3c-772 | Sourate Fatir (versets : 12 - 14) ← tafsir-2es/pdf-mut23h33-560
+tafsir-5ep/pdf-mut23h3c-773 | Sourate Fatir (versets : 15-18) ← tafsir-2es/pdf-mut23h33-561
+tafsir-5ep/pdf-mut23h3c-774 | Sourate Fatir (versets : 19 - 26) ← tafsir-2es/pdf-mut23h33-562
+tafsir-5ep/pdf-mut23h3c-775 | Sourate Fatir (versets : 27-28) ← tafsir-2es/pdf-mut23h33-563
+tafsir-5ep/pdf-mut23h3c-776 | Sourate Fatir (versets : 29-31) ← tafsir-2es/pdf-mut23h33-564
+tafsir-5ep/pdf-mut23h3c-777 | Sourate Fatir (versets : 32-35) ← tafsir-2es/pdf-mut23h33-565
+tafsir-5ep/pdf-mut23h3c-778 | Sourate Fatir (versets : 36-37) ← tafsir-2es/pdf-mut23h33-566
+tafsir-5ep/pdf-mut23h3c-779 | Sourate Fatir (versets : 38-40) ← tafsir-2es/pdf-mut23h33-567
+tafsir-5ep/pdf-mut23h3c-780 | Sourate Fatir (versets : 41-44) ← tafsir-2es/pdf-mut23h33-568
+tafsir-5ep/pdf-mut23h3c-781 | Sourate Fatir (versets : 45-46) ← tafsir-2es/pdf-mut23h33-569
+tafsir-5ep/pdf-mut23h3c-782 | Sourate Al-Hadid (versets : 1-4) ← tafsir-2es/pdf-mut23h33-570
+tafsir-5ep/pdf-mut23h3c-783 | Sourate Al-Hadid (versets : 5 - 8) ← tafsir-2es/pdf-mut23h33-571
+tafsir-5ep/pdf-mut23h3c-784 | Sourate Al-Hadid (versets : 9-11) ← tafsir-2es/pdf-mut23h33-572
+tafsir-5ep/pdf-mut23h3c-785 | Sourate Al-Hadid (versets : 12-14) ← tafsir-2es/pdf-mut23h33-573
+tafsir-5ep/pdf-mut23h3c-786 | Sourate Al-Hadid (versets 15-18) ← tafsir-2es/pdf-mut23h33-574
+tafsir-5ep/pdf-mut23h3c-787 | Sourate Al-Hadid (versets : 19-23) ← tafsir-2es/pdf-mut23h33-575
+tafsir-5ep/pdf-mut23h3c-788 | Sourate Al-Hadid (versets : 24-26) ← tafsir-2es/pdf-mut23h33-576
+tafsir-5ep/pdf-mut23h3c-789 | Sourate Al-Hadid (versets : 27-28) ← tafsir-2es/pdf-mut23h33-577
+tafsir-5ep/pdf-mut23h3c-790 | Sourate Al-Mujadila (versets : 1-4) ← tafsir-2es/pdf-mut23h33-578
+tafsir-5ep/pdf-mut23h3c-791 | Sourate Al-Mujadila (versets : 5-7) ← tafsir-2es/pdf-mut23h33-579
+tafsir-5ep/pdf-mut23h3c-792 | Sourate Al-Mujadila (versets : 8-10) ← tafsir-2es/pdf-mut23h33-580
+tafsir-5ep/pdf-mut23h3c-793 | Sourate Al-Mujadila (versets : 11-13) ← tafsir-2es/pdf-mut23h33-581
+tafsir-5ep/pdf-mut23h3c-794 | Sourate Al-Mujadila (versets : 14-19) ← tafsir-2es/pdf-mut23h33-582
+tafsir-5ep/pdf-mut23h3c-795 | Sourate Al-Mujadila (versets : 20-21) ← tafsir-2es/pdf-mut23h33-583
+tafsir-5ep/pdf-mut23h3c-796 | Index des figures citées ← tafsir-2es/pdf-mut23h33-584
+tafsir-5ep/pdf-mut23h3c-797 | Sources et références ← tafsir-2es/pdf-mut23h33-585
+
+TOTAL: 30 doublons résolubles immédiatement

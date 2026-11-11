@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "mot3 = أواق ; lettres : ا-و-ا-ق ; renvoi = [الموطأ رقم : 655] ; chiffres : 6-5-5",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793721699,
+  "id": "20261104000134da4285d26afa4504",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261104000134da4285d26afa4504",
+  "usage": {
+    "completion_tokens": 43,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8306,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8349
+  }
+}

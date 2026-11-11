@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Mot après « من » :** c'est **اللّذين** (c'est-à-dire « الذين » écrit avec lamapharyngée — le texte ne contient ni « المتن » ni « اللفظ »).\n\n**Item 1 :**\n« أستخلص من اللّذين تعريف مجلس الحديث ومختلفه . »\n- Le « 1 » vert : chiffres visibles de gauche à droite : « 1 » → lu en arabe : 1 (un).\n\n**Item 2 :**\n« أستخلص الفرق بينهما . »\n- Le « 2 » vert : chiffres visibles : « 2 » → lu en arabe : 2 (deux).\n\n(Contexte de droite : « عوضٌ بصله: بما يساويه في الفبول، وفيل في الرتبه . » / « المعارضة: معارضة حديث حديثًا آخر بقصدۀ في العنى . » — mentionné pour la continuité, mais l'item demandé ne contient pas « المتن » ni « اللفظ ».)",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793985755,
+  "id": "202611070122267110c773867c410f",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070122267110c773867c410f",
+  "usage": {
+    "completion_tokens": 245,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8154,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8399
+  }
+}

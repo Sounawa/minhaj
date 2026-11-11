@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription (right-to-left, reading order)\n\n**Heading (top, green):**\n٢ - إهداء ما استيسر من الهدي\n\n---\n\n**1) Verse quotation:**\n\nقال الله تعالى: ﴿فَمَا اسْتَيْسَرْ مِنَ الْهَدْيِ﴾ [سورة البقرة الآية: **195**]\n\n*(NB: this short quotation is actually from Al-Baqarah, not Al-Mā'ida — see French note 1.)*\n\n**2) First Muwaṭṭa passage:**\n\nفسره ابن عمر رضي الله عنه بقرة أو بدنة، روى مالك عن نافع: أن عبد الله بن عمر كان يقول: «ما استيسر من الهدي بدنة أو بقرة» [الموطأ رقم: **1144**]، وفسره علي وابن عباس رضي الله عنهما بشاة.\n\n**3) Second Muwaṭṭa passage:**\n\nفمعن مالك؛ فمعن ما سمعت إلى في ذلك؛ ولا يجب ما سمعت إلى في ذلك — روى مالك، فمعن مالك، أنه بلغه أن **عبد الله بن عباس** كان يقول: «ما استيسر من الهدي شاة» [الموطأ رقم: **1142**]، قال مالك: «وذلك أحب ما سمعت إلى في ذلك؛ لأن الله تبارك وتعالى يقول في كتابه: ﴿بَالَجْجَ... ﴾ — i.e. the verse:\n\n﴿جَعَلَ اللَّهُ الْكَعْبَةَ الْبَيْتَ الْحَرَامَ قِيَامًا لِلنَّاسِ وَالشَّهْرَ الْحَرَامَ وَالْهَدْيِ وَالْقَلَائِدِ... ذَلِكَ لِيَعْلَمُوا أَنَّ اللَّهَ يَعْلَمُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ وَأَنَّ اللَّهَ بِكُلِّ شَيْءٍ عَلِيمٌ﴾\n\n[سورة المائدة الآية: **97**] — digit by digit: ٩٧ = 9-7, i.e. **97**, not 98.\n\n*(Correction of my own garbled insert above — the running text reads: قال مالك: وذلك أحب ما سمعت إلى في ذلك؛ لأن الله تبارك وتعالى يقول في كتابه:)*\n\n**4) Closing commentary:**\n\nفهما يحكم به في الهدي شاة، وقد سماها الله هدياً، وذلك الذي لا اختلاف فيه عندنا، وكيف يشك أحد في ذلك؟ وكل شيء لا يبلغ أن يحكم فيه بغير\n\n*(the sentence continues on the next page — marked [؟] for its end.)*\n\n---\n\n# Notes françaises\n\n1. **Correction importante :** la première citation coranique ﴿فَمَا اسْتَيْسَرْ مِنَ الْهَدْيِ﴾ est suivie de la référence bleue **[سورة البقرة الآية: 195]** (Al-Baqarah 195, chiffres ١٩٥ = 1-9-5), **non** la Mā'ida. C'est la seconde référence qui indique **سورة المائدة الآية: 97**.\n2. **Le nom après بلغه أن** est, d'après l'image : **عبد الله بن عباس** (écrit avec فمعن مالك أنه بلغه أن...). Les graphies sont légèrement floues ; lecture la plus probable, mais [؟] résiduel possible sur la ligature.\n3. **Numéros du Mowatta** : premier passage **1144** (١١٤٤), second **1142** (١١٤٢) — conformes à vos hypothèses.\n4. **قال مالك: وذلك أحب ما سمعت إلى في ذلك** — la leçon « أحب » est celle qui apparaît (et non « حسن »).\n5. La dernière phrase est coupée en bas de page ; sa suite est hors champ : « وكل شيء لا يبلغ أن يحكم فيه بغير [؟] ».",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794270309,
+  "id": "202611100824456016c83e4c0c4051",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611100824456016c83e4c0c4051",
+  "usage": {
+    "completion_tokens": 1026,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8327,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9353
+  }
+}

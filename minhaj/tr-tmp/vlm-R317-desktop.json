@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "LAYOUT OK\n\n**Détails de la vérification :**\n\n*   **Structure et colonnes :** La disposition en deux colonnes (FR à gauche, AR à droite) est stable et respecte la largeur 1280px. Les alignements verticaux entre les sections (titres, paragraphes) sont cohérents.\n*   **Chevauchements :** Aucun chevauchement détecté entre le texte français, le texte arabe, les éléments de navigation ou les barres latérales. Les marges internes (padding) sont suffisantes.\n*   **Débordements (Overflow) :** \n    *   Le texte arabe vocalisé (*tashkil*) est dense mais reste bien contenu dans sa colonne de droite sans déborder horizontalement.\n    *   Les listes à puces et les notes de bas de page ne débordent pas de leur conteneur.\n*   **Lisibilité :**\n    *   **FR :** La police sans-serif est claire, l'interligne est confortable pour une lecture académique.\n    *   **AR :** La police est lisible malgré la densité des diacritiques. L'alignement à droite est correct.\n*   **Hiérarchie visuelle :** Les titres de sections (ex: \"Le texte\", \"La compréhension\", \"L'analyse\") sont bien différenciés par la graisse et l'espace. La progression logique de la leçon (Introduction -> Texte -> Analyse -> Notes) est facile à suivre.\n\n**Note technique :** La compression verticale de l'image ne masque aucun problème de layout structurel; le rendu est propre et professionnel.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793128459,
+  "id": "202610280314104d1d295982ff4d80",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610280314104d1d295982ff4d80",
+  "usage": {
+    "completion_tokens": 371,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5690,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6061
+  }
+}

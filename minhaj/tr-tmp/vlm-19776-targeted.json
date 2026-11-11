@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "VERDICT OK\n\n1. Le tableau de translittération est parfaitement complet, lisible et bien contenu dans les limites de l'écran sans aucune coupure.\n2. L'arabe du pied de page (ainsi que du reste de la page) est correctement rendu avec de vraies lettres arabes, sans aucun caractère manquant ou carré vide.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793212108,
+  "id": "2026102902282641c36247a6a24bab",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "2026102902282641c36247a6a24bab",
+  "usage": {
+    "completion_tokens": 80,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 892,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 972
+  }
+}

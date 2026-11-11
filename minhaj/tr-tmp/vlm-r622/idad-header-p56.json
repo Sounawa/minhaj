@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "[illisible] — l'image est quasi entièrement blanche ; seuls quelques fragments de caractères sont visibles en bas à droite, sans qu'aucune ligne commençant par « أتأمل النص » ni les mots « وأستخرج منه: » ou « وأجيب عنه: » ne soient identifiables de façon certaine. Je ne peux donc pas trancher.",
+        "reasoning_content": "Image nearly blank; only fragments visible. Can't transcribe reliably.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976553,
+  "id": "202611062249080c289cb55b014038",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062249080c289cb55b014038",
+  "usage": {
+    "completion_tokens": 100,
+    "completion_tokens_details": {
+      "reasoning_tokens": 14
+    },
+    "prompt_tokens": 8076,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8176
+  }
+}

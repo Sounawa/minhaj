@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "يضحك الرمي عن الحسبي والمرىص إن لم يمكن حطيهما، فإن أمكن حصلا ورميا\n\nبأنفسهما، فقد سئل مالك هل يرمي عن الحسبي والمرىص فقال: «نعم، ويحتسي\n\nالمرىص حين يرمي عنه، فيكون وهو في منزله، ويهرىبق دماء، فان صتح المرىص في",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794350126,
+  "id": "2026111106352174584208245c4cc3",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026111106352174584208245c4cc3",
+  "usage": {
+    "completion_tokens": 107,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 4508,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4615
+  }
+}

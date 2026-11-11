@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Voici les réponses aux points de vérification :\n\n1.  **Badge « Traduction savante »** : **Oui**, il est bien visible en haut de page (sous le titre), sous la forme d'une étiquette orange avec une icône de livre.\n2.  **Tableaux et débordement** : **Oui, ils tiennent dans l'écran**. Les tableaux (notamment celui des types de *harakat* et le tableau Espèce/Exemple/Lecture) sont correctement formatés pour le mobile (390px). Le texte est lisible, il n'y a pas de coupure brutale ni de barre de défilement horizontal visible.\n3.  **Défauts visuels** : **Aucun défaut majeur** détecté sur cette capture. La mise en page est propre, la typographie arabe est bien rendue et la structure hiérarchique (titres, listes) est claire.\n\n**Conclusion** : L'affichage mobile est conforme et fonctionnel.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792688148,
+  "id": "2026102300554389c4e31780234da9",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "2026102300554389c4e31780234da9",
+  "usage": {
+    "completion_tokens": 226,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 4324,
+    "prompt_tokens_details": {
+      "cached_tokens": 2
+    },
+    "total_tokens": 4550
+  }
+}

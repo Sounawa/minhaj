@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Voici la transcription fidèle du texte visible (bande partielle, les marges gauche et droite sont coupées) :\n\n**Ligne 1 (haut, tronquée) :**\n[?]و [?]ـ يم[?]و\n\n*(texte coupé en haut de l'image, illisible : [?])*\n\n**Ligne 2 :**\n2 - أن أدرك أحكام التحلّ من النسك.\n\n**Ligne 3 :**\n3 - أن التزم سنة النبي ﷺ في أداء أعمال يو[?م]\n\n*(le texte continue au-delà du bord gauche coupé)*\n\n**Rubrique colorée (vert) :**\n- تهديد\n\n*(ملاحظة : الرقم « 3 » و « 2 » بالأزرق في الأصل)*\n\nAucun verset coranique, renvoi [سورة X] ou [الموطأ رقم: N], ni note de bas de page n'est visible dans cette bande. Le symbole ﷺ apparaît après « سنة النبي ». Le début de la ligne 1 est tronqué et illisible : [?].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794336401,
+  "id": "20261111024634bac20c135bbd47df",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261111024634bac20c135bbd47df",
+  "usage": {
+    "completion_tokens": 250,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1145,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1395
+  }
+}

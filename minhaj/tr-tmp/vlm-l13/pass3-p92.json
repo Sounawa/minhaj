@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription exacte de la bande visible\n\n**En haut (titre rouge partiel) :**\nالفهم\n\n---\n\n**الشرح:**\n\nفَادِثِي : أشعرني بالانتهاء من العسل.\n\nأَشْعَرْنَهَا إِيَّاهُ : اجعله شعارها، أي الثّوب الذي يلي جسدها ثركا.\n\n---\n\n# Réponse à votre question sur l'encadré ترجمة الراوية\n\n**Je ne peux pas vous le transcrire** : l'encadré « ترجمة الراوية » (avec le nom de أمّ عطيّة، la variante وقيل، la liste des transmetteurs, et عاشت إلى حدود سنة N) **n'apparaît pas sur cette bande d'image**. La page visible ne contient que le الشرح ci-dessus et le numéro de page (85).\n\nJe refuse d'inventer le contenu de l'encadré de mémoire. Veuillez fournir la page contenant l'encadré ترجمة الراوية pour une transcription exacte.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793738171,
+  "id": "202611040436039a23efefaca845a5",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611040436039a23efefaca845a5",
+  "usage": {
+    "completion_tokens": 249,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 7669,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7918
+  }
+}

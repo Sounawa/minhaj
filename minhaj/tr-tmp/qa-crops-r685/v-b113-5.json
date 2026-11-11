@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "١- صفه الرمي: إذا زالت الشمس ثاني أيام النحر يدهب الحاج ماشيا متوضئا فبصلاة الظهر، ومعه إحدى وعشرون حصاة فيبتدئ بالجمرة الأولى، وهي التي تلي مسجد مني، فيرميها وهو مستقبل القبلة، ويدعو، ثم يأتي الجمرة الوسطي فيرميها بسبع حصيات أيضا، ثم يتقدم أمامها شملا ويدعو، ثم يأتي جمرة العقبة فيرميها بسبع",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794349604,
+  "id": "202611110626410c88314e348f4ec0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611110626410c88314e348f4ec0",
+  "usage": {
+    "completion_tokens": 135,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2396,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2531
+  }
+}

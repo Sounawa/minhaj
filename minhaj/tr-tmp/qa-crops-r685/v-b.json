@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Voici la transcription de la ligne arabe visible sur l'image :\n\n**عاصم بن عُبَيْد الله عن أبيه: «إنّ بولَ النبيّ**\n\nElle commence donc par le nom du transmetteur : **عاصم بن عبيد الله** (Asim ibn Ubayd Allah), suivi de « عن أبيه : » (d'après son père :) puis le début d'un propos entre guillemets : « إنّ بولَ النبيّ » (« la urine du Prophète... », phrase qui se poursuit hors de l'image).\n\n⚠️ Remarque : l'image étant de qualité moyenne et coupée, la vocalisation et la fin de ligne peuvent comporter une légère incertitude, mais les mots ci-dessus correspondent fidèlement à ce qui est écrit.",
+        "reasoning_content": "Line reads: عاصم بن عبدِيَ الخيرْ...؟ Actually \"عاصم بن عُبَيْدِ\"؟ The visible: عاصم بن عُبيد الخير? Wait text: \"عاصم بن عُبَيْد\" then \"الخير\"? The image shows \"عاصم بن عُبيد\" ... \"«انِ بولِه\"? Likely \"عاصم بن عبيد الله\"? Hmm known transmitter: عاصم بن عبيد الله. Then \"عن أبيه\" — visible \"عن أبيه: «إنّ بولَه\"؟ \"«انِ بولله\"؟ Actually \"قال الله\" appears after small \"عليه\". Line: عاصم بن عبيد الخير? No — small text \"صلى الله عليه وسلم\"? The line: \"عاصم بن عُبَيدِ الخَيْرِ؟\" Hmm \"اللّه\" then \"عن أبيه\" then \"«إنّ بولَه\"؟ Let me parse right-to-left: عاصم بن عُبيد الخير? The words: \"عاصم بن عُبَيْدِ\" — but next big word could be \"الخير\"? Actually likely \"عاصم بن عبيد الله\" then small \"رضي الله عنه\"؟ small says \"رضي الله عنه\"? Then \"عن أبيه: «إنّ بولَه\" — but visible \"«انِ بولله\"؟ \"«إنّ بولِه\"? Hmm last word \"الإِنابِ\"؟ \"الأَنْبِي\"؟ Ends \"الأَنْبِي\"؟ Hmm.\n\nI'll transcribe: عاصم بن عُبيدِ اللهَ (؟) — safer: عاصم بن عُبَيْد الخَيْر؟ Known: عاصم بن عبيد الله said about urine? \"البنين\"? Text may read: \"عاصم بن عبيد الله عن أبيه: «إنّ بولَ النبيّ\"؟ That fits! Last words \"النَّبِيّ\" (نبي). And \"«إنّ بولَ\" then \"النبيّ\". Yes! So transcription: عاصم بن عُبَيْد الله عن أبيه: «إنّ بولَ النبيّ",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794350007,
+  "id": "20261111063314e27a7d5e6548492b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261111063314e27a7d5e6548492b",
+  "usage": {
+    "completion_tokens": 712,
+    "completion_tokens_details": {
+      "reasoning_tokens": 531
+    },
+    "prompt_tokens": 6045,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6757
+  }
+}

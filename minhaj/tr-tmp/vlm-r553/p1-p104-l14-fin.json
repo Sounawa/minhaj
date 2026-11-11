@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "الإعداد القبلي\n\nأحفظ أحاديث الدرس المقبل وأجيب عن الآتي:\n\n1 - أشرح: حسب نود – أواق – أوسق.\n\n2 - أعرف الزكاة وأبين حكما وشروطها.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793716495,
+  "id": "202611032234508c065a865bbf44f7",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611032234508c065a865bbf44f7",
+  "usage": {
+    "completion_tokens": 62,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8210,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8272
+  }
+}

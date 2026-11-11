@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Voici la transcription exacte des lignes arabes visibles sur cette image :\n\n**قَالَ: التَّذْكِرَةُ مِنَ الَّذِي رَمَى عَنْهُ، وَأَهْدَى» [الموطأ رقم: 1218].**\n\nSoit, mot par mot :\n- قَالَ (il a dit)\n- التَّذْكِرَةُ (at-tadhkira — le rappel/l'avertissement)\n- مِنَ (de la part de)\n- الَّذِي (celui qui)\n- رَمَى (a tiré/a jeté)\n- عَنْهُ (sur lui / à son sujet)\n- وَأَهْدَى (et a fait don / a offert)\n- [الموطأ رقم: 1218] (référence : al-Muwaṭṭa', n° 1218)\n\n**Remarque importante :** le passage mentionné dans votre question — la réponse de Mālik « نعم » suivie de « ويتحرّى... حين يرمي عنه فيكبر وهو في منزله ويهرق... » — **ne figure pas sur cette image**. L'image ne contient qu'une seule ligne (la fin d'un passage citant al-Muwaṭṭa'), suivie d'un filet de séparation avec le numéro de page « 164 ». Je ne peux donc pas restituer lettre par lettre des mots qui ne sont pas visibles ici ; il faudrait fournir l'image de la page contenant ce passage.",
+        "reasoning_content": "Image shows one line: قَالَ التَّذْكِرَةُ مِنَ الَّذِي رَمَى عَنْهُ، وَأَهْدَى [الموطأ رقم 1218]\n\nThe user asks about Mālik's answer \"نعم\" etc. — not in this image. Provide exact transcription of what's visible and note the rest isn't present.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794350033,
+  "id": "202611110633445b4787770f0e40de",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611110633445b4787770f0e40de",
+  "usage": {
+    "completion_tokens": 466,
+    "completion_tokens_details": {
+      "reasoning_tokens": 94
+    },
+    "prompt_tokens": 8084,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8550
+  }
+}

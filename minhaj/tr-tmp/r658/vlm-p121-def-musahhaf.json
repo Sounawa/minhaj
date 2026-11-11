@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "التحقيق\n\nأولا : الحديث المصحف\n\n1. تعريفه :\n\nأ- لغة: اسم مفعل من التصحيف، والتصحيف: «الخطأ في الصحيفة» [القاموس المحيط، ص 826].\n\nب- اصطلاحا: ما كانت الخالفة فيه بتغيير حرف أو حرف، مع بقاء صورة الخط.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794193084,
+  "id": "20261109105801bf0fb00c71044942",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261109105801bf0fb00c71044942",
+  "usage": {
+    "completion_tokens": 91,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 3197,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3288
+  }
+}

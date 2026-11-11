@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Transcription de la moitié gauche (3 lignes), mot à mot :**\n\n**Ligne 1 :**\nعَنْ عَبْدِ اللهِ بْنِ عُمَر[...]\n- عَنْ : ʿa-n\n- عَبْدِ : ʿa-b-da\n- اللهِ : l-lā-hi\n- بْنِ : b-na\n- عُمَرَ : coupé au bord gauche — on lit « عمـ » (début de عُمَرَ), la fin est hors cadre.\n\n**Ligne 2 :**\nوَلَمْ يَحْلُقْ وَلَمْ يَقْصُرْ، جَ[...]\n- وَلَمْ : wa-lam\n- يَحْلُقْ : ya-ḥluq\n- وَلَمْ : wa-lam\n- يَقْصُرْ : yaq-ṣur\n- puis une virgule « ، » et un mot coupé au bord gauche : on lit « جـ » + ce qui semble être « ـحَ » — probablement « جَزَعَ » [?], fin illisible/hors cadre.\n\n**Ligne 3 :**\nيَرْجِعُ إِلَى اللَّبِيثِ فِي وِطْ[...]\n- يَرْجِعُ : yar-ji-ʿu\n- إِلَى : i-lā\n- اللَّبِيثِ : l-la-bī-thi\n- فِي : fī\n- وِطْ : coupé au bord gauche — début d'un mot (probablement « وِطْرٍ » [?]), suite hors cadre.\n\n**Note :** aucune trace de « ...مِنْ أَهْلِهِ بِـ » + lieu n'apparaît sur cette moitié gauche ; les débuts de lignes (à gauche) sont tronqués par le bord de l'image, donc tout mot supposé à cet endroit est noté [?].",
+        "reasoning_content": "Left half cut off at left edge. Transcribe lines.\n\nL1: عَنْ عَبْدِ اللهِ بْنِ عُمَرَ (cut, \"عُمَرَ\" partially — visible \"عم\" cut). \nL2: وَلَمْ يَحْلُقْ وَلَمْ يَقْصُرْ، جَ (cut \"جَزَ...\"?) actually \"...حَ\" cut.\nL3: يَرْجِعُ إِلَى اللَّبِيثِ فِي وِطْرَ... \"فِي وِطْ\" cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794337240,
+  "id": "20261111030023270f1e72c09d4d55",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261111030023270f1e72c09d4d55",
+  "usage": {
+    "completion_tokens": 637,
+    "completion_tokens_details": {
+      "reasoning_tokens": 150
+    },
+    "prompt_tokens": 8100,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8737
+  }
+}

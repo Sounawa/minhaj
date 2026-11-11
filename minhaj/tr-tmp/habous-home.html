@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ar" dir="rtl" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>وزارة الأوقاف والشؤون الإسلامية — مواقيت الصلاة وخطبة الجمعة</title>
+  <meta name="description" content="الموقع الرسمي لوزارة الأوقاف والشؤون الإسلامية في طور الصيانة: مواقيت الصلاة لمدن المملكة وخطبة الجمعة.">
+  <link rel="icon" type="image/svg+xml" href="assets/img/pattern-star.svg">
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script>document.documentElement.classList.remove('no-js');</script>
+</head>
+<body>
+  <a class="skip" href="#contenu">انتقل إلى المحتوى</a>
+  <div class="topbar" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container">
+      <img src="assets/img/logo-mhai-h.svg" alt="المملكة المغربية — وزارة الأوقاف والشؤون الإسلامية" width="420" height="76">
+    </div>
+  </header>
+
+  <section class="notice" aria-label="الموقع في طور الصيانة / Site en maintenance">
+    <div class="container">
+      <div class="notice-card">
+        <div class="notice-col" lang="ar" dir="rtl">
+          <span class="notice-badge">إشعار</span>
+          <h2>الموقع في طور الصيانة</h2>
+          <p>نعمل حاليا على تحديث البوابة الإلكترونية لوزارة الأوقاف والشؤون الإسلامية. وإلى حين إطلاق النسخة الجديدة، يمكنكم الاطلاع على مواقيت الصلاة وخطبة الجمعة. نشكركم على تفهمكم.</p>
+        </div>
+        <div class="notice-col" lang="fr" dir="ltr">
+          <span class="notice-badge">Avis</span>
+          <h2>Site en maintenance</h2>
+          <p>Le portail du Ministère des Habous et des Affaires Islamiques est en cours de mise à jour. En attendant la nouvelle version, vous pouvez consulter les horaires de prière et le prêche du vendredi. Merci de votre compréhension.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main id="contenu">
+    <div class="container">
+
+      <section class="section" id="prieres" aria-labelledby="prieres-titre">
+        <div class="section-head">
+          <img class="ornament" src="assets/img/pattern-star.svg" alt="" aria-hidden="true">
+          <h2 id="prieres-titre">مواقيت الصلاة</h2>
+          <span class="sub">حسب التوقيت الرسمي للمملكة المغربية (GMT)</span>
+        </div>
+
+        <div class="card prayer-card">
+          <div class="prayer-tools">
+            <label for="ville">المدينة</label>
+            <select id="ville" name="ville"></select>
+            <p class="prayer-date" id="prayer-date" aria-live="polite"></p>
+          </div>
+          <p class="prayer-alert" id="prayer-alert" hidden></p>
+          <noscript><p class="prayer-alert">يرجى تفعيل JavaScript لعرض مواقيت الصلاة، أو تحميل الجدول الشهري: <a href="data/horaires-2026-10.json">ملف المواقيت</a>.</p></noscript>
+
+          <ul class="today" id="today" aria-label="مواقيت اليوم"></ul>
+
+          <details class="month" id="month">
+            <summary>الجدول الشهري — <span id="month-caption"></span></summary>
+            <h3 class="print-only" id="print-title"></h3>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th scope="col">اليوم</th><th scope="col">الميلادي</th><th scope="col">الهجري</th><th scope="col">الصبح</th><th scope="col">الشروق</th><th scope="col">الظهر</th><th scope="col">العصر</th><th scope="col">المغرب</th><th scope="col">العشاء</th></tr>
+                </thead>
+                <tbody id="month-body"></tbody>
+              </table>
+            </div>
+            <div class="month-actions">
+              <button type="button" class="btn btn-outline" id="print-month">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a1 1 0 0 1-1-1v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a1 1 0 0 1-1 1h-2"/><path d="M6 14h12v7H6z"/></svg>
+                طباعة الجدول
+              </button>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="section khotba" id="khotba" aria-labelledby="khotba-titre">
+        <div class="section-head">
+          <img class="ornament" src="assets/img/pattern-star.svg" alt="" aria-hidden="true">
+          <h2 id="khotba-titre">خطبة الجمعة</h2>
+        </div>
+
+        <article class="card khotba-card" id="khotba-card">
+          <div class="khotba-meta">
+            <div class="info">
+              <h3>"محاسبة النفس سبيل الاستقامة وطريق الحياة الطيبة"</h3>
+              <p>خطبة ليوم 18 جمادى الأولى 1448هـ الموافق لـ 30 أكتوبر 2026م</p>
+            </div>
+            <a class="btn btn-primary" href="assets/docs/khotba-2026-10-30.pdf" download>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16"/></svg>
+              تحميل الخطبة (PDF)
+            </a>
+          </div>
+        </article>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© المملكة المغربية — وزارة الأوقاف والشؤون الإسلامية</p>
+      <p lang="zgh">ⵜⴰⴳⵍⴷⵉⵜ ⵏ ⵍⵎⵖⵔⵉⴱ — ⵜⴰⵎⴰⵡⴰⵙⵜ ⵏ ⵍⵃⵓⴱⵓⵙ ⴷ ⵜⵖⴰⵡⵙⵉⵡⵉⵏ ⵜⵓⵙⵍⵉⵎⵉⵏ</p>
+      <p lang="fr">Royaume du Maroc — Ministère des Habous et des Affaires Islamiques</p>
+    </div>
+  </footer>
+
+  <script src="data/horaires-2026-10.js"></script>
+  <script src="data/hijri.js"></script>
+  <script src="assets/js/prieres.js"></script>
+</body>
+</html>

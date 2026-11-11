@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Transcription exacte visible :\n\nفجلس يمسح النوم عن وجهه، ثم قرأ العشر الآيات الخواتم من سورة آل عمران، ثم قام إلى شن معلقة، فتوضأ منها فاحسن وضوءه، ثم قام يصلي « [أخرجه البخاري].\n\nConfirmations :\n- **شن معلقة** : confirmé, c'est bien ce qui est imprimé (avec un fatha sur le ش : شَنَ).\n- **الرenvoi entre crochets** : [أخرجه البخاري]. — confirmé (en rouge dans l'original).\n\nNota : la phrase « فتوضأ منها فاحسن وضوءه » figure aussi entre « معلقة » et « ثم قام يصلي », contrairement à la fin citée dans votre question qui la omet.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793700273,
+  "id": "20261103180426f710eca8f6f447b9",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103180426f710eca8f6f447b9",
+  "usage": {
+    "completion_tokens": 194,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8166,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8360
+  }
+}

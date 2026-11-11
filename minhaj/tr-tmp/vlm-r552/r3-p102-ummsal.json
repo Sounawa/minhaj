@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) Matn : « اللهم أجرني في مصيبتي، وأعقبني خيرا منها، إلا فعل الله ذلك به »\n\n(2) Parole d'أم سلمة : « فلما توفي أبو سلمة قلت ذلك، فأعقبني الله رسوله فتزوجته »\n\n(3) Renvoi du Muwaṭṭaʾ : [الموطأ رقم : 638] — chiffre par chiffre : 6 / 3 / 8 — le chiffre du milieu est **3**.\n\n(4) Renvoi coranique : [سورة البقرة الآية : 155] — chiffre par chiffre : 1 / 5 / 5.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793725079,
+  "id": "2026110400575134be0bbc63e64427",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110400575134be0bbc63e64427",
+  "usage": {
+    "completion_tokens": 164,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8279,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8443
+  }
+}

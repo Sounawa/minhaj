@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription (right-to-left, reading order)\n\n**بـ- اصطلاحًا: المحرف:** عرفه ابن حجر بأنه ما كان التغيير فيه بالنسبة إلى شكل الحروف، مع بقاء صورة الخط. ومثاله حديث جابر رضي الله عنه: «رُمِيَّ أَبِي يَوْمَ الأَخْرَبَ عَلَى الأَكَحْلِ [؟ فَكَأَه/فَكَأَنَّه] رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ» [صحيح مسلم، كتاب السلام، باب لكل داء دواء واستحباب التداوي] حرفَه غندر وقال فيه: «أبي» وإنما هو «أبُّي بن كعب»، وأبو جابر كان قد استُشهِد قبل ذلك بأحد. [مقدمة ابن الصلاح، الصلاح، ص 385] والأكحل: عرق في اليد في وسط الذراع.\n\n**2. الفرق بين المصحف والمحرف:**\n\nالصحف يكون التغيير فيه بتغيير حرف أو حروف مع بقاء صورة الخط، والمحرف يكون التغيير فيه بالنسبة إلى شكل الحروف مع بقاء صورة الخط، وكلاهما يجمعهما التغيير ويختلفان في نوعه.\n\n**3. حكم التصحيف والتحريف:**\n\nإذا وقع التصحيف أو التحريف من الراوي نادرا فإنه لا يقدح في ضبطه؛ لأن الخطأ اليسير لا يسلم منه أحد، وإذا كثر التصحيف منه، قدح في ضبطه، فيكون الراوي خفيف الضبط، والقدر الصحف أو المحرف مردود؛ لوروده على غير أصله.\n\n**أهتدي وأقتدي**\n\nقال يحيى بن معين رحمه الله: «آلة المحدث الصدق». [التمييد: 1/70].\n\n**التقويم**\n\n1. أذكر أنواع التصحيف.\n2. أبين الفرق بين تصحيف الاسم وتصحيف البصر.\n3. أنظر من كلام يحيى بن معين، وأبين أهمية الصدق لطالب الحديث.\n\n123\n\n---\n\n## Notes (français)\n\n1. **Ligne 1, crochet bleu** : il est bien imprimé en vert/bleu et se lit : [صحيح مسلم، كتاب السلام، باب لكل داء دواء واستحباب التداوي] — lu mot par mot, pas de « 53 » sur cette ligne (le « 53 » de la couche texte est une erreur ; le seul chiffre voisin est le **385** du crochet suivant).\n2. **Le hadith** : la couche texte « رميّ أَبَيْ يَوْمَ الأخرَاب عَلَى أكحّله » est corrompue ; l'impression réelle donne « رُمِيَّ أَبِي يَوْمَ الأَخْرَبَ عَلَى الأَكَحْلِ ». Le mot après الأَكَحْلِ est imprimé de façon ambiguë (فَكَأَه / فَكَأَنَّه) — marqué [؟].\n3. **Phrase de correction (غندر)** : la forme imprimée est « وأبو جابر كان قد استُشهِد قبل ذلك بأحد » — la couche texte « وأدركه/قل ذلك يومًا واحدًا » est erronée.\n4. **Référence de ce passage** : le crochet vert imprimé est partiellement coupé en bord de ligne ; on lit « [مقدمة ابن الصلاح] » puis « الصلاح، ص 385 » sur la ligne suivante — il s'agit de [مقدمة ابن الصلاح، ص 385], chiffre 385 lu chiffre par chiffre.\n5. **Rubrique rose** : imprimée « أهتدي وأقتدي » (et non « أهتدي » seul).\n6. **Citation de يحيى بن معين** : « آلة المحدث الصدق » avec référence [التمييد: 1/70] — le « 1/70 » est net.\n7. **Item 3 du التقويم** : le mot initial imprimé est « أنظر » (la couche texte « أنطلق » est fautive) ; le reste correspond à l'impression.",
+        "reasoning_content": "Transcribe from the image. The rubric is \"أهتدي وأقتدي\"? Image shows \"أهتدي وأقتدي\"? Actually shows \"أنقدي وأقتدي\"? Text: \"أهتدي وأقتدي\" — image shows \"أهتدي وأقتدي\" pink heading; OCR shows \"أفتدي وأقتدي\"? It reads \"أهتدي وأقتدي\". Use that.\n\nHadith: «رُمِيَ أَبِي يَوْمَ الأَخْرَبَ عَلَى الأَكَحْلِ فَكَأَه رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ»? Image: «رُمِيَّ أَبِي يَوْمَ الأَخْرَبَ عَلَى الأَكَحْلِ فَكَأَّه رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ» — image shows \"فكأنه\"? Text layer: «فَكَأَّهُ»? Printed: \"فكأنَّه\"? Actually image: «رُمِيَّ أَبِي يَوْمَ الأَخْرَبَ عَلَى الأَكَحْلِ فَكَأَه رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ» — I'll transcribe with best reading, mark uncertain parts.\n\nCorrection sentence: غندر وقال فيه: «أبي» وإنما هو «أبُّي بن كعب» وأبو جابر كان قد استشهد قبل ذلك بأحد. [مقدمة ابن الصلاح]? Actually reference printed [الصلاح، ص 385]? Image shows [الصلاح، ص 385] — likely \"المقدمة، ص 385\"? Image green bracket: \"الصلاح، ص 385\" — I'll read as [الصلاح، ص 385] with note. Also [مقدمة ابن الصلاح] appears after \"قبل ذلك بأحد\" — image shows \"[مقدمة ابن الصلاح]\" then \"والأكمل: عرق في اليد في وسط الذراع.\" Actually \"والأكحل: عرق في اليد في وسط الذراع.\"\n\nItem 1 heading: \"الفوق بين المصحف والمحرف\"? Image shows \"2. الفرق بين المصحف والمحرف:\"? It reads \"الفوق\"? — transcribe \"الفرق بين المصحف والمحرف\".\n\nWait item 7 expected صحف paragraph — image: \"الصحف يكون التغيير فيه بتغيير حرف أو حروف مع بقاء صورة الخط، والمحرف يكون التغيير فيه بالنسبة إلى شكل الحروف مع بقاء صورة الخط، وكلاهما يجمعهما التغيير ويختلفان في نوعه.\" Image shows \"الصحف يكون التغيير فيه بتغيير حرف أو حرف مع...\" — image: \"بتغيير حرف أو حروف\"? shows \"حرف أو حروف\"? OCR: \"بتغيير حرف أو حروف\"? Image shows \"بتغيير حرف أو حروف\"? It reads \"بتغيير حرف أو حروف\" — but image shows \"حرف أو حروف\"? I see \"بتغيير حرف أو حروف\" — hmm image shows \"حرف أو حروف\"? Fine.\n\nItem 8: كما expected.\n\nYahya quote: قال يحيى بن معين رحمه الله: «آلة المحدث الصدق». [التمييد: 1/70].\n\nItem 3 تقويم: أنظر من كلام يحيى بن معين، وأبين أهمية الصدق لطالب الحديث.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794197872,
+  "id": "20261109121720f0b29c3963c74993",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261109121720f0b29c3963c74993",
+  "usage": {
+    "completion_tokens": 1948,
+    "completion_tokens_details": {
+      "reasoning_tokens": 891
+    },
+    "prompt_tokens": 8803,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 10751
+  }
+}

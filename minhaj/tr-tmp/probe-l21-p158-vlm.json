@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Voici la transcription exacte des éléments demandés :\n\n**(1) Citation du verset (en tête de la section « تأويل الفعل الأول ») :**\n\nفَأَرَدتُّ أَنْ أَعِيبَهَا وَكَانَ وَرَاءَهُم مَّلِكٌ يَأْخُذُ كُلَّ سَفِينَةٍ غَصْبًا\n\n**(2) Citation attribuée à l'Imām aṭ-Ṭabarī avec sa référence :**\n\nقَالَ ابْنُ جَرِيرٍ : « أَمَّا قَوْلُهُ تَعَالَى ذِكْرُهُ : ﴿ فَأَرَدتُّ أَنْ أَعِيبَهَا ﴾ فَإِنَّهُ يَعْنِي بِذَلِكَ : فَأَرَدْتُ أَنْ أَخْرِقَهَا ». [جامع البيان: 15 / 393]\n\n**(3) Lignes de définitions en haut de page :**\n\n**الشِّقُّ :**\n*   **وَرَاءَهُم** : أَمَامَهُم.\n*   **غَصْبًا** : عَنْوَةً وَظُلْمًا.\n*   **يَأْخُذُ** : بَرْكَةً وَصِحَّةً وَطُولًا.\n*   **أَشْطَاهَا** : أَوْ زَوَايَاهَا.\n*   **قَوَارِبُ** : شَقَّيْهِ وَجَانِبَيْهِ.\n\n**التَّأْوِيلُ، اسْتِخْلَاصُ مَضَامِينِ الْآيَاتِ :**\n*   **وَرَاءَهُم** : أَمَامَهُم.\n*   **غَصْبًا** : عَنْوَةً وَظُلْمًا.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793645200,
+  "id": "202611030246301871493c15654520",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202611030246301871493c15654520",
+  "usage": {
+    "completion_tokens": 540,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5318,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5858
+  }
+}

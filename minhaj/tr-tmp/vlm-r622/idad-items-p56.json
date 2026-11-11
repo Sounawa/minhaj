@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Deux items, numérotés avec des chiffres arabes (pas de lettres أ/ب, pas d'ambiguïté) :\n\n1. مفهوم المتابعات والشواهد .\n2. أمثلة للشواهد والمتابعات .\n\nOui, il y a un item 2. L'option « أ. أمثلة للشواهد والاعتبار » est une erreur OCR.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793974182,
+  "id": "20261106220935f66fcfea0b1b4a44",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106220935f66fcfea0b1b4a44",
+  "usage": {
+    "completion_tokens": 93,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8231,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8324
+  }
+}

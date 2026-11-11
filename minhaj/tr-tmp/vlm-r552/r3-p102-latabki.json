@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Transcription exacte du texte visible :\n\nﷺ : دَعْهُنْ، فَإِذَا وَجَبَ فَلَا تُبَكِّنْ بَاكِيَةً». قَالُوا: يَا رَسُولَ اللهِ وَمَا الْوُجُوبُ؟ قَالَ: «إِذَا مَاتَ».\n\n- **LE VERBE EXACT :** تُبَكِّنْ\n- **Particule suivante :** بَاكِيَةً (sans « عليه »)\n\n**Renvoi :** الْمُوَطَّأْ رَقْمْ : **1** **6** **3** **2**\n\n**Glose :** وَمَعْنَى **لَا تُبَكِّنْ بَاكِيَةً**: لَا **تَرْفَعْ** صَوْتُهَا بِالْبُكَاءِ.",
+        "reasoning_content": "Transcribe visible text: \"دعْهن فإذا وجب فلا تبكِّنْ باكيةً». قالوا: يا رسول الله وما الوجوب؟ قال: «إذا مات».\" Then \"الموطأ رقم: 1632 ومعنى لا تبكِّنْ باكيةً: لا ترفع صوتها بالبكاء.\"",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793725071,
+  "id": "20261104005741ade92a4e87c64ff4",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261104005741ade92a4e87c64ff4",
+  "usage": {
+    "completion_tokens": 331,
+    "completion_tokens_details": {
+      "reasoning_tokens": 81
+    },
+    "prompt_tokens": 8307,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8638
+  }
+}

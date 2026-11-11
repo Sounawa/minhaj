@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) Transcription du texte en haut de page :\n\n« ثلاثًا، أو خمسًا، أو أكثر من ذلك بماء وسدر، وارجعلن في الأخرة كافورًا، أو شيئًا من كافور، فإذا فرغتن فانضي» قالَ: فلمَا فرغنا أذنَه، فأعطانا حقوَه، فقال: «أشهرُنها إباهَه» تعني بحقوَه: إزارَه [الموطأ رقم: 595].\n\n(2) Renvoi rouge, chiffre par chiffre : 5 — 9 — 5 (595).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793718047,
+  "id": "20261103230039a44f8269b3e448a6",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103230039a44f8269b3e448a6",
+  "usage": {
+    "completion_tokens": 158,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8135,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8293
+  }
+}

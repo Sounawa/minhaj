@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## Transcription de la citation (lignes visibles, mot à mot)\n\nLigne 1 :\nلكنه توسّع حيث قال : لا أعرف حديثًا صحيحين منضادين؛ فمَن عنده شيء من ذلك\n\nLigne 2 :\nفليأتِ به لأَءْلف بينهما، وانتفد عليه بعض صنيعه في توسعه؛ فقال البلقيني : إنه لو فتحنا باب\n\nLigne 3 :\nالنأويلات لا نفتحت أكثر الباب »«.\n\n**Note importante** : la citation commence avant la zone visible de l'image ; le passage « وانتُقد عليه بعض … في توسيعه » correspond ici à « وانتفد عليه بعض صنيعه في توسعه » — je transcris ce qui est visuellement écrit, sans corriger d'après mémoire.\n\n## Référence verte (ordre visuel gauche → droite)\n\n**[81/3 ، السخاوي ، الفتح الحديث شرح الفتح المغني]** — note : visuellement le crochet s'écrit ]…[ en RTL.\n\n- Suite de chiffres telle qu'imprimée : **81/3** → lue en sens arabe (RTL), cela donne **3/81** (tome 3, page 81).\n- Titre : الفتح الحديث — الفتح المغني (l'ordre visuel montre « شرح » entre les deux : الفتح الحديث شرح الفتح المغني, c'est-à-dire « al-Fatḥ al-ḥadīth, Sharḥ al-Fatḥ al-mughnī »).\n- Auteur mentionné : السخاوي (aṣ-Ṣakhāwī).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793985925,
+  "id": "202611070125088432e2230e534fba",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070125088432e2230e534fba",
+  "usage": {
+    "completion_tokens": 388,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8085,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8473
+  }
+}

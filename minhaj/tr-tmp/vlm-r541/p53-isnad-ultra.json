@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "— مالك بن أنس، عن سعيد بن أبي سعيد المقبري، عن عبيد بن جريج، أنه\nالأنصاري، عن سهل بن أبي حثمة الأنصاري، قال: «إن رسول الله ﷺ قال: إذا يُوشِك",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793688678,
+  "id": "20261103145113bfe0869baf2a44b2",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261103145113bfe0869baf2a44b2",
+  "usage": {
+    "completion_tokens": 67,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5742,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5809
+  }
+}

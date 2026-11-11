@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "يجون عليها الحيضَ ويجومُ وإحدانا، أو يبط ما يحول عليها الحيضُ، ثم لا نجده\n\nفيها حيضاً يحول عليها الحَوْلُ من يومِ زَكَيْتُ» [الموطأ، رقم: 666]·\n\n1 - ما نوعُ المال الذي بَيْنَ مالِك رضي الله عنه حكمُه في النص؟\n\n2 - هل وافق الجمهور مالكا؟ مع التعليل.\n\n—\n\nRemarque : je ne vois pas, sur cette image, d'en-tête التقويم ni الاستثمار ; seules les deux questions numérotées ci-dessus sont visibles. Les mots الشهر (question 1) et لِعِلَّةٍ/مذكور (fin du renvoi) sont partiellement coupés en haut de l'image : [illisible] pour la partie tronquée.",
+        "reasoning_content": "Transcribe exactly what's visible; no التقويم/الاستثمار headers visible apparently.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793730677,
+  "id": "20261104023108a5c8cbaaf86d4aef",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261104023108a5c8cbaaf86d4aef",
+  "usage": {
+    "completion_tokens": 238,
+    "completion_tokens_details": {
+      "reasoning_tokens": 20
+    },
+    "prompt_tokens": 8230,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8468
+  }
+}

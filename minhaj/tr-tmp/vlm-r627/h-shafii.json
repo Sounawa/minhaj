@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription exacte (token par token)\n\n## (1) Ligne d'introduction\n\nTokens visibles, de droite à gauche :\n\nأَلَّفَ — أَبُو — الحَدِيثِ — وَغَيْرِهِمْ — فِي — عِلْمِ — مُخْتَلَفِ — الحَدِيثِ — كُتُبًا — قَيِّمَةً —، — مِنْ — أَشْهَرِهَا —:\n\n**Premier mot exact après أَلَّفَ : « أَبُو »** (avec fatha sur le waw : أَبُو)\n\n## (2) Item « اختلاف الحديث » — texte entier de l'item\n\nاللِّإمَامِ — الشَّافِعِيِّ: (repris de la ligne 3 précédente)\n\n— — «اِخْتِلَافِ — الحَدِيثِ» — للِّإِمَامِ — الشَّافِعِيِّ: — الَّذِي — يَعُدُّ — أَوَّلَ — كِتَابٍ — أُلِّفَ — فِي — هَذَا — الفَنْ —، — وَلَكِنْهُ — لَمْ — يَقْصِدْ\n\nاِسْتِيفَاءَ — مَسَائِلَ — هَذَا — العِلْمِ — وَقَضَايَاهُ —، — وَإِنَّمَا — قَصَدَ — أَنْ — يُذَكِّرَ — جُمْلَةً — مِنْ — مَسَائِلِهِ — يَنْبُهُ — بِهَا — عَلَى — طَرِيقَتِهِ —، — وَلِيكُونَ\n\nنُبْرَاسًا — يُسْبِرُ — عَلَى — ضَوْءِهِ — مَنْ — يَجِيءُ — بَعْدَهُ — مِنَ — العُلَمَاءِ.\n\n## Remarque sur les nombres\n\nAucun nombre ne figure dans ces lignes demandées (seul « 3. » apparaît dans le titre bleu de la section : transcription chiffres gauche→droite = **3** ; lu en sens arabe : trois → « 3 »). Aucune référence chiffrée verte n'est visible dans cette portion d'image.\n\n⚠️ Point de vigilance sur le dernier mot de la 3e ligne du texte : « يُسْبِرُ » (ou possiblement يُسْتِرُ / يَسْبِرُ selon l'impression) — graphie peu nette, je l'ai transcrite telle que visible ; si doute : يُسْبِرُ [contexte : نبراس يضيء].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793985873,
+  "id": "20261107012416a15ada4511c84b82",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107012416a15ada4511c84b82",
+  "usage": {
+    "completion_tokens": 724,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8187,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8911
+  }
+}

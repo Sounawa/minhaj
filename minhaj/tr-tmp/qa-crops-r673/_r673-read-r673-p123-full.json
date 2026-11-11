@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription — Page 123 (end of الدرس 17: أحكام الهدي)\n\n## 1) Athar al-Muwaṭṭaʾ (encadré vert) — transcrit mot à mot :\n\nمَالِك عَنْ عَبْدِ اللهِ بْنِ دِينَارَ : «أَنَّهُ كَانَ يَرَى عَبْدُ اللهِ بْنُ عُمَرَ يُهْدِي فِي الحَجِّ بَدَنَتَيْنِ بَدَنَتَيْنِ، وَفِي العُمْرَةِ بَقَرَةً بَدَنَةً وَهِيَ قَائِمَةٌ، فِي دَارِ خَالِدِ بْنِ أَسِيدَ، وَكَانَ فِيهَا مِنْزَلُهُ. قَالَ: وَلَقَدْ رَأَيْتُهُ طَعَنَ فِي لِبَةِ بَدَنِتِهِ، حَتَّى خَرَجَتِ الحَرْبَةُ مِنْ تَحْتِ كَتِفِهَا» [الموطأ رقم: **1108**].\n\n> ⚠️ Note: le texte imprimé diffère de votre hypothèse de couche texte : ici on lit **«يُهْدِي فِي الحَجِّ»** (et non «يرى هدياً في الجعار») et **«بَقَرَةً بَدَنَةً»** (et non «بدنتين في العتمة»). Le numéro est composé chiffre par chiffre : **1-1-0-8** = 1108 (couche texte inversée «8011» ⇒ lecture correcte 1108).\n\n## 2) Rubrique suivante (la page ne contient PAS «أستخرج الأثر» ; la ligne de tâche demandée n'y figure pas non plus) :\n\n**الاستخلاص** [titre du bandeau vert — la couche texte «أستخرج الأثر» est erronée pour cette page]\n\nأستخرج أحكام الهدي التي يشير إليها الأثر.\n\n## 3) Rubrique suivante (pas de «الإعداد للدرس المقبل» sur cette page) :\n\n**الإعداد للدرس المقبلي** — [بند غير موجود : cette page ne contient pas la formule «أحفظ أحاديث الدرس المقبل وأجيب عن الآتي»]\n\nأحفظ أحاديث الدرس المقبل وأجيب عَن الآتي:\n\n## 4) Questions numérotées :\n\n**1-** أبحث عن حكم من فاته الحج، وكيفية تحلله من إحرامه.\n\n**2-** ماذا يفعل من باشر زوجه وهو محرم بالحج؟\n\n## 5) Numéro de page :\n\n**123** (dans la pastille bleue en bas à gauche ; la couche texte l'inverse en «321»).\n\n---\n\n### Notes (français)\n- La page est bien la dernière du الدرس 17 «أحكام الهدي», p. 123, avec bandeau décoratif bleu en haut.\n- Structure réelle : [Athar encadré] → **الاستخلاص** → **الإعداد للدرس المقبلي** → 2 questions. Aucune rubrique «أستخرج الأثر» séparée : la ligne «أستخرج أحكام الهدي التي يشير إليها الأثر» est en fait la consigne sous **الاستخلاص**.\n- Vocalisation complète de l'athar dans l'original ; numérotation de l'athar (1108) en chiffres occidentaux bleus.\n- Ilégalité : aucun mot véritablement illisible détecté ; les seuls écarts concernent les erreurs de la couche texte signalées par [؟]/⚠️ ci-dessus.",
+        "reasoning_content": "The image differs from user's assumptions: rubric is الاستخلاص, not أستخرج الأثر; no الإعداد للدرس المقبل. Transcribe what's actually visible, mark deviations.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794269647,
+  "id": "2026111008134973d8770ed7d04712",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026111008134973d8770ed7d04712",
+  "usage": {
+    "completion_tokens": 1010,
+    "completion_tokens_details": {
+      "reasoning_tokens": 43
+    },
+    "prompt_tokens": 8414,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9424
+  }
+}

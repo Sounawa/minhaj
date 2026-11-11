@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "المهاجرات الأول، والقرشية التيمية، وأم المؤمنين، وأحب النساء إلى رسول الله صلى الله عليه وسلم من المكيّات والمدنيّات، وهي التي نزل عذرها من السماء، وكان جبريل يُسلِّم عليها، ولم يتزوَّج النبي صلى الله عليه وسلم بكراً غيرها",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793688704,
+  "id": "20261103145137a0900449c4664e3d",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261103145137a0900449c4664e3d",
+  "usage": {
+    "completion_tokens": 92,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 6197,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6289
+  }
+}

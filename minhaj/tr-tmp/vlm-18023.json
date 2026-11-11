@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Voici la vérification point par point de la capture d'écran :\n\n1.  **Badge « Traduction savante »** : **Oui**, il est bien visible dans l'en-tête, à droite des badges « Lexicon 3.0 » et « 2e collège ».\n2.  **Tableaux (Mathn et Restitution)** :\n    *   **Mathn** : Les 5 versets sont présents, le texte arabe est aligné.\n    *   **Tableaux de restitution** (Espèce/Exemple/Lecture) : Ils sont **propres**, les colonnes sont **alignées** et il n'y a **aucun débordement** horizontal visible. Le texte s'adapte correctement à la largeur de la page.\n3.  **Défauts visuels** : **Aucun défaut majeur** n'est observable. Il n'y a pas de texte coupé, de chevauchement d'éléments ni de caractère manquant apparent sur cette vue d'ensemble. La mise en page bilingue (français à gauche, arabe à droite) est stable.\n\n**Conclusion** : La page s'affiche correctement et respecte les critères de lisibilité et d'alignement demandés.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792688137,
+  "id": "2026102300553002d997f52ca04e1e",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "2026102300553002d997f52ca04e1e",
+  "usage": {
+    "completion_tokens": 272,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5846,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6118
+  }
+}

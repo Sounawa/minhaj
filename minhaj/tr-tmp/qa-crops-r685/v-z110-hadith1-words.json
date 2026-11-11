@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Voici la transcription fidèle de la ligne visible dans l'image :\n\n**أَحَدٌ مِنَ الصَّحَاجِ الْبِيَاضِ مِنَى مِنْ وَرَاءِ الْعَقَبَةِ» [الْمُوَطَّأُ رَقْمَ: 1209].**\n\nRemarque importante : je ne vois pas dans cette image le passage « لا يبيتنّ أحد من ... بمنى من وراء العقبة » que vous mentionnez — l'image ne contient qu'une seule ligne complète, celle transcrite ci-dessus. Le mot entre « من » et « من وراء العقبة » ici est **مِنَى** (mīnā), écrit : م + ي + ن + ى (mīm, yāʾ, nūn, ʾalif maqṣūra), sans diacritique visible sur celui-ci dans l'image. Il s'agit apparemment d'un nom propre (Mīnā, la localité près de La Mecque), et non du mot « بمنى » que vous évoquiez. Si une autre partie du texte vous intéresse, merci de fournir l'image correspondante.",
+        "reasoning_content": "The image shows only one visible line: «أحد من الصحاج البياض منى من وراء العقبة» [الموطأ رقم: 1209]. The user's \"quote\" seems to be a trap; I should transcribe what's actually visible.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794349047,
+  "id": "2026111106171808b1561691f142ca",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026111106171808b1561691f142ca",
+  "usage": {
+    "completion_tokens": 338,
+    "completion_tokens_details": {
+      "reasoning_tokens": 55
+    },
+    "prompt_tokens": 8044,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8382
+  }
+}

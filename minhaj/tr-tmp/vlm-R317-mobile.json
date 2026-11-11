@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "LAYOUT OK\n\n**Analyse détaillée (390px) :**\n*   **Débordement horizontal :** Aucun. Le contenu (y compris les longs titres juridiques et l'arabe vocalisé dense) reste bien confiné dans la largeur du viewport. Les mots longs français (*jurisprudence*, *inconstitutionnalité*) et arabes s'adaptent correctement ou passent à la ligne sans couper les caractères.\n*   **Chevauchements :** Aucun détecté. La hiérarchie des sections (titres H2/H3, paragraphes, listes) est respectée. Les espacements entre blocs sont suffisants.\n*   **Lisibilité :**\n    *   **Français :** Taille de police confortable, interligne suffisant pour un texte académique dense.\n    *   **Arabe :** L'arabe vocalisé (avec tachkil) est effectivement plus large, mais il ne déborde pas. Il reste parfaitement lisible sur cette largeur.\n    *   **Interface :** Les boutons d'action (FR/AR, outils) en haut de page sont bien alignés et non coupés.\n\nLe layout est responsive et optimisé pour la lecture mobile de contenu bilingue complexe.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793128469,
+  "id": "202610280314207f8e2869c83141ce",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610280314207f8e2869c83141ce",
+  "usage": {
+    "completion_tokens": 284,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5249,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5533
+  }
+}

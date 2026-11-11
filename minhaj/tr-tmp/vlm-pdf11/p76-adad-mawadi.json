@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**(1)** L'en-tête « ٢- عدد سجدات التلاوة ووقتها » puis « أ- عدد سجدات التلاوة » ne sont **pas visibles** sur cette image (la page commence par la fin du titre rouge « ...سجدات التلاوة » coupé en haut).\n\n**(2)** La phrase lue est **conforme** au texte imprimé :\n« مذهب الإمام مالك وجمهور أصحابه وبه قال ابن عباس وابن عمر أن عدد السجدات في القرآن إحدى عشرة سجدة؛ ففي الموطأ قال الإمام مالك: «الأمر عندنا أن عزائم سجود القرآن إحدى عشرة سجدة...»\n(corrections mineures de l'imprimé : « إحدى عشرة سجدة؛ ففي الموطأ » — oui, exactement ainsi ; « عزائم سجود القرآن إحدى عشرة سجدة، لتبن في المصحل منها شيئا» » — l'image montre « لِتُبْنَ في المُصْحَف منها شيئا» » avec [illisible] sur المُصْحَف/المُفْصَل).\n\n**(3)** L'en-tête « ب- مواضع سجدات التلاوة » est **conforme** (imprimé : « ب- مواضع سجدات التلاوة »).\nDébut : **correction** — l'imprimé lit :\n« تقدم أن عدد سجدات التلاوة عند مالك وجمهور أصحابه إحدى عشرة سجدة، وهي التي ذكرها عبد الرزاق عن ابن جريج قال: «أخبرني عكرمة بن خالد أن سعيد بن جبير أخبره أنه سمع ابن عباس وابن عمر يعدان كم في القرآن من سجدة، فقالا: «الأعراف...»\nLes noms عبد الرزاق، ابن جريج، عكرمة بن خالد، سعيد بن جبير sont **conformes** à l'imprimé.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793700301,
+  "id": "20261103180448e312abd3eb70499e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103180448e312abd3eb70499e",
+  "usage": {
+    "completion_tokens": 475,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8263,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8738
+  }
+}

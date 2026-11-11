@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "الْيَوْمَ، فَإِنَّهُ يَرْجِعُ فِي بَطْنِ الْبَحْرِ سَبْعِينَ مَرَّةً وَآخِرُهُمْ يُسَبِّحُ\n\nالْبَيْتُ لَهُ خَارِجِينَ عَنْ مَنِيٍّ، يَرْمُونَ بِلَحْمِ الْخَيْرِ، يَأْكُلُ مِنْ زَمِنِ الْقَفْصِ، وَمِنْ يُمْسِكُ بَغْضِهِ فِي\n\nلَبُوِيَّكِ، فَإِنَّهُ يَرْمُونَ بِعُوْنِ الْأَخْذِ» [الْمُوَطَّأُ رَقْمُ: 1221].\n\n**Remarque :** une partie de la première ligne est coupée en haut de l'image, rendant la transcription de l'isnād incomplète. Le numéro de référence lisible est **1221**, chiffre par chiffre : **1-2-2-1** [الموطأ رقم: 1221].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794348863,
+  "id": "20261111061415c805d4a06ecb43d6",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261111061415c805d4a06ecb43d6",
+  "usage": {
+    "completion_tokens": 326,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 7957,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8283
+  }
+}

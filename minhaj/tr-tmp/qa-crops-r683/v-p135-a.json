@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "La ligne est coupée : seule la moitié supérieure des lettres est visible. Transcription partielle (de droite à gauche) :\n\nعَلَى الأَثَرِ ... وَقَدْ يَكُونُ [؟] ... وَالِدَيْهِ [؟]\n\nPrécisions :\n- À droite : «... عَلَى الأَثَرِ» (avec fatha sur ع، lam-alif، shadda sur ث) [؟]\n- Au centre : «وَقَدْ يَكُونُ ...» puis un mot coupé illisible [؟]\n- À gauche : «... وَالِدَيْهِ» suivi d'un mot tronqué au bord [؟]\n\nAucun «مِنْ أَهْلِهِ بِـ» ni «ثُمَّ يَرْجِعُ إِلَى...» n'est visible sur cette portion — la ligne est trop coupée pour transcrire mot à mot avec certitude. Merci de fournir un agrandissement plus bas (ligne complète).",
+        "reasoning_content": "Line cut off; only tops visible. Attempt: \"...عَلَى الأَثَرِ ... وَقَدْ يَكُونُ فِي حَيَاةِ وَالِدَيْهِ ...\". Bottom half cut; transcribe only visible with [?].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794336960,
+  "id": "20261111025550bcd1c92a4ce24c54",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261111025550bcd1c92a4ce24c54",
+  "usage": {
+    "completion_tokens": 317,
+    "completion_tokens_details": {
+      "reasoning_tokens": 68
+    },
+    "prompt_tokens": 8129,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8446
+  }
+}

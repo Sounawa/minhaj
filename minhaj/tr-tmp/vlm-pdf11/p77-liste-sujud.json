@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "النص المطبوع المرئي في الصورة هو:\n\nوالرَّعْدُ والنَّحْلُ والأسراء ومريم والنَّحْجُ أولها والفرقان وطبس واللم تنريل وحم [illisible] والسَّجْدَةُ إحدى عشْرَةَ سجْدَةً، قَالَا: وليس في المفْصَل منها شيء» [مصنف عبد الرزاق]\n\n**Remarques importantes :**\n- Le texte imprimé dans l'image ne commence **pas** par « فقالا » ni par une liste complète conforme à la question. La liste visible est : الرعد والنحل والأسراء ومريم والنحج [probablement النحل/الحج selon l'impression, mot difficile : illisible] أولها والفرقان وطبس واللم تنريل وحم...\n- Les mots d'ouverture visibles sont « وطبس » et « واللم تنريل » (imprimés ainsi, apparemment fautifs) ; je ne vois pas « طس », « ألم تنزيل », « هاء ميم » ni « أولها » sous la forme mentionnée dans la question.\n- Le décompte final imprimé est : **إحدى عشرة سجدَةً** (نصًّا: «إحدى عشْرَةَ سجْدَةً،»).\n- Le renvoi imprimé est bien : **[مصنف عبد الرزاق]**.\n- La fin de la citation : « قَالَا: وليس في المفْصَلِ منها شيء».\n\nCertains mots de l'image sont flous (par ex. « والنَّحْجُ » qui devrait probablement être « والحج ») ; je les ai transcrits tels qu'imprimés ou signalés [illisible].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793700317,
+  "id": "202611031805010327dab796cc47b5",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611031805010327dab796cc47b5",
+  "usage": {
+    "completion_tokens": 429,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 7882,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8311
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## Transcription\n\n**1) Medallion:** Not visible on this page (no round blue medallion present in the image) → medallion: [؟]\n\n**2) Calligraphic lesson title:** Not visible on this page (the title/banner itself is not shown) → [؟]\n\n**3) Recall line (above the rubric):**\nأَتَمَّلِ النَّصَ وَاسْتَعِينِ بِشَرْحِ الزَّرْقَانِيِّ لِبَيَانِ حُكْمِ مَنْ نَسِيَ طَوَافَ الإِفَاضَةِ حَتَّى رَجَعَ إِلَى بَلَدِهِ.\n\n**4) Rubric:**\nأَحْفَظْ أَحَادِيثِ الدَّرْسِ الْمُقْبِلِ وَأُجِيبْ عَنِّ الْآتِي:\n\n**5) Numbered questions:**\n1. أَشْرَحْ: - إِلْقَاءُ التَّقْثِ - لَبَدْتُ رَأْسِي.\n2. مَتَى يَتَحَلَّلُ الْمُحْرِم؟\n3. أَحْدِدِ الْأَعْمَالَ الَّتِي يَقُومُ بِهَا الْحَاجُّ يَوْمَ النَّحْرِ، ثُمَّ أَبْحَثْ عَنْ أَحْكَامِهَا.\n\n**6) Page number:** Not visible on this page → [؟]\n\n---\n\n### Notes (Français)\n- Pas de médaillon bleu ni de numéro de page visibles sur cette image : seules la ligne de rappel, le bandeau vert « الإعداد القبلي » (et non « أحفظ أحاديث... » qui suit), et les trois questions sont présents.\n- La ligne de rappel : « رجع إلى بلده » est lisible (pas de [؟]).\n- Q1 : le texte imprimé semble défectueux (« التقث », « لَبَدْتُ ») — probablement « إلقاء التقصر » et « لَبَدْتُ » = fautes d'impression ; transcrit tel quel.\n- Le bandeau vertporte « الإعداد القبلي » (préparation préalable), avec puce bleue.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794269364,
+  "id": "202611100809095f36b4e4c669450f",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611100809095f36b4e4c669450f",
+  "usage": {
+    "completion_tokens": 596,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8215,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8811
+  }
+}

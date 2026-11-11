@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "paragraphe= [absent de l'image fournie], verbe= [non visible], lettres : [non vérifiable]\n\nLa page affichée ne contient pas le paragraphe commençant par « وتستعمل شرعا بمعنى النماء » ; elle ne montre que la fin d'un commentaire (« نصابا... من رذيلة البخل، وتطهير من الذنوب » — cette dernière expression figure bien ici, mais le paragraphe demandé avec la phrase « فسميت زكاة بما ___ إليه إخراجها » n'est pas visible sur cette image).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793721736,
+  "id": "202611040002089106fe4b28084176",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611040002089106fe4b28084176",
+  "usage": {
+    "completion_tokens": 136,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8261,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8397
+  }
+}

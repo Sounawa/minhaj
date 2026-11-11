@@ -1,0 +1,423 @@
+
+########## r660-p78-full (hi-78-078.png) ##########
+# Transcription
+
+**Banner (medallion digit: ١١ = 11):**
+الدرس الحادي عشر
+أحكام الطواف (2)
+
+**أهداف الدرس**
+
+1 - أن أتعرّف حكم طواف القدم والوداع.
+2 - أن أتعرّف أحكام طواف الحائض.
+3 - أن أقتفي سنة النبي ﷺ وهديه في الطواف.
+
+**تمهيد**
+
+للطواف آدابٌ، منها: عدم الوقوف للحديث؛ فقد سأل مالك رحمه الله: هل يقع الرجل في الطواف بالبيت الواجب عليه يتحادث مع الرجل؟ فقال: «لا أُحبّ ذلك له» [الموطأ رقم: 1088]، ويختلف حكمه باختلاف نوعه، فطواف القدم يُغاير طواف الوداع، وهما معا يُغايران طواف الإفاضة.
+
+فما حكم طواف الوداع والقدم؟ وما حكم الطواف دون طهارة؟
+
+**الأحاديث**
+
+ـ مالك، عن نافع، عن عبد الله بن عمر: أن عمر بن الخطاب قال: «لا يصدّرنّ أحد من الحاجّ حتى يطوف بالبيت، فإن أخر النّسُك الطواف بالبيتّ» [الموطأ رقم: 1080].
+
+**Footer:** 74
+
+---
+
+**Notes français :**
+- Médaille du bandeau : « الدرس » (leçon) avec le chiffre ١١ (11), titre « أحكام الطواف (2) ».
+- Objectifs numérotés 1, 2, 3 en chiffres orientaux.
+- Deux citations avec références bleues [الموطأ رقم: 1088] et [الموطأ رقم: 1080].
+- Pied de page : 74 (dans un cercle bleu).
+
+########## r660-p79-full (hi-79-079.png) ##########
+# Transcription
+
+## 1) Mālik's comment — «ذلك فيما نرى والله أعلم لقول الله تعالى»
+
+Transcription (RTL, reading order):
+
+> — قال مالك في قول عمر بن الخطاب: «فإن آخر الناسك الطواف بالبيت»: «إن ذلك فيما نرى، والله أعلم، لقول الله تعالى: ﴿وَمَا يَعْكُفُ مَنْ يَتَعَيَّرَ﴾... ﴿إِنَّهَا مِرْ تَقْوَى الْفُلُوُبِ﴾ [؟]، وقال: ﴿ثُمَّ مِيْعَالًا إِلَى الْبَيْتِ الْعَتِيقِ﴾ [؟]، فصلّ الناسَر كلها وانقضا وفا إلى البيت العتيق». [الموطأ رقم: **1081**]
+
+**Quranic citations in ornate thuluth:** there are **THREE (3)** separate calligraphic citations:
+
+1. ﴿وَمَا يَعْكُفُ... ﴾ followed by [سورة الحج: الآية **30**] — digits read: three, zero.
+   - (Actual verse: ﴿وَمَن يَعْكُفْ فَيَتَمَتَّعْ بِالْعُمْرَةِ إِلَى الْحَجِّ﴾ — the calligraphic rendering is heavily ligated; parts marked [؟])
+2. ﴿...﴾ followed by [سورة الحج: الآية **31**] — digits: three, one.
+   - (Calligraphic text partially legible: ﴿...تَقْوَى الْقُلُوبِ / قُلُوبِ﴾ [؟])
+3. ﴿ثُمَّ لْيَقْضُوا تَفَثَهُمْ وَلْيُوفُوا نُذُورَهُمْ وَلْيَطَّوَّفُوا بِالْبَيْتِ الْعَتِيقِ﴾ [؟] — this citation is embedded in the narrative text, quoted by Mālik as «وَقَالَ ﴿ثُمَّ ... إِلَى الْبَيْتِ الْعَتِيقِ﴾».
+
+## 2) Hadith of Sa'd Ibn Abi Waqqās (bold)
+
+> — مالك، عنه بلغه: «أن سعد بن أبي وقاص كان إذا دخل مكة مراهنا، خرج إلى عرفة قبل أن يطوف بالبيت وبين الصفا والمروة، ثم يطوف بعد أن يرجع».
+> قال مالك: وذلك واسع إن شاء الله.» [الموطأ رقم: **1087**]
+
+(Blue reference digits read digit-by-digit: one, zero, eight, seven.)
+
+## 3) Hadith of ʿĀʾisha (bold)
+
+> — مالك، عن عبد الرحمن بن القاسم عن أبيه عن عائشة أم المؤمنين أنها قالت: قدمنت مكة وأنا حائض، فلم أطف بالبيت، ولا بين الصفا والمروة فشكوت ذلك إلى رسول الله ﷺ فقال: «افعلي ما يفعل الحاج، غير أن لا تطوفي بالبيت، ولا بين الصفا والمروة، حتى تطهري»». [الموطأ رقم: **1230**]
+
+(Blue reference digits: one, two, three, zero.)
+
+## 4) Biographical notice — ترجمة الراوي
+
+> **عمر بن الخطاب رضي الله عنه**: هو أبو حفص عمر بن الخطاب بن نُفَيل القرشي العدويّ أمير المؤمنين، خلِيفة رسول الله ﷺ، يُضرب به المثل في العدل والزهد والتواضع والاستمتاتة على الحق، ألّف في سيرته المجدلات [؟]. استشهد عام: **23** هـ.
+
+(Final year digits read digit-by-digit: two, three — i.e., 23 AH.)
+
+---
+
+## Notes (français)
+
+- La page contient **trois citations coraniques** en calligraphie coulisse (thuluth orné), encadrées de marqueurs bleus : [سورة الحج: الآية 30] et [سورة الحج: الآية 31], plus la citation ﴿ثُمَّ... الْبَيْتِ الْعَتِيقِ﴾ insérée dans le texte.
+- Les numéros de référence bleus du Muwaṭṭaʾ sont **1081**, **1087** et **1230** (la numérotation correspond à l'édition de Muḥammad Fuʾād ʿAbd al-Bāqī).
+- Le passage calligraphique est fortement ligaturé et superposé ; certains mots sont notés [؟] faute de lisibilité totale à 300 dpi.
+- Le nom de l'ouvrage biographique en bas de page ([؟] « المجدلات ») est incertain : il pourrait s'agir d'une référence aux *Siyar* / *Tārīkh* classiques.
+
+########## r660-p80-full (hi-80-080.png) ##########
+**الفهم**
+
+**الشرح:**
+- لا يَصُدَّرَنَّ: لا يُصرُّنَ.
+- مُحَلِّها: مكان حل نحرها.
+- مُرَاهَنَا: - بكسر الها وفتحها- ضاق عليه الوقت حتى يخاف فُوْتِ الوقوف بعرفة.
+
+**استخلاص المضامين:**
+1 - أيِّن أحكام طواف الوداع.
+2 - أستخلص من الآثار حكم طواف القووم للمراهق.
+3 - ما حكم طواف الحائض؟
+
+**فقته العديّت**
+
+**أولا: طواف الوداع**
+
+**1 - حكم طواف الوداع**
+
+طواف الوداع مستحب عند مالك؛ لقول عمر رضي الله عنه: «لا يَصُدَّرَنَّ أحدٌ من الحاجّ حتى يطوف بالبيت، فإِنّ آخر الناسك الطواف بالبيت»، فسماه نسكا لكونه عبادة، وذكر مالك أن ذلك ماذخن [؟] من قوله تعالى: ﴿وَقَضَى رَبُّكُمْ أَلَّا تَعْبُدُوا إِلَّا إِيَّاهُ﴾ [سورة الحج الآية: 30]، وقوله: ﴿فَمَا مِنْ دَابَّةٍ فِي الْأَرْضِ﴾ [سورة الحج الآية: 31]، قال مالك: «فمحل الشعائر كلُّها وانقضاءها إلى البيت العتيق»، والمراد بالشعائر أعلامُ الحج وأفعاله.
+
+**عدد الاستشهادات القرآنية في الفقرة: 2**
+- الأولى: [سورة الحج الآية: 30] — س ل ف ل ا ر ق ا م: ثلاثة، صفر (أي ٣٠)، بالأرقام: ث-ص-ص / 3-0-0؟ قراءة رقمان: "3" ثم "0".
+- الثانية: [سورة الحج الآية: 31] — رقم من رقمين: "3" ثم "1".
+
+ملاحظات فرنسية (notes) :
+1. La rubrique « استخلاص المضامين » est en vert, suivie de trois items numérotés en chiffres arabes (١، ٢، ٣ rendus « 1, 2, 3 »).
+2. La ligne verte « أولا: طواف الوداع » est en vert, « 1 - حكم طواف الوداع » également en vert.
+3. Le mot « ماذخن » dans le paragraphe est probablement une lecture erronée de « مستذكر » ou « ماذكرناه » [؟] — incertain.
+4. Les deux citations coraniques sont en calligraphie ornée (blanc sur fond bleu/ornement), avec étiquettes bleues indiquant sourate et verset (الحج 30 et 31).
+5. Le numéro de page, dans un rond bleu en bas de page, se lit « 40 ».
+
+########## r660-p81-full (hi-81-081.png) ##########
+# Transcription de la page (RTL)
+
+**العنوان (أخضر):**
+٢ - الرجوع لطواف الوداع بعد مغادرة البيت
+
+**النص:**
+الرجوع لطواف الوداع بعد مغادرة البيت مستحب مندوب إليه عند مالك، إن لم تلحق الراجع مشقة، ويدل له ما رُوي عن عائشة رضي الله عنها: أنّ صفيةَ بنت حُيَيّ خَاصَتْ فَذَكَرْتُ ذلِكَ لِرَسُولِ اللهِ ﷺ فَقَالَ: «أَحابَسْتَنا هي؟». قُبِلَ: إنّما قَفَأَتْ. فَقَالَ: «فَلَا إِذًا». [الموطأ رقم: ١٢٣٢] فلم يُلزمها بدَم ولا أَمْرها بالمقام ويدل للاستحباب أيضاً ما رُوي عن عروة أنه قال: «مَنْ أَفَاضَ فَقَضَى قَضَاءَ اللهِ حَجَّهُ، فَإِنْ لَمْ يَكُنْ حَبَسَهُ شَيْءٌ فَهْوَ حَقٌّ أنْ يَكُونَ آخِرُ عَهْدِهِ الطَّوَافَ بالبَيْتِ، وَإنْ حَبَسَهُ شَيْءٌ أَوْ عَرَضَ لَهُ فَقَضَى قَضَاءَ اللهِ حَجَّهُ» [الموطأ رقم: ١٠٨٣].
+
+**الرُّبريك (أحمر):**
+ثانيا: طواف القُدوم للمراهق
+
+**النص:**
+طواف القُدوم من واجبات الحج، فمن تركه مع القدرة فعليه الدم عند ابن القاسم؛ أما المراهق الذي يَضيق وقته عما يحتاج إليه من الطواف والسعي، ويُرى أنه إن اشتعَل بطواف القُدوم فأنه الحج فإنه يتوجه إلى عرفة للوقوف الركن، ثم يطواف الإفاضة بعد الرجوع من عرفة، ويسقط عنه طواف القُدوم؛ لأنه واجب على غير المراهق؛ فمن مالك أنه بلغه: «أنَّ سَعْدَ بنَ أبي وَقَّاص كَانَ إِذَا دَخَلَ مَكَّةَ مُرَاهِفًا، خَرَجَ إلى عَرَفَةَ قَبْلَ أنْ يَطُوفَ بالبَيْتِ وَبَيْنَ الصَّفَا والمَرْوَةِ، ثُمَّ يَطُوفُ بَعْدَ أنْ يَرْجِعَ» قال مالك: «وَذلِكَ وَاسِعٌ إنْ شَاءَ اللهُ»، يعني: لا حرج عليه في ترك طواف القُدوم.
+
+**الرُّبريك (أحمر):**
+ثالثا: طواف الحائض
+
+**الرُّبريك (أخضر):**
+١ - حكم طواف الحائض
+
+**النص:**
+مذهب الجمهور أنه لا يجوز للحائض أن تطوف حتى تظهر من حيضها؛ لأنه ﷺ عائشةَ رضي الله عنها عن ذلك؛ ففي الموطأ: «أَقْبَلَتْ مَا بَقَعَ الحَاجُ، غَيْرُ أنَّ لَا تَطُوفِي بالبَيْتِ وَلَا بَيْنَ الصَّفَا والمَرْوَةِ حَتَّى تَطْهَرِي»، وعلة النهي عند الجمهور [؟] (يتبع في الصفحة التالية)
+
+---
+
+## Notes (français)
+
+1. **Structure** : la page traite du retour au tawâf de l'adieu après avoir quitté la maison (rubrique ٢), puis de ثانيا: طواف القُدوم للمراهق (le tawâf d'arrivée pour l'adolescent), puis le début de ثالثا: طواف الحائض (le tawâf de la femme menstruée) avec la sous-rubrique ١ - حكم طواف الحائض.
+
+2. **Références bleues** : deux renvois au Muwaṭṭaʾ — [الموطأ رقم: ١٢٣٢] (chiffres un à un : ١-٢-٣-٢) et [الموطأ رقم: ١٠٨٣] (١-٠-٨-٣).
+
+3. **Le numéro de hadith ١٢٣٢** est placé après le hadith de Ṣafiyya bint Ḥuyayy, comme demandé, bien que le mot « إِذًا » de la citation apparaisse légèrement flou — transcrit d'après la forme contextuelle [؟] possible.
+
+4. **La fin de page** est tronquée : la phrase « وعلة النهي عند الجمهور » se poursuit sur la page suivante ; dernier mot partiellement illisible, noté [؟].
+
+5. La formule honorifique ﷺ figure en blanc sur fond coloré après « لِرَسُولِ اللهِ » et avant « عائشةَ » (deuxième occurrence).
+
+########## r660-p82-full (hi-82-082.png) ##########
+# Transcription (RTD, de droite à gauche)
+
+## 1) Suite de la règle du haid (début de page)
+
+**«هي عدم الطهارة، فيعصم الحائض والجنب والمحدث، قال مالك: "لا يَطوف أَحدٌ بالبيت ولا بَين الصفا والمروة إلا وهو طاهر"»** [الموطأ رقم: 1089]
+
+وقال مالك: «إنما ذلك ركضة من الشيطان» — لما رُوي عن ابن عمر رضي الله عنهما أنه: «جاءته امرأة تستفتيه فقالت: إنّي أريد أن أطوف بالبيت، حَنِي أنا كنُت عند باب المسجد هُرقت الدماء، فرجعت حَتّى ذهب ذلك عنّي، ثم أقبلت حَتّى إِذا كنُت عند باب المسجد هُرقت الدماء، فرجعت حَتّى ذهب ذلك عنّي، ثم أقبلت حَتّى إِذا كنُت عند باب المسجد هُرقت الدماء. قال عبد الله بن عمر: إنما ذلك ركضة من الشيطان، فاغتسلي، ثم استنفري بِثَوبِ، ثم طوفي» [الموطأ رقم: 1086]، فقد أوُل بنه أَقثاها فتوى من علم أنه ليس بحيض، وقد رواه جماعة من رواة الموطأ بلفظ: «آن عُوِزُوا استفتُتُّ...»، ودل جوابه على أنها ممن لا تحيض؛ لقوله: «ركضة»، يريد الاستحاضة، ولذا قال لها: «طوفي»، وإنما يَحِلُّ الطواف لمن تحل له الصلاة. وأما قوله: «فاغتسلي»، فعلى مذهبه من تدب الاغتسال للطواف، لا أنه اغتسال للحَيض.
+
+## 2) Titre vert numéroté « 2 »
+
+**2 - المتمتعة إذا حاضت وخشيت فوات الحج وأفعال العمرة**
+
+إذا أحرِمت المرأة بالعمرة من المِيقات، ثم دخلت مكة متمتعَة، وهي حائض، وخشيُت فوات الحج بانتظار الطُّهر وأفعال العمرة بعدَه فإنها تُهل بالحج وتُهدي، قال مالك: «إنها إذا خشيُت الفوات أَهلت بالحج وأهدمت، وكانت مِثل من قرن الحج والعمرة، وأجزَأ عنها طواف واحد» [الموطأ رقم: 1231].
+
+## 3) Titre vert numéroté « 3 »
+
+**3 - إذا حاضت المرأة بعد ركعتي الطواف**
+
+قال مالك: «والمرأة الحائض إِذا كانت قد طافت بالبيت، وصليت فيُقبل أن تحيضَ، فإنها تسعى بَين الصفا والمروة، وتَقف بعرفة والمزدلفة، وترمي الجمار، غير أنَّها لا تُقيمِ حَتّى تَظهر من حَيضِها» [الموطأ رقم: 1231].
+
+---
+
+## Notes françaises
+
+- **Numéros bleus relevés (chiffre par chiffre) :** 1089 (un-zéro-huit-neuf) ; 1086 (un-zéro-huit-six) ; 1231 (un-deux-trois-un) ; 1231 (un-deux-trois-un).
+- **Doublon : oui** — les références des rubriques 2 et 3 sont **identiques : [الموطأ رقم: 1231]** (probablement une erreur de renvoi de l'éditeur ; le hadith de la rubrique 3 devrait porter un autre numéro).
+- Le hadith d'Ibn Omar est reproduit avec la répétition rhétorique « هُرقت الدماء... ثم أقبلت » trois fois, comme dans les éditions du Muwaṭṭaʾ.
+- Quelques mots du passage intermédiaire (« عُوِزُوا استفتُتُّ... ») sont peu nets à 300 dpi : lecture [؟] partielle possible ; le sens est qu'une **vieille femme (عجوزا)** s'enquiert de son cas (استفتت) et qu'il s'agit d'**istihada** (الاستحاضة), d'où la recommandation (ندب) de l'ablution pour le ṭawāf.
+- Toutes les lignes sont transcrites dans l'ordre de lecture, de droite à gauche, sans aucune ligne illisible complète [؟].
+
+########## r660-p83-full (hi-83-083.png) ##########
+# Transcription de la page (droite → gauche)
+
+## 1) Paragraphe de clôture (يستفاد من الدرس)
+
+يستفاد من الدرس حرمة العبادات ومنها الحج فلا تصح إلا على طهارة لما فيها من المناجاة والاتصال بالخالق سبحانه طلبا لرضائه، كما يستفاد منه بسر التشريع وقيامها على الرقّ ومراعاة الأحوال الخاصة للناس.
+
+## 2) التقويم (le rubrique se lit : التقويم)
+
+**١** - ماذا يصنع من نسبي طواف الوداع ثم تذكره بعد مغادرة البيت؟
+
+**٢** - ماذا تفعل المستحاضة التي نزل بها الدم بعد أن تظهرت للطواف؟
+
+## 3) الاستثمار (rubrique exacte : الاستثمار) — hadith encadré
+
+مالكٌ عن أبي الأسود محمد بن عبد الرحمن بن نوفل، عن عروة بن الزبير، عن زينب بنت أبي سلمة، عن أم سلمةَ زوج النبيِّ ﷺ، أنها قالت: «شكوتُ إلى رسولِ اللهِ ﷺ أني اشتكِي فقالَ: طوفي مِن وراءِ الناسِ وأنتِ راكبةٌ. فطفتُ ورسولُ اللهِ ﷺ يُصلِّي إلى جانبِ البيتِ، وهو يقرأُ بالطُّورِ وكتابٍ مستورٍ»
+
+**[الموطأ رقم: ١٠٨٥]** (chiffres : ١ ٠ ٨ ٥)
+
+## 4) Ligne d'instruction
+
+- أستعين بشرح الزرقاني وأبين حكم طواف الركب.
+
+## 5) الإعداد القبلي
+
+أحفظ أحاديث الدرس المقبل وأجيب عن الآتي:
+
+**١** - أشرح: حنو قديد – مناة – يعتلون.
+
+**٢** - أبحث عن حكم السعي بين الصفا والمروة.
+
+---
+**Notes françaises :**
+- Rubrique lue exactement « التقويم » (non « التوقيم »).
+- Rubrique d'exploitation lue « الاستثمار ».
+- Le hadith contient «اشتكِي» (et non «أشكى») ; la lecture coranique citée est «الطُّور وكتاب مستور».
+- Le numéro bleu du الموطأ est ١٠٨٥, lisible sans ambiguïté.
+- Aucun mot illisible détecté ; pas de [؟] nécessaire.
+
+########## r660-p84-bound (hi-84-084.png) ##########
+## Lecture exacte
+
+**Médaillon circulaire (chiffre par chiffre) :** «١» puis «٢» → **١٢ = 12** (pas ٢١). Le mot المدرس est écrit en petit au-dessus du chiffre dans le médaillon.
+
+**Titre principal (bandeau vert) :**
+**أحكام السعي بين الصفا والمروة**
+→ Donc c'est bien **« أحكام السعي بين الصفا والمروة »**, et non أحكام الطواف (2).
+
+**Rubrique : أهداف الدرس**
+1. أن أتعرف أحكام السعي بين الصفا والمروة، وصفته.
+2. أن أتبع هدي النبي ﷺ في أحكام السعي.
+
+## Notes (français)
+- Le médaillon : deux chiffres distincts ١ et ٢ — l'ordre de lecture droite-gauche donne 12, confirmé par le mot المدرس au-dessus.
+- Titre explicite : il s'agit de la leçon sur le **sa'y entre Safa et Marwa** (le pèlerinage), pas du tawaf.
+- Sous le titre : sections تمهيد et الأحاديث avec le hadith d'Aïcha ( Raqât 'Aisha...) et Sourate Al-Baqarah 2:158.
+
+########## r660-zoom-p78-banner (zoom-p78-banner.png) ##########
+# Transcription of the top band
+
+## 1) Green banner + medallion
+- Medallion word (small, arched above the digits): **المدرس** — actually it reads **المدرس** / most plausibly **الدرس** with stylized ligature; given the context it is **الدرس** (lesson), **not** التمرين (exercise).
+- Medallion digits, read digit by digit: **1**, then **1** → **11**.
+- Banner text: **أحكام الطواف (2)**
+
+## 2) Main title
+Under the banner: **أحكام الطواف (2)**
+
+## 3) Rubric أهداف الدرس
+Rubric: **أهداف الدرس**
+
+Objectives (leading digits read digit by digit):
+
+1. **1** — أن أتعرف حكم طواف **القدوم والوداع**. ← It clearly says **طواف القدوم والوداع**, not just طواف القدوم.
+2. **2** — أن أتعرف أحكام طواف الحائض.
+3. **3** — أن أقتفي سنة النبي ﷺ وهدیه في الطواف. *(ﷺ rendered as calligraphic ligature; "وهديه" appears written as such — possibly intended وهدیه/وسنته [؟])*
+
+## 4) Tamhid paragraph / Muwaṭṭaʾ quote
+**Not visible in this crop.** The crop ends just below objective 3, at the top edge of the next green rubric (partially visible, text illegible: [؟]). No tamhid paragraph and no blue **[الموطأ رقم: NNN]** marker appears on this crop.
+
+---
+
+### Notes (français)
+- Médaillon : deux chiffres distincts « 1 » « 1 » = **11** ; le mot arqué au-dessus correspond à **الدرس** (leçon), pas التمرين.
+- Objectif 1 : lecture nette **« طواف القدوم والوداع »** (les deux termes sont présents).
+- Ligne 3 : le mot après « و » est légèrement flou — « وهدیه » vraisemblable, à confirmer [؟].
+- Le paragraphe tamhīdī et la référence bleue **الموطأ رقم** sont hors du cadrage (bande supérieure uniquement).
+
+########## _r660-read-r660-zoom-p79-calli.json (schema: ['choices', 'created', 'id', 'model', 'object', 'request_id', 'usage']) ##########
+{"choices": [{"finish_reason": "stop", "index": 0, "message": {"content": "## Remarque préliminaire importante\n\nL'image fournie **ne correspond pas à la description donnée**. Il n'y a sur cette page
+
+########## _r660-read-r660-zoom-p79-calli2.json (schema: ['choices', 'created', 'id', 'model', 'object', 'request_id', 'usage']) ##########
+{"choices": [{"finish_reason": "stop", "index": 0, "message": {"content": "# Transcription\n\n## 1) Fragments calligraphiques coraniques (haut → bas)\n\n**Fragment 1 :**\nوَمَن يَعْصِ مُشَفِّعًا يَدْع
+
+########## _r660-read-r660-zoom-p79-calli3.json (schema: ['choices', 'created', 'id', 'model', 'object', 'request_id', 'usage']) ##########
+{"choices": [{"finish_reason": "stop", "index": 0, "message": {"content": "# Réponse\n\n## 1) La DEUXIÈME citation calligraphique (après « وقال : »)\n\nElle comporte **3 mots** : ce n'est donc PAS « ل
+
+########## r660-zoom-p79-comment (zoom-p79-comment.png) ##########
+## Transcription du bandeau supérieur (avec les citations calligraphiées)
+
+**Fin du commentaire de Mālik :**
+« ... ذلك فيما نرى، والله أعلم، لقول الله تعالى : »
+
+### 1) Citations calligraphiées (thuluth, avec ornaments ❁)
+
+**Citation 1** (au-dessus de [سورة الحج الآية : 30]) :
+﴿ **وَمَن يَحْصُم شَعْرًا** ﴾
+
+- Mots visibles mot par mot : **وَمَن** / **يَحْصُم** / **شَعْرًا**
+- Parmi la liste de candidats : **aucun ne correspond exactement**. Le mot final شَعْرًا (« une chevelure/mèche ») ressemble visuellement à شعائر mais **ce n'est pas شعائر** — il n'y a pas de ى finale ni de forme plurielle. Je note donc : شعائر [؟] → lecture réelle : شَعْرًا.
+
+**Citation 2** (au-dessus de [سورة الحج الآية : 31]) :
+﴿ **ثُمَّ مِيَادِينَ الأيَّامِ الْمَعْلُومَاتِ** ﴾ — probablement une graphie ornementale déformée de ﴿فِي أَيَّامٍ مَعْلُومَاتٍ﴾ (Hajj 22:28).
+
+- Mots visibles mot par mot : **ثُمَّ** / **مِيَادِينَ** [؟] (mot ambigu, liaison calligraphique) / **الأيَّامِ** / **الْمَعْلُومَاتِ**
+- Parmi la liste de candidats : **aucun** (ni منافع، أجل، مسمى، ليقضوا، تفثهم، نذورهم، ليطوفوا، البيت، العتيق). Les mots ليقضوا تفثهم نذورهم ليطوفوا البيت العتيق **n'apparaissent pas** dans ce crop.
+
+### 2) Étiquettes bleues coraniques
+
+- [سورة الحج الآية : **30**] → premier chiffre : **٣** (trois, pas ٢) ; second chiffre : **٠** (zéro, pas ٢). = **30**
+- [سورة الحج الآية : **31**] → premier chiffre : **٣** ; second chiffre : **١** (un, pas ٣). = **31**
+
+### 3) Références bleues du Muwaṭṭaʾ
+
+- [الموطأ رقم : **1081**] → **١ ٠ ٨ ١** (un, zéro — rond plein, pas ٢ — huit, un)
+- [الموطأ رقم : **1087**] → **١ ٠ ٨ ٧** (dernier chiffre = ٧ en forme de V, distinct de ١)
+
+### Notes (français)
+
+- Le texte courant du hadith est net : Qāl Mālik… « فَإِنْ قُلْتُ قُولُ عُمَرَ بْنِ الْخَطَّابِ : "فَأَنْ أَخْرَ النَّسَكِ الطَّوَافِ بَالْبَيْتِ"… »
+- Les deux citations en thuluth semblent abrégées/déformées par les ligatures ornementales ; la 2ᵉ correspond vraisemblablement à la fin de la sourate 22 (v. 28), mais la liste de mots candidats fournie ne correspond pas à ce qui est réellement visible — prudence sur مِيَادِينَ [؟].
+- Le crop se termine sur la transmisson : « عَنْ عَبْدِ الرَّحْمَنِ بْنِ الْقَاسِمِ عَنْ أَبِيهِ عَنْ عَائِشَةَ أَمِيرِ الْمُؤْمِنِينَ أَنَّهَا قَالَتْ : قُلْتُ يَا رَسُولُ اللَّهِ، أَلَا تَحْجُ فِي السَّنَةِ؟ فَقَالَ : لَوْلَا أَنْ الصَّفَا وَالْمَرْوَةُ فَضِيحَتُ... » (ligne tronquée).
+
+########## _r660-read-r660-zoom-p79-frag1.json (schema: ['choices', 'created', 'id', 'model', 'object', 'request_id', 'usage']) ##########
+{"choices": [{"finish_reason": "stop", "index": 0, "message": {"content": "## Transcription\n\nIl s'agit du candidat **(a)** — sourate al-Ḥağğ, verset 32.\n\n**Nombre de mots visibles : 8**\n\n**Trans
+
+########## _r660-read-r660-zoom-p79-frag2.json (schema: ['choices', 'created', 'id', 'model', 'object', 'request_id', 'usage']) ##########
+{"choices": [{"finish_reason": "stop", "index": 0, "message": {"content": "**Réponse : (c) autre** — la ligne visible ne contient pas les citations (a) ou (b).\n\n**Nombre de mots visibles dans la cit
+
+########## _r660-read-r660-zoom-p79-frag2b.json (schema: ['choices', 'created', 'id', 'model', 'object', 'request_id', 'usage']) ##########
+{"choices": [{"finish_reason": "stop", "index": 0, "message": {"content": "## Réponse\n\n**Bonne nouvelle : le texte est entièrement lisible**, et c'est l'**hypothèse (b)** qui est correcte — il s'agi
+
+########## _r660-read-r660-zoom-p80-calli.json (schema: ['choices', 'created', 'id', 'model', 'object', 'request_id', 'usage']) ##########
+{"choices": [{"finish_reason": "stop", "index": 0, "message": {"content": "Après examen attentif de l'image fournie, je dois signaler que **la page ne correspond pas à la description donnée dans votre
+
+########## _r660-read-r660-zoom-p80-calli2.json (schema: ['choices', 'created', 'id', 'model', 'object', 'request_id', 'usage']) ##########
+{"choices": [{"finish_reason": "stop", "index": 0, "message": {"content": "# Transcription\n\n## 1) Paragraphe courant (nasch), de droite à gauche, haut → bas\n\n« أَوْلَا: طواف الوداع\n\n1 - حكم طواف
+
+########## _r660-read-r660-zoom-p80-calli3.json (schema: ['choices', 'created', 'id', 'model', 'object', 'request_id', 'usage']) ##########
+{"choices": [{"finish_reason": "stop", "index": 0, "message": {"content": "**Nombre exact de mots : 7** → l'hypothèse (b) est correcte.\n\n**Transcription mot par mot :**\n1. ثُمَّ\n2. لْيَقْضُوا\n3. 
+
+########## r660-zoom-p80-fiqh (zoom-p80-fiqh.png) ##########
+## 1) Transcription of the calligraphic citations
+
+**Citation 1** (inline, thuluth, first quote):
+﴿ **وَمَنْ يَعْظِمْ شَعَائِرَ اللَّهِ** ﴾
+- Visible from your list: **شعائر** ✔ (يَعْظِمْ visible; تقوى / القلوب / منافع / أجل / مسمى / محلها NOT in this citation).
+
+**Citation 2** (second thuluth block):
+﴿ **ثُمَّ لْيَقْضُوا تَفَثَهُمْ وَلْيُوفُوا نُذُورَهُمْ وَلْيَطَّوَّفُوا بِالْبَيْتِ الْعَتِيقِ** ﴾
+- Visible from your list: **ليقضوا** ✔، **تفثهم** ✔، **نذورهم** ✔، **ليطوفوا** ✔، **البيت** ✔، **العتيق** ✔
+- Not present here: شعائر، تقوى، القلوب، لكم، منافع، أجل، مسمى، محلها.
+
+**Citation 3** (in the text, «سورة الحج 31» context — quote actually given in print, not calligraphy):
+«فَمَحْلُ الشَّعَائِرِ كُلُّهَا وَانْقِضَاؤُهَا إِلَى الْبَيْتِ الْعَتِيقِ» — from your list: **شعائر** ✔، **البيت** ✔، **العتيق** ✔؛ **محلها** ✘ (the form is مَحْلُ / محل، not محلها).
+
+## 2) Blue numbers, digit by digit
+
+- **[30]** → digit 1: **3** (clearly a three, not a one); digit 2: **0** (oval zero, not a two). = 30
+- **[31]** → digit 1: **3**; digit 2: **1** (a single vertical stroke, not a three). = 31
+
+(These match سورة الحج 30 and 31 in the Quranic numbering.)
+
+## 3) Gloss lines
+
+- ✅ Confirmed: **فمحل الشعائر كلها وانقضاءها إلى البيت العتيق** — legible, no [؟] needed.
+- ✅ Confirmed: **والمراد بالشعائر أعلام الحج وأفعاله** — legible, no [؟] needed.
+
+## Notes (FR)
+
+- Les deux citations calligraphiées (thoulouth orné) correspondent à sourate Al-Hajj : la 1re « وَمَنْ يَعْظِمْ شَعَائِرَ اللَّهِ… » (v. 32), la 2e « ثُمَّ لْيَقْضُوا تَفَثَهُمْ… بِالْبَيْتِ الْعَتِيقِ » (v. 29).
+- Les numéros bleus sont clairs : 30 et 31 ; aucun risque de confusion 0/2 ou 1/3.
+- Le paragraphe liminaire (« طواف الوداع مستحب عند مالك؛ لقول عمر… لا يصدّرنّ أحد… فسماها نسكا… ») est imprimé en nasch, bien lisible.
+
+########## _r660-read-r660-zoom-p80-frag2b.json (schema: ['choices', 'created', 'id', 'model', 'object', 'request_id', 'usage']) ##########
+{"choices": [{"finish_reason": "stop", "index": 0, "message": {"content": "## Analyse de l'extrait orné (calligraphie thuluth)\n\nL'extrait décoré se situe dans le bas de l'image : il commence après l
+
+########## r660-zoom-p83-idad (zoom-p83-idad.png) ##########
+# Transcription — bande inférieure de la page
+
+## 1) Encadré du hadith (suite, fin)
+
+Le haut de l'encadré montre la fin de la chaîne (partiellement coupée par le recadrage). Ligne lisible dans le crop :
+
+**...ورِوي** ... (fragments de la chaîne coupés en haut : « ...بن مالك عن أبي الأسود... » — illisible partiellement : **[؟]**)
+
+Ligne complète du texte du hadith :
+
+> **ورُسُولُ اللهِ ﷺ حِينَئِذٍ يُصَلِّي إِلَى جَانِبِ البَيْتِ، وَهُوَ يَقْرَأُ بِالطُّورِ وَكِتَابٍ مَسْطُورٍ**
+
+Référence bleue :
+- **[الموطأ رقم: 1085]** — chiffres bleus lus chiffre par chiffre : **1 – 0 – 8 – 5**.
+
+## 2) Ligne d'instruction
+
+> **ـ أستعين بشرح الزرقاني وأبين حكم طواف الركب.**
+
+## 3) Rubrique verte
+
+> **الإعداد القبلي**
+
+Intro :
+> **أحفظ أحاديث الدرس المقبل وأجيب عن الآتي:**
+
+## 4) Items numérotés
+
+> **1 ـ أشرح: حذو قديد ـ مناة ـ يعتلون.**
+> 
+> **2 ـ أبحث عن حكم السعي بين الصفا والمروة.**
+
+### Lecture lettre par lettre des mots glossés après أشرح:
+| Mot du livre | Lecture | Correspondance avec candidats |
+|---|---|---|
+| **حذو** | ح–ذ–و | = **الكد/الحصى** ? Non — il s'agit de **حذو** (forme claire) |
+| **قديد** | ق–د–يـ–د | clair, correspond à « قديد » (viande séchée) |
+| **مناة** | م–ن–ا–ة | = **مناة** ✓ |
+| **يعتلون** | ي–ع–ت–ل–و–ن | = **يعتلون** ✓ |
+
+Remarque : les candidats proposés « الكد » et « جود » **n'apparaissent pas** dans cette ligne ; les mots réels sont **حذو قديد** puis **مناة** puis **يعتلون**.
+
+Après **أبحث عن** : **حكم السعي بين الصفا والمروة** (net, pas d'illéible).
+
+### [؟] (zones illisibles)
+- La toute première ligne de la chaîne (isnad, coupée horizontalement en haut du crop) : **[؟]** — seuls des fragments de lettres et diacritiques sont visibles.
+
+---
+
+## Notes (français)
+
+1. **Hadith d'Umm Salama** : texte du pèlerinage « de la peur » ( OMRA al-Qasr ), rapporté par Mâlik dans le *Muwaṭṭaʾ*, n° **1085** (chiffres bleus : 1, 0, 8, 5).
+2. La chaîne complète (Mâlik → Abū al-Aswad Muḥammad b. ʿAbd al-Raḥmān b. Nawfal → ʿUrwa b. al-Zubayr → Zaynab bint Abī Salāma → Umm Salāma) est coupée dans ce recadrage : seul « وروي » et des fragments sont visibles → [؟].
+3. La rubrique verte **الإعداد القبلي** (« Préparation antérieure ») est typique des manuels saoudiens d'éducation islamique ; exercice de vocabulaire (حذو قديد، مناة، يعتلون — mots du ḥadīth suivant sur le ṭawāf) puis question de fiqh sur le saʿy.
+4. Le numéro de page en bas à gauche est masqué/brouillé : **[؟]**.

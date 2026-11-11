@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Lecture lettre par lettre (de droite à gauche) :**\n\n- **ا** : alif isolé, sans dent, hampe verticale nue.\n- **ل** : lam, sans dent (elle n'en porte jamais), avec sa partie ascendante.\n- **ا** : alif médian sans dents.\n- **س** : sīn, **3 dents** (trois crêtes ondulées clairement visibles).\n- **ت/ث** : la lettre porte **trois points au-dessus** — on distingue nettement trois points disposés en triangle (pas deux).\n- **م** : mīm médian, sans dent, forme ronde fermée.\n- **ا** : alif sans dent.\n- **ر** : rāʾ final, sans dent, avec descente courbe vers la gauche.\n\n**Transcription :** الاستثمار\n\n**Conclusion :** le glyphe porte trois points sur la lettre en question (ث à trois points, distincts même si le flou de l'image les fait paraître légèrement fusionnés), donc il s'agit de **الاستثمار** (avec ث à 3 dents pour le sīn précédent et ث à 3 points), et non الاستتمار ni الاستتمام.",
+        "reasoning_content": "Visible: الاستتمار? The word shows الاستثمار or الاستتمار. In image, letter before م has three dots? It shows \"ث\"? The image title: \"الاستثمار\" — I see dots above. Actually the printed word appears الاستتمار with three dots (ث). Zoomed image shows three dots clearly above the letter. I'll conclude الاستثمار.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794215045,
+  "id": "20261109170353a783c212b7ac49b5",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261109170353a783c212b7ac49b5",
+  "usage": {
+    "completion_tokens": 359,
+    "completion_tokens_details": {
+      "reasoning_tokens": 80
+    },
+    "prompt_tokens": 8238,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8597
+  }
+}

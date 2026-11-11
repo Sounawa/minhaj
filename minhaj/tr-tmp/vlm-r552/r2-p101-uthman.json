@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "عَلَيْهِ وَسَلَّمَ، إِذَا فَرَغَ مِنْ دَفْنِ الْمَيِّتِ وَقَفَ عَلَيْهِ، فَقَالَ: «اسْتَغْفِرُوا وَأَسْأَلُوا لَهُ التَّثْبِيتَ»، فإنه الآن يُساءَل\n\n**Remarque :** L'image ne montre que la fin de la ligne visible. Le matn imprimé est « اسْتَغْفِرُوا وَأَسْأَلُوا لَهُ التَّثْبِيتَ » et non « استغفروا لأخيكم وسلوا له التثبيت ». Le renvoi [سنن أبي داود] n'est que partiellement visible en bas de l'image (rouge, coupé) : **[illisible]**.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793724472,
+  "id": "202611040047457c2a4fb208cc4547",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611040047457c2a4fb208cc4547",
+  "usage": {
+    "completion_tokens": 237,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8244,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8481
+  }
+}

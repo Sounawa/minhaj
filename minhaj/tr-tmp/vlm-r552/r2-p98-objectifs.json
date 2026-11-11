@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "الدرسا\n14\nأحكام الجنائز\n– الغسل والكفن وآداب الجنازة–\n\nL'image ne montre que le titre du chapitre ; les trois objectifs numérotés ne sont pas visibles sur cette image, je ne peux donc pas les transcrire ni trancher entre (a), (b) ou (c).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793724386,
+  "id": "20261104004618c1bb8b0457794e9b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261104004618c1bb8b0457794e9b",
+  "usage": {
+    "completion_tokens": 82,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8231,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8313
+  }
+}

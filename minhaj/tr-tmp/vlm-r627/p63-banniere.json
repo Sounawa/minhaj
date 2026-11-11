@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) Bannière : **مكوّن الحديث ومختلفه** (le mot « الدرس » avec son numéro en toutes lettres n'apparaît pas dans cette image)\n\n(2) Badge circulaire/rectangulaire : **الدرس/11**\n\n(3) Première ligne sous la bannière : non visible dans l'image fournie — [illisible] / absent du recadrage.",
+        "reasoning_content": "Image shows only banner \"مكوّن الحديث ومختلفه\" and \"الدرس/11\". No first line visible.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793984814,
+  "id": "202611070106478d8a6eabb4af46ee",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070106478d8a6eabb4af46ee",
+  "usage": {
+    "completion_tokens": 122,
+    "completion_tokens_details": {
+      "reasoning_tokens": 29
+    },
+    "prompt_tokens": 8232,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8354
+  }
+}

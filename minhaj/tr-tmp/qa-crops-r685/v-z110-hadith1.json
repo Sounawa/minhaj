@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "ـ مَالِك، عَنْ نَافِعٍ، أَنَّهُ قَالَ: زَعَمُوا أَنَّ عُمَرَ بْنَ الْخَطَّابِ قَالَ: «لَا يَبِيتَنَّ أَحَدٌ مِنَّا الَّذِي مِنْ وَرَاءِ الْعَقِيدَةِ» [الموطأ رقم: 1209].\n\nـ مَالِك، عَنْ عَبْدِ اللَّهِ بْنِ أَبِي بَكْرِ بْنِ حَزْمٍ، عَنْ أَبِيهِ، أَنَّ أَبَا النَّبَّاجِ عَاصِمِ بْنِ عُمَرَ الْخِزْرَجِيَّةِ (continue) — عَنْ أَبِيهِ: «أَنَّ رَسُولَ اللَّهِ ﷺ أَرْخَصَ لِرُعَاعِ الْإِبِلِ...»\n\nVeuillez noter que la fin de l'image est coupée (le texte de la dernière ligne est incomplet) et je n'ai pu transcrire que ce qui est visible. Si vous pouvez fournir l'image complète ou une meilleure résolution, je pourrai compléter la transcription avec précision, notamment le nom complet du transmetteur dans la seconde chaîne et la suite du texte en bas de page.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794348855,
+  "id": "20261111061406a3289e07b55d4ce5",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261111061406a3289e07b55d4ce5",
+  "usage": {
+    "completion_tokens": 369,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 7206,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7575
+  }
+}

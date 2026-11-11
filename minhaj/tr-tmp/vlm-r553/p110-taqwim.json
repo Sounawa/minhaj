@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "التقويم\n\n1 - أذكر الأموال التي لا يشترط فيها مور الحول.\n\n2 - ما هو الوقص؟ وهل يزكى في زكاة العين؟\n\n3 - لماذا فرق مالك بين حول الربح وحول الفائضة؟\n\n**Trois questions numérotées.**",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793723919,
+  "id": "202611040038372a372861a9b64915",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611040038372a372861a9b64915",
+  "usage": {
+    "completion_tokens": 76,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2548,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2624
+  }
+}

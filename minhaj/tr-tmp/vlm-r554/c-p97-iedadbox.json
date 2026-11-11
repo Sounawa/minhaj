@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Le bloc **الإعداد للدرس القادم** (titre + items ١- ٢- ٣-) n'est **pas visible** dans cette image.\n\nL'image ne montre que :\n- la fin du texte du hadith (« ...وبعد الصحيح إذا صلبنا لوقّتهم» [الموطأ رقم: 616])\n- la riwaya de مالك : «ـ مالك، عن نافع، عن ابن عمر، أنه قال : «صلي على عمر بن الخطاب في الم suede» [الموطأ رقم: 618]» (texte exact imprimé : «صُلِّي على عمر بن الخطاب في المَسجِد»)\n- l'amorce «أقرأ النصوص وأبين الآتي :»\n- item ١- «حكم الصلاة على الجنازة بعد العصر .»\n- item ٢- «حكم الصلاة على الجنازة في المسجد .»\n\nAucune lexie (العفّة، يحتسب، جنّة/جنبـة من النار، أجزني...) ni item ٣- ni titre الإعداد للدرس القادم n'apparaissent sur cette page ; ils doivent se trouver sur la page suivante. Je ne peux donc pas transcrire ce bloc sans inventer.",
+        "reasoning_content": "The image doesn't show الإعداد للدرس القادم block. Must say it's not visible.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793718945,
+  "id": "202611032315367d3caf9d82784ef6",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611032315367d3caf9d82784ef6",
+  "usage": {
+    "completion_tokens": 311,
+    "completion_tokens_details": {
+      "reasoning_tokens": 22
+    },
+    "prompt_tokens": 8195,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8506
+  }
+}

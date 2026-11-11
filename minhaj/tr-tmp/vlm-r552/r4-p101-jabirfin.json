@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "L'image fournie ne contient aucun texte de page de manuel : elle ne montre qu'un élément graphique flou (une icône rouge sur fond blanc). Aucun passage « فصاح النسوة وبكين... » n'y est visible, donc je ne peux transcrire aucun verbe — la réponse exacte est :\n\n[illisible]",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793725866,
+  "id": "20261104011101eb4495cf89d14288",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261104011101eb4495cf89d14288",
+  "usage": {
+    "completion_tokens": 79,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8179,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8258
+  }
+}

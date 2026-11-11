@@ -1,0 +1,20 @@
+**Transcription ligne 1 :**
+
+فَقَدْ وَجِبَ عَلَيْهِ الْحَلَاقُ» [الْمُوَطَّأُ رِقْم: NUM: 1186]، وَإِلَى هَذَا أَشَارَ الْجَمْهُورُ. وَابْنُ رُسْلَانَ التَّفْسِيرُ
+
+**Ligne 2 :**
+
+عَنْ عُمَرَ رَضِي اللهُ عَنْهُ لَمْ أَذْنُ وَمْنَ ضَفَرْ، قَالَ رَضِي اللهُ عَنْهُ: مَنْ ضَفَرْ رَأْسَهُ
+
+**Ligne 3 (dernière ligne partielle) :**
+
+فَلْيَحْلِقْ، وَلَا تَشْبَهُوا بِـ**اللَّنُبِّيِّ** [الْمُوَطَّأُ رِقْم: NUM: 1185]، قَالَ مَنْ تَشَبَّهَ بِهِ مُ حَرَامٌ عَلَيْهِ مَا...
+
+**Détails demandés :**
+
+- **Dernier mot après بـ** : les lettres visibles sont, dans l'ordre : **ا ل ل ن ب ي** avec une **chadda sur le ل et sur le ب**, et un shadda/sukūn final sur le ي. Soit littéralement : « اللَّنُبِّيِّ ». 
+  ⚠️ Ceci est graphiquement ce qui est imprimé — c'est vraisemblablement une **coquille typographique** du manuel pour « النَّبِيِّ » (double ل parasite), mais je transcris exactement ce qui est visible : `اللَّنُبِّيِّ` et non التلبيد / الملبدين / الملبد, qui ne correspondent pas aux lettres.
+
+- **Renvois** : NUM: 1186 (premier) et NUM: 1185 (second) — chiffres latins lisibles directement dans l'image (١١٨٦ et ١١٨٥).
+
+- La phrase suivante commence bien par « قَالَ مَنْ تَشَبَّهَ بِهِ... » mais la fin de ligne 3 est coupée par le bord de l'image et partiellement floue : après « مُ حَـ... » les lettres « حَرَامٌ عَلَيْهِ مَا » sont probablement mais non garanties à 100 % → [حـ...].

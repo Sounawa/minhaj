@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1. Oui, le badge « Traduction savante » est bien visible près du titre.\n2. Le tableau du poème (mathn) est propre et parfaitement aligné en colonnes.\n3. Aucun défaut visible : pas de chevauchement, de texte coupé ni de mise en page cassée.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792680619,
+  "id": "20261022225018ff787e1a200c43d3",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261022225018ff787e1a200c43d3",
+  "usage": {
+    "completion_tokens": 69,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1355,
+    "prompt_tokens_details": {
+      "cached_tokens": 2
+    },
+    "total_tokens": 1424
+  }
+}

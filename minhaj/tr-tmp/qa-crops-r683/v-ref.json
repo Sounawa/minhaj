@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Transcription de la ligne (partie visible) :**\n\n- **Texte noir :** « ...يقوم فيـه » (fragment — le début de la ligne est coupé hors champ ; en haut de l'image on voit aussi des fragments noirs d'une ligne précédente, tronqués)\n- **Renvoi bleu :** « [الآية: 3 » — avec le crochet ouvrant « [ » avant « الآية » ; le crochet fermant n'est pas visible dans le cadrage (hors champ à droite/haut). Le **nom de la sourate n'est pas visible** dans cette portion d'image — il est coupé, je ne le devine donc pas.\n\n**Description du chiffre :**\nLe glyphe est un chiffre de **forme occidentale « 3 »** : il se compose de **deux courbes ouvertes superposées** (deux « bosses » ouvertes vers la gauche), sans boucle fermée ni queue descendante. Ce n'est **pas** un ٣ arabe (qui aurait trois bosses pointues) ni un ٤ (boucle fermée avec queue). Il s'agit donc du chiffre **3** en style européen, écrit en bleu.\n\n**Ordre visuel de la ligne (de droite à gauche) :** « الآية: 3 [ » en bleu, puis en noir « يقوم فيـه ».",
+        "reasoning_content": "The renvoi is partial: only the closing bracket [ is visible at left... actually bracket \"[\" then \"3\". The sourate name appears cut off at top? Blue text: \"الآية: 3\" — visible \"الآيـة\" with shadda? The visible blue: \"الآية: 3\" preceded by \"[\". Only opening bracket visible (crochet ouvrant à droite?). Number: digit \"3\" in European/Western form? It looks like Western 3 (two open loops). Actually glyph resembles \"3\" — Western digit three, two stacked curves/bosses.\n\nTranscribe: [الآية: 3 — the sourate name not visible in this crop (cut off). Black text: \"يقوم فيـه\" and top row partial words cut off.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794336625,
+  "id": "20261111025014eac21b98de984b3c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261111025014eac21b98de984b3c",
+  "usage": {
+    "completion_tokens": 476,
+    "completion_tokens_details": {
+      "reasoning_tokens": 172
+    },
+    "prompt_tokens": 2750,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3226
+  }
+}

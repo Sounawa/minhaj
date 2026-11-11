@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## Transcription (Arabic, RTL, top to bottom)\n\n**1) Rubric (yellow banner, green border):**\n\nالحديث المطلوب تخريجه:\n\n**2) The hadith with its chain and blue source reference:**\n\nحدثنا أبو هشام الرفاعي، قال: حدثنا يحيى بن اليمان، عن شيخ من بني زهرة، عن الحارث بن عبد الرحمن بن أبي ذباب، عن طلحة بن عبيد الله، قال: قال النبي ﷺ: «لكل نبي رفيق ورفيقِي — يعني في الجنة — عثمان».\n\n[سنن الترمذي، أبواب الثلثية، باب في مناقب عثمان بن عفان رضي الله عنه]\n\n**3) Numbered items (real numbering starts at 1, items 1–6):**\n\n1. أكتب الحديث كما هو بلفظه وسنده.\n\n2. أبحث عن الحديث وسنده ولفظه في مطبوعه الأصلية.\n\n3. أبحث عن طرق الحديث وشواهده.\n\n4. أدرس سند الحديث الأصلي، متبعا ما يلي:\n   - أقوم بتشجير سند الحديث واستخراج رواته.\n   - أبحث عن كل راو من حيث العدالة والضبط . . . .\n   - أبحث في اتصال السند.\n   - أبين درجة سند الحديث الأصلي.\n\n5. أدرس طرق الحديث وشواهده (إن وجدت) وأبين درجة كل طريق أو شاهد.\n\n6. أبين درجة الحديث الأصلي بعدما تم البحث عن طرقه وشواهده.\n\n**4) Bottom section — new heading (green banner) then one line:**\n\nالإعداد التقلي\n\nالتعاون مع أصدقائي على تكوين فرق عمل لإنجاز أنشطة ورشات الدعم والتطبيق.\n\n**5) Page footer (digit by digit):**\n\n1 – 3 – 0 → **130**\n\n---\n\n## Structure note\n\nYes — the bottom is a **NEW section** with its own green banner heading («الإعداد التقلي…», likely الإعداد التقليدي للتقويم or similar, partially cut by the page break) clearly separated visually from the تخريج exercise above. The single line beneath it introduces teamwork workshops for support/remediation activities (ورشات الدعم والتطبيق).\n\n## Notes correctives (français)\n\n- L'OS de l'utilisateur (text layer OCR) contenait de nombreuses erreurs ; la transcription ci-dessus suit l'image.\n- L'isnad réel : أبو هشام الرفاعي → يحيى بن اليمان → شيخ من بني زهرة → الحارث بن عبد الرحمن بن أبي ذباب → طلحة بن عبيد الله — non « الزهري / ابن يحيى » du text layer, et « دباب » fait partie de كنية : أبي ذباب.\n- La référence bleue : سنن الترمذي، أبواب الثلثية (recueil : Tirmidhī ; chapitre : les traditions thulthiyya ; pas de numéro de hadith imprimé).\n- Le texte du hadith : «لكل نبي رفيق ورفيقِي — يعني في الجنة — عثمان» (pas «لكل نبي رفيق» suivi de [هنع]).\n- Les items sont numérotés **1 à 6** (le text layer commençait à 2) ; l'item 4 demande de « dresseren shajara du sanad et extraire les transmetteurs » (تشجير السند واستخراج الرواة), pas « أسند » ; l'item 6 : on détermine la **degré du hadith original** *après* la recherche de ses voies et shawāhid.\n- Note calligraphique : le nom du Prophète ﷺ figure en petites ligatures vertes dans le texte du hadith.\n- Numéro de page : 130 (cent-trente), en chiffres latins verts, lu chiffre par chiffre : 1-3-0.",
+        "reasoning_content": "Transcribe the page as shown in the image.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794201747,
+  "id": "202611091322077d7ff77e93934eae",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611091322077d7ff77e93934eae",
+  "usage": {
+    "completion_tokens": 934,
+    "completion_tokens_details": {
+      "reasoning_tokens": 10
+    },
+    "prompt_tokens": 8586,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9520
+  }
+}

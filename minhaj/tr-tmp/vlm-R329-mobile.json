@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Voici une brève analyse de la capture :\n\n*   **Lisibilité du texte :** Le texte est **lisible**. La police est claire et la taille est suffisante pour être lue sur un écran mobile.\n*   **Tableau de vers :** Les colonnes tiennent **dans la largeur** de l'écran. Il n'y a **pas de débordement horizontal** (pas de barre de défilement en bas).\n*   **Chevauchement et balises :** Il **n'y a pas de chevauchement** de texte ni de **balises HTML visibles** (type `<div>` ou code). La mise en page est propre, avec des sauts de ligne corrects entre les paragraphes et les sections.\n\nEn résumé, l'affichage est correct et adapté au mobile.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793146186,
+  "id": "202610280809404a3a7c57fa4d4167",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610280809404a3a7c57fa4d4167",
+  "usage": {
+    "completion_tokens": 182,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 4581,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4763
+  }
+}

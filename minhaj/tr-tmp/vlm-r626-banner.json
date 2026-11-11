@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1) Bannière calligraphiée (titre de leçon) : **[illisible]** — il n'y a pas de bannière de titre visible dans cette image ; seuls des fragments de lettres coupées apparaissent en haut.\n\n2) Badge circulaire : le numéro est trop flou pour être lu avec certitude — **[illisible]** (il pourrait s'agir de « 12 » mais je ne peux pas l'affirmer).\n\n3) Couleur dominante de l'élément graphique : **bleu** (trait horizontal bleu + badge circulaire bleu).\n\nTexte lisible sur la page (hors bannière) :\n- رجل أحرم ولم يقتل.\n- امرأة نفاس لم تقتسل للدخول مكة.",
+        "reasoning_content": "No banner title visible; badge unclear, blue line.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793981421,
+  "id": "20261107001014098e9e134f6a4f27",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107001014098e9e134f6a4f27",
+  "usage": {
+    "completion_tokens": 183,
+    "completion_tokens_details": {
+      "reasoning_tokens": 11
+    },
+    "prompt_tokens": 6805,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6988
+  }
+}

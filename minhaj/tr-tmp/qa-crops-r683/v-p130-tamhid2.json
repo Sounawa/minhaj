@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Transcription (lignes visibles, image partiellement rognée sur les bords) :**\n\n3- أَنَّ التَّزَامَ سُنَّةَ النَّبِيِّ ﷺ فِي أَدَاءِ أَعْمَالِ يَ[?]\n\n**تمهيد**\n\nمِنْ أَيَّامِ الْحَجِّ الْمَشْهُودَةِ يَوْمُ النَّحْرِ ؛ فَقَدْ سَمَاهُ ا[?]\n\n﴿وَأَذِّ فِي النَّاسِ بِالْحَجِّ يَأْتُوكَ رِجَالًا وَعَلَى كُلِّ ضَامِرٍ يَأْتِينَ﴾ [?]\n\n[سورة [?] الْآيَة: 3] يَقُومُ فِيهِ الْحَاجُ بِمَجْمُوعَةٍ مِنْ مَنَاسِكِ الْحَجِّ[?]\n\n**Remarques :**\n- Le texte est coupé à droite et à gauche : les débuts/fins de lignes manquent (signalés par [?]).\n- Le verset imprimé commence visiblement par ﴿وَأَذِّ...﴾ (allusion à Coran 22:27 : وَأَذِّنْ فِي النَّاسِ بِالْحَجِّ...) mais la fin du verset est rognée ; je n'ai transcrit que les mots lisibles.\n- Le renvoi bleu visible est « الْآيَة: 3] » ; le nom de la sourate (probablement [سورة الْحَجِّ]) est coupé à gauche — non deviné.\n- La question introductive (« مِنْ أَيَّامِ... ؛ فَقَدْ سَمَاهُ... ») se poursuit hors du cadre de l'image.\n- Les deux phrases interrogatives (فما هي...؟ ومتى...؟) mentionnées ne sont pas visibles dans cette portion de l'image.",
+        "reasoning_content": "Transcribe visible lines; right side cut off. Verse: ﴿وَأَذَّنٌّ فِي النَّاسِ بِالْحَجِّ يَأْتُوكَ رِجَالًا وَعَلَى كُلِّ ضَامِرٍ يَأْتِينَ...﴾ actually image shows \"وَأَذِّ فِي النَّاسِ بِالْحَجِّ يَأْتُوكَ رِجَالًا وَعَلَى كُلِّ ضَامِرٍ...\" — visible: \"وَأَذِّ فِي النَّاسِ بِالْحَجِّ يَأْتُوكَ رِجَالًا وَعَلَى كُلِّ ضَامِرٍ\" — cut off left. Reference: [الآية: 3] likely [سورة الحج الآية: 3]? Actually verse is Hajj 27. Image shows \"الآية: 3]\" with cut left part. Transcribe as seen.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794336045,
+  "id": "202611110240240fb4ed7b678444f7",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611110240240fb4ed7b678444f7",
+  "usage": {
+    "completion_tokens": 768,
+    "completion_tokens_details": {
+      "reasoning_tokens": 251
+    },
+    "prompt_tokens": 1571,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2339
+  }
+}

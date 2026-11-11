@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription de la page\n\n## 1) Ligne d'exploitation (encadré supérieur)\n\nأقرأ الحديث وأستخلص منه فضل يوم عرفة وأنشُر ذلك بين عائلتي.\n\n> **Note sur le verbe :** le mot s'écrit **أنشُر** (diffuser/propager), avec une ḍamma sur la shīn. Le mot ne comporte pas de س ; le \"س\" apparent dans l'image n'est qu'une trace de la lettre ش. [؟] en cas de doute graphique : la lecture la plus cohérente reste **أنشُر**.\n\n## 2) Rubrique et consigne\n\n**الإعداد القبلي**\n\nأحفظ أحاديث الدرس المقبل وأجيب عن الآتي:\n\n**1** - أبحث عن حكم المبيت والوقوف بمزدلفة.\n\n**2** - أبحث عن صفة الجمع بمزدلفة وسببه.\n\n> **Lecture chiffre par chiffre :** « 1 - » = أَحَد (un) ; « 2 - » = اِثْنَان (deux).\n> **Item 2, mot à mot :** أبحث (je cherche) — عن (sur) — صفة (la manière/le rite) — الجمع (du rassemblement) — بمزدلفة (à Mouzdalifa) — وسببه (et sa cause) — . (point final).\n\n## 3) Pied de page / éléments décoratifs\n\n- Bande décorative bleue géométrique en haut de page (motif arabesque) — pas de texte.\n- Filet horizontal bleu en bas de page.\n- Numéro de page dans une pastille bleue : **96** (peu lisible, pourrait être 9٦) [؟].\n\n---\n\n## Notes en français\n\n- La page correspond à la fin d'une leçon (exercice d'exploitation du hadith) suivie de la rubrique « الإعداد القبلي » (préparation à la leçon suivante).\n- Le verbe en question est **أنشُر** (« je propage/diffuse ») ; la graphie أنسب n'est pas attestée ici.\n- Le point après عائلتي ferme l'encadré ; il n'y a pas d'autre texte sur la page.\n- La pastille de numéro de page est dégradée : lecture la plus probable « 96 » [؟].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794183548,
+  "id": "20261109081902fbeddeab3b4e485a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261109081902fbeddeab3b4e485a",
+  "usage": {
+    "completion_tokens": 551,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8193,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8744
+  }
+}

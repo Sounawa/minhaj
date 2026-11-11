@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Transcription exacte de la page :**\n\n٢ - أستخرج من النص الثاني ما يدل على منزلة القرآن وعظمته.\n\n**الإعداد القبلي**\n\nأحفظ أحاديث الدرس المقبل وأجيب عن الآتي:\n\n١ - أشرح: عدل عشر - رقاب - حرزا من الشيطان - يبتدرونها.\n\n٢ - أستخرج من أحاديث الدرس المقبل فضائل الذكر والدعاء.\n\n**Corrections par rapport à ta lecture :**\n- « رقاب من الشيطان » : le texte imprimé porte « رقاب - حرزا من الشيطان » (le « من الشيطان » se rattache à حرزا, et « يبتدرونها » n'est pas « يبتدرونها » au pluriel — c'est bien **يبتدرونها** tel qu'imprimé, mais avec « حرزا » au singulier, non « حرزاً » visible avec tanwīn clair : le mot est écrit **حرزا**).\n- La question ١ après le hadith (« ما معنى قوله تعالى... ») n'est pas visible sur cette page ; seule la question ٢ apparaît, confirmée mot à mot.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793700356,
+  "id": "2026110318054798a2f8105dd34249",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110318054798a2f8105dd34249",
+  "usage": {
+    "completion_tokens": 283,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8285,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8568
+  }
+}

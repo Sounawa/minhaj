@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "```json\n{\n  \"verdict\": \"LAYOUT OK\",\n  \"details\": \"La mise en page est propre et professionnelle. (1) Aucun texte tronqué ou chevauchement observé. (2) Pas de débordement horizontal, le contenu reste bien dans les limites du conteneur. (3) La hiérarchie des titres (H1 pour le titre principal, H2 pour les sections comme 'Le texte', 'L'analyse', etc.) est claire et lisible. (4) Les guillemets français « » sont correctement utilisés et équilibrés. (5) Les listes numérotées sont bien formatées et alignées. (6) Les caractères spéciaux arabes (ḍ, ḥ, ġ, ʾ) et la vocalisation arabe sont rendus correctement. L'interface bilingue (français/arabe) est bien gérée avec une disposition en colonnes cohérente.\"\n}\n```",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793131424,
+  "id": "202610280403392b53e8b2619242c8",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610280403392b53e8b2619242c8",
+  "usage": {
+    "completion_tokens": 219,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5889,
+    "prompt_tokens_details": {
+      "cached_tokens": 2
+    },
+    "total_tokens": 6108
+  }
+}

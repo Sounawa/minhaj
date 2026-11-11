@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## Lecture de l'image\n\n**Mot visible n° 1** (après l'ornement bleu ﴿, de droite à gauche) :\n- **و** (waw)\n- **أ** (alef avec hamza)\n- **ذّ** (dhal avec **shadda** — le trait horizontal double bien visible au-dessus)\n- **نْ** (noun final avec **sukūn** — petit cercle au-dessus)\n\n→ **وَأَذِّنْ**\n\n(Le fragment noir en haut à gauche et la masse à gauche coupée par le bord sont des lettres du mot suivant, hors champ — ils ne constituent pas un mot lisible.)\n\n## Réponses aux questions de contrôle\n\n1. **Y a-t-il un alif après le dhal ?** — **Non.** Aucune hamza/alef suspendue ne suit le dhal avant le noun. L'unique trait vertical haut est le alif-hamza (أ) *avant* le dhal.\n2. **Y a-t-il une shadda sur le dhal ?** — **Oui**, nettement : le signe au-dessus du dhal est une shadda (petit « w » / trait double), pas une hamza isolée.\n3. **Le signe sur le noun final est-il un sukūn ou un tanwīn ?** — **Un sukūn** (petit cercle/ovale plein au-dessus du noun). Un tanwīn double kasra se verrait comme deux traits sous la lettre — absent ici.\n\n## Conclusion\n\nLe premier mot complet est **« وَأَذِّنْ »** (impératif : « fais entendre / proclame »), **et non** « وَأَذَانٌ ». Cela correspond à des versets comme ﴿وَأَذِّنْ فِي النَّاسِ بِالْحَجِّ﴾ ou ﴿فَأَذِّنْ بَيْنَكُمْ رِبَاطًا﴾ — ce qui est cohérent avec la suite partiellement visible à gauche (probablement النَّاسِ...).",
+        "reasoning_content": "Image shows «وَأَذَّنْ...» — actually visible: و أ ذّ ن with shadda on dhal, sukūn on noun, then partially cut word. Letters visible: و، أ، ذّ، نْ. There's a mark above right likely hamza on alef. Then a second partial word starting with ن/ر? Actually the left fragment could be the end of the verse continuing; but only one word visible.\n\nAnswer: it's وَأَذِّنْ (imperative), no alif after dhal, shadda present on dhal, sukūn circle on noun.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794336532,
+  "id": "20261111024839e0464547175842c6",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261111024839e0464547175842c6",
+  "usage": {
+    "completion_tokens": 623,
+    "completion_tokens_details": {
+      "reasoning_tokens": 136
+    },
+    "prompt_tokens": 2133,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2756
+  }
+}

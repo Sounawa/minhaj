@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) La phrase commençant par لأنّ عليّ بن أبي طالب n'apparaît pas dans cette image ; le texte visible commence par « فإن لم يكون أحد الزوجين موجودا، أو كان موجودا وأسقط حقه، فالأحق بتقبيل الميت أقرب الناس إليه، ويقدم القريب من النسب على القريب من الرضاع، والقريب من الرضاع على القريب من المصاهرة. فإن لم يوجد قريب، أو أسقط حقه، غسله غسله ».\n\n(2) [معرفة السنة والآثار الديهقي]. — transcrit tel qu'imprimé : « [معرفة السنة والآثار الديهقي] » (le mot النّ est imprimé sans ال : « معرفة السن والآثار الديهقي »).\n\n(3) Oui, en haut de la page : « ولما ماتت فاطمة رضي الله عنها غسلها عليّ بن أبي طالب رضي الله عنه ».",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793717643,
+  "id": "20261103225355ba26413fcd82458c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103225355ba26413fcd82458c",
+  "usage": {
+    "completion_tokens": 231,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5505,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5736
+  }
+}

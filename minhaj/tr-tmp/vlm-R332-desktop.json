@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "```json\n{\n  \"layout\": \"OK\",\n  \"details\": {\n    \"1_colonnes\": \"Deux colonnes distinctes bien présentes (français à gauche, arabe à droite).\",\n    \"2_balises\": \"Aucune balise HTML visible dans le contenu textuel.\",\n    \"3_debordement\": \"Le texte reste bien contenu dans les limites de la page.\",\n    \"4_chevauchement\": \"Aucun chevauchement de blocs ou de colonnes détecté.\",\n    \"5_titre_badge\": \"Le titre 'Dessin et réglage, chapitre T' (correspondant au sujet) et le badge 'Leçon 10 / 30' sont clairement lisibles en haut de page.\",\n    \"6_tables\": \"Les vers arabisants sont présentés de manière propre et alignée dans la colonne de droite.\"\n  }\n}\n```",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793160644,
+  "id": "2026102812103726ed336d83ad4f9e",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "2026102812103726ed336d83ad4f9e",
+  "usage": {
+    "completion_tokens": 200,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5831,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6031
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "[جامع البيان: ١/١٦١]",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793645450,
+  "id": "202611030250484a171fe95b594616",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202611030250484a171fe95b594616",
+  "usage": {
+    "completion_tokens": 18,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2963,
+    "prompt_tokens_details": {
+      "cached_tokens": 2
+    },
+    "total_tokens": 2981
+  }
+}

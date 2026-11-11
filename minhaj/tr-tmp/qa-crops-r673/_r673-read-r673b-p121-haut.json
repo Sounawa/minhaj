@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Transcription (right-to-left, top third as visible):**\n\n1) Passage d'ouverture (suite de la page précédente) :\n\nأو بقرَة، فالحُكْم فيه شاة، وما لا يبلغ أن يحكم فيه بشاة فهو كفارة من صيام أو إطعام مساكين». **[الموطأ رقم: 1143]** — chiffres lus chiffre par chiffre : **١–١–٤–٣ (1143, confirmé)**.\n\n2) Rubrique et sous-titre :\n\n**ثانيا: سوق الهدي** (rédigé **سوقَ**, sans tanwin apparent sur la photo)\n**1 - تعظيم الهدي**\n\n3) Citation coranique :\n\nقال تعالى: «﴿ذَٰلِكَ وَمَنْ يُعَظِّمْ شَعَائِرَ اللَّهِ فَإِنَّهَا مِنْ تَقْوَى الْقُلُوبِ﴾» **[سورة الحج الآية: 30]** — le verset commence bien par **ذَٰلِكَ وَمَنْ يُعَظِّمْ** ; numéro lu chiffre par chiffre : **٣–٠ (30, et non 31 ni 32)**.\n\n4) Phrase de commentaire (dernière ligne visible, coupée par le recadrage) :\n\nوالشعائر: الهدي والأنعام المشعرة، وتعظيمها تسليمها والمضجاة بها، وكان عروة يقول ...\n\n— le reste de la phrase, la citation «يا بني ...» et le crochet bleu [الموطأ رقم: NNN] (1120 ?) sont **hors champ** du tiers supérieur : à marquer **[؟]** jusqu'à zoom sur la partie basse de la page. Le nom cité visible est **عروة** (pas عمر).\n\n**Notes (français) :**\n- Numéro du Mوطأ : 1143 confirmé (lecture chiffre à chiffre, pas d'ambiguïté).\n- Numéro du verset : 30 (Sourate Al-Hajj), conforme à la voyellisation ذَٰلِكَ.\n- Le nom « عروة » apparaît bien en fin de ligne, mais la citation « يا بني... » et le second renvoi [1120 ?] se trouvent sous la limite de la zone scannée → [؟].\n- Rubrique en rouge : « ثانيا: سوق الهدي » ; sous-titre en vert : « 1 - تعظيم الهدي ».",
+        "reasoning_content": "Transcribe top third visible. Note the commentary line begins والشعائر: الهدي والأنعام المشعرة... but page cut; the quote from Urwah not visible in crop — mark as [؟]. Verse number appears 30.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794270324,
+  "id": "20261110082510dacd1838651f459a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261110082510dacd1838651f459a",
+  "usage": {
+    "completion_tokens": 643,
+    "completion_tokens_details": {
+      "reasoning_tokens": 52
+    },
+    "prompt_tokens": 8349,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8992
+  }
+}

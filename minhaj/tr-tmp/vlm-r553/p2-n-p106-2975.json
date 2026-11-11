@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "nombre=2,975, chiffres : 2 , 9 7 5 — contexte visible : « … وزن 2,975 غر … » (le mot de gauche est partiellement coupé : « يزن » [illisible partiellement], à droite « غرام » coupé).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793717252,
+  "id": "2026110322472705e6dee29dec404c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110322472705e6dee29dec404c",
+  "usage": {
+    "completion_tokens": 72,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1542,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1614
+  }
+}

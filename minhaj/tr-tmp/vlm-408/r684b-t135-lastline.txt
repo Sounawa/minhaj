@@ -1,0 +1,31 @@
+## Ligne finale (partielle, en haut de la zone extraite)
+
+La dernière ligne visible du texte noir est :
+
+**... يَرْجِعُ إِلَى الَّذِي فِيهِ**
+
+puis, après les guillemets, le renvoi bleu :
+
+**[الموطأ رقم: 1183].**
+
+### Transcription lettre par lettre
+
+1. **يَرْجِعُ** : ي (yāʾ, avec les deux points sous la forme initiale) – ر (rāʾ, sans point) – سukūn sur ر : **ـرْ** – ج (jīm, point unique en dessous) – ِ (kasra) – ع (ʿayn, forme finale en boucle ouverte) – ُ (ḍamma).
+2. **إِلَى** : إ (alif avec hamza inférieure + kasra) – ل (lām) – ا (alif nu) — graphie d'escamotage, pas de tanwīn.
+3. **الَّذِي** : ا – ل (lām + shadda, lampe de la maj) – ذ (dhāl avec point unique sur le sommet) – ِ – ي (yāʾ final sans points).
+4. **فِيهِ** : ف (fāʾ, **boucle ronde avec un point unique au-dessus**) – ِ (kasra) – ي (yāʾ médian, sans point dans la ligature) – ه (hāʾ finale en boucle fermée, avec kasra : **ـهِ**).
+
+### Réponse à vos questions
+
+- Le dernier mot **commence bien par فَ/فِ** (fāʾ ronde, un point) — mais ce n'est **ni فَيُفِيضُ, ni فَيُطِيفُ, ni فَيَرْجِعُ**. Le mot est **فِيهِ** : ف – ي – ه, seulement 3 lettres, pas de ض (boucle haute avec point au-dessus), pas de ط (boucle plate large), pas de ر/ج.
+- On ne voit **aucune ط** (pas de boucle plate large) → élimine فَيُطِيفُ.
+- On ne voit **aucun ض** (grande boucle fermée surmontée d'un point) → élimine فَيُفِيضُ.
+- **يَرْجِعُ** existe bien, mais c'est le **premier** mot de la ligne, pas le dernier.
+
+### Avant-dernier mot
+
+C'est **الَّذِي** (ال + ذ + ي), **pas البيت** : on ne voit aucune forme de بāʾ à point unique sous la boucle ; en revanche le **ذāl** (point unique posé sur un sommet anguleux) est clair.
+
+### Renvoi bleu
+
+**NUM: 1, 1, 8, 3** → [الموطأ رقم: **1183**] — suivi d'un point final noir « . ».

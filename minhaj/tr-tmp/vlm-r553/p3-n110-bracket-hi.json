@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) Chiffres arabes-indiques. Le renvoi rouge : [الموطأ ، رقم : ٦٦٦] — de droite à gauche : ٦ ، ٦ ، ٦ → réponse (a) ٦٦٦ (=666).\n\n(2) Aucun autre groupe de chiffres n'est visible sur l'image ; la seule occurrence chiffrée est celle du renvoi rouge, précédée de « الموطأ ، رقم : ». Le reste de la ligne imprimé est : « عليه الله من يوم زیار کاتب » [partiellement illisible].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793717497,
+  "id": "2026110322513004b82643810a4b33",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110322513004b82643810a4b33",
+  "usage": {
+    "completion_tokens": 128,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8307,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8435
+  }
+}

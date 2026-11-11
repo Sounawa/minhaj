@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "ما حاصل في المولد عند ملاحظة عن نقطه ») إنّي أعجز أن أكتب بيانًا في مصلحات «[الموفي] والقومية. [454]",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793669962,
+  "id": "2026110309392093caede754cb46bf",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "2026110309392093caede754cb46bf",
+  "usage": {
+    "completion_tokens": 51,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 482,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 533
+  }
+}

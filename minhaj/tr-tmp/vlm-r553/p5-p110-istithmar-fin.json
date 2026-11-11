@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "fin_citation= « فإذا حَضَى يحول عليها الحَوْل من يوم زَكَّيْت » — transcription visible : « حتى يحول عليها الحول من يوم زكّيت »,\nmot_final= زكّيت,\nlettres : ز، ك، ي، ت (avec تشديد على الياء : زَكَّيْت — pas زكيت/زكاتها/زكاها),\nrenvoi= [الموطأ رقم : 666] → chiffres : 6, 6, 6,\nq1= « 1- ما نوع المال الذي بين مالك رضي الله عنه حكمه في النص ؟ »,\nq2= non visible dans l'image fournie (seule la question 1 apparaît ; la 2e est hors cadre) → [illisible].",
+        "reasoning_content": "Image shows « حتى يحول عليها الحول من يوم زكاتها » — actually image shows \"من يوم زكّيّت\" ... it reads \"من يوم زكّيت\" — looks like \"زكّيّت\". Letters: ز ك ي ت. Renvoi: [الموطأ رقم : 666]... shows 666. Questions: only one question visible (1- ما نوع المال الذي...). The second question not visible — say [illisible/absente].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793721803,
+  "id": "202611040003129ae8ddfddf0d44d2",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611040003129ae8ddfddf0d44d2",
+  "usage": {
+    "completion_tokens": 299,
+    "completion_tokens_details": {
+      "reasoning_tokens": 109
+    },
+    "prompt_tokens": 8199,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8498
+  }
+}

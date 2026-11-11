@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## Transcription\n\n**1) Rubric:**\nأطبق؛\n\n**2) Flowchart title (header box):**\nخطوات دراسة وتخريج حديث\n\n**3) Boxes (in order):**\n\n- **أولا:** تقديم الحديث المراد دراسته، واستخراجه من مصادره الأصلية\n- **ثانيا:** البحث عن طرق الحديث ورواه\n- **ثالثا:** دراسة سند الحديث الأصلي (اتصال السند، عدالة الرواة، ضبط الرواة...)\n- **رابعا:** دراسة طرق ورواه الحديث\n- **خامسا:** الحكم الكلي على الحديث الأصلي (بعد دراسة طرقه وشواهده)\n\n**Small side text:** none — only page number: **129**\n\n## Notes (FR)\n\n- Le mot de la consigne est bien **أطبق؛** (en rose/magenta).\n- La numérotation utilise les ordinaux arabes (**أولا / ثانيا / ثالثا / رابعا / خامسا**), non des chiffres.\n- Boîte 1 : « مصادره الأصلية » confirmé (pas « مصادرها »).\n- Boîte 2 : « ورواه » (singulier), confirmé.\n- Boîte 3 : liste parenthétique exacte : اتصال السند، عدالة الرواة، ضبط الرواة...\n- Boîte 4 : « دراسة طرق ورواه الحديث » (ordre « طرق ورواه », pas « طرق الحديث ورواته ») — lisible, mais légère incertitude sur la voyellation ; rien d'illisible.\n- Boîte 5 : « الحكم الكلي على الحديث الأصلي » + parenthèse « (بعد دراسة طرقه وشواهده) ».\n- Aucun texte latéral hors organigramme ; numéro de page 129 en vert.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794201941,
+  "id": "20261109132535c416d06709f54f7f",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261109132535c416d06709f54f7f",
+  "usage": {
+    "completion_tokens": 432,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5953,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6385
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Correction : la couche ترجمة الراوي n'est **pas visible** sur cette image. Aucune kunyā, mission à Najrān ni année de mort n'apparaissent ; je ne peux ni confirmer ni corriger le texte que tu proposes, car il ne doit pas être reconstitué de mémoire.\n\nCe qui est effectivement lisible sur la page (section المعجم uniquement) :\n\n**المعجم**\n\nالشرح:\n- حَرْبَه مِنَ اللَّبِلِ : ورده من القرآن الذي يقرؤه بالليل.\n- عزائمُ سُجودِ القِرآنِ : السجدات المؤكدات.\n- تجادل : تحاج وتدافع.\n\nاستخلص المضمامين : [illisible]\n\nAucune mention de عمرو بن حزم dans l'image fournie.",
+        "reasoning_content": "Image shows a glossary, not a biography section. Must transcribe only visible text and correct.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793700908,
+  "id": "2026110318150166440a5b21e44c4e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110318150166440a5b21e44c4e",
+  "usage": {
+    "completion_tokens": 214,
+    "completion_tokens_details": {
+      "reasoning_tokens": 20
+    },
+    "prompt_tokens": 8227,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8441
+  }
+}

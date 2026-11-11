@@ -1,0 +1,6 @@
+IMAGE: t-p121-isnad-chain.png
+CONSIGNE: Transcris EXACTEMENT l'exemple تصحيف في الإسناد MOT À MOT : la chaîne complète (1er nom : شعبة ? العوام بن مراجم ? الحوام ? — LETTRE PAR LETTRE chaque nom), puis le hadith de عثمان بن عفان avec voyelles, puis le crochet [علل الدارقطني...] chiffre par chiffre.
+---
+تصحيف في الإسناد: ومثاله: حديث شعبة عن العوام بن مراجم، عن أبي عثمان النهدي
+
+(الجزء السفلي من السطر محجوز في الصورة؛ لا أستطيع قراءة نص حديث عثمان بن عفان ولا مرجع علل الدارقطني — غير ظاهرين في الصورة المقدمة.)

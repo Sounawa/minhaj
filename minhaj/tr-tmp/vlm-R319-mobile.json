@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "```json\n{\n  \"verdict\": \"LAYOUT OK\",\n  \"details\": \"La mise en page est propre et adaptée au format mobile (390px). Les titres sont bien hiérarchisés et lisibles. Aucun texte n'est tronqué ou chevauchant, et il n'y a pas de débordement horizontal. Les listes numérotées sont bien alignées. Les caractères spéciaux arabes translittérés (ḍ, ḥ, ġ) ainsi que le texte arabe vocalisé dense sont correctement rendus.\"\n}\n```",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793131434,
+  "id": "202610280403494c356949b99f403c",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610280403494c356949b99f403c",
+  "usage": {
+    "completion_tokens": 128,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 4629,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4757
+  }
+}

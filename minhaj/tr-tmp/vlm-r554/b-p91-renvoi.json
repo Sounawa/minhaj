@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) ﴿ولقد كرّمنا بني آدم وحملناهم في البر والبحر ورزقناهم من الطيّبات وفضلناهم على كثير ممّن خلقنا تفضيلا﴾\n\n(2) [سورة الإسراء الآية: 70]\n\n(3) «ولم يفتصر هذا التكريم للإنسان على حياته فقط، بل كرمه الله تعالى حيا وميتا، ومن مظاهر التكريم بعد الموت، ما أوحب الله تعالى على المسلمين من غسله وكفنه والصلاة عليه.»\n\n**Remarque de prudence :** l'image est en résolution moyenne ; je n'ai vu nulle part la question qui suit (لا يوجد سؤال بعد هذه الفقرة في الصفحة). Au cas où certains mots seraient mal déchiffrés, je signale que « وفضلناهم » pourrait être [وَفَضَّلْنَاهُمْ] et « أوحب » pourrait être [أوجب] — mais l'image semble bien montrer « أوحب ».",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793718012,
+  "id": "20261103230001873dc57124cc401a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103230001873dc57124cc401a",
+  "usage": {
+    "completion_tokens": 259,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8228,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8487
+  }
+}

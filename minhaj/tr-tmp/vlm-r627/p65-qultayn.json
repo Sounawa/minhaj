@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Le passage demandé sur **القلتان** (فإن القلتين إذا تغير… / المشهور عند مالك / ولا يعارض حديث القلتان…) **n'apparaît pas** dans l'image fournie. L'image montre la fin de la section sur التعديل والتشويه puis le début du النوع الثاني. Voici la transcription exacte du texte visible :\n\n…التغيير سواء كان قلتين أم قل ، فخص عموم كل منهما بالأخر «والشهور عند مالك رضي الله عنه أنه لا يتجس إلا بالتعدير ولو أقل من قلتين مستثنى بغير بتر بضاعة وهي بتر تلقي فيها خرق الحيض والحوم الكلاب . . . ، ولا يعارض هذا حديث القاتل لعدم صحته لتضعيف مالك وغيره» [الفتاوى\n\nالدواني على رسالة ابن أبي زيد القيرواني ، 1/125] •\n\nالثاني من القسمين: ما لا يمكن الجمع فيه ، وهذا يدخل تحتته نوعان :\n\nالأول: أن يعرف المتقدم من المتأخر ، فإن كان كذلك كان المتأخر ناسخا للمتقدم.\n\nالثاني: أن لا يعلم المتقدم من المتأخر فحينئذ نسلك مسلك الترجيح فنأخذ بالراجح وندع المرجوح. والتعارض بين الحديثين إنما هو بحسب ما ظهر للناظر فيهما ، وقد يمكن الجمع بين حديثين لدى عالم ، ويخفى ذلك على أخر ، كما أن طرح الجمع بين الحديثين قد تختلف ، ومن ذلك ما أورده الحافظ ابن حجر في التمييل لمختلف الحديث معقبا على ابن الصلاح رحمه الله؛ فقد مثل ابن",
+        "reasoning_content": "The image doesn't contain القلتان passage — it shows التعديل والتشويه and النوع الثاني. So much of requested text isn't visible. I should transcribe only what's visible and mark the rest as not present.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793984912,
+  "id": "20261107010813952b2cac6dca4fba",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107010813952b2cac6dca4fba",
+  "usage": {
+    "completion_tokens": 460,
+    "completion_tokens_details": {
+      "reasoning_tokens": 49
+    },
+    "prompt_tokens": 8212,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8672
+  }
+}

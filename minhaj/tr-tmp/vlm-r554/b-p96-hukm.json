@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) Phrase sur صلاة الجنازة : il n'y a pas de phrase « فرض كفاية » visible sur cette image ; le texte commence directement par le hadith : «إنّ رسول الله ﷺ نَعَى النّجاشيّ للنّاس، في اليوم الذي مات فيه، وخَرَج بهم إلى المُصَلّى، فَصَفّ بهم وكبّر أربع تَكْبِرات».\n\n(2) Citation entre chevrons avec renvoi : «… وكبّر أربع تَكْبِرات» [الموطّأ رقم: 60].\n\n(3) Phrase suivant la citation : ولا يفهم من هذا أن كلّ غائب يصلّي عليه؛ لأنّ الصّلاة مخصوصة بالمَيّت الحاضر المُسْجى أمام المصلّين، أمّا صلاة النّبيّ ﷺ على النّجاشيّ فإنّها كانت بسبب أنّ النّجاشيّ كان مسلماً، في بلد أهله نصارى، فليس فيهم من يصلّي عليه، فكانت خصوصيّة له وحدَه من أجل ذلك، ودليل الخصوصيّة أنّه لم يصلّ على غَيْرِه، وأنّه رفع له حتّى رأاه قصلّي عليه.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793718198,
+  "id": "202611032303060f9f35e51a5c4082",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611032303060f9f35e51a5c4082",
+  "usage": {
+    "completion_tokens": 325,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8251,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8576
+  }
+}

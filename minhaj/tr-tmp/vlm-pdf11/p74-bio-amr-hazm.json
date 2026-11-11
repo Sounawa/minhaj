@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "La biographie (ترجمة الراوي) de عمرو بن حزم n'apparaît PAS dans cette image.\n\nLe texte visible sur l'image est uniquement la section الشرح (explication du vocabulaire) :\n\n- **الشرح:**\n- حَرْبَة من اللَّبِل : ورده من الفرات الذي يَفْرُوُه بالليل.\n- عَزَائِمُ سُجُودِ القَرْآن : السجدات المؤكدات.\n- تَجَادَل : تحاجّ وتدافع.\n\nAucune mention de عمرو بن حزم, ni de sa kunyā, nasab, mission ou année de décès ne figure sur cette page. Je ne peux donc ni confirmer ni corriger la biographie demandée — elle se trouverait probablement sur une autre page du manuel.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793700215,
+  "id": "202611031803258bdb766730a74057",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611031803258bdb766730a74057",
+  "usage": {
+    "completion_tokens": 196,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8245,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8441
+  }
+}

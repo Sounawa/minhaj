@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**(1)** حَفِظْتُمُوهُ ؛ فَاعْلَمُوا بِهِ ؛ فَإِذَا عَلِمْتُم بِهِ فَانْشُرُوهُ»، [فتح المغيب بشرح الفية الحديث للعراقي، السخاوي، 3/220].\n\n**(2) التقويم**\n\n1. أعرِف محكمَ الحديث ومختلفَه.\n2. أذكُر أقسام مختلف الحديث.\n3. أذكُر أول من صنف في مختلف الحديث.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793984971,
+  "id": "20261107010924b0017f9add884c0e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107010924b0017f9add884c0e",
+  "usage": {
+    "completion_tokens": 148,
+    "completion_tokens_details": {
+      "reasoning_tokens": 147
+    },
+    "prompt_tokens": 8171,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8319
+  }
+}

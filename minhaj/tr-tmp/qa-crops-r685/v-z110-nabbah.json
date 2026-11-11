@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Voici la transcription du texte tel qu'il apparaît dans l'image :\n\n**Ligne 1 :**\nالْمَيْتَةِ خَارِجٌ عَنْ مَنْ يَرْمُونَهُ بِوَمِ الْأَثَرِ، ثُمَّ يَرْمُونَهُ بِفَعْلِهِ، وَمِنْهُمْ مَنْ يُضَعِّفُ\n\n**Ligne 2 :**\nلَبُوْمِينَ، ثُمَّ يَرْمُونَهُ بِفَعْلِ النَّفْرَ» [الْمُوَطَّأْ رِقْم: 1221]\n\n**Remarques importantes :**\n- Le texte visible dans cette image **ne correspond pas** au passage décrit dans votre question : il ne contient pas « أبا النبّاح عاصم بن... », ni « أخبره عن أبيه », ni « أنّ رسول الله ﷺ أرخص ».\n- Le mot que je transcris « بِوَمِ » (ligne 1) est peu clair dans l'image ; il pourrait s'agir d'une autre lecture, mais les points visibles correspondent à ب-و-م.\n- Les lettres bleues à la fin indiquent la source : « [الْمُوَطَّأْ رِقْم: 1221] » (le Muwaṭṭaʾ, numéro 1221).\n- La qualité de l'image et le rendu de la police rendent certains diacritiques incertains (notamment les fatha/kasra sur les mots courts).\n\nSi vous avez une autre image correspondant au passage sur عاصم بن أبي النبّاح, n'hésitez pas à la partager.",
+        "reasoning_content": "Read: \"الثبتُ خارِجٌ عن مَن يَرْمونه يُوَمّ الأثَر، ثم يرمونه بفعل، فمنهم من يُضعّف، ومنهم من يُبطل\" — actually \"يَوْمَ الأَثَر\". Line 2: \"لَبُوْمِينَ، ثم يَرمونه بفعل النَّفْرَ» [الْمُوَطَّأْ رِقْم: 1221]\".\n\nThe prompt mentions a different passage but image shows this text. Transcribe as seen.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794348931,
+  "id": "20261111061522608b528d85544218",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261111061522608b528d85544218",
+  "usage": {
+    "completion_tokens": 580,
+    "completion_tokens_details": {
+      "reasoning_tokens": 143
+    },
+    "prompt_tokens": 7991,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8571
+  }
+}

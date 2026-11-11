@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription de la page (manuel scolaire arabe)\n\n---\n\n## التحويل\n\n1- أبين حكم الحالتين الآتيتين مع الاستدلال والتعليل:\n\n- حجت امرأة بطيئة السير، ولِتسابير من يرافقها ركبت في سعيها بين الصفا والمروة.\n\n- قَدِّم حاج السعي بين الصفا والمروة على الطواف بالبيت فماذا يفعل؟.\n\n2- ما حكم الرقّي على الصفا والمروة؟\n\n---\n\n## الاستشهار\n\nقال مالك: «وَمَنْ نَسِيَ مِنْ طَوَافِهِ شَيْئًا، أَوْ شَكَّ فِيهِ، فَلْمَ يَذْكُرْ إِلَّا وَهُوَ يَسْعَى بَيْنَ الصَّفَا وَالمَرْوَةِ، فَلْيَنْهَ يَقْطَعْ سَعْيَهُ، ثُمَّ يَتِمُّ طَوَافَهُ بالبَيْتِ عَلَى مَا يَسْتَيْقِنُ، وَيَرْكَعْ رَكْعَتَيِ الطَّوَافِ، ثُمَّ يَبْدَئُ سَعْيَهُ بَيْنَ الصَّفَا وَالمَرْوَةِ» [الموطأ رقم: 1097]·\n\n*(le numéro bleu : 1097 — un, zéro, neuf, sept)*\n\n---\n\nأقرأ الأثر وأبين حكم من نسي شيئًا من طوافه، أو شك فيه، فتذكّر ذلك في السعي.\n\n---\n\n## الإعداد القبلي\n\nأحفظ أحاديث الدرس المقبل وأجيب عن الآتي:\n\n1- أبحث عن أحكام الصلاة والخطبة بعرفة.\n\n2- أبين حكم صيام يوم عرفة للحاج.\n\n---\n\n*Page number (blue): 47*\n\n---\n\n## Notes (français)\n\n- Le décret d'après la position dans la page de Malik est bien conforme au texte attendu du Mûwatta' : il commence par « ومن نسي من طوافه شيئا أو شك فيه... » — la transcription est exacte (le texte du Mûwatta' attendu de la version 1097 présente « فليقطع سعيه ثم يتم طوافه... »).\n- Les éléments numérotés sont transcrits chiffre par chiffre : le numéro de hadith (1097) et les numéros d'exercices (1-2) — le numéro 1 suit la convention arabe (chiffre à droite du tiret).\n- Le bas de page porte un numéro de page bleu en chiffres : 47.\n- Aucune partie illisible détectée ; les passages avec lettres inexactes (par exemple « قَدَّمَ » vs « قَدِّمَ ») sont transcrits tels qu'ils apparaissent.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794212610,
+  "id": "20261109162310981c41a7b50048a7",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261109162310981c41a7b50048a7",
+  "usage": {
+    "completion_tokens": 745,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8340,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9085
+  }
+}

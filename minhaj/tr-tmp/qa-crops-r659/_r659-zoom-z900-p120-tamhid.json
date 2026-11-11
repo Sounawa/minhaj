@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## التمحيص (Transcription, letter-by-letter verified)\n\n**Heading:** تمحيص\n\n**Paragraph:**\n\nبذل علماء الحديث جهودا لحفظ الأحاديث النبوية وصونها من التبديل والتغيير، ووقف من التحريف في الألفاظ والأسماء، وميزوا بين ما كانت **الخلافَة** فيه بتغيير حرف أو حروف، مع بقاء صورة الخط، وبين ما كان التحريف فيه بالنسبة إلى شكل الحروف، مع بقاء صورة الخط؟ وأطلقوا على كل منها اسما **خاصا**.\n\n**Closing questions:**\n- فماذا يسمى النوع الأول؟\n- وماذا يسمى النوع الثاني؟\n- وما فائدة معرفة كل منهما؟\n\n## Answers to your letter-by-letter decisions\n\n**(a) Verb:** Neither candidate is exact. The image reads **وميزوا** (wāw–mīm–yāʾ–zāy–wāw–alif), not وبينوا and certainly not ويبنيونا (which would be grammatically wrong here). The following word is **بين** (ب–ي–ن) as a preposition: \"وميزوا بين ما كانت…\"\n\n**(b) Noun:** **الخلافَة** — letters: ا ل خ ل ا ف ة (with fatha on the ف). Not المخالفة (there is no م after ال).\n\n**(c) After اسما:** **خاصا** — خ–ا–ص–ا. The letter is clearly ص (a ص with its tooth and bowl), not ض and not دع, so خاضا and خادعا are both ruled out.\n\n**(d) Start punctuation:** There is **no bracket, ellipsis, or dash** at the paragraph start — the text begins directly with بذل. Mark this as [؟]/none rather than inserting punctuation not in the source.\n\n**Closing questions:** All three match your candidates exactly, each ending with the Arabic question mark **؟** (reversed direction): فماذا يسمى النوع الأول؟ وماذا يسمى النوع الثاني؟ وما فائدة معرفة كل منهما؟",
+        "reasoning_content": "Transcribe based on image; clarify candidates. Image shows: بذل علماء الحديث جهودا لحفظ الأحاديث النبوية وصونها من التبديل والتغيير، ووقف من التحريف في الألفاظ والأسماء، وميزوا بين ما كانت الخلافة فيه بتغيير حرف أو حروف، وم…… actually image shows \"وميزوا بين ما كانت الخلافة فيه بتغيير حرف أو حروف\" — but candidate question says المخالفة or الخلافَة: image reads الخلافَة. Wait candidate (a) verb: وبينوا or ويبنيونا — image shows وميزوا... hmm. Actually image line: \"وميزوا بين ما كانت الخلافة فيه بتغيير حرف أو حروف، ومع...\" wait it says \"ومع بقاء صورة الخط، وبين ما كان التحريف فيه بالنسبة إلى شكل الحروف، مع بقاء صورة الخط؟\" and \"وأطلقوا على كل منها اسما خاصا.\" Questions fine. No bracket/ellipsis at start — mark [؟] maybe none. Answer: (a) neither — it's وميزوا; if forced, وبينوا appears as وبين ما. (b) الخلافَة. (c) خاصا. (d) no brackets/ellipses at start; paragraph begins directly.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794198181,
+  "id": "20261109122242d6bf0d3ab5334081",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261109122242d6bf0d3ab5334081",
+  "usage": {
+    "completion_tokens": 769,
+    "completion_tokens_details": {
+      "reasoning_tokens": 292
+    },
+    "prompt_tokens": 8150,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8919
+  }
+}

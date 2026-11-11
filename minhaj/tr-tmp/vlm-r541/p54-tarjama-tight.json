@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "ترجمة الرواية\n- عَنْشَةَ أُمِّ الْمُؤْمِنِينَ رَضِيَ اللهُ عَنْهَا قَالَتْ: كَانَ النَّبِيُّ ﷺ إِذَا دَخَلَ بَيْتَهُ\nالْمَسِيرُ رَضِيَ اللهُ عَنْهَا: التَّجْمِيعُ الْقُرْآنُ شَيْئًا مِنَ الْكُسَيْرِ مِنَ الرَّدَاءِ وَإِذَا خَرَجَ لِقَاءِ\nمَا يَرْتَدِي أَحْدَاهُمَا وَلاَ يَشْتَرِي مِنْ عَائِشَةَ، تَرْوِي رَضِيَ اللهُ عَنْهَا سَنَةَ 57 أَوْ 58 هـ.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793688054,
+  "id": "2026110314404883b765c42a7443a0",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "2026110314404883b765c42a7443a0",
+  "usage": {
+    "completion_tokens": 267,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5899,
+    "prompt_tokens_details": {
+      "cached_tokens": 2
+    },
+    "total_tokens": 6166
+  }
+}

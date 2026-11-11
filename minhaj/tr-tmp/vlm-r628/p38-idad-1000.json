@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**أتأمل النص وأجيب عن الآتي مع التعليل :**\n\n1 - لماذا اعترب الشخص في النص منضحا؟\n2 - ما الواجب على المنتفع انطلاقا من النص مع الاستشهاد بحيلة قر آنية؟\n\n**الإعداد القبلي**\n\nأحفظ أحاديت الدرس المقبل وأجيب عن الآتي.\n\n1 - أبحث عن مفهوم التلبيَة.\n2 - أوضح عبارات التلبيَة.\n\nIl y a **2 consignes** numérotées dans le bloc الإعداد القبلي : « أبحث عن مفهوم التلبيَة » et « أوضح عبارات التلبيَة ».",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983407,
+  "id": "202611070043204f972abf114e4c20",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070043204f972abf114e4c20",
+  "usage": {
+    "completion_tokens": 165,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8144,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8309
+  }
+}

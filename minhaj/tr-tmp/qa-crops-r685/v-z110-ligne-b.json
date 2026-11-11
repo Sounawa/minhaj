@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Transcription de la ligne principale (de droite à gauche) :\n\nعَاتِمِ بْنِ عَلِيِّ خِرَامِ عَنْ أَبِيهِ: «أَنَّ رَسُولَ اللهِ صَلَّى اللهُ عَلَيْهِ وَآلِهِ أَزْعَمَ لِرَاعِبِ الْأَبِلِ فِي\n\nLa ligne inférieure n'est pas entièrement visible (les lettres sont coupées) ; on y devine le début de mots, mais elle est trop tronquée pour être transcrite fidèlement.",
+        "reasoning_content": "Transcribe the main line: عَاتِمِ بْنِ عَلِيِّ خِرَامِ عَنْ أَبِيهِ: «أَنَّ رَسُولَ اللهِ صَلَّى اللهُ عَلَيْهِ وَآلِهِ أَزْعَمَ لِرَاعِبِ الْأَبِلِ فِي...",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794349038,
+  "id": "20261111061711d4b93dc6b7484ac7",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261111061711d4b93dc6b7484ac7",
+  "usage": {
+    "completion_tokens": 255,
+    "completion_tokens_details": {
+      "reasoning_tokens": 102
+    },
+    "prompt_tokens": 8073,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8328
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "صلاة الجنازة فرض كفاية على جماعة المسلمين، مثل تعسيل الميت وكفنه ودفنه،\n\nوإذا دفن الميت ولم يصل عليه أحد وجبت الصلاة على قبره بعد الدفن، بدل ذلك ما جاء\n\nفي الموطأ عن مالك، عن ابن شهاب، عن سعيد بن المسيب، عن أبي هريرة رضي\n\n46\n\n(NB : le titre « أ- حكم الصلاة على الجنازة » n'apparaît pas sur cette image ; le mot فرض كفاية figure ligne 1.)",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793718868,
+  "id": "2026110323142298a9a1cec4ce45f9",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110323142298a9a1cec4ce45f9",
+  "usage": {
+    "completion_tokens": 141,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8226,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8367
+  }
+}

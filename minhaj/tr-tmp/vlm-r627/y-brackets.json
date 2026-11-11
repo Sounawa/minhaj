@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## Réponse précise (transcription token par token, image unique = 1 ligne principale + fragments de lignes adjointes)\n\n**(1) Crochets visibles (ordre de droite à gauche) :**\n\nSur la ligne principale, de droite à gauche :\n- 1 crochet ouvrant **[** (juste avant le mot vert « البخاري ») — il apparaît comme « ا » vert haut, en réalité un bracket.\n- 1 crochet fermant **]** après « البخاري ».\n\n⚠️ Je n'en vois pas d'autres complets. Les fragments en haut et en bas montrent d'éventuels débuts de crochets verts mais non identifiables : je ne compte donc que **2 crochets** (1 ouvrant + 1 fermant) de façon fiable.\n\n**(2) Contenu de la référence verte complète :**\n\n**[رواه البخاري]**\n\nC'est la seule référence verte complète et lisible sur cette ligne. Le fragment vert en haut de ligne (fin de la ligne précédente) est tronqué : **[illisible]**.\n\n**(3) Matn précédant la première référence verte (transcription exacte, de droite à gauche) :**\n\n« ...مِنْهُمْ بَابٌ لا يَدْخُلُ اللهُ بِهِ مَيْتَةً [رواه البخاري] »\n\net, poursuivant après la référence (c'est un commentaire, en noir) :\n\n« وَحَدِيثُ : لا يَقْبَلُ اللهُ صَلاةَ بِغَيْرِ طُهُورٍ، وَلا صَدَقَةً مِنْ غُلُولٍ »\n\n**(4) Hadith commençant par « لا تدخل/لا يدخل الملائكة... » ?**\n\n**Non.** Le seul texte proche est « بَابٌ لا يَدْخُلُ اللهُ بِهِ مَيْتَةً » (qui évoque « لا يدخل الجنة من في قلبه مثقال ذرة... », mais ici c'est une glose de chapitre/bab), et « لا يَقْبَلُ اللهُ صَلاةَ... ». Aucun hadith débutant par « لا تدخل/لا يدخل الملائكة » n'est présent sur cette image — je ne l'inventerai pas.",
+        "reasoning_content": "The image is one wide line. Green text between brackets appears: [رواه البخاري] — I see green \"البخاري\" with bracket. Reading right to left: green segment near right: \"با [رواه البخاري\" — actually green reads \"...راها\" then bracket then \"البخاري\" then closing bracket? Visible: green text \"با [البخاري\" ... Let me describe honestly with uncertainty.\n\nLine content: \"...مِنْهُمْ بابٌ لا يَدْخُلُ اللهُ بِهِ مَيْتَةً [رواه البخاري] [يعني...] وَحَدِيثُ: لا يَقْبَلُ اللهُ صَلاةَ بِغَيْرِ طَهُورٍ، وَلا صَدَقَةً مِنْ غُلُولٍ\"",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793986923,
+  "id": "20261107014140c3a95f002fec4ee8",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107014140c3a95f002fec4ee8",
+  "usage": {
+    "completion_tokens": 738,
+    "completion_tokens_details": {
+      "reasoning_tokens": 201
+    },
+    "prompt_tokens": 8239,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8977
+  }
+}

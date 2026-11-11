@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Cette image ne montre pas la définition d'ابن حجر ni le mot النسبة إلى شكل الحروف. On y voit uniquement un titre en vert :\n\nب- اصطلاحا\n\net en dessous, partiellement coupé :\n\nالحرف: [؟] ... لفظ [؟]\n\nAucun numéro de page (53), aucun crochet [ص 53] ni [نزهة النظر ص 53], ni note n'est visible sur cette image.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794214970,
+  "id": "20261109170246eccd4167470c403e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261109170246eccd4167470c403e",
+  "usage": {
+    "completion_tokens": 103,
+    "completion_tokens_details": {
+      "reasoning_tokens": 102
+    },
+    "prompt_tokens": 8274,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8377
+  }
+}

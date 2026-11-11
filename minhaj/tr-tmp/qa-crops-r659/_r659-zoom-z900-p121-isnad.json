@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Note:** This image shows only part of the page you describe. Several items you ask about (the isnād example, the ḥadīth text, etc.) are **not visible** in this crop — they presumably appear on the next portion. Here is the exact transcription of what IS printed:\n\n**1) أعلى (continuation of previous section, partially cut):**\nبِـ... تَـ[؟] فَهِيَ تُدْخِلُ الحَقَّ بِتَغْيِيرِ حُرُوفِهِ، أو حُرُوفِهِ مَعَ بَعْضِ حُرُوفِهِ [؟] — only the tail of the line is visible and heavily cut; mostly [؟].\n\n**2) Heading:**\n**2. أهمية معرفة المصحف:**\n\nمَعْرِفَةُ هذَا النَّوْعِ مُهِمَّةٌ، وأَكْثَرُ وَقُوعِهِ كَانَ فِي الْمَتْنِ، وَقَدْ بَقِعَ فِي الْأَسْمَاءِ الَّتِي فِي الْأَسَانِيدِ، وَالْقَابِهِمْ وَأَنْسَابِهِمْ، قَالَ ابْنُ الصَّلَاحِ: «هَذَا فَنْ جَلِيلٌ إِنَّمَا يَنْهَضُ بِهِ عِبَابَةُ الحَذَاقِ مِنَ الحُفَّاظِ، وَالدَّارِ قَطْنِي مَنْهُمْ، وَلَهُ فِيهِ تَصْنِيفٌ مُفِيدٌ» [مُقَدَّمَةُ ابْنِ الصَّلَاحِ، 384].\n\n**3) Numbered heading:**\n**3. أقسامه:**\n\nقَسَمَ الْعُلَمَاءُ الْمُصْحَفَ إِلَى ثَلَاثَةِ تَقْسِيمَاتٍ، كُلِّ تَقْسِيمٍ بِاعْتِبَارِ:\n\n✅ Verified: the word before التقسيمات is **ثَلَاثَةِ** (printed with ة), and it is **تَقْسِيمَاتٍ** — note the heading reads «ثَلَاثَةِ تَقْسِيمَاتٍ» and the following word is **كُلِّ** (not كل تقسيم باعتبار exactly — it prints «كُلِّ تَقْسِيمٍ بِاعْتِبَارِ:»).\n\nSub-item (partially cut at bottom):\n**أ- بِاعْتِبَارِ مَوْقِعِهِ** [؟]، وَيَنْقَسِمُ بِهَذَا الِاعْتِبَارِ إِلَى قِسْمَيْنِ، وَهُمَا:\n\n**4, 5, 6) — Not present in this image.** The isnād example («تصحيف في الإسناد: ومثاله: عن ...»), the chain names, the matn «لَتُوَدَّنَّ الحقوق إِلَى أهلها...», the reference [علل الدارقطني، حديث ...], and the correction sentence (صحف فيه يحيى بن معين...) do not appear in this crop. Also note the correction sentence visible here belongs instead to the **مصحف في الأسماء** discussion — the bracketed reference printed is [مقدمة ابن الصلاح، **384**] — digits: ٣ ، ٨ ، ٤ (i.e. **384**, not 483).\n\nPlease upload the next portion of the page (below أ- باعتبار موقعه) for items 3-example through 6.",
+        "reasoning_content": "The image shows only part of what user asks; the actual example with chain isn't in this image. Provide what's visible and mark [؟] for missing parts.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794198808,
+  "id": "20261109123306f2f2784add5d41bd",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261109123306f2f2784add5d41bd",
+  "usage": {
+    "completion_tokens": 1006,
+    "completion_tokens_details": {
+      "reasoning_tokens": 34
+    },
+    "prompt_tokens": 8360,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9366
+  }
+}

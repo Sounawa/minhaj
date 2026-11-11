@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**(1) Titre du bloc :** الأحاديث\n\n**(2) Isnād :** مالك، عن أَبِي زُرْعةَ السَّخْتَيَانِيُّ، عن مُحَمَّدِ بنِ سيرينَ، عن أَمِّ عَطِيَّةَ الأَنْصَارِيَّةَ\n- Premier nom : أَبِي زُرْعَةَ السَّخْتَيَانِيُّ\n- Deuxième nom : مُحَمَّدِ بنِ سيرينَ\n\n**(3) Phrase :** قَالَتْ: دَخَلَ عَلَيْنَا رَسُولُ اللهِ ﷺ حِينَ نَوَفَيْتُ ابْنَتِي فَقَالَ: «أَغْسِلُوهَا",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793717592,
+  "id": "202611032253026f90d8081c3249d5",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611032253026f90d8081c3249d5",
+  "usage": {
+    "completion_tokens": 225,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8251,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8476
+  }
+}

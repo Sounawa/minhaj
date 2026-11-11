@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "```json\n{\n  \"overflow\": \"Aucun débordement horizontal, texte tronqué ou chevauchement détecté. Le contenu s'adapte bien à la largeur de 390px.\",\n  \"tables\": \"Les sections de vers (matn) et les listes de termes restent parfaitement lisibles et sont contenues dans les limites de la page. La mise en page en colonnes pour le vocabulaire est gérée efficacement.\",\n  \"verdict\": \"OK\"\n}\n```",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793191563,
+  "id": "202610282045582f3027f7bf2c4211",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610282045582f3027f7bf2c4211",
+  "usage": {
+    "completion_tokens": 111,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 4917,
+    "prompt_tokens_details": {
+      "cached_tokens": 2
+    },
+    "total_tokens": 5028
+  }
+}

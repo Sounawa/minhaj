@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## Transcription mot à mot (de droite à gauche)\n\nLe fragment visible se lit :\n\n- «...يـ» [?] — fin d'un mot précédent, tronqué au bord droit (deux lettres partielles avec un point sous la première)\n- **جَلَّا** — jīm pointé + lām + lām, avec shadda et fatha sur le lām final, un trait (fatha) au-dessus\n- **مِنْ** — mīm + nūn avec sukūn (petit cercle au-dessus du nūn)\n- **أَهْلِهِ** — hamza-aplomb + fatha, hāʾ + sukūn, lām, hāʾ finale avec deux kasra en dessous\n- **بِـ** — bāʾ avec kasra en dessous, reliée à la suite\n- **قَا...** — qāf avec deux points dessus + fatha, puis alif, puis une lettre suivante **tronquée au bord gauche** (on aperçoit un lām [?] avec fatha au-dessus)\n\n## Le lieu après «بِـ», lettre par lettre\n\n1. **ب** (bāʾ) avec kasra en dessous — certain\n2. **ق** (qāf) avec deux points au-dessus et fatha — certain\n3. **ا** (alif) — certain\n4. lettre suivante : forme verticale avec fatha au-dessus — probablement **ل** (lām) mais coupée par le bord : **[?]**\n\nLa fin du mot (et donc le nom du lieu) est **hors cadre** : je ne peux pas confirmer s'il y a ensuite dāl, yāʾ, nūn, tāʾ marbūṭa, etc. — **[?] pour tout le reste**.\n\n**Lecture partielle : «...جَلَّا مِنْ أَهْلِهِ بِقَا[لَـ...]»** — début plausible : «بِقَا[لَـ]» ou «بِقَا[لَعَة]»/«بِقَا[لِيَة]» [?], mais rien de deviné au-delà de قَا.",
+        "reasoning_content": "The image shows partial text: \"...جَلَّا مِنْ أَهْلِهِ بِقَالَ\"? Actually visible: «...ي؟ جَلَّا مِنْ أَهْلِهِ بِقَا...» last partial word \"بِـ\" followed by letters. Rightmost partial letters could be end of previous word. The word after بِـ appears: ق + ا + ل + ...? \"بِقَالَ\"? Hmm likely \"بِقَلَاة\"? The image shows \"بِقا\" + partial. Letters after بـ: qāf (ق), then ا, then ل with fatha? \"بِقَالَ\"? Not a place. Could be \"بِقَلَاة\"? Let me transcribe what's visible: «...جَلَّا مِنْ أَهْلِهِ بِقَا...» — the final letters: after بِـ: ق (qāf with dot), then ا (alif), then partial ل. So place maybe \"قَالَ...\" unclear. Report honestly.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794337122,
+  "id": "2026111102582733ddc763601d40f1",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026111102582733ddc763601d40f1",
+  "usage": {
+    "completion_tokens": 780,
+    "completion_tokens_details": {
+      "reasoning_tokens": 250
+    },
+    "prompt_tokens": 4097,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4877
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**ب- حول الفائدة والربح**\n\nحول الفائدة: من أفاد فائدة بميراث أو هبة أو صدقة أو إجارة أو كراء أو غيرها، فلا تجب عليه زكاة فيها قلتُ أو كثرتُ حتى يحول عليها الحول من يوم قبضها وهي نصاب، سواء أكانت جميع ماله أم انضاف إلى نصاب عنده؛ لأنها تجددت لاعن مال [illisible]\n\n(Le texte s'arrête en bas de page ; la suite ne figure pas sur cette page.)",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793719264,
+  "id": "202611032320585c8e03223b284aa2",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611032320585c8e03223b284aa2",
+  "usage": {
+    "completion_tokens": 129,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8261,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8390
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Transcription exacte entre « روايته » et « خالفت » :\n\n**على روايات أهل الحفظ والرضى**\n\nDonc c'est bien « على روايات أهل الحفظ والرضى » (et non « للحديث على رواية غيره من أهل الحفظ والرضى »).",
+        "reasoning_content": "Text: علامة المنكر في حديث المحدث إذا ما عرضت روايته على روايات أهل الحفظ والرضى خالفت روايته روايتهم أو خالفتها...",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976637,
+  "id": "2026110622503101f5378a16294495",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110622503101f5378a16294495",
+  "usage": {
+    "completion_tokens": 126,
+    "completion_tokens_details": {
+      "reasoning_tokens": 49
+    },
+    "prompt_tokens": 8062,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8188
+  }
+}

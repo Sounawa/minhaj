@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Le bloc « الشرح » avec des gloses du type « العَقيق : ... » n'apparaît PAS dans cette image. Le texte imprimé visible se limite à :\n\n- **يُحْنَثُبُ** : يصبر رضيّا بفضاء الله، راجيا فضله.\n- **جُنَّةٌ مِنَ النَّارِ** : وقاية من عذاب الله تعالى.\n\nPoint fermé : Non — la glose « العَقيق : موضع قرب المدينة » n'est pas visible sur cette page ; aucune occurrence de « العَقيق » n'y figure.",
+        "reasoning_content": "The image doesn't show a الشرح block with glosses. Answer: not present; only بنصير... and جنة من النار lines visible.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793724432,
+  "id": "20261104004705726a218b4fda4e5a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261104004705726a218b4fda4e5a",
+  "usage": {
+    "completion_tokens": 174,
+    "completion_tokens_details": {
+      "reasoning_tokens": 32
+    },
+    "prompt_tokens": 8158,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8332
+  }
+}

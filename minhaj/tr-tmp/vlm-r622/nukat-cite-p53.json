@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Aucun crochet de citation [ النكت على كتاب ابن الصلاح ... ] n'est visible sur cette image ; la page ne contient que le texte du cours et le numéro de page [illisible] en bas.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976621,
+  "id": "202611062250180897a29f344f4d80",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062250180897a29f344f4d80",
+  "usage": {
+    "completion_tokens": 48,
+    "completion_tokens_details": {
+      "reasoning_tokens": 47
+    },
+    "prompt_tokens": 6051,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6099
+  }
+}

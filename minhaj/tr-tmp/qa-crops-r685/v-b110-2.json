@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "أهداف الدرس\n\n1 - أن أُعرف حكم المبيت بمنى أيام رمي الجمار.\n\n2 - أن أُعرف صفة رمي الجمار وأحكامه.\n\n3 - أن أُتزم الآداب الإِسلامية عند رمي الجمار والبيات بمنى.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794348803,
+  "id": "20261111061320ac2787ebc6764299",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261111061320ac2787ebc6764299",
+  "usage": {
+    "completion_tokens": 73,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2320,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2393
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "أَخْبَرَنِي عِكْرِمَةُ بْنُ خَالِدٍ أَنَّ سَعِيدَ بْنَ جُبَيْرٍ أَخْبَرَهُ أَنَّهُ سَمِعَ ابْنَ عَبَّاسٍ وَابْنَ عُمَرَ يَعُدَّانِ كَمْ فِي الْقُرْآنِ مِنْ سَجْدَةٍ، فَقَالَا: «الْأَعْرَافِ",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793700934,
+  "id": "20261103181529b1501b98d8f24d67",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103181529b1501b98d8f24d67",
+  "usage": {
+    "completion_tokens": 154,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 6917,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7071
+  }
+}

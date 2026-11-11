@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "عَنْ أَهْلِهِ يَقْتُلُ لَهُ الْمُجْبِرُ، قَدْ أَفَاضَ [?]\n\nاللَّهِ أَنْ يَرْجِعَ فِيحَاقَ أَوْ يَقْصِرَ، ثُمَّ [?]\n\nض ولام يحلق ولم يقصر جاهلا.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794336770,
+  "id": "20261111025247c81d269773af40c0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261111025247c81d269773af40c0",
+  "usage": {
+    "completion_tokens": 107,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 1751,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1858
+  }
+}

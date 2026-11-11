@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## Transcription (exact, RTL)\n\n**Ligne supérieure tronquée (haut de page, coupé) :**\n«… على حِذاءِها. أنه سَمِعَ هذه الكلمات من النبي ﷺ. ودلَّ شاهدُ الحديثِ [؟]»\n*(la fin de la ligne est coupée par le cadrage ; lecture incertaine → [؟])*\n\n**Ligne 1 (avec la référence bleue) :**\n«وَالنُّسُكُ» [الموطأ رقم: 1126]، والمشهور من المذهب أنه يأكل من كل هدي بلغَ مَصْلَحَه إلا ثلاثة: جزاء الصيد، وفتية الأذى، وما نُذِرَ للمساكين.\n\n**Ligne 2 :**\nيستفاد من الدرس أن الشريعة الغراء مبنية على البِسْر ورفع الحرج فقد أذنت في التنعُّع بالعُمرة إلى الحج بهدي لبيت الله الحرام تعظيما لشعائر الله، وتكلفاً لضيوف الرحمن، وتوسعة على فقراء مكة.\n\n**Rubrique verte :**\n**التقويم**\n\n1 - أبيـن الناس المُجزِئ في الهدي\n2 - أبين حكم الانتفاع بالهدي مع التفصيل والاستدلال\n\n**Numéro de page (coin bas droit, partiellement visible) :**\n[؟] — ressemble à « 132 » mais tronqué/illisible → [؟]\n\n---\n\n## Notes (français)\n\n1. **La ligne verte « 3- أكل صاحب الهدي من هديه » n'est PAS visible** dans cette image — le cadrage commence plus bas. Elle se trouverait sur la page précédente ou plus haut.\n2. **La citation « عن مالك أنه سمع أهل العلم… » n'apparaît pas non plus** : seule la fin du matn est visible, sous la forme « والنُّسُكُ » en début de ligne. Les mots après « هديّه » (والنِّسُكْ ?) ne sont donc pas attestés ici, sauf « والنُّسُكُ ».\n3. **Crochets bleus : le seul visible est [الموطأ رقم: 1126]** — chiffres nets : 1‑1‑2‑6. Confirmé, pas 1127.\n4. **Les trois exceptions sont lisibles et confirmées** : جزاء الصيد / وفتية الأذى / وما نُذِرَ للمساكين (donc « فتية الأذى » tel quel, et « نُذِرَ » avec damma sur la نُ).\n5. Ligne 2 : « وتكلفاً » — lecture un peu ambiguë (peut-être وتَكَرُّماً ?) → à vérifier sur scan plus net.\n6. Rubrique التقويم : seulement **2 items** numérotés sur cette vue (1 et 2) ; le « 3 » de la sous-ligne verte du rappel n'est pas sur cette page.\n7. Numéro de page en bas à droite flou → [؟].",
+        "reasoning_content": "The image shows a page, but not what user's premise describes (green sub-line, quote about Malik, etc.). Must transcribe exactly what's visible and note discrepancies.\n\nVisible text (RTL):\n\nTop partial line (cut off): \"…على حِذاءِها. أنه سَمِعَ هَذِهِ الكَلِمَاتِ من النبي ﷺ. ودلَّ شاهدُ الحديثِ المنفَّرِجِ؟\" Actually reads \"وَمَا يَا نَضَاحِبُ الْهَدْيِ مِنْ صَاحِبِ الْهَدْيِ\" — hard. Let me read the top partial line: \"...على حِذَاءِها. أنه سَمِعَ هذه الكلمات من النبي ﷺ. دلَّ شاهد الحديث المنفرج\" — unclear; mark [؟]. Actually it says \"على حِذاءِها. أنه سَمِعَ هذه الكلمات من النبي ﷺ. ودل شاهد الحديث المنفرج؟\" I'll transcribe with [؟].\n\nLine 1: «والنُّسُكُ» [الموطأ رقم: 1126]، والمشهور من المذهب أنه يأكل من كل هدي بلغَ مصلَحه إلا ثلاثة: جزاء الصيد، وفتية الأذى، وما نُذِرَ للمساكين.\n\nLine 2: يستفاد من الدرس أن الشريعة الغراء مبنية على البِسْر ورفع الحرج فقد أذنت في التنعّع بالعِمَرة إلى الحج بهدي لبيت الله الحرام تعظيما لشعائر الله، وتكرمة لضيوف الرحمن، وتوسعة على فقراء مكة.\n\nThen التقويم green rubric:\n1- أيبن الناس المجزئ في الهدي؟ — reads \"أيُبن الناسُ المُجزِئ في الهدي\" likely \"أبين الناس المجزئ في الهدي؟\" Hmm: \"أبْين الناس المُجزِئ في الهدي\" — I'll transcribe \"أبيـن الناس المجزئ في الهدي\" with note. Actually probably \"أبيّن الناس المجزئ في الهدي\" (Explain to people the one who is...?). Transcribe as seen: \"أبيـن الناس المُجزِئ في الهدي\".\n\n2- أبين حكم الانتفاع بالهدي مع التفصيل والاستدلال.\n\nPage number partially visible bottom right: [؟] (132?).\n\nProvide French notes noting the premise mismatches: no green sub-line \"3- أكل صاحب الهدي...\" nor Malik quote visible; the quote \"عن مالك...\" is not on this crop; the green rubric is التقويم; bracket digits 1126 clearly visible.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794275011,
+  "id": "20261110094256101415faf207427a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261110094256101415faf207427a",
+  "usage": {
+    "completion_tokens": 1388,
+    "completion_tokens_details": {
+      "reasoning_tokens": 646
+    },
+    "prompt_tokens": 8238,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9626
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## Transcription mot à mot (tel qu'imprimé)\n\n**Bandeau vert (en haut) :**\n- ﴿...﴾ non — il s'agit d'un titre, lisant apparemment : **تهـ[ك/ذ]يـب [؟]** — résolution insuffisante : **[?]**\n\n**Ligne du milieu (imprimée, de droite à gauche) :**\n> مَنْ أَيَّامِ الحَجِّ المَشْهُودَةِ يَوْمُ النَّحْرِ ؛ فَقَدْ سَمَاهُ ا...\n\n(Le mot المَشْهُودَةُ/المَشْهُودَةِ [?] — la vocalisation exacte de la fin est coupée/floue ; la ligne est tronquée à gauche après سَمَاهُ ا...)\n\n**Ligne du bas (tronquée, seuls les sommets des lettres et diacritiques sont visibles) :**\n> ...حُ... ...غَ... ...قُ... [?] — transcription impossible : trop coupée. **[?]**\n\n## Verdict sur le premier mot du verset attendu\n\nLe milieu de l'image ne montre **pas** de verset coranique entre ﴿...﴾ ; aucun premier mot وَأَذَانٌ ou وَأَذِّنْ n'est visible dans cette image. **Verdict : indéterminé — [?]**\n\nAucun des deux mots demandés n'apparaît dans les fragments imprimés visibles ; je ne peux pas deviner au-delà de ce qui est réellement imprimé.",
+        "reasoning_content": "Lines partially visible. Top green band: «تهآيل»? likely \"تهذيب\"? Actually looks like «تهـكير»? Probably «تهذيب»? Hmm, letters: ت ه ك/ذ ي ب — could be «تهكيل»? Uncertain [?].\n\nMiddle line: «من أَيام الحج المشهودة يوم النحر ؛ فقد سماه ا...» — \"المشهودة\" hmm \"المشهورة\"? Image shows المشهودة? Quran 22:28 \"لِيَشْهَدُوا\"... The text likely \"من أيام الحج المشهودة يوم النحر؛ فقد سماه ا...\" transcribe as seen.\n\nBottom partial: diacritics only: «حُلُ ... غَ... قُ...» unclear.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794336150,
+  "id": "202611110242166e372027864e4061",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611110242166e372027864e4061",
+  "usage": {
+    "completion_tokens": 549,
+    "completion_tokens_details": {
+      "reasoning_tokens": 174
+    },
+    "prompt_tokens": 4468,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5017
+  }
+}

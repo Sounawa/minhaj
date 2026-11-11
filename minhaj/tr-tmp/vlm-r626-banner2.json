@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1) Titre calligraphié : **لباس المسمور**\n\n2) Badge circulaire : le chiffre **2** dans un cercle bleu, avec le mot **المدرس** écrit au-dessus en arc.\n\n3) Autres éléments : une bande bleue horizontale en haut de page, suivie d'une frise décorative de motifs géométriques bleus (type bordure zellige/mosaïque), et une grande pastille/bannière verte arrondie (forme de capsule) qui porte le titre en calligraphie bleue, avec le badge circulaire chevauchant son extrémité droite.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793981443,
+  "id": "20261107001037ed3de9c0f56b49d2",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107001037ed3de9c0f56b49d2",
+  "usage": {
+    "completion_tokens": 140,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 4107,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4247
+  }
+}

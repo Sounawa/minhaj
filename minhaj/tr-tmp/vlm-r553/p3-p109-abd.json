@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**Transcription exacte du texte visible :**\n\n**(1)** ولا يعتبر المال بنصاب غيره،\n\n**(2)** فَإِذَا مَالَكٌ فِي رَحْلِ كَانَتْ عِنْدَهُ سَبْعُونَ وَمَائَنَةَ دِرْهَمًا وَصَرْفَ اللَّادِهِمْ بِبِيضَةِ ثَمَانِينَ دِرْهَمًا بِدِينَارٍ :\n\n*Remarque : le nombre imprimé se lit سَبْعُونَ وَمَائَنَةَ (avec cette graphie) et non ستون ومائة ; le taux imprimé est ثَمَانِينَ دِرْهَمًا بِدِينَارٍ (et non ثمانية دراهم بدينار).*\n\n**(3)** «إِنَّهَا لَا تَجِبُ فِيهَا الزَّكَاةُ وَانْظُرْ مَا تَجِبُ الزَّكَاةُ فِيهَا الزَّكَاةُ» [الموطأ رقم : 664]\n\n*Le renvoi imprimé est en chiffres : [ الموطأ رقم : 664 ]*\n\n**(4)** لاَنَّ الْمَالَ إِنَّمَا يُعْتَبَرُ\n\n*(La suite de l'explication « …بنصاب نفسه… ولا العكس » n'est pas visible sur la partie de l'image fournie ; seul le début « لأن المال إنما يعتبر » apparaît en bas de page.)*",
+        "reasoning_content": "Transcribe only what's visible. The image shows the passage. The number appears as ٦٦٤? \"رقم : 664\". Dirhams: \"ببلادهم ثمانين درهما\" — the case says ثمانين? The question asks about ستون ومائة but image shows \"ثمانين درهما ببلادهم\" — I transcribe exactly.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793717664,
+  "id": "2026110322541240a349b45f3046b6",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110322541240a349b45f3046b6",
+  "usage": {
+    "completion_tokens": 500,
+    "completion_tokens_details": {
+      "reasoning_tokens": 84
+    },
+    "prompt_tokens": 8272,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8772
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**(1)** من أفضل ما يُشغَل به الإنسان وقتُه، الإكثار من ذكر الله ودعائه؛ فقد قال الله تعالى:\n\n**(2)** ﴿فَاذْكُرُونِي أَذْكُرْكُمْ﴾ ... ﴿وَقَالَ رَبُّكُمُ ادْعُونِي أَسْتَجِبْ لَكُمْ﴾\n\n**(3)** ١٥١\n\n**(4)** [سورة غافر الآية: 60]، وعن أبي موسى رضي الله عنه، قال: قال النبي ﷺ: «مثل الذي يذكر ربه والذي لا يذكر ربه، مثل الحيّ والميّت» [صحيح البخاري].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793781258,
+  "id": "2026110416341089de8ee69e804ee4",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110416341089de8ee69e804ee4",
+  "usage": {
+    "completion_tokens": 196,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 7113,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7309
+  }
+}

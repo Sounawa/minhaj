@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "‑ مَالِكٌ، عن عَبْدِ الله بنِ أَبي بَكْرِ بن حَزْمٍ، أنَّ في الكِتابِ الذي كَتَبَه رَسُولُ اللهِ ﷺ لعَمْرِو بنِ حَزْمٍ: «أنْ لا يُمْسَ الْقَرْآنُ إلّا طاهِرٌ» [الموَطَأ رقم: 536].\n\nChiffres imprimés : ٥٣٦ (imprimé ici en chiffres : 536) = 5 – 3 – 6, soit cinq cent trente-six.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793700893,
+  "id": "202611031814486ee095bbdbb640b0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611031814486ee095bbdbb640b0",
+  "usage": {
+    "completion_tokens": 160,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8199,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8359
+  }
+}

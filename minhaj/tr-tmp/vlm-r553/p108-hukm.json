@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "(1) هي الركن الثالث من أركان الإسلام. وهي أمر مقطوع به شرعا، قال تعالى:\n\n(2) وَأَقِيمُوا الصَّلَاةَ وَآتُوا الزَّكَاةَ\n\n(3) [سورة النور، الآية 54]\n\n(4) وقال عليه الصلاة والسلام: «بُنِيَ الإسلامُ على خَمْسٍ: شَهادَةِ أنْ لا إلَهَ إلا اللهُ وأنَّ مُحَمَّداً رَسُولُ اللهِ وإقامِ الصَّلاةِ وإيتاءِ الزَّكاة...» [صحيح البخاري].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793723861,
+  "id": "202611040037142bc59f7b27874e96",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611040037142bc59f7b27874e96",
+  "usage": {
+    "completion_tokens": 168,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 3077,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3245
+  }
+}

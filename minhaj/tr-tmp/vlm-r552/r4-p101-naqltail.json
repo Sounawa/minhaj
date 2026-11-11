@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Transcription exacte du paragraphe visible :\n\nواختُلِف في جواز نقل الميِّت من بلد إلى بلد، فقيل: يكرَه؛ لما فيه من تأخير دفنه وتعريضه لهتك حرْمته، وقيل: يستحب، والأولى تنزيل ذلك على حالين: فالجواز إذا كان هناك غرض راجح كالدفن في البقاع الفاضلة، والمنع حيث لا يكون هناك غرض\n\nRéponses aux points interrogés :\n- Après وقيل يستحب : « والأولى **تنزيل** ذلك على حالين »\n- « فالجواز إذا كان **هناك** غرض راجح... والمنع حيث لا يكون **هناك** غرض »",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793725887,
+  "id": "20261104011120df7e85e73a004a93",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261104011120df7e85e73a004a93",
+  "usage": {
+    "completion_tokens": 181,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8302,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8483
+  }
+}

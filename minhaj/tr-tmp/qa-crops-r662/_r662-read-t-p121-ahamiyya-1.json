@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**2. أهمية معرفة المصحف:**\n\nمعرفة هذا النوع مهمة، وأكثر وقوعه كان في المتون في الأسانيد\n\n**Réponses lettre par lettre :**\n- Après مهمة : la clause est **أكثر وقوعه كان في المتون** — c'est **كان** (sans ي sous le ك : kāf–alif–nūn, pas de yāʾ à 2 points) et **المتون** (avec un **و** visible entre ت et ن).\n- La suite jusqu'à الأسانيد : «...كان في المتون **في الأسانيد**».",
+        "reasoning_content": "Transcribe visible: title \"2. أهمية معرفة المصحف:\" and first line: \"معرفة هذا النوع مهمة، وأكثر وقوعه كان في المتون...\" visible: \"...وقوعه كان في المتون في الأسانيد\" — line reads: معرفة هذا النوع مهمة، وأكثر وقوعه كان في المتون في الأسانيد",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794214908,
+  "id": "2026110917013545a36bdf89414b05",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110917013545a36bdf89414b05",
+  "usage": {
+    "completion_tokens": 217,
+    "completion_tokens_details": {
+      "reasoning_tokens": 79
+    },
+    "prompt_tokens": 8333,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8550
+  }
+}

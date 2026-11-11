@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription exacte\n\n## Ligne de titre (en bleu)\n٣ . أشهر الكتب المؤلفة في مختلف الحديث ومشكره :\n\n**Chiffres, de gauche à droite dans le flux arabe (donc de droite à gauche de l'image) :** « ٣ »\n- un seul chiffre : **٣** (deux pointes) = **3**\n\n## Corps du texte\n\nألّف الحاذقون وغيرهم في علم مختلف الحديث كتباً قيمة، من أشهرها :\n\n- «اختلاف الحديث» للإمام الشافعي : الذي يعد أول كتاب ألف في هذا الفن، ولكن لم يفصل استنباط مسائل هذا العلم وقضاياه، وإنما قصد أن يذكر جملة من مسائله ينبه بها على طريقه، وليكون نبراساً يسير على ضوئه من يجيء بعده من العلماء .\n\n## Réponses aux points demandés\n\n**(1)** Le mot après « ألّف » est : **الحاذقون** — donc *ni* أهل *ni* أبو ; c'est « al-ḥādiqūn » (avec ح).\n\n**(2)** Dans l'item «اختلاف الحديث» :\n- Après ينبه بها على : **طريقه** (ط-ر-ي-ق-ه), pas طريقتها.\n- Après نبراساً : **يسير** (yassīr, sans voyelle sur le yāʾ), pas يُسبر.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793986265,
+  "id": "2026110701305171b549b5707446bb",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110701305171b549b5707446bb",
+  "usage": {
+    "completion_tokens": 347,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8198,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8545
+  }
+}

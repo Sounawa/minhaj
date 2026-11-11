@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Hadith (guillemets) : «من صلى على جنازة فله قيراط، ومن شهدها دفنها كان له قيراطان : القبراط مثل جبل أُحد»\n\nRenvoi : [مصنف ابن أبي شيبة كتاب الجنائز باب ثواب من صلى على الجنازة وتبعها حتى تدفن]\n\nQuestion finale : فما هي أحكام الدفن؟ وما آداب الجنازة؟\n\nRemarques sur les points demandés :\n- La fin du matn visible est : «... كان له قيراطان : القبراط مثل جبل أُحد» — il n'y a pas de «القيراط مثل جبل أُحد» séparé après deux-points ; le mot est imprimé «القبراط» (avec ب, que je transcris tel quel, sans le corriger en «القيراط»).\n- Le renvoi imprimé ne contient pas «باب ...» après «كتاب الجنائز» sous la forme attendue : il se lit «كتاب الجنائز باب ثواب من صلى على الجنازة وتبعها حتى تدفن».",
+        "reasoning_content": "The image text differs from the question's premise. Transcribe what's actually visible.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793724990,
+  "id": "2026110400561954036ac1e7f94c26",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110400561954036ac1e7f94c26",
+  "usage": {
+    "completion_tokens": 281,
+    "completion_tokens_details": {
+      "reasoning_tokens": 17
+    },
+    "prompt_tokens": 8159,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8440
+  }
+}

@@ -1,0 +1,20 @@
+# map-r576 — sondage bornes 3 nouvelles sources (ÉTAPE 6)
+# occurrences LUES dans la couche texte, aucune borne devinée
+# chiffres OCR possiblement inversés — arbitrage à l'image requis
+
+## tafsir-1-iadadi — 150 pages, 3 repères
+  p.  3  [quasi vide, 0 car]
+  p.  4  [quasi vide, 0 car]
+  p.150  [quasi vide, 3 car]
+
+## tafsir-2-iadadi — 210 pages, 6 repères
+  p.  3  [quasi vide, 0 car]
+  p.  4  [quasi vide, 1 car]
+  p.207  [quasi vide, 18 car]
+  p.208  [quasi vide, 18 car]
+  p.209  [quasi vide, 0 car]
+  p.210  [quasi vide, 0 car]
+
+## ulum-hadith-1-thanawi — 144 pages, 2 repères
+  p.  3  [quasi vide, 0 car]
+  p.  4  [quasi vide, 0 car]

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "**(1) En-tête et badge :**\n- Badge : [élément graphique orange/rouge, sans texte lisible]\n- En-tête : **الإعداد القبلي**\n\n**(2) Consigne :**\nأحفظ أحاديث الدرس المقبل وأعد ما يأتي :\n\n**Items : 3**\n1. أبين النصاب في المعادن والركاز .\n2. أستخرج الأموال التي لا تجب فيها الزكاة.\n3. أبحث عن حكم من مات ولم يخرج زكاة ماله.\n\n**(3) Autre chose :** Non, rien d'autre sur la page (fond blanc, pas de numéro de page visible).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793723933,
+  "id": "20261104003849f60813be58e4421a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261104003849f60813be58e4421a",
+  "usage": {
+    "completion_tokens": 154,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 4129,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4283
+  }
+}

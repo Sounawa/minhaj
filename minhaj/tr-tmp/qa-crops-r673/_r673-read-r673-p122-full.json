@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription de la page 6 — الدرس 17: أحكام الهدي\n\n---\n\n**1) En-tête (haut de page):**\n\nفَاحتَجَّ بإِطلاق هَذَا الحَدِيثِ وَبِقَولِهِ تَعَالَى: «لَكُمْ فِيهَا مَنَافِعُ» [سورة البقر] — *NB: la sourate indiquée est البقر, non الحج, et le verset cité est tronqué (forme « لكُمْ فِيهِمْ مَنَافِعٌ » attendue) [؟]* [الموطأ رقم: **1107**]\n\n**2) Phrase de fiqh (alinéa 1, suite de « 1- ركوب الهدي »):**\n\nالآية: [**31**] مِنْ أَجَازِ رُكُوبِ الهَدْيِ اخْتِيَارًا حَيْثُ لَا يَضُرُّهَا، وَكَرِهَهُ الجُمْهُورُ وَمَالِكُ فِي المُشْهُورِ عَنْهُ إِلَّا لِضَرُورَةٍ.\n\nوسوق الهدي وركوبه قد آل في الغالب الأعم إلى بدائل أخرى تحقق مقصد الشرع وحاجة المكلف، غير أن هذا لا يرفع الأصل عند إمكانه.\n\n*NB: le texte de l'utilisateur mentionnait « يأكلون فيها / وسوق الهدي وركوبه قد [؟] إلى بدائل » — sur l'image on lit clairement « قد آل ... إلى بدائل أخرى » ; le chiffre 31 confirme l'inversion du calque 13.*\n\n**3) Sous-titre 2:**\n\n**2 - شرب لبن الهدي**\n\nكره مالك في الاختيار ولو فضل الري عن فصيله؛ لأنه نوع من الرجوع في الصدقة، ومحل الكراهة حيث لا ضرر، وإلا غرم. فعن هشام بن عروة أن أباه قال: «إذًا اضطررت إلى بدنتك فَارْكَيْهَا رُكُوبًا غَيْرَ فَادِحٍ، وَإِذًا اضْطُرِرْتَ إِلَى لَبَنِهَا فَاشْرَبْ، يُرَوَّفُ فَصِيلُهَا فَإِذَا نَحَرْتَهَا فَاجْعَلْ فَصِيلَهَا مَعَهَا» [الموطأ رقم: **1112**]\n\n*NB: calque 2111 → image 1112 confirmé ; « فَائِحَرُ » de l'utilisateur = فَاجْعَلْ sur l'image.*\n\n**4) Sous-titre 3:**\n\n**3 - أكل صاحب الهدي من هديه**\n\nعن مالك: أنه سمع أهل العلم يقولون: «لَا يَأْكُلُ صَاحِبُ الهَدْيِ مِنْ هَدِيِّهِ وَالنِّسُكْ» [الموطأ رقم: **1126**]، والمشهور من المذهب أنه يأكل من كل هدي بلغ محله إلا ثلاثة: جزاء الصيد، وفتية الأذى، وما نذر للمساكين.\n\n*NB: le mot attendu [النسَّشك؟ الصواع؟] = **النِّسُكْ** sur l'image ; calque 6211 → image 1126 confirmé.*\n\n**5) Paragraphe de clôture:**\n\nيستفاد من الدرس أن الشرععة الغراء مبنية على اليسر ورفع الحرج فقد أذنت في التمتع بالعُمرة إلى الحج بهدي لبيت الله الحرام تعظيما لشعائر الله، وتكرمة لضيوف الرحمن، وتوسعة على فقراء مكة الرحم.\n\n*NB: première partie illisible/altérée sur l'image [؟] — « الشرععة الغراء » semble être une déformation de « الشريعة مبنية على اليسر » ; lecture la plus probable : « أن الشريعة الغراء مبنية على اليسر ورفع الحرج ».*\n\n**6) Récapitulatif (التقويم):**\n\n**التقويم**\n\n1 - أيّن السنّ المجزيء في الهدي\n\n2 - أَبيّن حكم الانتفاع بالهدي مع التفصيل والاستدلال\n\n*(Pied de page : numéro de page 132 — calque « 122 », image « 132 » [؟])*\n\n---\n\n## Notes (français)\n\n1. **Verset du haut** : l'image donne « لَكُمْ فِيهَا مَنَافِعُ » attribué à [سورة البقر] — probablement une variante éditoriale ; la source attendue (al-Ḥajj 33 : « لَكُمْ فِيهَا مَنَافِعُ إِلَى أَجَلٍ مُسَمًّى... ») n'apparaît pas in extenso ici [؟].\n2. **Numéros vérifiés chiffre par chiffre** : 1107 ✓, 31 ✓ (et non 13), 1112 ✓ (et non 2111), 1126 ✓ (et non 6211) — les calques de la couche texte étaient inversés.\n3. Le mot douteux de la section 3 est résolu : **النِّسُكْ**.\n4. Quelques mots du paragraphe de clôture restent flous sur le scan (marqués [؟]).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794269629,
+  "id": "20261110081322df11dc374acc4d7c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261110081322df11dc374acc4d7c",
+  "usage": {
+    "completion_tokens": 1400,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1399
+    },
+    "prompt_tokens": 8814,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 10214
+  }
+}

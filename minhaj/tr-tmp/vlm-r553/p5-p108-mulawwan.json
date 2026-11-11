@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "mot=ملوثا، lettres : م-ل-و-ث-ا، points_4e_lettre=trois points (ث) — l'imprimé porte « ملوثا ».",
+        "reasoning_content": "The image shows item ج: « طهارة للمال؛ لأن تعلق حق الغير به يجعله ملوثا لا يظهر إلا بإخراجه منه ». The word after يجعله: image shows \"ملوثا\"? It reads \"ملوثا\" — with ث? The printed word appears \"ملوثا\". I must answer based on visible: seems ملوثًا with three dots. But I shouldn't rely on canonical text; visually it's ملوثا. Hmm, cannot be fully sure; image shows \"ملوثا\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793721745,
+  "id": "202611040002168487b49e81654669",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611040002168487b49e81654669",
+  "usage": {
+    "completion_tokens": 165,
+    "completion_tokens_details": {
+      "reasoning_tokens": 118
+    },
+    "prompt_tokens": 8274,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8439
+  }
+}

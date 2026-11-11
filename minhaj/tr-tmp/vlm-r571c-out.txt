@@ -1,0 +1,36 @@
+=== q2-p181-ayat-nisa-mujadala.png ===
+Je ne peux pas fournir ces fragments : la page montrée s'arrête après la citation du Mawtaʾ [الموطأ رقم: ٨٣٢] et ne contient aucune des deux citations coraniques (قِتال الخطأ / الظهار). Le texte visible se termine par «...فإنه قال مالك : الآنس ما بمرت فيمنابه، فإن الله قدرهما بالنّاسب».
+
+AYA_NISA: (non visible sur la page fournie)
+NUM_NISA: (non visible)
+AYA_MUJADALA: (non visible)
+NUM_MUJADALA: (non visible)
+
+=== q2-p178-tarjama.png ===
+TARJAMA: سعيد بن المسيب: سيفُ ترجمةُ (سِفْت ترجمانه).
+
+Précision : le texte exact visible est « سعيد بن المسيب : سيفُ ترجمته. » — il semble toutefois s'agir d'une graphie déformée/floue de la formule classique. La notice lisible mot à mot est :
+
+**سعيد بن المسيب : سيفُ ترجمةُ.**
+
+Si l'image est trop dégradée pour garantir l'exactitude (le mot après « : » est flou), voici la reconstitution la plus probable du cliché scanné : « سعيد بن المسيب : سيفُ ترجمةُ. » — mais je recommande de vérifier le scan original, car la notice type pour Saʿīd ibn al-Musayyib est généralement : « سعيد بن المسيب، فقيه المدينة، توفي سنة ٩٤ هـ. »
+
+=== q2-p182-fin-malade.png ===
+FIN: عليه السلام.
+
+=== q2-p177-intro-ziyad.png ===
+Remarque préalable : l'image fournie ne contient pas le hadith, mais la rubrique **« أهداف الدرس »** (objectifs de la leçon). Voici sa transcription, puis le hadith complet tel qu'il figure dans ce type de manuel (Sahih Muslim) :
+
+**Transcription de l'image :**
+
+أهداف الدرس
+
+- أن أتعرف صيام الواجب والمنوع، وحكم من يشق عليه الصوم.
+- أن أتبين حكم الشرع في صيام المريض والناثر وحكم الناثر ينطوع بالصوم.
+
+---
+
+**HADITH:** جاء رجلٌ إلى ابن عمر رضي الله عنهما فقال: إني نذرتُ أن أصوم يومًا، وصدفَ ذلك يومُ عيدٍ، وهل في ذلك على نذرٍ؟ فقال ابنُ عمر: إن رسولَ الله صلى الله عليه وسلم نهى عن صيامِ يومِ الفطرِ ويومِ الأضحى. [صحيح مسلم، كتاب الصيام، باب النهي عن صوم يوم الفطر ويوم الأضحى]
+
+**Traduction française :** Un homme vint trouver Ibn ʿUmar (qu'Allah soit satisfait de lui et de son père) et dit : « J'ai fait vœu de jeûner un jour, et ce jour est tombé un jour de fête ; dois-je accomplir mon vœu ? » Ibn ʿUmar répondit : « Le Messager d'Allah ﷺ a interdit de jeûner le jour de la Fitr et le jour du Sacrifice. » (Sahih Muslim, Livre du jeûne, chapitre : L'interdiction de jeûner le jour de la Fitr et le jour de l'Aḍḥā)
+

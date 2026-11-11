@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Sur cette bande :\n\n- En rouge, entre crochets : [الموطأ ، رقم: ٦٦٠] — le numéro du Muwaṭṭaʾ est ٦٦٠, chiffre par chiffre : ٦، ٦، ٠.\n- Aucun autre nombre (pas de numéro de note de bas de page) n'est visible sur cette bande ; le reste imprimé en noir est : «ه الحول».",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793717277,
+  "id": "202611032247528e22b54c9c0e475b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611032247528e22b54c9c0e475b",
+  "usage": {
+    "completion_tokens": 101,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 3023,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3124
+  }
+}

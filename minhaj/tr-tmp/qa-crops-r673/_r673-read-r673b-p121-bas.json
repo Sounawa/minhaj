@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## Transcription (RTL)\n\n**1) Rubrique verte et sous-titre :**\n\nثالثا: **الانتفاع بالهدي**\n1- ركوب الهدي\n\n*(Note : le mot est « الانتفاع », pas « الاستفادة ».)*\n\n**2) Citation :**\n\nعن أبي هريرة رضي الله عنه: «أنّ رسول الله ﷺ رأى رجلا يسوق بدنة، فقال: اركبها. فقال: يا رسول الله إنها بدنة. فقال: اركبها ويلك». في الثانية أو الثالثة\n\n**3) Crochets bleus — chiffre par chiffre :**\n\nIl n'y a **pas** de crochet bleu après la citation du hadith d'Abu Hurayra dans le tiers inférieur. Les seuls crochets bleus de la page (moitié supérieure) sont :\n\n- [الموطأ رقم: **١١١٤**] → 1-1-1-4\n- [سورة البقرة آية: **١٨٤**] → 1-8-4\n\n**4) Fin de la citation :**\n\nLa citation **se termine sur cette page** par « في الثانية أو الثالثة » (indication qu'elle figure dans la deuxième ou la troisième version/narration du Mūwaṭṭaʾ). Il n'y a pas de continuation apparente ; le texte semble complet, mais la suite de la leçon (point 2, etc.) passe à la page suivante.\n\n---\n\n### Notes françaises\n\n- « ثالثا: الانتفاع بالهدي » = Troisièmement : tirer profit de l'animal (hady).\n- Hadith : le Prophète voit un homme mener une badana (chameau à sacrifier) et lui ordonne de la monter ; l'homme objecte que c'est une badana ; le Prophète insiste : « Monte-la, malheur à toi ! ».\n- ﷺ : monogramme « صلى الله عليه وسلم » imprimé.\n- Page numérotée en bas (chiffre illisible, [؟]) ; trait de séparation bleu en bas de page.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794270374,
+  "id": "20261110082600e8d77d26242b40af",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261110082600e8d77d26242b40af",
+  "usage": {
+    "completion_tokens": 489,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8076,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8565
+  }
+}

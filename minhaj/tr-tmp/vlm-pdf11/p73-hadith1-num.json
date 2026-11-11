@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "– مَالِكٌ، عَنْ عَبْدِ اللهِ بْنِ أَبِي بَكْرِ بْنِ حَزْمٍ، أَنَّ فِي الْكِتَابِ الَّذِي كَتَبَهُ رَسُولُ اللهِ ﷺ لِعَمْرِو بْنِ حَزْمٍ: «أَنْ لَا يَمَسُّ الْقُرْآنَ إِلَّا طَاهِرٌ» [الموطأ رقم: ٥٣٦].\n\n(a) Destinataire imprimé : لِعَمْرِو بْنِ حَزْمٍ (بمحذوف حرف العطف، غير أن الطباعة تحمل «لعمرو» بلام الجر والهمزة على الواو كما ظاهر الصورة).\n(b) Contenu entre guillemets : «أَنْ لَا يَمَسُّ الْقُرْآنَ إِلَّا طَاهِرٌ»\n(c) Numéro du Muwaṭṭaʾ : chiffres arabes orientaux ٥٣٦ = 5, 3, 6.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793700176,
+  "id": "202611031802496c7b893220f24335",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611031802496c7b893220f24335",
+  "usage": {
+    "completion_tokens": 303,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8263,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8566
+  }
+}

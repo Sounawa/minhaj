@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Oui, il s'agit d'une page de leçon **lisible et bien structurée**. Elle présente un titre clair, un texte principal (matn) en table de versets arabe/français, ainsi que des sections distinctes (Compréhension, Lexique, Analyse, Évaluation, Notes).\n\n**Non**, il n'y a pas de problème d'affichage majeur : le texte ne déborde pas, les blocs ne sont pas cassés et aucune balise HTML n'est visible. La mise en page est propre, avec une colonne de texte à gauche et la traduction/arabe à droite, sans chevauchement apparent.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793146175,
+  "id": "202610280809297d8c69e0cad645cf",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610280809297d8c69e0cad645cf",
+  "usage": {
+    "completion_tokens": 144,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5896,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6040
+  }
+}

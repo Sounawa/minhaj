@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "LAYOUT OK\n\n**Véifications effectuées :**\n1. **Contenu complet :** Le texte français est intégralement présent, incluant la section « Notes du traducteur » en fin de document (avec les références aux articles 33, 1837, 1873 du Code civil et les mentions des traités d'Al-Muhalla).\n2. **Aucune troncature :** Tous les paragraphes sont visibles sans coupure. Les longs textes juridiques s'affichent entièrement sur la largeur 390px.\n3. **Listes imbriquées correctes :** Les énumérations alphabétiques (a. b. c. d. e.) sous les sections « L'analyse » et « L'explication » présentent une indentation hiérarchique claire et cohérente, sans chevauchement entre les niveaux.\n\nLa mise en page mobile respecte la structure académique avec une typographie lisible et des espacements suffisants entre les sections juridiques.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793112459,
+  "id": "202610272247307bb0431cc29c4ba3",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610272247307bb0431cc29c4ba3",
+  "usage": {
+    "completion_tokens": 223,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5321,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5544
+  }
+}

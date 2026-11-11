@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Voici la vérification de la capture mobile (390px) :\n\n1.  **Badge « Traduction savante »** : **Oui**, il est bien visible en haut de page (badge orange/brun).\n2.  **Tableaux et débordement** : **Oui**, le tableau du *mathn* (sous \"Troisièmement\") et les tableaux de restitution tiennent dans l'écran. Il n'y a **pas de débordement horizontal** ni de texte coupé ; le contenu s'adapte à la largeur 390px.\n3.  **Défaut visible** : **Aucun défaut majeur** détecté sur cette capture. La mise en page est propre, la typographie arabe est lisible, et la structure hiérarchique (titres, listes, tableaux) est respectée.\n\n**Conclusion** : L'affichage mobile est conforme aux attentes.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792686602,
+  "id": "202610230029555a10ffd27472466e",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610230029555a10ffd27472466e",
+  "usage": {
+    "completion_tokens": 202,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5947,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6149
+  }
+}

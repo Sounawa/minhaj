@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Transcription exacte des lignes visibles :\n\nحصّة، [الذّكان في حصته حلّ إنسان منهم ما حبي فيه الزكاة، وذلك أن رسول الله\n\nعليه الله وسلّم قال: «ليس فيما دون خمس أواق من الورق صدقة»، قال مالك: وهذا أحبّ ما\n\nسمعت إلي». [الموطأ رقم: 668].\n\n**Réponses aux points demandés :**\n- «حصة أو حصص» : sur cette image, la ligne coupée en haut contient **حصّة** (avec chadda, sans ه finale visible sur la coupure) ; je ne vois pas «حصصهم جميعًا» ni «وإن بلغت» — ce texte se trouve sur la page/ligne précédente non visible.\n- «ما تجب فيه الزكاة» : la ligne visible porte **ما حبي فيه الزكاة** (transcrit tel quel ; le deuxième mot semble être حبي plutôt que تجب, l'impression est coupée/floue — [à vérifier : حبي/تجب]).\n- «وذا/وهذا أحب ما سمعت إلى» : la ligne visible porte **و هذا أحبّ ما** ... **سمعت إلي»** — la forme imprimée commence par **و** (وَهَذَا), pas «وذا».",
+        "reasoning_content": "Transcribe visible lines. The requested phrases (وإن بلغت حصة..., وما تجب فيه الزكاة, وذا أحب...) are not visible on this image. Transcribe what's visible.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793730990,
+  "id": "20261104023620e99ae41d5b364e7b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261104023620e99ae41d5b364e7b",
+  "usage": {
+    "completion_tokens": 352,
+    "completion_tokens_details": {
+      "reasoning_tokens": 43
+    },
+    "prompt_tokens": 8158,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8510
+  }
+}

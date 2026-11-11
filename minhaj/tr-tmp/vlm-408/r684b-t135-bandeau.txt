@@ -1,0 +1,17 @@
+Je dois être honnête avec vous : l'image fournie est extrêmement dégradée (résolution très faible, artefacts de compression importants). Je vois des formes bleues suggérant une écriture cursive sur fond clair avec une bande bleue en haut, mais **les détails fins comme les points diacritiques ou la fermeture des boucles ne sont tout simplement pas résolus** à cette taille d'image.
+
+**Ce que je peux deviner (avec prudence) :**
+- La forme générale semble être un mot unique, écrit de droite à gauche, avec des hampes verticales (alif/lam visibles comme traits verticaux).
+- Il y a ce qui semble être des petits traits au-dessus de certaines lettres, mais impossible de compter **3 points vs 4 points** — c'est infaisable à cette résolution.
+
+**Pourquoi je refuse de trancher entre vos deux hypothèses :**
+- الاستشهاد (avec ش à 3 points) et الاستثمار (avec ث à 4 points et م à boucle fermée) ne diffèrent précisément que par ces micro-détails.
+- Toute « transcription lettre par lettre » de ma part serait une invention, pas une lecture.
+
+**Mes deux hypothèses contextuelles :**
+- الاستشهاد (aḥalla : *istish-hād*) — « citation / référence » : très fréquent comme titre d'encadré dans les manuels (exercices de citation de sources).
+- الاستثمار (*istithmār*) — « investissement » : plausible en manuel d'économie/gestion, page 135.
+
+Voyellé : **اَلِاسْتِشْهَاد** / **اَلِاسْتِثْمَار**.
+
+**Pour résoudre la question :** renvoyez-moi un recadrage en haute résolution de la pastille (zoom ×4 minimum, sans compression) et je pourrai compter les points sur ش/ث et vérifier la boucle de م.

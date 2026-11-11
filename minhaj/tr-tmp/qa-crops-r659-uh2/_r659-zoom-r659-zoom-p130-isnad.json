@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "## Transcription exacte\n\n**1) La rubrique (en jaune) :**\n\nالحديث المطلوب تخريجه:\n\n**2) L'isnad et la matn (mot à mot, ligne par ligne) :**\n\nحدثنا أبو هشام الرفاعي، قال: حدثنا يحيى بن اليمان، عن شيخ من بني زهرة، عن\nالحارث بن عبد الرحمن بن أبي ذباب، عن طلحة بن عبيد الله، قال: قال النبي صلى الله عليه وسلم: «لكل نبي\nرفيق ورفيقي — يعني في الجنة — عثمان».\n\n**3) La source entre crochets (en vert/bleu) :**\n\n[سنن الترمذي، أبواب المناقب، باب في مناقب عثمان رضي الله عنه]\n\n## Vérifications demandées\n\n| Point | Résultat |\n|---|---|\n| **أبو هشام الرفاعي** | imprimé exactement ainsi — **SANS** « محمد بن يزيد ». Le livre ne mentionne que le laqab/le cheikh, pas la généalogie complète. |\n| **يحيى بن اليمان** | ✓ confirmé tel quel (بن اليمان, pas اليماني). |\n| **شيخ من بني زهرة** | ✓ imprimé « شيخ من بني زهرة » — **PAS** « الزهري ». |\n| **الحارث بن عبد الرحمن بن أبي ذباب** | ✓ les quatre segments exactement : الحارث / بن / عبد الرحمن / بن / أبي ذباب. |\n| **طلحة بن عبيد الله** | ✓ exact. |\n| **Matn** | «لكل نبي رفيق ورفيقي — يعني في الجنة — عثمان». Le glose **يعني في الجنة** est imprimé **en incise, entre tirets (—)**, en pleine ligne, pas entre parenthèses rondes. Dernier mot : **عثمان** avant le guillemet fermant ». |\n| **Source** | lit bien **أبواب المناقب** (pas أبواب الثلثية) et **باب في مناقب عثمان رضي الله عنه** — sans « بن عفان » et **sans numéro de hadith** imprimé. |\n\n## Notes (français)\n\n- Le relief-calligraphique صلى الله عليه وسلم est imprimé en petit corps, empilé sur deux lignes, à l'intérieur de la ligne d'isnad.\n- Aucun chiffre (n° de hadith, n° de page) n'apparaît dans l'encadré.\n- L'incise « — يعني في الجنة — » utilise des tirets cadratins, usage typique des manuels scolaires jordaniens/saoudiens.\n- Sous l'encadré figurent les consignes : 1. أكتب الحديث كما هو بلفظه وسنده. / 2. أبحث عن الحديث بسنده ولفظه في مطانه الأصلية. / 3. أبحث عن طرق الحديث وشواهده.\n- Le crochets de la source sont verts ; le texte interne semble vert-bleuté — la couleur exacte (bleu vs vert) est difficile à trancher sur ce scan [؟].",
+        "reasoning_content": "Transcribe what's visible. Chain: حدثنا أبو هشام الرفاعي، قال: حدثنا يحيى بن اليمان، عن شيخ من بني زهرة، عن الحارث بن عبد الرحمن بن أبي ذباب، عن طلحة بن عبيد الله، قال: قال النبي صلى الله عليه وسلم: «لكل نبي رفيق ورفيقي — يعني في الجنة — عثمان». Source: [سنن الترمذي، أبواب المناقب، باب في مناقب عثمان رضي الله عنه] — no hadith number visible. Note: no محمد بن يزيد printed. Dashes around parenthetical are printed as hyphens.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794201954,
+  "id": "2026110913254167d342a8a5854895",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110913254167d342a8a5854895",
+  "usage": {
+    "completion_tokens": 912,
+    "completion_tokens_details": {
+      "reasoning_tokens": 161
+    },
+    "prompt_tokens": 4476,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5388
+  }
+}

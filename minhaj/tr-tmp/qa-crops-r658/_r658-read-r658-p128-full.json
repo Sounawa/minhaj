@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "# Transcription complète de la page (sens de lecture : droite → gauche)\n\n## 1) الترويصة / أهتدي وأقتدي\n\n**أهتدي وأقتدي**\n\nقال الإمام ابن الصلاح رحمه الله مبينا آداب طالب الحديث: «... وليسأل الله تبارك وتعالى التيسير والتأييد والتوفيق، وليأخذ نفسه بالأخلاق الزكية، والآداب المرضية، ... ولا يحملنه الحرص، والشره على التساهل في السماع، والتحمل، والإخلال بما يشترط عليه في ذلك». [مقدمة ابن الصلاح، ص 247، بتصرف].\n\n> Lecture du numéro de page de référence, chiffre par chiffre : **2–4–7** = ٢٤٧ (ص 247)\n\n## 2) التقويم\n\n**التقويم** *(le calque texte erroné « اللفويم » est bien التقويم sur l'image — le ت est net)*\n\n**1.** أستخلص مما سبق الفرق بين اختصار الحديث وروايته بالمعنى.\n> Chiffre lu chiffre par chiffre : **1**\n\n**2.** أبين الراجح من أقوال العلماء في اختصار الحديث.\n> Chiffre lu chiffre par chiffre : **2**\n\n**3.** أصنف في خطاطة آداب طالب الحديث.\n> Chiffre lu chiffre par chiffre : **3** *(l'OCR attendait « 4. » mais l'image montre clairement 3)*\n\n## 3) الاستثمار\n\n**الاستثمار**\n\nقال الإمام القاضي عياض رحمه الله: «لا خلاف أن على الجاهل والمبتدىء، ومن لم يمهر في العلم ولا تقدم في معرفة تقديم الألفاظ وترتيب الجمل وفهم المعاني أن لا يكتب ولا يروي ولا يحكي حديثا إلا على اللفظ الذي سمعه، وأنه حرام عليه التعبير بغير لفظه المسموع؛ إذ جميع ما يفعله من ذلك تحكم بالجهالة وتصرف على غير حقيقة في أصول الشريعة وتقول على الله ورسوله ما لم يحط به علما ورسوله ما لم يحط به علما.». [الإلماع إلى معرفة أصول الرواية وتقييد السماع، القاضي عياض، ص 174].\n\n> Lecture du numéro de référence, chiffre par chiffre : **1–7–4** = ١٧٤ (ص 174)\n\n**أ-** أبين ما يجب على طالب الحديث أن يلتزمه من قيم الأمانة، والصدق، والخشية.\n\n## 4) الاعداد القبلي\n\n**الإعداد القبلي**\n\nيراعى في إنجاز درس الأنشطة التطبيقية ما يلي:\n\n**1.** تنجز حصة الأنشطة التطبيقية داخل المؤسسة.\n> Chiffre lu chiffre par chiffre : **1** — (le calque « لزن تتح حضية... » correspond bien à « تنجز حصة الأنشطة التطبيقية داخل المؤسسة »)\n\n**2.** يقسم المتعلمون إلى مجموعات، تنجز كل مجموعة عملها تحت إشراف الأستاذ(ة).\n> Chiffre lu chiffre par chiffre : **2**\n\n**4.** تعرض نتائج الأعمال في الفصل قصد مناقشتها.\n> Chiffre lu chiffre par chiffre : **4**\n\n**Bilan sur les numéros :** la liste contient réellement **3 items**, mais leurs vrais numéros imprimés sont **1, 2 et 4** — le « 3 » a été sauté par erreur typographique par l'éditeur (l'image montre bien « .4 » et non « .3 »).\n\n## Pied de page\n\n**128**\n> Chiffre lu chiffre par chiffre : **1–2–8** = ١٢٨\n\n---\n\n### Notes (français)\n- Toutes les références entre crochets sont en bleu sur l'original : [مقدمة ابن الصلاح، ص 247، بتصرف] et [الإلماع إلى معرفة أصول الرواية وتقييد السماع، القاضي عياض، ص 174].\n- Le titre des rubriques (أهتدي وأقتدي) est en rouge/magenta ; التقويم، الاستثمار، الاعداد القبلي sont en pastilles vertes.\n- Aucun texte n'a été jugé illéible ; le signe [؟] n'a donc pas été utilisé.\n- Dans la citation d'Ibn al-Salah, le texte imprimé comporte des points de suspension « ... » qui matérialisent l'abréviation (بتصرف) du texte source.",
+        "reasoning_content": "Transcribe carefully.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794195513,
+  "id": "202611091138109eb8bf7474c446aa",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611091138109eb8bf7474c446aa",
+  "usage": {
+    "completion_tokens": 1113,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4
+    },
+    "prompt_tokens": 8657,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9770
+  }
+}
