@@ -1,9 +1,9 @@
 {
- "ts": 1794477007.5347722,
- "iso": "2026-11-12T09:50:07Z",
+ "ts": 1794478091.4409013,
+ "iso": "2026-11-12T10:08:11Z",
  "version": "v4",
  "startedAt": "2026-10-31T15:29:57Z",
- "cycles": 193,
+ "cycles": 211,
  "wakeCount": 0,
  "workers": {
   "active": 0,
@@ -16,7 +16,7 @@
  },
  "portal": {
   "state": "FERMÉE",
-  "ts": "2026-11-12T09:39:01Z",
+  "ts": "2026-11-12T09:54:08Z",
   "detail": "bannière de maintenance présente"
  },
  "sourceHunt": {
@@ -34,7 +34,7 @@
   "subject": "auto(pipeline): 2026-11-12 08:48 — superviseur v4 (battement, registre, chasse)"
  },
  "lastPush": {
-  "ts": "2026-11-12T09:49:07Z",
+  "ts": "2026-11-12T09:59:11Z",
   "ok": true
  }
 }
