@@ -1,9 +1,9 @@
 {
- "ts": 1794502868.007527,
- "iso": "2026-11-12T17:01:08Z",
+ "ts": 1794505282.611411,
+ "iso": "2026-11-12T17:41:22Z",
  "version": "v4",
  "startedAt": "2026-10-31T15:29:57Z",
- "cycles": 152,
+ "cycles": 192,
  "wakeCount": 0,
  "workers": {
   "active": 0,
@@ -16,11 +16,11 @@
  },
  "portal": {
   "state": "FERMÉE",
-  "ts": "2026-11-12T17:01:04Z",
+  "ts": "2026-11-12T17:31:17Z",
   "detail": "bannière de maintenance présente"
  },
  "sourceHunt": {
-  "ts": "2026-11-12T17:01:06Z",
+  "ts": "2026-11-12T17:31:19Z",
   "book": "hadith-6ep",
   "docId": "pdf-mut23h3b-681",
   "titleFr": "S'empresser vers les œuvres bonnes",
@@ -31,7 +31,7 @@
  },
  "lastAutoCommit": null,
  "lastPush": {
-  "ts": "2026-11-12T17:01:08Z",
+  "ts": "2026-11-12T17:41:22Z",
   "ok": true
  }
 }
