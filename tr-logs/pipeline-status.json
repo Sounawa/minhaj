@@ -1,15 +1,15 @@
 {
- "ts": 1794476824.7797928,
- "iso": "2026-11-12T09:47:04Z",
+ "ts": 1794477007.5347722,
+ "iso": "2026-11-12T09:50:07Z",
  "version": "v4",
  "startedAt": "2026-10-31T15:29:57Z",
- "cycles": 190,
+ "cycles": 193,
  "wakeCount": 0,
  "workers": {
   "active": 0,
   "books": []
  },
- "remainingDocs": 563,
+ "remainingDocs": 562,
  "registry": {
   "hand": 1156,
   "llm": 57
@@ -34,7 +34,7 @@
   "subject": "auto(pipeline): 2026-11-12 08:48 — superviseur v4 (battement, registre, chasse)"
  },
  "lastPush": {
-  "ts": "2026-11-12T09:39:04Z",
+  "ts": "2026-11-12T09:49:07Z",
   "ok": true
  }
 }
