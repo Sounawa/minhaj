@@ -6,7 +6,7 @@
 # écriture atomique (tmp + os.replace), inscription registre « hand ».
 import json, os, sys, time
 
-HOME = "/home/z/my-project/repo-minhaj"
+HOME = "/home/z/my-project/minhaj"  # chemin poste IA-2 (session web-db9f75eb, Z2-7)
 REGISTRY = f"{HOME}/scripts-ia2/savant-registry-ia2.json"
 LOCK = REGISTRY + ".lock"
 
@@ -32,10 +32,11 @@ def acquire_lock():
 def main():
     args = [a for a in sys.argv[1:] if a != "--force"]
     force = "--force" in sys.argv
-    if len(args) != 3:
-        print("Usage: hand-set-ia2.py <bookId> <docId> <fichier.html> [--force]")
+    if len(args) not in (3, 4):
+        print("Usage: hand-set-ia2.py <bookId> <docId> <fichier.html> [titleFr] [--force]")
         sys.exit(1)
-    book_id, doc_id, html_path = args
+    book_id, doc_id, html_path = args[0], args[1], args[2]
+    title_fr = args[3] if len(args) == 4 else None
     html_fr = open(html_path, encoding="utf-8").read()
     path = f"{HOME}/content/books/{book_id}.json"
     acquire_lock()
@@ -57,6 +58,9 @@ def main():
                 if old and old != html_fr.strip() and not force:
                     sys.exit(f"REFUS garde-doublon : leçon {doc_id} déjà livrée ({len(old)} car)")
                 lesson["htmlFr"] = html_fr
+                if title_fr and not (lesson.get("titleFr") or "").strip():
+                    lesson["titleFr"] = title_fr
+                    print(f"  titleFr pose: {title_fr}")
                 n += 1
         if n == 0:
             sys.exit(f"AUCUN emplacement {docId:=doc_id} trouvé dans {book_id}")
