@@ -1,9 +1,9 @@
 {
- "ts": 1794474351.0251043,
- "iso": "2026-11-12T09:05:51Z",
+ "ts": 1794476704.750291,
+ "iso": "2026-11-12T09:45:04Z",
  "version": "v4",
  "startedAt": "2026-10-31T15:29:57Z",
- "cycles": 149,
+ "cycles": 188,
  "wakeCount": 0,
  "workers": {
   "active": 0,
@@ -11,16 +11,16 @@
  },
  "remainingDocs": 563,
  "registry": {
-  "hand": 1155,
+  "hand": 1156,
   "llm": 57
  },
  "portal": {
   "state": "FERMÉE",
-  "ts": "2026-11-12T08:53:49Z",
+  "ts": "2026-11-12T09:39:01Z",
   "detail": "bannière de maintenance présente"
  },
  "sourceHunt": {
-  "ts": "2026-11-12T08:38:42Z",
+  "ts": "2026-11-12T09:39:03Z",
   "book": "hadith-5ep",
   "docId": "pdf-1",
   "titleFr": "Présentation de l'auteur et de l'ouvrage",
@@ -34,7 +34,7 @@
   "subject": "auto(pipeline): 2026-11-12 08:48 — superviseur v4 (battement, registre, chasse)"
  },
  "lastPush": {
-  "ts": "2026-11-12T08:58:50Z",
+  "ts": "2026-11-12T09:39:04Z",
   "ok": true
  }
 }

@@ -1,0 +1,34 @@
+## Lecture de l'image (zoom sur la phrase)
+
+Dans l'image, la phrase se lit :
+
+**« ومثل ذلك القوم يقتلون الرجل خطأً، فتكون كفّارة ذلك عَتْقُ رقبةٍ على كل إنسانٍ منهم »**
+
+## Le mot avant رقبة
+
+Le mot est **« عَتْقُ »** (affranchissement), avec un **ت** :
+
+- **Le ت (ta')** : porte **deux points AU-DESSUS** de sa cupule (ـتـ). Dans l'image, on distingue clairement les deux points au-dessus de la lettre médiane du mot عَتْقُ.
+- **Le ق (qaf)** : porte **deux points AU-DESSUS** de sa boucle ronde fermée. Les deux points du ق final sont visibles au-dessus de la boucle.
+
+S'il s'était agi de **عَنْقُ** (cou), on aurait vu un **ن** : une lettre avec **UN SEUL point au-dessus** et la forme en dents/coupule du noun (ـنـ), suivie d'un ق sans lettre intermédiaire. Ce n'est pas ce que montre l'image : la lettre entre ع et ق a bien **deux points** et la forme du تا.
+
+⚠️ Réserve honnête : à cette résolution, les deux points du ت et ceux du ق sont distinguables, mais je décris ce qui est visible ; la graphie correspond à عَتْقُ (ce qui est d'ailleurs la leçon attendue du hadith : « la compensation est l'affranchissement d'un esclave »).
+
+## Transcription lettre par lettre
+
+- ومثل : و م ث ل
+- ذلك : ذ ل ك
+- القوم : ا ل ق و م
+- يقتلون : ي ق ت ل و ن
+- الرجل : ا ل ر ج ل
+- خطأ : خ ط أ
+- فتكون : ف ت ك و ن
+- كفارة : ك ف ا ر ة
+- ذلك : ذ ل ك
+- **عتق : ع ت ق** ← (ت = deux points au-dessus ; ق = deux points au-dessus de la boucle)
+- رقبة : ر ق ب ة
+- على : ع ل ى
+- كل : ك ل
+- إنسان : إ ن س ا ن
+- منهم : م ن ه م

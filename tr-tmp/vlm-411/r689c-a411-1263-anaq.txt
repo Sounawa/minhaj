@@ -1,0 +1,29 @@
+Je dois être honnête avec vous : l'image fournie **ne contient pas** la phrase que vous demandez d'analyser (« فتكون كفارة ذلك ... رقبة/عتق على كل إنسان منهم »).
+
+## Ce que montre réellement l'image
+
+Le zoom 900 dpi que vous avez joint montre uniquement le **début** du hadith n° 1263, à savoir :
+
+**Ligne 1 :**
+قالَ مَالِكٌ، فِي الْعَوْمِ يُصِيبُونَ الصَّيِّدَ جَمِيعًا، وَهُمْ مُحْرِمُونَ، أَوْ فِي الْحِرِمِ،
+
+**Ligne 2 :**
+فَقَالَ : « أَرَى أَنْ عَلَى كُلِّ إِنْسَانٍ مِنْهُمْ جَزَاءَهُ، إِنْ حَكَمَ عَلَيْهِمْ بِالْهَدْيِ فَعْلًى كُلِّ
+
+**Ligne 3 :**
+إِنْسَانٍ مِنْهُمْ هَدِيًّا، وَإِنْ حَكَمَ عَلَيْهِمْ بَالصَّدَقَةِ كَانَ عَلَى كُلِّ إِنْسَانٍ مِنْهُمْ الصَّدَقَةُ،
+
+Le bas de la ligne suivante apparaît à peine coupé : « ... فَذَاكَ الَّذِي أَرَى ... فَتُكَ ... كَفَّارَةَ ذَلِكَ ... رَقْبَةٌ (؟) ... » — mais la ligne est **tronquée** : on voit seulement le haut des lettres, avec les points diacritiques partiellement visibles, et il est impossible de lire le mot avant رقبة de manière fiable.
+
+## Ce qu'il faudrait pour répondre
+
+- Le **zoom de la ligne suivante** (celle qui commence par « فذاك الذي أرى... ») à la même résolution.
+- Sur cette ligne, il faudra distinguer :
+  - **عَتْقٌ** : point unique **au-dessus du ت** (deux points du ت fusionnés en plaque d'impression), sans point sous le ق ;
+  - **عَنْقٌ** : point **au-dessus du ق**.
+
+## Remarque contextuelle
+
+Dans les éditions imprimées du **Muwaṭṭaʾ** (Livre de la chasse, hadith sur la chasse au grand oiseau que l'on tue en groupe), les manuscrits hésitent entre « عَتْقٌ » (affranchissement d'un esclave comme kaffāra) et « رَقَبَةٌ ». Le vocabulaire de la phrase visible (« كَفَّارَةَ ذَلِكَ ») est bien celui de cette kaffāra.
+
+Merci de me transmettre le zoom de la ligne complète concernée ; je pourrai alors décrire point par point sans deviner.

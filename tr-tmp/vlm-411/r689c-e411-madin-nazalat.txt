@@ -1,0 +1,34 @@
+# Transcriptions lettre par lettre (d'après le zoom fourni)
+
+## 1) La phrase « والتكرير في (مدين مدين) لإفادة عموم ... »
+
+Le texte se lit :
+
+**« في (مدين مدين) لإفادة عموم التثنية، أي مدين لكل مسكين. والأصل في ذلك قوله تعالى : »**
+
+Le mot après **عموم** est clairement **« التثنية »** — ni « النية » ni « المدِّ ».
+- Points : التثنية = **ت** (2 points au-dessus) + **ث** (3 points au-dessus) + **ن** (1 point au-dessus) + **ي** (2 points en dessous) + **ة** (2 points au-dessus). On voit bien les trois points du ث et les deux points sous le ي final.
+
+## 2) « أي مد لكل مسكين » ou « أي مدين لكل مسكين » ?
+
+C'est : **« أي مدين لكل مسكين »** — le mot مدين comporte un **ي** (deux points en dessous) entre le د et le ن : مـديـن. Ce n'est donc pas « مد » (sans ي).
+
+## 3) Le hadith des deux authentiques
+
+Texte : **« وفي الصحيحين : عن كعب بن عجرة : «في نزلت الآية خاصة، وهي لكل عامة» »**
+
+- Premier mot : **« نزلت »** — **sans shadda visible** sur le ز dans cette image ; c'est la graphie non vocalisée « نزلت ». Je ne peux pas confirmer un نُزِّلَتِ avec shadda : aucun signe de تشديد n'est discernable sur le ز à cette résolution. La graphie ne montre que ن ز ل ت.
+- Mot suivant : **« خاصة »** — avec **ص** (trois points) + **شدة** sur le ص : صَّ. Ce n'est **pas** un ض (un seul point) : je distingue nettement trois points au-dessus du ص et la shadda par-dessus. Donc : **خَاصَّة**, pas خاضَة.
+- Suit « وهي لكل عامة » (عامة avec shadda sur ع apparente).
+
+## 4) La phrase « وفي هذا دلالة ... »
+
+Le texte se lit :
+
+**« وفي هذا دلالة لأصح قولي مالك : إن العبرة بعموم اللفظ، لا بخصوص ... »**
+
+- Avant قول : **« لأصح »** — **sans** ا ni ب : ل + أ + ص + ح. Pas de « لأصحاب » visible (pas de alif ni de baʾ après le ح).
+- Après مالك : **« : »** (deux-points typographiques) puis **« إن العبرة بعموم اللفظ، لا بخصوص... »** (le mot بخصوص est coupé en bas de ligne).
+
+## Remarque
+À 900 dpi, certains signes (shadda de نزلت) restent ambigus ; je n'ai transcrit que ce qui est réellement discernable, sans extrapoler.

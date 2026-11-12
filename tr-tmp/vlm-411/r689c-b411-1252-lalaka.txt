@@ -1,0 +1,18 @@
+D'après l'image (résolution maximale visible) :
+
+**1) Avant أذاك :** c'est « **قَالَ لَعَلَكَ أَذَاكَ** » — on lit bien لَعَلَكَ (lām-ʿayn-lām-kāf, avec fatha sur le lām initial et sukūn sur le ʿayn), pas de hamza avant. Le mot commence donc directement par l'alif de أذاك sans hamza.
+
+**2) Madda sur أذاك :** non, l'alif de أذاك est **sans madda** — c'est أَذَاكَ (alif + dhal + alif + kāf), pas آذاك. On voit d'ailleurs les deux fathas séparés (dhal et kāf), l'alif initial portant lui aussi un petit fatha.
+
+**3) هوامك :** le mot est écrit **هُوَامُكَ** — sans shadda sur le mīm visible à cette résolution ; entre les deux alifs on distingue وَ puis ا suivi de م. À cette résolution je ne peux pas confirmer de shadda (le texte canonique du hadith est هُوَامَّكَ avec mīm shaddé, mais ici le signe n'est pas clairement discernable — je ne devine pas).
+
+**Transcription lettre par lettre :**
+
+قَالَ لَعَلَكَ أَذَاكَ هُوَامُكَ
+- ق ل ل ع ل ك أ ذ ا ك ه و ا م ك
+
+Réponse de Kaʿb :
+نَعَمْ يَا رَسُولَ اللهِ
+- ن ع م ي ا ر س و ل ا ل ل ه
+
+⚠️ Réserve : la résolution de l'image ne permet pas de trancher avec certitude sur la shadda de هوامّك ni sur les fathas fins ; seul le squelette des lettres (rasm) est lisible. Pour les voyelles définitives, il faudrait un zoom supérieur sur la ligne.

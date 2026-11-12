@@ -1,0 +1,20 @@
+## Ce que montre réellement la page fournie
+
+La page (p.151, zoom 900 dpi) **ne contient pas** les passages 1, 2 et 3 que vous demandez : le récit du « قالت الرجل وهو يقول: هذا أمير المؤمنين… » avec « ظبي », la version d'al-Ḥākim, et le verset long entre accolades sont sur les **pages précédentes**. Je ne peux donc pas les transcrire d'après cette image. Voici, lettre par lettre, ce qui est effectivement lisible ici (l'histoire du Muwaṭṭa — c'est-à-dire votre point 4) :
+
+**Texte transcrit de la page :**
+
+> وحينما سمع سيدنا عمر أنكر عليه، مستدلاً بقوله تعالى: ﴿يُكَرَّهُ يَذْكُرُهُ، مَسْتَلًا مِنْ ذَنْبِهِ، وَيُحْكَمُ بِهِ﴾ [سورة المائدة الآية: 97]، «فسمع عمر قول الرجل فدعاه فسأله: هل تَقْرَأُ سورة المائدة؟ قال: لا، قال: فهل تعرف هذا الرجل الذي حكم معي؟ قال: لا، قال: لو أخبرتني أنك تَقْرَأُ سورة المائدة لَوَجَدْتُكَ صَرِيبًا، ثم قال: إن الله تبارك وتعالى يقول في كتابه: ﴿يُكَرَّهُ يَذْكُرُهُ، مَسْتَلًا مِنْ ذَنْبِهِ، وَيُحْكَمُ بِهِ﴾ [سورة المائدة الآية: 97]»
+> [الموطأ رقم: 1241]
+
+## Réponses précises à vos questions
+
+1. **Le verbe (point 4) :** c'est bien **« تَقْرَأُ »** — les lettres ق-ر-أ sont nettes aux deux occurrences (« هل تَقْرَأُ سورة المائدة ؟ » et « أنك تَقْرَأُ سورة المائدة »). Ce n'est pas تحفظ.
+
+2. **La suite :** « قال: لا، قال: فهل تعرف هذا الرجل الذي حكم معي؟ قال: لا، قال: لو أخبرتني أنك تقرأ سورة المائدة **لَوَجَدْتُكَ صَرِيبًا**، ثم قال: إن الله تبارك وتعالى… » (NB : le texte imprimé semble comporter une coquille « لو وجدتك صريبا » au lieu de « لو وجدتُك صريبا », forme attestée dans le Muwaṭṭa).
+
+3. **Le numéro N :** il apparaît **deux fois** sur cette page et c'est dans les deux cas **٩٧ (97)** — chiffre ٩ puis ٧. Ce n'est donc pas 95 ici, alors même que le verset cité dans votre point 3 (« ذَوَا عَدْلٍ مِنْكُمْ هَدًى يَبْلُغُ الْكَعْبَةَ… ») est en réalité l'**verset 95** d'al-Mā'ida : c'est apparemment une erreur de numérotation dans l'édition — mais sur **cette** page, le chiffre imprimé est bien 97.
+
+4. **Le fragment en calligraphie ornée** entre ﴿﴾ est imprimé en très petit ; ma lecture la plus plausible est « يُكَرَّهُ يَذْكُرُهُ، مَسْتَلًا مِنْ ذَنْبِهِ، وَيُحْكَمُ بِهِ » mais je signale une incertitude sur les mots ornementaux — je ne confirme pas « ذَوَا عَدْلٍ مِنْكُمْ هَدًى يَبْلُغُ الْكَعْبَةَ » sur cette page ; ce passage n'y figure pas.
+
+Pour les points 1, 2 et 3, merci de fournir les pages précédentes (≈ p.149–150) pour une transcription lettre par lettre sans deviner.

@@ -1,0 +1,26 @@
+Voici ce que l'image permet de lire réellement (je ne transcris que ce qui est visible — le reste de la page n'apparaît pas dans cette capture, je ne peux donc ni le confirmer ni le deviner) :
+
+## 1) Partie visible du hadith du Muwaṭṭaʾ (fin du dialogue)
+
+> « ...تَقْرَأُ سُورَةَ الْمَائِدَةِ؟ قَالَ: لَا، قَالَ: فَهَلْ تَعْرِفُ هَذَا الرَّجُلَ الَّذِي حَكَمَ مَعِي؟ فَقَالَ: لَا، قَالَ: لَوْ أَخْبَرْتُكِ أَنَّكِ تَقْرَأُ سُورَةَ الْمَائِدَةِ لَوْجَعْتُكِ صَدْرَكِ، ثُمَّ قَالَ: إِنَّ اللهَ تَبَارَكَ وَتَعَالَى يَقُولُ فِي كِتَابِهِ: ﴿يَحْكُمُ بِهِ...﴾ [سورة المائدة الآية: 97] »
+
+**[الموطأ رقم: 1241]**
+
+⚠️ Le **début** du dialogue (« فسمع عمر قول الرجل فدعاه فسأله: هل تقرأ/تحفظ... ») n'est **pas visible** dans cette capture : elle commence au milieu de la question. Je ne peux donc pas confirmer si le texte imprimé dit « تقرأ » ou « تحفظ » au tout début.
+
+## 2) Le verset
+
+L'image est **coupée** : seul le début du verset apparaît, à savoir **﴿يَحْكُمُ بِهِ...﴾**, et la ligne suivante du verset (ذوا عدل منكم هديا بلغ الكعبة...) n'est **pas visible** — elle est masquée par le début du hadith suivant (﴿يَحْكُمُ عَلَى...﴾ — « بَيْنَ »?). Je ne peux pas transcrire le verset en entier à partir de cette image.
+
+## 3) Le numéro du verset
+
+Le numéro **imprimé** est clairement : **[سورة المائدة الآية: 97]**
+
+(Remarque : dans le muṣḥaf, ce passage « يَحْكُمُ بِهِ ذَوَا عَدْلٍ مِنْكُمْ هُدًى... » correspond à la **fin de l'āya 95**, mais l'édition imprimée porte bien « 97 ».)
+
+## 4) Ce qui n'est PAS visible dans cette capture
+
+- La phrase « وقد استغرب السائل من فعل عمر هذا؛ فقال... » et la suite « قال الرجل وهو يقول: هذا أمير المؤمنين لا يستطيع أن يحكم في ... حتى دعا رجلا يحكم معه » → **non visibles** ; impossible de trancher entre « ظبي » et « طلِّي ».
+- « وفي رواية الحاكم، قال: ... » → **non visible** sur cette page.
+
+Pour ces deux passages, il faudrait une capture de la page précédente (le début du dialogue d'Omar, vers p. 150–151).
