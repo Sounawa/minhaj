@@ -1,0 +1,15 @@
+D'après l'image (encadré vert du bas de la page 146), voici ce que je peux lire, en décrivant les points et boucles :
+
+**1) Premier mot après ولا :**
+C'est **يَصْلُحُ** — avec un **ص** (sad, **sans point**) : on voit la boucle ronde du ص suivie d'une petite boucle fermée, sans point au-dessus ni au-dessous. Il n'y a **pas de point** sur cette lettre dans l'image, donc ce n'est pas ض.
+
+**2) Ensuite :**
+C'est **ولا يَطْرُحُها** (avec ط — boucle fermée sans point, et le verbe se termine par ها : هـ avec boucle et **تا marbouta** à deux points au-dessus). Le verbe est **يطرحها** (« qu'il jette »), pas يطردها : la lettre après يط est **ر** (petite boucle ouverte descendante, sans point), pas د.
+
+**3) La fin :**
+Oui, on lit bien **فليُطْعِمْ حفنة من طعام** :
+- **فليُطْعِمْ** : ف (boucle avec un point au-dessus), لِيْ, ط (boucle sans point), ع (boucle ouverte), مْ final avec soukoun.
+- **حفنة** : ح (boucle ouverte sans point), ف (boucle avec un point), ن (sans boucle, un point au-dessus), **تا marbouta** avec deux points au-dessus.
+- **من طعام** : ط sans point, ع, ا final droit sans boucle.
+
+Donc le hadith se termine par : « ...فإن طُرِحَها المحرم من جلده أو من ثوبه فليُطْعِمْ حفنة من طعام » [الموطأ رقم 1255] — avec حفنة (et non حفظة : la lettre est ن avec un point, pas ظ avec un point et une boucle).

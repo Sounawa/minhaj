@@ -25,6 +25,12 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: "/home/z",
   },
+  // R689 — parade « site invisible sur le preview » : Next 16.4 bloque par
+  // défaut les ressources de dev (/_next/hmr, chunks) servies depuis un hôte
+  // non déclaré — l'hydratation React échouait silencieusement en local
+  // (127.0.0.1) ET sur le domaine de preview (*.space-z.ai) : widgets figés
+  // (« Chargement de la bibliothèque… », « interrogation du moteur… »).
+  allowedDevOrigins: ["localhost", "127.0.0.1", "*.space-z.ai"],
   typescript: {
     ignoreBuildErrors: true,
   },

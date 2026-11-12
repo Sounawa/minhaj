@@ -1,26 +1,26 @@
 {
- "ts": 1794469461.802776,
- "iso": "2026-11-12T07:44:21Z",
+ "ts": 1794473749.3518388,
+ "iso": "2026-11-12T08:55:49Z",
  "version": "v4",
  "startedAt": "2026-10-31T15:29:57Z",
- "cycles": 68,
+ "cycles": 139,
  "wakeCount": 0,
  "workers": {
   "active": 0,
   "books": []
  },
- "remainingDocs": 564,
+ "remainingDocs": 563,
  "registry": {
-  "hand": 1154,
+  "hand": 1155,
   "llm": 57
  },
  "portal": {
   "state": "FERMÉE",
-  "ts": "2026-11-12T07:38:18Z",
+  "ts": "2026-11-12T08:53:49Z",
   "detail": "bannière de maintenance présente"
  },
  "sourceHunt": {
-  "ts": "2026-11-12T07:38:20Z",
+  "ts": "2026-11-12T08:38:42Z",
   "book": "hadith-5ep",
   "docId": "pdf-1",
   "titleFr": "Présentation de l'auteur et de l'ouvrage",
@@ -29,9 +29,12 @@
   "collection": "collection:DÉJÀ-EN-CACHE(hadith-5-ibtidai_text.pdf)",
   "detail": "direct=404"
  },
- "lastAutoCommit": null,
+ "lastAutoCommit": {
+  "ts": "2026-11-12T08:48:45Z",
+  "subject": "auto(pipeline): 2026-11-12 08:48 — superviseur v4 (battement, registre, chasse)"
+ },
  "lastPush": {
-  "ts": "2026-11-12T07:38:21Z",
+  "ts": "2026-11-12T08:48:48Z",
   "ok": true
  }
 }

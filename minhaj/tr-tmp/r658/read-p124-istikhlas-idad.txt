@@ -1,8 +1,0 @@
-IMAGE: p124-istikhlas-idad.png
-CONSIGNE: Transcris EXACTEMENT, ligne par ligne : (1) l'item أستخلص من النص... mot à mot ; (2) le titre الإعداد القبلي et chaque item numéroté mot à mot.
----
-L'item أستخلص من النص n'apparaît pas sur cette image, ni le titre الإعداد القبلي ni ses items numérotés. La seule ligne visible est :
-
-2. ابحث عن الفروق بين رواية الحديث باللفظ وروايته بالمعنى، وما يترتب على ذلك.
-
-124

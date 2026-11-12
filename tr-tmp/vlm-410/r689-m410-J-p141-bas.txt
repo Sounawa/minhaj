@@ -1,0 +1,29 @@
+Voici la transcription exacte de ce qui est **réellement imprimé** sur cette page — avec une remarque importante : les mots que vous demandez (الضبع، الغزال، الأرنب، اليربوع، كبش، عنز، عناق، جفرة) **n'apparaissent nulle part sur cette page**. Il s'agit apparemment du texte complet des hadiths du Mwatta, mais le manuel n'en imprime que des extraits abrégés. Je ne peux donc pas les transcrire « tels qu'imprimés » — ils ne sont pas imprimés. Je ne devine pas.
+
+## 1) Hadith [الموطأ رقم: 1240]
+
+Ce qui est imprimé :
+
+> مَالَكْ عَنْ أَبِي الزِّبِيرِ الْمَكِّيِّ «أَنَّ عُمَرَ بنَ الْخَطَّابِ قَضَى فِي الضِّبْعِ بِكَبِّشٍ، وَفِي الْغَزَالِ بِعِنْزٍ، وَفِي الْيَرْبُوعِ بِجَفْرَةَ»
+
+⚠️ Attention : en zoomant, la ligne visible ne contient que **كبش، عنز، جفرة** avec الضِّبْع، الْغَزَال، الْيَرْبُوع comme compensations. Les mots **الأرنب** et **عناق** ne sont pas visibles sur cette page (le hadith complet du Muwatta les contient, mais ils ne sont pas imprimés ici).
+
+## 2) Hadith [الموطأ رقم: 1242]
+
+> مَالَكْ عَنْ هِشَامَ بنَ عُرْوَةَ أَنَّ أَبَاهُ كَانَ يَقُولُ: «فِي الْبَقَرَةِ مِنَ الْوَحْشِ بِقَرَةٌ، وَفِي الشَّاةِ مِنَ الظِّبَاءِ شَاةٌ»
+
+La phrase imprimée est exactement : « في البقرة من الوحش **بقرۃ**، وفي الشاة من الظباء **شاة** » — les mots de compensation sont بقرۃ et شاة (pas d'autre mot).
+
+## 3) Hadith [الموطأ رقم: 1243]
+
+> مَالَكْ عَنْ يَحْيَى بن سَعِيدٍ عَنْ سَعِيدِ بن الْمُسَيِّبِ أَنَّهُ كَانَ يَقُولُ: «فِي حَامِ مَكَّةَ إِذَا قُتِّلَ شَاةٌ»
+
+Le verbe après « إذا » est imprimé : **قُتِّلَ** — forme **passive** (هنا بمعنى « si on a tué / a été tué »), avec :
+- un **fatha** (ــَ) au-dessus du **ق**,
+- un **shadda** (ــّ) sur le **ت** avec **deux kasras** (zabras) en dessous : **قُتِّلَ**.
+
+Ce n'est **ni** قَتَّلَ (actif intensif, qui aurait un fatha sous le ق et deux fathas au-dessus du ت) ni قُتِلَ simple : la shadda sur le ت et les deux kasras sous le ت sont clairement visibles.
+
+## Texte de fin de hadith 1240 (ligne suivante)
+
+La suite imprimée après « بِجَفْرَةَ » sur la ligne 1240 est : **وَفِي... [الموطأ رقم: 1240]** — mais les mots الأرنب/عناق n'y figurent pas dans cette version abrégée du manuel.

@@ -1,0 +1,15 @@
+Je ne peux pas effectuer la vérification demandée, car le contenu de cette page ne correspond pas à votre question.
+
+**Ce que montre réellement la page 142 :**
+
+Le premier hadith du cadre (N° 1244) est celui-ci :
+
+> « قَالَ مَالِكٌ فِي الرَّجُلِ مِنْ أَهْلِ مَكَّةَ يُحْرِمُ بِالحَجِّ أَوِ العُمْرَةِ، وَفِي بَيْتِهِ فَرَاخٌ [دَوَاجِنُ] مِنْ حَمَامِ مَكَّةَ فِيغْلَقُ عَلَيْهَا فَتَمُوتُ، فَقَالَ: "أَرَى بَأَنْ يُفْدَى ذَلِكَ عَنْ كُلِّ فَرْخٍ بِشَاةٍ" »
+
+Mais attention : **je ne peux pas "zoomer" au-delà de la résolution de l'image fournie**, et je dois être honnête sur les limites :
+
+1. **Sur le verbe** : à cette résolution, je lis « فَيُغْلَقُ عَلَيْهَا » (avec غ), ce qui est par ailleurs le texte correct et connu dans le Muwaṭṭaʾ (le sens impose يُغْلَق : « on les enferme sur elles et elles meurent » — يُطْلَق n'aurait pas de sens ici car le contexte dit فَتَمُوتُ). Mais je ne peux pas décrire le glyphe lettre par lettre (boucle, position du point) avec certitude à cette résolution — cela serait de la devinette, ce que vous demandez d'éviter.
+
+2. **La fin** : je lis « أَرَى بِأَنْ يُفْدَى ذَلِكَ عَنْ كُلِّ فَرْخٍ بِشَاةٍ » — mais je ne peux garantir la voyelle exacte (بشاة vs بشاةٍ) au niveau du pixel.
+
+**Recommandation** : pour une vérification graphique certaine, il faudrait une image à plus haute résolution recadrée sur cette ligne précisément.

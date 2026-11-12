@@ -1,6 +1,0 @@
-IMAGE: t-p122-luga-tight.png
-CONSIGNE: Image zoom MAXIMUM sur le crochet final de la ligne (le renvoi après «وتحريف الكلام: عدله عن جهته»). Transcris le crochet LETTRE PAR LETTRE et le numéro DIGIT PAR DIGIT : le glyphe montre-t-il 2/34 ou 2/43 ou 43/2 ? Décris l'ordre VISUEL des chiffres de gauche à droite, puis conclus le volume et la page.
----
-Transcription du crochet, de gauche à droite : « 4 », puis « 3 », puis « / », puis « 2 » — soit visuellement **43/2** (pas 2/34, pas 2/43).
-
-Conclusion : volume 2, page 43 → **(2/43)**.

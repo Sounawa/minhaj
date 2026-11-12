@@ -1,0 +1,37 @@
+## Transcription complète du hadith (ligne par ligne, d'après l'image)
+
+> **عن عبد الملك بن قريز، عن محمد بن سيرين، أن رجلا جاء إلى عمر بن الخطاب فقال إنّي أجرّيت أنا وصاحب لي فرسين نستبق إلى نقرة ثنية فأصبنا ظبيا ونحن محرمان فماذا نرى؟ فقال عمر لرجل إلى جنبله: تعال حكّم أنا ومَنّذا، فحكما علَي بعِنز** [الموطأ رقم: 1241]
+
+---
+
+## Réponses point par point (analyse graphique)
+
+### 1) Premier nom du sanad : **عبد الملك** ✅ (pas عبد الله)
+- Après « عبد », on lit **ا – ل – م – ل – ك** : la graphie montre **الم** avec une boucle de م médiale, puis **لك** avec un ك final à boucle fermée et hamza-like ascendant — il n'y a **pas de shadda** au-dessus entre deux ل (ce qui signalerait الله).
+- Points : aucun point sur الم (الله n'aurait pas de points non plus, mais الله exigerait deux ل dont le second avec shadda ✓ — absente ici) ; le م médial a une boucle ronde complète, absent dans الله.
+
+### 2) Nom après بن : **قريز** ✅ (pas قيس)
+- **ق** initiale : boucle ronde avec **2 points au-dessus**.
+- Ensuite **ر** : petit crochet descendant **sans point** (قيس aurait ي ici, avec 2 points dessous).
+- Puis **ي** médiale : hampe sans dents (sīn-like teeth absents), **2 points dessous**.
+- Finale : **ز** = trait oblique avec **UN point au-dessus** (une seule petite tache). Ce n'est donc pas س (3 dents, 0 point) ni قيس.
+- Donc : ق + ر + ي + ز = **قريز**.
+
+### 3) Les mots de la course
+- **أجرّيت** : ه hamza initiale dans أ ; ل ; ر médiale ; **ي médiale à 2 points dessous** avec **shadda visible** sur la ي ; ت finale à 2 points — donc أجرّيت (forme II), pas أريت ni أجريت.
+- **أنا** : hamza au-dessus d'alif + ن + ا — clair.
+- **وصاحب لي** : و ; ص (boucle + 0 point) ; ا ; ح (pas de point) ; ب finale (point dessous) ; لي (ل + ي à 2 points dessous).
+- **فرسين** : ف (1 point) ; ر ; س : **trois dents (sīn), sans points** ; ي ; ن finale (point dessous). Ce sont bien des **frs** (فرسين), pas des khyl.
+- **نستبق إلى نقرة ثنية** :
+  - نستبق : ن ; س (3 dents, 0 point) ; ت (2 points dessus) ; ب (1 point dessous) ; ق (2 points dessus).
+  - إلى : hamza sur alif + ل + ي.
+  - نقرة : ن ; ق ; ر ; ت — la lettre avant ت est un **ر sans point** (donc نقرة, pas نقطة — pas de point ovale de ط).
+  - ثنية : ث = **trois points au-dessus** sur la dent ; ن ; ي finale.
+
+### 4) Verdict final
+- **فأصبنا ظبيا ونحن محرمان فماذا نرى؟** — ظبيا : ظ avec **point unique au-dessus** de la dent, T finale alif.
+- **فقال عمر لرجل إلى جنبله** : جنبله — ج avec 1 point dessous, ب 1 point dessous, ل , ه finale ronde.
+- **تعال حكّم أنا ومَنّذا** : واو initiale ; م avec **shadda** (حكّم) ; مَنّذا = م ، ن à 2 points dessus + shadda ، ذ (1 point dessus).
+- **فحكما عليه بعِنز** ✅ : ف ; ح ; ك ; م ; ا ، puis عليه (ع ، ل ، ي à 2 points dessous ، ه) ، puis بعنز : ب (point dessous) ، ع ، ن (point dessous) ، **ز avec un seul point au-dessus** — confirmé : « بعنز » (une chèvre/bouc), pas بعير ni غير.
+
+Le numéro entre crochets en bleu : **[الموطأ رقم: 1241]**.
