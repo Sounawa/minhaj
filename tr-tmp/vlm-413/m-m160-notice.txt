@@ -1,0 +1,23 @@
+**Transcription (ligne par ligne, ce qui est visible) :**
+
+Ligne 1 (haut de l'encadré, coupée en partie) :
+وَلِئَنْ لَمْ تَحْلِفْ [?] — (partie supérieure tronquée/illisible : [?])
+
+Ligne 2 (suite, dans l'encadré vert) :
+فَانْتَهَجْ [?] — (début de ligne coupé : [?])
+
+Ligne 3 :
+وَإِنْ لَمْ تَحْلِفْ إِلَا جُذْعَا فَانْتَهِجْ « [الموطأ رقم: ١٣٥٤].
+
+— Renvoi chiffré : NUM: 1354 (١=1, ٣=3, ٥=5, ٤=4) → **1354**
+
+Zone décorative (bouton vert, titre encadré) :
+**ترجمة الراوي**
+
+Ligne suivante (bas de page, coupée verticalement, en partie bleue puis noire) :
+أَنَّ النَّبِيَّ ﷺ [?] عَنْهُ: «هَا [?] نَ ابْنُ نِيَارِ بْنِ مَالِكِ عَبْدَ اللَّهِ عَبْدًا عَلَى نَبِيِّ اللَّهِ ﷺ وَالْمُنْتَهَى كَانَ [?]
+
+**Remarques :**
+- La première ligne de l'encadré et la fin de la dernière ligne sont coupées par les bords de l'image → marquées [?].
+- Le renvoi est transcrit chiffre par chiffre : **NUM: 1354** (style : [الموطأ رقم: 1354]).
+- Le nomvisible en bas semble être « هانئ بن نيار بن مالك » mais la ligne étant tronquée et en partie floue, je ne transcris que ce qui est lisible : « ...هَا [؟] نَ ابْنُ نِيَارِ بْنِ مَالِكِ... ». La notice complète (شمّة بدرا، روى عنه البراء بن عازب، سنة الوفاة) n'est **pas visible** dans cette image.

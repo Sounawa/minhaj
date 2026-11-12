@@ -1,0 +1,20 @@
+Transcription de ce qui est visible :
+
+**Ligne supérieure (partiellement coupée, dépassant du haut de l'image) :**
+أبو بكر [؟] الصغذي [؟]، قال: [؟] حديث [؟] وليد بن مسلم، عن [؟] [؟] بن يحيى [؟] بن ... [؟] [illisible – coupé en haut]
+
+**Ligne 2 :**
+روى عنه ابن أخته البراء بن عازب، وجابر بن عبد الله، وجماعة، ماات سنة 15هـ.
+
+→ avec le nombre chiffre par chiffre : NUM: 15 (سنة 15هـ)
+
+**Rubrique (encadré vert, en bleu) :**
+الفهم
+
+**En-tête suivant (en vert) :**
+الشرح:
+
+**Remarques :**
+- La ligne du haut est tronquée par le bord de l'image : plusieurs mots sont illisibles ou incomplets, marqués [؟]/[?]. Je ne devine pas les noms manquants.
+- Dans la ligne 2, « ماات » semble écrit sans hamza visible (probablement مات) — je transcris ce qui est visible.
+- Aucune glose de type « terme : explication » n'est visible dans cette zone : le contenu sous الشرح est hors du microcrop.

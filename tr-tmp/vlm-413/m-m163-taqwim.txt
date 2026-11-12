@@ -1,0 +1,23 @@
+# Transcription
+
+## Zone décorative
+Bande bleue supérieure + frise géométrique bleue (motif décoratif, sans texte).
+
+## Rubrique verte (bouton vert avec pastille bleue)
+التقويم
+
+## Items numérotés (3 items)
+
+1 - أذكر حكم الأضحية مع الاستدلال بما في الموطأ.
+
+2 - ما هي الأيام المخصصة لنبح الأضحية؟
+
+3 - أبين حكم من نبح أضحيته بعد الصلاة وقبل نبح الإمام أضحيته.
+
+---
+
+**Réponses aux questions :**
+- **Rubrique verte :** oui, le titre est précisément **التقويم** (écrit en bleu sur fond vert, dans un bouton arrondi avec une pastille bleue à droite).
+- **Nombre d'items :** **3** (numérotés 1, 2, 3 en bleu, chaque numéro suivi d'un tiret « - »).
+- Aucun renvoi [الموطأ رقم: N] ni [سورة X الآية: N] visible sur cette page — donc aucun nombre à transcrire chiffre par chiffre.
+- Les diacritiques visibles (فتحة sur أذكر، نبح، نبح ; ضمة sur حكمَ؛ etc.) ont été conservés tels qu'imprimés ; aucune zone illisible détectée, pas de [?] nécessaire.

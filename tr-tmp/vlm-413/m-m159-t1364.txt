@@ -1,0 +1,25 @@
+Transcription (ligne par ligne) :
+
+**Ligne 1 (hadith, encadré vert) :**
+
+ـ مَالِكٌ عَنْ نَافِعٍ أَنَّ عَبْدَ اللهِ بْنَ عُمَرَ قَالَ: «الأَضْحِي يَوْمَانِ بَعْدَ يَوْمِ الأَضْحَى»
+
+**Ligne 2 (renvoi) :**
+
+[الموَطَأُ رَقَم: 1364] NUM: 1364 .
+
+**Bas de page :**
+
+159
+
+---
+
+**Réponses à vos questions précises :**
+
+1. **Premier mot du matn** : sur l'image, la graphie visible est « الأَضْحِي » (avec kasra sous le ح ; il semble y avoir une lettre finale avant le ي — le mot se lit الأضحي). La forme attendue « الأَضْحَيَا »/« الأضحية » n'est **pas** visible : je ne devine rien, la lettre ث/ة attendue n'apparaît pas clairement [? — fin du mot : « الأضحي » est la lecture la plus fidèle de ce qui est imprimé].
+
+2. **« يومان بعد يوم الأضحى »** : oui, c'est bien ce qui est visible : يَوْمَانِ بَعْدَ يَوْمِ الأَضْحَى — avec fatha sur الأ (hamz), sukūn sur ض, fatha finale sous le ى.
+
+3. **Harakats visibles** : fatha sur م (مَالِك), sukūn sur ع (عَن), fatha sur ن (نَافِع), fatha+shadda sur أَنَّ, fatha sur ع (عَبْد), shadda sur ب (بْنَ), fatha sur ق (قَال), sukūn/fatha sur يَوْمَانِ.
+
+**Note** : la numérotation standard du Muwaṭṭaʾ (recension Mālik) donne « الأضحيةُ يومان بعد يوم الأضحى », mais l'image imprimée montre une graphie du premier mot ambiguë ([?] sur la séquence finale) ; je transcris ce qui est visible, sans deviner.

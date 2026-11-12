@@ -1,0 +1,23 @@
+Voici la transcription exacte, ligne par ligne :
+
+**Ligne 1 :**
+
+- مَالِكٌ عَنْ يَحْيَى بِنْ سَعِيدٍ عَنْ بُشَيْرِ بْنِ يَسَارٍ: «أَنَّ أَبَا بُرْدَةَ بْنَ أَبِي مُوسَى»
+
+**Ligne 2 :**
+
+ضَحِّيَتِهِ قَبْلَ أَنْ يُذْبِحَ رَسُولُ اللهِ ﷺ يَوْمَ الْأَضْحَى، فَأَنْبَأَهُ رَسُولُ اللهِ ﷺ أَنَّهُ
+
+**Ligne 3 :**
+
+أَنْ يَعُودَ بِضَحِيَّةٍ أُخْرَى، قَالَ أَبُو بُرْدَةَ: لَا أَجِدُ إِلَّا جَذَعًا يَا رَسُولَ اللهِ. قَالَ لَهُ:
+
+**Remarques de lecture :**
+- Ligne 1 : le renvoi [الموطأ رقم: N] n'est pas visible sur cette portion d'image.
+- Ligne 2 : le mot est bien يُذْبِحَ (avec ضمة sur الياء + كسرة sous الذال, donc يُذبِح — forme passive avec ذ explicite, non ن).
+- Ligne 2 : فَأَنْبَأَهُ — hamzas visibles (أ ثم همزة بين الهمزة والألف), bien أَنْبَأَهُ et non فَرَعَعَ.
+- Ligne 3 : جَذَعًا — ladja visible sur الذال (ذ, non د).
+- Ligne 3 : le texte visible s'arrête à « قَالَ لَهُ: » — la suite (وَإِنْ لَمْ تَجِدْ إِلَّا جَذَعًا فَاذْبَحْهُ) et le renvoi NUM ne figurent pas dans cette zone (hors cadre en bas de page).
+- Zone décorative en haut de page : bande bleue + frise géométrique bleue (non textuelle, rien à transcrire).
+
+⚠️ Le bas de la ligne 3 est légèrement coupé par le bord de l'image : « قَالَ لَهُ » est lisible mais le caractère final « : » est partiellement tronqué — transcrit comme visible.

@@ -1,37 +1,37 @@
 {
- "ts": 1794489083.74723,
- "iso": "2026-11-12T13:11:23Z",
+ "ts": 1794498213.3094554,
+ "iso": "2026-11-12T15:43:33Z",
  "version": "v4",
  "startedAt": "2026-10-31T15:29:57Z",
- "cycles": 106,
+ "cycles": 75,
  "wakeCount": 0,
  "workers": {
   "active": 0,
   "books": []
  },
- "remainingDocs": 561,
+ "remainingDocs": 560,
  "registry": {
   "hand": 1157,
   "llm": 57
  },
  "portal": {
   "state": "FERMÉE",
-  "ts": "2026-11-12T12:57:18Z",
+  "ts": "2026-11-12T15:30:28Z",
   "detail": "bannière de maintenance présente"
  },
  "sourceHunt": {
-  "ts": "2026-11-12T12:57:20Z",
-  "book": "hadith-5ep",
-  "docId": "pdf-1",
-  "titleFr": "Présentation de l'auteur et de l'ouvrage",
+  "ts": "2026-11-12T15:30:30Z",
+  "book": "hadith-6ep",
+  "docId": "pdf-mut23h3b-681",
+  "titleFr": "S'empresser vers les œuvres bonnes",
   "direct": "404",
-  "wayback": "DISPONIBLE(20251117191829)",
-  "collection": "collection:DÉJÀ-EN-CACHE(hadith-5-ibtidai_text.pdf)",
+  "wayback": "ABSENT",
+  "collection": "collection:DÉJÀ-EN-CACHE(hadith-6-ibtidai_text.pdf)",
   "detail": "direct=404"
  },
  "lastAutoCommit": null,
  "lastPush": {
-  "ts": "2026-11-12T13:07:23Z",
+  "ts": "2026-11-12T15:40:33Z",
   "ok": true
  }
 }

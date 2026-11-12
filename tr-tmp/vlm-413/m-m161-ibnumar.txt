@@ -1,0 +1,20 @@
+**Transcription ligne par ligne :**
+
+**Ligne 1 :**
+طلّب رضي الله عنه. فهذا وإن كان موقوفا على الصحابةٍ فهو مما لا مجال فيه للرأيِ
+
+**Ligne 2 :**
+والاجتهاد، فيعملى حكم الرفع.
+
+**Ligne 3 :**
+وقد استدل ابن القصار في ذلك بقوله تعالى : ﴿وَبِنُّكْرٌ وَالْأَبْشَمُ اللَّهُ يَأْيِمُ مَعْلُومَاتٍ﴾ [?]
+
+**Ligne 4 :**
+[سورة الحج الآية: 26] قال : «والأيام المعلومات : يوم النحر ويوم ما بعده، والأيام المعدودات
+
+---
+
+**Notes :**
+- Le verbe avant حكم الرفع : l'image montre **فيعملى** — probablement فيعمل [?] (le ح final semble absent/coupé), à vérifier.
+- La fin de la ligne 3 est un verset coranique calligraphié ; les diacritiques visibles sont repris, mais certains mots restent incertains : ﴿وَبِنُّكْرٌ وَالْأَبْشَمُ اللَّهُ يَأْيِمُ مَعْلُومَاتٍ﴾ [?] — le texte attendu serait ﴿وَبِكْرٍ وَالْبَشَرِ اللَّهُ يَأْذَنُ مَعْلُومَاتٍ﴾ mais je ne devine pas : je transcris ce qui est visible, marqué [?] là où la lecture est douteuse.
+- Renvoi : سورة الحج الآية: NUM: <2><6> (chiffre par chiffre : 2, 6).
