@@ -1,9 +1,9 @@
 {
- "ts": 1794509926.1115177,
- "iso": "2026-11-12T18:58:46Z",
+ "ts": 1794517467.2176514,
+ "iso": "2026-11-12T21:04:27Z",
  "version": "v4",
  "startedAt": "2026-10-31T15:29:57Z",
- "cycles": 269,
+ "cycles": 394,
  "wakeCount": 0,
  "workers": {
   "active": 0,
@@ -16,22 +16,22 @@
  },
  "portal": {
   "state": "FERMÉE",
-  "ts": "2026-11-12T18:46:44Z",
+  "ts": "2026-11-12T21:02:24Z",
   "detail": "bannière de maintenance présente"
  },
  "sourceHunt": {
-  "ts": "2026-11-12T18:31:39Z",
+  "ts": "2026-11-12T21:02:25Z",
   "book": "hadith-6ep",
   "docId": "pdf-mut23h3b-681",
   "titleFr": "S'empresser vers les œuvres bonnes",
   "direct": "404",
-  "wayback": "ERR:URLError",
+  "wayback": "ERR:HTTPError",
   "collection": "collection:DÉJÀ-EN-CACHE(hadith-6-ibtidai_text.pdf)",
   "detail": "direct=404"
  },
  "lastAutoCommit": null,
  "lastPush": {
-  "ts": "2026-11-12T18:51:45Z",
+  "ts": "2026-11-12T21:02:27Z",
   "ok": true
  }
 }
