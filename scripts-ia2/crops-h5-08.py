@@ -4,8 +4,8 @@
 import subprocess, os
 from PIL import Image, ImageDraw
 
-SRC = '/home/z/my-project/minhaj/content/textbooks-src/hadith-5-ibtidai_text.pdf'
-OUT = '/home/z/my-project/minhaj/scripts-ia2/tmp/h5-08/crops'
+SRC = '/home/z/my-project/content/textbooks-src/hadith-5-ibtidai_text.pdf'
+OUT = '/home/z/my-project/scripts-ia2/tmp/h5-08/crops'
 os.makedirs(OUT, exist_ok=True)
 
 def render(pg):

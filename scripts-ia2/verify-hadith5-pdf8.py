@@ -3,8 +3,8 @@
 # Z2-8 — vérification de la livraison hadith-5ep / pdf-8 (le décret et la prédestination)
 import json, re, sys
 
-PATH = '/home/z/my-project/minhaj/content/books/hadith-5ep.json'
-HTML = '/home/z/my-project/minhaj/scripts-ia2/livraisons/hadith-5ep/pdf-8.html'
+PATH = '/home/z/my-project/content/books/hadith-5ep.json'
+HTML = '/home/z/my-project/scripts-ia2/livraisons/hadith-5ep/pdf-8.html'
 
 src = open(HTML, encoding='utf-8').read()
 book = json.load(open(PATH, encoding='utf-8'))

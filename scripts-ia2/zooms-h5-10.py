@@ -5,8 +5,8 @@
 import subprocess, os
 from PIL import Image
 
-SRC = '/home/z/my-project/minhaj/content/textbooks-src/hadith-5-ibtidai_text.pdf'
-OUT = '/home/z/my-project/minhaj/scripts-ia2/tmp/h5-10/zooms'
+SRC = '/home/z/my-project/content/textbooks-src/hadith-5-ibtidai_text.pdf'
+OUT = '/home/z/my-project/scripts-ia2/tmp/h5-10/zooms'
 os.makedirs(OUT, exist_ok=True)
 
 def band600(pg, y0, y1, x0=0.0, x1=1.0):

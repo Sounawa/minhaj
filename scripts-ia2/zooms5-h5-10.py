@@ -4,8 +4,8 @@
 import subprocess, os
 from PIL import Image
 
-SRC = '/home/z/my-project/minhaj/content/textbooks-src/hadith-5-ibtidai_text.pdf'
-OUT = '/home/z/my-project/minhaj/scripts-ia2/tmp/h5-10/zooms5'
+SRC = '/home/z/my-project/content/textbooks-src/hadith-5-ibtidai_text.pdf'
+OUT = '/home/z/my-project/scripts-ia2/tmp/h5-10/zooms5'
 os.makedirs(OUT, exist_ok=True)
 _cache = {}
 
@@ -14,7 +14,7 @@ def page600(pg):
         png = f'{OUT}/p600-{pg}.png'
         if not os.path.exists(png):
             # réutiliser les rendus existants de zooms4 si présents
-            src = f'/home/z/my-project/minhaj/scripts-ia2/tmp/h5-10/zooms4/p600-{pg}.png'
+            src = f'/home/z/my-project/scripts-ia2/tmp/h5-10/zooms4/p600-{pg}.png'
             if os.path.exists(src):
                 png = src
             else:

@@ -4,8 +4,8 @@
 import subprocess, os
 from PIL import Image
 
-SRC = '/home/z/my-project/minhaj/content/textbooks-src/hadith-5-ibtidai_text.pdf'
-OUT = '/home/z/my-project/minhaj/scripts-ia2/tmp/h5-07/plates'
+SRC = '/home/z/my-project/content/textbooks-src/hadith-5-ibtidai_text.pdf'
+OUT = '/home/z/my-project/scripts-ia2/tmp/h5-07/plates'
 
 # rendu 600 dpi page 47 pour zoom maximal
 png600 = f'{OUT}/p47-600.png'

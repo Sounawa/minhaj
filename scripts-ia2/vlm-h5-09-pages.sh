@@ -1,7 +1,7 @@
 #!/bin/bash
 # Z2-9 — hadith-5ep leçon pdf-9 (الإحداث والابتداع في الدين) — lectures VLM pages 56-59 via CLI z-ai
 set -u
-DIR=/home/z/my-project/minhaj/scripts-ia2/tmp/h5-09
+DIR=/home/z/my-project/scripts-ia2/tmp/h5-09
 
 PROMPT() {
 cat <<'EOF'

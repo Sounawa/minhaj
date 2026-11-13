@@ -4,7 +4,7 @@
 from PIL import Image, ImageDraw
 import os
 
-BASE = '/home/z/my-project/minhaj/scripts-ia2/tmp/h5-12'
+BASE = '/home/z/my-project/scripts-ia2/tmp/h5-12'
 OUT = f'{BASE}/zooms/comp-S-minbar.png'
 
 im = Image.open(f'{BASE}/p-070.png')

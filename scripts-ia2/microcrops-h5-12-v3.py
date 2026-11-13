@@ -4,7 +4,7 @@
 from PIL import Image
 import os
 
-OUT = '/home/z/my-project/minhaj/scripts-ia2/tmp/h5-12/zooms'
+OUT = '/home/z/my-project/scripts-ia2/tmp/h5-12/zooms'
 big = {}
 for p in [70, 71, 72]:
     big[p] = Image.open(f'{OUT}/big-{p}-0{p}.png')

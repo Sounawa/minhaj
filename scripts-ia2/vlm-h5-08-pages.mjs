@@ -3,7 +3,7 @@
 import ZAI from '/home/z/node_modules/z-ai-web-dev-sdk/dist/index.js';
 import fs from 'fs';
 
-const DIR = '/home/z/my-project/minhaj/scripts-ia2/tmp/h5-08';
+const DIR = '/home/z/my-project/scripts-ia2/tmp/h5-08';
 const pages = ['050', '051', '052', '053', '054', '055'];
 
 const ask = (p) => `Page ${p} d'un manuel scolaire marocain d'hadith (arabe, sens de lecture droite→gauche), 5ᵉ année primaire. Il s'agit de la leçon 8 « القضاء والقدر » (le décret et la prédestination), fondée sur la suite du hadith d'Ibn Mas'ūd des Quarante d'al-Nawawī (hadith 4) : la partie « يُؤْمَرُ بِأَرْبَعِ كَلِمَاتٍ: بِكَتْبِ رِزْقِهِ وَأَجَلِهِ وَعَمَلِهِ وَشَقِيٍّ أَوْ سَعِيدٍ » et la fin du hadith (فَيَسْبِقُ عَلَيْهِ الْكِتَابُ… فَيَدْخُلُهَا), avec le commentaire (شرح) d'Ibn Daqīq al-ʿīd.

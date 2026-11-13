@@ -3,8 +3,8 @@
 # Z2-7 — vérification de la livraison hadith-5ep / pdf-7 (renforcement et application)
 import json, re, sys
 
-PATH = '/home/z/my-project/minhaj/content/books/hadith-5ep.json'
-HTML = '/home/z/my-project/minhaj/scripts-ia2/livraisons/hadith-5ep/pdf-7.html'
+PATH = '/home/z/my-project/content/books/hadith-5ep.json'
+HTML = '/home/z/my-project/scripts-ia2/livraisons/hadith-5ep/pdf-7.html'
 
 src = open(HTML, encoding='utf-8').read()
 book = json.load(open(PATH, encoding='utf-8'))
@@ -62,7 +62,7 @@ check('htmlFr posé == fichier source', fr.strip() == src.strip(),
 check('titleFr (pré-existant du dépôt, conservé)', (l.get('titleFr') or '').strip() == 'Consolidation et application',
       f"({l.get('titleFr')!r})")
 # — registre IA-2 —
-reg = json.load(open('/home/z/my-project/minhaj/scripts-ia2/savant-registry-ia2.json',
+reg = json.load(open('/home/z/my-project/scripts-ia2/savant-registry-ia2.json',
                      encoding='utf-8'))
 check('registre IA-2 contient hadith-5ep/pdf-7', 'hadith-5ep/pdf-7' in reg.get('hand', []),
       f'({len(reg.get("hand", []))} savants)')

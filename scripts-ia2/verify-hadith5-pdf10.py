@@ -3,8 +3,8 @@
 # Z2-11 — vérification de la livraison hadith-5ep / pdf-10 (le licite, l'illicite et les choses ambiguës)
 import json, re, sys
 
-PATH = '/home/z/my-project/minhaj/content/books/hadith-5ep.json'
-HTML = '/home/z/my-project/minhaj/scripts-ia2/livraisons/hadith-5ep/pdf-10.html'
+PATH = '/home/z/my-project/content/books/hadith-5ep.json'
+HTML = '/home/z/my-project/scripts-ia2/livraisons/hadith-5ep/pdf-10.html'
 
 src = open(HTML, encoding='utf-8').read()
 book = json.load(open(PATH, encoding='utf-8'))
@@ -115,7 +115,7 @@ check('pose == source', fr == src, f'({len(fr)} vs {len(src)} car)')
 check('titleFr correct', l.get('titleFr') == 'Le licite, l’illicite et les choses ambiguës',
       f'({l.get("titleFr")!r})')
 # — cohérence série —
-reg = json.load(open('/home/z/my-project/minhaj/scripts-ia2/savant-registry-ia2.json', encoding='utf-8'))
+reg = json.load(open('/home/z/my-project/scripts-ia2/savant-registry-ia2.json', encoding='utf-8'))
 check('registre IA-2 → 10', f'hadith-5ep/pdf-10' in reg['hand'] and len(reg['hand']) == 10,
       f'({len(reg["hand"])} entrées)')
 

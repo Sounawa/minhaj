@@ -3,8 +3,8 @@
 # Z2-13 — prépa leçon 12 hadith-5ep : rendus 150 dpi pp.69-74 + couches texte
 import subprocess, os
 
-SRC = '/home/z/my-project/minhaj/content/textbooks-src/hadith-5-ibtidai_text.pdf'
-OUT = '/home/z/my-project/minhaj/scripts-ia2/tmp/h5-12'
+SRC = '/home/z/my-project/content/textbooks-src/hadith-5-ibtidai_text.pdf'
+OUT = '/home/z/my-project/scripts-ia2/tmp/h5-12'
 os.makedirs(OUT, exist_ok=True)
 
 # rendus 150 dpi p69..p74

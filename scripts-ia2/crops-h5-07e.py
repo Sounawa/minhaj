@@ -6,8 +6,8 @@ from PIL import Image
 Image.MAX_IMAGE_PIXELS = None
 import subprocess
 
-SRC = '/home/z/my-project/minhaj/content/textbooks-src/hadith-5-ibtidai_text.pdf'
-OUT = '/home/z/my-project/minhaj/scripts-ia2/tmp/h5-07/plates'
+SRC = '/home/z/my-project/content/textbooks-src/hadith-5-ibtidai_text.pdf'
+OUT = '/home/z/my-project/scripts-ia2/tmp/h5-07/plates'
 
 png = f'{OUT}/p48-900.png'
 if not os.path.exists(png):

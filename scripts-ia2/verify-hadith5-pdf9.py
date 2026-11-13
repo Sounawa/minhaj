@@ -3,8 +3,8 @@
 # Z2-10 — vérification de la livraison hadith-5ep / pdf-9 (les innovations dans la religion)
 import json, re, sys
 
-PATH = '/home/z/my-project/minhaj/content/books/hadith-5ep.json'
-HTML = '/home/z/my-project/minhaj/scripts-ia2/livraisons/hadith-5ep/pdf-9.html'
+PATH = '/home/z/my-project/content/books/hadith-5ep.json'
+HTML = '/home/z/my-project/scripts-ia2/livraisons/hadith-5ep/pdf-9.html'
 
 src = open(HTML, encoding='utf-8').read()
 book = json.load(open(PATH, encoding='utf-8'))

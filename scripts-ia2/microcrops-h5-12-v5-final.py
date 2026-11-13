@@ -4,7 +4,7 @@
 from PIL import Image, ImageDraw
 import os
 
-BASE = '/home/z/my-project/minhaj/scripts-ia2/tmp/h5-12'
+BASE = '/home/z/my-project/scripts-ia2/tmp/h5-12'
 OUT = f'{BASE}/zooms/comp-P-final.png'
 
 # (page, y0, y1, x0, x1, label) — fractions de la planche 150 dpi

@@ -6,8 +6,8 @@
 import subprocess, os
 from PIL import Image
 
-SRC = '/home/z/my-project/minhaj/content/textbooks-src/hadith-5-ibtidai_text.pdf'
-OUT = '/home/z/my-project/minhaj/scripts-ia2/tmp/h5-10'
+SRC = '/home/z/my-project/content/textbooks-src/hadith-5-ibtidai_text.pdf'
+OUT = '/home/z/my-project/scripts-ia2/tmp/h5-10'
 os.makedirs(OUT + '/plates', exist_ok=True)
 
 PAGES = (60, 61, 62, 63)

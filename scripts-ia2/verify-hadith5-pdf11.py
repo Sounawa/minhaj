@@ -3,8 +3,8 @@
 # Z2-12 — vérification de la livraison hadith-5ep / pdf-11 (la correction du cœur)
 import json, re, sys
 
-PATH = '/home/z/my-project/minhaj/content/books/hadith-5ep.json'
-HTML = '/home/z/my-project/minhaj/scripts-ia2/livraisons/hadith-5ep/pdf-11.html'
+PATH = '/home/z/my-project/content/books/hadith-5ep.json'
+HTML = '/home/z/my-project/scripts-ia2/livraisons/hadith-5ep/pdf-11.html'
 
 src = open(HTML, encoding='utf-8').read()
 book = json.load(open(PATH, encoding='utf-8'))
@@ -117,7 +117,7 @@ check('pose == source', fr == src, f'({len(fr)} vs {len(src)} car)')
 check('titleFr correct', l.get('titleFr') == 'La correction du cœur',
       f'({l.get("titleFr")!r})')
 # — cohérence série —
-reg = json.load(open('/home/z/my-project/minhaj/scripts-ia2/savant-registry-ia2.json', encoding='utf-8'))
+reg = json.load(open('/home/z/my-project/scripts-ia2/savant-registry-ia2.json', encoding='utf-8'))
 check('registre IA-2 → 11', 'hadith-5ep/pdf-11' in reg['hand'] and len(reg['hand']) == 11,
       f'({len(reg["hand"])} entrées)')
 

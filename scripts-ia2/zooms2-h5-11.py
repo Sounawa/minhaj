@@ -4,7 +4,7 @@
 import os
 from PIL import Image
 
-BASE = '/home/z/my-project/minhaj/scripts-ia2/tmp/h5-11'
+BASE = '/home/z/my-project/scripts-ia2/tmp/h5-11'
 OUT = f'{BASE}/zooms2'
 os.makedirs(OUT, exist_ok=True)
 _im = {}

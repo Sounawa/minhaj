@@ -5,8 +5,8 @@
 import subprocess, os
 from PIL import Image
 
-SRC = '/home/z/my-project/minhaj/content/textbooks-src/hadith-5-ibtidai_text.pdf'
-OUT = '/home/z/my-project/minhaj/scripts-ia2/tmp/h5-08/plates'
+SRC = '/home/z/my-project/content/textbooks-src/hadith-5-ibtidai_text.pdf'
+OUT = '/home/z/my-project/scripts-ia2/tmp/h5-08/plates'
 os.makedirs(OUT, exist_ok=True)
 
 for pg in (50, 51, 52, 53, 54, 55):

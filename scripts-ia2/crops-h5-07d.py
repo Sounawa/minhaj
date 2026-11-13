@@ -5,7 +5,7 @@ import os
 from PIL import Image
 Image.MAX_IMAGE_PIXELS = None
 
-OUT = '/home/z/my-project/minhaj/scripts-ia2/tmp/h5-07/plates'
+OUT = '/home/z/my-project/scripts-ia2/tmp/h5-07/plates'
 im = Image.open(f'{OUT}/p47-900.png')
 w, h = im.size
 # bande y 0.43-0.62 pleine largeur, coupée en 2 colonnes pour rester lisible

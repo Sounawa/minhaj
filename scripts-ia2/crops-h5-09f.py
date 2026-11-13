@@ -3,7 +3,7 @@
 # Z2-9 — zoom ×7 segments āyas استثمار (p.59)
 from PIL import Image
 
-TMP = '/home/z/my-project/minhaj/scripts-ia2/tmp/h5-09'
+TMP = '/home/z/my-project/scripts-ia2/tmp/h5-09'
 src = Image.open(f'{TMP}/plates/hi-59.png')
 
 for (x1, y1, x2, y2, name, fac) in [

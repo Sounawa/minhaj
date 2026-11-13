@@ -1,7 +1,7 @@
 #!/bin/bash
 # Z2-8 — hadith-5ep leçon pdf-8 (القضاء والقدر) — lectures VLM pages 50-55 via CLI z-ai
 set -u
-DIR=/home/z/my-project/minhaj/scripts-ia2/tmp/h5-08
+DIR=/home/z/my-project/scripts-ia2/tmp/h5-08
 
 PROMPT() {
 cat <<'EOF'

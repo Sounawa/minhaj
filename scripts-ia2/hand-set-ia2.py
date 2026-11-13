@@ -6,7 +6,7 @@
 # écriture atomique (tmp + os.replace), inscription registre « hand ».
 import json, os, sys, time
 
-HOME = "/home/z/my-project/minhaj"  # chemin poste IA-2 (session web-db9f75eb, Z2-7)
+HOME = "/home/z/my-project"  # chemin poste IA-2 (session web-db9f75eb, Z2-7)
 REGISTRY = f"{HOME}/scripts-ia2/savant-registry-ia2.json"
 LOCK = REGISTRY + ".lock"
 

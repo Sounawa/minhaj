@@ -4,7 +4,7 @@
 import os
 from PIL import Image
 
-TMP = '/home/z/my-project/minhaj/scripts-ia2/tmp/h5-09'
+TMP = '/home/z/my-project/scripts-ia2/tmp/h5-09'
 OUT = f'{TMP}/crops'
 os.makedirs(OUT, exist_ok=True)
 

@@ -3,7 +3,7 @@
 import ZAI from '/home/z/node_modules/z-ai-web-dev-sdk/dist/index.js';
 import fs from 'fs';
 
-const DIR = '/home/z/my-project/minhaj/scripts-ia2/tmp/h5-07';
+const DIR = '/home/z/my-project/scripts-ia2/tmp/h5-07';
 const pages = ['047', '048', '049', '050'];
 
 const ask = (p) => `Page ${p} d'un manuel scolaire marocain d'hadith (arabe, sens de lecture droite→gauche), 5ᵉ année primaire. Il s'agit de la leçon de consolidation « دعم وتطبيق » (dʿm wa-taṭbīq — renforcement et application), qui récapitule les hadiths des leçons précédentes : الأعمال بالنيات (les actes valent aux intentions), الإسلام والإيمان والأحسان (islām, īmān, iḥsān — le hadīth de Jibrīl), أركان الإسلام (les cinq piliers), أطوار خلق الإنسان (les phases de la création).
