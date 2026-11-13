@@ -236,3 +236,22 @@ Stage Summary:
 - LIVRÉ : site Minhāj remis en service (fix pipeline-status + entrée de boot permanente) — QA navigateur home/livre/intro PASS.
 - Prépa leçon 9 hadith-5ep commitée (rendus+planches+textlayer+4 VLM) — PROCHAIN TICK : lectures directes des planches (adjudication), rédaction pdf-9.html, QA, pose, commit.
 - Prochaine priorité : slot pdf-9 (leçon 9 — الإحداث والابتداع في الدين, pp. 56-59) ; git fetch 0/0 avant production ; PARALLÈLE : 1.
+
+Task ID: Z2-10
+Agent: IA-2 (Z.ai, session web-db9f75eb, trace 1a1d4b9b8e9e6655, tick 2026-11-13)
+Task: leçon 9 hadith-5ep « الإحداثُ والابتداعُ في الدِّينِ » (pdf-9, pp. 56-59) — planches → adjudication → rédaction → QA → pose.
+
+Work Log:
+- ADJUDICATION (planches 300 dpi p56-59 lues en direct + couche pdftotext + 4 VLM) : (1) NUMÉROTATION récusée/VLM corrigée — trois rubriques ثَانِيًا: مَا لَا يَدْخُلُ فِي الْبِدْعَة (p58A) et ثَالِثًا: شُرُوطُ الْعَمَلِ الْقَبُول (p58B) ; VLM « ثالثاً/رابعاً » et « شروط العمل الصالح » récusés ; (2) « لَا يَنْفَعُ صَاحِبَهُ إِلَّا إِذَا اجْتَمَعَ فِيهِ شَرْطَانِ » (VLM لا يَقْبَلُ صاحبُهُ récusé, crop la-yuqbal-sahibih) ; (3) p57 : « لَا يُقْبَلُ مِنْهَا شَرْعًا وَلَا يَكُونُ عَلَيْهَا ثَوَابٌ » (VLM لا يُقتدى بها récusé) ; réf. [الاعتسام] confirmée au zoom ; (4) tarǧama : « رَوَتْ لِأُمَّةِ الْإِسْلَامِ عِلْمًا كَثِيرًا وَفَقْهًا غَزِيرًا » reconstitué (VLM « لأُمَّةِ عَلَمًا » illisible), تُوُفِّيَتْ سنةَ سبعٍ وخمسينَ أو ثمانٍ وخمسينَ pour l'Hégire ; (5) المعجم (zoom ×2 p59B) : فَخُذُوهُ - مُخْتَلَعَةً - صَالِحًا - تَرْضِيهِ (lectures VLM غيبير/غايلس récusées — فَخُذُوهُ vient de l'āya 1) ; (6) الإعداد القبلي : النُّعْمَانَ بْنَ بَشِيرٍ + الْمُشْتَبِهَاتِ confirmés planche p59B (VLM عثمان بن عفان/المشتركات récusés ; cohérent avec le hadīth 6 « الْحَلَالُ بَيِّنٌ... »).
+- INCERTITUDES CONSIGNÉES (R511, conservées telles imprimées) : (1) réf. [الْأَنْعَامُ: 154] imprimée pour ﴿وَأَنَّ هَٰذَا صِرَاطِي مُسْتَقِيمًا...لَعَلَّكُمْ تَتَّقُونَ﴾ (canoniquement al-Anʿām 153) — décalage consigné ; (2) réf. [البينة: 5] imprimée pour ﴿وَمَا آتَاكُمُ الرَّسُولُ فَخُذُوهُ وَمَا نَهَاكُمْ عَنْهُ فَانْتَهُوا﴾ (canoniquement al-Ḥašr 7) ; (3) réf. [النمل: 19] imprimée pour ﴿وَأَنِ اعْمَلُوا فَسَيَرَى اللهُ عَمَلَكُمْ وَرَسُولُهُ وَالْمُؤْمِنُونَ﴾ (canoniquement aṭ-Ṭawba 105, et نصّ imprimé « وَأَنِ » au lieu de « وَقُلِ ») — FR neutre « Et agissez ».
+- RÉDACTION : scripts-ia2/livraisons/hadith-5ep/pdf-9.html (10 152 car) — 10 h2 / 5 h3 ; hadīth traduit avec la phraséologie de la leçon 8 (mêmes conventions) ; « cela en sera rejeté » pour فهو ردّ (conservé tel imprimé, sans « il en sera rétribué ») ; normalisation ʿ/ʾ → ' (U+2019) ; NNBSP typographique auto-fix.
+- QA : scripts-translate/qa-lesson.py PASS (auto-fix NNBSP) — 10 152 car, 0 arabe hors spans, 15 guillemets appariés, balises appariées, 0 apostrophe droite.
+- POSE : hand-set-ia2.py hadith-5ep pdf-9 → 1 emplacement, 10 152 car, registre IA-2 mis à jour ; titleFr pré-existant « Les innovations (bidʿa) dans la religion » conservé tel quel (garde) ; posé == source : True.
+- FIX REGISTRE : réinscription de hadith-5ep/pdf-8 (entrée perdue entre la pose Z2-8 et le commit 48a738f) → registre IA-2 : 9 entrées (pdf-1…pdf-9).
+- VERIF : verify-hadith5-pdf9.py — 105 contrôles OK / 0 échec (matière adjudiquée complète, 4 récusions VLM consignées en contrôles négatifs, garde-doublon, titleFr inchangé).
+- Sync git : fetch 0/0 avant pose (origin/main = main = 73e1103) ; commit + push immédiat (règle de vague).
+
+Stage Summary:
+- LIVRÉ : leçon 9 hadith-5ep « Les innovations (bidʿa) dans la religion » (pdf-9, pp. 56-59, 10 152 car, registre IA-2 → 9) — hadith-5ep : 9/29 leçons FR.
+- SITE : boot permanent .zscripts/dev.sh (Z2-9a) opérationnel — serveur relancé à la main (HTTP 200) ; la remise en service durable pour l'utilisateur passe par le rechargement du preview / nouveau boot sandbox.
+- Prochaine priorité : leçon 10 hadith-5ep (hadīth 6 des Arbaʿūn — النعمان بن بشير « الْحَلَالُ بَيِّنٌ وَالْحَرَامُ بَيِّنٌ », ~pp. 60+) ; الإعداد القبلي déjà posé dans pdf-9 ; git fetch 0/0 avant production ; PARALLÈLE : 1.
