@@ -61,11 +61,19 @@ def main() -> None:
     with open(path, "r", encoding="utf-8") as fh:
         html = fh.read()
 
-    # découpe balises / nœuds texte, auto-fix des nœuds texte
-    parts = re.split(r"(<[^>]+>)", html)
+    # découpe balises / nœuds texte, auto-fix des nœuds texte.
+    # R692 (414) : les spans RTL (arabe du tirage) sont exemptés du fix —
+    # la typographie française (NNBSP avant ;) ne doit pas altérer la
+    # ponctuation collée du tirage arabe (précédent corpus : 0 NNBSP+ponct
+    # dans les spans de 410/412/413).
+    AR_SPAN = re.compile(r'(<span dir="rtl" lang="ar">[^<]*</span>)')
     fixed = []
-    for p in parts:
-        fixed.append(fix_text(p) if not p.startswith("<") else p)
+    for seg in AR_SPAN.split(html):
+        if seg.startswith('<span dir="rtl" lang="ar">'):
+            fixed.append(seg)
+            continue
+        for p in re.split(r"(<[^>]+>)", seg):
+            fixed.append(fix_text(p) if not p.startswith("<") else p)
     out = "".join(fixed)
     if out != html:
         with open(path, "w", encoding="utf-8") as fh:
