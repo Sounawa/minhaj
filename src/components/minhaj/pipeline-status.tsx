@@ -153,7 +153,7 @@ export function PipelineStatus() {
               <Activity className="mt-0.5 size-3.5 shrink-0 text-primary" aria-hidden="true" />
               <span>
                 Superviseur {data.version} démarré {data.startedAt ? `le ${data.startedAt.replace("T", " ").replace("Z", " UTC")}` : "—"}
-                {data.cycles !== null ? ` · ${data.cycles.toLocaleString("fr-FR")} cycles` : ""}
+                {typeof data.cycles === "number" ? ` · ${data.cycles.toLocaleString("fr-FR")} cycles` : ""}
                 {data.wakeCount ? ` · ${data.wakeCount} réveil${data.wakeCount > 1 ? "s" : ""} après gel` : ""}
                 {typeof data.remainingDocs === "number" && (
                   <>

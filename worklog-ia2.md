@@ -217,3 +217,22 @@ Stage Summary:
 - LIVRÉ : leçon 8 hadith-5ep « Le décret et la prédestination (qaḍāʾ et qadar) » (pdf-8, pp. 50-55, 13 067 car, registre IA-2 → 8) — hadith-5ep 8/29.
 - MÉTHODE : pipeline VLM déplacé sur le CLI `z-ai vision` (SDK absent après recyclage) — même garantie de sortie ; 3 nouvelles hallucinations VLM documentées, la règle « toute āya/rubrique → vérification planche + couche » se confirme systématique.
 - Prochaine priorité : slot pdf-9 (leçon 9 — الإحداث والابتداع في الدين, hadith de ʿĀʾiša « مَنْ أَحْدَثَ فِي أَمْرِنَا هَذَا مَا لَيْسَ مِنْهُ فَهُوَ رَدٌّ », pp. 56+ ; bornage p.56 déjà lu) ; git fetch 0/0 avant production ; PARALLÈLE : 1.
+
+---
+Task ID: Z2-9a
+Agent: IA-2 (Z.ai, session web-db9f75eb, trace 1a1d4a421a2530e9, tick 2026-11-13)
+Task: REMISE EN SERVICE DU SITE (question utilisateur : « je n'ai pas accès au site, j'ai accès uniquement à la data, avant je le voyais dans le preview ») + préparation leçon 9 hadith-5ep.
+
+Work Log:
+- DIAGNOSTIC : sandbox recyclée → serveur dev tué ; ET cause racine : le dépôt vit dans /home/z/my-project/minhaj/ mais /start.sh (boot plateforme) ne lance `bun run dev` que si package.json ou .zscripts/dev.sh existe À LA RACINE /home/z/my-project/ → plus rien ne démarrait au boot depuis le reclonage.
+- FIX PERMANENT : créé /home/z/my-project/.zscripts/dev.sh (hors dépôt, persisté par la synchro plateforme) : cd minhaj → garantit .env (DATABASE_URL=minhaj/db/custom.db) → bun install si node_modules absent → prisma generate → exec bun run dev ; + /home/z/my-project/package.json délégateur en fallback (dev/db:push→generate, PAS de db:push --accept-data-loss au boot).
+- FIX BUG RÉEL : src/components/minhaj/pipeline-status.tsx:156 — « Cannot read properties of undefined (reading 'toLocaleString') » : l'API /api/pipeline-status renvoie {alive:false,...} SANS champ cycles quand le superviseur n'a jamais battu ; garde `data.cycles !== null` récusée → `typeof data.cycles === "number"` (aligné sur remainingDocs). QA navigateur post-fix : 0 erreur.
+- QA NAVIGATEUR COMPLÈTE (agent-browser) : home rendue (héros, chantier « Les 41 livres achevés », avancement par matière, 64 boutons livres 4ᵉ primaire→2ᵉ lycée) ; page livre hadith-1ep (titre, « Leçons (31) », filtre, intro savante bilingue) ; introduction du manuel : 37 segments arabes + FR rendus, badges savante+bilingue, capture /tmp/qa-r82-home.png + /tmp/qa-r82-intro.png. Routage hash-SPA (#/livre/…).
+- LIMITATION CONSTATÉE : les process lancés à la main meurent entre deux appels outil (recyclage) — le serveur ne survit pas à la fin de tour ; la remise en service DURABLE se fera au PROCHAIN boot sandbox via .zscripts/dev.sh (testé en simulant le flux : HTTP 200 + titre « Minhāj — Taʿlīm ʿatīq »). Réponse utilisateur : recharger le preview ; si 502, renvoyer un message (nouveau boot → site auto).
+- PRÉPA LEÇON 9 (déjà amorcée au tick précédent, commitée maintenant) : scripts-ia2/prep-h5-09.py + crops-h5-09[a-f].py + vlm-h5-09-pages.sh ; rendus 150 dpi p56-59 + 12 planches + textlayer-56-59.txt + 4 lectures VLM (vlm-p-056..059.json) dans scripts-ia2/tmp/h5-09/ ; VLM p56 : « الدرس 9: الإحداثُ والابتداعُ في الدِّينِ » + أهداف الدرس confirmés.
+- Sync git : fetch 0/0 avant commit ; commit + push immédiat (règle de vague).
+
+Stage Summary:
+- LIVRÉ : site Minhāj remis en service (fix pipeline-status + entrée de boot permanente) — QA navigateur home/livre/intro PASS.
+- Prépa leçon 9 hadith-5ep commitée (rendus+planches+textlayer+4 VLM) — PROCHAIN TICK : lectures directes des planches (adjudication), rédaction pdf-9.html, QA, pose, commit.
+- Prochaine priorité : slot pdf-9 (leçon 9 — الإحداث والابتداع في الدين, pp. 56-59) ; git fetch 0/0 avant production ; PARALLÈLE : 1.
