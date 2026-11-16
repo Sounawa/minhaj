@@ -41,141 +41,295 @@ from xml.sax.saxutils import escape as xescape
 # Constantes de mise en page
 # ---------------------------------------------------------------------------
 
-CSS = r""":root{
---fond:#f7f1e4;--carte:#fffdf8;--carte2:#f1ead6;
---encre:#33291a;--encre2:#6d5f4b;--gris:#7d6f57;
---ocre:#a3671c;--ocre-f:#8a5616;--ocre-p:#f1d9a0;
---olive:#5d6b2f;--olive-f:#49541f;
---ligne:#e3d6bc;--ligne2:#d2c29c;
---naskh:"Noto Naskh Arabic","Amiri","Scheherazade New","Geeza Pro","Traditional Arabic",serif;
+CSS = r"""/* ============================================================
+   Minhaj — المنهاج النموذجي للتعليم العتيق
+   Thème « manuscrit d’automne » : parchemin, olive profond,
+   terre brûlée, or vieilli. CSS pur, aucune dépendance locale.
+   ============================================================ */
+:root{
+  --fond:#f3ebd8;
+  --fond-2:#eaddc1;
+  --carte:#fffdf6;
+  --carte-2:#f9f3e2;
+  --encre:#2c2314;
+  --encre-2:#5f5140;
+  --gris:#75664e;
+  --terracotta:#a8511b;
+  --terracotta-f:#8c4212;
+  --or:#b98a2e;
+  --or-f:#8f6a1e;
+  --or-p:#ecd9a8;
+  --olive:#5b6a2c;
+  --olive-f:#3c4818;
+  --olive-nuit:#333e14;
+  --ligne:#e0d2b2;
+  --ligne-2:#c9b98f;
+  --naskh:"Noto Naskh Arabic","Amiri","Scheherazade New","Geeza Pro","Traditional Arabic",serif;
+  --amiri:"Amiri","Noto Naskh Arabic","Scheherazade New","Traditional Arabic",serif;
+  --serif:Georgia,"Iowan Old Style","Palatino Linotype","Times New Roman",serif;
 }
+/* Couleur d’accent par matière (automne : olives, terres, bronzes) */
+[data-sujet="tawhid"]{--sujet:#4c5d1f}
+[data-sujet="fiqh"]{--sujet:#7a5418}
+[data-sujet="sira"]{--sujet:#9c4a12}
+[data-sujet="tajwid"]{--sujet:#8a6a14}
+[data-sujet="tafsir"]{--sujet:#57641d}
+[data-sujet="hadith"]{--sujet:#8c4a2a}
+[data-sujet="faraid"]{--sujet:#9c5c14}
+[data-sujet="usul-fiqh"]{--sujet:#5c5218}
+[data-sujet="mantiq"]{--sujet:#41564f}
+[data-sujet="ulum-hadith"]{--sujet:#7c3f16}
+[data-sujet="ulum-quran"]{--sujet:#4e6118}
+[data-sujet="qiraat"]{--sujet:#8f5c18}
+[data-sujet="rasm-wa-dabt"]{--sujet:#3f5b47}
+[data-sujet="taqtit"]{--sujet:#6e5c20}
+[data-sujet="fikr-islami"]{--sujet:#833c12}
+[data-sujet="usul-qiyam"]{--sujet:#55642b}
+[data-sujet="nahu"]{--sujet:#6b3a20}
+[data-sujet="balagha"]{--sujet:#714a12}
+[data-sujet="adab"]{--sujet:#54491a}
+[data-sujet=""]{--sujet:#5c5218}
+
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--fond);color:var(--encre);font:17px/1.8 Georgia,"Times New Roman",serif}
-a{color:var(--ocre-f);text-decoration:none}
-a:hover{text-decoration:underline;color:var(--ocre)}
-:focus-visible{outline:3px solid var(--ocre);outline-offset:2px}
-.en-tete{background:var(--olive-f);color:#f6f0e2;border-bottom:4px solid var(--ocre)}
-.en-tete .interieur{max-width:1080px;margin:0 auto;padding:13px 20px;display:flex;flex-wrap:wrap;gap:4px 18px;align-items:baseline}
-.en-tete .marque{font-size:1rem;font-weight:bold}
-.en-tete .marque a{color:#f6f0e2}
-.en-tete .marque .arabe{font-family:var(--naskh);font-size:1.35rem;line-height:1.4}
-.en-tete .sous-marque{font-size:.85rem;color:#e4dbc2}
-.en-tete .liens{margin-inline-start:auto;font-size:.85rem}
-.en-tete .liens a{color:#ecdfc0}
-main{max-width:1080px;margin:0 auto;padding:26px 20px 46px}
-main.lecture{max-width:900px}
-.pied{border-top:1px solid var(--ligne);color:var(--gris);font-size:.83rem;text-align:center;padding:18px 20px 34px;max-width:1080px;margin:0 auto}
-.pied a{color:var(--ocre-f)}
+body{margin:0;background:var(--fond);color:var(--encre);font:17px/1.75 var(--serif)}
+::selection{background:var(--or-p);color:var(--encre)}
+a{color:var(--terracotta-f);text-decoration:none}
+a:hover{text-decoration:underline;color:var(--terracotta)}
+:focus-visible{outline:3px solid var(--or);outline-offset:2px;border-radius:3px}
 .hors-ecran{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
-/* accueil */
-.heros{text-align:center;margin:0 auto 26px;max-width:780px}
-.heros .surline{color:var(--ocre);letter-spacing:.05em;text-transform:uppercase;font-size:.8rem;margin:0 0 8px}
-.heros h1{margin:.1em 0 .35em;font-size:1.5rem;line-height:1.6}
-.heros h1 .arabe{font-family:var(--naskh);font-size:1.75rem;color:var(--olive-f)}
-.heros .sous{color:var(--encre2);margin:.2em 0}
-.prog{max-width:520px;margin:20px auto 0}
-.barre{height:12px;background:#ece2c8;border:1px solid var(--ligne2);border-radius:7px;overflow:hidden}
-.barre span{display:block;height:100%;background:var(--olive)}
-.compte{font-size:.92rem;color:var(--encre2);margin:9px 0 0}
-.compte strong{color:var(--encre);font-size:1.05rem}
-/* recherche */
-.recherche{max-width:780px;margin:0 auto 32px}
-.recherche input{width:100%;font:inherit;padding:11px 16px;border:1px solid var(--ligne2);border-radius:10px;background:var(--carte);color:var(--encre)}
-.recherche input:focus{border-color:var(--ocre);outline:2px solid var(--ocre-p)}
-.statut{color:var(--gris);font-size:.85rem;margin:6px 2px}
-.resultats{margin-top:14px}
-.resultats ol{list-style:none;margin:0;padding:0}
-.resultats li{background:var(--carte);border:1px solid var(--ligne);border-radius:10px;padding:10px 14px;margin-bottom:8px}
-.resultats li.r-livre{border-inline-start:4px solid var(--olive)}
-.resultats .r-titre{font-weight:bold}
-.resultats .r-titre a{display:block}
-.resultats .r-livre-n{color:var(--gris);font-size:.82rem;margin-inline-start:8px}
-.resultats .r-extrait{margin:6px 0 0;font-size:.92rem;color:var(--encre2);line-height:1.95}
-.resultats .r-extrait mark{background:var(--ocre-p);color:var(--encre);padding:0 2px;border-radius:3px}
-.resultats .r-compte{color:var(--gris);font-size:.85rem;margin:2px 4px 10px}
-/* grille des livres */
-.grille{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:14px}
-.carte{display:block;background:var(--carte);border:1px solid var(--ligne);border-radius:12px;padding:14px 16px;color:inherit;border-top:4px solid var(--ocre)}
-.carte:hover{text-decoration:none;box-shadow:0 3px 12px rgba(60,45,20,.13);transform:translateY(-1px);color:inherit}
-.carte.fait{border-top-color:var(--olive)}
-.carte .eta{font-size:.76rem;color:var(--gris);letter-spacing:.03em;margin:0 0 6px}
-.carte .eta b{color:var(--olive-f);font-weight:600}
-.carte .t-ar{font-family:var(--naskh);font-size:1.28rem;line-height:1.9;display:block;margin:2px 0}
-.carte .t-fr{display:block;font-size:.95rem;line-height:1.5;color:var(--encre2)}
-.carte .compte{font-size:.85rem;margin:8px 0 0;padding-top:8px;border-top:1px dashed var(--ligne)}
-/* fil d'Ariane */
-.fil{font-size:.88rem;color:var(--gris);margin:0 0 18px}
+
+/* ---------- en-tête ---------- */
+.en-tete{background:linear-gradient(180deg,#46541f,#333e14 82%);color:#f2ecd9;border-bottom:1px solid #222b0c}
+.en-tete::after{content:"";display:block;height:5px;
+  background:repeating-linear-gradient(90deg,#b98a2e 0 16px,#7d6118 16px 19px,#55672a 19px 34px,#7d6118 34px 37px)}
+.en-tete .interieur{max-width:1120px;margin:0 auto;padding:12px 22px;display:flex;flex-wrap:wrap;gap:2px 22px;align-items:center}
+.en-tete .marque a{display:inline-flex;flex-direction:column;gap:1px}
+.en-tete .marque .arabe{font-family:var(--amiri);font-size:1.5rem;line-height:1.5;color:#f3e6c3}
+.en-tete .marque .sous-marque{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#c9bd97}
+.en-tete .liens{margin-inline-start:auto;display:flex;gap:18px;font-size:.85rem;letter-spacing:.02em}
+.en-tete .liens a{color:#e6d9ae}
+.en-tete .liens a:hover{color:#fff3d0}
+
+/* ---------- corps ---------- */
+main{max-width:1120px;margin:0 auto;padding:26px 22px 40px}
+main.lecture{max-width:940px}
+.fil{font-size:.8rem;letter-spacing:.05em;text-transform:uppercase;color:var(--gris);margin:2px 0 20px}
 .fil a{color:var(--olive-f)}
-.fil .sep{margin:0 7px;color:var(--ligne2)}
-/* sommaire de livre */
-.livre-tete{max-width:780px;margin:0 auto 24px;text-align:center}
-.livre-tete h1{margin:.05em 0;font-size:1.35rem}
-.livre-tete h1 .arabe{font-family:var(--naskh);font-size:1.7rem;line-height:1.9;color:var(--olive-f)}
-.livre-tete .t-fr{color:var(--encre2);margin:.15em 0}
-.livre-tete .meta{font-size:.85rem;color:var(--gris);margin:.3em 0 0}
-.lecons{list-style:none;margin:0 auto;max-width:780px;padding:0}
+.fil .sep{margin:0 9px;color:var(--or)}
+
+/* ---------- héros (pleine page, accueil) ---------- */
+.heros.pleine{background:
+  radial-gradient(1100px 420px at 50% -60px,rgba(185,138,46,.16),transparent 62%),
+  linear-gradient(180deg,#f7f0dd,var(--fond));
+  text-align:center;padding:44px 22px 36px;border-bottom:1px solid var(--ligne-2)}
+.heros.pleine .surline{color:var(--terracotta-f);letter-spacing:.13em;text-transform:uppercase;font-size:.74rem;font-weight:600;margin:0}
+.heros h1{margin:.35em 0 .1em}
+.heros h1 .arabe{font-family:var(--amiri);font-weight:700;font-size:clamp(2.4rem,6vw,3.5rem);line-height:1.75;color:var(--olive-f);display:block}
+.heros .sous{color:var(--encre-2);max-width:720px;margin:.4em auto .2em;font-size:1.03rem}
+/* variante en panneau (hors-ligne, 404) */
+main .heros{max-width:840px;margin:6px auto 26px;text-align:center;background:var(--carte);border:1px solid var(--ligne);border-radius:16px;padding:32px 26px 28px}
+main .heros .surline{color:var(--terracotta-f);letter-spacing:.13em;text-transform:uppercase;font-size:.74rem;font-weight:600;margin:0}
+main .heros h1 .arabe{font-family:var(--amiri);font-weight:700;font-size:2.2rem;line-height:1.8;color:var(--olive-f);display:block}
+main .heros .sous{color:var(--encre-2);max-width:680px;margin:.4em auto .2em}
+
+/* ornement : filets + trois losanges */
+.ornement{display:flex;align-items:center;gap:9px;max-width:400px;margin:16px auto 6px}
+.ornement span{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--or))}
+.ornement span:last-child{background:linear-gradient(90deg,var(--or),transparent)}
+.ornement i{width:5px;height:5px;background:var(--or);transform:rotate(45deg);flex:none}
+.ornement i:first-of-type{width:7px;height:7px}
+
+/* statistiques */
+.stats{display:flex;max-width:640px;margin:24px auto 4px;border:1px solid var(--ligne-2);border-radius:14px;background:rgba(255,253,246,.8);box-shadow:0 2px 12px -6px rgba(90,70,30,.25)}
+.stat{flex:1;padding:13px 8px 11px;border-inline-end:1px solid var(--ligne)}
+.stat:last-child{border-inline-end:0}
+.stat b{display:block;font-size:1.55rem;line-height:1.2;color:var(--olive-f);font-variant-numeric:tabular-nums}
+.stat span{font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;color:var(--gris)}
+
+/* progression */
+.prog{max-width:520px;margin:18px auto 0}
+.barre{height:9px;background:var(--fond-2);border:1px solid var(--ligne-2);border-radius:99px;overflow:hidden}
+.barre span{display:block;height:100%;background:linear-gradient(90deg,var(--olive-f),#7d8c3e);border-radius:99px}
+.compte{font-size:.92rem;color:var(--encre-2);margin:9px 0 0}
+.compte strong{color:var(--encre);font-size:1.06rem}
+
+/* ---------- recherche ---------- */
+.recherche{position:relative;max-width:660px;margin:26px auto 8px}
+.recherche input{width:100%;font:inherit;padding:13px 20px 13px 46px;border:1px solid var(--ligne-2);border-radius:14px;background:var(--carte);color:var(--encre);box-shadow:0 3px 14px -8px rgba(90,70,30,.35)}
+.recherche input::placeholder{color:var(--gris);font-style:italic}
+.recherche input:focus{border-color:var(--or);outline:2px solid var(--or-p)}
+.recherche input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Ccircle cx='8.5' cy='8.5' r='5.5' fill='none' stroke='%23b98a2e' stroke-width='2'/%3E%3Cline x1='13' y1='13' x2='18' y2='18' stroke='%23b98a2e' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:15px 50%;background-size:19px}
+.statut{color:var(--gris);font-size:.85rem;margin:8px 4px}
+.resultats{margin-top:12px}
+.resultats ol{list-style:none;margin:8px 0 0;padding:0}
+.resultats li{background:var(--carte);border:1px solid var(--ligne);border-radius:12px;padding:12px 16px;margin-bottom:9px;box-shadow:0 2px 8px -6px rgba(90,70,30,.3)}
+.resultats li.r-livre{border-inline-start:4px solid var(--olive)}
+.resultats li.r-lecon{border-inline-start:4px solid var(--or)}
+.resultats .r-titre{font-weight:700}
+.resultats .r-titre a{display:inline}
+.resultats .r-livre-n{color:var(--gris);font-size:.8rem;margin-inline-start:9px;letter-spacing:.04em}
+.resultats .r-extrait{margin:7px 0 0;font-size:.93rem;color:var(--encre-2);line-height:2}
+.resultats .r-extrait mark{background:var(--or-p);color:var(--encre);padding:0 3px;border-radius:3px}
+.resultats .r-compte{color:var(--gris);font-size:.85rem;margin:10px 4px}
+
+/* ---------- bibliothèque : sections par matière ---------- */
+.sujet-titre{display:flex;align-items:center;gap:13px;margin:36px 2px 16px;font-size:1rem;font-weight:400}
+.sujet-titre::before{content:"";width:10px;height:10px;background:var(--or);transform:rotate(45deg);flex:none}
+.sujet-titre .sujet-ar{font-family:var(--amiri);font-size:1.65rem;line-height:1.4;color:var(--olive-f)}
+.sujet-titre .sujet-fr{letter-spacing:.11em;text-transform:uppercase;font-size:.8rem;font-weight:700;color:var(--encre-2)}
+.sujet-titre::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--ligne-2),transparent)}
+.sujet-titre .sujet-n{color:var(--gris);font-size:.8rem;white-space:nowrap;letter-spacing:.03em}
+
+/* grille et cartes des livres */
+.grille{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:16px}
+.carte-cadre{display:contents}
+.carte{--sujet:#5c5218;position:relative;display:flex;flex-direction:column;background:var(--carte);border:1px solid var(--ligne);border-radius:13px;padding:17px 17px 14px;color:inherit;overflow:hidden;transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
+.carte::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--sujet)}
+.carte::after{content:"";position:absolute;top:9px;inset-inline-end:9px;width:20px;height:20px;border-top:1px solid var(--or-p);border-inline-end:1px solid var(--or-p);border-start-end-radius:7px}
+.carte:hover{text-decoration:none;transform:translateY(-3px);box-shadow:0 12px 26px -14px rgba(70,50,15,.45);border-color:var(--ligne-2);color:inherit}
+.puces{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+.chip{font-size:.67rem;letter-spacing:.07em;text-transform:uppercase;font-weight:700;color:var(--encre-2);border:1px solid var(--ligne-2);border-radius:99px;padding:2.5px 10px;background:var(--carte-2);white-space:nowrap}
+.chip-sujet{color:var(--sujet,#5c5218);border-color:var(--sujet,#c9b98f);background:transparent}
+.chip-lien{cursor:pointer}
+a.chip-lien:hover{text-decoration:none;border-color:var(--or);color:var(--or-f)}
+.carte .t-ar{font-family:var(--naskh);font-size:1.4rem;line-height:2.05;text-align:center;display:block;margin:1px 0 7px;color:var(--olive-f)}
+.carte .t-fr{display:block;text-align:center;font-size:.92rem;line-height:1.55;color:var(--encre-2);flex:1}
+.carte-pied{margin-top:12px;padding-top:10px;border-top:1px dashed var(--ligne-2);display:flex;flex-direction:column;gap:8px}
+.carte .compte{font-size:.82rem;color:var(--gris);margin:0}
+.mini-barre{height:5px;border-radius:99px;background:var(--fond-2);overflow:hidden;display:block}
+.mini-barre span{display:block;height:100%;background:linear-gradient(90deg,var(--olive-f),#7d8c3e);border-radius:99px}
+.carte.a-faire .t-ar{color:var(--gris)}
+.carte.a-faire::before{opacity:.45}
+
+/* ---------- sommaire d’un livre ---------- */
+.livre-tete{max-width:780px;margin:4px auto 26px;text-align:center;background:var(--carte);border:1px solid var(--ligne-2);border-radius:16px;padding:30px 28px 24px;position:relative;box-shadow:0 3px 16px -10px rgba(90,70,30,.3)}
+.livre-tete::before{content:"";position:absolute;inset:7px;border:1px solid var(--or-p);border-radius:11px;pointer-events:none}
+.livre-tete .puces{justify-content:center;margin:0 0 12px}
+.livre-tete h1{margin:.05em 0 .05em}
+.livre-tete h1 .arabe{font-family:var(--amiri);font-weight:700;font-size:2.15rem;line-height:1.85;color:var(--olive-f);display:block}
+.livre-tete .t-fr{color:var(--encre-2);margin:.1em 0 0;font-size:1rem}
+.livre-tete .prog{margin-top:16px}
+
+/* liste des leçons */
+.lecons{list-style:none;margin:0 auto 34px;max-width:780px;padding:0;border:1px solid var(--ligne);border-radius:14px;background:var(--carte);overflow:hidden;box-shadow:0 3px 16px -12px rgba(90,70,30,.35)}
 .lecons li{border-bottom:1px solid var(--ligne)}
-.lecons li a{display:flex;flex-wrap:wrap;gap:2px 12px;align-items:baseline;padding:11px 6px}
-.lecons li a:hover{background:var(--carte);text-decoration:none}
-.badge{min-width:30px;text-align:center;background:var(--carte2);border:1px solid var(--ligne2);color:var(--encre2);border-radius:7px;font-size:.8rem;padding:1px 7px}
-.lecons .fait .badge{background:var(--olive);border-color:var(--olive);color:#f8f4e6}
-.lecons .t-ar{font-family:var(--naskh);font-size:1.18rem;line-height:1.9}
-.lecons .t-fr{color:var(--encre2);font-size:.92rem}
-.lecons li.a-faire{color:var(--gris)}
+.lecons li:last-child{border-bottom:0}
+.lecons li a,.lecons .ligne-lecon{display:flex;gap:15px;align-items:flex-start;padding:13px 20px}
+.lecons li a:hover{background:var(--carte-2);text-decoration:none}
+.badge{flex:none;min-width:33px;height:33px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:var(--fond-2);border:1px solid var(--ligne-2);color:var(--encre-2);font-size:.82rem;font-variant-numeric:tabular-nums;font-weight:700;margin-top:3px}
+.lecons .fait .badge{background:var(--olive-f);border-color:var(--olive-f);color:#f6f2df}
+.lecons .intro-l .badge{background:var(--or);border-color:var(--or);color:#fffdf6;font-size:.85rem}
+.libelles{display:flex;flex-direction:column;gap:1px;min-width:0;flex:1}
+.lecons .t-ar{font-family:var(--naskh);font-size:1.2rem;line-height:2.05;color:var(--encre)}
+.lecons .t-fr{color:var(--encre-2);font-size:.9rem;line-height:1.55}
+.lecons li.a-faire{background:repeating-linear-gradient(45deg,transparent 0 13px,rgba(160,130,60,.055) 13px 26px)}
 .lecons li.a-faire .t-ar,.lecons li.a-faire .t-fr{color:var(--gris)}
-.lecons .pdf{font-size:.78rem;color:var(--ocre-f);border:1px solid var(--ligne2);border-radius:6px;padding:1px 8px}
-.lecons li.intro-l a{color:var(--ocre-f)}
-/* contenu de leçon */
-.contenu{max-width:780px;margin:0 auto;background:var(--carte);border:1px solid var(--ligne);border-radius:14px;padding:32px 38px}
-.contenu h1{font-size:1.32rem;line-height:1.65;color:var(--ocre-f);border-bottom:2px solid var(--ocre);padding-bottom:.5em;margin:0 0 .9em}
-.contenu h2{font-size:1.16rem;color:var(--olive-f);border-bottom:1px solid var(--ligne);padding-bottom:.3em;margin:1.9em 0 .6em}
-.contenu h3{font-size:1.05rem;color:var(--olive-f);margin:1.5em 0 .4em}
-.contenu h4,.contenu h5{font-size:1rem;color:var(--encre2)}
-.contenu p{margin:.95em 0}
-.contenu ul,.contenu ol{margin:.9em 0;padding-inline-start:1.7em}
-.contenu li{margin:.32em 0}
+.lecons .pdf{flex:none;align-self:center;font-size:.74rem;letter-spacing:.04em;color:var(--or-f);border:1px solid var(--ligne-2);border-radius:99px;padding:3px 12px}
+.lecons .pdf:hover{border-color:var(--or);text-decoration:none}
+
+/* ---------- page de leçon ---------- */
+.contenu{max-width:840px;margin:0 auto;background:var(--carte);border:1px solid var(--ligne-2);border-radius:6px;padding:44px 54px 40px;position:relative;box-shadow:0 16px 36px -24px rgba(70,50,15,.45)}
+.contenu::before{content:"";position:absolute;inset:10px;border:1px solid var(--or-p);border-radius:3px;pointer-events:none}
+.contenu::after{content:"";position:absolute;top:-9px;left:50%;transform:translateX(-50%) rotate(45deg);width:13px;height:13px;background:var(--or);border:2px solid var(--fond)}
+.contenu h1{font-size:1.6rem;line-height:1.7;color:var(--olive-f);text-align:center;margin:.1em 0 .9em;padding-bottom:.6em;border-bottom:1px solid var(--ligne-2);position:relative}
+.contenu h1::after{content:"";position:absolute;bottom:-4.5px;left:50%;transform:translateX(-50%) rotate(45deg);width:9px;height:9px;background:var(--or)}
+.contenu h2{font-size:1.28rem;line-height:1.6;color:var(--olive-f);margin:2em 0 .7em;padding:0 0 .35em;padding-inline-start:26px;border-bottom:1px solid var(--ligne);position:relative}
+.contenu h2::before{content:"";position:absolute;inset-inline-start:2px;top:.55em;width:9px;height:9px;background:var(--or);transform:rotate(45deg)}
+.contenu h3{font-size:1.1rem;line-height:1.6;color:var(--terracotta-f);margin:1.6em 0 .45em}
+.contenu h4,.contenu h5,.contenu h6{font-size:1rem;color:var(--encre-2);margin:1.3em 0 .4em}
+.contenu p{margin:1em 0;line-height:1.85}
+.contenu em{font-style:italic;color:#6d4318}
+.contenu strong{color:var(--encre)}
+.contenu ul{list-style:none;margin:.9em 0;padding:0}
+.contenu ul li{margin:.45em 0;padding-inline-start:19px;position:relative}
+.contenu ul li::before{content:"";position:absolute;inset-inline-start:3px;top:.75em;width:6px;height:6px;background:var(--or);transform:rotate(45deg);opacity:.8}
+.contenu ol{margin:.9em 0;padding-inline-start:26px}
+.contenu ol li{margin:.45em 0}
+.contenu ol li::marker{color:var(--terracotta-f);font-weight:700}
 .contenu dl{margin:.9em 0}
-.contenu dt{font-weight:bold;margin-top:.7em}
+.contenu dt{font-weight:700;margin-top:.75em;color:var(--olive-f)}
 .contenu dd{margin:.15em 0 .15em 1.4em}
-.contenu blockquote{border-inline-start:3px solid var(--ocre);margin:1em 0;padding:.15em 0 .15em 1.1em;color:var(--encre2)}
-.contenu table{border-collapse:collapse;margin:1.1em 0;width:100%;font-size:.94em;line-height:1.6}
-.contenu th,.contenu td{border:1px solid var(--ligne2);padding:6px 10px;vertical-align:top}
-.contenu th{background:var(--carte2)}
+.contenu blockquote{border-inline-start:3px solid var(--or);margin:1.1em 0;padding:.2em 0 .2em 1.15em;color:var(--encre-2);font-style:italic}
+.contenu table{border-collapse:collapse;margin:1.2em 0;width:100%;font-size:.95em;line-height:1.7;background:var(--carte-2)}
+.contenu th,.contenu td{border:1px solid var(--ligne-2);padding:8px 13px;vertical-align:top}
+.contenu th{background:var(--or-p);color:var(--encre);font-weight:700}
 .contenu sup{font-size:.72em}
-.contenu [lang="ar"]{font-family:var(--naskh);font-size:1.16em;line-height:2.1}
-.contenu .intro-arabe{direction:rtl;text-align:right}
-.contenu .intro-arabe [lang="ar"]{font-size:1.3em}
-/* navigation précédent / suivant */
-.pn{display:flex;gap:10px;justify-content:space-between;align-items:stretch;max-width:780px;margin:20px auto 0}
-.pn a,.pn span.pn-vide{flex:1;background:var(--carte);border:1px solid var(--ligne);border-radius:10px;padding:10px 14px;font-size:.9rem;line-height:1.5;color:var(--ocre-f)}
-.pn a:hover{text-decoration:none;border-color:var(--ocre)}
-.pn .pn-suiv{text-align:right}
-.pn .pn-sommaire{flex:0 0 auto;background:var(--carte2);color:var(--encre2);text-align:center;min-width:120px}
-.pn .pn-vide{color:var(--gris)}
-.pn .pn-l{display:block;font-size:.75rem;color:var(--gris)}
-/* hors-ligne */
-details.lecon{background:var(--carte);border:1px solid var(--ligne);border-radius:10px;margin:10px 0}
-details.lecon summary{cursor:pointer;padding:10px 14px;display:flex;flex-wrap:wrap;gap:2px 12px;align-items:baseline;list-style:none}
+.contenu code{font-size:.9em;background:var(--carte-2);border:1px solid var(--ligne);border-radius:4px;padding:0 5px}
+.contenu [lang="ar"]{font-family:var(--naskh);font-size:1.42em;line-height:2.3;color:#24300e}
+.contenu .intro-arabe{direction:rtl;text-align:right;border:1px solid var(--ligne);border-inline-start:4px solid var(--or);border-radius:10px;background:var(--carte-2);padding:20px 24px;margin:1.3em 0}
+.contenu .intro-arabe [lang="ar"]{font-size:1.4em}
+
+/* ---------- navigation précédent / suivant ---------- */
+.pn{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:stretch;max-width:840px;margin:24px auto 0}
+.pn a,.pn .pn-vide{background:var(--carte);border:1px solid var(--ligne);border-radius:12px;padding:12px 16px;font-size:.93rem;line-height:1.6;color:var(--olive-f)}
+.pn a:hover{text-decoration:none;border-color:var(--or);box-shadow:0 6px 16px -10px rgba(120,90,30,.5)}
+.pn .pn-l{display:block;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gris);margin-bottom:3px}
+.pn .pn-suiv{text-align:end}
+.pn .pn-sommaire{background:var(--olive-f);border-color:var(--olive-f);color:#f2ecd9;text-align:center;padding:12px 20px;font-size:.9rem}
+.pn .pn-sommaire:hover{background:#47551f}
+.pn .pn-vide{color:var(--gris);border-style:dashed;background:transparent}
+
+/* ---------- hors-ligne : accordéons ---------- */
+details.lecon{background:var(--carte);border:1px solid var(--ligne);border-radius:12px;margin:10px 0;overflow:hidden}
+details.lecon summary{cursor:pointer;padding:13px 20px;display:flex;gap:15px;align-items:flex-start;list-style:none}
 details.lecon summary::-webkit-details-marker{display:none}
-details.lecon summary:before{content:"\25B8";color:var(--ocre);margin-inline-end:8px}
-details.lecon[open] summary:before{content:"\25BE"}
-details.lecon[open] summary{border-bottom:1px dashed var(--ligne)}
-details.lecon .contenu{background:none;border:none;border-radius:0;padding:16px 22px;margin:0;max-width:none}
-.section-livre{margin:36px 0}
-.section-livre>h2{font-size:1.15rem;color:var(--olive-f);border-bottom:2px solid var(--ligne2);padding-bottom:.3em}
-.section-livre>h2 .arabe{font-family:var(--naskh)}
-.section-livre .meta-l{font-size:.82rem;color:var(--gris);margin:.2em 0 10px}
-.bandeau{background:var(--ocre-p);border-bottom:2px solid var(--ocre);color:var(--encre);text-align:center;font-size:.85rem;padding:7px 14px}
-.bandeau a{color:var(--ocre-f);font-weight:bold}
-@media (max-width:640px){
-body{font-size:16px}
-.contenu{padding:20px 16px}
-.pn{flex-wrap:wrap}
-.pn .pn-sommaire{order:-1;flex:1 1 100%}
-.en-tete .liens{margin-inline-start:0}
+details.lecon summary::before{content:"";flex:none;width:9px;height:9px;background:var(--or);transform:rotate(45deg);margin-top:15px;transition:transform .15s ease}
+details.lecon[open] summary::before{transform:rotate(225deg)}
+details.lecon[open] summary{border-bottom:1px dashed var(--ligne-2);background:var(--carte-2)}
+details.lecon summary:hover{background:var(--carte-2)}
+details.lecon .contenu{background:none;border:none;border-radius:0;padding:18px 26px 22px;margin:0;max-width:none;box-shadow:none}
+details.lecon .contenu::before,details.lecon .contenu::after{display:none}
+.section-livre{margin:38px 0}
+.section-livre>h2{font-size:1.2rem;font-weight:400;color:var(--olive-f);border-bottom:2px solid var(--ligne-2);padding-bottom:.35em;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.section-livre>h2 .arabe{font-family:var(--amiri);font-size:1.7rem}
+.section-livre .meta-l{font-size:.83rem;color:var(--gris);margin:.25em 0 12px}
+
+/* ---------- bandeau (404, ancien lecteur) ---------- */
+.bandeau{background:linear-gradient(180deg,#46541f,#333e14);border-bottom:3px solid var(--or);color:#f2ecd9;text-align:center;font-size:.88rem;padding:10px 16px}
+.bandeau a{color:#f3e0b0;font-weight:700;text-decoration:underline}
+
+/* ---------- pied de page ---------- */
+.pied{background:linear-gradient(180deg,#3a4517,#2c360f);color:#cfc6a6;margin-top:44px}
+.pied::before{content:"";display:block;height:4px;
+  background:repeating-linear-gradient(90deg,#8f6a1e 0 16px,#5b6a2c 16px 34px,#8f6a1e 34px 37px)}
+.pied .interieur{max-width:1120px;margin:0 auto;padding:26px 22px 30px;text-align:center;font-size:.85rem;line-height:2}
+.pied-orn{display:flex;align-items:center;justify-content:center;gap:8px;margin:0 0 12px}
+.pied-orn i{width:5px;height:5px;background:var(--or);transform:rotate(45deg)}
+.pied-orn i:first-child{width:7px;height:7px}
+.pied-orn span{width:60px;height:1px;background:linear-gradient(90deg,transparent,#8f6a1e)}
+.pied-orn span:last-child{background:linear-gradient(90deg,#8f6a1e,transparent)}
+.pied a{color:#e6c98c}
+.pied .pied-liens span{margin:0 8px;color:#7a7355}
+
+/* ---------- impression ---------- */
+@media print{
+  .en-tete,.pied,.fil,.pn,.recherche,.bandeau,.stats{display:none}
+  .contenu{border:0;box-shadow:none;padding:0}
+  .contenu::before,.contenu::after{display:none}
+  body{background:#fff}
 }
-@media print{.en-tete,.pied,.fil,.pn,.recherche,.bandeau{display:none}.contenu{border:0;padding:0}}
+
+/* ---------- écrans étroits ---------- */
+@media (max-width:720px){
+  body{font-size:16px}
+  .en-tete .interieur{padding:10px 16px;gap:2px 14px}
+  .en-tete .marque .arabe{font-size:1.3rem}
+  .en-tete .liens{margin-inline-start:0;gap:14px}
+  main{padding:22px 14px 34px}
+  .heros.pleine{padding:34px 16px 28px}
+  .contenu{padding:26px 20px 24px}
+  .lecons li a,.lecons .ligne-lecon{padding:12px 14px;gap:11px}
+  .details-lecon-gap{display:none}
+  .pn{grid-template-columns:1fr}
+  .pn .pn-sommaire{order:-1}
+  .stats{flex-direction:column}
+  .stat{border-inline-end:0;border-bottom:1px solid var(--ligne);padding:10px 8px 8px}
+  .stat:last-child{border-bottom:0}
+  .sujet-titre{gap:9px;margin:30px 2px 12px}
+  .sujet-titre .sujet-ar{font-size:1.45rem}
+  .sujet-titre .sujet-fr{font-size:.72rem;letter-spacing:.08em}
+}
 """
 
 RECHERCHE_JS = r"""/* Moteur de recherche du Minhaj — JS pur, aucune dépendance.
@@ -452,6 +606,8 @@ def charger_livres(rep_books, manifest, avertissements):
         sujet = sujets.get(data.get('subject') or '', {})
         niveau = niveaux.get(data.get('level') or '', {})
         sujet_fr = sujet.get('titleFr') or data.get('subjectAr') or data.get('subject') or ''
+        sujet_ar = sujet.get('labelAr') or data.get('subjectAr') or ''
+        sujet_id = data.get('subject') or ''
         niveau_fr = niveau.get('shortFr') or niveau.get('labelFr') or data.get('levelAr') or ''
 
         # introduction
@@ -499,6 +655,8 @@ def charger_livres(rep_books, manifest, avertissements):
             'titleFr': (data.get('titleFr') or '').strip() or slug,
             'titleAr': (data.get('titleAr') or '').strip(),
             'sujetFr': sujet_fr,
+            'sujetAr': sujet_ar,
+            'sujetId': sujet_id,
             'niveauFr': niveau_fr,
             'pdfUrl': (data.get('pdfUrl') or '').strip(),
             'non_publie': bool(data.get('unpublished')),
@@ -531,21 +689,25 @@ def chaine_navigation(livre):
 # ---------------------------------------------------------------------------
 
 FAVICON = ("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E"
-           "%3Crect width='32' height='32' rx='7' fill='%2349541f'/%3E"
-           "%3Ctext x='16' y='23' font-size='19' text-anchor='middle' fill='%23f6f0e2' "
-           "font-family='serif'%3E%D9%85%3C/text%3E%3C/svg%3E")
+           "%3Crect width='32' height='32' rx='7' fill='%23333e14'/%3E"
+           "%3Crect x='10' y='10' width='12' height='12' fill='%23e8cf9a'/%3E"
+           "%3Crect x='10' y='10' width='12' height='12' fill='%23e8cf9a' transform='rotate(45 16 16)'/%3E"
+           "%3Ccircle cx='16' cy='16' r='2.6' fill='%23333e14'/%3E%3C/svg%3E")
 
 
 def entete(rel, programme_ar):
     return f"""<header class="en-tete"><div class="interieur">
-<span class="marque"><a href="{rel}index.html"><span class="arabe" dir="rtl" lang="ar">{programme_ar}</span></a></span>
-<span class="sous-marque">Minhaj — manuels de l’enseignement traditionnel (Maroc)</span>
-<span class="liens"><a href="{rel}hors-ligne.html">hors connexion</a> · <a href="https://github.com/Sounawa/minhaj" target="_blank" rel="noopener">dépôt GitHub</a></span>
+<span class="marque"><a href="{rel}index.html"><span class="arabe" dir="rtl" lang="ar">{programme_ar}</span><span class="sous-marque">Manuels de l’enseignement traditionnel — Maroc</span></a></span>
+<span class="liens"><a href="{rel}hors-ligne.html">Hors connexion</a><a href="https://github.com/Sounawa/minhaj" target="_blank" rel="noopener">Dépôt GitHub</a></span>
 </div></header>"""
 
 
 def pied(rel, date_fr):
-    return f"""<footer class="pied">Transcription mot à mot et traduction française du curriculum de l’enseignement traditionnel marocain — Ministère des Habous et des Affaires islamiques · site statique généré le {date_fr} · <a href="{rel}ancien-lecteur.html">ancien lecteur</a> · <a href="https://github.com/Sounawa/minhaj" target="_blank" rel="noopener">Sounawa/minhaj</a></footer>"""
+    return f"""<footer class="pied"><div class="interieur">
+<p class="pied-orn" aria-hidden="true"><span></span><i></i><i></i><i></i><span></span></p>
+<p>Transcription mot à mot et traduction française du curriculum de l’enseignement traditionnel marocain<br>Ministère des Habous et des Affaires islamiques — Royaume du Maroc</p>
+<p class="pied-liens"><a href="{rel}ancien-lecteur.html">Ancien lecteur</a><span aria-hidden="true">·</span><a href="https://github.com/Sounawa/minhaj" target="_blank" rel="noopener">Dépôt GitHub</a><span aria-hidden="true">·</span>site statique généré le {date_fr}</p>
+</div></footer>"""
 
 
 BOOTSTRAP_RECHERCHE_RACINE = r"""<script src="recherche.js"></script>
@@ -581,12 +743,12 @@ def coquille(titre, description, rel, programme_ar, date_fr, corps, scripts_html
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{titre}</title>
 <meta name="description" content="{description}">
-<meta name="theme-color" content="#49541f">
+<meta name="theme-color" content="#333e14">
 <meta name="generator" content="minhaj-build {date_fr}">
 <link rel="icon" href="{FAVICON}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{rel}assets/style.css">
 </head>
 <body>
@@ -599,21 +761,28 @@ def coquille(titre, description, rel, programme_ar, date_fr, corps, scripts_html
 """
 
 
-def html_cartes(livres, rel):
-    cartes = []
-    for b in livres:
-        n_total = len(b['lecons'])
-        n_ok = sum(1 for l in b['lecons'] if l['ok'])
-        pct = round(100 * n_ok / n_total) if n_total else 0
-        classe = 'fait' if n_ok else 'a-faire'
-        cartes.append(f"""<a class="carte {classe}" href="{rel}livres/{b['slug']}/">
-<p class="eta"><b>{esc(b['sujetFr'])}</b> · {esc(b['niveauFr'])}</p>
+def carte_livre(b, href):
+    n_total = len(b['lecons'])
+    n_ok = sum(1 for l in b['lecons'] if l['ok'])
+    pct = round(100 * n_ok / n_total) if n_total else 0
+    classe = 'fait' if n_ok else 'a-faire'
+    return f"""<span class="carte-cadre" data-sujet="{esc(b.get('sujetId') or '')}"><a class="carte {classe}" href="{href}">
+<span class="puces"><span class="chip chip-sujet">{esc(b['sujetFr'])}</span><span class="chip">{esc(b['niveauFr'])}</span></span>
 <span class="t-ar" dir="rtl" lang="ar">{esc(b['titleAr'])}</span>
 <span class="t-fr">{esc(b['titleFr'])}</span>
-<div class="barre"><span style="width:{pct}%"></span></div>
-<p class="compte">{n_ok} / {n_total} leçons transcrites</p>
-</a>""")
-    return '<section class="grille">\n' + '\n'.join(cartes) + '\n</section>'
+<span class="carte-pied"><span class="compte">{n_ok} / {n_total} leçons transcrites</span>
+<span class="mini-barre" aria-hidden="true"><span style="width:{pct}%"></span></span></span>
+</a></span>"""
+
+
+def grille_cartes(livres, hrefs):
+    return '<section class="grille">\n' + '\n'.join(
+        carte_livre(b, h) for b, h in zip(livres, hrefs)) + '\n</section>'
+
+
+def html_cartes(livres, rel):
+    hrefs = [f'{rel}livres/{b["slug"]}/' for b in livres]
+    return grille_cartes(livres, hrefs)
 
 
 def html_recherche():
@@ -633,16 +802,44 @@ def page_accueil(livres, programme, date_fr):
     nom_ar = programme.get('nameAr', 'المنهج النموذجي للتعليم العتيق')
     nom_fr = programme.get('nameFr') or 'Programme modèle de l’enseignement traditionnel'
     editeur_fr = programme.get('publisherFr') or 'Ministère des Habous et des Affaires islamiques — Royaume du Maroc'
-    corps = f"""<main>
-<section class="heros">
+
+    # groupes par matière, dans l’ordre du manifeste
+    groupes, ordre = {}, []
+    for b in livres:
+        k = b['sujetFr'] or 'Autres'
+        if k not in groupes:
+            groupes[k] = []
+            ordre.append(k)
+        groupes[k].append(b)
+    sections = []
+    for k in ordre:
+        bs = groupes[k]
+        ar = (bs[0].get('sujetAr') or '').replace('-', ' ')
+        ar_html = f'<span class="sujet-ar" dir="rtl" lang="ar">{esc(ar)}</span>' if ar else ''
+        n_m = len(bs)
+        pluriel = 's' if n_m > 1 else ''
+        sections.append(
+            f'<section class="sujet-section">\n'
+            f'<h2 class="sujet-titre">{ar_html}<span class="sujet-fr">{esc(k)}</span>'
+            f'<span class="sujet-n">{n_m} manuel{pluriel}</span></h2>\n'
+            + html_cartes(bs, '') + '\n</section>')
+
+    corps = f"""<section class="heros pleine">
 <p class="surline">{esc(nom_fr)} — {esc(editeur_fr)}</p>
 <h1><span class="arabe" dir="rtl" lang="ar">{esc(nom_ar)}</span></h1>
 <p class="sous">Collection de {len(livres)} manuels scolaires marocains d’enseignement traditionnel, transcrits mot à mot en arabe et traduits ou commentés en français, leçon par leçon.</p>
+<div class="ornement" aria-hidden="true"><span></span><i></i><i></i><i></i><span></span></div>
+<div class="stats">
+<div class="stat"><b>{len(livres)}</b><span>manuels</span></div>
+<div class="stat"><b>{n_ok}</b><span>leçons transcrites</span></div>
+<div class="stat"><b>{pct} %</b><span>du corpus</span></div>
+</div>
 <div class="prog"><div class="barre"><span style="width:{pct}%"></span></div>
-<p class="compte"><strong>{n_ok} / {n_total}</strong> leçons transcrites · {len(livres)} livres · mise à jour : {date_fr}</p></div>
+<p class="compte"><strong>{n_ok} / {n_total}</strong> leçons transcrites · mise à jour : {date_fr}</p></div>
 </section>
+<main>
 {html_recherche()}
-{html_cartes(livres, '')}
+{''.join(sections)}
 </main>"""
     return coquille(
         'Minhaj — manuels de l’enseignement traditionnel (Maroc)',
@@ -655,31 +852,34 @@ def html_liste_lecons(livre):
     if livre['intro']:
         it = livre['intro']
         ar = f'<span class="t-ar" dir="rtl" lang="ar">{esc(it["titreAr"])}</span>' if it['titreAr'] else ''
-        items.append(f"""<li class="intro-l fait"><a href="introduction.html"><span class="badge">✦</span>{ar}<span class="t-fr">{esc(it['titreFr'])}</span></a></li>""")
+        lib = f'<span class="libelles">{ar}<span class="t-fr">{esc(it["titreFr"])}</span></span>'
+        items.append(f'<li class="intro-l fait"><a href="introduction.html"><span class="badge" aria-hidden="true">✦</span>{lib}</a></li>')
     for l in livre['lecons']:
-        badge = f'<span class="badge">{l["num"]}</span>'
+        badge = f'<span class="badge" aria-hidden="true">{l["num"]}</span>'
         ar = f'<span class="t-ar" dir="rtl" lang="ar">{esc(l["titleAr"])}</span>' if l['titleAr'] else ''
         fr = f'<span class="t-fr">{esc(l["titleFr"])}</span>' if l['titleFr'] else ''
+        lib = f'<span class="libelles">{ar}{fr}</span>'
         pdf = f'<a class="pdf" href="{esc(l["pdfUrl"])}" target="_blank" rel="noopener">PDF officiel</a>' if l['pdfUrl'] else ''
         if l['ok']:
-            items.append(f'<li class="fait"><a href="{url_lecon(l["docId"])}.html">{badge}{ar}{fr}</a></li>')
+            items.append(f'<li class="fait"><a href="{url_lecon(l["docId"])}.html">{badge}{lib}</a></li>')
         else:
-            items.append(f'<li class="a-faire"><span style="display:flex;flex-wrap:wrap;gap:2px 12px;align-items:baseline;padding:11px 6px">{badge}{ar}{fr}{pdf}</span></li>')
-    return '<ol class="lecons">\n' + '\n'.join(items) + '\n</ol>'
+            items.append(f'<li class="a-faire"><span class="ligne-lecon">{badge}{lib}{pdf}</span></li>')
+    return '<ol class="lecons">\n' + '\n'.join(items) + '\n</ol>' 
 
 
 def page_sommaire_livre(livre, programme_ar, date_fr):
     n_total = len(livre['lecons'])
     n_ok = sum(1 for l in livre['lecons'] if l['ok'])
     pct = round(100 * n_ok / n_total) if n_total else 0
-    pdf_livre = (f' · <a href="{esc(livre["pdfUrl"])}" target="_blank" rel="noopener">PDF officiel du manuel</a>'
-                 if livre['pdfUrl'] else '')
+    pdf_chip = (f'<a class="chip chip-lien" href="{esc(livre["pdfUrl"])}" target="_blank" rel="noopener">PDF du manuel</a>'
+                if livre['pdfUrl'] else '')
     corps = f"""<main>
 <nav class="fil"><a href="../../index.html">Accueil</a><span class="sep">›</span><span>{esc(livre['titleFr'])}</span></nav>
-<header class="livre-tete">
+<header class="livre-tete" data-sujet="{esc(livre['sujetId'] or '')}">
+<p class="puces"><span class="chip chip-sujet">{esc(livre['sujetFr'])}</span><span class="chip">{esc(livre['niveauFr'])}</span>{pdf_chip}</p>
 <h1><span class="arabe" dir="rtl" lang="ar">{esc(livre['titleAr'])}</span></h1>
 <p class="t-fr">{esc(livre['titleFr'])}</p>
-<p class="meta">{esc(livre['sujetFr'])} · {esc(livre['niveauFr'])}{pdf_livre}</p>
+<div class="ornement" aria-hidden="true"><span></span><i></i><i></i><i></i><span></span></div>
 <div class="prog"><div class="barre"><span style="width:{pct}%"></span></div>
 <p class="compte"><strong>{n_ok} / {n_total}</strong> leçons transcrites</p></div>
 </header>
@@ -696,12 +896,14 @@ def html_pn(prec, suiv, url_sommaire):
     def bloc(el, cote):
         if el:
             rel_attr = ' rel="prev"' if cote == 'prec' else ' rel="next"'
+            fleche = '←' if cote == 'prec' else '→'
             return (f'<a class="pn-{cote}" href="{el["url"]}"{rel_attr}>'
-                    f'<span class="pn-l">{"← Précédent" if cote == "prec" else "Suivant →"}</span>{esc(el["label"])}</a>')
+                    f'<span class="pn-l">{"Précédent" if cote == "prec" else "Suivant"}</span>'
+                    f'<span class="pn-t">{fleche} {esc(el["label"])}</span></a>')
         texte = 'Début du livre' if cote == 'prec' else 'Fin des pages transcrites'
-        return f'<span class="pn-vide"><span class="pn-l">{"← Précédent" if cote == "prec" else "Suivant →"}</span>{texte}</span>'
+        return f'<span class="pn-vide"><span class="pn-l">{"Précédent" if cote == "prec" else "Suivant"}</span><span class="pn-t">{texte}</span></span>'
 
-    return (f'<nav class="pn">{bloc(prec, "prec")}'
+    return (f'<nav class="pn" aria-label="Navigation entre les leçons">{bloc(prec, "prec")}'
             f'<a class="pn-sommaire" href="{url_sommaire}">Sommaire du livre</a>'
             f'{bloc(suiv, "suiv")}</nav>')
 
@@ -753,18 +955,7 @@ def page_hors_ligne(livres, programme, css_texte, recherche_js, date_fr):
     pct = round(100 * n_ok / n_total) if n_total else 0
     nom_ar = programme.get('nameAr', 'المنهج النموذجي للتعليم العتيق')
 
-    cartes = []
-    for b in livres:
-        ok = sum(1 for l in b['lecons'] if l['ok'])
-        tot = len(b['lecons'])
-        p = round(100 * ok / tot) if tot else 0
-        cartes.append(f"""<a class="carte {'fait' if ok else 'a-faire'}" href="#livre-{b['slug']}">
-<p class="eta"><b>{esc(b['sujetFr'])}</b> · {esc(b['niveauFr'])}</p>
-<span class="t-ar" dir="rtl" lang="ar">{esc(b['titleAr'])}</span>
-<span class="t-fr">{esc(b['titleFr'])}</span>
-<div class="barre"><span style="width:{p}%"></span></div>
-<p class="compte">{ok} / {tot} leçons transcrites</p>
-</a>""")
+    cartes = [carte_livre(b, f'#livre-{b["slug"]}') for b in livres]
 
     sections = []
     for b in livres:
@@ -854,12 +1045,12 @@ ouvrirAncre();
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Minhaj — consultation hors connexion | {esc(nom_ar)}</title>
 <meta name="description" content="Variante mono-fichier du site Minhaj : tous les livres et leçons transcrites embarqués, consultable hors connexion (file://).">
-<meta name="theme-color" content="#49541f">
+<meta name="theme-color" content="#333e14">
 <meta name="generator" content="minhaj-build {date_fr}">
 <link rel="icon" href="{FAVICON}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 {css_texte}
 </style>
@@ -919,8 +1110,11 @@ if(c)c.href=pref+'index.html';
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Page introuvable — Minhaj</title>
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#49541f">
+<meta name="theme-color" content="#333e14">
 <link rel="icon" href="{FAVICON}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 {css_texte}
 </style>
@@ -929,9 +1123,11 @@ if(c)c.href=pref+'index.html';
 <div class="bandeau">Erreur 404 — cette adresse n’existe pas sur le site.</div>
 <main>
 <section class="heros">
+<p class="surline">Erreur 404</p>
 <h1><span class="arabe" dir="rtl" lang="ar">{esc(nom_ar)}</span></h1>
+<div class="ornement" aria-hidden="true"><span></span><i></i><i></i><i></i><span></span></div>
 <p class="sous">La page demandée est introuvable. Revenir à l’accueil pour retrouver les 64 livres et leurs leçons transcrites.</p>
-<p style="margin-top:18px"><a style="display:inline-block;background:var(--carte);border:1px solid var(--ligne);border-radius:10px;padding:10px 18px;color:var(--ocre-f)" id="retour" href="{base_url}">← Accueil du Minhaj</a></p>
+<p style="margin-top:20px"><a class="chip chip-lien" id="retour" href="{base_url}" style="font-size:.85rem;padding:8px 20px">← Accueil du Minhaj</a></p>
 </section>
 </main>
 <script>{script}</script>
