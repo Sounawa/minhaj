@@ -16948,3 +16948,9 @@ Stage Summary:
 - ÉTAT DU LIVRE : hadith-tanawi-3 — 5/29 posés (n-1…n-5) ; reste 24 (n-6 أحكام كراء الأرض p.49+ … لائحة p.199-200).
 - PUSH : export GH_PAT + credential.helper de session (règle de la variable exportée, jamais écrite sur disque) → POUSSÉ sur Sounawa/minhaj@main ; vérifié live (raw registre = 5 slots, slot n-5 81129 car).
 - trace 1a1d675aa095fb41-r701
+
+## R702 — Site lecteur GitHub Pages https://sounawa.github.io/minhaj/ — EN LIGNE
+- SITE : index.html statique à la racine du dépôt (sommaire avec barre d'avancement n/29 calculée sur le registre, 29 cartes de leçons — leçons posées cliquables vers le lecteur, slots à venir avec lien vers le PDF officiel habous.gov.ma ; lecteur hash-routing #/l/intro + #/l/<docId> avec navigation précédente/suivante) + .nojekyll ; variante hors-ligne JSON embarqué : download/minhaj-hors-ligne.html (double-clic, sans serveur, même gabarit).
+- PIPELINE : scripts/r702-site.py (deux variantes du même gabarit : mode fetch pour Pages, mode embarqué pour hors-ligne ; JSON re-parsé et 29 leçons vérifiées) ; rendu contrôlé dans un navigateur headless (sommaire ; lecteur leçon 5 : 9 h2, 30 p, 456 spans RTL rendus).
+- PUSH + PAGES : commit b0b8e5e (index.html + .nojekyll ; sparse-checkout désactivé au passage, racine désormais suivie) poussé sur Sounawa/minhaj@main ; GitHub Pages activé par API (POST /repos/Sounawa/minhaj/pages, source main /, HTTP 201) ; https://sounawa.github.io/minhaj/ sondé HTTP 200 et ouvert headless : 30 cartes, 5 done, 0 erreur de chargement.
+- trace 1a1d675aa095fb41-r702
