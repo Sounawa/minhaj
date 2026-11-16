@@ -16935,3 +16935,16 @@ Stage Summary:
 - ÉTAT DU LIVRE : hadith-tanawi-3 — 4/29 posés (n-1…n-4) ; reste 25 (n-5 المساقاة p.41+ … لائحة p.199-200).
 - PUSH : poussé et vérifié live (raw registre = slot n-4 62812 car).
 - trace 1a1d675aa095fb41-r700
+
+## R701 — Leçon 5 أحكام المساقاة (slot pdf-mut23h2n-5, PDF p.41-48) — LIVRÉE
+- LIVRÉ : leçon 5 hadith-tanawi-3 « Les règles de l'association à l'irrigation (musāqāt) » (slot pdf-mut23h2n-5, htmlFr 81129 car posé) — hadith-tanawi-3 : 5/29.
+- SOURCE : pp.41-48, offset PDF=imprimé=0 confirmé (pieds 41-48) ; p.48 = fin de leçon (استثمار 2283 + question الزرقاني p.48 intégrée au fil, PAS de section الأسئلة séparée ; إعداد قبلي 2 items SANS encadré de ḥadīth), leçon 6 كراء الأرض à p.49.
+- PIPELINE : couche pdftotext pp.41-48 + 8 vignettes 110 dpi + 16 bandes 300 dpi + 6 zooms serrés ×2 = 30 lectures VLM ; bande p.47-2 bouclée (hallucination consignée).
+- TITRE : médallion أحكام المساقاة + badge 5 + onglet أ ; 3 objectifs (المساقاة/الشروط/المقاصد — « مفاصد » couche consigné).
+- TEXTES : 4 textes principaux (2267 Ibn Rawāḥa/kharṣ Khaybar ; 2269 البياض ; 2276 الأصول ; 2277 الزرع) + 11 attestations intégrées (2268 ; 2278 ×2 ; 2279 ×2 + المنتقى 7/31 بتصرف ; 2284 ×2 ; 2271 ; 2273 ×2) + استثمار 2283 + ترجمة الراوي Saʿīd b. al-Musayyib (94/93هـ, ناهز 80) + الشرح 4 glosses (خيبر/يخرص/البياض/فرسك) + استخلاص 3 consignes.
+- ARBITRAGES : أُقِرْكُمْ مَا أُقِرْكُمُ الله (damme coranique vs أقركم passes) ; إِنْ شِئْتُمْ فَلْكُم (vs شَنْئَت/شَدِثْت/شَطَبْت) ; غَيْرُ جَائِزٍ (zoom net) vs غَرَمٌ جَائِرٌ (bande) + canonique لَا أَرَاهُ جَائِزًا consignée ; حَيْتَبَعَ الْأَصْل (forme convergente des 3 lectures) ; ثُمَّمَنَ ذَهَبًا وَلَا وَرِقًا بُزُّادَهُ ; الْمُتَسَاقِيَّيْنِ vs التَّسَاوِيِّينَ ; وَثَبَّعَهُ بِجُزْءٍ مِنْ رُبُعِهِ (vs شَهِه) ; عَافَاكَ الله + لِتَظَاهُرِ الْعَقْدِ (canonique لِتَأْكِيدِ consignée) ; يُحَصِّرُ vs يَحْزُر/يَحْصُر ; خَمُّ الْعَيْن (vs وَخَع/وَخُمِّ) ; سَدُّ الْحُظَارِ (vs شُدُّ الخطَار) ; وَحَدُّ الثَّمَرِ (vs وَجَدُّ/وَجَدَّ) ; يَنْبَغِي 2v1 (vs يُتَبْعَى) ; الْمُؤُنَةُ/الْبَذْرُ/أَزْرَعَ/يُسَمِّ canoniques corrigés ; يَتَفَقَّانَ عَلَيْهِ قِلْبٌ أَوْ كَثْرٌ (canonique قِلَّةً/كَثْرَةً consignée) ; badges : 2267 (z1+z2, absent couche — set non monotone), 2284 (couche « 4822 » inversé consigné), 2273 ×2 ; aبيّن/أُعَرِّفُ/الزِّيادَة مضاعفات VLM consignées.
+- FAIT-MAIN : 47 </span> orphelins de rédaction + ~40 artefacts de guillemets (») réparés en 5 itérations — réouvertures de spans arabes après badges inline (2268/2277×2/2279×2/2284/2271/2273×2), 8 closers français réinsérés, 8 doublons »)») nettoyés ; réparateur R697-R701 même génération.
+- QA DOUBLE PORTE : PASS — typo (balises équilibrées, «42/»42 appariés, zéro marqueur/placeholder, spans RTL arabophones) ; matière (9 h2, 11 numéros Muwaṭṭa : 2267, 2268, 2269, 2271, 2273, 2276, 2277, 2278, 2279, 2283, 2284 ; rubriques أهداف/تمهيد/الشرح/استخلاص المضامين/الاستثمار/التقويم/الإعداد القبلي + question الزرقاني présentes).
+- ÉTAT DU LIVRE : hadith-tanawi-3 — 5/29 posés (n-1…n-5) ; reste 24 (n-6 أحكام كراء الأرض p.49+ … لائحة p.199-200).
+- PUSH : export GH_PAT + credential.helper de session (règle de la variable exportée, jamais écrite sur disque) → POUSSÉ sur Sounawa/minhaj@main ; vérifié live (raw registre = 5 slots, slot n-5 81129 car).
+- trace 1a1d675aa095fb41-r701
