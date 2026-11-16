@@ -5,41 +5,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Minhaj — consultation hors connexion | المنهاج النموذجي للتعليم العتيق</title>
 <meta name="description" content="Variante mono-fichier du site Minhaj : tous les livres et leçons transcrites embarqués, consultable hors connexion (file://).">
-<meta name="theme-color" content="#333e14">
+<meta name="theme-color" content="#2a340c">
 <meta name="generator" content="minhaj-build 16 novembre 2026">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23333e14'/%3E%3Crect x='10' y='10' width='12' height='12' fill='%23e8cf9a'/%3E%3Crect x='10' y='10' width='12' height='12' fill='%23e8cf9a' transform='rotate(45 16 16)'/%3E%3Ccircle cx='16' cy='16' r='2.6' fill='%23333e14'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-/* ============================================================
+/* ==============================================================
    Minhaj — المنهاج النموذجي للتعليم العتيق
-   Thème « manuscrit d’automne » : parchemin, olive profond,
-   terre brûlée, or vieilli. CSS pur, aucune dépendance locale.
-   ============================================================ */
+   « Automne maghrébin — édition bibliothèque »
+   Parchemin crémeux, olive profond, terracotta, or vieilli,
+   motif zellige discret. CSS pur, aucune dépendance locale.
+   Rangement de l'accueil par cycle scolaire (primaire → lycée).
+   ============================================================== */
 :root{
-  --fond:#f3ebd8;
-  --fond-2:#eaddc1;
-  --carte:#fffdf6;
-  --carte-2:#f9f3e2;
-  --encre:#2c2314;
-  --encre-2:#5f5140;
-  --gris:#75664e;
+  --fond:#f5edda;
+  --fond-2:#eddfc2;
+  --carte:#fffcf3;
+  --carte-2:#faf3e1;
+  --encre:#2b2113;
+  --encre-2:#614f38;
+  --gris:#7c6c50;
   --terracotta:#a8511b;
   --terracotta-f:#8c4212;
   --or:#b98a2e;
-  --or-f:#8f6a1e;
-  --or-p:#ecd9a8;
+  --or-f:#8a651c;
+  --or-p:#f0dfae;
+  --or-haut:#e8cf9a;
   --olive:#5b6a2c;
   --olive-f:#3c4818;
-  --olive-nuit:#333e14;
-  --ligne:#e0d2b2;
-  --ligne-2:#c9b98f;
+  --olive-nuit:#2c360f;
+  --ligne:#e2d3b1;
+  --ligne-2:#c9b98d;
   --naskh:"Noto Naskh Arabic","Amiri","Scheherazade New","Geeza Pro","Traditional Arabic",serif;
   --amiri:"Amiri","Noto Naskh Arabic","Scheherazade New","Traditional Arabic",serif;
-  --serif:Georgia,"Iowan Old Style","Palatino Linotype","Times New Roman",serif;
+  --serif:"EB Garamond","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --motif:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='84' viewBox='0 0 84 84'%3E%3Cg fill='none' stroke='%23e8cf9a' stroke-opacity='.13'%3E%3Cpath d='M42 9 L50 34 L75 42 L50 50 L42 75 L34 50 L9 42 L34 34 Z'/%3E%3Crect x='27' y='27' width='30' height='30' transform='rotate(45 42 42)'/%3E%3Ccircle cx='42' cy='42' r='5'/%3E%3Ccircle cx='0' cy='0' r='15'/%3E%3Ccircle cx='84' cy='0' r='15'/%3E%3Ccircle cx='0' cy='84' r='15'/%3E%3Ccircle cx='84' cy='84' r='15'/%3E%3C/g%3E%3C/svg%3E");
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='.05'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
 }
-/* Couleur d’accent par matière (automne : olives, terres, bronzes) */
+/* Accent par matière (automne : olives, terres, bronzes) */
 [data-sujet="tawhid"]{--sujet:#4c5d1f}
 [data-sujet="fiqh"]{--sujet:#7a5418}
 [data-sujet="sira"]{--sujet:#9c4a12}
@@ -63,163 +68,218 @@
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--fond);color:var(--encre);font:17px/1.75 var(--serif)}
+body{
+  margin:0;color:var(--encre);
+  font:18px/1.72 var(--serif);
+  background:var(--fond);
+  background-image:var(--grain);
+}
 ::selection{background:var(--or-p);color:var(--encre)}
 a{color:var(--terracotta-f);text-decoration:none}
 a:hover{text-decoration:underline;color:var(--terracotta)}
 :focus-visible{outline:3px solid var(--or);outline-offset:2px;border-radius:3px}
 .hors-ecran{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600}
 
-/* ---------- en-tête ---------- */
-.en-tete{background:linear-gradient(180deg,#46541f,#333e14 82%);color:#f2ecd9;border-bottom:1px solid #222b0c}
-.en-tete::after{content:"";display:block;height:5px;
-  background:repeating-linear-gradient(90deg,#b98a2e 0 16px,#7d6118 16px 19px,#55672a 19px 34px,#7d6118 34px 37px)}
-.en-tete .interieur{max-width:1120px;margin:0 auto;padding:12px 22px;display:flex;flex-wrap:wrap;gap:2px 22px;align-items:center}
+/* ================= en-tête ================= */
+.en-tete{position:relative;background:linear-gradient(180deg,#384310,#2a340c 88%);color:#f2ecd9;border-bottom:1px solid #1f2707;overflow:hidden}
+.en-tete::before{content:"";position:absolute;inset:0;background-image:var(--motif);opacity:.5;pointer-events:none}
+.en-tete::after{content:"";display:block;height:4px;position:relative;
+  background:repeating-linear-gradient(90deg,#b98a2e 0 18px,#6f5615 18px 21px,#55672a 21px 38px,#6f5615 38px 41px)}
+.en-tete .interieur{position:relative;max-width:1160px;margin:0 auto;padding:11px 22px;display:flex;flex-wrap:wrap;gap:2px 22px;align-items:center}
 .en-tete .marque a{display:inline-flex;flex-direction:column;gap:1px}
-.en-tete .marque .arabe{font-family:var(--amiri);font-size:1.5rem;line-height:1.5;color:#f3e6c3}
-.en-tete .marque .sous-marque{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#c9bd97}
-.en-tete .liens{margin-inline-start:auto;display:flex;gap:18px;font-size:.85rem;letter-spacing:.02em}
-.en-tete .liens a{color:#e6d9ae}
-.en-tete .liens a:hover{color:#fff3d0}
+.en-tete .marque .arabe{font-family:var(--amiri);font-size:1.55rem;line-height:1.5;color:#f3e6c3}
+.en-tete .marque .sous-marque{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:#c4b88e}
+.en-tete .liens{margin-inline-start:auto;display:flex;gap:8px;font-size:.85rem;flex-wrap:wrap}
+.en-tete .liens a{color:#e8dbb2;border:1px solid rgba(232,219,178,.35);border-radius:99px;padding:4px 14px}
+.en-tete .liens a:hover{color:#fff3d0;border-color:rgba(240,223,174,.8);text-decoration:none;background:rgba(240,223,174,.08)}
 
-/* ---------- corps ---------- */
-main{max-width:1120px;margin:0 auto;padding:26px 22px 40px}
-main.lecture{max-width:940px}
+/* ================= corps ================= */
+main{max-width:1160px;margin:0 auto;padding:26px 22px 44px}
+main.lecture{max-width:960px}
 .fil{font-size:.8rem;letter-spacing:.05em;text-transform:uppercase;color:var(--gris);margin:2px 0 20px}
 .fil a{color:var(--olive-f)}
 .fil .sep{margin:0 9px;color:var(--or)}
 
-/* ---------- héros (pleine page, accueil) ---------- */
-.heros.pleine{background:
-  radial-gradient(1100px 420px at 50% -60px,rgba(185,138,46,.16),transparent 62%),
-  linear-gradient(180deg,#f7f0dd,var(--fond));
-  text-align:center;padding:44px 22px 36px;border-bottom:1px solid var(--ligne-2)}
-.heros.pleine .surline{color:var(--terracotta-f);letter-spacing:.13em;text-transform:uppercase;font-size:.74rem;font-weight:600;margin:0}
-.heros h1{margin:.35em 0 .1em}
-.heros h1 .arabe{font-family:var(--amiri);font-weight:700;font-size:clamp(2.4rem,6vw,3.5rem);line-height:1.75;color:var(--olive-f);display:block}
-.heros .sous{color:var(--encre-2);max-width:720px;margin:.4em auto .2em;font-size:1.03rem}
+/* ================= héro ================= */
+.heros.pleine{position:relative;background:linear-gradient(160deg,#33400f,#242d09 78%);color:#f2ecd9;
+  border-bottom:1px solid #1c2406;overflow:hidden;text-align:center;padding:52px 22px 46px}
+.heros.pleine::before{content:"";position:absolute;inset:0;background-image:var(--motif);
+  -webkit-mask-image:radial-gradient(760px 460px at 50% 0%,#000 30%,transparent 78%);
+  mask-image:radial-gradient(760px 460px at 50% 0%,#000 30%,transparent 78%);pointer-events:none}
+.heros.pleine::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;
+  background:repeating-linear-gradient(90deg,#b98a2e 0 18px,#6f5615 18px 21px,#55672a 21px 38px,#6f5615 38px 41px)}
+.heros-interieur{position:relative;max-width:880px;margin:0 auto}
+.heros.pleine .surline{color:#d9b45c;letter-spacing:.17em;text-transform:uppercase;font-size:.72rem;font-weight:600;margin:0}
+.heros h1{margin:.3em 0 .1em}
+.heros h1 .arabe{font-family:var(--amiri);font-weight:700;font-size:clamp(2.5rem,6.4vw,3.7rem);line-height:1.8;color:#f3e6c3;display:block;text-shadow:0 2px 22px rgba(0,0,0,.35)}
+.heros.pleine .sous{color:#e3d8b4;max-width:700px;margin:.5em auto .2em;font-size:1.08rem;font-style:italic}
 /* variante en panneau (hors-ligne, 404) */
-main .heros{max-width:840px;margin:6px auto 26px;text-align:center;background:var(--carte);border:1px solid var(--ligne);border-radius:16px;padding:32px 26px 28px}
-main .heros .surline{color:var(--terracotta-f);letter-spacing:.13em;text-transform:uppercase;font-size:.74rem;font-weight:600;margin:0}
-main .heros h1 .arabe{font-family:var(--amiri);font-weight:700;font-size:2.2rem;line-height:1.8;color:var(--olive-f);display:block}
-main .heros .sous{color:var(--encre-2);max-width:680px;margin:.4em auto .2em}
+main .heros{max-width:880px;margin:6px auto 28px;text-align:center;background:linear-gradient(160deg,#33400f,#242d09 82%);border-radius:18px;padding:34px 26px 30px;color:#f2ecd9;position:relative;overflow:hidden;border:1px solid #1f2707}
+main .heros::before{content:"";position:absolute;inset:0;background-image:var(--motif);opacity:.6;pointer-events:none}
+main .heros .surline{color:#d9b45c;letter-spacing:.15em;text-transform:uppercase;font-size:.72rem;font-weight:600;margin:0;position:relative}
+main .heros h1{position:relative}
+main .heros h1 .arabe{font-family:var(--amiri);font-weight:700;font-size:2.25rem;line-height:1.85;color:#f3e6c3;display:block}
+main .heros .sous{color:#e3d8b4;max-width:680px;margin:.45em auto .2em;position:relative}
 
 /* ornement : filets + trois losanges */
-.ornement{display:flex;align-items:center;gap:9px;max-width:400px;margin:16px auto 6px}
-.ornement span{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--or))}
-.ornement span:last-child{background:linear-gradient(90deg,var(--or),transparent)}
-.ornement i{width:5px;height:5px;background:var(--or);transform:rotate(45deg);flex:none}
+.ornement{display:flex;align-items:center;gap:9px;max-width:420px;margin:18px auto 6px;position:relative}
+.ornement span{flex:1;height:1px;background:linear-gradient(90deg,transparent,#b98a2e)}
+.ornement span:last-child{background:linear-gradient(90deg,#b98a2e,transparent)}
+.ornement i{width:5px;height:5px;background:#d9b45c;transform:rotate(45deg);flex:none}
 .ornement i:first-of-type{width:7px;height:7px}
 
 /* statistiques */
-.stats{display:flex;max-width:640px;margin:24px auto 4px;border:1px solid var(--ligne-2);border-radius:14px;background:rgba(255,253,246,.8);box-shadow:0 2px 12px -6px rgba(90,70,30,.25)}
-.stat{flex:1;padding:13px 8px 11px;border-inline-end:1px solid var(--ligne)}
+.stats{display:flex;max-width:660px;margin:26px auto 4px;border:1px solid rgba(232,207,154,.4);border-radius:16px;background:rgba(255,253,246,.06);backdrop-filter:blur(2px);overflow:hidden;position:relative}
+.stat{flex:1;padding:15px 8px 12px;border-inline-end:1px solid rgba(232,207,154,.22)}
 .stat:last-child{border-inline-end:0}
-.stat b{display:block;font-size:1.55rem;line-height:1.2;color:var(--olive-f);font-variant-numeric:tabular-nums}
-.stat span{font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;color:var(--gris)}
+.stat b{display:block;font-size:1.7rem;line-height:1.15;color:#ecc987;font-variant-numeric:tabular-nums;font-weight:700}
+.stat span{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:#cfc49c}
+/* variante claire (hors-ligne/404 en panneau sombre -> mêmes tons) */
+main .heros .stats{border-color:rgba(232,207,154,.4);background:rgba(255,253,246,.06)}
 
 /* progression */
-.prog{max-width:520px;margin:18px auto 0}
-.barre{height:9px;background:var(--fond-2);border:1px solid var(--ligne-2);border-radius:99px;overflow:hidden}
-.barre span{display:block;height:100%;background:linear-gradient(90deg,var(--olive-f),#7d8c3e);border-radius:99px}
-.compte{font-size:.92rem;color:var(--encre-2);margin:9px 0 0}
-.compte strong{color:var(--encre);font-size:1.06rem}
+.prog{max-width:560px;margin:20px auto 0;position:relative}
+.barre{height:9px;background:rgba(0,0,0,.32);border:1px solid rgba(232,207,154,.35);border-radius:99px;overflow:hidden}
+.barre span{display:block;height:100%;background:linear-gradient(90deg,#8a651c,#d9b45c 60%,#e8cf9a);border-radius:99px}
+.compte{font-size:.94rem;color:#ddd2ac;margin:10px 0 0}
+.compte strong{color:#f3e6c3;font-size:1.1rem}
+main .heros .prog{margin-top:18px}
 
-/* ---------- recherche ---------- */
-.recherche{position:relative;max-width:660px;margin:26px auto 8px}
-.recherche input{width:100%;font:inherit;padding:13px 20px 13px 46px;border:1px solid var(--ligne-2);border-radius:14px;background:var(--carte);color:var(--encre);box-shadow:0 3px 14px -8px rgba(90,70,30,.35)}
-.recherche input::placeholder{color:var(--gris);font-style:italic}
-.recherche input:focus{border-color:var(--or);outline:2px solid var(--or-p)}
-.recherche input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Ccircle cx='8.5' cy='8.5' r='5.5' fill='none' stroke='%23b98a2e' stroke-width='2'/%3E%3Cline x1='13' y1='13' x2='18' y2='18' stroke='%23b98a2e' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:15px 50%;background-size:19px}
-.statut{color:var(--gris);font-size:.85rem;margin:8px 4px}
-.resultats{margin-top:12px}
+/* ================= recherche ================= */
+.recherche{position:relative;max-width:680px;margin:28px auto 6px}
+.recherche input{width:100%;font:17px/1.4 var(--serif);padding:14px 20px 14px 48px;border:1px solid rgba(201,185,141,.9);border-radius:14px;background:var(--carte);color:var(--encre);box-shadow:0 6px 18px -8px rgba(0,0,0,.45),0 2px 6px -3px rgba(120,90,30,.3)}
+.recherche input::placeholder{color:#8b7c5e;font-style:italic}
+.recherche input:focus{border-color:#d9b45c;outline:2px solid rgba(217,180,92,.4)}
+.recherche input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Ccircle cx='8.5' cy='8.5' r='5.5' fill='none' stroke='%238a651c' stroke-width='2'/%3E%3Cline x1='13' y1='13' x2='18' y2='18' stroke='%238a651c' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:16px 50%;background-size:19px}
+.statut{color:#cfc49c;font-size:.85rem;margin:8px 4px}
+.resultats{margin-top:12px;text-align:start}
 .resultats ol{list-style:none;margin:8px 0 0;padding:0}
-.resultats li{background:var(--carte);border:1px solid var(--ligne);border-radius:12px;padding:12px 16px;margin-bottom:9px;box-shadow:0 2px 8px -6px rgba(90,70,30,.3)}
+.resultats li{background:var(--carte);border:1px solid var(--ligne);border-radius:12px;padding:13px 17px;margin-bottom:9px;box-shadow:0 4px 14px -8px rgba(0,0,0,.5);color:var(--encre)}
 .resultats li.r-livre{border-inline-start:4px solid var(--olive)}
 .resultats li.r-lecon{border-inline-start:4px solid var(--or)}
 .resultats .r-titre{font-weight:700}
 .resultats .r-titre a{display:inline}
 .resultats .r-livre-n{color:var(--gris);font-size:.8rem;margin-inline-start:9px;letter-spacing:.04em}
-.resultats .r-extrait{margin:7px 0 0;font-size:.93rem;color:var(--encre-2);line-height:2}
+.resultats .r-extrait{margin:7px 0 0;font-size:.94rem;color:var(--encre-2);line-height:2.05}
 .resultats .r-extrait mark{background:var(--or-p);color:var(--encre);padding:0 3px;border-radius:3px}
-.resultats .r-compte{color:var(--gris);font-size:.85rem;margin:10px 4px}
+.resultats .r-compte{color:#cfc49c;font-size:.88rem;margin:12px 4px}
+main .heros .resultats .r-compte{color:#cfc49c}
 
-/* ---------- bibliothèque : sections par matière ---------- */
-.sujet-titre{display:flex;align-items:center;gap:13px;margin:36px 2px 16px;font-size:1rem;font-weight:400}
-.sujet-titre::before{content:"";width:10px;height:10px;background:var(--or);transform:rotate(45deg);flex:none}
-.sujet-titre .sujet-ar{font-family:var(--amiri);font-size:1.65rem;line-height:1.4;color:var(--olive-f)}
-.sujet-titre .sujet-fr{letter-spacing:.11em;text-transform:uppercase;font-size:.8rem;font-weight:700;color:var(--encre-2)}
-.sujet-titre::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--ligne-2),transparent)}
-.sujet-titre .sujet-n{color:var(--gris);font-size:.8rem;white-space:nowrap;letter-spacing:.03em}
+/* ================= navigation par cycle ================= */
+.cycle-nav{position:sticky;top:0;z-index:50;background:rgba(245,237,218,.94);backdrop-filter:blur(9px);border-bottom:1px solid var(--ligne-2);box-shadow:0 6px 18px -14px rgba(70,50,15,.5)}
+.cycle-nav .interieur{max-width:1160px;margin:0 auto;padding:10px 22px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;align-items:center}
+.cycle-nav .nav-titre{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gris);margin-inline-end:6px}
+.cycle-nav a{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--ligne-2);border-radius:99px;padding:6px 16px;font-size:.9rem;color:var(--encre-2);background:var(--carte);transition:border-color .15s ease,background .15s ease,color .15s ease}
+.cycle-nav a i{width:9px;height:9px;border-radius:3px;background:var(--nav-coul,#5c5218);flex:none;transform:rotate(45deg)}
+.cycle-nav a:hover{text-decoration:none;border-color:var(--nav-coul,#8a651c);color:var(--nav-coul-f,#3c4818);background:var(--carte-2)}
 
-/* grille et cartes des livres */
-.grille{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:16px}
+/* ================= cycles (bibliothèque par niveau) ================= */
+.cycle{margin:40px 0 6px;scroll-margin-top:58px}
+.cycle-tete{position:relative;display:flex;align-items:center;gap:18px;flex-wrap:wrap;
+  border-radius:18px;padding:20px 26px;color:#f6efdb;overflow:hidden;border:1px solid rgba(31,39,7,.55);
+  background:radial-gradient(620px 220px at 88% -46%,rgba(232,207,154,.22),transparent 62%),linear-gradient(122deg,var(--cycle-nuit,#4a3210),var(--cycle,#7a5418) 88%);
+  box-shadow:0 18px 34px -24px rgba(50,32,8,.75)}
+.cycle-tete::before{content:"";position:absolute;inset:0;background-image:var(--motif);opacity:.55;pointer-events:none}
+.cycle-medaille{position:relative;flex:none;width:54px;height:54px;border-radius:50%;border:2px solid rgba(232,207,154,.75);
+  background:rgba(0,0,0,.22);display:grid;place-items:center;font:700 1.5rem/1 var(--serif);color:#ecc987;
+  box-shadow:inset 0 0 0 3px rgba(0,0,0,.18)}
+.cycle-titres{position:relative;flex:1;min-width:230px}
+.cycle-titres h2{margin:0;font-size:1.42rem;line-height:1.35;font-weight:600;letter-spacing:.01em;color:#f8f1dd}
+.cycle-titres .cycle-meta{margin:3px 0 0;font-size:.86rem;color:#ddd2ac;letter-spacing:.03em}
+.cycle-ar{position:relative;font-family:var(--amiri);font-size:1.85rem;line-height:1.7;color:#f0dfae;white-space:nowrap}
+.cycle-compte{position:relative;flex:none;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:#f0dfae;border:1px solid rgba(232,207,154,.55);border-radius:99px;padding:6px 14px;background:rgba(0,0,0,.18);white-space:nowrap}
+
+/* groupe d'un niveau */
+.niveau-groupe{margin:30px 0 10px;scroll-margin-top:64px}
+.niveau-titre{display:flex;align-items:center;gap:13px;margin:0 2px 15px;padding:0}
+.niveau-badge{flex:none;min-width:50px;height:50px;padding:0 8px;border-radius:13px;display:grid;place-items:center;
+  background:linear-gradient(150deg,var(--cycle,#7a5418),var(--cycle-nuit,#4a3210));color:#f6efdb;
+  font:700 1.22rem/1 var(--serif);font-variant-numeric:tabular-nums;letter-spacing:.02em;
+  box-shadow:0 6px 14px -7px rgba(50,32,8,.7),inset 0 1px 0 rgba(255,255,255,.22)}
+.niveau-lib{display:flex;flex-direction:column;gap:0;min-width:0}
+.niveau-lib .niveau-fr{font-size:1.1rem;font-weight:600;color:var(--encre);letter-spacing:.01em;line-height:1.3}
+.niveau-lib .niveau-ar{font-family:var(--amiri);font-size:1.32rem;line-height:1.9;color:var(--encre-2)}
+.niveau-titre::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--ligne-2),transparent);margin-inline-start:6px}
+.niveau-n{flex:none;font-size:.75rem;letter-spacing:.09em;text-transform:uppercase;color:var(--encre-2);
+  border:1px solid var(--ligne-2);border-radius:99px;padding:4px 12px;background:var(--carte);white-space:nowrap}
+
+/* ================= grille et cartes des livres ================= */
+.grille{display:grid;grid-template-columns:repeat(auto-fill,minmax(252px,1fr));gap:15px}
 .carte-cadre{display:contents}
-.carte{--sujet:#5c5218;position:relative;display:flex;flex-direction:column;background:var(--carte);border:1px solid var(--ligne);border-radius:13px;padding:17px 17px 14px;color:inherit;overflow:hidden;transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
-.carte::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--sujet)}
-.carte::after{content:"";position:absolute;top:9px;inset-inline-end:9px;width:20px;height:20px;border-top:1px solid var(--or-p);border-inline-end:1px solid var(--or-p);border-start-end-radius:7px}
-.carte:hover{text-decoration:none;transform:translateY(-3px);box-shadow:0 12px 26px -14px rgba(70,50,15,.45);border-color:var(--ligne-2);color:inherit}
-.puces{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
-.chip{font-size:.67rem;letter-spacing:.07em;text-transform:uppercase;font-weight:700;color:var(--encre-2);border:1px solid var(--ligne-2);border-radius:99px;padding:2.5px 10px;background:var(--carte-2);white-space:nowrap}
-.chip-sujet{color:var(--sujet,#5c5218);border-color:var(--sujet,#c9b98f);background:transparent}
-.chip-lien{cursor:pointer}
+.carte{--sujet:#5c5218;position:relative;display:flex;flex-direction:column;background:var(--carte);
+  border:1px solid var(--ligne);border-inline-start:4px solid var(--sujet);border-radius:13px;padding:16px 16px 13px;
+  color:inherit;overflow:hidden;transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
+.carte::before{content:"";position:absolute;top:0;inset-inline:0;height:56px;background:linear-gradient(180deg,rgba(185,138,46,.075),transparent);pointer-events:none}
+.carte::after{content:"";position:absolute;top:9px;inset-inline-end:9px;width:20px;height:20px;border-top:1px solid rgba(185,138,46,.4);border-inline-end:1px solid rgba(185,138,46,.4);border-start-end-radius:7px}
+.carte:hover{text-decoration:none;transform:translateY(-3px);box-shadow:0 16px 30px -16px rgba(70,50,15,.5);border-color:var(--ligne-2);border-inline-start-color:var(--sujet);color:inherit}
+.puces{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px;position:relative}
+.chip{font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--encre-2);border:1px solid var(--ligne-2);border-radius:99px;padding:2.5px 11px;background:var(--carte-2);white-space:nowrap}
+.chip-sujet{color:var(--sujet,#5c5218);border-color:var(--sujet,#c9b98d);background:transparent}
+.chip-lien{cursor:pointer;font-size:.72rem;padding:5px 14px}
 a.chip-lien:hover{text-decoration:none;border-color:var(--or);color:var(--or-f)}
-.carte .t-ar{font-family:var(--naskh);font-size:1.4rem;line-height:2.05;text-align:center;display:block;margin:1px 0 7px;color:var(--olive-f)}
-.carte .t-fr{display:block;text-align:center;font-size:.92rem;line-height:1.55;color:var(--encre-2);flex:1}
-.carte-pied{margin-top:12px;padding-top:10px;border-top:1px dashed var(--ligne-2);display:flex;flex-direction:column;gap:8px}
-.carte .compte{font-size:.82rem;color:var(--gris);margin:0}
+.carte .t-ar{font-family:var(--amiri);font-size:1.5rem;line-height:2.1;text-align:center;display:block;margin:1px 0 7px;color:#35420f;position:relative}
+.carte .t-fr{display:block;text-align:center;font-size:.92rem;line-height:1.55;color:var(--encre-2);flex:1;position:relative}
+.carte-pied{margin-top:13px;padding-top:11px;border-top:1px dashed var(--ligne-2);display:flex;flex-direction:column;gap:8px;position:relative}
+.carte .compte{font-size:.83rem;color:var(--gris);margin:0}
 .mini-barre{height:5px;border-radius:99px;background:var(--fond-2);overflow:hidden;display:block}
 .mini-barre span{display:block;height:100%;background:linear-gradient(90deg,var(--olive-f),#7d8c3e);border-radius:99px}
-.carte.a-faire .t-ar{color:var(--gris)}
-.carte.a-faire::before{opacity:.45}
+.carte.a-faire .t-ar{color:#a39472}
+.carte.a-faire{border-inline-start-color:#b3a27e}
+.carte.a-faire .mini-barre span{background:#b3a27e}
 
-/* ---------- sommaire d’un livre ---------- */
-.livre-tete{max-width:780px;margin:4px auto 26px;text-align:center;background:var(--carte);border:1px solid var(--ligne-2);border-radius:16px;padding:30px 28px 24px;position:relative;box-shadow:0 3px 16px -10px rgba(90,70,30,.3)}
-.livre-tete::before{content:"";position:absolute;inset:7px;border:1px solid var(--or-p);border-radius:11px;pointer-events:none}
-.livre-tete .puces{justify-content:center;margin:0 0 12px}
-.livre-tete h1{margin:.05em 0 .05em}
-.livre-tete h1 .arabe{font-family:var(--amiri);font-weight:700;font-size:2.15rem;line-height:1.85;color:var(--olive-f);display:block}
-.livre-tete .t-fr{color:var(--encre-2);margin:.1em 0 0;font-size:1rem}
-.livre-tete .prog{margin-top:16px}
+/* ================= sommaire d’un livre ================= */
+.livre-tete{max-width:800px;margin:4px auto 28px;text-align:center;background:var(--carte);border:1px solid var(--ligne-2);border-radius:18px;padding:32px 28px 26px;position:relative;box-shadow:0 6px 22px -14px rgba(90,70,30,.45);overflow:hidden}
+.livre-tete::before{content:"";position:absolute;inset:8px;border:1px solid rgba(185,138,46,.4);border-radius:12px;pointer-events:none}
+.livre-tete::after{content:"";position:absolute;top:0;inset-inline:0;height:5px;background:var(--sujet,#5c5218)}
+.livre-tete .puces{justify-content:center;margin:2px 0 14px;position:relative}
+.livre-tete h1{margin:.05em 0 .05em;position:relative}
+.livre-tete h1 .arabe{font-family:var(--amiri);font-weight:700;font-size:2.25rem;line-height:1.9;color:#35420f;display:block}
+.livre-tete .t-fr{color:var(--encre-2);margin:.1em 0 0;font-size:1.02rem;position:relative}
+.livre-tete .prog{margin-top:18px}
+.livre-tete .barre{background:var(--fond-2);border-color:var(--ligne-2)}
+.livre-tete .barre span{background:linear-gradient(90deg,var(--olive-f),#7d8c3e)}
+.livre-tete .compte{color:var(--encre-2)}
+.livre-tete .compte strong{color:var(--encre)}
 
 /* liste des leçons */
-.lecons{list-style:none;margin:0 auto 34px;max-width:780px;padding:0;border:1px solid var(--ligne);border-radius:14px;background:var(--carte);overflow:hidden;box-shadow:0 3px 16px -12px rgba(90,70,30,.35)}
+.lecons{list-style:none;margin:0 auto 36px;max-width:800px;padding:0;border:1px solid var(--ligne);border-radius:15px;background:var(--carte);overflow:hidden;box-shadow:0 6px 22px -16px rgba(90,70,30,.45)}
 .lecons li{border-bottom:1px solid var(--ligne)}
 .lecons li:last-child{border-bottom:0}
 .lecons li a,.lecons .ligne-lecon{display:flex;gap:15px;align-items:flex-start;padding:13px 20px}
 .lecons li a:hover{background:var(--carte-2);text-decoration:none}
-.badge{flex:none;min-width:33px;height:33px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:var(--fond-2);border:1px solid var(--ligne-2);color:var(--encre-2);font-size:.82rem;font-variant-numeric:tabular-nums;font-weight:700;margin-top:3px}
-.lecons .fait .badge{background:var(--olive-f);border-color:var(--olive-f);color:#f6f2df}
-.lecons .intro-l .badge{background:var(--or);border-color:var(--or);color:#fffdf6;font-size:.85rem}
+.badge{flex:none;min-width:34px;height:34px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:var(--fond-2);border:1px solid var(--ligne-2);color:var(--encre-2);font-size:.84rem;font-variant-numeric:tabular-nums;font-weight:700;margin-top:3px}
+.lecons .fait .badge{background:linear-gradient(150deg,var(--olive),var(--olive-f));border-color:var(--olive-f);color:#f6f2df}
+.lecons .intro-l .badge{background:linear-gradient(150deg,#c39a3b,#8a651c);border-color:#8a651c;color:#fffdf6;font-size:.85rem}
 .libelles{display:flex;flex-direction:column;gap:1px;min-width:0;flex:1}
-.lecons .t-ar{font-family:var(--naskh);font-size:1.2rem;line-height:2.05;color:var(--encre)}
+.lecons .t-ar{font-family:var(--amiri);font-size:1.3rem;line-height:2.05;color:var(--encre)}
 .lecons .t-fr{color:var(--encre-2);font-size:.9rem;line-height:1.55}
-.lecons li.a-faire{background:repeating-linear-gradient(45deg,transparent 0 13px,rgba(160,130,60,.055) 13px 26px)}
+.lecons li.a-faire{background:repeating-linear-gradient(45deg,transparent 0 13px,rgba(160,130,60,.06) 13px 26px)}
 .lecons li.a-faire .t-ar,.lecons li.a-faire .t-fr{color:var(--gris)}
 .lecons .pdf{flex:none;align-self:center;font-size:.74rem;letter-spacing:.04em;color:var(--or-f);border:1px solid var(--ligne-2);border-radius:99px;padding:3px 12px}
 .lecons .pdf:hover{border-color:var(--or);text-decoration:none}
 
-/* ---------- page de leçon ---------- */
-.contenu{max-width:840px;margin:0 auto;background:var(--carte);border:1px solid var(--ligne-2);border-radius:6px;padding:44px 54px 40px;position:relative;box-shadow:0 16px 36px -24px rgba(70,50,15,.45)}
-.contenu::before{content:"";position:absolute;inset:10px;border:1px solid var(--or-p);border-radius:3px;pointer-events:none}
-.contenu::after{content:"";position:absolute;top:-9px;left:50%;transform:translateX(-50%) rotate(45deg);width:13px;height:13px;background:var(--or);border:2px solid var(--fond)}
-.contenu h1{font-size:1.6rem;line-height:1.7;color:var(--olive-f);text-align:center;margin:.1em 0 .9em;padding-bottom:.6em;border-bottom:1px solid var(--ligne-2);position:relative}
-.contenu h1::after{content:"";position:absolute;bottom:-4.5px;left:50%;transform:translateX(-50%) rotate(45deg);width:9px;height:9px;background:var(--or)}
-.contenu h2{font-size:1.28rem;line-height:1.6;color:var(--olive-f);margin:2em 0 .7em;padding:0 0 .35em;padding-inline-start:26px;border-bottom:1px solid var(--ligne);position:relative}
-.contenu h2::before{content:"";position:absolute;inset-inline-start:2px;top:.55em;width:9px;height:9px;background:var(--or);transform:rotate(45deg)}
-.contenu h3{font-size:1.1rem;line-height:1.6;color:var(--terracotta-f);margin:1.6em 0 .45em}
+/* ================= page de leçon ================= */
+.contenu{max-width:860px;margin:0 auto;background:#fffdf6;border:1px solid #d5c395;border-radius:8px;padding:46px 56px 42px;position:relative;box-shadow:0 22px 44px -28px rgba(70,50,15,.55)}
+.contenu::before{content:"";position:absolute;inset:9px;border:1px solid rgba(185,138,46,.35);border-radius:4px;pointer-events:none}
+.contenu::after{content:"";position:absolute;top:-10px;left:50%;transform:translateX(-50%) rotate(45deg);width:14px;height:14px;background:var(--or);border:2.5px solid var(--fond)}
+.contenu h1{font-size:1.7rem;line-height:1.65;color:#35420f;text-align:center;margin:.1em 0 .9em;padding-bottom:.6em;border-bottom:1px solid var(--ligne-2);position:relative}
+.contenu h1::after{content:"";position:absolute;bottom:-5px;left:50%;transform:translateX(-50%) rotate(45deg);width:9px;height:9px;background:var(--or)}
+.contenu h2{font-size:1.32rem;line-height:1.6;color:#35420f;margin:2em 0 .7em;padding:0 0 .35em;padding-inline-start:26px;border-bottom:1px solid var(--ligne);position:relative}
+.contenu h2::before{content:"";position:absolute;inset-inline-start:2px;top:.52em;width:9px;height:9px;background:var(--or);transform:rotate(45deg)}
+.contenu h3{font-size:1.12rem;line-height:1.6;color:var(--terracotta-f);margin:1.6em 0 .45em}
 .contenu h4,.contenu h5,.contenu h6{font-size:1rem;color:var(--encre-2);margin:1.3em 0 .4em}
-.contenu p{margin:1em 0;line-height:1.85}
+.contenu p{margin:1em 0;line-height:1.9}
 .contenu em{font-style:italic;color:#6d4318}
 .contenu strong{color:var(--encre)}
 .contenu ul{list-style:none;margin:.9em 0;padding:0}
 .contenu ul li{margin:.45em 0;padding-inline-start:19px;position:relative}
-.contenu ul li::before{content:"";position:absolute;inset-inline-start:3px;top:.75em;width:6px;height:6px;background:var(--or);transform:rotate(45deg);opacity:.8}
+.contenu ul li::before{content:"";position:absolute;inset-inline-start:3px;top:.72em;width:6px;height:6px;background:var(--or);transform:rotate(45deg);opacity:.85}
 .contenu ol{margin:.9em 0;padding-inline-start:26px}
 .contenu ol li{margin:.45em 0}
 .contenu ol li::marker{color:var(--terracotta-f);font-weight:700}
 .contenu dl{margin:.9em 0}
-.contenu dt{font-weight:700;margin-top:.75em;color:var(--olive-f)}
+.contenu dt{font-weight:700;margin-top:.75em;color:#35420f}
 .contenu dd{margin:.15em 0 .15em 1.4em}
 .contenu blockquote{border-inline-start:3px solid var(--or);margin:1.1em 0;padding:.2em 0 .2em 1.15em;color:var(--encre-2);font-style:italic}
 .contenu table{border-collapse:collapse;margin:1.2em 0;width:100%;font-size:.95em;line-height:1.7;background:var(--carte-2)}
@@ -227,21 +287,21 @@ a.chip-lien:hover{text-decoration:none;border-color:var(--or);color:var(--or-f)}
 .contenu th{background:var(--or-p);color:var(--encre);font-weight:700}
 .contenu sup{font-size:.72em}
 .contenu code{font-size:.9em;background:var(--carte-2);border:1px solid var(--ligne);border-radius:4px;padding:0 5px}
-.contenu [lang="ar"]{font-family:var(--naskh);font-size:1.42em;line-height:2.3;color:#24300e}
+.contenu [lang="ar"]{font-family:var(--naskh);font-size:1.5em;line-height:2.35;color:#22300b}
 .contenu .intro-arabe{direction:rtl;text-align:right;border:1px solid var(--ligne);border-inline-start:4px solid var(--or);border-radius:10px;background:var(--carte-2);padding:20px 24px;margin:1.3em 0}
-.contenu .intro-arabe [lang="ar"]{font-size:1.4em}
+.contenu .intro-arabe [lang="ar"]{font-size:1.42em}
 
-/* ---------- navigation précédent / suivant ---------- */
-.pn{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:stretch;max-width:840px;margin:24px auto 0}
-.pn a,.pn .pn-vide{background:var(--carte);border:1px solid var(--ligne);border-radius:12px;padding:12px 16px;font-size:.93rem;line-height:1.6;color:var(--olive-f)}
-.pn a:hover{text-decoration:none;border-color:var(--or);box-shadow:0 6px 16px -10px rgba(120,90,30,.5)}
-.pn .pn-l{display:block;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gris);margin-bottom:3px}
+/* ================= navigation précédent / suivant ================= */
+.pn{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:stretch;max-width:860px;margin:26px auto 0}
+.pn a,.pn .pn-vide{background:var(--carte);border:1px solid var(--ligne);border-radius:12px;padding:12px 16px;font-size:.94rem;line-height:1.6;color:var(--olive-f)}
+.pn a:hover{text-decoration:none;border-color:var(--or);box-shadow:0 8px 18px -12px rgba(120,90,30,.6)}
+.pn .pn-l{display:block;font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;color:var(--gris);margin-bottom:3px}
 .pn .pn-suiv{text-align:end}
-.pn .pn-sommaire{background:var(--olive-f);border-color:var(--olive-f);color:#f2ecd9;text-align:center;padding:12px 20px;font-size:.9rem}
-.pn .pn-sommaire:hover{background:#47551f}
+.pn .pn-sommaire{background:linear-gradient(150deg,var(--olive),var(--olive-f));border-color:var(--olive-f);color:#f2ecd9;text-align:center;padding:12px 20px;font-size:.9rem}
+.pn .pn-sommaire:hover{filter:brightness(1.08)}
 .pn .pn-vide{color:var(--gris);border-style:dashed;background:transparent}
 
-/* ---------- hors-ligne : accordéons ---------- */
+/* ================= hors-ligne : accordéons ================= */
 details.lecon{background:var(--carte);border:1px solid var(--ligne);border-radius:12px;margin:10px 0;overflow:hidden}
 details.lecon summary{cursor:pointer;padding:13px 20px;display:flex;gap:15px;align-items:flex-start;list-style:none}
 details.lecon summary::-webkit-details-marker{display:none}
@@ -251,55 +311,91 @@ details.lecon[open] summary{border-bottom:1px dashed var(--ligne-2);background:v
 details.lecon summary:hover{background:var(--carte-2)}
 details.lecon .contenu{background:none;border:none;border-radius:0;padding:18px 26px 22px;margin:0;max-width:none;box-shadow:none}
 details.lecon .contenu::before,details.lecon .contenu::after{display:none}
-.section-livre{margin:38px 0}
-.section-livre>h2{font-size:1.2rem;font-weight:400;color:var(--olive-f);border-bottom:2px solid var(--ligne-2);padding-bottom:.35em;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
-.section-livre>h2 .arabe{font-family:var(--amiri);font-size:1.7rem}
+.section-livre{margin:34px 0}
+.section-livre>h2{font-size:1.2rem;font-weight:600;color:#35420f;border-bottom:2px solid var(--ligne-2);padding-bottom:.35em;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.section-livre>h2 .arabe{font-family:var(--amiri);font-size:1.75rem}
 .section-livre .meta-l{font-size:.83rem;color:var(--gris);margin:.25em 0 12px}
+.niveau-sep{display:flex;align-items:center;gap:11px;margin:26px 0 6px;font-size:.92rem;font-weight:600;color:var(--encre-2)}
+.niveau-sep i{width:9px;height:9px;background:var(--cycle,#8a651c);transform:rotate(45deg);flex:none}
+.niveau-sep .arabe{font-family:var(--amiri);font-size:1.15rem;color:var(--encre-2)}
+.niveau-sep::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--ligne-2),transparent)}
+.niveau-sep .niveau-n{margin-inline-start:0}
 
-/* ---------- bandeau (404, ancien lecteur) ---------- */
-.bandeau{background:linear-gradient(180deg,#46541f,#333e14);border-bottom:3px solid var(--or);color:#f2ecd9;text-align:center;font-size:.88rem;padding:10px 16px}
+/* titres de parties (hors-ligne) */
+.hors-ligne-partie{display:flex;align-items:center;gap:14px;margin:44px 2px 18px;font-size:1.3rem;font-weight:600;color:#35420f}
+.hors-ligne-partie::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--ligne-2),transparent)}
+.hors-ligne-partie::before{content:"";width:10px;height:10px;background:var(--or);transform:rotate(45deg);flex:none}
+
+/* ================= bandeau (404, ancien lecteur) ================= */
+.bandeau{background:linear-gradient(180deg,#384310,#2a340c);border-bottom:3px solid var(--or);color:#f2ecd9;text-align:center;font-size:.88rem;padding:10px 16px}
 .bandeau a{color:#f3e0b0;font-weight:700;text-decoration:underline}
 
-/* ---------- pied de page ---------- */
-.pied{background:linear-gradient(180deg,#3a4517,#2c360f);color:#cfc6a6;margin-top:44px}
-.pied::before{content:"";display:block;height:4px;
-  background:repeating-linear-gradient(90deg,#8f6a1e 0 16px,#5b6a2c 16px 34px,#8f6a1e 34px 37px)}
-.pied .interieur{max-width:1120px;margin:0 auto;padding:26px 22px 30px;text-align:center;font-size:.85rem;line-height:2}
+/* ================= pied de page ================= */
+.pied{position:relative;background:linear-gradient(180deg,#333f0e,#242d09);color:#cfc6a6;margin-top:48px;overflow:hidden}
+.pied::before{content:"";position:absolute;inset:0;background-image:var(--motif);opacity:.35;pointer-events:none}
+.pied::after{content:"";position:relative;display:block;height:4px;
+  background:repeating-linear-gradient(90deg,#8a651c 0 18px,#5b6a2c 18px 36px,#8a651c 36px 39px)}
+.pied .interieur{position:relative;max-width:1160px;margin:0 auto;padding:28px 22px 32px;text-align:center;font-size:.86rem;line-height:2}
 .pied-orn{display:flex;align-items:center;justify-content:center;gap:8px;margin:0 0 12px}
 .pied-orn i{width:5px;height:5px;background:var(--or);transform:rotate(45deg)}
 .pied-orn i:first-child{width:7px;height:7px}
-.pied-orn span{width:60px;height:1px;background:linear-gradient(90deg,transparent,#8f6a1e)}
-.pied-orn span:last-child{background:linear-gradient(90deg,#8f6a1e,transparent)}
-.pied a{color:#e6c98c}
+.pied-orn span{width:60px;height:1px;background:linear-gradient(90deg,transparent,#8a651c)}
+.pied-orn span:last-child{background:linear-gradient(90deg,#8a651c,transparent)}
+.pied a{color:#e8c98c}
 .pied .pied-liens span{margin:0 8px;color:#7a7355}
 
-/* ---------- impression ---------- */
+/* ================= impression ================= */
 @media print{
-  .en-tete,.pied,.fil,.pn,.recherche,.bandeau,.stats{display:none}
+  .en-tete,.pied,.fil,.pn,.recherche,.bandeau,.stats,.cycle-nav{display:none}
   .contenu{border:0;box-shadow:none;padding:0}
   .contenu::before,.contenu::after{display:none}
   body{background:#fff}
 }
 
-/* ---------- écrans étroits ---------- */
-@media (max-width:720px){
-  body{font-size:16px}
+/* ================= écrans étroits ================= */
+@media (max-width:760px){
+  body{font-size:16.5px}
   .en-tete .interieur{padding:10px 16px;gap:2px 14px}
   .en-tete .marque .arabe{font-size:1.3rem}
-  .en-tete .liens{margin-inline-start:0;gap:14px}
-  main{padding:22px 14px 34px}
-  .heros.pleine{padding:34px 16px 28px}
-  .contenu{padding:26px 20px 24px}
+  .en-tete .liens{margin-inline-start:0;gap:8px}
+  main{padding:22px 14px 36px}
+  .heros.pleine{padding:38px 16px 34px}
+  .contenu{padding:28px 20px 26px}
   .lecons li a,.lecons .ligne-lecon{padding:12px 14px;gap:11px}
   .details-lecon-gap{display:none}
   .pn{grid-template-columns:1fr}
   .pn .pn-sommaire{order:-1}
   .stats{flex-direction:column}
-  .stat{border-inline-end:0;border-bottom:1px solid var(--ligne);padding:10px 8px 8px}
+  .stat{border-inline-end:0;border-bottom:1px solid rgba(232,207,154,.22);padding:11px 8px 9px}
   .stat:last-child{border-bottom:0}
-  .sujet-titre{gap:9px;margin:30px 2px 12px}
-  .sujet-titre .sujet-ar{font-size:1.45rem}
-  .sujet-titre .sujet-fr{font-size:.72rem;letter-spacing:.08em}
+  .cycle-nav{top:0}
+  .cycle-nav .interieur{padding:8px 12px;gap:7px}
+  .cycle-nav .nav-titre{display:none}
+  .cycle-nav a{padding:5px 13px;font-size:.85rem}
+  .cycle{margin:30px 0 4px}
+  .cycle-tete{padding:16px 16px;gap:12px;border-radius:15px}
+  .cycle-medaille{width:44px;height:44px;font-size:1.25rem}
+  .cycle-titres h2{font-size:1.18rem}
+  .cycle-titres .cycle-meta{font-size:.78rem}
+  .cycle-ar{font-size:1.45rem}
+  .cycle-compte{font-size:.68rem;padding:4px 11px}
+  .niveau-groupe{margin:24px 0 8px}
+  .niveau-badge{min-width:42px;height:42px;font-size:1.02rem;border-radius:11px}
+  .niveau-lib .niveau-ar{font-size:1.12rem}
+  .niveau-lib .niveau-fr{font-size:.98rem}
+  .niveau-n{font-size:.66rem;padding:3px 10px}
+  .niveau-titre{gap:10px}
+  .grille{grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:11px}
+  .carte{padding:13px 12px 11px;border-inline-start-width:3px}
+  .carte .t-ar{font-size:1.24rem;line-height:2}
+  .carte .t-fr{font-size:.84rem}
+  .livre-tete{padding:24px 16px 20px}
+  .livre-tete h1 .arabe{font-size:1.7rem}
+  .contenu h1{font-size:1.4rem}
+}
+@media (max-width:420px){
+  .grille{grid-template-columns:1fr}
+  .cycle-compte{display:none}
 }
 
 </style>
@@ -313,7 +409,7 @@ details.lecon .contenu::before,details.lecon .contenu::after{display:none}
 <section class="heros">
 <p class="surline">Consultation hors connexion — fichier unique</p>
 <h1><span class="arabe" dir="rtl" lang="ar">المنهاج النموذجي للتعليم العتيق</span></h1>
-<p class="sous">Toute la collection est embarquée dans ce fichier : sommaires, leçons transcrites, recherche. Enregistrez-le et ouvrez-le sans connexion.</p>
+<p class="sous">Toute la collection est embarquée dans ce fichier : sommaires rangés par niveau scolaire, leçons transcrites, recherche. Enregistrez-le et ouvrez-le sans connexion.</p>
 <div class="prog"><div class="barre"><span style="width:67%"></span></div>
 <p class="compte"><strong>1200 / 1782</strong> leçons transcrites · 64 livres · mise à jour : 16 novembre 2026</p></div>
 </section>
@@ -324,456 +420,511 @@ details.lecon .contenu::before,details.lecon .contenu::after{display:none}
 <p id="statut" class="statut" hidden></p>
 <div id="resultats" class="resultats" aria-live="polite"></div>
 </section>
-<section class="grille" id="accueil">
+<h2 class="hors-ligne-partie">Bibliothèque par niveau scolaire</h2>
+<section class="cycle" id="cycle-ep">
+<header class="cycle-tete" style="--cycle:#4f611d;--cycle-nuit:#37430f"><span class="cycle-medaille" aria-hidden="true">1</span><span class="cycle-titres"><h2>Enseignement primaire</h2><p class="cycle-meta">4ᵉ primaire · 5ᵉ primaire · 6ᵉ primaire</p></span><span class="cycle-ar" dir="rtl" lang="ar">السلك الابتدائي العتيق</span><span class="cycle-compte">17 manuels</span></header>
+<section class="niveau-groupe">
+<h3 class="niveau-sep" style="--cycle:#4f611d"><i aria-hidden="true"></i>4ᵉ primaire <span class="arabe" dir="rtl" lang="ar">السنة الرابعة من السلك الابتدائي العتيق</span><span class="niveau-n">5 manuels</span></h3>
+<section class="grille">
 <span class="carte-cadre" data-sujet="fiqh"><a class="carte fait" href="#livre-fiqh-1ep">
-<span class="puces"><span class="chip chip-sujet">Droit rituel</span><span class="chip">4ᵉ primaire</span></span>
+<span class="puces"><span class="chip chip-sujet">Droit rituel</span></span>
 <span class="t-ar" dir="rtl" lang="ar">الفقه من متن الأخضري بشرح الآبي الأزهري للسنة الرابعة من التعليم الابتدائي العتيق</span>
 <span class="t-fr">Fiqh — le Mukhtaṣar d&#x27;al-Akhdarī, comm. d&#x27;al-Ābī al-Azharī</span>
 <span class="carte-pied"><span class="compte">30 / 30 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="tafsir"><a class="carte fait" href="#livre-tafsir-1ep">
-<span class="puces"><span class="chip chip-sujet">Exégèse coranique</span><span class="chip">4ᵉ primaire</span></span>
+<span class="puces"><span class="chip chip-sujet">Exégèse coranique</span></span>
 <span class="t-ar" dir="rtl" lang="ar">التفسير من خلال تفسير الجلالين</span>
 <span class="t-fr">Tafsīr — le Tafsīr al-Jalālayn</span>
 <span class="carte-pied"><span class="compte">29 / 29 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="hadith"><a class="carte fait" href="#livre-hadith-1ep">
-<span class="puces"><span class="chip chip-sujet">Tradition prophétique</span><span class="chip">4ᵉ primaire</span></span>
+<span class="puces"><span class="chip chip-sujet">Tradition prophétique</span></span>
 <span class="t-ar" dir="rtl" lang="ar">الحديث من رياض الصالحين للإمام النووي بشرح روضة المتقين</span>
 <span class="t-fr">Ḥadīth — Riyāḍ al-Ṣāliḥīn d&#x27;al-Nawawī, comm. Rawḍat al-Muttaqīn</span>
 <span class="carte-pied"><span class="compte">31 / 31 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="rasm-wa-dabt"><a class="carte fait" href="#livre-rasm-wa-dabt-4ep">
-<span class="puces"><span class="chip chip-sujet">Graphie et vocalisation</span><span class="chip">4ᵉ primaire</span></span>
+<span class="puces"><span class="chip chip-sujet">Graphie et vocalisation</span></span>
 <span class="t-ar" dir="rtl" lang="ar">الرسم والضبط</span>
 <span class="t-fr">Rasm et ḍabṭ — graphie et vocalisation coraniques</span>
 <span class="carte-pied"><span class="compte">29 / 29 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="usul-qiyam"><a class="carte a-faire" href="#livre-usul-qiyam-4ep">
-<span class="puces"><span class="chip chip-sujet">Valeurs du Coran et de la Sunna</span><span class="chip">4ᵉ primaire</span></span>
+<span class="puces"><span class="chip chip-sujet">Valeurs du Coran et de la Sunna</span></span>
 <span class="t-ar" dir="rtl" lang="ar">أصول القيم في القرآن والسنة</span>
 <span class="t-fr">Fondements des valeurs dans le Coran et la Sunna</span>
 <span class="carte-pied"><span class="compte">0 / 25 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:0%"></span></span></span>
 </a></span>
+</section>
+</section>
+<section class="niveau-groupe">
+<h3 class="niveau-sep" style="--cycle:#4f611d"><i aria-hidden="true"></i>5ᵉ primaire <span class="arabe" dir="rtl" lang="ar">السنة الخامسة من السلك الابتدائي العتيق</span><span class="niveau-n">6 manuels</span></h3>
+<section class="grille">
 <span class="carte-cadre" data-sujet="fiqh"><a class="carte fait" href="#livre-fiqh-5ep">
-<span class="puces"><span class="chip chip-sujet">Droit rituel</span><span class="chip">5ᵉ primaire</span></span>
+<span class="puces"><span class="chip chip-sujet">Droit rituel</span></span>
 <span class="t-ar" dir="rtl" lang="ar">الفقه من منظومة المرشد المعين لابن عاشر بشرح ميارة الفاسي للسنة الخامسة من التعليم الابتدائي العتيق</span>
 <span class="t-fr">Fiqh — le Muršid al-muʿīn d&#x27;Ibn ʿĀšir, avec le commentaire de Mayyāra al-Fāsī (5ᵉ primaire)</span>
 <span class="carte-pied"><span class="compte">10 / 10 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="tajwid"><a class="carte fait" href="#livre-tajwid-5ep">
-<span class="puces"><span class="chip chip-sujet">Psalmodie coranique</span><span class="chip">5ᵉ primaire</span></span>
+<span class="puces"><span class="chip chip-sujet">Psalmodie coranique</span></span>
 <span class="t-ar" dir="rtl" lang="ar">التجويد: تطبيقات على نظم تحفة الأطفال للجمزوري</span>
 <span class="t-fr">Tajwīd — applications de la Tuḥfat al-Aṭfāl d&#x27;al-Jamzūrī</span>
 <span class="carte-pied"><span class="compte">30 / 30 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="tafsir"><a class="carte fait" href="#livre-tafsir-5ep">
-<span class="puces"><span class="chip chip-sujet">Exégèse coranique</span><span class="chip">5ᵉ primaire</span></span>
+<span class="puces"><span class="chip chip-sujet">Exégèse coranique</span></span>
 <span class="t-ar" dir="rtl" lang="ar">التفسير من خلال تفسير الجلالين</span>
 <span class="t-fr">Tafsīr — le Tafsīr al-Jalālayn</span>
 <span class="carte-pied"><span class="compte">122 / 122 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="hadith"><a class="carte fait" href="#livre-hadith-5ep">
-<span class="puces"><span class="chip chip-sujet">Tradition prophétique</span><span class="chip">5ᵉ primaire</span></span>
+<span class="puces"><span class="chip chip-sujet">Tradition prophétique</span></span>
 <span class="t-ar" dir="rtl" lang="ar">الحديث من كتاب الأربعين النووية للإمام النووي بشرح ابن دقيق العيد للسنة الخامسة من التعليم الابتدائي العتيق</span>
 <span class="t-fr">Ḥadīth — les Quarante hadiths d&#x27;al-Nawawī, comm. d&#x27;Ibn Daqīq al-ʿĪd (5ᵉ primaire)</span>
 <span class="carte-pied"><span class="compte">19 / 29 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:66%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="rasm-wa-dabt"><a class="carte fait" href="#livre-rasm-wa-dabt-5ep">
-<span class="puces"><span class="chip chip-sujet">Graphie et vocalisation</span><span class="chip">5ᵉ primaire</span></span>
+<span class="puces"><span class="chip chip-sujet">Graphie et vocalisation</span></span>
 <span class="t-ar" dir="rtl" lang="ar">الرسم والضبط من أرجوزة عمدة البيان لإدريس الودغيري</span>
 <span class="t-fr">Rasm et ḍabṭ — ʿUmdat al-Bayān d&#x27;al-Wadghīrī</span>
 <span class="carte-pied"><span class="compte">2 / 31 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:6%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="usul-qiyam"><a class="carte a-faire" href="#livre-usul-qiyam-5ep">
-<span class="puces"><span class="chip chip-sujet">Valeurs du Coran et de la Sunna</span><span class="chip">5ᵉ primaire</span></span>
+<span class="puces"><span class="chip chip-sujet">Valeurs du Coran et de la Sunna</span></span>
 <span class="t-ar" dir="rtl" lang="ar">أصول القيم في القرآن والسنة</span>
 <span class="t-fr">Fondements des valeurs dans le Coran et la Sunna (5ᵉ)</span>
 <span class="carte-pied"><span class="compte">0 / 26 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:0%"></span></span></span>
 </a></span>
+</section>
+</section>
+<section class="niveau-groupe">
+<h3 class="niveau-sep" style="--cycle:#4f611d"><i aria-hidden="true"></i>6ᵉ primaire <span class="arabe" dir="rtl" lang="ar">السنة السادسة من السلك الابتدائي العتيق</span><span class="niveau-n">6 manuels</span></h3>
+<section class="grille">
 <span class="carte-cadre" data-sujet="fiqh"><a class="carte fait" href="#livre-fiqh-6ep">
-<span class="puces"><span class="chip chip-sujet">Droit rituel</span><span class="chip">6ᵉ primaire</span></span>
+<span class="puces"><span class="chip chip-sujet">Droit rituel</span></span>
 <span class="t-ar" dir="rtl" lang="ar">الفقه من منظومة المرشد المعين لابن عاشر بشرح ميارة</span>
 <span class="t-fr">Fiqh — le Murshid al-Muʿīn d&#x27;Ibn ʿĀshir, comm. de Mayyāra</span>
 <span class="carte-pied"><span class="compte">30 / 30 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="tajwid"><a class="carte fait" href="#livre-tajwid-6ep">
-<span class="puces"><span class="chip chip-sujet">Psalmodie coranique</span><span class="chip">6ᵉ primaire</span></span>
+<span class="puces"><span class="chip chip-sujet">Psalmodie coranique</span></span>
 <span class="t-ar" dir="rtl" lang="ar">التجويد من نظم الدرر اللوامع للإمام ابن بري</span>
 <span class="t-fr">Tajwīd — Naẓm al-Durar al-Lawāmiʿ d&#x27;Ibn Barrī</span>
 <span class="carte-pied"><span class="compte">28 / 28 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="tafsir"><a class="carte fait" href="#livre-tafsir-6ep">
-<span class="puces"><span class="chip chip-sujet">Exégèse coranique</span><span class="chip">6ᵉ primaire</span></span>
+<span class="puces"><span class="chip chip-sujet">Exégèse coranique</span></span>
 <span class="t-ar" dir="rtl" lang="ar">التفسير من خلال تفسير الجلالين</span>
 <span class="t-fr">Tafsīr — le Tafsīr al-Jalālayn</span>
 <span class="carte-pied"><span class="compte">30 / 30 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="hadith"><a class="carte fait" href="#livre-hadith-6ep">
-<span class="puces"><span class="chip chip-sujet">Tradition prophétique</span><span class="chip">6ᵉ primaire</span></span>
+<span class="puces"><span class="chip chip-sujet">Tradition prophétique</span></span>
 <span class="t-ar" dir="rtl" lang="ar">الحديث من كتاب الأربعين النووية بشرح ابن دقيق العيد</span>
 <span class="t-fr">Ḥadīth — les Quarante hadiths d&#x27;al-Nawawī, comm. d&#x27;Ibn Daqīq al-ʿĪd</span>
 <span class="carte-pied"><span class="compte">1 / 29 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:3%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="rasm-wa-dabt"><a class="carte a-faire" href="#livre-rasm-wa-dabt-6ep">
-<span class="puces"><span class="chip chip-sujet">Graphie et vocalisation</span><span class="chip">6ᵉ primaire</span></span>
+<span class="puces"><span class="chip chip-sujet">Graphie et vocalisation</span></span>
 <span class="t-ar" dir="rtl" lang="ar">الرسم والضبط من أرجوزة عمدة البيان لإدريس الودغيري</span>
 <span class="t-fr">Rasm et ḍabṭ — ʿUmdat al-Bayān d&#x27;al-Wadghīrī (fin)</span>
 <span class="carte-pied"><span class="compte">0 / 29 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:0%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="usul-qiyam"><a class="carte a-faire" href="#livre-usul-qiyam-6ep">
-<span class="puces"><span class="chip chip-sujet">Valeurs du Coran et de la Sunna</span><span class="chip">6ᵉ primaire</span></span>
+<span class="puces"><span class="chip chip-sujet">Valeurs du Coran et de la Sunna</span></span>
 <span class="t-ar" dir="rtl" lang="ar">أصول القيم في القرآن والسنة</span>
 <span class="t-fr">Fondements des valeurs dans le Coran et la Sunna (6ᵉ)</span>
 <span class="carte-pied"><span class="compte">0 / 25 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:0%"></span></span></span>
 </a></span>
+</section>
+</section>
+</section><section class="cycle" id="cycle-es">
+<header class="cycle-tete" style="--cycle:#9c4a12;--cycle-nuit:#5e2c0a"><span class="cycle-medaille" aria-hidden="true">2</span><span class="cycle-titres"><h2>Enseignement secondaire collégial</h2><p class="cycle-meta">1ᵉʳ collège · 2ᵉ collège · 3ᵉ collège</p></span><span class="cycle-ar" dir="rtl" lang="ar">السلك الإعدادي العتيق</span><span class="cycle-compte">20 manuels</span></header>
+<section class="niveau-groupe">
+<h3 class="niveau-sep" style="--cycle:#9c4a12"><i aria-hidden="true"></i>1ᵉʳ collège <span class="arabe" dir="rtl" lang="ar">السنة الأولى من السلك الإعدادي العتيق</span><span class="niveau-n">6 manuels</span></h3>
+<section class="grille">
 <span class="carte-cadre" data-sujet="tawhid"><a class="carte fait" href="#livre-tawhid-1es">
-<span class="puces"><span class="chip chip-sujet">Monothéisme</span><span class="chip">1ᵉʳ collège</span></span>
+<span class="puces"><span class="chip chip-sujet">Monothéisme</span></span>
 <span class="t-ar" dir="rtl" lang="ar">التوحيد من متن الرسالة لابن أبي زيد القيرواني</span>
 <span class="t-fr">Tawḥīd — la Risāla d&#x27;Ibn Abī Zayd al-Qayrawānī</span>
 <span class="carte-pied"><span class="compte">29 / 29 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="fiqh"><a class="carte fait" href="#livre-fiqh-1es">
-<span class="puces"><span class="chip chip-sujet">Droit rituel</span><span class="chip">1ᵉʳ collège</span></span>
+<span class="puces"><span class="chip chip-sujet">Droit rituel</span></span>
 <span class="t-ar" dir="rtl" lang="ar">الفقه من متن الرسالة لابن أبي زيد القيرواني بشرح كفاية الطالب الرباني</span>
 <span class="t-fr">Fiqh — la Risāla d&#x27;Ibn Abī Zayd al-Qayrawānī</span>
 <span class="carte-pied"><span class="compte">30 / 30 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="sira"><a class="carte fait" href="#livre-sira-1es">
-<span class="puces"><span class="chip chip-sujet">Biographie prophétique</span><span class="chip">1ᵉʳ collège</span></span>
+<span class="puces"><span class="chip chip-sujet">Biographie prophétique</span></span>
 <span class="t-ar" dir="rtl" lang="ar">السيرة النبوية</span>
 <span class="t-fr">Sīra — la biographie du Prophète ﷺ</span>
 <span class="carte-pied"><span class="compte">29 / 29 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="tafsir"><a class="carte fait" href="#livre-tafsir-1es">
-<span class="puces"><span class="chip chip-sujet">Exégèse coranique</span><span class="chip">1ᵉʳ collège</span></span>
+<span class="puces"><span class="chip chip-sujet">Exégèse coranique</span></span>
 <span class="t-ar" dir="rtl" lang="ar">التفسير من خلال التسهيل لعلوم التنزيل لابن جزي</span>
 <span class="t-fr">Tafsīr — al-Tashīl li-ʿUlūm al-Tanzīl d&#x27;Ibn Juzayy</span>
 <span class="carte-pied"><span class="compte">30 / 30 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="hadith"><a class="carte fait" href="#livre-hadith-1es">
-<span class="puces"><span class="chip chip-sujet">Tradition prophétique</span><span class="chip">1ᵉʳ collège</span></span>
+<span class="puces"><span class="chip chip-sujet">Tradition prophétique</span></span>
 <span class="t-ar" dir="rtl" lang="ar">الحديث من موطأ الإمام مالك بشرح الزرقاني</span>
 <span class="t-fr">Ḥadīth — le Muwaṭṭaʾ de l&#x27;imam Mālik, comm. d&#x27;al-Zarqānī</span>
 <span class="carte-pied"><span class="compte">31 / 31 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="ulum-quran"><a class="carte fait" href="#livre-ulum-quran-1es">
-<span class="puces"><span class="chip chip-sujet">Sciences coraniques</span><span class="chip">1ᵉʳ collège</span></span>
+<span class="puces"><span class="chip chip-sujet">Sciences coraniques</span></span>
 <span class="t-ar" dir="rtl" lang="ar">علوم القرآن</span>
 <span class="t-fr">Sciences du Coran — ʿulūm al-Qurʾān</span>
 <span class="carte-pied"><span class="compte">27 / 27 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
+</section>
+</section>
+<section class="niveau-groupe">
+<h3 class="niveau-sep" style="--cycle:#9c4a12"><i aria-hidden="true"></i>2ᵉ collège <span class="arabe" dir="rtl" lang="ar">السنة الثانية من السلك الإعدادي العتيق</span><span class="niveau-n">7 manuels</span></h3>
+<section class="grille">
 <span class="carte-cadre" data-sujet="tawhid"><a class="carte fait" href="#livre-tawhid-2es">
-<span class="puces"><span class="chip chip-sujet">Monothéisme</span><span class="chip">2ᵉ collège</span></span>
+<span class="puces"><span class="chip chip-sujet">Monothéisme</span></span>
 <span class="t-ar" dir="rtl" lang="ar">التوحيد من منظومة المرشد المعين على الضروري من علوم الدين لعبد الواحد بن عاشر</span>
 <span class="t-fr">Tawḥīd — le Murshid al-Muʿīn d&#x27;Ibn ʿĀshir</span>
 <span class="carte-pied"><span class="compte">25 / 25 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="fiqh"><a class="carte fait" href="#livre-fiqh-2es">
-<span class="puces"><span class="chip chip-sujet">Droit rituel</span><span class="chip">2ᵉ collège</span></span>
+<span class="puces"><span class="chip chip-sujet">Droit rituel</span></span>
 <span class="t-ar" dir="rtl" lang="ar">الفقه من رسالة ابن أبي زيد القيرواني بشرح كفاية الطالب الرباني بحاشية العدوي للسنة الثانية من التعليم الإعدادي العتيق</span>
 <span class="t-fr">Fiqh — la Risāla d&#x27;Ibn Abī Zayd, comm. al-Kifāya + ḥāshiya al-ʿAdawī (2ᵉ collège)</span>
 <span class="carte-pied"><span class="compte">2 / 2 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="sira"><a class="carte fait" href="#livre-sira-2es">
-<span class="puces"><span class="chip chip-sujet">Biographie prophétique</span><span class="chip">2ᵉ collège</span></span>
+<span class="puces"><span class="chip chip-sujet">Biographie prophétique</span></span>
 <span class="t-ar" dir="rtl" lang="ar">السيرة النبوية</span>
 <span class="t-fr">Sīra — la biographie du Prophète ﷺ (2ᵉ collège)</span>
 <span class="carte-pied"><span class="compte">28 / 28 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="tajwid"><a class="carte fait" href="#livre-tajwid-2es">
-<span class="puces"><span class="chip chip-sujet">Psalmodie coranique</span><span class="chip">2ᵉ collège</span></span>
+<span class="puces"><span class="chip chip-sujet">Psalmodie coranique</span></span>
 <span class="t-ar" dir="rtl" lang="ar">التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لإبراهيم المارغني</span>
 <span class="t-fr">Tajwīd — al-Durar al-Lawāmiʿ d&#x27;Ibn Barrī, comm. al-Nujūm al-Ṭawāliʿ</span>
 <span class="carte-pied"><span class="compte">27 / 27 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="tafsir"><a class="carte fait" href="#livre-tafsir-2es">
-<span class="puces"><span class="chip chip-sujet">Exégèse coranique</span><span class="chip">2ᵉ collège</span></span>
+<span class="puces"><span class="chip chip-sujet">Exégèse coranique</span></span>
 <span class="t-ar" dir="rtl" lang="ar">التفسير من خلال التسهيل لعلوم التنزيل لابن جزي</span>
 <span class="t-fr">Tafsīr — al-Tashīl li-ʿUlūm al-Tanzīl d&#x27;Ibn Juzayy (suite)</span>
 <span class="carte-pied"><span class="compte">37 / 37 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="hadith"><a class="carte fait" href="#livre-hadith-2es">
-<span class="puces"><span class="chip chip-sujet">Tradition prophétique</span><span class="chip">2ᵉ collège</span></span>
+<span class="puces"><span class="chip chip-sujet">Tradition prophétique</span></span>
 <span class="t-ar" dir="rtl" lang="ar">الحديث من موطأ الإمام مالك بشرح الزرقاني للسنة الثانية من التعليم الإعدادي العتيق</span>
 <span class="t-fr">Ḥadīth — le Muwaṭṭaʾ de l&#x27;imam Mālik, comm. d&#x27;al-Zarqānī (2ᵉ collège)</span>
 <span class="carte-pied"><span class="compte">30 / 30 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="ulum-quran"><a class="carte fait" href="#livre-ulum-quran-2es">
-<span class="puces"><span class="chip chip-sujet">Sciences coraniques</span><span class="chip">2ᵉ collège</span></span>
+<span class="puces"><span class="chip chip-sujet">Sciences coraniques</span></span>
 <span class="t-ar" dir="rtl" lang="ar">علوم القرآن</span>
 <span class="t-fr">Sciences du Coran — ʿulūm al-Qurʾān (2ᵉ collège)</span>
 <span class="carte-pied"><span class="compte">28 / 28 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
+</section>
+</section>
+<section class="niveau-groupe">
+<h3 class="niveau-sep" style="--cycle:#9c4a12"><i aria-hidden="true"></i>3ᵉ collège <span class="arabe" dir="rtl" lang="ar">السنة الثالثة من السلك الإعدادي العتيق</span><span class="niveau-n">7 manuels</span></h3>
+<section class="grille">
 <span class="carte-cadre" data-sujet="fiqh"><a class="carte fait" href="#livre-fiqh-3es">
-<span class="puces"><span class="chip chip-sujet">Droit rituel</span><span class="chip">3ᵉ collège</span></span>
+<span class="puces"><span class="chip chip-sujet">Droit rituel</span></span>
 <span class="t-ar" dir="rtl" lang="ar">الفقه من متن الرسالة لابن أبي زيد القيرواني بشرح كفاية الطالب الرباني بحاشية العدوي</span>
 <span class="t-fr">Fiqh — la Risāla d&#x27;Ibn Abī Zayd al-Qayrawānī (suite)</span>
 <span class="carte-pied"><span class="compte">2 / 29 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:7%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="sira"><a class="carte fait" href="#livre-sira-3es">
-<span class="puces"><span class="chip chip-sujet">Biographie prophétique</span><span class="chip">3ᵉ collège</span></span>
+<span class="puces"><span class="chip chip-sujet">Biographie prophétique</span></span>
 <span class="t-ar" dir="rtl" lang="ar">السيرة النبوية</span>
 <span class="t-fr">Sīra — la biographie du Prophète ﷺ (3ᵉ collège)</span>
 <span class="carte-pied"><span class="compte">8 / 8 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="tajwid"><a class="carte a-faire" href="#livre-tajwid-3es">
-<span class="puces"><span class="chip chip-sujet">Psalmodie coranique</span><span class="chip">3ᵉ collège</span></span>
+<span class="puces"><span class="chip chip-sujet">Psalmodie coranique</span></span>
 <span class="t-ar" dir="rtl" lang="ar">التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لإبراهيم المارغني</span>
 <span class="t-fr">Tajwīd — al-Durar al-Lawāmiʿ d&#x27;Ibn Barrī (suite)</span>
 <span class="carte-pied"><span class="compte">0 / 28 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:0%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="tafsir"><a class="carte fait" href="#livre-tafsir-3es">
-<span class="puces"><span class="chip chip-sujet">Exégèse coranique</span><span class="chip">3ᵉ collège</span></span>
+<span class="puces"><span class="chip chip-sujet">Exégèse coranique</span></span>
 <span class="t-ar" dir="rtl" lang="ar">التفسير من خلال التسهيل لعلوم التنزيل لابن جزي</span>
 <span class="t-fr">Tafsīr — al-Tashīl li-ʿUlūm al-Tanzīl d&#x27;Ibn Juzayy (fin)</span>
 <span class="carte-pied"><span class="compte">18 / 43 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:42%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="hadith"><a class="carte fait" href="#livre-hadith-3es">
-<span class="puces"><span class="chip chip-sujet">Tradition prophétique</span><span class="chip">3ᵉ collège</span></span>
+<span class="puces"><span class="chip chip-sujet">Tradition prophétique</span></span>
 <span class="t-ar" dir="rtl" lang="ar">الحديث من موطأ الإمام مالك بشرح الزرقاني</span>
 <span class="t-fr">Ḥadīth — le Muwaṭṭaʾ de l&#x27;imam Mālik (suite)</span>
 <span class="carte-pied"><span class="compte">29 / 29 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="usul-fiqh"><a class="carte fait" href="#livre-usul-fiqh-waraqat">
-<span class="puces"><span class="chip chip-sujet">Principes du droit</span><span class="chip">3ᵉ collège</span></span>
+<span class="puces"><span class="chip chip-sujet">Principes du droit</span></span>
 <span class="t-ar" dir="rtl" lang="ar">كتاب أصول الفقه من ورقات إمام الحرمين بشرح الحطاب الرعيني</span>
 <span class="t-fr">Uṣūl al-fiqh — al-Warāqāt d&#x27;al-Juwaynī, comm. d&#x27;al-Ḥaṭṭāb</span>
 <span class="carte-pied"><span class="compte">28 / 28 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="ulum-quran"><a class="carte fait" href="#livre-ulum-quran-3es">
-<span class="puces"><span class="chip chip-sujet">Sciences coraniques</span><span class="chip">3ᵉ collège</span></span>
+<span class="puces"><span class="chip chip-sujet">Sciences coraniques</span></span>
 <span class="t-ar" dir="rtl" lang="ar">علوم القرآن</span>
 <span class="t-fr">Sciences du Coran — ʿulūm al-Qurʾān (3ᵉ collège)</span>
 <span class="carte-pied"><span class="compte">28 / 28 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
+</section>
+</section>
+</section><section class="cycle" id="cycle-tanawi">
+<header class="cycle-tete" style="--cycle:#7a5418;--cycle-nuit:#4a3210"><span class="cycle-medaille" aria-hidden="true">3</span><span class="cycle-titres"><h2>Enseignement secondaire qualifiant</h2><p class="cycle-meta">1ᵉʳ lycée · 2ᵉ lycée · 3ᵉ lycée</p></span><span class="cycle-ar" dir="rtl" lang="ar">السلك التأهيلي العتيق</span><span class="cycle-compte">27 manuels</span></header>
+<section class="niveau-groupe">
+<h3 class="niveau-sep" style="--cycle:#7a5418"><i aria-hidden="true"></i>1ᵉʳ lycée <span class="arabe" dir="rtl" lang="ar">السنة الأولى من السلك التأهيلي العتيق</span><span class="niveau-n">9 manuels</span></h3>
+<section class="grille">
 <span class="carte-cadre" data-sujet="fiqh"><a class="carte fait" href="#livre-fiqh-tanawi-1">
-<span class="puces"><span class="chip chip-sujet">Droit rituel</span><span class="chip">1ᵉʳ lycée</span></span>
+<span class="puces"><span class="chip chip-sujet">Droit rituel</span></span>
 <span class="t-ar" dir="rtl" lang="ar">الفقه من متن مختصر الشيخ خليل بشرح الدردير وحاشية الدسوقي</span>
 <span class="t-fr">Fiqh — le Mukhtaṣar de Khalīl, comm. d&#x27;al-Dardīr et ḥāshiya al-Dasūqī (1ᵉʳ lycée)</span>
 <span class="carte-pied"><span class="compte">30 / 30 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="tafsir"><a class="carte fait" href="#livre-tafsir-tanawi-1">
-<span class="puces"><span class="chip chip-sujet">Exégèse coranique</span><span class="chip">1ᵉʳ lycée</span></span>
+<span class="puces"><span class="chip chip-sujet">Exégèse coranique</span></span>
 <span class="t-ar" dir="rtl" lang="ar">التفسير من خلال المحرر الوجيز في تفسير الكتاب العزيز لابن عطية</span>
 <span class="t-fr">Tafsīr — al-Muḥarrar al-Wajīz d&#x27;Ibn ʿAṭiyya</span>
 <span class="carte-pied"><span class="compte">31 / 31 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="hadith"><a class="carte fait" href="#livre-hadith-tanawi-1">
-<span class="puces"><span class="chip chip-sujet">Tradition prophétique</span><span class="chip">1ᵉʳ lycée</span></span>
+<span class="puces"><span class="chip chip-sujet">Tradition prophétique</span></span>
 <span class="t-ar" dir="rtl" lang="ar">الحديث من موطأ الإمام مالك بشرح الزرقاني</span>
 <span class="t-fr">Ḥadīth — le Muwaṭṭaʾ de l&#x27;imam Mālik (lycée)</span>
 <span class="carte-pied"><span class="compte">30 / 30 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="usul-fiqh"><a class="carte a-faire" href="#livre-usul-fiqh-tanawi-1">
-<span class="puces"><span class="chip chip-sujet">Principes du droit</span><span class="chip">1ᵉʳ lycée</span></span>
+<span class="puces"><span class="chip chip-sujet">Principes du droit</span></span>
 <span class="t-ar" dir="rtl" lang="ar">أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم الغرناطي</span>
 <span class="t-fr">Uṣūl al-fiqh — la Manẓūma Marṭaqī al-Wuṣūl d&#x27;Ibn ʿĀṣim</span>
 <span class="carte-pied"><span class="compte">0 / 0 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:0%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="mantiq"><a class="carte fait" href="#livre-mantiq-tanawi-1">
-<span class="puces"><span class="chip chip-sujet">Logique</span><span class="chip">1ᵉʳ lycée</span></span>
+<span class="puces"><span class="chip chip-sujet">Logique</span></span>
 <span class="t-ar" dir="rtl" lang="ar">المنطق من نظم السلم المنورق لعبد الرحمان الأخضري بشرح حسن القويسني</span>
 <span class="t-fr">Mantiq — Naẓm al-Sullam d&#x27;al-Akhdarī, comm. d&#x27;al-Qawasnī</span>
 <span class="carte-pied"><span class="compte">29 / 29 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="ulum-hadith"><a class="carte fait" href="#livre-ulum-hadith-tanawi-1">
-<span class="puces"><span class="chip chip-sujet">Sciences du hadith</span><span class="chip">1ᵉʳ lycée</span></span>
+<span class="puces"><span class="chip chip-sujet">Sciences du hadith</span></span>
 <span class="t-ar" dir="rtl" lang="ar">علوم الحديث من المنظومة البيقونية بشرح الزرقاني</span>
 <span class="t-fr">Sciences du ḥadīth — la Manẓūma al-Bayqūniyya, comm. d&#x27;al-Zarqānī</span>
 <span class="carte-pied"><span class="compte">30 / 30 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="qiraat"><a class="carte fait" href="#livre-qiraat-tanawi-1">
-<span class="puces"><span class="chip chip-sujet">Lectures coraniques</span><span class="chip">1ᵉʳ lycée</span></span>
+<span class="puces"><span class="chip chip-sujet">Lectures coraniques</span></span>
 <span class="t-ar" dir="rtl" lang="ar">القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي</span>
 <span class="t-fr">Qirāʾāt — Ḥirz al-Amānī (al-Shāṭibiyya) d&#x27;al-Shāṭibī</span>
 <span class="carte-pied"><span class="compte">22 / 22 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="taqtit"><a class="carte fait" href="#livre-taqtit-tanawi-1">
-<span class="puces"><span class="chip chip-sujet">Découpage temporel</span><span class="chip">1ᵉʳ lycée</span></span>
+<span class="puces"><span class="chip chip-sujet">Découpage temporel</span></span>
 <span class="t-ar" dir="rtl" lang="ar">التوقيت من منظومة المقنع بشرح المطلع على مسائل المقنع لمحمد بن سعيد المرغتي</span>
 <span class="t-fr">Tawqīt — al-Muqniʿ d&#x27;al-Marghīthī (comput religieux)</span>
 <span class="carte-pied"><span class="compte">27 / 27 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="fikr-islami"><a class="carte a-faire" href="#livre-fikr-islami-tanawi-1">
-<span class="puces"><span class="chip chip-sujet">Pensée islamique</span><span class="chip">1ᵉʳ lycée</span></span>
+<span class="puces"><span class="chip chip-sujet">Pensée islamique</span></span>
 <span class="t-ar" dir="rtl" lang="ar">الفكر الإسلامي: قضايا كلامية</span>
 <span class="t-fr">Pensée islamique — questions kalāmiques</span>
 <span class="carte-pied"><span class="compte">0 / 28 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:0%"></span></span></span>
 </a></span>
+</section>
+</section>
+<section class="niveau-groupe">
+<h3 class="niveau-sep" style="--cycle:#7a5418"><i aria-hidden="true"></i>2ᵉ lycée <span class="arabe" dir="rtl" lang="ar">السنة الثانية من السلك التأهيلي العتيق</span><span class="niveau-n">9 manuels</span></h3>
+<section class="grille">
 <span class="carte-cadre" data-sujet="fiqh"><a class="carte fait" href="#livre-fiqh-tanawi-2">
-<span class="puces"><span class="chip chip-sujet">Droit rituel</span><span class="chip">2ᵉ lycée</span></span>
+<span class="puces"><span class="chip chip-sujet">Droit rituel</span></span>
 <span class="t-ar" dir="rtl" lang="ar">الفقه من مختصر الشيخ خليل بشرح الدردير وحاشية الدسوقي للسنة الثانية من التعليم الثانوي العتيق</span>
 <span class="t-fr">Fiqh — le Mukhtaṣar de Khalīl, comm. d&#x27;al-Dardīr et ḥāshiya al-Dasūqī (2ᵉ lycée)</span>
 <span class="carte-pied"><span class="compte">21 / 21 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="tafsir"><a class="carte fait" href="#livre-tafsir-tanawi-2">
-<span class="puces"><span class="chip chip-sujet">Exégèse coranique</span><span class="chip">2ᵉ lycée</span></span>
+<span class="puces"><span class="chip chip-sujet">Exégèse coranique</span></span>
 <span class="t-ar" dir="rtl" lang="ar">التفسير من خلال المحرر الوجيز في تفسير الكتاب العزيز لابن عطية</span>
 <span class="t-fr">Tafsīr — al-Muḥarrar al-Wajīz d&#x27;Ibn ʿAṭiyya (suite)</span>
 <span class="carte-pied"><span class="compte">20 / 20 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="hadith"><a class="carte a-faire" href="#livre-hadith-tanawi-2">
-<span class="puces"><span class="chip chip-sujet">Tradition prophétique</span><span class="chip">2ᵉ lycée</span></span>
+<span class="puces"><span class="chip chip-sujet">Tradition prophétique</span></span>
 <span class="t-ar" dir="rtl" lang="ar">الحديث من موطأ الإمام مالك بشرح الزرقاني للسنة الثانية من التعليم الثانوي العتيق</span>
 <span class="t-fr">Ḥadīth — le Muwaṭṭaʾ de l&#x27;imam Mālik (2ᵉ lycée)</span>
 <span class="carte-pied"><span class="compte">0 / 0 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:0%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="faraid"><a class="carte fait" href="#livre-faraid-tanawi-2">
-<span class="puces"><span class="chip chip-sujet">Droit successoral</span><span class="chip">2ᵉ lycée</span></span>
+<span class="puces"><span class="chip chip-sujet">Droit successoral</span></span>
 <span class="t-ar" dir="rtl" lang="ar">الفرائض من مختصر الشيخ خليل بشرح الخرشي</span>
 <span class="t-fr">Farāʾiḍ — le Mukhtaṣar de Khalīl, comm. d&#x27;al-Kharshī (2ᵉ lycée)</span>
 <span class="carte-pied"><span class="compte">17 / 17 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="usul-fiqh"><a class="carte a-faire" href="#livre-usul-fiqh-tanawi-2">
-<span class="puces"><span class="chip chip-sujet">Principes du droit</span><span class="chip">2ᵉ lycée</span></span>
+<span class="puces"><span class="chip chip-sujet">Principes du droit</span></span>
 <span class="t-ar" dir="rtl" lang="ar">أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم الغرناطي</span>
 <span class="t-fr">Uṣūl al-fiqh — Marṭaqī al-Wuṣūl d&#x27;Ibn ʿĀṣim (2ᵉ lycée)</span>
 <span class="carte-pied"><span class="compte">0 / 30 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:0%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="ulum-hadith"><a class="carte fait" href="#livre-ulum-hadith-tanawi-2">
-<span class="puces"><span class="chip chip-sujet">Sciences du hadith</span><span class="chip">2ᵉ lycée</span></span>
+<span class="puces"><span class="chip chip-sujet">Sciences du hadith</span></span>
 <span class="t-ar" dir="rtl" lang="ar">علوم الحديث</span>
 <span class="t-fr">Sciences du ḥadīth — 2ᵉ lycée</span>
 <span class="carte-pied"><span class="compte">27 / 27 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="qiraat"><a class="carte a-faire" href="#livre-qiraat-tanawi-2">
-<span class="puces"><span class="chip chip-sujet">Lectures coraniques</span><span class="chip">2ᵉ lycée</span></span>
+<span class="puces"><span class="chip chip-sujet">Lectures coraniques</span></span>
 <span class="t-ar" dir="rtl" lang="ar">القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي</span>
 <span class="t-fr">Qirāʾāt — Ḥirz al-Amānī (al-Shāṭibiyya, suite)</span>
 <span class="carte-pied"><span class="compte">0 / 28 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:0%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="taqtit"><a class="carte a-faire" href="#livre-taqtit-tanawi-2">
-<span class="puces"><span class="chip chip-sujet">Découpage temporel</span><span class="chip">2ᵉ lycée</span></span>
+<span class="puces"><span class="chip chip-sujet">Découpage temporel</span></span>
 <span class="t-ar" dir="rtl" lang="ar">التوقيت من منظومة عمدة أهل الثبت في علم الأوقات وسمت البيت</span>
 <span class="t-fr">Tawqīt — ʿUmdat Ahl al-Thabt (temps et orientations)</span>
 <span class="carte-pied"><span class="compte">0 / 29 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:0%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="fikr-islami"><a class="carte a-faire" href="#livre-fikr-islami-tanawi-2">
-<span class="puces"><span class="chip chip-sujet">Pensée islamique</span><span class="chip">2ᵉ lycée</span></span>
+<span class="puces"><span class="chip chip-sujet">Pensée islamique</span></span>
 <span class="t-ar" dir="rtl" lang="ar">الفكر الإسلامي: الفلسفة الإسلامية</span>
 <span class="t-fr">Pensée islamique — la philosophie musulmane</span>
 <span class="carte-pied"><span class="compte">0 / 28 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:0%"></span></span></span>
 </a></span>
+</section>
+</section>
+<section class="niveau-groupe">
+<h3 class="niveau-sep" style="--cycle:#7a5418"><i aria-hidden="true"></i>3ᵉ lycée <span class="arabe" dir="rtl" lang="ar">السنة الثالثة من السلك التأهيلي العتيق</span><span class="niveau-n">9 manuels</span></h3>
+<section class="grille">
 <span class="carte-cadre" data-sujet="fiqh"><a class="carte fait" href="#livre-fiqh-tanawi-3">
-<span class="puces"><span class="chip chip-sujet">Droit rituel</span><span class="chip">3ᵉ lycée</span></span>
+<span class="puces"><span class="chip chip-sujet">Droit rituel</span></span>
 <span class="t-ar" dir="rtl" lang="ar">الفقه من متن مختصر الشيخ خليل بشرح الدردير وحاشية الدسوقي</span>
 <span class="t-fr">Fiqh — le Mukhtaṣar de Khalīl (suite du programme)</span>
 <span class="carte-pied"><span class="compte">32 / 32 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="tafsir"><a class="carte a-faire" href="#livre-tafsir-tanawi-3">
-<span class="puces"><span class="chip chip-sujet">Exégèse coranique</span><span class="chip">3ᵉ lycée</span></span>
+<span class="puces"><span class="chip chip-sujet">Exégèse coranique</span></span>
 <span class="t-ar" dir="rtl" lang="ar">تفسير سورة الكهف من خلال المحرر الوجيز في تفسير الكتاب العزيز لابن عطية</span>
 <span class="t-fr">Tafsīr — la sourate al-Kahf (al-Muḥarrar al-Wajīz)</span>
 <span class="carte-pied"><span class="compte">0 / 29 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:0%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="hadith"><a class="carte fait" href="#livre-hadith-tanawi-3">
-<span class="puces"><span class="chip chip-sujet">Tradition prophétique</span><span class="chip">3ᵉ lycée</span></span>
+<span class="puces"><span class="chip chip-sujet">Tradition prophétique</span></span>
 <span class="t-ar" dir="rtl" lang="ar">كتاب الحديث من موطأ الإمام مالك بشرح الزرقاني</span>
 <span class="t-fr">Ḥadīth — le Muwaṭṭaʾ de l&#x27;imam Mālik (3ᵉ lycée)</span>
 <span class="carte-pied"><span class="compte">8 / 29 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:28%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="faraid"><a class="carte fait" href="#livre-faraid-tanawi-3">
-<span class="puces"><span class="chip chip-sujet">Droit successoral</span><span class="chip">3ᵉ lycée</span></span>
+<span class="puces"><span class="chip chip-sujet">Droit successoral</span></span>
 <span class="t-ar" dir="rtl" lang="ar">الفرائض من منظومة الجواهر المكنونة في صدف الفرائض المسنونة</span>
 <span class="t-fr">Farāʾiḍ — la Manẓūma al-Jawāhir al-Maknūna (successions)</span>
 <span class="carte-pied"><span class="compte">19 / 19 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:100%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="usul-fiqh"><a class="carte a-faire" href="#livre-usul-fiqh-tanawi-3">
-<span class="puces"><span class="chip chip-sujet">Principes du droit</span><span class="chip">3ᵉ lycée</span></span>
+<span class="puces"><span class="chip chip-sujet">Principes du droit</span></span>
 <span class="t-ar" dir="rtl" lang="ar">أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم الغرناطي</span>
 <span class="t-fr">Uṣūl al-fiqh — Marṭaqī al-Wuṣūl d&#x27;Ibn ʿĀṣim (3ᵉ lycée)</span>
 <span class="carte-pied"><span class="compte">0 / 30 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:0%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="ulum-hadith"><a class="carte a-faire" href="#livre-ulum-hadith-tanawi-3">
-<span class="puces"><span class="chip chip-sujet">Sciences du hadith</span><span class="chip">3ᵉ lycée</span></span>
+<span class="puces"><span class="chip chip-sujet">Sciences du hadith</span></span>
 <span class="t-ar" dir="rtl" lang="ar">علوم الحديث</span>
 <span class="t-fr">Sciences du ḥadīth — 3ᵉ lycée</span>
 <span class="carte-pied"><span class="compte">0 / 27 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:0%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="qiraat"><a class="carte a-faire" href="#livre-qiraat-tanawi-3">
-<span class="puces"><span class="chip chip-sujet">Lectures coraniques</span><span class="chip">3ᵉ lycée</span></span>
+<span class="puces"><span class="chip chip-sujet">Lectures coraniques</span></span>
 <span class="t-ar" dir="rtl" lang="ar">القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي</span>
 <span class="t-fr">Qirāʾāt — Ḥirz al-Amānī (al-Shāṭibiyya, 3ᵉ lycée)</span>
 <span class="carte-pied"><span class="compte">0 / 23 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:0%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="taqtit"><a class="carte a-faire" href="#livre-taqtit-tanawi-3">
-<span class="puces"><span class="chip chip-sujet">Découpage temporel</span><span class="chip">3ᵉ lycée</span></span>
+<span class="puces"><span class="chip chip-sujet">Découpage temporel</span></span>
 <span class="t-ar" dir="rtl" lang="ar">التوقيت من منظومة الجامع المفيد في حساب الخسوف والكسوف ورؤية الأهلة</span>
 <span class="t-fr">Tawqīt — al-Jāmiʿ al-Mufīd (éclipses et croissants)</span>
 <span class="carte-pied"><span class="compte">0 / 30 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:0%"></span></span></span>
 </a></span>
 <span class="carte-cadre" data-sujet="fikr-islami"><a class="carte a-faire" href="#livre-fikr-islami-tanawi-3">
-<span class="puces"><span class="chip chip-sujet">Pensée islamique</span><span class="chip">3ᵉ lycée</span></span>
+<span class="puces"><span class="chip chip-sujet">Pensée islamique</span></span>
 <span class="t-ar" dir="rtl" lang="ar">الفكر الإسلامي: التصوف الإسلامي</span>
 <span class="t-fr">Pensée islamique — le soufisme (taṣawwuf)</span>
 <span class="carte-pied"><span class="compte">0 / 27 leçons transcrites</span>
 <span class="mini-barre" aria-hidden="true"><span style="width:0%"></span></span></span>
 </a></span>
 </section>
+</section>
+</section>
+<h2 class="hors-ligne-partie">Leçons transcrites</h2>
+<section class="cycle" id="contenu-cycle-ep">
+<header class="cycle-tete" style="--cycle:#4f611d;--cycle-nuit:#37430f"><span class="cycle-titres"><h2>Enseignement primaire</h2><p class="cycle-meta">4ᵉ primaire · 5ᵉ primaire · 6ᵉ primaire</p></span><span class="cycle-ar" dir="rtl" lang="ar">السلك الابتدائي العتيق</span><span class="cycle-compte">17 manuels</span></header>
+<div class="niveau-sep" style="--cycle:#4f611d"><i aria-hidden="true"></i>4ᵉ primaire <span class="arabe" dir="rtl" lang="ar">السنة الرابعة من السلك الابتدائي العتيق</span></div>
 <section class="section-livre livre-hl" id="livre-fiqh-1ep" data-slug="fiqh-1ep" data-titre="Fiqh — le Mukhtaṣar d&#x27;al-Akhdarī, comm. d&#x27;al-Ābī al-Azharī">
 <h2><span class="arabe" dir="rtl" lang="ar">الفقه من متن الأخضري بشرح الآبي الأزهري للسنة الرابعة من التعليم الابتدائي العتيق</span> — Fiqh — le Mukhtaṣar d&#x27;al-Akhdarī, comm. d&#x27;al-Ābī al-Azharī</h2>
 <p class="meta-l">Droit rituel · 4ᵉ primaire · 30 / 30 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
@@ -3164,7 +3315,8 @@ Qu’incombe-t-il au ma’<em>mūm</em> en ce cas&nbsp; ? Et doit-il suivre l�
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-tafsir-1ep" data-slug="tafsir-1ep" data-titre="Tafsīr — le Tafsīr al-Jalālayn">
+</section>
+<section class="section-livre livre-hl" id="livre-tafsir-1ep" data-slug="tafsir-1ep" data-titre="Tafsīr — le Tafsīr al-Jalālayn">
 <h2><span class="arabe" dir="rtl" lang="ar">التفسير من خلال تفسير الجلالين</span> — Tafsīr — le Tafsīr al-Jalālayn</h2>
 <p class="meta-l">Exégèse coranique · 4ᵉ primaire · 29 / 29 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-tafsir-1ep-introduction">
@@ -4977,7 +5129,8 @@ Ces trois sourates comptent parmi les plus importantes&nbsp; : elles exhortent
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-hadith-1ep" data-slug="hadith-1ep" data-titre="Ḥadīth — Riyāḍ al-Ṣāliḥīn d&#x27;al-Nawawī, comm. Rawḍat al-Muttaqīn">
+</section>
+<section class="section-livre livre-hl" id="livre-hadith-1ep" data-slug="hadith-1ep" data-titre="Ḥadīth — Riyāḍ al-Ṣāliḥīn d&#x27;al-Nawawī, comm. Rawḍat al-Muttaqīn">
 <h2><span class="arabe" dir="rtl" lang="ar">الحديث من رياض الصالحين للإمام النووي بشرح روضة المتقين</span> — Ḥadīth — Riyāḍ al-Ṣāliḥīn d&#x27;al-Nawawī, comm. Rawḍat al-Muttaqīn</h2>
 <p class="meta-l">Tradition prophétique · 4ᵉ primaire · 31 / 31 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-hadith-1ep-introduction">
@@ -6754,7 +6907,8 @@ Du fait de la disparition du savoir religieux, les affaires de la religion sont 
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-rasm-wa-dabt-4ep" data-slug="rasm-wa-dabt-4ep" data-titre="Rasm et ḍabṭ — graphie et vocalisation coraniques">
+</section>
+<section class="section-livre livre-hl" id="livre-rasm-wa-dabt-4ep" data-slug="rasm-wa-dabt-4ep" data-titre="Rasm et ḍabṭ — graphie et vocalisation coraniques">
 <h2><span class="arabe" dir="rtl" lang="ar">الرسم والضبط</span> — Rasm et ḍabṭ — graphie et vocalisation coraniques</h2>
 <p class="meta-l">Graphie et vocalisation · 4ᵉ primaire · 29 / 29 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-rasm-wa-dabt-4ep-introduction">
@@ -9914,7 +10068,8 @@ Lundi 29 avril 2024
 </ol>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-usul-qiyam-4ep" data-slug="usul-qiyam-4ep" data-titre="Fondements des valeurs dans le Coran et la Sunna">
+</section>
+<section class="section-livre livre-hl" id="livre-usul-qiyam-4ep" data-slug="usul-qiyam-4ep" data-titre="Fondements des valeurs dans le Coran et la Sunna">
 <h2><span class="arabe" dir="rtl" lang="ar">أصول القيم في القرآن والسنة</span> — Fondements des valeurs dans le Coran et la Sunna</h2>
 <p class="meta-l">Valeurs du Coran et de la Sunna · 4ᵉ primaire · 0 / 25 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-usul-qiyam-4ep-introduction">
@@ -9958,7 +10113,9 @@ Lundi 29 avril 2024
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-fiqh-5ep" data-slug="fiqh-5ep" data-titre="Fiqh — le Muršid al-muʿīn d&#x27;Ibn ʿĀšir, avec le commentaire de Mayyāra al-Fāsī (5ᵉ primaire)">
+</section>
+<div class="niveau-sep" style="--cycle:#4f611d"><i aria-hidden="true"></i>5ᵉ primaire <span class="arabe" dir="rtl" lang="ar">السنة الخامسة من السلك الابتدائي العتيق</span></div>
+<section class="section-livre livre-hl" id="livre-fiqh-5ep" data-slug="fiqh-5ep" data-titre="Fiqh — le Muršid al-muʿīn d&#x27;Ibn ʿĀšir, avec le commentaire de Mayyāra al-Fāsī (5ᵉ primaire)">
 <h2><span class="arabe" dir="rtl" lang="ar">الفقه من منظومة المرشد المعين لابن عاشر بشرح ميارة الفاسي للسنة الخامسة من التعليم الابتدائي العتيق</span> — Fiqh — le Muršid al-muʿīn d&#x27;Ibn ʿĀšir, avec le commentaire de Mayyāra al-Fāsī (5ᵉ primaire)</h2>
 <p class="meta-l">Droit rituel · 5ᵉ primaire · 10 / 10 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-fiqh-5ep-introduction">
@@ -10907,7 +11064,8 @@ Sur tout cela, le poète a dit&nbsp; : « &nbsp;…qu’il ait atteint cet o
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-tajwid-5ep" data-slug="tajwid-5ep" data-titre="Tajwīd — applications de la Tuḥfat al-Aṭfāl d&#x27;al-Jamzūrī">
+</section>
+<section class="section-livre livre-hl" id="livre-tajwid-5ep" data-slug="tajwid-5ep" data-titre="Tajwīd — applications de la Tuḥfat al-Aṭfāl d&#x27;al-Jamzūrī">
 <h2><span class="arabe" dir="rtl" lang="ar">التجويد: تطبيقات على نظم تحفة الأطفال للجمزوري</span> — Tajwīd — applications de la Tuḥfat al-Aṭfāl d&#x27;al-Jamzūrī</h2>
 <p class="meta-l">Psalmodie coranique · 5ᵉ primaire · 30 / 30 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-tajwid-5ep-introduction">
@@ -12280,7 +12438,8 @@ Sur tout cela, le poète a dit&nbsp; : « &nbsp;…qu’il ait atteint cet o
 
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-tafsir-5ep" data-slug="tafsir-5ep" data-titre="Tafsīr — le Tafsīr al-Jalālayn">
+</section>
+<section class="section-livre livre-hl" id="livre-tafsir-5ep" data-slug="tafsir-5ep" data-titre="Tafsīr — le Tafsīr al-Jalālayn">
 <h2><span class="arabe" dir="rtl" lang="ar">التفسير من خلال تفسير الجلالين</span> — Tafsīr — le Tafsīr al-Jalālayn</h2>
 <p class="meta-l">Exégèse coranique · 5ᵉ primaire · 122 / 122 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-tafsir-5ep-introduction">
@@ -21662,7 +21821,8 @@ Quels sont donc les indices de la puissance de Dieu — qu’Il soit exalté —
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-hadith-5ep" data-slug="hadith-5ep" data-titre="Ḥadīth — les Quarante hadiths d&#x27;al-Nawawī, comm. d&#x27;Ibn Daqīq al-ʿĪd (5ᵉ primaire)">
+</section>
+<section class="section-livre livre-hl" id="livre-hadith-5ep" data-slug="hadith-5ep" data-titre="Ḥadīth — les Quarante hadiths d&#x27;al-Nawawī, comm. d&#x27;Ibn Daqīq al-ʿĪd (5ᵉ primaire)">
 <h2><span class="arabe" dir="rtl" lang="ar">الحديث من كتاب الأربعين النووية للإمام النووي بشرح ابن دقيق العيد للسنة الخامسة من التعليم الابتدائي العتيق</span> — Ḥadīth — les Quarante hadiths d&#x27;al-Nawawī, comm. d&#x27;Ibn Daqīq al-ʿĪd (5ᵉ primaire)</h2>
 <p class="meta-l">Tradition prophétique · 5ᵉ primaire · 19 / 29 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-hadith-5ep-introduction">
@@ -23046,7 +23206,8 @@ Quels sont donc les indices de la puissance de Dieu — qu’Il soit exalté —
 
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-rasm-wa-dabt-5ep" data-slug="rasm-wa-dabt-5ep" data-titre="Rasm et ḍabṭ — ʿUmdat al-Bayān d&#x27;al-Wadghīrī">
+</section>
+<section class="section-livre livre-hl" id="livre-rasm-wa-dabt-5ep" data-slug="rasm-wa-dabt-5ep" data-titre="Rasm et ḍabṭ — ʿUmdat al-Bayān d&#x27;al-Wadghīrī">
 <h2><span class="arabe" dir="rtl" lang="ar">الرسم والضبط من أرجوزة عمدة البيان لإدريس الودغيري</span> — Rasm et ḍabṭ — ʿUmdat al-Bayān d&#x27;al-Wadghīrī</h2>
 <p class="meta-l">Graphie et vocalisation · 5ᵉ primaire · 2 / 31 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-rasm-wa-dabt-5ep-introduction">
@@ -23290,7 +23451,8 @@ Quels sont donc les mots à alif élidé qui restent au chapitre du <em>nūn</em
 <p>J’apprends par cœur les vers restants du chapitre du <em>nūn</em> <span dir="rtl" lang="ar">(نُون)</span>, 132 à 135, et j’accomplis les activités proposées par le professeur (la professeure).</p>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-usul-qiyam-5ep" data-slug="usul-qiyam-5ep" data-titre="Fondements des valeurs dans le Coran et la Sunna (5ᵉ)">
+</section>
+<section class="section-livre livre-hl" id="livre-usul-qiyam-5ep" data-slug="usul-qiyam-5ep" data-titre="Fondements des valeurs dans le Coran et la Sunna (5ᵉ)">
 <h2><span class="arabe" dir="rtl" lang="ar">أصول القيم في القرآن والسنة</span> — Fondements des valeurs dans le Coran et la Sunna (5ᵉ)</h2>
 <p class="meta-l">Valeurs du Coran et de la Sunna · 5ᵉ primaire · 0 / 26 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-usul-qiyam-5ep-introduction">
@@ -23333,7 +23495,9 @@ Quels sont donc les mots à alif élidé qui restent au chapitre du <em>nūn</em
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-fiqh-6ep" data-slug="fiqh-6ep" data-titre="Fiqh — le Murshid al-Muʿīn d&#x27;Ibn ʿĀshir, comm. de Mayyāra">
+</section>
+<div class="niveau-sep" style="--cycle:#4f611d"><i aria-hidden="true"></i>6ᵉ primaire <span class="arabe" dir="rtl" lang="ar">السنة السادسة من السلك الابتدائي العتيق</span></div>
+<section class="section-livre livre-hl" id="livre-fiqh-6ep" data-slug="fiqh-6ep" data-titre="Fiqh — le Murshid al-Muʿīn d&#x27;Ibn ʿĀshir, comm. de Mayyāra">
 <h2><span class="arabe" dir="rtl" lang="ar">الفقه من منظومة المرشد المعين لابن عاشر بشرح ميارة</span> — Fiqh — le Murshid al-Muʿīn d&#x27;Ibn ʿĀshir, comm. de Mayyāra</h2>
 <p class="meta-l">Droit rituel · 6ᵉ primaire · 30 / 30 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-fiqh-6ep-introduction">
@@ -26366,7 +26530,8 @@ Et parmi ce qu’on peut tirer de cette leçon&nbsp; :</p>
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-tajwid-6ep" data-slug="tajwid-6ep" data-titre="Tajwīd — Naẓm al-Durar al-Lawāmiʿ d&#x27;Ibn Barrī">
+</section>
+<section class="section-livre livre-hl" id="livre-tajwid-6ep" data-slug="tajwid-6ep" data-titre="Tajwīd — Naẓm al-Durar al-Lawāmiʿ d&#x27;Ibn Barrī">
 <h2><span class="arabe" dir="rtl" lang="ar">التجويد من نظم الدرر اللوامع للإمام ابن بري</span> — Tajwīd — Naẓm al-Durar al-Lawāmiʿ d&#x27;Ibn Barrī</h2>
 <p class="meta-l">Psalmodie coranique · 6ᵉ primaire · 28 / 28 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-tajwid-6ep-introduction">
@@ -28751,7 +28916,8 @@ et je donne au <em>zāy</em> <span dir="rtl" lang="ar">(زَاي)</span> son dû
 <div>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-tafsir-6ep" data-slug="tafsir-6ep" data-titre="Tafsīr — le Tafsīr al-Jalālayn">
+</section>
+<section class="section-livre livre-hl" id="livre-tafsir-6ep" data-slug="tafsir-6ep" data-titre="Tafsīr — le Tafsīr al-Jalālayn">
 <h2><span class="arabe" dir="rtl" lang="ar">التفسير من خلال تفسير الجلالين</span> — Tafsīr — le Tafsīr al-Jalālayn</h2>
 <p class="meta-l">Exégèse coranique · 6ᵉ primaire · 30 / 30 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-tafsir-6ep-introduction">
@@ -31824,7 +31990,8 @@ d’<em>Abū</em> <span dir="rtl" lang="ar">(أَبُو)</span> al-Ḥasan ’<e
 d’<em>Aḥmad</em> <span dir="rtl" lang="ar">(أَحْمَد)</span> ibn <em>Muḥammad</em> <span dir="rtl" lang="ar">(مُحَمَّدٌ)</span> al-Ṣ<em>āwī</em> <em>al-Mālikī</em> <em>al-Khalwatī</em> (1178-1241 H), <em>Dār</em> <em>al-Jīl</em>, Beyrouth, sans date ni numéro d’édition.</p>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-hadith-6ep" data-slug="hadith-6ep" data-titre="Ḥadīth — les Quarante hadiths d&#x27;al-Nawawī, comm. d&#x27;Ibn Daqīq al-ʿĪd">
+</section>
+<section class="section-livre livre-hl" id="livre-hadith-6ep" data-slug="hadith-6ep" data-titre="Ḥadīth — les Quarante hadiths d&#x27;al-Nawawī, comm. d&#x27;Ibn Daqīq al-ʿĪd">
 <h2><span class="arabe" dir="rtl" lang="ar">الحديث من كتاب الأربعين النووية بشرح ابن دقيق العيد</span> — Ḥadīth — les Quarante hadiths d&#x27;al-Nawawī, comm. d&#x27;Ibn Daqīq al-ʿĪd</h2>
 <p class="meta-l">Tradition prophétique · 6ᵉ primaire · 1 / 29 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-hadith-6ep-introduction">
@@ -31968,7 +32135,8 @@ Quelles sont donc les œuvres <em>auxquelles</em> il faut s’empresser&nbsp; 
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-rasm-wa-dabt-6ep" data-slug="rasm-wa-dabt-6ep" data-titre="Rasm et ḍabṭ — ʿUmdat al-Bayān d&#x27;al-Wadghīrī (fin)">
+</section>
+<section class="section-livre livre-hl" id="livre-rasm-wa-dabt-6ep" data-slug="rasm-wa-dabt-6ep" data-titre="Rasm et ḍabṭ — ʿUmdat al-Bayān d&#x27;al-Wadghīrī (fin)">
 <h2><span class="arabe" dir="rtl" lang="ar">الرسم والضبط من أرجوزة عمدة البيان لإدريس الودغيري</span> — Rasm et ḍabṭ — ʿUmdat al-Bayān d&#x27;al-Wadghīrī (fin)</h2>
 <p class="meta-l">Graphie et vocalisation · 6ᵉ primaire · 0 / 29 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-rasm-wa-dabt-6ep-introduction">
@@ -32016,7 +32184,8 @@ Quelles sont donc les œuvres <em>auxquelles</em> il faut s’empresser&nbsp; 
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-usul-qiyam-6ep" data-slug="usul-qiyam-6ep" data-titre="Fondements des valeurs dans le Coran et la Sunna (6ᵉ)">
+</section>
+<section class="section-livre livre-hl" id="livre-usul-qiyam-6ep" data-slug="usul-qiyam-6ep" data-titre="Fondements des valeurs dans le Coran et la Sunna (6ᵉ)">
 <h2><span class="arabe" dir="rtl" lang="ar">أصول القيم في القرآن والسنة</span> — Fondements des valeurs dans le Coran et la Sunna (6ᵉ)</h2>
 <p class="meta-l">Valeurs du Coran et de la Sunna · 6ᵉ primaire · 0 / 25 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-usul-qiyam-6ep-introduction">
@@ -32059,7 +32228,11 @@ Quelles sont donc les œuvres <em>auxquelles</em> il faut s’empresser&nbsp; 
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-tawhid-1es" data-slug="tawhid-1es" data-titre="Tawḥīd — la Risāla d&#x27;Ibn Abī Zayd al-Qayrawānī">
+</section>
+</section><section class="cycle" id="contenu-cycle-es">
+<header class="cycle-tete" style="--cycle:#9c4a12;--cycle-nuit:#5e2c0a"><span class="cycle-titres"><h2>Enseignement secondaire collégial</h2><p class="cycle-meta">1ᵉʳ collège · 2ᵉ collège · 3ᵉ collège</p></span><span class="cycle-ar" dir="rtl" lang="ar">السلك الإعدادي العتيق</span><span class="cycle-compte">20 manuels</span></header>
+<div class="niveau-sep" style="--cycle:#9c4a12"><i aria-hidden="true"></i>1ᵉʳ collège <span class="arabe" dir="rtl" lang="ar">السنة الأولى من السلك الإعدادي العتيق</span></div>
+<section class="section-livre livre-hl" id="livre-tawhid-1es" data-slug="tawhid-1es" data-titre="Tawḥīd — la Risāla d&#x27;Ibn Abī Zayd al-Qayrawānī">
 <h2><span class="arabe" dir="rtl" lang="ar">التوحيد من متن الرسالة لابن أبي زيد القيرواني</span> — Tawḥīd — la Risāla d&#x27;Ibn Abī Zayd al-Qayrawānī</h2>
 <p class="meta-l">Monothéisme · 1ᵉʳ collège · 29 / 29 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-tawhid-1es-introduction">
@@ -34238,7 +34411,8 @@ Quelles sont donc les œuvres <em>auxquelles</em> il faut s’empresser&nbsp; 
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-fiqh-1es" data-slug="fiqh-1es" data-titre="Fiqh — la Risāla d&#x27;Ibn Abī Zayd al-Qayrawānī">
+</section>
+<section class="section-livre livre-hl" id="livre-fiqh-1es" data-slug="fiqh-1es" data-titre="Fiqh — la Risāla d&#x27;Ibn Abī Zayd al-Qayrawānī">
 <h2><span class="arabe" dir="rtl" lang="ar">الفقه من متن الرسالة لابن أبي زيد القيرواني بشرح كفاية الطالب الرباني</span> — Fiqh — la Risāla d&#x27;Ibn Abī Zayd al-Qayrawānī</h2>
 <p class="meta-l">Droit rituel · 1ᵉʳ collège · 30 / 30 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-fiqh-1es-introduction">
@@ -36866,7 +37040,8 @@ Peut-être est-il des visées (<em><em>maqā</em>ṣid</em>) de la couverture du
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-sira-1es" data-slug="sira-1es" data-titre="Sīra — la biographie du Prophète ﷺ">
+</section>
+<section class="section-livre livre-hl" id="livre-sira-1es" data-slug="sira-1es" data-titre="Sīra — la biographie du Prophète ﷺ">
 <h2><span class="arabe" dir="rtl" lang="ar">السيرة النبوية</span> — Sīra — la biographie du Prophète ﷺ</h2>
 <p class="meta-l">Biographie prophétique · 1ᵉʳ collège · 29 / 29 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-sira-1es-introduction">
@@ -38731,7 +38906,8 @@ En ce voyage béni, Dieu — qu’Il soit exalté — honora Son Prophète — q
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-tafsir-1es" data-slug="tafsir-1es" data-titre="Tafsīr — al-Tashīl li-ʿUlūm al-Tanzīl d&#x27;Ibn Juzayy">
+</section>
+<section class="section-livre livre-hl" id="livre-tafsir-1es" data-slug="tafsir-1es" data-titre="Tafsīr — al-Tashīl li-ʿUlūm al-Tanzīl d&#x27;Ibn Juzayy">
 <h2><span class="arabe" dir="rtl" lang="ar">التفسير من خلال التسهيل لعلوم التنزيل لابن جزي</span> — Tafsīr — al-Tashīl li-ʿUlūm al-Tanzīl d&#x27;Ibn Juzayy</h2>
 <p class="meta-l">Exégèse coranique · 1ᵉʳ collège · 30 / 30 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-tafsir-1es-introduction">
@@ -41234,7 +41410,8 @@ Ce verset vise la préservation de l’entente et de l’amour entre les membres
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-hadith-1es" data-slug="hadith-1es" data-titre="Ḥadīth — le Muwaṭṭaʾ de l&#x27;imam Mālik, comm. d&#x27;al-Zarqānī">
+</section>
+<section class="section-livre livre-hl" id="livre-hadith-1es" data-slug="hadith-1es" data-titre="Ḥadīth — le Muwaṭṭaʾ de l&#x27;imam Mālik, comm. d&#x27;al-Zarqānī">
 <h2><span class="arabe" dir="rtl" lang="ar">الحديث من موطأ الإمام مالك بشرح الزرقاني</span> — Ḥadīth — le Muwaṭṭaʾ de l&#x27;imam Mālik, comm. d&#x27;al-Zarqānī</h2>
 <p class="meta-l">Tradition prophétique · 1ᵉʳ collège · 31 / 31 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-hadith-1es-introduction">
@@ -43603,7 +43780,8 @@ Et le mot de la fin&nbsp;: il n’y a point de limite au montant de la récitati
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-ulum-quran-1es" data-slug="ulum-quran-1es" data-titre="Sciences du Coran — ʿulūm al-Qurʾān">
+</section>
+<section class="section-livre livre-hl" id="livre-ulum-quran-1es" data-slug="ulum-quran-1es" data-titre="Sciences du Coran — ʿulūm al-Qurʾān">
 <h2><span class="arabe" dir="rtl" lang="ar">علوم القرآن</span> — Sciences du Coran — ʿulūm al-Qurʾān</h2>
 <p class="meta-l">Sciences coraniques · 1ᵉʳ collège · 27 / 27 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-ulum-quran-1es-introduction">
@@ -45385,7 +45563,9 @@ au Maghreb, chez le sédentaire comme chez le nomade.&nbsp;»</p>
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-tawhid-2es" data-slug="tawhid-2es" data-titre="Tawḥīd — le Murshid al-Muʿīn d&#x27;Ibn ʿĀshir">
+</section>
+<div class="niveau-sep" style="--cycle:#9c4a12"><i aria-hidden="true"></i>2ᵉ collège <span class="arabe" dir="rtl" lang="ar">السنة الثانية من السلك الإعدادي العتيق</span></div>
+<section class="section-livre livre-hl" id="livre-tawhid-2es" data-slug="tawhid-2es" data-titre="Tawḥīd — le Murshid al-Muʿīn d&#x27;Ibn ʿĀshir">
 <h2><span class="arabe" dir="rtl" lang="ar">التوحيد من منظومة المرشد المعين على الضروري من علوم الدين لعبد الواحد بن عاشر</span> — Tawḥīd — le Murshid al-Muʿīn d&#x27;Ibn ʿĀshir</h2>
 <p class="meta-l">Monothéisme · 2ᵉ collège · 25 / 25 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-tawhid-2es-introduction">
@@ -47446,7 +47626,8 @@ au Maghreb, chez le sédentaire comme chez le nomade.&nbsp;»</p>
 <p><em>N.d.T. — (1) Cette liste finale couronne le programme de <em>tawḥīd</em> de la deuxième année&nbsp;: elle atteste les sources effectivement mises à contribution dans les leçons. (2) Le Coran de référence&nbsp;: la lecture <em>Warsh</em> d’après <em>Nāfi</em>' (la lecture du Maghreb) selon le décompte médinois — édition officielle de la Fondation <em>Muḥammad</em> <span dir="rtl" lang="ar">(مُحَمَّدٌ)</span> VI&nbsp;; c’est elle qui fonde la numérotation «&nbsp;de l’école&nbsp;» de nos chips, face à l’édition <em>ḥaf</em>ṣ (les décalages documentés&nbsp;: <em>Baqara</em> −1, <em>Shūrā</em> −2, An'<em>ām</em> +1, <em>Yā-Sīn</em> +1, <em>ar-Raḥmān</em> <span dir="rtl" lang="ar">(الرَّحْمَٰنُ)</span> +2, etc.). (3) Les 6 autres entrées&nbsp;: le commentaire de <em>Zarrūq</em> (m. 899/1493 — déjà cité en leçon 23) sur la <em><em>Muqaddima</em></em> du <em>mystique</em> algérien <em>al-Waghlīsī</em> (m. 786/1384)&nbsp;; le commentaire d’<em>ad-Dardīr</em> <span dir="rtl" lang="ar">(الدَّرْدِيرُ)</span> (m. 1201/1786) sur sa propre <em><em>Kharīda</em> al-bahiyya</em> — les deux prescrites dès la leçon 9&nbsp;; le <em><em>Jāmi</em>'</em> de <em>Qurṭubī</em> (m. 671/1272 — cité en lesçons 13, 14, 18, 19)&nbsp;; le commentaire de <em>Nābulusī</em> (m. 1143/1731, savant damascène) sur l’<em><em>Iḍā</em>'at ad-dujna</em> d’<em>al-Maqqarī</em> — la <em>matn</em> citée aux leçons 3, 8 et 20, dont l’auteur (m. 1041 H) fut documenté dès la leçon 3&nbsp;; la <em><em>ḥāshiyya</em> <span dir="rtl" lang="ar">(حَاشِيَة)</span></em> d’<em>ad-Dasūqī</em> <span dir="rtl" lang="ar">(الدَّسُوقِيُّ)</span> sur l’<em>Umm <em>al-barāhīn</em></em> d’<em>as-Sanūsī</em> — le commentaire des leçons 7 et 21&nbsp;; le commentaire de <em>Taftāzānī</em> (m. 793/1391) du credo de Naṣ<em>afī</em> — cité en leçon 18. (4) L’établissement de deux volumes est signé 'Abd <em>as-Salām</em> <em>Shannār</em> (éd. <em>al-Bayrūnī</em>/<em>Dār</em> Ibn 'Abd <em>al-Hādī</em>) — le même éditeur du <em>Dardīr</em> et du <em>Taftāzānī</em>. (5) Les dates de mort sont celles imprimées par le manuel&nbsp;; l’orthographe des noms (<em>Waghlīsī</em>, <em>Basaṭa</em>, <em>Shannār</em>, <em>al-Mizaydī</em>) est restituée telle quelle.</em></p>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-fiqh-2es" data-slug="fiqh-2es" data-titre="Fiqh — la Risāla d&#x27;Ibn Abī Zayd, comm. al-Kifāya + ḥāshiya al-ʿAdawī (2ᵉ collège)">
+</section>
+<section class="section-livre livre-hl" id="livre-fiqh-2es" data-slug="fiqh-2es" data-titre="Fiqh — la Risāla d&#x27;Ibn Abī Zayd, comm. al-Kifāya + ḥāshiya al-ʿAdawī (2ᵉ collège)">
 <h2><span class="arabe" dir="rtl" lang="ar">الفقه من رسالة ابن أبي زيد القيرواني بشرح كفاية الطالب الرباني بحاشية العدوي للسنة الثانية من التعليم الإعدادي العتيق</span> — Fiqh — la Risāla d&#x27;Ibn Abī Zayd, comm. al-Kifāya + ḥāshiya al-ʿAdawī (2ᵉ collège)</h2>
 <p class="meta-l">Droit rituel · 2ᵉ collège · 2 / 2 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-fiqh-2es-introduction">
@@ -47592,7 +47773,8 @@ Nous le plaçons entre tes mains pour que tu t’imbibes du droit mālikite que 
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-sira-2es" data-slug="sira-2es" data-titre="Sīra — la biographie du Prophète ﷺ (2ᵉ collège)">
+</section>
+<section class="section-livre livre-hl" id="livre-sira-2es" data-slug="sira-2es" data-titre="Sīra — la biographie du Prophète ﷺ (2ᵉ collège)">
 <h2><span class="arabe" dir="rtl" lang="ar">السيرة النبوية</span> — Sīra — la biographie du Prophète ﷺ (2ᵉ collège)</h2>
 <p class="meta-l">Biographie prophétique · 2ᵉ collège · 28 / 28 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-sira-2es-introduction">
@@ -49975,7 +50157,8 @@ C’est <em>al-Walīd</em> b. <em>al-Mughīra</em> b. 'Abd <em>Allāh</em> <span
 <div>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-tajwid-2es" data-slug="tajwid-2es" data-titre="Tajwīd — al-Durar al-Lawāmiʿ d&#x27;Ibn Barrī, comm. al-Nujūm al-Ṭawāliʿ">
+</section>
+<section class="section-livre livre-hl" id="livre-tajwid-2es" data-slug="tajwid-2es" data-titre="Tajwīd — al-Durar al-Lawāmiʿ d&#x27;Ibn Barrī, comm. al-Nujūm al-Ṭawāliʿ">
 <h2><span class="arabe" dir="rtl" lang="ar">التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لإبراهيم المارغني</span> — Tajwīd — al-Durar al-Lawāmiʿ d&#x27;Ibn Barrī, comm. al-Nujūm al-Ṭawāliʿ</h2>
 <p class="meta-l">Psalmodie coranique · 2ᵉ collège · 27 / 27 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-tajwid-2es-introduction">
@@ -52370,7 +52553,8 @@ C’est <em>al-Walīd</em> b. <em>al-Mughīra</em> b. 'Abd <em>Allāh</em> <span
 <p><em>N.d.T. — (1) Leçon finale du livre&nbsp;: le mathn intégral, sans exercice ni section d’application — le manuel ne donne que la présentation, le titre de section et la table des versets. (2) Les soixante et un vers sont rendus dans les termes mêmes établis verset à verset aux leçons précédentes du livre (leçons 1 à 26), où chacun fut vérifié verbatim sur le mathn et <em>expliqu</em>é du commentaire <em><em>an-Nujūm</em> <em>aṭ-ṭawāli</em>'</em> : versets 1-3 (première leçon), 4-5 (2), 6-7 (3), 8-9 (4), 10-11 (5), 12-13 (6), 14-15 (7), 16-20 (8), 21-22 (9), 23-24 (10), 25-28 (11), 29-31 (12), 32-33 (13), 34-35 (14), 36-39 (15), 40-41 (16), 42-43 (17), 44-45 (18), 46-47 (19), 48-50 (21), 51-55 (22), 56-58 (24), 59-61 (25) — les versets du titre de chaque chapitre et de l’assimilation obligatoire sont ceux des leçons 16 et 21. (3) La table suit la convention du livre&nbsp;: le premier hémistiche en la cellule droite. (4) «&nbsp;La carte du mathn&nbsp;» est une aide de la traduction, résumant la structure que les leçons ont parcourue — elle n’est point du manuel. (5) Le mathn arabe étant affiché en regard par le lecteur du site, verset à verset, la traduction n’en double point ici les <em>diacritiques</em> ni les Vocalisations de convention — les termes <em>techniques</em> gardent la graphie du livre (<em>taḥqīq</em>, <em>tashīl</em>, <em>isqāṭ</em> <span dir="rtl" lang="ar">(إسقاط)</span>, <em>tabdīl</em>, <em>naql</em>, <em>iẓhār</em>, <em>idghām</em>, <em>qalb</em> <span dir="rtl" lang="ar">(قَلْب)</span>, <em>ikhfā</em>', <em>tabyīn</em>).</em></p>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-tafsir-2es" data-slug="tafsir-2es" data-titre="Tafsīr — al-Tashīl li-ʿUlūm al-Tanzīl d&#x27;Ibn Juzayy (suite)">
+</section>
+<section class="section-livre livre-hl" id="livre-tafsir-2es" data-slug="tafsir-2es" data-titre="Tafsīr — al-Tashīl li-ʿUlūm al-Tanzīl d&#x27;Ibn Juzayy (suite)">
 <h2><span class="arabe" dir="rtl" lang="ar">التفسير من خلال التسهيل لعلوم التنزيل لابن جزي</span> — Tafsīr — al-Tashīl li-ʿUlūm al-Tanzīl d&#x27;Ibn Juzayy (suite)</h2>
 <p class="meta-l">Exégèse coranique · 2ᵉ collège · 37 / 37 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-tafsir-2es-introduction">
@@ -55508,7 +55692,8 @@ Quels sont donc les indices de la puissance de Dieu — qu’Il soit exalté —
 </ol>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-hadith-2es" data-slug="hadith-2es" data-titre="Ḥadīth — le Muwaṭṭaʾ de l&#x27;imam Mālik, comm. d&#x27;al-Zarqānī (2ᵉ collège)">
+</section>
+<section class="section-livre livre-hl" id="livre-hadith-2es" data-slug="hadith-2es" data-titre="Ḥadīth — le Muwaṭṭaʾ de l&#x27;imam Mālik, comm. d&#x27;al-Zarqānī (2ᵉ collège)">
 <h2><span class="arabe" dir="rtl" lang="ar">الحديث من موطأ الإمام مالك بشرح الزرقاني للسنة الثانية من التعليم الإعدادي العتيق</span> — Ḥadīth — le Muwaṭṭaʾ de l&#x27;imam Mālik, comm. d&#x27;al-Zarqānī (2ᵉ collège)</h2>
 <p class="meta-l">Tradition prophétique · 2ᵉ collège · 30 / 30 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-hadith-2es-introduction">
@@ -57932,7 +58117,8 @@ Quels sont donc les indices de la puissance de Dieu — qu’Il soit exalté —
 <p>Chaîne de production de la passe R575 (trace 1a1a172f41684dc9-cron-agent-loop-202611050405, ouvrier D Job 499559, tick 03 :56 +08) : revendication <em>atomique</em> du créneau pdf-31 à 20 :41 :36Z (2026-11-04 UTC), refresh 20 :42 :00Z — dans la MÊME passe que R574, en exécution directe du mandat utilisateur «&nbsp;tu dois avancer&nbsp;», la revendication de R574 restant vivante et le slot pdf-31 étant le dernier libre du livre. GARDE-DOUBLON double vert&nbsp;: hadith-2es.json pdf-31 titleFr «&nbsp;Liste des sources et références&nbsp;» htmlFr 0 car (contrôle positif pdf-30 htmlFr 11 027 car écrit à l’instant)&nbsp;; registre savant hand+llm 1 133 entrées, pdf-31 ABSENT (pdf-30 présent). MÉTHODE locale sans API vision&nbsp;: couche texte 5 468 car (hadith2-extract-l31.py, pages 200-209 — p.207-208 en table éparpillée, p.206 vide, p.201-205 lisibles avec garbles) + rendu 300 dpi des pages 201-208 lus in extenso À L’ŒIL (tr-tmp/r575-pages/) + NEUF zones d’adjudication en composites 600 dpi (tr-tmp/r575-crops/, composites A, B, C-fix, D-zooms-v2, entry19 et row31b) tranchant au recadrage et jamais de mémoire&nbsp;: «&nbsp;al-Muṣ<em>ḥaf</em> al-Muṣ<em>addī</em>&nbsp;» porté tel qu’imprimé (mot non identifié, doute déclaré)&nbsp;; "<em>al-maṭwū</em>'<em>āt</em>" imprimé (contre "<em>al-maṭbū</em>'<em>āt</em>" attendu)&nbsp;; "<em>Sālim</em> <em>Muḥammad</em> <span dir="rtl" lang="ar">(مُحَمَّدٌ)</span> '<em>Aṭā</em>" imprimé (contre "<em>Salīm</em>" des éditions courantes)&nbsp;; "Markaz <em>Najībūh</em>" imprimé (probablement "Markaz <em>Najīb</em>")&nbsp;; "<em>Dārat</em> al-Ma'<em>ārif</em> <em>an-Niẓāmiyya</em> – Inde" imprimé&nbsp;; "'<em>iḍā</em>'<em>āt</em> manhajiyya" tranché (hamza isolée à l’image, contre couche "'<em>iḍā</em>'<em>āt</em>")&nbsp;; rangée 34 "<em>la-mā</em>" imprimé (<em>coquille</em> probable pour "lahum", bannière p.199)&nbsp;; rangée 36 "<em>al-mawḍū</em>'<em>āt</em>" imprimé (<em>coquille</em> probable pour "<em>al-mawāḍī</em>'", bannière p.207)&nbsp;; rangée 31 "<em>al-manū</em>'" imprimé (<em>coquille</em> probable pour "<em>al-mamnū</em>'", titre registre pdf-27)&nbsp;; rangée 33 chadda sur le <em>sīn</em> <span dir="rtl" lang="ar">(سِين)</span> de "wa-sitta"&nbsp;; "<em>baqiyyat</em> al-'alma'<em>ī</em>" non vocalisé (vocalisation incertaine déclarée). AUCUNE citation <em>coranique</em> traduite dans l’annexe (liste <em>bibliographique</em>) — quran-cache.json non sollicité&nbsp;; la ligne d’ouverture <em>coranique</em> (Warch 'an <em>Nāfi</em>' <em>ṭarīq</em> al-'<em>Azraq</em>, Fondation Mohammed VI) CONFIRME la doctrine R511 au sein du fascicule lui-même. Les vingt-sept entrées numérotées (14 livres de hadith, 5 commentaires, 5 livres de <em>fiqh</em> <span dir="rtl" lang="ar">(فِقْه)</span>, 3 livres de biographies) et les trente-six rangées de l’index des thèmes sont portées telles qu’imprimées, sans re-numérotation. LIVRAISON&nbsp;: htmlFr FR-seule sur gabarit pdf-29, <em>qa-lesson</em>.py OK, verify-hadith2-pdf31.py, hand-set (docId pdf-31, registre savants incrémenté, hadith-2es 30/30 — LIVRE CLOS), <em>QA</em> navigateur 1280/390 sur miroir&nbsp;:3100, clôture du front hadith-2es.</p>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-ulum-quran-2es" data-slug="ulum-quran-2es" data-titre="Sciences du Coran — ʿulūm al-Qurʾān (2ᵉ collège)">
+</section>
+<section class="section-livre livre-hl" id="livre-ulum-quran-2es" data-slug="ulum-quran-2es" data-titre="Sciences du Coran — ʿulūm al-Qurʾān (2ᵉ collège)">
 <h2><span class="arabe" dir="rtl" lang="ar">علوم القرآن</span> — Sciences du Coran — ʿulūm al-Qurʾān (2ᵉ collège)</h2>
 <p class="meta-l">Sciences coraniques · 2ᵉ collège · 28 / 28 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-ulum-quran-2es-introduction">
@@ -59703,7 +59889,9 @@ Quiconque médite ces deux versets y trouve des faces qui <em>indiquent</em> l�
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-fiqh-3es" data-slug="fiqh-3es" data-titre="Fiqh — la Risāla d&#x27;Ibn Abī Zayd al-Qayrawānī (suite)">
+</section>
+<div class="niveau-sep" style="--cycle:#9c4a12"><i aria-hidden="true"></i>3ᵉ collège <span class="arabe" dir="rtl" lang="ar">السنة الثالثة من السلك الإعدادي العتيق</span></div>
+<section class="section-livre livre-hl" id="livre-fiqh-3es" data-slug="fiqh-3es" data-titre="Fiqh — la Risāla d&#x27;Ibn Abī Zayd al-Qayrawānī (suite)">
 <h2><span class="arabe" dir="rtl" lang="ar">الفقه من متن الرسالة لابن أبي زيد القيرواني بشرح كفاية الطالب الرباني بحاشية العدوي</span> — Fiqh — la Risāla d&#x27;Ibn Abī Zayd al-Qayrawānī (suite)</h2>
 <p class="meta-l">Droit rituel · 3ᵉ collège · 2 / 29 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-fiqh-3es-introduction">
@@ -59824,7 +60012,8 @@ Lundi 31 décembre 2018
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-sira-3es" data-slug="sira-3es" data-titre="Sīra — la biographie du Prophète ﷺ (3ᵉ collège)">
+</section>
+<section class="section-livre livre-hl" id="livre-sira-3es" data-slug="sira-3es" data-titre="Sīra — la biographie du Prophète ﷺ (3ᵉ collège)">
 <h2><span class="arabe" dir="rtl" lang="ar">السيرة النبوية</span> — Sīra — la biographie du Prophète ﷺ (3ᵉ collège)</h2>
 <p class="meta-l">Biographie prophétique · 3ᵉ collège · 8 / 8 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-sira-3es-introduction">
@@ -60504,7 +60693,8 @@ La présentation de la bataille de Mu'ta</p>
 <div>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-tajwid-3es" data-slug="tajwid-3es" data-titre="Tajwīd — al-Durar al-Lawāmiʿ d&#x27;Ibn Barrī (suite)">
+</section>
+<section class="section-livre livre-hl" id="livre-tajwid-3es" data-slug="tajwid-3es" data-titre="Tajwīd — al-Durar al-Lawāmiʿ d&#x27;Ibn Barrī (suite)">
 <h2><span class="arabe" dir="rtl" lang="ar">التجويد من نظم الدرر اللوامع لابن بري بشرح النجوم الطوالع لإبراهيم المارغني</span> — Tajwīd — al-Durar al-Lawāmiʿ d&#x27;Ibn Barrī (suite)</h2>
 <p class="meta-l">Psalmodie coranique · 3ᵉ collège · 0 / 28 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-tajwid-3es-introduction">
@@ -60558,7 +60748,8 @@ La présentation de la bataille de Mu'ta</p>
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-tafsir-3es" data-slug="tafsir-3es" data-titre="Tafsīr — al-Tashīl li-ʿUlūm al-Tanzīl d&#x27;Ibn Juzayy (fin)">
+</section>
+<section class="section-livre livre-hl" id="livre-tafsir-3es" data-slug="tafsir-3es" data-titre="Tafsīr — al-Tashīl li-ʿUlūm al-Tanzīl d&#x27;Ibn Juzayy (fin)">
 <h2><span class="arabe" dir="rtl" lang="ar">التفسير من خلال التسهيل لعلوم التنزيل لابن جزي</span> — Tafsīr — al-Tashīl li-ʿUlūm al-Tanzīl d&#x27;Ibn Juzayy (fin)</h2>
 <p class="meta-l">Exégèse coranique · 3ᵉ collège · 18 / 43 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-tafsir-3es-introduction">
@@ -62143,7 +62334,8 @@ Je médite le verset et j’en extrais les attributs de Dieu — qu’Il soit ex
 <p>Exégèse de la sourate <em>aṭ-</em>Ṭ<em>arīm</em> (versets&nbsp;: 1-2)</p>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-hadith-3es" data-slug="hadith-3es" data-titre="Ḥadīth — le Muwaṭṭaʾ de l&#x27;imam Mālik (suite)">
+</section>
+<section class="section-livre livre-hl" id="livre-hadith-3es" data-slug="hadith-3es" data-titre="Ḥadīth — le Muwaṭṭaʾ de l&#x27;imam Mālik (suite)">
 <h2><span class="arabe" dir="rtl" lang="ar">الحديث من موطأ الإمام مالك بشرح الزرقاني</span> — Ḥadīth — le Muwaṭṭaʾ de l&#x27;imam Mālik (suite)</h2>
 <p class="meta-l">Tradition prophétique · 3ᵉ collège · 29 / 29 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-hadith-3es-introduction">
@@ -65362,7 +65554,8 @@ Je médite le verset et j’en extrais les attributs de Dieu — qu’Il soit ex
 
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-usul-fiqh-waraqat" data-slug="usul-fiqh-waraqat" data-titre="Uṣūl al-fiqh — al-Warāqāt d&#x27;al-Juwaynī, comm. d&#x27;al-Ḥaṭṭāb">
+</section>
+<section class="section-livre livre-hl" id="livre-usul-fiqh-waraqat" data-slug="usul-fiqh-waraqat" data-titre="Uṣūl al-fiqh — al-Warāqāt d&#x27;al-Juwaynī, comm. d&#x27;al-Ḥaṭṭāb">
 <h2><span class="arabe" dir="rtl" lang="ar">كتاب أصول الفقه من ورقات إمام الحرمين بشرح الحطاب الرعيني</span> — Uṣūl al-fiqh — al-Warāqāt d&#x27;al-Juwaynī, comm. d&#x27;al-Ḥaṭṭāb</h2>
 <p class="meta-l">Principes du droit · 3ᵉ collège · 28 / 28 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-usul-fiqh-waraqat-introduction">
@@ -67944,7 +68137,8 @@ Je médite le verset et j’en extrais les attributs de Dieu — qu’Il soit ex
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-ulum-quran-3es" data-slug="ulum-quran-3es" data-titre="Sciences du Coran — ʿulūm al-Qurʾān (3ᵉ collège)">
+</section>
+<section class="section-livre livre-hl" id="livre-ulum-quran-3es" data-slug="ulum-quran-3es" data-titre="Sciences du Coran — ʿulūm al-Qurʾān (3ᵉ collège)">
 <h2><span class="arabe" dir="rtl" lang="ar">علوم القرآن</span> — Sciences du Coran — ʿulūm al-Qurʾān (3ᵉ collège)</h2>
 <p class="meta-l">Sciences coraniques · 3ᵉ collège · 28 / 28 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-ulum-quran-3es-introduction">
@@ -69949,7 +70143,11 @@ Toutes les sources s’accordent que l’imam <em>Nāfi</em>' lut sur soixante-d
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-fiqh-tanawi-1" data-slug="fiqh-tanawi-1" data-titre="Fiqh — le Mukhtaṣar de Khalīl, comm. d&#x27;al-Dardīr et ḥāshiya al-Dasūqī (1ᵉʳ lycée)">
+</section>
+</section><section class="cycle" id="contenu-cycle-tanawi">
+<header class="cycle-tete" style="--cycle:#7a5418;--cycle-nuit:#4a3210"><span class="cycle-titres"><h2>Enseignement secondaire qualifiant</h2><p class="cycle-meta">1ᵉʳ lycée · 2ᵉ lycée · 3ᵉ lycée</p></span><span class="cycle-ar" dir="rtl" lang="ar">السلك التأهيلي العتيق</span><span class="cycle-compte">27 manuels</span></header>
+<div class="niveau-sep" style="--cycle:#7a5418"><i aria-hidden="true"></i>1ᵉʳ lycée <span class="arabe" dir="rtl" lang="ar">السنة الأولى من السلك التأهيلي العتيق</span></div>
+<section class="section-livre livre-hl" id="livre-fiqh-tanawi-1" data-slug="fiqh-tanawi-1" data-titre="Fiqh — le Mukhtaṣar de Khalīl, comm. d&#x27;al-Dardīr et ḥāshiya al-Dasūqī (1ᵉʳ lycée)">
 <h2><span class="arabe" dir="rtl" lang="ar">الفقه من متن مختصر الشيخ خليل بشرح الدردير وحاشية الدسوقي</span> — Fiqh — le Mukhtaṣar de Khalīl, comm. d&#x27;al-Dardīr et ḥāshiya al-Dasūqī (1ᵉʳ lycée)</h2>
 <p class="meta-l">Droit rituel · 1ᵉʳ lycée · 30 / 30 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-fiqh-tanawi-1-introduction">
@@ -73478,7 +73676,8 @@ Déduis du matn le statut de la prise en charge de l’immeuble.</p>
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-tafsir-tanawi-1" data-slug="tafsir-tanawi-1" data-titre="Tafsīr — al-Muḥarrar al-Wajīz d&#x27;Ibn ʿAṭiyya">
+</section>
+<section class="section-livre livre-hl" id="livre-tafsir-tanawi-1" data-slug="tafsir-tanawi-1" data-titre="Tafsīr — al-Muḥarrar al-Wajīz d&#x27;Ibn ʿAṭiyya">
 <h2><span class="arabe" dir="rtl" lang="ar">التفسير من خلال المحرر الوجيز في تفسير الكتاب العزيز لابن عطية</span> — Tafsīr — al-Muḥarrar al-Wajīz d&#x27;Ibn ʿAṭiyya</h2>
 <p class="meta-l">Exégèse coranique · 1ᵉʳ lycée · 31 / 31 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-tafsir-tanawi-1-introduction">
@@ -77329,7 +77528,8 @@ Toute la série de versets confirme l’exhortation à préserver l’engagement
 <p>N.d.T. — Conventions et correspondances&nbsp;: la translittération suit les conventions du fil (j du <em>jīm</em> <span dir="rtl" lang="ar">(جِيم)</span>, kh du <em>khā</em>', ch du <em>chīn</em>, th du <em>thā</em>' : <em>al-Ghazālī</em>, <em>al-Kachchāf</em>, <em>ach-Chihāb</em>, <em>at-Tamhīd</em>, <em>aṭ-</em>Ṭ<em>abarānī</em>)&nbsp;; les titres d’ouvrages en translittération <em>italique</em>, les guillemets français suivant l’imprimé&nbsp;; les formules d’édition rendues d’un vocabulaire constant — «&nbsp;édition établie par&nbsp;» pour la révision <em>scientifique</em>, «&nbsp;éditeur&nbsp;» pour la maison d’édition, «&nbsp;tirage&nbsp;» pour l’édition imprimée. Correspondances avec le fil des leçons&nbsp;: le <em><em>Muḥarrar</em> <em>al-wajīz</em></em> d’Ibn '<em>Aṭiyya</em>, l’ouvrage-source dont le manuel tire chaque leçon, est ici recensé dans son édition de <em>Dār</em> al-Kutub al-'Ilmiyya (1422) — le livre se clôt sur l’inventaire de sa propre source&nbsp;; <em>aṭ-</em>Ṭ<em>ayyibī</em>, dont le commentaire de <em><em>Machkāt</em> al-maṣ<em>ābīḥ</em></em> fut cité in extenso à la leçon des <em>āyāt</em> 120-124 pour le hadith de «&nbsp;Mu'<em>ādh</em>, communauté obéissante envers Allah&nbsp;» ; <em>al-Bukhārī</em>, dont le Ṣ<em>aḥīḥ</em> portait le hadith de la définition de l’excellence, traduit in extenso à la dernière leçon de commentaire&nbsp;; Muslim, dont le Ṣ<em>aḥīḥ</em> portait le hadith du vendredi&nbsp;; <em>az-Zamakhcharī</em> et <em>Abū</em> <span dir="rtl" lang="ar">(أَبُو)</span> Ḥ<em>ayyān</em>, dont les œuvres furent <em>convoqu</em>ées en propres par les notices du <em><em>Muḥarrar</em></em> original collationnées durant l’année. HUIT figures de l’index précédent reparaissent ici par leurs œuvres&nbsp;: <em>Nāfi</em>' ouvre la liste par la <em>riwāya</em> <span dir="rtl" lang="ar">(رِوَايَة)</span> de Warch — la vulgate de récitation du Maghreb, celle du livre&nbsp;; <em>Mālik</em> <span dir="rtl" lang="ar">(مَالِك)</span> par son <em><em>Muwaṭṭa</em>'</em>&nbsp;; Ibn '<em>Aṭiyya</em> par le <em><em>Muḥarrar</em></em>&nbsp;; <em>az-Zamakhcharī</em>, <em>al-Qurṭubī</em>, Ibn <em>Kathīr</em>, <em>al-Marāghī</em> et <em>aṭ-</em>Ṭ<em>āhir</em> b. '<em>Āchūr</em> par leurs <em>tafsīr</em> <span dir="rtl" lang="ar">(تَفْسِير)</span>. Symé<em>triquement</em>, <em>aṭ-</em>Ṭ<em>abarī</em> — dont la notice figurait à l’index des figures — ne reparaît point ici par son <em><em>Jāmi</em>' <em>al-bayān</em></em>&nbsp;; l’asymétrie des deux index est signalée sans être tranchée. Observation d’ensemble&nbsp;: l’index réunit, autour de la source première du livre, la littérature du <em>tafsīr</em> <span dir="rtl" lang="ar">(تَفْسِير)</span> des premiers siècles à l’é<em>poque</em> moderne, l’appareil du hadith sous ses formes <em>canoniques</em> — Ṣ<em>aḥīḥ</em>, sunan, musnad, mu'jam, majma' —, la <em>sirā</em> et ses commentaires, et les deux sommes du droit et de l’é<em>thique</em> religieuses&nbsp;; la double datation Hégire / ère chrétienne, les maisons d’édition de Beyrouth, du Caire, d’Alep, de Riyad et de Tunis, et la récitation maghrébine de Warch disent, de part en part, l’ancrage nord-africain du manuel et l’ouverture de sa bibliographie aux éditions contemporaines.</p>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-hadith-tanawi-1" data-slug="hadith-tanawi-1" data-titre="Ḥadīth — le Muwaṭṭaʾ de l&#x27;imam Mālik (lycée)">
+</section>
+<section class="section-livre livre-hl" id="livre-hadith-tanawi-1" data-slug="hadith-tanawi-1" data-titre="Ḥadīth — le Muwaṭṭaʾ de l&#x27;imam Mālik (lycée)">
 <h2><span class="arabe" dir="rtl" lang="ar">الحديث من موطأ الإمام مالك بشرح الزرقاني</span> — Ḥadīth — le Muwaṭṭaʾ de l&#x27;imam Mālik (lycée)</h2>
 <p class="meta-l">Tradition prophétique · 1ᵉʳ lycée · 30 / 30 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-hadith-tanawi-1-introduction">
@@ -79836,7 +80036,8 @@ Et le sens des textes et des récits concernant la compensation est qu’il n’
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-usul-fiqh-tanawi-1" data-slug="usul-fiqh-tanawi-1" data-titre="Uṣūl al-fiqh — la Manẓūma Marṭaqī al-Wuṣūl d&#x27;Ibn ʿĀṣim">
+</section>
+<section class="section-livre livre-hl" id="livre-usul-fiqh-tanawi-1" data-slug="usul-fiqh-tanawi-1" data-titre="Uṣūl al-fiqh — la Manẓūma Marṭaqī al-Wuṣūl d&#x27;Ibn ʿĀṣim">
 <h2><span class="arabe" dir="rtl" lang="ar">أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم الغرناطي</span> — Uṣūl al-fiqh — la Manẓūma Marṭaqī al-Wuṣūl d&#x27;Ibn ʿĀṣim</h2>
 <p class="meta-l">Principes du droit · 1ᵉʳ lycée · 0 / 0 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-usul-fiqh-tanawi-1-introduction">
@@ -79963,7 +80164,8 @@ Et le sens des textes et des récits concernant la compensation est qu’il n’
 </ol>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-mantiq-tanawi-1" data-slug="mantiq-tanawi-1" data-titre="Mantiq — Naẓm al-Sullam d&#x27;al-Akhdarī, comm. d&#x27;al-Qawasnī">
+</section>
+<section class="section-livre livre-hl" id="livre-mantiq-tanawi-1" data-slug="mantiq-tanawi-1" data-titre="Mantiq — Naẓm al-Sullam d&#x27;al-Akhdarī, comm. d&#x27;al-Qawasnī">
 <h2><span class="arabe" dir="rtl" lang="ar">المنطق من نظم السلم المنورق لعبد الرحمان الأخضري بشرح حسن القويسني</span> — Mantiq — Naẓm al-Sullam d&#x27;al-Akhdarī, comm. d&#x27;al-Qawasnī</h2>
 <p class="meta-l">Logique · 1ᵉʳ lycée · 29 / 29 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-mantiq-tanawi-1-introduction">
@@ -82143,7 +82345,8 @@ Rédige un sujet dans <em>lequel</em> j’analyse la question du tayammum dans l
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-ulum-hadith-tanawi-1" data-slug="ulum-hadith-tanawi-1" data-titre="Sciences du ḥadīth — la Manẓūma al-Bayqūniyya, comm. d&#x27;al-Zarqānī">
+</section>
+<section class="section-livre livre-hl" id="livre-ulum-hadith-tanawi-1" data-slug="ulum-hadith-tanawi-1" data-titre="Sciences du ḥadīth — la Manẓūma al-Bayqūniyya, comm. d&#x27;al-Zarqānī">
 <h2><span class="arabe" dir="rtl" lang="ar">علوم الحديث من المنظومة البيقونية بشرح الزرقاني</span> — Sciences du ḥadīth — la Manẓūma al-Bayqūniyya, comm. d&#x27;al-Zarqānī</h2>
 <p class="meta-l">Sciences du hadith · 1ᵉʳ lycée · 30 / 30 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-ulum-hadith-tanawi-1-introduction">
@@ -83985,7 +84188,8 @@ Rédige un sujet dans <em>lequel</em> j’analyse la question du tayammum dans l
 <p>«&nbsp;&nbsp;Les notes sur le livre d’Ibn aṣ-Ṣ<em>alāḥ</em>&nbsp;&nbsp;» — les annotations d’Ibn Ḥajar sur la <em>Muqaddima</em>&nbsp;&nbsp;; l’auteur est <em>Abū</em> <span dir="rtl" lang="ar">(أَبُو)</span> <em>l-Faḍl</em> <em>Aḥmad</em> <span dir="rtl" lang="ar">(أَحْمَد)</span> ibn '<em>Alī</em> ibn Ḥajar al-'<em>Asqalānī</em> (cf. la notice 8)&nbsp;&nbsp;; l’édition&nbsp; : <em>Dār</em> al-Kutub al-'ilmiyya – Beyrouth, troisième édition, 2009 — la seule année grégorienne de toute la bibliographie, imprimée telle quelle&nbsp;&nbsp;; cette dernière notice referme la liste des sources, et avec elle le manuel tout entier.</p>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-qiraat-tanawi-1" data-slug="qiraat-tanawi-1" data-titre="Qirāʾāt — Ḥirz al-Amānī (al-Shāṭibiyya) d&#x27;al-Shāṭibī">
+</section>
+<section class="section-livre livre-hl" id="livre-qiraat-tanawi-1" data-slug="qiraat-tanawi-1" data-titre="Qirāʾāt — Ḥirz al-Amānī (al-Shāṭibiyya) d&#x27;al-Shāṭibī">
 <h2><span class="arabe" dir="rtl" lang="ar">القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي</span> — Qirāʾāt — Ḥirz al-Amānī (al-Shāṭibiyya) d&#x27;al-Shāṭibī</h2>
 <p class="meta-l">Lectures coraniques · 1ᵉʳ lycée · 22 / 22 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-qiraat-tanawi-1-introduction">
@@ -87574,7 +87778,8 @@ Rédige un sujet dans <em>lequel</em> j’analyse la question du tayammum dans l
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-taqtit-tanawi-1" data-slug="taqtit-tanawi-1" data-titre="Tawqīt — al-Muqniʿ d&#x27;al-Marghīthī (comput religieux)">
+</section>
+<section class="section-livre livre-hl" id="livre-taqtit-tanawi-1" data-slug="taqtit-tanawi-1" data-titre="Tawqīt — al-Muqniʿ d&#x27;al-Marghīthī (comput religieux)">
 <h2><span class="arabe" dir="rtl" lang="ar">التوقيت من منظومة المقنع بشرح المطلع على مسائل المقنع لمحمد بن سعيد المرغتي</span> — Tawqīt — al-Muqniʿ d&#x27;al-Marghīthī (comput religieux)</h2>
 <p class="meta-l">Découpage temporel · 1ᵉʳ lycée · 27 / 27 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-taqtit-tanawi-1-introduction">
@@ -91425,7 +91630,8 @@ Et quand le Soleil s’est élevé à 45 degrés, le <em>ẓill</em> de toute ch
 </ol>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-fikr-islami-tanawi-1" data-slug="fikr-islami-tanawi-1" data-titre="Pensée islamique — questions kalāmiques">
+</section>
+<section class="section-livre livre-hl" id="livre-fikr-islami-tanawi-1" data-slug="fikr-islami-tanawi-1" data-titre="Pensée islamique — questions kalāmiques">
 <h2><span class="arabe" dir="rtl" lang="ar">الفكر الإسلامي: قضايا كلامية</span> — Pensée islamique — questions kalāmiques</h2>
 <p class="meta-l">Pensée islamique · 1ᵉʳ lycée · 0 / 28 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-fikr-islami-tanawi-1-introduction">
@@ -91485,7 +91691,9 @@ Et quand le Soleil s’est élevé à 45 degrés, le <em>ẓill</em> de toute ch
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-fiqh-tanawi-2" data-slug="fiqh-tanawi-2" data-titre="Fiqh — le Mukhtaṣar de Khalīl, comm. d&#x27;al-Dardīr et ḥāshiya al-Dasūqī (2ᵉ lycée)">
+</section>
+<div class="niveau-sep" style="--cycle:#7a5418"><i aria-hidden="true"></i>2ᵉ lycée <span class="arabe" dir="rtl" lang="ar">السنة الثانية من السلك التأهيلي العتيق</span></div>
+<section class="section-livre livre-hl" id="livre-fiqh-tanawi-2" data-slug="fiqh-tanawi-2" data-titre="Fiqh — le Mukhtaṣar de Khalīl, comm. d&#x27;al-Dardīr et ḥāshiya al-Dasūqī (2ᵉ lycée)">
 <h2><span class="arabe" dir="rtl" lang="ar">الفقه من مختصر الشيخ خليل بشرح الدردير وحاشية الدسوقي للسنة الثانية من التعليم الثانوي العتيق</span> — Fiqh — le Mukhtaṣar de Khalīl, comm. d&#x27;al-Dardīr et ḥāshiya al-Dasūqī (2ᵉ lycée)</h2>
 <p class="meta-l">Droit rituel · 2ᵉ lycée · 21 / 21 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-fiqh-tanawi-2-introduction">
@@ -93147,7 +93355,8 @@ Je médite ces deux textes et je réponds à ce qui suit&nbsp;:</p>
 </ol>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-tafsir-tanawi-2" data-slug="tafsir-tanawi-2" data-titre="Tafsīr — al-Muḥarrar al-Wajīz d&#x27;Ibn ʿAṭiyya (suite)">
+</section>
+<section class="section-livre livre-hl" id="livre-tafsir-tanawi-2" data-slug="tafsir-tanawi-2" data-titre="Tafsīr — al-Muḥarrar al-Wajīz d&#x27;Ibn ʿAṭiyya (suite)">
 <h2><span class="arabe" dir="rtl" lang="ar">التفسير من خلال المحرر الوجيز في تفسير الكتاب العزيز لابن عطية</span> — Tafsīr — al-Muḥarrar al-Wajīz d&#x27;Ibn ʿAṭiyya (suite)</h2>
 <p class="meta-l">Exégèse coranique · 2ᵉ lycée · 20 / 20 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-tafsir-tanawi-2-introduction">
@@ -95497,7 +95706,8 @@ Et Sa parole, glorifié soit-Il&nbsp;: “ jusqu’à ce qu’il atteigne sa maj
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-hadith-tanawi-2" data-slug="hadith-tanawi-2" data-titre="Ḥadīth — le Muwaṭṭaʾ de l&#x27;imam Mālik (2ᵉ lycée)">
+</section>
+<section class="section-livre livre-hl" id="livre-hadith-tanawi-2" data-slug="hadith-tanawi-2" data-titre="Ḥadīth — le Muwaṭṭaʾ de l&#x27;imam Mālik (2ᵉ lycée)">
 <h2><span class="arabe" dir="rtl" lang="ar">الحديث من موطأ الإمام مالك بشرح الزرقاني للسنة الثانية من التعليم الثانوي العتيق</span> — Ḥadīth — le Muwaṭṭaʾ de l&#x27;imam Mālik (2ᵉ lycée)</h2>
 <p class="meta-l">Tradition prophétique · 2ᵉ lycée · 0 / 0 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-hadith-tanawi-2-introduction">
@@ -95508,7 +95718,8 @@ Et Sa parole, glorifié soit-Il&nbsp;: “ jusqu’à ce qu’il atteigne sa maj
 <p><strong>Note :</strong> le ministère des Habous et des Affaires islamiques n'avait pas publié, à la date d'élaboration du présent muṣḥaf numérique, les leçons de ce niveau sur le portail du site officiel ; à la différence des autres niveaux, cette année ne dispose ni d'une page de manuel ni d'une page de leçons en ligne. Le contenu sera inséré dès sa publication officielle.</p>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-faraid-tanawi-2" data-slug="faraid-tanawi-2" data-titre="Farāʾiḍ — le Mukhtaṣar de Khalīl, comm. d&#x27;al-Kharshī (2ᵉ lycée)">
+</section>
+<section class="section-livre livre-hl" id="livre-faraid-tanawi-2" data-slug="faraid-tanawi-2" data-titre="Farāʾiḍ — le Mukhtaṣar de Khalīl, comm. d&#x27;al-Kharshī (2ᵉ lycée)">
 <h2><span class="arabe" dir="rtl" lang="ar">الفرائض من مختصر الشيخ خليل بشرح الخرشي</span> — Farāʾiḍ — le Mukhtaṣar de Khalīl, comm. d&#x27;al-Kharshī (2ᵉ lycée)</h2>
 <p class="meta-l">Droit successoral · 2ᵉ lycée · 17 / 17 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-faraid-tanawi-2-introduction">
@@ -97018,7 +97229,8 @@ Le <em>reliquat</em> après prélèvement du legs est de 20 000 dirhams, qui con
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-usul-fiqh-tanawi-2" data-slug="usul-fiqh-tanawi-2" data-titre="Uṣūl al-fiqh — Marṭaqī al-Wuṣūl d&#x27;Ibn ʿĀṣim (2ᵉ lycée)">
+</section>
+<section class="section-livre livre-hl" id="livre-usul-fiqh-tanawi-2" data-slug="usul-fiqh-tanawi-2" data-titre="Uṣūl al-fiqh — Marṭaqī al-Wuṣūl d&#x27;Ibn ʿĀṣim (2ᵉ lycée)">
 <h2><span class="arabe" dir="rtl" lang="ar">أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم الغرناطي</span> — Uṣūl al-fiqh — Marṭaqī al-Wuṣūl d&#x27;Ibn ʿĀṣim (2ᵉ lycée)</h2>
 <p class="meta-l">Principes du droit · 2ᵉ lycée · 0 / 30 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-usul-fiqh-tanawi-2-introduction">
@@ -97067,7 +97279,8 @@ Le <em>reliquat</em> après prélèvement du legs est de 20 000 dirhams, qui con
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-ulum-hadith-tanawi-2" data-slug="ulum-hadith-tanawi-2" data-titre="Sciences du ḥadīth — 2ᵉ lycée">
+</section>
+<section class="section-livre livre-hl" id="livre-ulum-hadith-tanawi-2" data-slug="ulum-hadith-tanawi-2" data-titre="Sciences du ḥadīth — 2ᵉ lycée">
 <h2><span class="arabe" dir="rtl" lang="ar">علوم الحديث</span> — Sciences du ḥadīth — 2ᵉ lycée</h2>
 <p class="meta-l">Sciences du hadith · 2ᵉ lycée · 27 / 27 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-ulum-hadith-tanawi-2-introduction">
@@ -98563,7 +98776,8 @@ Le <em>reliquat</em> après prélèvement du legs est de 20 000 dirhams, qui con
 </ol>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-qiraat-tanawi-2" data-slug="qiraat-tanawi-2" data-titre="Qirāʾāt — Ḥirz al-Amānī (al-Shāṭibiyya, suite)">
+</section>
+<section class="section-livre livre-hl" id="livre-qiraat-tanawi-2" data-slug="qiraat-tanawi-2" data-titre="Qirāʾāt — Ḥirz al-Amānī (al-Shāṭibiyya, suite)">
 <h2><span class="arabe" dir="rtl" lang="ar">القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي</span> — Qirāʾāt — Ḥirz al-Amānī (al-Shāṭibiyya, suite)</h2>
 <p class="meta-l">Lectures coraniques · 2ᵉ lycée · 0 / 28 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-qiraat-tanawi-2-introduction">
@@ -98609,7 +98823,8 @@ Le <em>reliquat</em> après prélèvement du legs est de 20 000 dirhams, qui con
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-taqtit-tanawi-2" data-slug="taqtit-tanawi-2" data-titre="Tawqīt — ʿUmdat Ahl al-Thabt (temps et orientations)">
+</section>
+<section class="section-livre livre-hl" id="livre-taqtit-tanawi-2" data-slug="taqtit-tanawi-2" data-titre="Tawqīt — ʿUmdat Ahl al-Thabt (temps et orientations)">
 <h2><span class="arabe" dir="rtl" lang="ar">التوقيت من منظومة عمدة أهل الثبت في علم الأوقات وسمت البيت</span> — Tawqīt — ʿUmdat Ahl al-Thabt (temps et orientations)</h2>
 <p class="meta-l">Découpage temporel · 2ᵉ lycée · 0 / 29 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-taqtit-tanawi-2-introduction">
@@ -98661,7 +98876,8 @@ Nous demandons à Dieu Très-Haut d’ouvrir vos consciences, d’illuminer vos 
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-fikr-islami-tanawi-2" data-slug="fikr-islami-tanawi-2" data-titre="Pensée islamique — la philosophie musulmane">
+</section>
+<section class="section-livre livre-hl" id="livre-fikr-islami-tanawi-2" data-slug="fikr-islami-tanawi-2" data-titre="Pensée islamique — la philosophie musulmane">
 <h2><span class="arabe" dir="rtl" lang="ar">الفكر الإسلامي: الفلسفة الإسلامية</span> — Pensée islamique — la philosophie musulmane</h2>
 <p class="meta-l">Pensée islamique · 2ᵉ lycée · 0 / 28 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-fikr-islami-tanawi-2-introduction">
@@ -98708,7 +98924,9 @@ Nous demandons à Dieu Très-Haut d’ouvrir vos consciences, d’illuminer vos 
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-fiqh-tanawi-3" data-slug="fiqh-tanawi-3" data-titre="Fiqh — le Mukhtaṣar de Khalīl (suite du programme)">
+</section>
+<div class="niveau-sep" style="--cycle:#7a5418"><i aria-hidden="true"></i>3ᵉ lycée <span class="arabe" dir="rtl" lang="ar">السنة الثالثة من السلك التأهيلي العتيق</span></div>
+<section class="section-livre livre-hl" id="livre-fiqh-tanawi-3" data-slug="fiqh-tanawi-3" data-titre="Fiqh — le Mukhtaṣar de Khalīl (suite du programme)">
 <h2><span class="arabe" dir="rtl" lang="ar">الفقه من متن مختصر الشيخ خليل بشرح الدردير وحاشية الدسوقي</span> — Fiqh — le Mukhtaṣar de Khalīl (suite du programme)</h2>
 <p class="meta-l">Droit rituel · 3ᵉ lycée · 32 / 32 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-fiqh-tanawi-3-introduction">
@@ -101927,7 +102145,8 @@ Le compilateur — que Dieu lui fasse miséricorde — a dit&nbsp;: «&nbsp;et s
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-tafsir-tanawi-3" data-slug="tafsir-tanawi-3" data-titre="Tafsīr — la sourate al-Kahf (al-Muḥarrar al-Wajīz)">
+</section>
+<section class="section-livre livre-hl" id="livre-tafsir-tanawi-3" data-slug="tafsir-tanawi-3" data-titre="Tafsīr — la sourate al-Kahf (al-Muḥarrar al-Wajīz)">
 <h2><span class="arabe" dir="rtl" lang="ar">تفسير سورة الكهف من خلال المحرر الوجيز في تفسير الكتاب العزيز لابن عطية</span> — Tafsīr — la sourate al-Kahf (al-Muḥarrar al-Wajīz)</h2>
 <p class="meta-l">Exégèse coranique · 3ᵉ lycée · 0 / 29 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-tafsir-tanawi-3-introduction">
@@ -101980,7 +102199,8 @@ Le compilateur — que Dieu lui fasse miséricorde — a dit&nbsp;: «&nbsp;et s
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-hadith-tanawi-3" data-slug="hadith-tanawi-3" data-titre="Ḥadīth — le Muwaṭṭaʾ de l&#x27;imam Mālik (3ᵉ lycée)">
+</section>
+<section class="section-livre livre-hl" id="livre-hadith-tanawi-3" data-slug="hadith-tanawi-3" data-titre="Ḥadīth — le Muwaṭṭaʾ de l&#x27;imam Mālik (3ᵉ lycée)">
 <h2><span class="arabe" dir="rtl" lang="ar">كتاب الحديث من موطأ الإمام مالك بشرح الزرقاني</span> — Ḥadīth — le Muwaṭṭaʾ de l&#x27;imam Mālik (3ᵉ lycée)</h2>
 <p class="meta-l">Tradition prophétique · 3ᵉ lycée · 8 / 29 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-hadith-tanawi-3-introduction">
@@ -102443,7 +102663,8 @@ Le compilateur — que Dieu lui fasse miséricorde — a dit&nbsp;: «&nbsp;et s
 
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-faraid-tanawi-3" data-slug="faraid-tanawi-3" data-titre="Farāʾiḍ — la Manẓūma al-Jawāhir al-Maknūna (successions)">
+</section>
+<section class="section-livre livre-hl" id="livre-faraid-tanawi-3" data-slug="faraid-tanawi-3" data-titre="Farāʾiḍ — la Manẓūma al-Jawāhir al-Maknūna (successions)">
 <h2><span class="arabe" dir="rtl" lang="ar">الفرائض من منظومة الجواهر المكنونة في صدف الفرائض المسنونة</span> — Farāʾiḍ — la Manẓūma al-Jawāhir al-Maknūna (successions)</h2>
 <p class="meta-l">Droit successoral · 3ᵉ lycée · 19 / 19 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-faraid-tanawi-3-introduction">
@@ -103580,7 +103801,8 @@ Le compilateur — que Dieu lui fasse miséricorde — a dit&nbsp;: «&nbsp;et s
 <p>La chaîne ne finit pas&nbsp;: c’est la dernière leçon de méthode que la page des sources enseigne, et la première que la présente édition retient. Le manuel s’achève à la page 210 — les livres qu’il nomme, eux, sont encore ouverts.</p>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-usul-fiqh-tanawi-3" data-slug="usul-fiqh-tanawi-3" data-titre="Uṣūl al-fiqh — Marṭaqī al-Wuṣūl d&#x27;Ibn ʿĀṣim (3ᵉ lycée)">
+</section>
+<section class="section-livre livre-hl" id="livre-usul-fiqh-tanawi-3" data-slug="usul-fiqh-tanawi-3" data-titre="Uṣūl al-fiqh — Marṭaqī al-Wuṣūl d&#x27;Ibn ʿĀṣim (3ᵉ lycée)">
 <h2><span class="arabe" dir="rtl" lang="ar">أصول الفقه من منظومة مرتقى الوصول إلى الضروري من الأصول لابن عاصم الغرناطي</span> — Uṣūl al-fiqh — Marṭaqī al-Wuṣūl d&#x27;Ibn ʿĀṣim (3ᵉ lycée)</h2>
 <p class="meta-l">Principes du droit · 3ᵉ lycée · 0 / 30 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-usul-fiqh-tanawi-3-introduction">
@@ -103641,7 +103863,8 @@ Lundi 16 décembre 2024
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-ulum-hadith-tanawi-3" data-slug="ulum-hadith-tanawi-3" data-titre="Sciences du ḥadīth — 3ᵉ lycée">
+</section>
+<section class="section-livre livre-hl" id="livre-ulum-hadith-tanawi-3" data-slug="ulum-hadith-tanawi-3" data-titre="Sciences du ḥadīth — 3ᵉ lycée">
 <h2><span class="arabe" dir="rtl" lang="ar">علوم الحديث</span> — Sciences du ḥadīth — 3ᵉ lycée</h2>
 <p class="meta-l">Sciences du hadith · 3ᵉ lycée · 0 / 27 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-ulum-hadith-tanawi-3-introduction">
@@ -103688,7 +103911,8 @@ Lundi 16 décembre 2024
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-qiraat-tanawi-3" data-slug="qiraat-tanawi-3" data-titre="Qirāʾāt — Ḥirz al-Amānī (al-Shāṭibiyya, 3ᵉ lycée)">
+</section>
+<section class="section-livre livre-hl" id="livre-qiraat-tanawi-3" data-slug="qiraat-tanawi-3" data-titre="Qirāʾāt — Ḥirz al-Amānī (al-Shāṭibiyya, 3ᵉ lycée)">
 <h2><span class="arabe" dir="rtl" lang="ar">القراءات من متن حرز الأماني ووجه التهاني لأبي القاسم الشاطبي</span> — Qirāʾāt — Ḥirz al-Amānī (al-Shāṭibiyya, 3ᵉ lycée)</h2>
 <p class="meta-l">Lectures coraniques · 3ᵉ lycée · 0 / 23 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-qiraat-tanawi-3-introduction">
@@ -103738,7 +103962,8 @@ Ensuite : nos fils et nos filles les élèves.</p>
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-taqtit-tanawi-3" data-slug="taqtit-tanawi-3" data-titre="Tawqīt — al-Jāmiʿ al-Mufīd (éclipses et croissants)">
+</section>
+<section class="section-livre livre-hl" id="livre-taqtit-tanawi-3" data-slug="taqtit-tanawi-3" data-titre="Tawqīt — al-Jāmiʿ al-Mufīd (éclipses et croissants)">
 <h2><span class="arabe" dir="rtl" lang="ar">التوقيت من منظومة الجامع المفيد في حساب الخسوف والكسوف ورؤية الأهلة</span> — Tawqīt — al-Jāmiʿ al-Mufīd (éclipses et croissants)</h2>
 <p class="meta-l">Découpage temporel · 3ᵉ lycée · 0 / 30 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-taqtit-tanawi-3-introduction">
@@ -103795,7 +104020,8 @@ Ensuite : nos fils et nos filles les élèves.</p>
 </ul>
 </div>
 </details>
-</section><section class="section-livre livre-hl" id="livre-fikr-islami-tanawi-3" data-slug="fikr-islami-tanawi-3" data-titre="Pensée islamique — le soufisme (taṣawwuf)">
+</section>
+<section class="section-livre livre-hl" id="livre-fikr-islami-tanawi-3" data-slug="fikr-islami-tanawi-3" data-titre="Pensée islamique — le soufisme (taṣawwuf)">
 <h2><span class="arabe" dir="rtl" lang="ar">الفكر الإسلامي: التصوف الإسلامي</span> — Pensée islamique — le soufisme (taṣawwuf)</h2>
 <p class="meta-l">Pensée islamique · 3ᵉ lycée · 0 / 27 leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
 <details class="lecon intro-l" id="lec-fikr-islami-tanawi-3-introduction">
@@ -103851,6 +104077,7 @@ Lundi 16 mars 2026
 </ul>
 </div>
 </details>
+</section>
 </section>
 </main>
 <footer class="pied"><div class="interieur">

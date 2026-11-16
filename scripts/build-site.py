@@ -332,6 +332,12 @@ details.lecon .contenu::before,details.lecon .contenu::after{display:none}
 }
 """
 
+# Feuille de style externe (scripts/site-style.css) si présente :
+# permet de faire évoluer le design sans toucher à la constante embarquée.
+_CSS_EXTERNE = Path(__file__).resolve().parent / 'site-style.css'
+if _CSS_EXTERNE.exists():
+    CSS = _CSS_EXTERNE.read_text(encoding='utf-8')
+
 RECHERCHE_JS = r"""/* Moteur de recherche du Minhaj — JS pur, aucune dépendance.
  * Recherche par titre et par texte des leçons transcrites, en français
  * comme en arabe : la requête et l'index sont normalisés de la même façon
@@ -609,6 +615,10 @@ def charger_livres(rep_books, manifest, avertissements):
         sujet_ar = sujet.get('labelAr') or data.get('subjectAr') or ''
         sujet_id = data.get('subject') or ''
         niveau_fr = niveau.get('shortFr') or niveau.get('labelFr') or data.get('levelAr') or ''
+        niveau_id = data.get('level') or ''
+        niveau_ar = niveau.get('labelAr') or data.get('levelAr') or ''
+        cycle = niveau.get('cycle') or 'autre'
+        annee = niveau.get('year') or 0
 
         # introduction
         intro_fr = (intro.get('htmlFr') or '').strip()
@@ -658,6 +668,10 @@ def charger_livres(rep_books, manifest, avertissements):
             'sujetAr': sujet_ar,
             'sujetId': sujet_id,
             'niveauFr': niveau_fr,
+            'niveauId': niveau_id,
+            'niveauAr': niveau_ar,
+            'cycle': cycle,
+            'annee': annee,
             'pdfUrl': (data.get('pdfUrl') or '').strip(),
             'non_publie': bool(data.get('unpublished')),
             'intro': entree_intro,
@@ -670,6 +684,73 @@ def charger_livres(rep_books, manifest, avertissements):
             avertissements.append(f"{b['slug']} : une leçon occupe déjà le nom « introduction »")
     livres.sort(key=lambda b: (b['ordre'], b['slug']))
     return livres
+
+
+# Cycles scolaires (ordre de lecture de la bibliothèque) :
+# id, libellé court FR, libellé complet FR, libellé AR, couleur, nuance profonde
+CYCLES = [
+    ('ep', 'Primaire', 'Enseignement primaire', 'السلك الابتدائي العتيق', '#4f611d', '#37430f'),
+    ('es', 'Collège', 'Enseignement secondaire collégial', 'السلك الإعدادي العتيق', '#9c4a12', '#5e2c0a'),
+    ('tanawi', 'Lycée', 'Enseignement secondaire qualifiant', 'السلك التأهيلي العتيق', '#7a5418', '#4a3210'),
+]
+
+
+def groupes_niveaux(livres):
+    """Regroupe les livres par cycle scolaire puis par année.
+
+    Retourne une liste de dictionnaires :
+      {id, court, long, ar, couleur, nuit, total, niveaux: [(id, fr, ar, badge, [livres])]}
+    Les livres hors des cycles connus (improbable) tombent dans un groupe « Autres ».
+    """
+    par_cycle = {}
+    for b in livres:
+        par_cycle.setdefault(b['cycle'], {}).setdefault(b['niveauId'] or 'autre', []).append(b)
+
+    sections = []
+    for cid, court, long_fr, ar, coul, nuit in CYCLES:
+        nivs = par_cycle.pop(cid, {})
+        if not nivs:
+            continue
+        paires = []
+        for nid in sorted(nivs, key=lambda x: (min((b['annee'] for b in nivs[x]), default=0), x)):
+            bs = sorted(nivs[nid], key=lambda b: b['ordre'])
+            badge = (bs[0]['niveauFr'].split(' ')[0] if bs[0]['niveauFr'] else '') or nid
+            paires.append((nid, bs[0]['niveauFr'], bs[0]['niveauAr'], badge, bs))
+        sections.append({
+            'id': cid, 'court': court, 'long': long_fr, 'ar': ar,
+            'couleur': coul, 'nuit': nuit, 'total': sum(len(p[4]) for p in paires),
+            'niveaux': paires,
+        })
+    if par_cycle:  # niveaux ou cycles inattendus — filet de sécurité
+        reste = [b for nivs in par_cycle.values() for bs in nivs.values() for b in bs]
+        sections.append({
+            'id': 'autre', 'court': 'Autres', 'long': 'Autres manuels',
+            'ar': 'مصنفات أخرى', 'couleur': '#5c5218', 'nuit': '#3a3210',
+            'total': len(reste),
+            'niveaux': [('autre', 'Autres', '', '•', sorted(reste, key=lambda b: b['ordre']))],
+        })
+    return sections
+
+
+def html_niveau_titre(nid, nfr, nar, badge, bs):
+    ar_html = (f'<span class="niveau-ar" dir="rtl" lang="ar">{esc(nar)}</span>'
+               if nar else '')
+    return (f'<h3 class="niveau-titre"><span class="niveau-badge" aria-hidden="true">{esc(badge)}</span>'
+            f'<span class="niveau-lib"><span class="niveau-fr">{esc(nfr)}</span>{ar_html}</span>'
+            f'<span class="niveau-n">{len(bs)} manuel{"s" if len(bs) > 1 else ""}</span></h3>')
+
+
+def html_cycle_bande(sec, indice=None):
+    style = f'--cycle:{sec["couleur"]};--cycle-nuit:{sec["nuit"]}'
+    niveaux_l = ' · '.join(esc(p[1]) for p in sec['niveaux'])
+    med = (f'<span class="cycle-medaille" aria-hidden="true">{indice}</span>' if indice
+           else '')
+    return (f'<header class="cycle-tete" style="{style}">{med}'
+            f'<span class="cycle-titres"><h2>{esc(sec["long"])}</h2>'
+            f'<p class="cycle-meta">{niveaux_l}</p></span>'
+            f'<span class="cycle-ar" dir="rtl" lang="ar">{esc(sec["ar"])}</span>'
+            f'<span class="cycle-compte">{sec["total"]} manuel{"s" if sec["total"] > 1 else ""}</span>'
+            f'</header>')
 
 
 def chaine_navigation(livre):
@@ -743,12 +824,12 @@ def coquille(titre, description, rel, programme_ar, date_fr, corps, scripts_html
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{titre}</title>
 <meta name="description" content="{description}">
-<meta name="theme-color" content="#333e14">
+<meta name="theme-color" content="#2a340c">
 <meta name="generator" content="minhaj-build {date_fr}">
 <link rel="icon" href="{FAVICON}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{rel}assets/style.css">
 </head>
 <body>
@@ -767,7 +848,7 @@ def carte_livre(b, href):
     pct = round(100 * n_ok / n_total) if n_total else 0
     classe = 'fait' if n_ok else 'a-faire'
     return f"""<span class="carte-cadre" data-sujet="{esc(b.get('sujetId') or '')}"><a class="carte {classe}" href="{href}">
-<span class="puces"><span class="chip chip-sujet">{esc(b['sujetFr'])}</span><span class="chip">{esc(b['niveauFr'])}</span></span>
+<span class="puces"><span class="chip chip-sujet">{esc(b['sujetFr'])}</span></span>
 <span class="t-ar" dir="rtl" lang="ar">{esc(b['titleAr'])}</span>
 <span class="t-fr">{esc(b['titleFr'])}</span>
 <span class="carte-pied"><span class="compte">{n_ok} / {n_total} leçons transcrites</span>
@@ -795,6 +876,14 @@ def html_recherche():
 </section>"""
 
 
+NAV_CYCLE = ('<nav class="cycle-nav" aria-label="Niveaux scolaires"><div class="interieur">'
+             '<span class="nav-titre">Par niveau :</span>'
+             '<a href="#cycle-ep" style="--nav-coul:#4f611d;--nav-coul-f:#37430f"><i aria-hidden="true"></i>Primaire</a>'
+             '<a href="#cycle-es" style="--nav-coul:#9c4a12;--nav-coul-f:#5e2c0a"><i aria-hidden="true"></i>Collège</a>'
+             '<a href="#cycle-tanawi" style="--nav-coul:#7a5418;--nav-coul-f:#4a3210"><i aria-hidden="true"></i>Lycée</a>'
+             '</div></nav>')
+
+
 def page_accueil(livres, programme, date_fr):
     n_total = sum(len(b['lecons']) for b in livres)
     n_ok = sum(1 for b in livres for l in b['lecons'] if l['ok'])
@@ -803,31 +892,25 @@ def page_accueil(livres, programme, date_fr):
     nom_fr = programme.get('nameFr') or 'Programme modèle de l’enseignement traditionnel'
     editeur_fr = programme.get('publisherFr') or 'Ministère des Habous et des Affaires islamiques — Royaume du Maroc'
 
-    # groupes par matière, dans l’ordre du manifeste
-    groupes, ordre = {}, []
-    for b in livres:
-        k = b['sujetFr'] or 'Autres'
-        if k not in groupes:
-            groupes[k] = []
-            ordre.append(k)
-        groupes[k].append(b)
-    sections = []
-    for k in ordre:
-        bs = groupes[k]
-        ar = (bs[0].get('sujetAr') or '').replace('-', ' ')
-        ar_html = f'<span class="sujet-ar" dir="rtl" lang="ar">{esc(ar)}</span>' if ar else ''
-        n_m = len(bs)
-        pluriel = 's' if n_m > 1 else ''
-        sections.append(
-            f'<section class="sujet-section">\n'
-            f'<h2 class="sujet-titre">{ar_html}<span class="sujet-fr">{esc(k)}</span>'
-            f'<span class="sujet-n">{n_m} manuel{pluriel}</span></h2>\n'
-            + html_cartes(bs, '') + '\n</section>')
+    # ---- bibliothèque rangée par cycle scolaire puis par année
+    sections_html = []
+    for i, sec in enumerate(groupes_niveaux(livres), start=1):
+        niveaux_html = []
+        for nid, nfr, nar, badge, bs in sec['niveaux']:
+            niveaux_html.append(
+                f'<section class="niveau-groupe" id="niveau-{esc(nid)}">\n'
+                + html_niveau_titre(nid, nfr, nar, badge, bs) + '\n'
+                + html_cartes(bs, '') + '\n</section>')
+        sections_html.append(
+            f'<section class="cycle" id="cycle-{esc(sec["id"])}">\n'
+            + html_cycle_bande(sec, indice=i) + '\n'
+            + '\n'.join(niveaux_html) + '\n</section>')
 
-    corps = f"""<section class="heros pleine">
+    corps = f"""<section class="heros pleine" id="accueil">
+<div class="heros-interieur">
 <p class="surline">{esc(nom_fr)} — {esc(editeur_fr)}</p>
 <h1><span class="arabe" dir="rtl" lang="ar">{esc(nom_ar)}</span></h1>
-<p class="sous">Collection de {len(livres)} manuels scolaires marocains d’enseignement traditionnel, transcrits mot à mot en arabe et traduits ou commentés en français, leçon par leçon.</p>
+<p class="sous">Collection de {len(livres)} manuels scolaires marocains d’enseignement traditionnel, transcrits mot à mot en arabe et traduits ou commentés en français, leçon par leçon — rangés ici du primaire au lycée.</p>
 <div class="ornement" aria-hidden="true"><span></span><i></i><i></i><i></i><span></span></div>
 <div class="stats">
 <div class="stat"><b>{len(livres)}</b><span>manuels</span></div>
@@ -836,14 +919,16 @@ def page_accueil(livres, programme, date_fr):
 </div>
 <div class="prog"><div class="barre"><span style="width:{pct}%"></span></div>
 <p class="compte"><strong>{n_ok} / {n_total}</strong> leçons transcrites · mise à jour : {date_fr}</p></div>
-</section>
-<main>
 {html_recherche()}
-{''.join(sections)}
+</div>
+</section>
+{NAV_CYCLE}
+<main>
+{''.join(sections_html)}
 </main>"""
     return coquille(
         'Minhaj — manuels de l’enseignement traditionnel (Maroc)',
-        'Sommaire des 64 manuels du المنهج النموذجي للتعليم العتيق : leçons transcrites mot à mot en arabe, traduites et commentées en français. Recherche globale en français et en arabe.',
+        'Sommaire des 64 manuels du المنهج النموذجي للتعليم العتيق, rangés par niveau scolaire (primaire, collège, lycée) : leçons transcrites mot à mot en arabe, traduites et commentées en français. Recherche globale en français et en arabe.',
         '', nom_ar, date_fr, corps, BOOTSTRAP_RECHERCHE_RACINE), n_ok, n_total
 
 
@@ -873,8 +958,14 @@ def page_sommaire_livre(livre, programme_ar, date_fr):
     pct = round(100 * n_ok / n_total) if n_total else 0
     pdf_chip = (f'<a class="chip chip-lien" href="{esc(livre["pdfUrl"])}" target="_blank" rel="noopener">PDF du manuel</a>'
                 if livre['pdfUrl'] else '')
+    fil = (f'<nav class="fil"><a href="../../index.html">Accueil</a><span class="sep">›</span>'
+           f'<a href="../../index.html#cycle-{esc(livre["cycle"])}">{esc({c[1]: c[1] for c in CYCLES}.get(livre["cycle"], "Bibliothèque"))}</a><span class="sep">›</span>'
+           f'<a href="../../index.html#niveau-{esc(livre["niveauId"])}">{esc(livre["niveauFr"])}</a><span class="sep">›</span>'
+           f'<span>{esc(livre["titleFr"])}</span></nav>') if livre['cycle'] in {c[0] for c in CYCLES} else (
+           f'<nav class="fil"><a href="../../index.html">Accueil</a><span class="sep">›</span>'
+           f'<span>{esc(livre["titleFr"])}</span></nav>')
     corps = f"""<main>
-<nav class="fil"><a href="../../index.html">Accueil</a><span class="sep">›</span><span>{esc(livre['titleFr'])}</span></nav>
+{fil}
 <header class="livre-tete" data-sujet="{esc(livre['sujetId'] or '')}">
 <p class="puces"><span class="chip chip-sujet">{esc(livre['sujetFr'])}</span><span class="chip">{esc(livre['niveauFr'])}</span>{pdf_chip}</p>
 <h1><span class="arabe" dir="rtl" lang="ar">{esc(livre['titleAr'])}</span></h1>
@@ -911,7 +1002,10 @@ def html_pn(prec, suiv, url_sommaire):
 def page_lecon(livre, lecon, prec, suiv, programme_ar, date_fr):
     titre_page = f"Leçon {lecon['num']} — {livre['titleFr']} | Minhaj"
     description = texte_plain(lecon['htmlFr'])[:160].strip()
+    fil_niveau = (f'<a href="../../index.html#niveau-{esc(livre["niveauId"])}">{esc(livre["niveauFr"])}</a><span class="sep">›</span>'
+                  if livre['niveauId'] else '')
     fil = (f'<nav class="fil"><a href="../../index.html">Accueil</a><span class="sep">›</span>'
+           f'{fil_niveau}'
            f'<a href="index.html">{esc(livre["titleFr"])}</a><span class="sep">›</span>'
            f'<span>Leçon {lecon["num"]}</span></nav>')
     corps = f"""<main class="lecture">
@@ -930,7 +1024,10 @@ def page_introduction(livre, suiv, programme_ar, date_fr):
         contenu = it['htmlFr']
     else:
         contenu = f'<div class="intro-arabe" dir="rtl" lang="ar">\n{it["htmlAr"]}\n</div>'
+    fil_niveau = (f'<a href="../../index.html#niveau-{esc(livre["niveauId"])}">{esc(livre["niveauFr"])}</a><span class="sep">›</span>'
+                  if livre['niveauId'] else '')
     fil = (f'<nav class="fil"><a href="../../index.html">Accueil</a><span class="sep">›</span>'
+           f'{fil_niveau}'
            f'<a href="index.html">{esc(livre["titleFr"])}</a><span class="sep">›</span>'
            f'<span>{esc(it["titreFr"])}</span></nav>')
     corps = f"""<main class="lecture">
@@ -955,34 +1052,43 @@ def page_hors_ligne(livres, programme, css_texte, recherche_js, date_fr):
     pct = round(100 * n_ok / n_total) if n_total else 0
     nom_ar = programme.get('nameAr', 'المنهج النموذجي للتعليم العتيق')
 
-    cartes = [carte_livre(b, f'#livre-{b["slug"]}') for b in livres]
-
+    # ---- partie 1 : bibliothèque rangée par cycle puis niveau (cartes -> ancres)
+    bibli_html = []
+    # ---- partie 2 : sections complètes (leçons transcrites), même rangement
     sections = []
-    for b in livres:
-        blocs = []
-        if b['intro']:
-            it = b['intro']
-            contenu = it['htmlFr'] or f'<div class="intro-arabe" dir="rtl" lang="ar">\n{it["htmlAr"]}\n</div>'
-            blocs.append(f"""<details class="lecon intro-l" id="lec-{b['slug']}-introduction">
-<summary><span class="badge">✦</span><span class="t-ar" dir="rtl" lang="ar">{esc(it['titreAr'])}</span><span class="t-fr">{esc(it['titreFr'])}</span></summary>
-<div class="contenu">
-{contenu}
-</div>
-</details>""")
-        for l in b['lecons']:
-            if not l['ok']:
-                continue
-            blocs.append(f"""<details class="lecon" id="lec-{b['slug']}-{l['docId']}" data-docid="{esc(l['docId'])}" data-titre="{esc(l['titleFr'] or l['titleAr'])}">
-<summary><span class="badge">{l['num']}</span><span class="t-ar" dir="rtl" lang="ar">{esc(l['titleAr'])}</span><span class="t-fr">{esc(l['titleFr'])}</span></summary>
-<div class="contenu">
-{l['htmlFr']}
-</div>
-</details>""")
-        sections.append(f"""<section class="section-livre livre-hl" id="livre-{b['slug']}" data-slug="{b['slug']}" data-titre="{esc(b['titleFr'])}">
-<h2><span class="arabe" dir="rtl" lang="ar">{esc(b['titleAr'])}</span> — {esc(b['titleFr'])}</h2>
-<p class="meta-l">{esc(b['sujetFr'])} · {esc(b['niveauFr'])} · {sum(1 for l in b['lecons'] if l['ok'])} / {len(b['lecons'])} leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
-{''.join(blocs)}
-</section>""")
+    for i, sec in enumerate(groupes_niveaux(livres), start=1):
+        # cartes de la bibliothèque
+        niveaux_cartes = []
+        niveaux_sections = []
+        for nid, nfr, nar, badge, bs in sec['niveaux']:
+            cartes_n = [carte_livre(b, f'#livre-{b["slug"]}') for b in bs]
+            ar_html = (f' <span class="arabe" dir="rtl" lang="ar">{esc(nar)}</span>' if nar else '')
+            niveaux_cartes.append(
+                f'<section class="niveau-groupe">\n'
+                f'<h3 class="niveau-sep" style="--cycle:{esc(sec["couleur"])}"><i aria-hidden="true"></i>{esc(nfr)}{ar_html}'
+                f'<span class="niveau-n">{len(bs)} manuel{"s" if len(bs) > 1 else ""}</span></h3>\n'
+                + '<section class="grille">\n' + '\n'.join(cartes_n) + '\n</section>\n</section>')
+            for b in bs:
+                niveaux_sections.append(b)
+        bibli_html.append(
+            f'<section class="cycle" id="cycle-{esc(sec["id"])}">\n'
+            + html_cycle_bande(sec, indice=i) + '\n'
+            + '\n'.join(niveaux_cartes) + '\n</section>')
+
+        # sections complètes de ce cycle
+        blocs_cycle = []
+        dernier_niveau = None
+        for b in niveaux_sections:
+            if b['niveauId'] != dernier_niveau:
+                dernier_niveau = b['niveauId']
+                ar_n = f' <span class="arabe" dir="rtl" lang="ar">{esc(b["niveauAr"])}</span>' if b['niveauAr'] else ''
+                blocs_cycle.append(
+                    f'<div class="niveau-sep" style="--cycle:{esc(sec["couleur"])}"><i aria-hidden="true"></i>{esc(b["niveauFr"])}{ar_n}</div>')
+            blocs_cycle.append(section_livre_hl(b))
+        sections.append(
+            f'<section class="cycle" id="contenu-cycle-{esc(sec["id"])}">\n'
+            + html_cycle_bande(sec) + '\n'
+            + '\n'.join(blocs_cycle) + '\n</section>')
 
     bootstrap = r"""(function(){
 function indexDepuisDOM(){
@@ -1029,12 +1135,14 @@ ouvrirAncre();
 <section class="heros">
 <p class="surline">Consultation hors connexion — fichier unique</p>
 <h1><span class="arabe" dir="rtl" lang="ar">{esc(nom_ar)}</span></h1>
-<p class="sous">Toute la collection est embarquée dans ce fichier : sommaires, leçons transcrites, recherche. Enregistrez-le et ouvrez-le sans connexion.</p>
+<p class="sous">Toute la collection est embarquée dans ce fichier : sommaires rangés par niveau scolaire, leçons transcrites, recherche. Enregistrez-le et ouvrez-le sans connexion.</p>
 <div class="prog"><div class="barre"><span style="width:{pct}%"></span></div>
 <p class="compte"><strong>{n_ok} / {n_total}</strong> leçons transcrites · {len(livres)} livres · mise à jour : {date_fr}</p></div>
 </section>
 {html_recherche()}
-{html_cartes_hl(cartes)}
+<h2 class="hors-ligne-partie">Bibliothèque par niveau scolaire</h2>
+{''.join(bibli_html)}
+<h2 class="hors-ligne-partie">Leçons transcrites</h2>
 {''.join(sections)}
 </main>"""
 
@@ -1045,12 +1153,12 @@ ouvrirAncre();
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Minhaj — consultation hors connexion | {esc(nom_ar)}</title>
 <meta name="description" content="Variante mono-fichier du site Minhaj : tous les livres et leçons transcrites embarqués, consultable hors connexion (file://).">
-<meta name="theme-color" content="#333e14">
+<meta name="theme-color" content="#2a340c">
 <meta name="generator" content="minhaj-build {date_fr}">
 <link rel="icon" href="{FAVICON}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 {css_texte}
 </style>
@@ -1072,6 +1180,34 @@ ouvrirAncre();
 
 def html_cartes_hl(cartes):
     return '<section class="grille" id="accueil">\n' + '\n'.join(cartes) + '\n</section>'
+
+
+def section_livre_hl(b):
+    """Bloc complet d'un livre pour la version hors-ligne (leçons en accordéons)."""
+    blocs = []
+    if b['intro']:
+        it = b['intro']
+        contenu = it['htmlFr'] or f'<div class="intro-arabe" dir="rtl" lang="ar">\n{it["htmlAr"]}\n</div>'
+        blocs.append(f"""<details class="lecon intro-l" id="lec-{b['slug']}-introduction">
+<summary><span class="badge">✦</span><span class="t-ar" dir="rtl" lang="ar">{esc(it['titreAr'])}</span><span class="t-fr">{esc(it['titreFr'])}</span></summary>
+<div class="contenu">
+{contenu}
+</div>
+</details>""")
+    for l in b['lecons']:
+        if not l['ok']:
+            continue
+        blocs.append(f"""<details class="lecon" id="lec-{b['slug']}-{l['docId']}" data-docid="{esc(l['docId'])}" data-titre="{esc(l['titleFr'] or l['titleAr'])}">
+<summary><span class="badge">{l['num']}</span><span class="t-ar" dir="rtl" lang="ar">{esc(l['titleAr'])}</span><span class="t-fr">{esc(l['titleFr'])}</span></summary>
+<div class="contenu">
+{l['htmlFr']}
+</div>
+</details>""")
+    return f"""<section class="section-livre livre-hl" id="livre-{b['slug']}" data-slug="{b['slug']}" data-titre="{esc(b['titleFr'])}">
+<h2><span class="arabe" dir="rtl" lang="ar">{esc(b['titleAr'])}</span> — {esc(b['titleFr'])}</h2>
+<p class="meta-l">{esc(b['sujetFr'])} · {esc(b['niveauFr'])} · {sum(1 for l in b['lecons'] if l['ok'])} / {len(b['lecons'])} leçons transcrites · les leçons non transcrites n’apparaissent pas ici (voir le site en ligne).</p>
+{''.join(blocs)}
+</section>"""
 
 
 # ---------------------------------------------------------------------------
@@ -1110,11 +1246,11 @@ if(c)c.href=pref+'index.html';
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Page introuvable — Minhaj</title>
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#333e14">
+<meta name="theme-color" content="#2a340c">
 <link rel="icon" href="{FAVICON}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 {css_texte}
 </style>
