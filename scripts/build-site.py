@@ -732,18 +732,47 @@ def groupes_niveaux(livres):
     return sections
 
 
-def html_niveau_titre(nid, nfr, nar, badge, bs):
+def html_niveau_tete(nfr, nar, badge, compte):
+    """En-tête d'un sous-onglet niveau — rendu comme <summary>
+    (premier enfant d'un <details class="niveau">)."""
     ar_html = (f'<span class="niveau-ar" dir="rtl" lang="ar">{esc(nar)}</span>'
                if nar else '')
-    return (f'<h3 class="niveau-titre"><span class="niveau-badge" aria-hidden="true">{esc(badge)}</span>'
+    return (f'<summary class="niveau-tete" title="Déplier / replier ce niveau">'
+            f'<span class="niveau-badge" aria-hidden="true">{esc(badge)}</span>'
             f'<span class="niveau-lib"><span class="niveau-fr">{esc(nfr)}</span>{ar_html}</span>'
-            f'<span class="niveau-n">{len(bs)} manuel{"s" if len(bs) > 1 else ""}</span></h3>')
+            f'<span class="niveau-filet" aria-hidden="true"></span>'
+            f'<span class="niveau-n">{esc(compte)}</span>'
+            f'<span class="niveau-chev" aria-hidden="true">'
+            f'<svg viewBox="0 0 24 24" width="15" height="15" fill="none" '
+            f'stroke="currentColor" stroke-width="2.6" stroke-linecap="round" '
+            f'stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>'
+            f'</span>'
+            f'<span class="hors-ecran">— appuyer pour déplier ou replier ce niveau</span>'
+            f'</summary>')
+
+
+def html_niveau_accordeon(nid, nfr, nar, badge, bs, rel):
+    """Sous-onglet rétractable d'un niveau scolaire : <details class="niveau">
+    imbriqué dans le <details class="cycle"> de sa série. Refermé par défaut,
+    il reste très compact ; les cartes restent dans le DOM (accessibilité,
+    recherche navigateur, impression via JS)."""
+    compte = f'{len(bs)} manuel{"s" if len(bs) > 1 else ""}'
+    return (f'<details class="niveau" id="niveau-{esc(nid)}" data-niveau="{esc(nid)}">\n'
+            + html_niveau_tete(nfr, nar, badge, compte) + '\n'
+            + '<div class="niveau-corps">\n' + html_cartes(bs, rel) + '\n</div>\n'
+            + '</details>')
+
+
+def style_cycle(sec):
+    """Variables CSS de la palette du cycle — posées sur <details class="cycle">
+    pour que les sous-onglets niveaux (badges) héritent de la couleur."""
+    return f'--cycle:{sec["couleur"]};--cycle-nuit:{sec["nuit"]}'
 
 
 def html_cycle_bande(sec, indice=None):
     """Bandeau d'un cycle — rendu comme <summary> (onglet rétractable,
-    premier enfant d'un <details class="cycle">)."""
-    style = f'--cycle:{sec["couleur"]};--cycle-nuit:{sec["nuit"]}'
+    premier enfant d'un <details class="cycle">). Les couleurs viennent des
+    variables posées par style_cycle() sur le <details> parent."""
     niveaux_l = ' · '.join(esc(p[1]) for p in sec['niveaux'])
     med = (f'<span class="cycle-medaille" aria-hidden="true">{indice}</span>' if indice
            else '')
@@ -752,7 +781,7 @@ def html_cycle_bande(sec, indice=None):
             f'stroke="currentColor" stroke-width="2.6" stroke-linecap="round" '
             f'stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>'
             f'</span>')
-    return (f'<summary class="cycle-tete" style="{style}" title="Déplier / replier cette série">{med}'
+    return (f'<summary class="cycle-tete" title="Déplier / replier cette série">{med}'
             f'<span class="cycle-titres"><h2>{esc(sec["long"])}</h2>'
             f'<p class="cycle-meta">{niveaux_l}</p></span>'
             f'<span class="cycle-ar" dir="rtl" lang="ar">{esc(sec["ar"])}</span>'
@@ -909,6 +938,8 @@ BOOTSTRAP_ACCUEIL = r"""<script>
 'use strict';
 var nav=document.querySelector('.cycle-nav');
 var cycles=[].slice.call(document.querySelectorAll('details.cycle'));
+var niveaux=[].slice.call(document.querySelectorAll('details.niveau'));
+var repliables=cycles.concat(niveaux);
 var bouton=document.getElementById('bascule-tout');
 var memo=false;
 try{memo=!!window.sessionStorage;}catch(e){memo=false;}
@@ -918,18 +949,22 @@ function maj(){
     if(t){if(c.open){t.setAttribute('data-ouvert','');}else{t.removeAttribute('data-ouvert');}}
   });
   if(bouton){
-    var tous=cycles.length>0&&cycles.every(function(c){return c.open;});
+    var tous=repliables.length>0&&repliables.every(function(d){return d.open;});
     bouton.textContent=tous?'Tout replier':'Tout déplier';
     bouton.setAttribute('aria-pressed',tous?'true':'false');
   }
-  if(memo){try{sessionStorage.setItem('minhaj-cycles',
-    cycles.filter(function(c){return c.open;}).map(function(c){return c.id;}).join(','));}catch(e){}}
+  if(memo){try{
+    sessionStorage.setItem('minhaj-cycles',
+      cycles.filter(function(c){return c.open;}).map(function(c){return c.id;}).join(','));
+    sessionStorage.setItem('minhaj-niveaux',
+      niveaux.filter(function(n){return n.open;}).map(function(n){return n.id;}).join(','));
+  }catch(e){}}
 }
 function ouvrirSeul(cible){
   cycles.forEach(function(c){c.open=(c===cible);});
   maj();
 }
-cycles.forEach(function(c){c.addEventListener('toggle',maj);});
+repliables.forEach(function(d){d.addEventListener('toggle',maj);});
 if(nav){
   nav.addEventListener('click',function(ev){
     var a=ev.target&&ev.target.closest?ev.target.closest('a[data-cible]'):null;
@@ -946,8 +981,8 @@ if(nav){
 }
 if(bouton){
   bouton.addEventListener('click',function(){
-    var tous=cycles.length>0&&cycles.every(function(c){return c.open;});
-    cycles.forEach(function(c){c.open=!tous;});
+    var tous=repliables.length>0&&repliables.every(function(d){return d.open;});
+    repliables.forEach(function(d){d.open=!tous;});
     maj();
     if(nav){
       if(tous){nav.scrollIntoView({behavior:'smooth',block:'start'});}
@@ -973,12 +1008,14 @@ function traiterAncre(){
   setTimeout(function(){el.scrollIntoView({behavior:'smooth',block:'start'});},80);
 }
 window.addEventListener('hashchange',traiterAncre);
-window.addEventListener('beforeprint',function(){cycles.forEach(function(c){c.open=true;});maj();});
+window.addEventListener('beforeprint',function(){repliables.forEach(function(d){d.open=true;});maj();});
 if(memo&&!location.hash){
   try{
-    var memoStr=sessionStorage.getItem('minhaj-cycles')||'';
-    if(memoStr){memoStr.split(',').forEach(function(id){
-      var c=document.getElementById(id);if(c)c.open=true;});}
+    ['minhaj-cycles','minhaj-niveaux'].forEach(function(cle){
+      var memoStr=sessionStorage.getItem(cle)||'';
+      if(memoStr){memoStr.split(',').forEach(function(id){
+        var d=document.getElementById(id);if(d)d.open=true;});}
+    });
   }catch(e){}
 }
 maj();
@@ -996,19 +1033,17 @@ def page_accueil(livres, programme, date_fr):
     editeur_fr = programme.get('publisherFr') or 'Ministère des Habous et des Affaires islamiques — Royaume du Maroc'
 
     # ---- bibliothèque rangée par cycle scolaire puis par année
-    #      chaque cycle est un onglet rétractable (details/summary),
-    #      refermé par défaut : l'accueil reste compact.
+    #      chaque cycle est un onglet rétractable (details/summary) et chaque
+    #      niveau un sous-onglet imbriqué (details.niveau) : trois clics
+    #      maximum pour atteindre les cartes, l'accueil reste compact.
     sections = groupes_niveaux(livres)
     sections_html = []
     for i, sec in enumerate(sections, start=1):
         niveaux_html = []
         for nid, nfr, nar, badge, bs in sec['niveaux']:
-            niveaux_html.append(
-                f'<section class="niveau-groupe" id="niveau-{esc(nid)}">\n'
-                + html_niveau_titre(nid, nfr, nar, badge, bs) + '\n'
-                + html_cartes(bs, '') + '\n</section>')
+            niveaux_html.append(html_niveau_accordeon(nid, nfr, nar, badge, bs, ''))
         sections_html.append(
-            f'<details class="cycle" id="cycle-{esc(sec["id"])}" data-cycle="{esc(sec["id"])}">\n'
+            f'<details class="cycle" id="cycle-{esc(sec["id"])}" data-cycle="{esc(sec["id"])}" style="{style_cycle(sec)}">\n'
             + html_cycle_bande(sec, indice=i) + '\n'
             + '<div class="cycle-corps">\n' + '\n'.join(niveaux_html) + '\n</div>\n</details>')
 
@@ -1160,41 +1195,43 @@ def page_hors_ligne(livres, programme, css_texte, recherche_js, date_fr):
     nom_ar = programme.get('nameAr', 'المنهج النموذجي للتعليم العتيق')
 
     # ---- partie 1 : bibliothèque rangée par cycle puis niveau (cartes -> ancres)
-    #      cycles en onglets rétractables, comme l'accueil
+    #      cycles en onglets rétractables, niveaux en sous-onglets imbriqués,
+    #      comme l'accueil en ligne
     bibli_html = []
     # ---- partie 2 : sections complètes (leçons transcrites), même rangement
     sections = []
     for i, sec in enumerate(groupes_niveaux(livres), start=1):
         # cartes de la bibliothèque
         niveaux_cartes = []
-        niveaux_sections = []
+        blocs_cycle = []
         for nid, nfr, nar, badge, bs in sec['niveaux']:
             cartes_n = [carte_livre(b, f'#livre-{b["slug"]}') for b in bs]
-            ar_html = (f' <span class="arabe" dir="rtl" lang="ar">{esc(nar)}</span>' if nar else '')
+            compte_c = f'{len(bs)} manuel{"s" if len(bs) > 1 else ""}'
             niveaux_cartes.append(
-                f'<section class="niveau-groupe">\n'
-                f'<h3 class="niveau-sep" style="--cycle:{esc(sec["couleur"])}"><i aria-hidden="true"></i>{esc(nfr)}{ar_html}'
-                f'<span class="niveau-n">{len(bs)} manuel{"s" if len(bs) > 1 else ""}</span></h3>\n'
-                + '<section class="grille">\n' + '\n'.join(cartes_n) + '\n</section>\n</section>')
-            for b in bs:
-                niveaux_sections.append(b)
+                f'<details class="niveau" id="niveau-{esc(nid)}">\n'
+                + html_niveau_tete(nfr, nar, badge, compte_c) + '\n'
+                + '<div class="niveau-corps">\n'
+                + '<section class="grille">\n' + '\n'.join(cartes_n) + '\n</section>\n'
+                + '</div>\n</details>')
+
+            # sections complètes de ce niveau
+            n_ok_lv = sum(1 for b in bs for l in b['lecons'] if l['ok'])
+            compte_l = (f'{len(bs)} livre{"s" if len(bs) > 1 else ""}'
+                        f' · {n_ok_lv} leçons transcrites')
+            blocs_cycle.append(
+                f'<details class="niveau" id="contenu-niveau-{esc(nid)}">\n'
+                + html_niveau_tete(nfr, nar, badge, compte_l) + '\n'
+                + '<div class="niveau-corps">\n'
+                + '\n'.join(section_livre_hl(b) for b in bs) + '\n</div>\n'
+                + '</details>')
+
         bibli_html.append(
-            f'<details class="cycle" id="cycle-{esc(sec["id"])}" data-cycle="{esc(sec["id"])}">\n'
+            f'<details class="cycle" id="cycle-{esc(sec["id"])}" data-cycle="{esc(sec["id"])}" style="{style_cycle(sec)}">\n'
             + html_cycle_bande(sec, indice=i) + '\n'
             + '<div class="cycle-corps">\n' + '\n'.join(niveaux_cartes) + '\n</div>\n</details>')
 
-        # sections complètes de ce cycle
-        blocs_cycle = []
-        dernier_niveau = None
-        for b in niveaux_sections:
-            if b['niveauId'] != dernier_niveau:
-                dernier_niveau = b['niveauId']
-                ar_n = f' <span class="arabe" dir="rtl" lang="ar">{esc(b["niveauAr"])}</span>' if b['niveauAr'] else ''
-                blocs_cycle.append(
-                    f'<div class="niveau-sep" style="--cycle:{esc(sec["couleur"])}"><i aria-hidden="true"></i>{esc(b["niveauFr"])}{ar_n}</div>')
-            blocs_cycle.append(section_livre_hl(b))
         sections.append(
-            f'<details class="cycle" id="contenu-cycle-{esc(sec["id"])}" data-cycle="{esc(sec["id"])}">\n'
+            f'<details class="cycle" id="contenu-cycle-{esc(sec["id"])}" data-cycle="{esc(sec["id"])}" style="{style_cycle(sec)}">\n'
             + html_cycle_bande(sec) + '\n'
             + '<div class="cycle-corps">\n' + '\n'.join(blocs_cycle) + '\n</div>\n</details>')
 
@@ -1252,7 +1289,7 @@ ouvrirAncre();
 })();"""
 
     corps = f"""<main>
-<section class="heros">
+<section class="heros" id="accueil">
 <p class="surline">Consultation hors connexion — fichier unique</p>
 <h1><span class="arabe" dir="rtl" lang="ar">{esc(nom_ar)}</span></h1>
 <p class="sous">Toute la collection est embarquée dans ce fichier : sommaires rangés par niveau scolaire, leçons transcrites, recherche. Enregistrez-le et ouvrez-le sans connexion.</p>
@@ -1296,10 +1333,6 @@ ouvrirAncre();
 </body>
 </html>
 """
-
-
-def html_cartes_hl(cartes):
-    return '<section class="grille" id="accueil">\n' + '\n'.join(cartes) + '\n</section>'
 
 
 def section_livre_hl(b):

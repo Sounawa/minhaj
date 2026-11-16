@@ -181,7 +181,7 @@ main .heros .resultats .r-compte{color:#cfc49c}
 .nav-tout[aria-pressed="true"]{color:var(--terracotta-f);border-color:var(--terracotta);border-style:solid}
 
 /* ================= cycles (bibliothèque par niveau) ================= */
-/* Chaque cycle est un onglet rétractable : <details class="cycle"> */
+/* Chaque cycle est un onglet rétractable : élément details.cycle */
 details.cycle{margin:36px 0 10px;scroll-margin-top:60px}
 .cycle{scroll-margin-top:60px}
 .cycle-tete{position:relative;display:flex;align-items:center;gap:18px;flex-wrap:wrap;
@@ -217,9 +217,18 @@ details.cycle[open] .cycle-corps{animation:cycle-apparait .28s ease}
 .cycle-ar{position:relative;font-family:var(--amiri);font-size:1.85rem;line-height:1.7;color:#f0dfae;white-space:nowrap}
 .cycle-compte{position:relative;flex:none;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:#f0dfae;border:1px solid rgba(232,207,154,.55);border-radius:99px;padding:6px 14px;background:rgba(0,0,0,.18);white-space:nowrap}
 
-/* groupe d'un niveau */
-.niveau-groupe{margin:30px 0 10px;scroll-margin-top:64px}
-.niveau-titre{display:flex;align-items:center;gap:13px;margin:0 2px 15px;padding:0}
+/* sous-onglet d'un niveau — details.niveau imbriqué dans le cycle.
+   Refermé par défaut : un niveau = une ligne compacte (badge, libellés,
+   effectif, chevron). Les couleurs héritent des variables posées sur
+   l'élément parent details.cycle (style_cycle()). */
+details.niveau{margin:16px 0;border:1px solid var(--ligne-2);border-radius:14px;background:var(--carte);overflow:hidden;scroll-margin-top:64px}
+details.niveau[open]{background:rgba(255,252,243,.6);box-shadow:0 12px 28px -22px rgba(70,50,15,.55)}
+details.niveau>summary.niveau-tete{cursor:pointer;list-style:none;-webkit-user-select:none;user-select:none;display:flex;align-items:center;gap:13px;padding:12px 16px;transition:background .15s ease}
+details.niveau>summary.niveau-tete::-webkit-details-marker{display:none}
+details.niveau>summary.niveau-tete::marker{content:""}
+details.niveau>summary.niveau-tete:hover{background:var(--carte-2)}
+details.niveau[open]>summary.niveau-tete{border-bottom:1px dashed var(--ligne-2)}
+.niveau-filet{flex:1;min-width:14px;height:1px;background:linear-gradient(90deg,var(--ligne-2),transparent)}
 .niveau-badge{flex:none;min-width:50px;height:50px;padding:0 8px;border-radius:13px;display:grid;place-items:center;
   background:linear-gradient(150deg,var(--cycle,#7a5418),var(--cycle-nuit,#4a3210));color:#f6efdb;
   font:700 1.22rem/1 var(--serif);font-variant-numeric:tabular-nums;letter-spacing:.02em;
@@ -227,9 +236,17 @@ details.cycle[open] .cycle-corps{animation:cycle-apparait .28s ease}
 .niveau-lib{display:flex;flex-direction:column;gap:0;min-width:0}
 .niveau-lib .niveau-fr{font-size:1.1rem;font-weight:600;color:var(--encre);letter-spacing:.01em;line-height:1.3}
 .niveau-lib .niveau-ar{font-family:var(--amiri);font-size:1.32rem;line-height:1.9;color:var(--encre-2)}
-.niveau-titre::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--ligne-2),transparent);margin-inline-start:6px}
 .niveau-n{flex:none;font-size:.75rem;letter-spacing:.09em;text-transform:uppercase;color:var(--encre-2);
-  border:1px solid var(--ligne-2);border-radius:99px;padding:4px 12px;background:var(--carte);white-space:nowrap}
+  border:1px solid var(--ligne-2);border-radius:99px;padding:4px 12px;background:var(--carte-2);white-space:nowrap}
+.niveau-chev{flex:none;width:29px;height:29px;border-radius:50%;border:1.5px solid var(--ligne-2);background:var(--carte-2);
+  display:grid;place-items:center;color:var(--encre-2);transition:transform .22s ease,background .15s ease,color .15s ease,border-color .15s ease}
+details.niveau>summary.niveau-tete:hover .niveau-chev{background:var(--fond-2);border-color:var(--or);color:var(--or-f)}
+details.niveau[open] .niveau-chev{transform:rotate(180deg)}
+.niveau-corps{padding:6px 14px 16px}
+details.niveau[open] .niveau-corps{animation:cycle-apparait .26s ease}
+@media (prefers-reduced-motion:reduce){
+  details.niveau[open] .niveau-corps{animation:none}
+}
 
 /* ================= grille et cartes des livres ================= */
 .grille{display:grid;grid-template-columns:repeat(auto-fill,minmax(252px,1fr));gap:15px}
@@ -342,11 +359,6 @@ details.lecon .contenu::before,details.lecon .contenu::after{display:none}
 .section-livre>h2{font-size:1.2rem;font-weight:600;color:#35420f;border-bottom:2px solid var(--ligne-2);padding-bottom:.35em;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
 .section-livre>h2 .arabe{font-family:var(--amiri);font-size:1.75rem}
 .section-livre .meta-l{font-size:.83rem;color:var(--gris);margin:.25em 0 12px}
-.niveau-sep{display:flex;align-items:center;gap:11px;margin:26px 0 6px;font-size:.92rem;font-weight:600;color:var(--encre-2)}
-.niveau-sep i{width:9px;height:9px;background:var(--cycle,#8a651c);transform:rotate(45deg);flex:none}
-.niveau-sep .arabe{font-family:var(--amiri);font-size:1.15rem;color:var(--encre-2)}
-.niveau-sep::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--ligne-2),transparent)}
-.niveau-sep .niveau-n{margin-inline-start:0}
 
 /* titres de parties (hors-ligne) */
 .hors-ligne-partie{display:flex;align-items:center;gap:14px;margin:44px 2px 18px;font-size:1.3rem;font-weight:600;color:#35420f}
@@ -401,7 +413,7 @@ details.lecon .contenu::before,details.lecon .contenu::after{display:none}
   .cycle-nav a{padding:5px 13px;font-size:.85rem}
   /* la barre d'onglets passe sur deux rangées : marges d'ancre plus grandes */
   details.cycle,.cycle{scroll-margin-top:104px}
-  .niveau-groupe{scroll-margin-top:112px}
+  details.niveau{scroll-margin-top:150px}
   details.cycle{margin:28px 0 8px}
   .cycle-tete{padding:16px 16px;gap:12px;border-radius:15px}
   .cycle-chev{width:31px;height:31px}
@@ -414,12 +426,14 @@ details.lecon .contenu::before,details.lecon .contenu::after{display:none}
   .cycle-titres .cycle-meta{font-size:.78rem}
   .cycle-ar{font-size:1.45rem}
   .cycle-compte{font-size:.68rem;padding:4px 11px}
-  .niveau-groupe{margin:24px 0 8px}
+  details.niveau{margin:13px 0}
+  details.niveau>summary.niveau-tete{gap:10px;padding:10px 12px}
   .niveau-badge{min-width:42px;height:42px;font-size:1.02rem;border-radius:11px}
   .niveau-lib .niveau-ar{font-size:1.12rem}
   .niveau-lib .niveau-fr{font-size:.98rem}
   .niveau-n{font-size:.66rem;padding:3px 10px}
-  .niveau-titre{gap:10px}
+  .niveau-chev{width:25px;height:25px}
+  .niveau-corps{padding:4px 8px 12px}
   .grille{grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:11px}
   .carte{padding:13px 12px 11px;border-inline-start-width:3px}
   .carte .t-ar{font-size:1.24rem;line-height:2}
