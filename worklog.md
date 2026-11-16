@@ -16969,3 +16969,13 @@ Stage Summary:
 - ÉTAT DU LIVRE : hadith-tanawi-3 — 6/29 posés (n-1…n-6) ; reste 23 (n-7 أحكام الشفعة p.55+ … لائحة p.199-200).
 - PUSH : export GH_PAT + credential.helper de session (règle de la variable exportée, jamais écrite sur disque) → POUSSÉ sur Sounawa/minhaj@main ; vérifié live (raw registre = 6 slots, slot n-6 {n} car).
 - trace 1a1d675aa095fb41-r703
+
+## R704 — Incident « site Pages ≠ vraie app Minhāj » — DIAGNOSTIQUÉ, APP RELANCÉE
+- PLAINTE UTILISATEUR : « c'est pas mon projet, tu as pas reproduis le vrai site minhaj » — exact : R702 avait posé sur GitHub Pages un mini-site statique maison (miroir du seul livre hadith-tanawi-3) qui N'EST PAS la vraie app. Pages ne peut héberger que du statique ; la vraie app = Next.js 16 standalone + Prisma + API (64 livres, 1261 leçons, lecteur bilingue, Assistant IA).
+- RELANCE APP (bac recyclé → tout avait disparu : /home/z/node_modules, standalone, .next) :
+  - `scripts/r704-rebuild.sh` (persisté hors dépôt, dans /home/z/my-project/scripts/) : cd repo-417 → bun install --frozen-lockfile → prisma generate → next build (webpack, NODE_OPTIONS 1024) → copie standalone vers /home/z/standalone-minhaj (zone stable hors évinceur, recette R676).
+  - PIÈGE R704 : le standalone NICHÉ — server.js à /home/z/standalone-minhaj/**my-project/repo-417**/server.js (le build réplique le chemin du projet) ; static/ et public à copier dans .next/ du chemin niché, pas à la racine.
+  - Démarrage : `cd /home/z/my-project/repo-417 && PORT=3000 node /home/z/standalone-minhaj/my-project/repo-417/server.js` → Ready ; accueil = thème automne, stats 64 manuels / 1261 leçons / 1846 documents / 64 reconstitués ; API /api/lessons/hadith-tanawi-3/pdf-mut23h2n-6 → leçon 6 servie ✓.
+- HÉBERGEMENT PERMANENT (à décider avec l'utilisateur) : (1) Vercel — recommandé, import repo, marche tel quel (Next.js natif) ; nécessite compte Vercel/credentials → à faire par l'utilisateur ou token fourni ; (2) reproduction du design réel en statique sur Pages (long, fonctionnalités serveur perdues). Pages actuel = miroir provisoire, PAS le site.
+- ÉTAT LEÇONS inchangé : hadith-tanawi-3 6/29 (n-6 leçon 6 posée en R703) ; prochaine leçon = n-7 أحكام الشفعة pp.55+.
+- trace 1a1d675aa095fb41-r704
