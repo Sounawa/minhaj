@@ -16922,3 +16922,16 @@ Stage Summary:
 - ÉTAT DU LIVRE : hadith-tanawi-3 — 3/29 posés (n-1, n-2, n-3) ; reste 26 (n-4 ضمان مال القراض p.33+ … لائحة p.199-200). Sync multi-agents : ff-pull sur IA-2 055228d (leçon 18 hadith-5ep) avant travail, débris locaux autres sessions stashés.
 - PUSH : poussé et vérifié live (raw registre = slot n-3 56302 car).
 - trace 1a1d675aa095fb41-r699
+
+## R700 — Leçon 4 الضمان والتعدي في القراض (slot pdf-mut23h2n-4, PDF p.33-40) — LIVRÉE
+- LIVRÉ : leçon 4 hadith-tanawi-3 « Le dépassement et la garantie dans la commandite » (slot pdf-mut23h2n-4, htmlFr 62812 car posé) — hadith-tanawi-3 : 4/29.
+- SOURCE : pp.33-40, offset PDF=imprimé=0 confirmé (pieds 33-40) ; p.40 = fin de leçon (الأسئلة/الإعداد القبلي + encadré 2336), leçon 5 المساقاة à p.41.
+- PIPELINE : couche pdftotext pp.32-45 + 8 vignettes 110 dpi (relancées après bug de nom de fichier p110-033) + 16 bandes 300 dpi = 24 lectures VLM.
+- TITRE : médallion التعرض والضمان في القراض (vignette) vs bande التعذكُر vs couche التعذو — lecture « التعرض » retenue, variantes consignées ; objectifs/titre de rubrique disent الضمان والتعدي.
+- TEXTES : 4 textes principaux (2309 شرط الضمان ; 2318 استنسلف ; 2315 تعدى فاشترى ; 2334 القول قول العامل الثلثين/الثلث) + 8 citations intégrées en فقه الحديث (2297 وجه القراض المغروف ; 2309 repris in extenso ; 2302 هلاك بعضه ; 2315 repris ; 2316 ضامن للمال إن نقص [crochets imprimés] ; 2317 تعدى فتسلف ; 2318 repris ; 2333 القول قول العامل sur l'aveu) + 2335 تلفت السلعة (les cent dinars volés) + 2312 استثمار (الكراء) + 2336 encadré إعداد قبلي (خلف الفراء).
+- ARBITRAGES : أزداد (p35 vs أراد p33) ; وضع canonique vs وُضع (×2) ; سنّة canonique vs سنة — confirmé par سُنَّةِ attesté dans 2335 ; إن صاحب المال بالخيار imprimé conservé (canonique إنّ صاحبَ consignée) ; خَلَّى بينهما canonique vs خلّيّ ; بِيعَتْ vs يعت ; بَعْدَ مَا هَلَكَ vs بعد الذي ; مفهوم : نقله ابن حبيب (bande+gr) vs نفته (couche+vignette 2v1 — canonique gr retenue, consigné), جمهور أهل العلماء 2v1 vs الفقهاء bande, في المدونة 2v1 vs الرواية bande, يجبر التلف vs للغير ; ثالثا أحكام التعدي في القراض (vignette) vs بإقراض (bande) ; يستنكر (p38) vs يستذكر/يستثكر (p34) ; بسميّه vs بالسميّة ; ماله وربحه vs مائة ; قراضتْه التقويم (×2) vs قارضها ; أنّها قرضته vs أنّهما ; badge 2312 (bande) vs 2313 (vignette) ; خَلْبَ canonique vs خطب (×2) ; يفتي canonique vs أفتري 2v1 ; مثل الدلابة canonique vs الدائبة ; المساقاة canonique vs السقاءة bande.
+- FAIT-MAIN : 37 </span> orphelins + 5 doubles guillemets réparés (3 itérations de pose) — même génération de réparateur R697-R700 ; spans arabe réouverts après badges (2316/2317).
+- QA DOUBLE PORTE : PASS — typo (balises équilibrées, «47/»47 appariés, zéro marqueur/placeholder) ; matière (9 h2, 12 numéros Muwaṭṭa : 2297, 2302, 2309, 2312, 2315, 2316, 2317, 2318, 2333, 2334, 2335, 2336 ; rubriques أهداف/تمهيد/الشرح/استخلاص/الاستثمار/التقويم/الإعداد القبلي présentes).
+- ÉTAT DU LIVRE : hadith-tanawi-3 — 4/29 posés (n-1…n-4) ; reste 25 (n-5 المساقاة p.41+ … لائحة p.199-200).
+- PUSH : poussé et vérifié live (raw registre = slot n-4 62812 car).
+- trace 1a1d675aa095fb41-r700
