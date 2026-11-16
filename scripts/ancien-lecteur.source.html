@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ḥadīth 3ᵉ secondaire traditionnel — Muwaṭṭaʾ al-imām Mālik (Zarqānī) — lecteur</title>
+<meta name="description" content="Lecteur du registre hadith-tanawi-3 : leçons transcrites en français avec les textes arabes du Muwaṭṭaʾ, tableau d'avancement du livre. Dépôt Sounawa/minhaj.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#232a24;--cream:#faf7ef;--card:#fffdf7;--green:#0e6b47;--green-d:#0a5238;--gold:#a67c00;--line:#e4dcc8;--dim:#6b7266}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.65 Georgia,'Times New Roman',serif}
+.wrap{max-width:860px;margin:0 auto;padding:0 18px}
+a{color:var(--green);text-decoration:none}
+a:hover{text-decoration:underline}
+header.top{background:var(--green-d);color:#f4efe2;border-bottom:4px solid var(--gold)}
+header.top .wrap{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 18px;padding-top:14px;padding-bottom:14px}
+header.top .brand{font-size:1.05rem;font-weight:bold}
+header.top .brand .ar{font-size:1.25rem}
+header.top a{color:#f4efe2}
+header.top .repo{margin-inline-start:auto;font-size:.85rem;opacity:.92}
+main{padding:26px 18px 46px}
+.hero{text-align:center;margin-bottom:26px}
+.hero .subject{color:var(--gold);letter-spacing:.06em;text-transform:uppercase;font-size:.85rem;margin:0 0 6px}
+.hero h1{font-size:1.7rem;line-height:1.5;color:var(--green-d);margin:.1em 0 .3em}
+.hero .sub{color:var(--dim);margin:.2em 0 0}
+.prog{max-width:520px;margin:18px auto 0}
+.bar{height:14px;border:1px solid var(--line);border-radius:8px;background:#efe9d8;overflow:hidden}
+.bar span{display:block;height:100%;background:linear-gradient(90deg,var(--green),#14996a)}
+.count{margin:8px 0 0;font-size:.95rem;color:var(--dim)}
+.count strong{color:var(--ink);font-size:1.05rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 15px;position:relative;transition:box-shadow .15s,transform .15s}
+.card:hover{box-shadow:0 3px 10px rgba(40,60,45,.14);transform:translateY(-1px);text-decoration:none}
+.card.intro{background:#f3efe2;border-color:var(--gold)}
+.badge{display:inline-block;min-width:26px;text-align:center;background:var(--green);color:#fff;border-radius:6px;font-size:.8rem;padding:1px 6px;margin-right:8px}
+.card.intro .badge{background:var(--gold)}
+.tl{display:block;margin:8px 0 2px;font-size:1.15rem;color:var(--ink)}
+.tf{display:block;color:var(--dim);font-size:.9rem;line-height:1.4;margin-bottom:8px}
+.st{display:block;font-size:.83rem;border-top:1px dashed var(--line);padding-top:7px}
+.st.ok{color:var(--green);font-weight:bold}
+.st.wait{color:var(--dim)}
+.crumb{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin-bottom:18px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.crumb .sep{color:var(--dim)}
+.content{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 30px}
+.content h1{font-size:1.28rem;line-height:1.55;border-bottom:2px solid var(--gold);padding-bottom:.55em;color:var(--green-d)}
+.content h2{font-size:1.1rem;color:var(--green);border-bottom:1px solid var(--line);padding-bottom:.3em;margin-top:2em}
+.content h3{font-size:1rem;color:var(--green-d)}
+.content p{margin:.95em 0;text-align:left}
+.content strong{color:#143d2b}
+.content span[dir="rtl"]{font-family:'Amiri','Scheherazade New','Traditional Arabic',serif;font-size:1.08em}
+.content.intro-ar{font-size:1.06rem}
+.content.intro-ar h1,.content.intro-ar h3{font-family:'Amiri',serif}
+.err{background:#fbeaea;border:1px solid #d8a0a0;padding:14px 18px;border-radius:8px}
+footer.foot{border-top:1px solid var(--line);color:var(--dim);font-size:.83rem;padding:16px 18px 30px;text-align:center}
+@media print{header.top,footer.foot,.crumb{display:none}.content{border:0}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <span class="brand"><a href="#/"><span class="ar" dir="rtl" lang="ar">منهج الغيار في الحديث</span></a> — lecteur</span>
+  <span class="repo"><a href="https://github.com/Sounawa/minhaj" target="_blank" rel="noopener">dépôt GitHub</a></span>
+</div></header><span id="bu" data-bu="16 novembre 2026"></span>
+<main class="wrap" id="app"><noscript>JavaScript requis pour afficher le registre.</noscript></main>
+<footer class="foot wrap">Données&nbsp;: registre <code>content/books/hadith-tanawi-3.json</code> du dépôt <a href="https://github.com/Sounawa/minhaj">Sounawa/minhaj</a> · page statique (GitHub Pages) · dernière mise à jour&nbsp;: 16 novembre 2026</footer>
+
+<script>
+(function(){
+'use strict';
+var app=document.getElementById('app'),DATA=null;
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function readable(){var a=[];if(DATA.intro&&(DATA.intro.html||'').trim())a.push({id:'intro',n:'التمهيد',fr:'Présentation du manuel',ar:DATA.intro.titleAr||'التمهيد',html:DATA.intro.html,intro:true});
+(DATA.lessons||[]).forEach(function(l,i){if((l.htmlFr||'').trim())a.push({id:l.docId,n:String(i+1),fr:l.titleFr||'',ar:l.titleAr||'',html:l.htmlFr});});return a;}
+function home(){
+  var L=DATA.lessons||[],done=readable().filter(function(x){return !x.intro;}).length,pct=Math.round(done/L.length*100),h='';
+  h+='<section class="hero"><p class="subject">'+esc(DATA.subjectAr)+' · '+esc(DATA.titleFr)+'</p>';
+  h+='<h1 dir="rtl" lang="ar">'+esc(DATA.titleAr)+'</h1>';
+  h+='<p class="sub">Lecteur du registre <code>'+esc(DATA.id)+'</code> — transcription française leçon par leçon du manuel (textes du <em>Muwaṭṭaʾ</em> conservés en arabe).</p>';
+  h+='<div class="prog"><div class="bar"><span style="width:'+pct+'%"></span></div>';
+  h+='<p class="count"><strong>'+done+' / '+L.length+'</strong> leçons transcrites et posées · mise à jour&nbsp;: '+document.getElementById('bu').getAttribute('data-bu')+'</p></div></section>';
+  h+='<section class="grid">';
+  if(DATA.intro&&(DATA.intro.html||'').trim())
+    h+='<a class="card intro" href="#/l/intro"><span class="badge">✦</span><span class="tl" dir="rtl" lang="ar">'+esc(DATA.intro.titleAr)+'</span><span class="tf">'+esc(DATA.intro.titleFr||'Présentation du manuel')+'</span><span class="st ok">✓ lire la présentation</span></a>';
+  L.forEach(function(l,i){
+    var ok=(l.htmlFr||'').trim(),open=ok?'<a class="card done" href="#/l/'+encodeURIComponent(l.docId)+'">':'<div class="card todo">';
+    h+=open+'<span class="badge">'+(i+1)+'</span>';
+    h+='<span class="tl" dir="rtl" lang="ar">'+esc(l.titleAr)+'</span>';
+    h+='<span class="tf">'+esc(l.titleFr||'')+'</span>';
+    if(ok)h+='<span class="st ok">✓ leçon posée — lire</span>';
+    else h+='<span class="st wait">à venir — <a href="'+esc(l.pdfUrl||'')+'" target="_blank" rel="noopener">PDF officiel</a> (habous.gov.ma)</span>';
+    h+=ok?'</a>':'</div>';
+  });
+  h+='</section>';
+  app.innerHTML=h;window.scrollTo(0,0);
+}
+function reader(id){
+  var cur=null,i=0;
+  readable().forEach(function(x,ix){if(x.id===id){cur=x;i=ix;}});
+  if(!cur){home();return;}
+  var prev=readable()[i-1]||null,next=readable()[i+1]||null,nav='<a href="#/">← Sommaire</a>';
+  nav+='<span class="sep">·</span>'+(prev?'<a href="#/l/'+encodeURIComponent(prev.id)+'">← '+(prev.intro?'présentation':'leçon '+prev.n)+'</a>':'<span class="sep">début du livre</span>');
+  nav+='<span class="sep">·</span>'+(next?'<a href="#/l/'+encodeURIComponent(next.id)+'">'+(next.intro?'présentation':'leçon '+next.n)+' →</a>':'<span class="sep">fin des leçons posées</span>');
+  var cls=cur.intro?'content intro-ar" dir="rtl" lang="ar':'content lesson-fr" lang="fr';
+  app.innerHTML='<nav class="crumb">'+nav+'</nav><article class="'+cls+'">'+cur.html+'</article>';
+  window.scrollTo(0,0);
+}
+function route(){var m=(location.hash||'').match(/^#\/l\/(.+)$/);if(m)reader(decodeURIComponent(m[1]));else home();}
+window.addEventListener('hashchange',route);
+try{var el=document.getElementById('inline-data');
+if(el&&el.textContent&&el.textContent.trim()){DATA=JSON.parse(el.textContent);route();}
+else{fetch('content/books/hadith-tanawi-3.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json();}).then(function(j){DATA=j;route();}).catch(function(){app.innerHTML='<p class="err">Impossible de charger le registre <code>content/books/hadith-tanawi-3.json</code> (page ouverte hors serveur&nbsp;?). Utilisez la version hors-ligne «&nbsp;minhaj-hors-ligne.html&nbsp;» livrée dans download/.</p>';});}}
+catch(e){app.innerHTML='<p class="err">Erreur de chargement&nbsp;: '+esc(e&&e.message||e)+'</p>';}
+})();
+</script>
+</body>
+</html>
