@@ -170,16 +170,44 @@ main .heros .resultats .r-compte{color:#cfc49c}
 .cycle-nav{position:sticky;top:0;z-index:50;background:rgba(245,237,218,.94);backdrop-filter:blur(9px);border-bottom:1px solid var(--ligne-2);box-shadow:0 6px 18px -14px rgba(70,50,15,.5)}
 .cycle-nav .interieur{max-width:1160px;margin:0 auto;padding:10px 22px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;align-items:center}
 .cycle-nav .nav-titre{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gris);margin-inline-end:6px}
-.cycle-nav a{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--ligne-2);border-radius:99px;padding:6px 16px;font-size:.9rem;color:var(--encre-2);background:var(--carte);transition:border-color .15s ease,background .15s ease,color .15s ease}
+.cycle-nav a{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--ligne-2);border-radius:99px;padding:6px 16px;font-size:.9rem;color:var(--encre-2);background:var(--carte);transition:border-color .15s ease,background .15s ease,color .15s ease,box-shadow .15s ease}
 .cycle-nav a i{width:9px;height:9px;border-radius:3px;background:var(--nav-coul,#5c5218);flex:none;transform:rotate(45deg)}
 .cycle-nav a:hover{text-decoration:none;border-color:var(--nav-coul,#8a651c);color:var(--nav-coul-f,#3c4818);background:var(--carte-2)}
+.cycle-nav a b.nav-n{flex:none;font:700 .7rem/1 var(--serif);font-variant-numeric:tabular-nums;color:var(--nav-coul-f,#5c5218);background:rgba(90,70,30,.09);border-radius:99px;padding:2.5px 8px;margin-inline-start:1px}
+.cycle-nav a[data-ouvert]{background:var(--nav-coul,#5c5218);border-color:var(--nav-coul-f,#37430f);color:#f6efdb;box-shadow:0 6px 14px -7px rgba(50,32,8,.6)}
+.cycle-nav a[data-ouvert] i{background:#f6efdb}
+.cycle-nav a[data-ouvert] b.nav-n{color:#f6efdb;background:rgba(0,0,0,.26)}
+.nav-tout{cursor:pointer;font-family:var(--serif);font-size:.85rem;letter-spacing:.02em;color:var(--encre-2);background:transparent;border:1px dashed var(--ligne-2);border-radius:99px;padding:6px 15px;transition:border-color .15s ease,color .15s ease}
+.nav-tout:hover{border-color:var(--or);color:var(--or-f);border-style:solid}
+.nav-tout[aria-pressed="true"]{color:var(--terracotta-f);border-color:var(--terracotta);border-style:solid}
 
 /* ================= cycles (bibliothèque par niveau) ================= */
-.cycle{margin:40px 0 6px;scroll-margin-top:58px}
+/* Chaque cycle est un onglet rétractable : <details class="cycle"> */
+details.cycle{margin:36px 0 10px;scroll-margin-top:60px}
+.cycle{scroll-margin-top:60px}
 .cycle-tete{position:relative;display:flex;align-items:center;gap:18px;flex-wrap:wrap;
   border-radius:18px;padding:20px 26px;color:#f6efdb;overflow:hidden;border:1px solid rgba(31,39,7,.55);
   background:radial-gradient(620px 220px at 88% -46%,rgba(232,207,154,.22),transparent 62%),linear-gradient(122deg,var(--cycle-nuit,#4a3210),var(--cycle,#7a5418) 88%);
   box-shadow:0 18px 34px -24px rgba(50,32,8,.75)}
+details.cycle>summary.cycle-tete{cursor:pointer;list-style:none;-webkit-user-select:none;user-select:none;transition:filter .15s ease,box-shadow .15s ease}
+details.cycle>summary.cycle-tete::-webkit-details-marker{display:none}
+details.cycle>summary.cycle-tete::marker{content:""}
+details.cycle>summary.cycle-tete:hover{filter:brightness(1.09);box-shadow:0 24px 44px -26px rgba(50,32,8,.95)}
+details.cycle[open]>summary.cycle-tete{border-radius:18px 18px 0 0;box-shadow:none}
+details.cycle[open]>summary.cycle-tete:hover{filter:brightness(1.04)}
+.cycle-chev{position:relative;flex:none;width:38px;height:38px;margin-inline-start:2px;border-radius:50%;
+  border:1.5px solid rgba(232,207,154,.65);background:rgba(0,0,0,.24);display:grid;place-items:center;color:#ecc987;
+  transition:transform .24s ease,background .15s ease}
+details.cycle>summary.cycle-tete:hover .cycle-chev{background:rgba(0,0,0,.42)}
+details.cycle[open] .cycle-chev{transform:rotate(180deg)}
+.cycle-corps{border:1px solid var(--ligne-2);border-top:0;border-radius:0 0 18px 18px;
+  background:rgba(255,252,243,.5);padding:4px 20px 12px}
+details.cycle[open] .cycle-corps{animation:cycle-apparait .28s ease}
+@keyframes cycle-apparait{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  details.cycle[open] .cycle-corps{animation:none}
+  html{scroll-behavior:auto}
+}
 .cycle-tete::before{content:"";position:absolute;inset:0;background-image:var(--motif);opacity:.55;pointer-events:none}
 .cycle-medaille{position:relative;flex:none;width:54px;height:54px;border-radius:50%;border:2px solid rgba(232,207,154,.75);
   background:rgba(0,0,0,.22);display:grid;place-items:center;font:700 1.5rem/1 var(--serif);color:#ecc987;
@@ -372,8 +400,16 @@ details.lecon .contenu::before,details.lecon .contenu::after{display:none}
   .cycle-nav .interieur{padding:8px 12px;gap:7px}
   .cycle-nav .nav-titre{display:none}
   .cycle-nav a{padding:5px 13px;font-size:.85rem}
-  .cycle{margin:30px 0 4px}
+  /* la barre d'onglets passe sur deux rangées : marges d'ancre plus grandes */
+  details.cycle,.cycle{scroll-margin-top:104px}
+  .niveau-groupe{scroll-margin-top:112px}
+  details.cycle{margin:28px 0 8px}
   .cycle-tete{padding:16px 16px;gap:12px;border-radius:15px}
+  .cycle-chev{width:31px;height:31px}
+  .cycle-chev svg{width:16px;height:16px}
+  .cycle-corps{padding:2px 10px 8px;border-radius:0 0 15px 15px}
+  .nav-tout{padding:5px 12px;font-size:.8rem}
+  .cycle-nav a b.nav-n{font-size:.66rem;padding:2px 7px}
   .cycle-medaille{width:44px;height:44px;font-size:1.25rem}
   .cycle-titres h2{font-size:1.18rem}
   .cycle-titres .cycle-meta{font-size:.78rem}
@@ -396,6 +432,7 @@ details.lecon .contenu::before,details.lecon .contenu::after{display:none}
 @media (max-width:420px){
   .grille{grid-template-columns:1fr}
   .cycle-compte{display:none}
+  .cycle-ar{display:none}
 }
 
 </style>
@@ -421,8 +458,9 @@ details.lecon .contenu::before,details.lecon .contenu::after{display:none}
 <div id="resultats" class="resultats" aria-live="polite"></div>
 </section>
 <h2 class="hors-ligne-partie">Bibliothèque par niveau scolaire</h2>
-<section class="cycle" id="cycle-ep">
-<header class="cycle-tete" style="--cycle:#4f611d;--cycle-nuit:#37430f"><span class="cycle-medaille" aria-hidden="true">1</span><span class="cycle-titres"><h2>Enseignement primaire</h2><p class="cycle-meta">4ᵉ primaire · 5ᵉ primaire · 6ᵉ primaire</p></span><span class="cycle-ar" dir="rtl" lang="ar">السلك الابتدائي العتيق</span><span class="cycle-compte">17 manuels</span></header>
+<details class="cycle" id="cycle-ep" data-cycle="ep">
+<summary class="cycle-tete" style="--cycle:#4f611d;--cycle-nuit:#37430f" title="Déplier / replier cette série"><span class="cycle-medaille" aria-hidden="true">1</span><span class="cycle-titres"><h2>Enseignement primaire</h2><p class="cycle-meta">4ᵉ primaire · 5ᵉ primaire · 6ᵉ primaire</p></span><span class="cycle-ar" dir="rtl" lang="ar">السلك الابتدائي العتيق</span><span class="cycle-compte">17 manuels</span><span class="cycle-chev" aria-hidden="true"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span><span class="hors-ecran">— appuyer pour déplier ou replier cette série</span></summary>
+<div class="cycle-corps">
 <section class="niveau-groupe">
 <h3 class="niveau-sep" style="--cycle:#4f611d"><i aria-hidden="true"></i>4ᵉ primaire <span class="arabe" dir="rtl" lang="ar">السنة الرابعة من السلك الابتدائي العتيق</span><span class="niveau-n">5 manuels</span></h3>
 <section class="grille">
@@ -557,8 +595,10 @@ details.lecon .contenu::before,details.lecon .contenu::after{display:none}
 </a></span>
 </section>
 </section>
-</section><section class="cycle" id="cycle-es">
-<header class="cycle-tete" style="--cycle:#9c4a12;--cycle-nuit:#5e2c0a"><span class="cycle-medaille" aria-hidden="true">2</span><span class="cycle-titres"><h2>Enseignement secondaire collégial</h2><p class="cycle-meta">1ᵉʳ collège · 2ᵉ collège · 3ᵉ collège</p></span><span class="cycle-ar" dir="rtl" lang="ar">السلك الإعدادي العتيق</span><span class="cycle-compte">20 manuels</span></header>
+</div>
+</details><details class="cycle" id="cycle-es" data-cycle="es">
+<summary class="cycle-tete" style="--cycle:#9c4a12;--cycle-nuit:#5e2c0a" title="Déplier / replier cette série"><span class="cycle-medaille" aria-hidden="true">2</span><span class="cycle-titres"><h2>Enseignement secondaire collégial</h2><p class="cycle-meta">1ᵉʳ collège · 2ᵉ collège · 3ᵉ collège</p></span><span class="cycle-ar" dir="rtl" lang="ar">السلك الإعدادي العتيق</span><span class="cycle-compte">20 manuels</span><span class="cycle-chev" aria-hidden="true"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span><span class="hors-ecran">— appuyer pour déplier ou replier cette série</span></summary>
+<div class="cycle-corps">
 <section class="niveau-groupe">
 <h3 class="niveau-sep" style="--cycle:#9c4a12"><i aria-hidden="true"></i>1ᵉʳ collège <span class="arabe" dir="rtl" lang="ar">السنة الأولى من السلك الإعدادي العتيق</span><span class="niveau-n">6 manuels</span></h3>
 <section class="grille">
@@ -714,8 +754,10 @@ details.lecon .contenu::before,details.lecon .contenu::after{display:none}
 </a></span>
 </section>
 </section>
-</section><section class="cycle" id="cycle-tanawi">
-<header class="cycle-tete" style="--cycle:#7a5418;--cycle-nuit:#4a3210"><span class="cycle-medaille" aria-hidden="true">3</span><span class="cycle-titres"><h2>Enseignement secondaire qualifiant</h2><p class="cycle-meta">1ᵉʳ lycée · 2ᵉ lycée · 3ᵉ lycée</p></span><span class="cycle-ar" dir="rtl" lang="ar">السلك التأهيلي العتيق</span><span class="cycle-compte">27 manuels</span></header>
+</div>
+</details><details class="cycle" id="cycle-tanawi" data-cycle="tanawi">
+<summary class="cycle-tete" style="--cycle:#7a5418;--cycle-nuit:#4a3210" title="Déplier / replier cette série"><span class="cycle-medaille" aria-hidden="true">3</span><span class="cycle-titres"><h2>Enseignement secondaire qualifiant</h2><p class="cycle-meta">1ᵉʳ lycée · 2ᵉ lycée · 3ᵉ lycée</p></span><span class="cycle-ar" dir="rtl" lang="ar">السلك التأهيلي العتيق</span><span class="cycle-compte">27 manuels</span><span class="cycle-chev" aria-hidden="true"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span><span class="hors-ecran">— appuyer pour déplier ou replier cette série</span></summary>
+<div class="cycle-corps">
 <section class="niveau-groupe">
 <h3 class="niveau-sep" style="--cycle:#7a5418"><i aria-hidden="true"></i>1ᵉʳ lycée <span class="arabe" dir="rtl" lang="ar">السنة الأولى من السلك التأهيلي العتيق</span><span class="niveau-n">9 manuels</span></h3>
 <section class="grille">
@@ -920,10 +962,12 @@ details.lecon .contenu::before,details.lecon .contenu::after{display:none}
 </a></span>
 </section>
 </section>
-</section>
+</div>
+</details>
 <h2 class="hors-ligne-partie">Leçons transcrites</h2>
-<section class="cycle" id="contenu-cycle-ep">
-<header class="cycle-tete" style="--cycle:#4f611d;--cycle-nuit:#37430f"><span class="cycle-titres"><h2>Enseignement primaire</h2><p class="cycle-meta">4ᵉ primaire · 5ᵉ primaire · 6ᵉ primaire</p></span><span class="cycle-ar" dir="rtl" lang="ar">السلك الابتدائي العتيق</span><span class="cycle-compte">17 manuels</span></header>
+<details class="cycle" id="contenu-cycle-ep" data-cycle="ep">
+<summary class="cycle-tete" style="--cycle:#4f611d;--cycle-nuit:#37430f" title="Déplier / replier cette série"><span class="cycle-titres"><h2>Enseignement primaire</h2><p class="cycle-meta">4ᵉ primaire · 5ᵉ primaire · 6ᵉ primaire</p></span><span class="cycle-ar" dir="rtl" lang="ar">السلك الابتدائي العتيق</span><span class="cycle-compte">17 manuels</span><span class="cycle-chev" aria-hidden="true"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span><span class="hors-ecran">— appuyer pour déplier ou replier cette série</span></summary>
+<div class="cycle-corps">
 <div class="niveau-sep" style="--cycle:#4f611d"><i aria-hidden="true"></i>4ᵉ primaire <span class="arabe" dir="rtl" lang="ar">السنة الرابعة من السلك الابتدائي العتيق</span></div>
 <section class="section-livre livre-hl" id="livre-fiqh-1ep" data-slug="fiqh-1ep" data-titre="Fiqh — le Mukhtaṣar d&#x27;al-Akhdarī, comm. d&#x27;al-Ābī al-Azharī">
 <h2><span class="arabe" dir="rtl" lang="ar">الفقه من متن الأخضري بشرح الآبي الأزهري للسنة الرابعة من التعليم الابتدائي العتيق</span> — Fiqh — le Mukhtaṣar d&#x27;al-Akhdarī, comm. d&#x27;al-Ābī al-Azharī</h2>
@@ -32229,8 +32273,10 @@ Quelles sont donc les œuvres <em>auxquelles</em> il faut s’empresser&nbsp; 
 </div>
 </details>
 </section>
-</section><section class="cycle" id="contenu-cycle-es">
-<header class="cycle-tete" style="--cycle:#9c4a12;--cycle-nuit:#5e2c0a"><span class="cycle-titres"><h2>Enseignement secondaire collégial</h2><p class="cycle-meta">1ᵉʳ collège · 2ᵉ collège · 3ᵉ collège</p></span><span class="cycle-ar" dir="rtl" lang="ar">السلك الإعدادي العتيق</span><span class="cycle-compte">20 manuels</span></header>
+</div>
+</details><details class="cycle" id="contenu-cycle-es" data-cycle="es">
+<summary class="cycle-tete" style="--cycle:#9c4a12;--cycle-nuit:#5e2c0a" title="Déplier / replier cette série"><span class="cycle-titres"><h2>Enseignement secondaire collégial</h2><p class="cycle-meta">1ᵉʳ collège · 2ᵉ collège · 3ᵉ collège</p></span><span class="cycle-ar" dir="rtl" lang="ar">السلك الإعدادي العتيق</span><span class="cycle-compte">20 manuels</span><span class="cycle-chev" aria-hidden="true"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span><span class="hors-ecran">— appuyer pour déplier ou replier cette série</span></summary>
+<div class="cycle-corps">
 <div class="niveau-sep" style="--cycle:#9c4a12"><i aria-hidden="true"></i>1ᵉʳ collège <span class="arabe" dir="rtl" lang="ar">السنة الأولى من السلك الإعدادي العتيق</span></div>
 <section class="section-livre livre-hl" id="livre-tawhid-1es" data-slug="tawhid-1es" data-titre="Tawḥīd — la Risāla d&#x27;Ibn Abī Zayd al-Qayrawānī">
 <h2><span class="arabe" dir="rtl" lang="ar">التوحيد من متن الرسالة لابن أبي زيد القيرواني</span> — Tawḥīd — la Risāla d&#x27;Ibn Abī Zayd al-Qayrawānī</h2>
@@ -70144,8 +70190,10 @@ Toutes les sources s’accordent que l’imam <em>Nāfi</em>' lut sur soixante-d
 </div>
 </details>
 </section>
-</section><section class="cycle" id="contenu-cycle-tanawi">
-<header class="cycle-tete" style="--cycle:#7a5418;--cycle-nuit:#4a3210"><span class="cycle-titres"><h2>Enseignement secondaire qualifiant</h2><p class="cycle-meta">1ᵉʳ lycée · 2ᵉ lycée · 3ᵉ lycée</p></span><span class="cycle-ar" dir="rtl" lang="ar">السلك التأهيلي العتيق</span><span class="cycle-compte">27 manuels</span></header>
+</div>
+</details><details class="cycle" id="contenu-cycle-tanawi" data-cycle="tanawi">
+<summary class="cycle-tete" style="--cycle:#7a5418;--cycle-nuit:#4a3210" title="Déplier / replier cette série"><span class="cycle-titres"><h2>Enseignement secondaire qualifiant</h2><p class="cycle-meta">1ᵉʳ lycée · 2ᵉ lycée · 3ᵉ lycée</p></span><span class="cycle-ar" dir="rtl" lang="ar">السلك التأهيلي العتيق</span><span class="cycle-compte">27 manuels</span><span class="cycle-chev" aria-hidden="true"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span><span class="hors-ecran">— appuyer pour déplier ou replier cette série</span></summary>
+<div class="cycle-corps">
 <div class="niveau-sep" style="--cycle:#7a5418"><i aria-hidden="true"></i>1ᵉʳ lycée <span class="arabe" dir="rtl" lang="ar">السنة الأولى من السلك التأهيلي العتيق</span></div>
 <section class="section-livre livre-hl" id="livre-fiqh-tanawi-1" data-slug="fiqh-tanawi-1" data-titre="Fiqh — le Mukhtaṣar de Khalīl, comm. d&#x27;al-Dardīr et ḥāshiya al-Dasūqī (1ᵉʳ lycée)">
 <h2><span class="arabe" dir="rtl" lang="ar">الفقه من متن مختصر الشيخ خليل بشرح الدردير وحاشية الدسوقي</span> — Fiqh — le Mukhtaṣar de Khalīl, comm. d&#x27;al-Dardīr et ḥāshiya al-Dasūqī (1ᵉʳ lycée)</h2>
@@ -104078,7 +104126,8 @@ Lundi 16 mars 2026
 </div>
 </details>
 </section>
-</section>
+</div>
+</details>
 </main>
 <footer class="pied"><div class="interieur">
 <p class="pied-orn" aria-hidden="true"><span></span><i></i><i></i><i></i><span></span></p>
@@ -104305,18 +104354,30 @@ try{MinhajRecherche.definirDonnees(indexDepuisDOM());suivant();}
 catch(e){if(echec)echec(String(e&&e.message||e));}
 }
 });
+function ouvrirAncetres(el){
+var d=el;
+while(d){
+if(d.tagName==='DETAILS')d.open=true;
+d=d.parentElement&&d.parentElement.closest?d.parentElement.closest('details'):null;
+}
+}
 function ouvrirAncre(){
 var id=decodeURIComponent((location.hash||'').slice(1));
 if(!id)return;
 var el=document.getElementById(id);
-if(el){var d=el.closest('details');if(d)d.open=true;}
+if(!el)return;
+ouvrirAncetres(el);
+setTimeout(function(){el.scrollIntoView({behavior:'smooth',block:'start'});},80);
 }
 window.addEventListener('hashchange',ouvrirAncre);
 document.addEventListener('click',function(ev){
 var a=ev.target.closest?ev.target.closest('a[href^="#"]'):null;
 if(!a)return;
 var el=document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));
-if(el){var d=el.closest('details');if(d)d.open=true;}
+if(el){ouvrirAncetres(el);setTimeout(function(){el.scrollIntoView({behavior:'smooth',block:'start'});},80);}
+});
+window.addEventListener('beforeprint',function(){
+var ds=document.querySelectorAll('details');for(var k=0;k<ds.length;k++)ds[k].open=true;
 });
 ouvrirAncre();
 })();

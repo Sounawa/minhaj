@@ -40,10 +40,11 @@
 </section>
 </div>
 </section>
-<nav class="cycle-nav" aria-label="Niveaux scolaires"><div class="interieur"><span class="nav-titre">Par niveau :</span><a href="#cycle-ep" style="--nav-coul:#4f611d;--nav-coul-f:#37430f"><i aria-hidden="true"></i>Primaire</a><a href="#cycle-es" style="--nav-coul:#9c4a12;--nav-coul-f:#5e2c0a"><i aria-hidden="true"></i>Collège</a><a href="#cycle-tanawi" style="--nav-coul:#7a5418;--nav-coul-f:#4a3210"><i aria-hidden="true"></i>Lycée</a></div></nav>
+<nav class="cycle-nav" aria-label="Niveaux scolaires"><div class="interieur"><span class="nav-titre">Choisir une série :</span><a href="#cycle-ep" data-cible="cycle-ep" style="--nav-coul:#4f611d;--nav-coul-f:#37430f"><i aria-hidden="true"></i>Primaire<b class="nav-n">17</b></a><a href="#cycle-es" data-cible="cycle-es" style="--nav-coul:#9c4a12;--nav-coul-f:#5e2c0a"><i aria-hidden="true"></i>Collège<b class="nav-n">20</b></a><a href="#cycle-tanawi" data-cible="cycle-tanawi" style="--nav-coul:#7a5418;--nav-coul-f:#4a3210"><i aria-hidden="true"></i>Lycée<b class="nav-n">27</b></a><button type="button" id="bascule-tout" class="nav-tout" aria-pressed="false">Tout déplier</button></div></nav>
 <main>
-<section class="cycle" id="cycle-ep">
-<header class="cycle-tete" style="--cycle:#4f611d;--cycle-nuit:#37430f"><span class="cycle-medaille" aria-hidden="true">1</span><span class="cycle-titres"><h2>Enseignement primaire</h2><p class="cycle-meta">4ᵉ primaire · 5ᵉ primaire · 6ᵉ primaire</p></span><span class="cycle-ar" dir="rtl" lang="ar">السلك الابتدائي العتيق</span><span class="cycle-compte">17 manuels</span></header>
+<details class="cycle" id="cycle-ep" data-cycle="ep">
+<summary class="cycle-tete" style="--cycle:#4f611d;--cycle-nuit:#37430f" title="Déplier / replier cette série"><span class="cycle-medaille" aria-hidden="true">1</span><span class="cycle-titres"><h2>Enseignement primaire</h2><p class="cycle-meta">4ᵉ primaire · 5ᵉ primaire · 6ᵉ primaire</p></span><span class="cycle-ar" dir="rtl" lang="ar">السلك الابتدائي العتيق</span><span class="cycle-compte">17 manuels</span><span class="cycle-chev" aria-hidden="true"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span><span class="hors-ecran">— appuyer pour déplier ou replier cette série</span></summary>
+<div class="cycle-corps">
 <section class="niveau-groupe" id="niveau-4ep">
 <h3 class="niveau-titre"><span class="niveau-badge" aria-hidden="true">4ᵉ</span><span class="niveau-lib"><span class="niveau-fr">4ᵉ primaire</span><span class="niveau-ar" dir="rtl" lang="ar">السنة الرابعة من السلك الابتدائي العتيق</span></span><span class="niveau-n">5 manuels</span></h3>
 <section class="grille">
@@ -178,8 +179,10 @@
 </a></span>
 </section>
 </section>
-</section><section class="cycle" id="cycle-es">
-<header class="cycle-tete" style="--cycle:#9c4a12;--cycle-nuit:#5e2c0a"><span class="cycle-medaille" aria-hidden="true">2</span><span class="cycle-titres"><h2>Enseignement secondaire collégial</h2><p class="cycle-meta">1ᵉʳ collège · 2ᵉ collège · 3ᵉ collège</p></span><span class="cycle-ar" dir="rtl" lang="ar">السلك الإعدادي العتيق</span><span class="cycle-compte">20 manuels</span></header>
+</div>
+</details><details class="cycle" id="cycle-es" data-cycle="es">
+<summary class="cycle-tete" style="--cycle:#9c4a12;--cycle-nuit:#5e2c0a" title="Déplier / replier cette série"><span class="cycle-medaille" aria-hidden="true">2</span><span class="cycle-titres"><h2>Enseignement secondaire collégial</h2><p class="cycle-meta">1ᵉʳ collège · 2ᵉ collège · 3ᵉ collège</p></span><span class="cycle-ar" dir="rtl" lang="ar">السلك الإعدادي العتيق</span><span class="cycle-compte">20 manuels</span><span class="cycle-chev" aria-hidden="true"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span><span class="hors-ecran">— appuyer pour déplier ou replier cette série</span></summary>
+<div class="cycle-corps">
 <section class="niveau-groupe" id="niveau-1es">
 <h3 class="niveau-titre"><span class="niveau-badge" aria-hidden="true">1ᵉʳ</span><span class="niveau-lib"><span class="niveau-fr">1ᵉʳ collège</span><span class="niveau-ar" dir="rtl" lang="ar">السنة الأولى من السلك الإعدادي العتيق</span></span><span class="niveau-n">6 manuels</span></h3>
 <section class="grille">
@@ -335,8 +338,10 @@
 </a></span>
 </section>
 </section>
-</section><section class="cycle" id="cycle-tanawi">
-<header class="cycle-tete" style="--cycle:#7a5418;--cycle-nuit:#4a3210"><span class="cycle-medaille" aria-hidden="true">3</span><span class="cycle-titres"><h2>Enseignement secondaire qualifiant</h2><p class="cycle-meta">1ᵉʳ lycée · 2ᵉ lycée · 3ᵉ lycée</p></span><span class="cycle-ar" dir="rtl" lang="ar">السلك التأهيلي العتيق</span><span class="cycle-compte">27 manuels</span></header>
+</div>
+</details><details class="cycle" id="cycle-tanawi" data-cycle="tanawi">
+<summary class="cycle-tete" style="--cycle:#7a5418;--cycle-nuit:#4a3210" title="Déplier / replier cette série"><span class="cycle-medaille" aria-hidden="true">3</span><span class="cycle-titres"><h2>Enseignement secondaire qualifiant</h2><p class="cycle-meta">1ᵉʳ lycée · 2ᵉ lycée · 3ᵉ lycée</p></span><span class="cycle-ar" dir="rtl" lang="ar">السلك التأهيلي العتيق</span><span class="cycle-compte">27 manuels</span><span class="cycle-chev" aria-hidden="true"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span><span class="hors-ecran">— appuyer pour déplier ou replier cette série</span></summary>
+<div class="cycle-corps">
 <section class="niveau-groupe" id="niveau-tanawi-1">
 <h3 class="niveau-titre"><span class="niveau-badge" aria-hidden="true">1ᵉʳ</span><span class="niveau-lib"><span class="niveau-fr">1ᵉʳ lycée</span><span class="niveau-ar" dir="rtl" lang="ar">السنة الأولى من السلك التأهيلي العتيق</span></span><span class="niveau-n">9 manuels</span></h3>
 <section class="grille">
@@ -541,7 +546,8 @@
 </a></span>
 </section>
 </section>
-</section>
+</div>
+</details>
 </main>
 <footer class="pied"><div class="interieur">
 <p class="pied-orn" aria-hidden="true"><span></span><i></i><i></i><i></i><span></span></p>
@@ -569,6 +575,87 @@ s.onerror=function(){if(echec)echec();};
 document.head.appendChild(s);
 }
 });
+})();
+</script>
+<script>
+(function(){
+'use strict';
+var nav=document.querySelector('.cycle-nav');
+var cycles=[].slice.call(document.querySelectorAll('details.cycle'));
+var bouton=document.getElementById('bascule-tout');
+var memo=false;
+try{memo=!!window.sessionStorage;}catch(e){memo=false;}
+function maj(){
+  cycles.forEach(function(c){
+    var t=nav?nav.querySelector('a[data-cible="'+c.id+'"]'):null;
+    if(t){if(c.open){t.setAttribute('data-ouvert','');}else{t.removeAttribute('data-ouvert');}}
+  });
+  if(bouton){
+    var tous=cycles.length>0&&cycles.every(function(c){return c.open;});
+    bouton.textContent=tous?'Tout replier':'Tout déplier';
+    bouton.setAttribute('aria-pressed',tous?'true':'false');
+  }
+  if(memo){try{sessionStorage.setItem('minhaj-cycles',
+    cycles.filter(function(c){return c.open;}).map(function(c){return c.id;}).join(','));}catch(e){}}
+}
+function ouvrirSeul(cible){
+  cycles.forEach(function(c){c.open=(c===cible);});
+  maj();
+}
+cycles.forEach(function(c){c.addEventListener('toggle',maj);});
+if(nav){
+  nav.addEventListener('click',function(ev){
+    var a=ev.target&&ev.target.closest?ev.target.closest('a[data-cible]'):null;
+    if(!a)return;
+    var cible=document.getElementById(a.getAttribute('data-cible'));
+    if(!cible)return;
+    ev.preventDefault();
+    var ouverts=cycles.filter(function(c){return c.open;});
+    if(cible.open&&ouverts.length===1){cible.scrollIntoView({behavior:'smooth',block:'start'});return;}
+    ouvrirSeul(cible);
+    if(history.replaceState)history.replaceState(null,'','#'+cible.id);
+    cible.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+}
+if(bouton){
+  bouton.addEventListener('click',function(){
+    var tous=cycles.length>0&&cycles.every(function(c){return c.open;});
+    cycles.forEach(function(c){c.open=!tous;});
+    maj();
+    if(nav){
+      if(tous){nav.scrollIntoView({behavior:'smooth',block:'start'});}
+      else{window.scrollTo({top:0,behavior:'smooth'});}
+    }
+  });
+}
+function ouvrirAncetres(el){
+  var d=el;
+  while(d){
+    if(d.tagName==='DETAILS'&&!d.open)d.open=true;
+    d=d.parentElement&&d.parentElement.closest?d.parentElement.closest('details'):null;
+  }
+}
+function traiterAncre(){
+  var id;
+  try{id=decodeURIComponent((location.hash||'').slice(1));}catch(e){id=(location.hash||'').slice(1);}
+  if(!id)return;
+  var el=document.getElementById(id);
+  if(!el)return;
+  ouvrirAncetres(el);
+  maj();
+  setTimeout(function(){el.scrollIntoView({behavior:'smooth',block:'start'});},80);
+}
+window.addEventListener('hashchange',traiterAncre);
+window.addEventListener('beforeprint',function(){cycles.forEach(function(c){c.open=true;});maj();});
+if(memo&&!location.hash){
+  try{
+    var memoStr=sessionStorage.getItem('minhaj-cycles')||'';
+    if(memoStr){memoStr.split(',').forEach(function(id){
+      var c=document.getElementById(id);if(c)c.open=true;});}
+  }catch(e){}
+}
+maj();
+traiterAncre();
 })();
 </script>
 </body>

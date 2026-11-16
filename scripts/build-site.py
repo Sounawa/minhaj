@@ -741,16 +741,25 @@ def html_niveau_titre(nid, nfr, nar, badge, bs):
 
 
 def html_cycle_bande(sec, indice=None):
+    """Bandeau d'un cycle — rendu comme <summary> (onglet rétractable,
+    premier enfant d'un <details class="cycle">)."""
     style = f'--cycle:{sec["couleur"]};--cycle-nuit:{sec["nuit"]}'
     niveaux_l = ' · '.join(esc(p[1]) for p in sec['niveaux'])
     med = (f'<span class="cycle-medaille" aria-hidden="true">{indice}</span>' if indice
            else '')
-    return (f'<header class="cycle-tete" style="{style}">{med}'
+    chev = (f'<span class="cycle-chev" aria-hidden="true">'
+            f'<svg viewBox="0 0 24 24" width="19" height="19" fill="none" '
+            f'stroke="currentColor" stroke-width="2.6" stroke-linecap="round" '
+            f'stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>'
+            f'</span>')
+    return (f'<summary class="cycle-tete" style="{style}" title="Déplier / replier cette série">{med}'
             f'<span class="cycle-titres"><h2>{esc(sec["long"])}</h2>'
             f'<p class="cycle-meta">{niveaux_l}</p></span>'
             f'<span class="cycle-ar" dir="rtl" lang="ar">{esc(sec["ar"])}</span>'
             f'<span class="cycle-compte">{sec["total"]} manuel{"s" if sec["total"] > 1 else ""}</span>'
-            f'</header>')
+            f'{chev}'
+            f'<span class="hors-ecran">— appuyer pour déplier ou replier cette série</span>'
+            f'</summary>')
 
 
 def chaine_navigation(livre):
@@ -876,12 +885,106 @@ def html_recherche():
 </section>"""
 
 
-NAV_CYCLE = ('<nav class="cycle-nav" aria-label="Niveaux scolaires"><div class="interieur">'
-             '<span class="nav-titre">Par niveau :</span>'
-             '<a href="#cycle-ep" style="--nav-coul:#4f611d;--nav-coul-f:#37430f"><i aria-hidden="true"></i>Primaire</a>'
-             '<a href="#cycle-es" style="--nav-coul:#9c4a12;--nav-coul-f:#5e2c0a"><i aria-hidden="true"></i>Collège</a>'
-             '<a href="#cycle-tanawi" style="--nav-coul:#7a5418;--nav-coul-f:#4a3210"><i aria-hidden="true"></i>Lycée</a>'
-             '</div></nav>')
+def nav_cycle_html(sections):
+    """Barre d'onglets collante : un onglet par cycle (avec effectif) +
+    bouton « tout déplier / replier ». Clic = ouvre la série demandée et
+    referme les autres (comportement accordéon, géré par BOOTSTRAP_ACCUEIL)."""
+    liens = []
+    for sec in sections:
+        liens.append(
+            f'<a href="#cycle-{esc(sec["id"])}" data-cible="cycle-{esc(sec["id"])}" '
+            f'style="--nav-coul:{sec["couleur"]};--nav-coul-f:{sec["nuit"]}">'
+            f'<i aria-hidden="true"></i>{esc(sec["court"])}'
+            f'<b class="nav-n">{sec["total"]}</b></a>')
+    return ('<nav class="cycle-nav" aria-label="Niveaux scolaires"><div class="interieur">'
+            '<span class="nav-titre">Choisir une série :</span>'
+            + ''.join(liens) +
+            '<button type="button" id="bascule-tout" class="nav-tout" '
+            'aria-pressed="false">Tout déplier</button>'
+            '</div></nav>')
+
+
+BOOTSTRAP_ACCUEIL = r"""<script>
+(function(){
+'use strict';
+var nav=document.querySelector('.cycle-nav');
+var cycles=[].slice.call(document.querySelectorAll('details.cycle'));
+var bouton=document.getElementById('bascule-tout');
+var memo=false;
+try{memo=!!window.sessionStorage;}catch(e){memo=false;}
+function maj(){
+  cycles.forEach(function(c){
+    var t=nav?nav.querySelector('a[data-cible="'+c.id+'"]'):null;
+    if(t){if(c.open){t.setAttribute('data-ouvert','');}else{t.removeAttribute('data-ouvert');}}
+  });
+  if(bouton){
+    var tous=cycles.length>0&&cycles.every(function(c){return c.open;});
+    bouton.textContent=tous?'Tout replier':'Tout déplier';
+    bouton.setAttribute('aria-pressed',tous?'true':'false');
+  }
+  if(memo){try{sessionStorage.setItem('minhaj-cycles',
+    cycles.filter(function(c){return c.open;}).map(function(c){return c.id;}).join(','));}catch(e){}}
+}
+function ouvrirSeul(cible){
+  cycles.forEach(function(c){c.open=(c===cible);});
+  maj();
+}
+cycles.forEach(function(c){c.addEventListener('toggle',maj);});
+if(nav){
+  nav.addEventListener('click',function(ev){
+    var a=ev.target&&ev.target.closest?ev.target.closest('a[data-cible]'):null;
+    if(!a)return;
+    var cible=document.getElementById(a.getAttribute('data-cible'));
+    if(!cible)return;
+    ev.preventDefault();
+    var ouverts=cycles.filter(function(c){return c.open;});
+    if(cible.open&&ouverts.length===1){cible.scrollIntoView({behavior:'smooth',block:'start'});return;}
+    ouvrirSeul(cible);
+    if(history.replaceState)history.replaceState(null,'','#'+cible.id);
+    cible.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+}
+if(bouton){
+  bouton.addEventListener('click',function(){
+    var tous=cycles.length>0&&cycles.every(function(c){return c.open;});
+    cycles.forEach(function(c){c.open=!tous;});
+    maj();
+    if(nav){
+      if(tous){nav.scrollIntoView({behavior:'smooth',block:'start'});}
+      else{window.scrollTo({top:0,behavior:'smooth'});}
+    }
+  });
+}
+function ouvrirAncetres(el){
+  var d=el;
+  while(d){
+    if(d.tagName==='DETAILS'&&!d.open)d.open=true;
+    d=d.parentElement&&d.parentElement.closest?d.parentElement.closest('details'):null;
+  }
+}
+function traiterAncre(){
+  var id;
+  try{id=decodeURIComponent((location.hash||'').slice(1));}catch(e){id=(location.hash||'').slice(1);}
+  if(!id)return;
+  var el=document.getElementById(id);
+  if(!el)return;
+  ouvrirAncetres(el);
+  maj();
+  setTimeout(function(){el.scrollIntoView({behavior:'smooth',block:'start'});},80);
+}
+window.addEventListener('hashchange',traiterAncre);
+window.addEventListener('beforeprint',function(){cycles.forEach(function(c){c.open=true;});maj();});
+if(memo&&!location.hash){
+  try{
+    var memoStr=sessionStorage.getItem('minhaj-cycles')||'';
+    if(memoStr){memoStr.split(',').forEach(function(id){
+      var c=document.getElementById(id);if(c)c.open=true;});}
+  }catch(e){}
+}
+maj();
+traiterAncre();
+})();
+</script>"""
 
 
 def page_accueil(livres, programme, date_fr):
@@ -893,8 +996,11 @@ def page_accueil(livres, programme, date_fr):
     editeur_fr = programme.get('publisherFr') or 'Ministère des Habous et des Affaires islamiques — Royaume du Maroc'
 
     # ---- bibliothèque rangée par cycle scolaire puis par année
+    #      chaque cycle est un onglet rétractable (details/summary),
+    #      refermé par défaut : l'accueil reste compact.
+    sections = groupes_niveaux(livres)
     sections_html = []
-    for i, sec in enumerate(groupes_niveaux(livres), start=1):
+    for i, sec in enumerate(sections, start=1):
         niveaux_html = []
         for nid, nfr, nar, badge, bs in sec['niveaux']:
             niveaux_html.append(
@@ -902,9 +1008,9 @@ def page_accueil(livres, programme, date_fr):
                 + html_niveau_titre(nid, nfr, nar, badge, bs) + '\n'
                 + html_cartes(bs, '') + '\n</section>')
         sections_html.append(
-            f'<section class="cycle" id="cycle-{esc(sec["id"])}">\n'
+            f'<details class="cycle" id="cycle-{esc(sec["id"])}" data-cycle="{esc(sec["id"])}">\n'
             + html_cycle_bande(sec, indice=i) + '\n'
-            + '\n'.join(niveaux_html) + '\n</section>')
+            + '<div class="cycle-corps">\n' + '\n'.join(niveaux_html) + '\n</div>\n</details>')
 
     corps = f"""<section class="heros pleine" id="accueil">
 <div class="heros-interieur">
@@ -922,14 +1028,15 @@ def page_accueil(livres, programme, date_fr):
 {html_recherche()}
 </div>
 </section>
-{NAV_CYCLE}
+{nav_cycle_html(sections)}
 <main>
 {''.join(sections_html)}
 </main>"""
     return coquille(
         'Minhaj — manuels de l’enseignement traditionnel (Maroc)',
         'Sommaire des 64 manuels du المنهج النموذجي للتعليم العتيق, rangés par niveau scolaire (primaire, collège, lycée) : leçons transcrites mot à mot en arabe, traduites et commentées en français. Recherche globale en français et en arabe.',
-        '', nom_ar, date_fr, corps, BOOTSTRAP_RECHERCHE_RACINE), n_ok, n_total
+        '', nom_ar, date_fr, corps,
+        BOOTSTRAP_RECHERCHE_RACINE + '\n' + BOOTSTRAP_ACCUEIL), n_ok, n_total
 
 
 def html_liste_lecons(livre):
@@ -1053,6 +1160,7 @@ def page_hors_ligne(livres, programme, css_texte, recherche_js, date_fr):
     nom_ar = programme.get('nameAr', 'المنهج النموذجي للتعليم العتيق')
 
     # ---- partie 1 : bibliothèque rangée par cycle puis niveau (cartes -> ancres)
+    #      cycles en onglets rétractables, comme l'accueil
     bibli_html = []
     # ---- partie 2 : sections complètes (leçons transcrites), même rangement
     sections = []
@@ -1071,9 +1179,9 @@ def page_hors_ligne(livres, programme, css_texte, recherche_js, date_fr):
             for b in bs:
                 niveaux_sections.append(b)
         bibli_html.append(
-            f'<section class="cycle" id="cycle-{esc(sec["id"])}">\n'
+            f'<details class="cycle" id="cycle-{esc(sec["id"])}" data-cycle="{esc(sec["id"])}">\n'
             + html_cycle_bande(sec, indice=i) + '\n'
-            + '\n'.join(niveaux_cartes) + '\n</section>')
+            + '<div class="cycle-corps">\n' + '\n'.join(niveaux_cartes) + '\n</div>\n</details>')
 
         # sections complètes de ce cycle
         blocs_cycle = []
@@ -1086,9 +1194,9 @@ def page_hors_ligne(livres, programme, css_texte, recherche_js, date_fr):
                     f'<div class="niveau-sep" style="--cycle:{esc(sec["couleur"])}"><i aria-hidden="true"></i>{esc(b["niveauFr"])}{ar_n}</div>')
             blocs_cycle.append(section_livre_hl(b))
         sections.append(
-            f'<section class="cycle" id="contenu-cycle-{esc(sec["id"])}">\n'
+            f'<details class="cycle" id="contenu-cycle-{esc(sec["id"])}" data-cycle="{esc(sec["id"])}">\n'
             + html_cycle_bande(sec) + '\n'
-            + '\n'.join(blocs_cycle) + '\n</section>')
+            + '<div class="cycle-corps">\n' + '\n'.join(blocs_cycle) + '\n</div>\n</details>')
 
     bootstrap = r"""(function(){
 function indexDepuisDOM(){
@@ -1115,18 +1223,30 @@ try{MinhajRecherche.definirDonnees(indexDepuisDOM());suivant();}
 catch(e){if(echec)echec(String(e&&e.message||e));}
 }
 });
+function ouvrirAncetres(el){
+var d=el;
+while(d){
+if(d.tagName==='DETAILS')d.open=true;
+d=d.parentElement&&d.parentElement.closest?d.parentElement.closest('details'):null;
+}
+}
 function ouvrirAncre(){
 var id=decodeURIComponent((location.hash||'').slice(1));
 if(!id)return;
 var el=document.getElementById(id);
-if(el){var d=el.closest('details');if(d)d.open=true;}
+if(!el)return;
+ouvrirAncetres(el);
+setTimeout(function(){el.scrollIntoView({behavior:'smooth',block:'start'});},80);
 }
 window.addEventListener('hashchange',ouvrirAncre);
 document.addEventListener('click',function(ev){
 var a=ev.target.closest?ev.target.closest('a[href^="#"]'):null;
 if(!a)return;
 var el=document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));
-if(el){var d=el.closest('details');if(d)d.open=true;}
+if(el){ouvrirAncetres(el);setTimeout(function(){el.scrollIntoView({behavior:'smooth',block:'start'});},80);}
+});
+window.addEventListener('beforeprint',function(){
+var ds=document.querySelectorAll('details');for(var k=0;k<ds.length;k++)ds[k].open=true;
 });
 ouvrirAncre();
 })();"""
