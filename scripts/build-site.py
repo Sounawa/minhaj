@@ -1070,6 +1070,31 @@ def balise_ar(t):
     return re.sub(motif, lambda m: '<span dir="rtl" lang="ar">' + m.group(0) + '</span>', t)
 
 
+def texte_commentaire_index(comm):
+    """Texte plain d'un commentaire pédagogique pour l'index de recherche.
+    Consignée à R721 (« LIMITES ») et réalisée à R722 : le contenu de شرح الدرس
+    devient cherchable — resume, explication, points et vocabulaire (ar,
+    translit, fr). N'invente rien : les champs sont rendus tels quels, en
+    texte plain. Appelé seulement quand les commentaires sont affichés
+    (MODE_COMM != 'lecon') pour garder index et pages synchrones."""
+    if not comm:
+        return ''
+    morceaux = []
+    if comm.get('resume'):
+        morceaux.append(comm['resume'])
+    exp = comm.get('explication')
+    if isinstance(exp, str):
+        morceaux.append(exp)
+    elif exp:
+        morceaux.extend(x for x in exp if x)
+    morceaux.extend(x for x in (comm.get('points') or []) if x)
+    for v in (comm.get('vocabulaire') or []):
+        for cle in ('ar', 'translit', 'fr'):
+            if v.get(cle):
+                morceaux.append(v[cle])
+    return texte_plain(' '.join(morceaux))
+
+
 def section_commentaire_html(comm):
     """Section « Commentaire pédagogique » d'une leçon ou d'une introduction.
     S'ajoute SOUS la leçon — rien de l'existant n'est modifié. Champs lus :
@@ -2365,32 +2390,47 @@ def main():
     entrees_books = []
     entrees_lecons = []
     textes_par_cycle = {}
+    # Le contenu des commentaires pédagogiques (شرح الدرس) entre dans l'index
+    # de recherche (réalisé à R722 — consigné comme amélioration à R721) : les
+    # fragments de cycle portent leçon + commentaire, synchrones des pages
+    # (rien d'indexé qui ne soit pas affiché — mode 'lecon' exclu).
+    avec_comm_index = MODE_COMM != 'lecon'
     for ib, b in enumerate(livres):
         entrees_books.append({'s': b['slug'], 't': b['titleFr'], 'ta': b['titleAr'],
                               'u': f"livres/{b['slug']}/"})
         cyc = b['cycle'] or 'autre'
         if b['intro']:
             it = b['intro']
+            xt = it['texte']
+            if avec_comm_index:
+                tc = texte_commentaire_index(it.get('comm'))
+                if tc:
+                    xt += ' ' + tc
             entrees_lecons.append({
                 'b': ib, 'd': 'introduction',
                 't': it['titreFr'], 'ta': it['titreAr'],
                 'u': f"livres/{b['slug']}/introduction.html",
-                'x': it['texte'],
+                'x': xt,
             })
             textes_par_cycle.setdefault(cyc, []).append(
-                {'b': ib, 'd': 'introduction', 'x': it['texte']})
+                {'b': ib, 'd': 'introduction', 'x': xt})
         for l in b['lecons']:
             if not l['ok']:
                 continue
+            xt = l['texte']
+            if avec_comm_index:
+                tc = texte_commentaire_index(l.get('comm'))
+                if tc:
+                    xt += ' ' + tc
             entrees_lecons.append({
                 'b': ib, 'd': l['docId'],
                 't': l['titleFr'] or l['titleAr'] or f"Leçon {l['num']}",
                 'ta': l['titleAr'],
                 'u': f"livres/{b['slug']}/{url_lecon(l['docId'])}.html",
-                'x': l['texte'],
+                'x': xt,
             })
             textes_par_cycle.setdefault(cyc, []).append(
-                {'b': ib, 'd': l['docId'], 'x': l['texte']})
+                {'b': ib, 'd': l['docId'], 'x': xt})
     if sorted(textes_par_cycle) != cycles_frag:
         avertissements.append('cycles sans fragment de texte — incohérence de découpage')
     (sortie / 'recherche').mkdir(exist_ok=True)

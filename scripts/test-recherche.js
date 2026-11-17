@@ -70,5 +70,12 @@ const avecExtrait = rTous.resultats.filter(x => x.type === 'lecon' && x.extrait)
 console.log('résultats avec extrait :', avecExtrait, '/', rTous.resultats.filter(x => x.type === 'lecon').length);
 if (!avecExtrait) { console.log('!! aucun extrait après fragments'); ok = false; }
 
+/* R722 : le contenu des commentaires pédagogiques (شرح الدرس) est indexé —
+ * « guide de lecture » n'apparaît que dans les résumés des commentaires. */
+const rComm = chercher('guide de lecture');
+const nCommLecons = rComm.resultats.filter(x => x.type === 'lecon').length;
+console.log(`== « guide de lecture » (contenu des commentaires) : ${rComm.total} résultats, dont ${nCommLecons} leçons`);
+if (nCommLecons < 12) { console.log('!! les commentaires pédagogiques ne sont pas indexés'); ok = false; }
+
 console.log('\n' + (ok ? 'TEST RECHERCHE : PASS' : 'TEST RECHERCHE : ECHEC'));
 process.exit(ok ? 0 : 1);
