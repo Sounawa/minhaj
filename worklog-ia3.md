@@ -119,5 +119,22 @@ Trace: 3af9c47be21d8065-w3
   (résidu 0) ; régressions vagues 1-2 vérifiées au dry.
 - Push : pull --rebase + push + refetch → rev-list = 0 (EN LIGNE vérifié).
 
+## W4 — 2026-11-17 — typo fiqh-tanawi-3 docs 19441, 19448, 19449, 19452 (vague 4/8)
+Task ID: W4
+Trace: 3af9c47be21d8065-w4
+
+- Vague 4/4 docs : **19441 (45 apos), 19448 (37), 19449 (45), 19452 (35) =
+  162 apostrophes** classées **101 ʿ + 61 ʾ + 0 ’**, 0 incertaine ; **908
+  normalisations U+202F** (202+189+230+287) ; 0 double espace.
+- Carte étendue : rabʿ/rubʿ, Nāfiʿ, ğamʿ, māniʿ, tachaffuʿ, maʿlūl, maʿa
+  (مَعَ), maʿrūf, muʾaqqab (hamza), muʿāwaḍa, muʿtamad, muʾakhkhar (hamza),
+  charʿī, chafʿa, mustaʿrāʾ, istiʿrāʾ, manfaʿa, ʿaqār, ʿilla, ʿAlīch/ʿAlīsh,
+  ʿurf/ʿurfan, ʿimāra, ʿachar, ʿUqbarī, ʿiwaḍ, ʿaraḍ, ʿayb, ʾadam/ʾadaman
+  et ibtighāʾ — **nouvelle branche « hamza initiale »** (WORD_INITIAL_HAMZA)
+  distinguée des initiales ʿayn.
+- QA : `qa-lesson.py` **PASS ×4** ; `verify-diff.py` **0 diff non autorisé**.
+- Push : pull --rebase + push + refetch → rev-list = 0 (EN LIGNE vérifié).
+
+
 
 
