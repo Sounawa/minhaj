@@ -1,0 +1,195 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""IA-3 (W1) — correction typographique du secondaire (zone IA-3 : *-es / *-tanawi-*).
+
+Actions sur les nœuds texte (hors balises, hors commentaires HTML, hors spans
+arabe dir="rtl"/lang="ar" toutes formes, nested-aware) :
+  - apostrophe droite ' → ’ (élision française) / ʿ (ʿayn) / ʾ (hamza) —
+    convention §5 du protocole (ʾ après voyelle longue, ʿ pour le ʿayn),
+    classée par règles + carte de mots vérifiés sur le corpus (17 nov. 2026) ;
+  - U+202F avant ; : ! ? » (entité &nbsp; incluse) et après « ;
+  - doubles espaces → simple.
+Une incertaine = laissée droite + consignée (jamais devinée) : le doc n'est
+pas écrit tant qu'une incertaine subsiste.
+Porte QA : scripts-translate/qa-lesson.py (outil officiel) sur copie extraite.
+Usage : python3 scripts-ia3/fix-typo.py --book fiqh-tanawi-3 --docs 15355,16211 [--dry]
+"""
+import argparse, json, re, subprocess, sys, os
+
+NARROW = "\u202f"
+DIAC = set("āīūṭḍḥṣẓḷṃṅġšṯẋĀĪŪṢḤ")
+
+# carte de mots vérifiée sur le corpus (vérité terrain 17 nov. 2026) :
+# ʾ pour la hamza après voyelle longue (Muwaṭṭaʾ ×39, ḥunafāʾ, al-ḥamrāʾ, ḥayāʾ) ;
+# ʿ pour le ʿayn (ʿatīq ×44, ʿArafa).
+WORD_INITIAL_AYN = {"atīq", "afw", "Iyāḍ", "Abd", "amd", "Arafa"}       # 'atīq, 'afw, 'Iyāḍ, 'Abd, al-'amd
+WORD_FINAL = {"khul": "ʿ", "tabarru": "ʾ", "malā": "ʾ", "khaṭā": "ʾ",
+              "Muwaṭṭa": "ʾ", "gharamā": "ʾ", "mawḍū": "ʾ", "ḥibā": "ʾ", "ḥidā": "ʾ"}
+WORD_MEDIAL = {"ta": "ʿ", "shar": "ʿ", "ba": "ʿ", "asta": "ʿ", "mu": "ʿ"}  # taʿlīm, sharʿī, baʿdi, astaʿmilu, muʿajjal
+FRENCH_ELISION = {"l", "d", "n", "s", "j", "c", "m", "t", "qu", "jusqu", "lorsqu",
+                  "puisqu", "quelqu", "aujourd"}
+ARABIC = re.compile(r"[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDF9\uFDFB-\uFDFF\uFE70-\uFEFF]")
+
+
+def tokenize(html):
+    """[(kind, texte)] kind ∈ {text, tag, comment, prot} ; spans arabe protégés
+    (toutes formes d'attributs, nested-aware par profondeur)."""
+    out, i, ar_depth = [], 0, 0
+    for m in re.finditer(r"<!--.*?-->|<[^>]+>", html, flags=re.S):
+        if m.start() > i:
+            out.append(("prot" if ar_depth else "text", html[i:m.start()]))
+        tok = m.group(0)
+        low = tok.lower()
+        if low.startswith("<!--"):
+            out.append(("comment", tok))
+        elif low.startswith("</span"):
+            if ar_depth:
+                ar_depth -= 1
+            out.append(("prot", tok))
+        elif low.startswith("<span"):
+            if ('dir="rtl"' in tok or "dir='rtl'" in tok or 'lang="ar"' in tok
+                    or "lang='ar'" in tok):
+                ar_depth += 1
+            out.append(("prot", tok))
+        else:
+            out.append(("prot", tok))
+        i = m.end()
+    if i < len(html):
+        out.append(("prot" if ar_depth else "text", html[i:]))
+    return out
+
+
+def word_before(rendered, p):
+    w, k = [], p - 1
+    while k >= 0 and (rendered[k].isalnum() or rendered[k] in DIAC or rendered[k] == "-"):
+        w.append(rendered[k]); k -= 1
+    return "".join(reversed(w))
+
+
+def word_after(rendered, p):
+    w, k = [], p + 1
+    while k < len(rendered) and (rendered[k].isalnum() or rendered[k] in DIAC or rendered[k] == "-"):
+        w.append(rendered[k]); k += 1
+    return "".join(w)
+
+
+def classify(rendered, p):
+    """→ (char|None, raison) pour l'apostrophe droite à la position p."""
+    prev_w = word_before(rendered, p)
+    nxt_w = word_after(rendered, p)
+    nxt_ch = rendered[p + 1] if p + 1 < len(rendered) else ""
+    # inventaire de signes : (ṣ, ḍ, ṭ, ḥ, ') → ʾ (parallèle Muwaṭṭaʾ, incertaine consignée)
+    if nxt_ch == ")" and re.search(r"[,;] $", rendered[max(0, p - 3):p]):
+        return "ʾ", "inventaire signes (ṣ,ḍ,ṭ,ḥ,') → ʾ consigné"
+    if (not prev_w or prev_w.endswith("-")) and nxt_w:         # ' initial de mot (préfixes al-, bi-, wa-…)
+        if any(nxt_w == x or nxt_w.split("-")[0] == x or nxt_w.startswith(x) for x in WORD_INITIAL_AYN):
+            return "ʿ", f"ʿayn initial ({prev_w or ''}{nxt_w})"
+        return None, f"initial non cartographié ('{prev_w}{nxt_w}')"
+    if not nxt_w and prev_w:                                   # ' final de mot
+        if prev_w[-1] in "āīū":
+            return "ʾ", f"hamza après voyelle longue ({prev_w})"
+        if prev_w in WORD_FINAL:
+            return WORD_FINAL[prev_w], f"carte mot final ({prev_w})"
+        return None, f"final non cartographié ('{prev_w}')"
+    if prev_w and nxt_w:                                       # ' médial
+        if prev_w[-1] in "āīū":
+            return "ʾ", f"hamza médiale après voyelle longue ({prev_w}'{nxt_w})"
+        if prev_w.lower() in WORD_MEDIAL:
+            return WORD_MEDIAL[prev_w.lower()], f"carte mot médial ({prev_w}'{nxt_w})"
+        if prev_w.lower() in FRENCH_ELISION and not (set(nxt_w) & DIAC):
+            return "’", f"élision française ({prev_w}'{nxt_w})"
+        return None, f"médial non classé ({prev_w}'{nxt_w})"
+    return None, "cas dégénéré"
+
+
+def fix_text_segment(s):
+    """U+202F + doubles espaces (règles de qa-lesson.py, entités &nbsp; incluses)."""
+    s = re.sub(r"&nbsp;(?=[;:!?»])", NARROW, s)
+    s = s.replace("«&nbsp;", "«" + NARROW)
+    s = re.sub(r"[ \u00a0\u202f]*([;:!?»])", NARROW + r"\1", s)
+    s = re.sub(r"«[ \u00a0\u202f]*", "«" + NARROW, s)
+    s = re.sub(r" {2,}", " ", s)
+    return s
+
+
+def fix_html(html, dry):
+    segs = tokenize(html)
+    rendered, posmap = [], []
+    for si, (kind, s) in enumerate(segs):
+        if kind == "text":
+            for off in range(len(s)):
+                rendered.append(s[off]); posmap.append((si, off))
+    rendered = "".join(rendered)
+    segs2 = [list(x) for x in segs]
+    decisions, uncertainties = [], []
+    for m in re.finditer("'", rendered):
+        p = m.start()
+        ch, why = classify(rendered, p)
+        if ch is None:
+            uncertainties.append((p, rendered[max(0, p - 30):p + 30]))
+            continue
+        si, off = posmap[p]
+        segs2[si][1] = segs2[si][1][:off] + ch + segs2[si][1][off + 1:]
+        decisions.append((p, rendered[max(0, p - 22):p + 22], ch, why))
+    prot_ok = all(s == s2 for (k, s), (k2, s2) in zip(segs, segs2) if k != "text")
+    out = []
+    for (kind, s), s2 in zip(segs, [x[1] for x in segs2]):
+        out.append((kind, fix_text_segment(s2) if (kind == "text" and not dry) else s))
+    fixed = "".join(s for _, s in out)
+    return fixed, decisions, uncertainties, prot_ok
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--book", required=True)
+    ap.add_argument("--docs", required=True)  # ids séparés par des virgules
+    ap.add_argument("--dry", action="store_true")
+    args = ap.parse_args()
+
+    path = f"content/books/{args.book}.json"
+    raw = open(path, encoding="utf-8").read()
+    book = json.loads(raw)
+    trail = "\n" if raw.endswith("\n") else ""
+    assert json.dumps(book, ensure_ascii=False, indent=2) + trail == raw, "round-trip JSON != fichier"
+
+    ids = [x.strip() for x in args.docs.split(",")]
+    docs = ([book["intro"]] if book.get("intro") else []) + book.get("lessons", [])
+    n_written = 0
+    for did in ids:
+        d = [x for x in docs if str(x.get("docId")) == did][0]
+        html = d.get("htmlFr") or ""
+        if "://" in html:
+            print(f"{did}: ⚠ '://' présent — vérifier le diff ':'")
+        fixed, decisions, uncertainties, prot_ok = fix_html(html, args.dry)
+        print(f"=== {did} | {len(decisions)} apostrophes classées, {len(uncertainties)} incertaines, protégés {'OK' if prot_ok else 'DIFF!'}")
+        for p, ctx, ch, why in decisions:
+            print(f"  {ch} {ctx!r}  [{why}]")
+        for p, ctx in uncertainties:
+            print(f"  ? INCERTAINE {ctx!r}")
+        o, c = fixed.count("«"), fixed.count("»")
+        bal = all(len(re.findall(rf"<{t}[ >]", fixed)) == len(re.findall(rf"</{t}>", fixed))
+                  for t in ("h1", "h2", "h3", "p", "ul", "ol", "li", "em", "strong", "span", "td", "tr", "table"))
+        ar_txt = len(ARABIC.findall("".join(s for k, s in tokenize(fixed) if k == "text")))
+        print(f"  guillemets {o}/{c} {'OK' if o == c else 'DIFF'} | balises {'OK' if bal else 'DIFF'} | arabe hors span: {ar_txt}")
+        if uncertainties or not prot_ok or o != c or not bal or ar_txt:
+            print("  → doc NON écrit (à trancher)")
+            continue
+        n_written += 1
+        if args.dry:
+            continue
+        d["htmlFr"] = fixed
+        os.makedirs("scripts-ia3/tmp", exist_ok=True)
+        tmp = f"scripts-ia3/tmp/{did}.html"
+        open(tmp, "w", encoding="utf-8").write(fixed)
+        r = subprocess.run([sys.executable, "scripts-translate/qa-lesson.py", tmp],
+                           capture_output=True, text=True)
+        print("  qa-lesson:", (r.stdout.strip() or r.stderr.strip()).replace("\n", " | "))
+    if not args.dry and n_written:
+        json.dump(book, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+        if trail:
+            open(path, "a", encoding="utf-8").write(trail)
+        print(f"livre réécrit : {path} ({n_written} docs)")
+
+
+if __name__ == "__main__":
+    main()
