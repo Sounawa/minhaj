@@ -270,3 +270,25 @@ Trace: 3af9c47be21d8065-w10
 
 
 
+
+## W11 — 2026-11-17 — typo ulum-hadith-tanawi-1 pdf-mut23h2q-120, 121, 122, 123 (vague 3/8)
+Task ID: W11
+Trace: 3af9c47be21d8065-w11
+
+- Vague 3/4 docs (la leçon du muʾannan/muʿanʿan) : **pdf-mut23h2q-120 (37
+  apos), 121 (126), 122 (46), 123 (95) = 304 apostrophes** classées
+  **208 ʿ + 96 ʾ + 0 ’**, 0 incertaine ; **458 normalisations U+202F**
+  (87+104+149+118).
+- Carte étendue : muʾannan/mouʾannanoun (ʾ, glose du doc), muʿanʿan
+  (ʿ,ʿ), tābiʿ/tābiʿūn, maqṭūʿ (exception long-vowel ū), Hāniʾ/Hāniʾin,
+  iʿnana, ʿanʿana, rakaʿa, samiʿat, Shuʿba, Samʿānī, Bardhaʿī, istiʿāna,
+  Aʿraj, Maʿrifa, yuʿtar, muʿtazilite, Dhuʿayb, yaʿlū, murtafiʿ, bisabʿ,
+  yabdaʾ, yuwammaʾu, yajʿal.
+- **1 incertaine consignée** : « mu''an » (double signe du corpus, forme
+  abrégée) rendu **muʾʾan** par parallélisme avec la glose du document
+  (« mou'annanoun » = muʾannanoun, hamza) — lecture muʿʿan possible ; à
+  confronter au PDF. Le tri des couples passe aux préfixes les plus longs
+  d'abord (mu'an'an avant mu'an) ; tail médial élagué des apostrophes
+  bordantes (strip).
+- QA : `qa-lesson.py` **PASS ×4** ; `verify-diff.py` **0 diff non autorisé**.
+- Push : pull --rebase + push + refetch → rev-list = 0 (EN LIGNE vérifié).

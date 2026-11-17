@@ -48,7 +48,9 @@ WORD_FINAL = {"khul": "ʿ", "jāmi": "ʿ", "rābi": "ʿ", "raja": "ʿ", "bay": "
               "dharā'i": "ʿ",                                                   # dharāʾiʿ (ذرائع — double signe)
               "muwatta": "ʾ",                                                   # Muwattaʾ (الموطأ)
               "bad": "ʾ", "mutāba": "ʿ", "munqaṭi": "ʿ",                        # badʾ (بدء), mutābaʿa, munqaṭiʿ ×2
-              "tābi": "ʿ", "nasa": "ʿ", "yabda": "ʾ", "yuwamma": "ʾ"}           # tābiʿ, Nasaʿī, yabdaʾ, yuwammaʾ
+              "tābi": "ʿ", "nasa": "ʿ", "yabda": "ʾ", "yuwamma": "ʾ",           # tābiʿ, Nasaʿī, yabdaʾ, yuwammaʾ
+              "hāni": "ʾ", "murtafi": "ʿ", "munaqaṭi": "ʿ", "bisab": "ʿ",       # Hāniʾ, murtafiʿ, munaqaṭiʿ, bisabʿ
+              "mu": "ʾ"}                                                        # mu''an → muʾʾan (1er signe ; incertaine consignée W11)
 # couples (fin du mot avant ', début du mot après ') tranchés mot à mot —
 # la lettre entre les deux morceaux n'est pas déductible du préfixe seul :
 # taʿlīm/taʿzīr (ʿayn) mais taʾkhīr/taʾbīm (hamza) ; saʾala hamza mais aʿṭā ʿayn.
@@ -104,7 +106,14 @@ PAIR_MEDIAL = {("ta", "līm"): "ʿ", ("ta", "zīr"): "ʿ", ("ta", "khīr"): "ʾ"
                ("tābi", "ūn"): "ʿ", ("bardha", "ī"): "ʿ", ("isti", "āna"): "ʿ", # tābiʿūn, Bardhaʿī, istiʿāna
                ("a", "raj"): "ʿ", ("ma", "rifa"): "ʿ", ("yu", "tar"): "ʿ",      # Aʿraj, Maʿrifa, yuʿtar
                ("mu", "tazi"): "ʿ", ("mutāba", "āt"): "ʿ", ("dhu", "ayb"): "ʿ", # muʿtazilite, mutābaʿāt, Dhuʿayb
-               ("yaj", "al"): "ʾ", ("nasa", "ī"): "ʿ", ("yuwamma", "u"): "ʾ"}   # yajʿal, Nasaʿī, yuwammaʾu
+               ("yaj", "al"): "ʾ", ("nasa", "ī"): "ʿ", ("yuwamma", "u"): "ʾ",   # yajʿal, Nasaʿī, yuwammaʾu
+               ("mu", "an'an"): "ʿ", ("mu'an", "an"): "ʿ",                      # muʿanʿan (les deux signes)
+               ("mu", "annan"): "ʾ", ("mou", "annan"): "ʾ",                     # muʾannan, mouʾannanoun (glose du doc)
+               ("mu", "an"): "ʾ",                                               # mu''an 2e signe → muʾʾan (incertaine consignée)
+               ("an", "ana"): "ʿ", ("hāni", "in"): "ʾ", ("raka", "a"): "ʿ",     # ʿanʿana, Hāniʾin, rakaʿa
+               ("āfi", "ī"): "ʾ", ("ya", "lū"): "ʿ", ("irtafa", "a"): "ʾ",      # al-āfiʾī (OCR cité — consignée), yaʿlū, irtafaʾa
+               ("shu", "ba"): "ʿ", ("sam", "ān"): "ʿ",                          # Shuʿba, Samʿānī
+               ("i", "nana"): "ʿ", ("sami", "at"): "ʿ"}                         # iʿnana (العِنان), samiʿat
 LONGVOWL_AYN = ("charī", "shari", "maqṭū")   # sharīʿa / maqṭūʿ : ʿayn (pas hamza) après ī/ū
 FRENCH_ELISION = {"l", "d", "n", "s", "j", "c", "m", "t", "qu", "jusqu", "lorsqu",
                   "puisqu", "quelqu", "aujourd"}
@@ -183,8 +192,8 @@ def classify(rendered, p):
                 return WORD_FINAL[cand.lower()], f"carte mot final ({cand})"
         return None, f"final non cartographié ('{prev_w}')"
     if prev_w and nxt_w:                                       # ' médial
-        prev_tail = prev_w.rstrip("-").rsplit("-", 1)[-1].lower().lstrip("'")
-        for p0, n0 in PAIR_MEDIAL:
+        prev_tail = prev_w.rstrip("-").rsplit("-", 1)[-1].lower().strip("'")
+        for p0, n0 in sorted(PAIR_MEDIAL, key=lambda k: -len(k[1])):  # préfixes les plus longs d'abord
             if prev_tail == p0 and nxt_w[:len(n0)].lower() == n0:
                 return PAIR_MEDIAL[(p0, n0)], f"carte couple ({p0}'{n0}…)"
         if prev_w.endswith(LONGVOWL_AYN):
