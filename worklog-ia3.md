@@ -343,3 +343,21 @@ Trace: 3af9c47be21d8065-w14
   yatawaḍḍaʾ.
 - QA : `qa-lesson.py` **PASS ×4** ; `verify-diff.py` **0 diff non autorisé**.
 - Push : pull --rebase + push + refetch → rev-list = 0 (EN LIGNE vérifié).
+
+## W15 — 2026-11-17 — typo ulum-hadith-tanawi-1 pdf-mut23h2r-136, 137, 138, 139 (vague 7/8)
+Task ID: W15
+Trace: 3af9c47be21d8065-w15
+
+- Vague 7/4 docs : **pdf-mut23h2r-136 (82 apos), 137 (71), 138 (74),
+  139 (106) = 333 apostrophes** classées **198 ʿ + 135 ʾ + 0 ’**, 0
+  incertaine ; **654 normalisations U+202F** (173+100+167+214).
+- Carte étendue : taʿaṣṣub, Juʿfī, taʿdīl, yaʿrifhu, khaṭaʾuhu,
+  Sabīʿī, taʿṣīm, chayʾi, waḍaʾū, iʾtibār, raʾnu (OCR tronqué),
+  ajmaʿū, ḍaʾfihī, mutaʿabbidīn, mustaʿmal, Shuʿab, Zurʾa, taʿmīm,
+  maʾidatu, waḍʿi/waḍʿu, arbaʿa/arbaʿin, yaqiʿu, yaqṭaʿuhā, iʿjām,
+  aʿrāḍi, ṭaʿn, taʿālā, yaʿtuddu, Tibiʿī (forme fautive citée),
+  mukhtaraʾ, yatabawwaʾ, mawḍūʿ et ṣanūʿ (exceptions long-vowel).
+- **2 lectures consignées** : « ya'hadu » rendu yaʿhadu (يعهد supposé,
+  print douteux) ; « ya'idu » rendu yaʾidu (token OCR récusé par le doc).
+- QA : `qa-lesson.py` **PASS ×4** ; `verify-diff.py` **0 diff non autorisé**.
+- Push : pull --rebase + push + refetch → rev-list = 0 (EN LIGNE vérifié).
