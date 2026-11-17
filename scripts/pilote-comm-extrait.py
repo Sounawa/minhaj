@@ -54,7 +54,7 @@ def dump(slug, docid):
     p = P()
     p.feed(cible['htmlFr'])
     print(f'===== {slug} / {docid} — {cible.get("titleFr", "")} | {cible.get("titleAr", "")} — {len(cible["htmlFr"])} car =====')
-    for typ, t in p.blobs[:60]:
+    for typ, t in p.blobs[int(os.environ.get('COMM_DEBUT', '0')):int(os.environ.get('COMM_DEBUT', '0')) + 60]:
         print(f'[{typ}] {t[:220]}')
     return True
 
