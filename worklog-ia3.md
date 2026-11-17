@@ -190,6 +190,39 @@ Trace: 3af9c47be21d8065-w7
 - QA : `qa-lesson.py` **PASS ×4** ; `verify-diff.py` **0 diff non autorisé**.
 - Push : pull --rebase + push + refetch → rev-list = 0 (EN LIGNE vérifié).
 
+## W8 — 2026-11-17 — typo fiqh-tanawi-3 docs 19671, 19744, 19756, 19757 (vague 8/8) — LIVRE TERMINÉ
+Task ID: W8
+Trace: 3af9c47be21d8065-w8
+
+- Vague 8/4 docs (dont les deux index) : **19671 (18 apos), 19744 (18),
+  19756 (88), 19757 (144) = 268 apostrophes** classées **214 ʿ + 54 ʾ + 0 ’**,
+  0 incertaine ; **736 normalisations U+202F** (167+193+111+265) ; 0 double
+  espace. Carte étendue (index des figures et des sources, noms propres) :
+  aqṭaʿa, maʿdin, iʾlām, marāğiʿ, dharāʾiʿ (double signe — word_before
+  traverse désormais une apostrophe interne), Muʿīn, ẓamʾān, Rabʿī,
+  iʾtirāḍ, istiʾāra, Raʾūf, chāfiʿite, riʾāsa, maʿārif, Marʿab, Taʾrīfāt,
+  Jaʿfī, Fuʾād, aʾlām, Achʿath, Chuʿayb, Saʿīd, Yaʿqūb, Muʾassasa, maṭbaʿa,
+  saʾāda, Muʿādh, Maʿbad, Thaʿālabī, Jaʿfarī, muʿjam, muʿāṣira, Muwattaʾ,
+  Aʿrāb, Naʿīm.
+- **Règle générale posée et consignée** (W8) : ' initial de mot = **ʿayn par
+  défaut** dans la translittération de ce corpus (ʿAbd, ʿAlī, ʿilm, ʿĪsā,
+  ʿulamāʾ, ʿAmir…) ; l'hamza initiale reste l'exception (liste
+  WORD_INITIAL_HAMZA : ʾadam, ʾadaman, ibtighāʾ, aʾdhara, ʾastakhliḍ/ṣ).
+- **1 incertaine consignée** : « Ru'īnī » (al-Ḥaṭṭāb ar-Ruʾīnī) rendu ʾ
+  (hamza) — la lecture ar-Ruwaynī (sans hamza, w) est possible selon la
+  source ; à confronter au PDF.
+- QA : `qa-lesson.py` **PASS ×4** ; `verify-diff.py` **0 diff non autorisé**.
+- **BILAN DU LIVRE fiqh-tanawi-3 (claim W1, terminé W8)** : 32/32 leçons
+  corrigées (intro déjà propre) — **1099 apostrophes droites classées :
+  711 ʿ + 387 ʾ + 1 ’** (somme exacte des vagues W1-W8, dont les 4
+  parenthèses d'inventaire de signes classées ʾ par parallélisme
+  Muwaṭṭaʾ) et **6900 normalisations U+202F** ; 0 incertaine bloquante ;
+  2 incertaines résiduelles consignées (ʾastakhliḍ/ṣ wasl, Ruʾīnī). Scan
+  global après livre : **fiqh-tanawi-3 disparu du rapport qa_corpus (0 dur,
+  0 soft)** ; corpus global 807 → 775 docs à défauts durs (−32 = ce livre).
+- Push : pull --rebase + push + refetch → rev-list = 0 (EN LIGNE vérifié).
+
+
 
 
 
