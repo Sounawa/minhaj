@@ -473,3 +473,41 @@ Trace: 1a1d675aa095fb41-w17
 - Push : commits locaux W17a (6adb9c0) + W17 — GH_PAT absent du sandbox
   recyclé ; poussée au prochain tour avec token réinjecté.
 
+
+## W18 — 2026-11-17 — typo fiqh-tanawi-2, 22/22 docs (LIVRE 4 TERMINÉ) — cartes R714-R715d récupérées
+Task ID: W18
+Trace: 1a1d675aa095fb41-w18
+
+- Livraison : **22/22 docs fiqh-tanawi-2 — 641 apostrophes droites classées**
+  : **458 ʿ + 183 ʾ** (5 ʿ + 2 ʾ préexistants dans le livre) + **2608
+  U+202F** ; 0 élision nouvelle (le ’ français préexistant, 3850, couvre le
+  texte). R715-R715d annonçait 485 ʿ + 156 ʾ — l'écart (~27 formes) vient
+  des révisions consignées ci-dessous et de la convention elisions/’ de
+  l'outillage actuel.
+- Arbitrage : dry 578 classées + 63 incertaines → 60 résolues par
+  w2-ft2-supp.json + w1-map.json (arbitrage R714-R715d retrouvé), 3
+  seconds-signes luʾluʾ/luʾluʾa/laʾālīʾ arbitrés au tour (hamza لؤلؤ/لألئ).
+- Révisions consignées (supplantent le supp R714-R715d) : **al-Ashʿath**
+  (الأشعث, ʿayn — le supp ʾ était fautif ; père d'Abū Dāwūd),
+  **al-Aṣmaʿī** (الأصمعي, ʿayn — canon ; aṣmaʾ الأصماء reste ʾ, mot
+  distinct), **al-Aʿẓamī** (الأعظمي, ʿayn — la valeur héritée ʾʿ était une
+  incohérence 2-chars/1-signe ; forme réelle « al-A'<em>ẓamī</em> »).
+- Décisions supp confirmées : al-Ḥaṭṭāb al-**Ruʾaynī** (الرُّؤَيْنِي hamza,
+  d. 954 H — parallèle Ruʾīnī W8 ; le corpus porte aussi Ruʿaynī ailleurs,
+  autre savant) ; **Diʿāma** conservé ʿ tel qu'imprimé دِعامة (canon
+  دِئامة consigné) ; al-muʿlim (المعلّم, print) ; iʿmār (الإعمار) ;
+  taʿajjala تعجّل ʿ (≠ taʾajjala) ; yarduʾa/arḍaʾ (ر-ض-أ) ;
+  ḍayʾa (ضَيْئة, loss) ; al-mubaṭʾ (المُبَطْأ, ب-ط-أ) ; Luʾluʾ/luʾluʾa
+  (لؤلؤ, hamza).
+- Carte étendue : 38 couples médiaux + 14 finales + chaîne luʾluʾ (clé
+  finale avec ' interne). Précédent corpus noté pour W19 : tabāyin (ulum-2)
+  soutient la conversion at-tabā'in → at-tabāyin (' → y, valeur carte
+  «=y» héritée) avec autorisation verify-diff bornée à ajouter.
+- QA : qa-lesson **PASS ×22**, **verify-diff 0 diff non autorisé**, comptes
+  458+183 = 641 = total exact ; **fiqh-tanawi-2 disparu du scan (0 dur)** —
+  corpus global **714 → 693 docs à défauts durs** (30 livres restants,
+  ~42 100 ').
+- Push : commit local — poussé au tour même avec le token réinjecté
+  (credential-helper one-shot, zéro trace disque ; W17a+W17 poussés juste
+  avant : a190eea, rev-list 0 vérifié).
+

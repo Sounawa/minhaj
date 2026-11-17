@@ -186,6 +186,28 @@ PAIR_MEDIAL = {("ta", "līm"): "ʿ", ("ta", "zīr"): "ʿ", ("ta", "khīr"): "ʾ"
                ("wāqi", "ayn"): "ʿ", ("mu", "all"): "ʿ",                        # wāqiʿayn, muʿall (المعلّ)
                ("mun", "im"): "ʿ", ("maṭba", "a"): "ʿ", ("mu", "minīn"): "ʾ",   # Munʿim, Maṭbaʿa, muʾminīn
                ("arna", "ūṭ"): "ʾ"}                                             # Arnaʾūṭ (الأرناؤط)
+# W18 (fiqh-tanawi-2, cartes R714-R715d + arbitrages du tour) — couples médiaux :
+PAIR_MEDIAL.update({
+    ("a", "dama"): "ʿ", ("a", "qār"): "ʿ", ("af", "āl"): "ʿ",                    # (A)ʿdama, al-aʿqār, afʿāl
+    ("a", "ẓamī"): "ʿ",                                                          # al-Aʿẓamī (الأعظمي — révision du supp ʾʿ, signe unique = ʿayn)
+    ("ash", "ath"): "ʿ", ("aṣma", "ī"): "ʿ",                                     # al-Ashʿath, al-Aṣmaʿī (révisions du supp ʾ — canon ʿayn)
+    ("di", "āma"): "ʿ",                                                          # Qatāda b. Diʿāma (tel qu'imprimé دِعامة — canon دِئامة consigné)
+    ("i", "dhānan"): "ʾ", ("i", "mār"): "ʿ", ("i", "tiqād"): "ʿ",                # iʾdhānan (الإذناء), iʿmār (الإعمار), iʿtiqād
+    ("iṣ", "āf"): "ʿ", ("iṣṭana", "a"): "ʿ", ("lum", "at"): "ʿ",                 # Iṣʿāf (إصعاف), iṣṭanaʿa, Lumʿat (اللمعة)
+    ("lu'lu", "a"): "ʾ", ("lu", "lu"): "ʾ", ("la", "ālī"): "ʾ",                  # luʾluʾa, Luʾluʾ, laʾālīʾ (لؤلؤ/لألئ, hamza)
+    ("ma", "dan"): "ʿ", ("ma", "dhūn"): "ʾ", ("ma", "lūfan"): "ʿ",               # Maʿdan, maʾdhūn (مأذون), maʿlūfan
+    ("ma", "wūḍ"): "ʿ", ("ma", "ālāt"): "ʿ", ("ma", "ṣara"): "ʿ",                # maʿwūḍ, maʿālāt, maʿṣara
+    ("mar", "ashlī"): "ʿ", ("mar", "ā"): "ʿ", ("mazra", "a"): "ʿ",               # al-Marʿashlī, marʿā, mazraʿa
+    ("mu", "awwana"): "ʿ", ("mu", "lim"): "ʿ", ("mu", "īr"): "ʿ",                # (A)l-Muʿawwana, al-muʿlim (المعلّم, print), al-muʿīr
+    ("musta", "īr"): "ʿ", ("muta", "allim"): "ʿ", ("nu", "aym"): "ʿ",            # al-mustaʿīr, mutaʿallim, Nuʿaym
+    ("nu", "mān"): "ʿ", ("ru", "aynī"): "ʾ",                                     # al-Nuʿmān, al-Ḥaṭṭāb al-Ruʾaynī (الرُّؤَيْنِي hamza, d. 954 H)
+    ("ta", "ajjal"): "ʿ", ("ta", "ajjala"): "ʿ", ("ta", "yīn"): "ʿ",             # taʿajjala (تعجّل ʿayn, ≠ taʾajjala), taʿyīn
+    ("yardu", "u"): "ʾ", ("ḍay", "a"): "ʾ", ("ṭubi", "a"): "ʿ"})                 # yarduʾa (ر-ض-أ), ḍayʾa (ضَيْئة loss), ṭubiʿa
+# W18 — finales :
+WORD_FINAL.update({"al-mubaṭ": "ʾ", "mubaṭ": "ʾ", "al-mustaṣni": "ʿ",           # al-mubaṭʾ (المُبَطْأ), al-mustaṣniʿ
+                   "mustaṣni": "ʿ", "al-tafri": "ʿ", "tafri": "ʿ",              # (A)l-Tafriʿ (التفريع)
+                   "arda": "ʾ", "aṣma": "ʾ", "jadha": "ʿ", "mil": "ʾ",          # arḍaʾ (أَرْضَأ), aṣmaʾ (الأصماء hamza), jadhaʿ, milʾ
+                   "lu'lu": "ʾ", "qam": "ʿ", "rāfi": "ʿ"})                      # Luʾluʾ (chaîne), qamʿ, Rāfiʿ
 # W17 (fiqh-tanawi-1, cartes R714-R715d + arbitrages du tour) — couples médiaux :
 PAIR_MEDIAL.update({
     ("dharī", "a"): "ʿ", ("mufā", "ala"): "ʿ", ("maqlū", "an"): "ʿ",             # adh-dharīʿa (الذرائعة/الذريعة), mufāʿala, maqlūʿan
