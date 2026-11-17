@@ -218,6 +218,132 @@ PAIR_MEDIAL.update({
     ("rubu", "in"): "ʿ", ("rubu", "u"): "ʿ",                                     # rubuʿ (الرُّبْع, Nisāʾ 4:12 — révision du supp ʾ, canon ʿayn)
     ("wada", "at"): "ʿ", ("ya", "ūdu"): "ʿ", ("ya", "ūlu"): "ʿ",                 # wadaʿat, yaʿūdu/yaʿūlu (ع-و-د/ع-و-ل)
     ("ya", "tī"): "ʾ"})                                                          # yaʾtī (يأتي)
+# W20 (fiqh-1es, cartes R714-R715d récupérées — convention école française) — couples médiaux :
+PAIR_MEDIAL.update({
+    ("a", "dhar"): "ʾ",
+    ("a", "lā"): "ʿ",
+    ("a", "mash"): "ʿ",
+    ("a", "mā"): "ʿ",
+    ("a", "qāb"): "ʿ",
+    ("a", "rāf"): "ʿ",
+    ("a", "yān"): "ʿ",
+    ("a", "āda"): "ʿ",
+    ("a", "ādathā"): "ʿ",
+    ("ash", "arī"): "ʿ",
+    ("ashja", "ī"): "ʿ",
+    ("aw", "aba"): "ʿ",
+    ("ba", "ḍ"): "ʿ",
+    ("baq", "a"): "ʿ",
+    ("bid", "a"): "ʿ",
+    ("da", "b"): "ʾ",
+    ("da", "wa"): "ʿ",
+    ("da", "wat"): "ʿ",
+    ("dhara", "ahu"): "ʿ",
+    ("dhi", "b"): "ʾ",
+    ("dhu", "āba"): "ʾ",
+    ("hay", "a"): "ʾ",
+    ("i", "tikāf"): "ʿ",
+    ("iṭ", "ām"): "ʿ",
+    ("iṭma", "anna"): "ʾ",
+    ("ja", "d"): "ʿ",
+    ("jumu", "a"): "ʿ",
+    ("ka", "b"): "ʿ",
+    ("ka", "ba"): "ʿ",
+    ("ma", "dūdāt"): "ʿ",
+    ("ma", "iz"): "ʿ",
+    ("ma", "mūm"): "ʾ",
+    ("ma", "qil"): "ʿ",
+    ("ma", "tarik"): "ʿ",
+    ("ma", "thūra"): "ʾ",
+    ("ma", "āṭin"): "ʿ",
+    ("maqma", "a"): "ʿ",
+    ("mar", "a"): "ʾ",
+    ("mi", "īn"): "ʿ",
+    ("mu", "akkada"): "ʾ",
+    ("mu", "awana"): "ʿ",
+    ("mu", "awna"): "ʿ",
+    ("mu", "awwidhatayn"): "ʿ",
+    ("mu", "aṣfar"): "ʿ",
+    ("mu", "tadda"): "ʿ",
+    ("murḍi", "a"): "ʿ",
+    ("mustanli", "an"): "ʿ",
+    ("muta", "akhkhirūn"): "ʾ",
+    ("mutalaffi", "āt"): "ʿ",
+    ("muwaṭṭa", "enne"): "ʾ",
+    ("muṣ", "ab"): "ʿ",
+    ("muṭma", "innan"): "ʾ",
+    ("nakha", "ī"): "ʿ",
+    ("nakhla", "u"): "ʿ",
+    ("nakhna", "u"): "ʿ",
+    ("nakhḍa", "u"): "ʿ",
+    ("qa", "nabī"): "ʿ",
+    ("ra", "afa"): "ʿ",
+    ("ra", "d"): "ʿ",
+    ("rib", "ī"): "ʿ",
+    ("ru", "āf"): "ʿ",
+    ("sa", "a"): "ʾ",
+    ("sa", "y"): "ʿ",
+    ("sa", "ā"): "ʿ",
+    ("sami", "a"): "ʿ",
+    ("sha", "bān"): "ʿ",
+    ("sum", "a"): "ʿ",
+    ("sur", "at"): "ʿ",
+    ("sāta", "idhin"): "ʾ",
+    ("ta", "abbud"): "ʿ",
+    ("ta", "ammal"): "ʿ",
+    ("ta", "ammuq"): "ʿ",
+    ("ta", "ziya"): "ʿ",
+    ("tasta", "jir"): "ʾ",
+    ("tha", "labī"): "ʿ",
+    ("tuṭ", "im"): "ʿ",
+    ("wa", "ẓ"): "ʿ",
+    ("wadā'i", "u-hu"): "ʿ",
+    ("ya", "kufūna"): "ʿ",
+    ("ya", "qilu"): "ʿ",
+    ("ya", "ummu"): "ʾ",
+    ("yas", "ā"): "ʿ",
+    ("yata", "ahhabu"): "ʿ",
+    ("yatawakka", "u"): "ʾ",
+    ("yaṭa", "u"): "ʾ",
+    ("yaẓ", "an"): "ʿ",
+    ("yu", "tā"): "ʾ",
+    ("yu", "ummu"): "ʾ",
+    ("ḍab", "ayk"): "ʿ",
+    ("ḥam", "a"): "ʾ",
+    ("ṣa", "īd"): "ʿ",
+    ("ṣa'ṣa", "a"): "ʿ",
+    ("ṣin", "a"): "ʿ",
+    ("ṭa", "muhū"): "ʿ",
+    ("ṣa", "ṣa"): "ʿ",
+    ("ṣaṣ", "a"): "ʿ",
+    ("du", "ā"): "ʿ",
+    ("sha", "ā"): "ʿ",
+})
+# W20 — finales :
+WORD_FINAL.update({
+    "al-mutamatti": "ʿ",
+    "al-qāri": "ʾ",
+    "al-shay": "ʾ",
+    "dir": "ʿ",
+    "falyūmi": "ʿ",
+    "mawāḍi": "ʿ",
+    "mustami": "ʿ",
+    "mutamatti": "ʿ",
+    "qāri": "ʾ",
+    "shaf": "ʿ",
+    "shay": "ʾ",
+    "tamattu": "ʿ",
+    "tarabbu": "ʿ",
+    "tashaffu": "ʿ",
+    "tatawwu": "ʿ",
+    "wa-mawāḍi": "ʿ",
+    "wāsi": "ʿ",
+    "zuray": "ʿ",
+    "ḍab": "ʿ",
+    "ṭal": "ʿ",
+    "al-ku'": "ʿ",
+    "ku": "ʿ",          # al-ku'' — second signe de la double apostrophe du tirage (canon al-kuʿ, consigné W20)
+})
 # W19 — finales :
 WORD_FINAL.update({"khurqa": "ʾ", "man": "ʿ"})                                  # khurqaʾ (الخُرْقَاء?, supp), manaʿ (مَنْع)
 # W18 — finales :
@@ -411,9 +537,14 @@ def main():
 
     ids = [x.strip() for x in args.docs.split(",")]
     docs = ([book["intro"]] if book.get("intro") else []) + book.get("lessons", [])
+    seen_ids = set()      # docIds homonymes (intro + leçon) : traiter chaque doc une fois
     n_written = 0
     for did in ids:
-        d = [x for x in docs if str(x.get("docId")) == did][0]
+        d = next((x for x in docs if str(x.get("docId")) == did and id(x) not in seen_ids), None)
+        if d is None:
+            print(f"=== {did} | ⚠ introuvable ou déjà traité")
+            continue
+        seen_ids.add(id(d))
         html = d.get("htmlFr") or ""
         if "://" in html:
             print(f"{did}: ⚠ '://' présent — vérifier le diff ':'")

@@ -545,3 +545,43 @@ Trace: 1a1d675aa095fb41-w19
 - Push : commit local poussé au tour même (credential-helper one-shot,
   zéro trace disque).
 
+
+## W20 — 2026-11-17 — typo fiqh-1es, 31/31 docs (LIVRE 6 TERMINÉ) — la récupération R715-R715d est complète
+Task ID: W20
+Trace: 1a1d675aa095fb41-w20
+
+- Livraison : **31/31 docs fiqh-1es — 1700 apostrophes droites classées**
+  : **1265 ʿ + 436 ʾ** (7 ʿ + 1 ʾ préexistants) + **4536 U+202F**
+  (535→5071) ; **al-kuʿʿ ×2** (11421, 11428 — double apostrophe du tirage
+  conservée, canon al-kuʿ الكُوع consigné ; clé finale « ku » ajoutée).
+- Arbitrage : dry 1454 classées + 238 incertaines → **229 résolues par
+  w2-1es-supp.json** (convention école française du livre) + 9
+  seconds-signes arbitrés au tour : Ṣaʿṣaʿa (صعصة, ×2 ʿ), duʿāʾ (الدُّعاء,
+  ʿ+ʾ auto-finale), shaʿāʾir (الشَّعائر, ʿayn 1er signe), al-kuʿʿ.
+- **BUG DÉCOUVERT ET CORRIGÉ — docIds homonymes** : fiqh-1es porte DEUX
+  docs « 11505 » (l'intro et une leçon) ; la sélection
+  `[x for x in docs if str(docId)==did][0]` prenait toujours le premier —
+  la leçon homonyme n'a jamais été traitée (le livre semblait fini à 8 '
+  près). Correctif dans fix-typo.py : dédup par identité d'objet
+  (seen_ids), bloc « ⚠ introuvable ou déjà traité » — les tours futurs avec
+  des docIds dupliqués sont protégés. Comptes re-vérifiés après correctif :
+  0 ' résiduel.
+- Révisions/consignations du supp : al-kuʿʿ (print), le reste du supp 314
+  formes validé tel quel (convention école française : 'a élide + 'a ayn
+  — 314 formes, cf. R715).
+- Carte étendue : 98 couples médiaux + 21 finales (émis par
+  w17-arbitre.py --supp, insérés par w20-carte-patch.py).
+- QA : qa-lesson **PASS ×31**, **verify-diff 0 diff non autorisé**, comptes
+  1265+436 = 1701 − 8 préexistants = 1700 = total exact ; **fiqh-1es
+  disparu du scan (0 dur)** — corpus global **674 → 644 docs à défauts
+  durs** (29 livres restants, ~41 100 ').
+- BILAN RÉCUPÉRATION R715-R715d : les 5 livres arbitrés de la session
+  perdue (fiqh-tanawi-1/2, faraid-tanawi-3, fiqh-1es + ft3 déjà couvert
+  par W1-W16) sont NORMALISÉS ET EN LIGNE (W17-W20) — 4037 + 1114 = 5151
+  ' récupérées. Reste 29 livres (~41 100 '), aucun arbitrage conservé :
+ hadith-3es 3551, hadith-2es 3467, taqtit-tanawi-1 2870, hadith-tanawi-1
+  2537, tajwid-2es 2002, ulum-hadith-tanawi-2 1879, ulum-quran-2es 1808,
+  hadith-1es 1783, qiraat-tanawi-1 1774…
+- Push : commit local poussé au tour même (credential-helper one-shot,
+  zéro trace disque).
+
