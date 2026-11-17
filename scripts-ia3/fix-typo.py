@@ -23,13 +23,17 @@ DIAC = set("āīūṭḍḥṣẓḷṃṅġšṯẋĀĪŪṢḤ")
 # ʾ pour la hamza après voyelle longue (Muwaṭṭaʾ ×39, ḥunafāʾ, al-ḥamrāʾ, ḥayāʾ) ;
 # ʿ pour le ʿayn (ʿatīq ×44, ʿArafa, Jāmiʿ ×5, ʿUmar ×51 main — contre ’Umar ×228
 # artefact blanket d'autres livres, divergence consignée au journal W2).
-WORD_INITIAL_AYN = {"atīq", "afw", "Iyāḍ", "Abd", "amd", "Arafa", "Umar", "alā",
+WORD_INITIAL_AYN = {"atīq", "afw", "iyāḍ", "abd", "amd", "arafa", "umar", "alā",
                     "an", "alay", "usri", "admata", "ayn", "aynin", "urūḍ", "azl",
-                    "Ādiyāt", "amal", "arḍin", "arḍi", "uzila"}
-WORD_FINAL = {"khul": "ʿ", "Jāmi": "ʿ", "rābi": "ʿ", "raja": "ʿ", "bay": "ʿ",   # khulʿ, Jāmiʿ, rābiʿ, rajaʿa, bayʿ
-              "tabarru": "ʾ", "malā": "ʾ", "khaṭā": "ʾ", "Muwaṭṭa": "ʾ",
+                    "ādiyāt", "amal", "arḍin", "arḍi", "uzila", "iṣma", "aqd",
+                    "inda", "ā", "abbās"}                                 # clés minuscules (comparaison .lower())
+WORD_FINAL = {"khul": "ʿ", "jāmi": "ʿ", "rābi": "ʿ", "raja": "ʿ", "bay": "ʿ",  # khulʿ, Jāmiʿ, rābiʿ, rajaʿa, bayʿ
+              "tabarru": "ʾ", "malā": "ʾ", "khaṭā": "ʾ", "muwaṭṭa": "ʾ",
               "gharamā": "ʾ", "mawḍū": "ʾ", "ḥibā": "ʾ", "ḥidā": "ʾ",
-              "juz": "ʾ", "mali": "ʾ"}                                        # juzʾ, maliʾ (مليء)
+              "juz": "ʾ", "mali": "ʾ",                                          # juzʾ, maliʾ (مليء)
+              "far": "ʿ", "buḍ": "ʿ", "qiṭ": "ʿ", "taba": "ʿ", "tatabba": "ʿ",
+              "tab": "ʿ", "sābi": "ʿ", "ṣāni": "ʿ", "waḍ": "ʿ", "manāfi": "ʿ",  # farʿ, buḍʿ, qiṭʿ, tabaʿ, tatabbaʿ, tabʿ, sābiʿ, ṣāniʿ, waḍʿ, manāfiʿ
+              "ra": "ʾ", "mustaṣna": "ʾ"}                                       # raʾs final (رأس), mustaṣnaʾ
 # couples (fin du mot avant ', début du mot après ') tranchés mot à mot —
 # la lettre entre les deux morceaux n'est pas déductible du préfixe seul :
 # taʿlīm/taʿzīr (ʿayn) mais taʾkhīr/taʾbīm (hamza) ; saʾala hamza mais aʿṭā ʿayn.
@@ -40,7 +44,14 @@ PAIR_MEDIAL = {("ta", "līm"): "ʿ", ("ta", "zīr"): "ʿ", ("ta", "khīr"): "ʾ"
                ("sa", "ala"): "ʾ", ("a", "ṭā"): "ʿ", ("yasa", "al"): "ʾ",
                ("ustu", "niya"): "ʿ", ("shari", "a"): "ʿ", ("charī", "a"): "ʿ",
                ("shar", "ī"): "ʿ",                                              # sharʿī (شرعي)
-               ("raja", "a"): "ʿ", ("ya", "ti"): "ʾ"}                           # rajaʿa (رجع), yaʾti (يأتي)
+               ("raja", "a"): "ʿ", ("ya", "ti"): "ʾ",                           # rajaʿa (رجع), yaʾti (يأتي)
+               ("fa", "īl"): "ʿ", ("maf", "ūl"): "ʿ", ("ra", "y"): "ʾ",         # faʿīl, mafʿūl, raʾy
+               ("ğa", "ala"): "ʿ", ("muba", "bira"): "ʾ",                       # ğaʿala, mubaʾbira
+               ("mu", "ayya"): "ʿ", ("ma", "dūm"): "ʿ", ("ma", "tūh"): "ʿ",     # muʿayyana, maʿdūm, maʿtūh
+               ("waqa", "a"): "ʿ", ("mawqi", "a"): "ʿ", ("far", "ī"): "ʿ",      # waqaʿa, mawqiʿa, farʿī
+               ("chāfi", "ī"): "ʿ",                                             # Chāfiʿī
+               ("ma", "nā"): "ʿ", ("ra", "s"): "ʾ",                             # maʿnā, raʾs (رأس)
+               ("sa", "d"): "ʿ", ("dfa", "ū"): "ʿ"}                             # Saʿd, dfaʿū
 LONGVOWL_AYN = ("charī", "shari")   # sharīʿa : ʿayn (pas hamza) après ī
 FRENCH_ELISION = {"l", "d", "n", "s", "j", "c", "m", "t", "qu", "jusqu", "lorsqu",
                   "puisqu", "quelqu", "aujourd"}
@@ -98,25 +109,26 @@ def classify(rendered, p):
     if nxt_ch == ")" and re.search(r"[,;] $", rendered[max(0, p - 3):p]):
         return "ʾ", "inventaire signes (ṣ,ḍ,ṭ,ḥ,') → ʾ consigné"
     if (not prev_w or prev_w.endswith("-")) and nxt_w:         # ' initial de mot (préfixes al-, bi-, wa-…)
-        if any(nxt_w == x or nxt_w.split("-")[0] == x or nxt_w.startswith(x) for x in WORD_INITIAL_AYN):
+        nx = nxt_w.lower()
+        if any(nx == x or nx.split("-")[0] == x or nx.startswith(x) for x in WORD_INITIAL_AYN):
             return "ʿ", f"ʿayn initial ({prev_w or ''}{nxt_w})"
         return None, f"initial non cartographié ('{prev_w}{nxt_w}')"
     if not nxt_w and prev_w:                                   # ' final de mot
         tail = prev_w.rsplit("-", 1)[-1]
-        if prev_w[-1] in "āīū":
+        if prev_w[-1] in "āīūĀĪŪ":
             return "ʾ", f"hamza après voyelle longue ({prev_w})"
         for cand in (prev_w, tail):
-            if cand in WORD_FINAL:
-                return WORD_FINAL[cand], f"carte mot final ({cand})"
+            if cand.lower() in WORD_FINAL:
+                return WORD_FINAL[cand.lower()], f"carte mot final ({cand})"
         return None, f"final non cartographié ('{prev_w}')"
     if prev_w and nxt_w:                                       # ' médial
         prev_tail = prev_w.rsplit("-", 1)[-1].lower()
         for p0, n0 in PAIR_MEDIAL:
-            if prev_tail == p0 and nxt_w[:len(n0)] == n0:
+            if prev_tail == p0 and nxt_w[:len(n0)].lower() == n0:
                 return PAIR_MEDIAL[(p0, n0)], f"carte couple ({p0}'{n0}…)"
         if prev_w.endswith(LONGVOWL_AYN):
             return "ʿ", f"ʿayn après voyelle longue ({prev_w}'{nxt_w})"
-        if prev_w[-1] in "āīū":
+        if prev_w[-1] in "āīūĀĪŪ":
             return "ʾ", f"hamza médiale après voyelle longue ({prev_w}'{nxt_w})"
         if prev_w.lower() in FRENCH_ELISION and not (set(nxt_w) & DIAC):
             return "’", f"élision française ({prev_w}'{nxt_w})"

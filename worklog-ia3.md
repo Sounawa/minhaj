@@ -101,4 +101,23 @@ Trace: 3af9c47be21d8065-w2
 - Push : `git pull --rebase origin main` + push + refetch → rev-list = 0
   (EN LIGNE vérifié).
 
+## W3 — 2026-11-17 — typo fiqh-tanawi-3 docs 19383, 19388, 19395, 19407 (vague 3/8)
+Task ID: W3
+Trace: 3af9c47be21d8065-w3
+
+- Vague 3/4 docs : **19383 (36 apos), 19388 (24), 19395 (16), 19407 (40) =
+  116 apostrophes** classées **64 ʿ + 52 ʾ + 0 ’**, 0 incertaine ; **901
+  normalisations U+202F** (219+209+195+278) ; 0 double espace.
+- Carte étendue (toujours couple/mot vérifié) : maʿnā, faʿīl, mafʿūl, raʾs
+  (rās vs farʿ — collision évitée), Saʿd, dfaʿū (misprint documenté du
+  manuel), waqaʿa/mawqiʿa, maʿdūm/maʿtūh/muʿayyana, ğaʿala, mubaʾbira,
+  manāfiʿ, tabaʿ/tatabbaʿ/tabʿ, sābiʿ/ṣāniʿ/waḍʿ, buḍʿ, qiṭʿ, farʿ/farʿī,
+  mustaṣnaʾ, ʿiṣma, ʿaqd, ʿinda, ʿAbbās, ʿĀʾicha (ʿ initial + ʾ médial),
+  Chāfiʿī. Correction d'un bug de casse : clés de carte désormais toutes
+  minuscules (La Muwaṭṭa' → muwaṭṭa matchait plus après .lower()).
+- QA : `qa-lesson.py` **PASS ×4** ; `verify-diff.py` **0 diff non autorisé**
+  (résidu 0) ; régressions vagues 1-2 vérifiées au dry.
+- Push : pull --rebase + push + refetch → rev-list = 0 (EN LIGNE vérifié).
+
+
 
