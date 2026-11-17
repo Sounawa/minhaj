@@ -1,0 +1,73 @@
+name: Rendu du site
+
+# Reconstruction automatique du rendu publié à chaque poussée sur main —
+# quelle que soit l'IA qui pousse (IA-1 site/commentaires, IA-2 primaire,
+# IA-3 secondaire) : les compteurs publics (leçons transcrites, documents
+# savants, commentaires pédagogiques, page avancement.html) restent
+# synchrones des données du dépôt.
+# Demande utilisateur R721 : « je dois voir à chaque push que tu fais ou
+# que les IA font mettre à jour les informations sur les documents qui ont
+# été fait et ceux qui restent ».
+#
+# Garanties :
+#   - le build ne touche QUE le rendu (site/ + racine publiée) — jamais les
+#     données (content/books/*.json, registres, journaux, commentaires) ;
+#   - si le rendu est déjà synchrone (cas d'une poussée IA-1 qui vient de
+#     construire), rien n'est commis ;
+#   - si une poussée concurrente arrive pendant le rendu, tentative de
+#     rebase ×3 ; la poussée concurrente a de toute façon déclenché son
+#     propre rendu — le système converge toujours vers le rendu des
+#     dernières données ;
+#   - le commit du rendu porte [skip ci] pour ne pas se re-déclencher.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rendu-pages
+  cancel-in-progress: false
+
+jobs:
+  rendu:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Python 3
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Construire le site (Python stdlib, sans réseau)
+        run: python3 scripts/build-site.py --publier .
+
+      - name: Commettre et pousser le rendu s'il change
+        run: |
+          set -e
+          git config user.name "minhaj-rendu"
+          git config user.email "minhaj-rendu@users.noreply.github.com"
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "Rendu déjà synchrone des données — rien à commettre."
+            exit 0
+          fi
+          git add -A
+          git commit -m "[ci] rendu du site synchrone des données (après $GITHUB_SHA) [skip ci]"
+          for i in 1 2 3; do
+            if git push origin HEAD:main; then
+              echo "Rendu publié."
+              exit 0
+            fi
+            echo "Poussée rejetée (poussée concurrente) — rebase puis nouvelle tentative."
+            git pull --rebase origin main
+          done
+          echo "Échec après 3 tentatives — la prochaine poussée relancera un rendu."
+          exit 1
