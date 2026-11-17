@@ -618,6 +618,119 @@ def url_lecon(doc_id):
 
 
 # ---------------------------------------------------------------------------
+# Retrait de l’apparat de livraison AU RENDU (les données ne bougent jamais)
+# ---------------------------------------------------------------------------
+
+# Les fichiers content/books/*.json portent, pour 45 documents du primaire-
+# collège (hadith-2es pdf-16…31, hadith-3es pdf-mut23h2x-390…418), un
+# « apparat de preuve de la livraison » : notes internes de production
+# (chaînes de passes, claims, contrôles de livraison, points restés ouverts)
+# posées en queue du htmlFr par l’IA de transcription. Ce scaffolding de
+# livraison ne relève pas de la leçon publiée : il est retiré AU RENDU par le
+# présent filtre, appliqué en mémoire au chargement — AVANT pages, index de
+# recherche et extraits. Les données sources ne sont JAMAIS modifiées
+# (protocole : content/books/*.json hors de la zone IA-1) ; quand le
+# propriétaire de la zone nettoiera ses données, le filtre deviendra sans
+# effet. Trois formes consignées (cartographie R719, scripts/qa-apparat.py) :
+#   A. bloc autonome   « <h2>L’apparat de preuve de la livraison</h2> » —
+#      retiré avec tout ce qui suit jusqu’à la fin du document ou au
+#      prochain <h2> (40 leçons : hadith-2es pdf-16…31, hadith-3es 395…418) ;
+#   B. titre mixte     « Les subtilités de la leçon et l’apparat de preuve de
+#      la livraison » (5 leçons : 390…394) — le titre est rendu « Les
+#      subtilités de la leçon », les paragraphes d’entête de livraison
+#      immédiats (« Chaîne de production de la passe… », « Cette livraison a
+#      été faite… ») sont retirés, les subtilités savantes qui suivent sont
+#      conservées ;
+#   C. rubrique de sommaire « l’apparat de preuve… » en fin de <h1> de leçon
+#      (6 leçons : 395, 414…418, variantes «, l’apparat… » / « et l’apparat… » /
+#      « l’apparat de preuve complet… ») — retirée une fois le bloc absent du
+#      rendu, pour que le sommaire ne promette plus une section qui n’est plus
+#      affichée ;
+#   D. références croisées « (voir l’apparat…) » — 9 parenthèses entières —
+#      et références enchâssées ou de fin de phrase «…, voir l’apparat) »,
+#      «… — voir l’apparat) », «… voir l’apparat] » (crochet de citation),
+#      «… — voir l’apparat. » — 12 occurrences — : la référence devient
+#      pendante une fois le bloc masqué, elle est retirée en gardant la
+#      justification savante qui l’entoure (21 occurrences au corpus, toutes
+#      dans des notes de transcription ; le mot « apparat » subsiste ailleurs
+#      pour l’apparat critique du traducteur et les « objets d’apparat » du
+#      droit des successions — jamais touchés) ;
+#   E. paires dt/dd de livraison du <dl class="lesson-meta"> : « Versets du
+#      cache », « Preuves de la passe », « État de la passe » (403…409),
+#      « Statut de la livraison », « Trace de la passe » (401, 402) — 24
+#      paires — retirées ; « Source du cours » (rubrique standard de 6
+#      livres) et « Plan du cours imprimé » (plan de la leçon imprimée,
+#      utile au lecteur) sont conservés.
+
+_RE_APPARAT_H2 = re.compile(r'<h2[^>]*>\s*L’apparat de preuve de la livraison\s*</h2>')
+_RE_APPARAT_MIX = re.compile(r'<h2[^>]*>\s*Les subtilités de la leçon et l’apparat de preuve de la livraison\s*</h2>')
+_RE_APPARAT_SCAFF = re.compile(r'<p>(?:Chaîne de production de la passe|Cette livraison a été faite)\b.*?</p>', re.S)
+_RE_APPARAT_RUBRIQUE = re.compile(r'\s*(?:[,;]\s*)?(?:et\s+)?l’apparat de preuve[^<]*</h1>')
+_RE_APPARAT_PAREN = re.compile(r'\s*\(voir l’apparat[^)<]{0,60}\)')
+_RE_APPARAT_QUEUE = re.compile(r'\s*(?:[,;]|[—–-])\s*voir l’apparat[^)<>\]]{0,60}?([)\]])')
+_RE_APPARAT_FIN = re.compile(r'\s*[—–-]\s*voir l’apparat\s*\.')
+_RE_APPARAT_DL = re.compile(r'\s*<dt>(?:Versets du cache|Preuves de la passe|État de la passe|Statut de la livraison|Trace de la passe)</dt>\s*<dd>.*?</dd>', re.S)
+
+APPARAT_STATS = {'blocs': 0, 'paragraphes': 0, 'rubriques': 0, 'references': 0, 'paires': 0, 'octets': 0}
+
+
+def nettoyer_apparat(html):
+    """Retire l’apparat de livraison au rendu — données sources intouchées."""
+    if ('apparat de preuve' not in html and 'Chaîne de production' not in html
+            and 'Cette livraison a été faite' not in html and 'voir l’apparat' not in html):
+        return html
+    avant = len(html)
+
+    # A — bloc autonome : h2 + contenu jusqu’à la fin ou au prochain <h2
+    m = _RE_APPARAT_H2.search(html)
+    if m:
+        nxt = html.find('<h2', m.end())
+        html = html[:m.start()] + (html[nxt:] if nxt != -1 else '')
+        APPARAT_STATS['blocs'] += 1
+
+    # B — titres mixtes : paragraphes d’entête de livraison immédiats retirés
+    morceaux, pos = [], 0
+    for m in _RE_APPARAT_MIX.finditer(html):
+        debut, fin = m.span()
+        morceaux.append(html[pos:debut])
+        k, retire = fin, 0
+        while True:
+            j = k
+            while j < len(html) and html[j] in ' \t\r\n':
+                j += 1
+            sm = _RE_APPARAT_SCAFF.match(html, j)
+            if not sm:
+                break
+            k = sm.end()
+            retire += 1
+        morceaux.append('<h2>Les subtilités de la leçon</h2>')
+        APPARAT_STATS['paragraphes'] += retire
+        pos = k
+    if morceaux:
+        morceaux.append(html[pos:])
+        html = ''.join(morceaux)
+
+    # C — rubrique d’apparat en fin de <h1> de sommaire de leçon
+    html, n_rub = _RE_APPARAT_RUBRIQUE.subn('</h1>', html)
+    APPARAT_STATS['rubriques'] += n_rub
+
+    # D — références croisées devenues pendantes (parenthèses entières puis
+    #     enchâssées avec garde du fermant, puis fins de phrase)
+    html, n1 = _RE_APPARAT_PAREN.subn('', html)
+    html, n2 = _RE_APPARAT_QUEUE.subn(r'\1', html)
+    html, n3 = _RE_APPARAT_FIN.subn('.', html)
+    APPARAT_STATS['references'] += n1 + n2 + n3
+
+    # E — paires dt/dd de livraison du lesson-meta (Source du cours et Plan
+    #     du cours imprimé conservés)
+    html, n_dd = _RE_APPARAT_DL.subn('', html)
+    APPARAT_STATS['paires'] += n_dd
+
+    APPARAT_STATS['octets'] += avant - len(html)
+    return html
+
+
+# ---------------------------------------------------------------------------
 # Chargement des données
 # ---------------------------------------------------------------------------
 
@@ -650,7 +763,7 @@ def charger_livres(rep_books, manifest, avertissements):
         annee = niveau.get('year') or 0
 
         # introduction
-        intro_fr = (intro.get('htmlFr') or '').strip()
+        intro_fr = nettoyer_apparat((intro.get('htmlFr') or '').strip())
         intro_ar = (intro.get('html') or '').strip()
         entree_intro = None
         if intro_fr or intro_ar:
@@ -675,7 +788,7 @@ def charger_livres(rep_books, manifest, avertissements):
                 avertissements.append(f'{slug} : docId en double {did} — seconde occurrence ignorée')
                 continue
             vus.add(did)
-            fr = l.get('htmlFr') or ''
+            fr = nettoyer_apparat(l.get('htmlFr') or '')
             ok = bool(fr.strip())
             lecons.append({
                 'docId': did,
@@ -2248,6 +2361,14 @@ def main():
           f'({n_docs - n_sav_docs} en attente du cap savant)')
     print(f'commentaires pédagogiques : {n_comm} / {total_lecons + total_intro} documents '
           f'(mode : {MODE_COMM})')
+    if (APPARAT_STATS['blocs'] or APPARAT_STATS['paragraphes'] or APPARAT_STATS['rubriques']
+            or APPARAT_STATS['references'] or APPARAT_STATS['paires']):
+        print(f'apparat de livraison retiré au rendu : {APPARAT_STATS["blocs"]} blocs autonomes, '
+              f'{APPARAT_STATS["paragraphes"]} paragraphes d’entête mixte, '
+              f'{APPARAT_STATS["rubriques"]} rubriques de sommaire, '
+              f'{APPARAT_STATS["references"]} références croisées, '
+              f'{APPARAT_STATS["paires"]} paires dt/dd de livraison '
+              f'({APPARAT_STATS["octets"]} caractères) — données sources intouchées')
     print(f'pages HTML : {n_pages} | fichiers copiés à la racine : {n_copies}')
     print(f'index de recherche : {len(entrees_lecons)} documents en {len(fichiers_recherche)} fichiers '
           f'({mo_octets(octets_recherche)} — titres {mo_octets(octets_titres)} + {n_frags} fragments de texte) '
