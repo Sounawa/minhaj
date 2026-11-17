@@ -575,22 +575,43 @@
 <script src="recherche.js"></script>
 <script>
 (function(){
-var charge=false;
-MinhajRecherche.installerUI({
-input:document.getElementById('champ'),
+var frags=["recherche/index-ep.js", "recherche/index-es.js", "recherche/index-tanawi.js"];
+var restants=frags.length;
+var input=document.getElementById('champ');
+function majStatut(txt){
+var s=document.getElementById('statut');
+if(!s)return;
+s.hidden=!txt;s.textContent=txt||'';
+}
+window.__minhajRechercheUI=MinhajRecherche.installerUI({
+input:input,
 conteneur:document.getElementById('resultats'),
 statut:document.getElementById('statut'),
 chargerIndex:function(suivant,echec){
-if(charge){suivant();return;}
-charge=true;
+var t=document.createElement('script');
+t.src='recherche/index-titres.js';
+t.onload=function(){
+if(!window.MINHAJ_INDEX){if(echec)echec('Index illisible.');return;}
+MinhajRecherche.definirDonnees(window.MINHAJ_INDEX);window.MINHAJ_INDEX=null;suivant();
+/* texte complet en arrière-plan : chaque fragment enrichit les résultats */
+frags.forEach(function(src){
 var s=document.createElement('script');
-s.src='recherche-index.js';
+s.src=src;
 s.onload=function(){
-if(window.MINHAJ_INDEX){MinhajRecherche.definirDonnees(window.MINHAJ_INDEX);window.MINHAJ_INDEX=null;suivant();}
-else if(echec)echec('Index illisible.');
+var pile=window.MINHAJ_TEXTE;window.MINHAJ_TEXTE=null;
+if(pile)MinhajRecherche.ajouterTexte(pile);
+restants--;
+if(restants&&input.value.trim().length>=2)
+majStatut('Résultats des titres affichés — texte complet en cours ('+(frags.length-restants)+'/'+frags.length+')…');
+else majStatut('');
+var ui=window.__minhajRechercheUI;ui&&ui.lancer();
 };
-s.onerror=function(){if(echec)echec();};
+s.onerror=function(){restants--;majStatut('');};
 document.head.appendChild(s);
+});
+};
+t.onerror=function(){if(echec)echec();};
+document.head.appendChild(t);
 }
 });
 })();

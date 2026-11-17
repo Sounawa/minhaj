@@ -1,7 +1,0 @@
-{
-  "name": "vlm-r651",
-  "private": true,
-  "dependencies": {
-    "z-ai-web-dev-sdk": "^0.0.18"
-  }
-}

@@ -12,7 +12,7 @@ site/ un site entièrement pré-généré, sans aucun fetch à l'exécution :
   livres/<slug>/<docId>.html       page de leçon transcrite (htmlFr rendu tel quel)
   assets/style.css                 feuille de style unique — thème « automne »
   recherche.js                     moteur de recherche (JS pur, aucune dépendance)
-  recherche-index.js               index de recherche pré-généré (chargé à la demande)
+  recherche/                       index de recherche découpé (titres + fragments par cycle)
   hors-ligne.html                  variante mono-fichier : tout embarqué, ouvrable en file://
   ancien-lecteur.html              copie de l'ancien lecteur SPA (chemins fetch corrigés)
   404.html, robots.txt, sitemap.xml
@@ -26,6 +26,7 @@ Chemins RELATIFS partout (site servi depuis /minhaj/), UTF-8, Python stdlib.
 """
 
 import argparse
+import base64
 import html as html_mod
 import json
 import re
@@ -407,6 +408,7 @@ function preparer(donnees) {
 
 /* Extrait recadré dans le texte d'origine, avec surlignage du terme. */
 function extrait(l, termes) {
+  if (!l.x) return '';
   var carte = normaliserCarte(l.x);
   var nt = carte.t, m = carte.m, pos = -1, lg = 0;
   for (var k = 0; k < termes.length; k++) {
@@ -469,7 +471,33 @@ function chercher(requete) {
   return { total: total, resultats: resultats };
 }
 
-function definirDonnees(d) { etat.donnees = preparer(d); etat.pret = true; }
+/* Carte « b:d » -> entrée de leçon, pour l'ajout progressif des textes
+ * complets arrivant par fragments (voir ajouterTexte). */
+var indexLecons = {};
+
+function definirDonnees(d) {
+  etat.donnees = preparer(d);
+  indexLecons = {};
+  etat.donnees.lecons.forEach(function (l) { indexLecons[l.b + ':' + l.docId] = l; });
+  etat.pret = true;
+}
+
+/* Ajout de fragments de texte complet chargés en arrière-plan : la recherche
+ * suivante couvre aussi le contenu des leçons. Accepte soit une liste de
+ * fragments {cycle, paires} (window.MINHAJ_TEXTE), soit une liste directe
+ * de paires {b, d, x}. Retourne le nombre de documents enrichis. */
+function ajouterTexte(fragments) {
+  if (!etat.pret) return 0;
+  var n = 0;
+  (fragments || []).forEach(function (fr) {
+    var paires = fr && fr.paires ? fr.paires : [fr];
+    paires.forEach(function (p) {
+      var l = indexLecons[p.b + ':' + p.d];
+      if (l && p.x) { l.x = p.x; l.nx = null; n++; }
+    });
+  });
+  return n;
+}
 
 function installerUI(opts) {
   var input = opts.input, cont = opts.conteneur, statut = opts.statut || null;
@@ -486,7 +514,7 @@ function installerUI(opts) {
       } else {
         h += '<li class="r-lecon"><span class="r-titre"><a href="' + x.url + '">' + x.titre + '</a></span>' +
              '<span class="r-livre-n">' + x.sousTitre + '</span>' +
-             '<p class="r-extrait" dir="auto">' + x.extrait + '</p></li>';
+             (x.extrait ? '<p class="r-extrait" dir="auto">' + x.extrait + '</p>' : '') + '</li>';
       }
     });
     h += '</ol>';
@@ -524,6 +552,7 @@ function installerUI(opts) {
 globale.MinhajRecherche = {
   normaliser: normaliser,
   definirDonnees: definirDonnees,
+  ajouterTexte: ajouterTexte,
   pret: function () { return etat.pret; },
   chercher: chercher,
   installerUI: installerUI
@@ -829,25 +858,52 @@ def pied(rel, date_fr):
 </div></footer>"""
 
 
-BOOTSTRAP_RECHERCHE_RACINE = r"""<script src="recherche.js"></script>
+def bootstrap_recherche_racine(fragments):
+    """Chargeur progressif de la recherche (accueil) : l'index léger des
+    titres est chargé à la première frappe — résultats immédiats — puis les
+    fragments de texte complet (par cycle) arrivent en arrière-plan et
+    enrichissent les résultats sans nouvelle action de l'utilisateur."""
+    liste = json.dumps(fragments, ensure_ascii=False)
+    return """<script src="recherche.js"></script>
 <script>
 (function(){
-var charge=false;
-MinhajRecherche.installerUI({
-input:document.getElementById('champ'),
+var frags=""" + liste + r""";
+var restants=frags.length;
+var input=document.getElementById('champ');
+function majStatut(txt){
+var s=document.getElementById('statut');
+if(!s)return;
+s.hidden=!txt;s.textContent=txt||'';
+}
+window.__minhajRechercheUI=MinhajRecherche.installerUI({
+input:input,
 conteneur:document.getElementById('resultats'),
 statut:document.getElementById('statut'),
 chargerIndex:function(suivant,echec){
-if(charge){suivant();return;}
-charge=true;
+var t=document.createElement('script');
+t.src='recherche/index-titres.js';
+t.onload=function(){
+if(!window.MINHAJ_INDEX){if(echec)echec('Index illisible.');return;}
+MinhajRecherche.definirDonnees(window.MINHAJ_INDEX);window.MINHAJ_INDEX=null;suivant();
+/* texte complet en arrière-plan : chaque fragment enrichit les résultats */
+frags.forEach(function(src){
 var s=document.createElement('script');
-s.src='recherche-index.js';
+s.src=src;
 s.onload=function(){
-if(window.MINHAJ_INDEX){MinhajRecherche.definirDonnees(window.MINHAJ_INDEX);window.MINHAJ_INDEX=null;suivant();}
-else if(echec)echec('Index illisible.');
+var pile=window.MINHAJ_TEXTE;window.MINHAJ_TEXTE=null;
+if(pile)MinhajRecherche.ajouterTexte(pile);
+restants--;
+if(restants&&input.value.trim().length>=2)
+majStatut('Résultats des titres affichés — texte complet en cours ('+(frags.length-restants)+'/'+frags.length+')…');
+else majStatut('');
+var ui=window.__minhajRechercheUI;ui&&ui.lancer();
 };
-s.onerror=function(){if(echec)echec();};
+s.onerror=function(){restants--;majStatut('');};
 document.head.appendChild(s);
+});
+};
+t.onerror=function(){if(echec)echec();};
+document.head.appendChild(t);
 }
 });
 })();
@@ -1024,7 +1080,7 @@ traiterAncre();
 </script>"""
 
 
-def page_accueil(livres, programme, date_fr):
+def page_accueil(livres, programme, date_fr, fragments_recherche):
     n_total = sum(len(b['lecons']) for b in livres)
     n_ok = sum(1 for b in livres for l in b['lecons'] if l['ok'])
     pct = round(100 * n_ok / n_total) if n_total else 0
@@ -1071,7 +1127,7 @@ def page_accueil(livres, programme, date_fr):
         'Minhaj — manuels de l’enseignement traditionnel (Maroc)',
         'Sommaire des 64 manuels du المنهج النموذجي للتعليم العتيق, rangés par niveau scolaire (primaire, collège, lycée) : leçons transcrites mot à mot en arabe, traduites et commentées en français. Recherche globale en français et en arabe.',
         '', nom_ar, date_fr, corps,
-        BOOTSTRAP_RECHERCHE_RACINE + '\n' + BOOTSTRAP_ACCUEIL), n_ok, n_total
+        bootstrap_recherche_racine(fragments_recherche) + '\n' + BOOTSTRAP_ACCUEIL), n_ok, n_total
 
 
 def html_liste_lecons(livre):
@@ -1193,11 +1249,49 @@ def page_introduction(livre, suiv, programme_ar, date_fr):
 # Hors-ligne (mono-fichier)
 # ---------------------------------------------------------------------------
 
-def page_hors_ligne(livres, programme, css_texte, recherche_js, date_fr):
+def polices_inline(depot):
+    """Bloc <style> des polices embarquées (base64) pour le hors-ligne, ou None.
+    Source : content/fonts/google-fonts.css + fichiers woff2 voisins, récupérés
+    une fois par scripts/fetch-polices.py — le build reste hors-ligne."""
+    rep = depot / 'content' / 'fonts'
+    css = rep / 'google-fonts.css'
+    if not css.exists():
+        return None
+    try:
+        texte = css.read_text(encoding='utf-8')
+    except Exception:
+        return None
+    manquants = []
+
+    def remplacer(m):
+        nom = m.group(1).rsplit('/', 1)[-1].split('?')[0]
+        f = rep / nom
+        if not f.exists():
+            manquants.append(nom)
+            return m.group(0)
+        b64 = base64.b64encode(f.read_bytes()).decode('ascii')
+        return "src: url(data:font/woff2;base64," + b64 + ") format('woff2');"
+
+    bloc = re.sub(r"src:\s*url\((https://fonts\.gstatic\.com/[^)]+)\)\s*format\('woff2'\)",
+                  remplacer, texte)
+    if manquants or 'data:font/woff2' not in bloc:
+        return None
+    return bloc
+
+
+def page_hors_ligne(livres, programme, css_texte, recherche_js, date_fr, polices=None):
     n_total = sum(len(b['lecons']) for b in livres)
     n_ok = sum(1 for b in livres for l in b['lecons'] if l['ok'])
     pct = round(100 * n_ok / n_total) if n_total else 0
     nom_ar = programme.get('nameAr', 'المنهج النموذجي للتعليم العتيق')
+    if polices:
+        liens_polices = ('<style id="polices-embarquees">\n' + polices + '\n</style>')
+    else:
+        liens_polices = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
+                         '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
+                         '<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700'
+                         '&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600'
+                         '&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap" rel="stylesheet">')
 
     # ---- partie 1 : bibliothèque rangée par cycle puis niveau (cartes -> ancres)
     #      cycles en onglets rétractables, niveaux en sous-onglets imbriqués,
@@ -1318,9 +1412,7 @@ ouvrirAncre();
 <meta name="theme-color" content="#2a340c">
 <meta name="generator" content="minhaj-build {date_fr}">
 <link rel="icon" href="{FAVICON}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+{liens_polices}
 <style>
 {css_texte}
 </style>
@@ -1506,6 +1598,10 @@ def main():
     if not livres:
         print('!! aucun livre trouvé dans', rep_books)
         return 1
+    # cycles ayant au moins un document transcrit -> fragments de l'index
+    cycles_frag = sorted({(b['cycle'] or 'autre') for b in livres
+                          if b['intro'] or any(l['ok'] for l in b['lecons'])})
+    fragments_recherche = [f'recherche/index-{c}.js' for c in cycles_frag]
     programme = manifest.get('program', {})
     nom_ar = programme.get('nameAr', 'المنهج النموذجي للتعليم العتيق')
 
@@ -1520,7 +1616,7 @@ def main():
     total_intro = 0
 
     # ---- accueil
-    page, total_ok, total_lecons = page_accueil(livres, programme, date_fr)
+    page, total_ok, total_lecons = page_accueil(livres, programme, date_fr, fragments_recherche)
     (sortie / 'index.html').write_text(page, encoding='utf-8')
     n_pages += 1
     total_intro = sum(1 for b in livres if b['intro'])
@@ -1529,12 +1625,14 @@ def main():
     (sortie / 'assets' / 'style.css').write_text(CSS, encoding='utf-8')
     (sortie / 'recherche.js').write_text(RECHERCHE_JS, encoding='utf-8')
 
-    # ---- index de recherche pré-généré
+    # ---- index de recherche pré-généré (découpé : titres puis fragments par cycle)
     entrees_books = []
     entrees_lecons = []
+    textes_par_cycle = {}
     for ib, b in enumerate(livres):
         entrees_books.append({'s': b['slug'], 't': b['titleFr'], 'ta': b['titleAr'],
                               'u': f"livres/{b['slug']}/"})
+        cyc = b['cycle'] or 'autre'
         if b['intro']:
             it = b['intro']
             entrees_lecons.append({
@@ -1543,6 +1641,8 @@ def main():
                 'u': f"livres/{b['slug']}/introduction.html",
                 'x': it['texte'],
             })
+            textes_par_cycle.setdefault(cyc, []).append(
+                {'b': ib, 'd': 'introduction', 'x': it['texte']})
         for l in b['lecons']:
             if not l['ok']:
                 continue
@@ -1553,12 +1653,29 @@ def main():
                 'u': f"livres/{b['slug']}/{url_lecon(l['docId'])}.html",
                 'x': l['texte'],
             })
-    index_js = ('/* Index de recherche pré-généré par scripts/build-site.py — '
-                f'{len(entrees_books)} livres, {len(entrees_lecons)} documents. */\n'
-                'window.MINHAJ_INDEX=' +
-                json.dumps({'books': entrees_books, 'lecons': entrees_lecons},
-                           ensure_ascii=False, separators=(',', ':')) + ';\n')
-    (sortie / 'recherche-index.js').write_text(index_js, encoding='utf-8')
+            textes_par_cycle.setdefault(cyc, []).append(
+                {'b': ib, 'd': l['docId'], 'x': l['texte']})
+    if sorted(textes_par_cycle) != cycles_frag:
+        avertissements.append('cycles sans fragment de texte — incohérence de découpage')
+    (sortie / 'recherche').mkdir(exist_ok=True)
+    titres_seuls = [{k: v for k, v in e.items() if k != 'x'} for e in entrees_lecons]
+    titres_js = ('/* Index léger des titres — pré-généré par scripts/build-site.py — '
+                 f'{len(entrees_books)} livres, {len(titres_seuls)} documents (sans texte ; '
+                 'les textes arrivent par fragments de cycle). */\n'
+                 'window.MINHAJ_INDEX=' +
+                 json.dumps({'books': entrees_books, 'lecons': titres_seuls},
+                            ensure_ascii=False, separators=(',', ':')) + ';\n')
+    (sortie / 'recherche' / 'index-titres.js').write_text(titres_js, encoding='utf-8')
+    n_frags = 0
+    for cyc in sorted(textes_par_cycle):
+        paires = textes_par_cycle[cyc]
+        frag_js = (f"/* Fragment de texte complet — cycle {cyc} — {len(paires)} documents — "
+                   "pré-généré par scripts/build-site.py. */\n"
+                   '(window.MINHAJ_TEXTE=window.MINHAJ_TEXTE||[]).push(' +
+                   json.dumps({'cycle': cyc, 'paires': paires},
+                              ensure_ascii=False, separators=(',', ':')) + ");\n")
+        (sortie / 'recherche' / f'index-{cyc}.js').write_text(frag_js, encoding='utf-8')
+        n_frags += 1
 
     # ---- pages livres / introductions / leçons
     for b in livres:
@@ -1583,7 +1700,8 @@ def main():
             n_pages += 1
 
     # ---- hors-ligne
-    page_hl = page_hors_ligne(livres, programme, CSS, RECHERCHE_JS, date_fr)
+    bloc_polices = polices_inline(depot)
+    page_hl = page_hors_ligne(livres, programme, CSS, RECHERCHE_JS, date_fr, polices=bloc_polices)
     (sortie / 'hors-ligne.html').write_text(page_hl, encoding='utf-8')
 
     # ---- 404 / robots / sitemap
@@ -1632,14 +1750,22 @@ def main():
             (racine / 'ancien-lecteur.html').write_text(
                 preparer_ancien_lecteur(texte_spa, 'content/books/', './'), encoding='utf-8')
         (racine / '.nojekyll').touch(exist_ok=True)
+        ancien_index = racine / 'recherche-index.js'
+        if ancien_index.exists():
+            ancien_index.unlink()
 
     # ---- rapport
-    taille_index = (sortie / 'recherche-index.js').stat().st_size
+    fichiers_recherche = sorted((sortie / 'recherche').glob('*.js'))
+    octets_recherche = sum(p.stat().st_size for p in fichiers_recherche)
+    octets_titres = (sortie / 'recherche' / 'index-titres.js').stat().st_size
     taille_hl = (sortie / 'hors-ligne.html').stat().st_size
     print('=== Génération terminée ===')
     print(f'livres : {len(livres)} | leçons : {total_lecons} ({total_ok} transcrites) | introductions : {total_intro}')
     print(f'pages HTML : {n_pages} | fichiers copiés à la racine : {n_copies}')
-    print(f'index de recherche : {len(entrees_lecons)} entrées, {mo_octets(taille_index)} | hors-ligne : {mo_octets(taille_hl)}')
+    print(f'index de recherche : {len(entrees_lecons)} documents en {len(fichiers_recherche)} fichiers '
+          f'({mo_octets(octets_recherche)} — titres {mo_octets(octets_titres)} + {n_frags} fragments de texte) '
+          f'| hors-ligne : {mo_octets(taille_hl)} | '
+          f'polices hors-ligne : {"embarquées" if bloc_polices else "Google Fonts (repli)"}')
     if avertissements:
         print(f'avertissements ({len(avertissements)}) :')
         for a in avertissements[:20]:

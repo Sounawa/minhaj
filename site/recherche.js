@@ -67,6 +67,7 @@ function preparer(donnees) {
 
 /* Extrait recadré dans le texte d'origine, avec surlignage du terme. */
 function extrait(l, termes) {
+  if (!l.x) return '';
   var carte = normaliserCarte(l.x);
   var nt = carte.t, m = carte.m, pos = -1, lg = 0;
   for (var k = 0; k < termes.length; k++) {
@@ -129,7 +130,33 @@ function chercher(requete) {
   return { total: total, resultats: resultats };
 }
 
-function definirDonnees(d) { etat.donnees = preparer(d); etat.pret = true; }
+/* Carte « b:d » -> entrée de leçon, pour l'ajout progressif des textes
+ * complets arrivant par fragments (voir ajouterTexte). */
+var indexLecons = {};
+
+function definirDonnees(d) {
+  etat.donnees = preparer(d);
+  indexLecons = {};
+  etat.donnees.lecons.forEach(function (l) { indexLecons[l.b + ':' + l.docId] = l; });
+  etat.pret = true;
+}
+
+/* Ajout de fragments de texte complet chargés en arrière-plan : la recherche
+ * suivante couvre aussi le contenu des leçons. Accepte soit une liste de
+ * fragments {cycle, paires} (window.MINHAJ_TEXTE), soit une liste directe
+ * de paires {b, d, x}. Retourne le nombre de documents enrichis. */
+function ajouterTexte(fragments) {
+  if (!etat.pret) return 0;
+  var n = 0;
+  (fragments || []).forEach(function (fr) {
+    var paires = fr && fr.paires ? fr.paires : [fr];
+    paires.forEach(function (p) {
+      var l = indexLecons[p.b + ':' + p.d];
+      if (l && p.x) { l.x = p.x; l.nx = null; n++; }
+    });
+  });
+  return n;
+}
 
 function installerUI(opts) {
   var input = opts.input, cont = opts.conteneur, statut = opts.statut || null;
@@ -146,7 +173,7 @@ function installerUI(opts) {
       } else {
         h += '<li class="r-lecon"><span class="r-titre"><a href="' + x.url + '">' + x.titre + '</a></span>' +
              '<span class="r-livre-n">' + x.sousTitre + '</span>' +
-             '<p class="r-extrait" dir="auto">' + x.extrait + '</p></li>';
+             (x.extrait ? '<p class="r-extrait" dir="auto">' + x.extrait + '</p>' : '') + '</li>';
       }
     });
     h += '</ol>';
@@ -184,6 +211,7 @@ function installerUI(opts) {
 globale.MinhajRecherche = {
   normaliser: normaliser,
   definirDonnees: definirDonnees,
+  ajouterTexte: ajouterTexte,
   pret: function () { return etat.pret; },
   chercher: chercher,
   installerUI: installerUI
