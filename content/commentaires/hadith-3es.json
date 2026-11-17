@@ -1,0 +1,61 @@
+{
+  "livre": "hadith-3es",
+  "noteLivre": "Le livre d’al-Ḥadīth — 3ᵉ année de l’enseignement collégial traditionnel (Muwaṭṭaʾ de l’imām Mālik, avec le commentaire d’az-Zurqānī)",
+  "commentaires": {
+    "pdf-mut23h2x-413": {
+      "auteur": "IA-1, tour R716",
+      "resume": "Guide de lecture de la leçon 24 (أحكام الأضحية) : ce que dit le manuel, où il le dit, et comment les preuves s’enchaînent — pour suivre le cours sur la victime sacrificielle sans se perdre dans sa matière.",
+      "explication": [
+        "La leçon répond à trois objectifs posés d’entrée (ahdāf ad-dars) : reconnaître le sens de l’aḍḥiyya et son statut, connaître le temps recommandé de son immolation, et se conformer aux directives prophétiques qui les portent. Toute la matière se laisse lire comme la réponse ordonnée à ces trois questions — c’est la meilleure carte de révision : à chaque rubrique du manuel (tamhīd, textes du Muwaṭṭaʾ, tarjamat ar-rāwī, ach-charḥ, istiḫlāṣ, fiqh al-ḥadīth), se demander quel objectif elle sert.",
+        "Le cours porte trois textes du Muwaṭṭaʾ, et chacun fait un travail précis. Le premier fixe la mesure de la bête : la brebis d’offrande doit être قَوِيٍّ عَلَى ثَمَنِهَا — forte de prix, c’est-à-dire parvenue à la deuxième année ; le jaḏaʿ, arrêté à la première année accomplie, reste en deçà du canon. Le deuxième texte repère le temps de l’immolation. Le troisième porte la scène entière d’abū burda : une immolation anticipée, l’ordre du Prophète ﷺ d’en recommencer une autre, la plaidoirie du transmetteur — لَا أَجِدُ إِلَّا جَذَعًا — puis la dispense finale : وَإِنْ لَمْ تَجِدْ إِلَّا جَذَعًا فَاذْبَحْ. La glose du manuel (ach-charḥ) éclaire précisément les deux termes clés : jaḏaʿ et qawī ʿalā thamanihā.",
+        "La notice du transmetteur (tarjamat ar-rāwī) n’est pas une digression : hanīʾ b. niyār al-balawī al-anṣārī (abū burda) assista à Badr et à tous les champs — l’homme qui immola trop tôt est un grand compagnon, non un novice ; la règle tirée de son cas n’en est que plus sûre. C’est la méthode constante du manuel : la force du texte passe par la qualité de sa chaîne de transmission.",
+        "Dans le fiqh al-ḥadīth, retenir l’articulation finale : l’aḍḥiyya est une sunna confirmée (sunna mu’akkada) pour tout homme capable, résident ou voyageur — hors les pèlerins de minā, dont le rite propre est le ḥadī, et qui se retiennent des cheveux et des ongles jusqu’à l’immolation (فَلْيَمْسِكْ عَنْ شَعْرِهِ وَأَظْفَارِهِ) ; et l’immolation avant la prière de la fête ne vaut pas offrande du rite — c’est le sens de la scène d’al-barāʾ. La définition du manuel pose trois éléments à ne jamais séparer : la bête (ce qui est immolé des naʿam), le dessein (taqarrub — un culte, non un abattage), le temps (le jour de la fête et après lui)."
+      ],
+      "points": [
+        "À chaque rubrique du manuel, rattacher l’objectif du cours qu’elle sert — les trois objectifs de la page d’ouverture cadrent toute la leçon.",
+        "Définition à retenir : la bête (des naʿam) + le dessein (taqarrub) + le temps (le jour de la fête et après lui) — les trois éléments ensemble.",
+        "Statut : sunna mu’akkada pour l’homme capable, résident ou voyageur ; le pèlerin de minā, lui, immole le ḥadī et se retient des cheveux et des ongles.",
+        "Temps : l’immolation se place après la prière de la ʿīd ; immoler avant la prière ne compte pas comme aḍḥiyya (hadith du troisième texte).",
+        "Degrés de l’animal : la brebis doit avoir franchi la deuxième année (qawī ʿalā thamanihā) ; le jaḏaʿ n’entre que par la dispense explicite وَإِنْ لَمْ تَجِدْ إِلَّا جَذَعًا فَاذْبَحْ.",
+        "Méthode du cours : l’ordre divin (sourate al-kawthar) d’abord, puis la sunna confirmée, puis la pratique juridique de Mālik — les preuves s’étagent."
+      ],
+      "vocabulaire": [
+        {"ar": "الأَضْحِيَّة", "translit": "aḍḥiyya", "fr": "victime sacrificielle offerte le jour de la fête et après lui"},
+        {"ar": "جَذَع", "translit": "jaḏaʿ", "fr": "brebis qui a accompli sa première année (en deçà du canon de l’aḍḥiyya)"},
+        {"ar": "تَقَرُّب", "translit": "taqarrub", "fr": "rapprochement d’Allah : le dessein qui fait de l’immolation un culte"},
+        {"ar": "شَعِيرَة", "translit": "chaʾīra", "fr": "rite religieux — l’aḍḥiyya est « une part des rites de la religion »"},
+        {"ar": "سُنَّة مُؤَكَّدَة", "translit": "sunna mu’akkada", "fr": "sunna confirmée : le statut de l’aḍḥiyya pour qui en a la capacité"},
+        {"ar": "قَوِيٍّ عَلَى ثَمَنِهَا", "translit": "qawī ʿalā thamanihā", "fr": "« forte de prix » : la brebis parvenue à la deuxième année"}
+      ],
+      "avertissement": "Ce commentaire est un guide de lecture du manuel ; en cas de divergence d’expression, le manuel et sa traduction savante font foi."
+    },
+    "pdf-mut23h2x-414": {
+      "auteur": "IA-1, tour R716",
+      "resume": "Ce que la leçon 25 (شروط الأضحية وحكم الشركة فيها) exige de retenir : quatre vices disqualifiants, un âge requis par espèce, une formation parfaite — et une règle d’association strictement délimitée. Le commentaire montre comment chaque rubrique du manuel y conduit.",
+      "explication": [
+        "Le premier texte (n° 1352) est le socle : interrogé sur ce dont on se garde dans les bêtes d’offrande, le Prophète ﷺ répondit en désignant de sa main le nombre — quatre — puis les énuméra : la boiteuse à claudication manifeste (الْعَرْجَاءُ الْبَيِّنُ ظَلْعُهَا), l’aveugle à l’aveuglement manifeste (الْعَوْرَاءُ الْبَيِّنُ عَوْرُهَا), la malade au mal manifeste (الْمَرِيضَةُ الْبَيِّنُ مَرَضُهَا), la maigre qui ne peut dégraisser (الْعَجْفَاءُ الَّتِي لَا تُنْقَى). La scène du geste compte : le nombre est fixé par une indication visible, transmise par al-barāʾ b. ʿāzib.",
+        "Deux autres textes complètent le socle. Le n° 1353 (ʿabd Allāh b. ʿumar, par Nāfiʿ) sépare deux attendus : l’âge — لَمْ تُسَنَّ, qui n’a pas atteint l’âge requis — et la formation — نُقِصَ مِنْ خَلْفِهَا, atteinte d’un vice dans sa formation. Le n° 1354 (jābir b. ʿabd Allāh, l’année d’al-ḥudaybiyya) pose le compte partagé : نَحَرْنَا مَعَ رَسُولِ اللهِ ﷺ عَامَ الْحُدَيْبِيَّةِ الْبُدْنَةَ عَنْ سَبْعَة, et la vache à sept — c’est lui qui nourrit la seconde section sur l’association.",
+        "Le fiqh al-ḥadīth organise trois conditions : la salubrité des vices (les quatre défauts font l’unanimité — maǧmūʿ ʿalayhā — et tout ce qui va dans leur sens y entre, surtout si la cause est manifeste ; sur l’extension, le manuel oppose deux voies de savants : celle du sens contraposé — tout ce qui n’est pas des quatre vices est licite — et celle de l’extension à l’oreille, à l’œil et à leur semblable) ; l’âge requis (san al-iǧzāʾ — la règle compte l’année pleine puis l’entrée dans l’année suivante : le mouton entre dans sa deuxième année même d’un jour, la chèvre de manière manifeste) ; la perfection de la formation (kamāl ḫalqihā — le défaut défini par la double atteinte du prix et de la graisse).",
+        "L’association (ach-chirkah) est la nuance la plus fine de la leçon : Mālik n’admet pas que plusieurs partagent le prix d’une aḍḥiyya, ni des dons obligatoires — et dans le ḥadī de nafl, la citation du manuel porte « يُشْتَرِكُونَ فِيهَا فِي النُّسُكِ والضَّحايا » avec un jugement de réprobation (يُكْرَه). Le hadith de jābir est porté par Mālik sur le partage de la récompense, non sur la bête partagée — l’association dans le mérite est dite expressément. Et la licéité inverse : une seule aḍḥiyya pour un homme qui l’immole pour lui, les gens de sa maison et ce qui est à sa charge, fussent-ils nombreux. Ne pas confondre les deux plans : partager la bête (non, selon Mālik) et partager le mérite (oui)."
+      ],
+      "points": [
+        "Les quatre vices (n° 1352) font l’unanimité : claudication, aveuglement, maladie, maigreur — chacun « manifeste » (bayyin) ; la maigre est celle qui n’a ni graisse dans sa chair ni moelle dans ses os.",
+        "Trois conditions dans le fiqh : salubrité des vices, âge requis (san al-iǧzāʾ), perfection de la formation (kamāl ḫalqihā) — le n° 1353 porte les deux dernières.",
+        "Sur l’extension des vices, deux voies de savants : tout ce qui n’est pas des quatre est licite, ou extension à l’oreille, à l’œil et à ce qui est dans leur sens.",
+        "Association selon Mālik : pas de partage du prix pour l’aḍḥiyya ni pour les dons obligatoires ; le hadith de jābir (sept par chameau et par vache) se comprend du partage de la récompense.",
+        "Une seule aḍḥiyya suffit pour un homme et les gens de sa maison — même nombreux.",
+        "Préparation préalable (p.163) : savoir expliquer ẓalʿuhā, al-ʿawrāʾ, al-ʿaǧafāʾ et lā tanqī — ce sont précisément les mots glosés du n° 1352."
+      ],
+      "vocabulaire": [
+        {"ar": "ظَلْع", "translit": "ẓalʿ", "fr": "claudication — الْعَرْجَاءُ الْبَيِّنُ : la boiteuse à claudication manifeste"},
+        {"ar": "عَوَر", "translit": "ʿawar", "fr": "aveuglement — الْعَوْرَاءُ الْبَيِّنُ : l’aveugle à l’aveuglement manifeste"},
+        {"ar": "عَجَفَاء", "translit": "ʿaǧafāʾ", "fr": "maigreur extrême : ni graisse dans la chair, ni moelle dans les os"},
+        {"ar": "لَا تُنْقَى", "translit": "lā tanqī", "fr": "« qu’on ne peut dégraisser » : la maigre qui ne se répare pas"},
+        {"ar": "سِنّ الإِجْزَاء", "translit": "san al-iǧzāʾ", "fr": "l’âge requis pour que l’offrande soit valable"},
+        {"ar": "شِرْكَة", "translit": "chirkah", "fr": "association de plusieurs sur une bête d’offrande (partage du prix ou de la bête)"},
+        {"ar": "بُدْن", "translit": "budn", "fr": "chameaux d’offrande — selon le n° 1354, immolés à sept"}
+      ],
+      "avertissement": "Ce commentaire est un guide de lecture du manuel ; en cas de divergence d’expression, le manuel et sa traduction savante font foi."
+    }
+  }
+}

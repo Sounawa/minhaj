@@ -481,6 +481,38 @@ details.lecon .contenu::before,details.lecon .contenu::after{display:none}
   .cycle-compte{display:none}
   .cycle-ar{display:none}
 }
+/* ---- Commentaires pédagogiques (mission « leçon + commentaire ») ---- */
+.puce-comm{flex:none;align-self:center;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:700;border-radius:99px;padding:3px 11px;border:1px solid var(--olive);color:var(--olive-f);background:#edf0da;white-space:nowrap}
+.commentaire{margin:30px 0 6px;padding:26px 30px;border:1px solid var(--ligne-2);border-inline-start:4px solid var(--olive);border-radius:14px;background:var(--carte)}
+.commentaire h2{font-size:1.22rem;font-weight:700;color:var(--olive-f);display:flex;align-items:center;gap:10px;margin:0 0 8px;flex-wrap:wrap}
+.commentaire h2 .comm-ar{font-family:var(--amiri);font-size:1.4rem;font-weight:700;line-height:1.6}
+.comm-med{color:var(--olive);flex:none}
+.comm-resume{font-weight:600;color:var(--encre-2)}
+.comm-explication p{margin:.55em 0}
+.commentaire h3{font-size:1.04rem;color:var(--olive-f);margin:1.15em 0 .4em}
+.comm-points li{margin:.32em 0}
+.comm-vocab{width:100%;border-collapse:collapse;margin-top:.45em}
+.comm-vocab td{border-top:1px solid var(--ligne-2);padding:7px 10px;vertical-align:top}
+.comm-vocab tr:first-child td{border-top:0}
+.comm-v-ar{font-family:var(--amiri);font-size:1.22rem;line-height:1.8;white-space:nowrap}
+.comm-v-tr{font-style:italic;color:var(--encre-2);width:30%}
+.comm-avert{margin-top:1em;padding:10px 14px;border-radius:10px;background:var(--fond-2);color:var(--encre-2)}
+.comm-meta{margin:16px 0 0;font-size:.78rem;color:var(--gris)}
+.comm-compte-livre{color:var(--olive-f)}
+/* zone d'avancement sur l'accueil */
+.zone-commentaires{max-width:1160px;margin:30px auto 0;padding:0 22px}
+.cycle-comm>summary.cycle-tete{background:radial-gradient(620px 220px at 88% -46%,rgba(178,196,120,.28),transparent 62%),linear-gradient(122deg,var(--olive-nuit),var(--olive) 88%)}
+.comm-liste{list-style:none;margin:14px 0 0;padding:0}
+.comm-liste li{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;padding:10px 4px;border-top:1px solid var(--ligne-2)}
+.comm-livre{font-weight:600;color:var(--encre);text-decoration:none}
+.comm-livre:hover{color:var(--olive-f);text-decoration:underline}
+.comm-livre-ar{font-family:var(--amiri);font-size:1.12rem;line-height:1.7;color:var(--encre-2)}
+.chip-comm{flex:none;border-radius:99px;border:1px solid var(--olive);color:var(--olive-f);background:#edf0da;font-size:.78rem;font-weight:600;padding:3px 12px;white-space:nowrap}
+@media (max-width:710px){
+  .zone-commentaires{padding:0 14px;margin-top:22px}
+  .commentaire{padding:20px 18px}
+  .comm-v-tr{width:auto}
+}
 
 </style>
 </head>

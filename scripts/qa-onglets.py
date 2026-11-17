@@ -80,15 +80,15 @@ def main():
         page.goto(f'{base}/index.html', wait_until='networkidle')
 
         n_details = page.locator('details.cycle').count()
-        controle('accueil : 4 onglets (details.cycle — 3 cycles + traduction savante)',
-                 n_details == 4, f'trouvés {n_details}')
+        controle('accueil : 5 onglets (details.cycle — 3 cycles + traduction savante + commentaires)',
+                 n_details == 5, f'trouvés {n_details}')
         n_niveaux = page.locator('details.niveau').count()
         controle('accueil : 9 sous-onglets (details.niveau)', n_niveaux == 9, f'trouvés {n_niveaux}')
         fermes = page.eval_on_selector_all(
             'details.cycle, details.niveau',
             'els => ({t:els.length, f:els.filter(e => !e.open).length})')
-        controle('accueil : 13 repliables refermés au chargement',
-                 fermes['t'] == 13 and fermes['f'] == 13, str(fermes))
+        controle('accueil : 14 repliables refermés au chargement',
+                 fermes['t'] == 14 and fermes['f'] == 14, str(fermes))
         cartes = page.locator('.carte').count()
         controle('accueil : 64 cartes dans le DOM', cartes == 64, f'cartes {cartes}')
         v0 = visibles(page)
@@ -167,8 +167,8 @@ def main():
           n:document.querySelectorAll('details.niveau[open]').length,
           lib:document.getElementById('bascule-tout').textContent,
           pressed:document.getElementById('bascule-tout').getAttribute('aria-pressed')})''')
-        controle('« Tout déplier » : 4 onglets + 9 niveaux ouverts',
-                 etat3['c'] == 4 and etat3['n'] == 9, str(etat3))
+        controle('« Tout déplier » : 5 onglets + 9 niveaux ouverts',
+                 etat3['c'] == 5 and etat3['n'] == 9, str(etat3))
         v3 = visibles(page)
         controle('« Tout déplier » : 64 cartes visibles', v3 == 64, f'visibles {v3}')
         controle('« Tout déplier » : libellé devient « Tout replier »',

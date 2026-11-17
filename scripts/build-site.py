@@ -898,6 +898,103 @@ def charger_registre_savant(depot, avertissements):
     return ids, qual
 
 
+def charger_commentaires(depot, avertissements):
+    """Commentaires pédagogiques (mission « leçon + commentaire »).
+    Un fichier par livre : content/commentaires/<slug>.json de la forme
+    {"livre": "<slug>", "commentaires": {"<docId>": {...}}}. Le lien se fait
+    par docId (et par « introduction » pour l'intro) ; les fichiers sont
+    indépendants de content/books/ — JAMAIS modifiés : aucun travail
+    existant (transcription, traduction savante) n'est effacé ni altéré.
+    Champs d'une entrée : auteur, résumé, explication (texte ou liste de
+    paragraphes), points (liste), vocabulaire (liste {ar, translit, fr}),
+    avertissement — tous optionnels, au moins un requis."""
+    rep = depot / 'content' / 'commentaires'
+    if not rep.is_dir():
+        return {}
+    cartes = {}
+    for chemin in sorted(rep.glob('*.json')):
+        try:
+            data = json.loads(chemin.read_text(encoding='utf-8'))
+        except Exception as e:
+            avertissements.append(f'commentaires {chemin.name} illisible : {e}')
+            continue
+        if not isinstance(data, dict):
+            avertissements.append(f'commentaires {chemin.name} : objet attendu à la racine')
+            continue
+        slug = str(data.get('livre') or chemin.stem)
+        entrees = data.get('commentaires')
+        if not isinstance(entrees, dict):
+            avertissements.append(f'commentaires {chemin.name} : « commentaires » doit être un objet')
+            continue
+        carte = cartes.setdefault(slug, {})
+        for did, comm in entrees.items():
+            if isinstance(comm, dict) and any(
+                    comm.get(k) for k in ('resume', 'explication', 'points', 'vocabulaire')):
+                carte[str(did)] = comm
+            else:
+                avertissements.append(f'commentaires {chemin.name} : entrée « {did} » vide — ignorée')
+    return cartes
+
+
+def balise_ar(t):
+    """Enrobe chaque segment arabe (lettre à lettre, marques et espaces
+    internes comprises) dans <span dir="rtl" lang="ar"> — convention du
+    corpus : 0 caractère arabe hors balise RTL. À appliquer APRÈS esc()."""
+    motif = (r'([\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFDFA\uFE70-\uFEFF]'
+             r'[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFDFA\uFE70-\uFEFF'
+             r'\u0640\u064B-\u065F\u0670\u06D6-\u06ED\u060C\u061B\u061F\s]*'
+             r'[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFDFA\uFE70-\uFEFF])')
+    return re.sub(motif, lambda m: '<span dir="rtl" lang="ar">' + m.group(0) + '</span>', t)
+
+
+def section_commentaire_html(comm):
+    """Section « Commentaire pédagogique » d'une leçon ou d'une introduction.
+    S'ajoute SOUS la leçon — rien de l'existant n'est modifié. Champs lus :
+    resume, explication (str ou liste), points, vocabulaire
+    [{ar, translit, fr}], avertissement, auteur."""
+    if not comm:
+        return ''
+    parties = []
+    resume = str(comm.get('resume') or '').strip()
+    if resume:
+        parties.append(f'<p class="comm-resume">{balise_ar(esc(resume))}</p>')
+    explication = comm.get('explication') or []
+    if isinstance(explication, str):
+        explication = [explication]
+    paragraphes = [balise_ar(esc(str(p))).strip() for p in explication if str(p).strip()]
+    if paragraphes:
+        corps = ''.join(f'<p>{p}</p>' for p in paragraphes)
+        parties.append(f'<div class="comm-explication">{corps}</div>')
+    points = [str(p).strip() for p in (comm.get('points') or []) if str(p).strip()]
+    if points:
+        items = ''.join(f'<li>{balise_ar(esc(p))}</li>' for p in points)
+        parties.append(f'<h3>À retenir</h3>\n<ul class="comm-points">{items}</ul>')
+    vocab = [v for v in (comm.get('vocabulaire') or [])
+             if isinstance(v, dict) and (str(v.get('ar') or '').strip() or str(v.get('fr') or '').strip())]
+    if vocab:
+        lignes = ''.join(
+            f'<tr><td class="comm-v-ar" dir="rtl" lang="ar">{esc(str(v.get("ar") or ""))}</td>'
+            f'<td class="comm-v-tr">{esc(str(v.get("translit") or ""))}</td>'
+            f'<td class="comm-v-fr">{balise_ar(esc(str(v.get("fr") or "")))}</td></tr>'
+            for v in vocab)
+        parties.append('<h3>Vocabulaire du commentaire</h3>\n'
+                       f'<table class="comm-vocab"><tbody>{lignes}</tbody></table>')
+    avert = str(comm.get('avertissement') or '').strip()
+    if avert:
+        parties.append(f'<p class="comm-avert">{balise_ar(esc(avert))}</p>')
+    if not parties:
+        return ''
+    auteur = str(comm.get('auteur') or '').strip()
+    suite_meta = f' (rédaction : {esc(auteur)})' if auteur else ''
+    pied = (f'<p class="comm-meta">Commentaire pédagogique du site{suite_meta} — '
+            f'il accompagne la leçon et sa traduction savante sans les remplacer.</p>')
+    return (f'<section class="commentaire" id="commentaire" aria-labelledby="comm-titre">\n'
+            f'<h2 id="comm-titre"><span class="comm-med" aria-hidden="true">✧</span> '
+            f'Commentaire pédagogique '
+            f'<span class="comm-ar" dir="rtl" lang="ar">شرح الدرس</span></h2>\n'
+            + '\n'.join(parties) + '\n' + pied + '\n</section>')
+
+
 def _ld(objets):
     """Bloc <script type="application/ld+json"> (liste de dicts) ou ''."""
     if not objets:
@@ -1187,6 +1284,8 @@ def page_accueil(livres, programme, date_fr, fragments_recherche):
     n_sav_docs = (sum(1 for b in livres for l in b['lecons'] if l['ok'] and l['savante'])
                   + sum(1 for b in livres if b['intro'] and b['intro']['htmlFr'] and b['intro']['savante']))
     n_attente = n_docs - n_sav_docs
+    n_comm = (sum(1 for b in livres for l in b['lecons'] if l.get('comm'))
+              + sum(1 for b in livres if b['intro'] and b['intro'].get('comm')))
     nom_ar = programme.get('nameAr', 'المنهج النموذجي للتعليم العتيق')
     nom_fr = programme.get('nameFr') or 'Programme modèle de l’enseignement traditionnel'
     editeur_fr = programme.get('publisherFr') or 'Ministère des Habous et des Affaires islamiques — Royaume du Maroc'
@@ -1207,6 +1306,7 @@ def page_accueil(livres, programme, date_fr, fragments_recherche):
             + '<div class="cycle-corps">\n' + '\n'.join(niveaux_html) + '\n</div>\n</details>')
 
     section_savante = section_savante_html(livres, n_sav_docs, n_docs, n_attente, n_total, n_ok)
+    section_comm = section_commentaires_html(livres, n_comm, n_total)
 
     corps = f"""<section class="heros pleine" id="accueil">
 <div class="heros-interieur">
@@ -1231,7 +1331,8 @@ def page_accueil(livres, programme, date_fr, fragments_recherche):
 <main>
 {''.join(sections_html)}
 </main>
-{section_savante}"""
+{section_savante}
+{section_comm}"""
     meta_desc = (f'Sommaire des {len(livres)} manuels du المنهج النموذجي للتعليم العتيق, '
                  'rangés par niveau scolaire (primaire, collège, lycée) : leçons transcrites '
                  'mot à mot en arabe, traduction savante en français leçon par leçon. '
@@ -1325,6 +1426,56 @@ def section_savante_html(livres, n_sav_docs, n_docs, n_attente, n_total, n_ok):
 </section>"""
 
 
+def section_commentaires_html(livres, n_comm, n_total):
+    """Zone repliable « Commentaires pédagogiques » (accueil) : avancement
+    de la mission « leçon + commentaire ». Les commentaires vivent dans
+    content/commentaires/ et s'ajoutent SOUS chaque leçon — aucun travail
+    existant n'est modifié ; à la fin du projet, l'affichage pourra être
+    choisi : leçon seule, commentaire seul, ou les deux."""
+    if not n_comm:
+        return ''
+    chev = ('<span class="cycle-chev" aria-hidden="true">'
+            '<svg viewBox="0 0 24 24" width="19" height="19" fill="none" '
+            'stroke="currentColor" stroke-width="2.6" stroke-linecap="round" '
+            'stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>'
+            '</span>')
+    entrees = []
+    for b in livres:
+        n = sum(1 for l in b['lecons'] if l.get('comm'))
+        if b['intro'] and b['intro'].get('comm'):
+            n += 1
+        if n:
+            entrees.append((n, b))
+    entrees.sort(key=lambda e: (-e[0], e[1]['titleFr']))
+    lignes = ''.join(
+        f'<li><a class="comm-livre" href="livres/{esc(b["slug"])}/">{esc(b["titleFr"])}</a>'
+        f'<span class="comm-livre-ar" dir="rtl" lang="ar">{esc(b["titleAr"])}</span>'
+        f'<span class="chip-comm">✧ {n} commentaire{"s" if n > 1 else ""}</span></li>'
+        for n, b in entrees)
+    pct = round(100 * n_comm / n_total) if n_total else 0
+    meta = (f'{n_comm} / {n_total} documents ont déjà un commentaire pédagogique ({pct} %) '
+            f'— la leçon et sa traduction savante restent inchangées.')
+    return f"""<section class="zone-commentaires" id="commentaires">
+<details class="cycle cycle-comm" id="cycle-commentaires" style="--cycle:var(--olive);--cycle-nuit:var(--olive-nuit)">
+<summary class="cycle-tete" title="Déplier / replier l’avancement des commentaires pédagogiques">
+<span class="cycle-medaille" aria-hidden="true">✧</span>
+<span class="cycle-titres"><h2>Commentaires pédagogiques</h2>
+<p class="cycle-meta">{meta}</p></span>
+<span class="cycle-ar" dir="rtl" lang="ar">الشرح والتعليق</span>
+<span class="cycle-compte">{n_comm} / {n_total}</span>
+{chev}
+<span class="hors-ecran">— appuyer pour déplier ou replier l’avancement des commentaires pédagogiques</span>
+</summary>
+<div class="cycle-corps">
+<p class="savante-note">En plus de la leçon transcrite et de sa traduction savante, chaque leçon reçoit peu à peu un <strong>commentaire pédagogique</strong> rédigé par l’équipe du site : il explique la leçon, la situe dans le manuel et en tire les points à retenir. Il s’ajoute sous la leçon — rien du travail existant n’est modifié — et à la fin du projet l’affichage pourra être réglé à volonté : la leçon seule, le commentaire seul, ou les deux.</p>
+<ul class="comm-liste">
+{lignes}
+</ul>
+</div>
+</details>
+</section>"""
+
+
 def html_liste_lecons(livre):
     items = []
     if livre['intro']:
@@ -1334,7 +1485,9 @@ def html_liste_lecons(livre):
         puce_intro = (f'<span class="puce-trad sav" title="Traduction savante — rédigée à la main '
                       f'ou traduite puis relue et validée">✦ savante</span>'
                       if it.get('savante') and it.get('htmlFr') else '')
-        items.append(f'<li class="intro-l fait"><a href="introduction.html"><span class="badge" aria-hidden="true">✦</span>{lib}{puce_intro}</a></li>')
+        puce_comm_i = (f'<span class="puce-comm" title="Commentaire pédagogique disponible">'
+                       f'✧ comm.</span>') if it.get('comm') else ''
+        items.append(f'<li class="intro-l fait"><a href="introduction.html"><span class="badge" aria-hidden="true">✦</span>{lib}{puce_intro}{puce_comm_i}</a></li>')
     for l in livre['lecons']:
         badge = f'<span class="badge" aria-hidden="true">{l["num"]}</span>'
         ar = f'<span class="t-ar" dir="rtl" lang="ar">{esc(l["titleAr"])}</span>' if l['titleAr'] else ''
@@ -1346,7 +1499,9 @@ def html_liste_lecons(livre):
                     f'ou traduite puis relue et validée">✦ savante</span>' if l['savante']
                     else '<span class="puce-trad auto" title="Traduction automatique — en attente '
                          'du cap de la traduction savante">auto</span>')
-            items.append(f'<li class="fait"><a href="{url_lecon(l["docId"])}.html">{badge}{lib}{puce}</a></li>')
+            puce_comm = (f'<span class="puce-comm" title="Commentaire pédagogique disponible">'
+                         f'✧ comm.</span>') if l.get('comm') else ''
+            items.append(f'<li class="fait"><a href="{url_lecon(l["docId"])}.html">{badge}{lib}{puce}{puce_comm}</a></li>')
         else:
             items.append(f'<li class="a-faire"><span class="ligne-lecon">{badge}{lib}{pdf}</span></li>')
     return '<ol class="lecons">\n' + '\n'.join(items) + '\n</ol>'
@@ -1358,6 +1513,13 @@ def page_sommaire_livre(livre, programme_ar, date_fr):
     pct = round(100 * n_ok / n_total) if n_total else 0
     n_sav = sum(1 for l in livre['lecons'] if l['ok'] and l['savante'])
     n_att = n_ok - n_sav
+    n_comm_livre = (sum(1 for l in livre['lecons'] if l.get('comm'))
+                    + (1 if livre['intro'] and livre['intro'].get('comm') else 0))
+    ligne_comm = (f'<p class="compte comm-compte-livre">✧ {n_comm_livre} commentaire'
+                  f'{"s" if n_comm_livre > 1 else ""} pédagogique'
+                  f'{"s" if n_comm_livre > 1 else ""} rédigé'
+                  f'{"s" if n_comm_livre > 1 else ""} dans ce manuel</p>'
+                  if n_comm_livre else '')
     pdf_chip = (f'<a class="chip chip-lien" href="{esc(livre["pdfUrl"])}" target="_blank" rel="noopener">PDF du manuel</a>'
                 if livre['pdfUrl'] else '')
     fil = (f'<nav class="fil"><a href="../../index.html">Accueil</a><span class="sep">›</span>'
@@ -1377,6 +1539,7 @@ def page_sommaire_livre(livre, programme_ar, date_fr):
 <p class="compte"><strong>{n_ok} / {n_total}</strong> leçons transcrites</p></div>
 <div class="prog prog-savante"><div class="barre barre-savante"><span style="width:{round(100 * n_sav / n_ok) if n_ok else 0}%"></span></div>
 <p class="compte"><strong>{n_sav} / {n_ok}</strong> leçons en traduction savante · {n_att} en attente du cap savant</p></div>
+{ligne_comm}
 </header>
 {html_liste_lecons(livre)}
 </main>"""
@@ -1437,12 +1600,21 @@ def page_lecon(livre, lecon, prec, suiv, programme_ar, date_fr):
             f'ou traduite puis relue et validée">✦ Traduction savante</span></p>' if lecon['savante']
             else f'<p class="trad-etat"><span class="puce-trad auto" title="Traduction automatique — en attente '
                  f'du cap de la traduction savante">Traduction automatique — relecture savante en cours</span></p>')
+    # Mission « leçon + commentaire » : le commentaire s'ajoute SOUS la leçon
+    # (mode les-deux, défaut), est masqué (mode lecon) ou remplace la leçon
+    # quand il existe (mode commentaire — repli sur la leçon sinon).
+    bloc_comm = section_commentaire_html(lecon.get('comm')) if MODE_COMM != 'lecon' else ''
+    article = f'<article class="contenu">\n{lecon["htmlFr"]}\n</article>'
+    if MODE_COMM == 'commentaire' and bloc_comm:
+        corps_centre = bloc_comm
+    elif bloc_comm:
+        corps_centre = article + '\n' + bloc_comm
+    else:
+        corps_centre = article
     corps = f"""<main class="lecture">
 {fil}
 {etat}
-<article class="contenu">
-{lecon['htmlFr']}
-</article>
+{corps_centre}
 {html_pn(prec, suiv, 'index.html')}
 </main>"""
     segments = [('Accueil', BASE_URL)]
@@ -1484,11 +1656,15 @@ def page_introduction(livre, suiv, programme_ar, date_fr):
            f'{fil_niveau}'
            f'<a href="index.html">{esc(livre["titleFr"])}</a><span class="sep">›</span>'
            f'<span>{esc(it["titreFr"])}</span></nav>')
+    bloc_comm = section_commentaire_html(it.get('comm')) if MODE_COMM != 'lecon' else ''
+    if MODE_COMM == 'commentaire' and bloc_comm:
+        corps_centre = bloc_comm
+    else:
+        corps_centre = (f'<article class="contenu">\n{contenu}\n</article>'
+                        + (('\n' + bloc_comm) if bloc_comm else ''))
     corps = f"""<main class="lecture">
 {fil}
-<article class="contenu">
-{contenu}
-</article>
+{corps_centre}
 {html_pn(None, suiv, 'index.html')}
 </main>"""
     description = f"Présentation du manuel « {livre['titleFr']} » ({livre['sujetFr']}, {livre['niveauFr']})."
@@ -1707,19 +1883,23 @@ def section_livre_hl(b):
     if b['intro']:
         it = b['intro']
         contenu = it['htmlFr'] or f'<div class="intro-arabe" dir="rtl" lang="ar">\n{it["htmlAr"]}\n</div>'
+        comm_i = section_commentaire_html(it.get('comm')) if MODE_COMM != 'lecon' else ''
         blocs.append(f"""<details class="lecon intro-l" id="lec-{b['slug']}-introduction">
 <summary><span class="badge">✦</span><span class="t-ar" dir="rtl" lang="ar">{esc(it['titreAr'])}</span><span class="t-fr">{esc(it['titreFr'])}</span></summary>
 <div class="contenu">
 {contenu}
+{comm_i}
 </div>
 </details>""")
     for l in b['lecons']:
         if not l['ok']:
             continue
+        comm_l = section_commentaire_html(l.get('comm')) if MODE_COMM != 'lecon' else ''
         blocs.append(f"""<details class="lecon" id="lec-{b['slug']}-{l['docId']}" data-docid="{esc(l['docId'])}" data-titre="{esc(l['titleFr'] or l['titleAr'])}">
 <summary><span class="badge">{l['num']}</span><span class="t-ar" dir="rtl" lang="ar">{esc(l['titleAr'])}</span><span class="t-fr">{esc(l['titleFr'])}</span></summary>
 <div class="contenu">
 {l['htmlFr']}
+{comm_l}
 </div>
 </details>""")
     return f"""<section class="section-livre livre-hl" id="livre-{b['slug']}" data-slug="{b['slug']}" data-titre="{esc(b['titleFr'])}">
@@ -1835,7 +2015,14 @@ def main():
                          help='copie aussi le contenu de site/ à la racine RACINE (publication Pages)')
     parseur.add_argument('--sans-nettoyage', action='store_true',
                          help='ne supprime pas site/ avant génération (débogage)')
+    parseur.add_argument('--mode-commentaires', choices=('les-deux', 'lecon', 'commentaire'),
+                         default='les-deux',
+                         help='affichage des commentaires pédagogiques : les-deux (leçon puis '
+                              'commentaire, défaut), lecon (commentaire masqué), commentaire '
+                              '(le commentaire remplace la leçon quand il existe ; repli sur la '
+                              'leçon sinon)')
     opts = parseur.parse_args()
+    globals()['MODE_COMM'] = opts.mode_commentaires
 
     repertoire_script = Path(__file__).resolve().parent
     depot = repertoire_script.parent
@@ -1880,6 +2067,17 @@ def main():
             b['intro']['savante'] = bool(b['intro']['docId']) and (
                 b['intro']['docId'] in registre_savant
                 or f"{b['slug']}/{b['intro']['docId']}" in registre_ia2)
+    # commentaires pédagogiques (mission « leçon + commentaire »)
+    cartes_comm = charger_commentaires(depot, avertissements)
+    n_comm = 0
+    for b in livres:
+        carte = cartes_comm.get(b['slug'], {})
+        for l in b['lecons']:
+            l['comm'] = carte.get(l['docId'])
+        if b['intro']:
+            b['intro']['comm'] = carte.get(b['intro']['docId'] or 'introduction')
+        n_comm += sum(1 for l in b['lecons'] if l['comm']) \
+            + (1 if b['intro'] and b['intro']['comm'] else 0)
     # cycles ayant au moins un document transcrit -> fragments de l'index
     cycles_frag = sorted({(b['cycle'] or 'autre') for b in livres
                           if b['intro'] or any(l['ok'] for l in b['lecons'])})
@@ -2048,6 +2246,8 @@ def main():
     print(f'livres : {len(livres)} | leçons : {total_lecons} ({total_ok} transcrites) | introductions : {total_intro}')
     print(f'traduction savante : {n_sav_docs} / {n_docs} documents traduits '
           f'({n_docs - n_sav_docs} en attente du cap savant)')
+    print(f'commentaires pédagogiques : {n_comm} / {total_lecons + total_intro} documents '
+          f'(mode : {MODE_COMM})')
     print(f'pages HTML : {n_pages} | fichiers copiés à la racine : {n_copies}')
     print(f'index de recherche : {len(entrees_lecons)} documents en {len(fichiers_recherche)} fichiers '
           f'({mo_octets(octets_recherche)} — titres {mo_octets(octets_titres)} + {n_frags} fragments de texte) '
