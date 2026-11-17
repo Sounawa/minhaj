@@ -157,6 +157,25 @@ Trace: 3af9c47be21d8065-w5
   `verify-diff.py` **0 diff non autorisé**, résidu 0.
 - Push : pull --rebase + push + refetch → rev-list = 0 (EN LIGNE vérifié).
 
+## W6 — 2026-11-17 — typo fiqh-tanawi-3 docs 19500, 19503, 19515, 19517 (vague 6/8)
+Task ID: W6
+Trace: 3af9c47be21d8065-w6
+
+- Vague 6/4 docs : **19500 (23 apos), 19503 (26), 19515 (21), 19517 (49) =
+  119 apostrophes** classées **57 ʿ + 62 ʾ + 0 ’**, 0 incertaine bloquante ;
+  **879 normalisations U+202F** (210+270+219+180) ; 0 double espace.
+- Carte étendue : tawāṭuʾ, tanāzuʿ, mutaʿaddin, taʿaddud, charʿan, taʿlīl,
+  maʿdim, daʿwā, muʿaddī/muʿaddā, ʿadīm, ʿuqba, ʿichrūn, maʾrā,
+  ʾastakhliḍ/ʾastakhliṣ.
+- **2 incertaines tranchées linguistiquement + consignées** (aucun précédent
+  corpus) : (1) « 'astakhliḍ/ṣ » — hamzat **wasl** de استخلف/استخلص citée de
+  l'imprimé → rendue ʾ (convention §5) ; passable en non-transcrite selon le
+  système du manuel ; (2) « ma'rā » (مَعْرَاء, tache, Mukhtaṣar) → maʾrā
+  (hamza). À confronter au PDF quand disponible.
+- QA : `qa-lesson.py` **PASS ×4** ; `verify-diff.py` **0 diff non autorisé**.
+- Push : pull --rebase + push + refetch → rev-list = 0 (EN LIGNE vérifié).
+
+
 
 
 

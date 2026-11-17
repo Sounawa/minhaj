@@ -28,8 +28,8 @@ WORD_INITIAL_AYN = {"atīq", "afw", "iyāḍ", "abd", "amd", "arafa", "umar", "a
                     "azl", "ādiyāt", "amal", "arḍin", "arḍi", "uzila", "iṣma",
                     "aqd", "inda", "ā", "abbās", "aqār", "illa", "alīch", "alīsh",
                     "urf", "imāra", "achar", "uqbarī", "iwaḍ", "araḍ", "ayb",
-                    "ilm", "amr"}
-WORD_INITIAL_HAMZA = {"adam", "adaman", "ibtighā", "adhara"}   # ʾadam (عدم), ibtighāʾ, aʾdhara (quadrilittère)
+                    "ilm", "amr", "adīm", "uqba", "ichrūn"}
+WORD_INITIAL_HAMZA = {"adam", "adaman", "ibtighā", "adhara", "astakhli"}   # ʾadam, ibtighāʾ, aʾdhara, ʾastakhliḍ/ṣ (hamzat wasl imprimée — incertaine résiduelle consignée W6)
 WORD_FINAL = {"khul": "ʿ", "jāmi": "ʿ", "rābi": "ʿ", "raja": "ʿ", "bay": "ʿ",  # khulʿ, Jāmiʿ, rābiʿ, rajaʿa, bayʿ
               "tabarru": "ʾ", "malā": "ʾ", "khaṭā": "ʾ", "muwaṭṭa": "ʾ",
               "gharamā": "ʾ", "mawḍū": "ʾ", "ḥibā": "ʾ", "ḥidā": "ʾ",
@@ -39,7 +39,8 @@ WORD_FINAL = {"khul": "ʿ", "jāmi": "ʿ", "rābi": "ʿ", "raja": "ʿ", "bay": "
               "ra": "ʾ", "mustaṣna": "ʾ",                                       # raʾs final (رأس), mustaṣnaʾ
               "rab": "ʿ", "rub": "ʿ", "nāfi": "ʿ", "ğam": "ʿ", "māni": "ʿ",     # rabʿ, rubʿ, Nāfiʿ, ğamʿ, māniʿ
               "tachaffu": "ʿ",                                                  # tachaffuʿ
-              "ğāmi": "ʿ", "wa": "ʿ"}                                           # Ğāmiʿ, waʿd (وعد)
+              "ğāmi": "ʿ", "wa": "ʿ",                                           # Ğāmiʿ, waʿd (وعد)
+              "tawāṭu": "ʾ", "tanāzu": "ʿ"}                                     # tawāṭuʾ (تواطؤ), tanāzuʿ (تنازع)
 # couples (fin du mot avant ', début du mot après ') tranchés mot à mot —
 # la lettre entre les deux morceaux n'est pas déductible du préfixe seul :
 # taʿlīm/taʿzīr (ʿayn) mais taʾkhīr/taʾbīm (hamza) ; saʾala hamza mais aʿṭā ʿayn.
@@ -67,7 +68,11 @@ PAIR_MEDIAL = {("ta", "līm"): "ʿ", ("ta", "zīr"): "ʿ", ("ta", "khīr"): "ʾ"
                ("ta", "wīl"): "ʾ", ("i", "dār"): "ʾ", ("yu", "dhir"): "ʾ",      # taʾwīl, iʾdār, yuʾdhiru
                ("mu", "ğam"): "ʿ", ("ṭa", "ām"): "ʿ", ("ya", "nī"): "ʿ",        # muʿğam, ṭaʿām, yaʿnī
                ("ju", "l"): "ʿ", ("za", "āma"): "ʿ", ("za", "īm"): "ʿ",         # juʿl, zaʿāma, zaʿīm
-               ("a", "dhara"): "ʾ", ("wa", "d"): "ʿ", ("ba", "īr"): "ʿ"}        # aʾdhara, waʿd, baʿīr
+               ("a", "dhara"): "ʾ", ("wa", "d"): "ʿ", ("ba", "īr"): "ʿ",        # aʾdhara, waʿd, baʿīr
+               ("muta", "addin"): "ʿ", ("ta", "addud"): "ʿ",                    # mutaʿaddin, taʿaddud
+               ("char", "an"): "ʿ", ("ta", "līl"): "ʿ",                         # charʿan, taʿlīl
+               ("ma", "dim"): "ʿ", ("ma", "rā"): "ʾ",                           # maʿdim (معدم), maʾrā (مَعْرَاء — incertaine consignée)
+               ("da", "wā"): "ʿ", ("mu", "add"): "ʿ"}                           # daʿwā, muʿaddī/muʿaddā
 LONGVOWL_AYN = ("charī", "shari")   # sharīʿa : ʿayn (pas hamza) après ī
 FRENCH_ELISION = {"l", "d", "n", "s", "j", "c", "m", "t", "qu", "jusqu", "lorsqu",
                   "puisqu", "quelqu", "aujourd"}
@@ -126,7 +131,8 @@ def classify(rendered, p):
         return "ʾ", "inventaire signes (ṣ,ḍ,ṭ,ḥ,') → ʾ consigné"
     if (not prev_w or prev_w.endswith("-")) and nxt_w:         # ' initial de mot (préfixes al-, bi-, wa-…)
         nx = nxt_w.lower()
-        if nx in WORD_INITIAL_HAMZA or nx.split("-")[0] in WORD_INITIAL_HAMZA:
+        if nx in WORD_INITIAL_HAMZA or nx.split("-")[0] in WORD_INITIAL_HAMZA \
+                or any(nx.startswith(x) for x in WORD_INITIAL_HAMZA if len(x) > 4):
             return "ʾ", f"hamza initial ({prev_w or ''}{nxt_w})"
         if any(nx == x or nx.split("-")[0] == x or nx.startswith(x) for x in WORD_INITIAL_AYN):
             return "ʿ", f"ʿayn initial ({prev_w or ''}{nxt_w})"
