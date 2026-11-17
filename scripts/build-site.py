@@ -31,6 +31,7 @@ import html as html_mod
 import json
 import re
 import shutil
+import subprocess
 import sys
 from datetime import datetime
 from html.parser import HTMLParser
@@ -1663,6 +1664,43 @@ def html_liste_lecons(livre):
     return '<ol class="lecons">\n' + '\n'.join(items) + '\n</ol>'
 
 
+def activite_git(maxi=8):
+    """Dernières livraisons du dépôt (rendus automatiques [ci] exclus) —
+    alimente la section « Dernières livraisons des trois IA » de la page
+    avancement. Lecture git locale, sans réseau ; en cas d’indisponibilité
+    (git absent, clone superficiel trop court), renvoie une liste vide et la
+    section est simplement omise. Demande utilisateur R721 (c) : voir à
+    chaque poussée ce que chaque IA a livré."""
+    try:
+        fmt = '%cd\x1f%s'
+        p = subprocess.run(
+            ['git', 'log', '-16', '--no-merges',
+             '--date=format:%d/%m/%Y à %H:%M UTC', '--format=' + fmt],
+            capture_output=True, text=True, timeout=15, check=False)
+        if p.returncode != 0:
+            return []
+        lignes = []
+        for brut in p.stdout.splitlines():
+            if '\x1f' not in brut:
+                continue
+            d, sujet = brut.split('\x1f', 1)
+            if sujet.startswith('[ci]'):
+                continue  # rendu automatique — pas une livraison humaine/IA
+            zone = 'IA-1'
+            if sujet.startswith('IA-2'):
+                zone = 'IA-2'
+            elif sujet.startswith('IA-3'):
+                zone = 'IA-3'
+            if len(sujet) > 150:
+                sujet = sujet[:150].rstrip() + '…'
+            lignes.append((d, zone, sujet))
+            if len(lignes) >= maxi:
+                break
+        return lignes
+    except Exception:
+        return []
+
+
 def page_avancement(livres, programme, date_fr):
     """Page « Avancement » — documents faits / restants, par cycle et par
     manuel. Régénérée à chaque construction ; la CI reconstruit et publie le
@@ -1682,6 +1720,42 @@ def page_avancement(livres, programme, date_fr):
               + sum(1 for b in livres if b['intro'] and b['intro'].get('comm')))
     lib_cycle = {c[0]: c[1] for c in CYCLES}
     coul_cycle = {c[0]: c[4] for c in CYCLES}
+
+    # ---- activité des trois IA (dernières livraisons, lecture git locale)
+    # Zones : IA-2 = primaire (fichiers *-ep), IA-3 = collège + lycée
+    # (*-es, *-tanawi), IA-1 = site, commentaires, orchestration.
+    tot_ep = sum(len(b['lecons']) for b in livres if b['cycle'] == 'ep')
+    ok_ep = sum(1 for b in livres if b['cycle'] == 'ep'
+                for l in b['lecons'] if l['ok'])
+    tot_sup = sum(len(b['lecons']) for b in livres
+                  if b['cycle'] in ('es', 'tanawi'))
+    ok_sup = sum(1 for b in livres if b['cycle'] in ('es', 'tanawi')
+                 for l in b['lecons'] if l['ok'])
+    activite = activite_git()
+    lignes_act = []
+    coul_ia = {'IA-1': '#614f38', 'IA-2': '#4f611d', 'IA-3': '#9c4a12'}
+    for d, zone, sujet in activite:
+        lignes_act.append(
+            f'<tr><td class="n av-date">{esc(d)}</td>'
+            f'<td><span class="chip chip-sujet" style="color:{coul_ia.get(zone, "#614f38")}">{zone}</span></td>'
+            f'<td class="av-livr">{esc(sujet)}</td></tr>')
+    if activite:
+        corps_act = f"""<section class="av-bloc" id="activite">
+<h2>Dernières livraisons des trois IA</h2>
+<p class="av-note">Chaque poussée sur le dépôt déclenche automatiquement la reconstruction et la
+republication du site (CI «&nbsp;Rendu du site&nbsp;») — tous les compteurs de cette page restent donc
+synchrones des données. Trois agents travaillent en parallèle sur des zones distinctes&nbsp;:
+<b>IA-1</b> — site, commentaires pédagogiques et orchestration ({n_comm} commentaires écrits)&nbsp;;
+<b>IA-2</b> — traduction savante du primaire ({ok_ep} / {tot_ep} leçons transcrites)&nbsp;;
+<b>IA-3</b> — collège et lycée, traduction savante et fiabilité du texte ({ok_sup} / {tot_sup} leçons
+transcrites). Dernières livraisons&nbsp;:</p>
+<div class="av-table-wrap"><table class="av-table av-act">
+<thead><tr><th>Date</th><th>Agent</th><th>Livraison</th></tr></thead>
+<tbody>{chr(10).join(lignes_act)}</tbody>
+</table></div>
+</section>"""
+    else:
+        corps_act = ''
 
     # ---- synthèse par cycle (ordre de lecture)
     lignes_cycle = []
@@ -1748,6 +1822,7 @@ l’IA-1, de l’IA-2 ou de l’IA-3) déclenche une reconstruction automatique 
 </div>
 </section>
 <main>
+{corps_act}
 <section class="av-bloc">
 <h2>Synthèse par cycle</h2>
 <div class="av-table-wrap"><table class="av-table">

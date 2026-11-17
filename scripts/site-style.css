@@ -525,6 +525,11 @@ details.lecon .contenu::before,details.lecon .contenu::after{display:none}
 .av-livre .t-ar{font-family:var(--amiri);font-size:1.1rem;line-height:1.85;color:var(--encre)}
 .av-livre .t-fr{font-size:.88rem;color:var(--encre-2)}
 .av-barre{display:inline-block;width:110px;height:8px;border-radius:99px;background:var(--fond-2);border:1px solid var(--ligne-2);overflow:hidden;vertical-align:middle}
+/* Section « Dernières livraisons des trois IA » (page avancement) */
+.av-act{min-width:640px}
+.av-act .av-livr{font-size:.9rem;color:var(--encre);overflow-wrap:anywhere;max-width:720px;line-height:1.55}
+.av-act .av-date{color:var(--encre-2);font-size:.86rem}
+.av-act .chip-sujet{font-weight:700;letter-spacing:.02em;white-space:nowrap}
 .av-barre span{display:block;height:100%;border-radius:99px}
 .av-table .pct{font-size:.8rem;color:var(--encre-2);font-variant-numeric:tabular-nums;white-space:nowrap}
 .av-table .chip-sujet{background:transparent}
