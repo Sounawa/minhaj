@@ -222,6 +222,28 @@ Trace: 3af9c47be21d8065-w8
   0 soft)** ; corpus global 807 → 775 docs à défauts durs (−32 = ce livre).
 - Push : pull --rebase + push + refetch → rev-list = 0 (EN LIGNE vérifié).
 
+## W9 — 2026-11-17 — claim ulum-hadith-tanawi-1 ; typo pdf-mut23h2q-112, 113, 114, 115 (vague 1/8)
+Task ID: W9
+Trace: 3af9c47be21d8065-w9
+
+- Deuxième livre claimé : **ulum-hadith-tanawi-1** (30 docs à apostrophes
+  droites pures, aucun claim antérieur vérifié) — vague 1/4 docs :
+  **pdf-mut23h2q-112 (17 apos), 113 (9), 114 (33), 115 (27) = 86
+  apostrophes** classées **55 ʿ + 31 ʾ + 0 ’**, 0 incertaine ; **289
+  normalisations U+202F** (77+58+82+72).
+- Vocabulaire des sciences du hadith cartographié (précédents corpus
+  sondés) : **Qurʾān** (ʾ, ×15 en corpus), badʾ (بدء), muʿallal, Achʿarī,
+  Maʿālim, naʿlayn, Chuʿba, ḍaʿīf ×1, ḍaʿf, muʿḍal, mutābaʿa, munqaṭiʿ ×2.
+- Correctif outil : après la traversée des apostrophes internes
+  (dharāʾiʿ), le tail médial peut porter un ' initial — élagué
+  (`lstrip("'")`) ; et le vérificateur modélise désormais le
+  réordonnancement « + course d'espaces (l'espace fine passe devant les
+  entités, équivalent qa-lesson) — motif «&nbsp;&nbsp;\u202f →
+  «\u202f&nbsp;\u202f légitimé.
+- QA : `qa-lesson.py` **PASS ×4** ; `verify-diff.py` **0 diff non
+  autorisé** ; les 4 docs ont disparu du scan.
+- Push : pull --rebase + push + refetch → rev-list = 0 (EN LIGNE vérifié).
+
 
 
 

@@ -33,6 +33,13 @@ for k in changed:
     stats = {"apos": 0, "narrow": 0, "dbl": 0}
     i = j = 0
     while i < len(a) and j < len(b):
+        if a[i] == "«" and b[j] == "«" and j + 1 < len(b) and b[j + 1] == NAR:
+            m = re.match(r"«((?:[ \u00a0\u202f]|&nbsp;)+)", a[i:])
+            if m:                                                   # course après « : l'espace fine
+                units = re.findall(r"(?:[ \u00a0\u202f]|&nbsp;)", m.group(1))   # passe DEVANT les entités
+                rest = "".join(units[1:])                           # (équivalent qa-lesson, entités protégées)
+                if b[j + 2:j + 2 + len(rest)] == rest:
+                    stats["narrow"] += 1; i += m.end(); j += 2 + len(rest); continue
         if a[i] == b[j]:
             i += 1; j += 1; continue
         if a[i] == "'" and j < len(b) and b[j] in ALLOWED:          # apostrophe classée

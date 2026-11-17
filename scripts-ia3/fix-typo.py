@@ -46,7 +46,8 @@ WORD_FINAL = {"khul": "ʿ", "jāmi": "ʿ", "rābi": "ʿ", "raja": "ʿ", "bay": "
               "zar": "ʿ", "naf": "ʿ", "ḍ": "ʿ",                                 # zarʿ, nafʿ, racine b-ḍ-ʿ
               "rafī": "ʿ", "tafarru": "ʿ", "marāği": "ʿ",                       # Rafīʿ, tafarruʿ, marāğiʿ
               "dharā'i": "ʿ",                                                   # dharāʾiʿ (ذرائع — double signe)
-              "muwatta": "ʾ"}                                                   # Muwattaʾ (الموطأ)
+              "muwatta": "ʾ",                                                   # Muwattaʾ (الموطأ)
+              "bad": "ʾ", "mutāba": "ʿ", "munqaṭi": "ʿ"}                        # badʾ (بدء), mutābaʿa, munqaṭiʿ ×2
 # couples (fin du mot avant ', début du mot après ') tranchés mot à mot —
 # la lettre entre les deux morceaux n'est pas déductible du préfixe seul :
 # taʿlīm/taʿzīr (ʿayn) mais taʾkhīr/taʾbīm (hamza) ; saʾala hamza mais aʿṭā ʿayn.
@@ -93,7 +94,11 @@ PAIR_MEDIAL = {("ta", "līm"): "ʿ", ("ta", "zīr"): "ʿ", ("ta", "khīr"): "ʾ"
                ("maṭba", "at"): "ʿ", ("sa", "āda"): "ʾ", ("ru", "īn"): "ʾ",     # maṭbaʿa, saʾāda, Ruʾīnī (incertaine consignée)
                ("mu", "ādh"): "ʿ", ("ma", "bad"): "ʿ", ("tha", "ālab"): "ʿ",    # Muʿādh, Maʿbad, Thaʿālabī
                ("ja", "far"): "ʿ", ("mu", "jam"): "ʿ", ("mu", "āṣir"): "ʿ",     # Jaʿfarī, muʿjam, muʿāṣira
-               ("a", "rāb"): "ʿ", ("na", "īm"): "ʿ"}                            # Aʿrāb (أعراب), Naʿīm
+               ("a", "rāb"): "ʿ", ("na", "īm"): "ʿ",                            # Aʿrāb (أعراب), Naʿīm
+               ("qur", "ān"): "ʾ", ("mu", "alla"): "ʿ", ("ach", "arī"): "ʿ",    # Qurʾān ×15, muʿallal, Achʿarī
+               ("ma", "ālim"): "ʿ", ("na", "layn"): "ʿ", ("chu", "ba"): "ʿ",    # Maʿālim, naʿlayn, Chuʿba
+               ("ḍa", "īf"): "ʿ", ("ḍa", "f"): "ʿ", ("mu", "ḍal"): "ʿ",         # ḍaʿīf ×1, ḍaʿf, muʿḍal
+               ("mutāba", "a"): "ʿ"}                                            # mutābaʿa (متابعة)
 LONGVOWL_AYN = ("charī", "shari")   # sharīʿa : ʿayn (pas hamza) après ī
 FRENCH_ELISION = {"l", "d", "n", "s", "j", "c", "m", "t", "qu", "jusqu", "lorsqu",
                   "puisqu", "quelqu", "aujourd"}
@@ -172,7 +177,7 @@ def classify(rendered, p):
                 return WORD_FINAL[cand.lower()], f"carte mot final ({cand})"
         return None, f"final non cartographié ('{prev_w}')"
     if prev_w and nxt_w:                                       # ' médial
-        prev_tail = prev_w.rstrip("-").rsplit("-", 1)[-1].lower()
+        prev_tail = prev_w.rstrip("-").rsplit("-", 1)[-1].lower().lstrip("'")
         for p0, n0 in PAIR_MEDIAL:
             if prev_tail == p0 and nxt_w[:len(n0)].lower() == n0:
                 return PAIR_MEDIAL[(p0, n0)], f"carte couple ({p0}'{n0}…)"
