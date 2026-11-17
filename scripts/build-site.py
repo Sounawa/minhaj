@@ -851,26 +851,42 @@ BASE_URL = ''  # posé par main() — URL publique (og:url, JSON-LD, SearchActio
 
 def charger_registre_savant(depot, avertissements):
     """docIds à traduction SAVANTE (rédigée à la main ou traduite puis validée).
-    Source qui fait foi : scripts-translate/savant-registry.json (écrit par
-    hand-set.py / llm-translate.ts) ; savant-registry.json à la racine n'est
+    Sources : 1) scripts-translate/savant-registry.json (fait foi — écrit par
+    hand-set.py / llm-translate.ts, docIds nus) ; 2) scripts-ia2/
+    savant-registry-ia2.json (sous-registre du protocole deux-IA, docIds
+    qualifiés « livre/docId ») ; le savant-registry.json de la racine n'est
     qu'un miroir de publication — divergence = avertissement."""
     chemin = depot / 'scripts-translate' / 'savant-registry.json'
     if not chemin.exists():
         chemin = depot / 'savant-registry.json'
     if not chemin.exists():
         avertissements.append('registre savant introuvable — aucun document marqué savant')
-        return set()
+        return set(), set()
     try:
         reg = json.loads(chemin.read_text(encoding='utf-8'))
     except Exception as e:
         avertissements.append(f'registre savant illisible : {e}')
-        return set()
+        return set(), set()
     ids = {str(x) for x in reg.get('hand', [])}
     llm = reg.get('llm', {})
     if isinstance(llm, dict):
         ids |= {str(k) for k in llm}
     else:
         ids |= {str(x) for x in llm}
+    # sous-registre IA-2 (ids qualifiés « livre/docId »)
+    qual = set()
+    ia2 = depot / 'scripts-ia2' / 'savant-registry-ia2.json'
+    if ia2.exists():
+        try:
+            reg2 = json.loads(ia2.read_text(encoding='utf-8'))
+            bruts = [str(x) for x in reg2.get('hand', [])]
+            llm2 = reg2.get('llm', {})
+            bruts += [str(k) for k in llm2] if isinstance(llm2, dict) else [str(x) for x in llm2]
+            for brut in bruts:
+                if '/' in brut:
+                    qual.add(brut.strip())
+        except Exception as e:
+            avertissements.append(f'registre IA-2 illisible : {e}')
     miroir = depot / 'savant-registry.json'
     if miroir.exists() and miroir.resolve() != chemin.resolve():
         try:
@@ -879,7 +895,7 @@ def charger_registre_savant(depot, avertissements):
                                       'du registre scripts-translate (qui fait foi)')
         except Exception:
             pass
-    return ids
+    return ids, qual
 
 
 def _ld(objets):
@@ -1853,13 +1869,17 @@ def main():
     if not livres:
         print('!! aucun livre trouvé dans', rep_books)
         return 1
-    # statut « traduction savante » par document (registre hand ∪ llm)
-    registre_savant = charger_registre_savant(depot, avertissements)
+    # statut « traduction savante » par document (registre hand ∪ llm
+    # + sous-registre IA-2 en ids qualifiés « livre/docId »)
+    registre_savant, registre_ia2 = charger_registre_savant(depot, avertissements)
     for b in livres:
         for l in b['lecons']:
-            l['savante'] = l['docId'] in registre_savant
+            l['savante'] = (l['docId'] in registre_savant
+                            or f"{b['slug']}/{l['docId']}" in registre_ia2)
         if b['intro']:
-            b['intro']['savante'] = bool(b['intro']['docId']) and b['intro']['docId'] in registre_savant
+            b['intro']['savante'] = bool(b['intro']['docId']) and (
+                b['intro']['docId'] in registre_savant
+                or f"{b['slug']}/{b['intro']['docId']}" in registre_ia2)
     # cycles ayant au moins un document transcrit -> fragments de l'index
     cycles_frag = sorted({(b['cycle'] or 'autre') for b in livres
                           if b['intro'] or any(l['ok'] for l in b['lecons'])})
