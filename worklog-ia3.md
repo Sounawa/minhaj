@@ -135,6 +135,28 @@ Trace: 3af9c47be21d8065-w4
 - QA : `qa-lesson.py` **PASS ×4** ; `verify-diff.py` **0 diff non autorisé**.
 - Push : pull --rebase + push + refetch → rev-list = 0 (EN LIGNE vérifié).
 
+## W5 — 2026-11-17 — typo fiqh-tanawi-3 docs 19456, 19492, 19495, 19496 (vague 5/8) + bug entités réparé
+Task ID: W5
+Trace: 3af9c47be21d8065-w5
+
+- Vague 5/4 docs : **19456 (23 apos), 19492 (32), 19495 (61), 19496 (58) =
+  174 apostrophes** classées **122 ʿ + 52 ʾ + 0 ’**, 0 incertaine ; **1071
+  normalisations U+202F** (175+235+248+413) ; 0 double espace.
+- Carte étendue : taʾwīl (hamza), iʾdār, yuʾdhiru, aʾdhara (hamza médial),
+  waʿd, baʿīr, muʿğam, ṭaʿām, yaʿnī, juʿl, zaʿāma, zaʿīm, Ğāmiʿ, ʿilm, ʿAmr,
+  ʾadhara (hamza initiale).
+- **Bug trouvé et réparé (attrapé par verify-diff.py, jamais en ligne)** : la
+  règle générique U+202F voyait le `;` INTERNE de l'entité `&nbsp;` comme une
+  ponctuation française quand l'entité précède une balise (« `&nbsp;</p>` »
+  devenait « `&nbsp\u202f;` » — entité cassée). 5 occurrences corrigées dans
+  le livre ; `fix_text_segment` protège désormais les entités (comme
+  qa-lesson.py) après la conversion `&nbsp;+ponc → \u202f+ponc`. Les vagues
+  1-4 ne contiennent aucune occurrence du motif (verify-diff 0 diff à chaque
+  livraison) — rien à reprendre côté en ligne.
+- QA : `qa-lesson.py` **PASS ×4** (re-vérifié après réparation) ;
+  `verify-diff.py` **0 diff non autorisé**, résidu 0.
+- Push : pull --rebase + push + refetch → rev-list = 0 (EN LIGNE vérifié).
+
 
 
 

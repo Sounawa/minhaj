@@ -27,8 +27,9 @@ WORD_INITIAL_AYN = {"atīq", "afw", "iyāḍ", "abd", "amd", "arafa", "umar", "a
                     "an", "alay", "usri", "usr", "admata", "ayn", "aynin", "urūḍ",
                     "azl", "ādiyāt", "amal", "arḍin", "arḍi", "uzila", "iṣma",
                     "aqd", "inda", "ā", "abbās", "aqār", "illa", "alīch", "alīsh",
-                    "urf", "imāra", "achar", "uqbarī", "iwaḍ", "araḍ", "ayb"}
-WORD_INITIAL_HAMZA = {"adam", "adaman", "ibtighā"}          # ʾadam (عدم), ibtighāʾ (ابتغاء)
+                    "urf", "imāra", "achar", "uqbarī", "iwaḍ", "araḍ", "ayb",
+                    "ilm", "amr"}
+WORD_INITIAL_HAMZA = {"adam", "adaman", "ibtighā", "adhara"}   # ʾadam (عدم), ibtighāʾ, aʾdhara (quadrilittère)
 WORD_FINAL = {"khul": "ʿ", "jāmi": "ʿ", "rābi": "ʿ", "raja": "ʿ", "bay": "ʿ",  # khulʿ, Jāmiʿ, rābiʿ, rajaʿa, bayʿ
               "tabarru": "ʾ", "malā": "ʾ", "khaṭā": "ʾ", "muwaṭṭa": "ʾ",
               "gharamā": "ʾ", "mawḍū": "ʾ", "ḥibā": "ʾ", "ḥidā": "ʾ",
@@ -37,7 +38,8 @@ WORD_FINAL = {"khul": "ʿ", "jāmi": "ʿ", "rābi": "ʿ", "raja": "ʿ", "bay": "
               "tab": "ʿ", "sābi": "ʿ", "ṣāni": "ʿ", "waḍ": "ʿ", "manāfi": "ʿ",  # farʿ, buḍʿ, qiṭʿ, tabaʿ, tatabbaʿ, tabʿ, sābiʿ, ṣāniʿ, waḍʿ, manāfiʿ
               "ra": "ʾ", "mustaṣna": "ʾ",                                       # raʾs final (رأس), mustaṣnaʾ
               "rab": "ʿ", "rub": "ʿ", "nāfi": "ʿ", "ğam": "ʿ", "māni": "ʿ",     # rabʿ, rubʿ, Nāfiʿ, ğamʿ, māniʿ
-              "tachaffu": "ʿ"}                                                  # tachaffuʿ
+              "tachaffu": "ʿ",                                                  # tachaffuʿ
+              "ğāmi": "ʿ", "wa": "ʿ"}                                           # Ğāmiʿ, waʿd (وعد)
 # couples (fin du mot avant ', début du mot après ') tranchés mot à mot —
 # la lettre entre les deux morceaux n'est pas déductible du préfixe seul :
 # taʿlīm/taʿzīr (ʿayn) mais taʾkhīr/taʾbīm (hamza) ; saʾala hamza mais aʿṭā ʿayn.
@@ -61,7 +63,11 @@ PAIR_MEDIAL = {("ta", "līm"): "ʿ", ("ta", "zīr"): "ʿ", ("ta", "khīr"): "ʾ"
                ("mu", "akhk"): "ʾ",                                             # muʾakhkhar
                ("char", "ī"): "ʿ", ("chaf", "a"): "ʿ",                          # charʿī, chafʿa
                ("musta", "rā"): "ʿ", ("isti", "rā"): "ʿ",                       # mustaʿrāʾ, istiʿrāʾ
-               ("manfa", "a"): "ʿ"}                                             # manfaʿa (منفعة)
+               ("manfa", "a"): "ʿ",                                             # manfaʿa (منفعة)
+               ("ta", "wīl"): "ʾ", ("i", "dār"): "ʾ", ("yu", "dhir"): "ʾ",      # taʾwīl, iʾdār, yuʾdhiru
+               ("mu", "ğam"): "ʿ", ("ṭa", "ām"): "ʿ", ("ya", "nī"): "ʿ",        # muʿğam, ṭaʿām, yaʿnī
+               ("ju", "l"): "ʿ", ("za", "āma"): "ʿ", ("za", "īm"): "ʿ",         # juʿl, zaʿāma, zaʿīm
+               ("a", "dhara"): "ʾ", ("wa", "d"): "ʿ", ("ba", "īr"): "ʿ"}        # aʾdhara, waʿd, baʿīr
 LONGVOWL_AYN = ("charī", "shari")   # sharīʿa : ʿayn (pas hamza) après ī
 FRENCH_ELISION = {"l", "d", "n", "s", "j", "c", "m", "t", "qu", "jusqu", "lorsqu",
                   "puisqu", "quelqu", "aujourd"}
@@ -149,12 +155,20 @@ def classify(rendered, p):
 
 
 def fix_text_segment(s):
-    """U+202F + doubles espaces (règles de qa-lesson.py, entités &nbsp; incluses)."""
+    """U+202F + doubles espaces (règles de qa-lesson.py). Les entités sont
+    converties avant ponc (&nbsp;: → \u202f:) puis PROTÉGÉES — leur ';' interne
+    ne doit jamais être pris pour une ponctuation française."""
     s = re.sub(r"&nbsp;(?=[;:!?»])", NARROW, s)
     s = s.replace("«&nbsp;", "«" + NARROW)
+    ents = []
+    def _p(m):
+        ents.append(m.group(0))
+        return "\x00%d\x00" % (len(ents) - 1)
+    s = re.sub(r"&[a-zA-Z]+;|&#\d+;", _p, s)
     s = re.sub(r"[ \u00a0\u202f]*([;:!?»])", NARROW + r"\1", s)
     s = re.sub(r"«[ \u00a0\u202f]*", "«" + NARROW, s)
     s = re.sub(r" {2,}", " ", s)
+    s = re.sub(r"\x00(\d+)\x00", lambda m: ents[int(m.group(1))], s)
     return s
 
 
