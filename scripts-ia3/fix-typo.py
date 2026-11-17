@@ -47,7 +47,8 @@ WORD_FINAL = {"khul": "ʿ", "jāmi": "ʿ", "rābi": "ʿ", "raja": "ʿ", "bay": "
               "rafī": "ʿ", "tafarru": "ʿ", "marāği": "ʿ",                       # Rafīʿ, tafarruʿ, marāğiʿ
               "dharā'i": "ʿ",                                                   # dharāʾiʿ (ذرائع — double signe)
               "muwatta": "ʾ",                                                   # Muwattaʾ (الموطأ)
-              "bad": "ʾ", "mutāba": "ʿ", "munqaṭi": "ʿ"}                        # badʾ (بدء), mutābaʿa, munqaṭiʿ ×2
+              "bad": "ʾ", "mutāba": "ʿ", "munqaṭi": "ʿ",                        # badʾ (بدء), mutābaʿa, munqaṭiʿ ×2
+              "tābi": "ʿ", "nasa": "ʿ", "yabda": "ʾ", "yuwamma": "ʾ"}           # tābiʿ, Nasaʿī, yabdaʾ, yuwammaʾ
 # couples (fin du mot avant ', début du mot après ') tranchés mot à mot —
 # la lettre entre les deux morceaux n'est pas déductible du préfixe seul :
 # taʿlīm/taʿzīr (ʿayn) mais taʾkhīr/taʾbīm (hamza) ; saʾala hamza mais aʿṭā ʿayn.
@@ -95,11 +96,16 @@ PAIR_MEDIAL = {("ta", "līm"): "ʿ", ("ta", "zīr"): "ʿ", ("ta", "khīr"): "ʾ"
                ("mu", "ādh"): "ʿ", ("ma", "bad"): "ʿ", ("tha", "ālab"): "ʿ",    # Muʿādh, Maʿbad, Thaʿālabī
                ("ja", "far"): "ʿ", ("mu", "jam"): "ʿ", ("mu", "āṣir"): "ʿ",     # Jaʿfarī, muʿjam, muʿāṣira
                ("a", "rāb"): "ʿ", ("na", "īm"): "ʿ",                            # Aʿrāb (أعراب), Naʿīm
+               ("isti", "āra"): "ʿ",                                            # CORRECTION W10 : istiʿāra = الاستعارة ʿayn (était ʾ — erreur)
                ("qur", "ān"): "ʾ", ("mu", "alla"): "ʿ", ("ach", "arī"): "ʿ",    # Qurʾān ×15, muʿallal, Achʿarī
                ("ma", "ālim"): "ʿ", ("na", "layn"): "ʿ", ("chu", "ba"): "ʿ",    # Maʿālim, naʿlayn, Chuʿba
                ("ḍa", "īf"): "ʿ", ("ḍa", "f"): "ʿ", ("mu", "ḍal"): "ʿ",         # ḍaʿīf ×1, ḍaʿf, muʿḍal
-               ("mutāba", "a"): "ʿ"}                                            # mutābaʿa (متابعة)
-LONGVOWL_AYN = ("charī", "shari")   # sharīʿa : ʿayn (pas hamza) après ī
+               ("mutāba", "a"): "ʿ",                                            # mutābaʿa (متابعة)
+               ("tābi", "ūn"): "ʿ", ("bardha", "ī"): "ʿ", ("isti", "āna"): "ʿ", # tābiʿūn, Bardhaʿī, istiʿāna
+               ("a", "raj"): "ʿ", ("ma", "rifa"): "ʿ", ("yu", "tar"): "ʿ",      # Aʿraj, Maʿrifa, yuʿtar
+               ("mu", "tazi"): "ʿ", ("mutāba", "āt"): "ʿ", ("dhu", "ayb"): "ʿ", # muʿtazilite, mutābaʿāt, Dhuʿayb
+               ("yaj", "al"): "ʾ", ("nasa", "ī"): "ʿ", ("yuwamma", "u"): "ʾ"}   # yajʿal, Nasaʿī, yuwammaʾu
+LONGVOWL_AYN = ("charī", "shari", "maqṭū")   # sharīʿa / maqṭūʿ : ʿayn (pas hamza) après ī/ū
 FRENCH_ELISION = {"l", "d", "n", "s", "j", "c", "m", "t", "qu", "jusqu", "lorsqu",
                   "puisqu", "quelqu", "aujourd"}
 ARABIC = re.compile(r"[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDF9\uFDFB-\uFDFF\uFE70-\uFEFF]")

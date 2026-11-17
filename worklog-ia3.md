@@ -244,6 +244,27 @@ Trace: 3af9c47be21d8065-w9
   autorisé** ; les 4 docs ont disparu du scan.
 - Push : pull --rebase + push + refetch → rev-list = 0 (EN LIGNE vérifié).
 
+## W10 — 2026-11-17 — typo ulum-hadith-tanawi-1 pdf-mut23h2q-116, 117, 118, 119 (vague 2/8) + correction istiʿāra
+Task ID: W10
+Trace: 3af9c47be21d8065-w10
+
+- Vague 2/4 docs : **pdf-mut23h2q-116 (95 apos), 117 (55), 118 (36),
+  119 (77) = 263 apostrophes** classées **160 ʿ + 103 ʾ + 0 ’**, 0
+  incertaine ; **350 normalisations U+202F** (94+70+90+96).
+- Carte étendue (tābiʿ/tābiʿūn/mutābaʿa/ʿāt, maqṭūʿ — exception
+  long-vowel pour ū, muʿallal, Qurʾān, badʾ, Achʿarī, Maʿālim, naʿlayn,
+  Chuʿba, ḍaʿīf/ḍaʿf, muʿḍal, Bardhaʿī, istiʿāna, Aʿraj, Maʿrifa, yuʿtar,
+  muʿtazilite, Dhuʿayb, yajʿal, Nasaʿī, yuwammaʾu).
+- **Correction de MON propre contenu W7/W8 (livre 1, doc 19756)** : deux
+  « istiʾāra » (استعارة = ʿAYN, pas hamza) — posées à tort ʾ par la carte
+  ("isti","āra") — réparées en istiʿāra (le mot est scindé par une balise
+  <em>, d'où la recherche contiguë manquée au premier passage) ;
+  l'entrée de carte est corrigée (« isti », « āra ») → ʿ. istiʾlāf
+  (استئلاف, hamza) reste correct. Consigné comme leçon : les mots
+  translittérés scindés par balises échappent aux sondages contigus.
+- QA : `qa-lesson.py` **PASS ×4** ; `verify-diff.py` **0 diff non autorisé**.
+- Push : pull --rebase + push + refetch → rev-list = 0 (EN LIGNE vérifié).
+
 
 
 
