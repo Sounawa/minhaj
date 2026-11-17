@@ -61,3 +61,15 @@ Trace: 3af9c47be21d8065-w1
   **échec (aucun token)**. État : 1 livraison locale non poussée (la seule
   autorisée). Dès réception du token : `git push origin main` puis aligner les
   compteurs. `scripts-ia3/tmp/` (scan + extraits QA) volontairement non suivi git.
+- **Complément W1 — push vérifié EN LIGNE** : token reçu de l'utilisateur (17 nov.) ;
+  `git pull --rebase origin main` (up to date) puis push → `3c45e8b..263f8ca
+  HEAD -> main` ; refetch : `rev-list origin/main..HEAD = 0`, origin/main =
+  263f8ca. **EN LIGNE vérifié** avant consignation (le point manqué du R716 ne
+  sera pas refait).
+  Incident d'environnement consigné : un premier push lancé sans `cd` explicite
+  est parti sur le bac IA-1 (cwd du tour réinitialisé) et a déclenché un fetch
+  complet (~2,9 Go) sur ce bac — tué avant tout rebase/push, `tmp_pack_*`
+  supprimés, HEAD du bac IA-1 vérifié intact (1f6be86), livraison IA-3 intacte.
+  Règle IA-3 adoptée : toujours `git -C /home/z/my-project/minhaj-repo …` ;
+  token uniquement dans les commandes, jamais dans un fichier suivi ni un journal.
+
