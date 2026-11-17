@@ -203,6 +203,23 @@ PAIR_MEDIAL.update({
     ("nu", "mān"): "ʿ", ("ru", "aynī"): "ʾ",                                     # al-Nuʿmān, al-Ḥaṭṭāb al-Ruʾaynī (الرُّؤَيْنِي hamza, d. 954 H)
     ("ta", "ajjal"): "ʿ", ("ta", "ajjala"): "ʿ", ("ta", "yīn"): "ʿ",             # taʿajjala (تعجّل ʿayn, ≠ taʾajjala), taʿyīn
     ("yardu", "u"): "ʾ", ("ḍay", "a"): "ʾ", ("ṭubi", "a"): "ʿ"})                 # yarduʾa (ر-ض-أ), ḍayʾa (ضَيْئة loss), ṭubiʿa
+# W19 (faraid-tanawi-3, cartes R714-R715d + arbitrages du tour) — couples médiaux :
+PAIR_MEDIAL.update({
+    ("ba", "charīna"): "ʿ", ("da", "m"): "ʿ",                                    # bacharīna (بشر), daʿm (دعم)
+    ("chay", "u"): "ʾ", ("chā'i", "in"): "ʾ",                                    # chayʾu/chāʾiʾin (شيء, graphie ch du tirage)
+    ("imru", "un"): "ʾ", ("qor", "ān"): "ʾ",                                     # imruʾun (امرؤ), Qorʾān (graphie q)
+    ("joum", "a"): "ʿ", ("joum", "āt"): "ʿ", ("jāmi", "a"): "ʿ",                 # joumʿa/āt, jāmiʿa
+    ("ma", "jam"): "ʿ", ("ma", "āda"): "ʿ",                                      # majmaʿ, maʿāda
+    ("mas", "ala"): "ʾ", ("mas", "alatayn"): "ʾ", ("yas", "alūnaka"): "ʾ",       # masʾala(tayn) (مسألة), yasʾalūnaka
+    ("mu", "tabara"): "ʿ", ("mu", "tiq"): "ʿ", ("mu", "ūnat"): "ʿ",              # muʿtabar, muʿtiq, muʿūnat
+    ("muta", "addid"): "ʿ", ("ta", "malu"): "ʿ", ("ta", "mīr"): "ʿ",             # mutaʿaddid, taʿmalu, taʿmīr(i)
+    ("ta", "mīri"): "ʿ", ("ta", "sīb"): "ʿ", ("ta", "ṣīl"): "ʿ",                 # taʿmīri, taʿṣīb (التعصيب), taʿṣīl
+    ("ta", "ṣīb"): "ʿ", ("ta", "īl"): "ʿ",                                       # taʿṣīb, taʿīl (التعييل — lecture du tirage consignée, canon taʾyīl?)
+    ("rubu", "in"): "ʿ", ("rubu", "u"): "ʿ",                                     # rubuʿ (الرُّبْع, Nisāʾ 4:12 — révision du supp ʾ, canon ʿayn)
+    ("wada", "at"): "ʿ", ("ya", "ūdu"): "ʿ", ("ya", "ūlu"): "ʿ",                 # wadaʿat, yaʿūdu/yaʿūlu (ع-و-د/ع-و-ل)
+    ("ya", "tī"): "ʾ"})                                                          # yaʾtī (يأتي)
+# W19 — finales :
+WORD_FINAL.update({"khurqa": "ʾ", "man": "ʿ"})                                  # khurqaʾ (الخُرْقَاء?, supp), manaʿ (مَنْع)
 # W18 — finales :
 WORD_FINAL.update({"al-mubaṭ": "ʾ", "mubaṭ": "ʾ", "al-mustaṣni": "ʿ",           # al-mubaṭʾ (المُبَطْأ), al-mustaṣniʿ
                    "mustaṣni": "ʿ", "al-tafri": "ʿ", "tafri": "ʿ",              # (A)l-Tafriʿ (التفريع)
@@ -318,6 +335,8 @@ def classify(rendered, p):
     if prev_w and nxt_w:                                       # ' médial
         if prev_w.lower().endswith("bat") and nxt_w == "an":
             return "t", "bat'an = باتًّا (l'apostrophe rend le tāʾ géminé — consigné R714/W17)"
+        if prev_w.lower().endswith("tabā") and nxt_w == "in":
+            return "y", "tabā'in = التَّبَايُن (l'apostrophe rend le yāʾ radical — consigné R715/W19, parallèle at-tabāyun déjà écrit)"
         prev_tail = prev_w.rstrip("-").rsplit("-", 1)[-1].lower().strip("'")
         for p0, n0 in sorted(PAIR_MEDIAL, key=lambda k: -len(k[1])):  # préfixes les plus longs d'abord
             if prev_tail == p0 and nxt_w[:len(n0)].lower() == n0:

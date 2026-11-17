@@ -47,6 +47,9 @@ for k in changed:
         if (a[i] == "'" and j < len(b) and b[j] == "t"              # bat'an → battan (باتًّا, tāʾ géminé — consigné R714/W17)
                 and a[i-3:i] == "bat" and a[i+1:i+3] == "an"):
             stats["apos"] += 1; i += 1; j += 1; continue
+        if (a[i] == "'" and j < len(b) and b[j] == "y"              # tabā'in → tabāyun (التَّبَايُن, yāʾ radical — consigné R715/W19)
+                and a[i+1:i+3] == "in" and (a[i-4:i] == "tabā" or a[i-5:i] == "</em>")):
+            stats["apos"] += 1; i += 1; j += 1; continue
         # course d'espaces/entité dans a → \u202f dans b (avant ponc, après «, partout) :
         # b[j]==NNBSP et b[j+1] == le caractère qui suit la course dans a
         if b[j] == NAR:

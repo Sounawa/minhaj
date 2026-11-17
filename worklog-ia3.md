@@ -511,3 +511,37 @@ Trace: 1a1d675aa095fb41-w18
   (credential-helper one-shot, zéro trace disque ; W17a+W17 poussés juste
   avant : a190eea, rev-list 0 vérifié).
 
+
+## W19 — 2026-11-17 — typo faraid-tanawi-3, 20/20 docs (LIVRE 5 TERMINÉ) — cartes R714-R715d récupérées
+Task ID: W19
+Trace: 1a1d675aa095fb41-w19
+
+- Livraison : **20/20 docs faraid-tanawi-3 — 696 apostrophes droites
+  classées** : **445 ʿ + 249 ʾ** + **2 tabā'in → tabāyun** (' → y,
+  التَّبَايُن, yāʾ radical — consigné R715, parallèle at-tabāyun déjà écrit
+  ×5 dans le livre ; autorisation verify-diff bornée au contexte
+  «tabā|in» incl. la frontière de balise «at-tabā</em>'in») + **4004
+  U+202F** (356→4360). docIds pdf-mut23h2v/w-* (format sans chiffres seuls
+  — builder W715 déjà corrigée pour ce format).
+- Arbitrage : dry 532 classées + 164 incertaines → **164/164 résolues** par
+  w2-far3-supp.json (l'arbitrage R715-R715d couvrait tout le livre), 0 à
+  arbitrer.
+- Révisions consignées (supplantent le supp) : **rubuʿ** ×3 (الرُّبْع, le
+  quart — Nisāʾ 4:12 «fa-lakumu r-rubuʿu» ; le supp ʾ était fautif, canon
+  ʿayn sans précédent corpus).
+- Décisions supp conservées et consignées : **taʿīl** (التعييل — lecture du
+  tirage ʿ conservée, canon attendu taʾyīl التأييل — image à confirmer au
+  prochain passage PDF) ; masʾala(tayn), yasʾalūnaka, imruʾun, yaʾtī,
+  chayʾu/chāʾiʾin (graphie ch), Qorʾān (graphie q), daʿm, joumʿa/āt,
+  jāmiʿa, majmaʿ, maʿāda, muʿtabar, muʿtiq, muʿūnat, mutaʿaddid, taʿmalu,
+  taʿmīr(i), taʿṣīb/taʿṣīl, wadaʿat, yaʿūdu/yaʿūlu, bacharīna, manaʿ,
+  khurqaʾ (supp).
+- Carte étendue : 31 couples médiaux + 2 finales + règles spéciales
+  tabā'in/bat'an (' → y/t, autorisations verify-diff bornées).
+- QA : qa-lesson **PASS ×20**, **verify-diff 0 diff non autorisé** (après
+  correction de la borne balise), comptes 445+249+2 = 696 = total exact ;
+  **faraid-tanawi-3 disparu du scan (0 dur)** — corpus global
+  **693 → 674 docs à défauts durs** (29 livres restants, ~41 400 ').
+- Push : commit local poussé au tour même (credential-helper one-shot,
+  zéro trace disque).
+
