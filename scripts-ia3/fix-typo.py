@@ -33,7 +33,7 @@ WORD_INITIAL_AYN = {"atīq", "afw", "iyāḍ", "abd", "amd", "arafa", "umar", "a
                     "azīz", "ulamā", "awad", "uthmān", "arabī"}
 WORD_INITIAL_HAMZA = {"adam", "adaman", "ibtighā", "adhara", "astakhli",
                       "aw", "aḥad", "idhā", "ilā", "abīhi", "innī", "innamā",
-                      "ab'adakanna"}   # ʾadam, ibtighāʾ, aʾdhara, ʾastakhliḍ/ṣ, ʾaw, ʾaḥadukum, ʾilā, ʾabīhi, ʾinnī, ʾinnamā, ʾab'adakanna (print)
+                      "ab'adakanna", "andād"}   # ʾadam, ibtighāʾ, aʾdhara, ʾastakhliḍ/ṣ, ʾaw, ʾaḥadukum, ʾilā, ʾabīhi, ʾinnī, ʾinnamā, ʾab'adakanna (print), ʾandād
 WORD_FINAL = {"khul": "ʿ", "jāmi": "ʿ", "rābi": "ʿ", "raja": "ʿ", "bay": "ʿ",  # khulʿ, Jāmiʿ, rābiʿ, rajaʿa, bayʿ
               "tabarru": "ʾ", "malā": "ʾ", "khaṭā": "ʾ", "muwaṭṭa": "ʾ",
               "gharamā": "ʾ", "mawḍū": "ʾ", "ḥibā": "ʾ", "ḥidā": "ʾ",
@@ -60,7 +60,9 @@ WORD_FINAL = {"khul": "ʿ", "jāmi": "ʿ", "rābi": "ʿ", "raja": "ʿ", "bay": "
               "san": "ʿ",                                                       # sanʿ (OCR cité — récusé)
               "muqri": "ʿ",                                                     # muqriʿ (المقرئ)
               "naw": "ʿ",                                                       # nawʿ (النوع)
-              "mukhtara": "ʾ", "yatabawwa": "ʾ"}                                # mukhtaraʾ (المختار), yatabawwaʾ
+              "mukhtara": "ʾ", "yatabawwa": "ʾ",                                # mukhtaraʾ (المختار), yatabawwaʾ
+              "qawāṭi": "ʿ", "mal": "ʾ",                                        # Qawāṭiʿ, Malʾ (ملء)
+              "marāji": "ʿ"}                                                    # marājiʿ (المراجع, graphie j)
 # couples (fin du mot avant ', début du mot après ') tranchés mot à mot —
 # la lettre entre les deux morceaux n'est pas déductible du préfixe seul :
 # taʿlīm/taʿzīr (ʿayn) mais taʾkhīr/taʾbīm (hamza) ; saʾala hamza mais aʿṭā ʿayn.
@@ -168,8 +170,14 @@ PAIR_MEDIAL = {("ta", "līm"): "ʿ", ("ta", "zīr"): "ʿ", ("ta", "khīr"): "ʾ"
                ("yaqi", "u"): "ʿ", ("yaqṭa", "uhā"): "ʿ", ("ya", "idu"): "ʾ",   # yaqiʿu, yaqṭaʿuhā, yaʾidu (OCR récusé — consignée)
                ("i", "jām"): "ʿ",                                               # iʿjām (الإعجام)
                ("a", "rāḍi"): "ʿ", ("arba", "in"): "ʾ", ("ṭa", "n"): "ʿ",       # aʿrāḍi, arbaʿin, ṭaʿn
-               ("ta", "ālā"): "ʿ", ("ya", "tuddu"): "ʿ", ("tibi", "ī"): "ʿ"}    # taʿālā, yaʿtuddu, Tibiʿī (forme fautive)
+               ("ta", "ālā"): "ʿ", ("ya", "tuddu"): "ʿ", ("tibi", "ī"): "ʿ",    # taʿālā, yaʿtuddu, Tibiʿī (forme fautive)
+               ("mu", "ṭī"): "ʿ", ("qal", "ajī"): "ʿ", ("ma", "ānī"): "ʿ",      # Muʿṭī, Qalʿajī, maʿānī
+               ("mu", "aẓẓam"): "ʿ", ("ya", "lā"): "ʿ", ("am", "an"): "ʾ",      # Muʿaẓẓam, Yaʿlā, al-amʾan (المأمن, print)
+               ("wāqi", "ayn"): "ʿ", ("mu", "all"): "ʿ",                        # wāqiʿayn, muʿall (المعلّ)
+               ("mun", "im"): "ʿ", ("maṭba", "a"): "ʿ", ("mu", "minīn"): "ʾ",   # Munʿim, Maṭbaʿa, muʾminīn
+               ("arna", "ūṭ"): "ʾ"}                                             # Arnaʾūṭ (الأرناؤط)
 WORD_FINAL["yatawaḍḍa"] = "ʾ"                                                   # yatawaḍḍaʾ (توضأ)
+WORD_FINAL["bayyi"] = "ʿ"                                                       # al-Bayyiʿ
 LONGVOWL_AYN = ("charī", "shari", "maqṭū", "marfū", "wuqū", "mawḍū", "ṣanū")   # ʿayn après ī/ū : sharīʿa, maqṭūʿ, marfūʿ, wuqūʿ, mawḍūʿ, ṣanūʿ
 FRENCH_ELISION = {"l", "d", "n", "s", "j", "c", "m", "t", "qu", "jusqu", "lorsqu",
                   "puisqu", "quelqu", "aujourd"}

@@ -361,3 +361,54 @@ Trace: 3af9c47be21d8065-w15
   print douteux) ; « ya'idu » rendu yaʾidu (token OCR récusé par le doc).
 - QA : `qa-lesson.py` **PASS ×4** ; `verify-diff.py` **0 diff non autorisé**.
 - Push : pull --rebase + push + refetch → rev-list = 0 (EN LIGNE vérifié).
+
+## W16 — 2026-11-17 — typo ulum-hadith-tanawi-1 pdf-mut23h2r-140, 141 (vague 8/8) — LIVRE 2 TERMINÉ
+Task ID: W16
+Trace: 3af9c47be21d8065-w16
+
+- Vague 8/2 docs (bibliographie du livre) : **pdf-mut23h2r-140 (110 apos),
+  141 (171) = 281 apostrophes** classées **224 ʿ + 57 ʾ + 0 ’**, 0
+  incertaine ; **372 normalisations U+202F** (149+223).
+- Carte étendue : Arnaʾūṭ, al-Bayyiʿ, marājiʿ (graphie j), Munʿim,
+  Maṭbaʿa, muʾminīn, Qawāṭiʿ, Malʾ (ملء), Muʿṭī, Qalʿajī, maʿānī,
+  Muʿaẓẓam, Yaʿlā, al-amʾan (المأمن, print), wāqiʿayn, muʿall, ʾandād
+  (hamza initiale).
+- QA : `qa-lesson.py` **PASS ×2** ; `verify-diff.py` **0 diff non autorisé**.
+- **BILAN DU LIVRE 2 ulum-hadith-tanawi-1 (claim W9, terminé W16)** :
+  30/30 leçons corrigées — **2265 apostrophes droites classées**
+  (somme exacte W9-W16) et **3919 normalisations U+202F** ; 0 incertaine
+  bloquante ; incertaines résiduelles déjà consignées (muʾʾan, yaʿhadu,
+  yaʾidu, ḍaʾāmahu, muʾaḍḍal — tokens d'imprimé/OCR douteux, à confronter
+  au PDF). Scan global après livre : **ulum-hadith-tanawi-1 disparu du
+  rapport qa_corpus (0 dur, 0 soft)** ; corpus global 775 → 745 docs à
+  défauts durs (−30 = ce livre).
+- Push : pull --rebase + push + refetch → rev-list = 0 (EN LIGNE vérifié).
+
+## BILAN DE SESSION IA-3 (W1-W16, 17 nov. 2026)
+Task ID: W-bilan
+Trace: 3af9c47be21d8065-w16
+
+- **2 livres terminés, 62 documents corrigés, tout EN LIGNE** (aucune
+  livraison non poussée) :
+  - fiqh-tanawi-3 : 32/32 leçons — 1099 apostrophes (711 ʿ + 387 ʾ + 1 ’)
+    + 6900 U+202F (W1-W8) ;
+  - ulum-hadith-tanawi-1 : 30/30 leçons — 2265 apostrophes (W9-W16)
+    + 3919 U+202F.
+  - Total : **3364 apostrophes droites classées + 10 819 normalisations
+    U+202F** sur 62 docs, QA qa-lesson PASS à chaque doc, verify-diff 0
+    diff non autorisé à chaque livraison, corpus global 807 → 745 docs à
+    défauts durs (−62 = ces deux livres).
+- Reste du rapport Z1 à couvrir (13 livres, ~289 docs à défauts durs) :
+  tafsir-tanawi-1 (32, avec guillemets/balises/arabe à trier), fiqh-tanawi-1
+  (31), hadith-tanawi-1 (30), mantiq-tanawi-1 (30), taqtit-tanawi-1 (28),
+  ulum-hadith-tanawi-2 (27), qiraat-tanawi-1 (22), fiqh-tanawi-2 (21),
+  tafsir-tanawi-2 (21, 19 arabes hors span à examiner), faraid-tanawi-3 (19),
+  faraid-tanawi-2 (17), hadith-tanawi-2 (1), + les 2 corrections de contenu
+  déjà faites (entités &nbsp; wave 5, istiʿāra W10) consignées.
+- Outils livrés dans scripts-ia3/ : fix-typo.py (règles + carte de mots
+  vérifiée, protège entités, traverse apostrophes internes), verify-diff.py
+  (vérification indépendante de chaque livraison), probe-words.py (sondages
+  de précédents) ; tmp/ non suivi git.
+- Incertaines résiduelles cumulées consignées (à confronter au PDF) :
+  muʾʾan, ʾastakhliḍ/ṣ (wasl), maʾrā, Ruʾīnī, muʾaḍḍal, yaʿhadu, yaʾidu,
+  ḍaʾāmahu, al-āfiʾī, inventaire de signes (ṣ,ḍ,ṭ,ḥ,ʾ) ×4.
