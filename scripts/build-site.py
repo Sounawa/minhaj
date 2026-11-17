@@ -1166,6 +1166,11 @@ def page_introduction(livre, suiv, programme_ar, date_fr):
         contenu = it['htmlFr']
     else:
         contenu = f'<div class="intro-arabe" dir="rtl" lang="ar">\n{it["htmlAr"]}\n</div>'
+    # Titre h1 garanti sur chaque page d'introduction (accessibilité / hiérarchie)
+    # — seulement si le contenu n'en apporte pas déjà un.
+    if '<h1' not in contenu.lower():
+        titre_h1 = esc(it['titreFr'] or 'Présentation du manuel')
+        contenu = f'<h1>{titre_h1}</h1>\n{contenu}'
     fil_niveau = (f'<a href="../../index.html#niveau-{esc(livre["niveauId"])}">{esc(livre["niveauFr"])}</a><span class="sep">›</span>'
                   if livre['niveauId'] else '')
     fil = (f'<nav class="fil"><a href="../../index.html">Accueil</a><span class="sep">›</span>'
