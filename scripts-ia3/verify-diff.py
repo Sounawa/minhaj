@@ -44,6 +44,9 @@ for k in changed:
             i += 1; j += 1; continue
         if a[i] == "'" and j < len(b) and b[j] in ALLOWED:          # apostrophe classée
             stats["apos"] += 1; i += 1; j += 1; continue
+        if (a[i] == "'" and j < len(b) and b[j] == "t"              # bat'an → battan (باتًّا, tāʾ géminé — consigné R714/W17)
+                and a[i-3:i] == "bat" and a[i+1:i+3] == "an"):
+            stats["apos"] += 1; i += 1; j += 1; continue
         # course d'espaces/entité dans a → \u202f dans b (avant ponc, après «, partout) :
         # b[j]==NNBSP et b[j+1] == le caractère qui suit la course dans a
         if b[j] == NAR:

@@ -33,7 +33,8 @@ WORD_INITIAL_AYN = {"atīq", "afw", "iyāḍ", "abd", "amd", "arafa", "umar", "a
                     "azīz", "ulamā", "awad", "uthmān", "arabī"}
 WORD_INITIAL_HAMZA = {"adam", "adaman", "ibtighā", "adhara", "astakhli",
                       "aw", "aḥad", "idhā", "ilā", "abīhi", "innī", "innamā",
-                      "ab'adakanna", "andād"}   # ʾadam, ibtighāʾ, aʾdhara, ʾastakhliḍ/ṣ, ʾaw, ʾaḥadukum, ʾilā, ʾabīhi, ʾinnī, ʾinnamā, ʾab'adakanna (print), ʾandād
+                      "ab'adakanna", "andād",                       # ʾadam, ibtighāʾ, aʾdhara, ʾastakhliḍ/ṣ, ʾaw, ʾaḥadukum, ʾilā, ʾabīhi, ʾinnī, ʾinnamā, ʾab'adakanna (print), ʾandād
+                      "aṭaytuk", "ujjila", "alif"}                  # W17 (fiqh-tanawi-1) : ʾataytuk (أتيتك), ʾujjila (أُجِّل), ʾalif (الألف) — cartes R714-R715d
 WORD_FINAL = {"khul": "ʿ", "jāmi": "ʿ", "rābi": "ʿ", "raja": "ʿ", "bay": "ʿ",  # khulʿ, Jāmiʿ, rābiʿ, rajaʿa, bayʿ
               "tabarru": "ʾ", "malā": "ʾ", "khaṭā": "ʾ", "muwaṭṭa": "ʾ",
               "gharamā": "ʾ", "mawḍū": "ʾ", "ḥibā": "ʾ", "ḥidā": "ʾ",
@@ -63,6 +64,15 @@ WORD_FINAL = {"khul": "ʿ", "jāmi": "ʿ", "rābi": "ʿ", "raja": "ʿ", "bay": "
               "mukhtara": "ʾ", "yatabawwa": "ʾ",                                # mukhtaraʾ (المختار), yatabawwaʾ
               "qawāṭi": "ʿ", "mal": "ʾ",                                        # Qawāṭiʿ, Malʾ (ملء)
               "marāji": "ʿ"}                                                    # marājiʿ (المراجع, graphie j)
+# W17 (fiqh-tanawi-1, cartes R714-R715d) — finales :
+WORD_FINAL.update({"tawābi": "ʿ", "sila": "ʿ", "tāsi": "ʿ", "majma": "ʿ",
+                   "mawāni": "ʿ", "tabi": "ʿ", "taqṭa": "ʿ", "ḍa": "ʿ",
+                   "ḍar": "ʿ", "daf": "ʿ", "judh": "ʿ", "shar": "ʿ",         # tawābiʿ, as-silaʿ, at-tāsiʿ, majmaʿ, mawāniʿ, tabiʿ, taqṭaʿ, ḍaʿ, ḍarʿ (الضَّرْع), ad-dafʿ, al-judhʿ, ash-sharʿ
+                   "laba": "ʾ", "istiqra": "ʾ", "sa": "ʾ"})                  # labaʾ (اللَّبَأ), istiqraʾ (الاستقراء), as-saʾ (السَّاء)
+# finales ʿayn après voyelle longue — la règle « ā/ī/ū → ʾ » est suspendue pour
+# ces racines en ʿ (ijtimāʿ, ijmāʿ, dhirāʿ, intifāʿ, madfūʿ, buyūʿ, mabīʿ, maklūʿ) :
+WORD_FINAL_LONG_AYN = {"ijtimā", "ijmā", "dhirā", "intifā",
+                       "madfū", "bayū", "buyū", "mabī", "maklū"}
 # couples (fin du mot avant ', début du mot après ') tranchés mot à mot —
 # la lettre entre les deux morceaux n'est pas déductible du préfixe seul :
 # taʿlīm/taʿzīr (ʿayn) mais taʾkhīr/taʾbīm (hamza) ; saʾala hamza mais aʿṭā ʿayn.
@@ -176,6 +186,32 @@ PAIR_MEDIAL = {("ta", "līm"): "ʿ", ("ta", "zīr"): "ʿ", ("ta", "khīr"): "ʾ"
                ("wāqi", "ayn"): "ʿ", ("mu", "all"): "ʿ",                        # wāqiʿayn, muʿall (المعلّ)
                ("mun", "im"): "ʿ", ("maṭba", "a"): "ʿ", ("mu", "minīn"): "ʾ",   # Munʿim, Maṭbaʿa, muʾminīn
                ("arna", "ūṭ"): "ʾ"}                                             # Arnaʾūṭ (الأرناؤط)
+# W17 (fiqh-tanawi-1, cartes R714-R715d + arbitrages du tour) — couples médiaux :
+PAIR_MEDIAL.update({
+    ("dharī", "a"): "ʿ", ("mufā", "ala"): "ʿ", ("maqlū", "an"): "ʿ",             # adh-dharīʿa (الذرائعة/الذريعة), mufāʿala, maqlūʿan
+    ("jamā", "a"): "ʿ", ("bī", "uhā"): "ʿ", ("maṣrā", "a"): "ʿ",                 # al-jamāʿa, bīʿuhā, maṣrāʿa (consignée)
+    ("muwā", "ada"): "ʿ", ("rā", "ib"): "ʿ", ("mubā", "a"): "ʿ",                 # muwāʿada (consignée), rāʿib (consignée), al-mubāʿa (المُبَاعَة)
+    ("rubā", "iyan"): "ʿ", ("raḍā", "a"): "ʿ", ("mu", "āyana"): "ʿ",             # rubāʿiyan, ar-raḍāʿa (الرِّضَاعَة), muʿāyana
+    ("mun", "aqid"): "ʿ", ("ma", "ūna"): "ʿ", ("shāfi", "ī"): "ʿ",               # munʿaqid, al-Maʿūna, (a)sh-Shāfiʿī
+    ("shāfi", "ite"): "ʿ", ("shāfi", "ites"): "ʿ", ("raba", "ī"): "ʿ",           # shāfiʿite(s), al-Rabaʿī
+    ("ja", "dī"): "ʿ", ("ma", "āfirī"): "ʿ", ("ṣa", "īdī"): "ʿ",                 # al-Jaʿdī, al-Maʿāfirī, al-Ṣaʿīdī
+    ("shu", "bān"): "ʿ", ("shu", "bānī"): "ʿ", ("shu", "ayb"): "ʿ",              # (a)sh-Shuʿbān(ī), Shuʿayb
+    ("ma", "dān"): "ʿ", ("muṣ", "ar"): "ʿ", ("yana", "qidu"): "ʿ",               # Maʿdān, Muṣʿar (consignée), Yanaʿqidu
+    ("ja", "ala"): "ʿ", ("jay", "ala"): "ʿ", ("i", "tāna"): "ʿ",                 # jaʿala, jayʿala (consignée), iʿtāna
+    ("tata", "ayyana"): "ʿ", ("midāfa", "a"): "ʿ", ("mubāya", "a"): "ʿ",         # tataʿayyana, midāfaʿa, mubāyaʿa
+    ("bay", "ihi"): "ʿ", ("ṣan", "a"): "ʿ", ("ta", "jal"): "ʿ",                  # ka-bayʿihi, ṣanʿa (الصَّنْعَة), taʿjal/taʿjīl (تعجيل — carte session)
+    ("rābi", "an"): "ʿ", ("naf", "an"): "ʿ", ("mawāni", "uhu"): "ʿ",             # rābiʿan, nafʿan, wa-mawāniʿuhu
+    ("ra", "īnī"): "ʾ", ("isti", "mān"): "ʾ", ("ru", "ya"): "ʾ",                 # al-Raʾīnī (consignée W8), al-istiʾmān, al-ruʾya
+    ("mu", "na"): "ʾ", ("ḍa", "n"): "ʾ", ("ab", "ad"): "ʿ",                      # al-muʾna (المؤنة), ḍaʾn (ضأن), (li-)abʿad (أبعد)
+    ("ta", "bīd"): "ʾ", ("ta", "dīb"): "ʾ",                                      # taʾbīd (تأبيد), taʾdīb (تأديب)
+    ("d", "al-dardīr"): "’", ("d", "al-dasūqī"): "’",                            # élision française devant nom transcrit (dʾal-Dardīr)
+    ("mu", "āṭā"): "ʿ", ("muāṭā", "a"): "ʾ",                                     # muʿāṭāʾa (المعاطاة/المعاطاء — carte session ʿʿ révisée, consignée)
+    ("mu", "ajjal"): "ʾ", ("mu", "allifahu"): "ʾ",                               # muʾajjal (المؤجل — prime sur (mu,ajja)), muʾallifahu (مؤلفه)
+    ("ka", "k"): "ʿ", ("b", "nī"): "ʿ", ("ma", "qūd"): "ʿ",                     # kaʿk (الكَعْك), baʿnī, maʿqūd
+    ("kala", "a"): "ʾ", ("kala", "ahu"): "ʾ", ("yakla", "uhu"): "ʾ",             # kalaʾa ad-dayn (كَلَأَ différer — le doc le dit), yaklaʾuhu, kilāʾa
+    ("kilā", "a"): "ʾ", ("radu", "a"): "ʾ", ("tabi", "ā"): "ʿ",                  # kilāʾa (racine ك-ل-أ), raduʾa (carte session), tabiʿā
+    ("arba", "ūn"): "ʾ", ("ta", "jīl"): "ʿ", ("tu", "awwilat"): "ʾ",             # Arbaʾūn tel qu'imprimé (parallèle arbaʾa W9-W16), taʿjīl, tuʾawwilat
+    ("yūmi", "u"): "ʿ", ("shuf", "a"): "ʿ", ("ba", "d"): "ʿ", ("bay", "āt"): "ʿ"}) # yūmiʿu (forme imprimée consignée), shufʿa, baʿd, al-bayʿāt
 WORD_FINAL["yatawaḍḍa"] = "ʾ"                                                   # yatawaḍḍaʾ (توضأ)
 WORD_FINAL["bayyi"] = "ʿ"                                                       # al-Bayyiʿ
 LONGVOWL_AYN = ("charī", "shari", "maqṭū", "marfū", "wuqū", "mawḍū", "ṣanū")   # ʿayn après ī/ū : sharīʿa, maqṭūʿ, marfūʿ, wuqūʿ, mawḍūʿ, ṣanūʿ
@@ -250,12 +286,16 @@ def classify(rendered, p):
         base = prev_w.rstrip("-")                              # racines « b-ḍ-' » : hyphen final
         tail = base.rsplit("-", 1)[-1]
         if prev_w[-1] in "āīūĀĪŪ":
+            if base.lower() in WORD_FINAL_LONG_AYN or tail.lower() in WORD_FINAL_LONG_AYN:
+                return "ʿ", f"ʿayn final carte longue ({prev_w})"          # ijtimāʿ, ijmāʿ, dhirāʿ, intifāʿ, madfūʿ, buyūʿ, mabīʿ, maklūʿ
             return "ʾ", f"hamza après voyelle longue ({prev_w})"
         for cand in (base, tail):
             if cand.lower() in WORD_FINAL:
                 return WORD_FINAL[cand.lower()], f"carte mot final ({cand})"
         return None, f"final non cartographié ('{prev_w}')"
     if prev_w and nxt_w:                                       # ' médial
+        if prev_w.lower().endswith("bat") and nxt_w == "an":
+            return "t", "bat'an = باتًّا (l'apostrophe rend le tāʾ géminé — consigné R714/W17)"
         prev_tail = prev_w.rstrip("-").rsplit("-", 1)[-1].lower().strip("'")
         for p0, n0 in sorted(PAIR_MEDIAL, key=lambda k: -len(k[1])):  # préfixes les plus longs d'abord
             if prev_tail == p0 and nxt_w[:len(n0)].lower() == n0:
@@ -281,8 +321,8 @@ def fix_text_segment(s):
         ents.append(m.group(0))
         return "\x00%d\x00" % (len(ents) - 1)
     s = re.sub(r"&[a-zA-Z]+;|&#\d+;", _p, s)
-    s = re.sub(r"[ \u00a0\u202f]*([;:!?»])", NARROW + r"\1", s)
-    s = re.sub(r"«[ \u00a0\u202f]*", "«" + NARROW, s)
+    s = re.sub(r"[ \u00a0\u202f]+(?=[;:!?»])", NARROW, s)          # remplace les espaces existants (n'insère jamais — »», ««, ponc collé)
+    s = re.sub(r"«[ \u00a0\u202f]+", "«" + NARROW, s)
     s = re.sub(r" {2,}", " ", s)
     s = re.sub(r"\x00(\d+)\x00", lambda m: ents[int(m.group(1))], s)
     return s

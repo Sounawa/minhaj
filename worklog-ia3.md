@@ -412,3 +412,64 @@ Trace: 3af9c47be21d8065-w16
 - Incertaines résiduelles cumulées consignées (à confronter au PDF) :
   muʾʾan, ʾastakhliḍ/ṣ (wasl), maʾrā, Ruʾīnī, muʾaḍḍal, yaʿhadu, yaʾidu,
   ḍaʾāmahu, al-āfiʾī, inventaire de signes (ṣ,ḍ,ṭ,ḥ,ʾ) ×4.
+
+## W17 — 2026-11-17 — typo fiqh-tanawi-1, 31/31 docs (LIVRE 3 TERMINÉ) — récupération de la session perdue R714-R715d
+Task ID: W17
+Trace: 1a1d675aa095fb41-w17
+
+- Contexte : reprise post-recyclage — les vagues W1-W5 de la session
+  R714-R715d (livres entiers ft3/ft1/ft2/far3/1es, commits b455a2f,
+  3f1934b, b44cef2, 93a64d3 jamais poussés) étaient perdues avec le clone ;
+  l'arbitrage a survécu sous scripts/ hors dépôt (w1-map.json 921 formes +
+  w2-ft1-supp.json 244 formes ft1). Réconciliation position par position de
+  ces cartes contre fix-typo.py : **810 accords**, 245 divergences examinées
+  une à une (40 élisions françaises du doc-intro 11509 jamais traitées par
+  R714-R715d, ~130 incertaines résolues par la carte session, ~20 conflits
+  sémantiques arbitrés au tour même).
+- Livraison : **31/31 docs fiqh-tanawi-1 — 1055 apostrophes droites
+  classées** : **746 ʿ + 265 ʾ + 41 ’** (élisions du doc-intro 11509) +
+  **3 bat'an → battan** (باتًّا, tāʾ géminé — consigné R714) ;
+  **7552 normalisations U+202F** + doubles espaces.
+- Carte étendue : ~60 couples médiaux (dharīʿa, mufāʿala, jamāʿa, maqlūʿan,
+  bīʿuhā, mubāʿa, raḍāʿa, shufʿa, mubāyaʿa, midāfaʿa, jaʿala, Shuʿayb,
+  (a)sh-Shāfiʿī/ites, al-Rabaʿī, al-Maʿāfirī, Ṣaʿīdī, Maʿdān, Muṣʿar,
+  Yanaʿqidu, iʿtāna, tataʿayyana, taʿjal/taʿjīl, rābiʿan, nafʿan, ka-bayʿihi,
+  al-bayʿāt, ṣanʿa, baʿd, kaʿk, baʿnī, maʿqūd, kalaʾa/kilāʾa/raduʾa (racine
+  ك-ل-أ), tabiʿā, muʿāṭāʾa, taʾbīd, taʾdīb, al-muʾna, ḍaʾn (ضأن), abʿad,
+  istiʾmān, ruʾya, raʾīnī, élisions dʾal-Dardīr/al-Dasūqī…) + 16 finales
+  (tawābiʿ, silaʿ, tāsiʿ, majmaʿ, mawāniʿ, tabiʿ, taqṭaʿ, ḍaʿ, ḍarʿ, dafʿ,
+  judhʿ, sharʿ, labaʾ, istiqraʾ, saʾ) + **WORD_FINAL_LONG_AYN** (ijtimāʿ,
+  ijmāʿ, dhirāʿ, intifāʿ, madfūʿ, bayūʿ, buyūʿ, mabīʿ, maklūʿ — la règle
+  ā/ī/ū→ʾ suspendue pour ces racines en ʿ) + initiales hamza (ʾaṭaytuk,
+  ʾujjila, ʾalif) + règle dédiée bat'an (→ battan) avec autorisation
+  verify-diff bornée au contexte bat|an ; règle U+202F passée en
+  lookahead-only (remplace les espaces existants, n'insère jamais — cas
+  »» et «« des fermetures imbriquées de 11905).
+- Révisions de la carte session (consignées — supplantent R714-R715d) :
+  ʿanhā = عنها (al-manhī ʿanhā, ʿayn), ʿubbirat = عُبِّرَت (palme fécondée,
+  ʿayn), li-abʿad = أبعد (ʿayn), Ṣanʿāʾ = صنعاء (ʿ puis ʾ — la carte
+  ʾʾ de R714 était fautive), al-aʿlām = الأعلام (hamza),
+  muʿāṭāʾa = المعاطاة (ʿʿ de R714 révisé en ʿʾ).
+- Décisions session confirmées par le texte même : kalīʾ = « de kalaʾa
+  ad-dayn — il a différé » (racine ك-ل-أ) ; an-Nasāʾī, an-Nisāʾ, masāʾil,
+  khaṣāʾ, ṣāʾigh hamza ; al-intifāʿ = الإنتفاع (ʿayn) ; taʿjīl تعجيل (ʿ)
+  mais muʾajjal المؤجل (ʾ) — mots distincts. Arbaʾūn (11980 ×2) gardé ʾ tel
+  qu'imprimé — parallèle arbaʾa aqsām / bi-arbaʾin vérifiés à l'image
+  (W9-W16).
+- Réparation structurelle consignée au commit W17a (6adb9c0) :
+  11905/11909/11912 finissaient sur des balises vides suspendues
+  (transcriptions tronquées déjà à HEAD) + un » manquant (11905) — réparé
+  (pile contrôlée, guillemets appariés, qa-lesson PASS ×3) sinon la vague ne
+  pouvait écrire ces 3 docs ; + correction consignée fiqh-tanawi-3 :
+  al-muʾajjal bi-l-mawt (المؤجل — erreur latente de la carte (mu,ajja),
+  1 occurrence, parallèle CORRECTION W10 istiʿāra).
+- QA : qa-lesson **PASS ×31** (0 arabe, guillemets appariés, balises
+  appariées, 0 apostrophe droite à chaque doc) ; **verify-diff 0 diff non
+  autorisé** ; comptes 746 ʿ + 265 ʾ + 41 ’ + 3 battan = 1055 = total exact
+  des ' du livre (1006 leçons + 49 intro) ; **fiqh-tanawi-1 disparu du scan
+  (0 dur)** — corpus global **745 → 714 docs à défauts durs** (31 livres
+  restants, ~42 800 ' dont hadith-3es/2es ~7 000, taqtit-tanawi-1 2 870,
+  hadith-tanawi-1 2 537).
+- Push : commits locaux W17a (6adb9c0) + W17 — GH_PAT absent du sandbox
+  recyclé ; poussée au prochain tour avec token réinjecté.
+
