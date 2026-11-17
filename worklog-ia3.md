@@ -292,3 +292,22 @@ Trace: 3af9c47be21d8065-w11
   bordantes (strip).
 - QA : `qa-lesson.py` **PASS ×4** ; `verify-diff.py` **0 diff non autorisé**.
 - Push : pull --rebase + push + refetch → rev-list = 0 (EN LIGNE vérifié).
+
+## W12 — 2026-11-17 — typo ulum-hadith-tanawi-1 pdf-mut23h2q-124, 125, 126, 127 (vague 4/8)
+Task ID: W12
+Trace: 3af9c47be21d8065-w12
+
+- Vague 4/4 docs : **pdf-mut23h2q-124 (59 apos), 125 (62), 126 (130),
+  127 (172) = 423 apostrophes** classées **312 ʿ + 111 ʾ + 0 ’**, 0
+  incertaine ; **532 normalisations U+202F** (95+98+174+165).
+- Carte étendue : fiʿlin, tābiʿīn/ī, jawāmiʿ, rafʾan/rafʾ, yarfaʾuhu,
+  shāfiʿītes, Masʿūd, Aʿmach, Ṣanʿānī, chaʾīrin, qiṭʿatun, yamnaʿu,
+  aʾyāhu/aʾḍalahu, ḍuʿafāʾ, iʾḍāl, iʾrsāl, yaʾjal, yuʿraf, munqaṭiʿs,
+  kānatimraʾatī (amalgame d'imprimé), iʾdād, abʿadakanna (print),
+  muʿḍila, yumʿiʾaḥadukum (double signe), aʿmālu, yaʿqqu, Chaʿbī,
+  tajtamiʾu, ḍaʾāmahu (lecture récusée du doc — consignée), yuʾmar,
+  istiʾdhān, yasmaʿ, ṭaʿ.
+- Initiales hamza consignées au fil : ʾaw, ʾaḥadukum, ʾilā, ʾabīhi,
+  ʾinnī, ʾinnamā, ʾab'adakanna.
+- QA : `qa-lesson.py` **PASS ×4** ; `verify-diff.py` **0 diff non autorisé**.
+- Push : pull --rebase + push + refetch → rev-list = 0 (EN LIGNE vérifié).

@@ -31,7 +31,9 @@ WORD_INITIAL_AYN = {"atīq", "afw", "iyāḍ", "abd", "amd", "arafa", "umar", "a
                     "ilm", "amr", "adīm", "uqba", "ichrūn", "inān", "iyāl",
                     "adāla", "allāma", "udhr", "n-n", "alī", "aliyy", "aqīda",
                     "azīz", "ulamā", "awad", "uthmān", "arabī"}
-WORD_INITIAL_HAMZA = {"adam", "adaman", "ibtighā", "adhara", "astakhli"}   # ʾadam, ibtighāʾ, aʾdhara, ʾastakhliḍ/ṣ (hamzat wasl imprimée — incertaine résiduelle consignée W6)
+WORD_INITIAL_HAMZA = {"adam", "adaman", "ibtighā", "adhara", "astakhli",
+                      "aw", "aḥadu", "ilā", "abīhi", "innī", "innamā",
+                      "ab'adakanna"}   # ʾadam, ibtighāʾ, aʾdhara, ʾastakhliḍ/ṣ, ʾaw, ʾaḥadukum, ʾilā, ʾabīhi, ʾinnī, ʾinnamā, ʾab'adakanna (print)
 WORD_FINAL = {"khul": "ʿ", "jāmi": "ʿ", "rābi": "ʿ", "raja": "ʿ", "bay": "ʿ",  # khulʿ, Jāmiʿ, rābiʿ, rajaʿa, bayʿ
               "tabarru": "ʾ", "malā": "ʾ", "khaṭā": "ʾ", "muwaṭṭa": "ʾ",
               "gharamā": "ʾ", "mawḍū": "ʾ", "ḥibā": "ʾ", "ḥidā": "ʾ",
@@ -50,7 +52,9 @@ WORD_FINAL = {"khul": "ʿ", "jāmi": "ʿ", "rābi": "ʿ", "raja": "ʿ", "bay": "
               "bad": "ʾ", "mutāba": "ʿ", "munqaṭi": "ʿ",                        # badʾ (بدء), mutābaʿa, munqaṭiʿ ×2
               "tābi": "ʿ", "nasa": "ʿ", "yabda": "ʾ", "yuwamma": "ʾ",           # tābiʿ, Nasaʿī, yabdaʾ, yuwammaʾ
               "hāni": "ʾ", "murtafi": "ʿ", "munaqaṭi": "ʿ", "bisab": "ʿ",       # Hāniʾ, murtafiʿ, munaqaṭiʿ, bisabʿ
-              "mu": "ʾ"}                                                        # mu''an → muʾʾan (1er signe ; incertaine consignée W11)
+              "mu": "ʾ",                                                        # mu''an → muʾʾan (1er signe ; incertaine consignée W11)
+              "jawāmi": "ʿ", "raf": "ʾ",                                        # jawāmiʿ, rafʾ (الرفع)
+              "yasma": "ʿ", "ṭa": "ʿ"}                                          # yasmaʿ, ṭaʿ (الطعن)
 # couples (fin du mot avant ', début du mot après ') tranchés mot à mot —
 # la lettre entre les deux morceaux n'est pas déductible du préfixe seul :
 # taʿlīm/taʿzīr (ʿayn) mais taʾkhīr/taʾbīm (hamza) ; saʾala hamza mais aʿṭā ʿayn.
@@ -113,8 +117,22 @@ PAIR_MEDIAL = {("ta", "līm"): "ʿ", ("ta", "zīr"): "ʿ", ("ta", "khīr"): "ʾ"
                ("an", "ana"): "ʿ", ("hāni", "in"): "ʾ", ("raka", "a"): "ʿ",     # ʿanʿana, Hāniʾin, rakaʿa
                ("āfi", "ī"): "ʾ", ("ya", "lū"): "ʿ", ("irtafa", "a"): "ʾ",      # al-āfiʾī (OCR cité — consignée), yaʿlū, irtafaʾa
                ("shu", "ba"): "ʿ", ("sam", "ān"): "ʿ",                          # Shuʿba, Samʿānī
-               ("i", "nana"): "ʿ", ("sami", "at"): "ʿ"}                         # iʿnana (العِنان), samiʿat
-LONGVOWL_AYN = ("charī", "shari", "maqṭū")   # sharīʿa / maqṭūʿ : ʿayn (pas hamza) après ī/ū
+               ("i", "nana"): "ʿ", ("sami", "at"): "ʿ",                         # iʿnana (العِنان), samiʿat
+               ("mas", "ūd"): "ʿ", ("a", "mach"): "ʿ", ("ṣan", "ānī"): "ʿ",     # Masʿūd, Aʿmach, Ṣanʿānī
+               ("cha", "īrin"): "ʾ", ("qiṭ", "at"): "ʿ", ("yamna", "u"): "ʿ",   # chaʾīrin, qiṭʿatun, yamnaʿu
+               ("a", "yāhu"): "ʾ", ("a", "ḍalahu"): "ʾ", ("tābi", "ī"): "ʿ",    # aʾyāhu, aʾḍalahu, tābiʿī
+               ("ḍu", "afā"): "ʿ", ("i", "ḍāl"): "ʾ", ("i", "rsāl"): "ʾ",       # ḍuʿafā, iʾḍāl, iʾrsāl
+               ("ya", "jal"): "ʾ", ("yu", "raf"): "ʿ", ("munqaṭi", "s"): "ʿ",   # yaʾjal, yuʿraf, munqaṭiʿs
+               ("kānatimra", "at"): "ʾ",                                        # kānatimraʾatī (amalgame d'imprimé)
+               ("i", "dād"): "ʾ", ("ab", "adakanna"): "ʿ",                      # iʾdād, abʿadakanna (print)
+               ("mu", "ḍil"): "ʿ", ("yum", "i"): "ʿ", ("yum'i", "aḥ"): "ʾ",     # muʿḍila, yumʿiʾaḥadukum (2e signe)
+               ("i", "aḥadukum"): "ʾ",                                          # ʾaḥadukum
+               ("a", "mālu"): "ʿ", ("ya", "uqqu"): "ʿ", ("cha", "bī"): "ʿ",     # aʿmālu, yaʿqqu, Chaʿbī
+               ("tajtami", "u"): "ʾ", ("ḍa", "āmahu"): "ʾ",                     # tajtamiʾu, ḍaʾāmahu (récusée — consignée)
+               ("yu", "mar"): "ʾ", ("isti", "dhān"): "ʾ",                       # yuʾmar, istiʾdhān
+               ("fi", "lin"): "ʿ", ("tābi", "īn"): "ʿ", ("raf", "an"): "ʾ",     # fiʿlin, tābiʿīn, rafʾan
+               ("yarfa", "uhu"): "ʾ", ("shāfi", "īt"): "ʿ"}                     # yarfaʾuhu, shāfiʿītes
+LONGVOWL_AYN = ("charī", "shari", "maqṭū", "marfū")   # sharīʿa / maqṭūʿ / marfūʿ : ʿayn (pas hamza) après ī/ū
 FRENCH_ELISION = {"l", "d", "n", "s", "j", "c", "m", "t", "qu", "jusqu", "lorsqu",
                   "puisqu", "quelqu", "aujourd"}
 ARABIC = re.compile(r"[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDF9\uFDFB-\uFDFF\uFE70-\uFEFF]")
