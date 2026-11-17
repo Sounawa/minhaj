@@ -1,6 +1,0 @@
-IMAGE: t-p120-title.png
-CONSIGNE: Transcris EXACTEMENT : (1) le numéro dans le médaillon chiffre par chiffre ; (2) le titre calligraphié LETTRE PAR LETTRE (المصحف والمحرف ou الصحف والتحريف ?) ; (3) le label أهداف الدرس s'il est visible.
----
-(1) Numéro : 23
-(2) Titre : المصحف والمحرف (c'est bien المصحف والمحرف, pas الصحف والتحريف)
-(3) Label أهداف الدرس : non visible dans cette image.

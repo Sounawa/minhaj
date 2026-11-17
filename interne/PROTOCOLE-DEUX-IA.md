@@ -10,7 +10,7 @@
 ## 1. Principe de base : GitHub = source de vérité unique (inchangé)
 
 ```bash
-bash /home/z/my-project/scripts-recovery/session-start.sh   # à CHAQUE début de session
+bash /home/z/my-project/scripts/session-start.sh   # à CHAQUE début de session (déplacé de scripts-recovery/ en R716-a)
 git pull --rebase origin main                               # avant CHAQUE push
 git push origin main                                        # après CHAQUE leçon livrée
 ```

@@ -1,6 +1,0 @@
-IMAGE: p124-istithmar.png
-CONSIGNE: Transcris EXACTEMENT, ligne par ligne : le titre الاستتمار, la citation de الإمام ابن الصلاح ENTIERE mot à mot (chaque phrase, avec les mots ambigus lettre par lettre), et le renvoi [مقدمة ابن الصلاح...] chiffre par chiffre.
----
-الاستتمار
-
-قال الإمام ابن الصلاح رحمه الله: «وأما التصحيف فسبيل السلامة منه الأخذ من أفواه أهل العلم، والضبط، فإن من حرِم ذلك، وكان أخذه وتعلمه من بطون الكتب، كان من شأنه التحريف، ولم يفلت من التبديل، والتصحيف». [مقدمة ابن الصلاح، ص 218].
