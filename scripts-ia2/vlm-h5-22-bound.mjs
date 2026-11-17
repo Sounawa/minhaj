@@ -1,0 +1,38 @@
+// Z2-25 — hadith-5ep leçon 22 — test quota VLM + bornage : p125 (fin attendue L22) et p126 (début attendu L23)
+import ZAI from '/home/z/my-project/node_modules/z-ai-web-dev-sdk/dist/index.js';
+import fs from 'fs';
+
+const DIR = '/home/z/my-project/scripts-ia2/tmp/h5-22';
+const COMMON = `Page entière (150 dpi) d'un manuel scolaire marocain d'hadith (5e année primaire traditionnel), sens de lecture droite→gauche.
+TRANSCRIS TOUT ce qui est imprimé sur la page, rubrique par rubrique, mot à mot, avec la vocalisation. Balise les titres de rubrique comme [TITRE] ... [/TITRE], les encadrés comme [CADRE] ... [/CADRE]. Les bandeaux décoratifs illisibles : [؟]. Ne complète JAMAIS par mémoire d'un texte connu : seulement ce qui est imprimé.`;
+
+const Q = {
+  125: `Page 125 : est-ce la FIN de la leçon 22 «الإحسان في كل شيء» ? Transcris les rubriques visibles (تقويم, إعداد قبلي, وأهداف de la leçon suivante «التقوى» si présents en bas de page). Transcris tout.`,
+  126: `Page 126 : est-ce le DÉBUT de la leçon 23 «التقوى وحسن الخلق» ? Transcris le bandeau de titre s'il est présent, أهداف الدرس, la notice ترجمة الراوي. Transcris tout.`,
+};
+
+const zai = await ZAI.create();
+const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+for (const p of Object.keys(Q)) {
+  const out = `${DIR}/vlm22-bound-p-${p}.txt`;
+  if (fs.existsSync(out)) { console.log(`skip p${p}`); continue; }
+  const img = fs.readFileSync(`${DIR}/r150/p${p}.png`).toString('base64');
+  console.log(`\n======== p${p} ========`);
+  let done = false;
+  for (let attempt = 1; attempt <= 3 && !done; attempt++) {
+    try {
+      const r = await zai.createChatCompletionVision({
+        messages: [{ role: 'user', content: [
+            { type: 'text', text: COMMON + '\n\n' + Q[p] },
+            { type: 'image_url', image_url: { url: `data:image/png;base64,${img}` } },
+          ] }],
+        model: 'glm-5v-turbo', temperature: 0.1, max_tokens: 2048,
+      });
+      const txt = r?.choices?.[0]?.message?.content ?? JSON.stringify(r);
+      fs.writeFileSync(out, txt);
+      console.log(txt.length > 700 ? txt.slice(0, 350) + '\n[...]' : txt);
+      done = true;
+    } catch (e) { console.log(`tentative ${attempt} p${p} échec: ${e.message}`); await sleep(10000*attempt); }
+  }
+  await sleep(3000);
+}
