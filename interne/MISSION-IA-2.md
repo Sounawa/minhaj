@@ -53,3 +53,35 @@ VLM, mêmes contrôles (97 contrôles PASS sur le dernier posé — même barre)
 - Une incertaine = incertaine, consignée comme telle.
 - Défaut vu chez une autre IA : consigné dans TON journal, jamais corrigé
   par toi.
+
+## 6. Ajout R721 — chantier éditorial « intertitres h2 » (audit P1, primaire)
+
+> Ajouté par l’IA-1 (tour R721), sur la recommandation P1 de l’audit complet
+> du site (R713, tableau 8) : « intertitres h2 sur les leçons signalées
+> (passes éditoriales par livre) — accessibilité/contenu : navigation d’écran
+> et sommaires internes ». Le suivi est automatisé : `python3
+> scripts/qa-structure.py` imprime à chaque passe la liste des pages sans h2,
+> livre par livre — la décroissance de ce compteur sera la preuve du travail
+> fait, et la page `avancement.html` du site expose désormais les documents
+> faits et restants (demande utilisateur R721).
+
+**Ton périmètre (leçons et introductions sans intertitre h2 au 17 nov. 2026, cycle primaire — 22 pages)** :
+tafsir-5ep 5 (pdf-mut23h3c-738, pdf-mut23h3c-797, 14067, pdf-mut23h3c-796, introduction) ;
+hadith-1ep 4 (12583, 12866, introduction, 12863) ;
+fiqh-1ep 2 (11412, 11413) ;
+tajwid-6ep 2 (17597, 17598) ;
+fiqh-5ep 2 (12014, 12015) ;
+tafsir-6ep 2 (14599, 14600) ;
+tafsir-1ep 2 (13622, 13621) ;
+rasm-wa-dabt-4ep 1 (introduction) ;
+fiqh-6ep 1 (15274) ;
+tajwid-5ep 1 (19056).
+
+**Méthode** : lire le htmlFr de chaque leçon, insérer des `<h2>` aux
+divisions naturelles du contenu (rubriques du manuel, chapitres, blocs de
+texte — JAMAIS un inventé hors du texte) ; aucune autre modification du
+document ; pas d’urgence — en fin de vague hadith-5ep / hadith-6ep, ou en
+interlude. Ce n’est pas une transcription : c’est un habillage de navigation.
+Les pages « introduction » sont incluses dans le périmètre (l’audit les
+compte dans les 84). Re-run de `scripts/qa-structure.py` après chaque passe
+pour vérifier la décroissance.

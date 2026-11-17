@@ -69,3 +69,45 @@ des leçons sans texte, même convention que les fronts IA-1/IA-2
 `<span dir="rtl" lang="ar">`, ʾ/ʿ en translittération, vague 1-4 documents,
 QA avant commit, une incertaine = incertaine consignée, défaut vu chez une
 autre IA = consigné chez toi, jamais corrigé par toi.
+
+## Ajout R721 — chantier éditorial « intertitres h2 » (audit P1, collège + lycée)
+
+> Ajouté par l’IA-1 (tour R721), sur la recommandation P1 de l’audit complet
+> du site (R713, tableau 8). Suivi automatisé : `python3 scripts/
+> qa-structure.py` imprime la liste des pages sans h2, livre par livre — la
+> décroissance du compteur est la preuve du travail fait.
+
+**Ton périmètre (leçons et introductions sans intertitre h2 au 17 nov. 2026, collège + lycée — 62 pages)** :
+tafsir-tanawi-2 19 (13676, 13620, 13747, 13525, 13597, 13716, 13652, 13738, 13534, 13593, 13659, 13654, 13688, 13618, 13660, 13744, 13619, introduction, 13681) ;
+fiqh-tanawi-2 4 (13349, 12519, 13353, 12522) ;
+tawhid-1es 4 (16805, 13980, 16806, introduction) ;
+tafsir-tanawi-1 3 (13663, 13662, introduction) ;
+ulum-quran-3es 3 (19522, 19521, introduction) ;
+sira-2es 2 (14915, 14917) ;
+tawhid-2es 2 (19185, introduction) ;
+tafsir-2es 2 (pdf-mut23h33-585, pdf-mut23h33-584) ;
+hadith-tanawi-1 2 (12990, 12925) ;
+sira-1es 2 (14268, 14270) ;
+fiqh-tanawi-3 2 (introduction, 16211) ;
+fiqh-3es 2 (12352, 12351) ;
+ulum-quran-2es 2 (introduction, 19289) ;
+mantiq-tanawi-1 1 (introduction) ;
+hadith-1es 1 (13006) ;
+qiraat-tanawi-3 1 (introduction) ;
+tafsir-1es 1 (12381) ;
+taqtit-tanawi-1 1 (introduction) ;
+fikr-islami-tanawi-3 1 (introduction) ;
+fikr-islami-tanawi-1 1 (introduction) ;
+ulum-quran-1es 1 (17778) ;
+tajwid-2es 1 (18635) ;
+hadith-tanawi-2 1 (introduction) ;
+faraid-tanawi-2 1 (16203) ;
+tajwid-3es 1 (introduction) ;
+taqtit-tanawi-3 1 (introduction).
+
+**Méthode** : lire le htmlFr de chaque leçon, insérer des `<h2>` aux
+divisions naturelles du contenu (rubriques du manuel, chapitres, blocs de
+texte — JAMAIS un inventé hors du texte) ; aucune autre modification du
+document ; après tes vagues de typo en cours (fiqh-tanawi-3, ulum-hadith-tanawi-1),
+sans urgence. Ce n’est pas une transcription : c’est un habillage de
+navigation. Re-run de `scripts/qa-structure.py` après chaque passe.

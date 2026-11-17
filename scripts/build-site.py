@@ -673,6 +673,16 @@ _RE_APPARAT_DL = re.compile(r'\s*<dt>(?:Versets du cache|Preuves de la passe|Ét
 
 APPARAT_STATS = {'blocs': 0, 'paragraphes': 0, 'rubriques': 0, 'references': 0, 'paires': 0, 'octets': 0}
 
+_RE_H1_VIDE = re.compile(r'<h1[^>]*>(?:\s|<br\s*/?>|&nbsp;)*</h1>', re.I)
+
+
+def normaliser_titres(html):
+    """Retire au rendu les titres h1 VIDES (balise sans aucun texte) — le
+    h1 de la page est garanti par page_lecon()/page_introduction().
+    Audit R713 : 1 leçon portait un <h1></h1> orphelin (taqtit-tanawi-1
+    docId 19324). Données sources intouchées."""
+    return _RE_H1_VIDE.sub('', html)
+
 
 def nettoyer_apparat(html):
     """Retire l’apparat de livraison au rendu — données sources intouchées."""
@@ -763,7 +773,7 @@ def charger_livres(rep_books, manifest, avertissements):
         annee = niveau.get('year') or 0
 
         # introduction
-        intro_fr = nettoyer_apparat((intro.get('htmlFr') or '').strip())
+        intro_fr = normaliser_titres(nettoyer_apparat((intro.get('htmlFr') or '').strip()))
         intro_ar = (intro.get('html') or '').strip()
         entree_intro = None
         if intro_fr or intro_ar:
@@ -788,7 +798,7 @@ def charger_livres(rep_books, manifest, avertissements):
                 avertissements.append(f'{slug} : docId en double {did} — seconde occurrence ignorée')
                 continue
             vus.add(did)
-            fr = nettoyer_apparat(l.get('htmlFr') or '')
+            fr = normaliser_titres(nettoyer_apparat(l.get('htmlFr') or ''))
             ok = bool(fr.strip())
             lecons.append({
                 'docId': did,
@@ -1122,7 +1132,15 @@ def _og(titre, description, url, typ='website'):
                f'<meta property="og:type" content="{typ}">',
                '<meta property="og:locale" content="fr_FR">',
                f'<meta property="og:title" content="{esc(titre)}">',
-               f'<meta property="og:description" content="{esc(description)}">']
+               f'<meta property="og:description" content="{esc(description)}">',
+               # image de partage (audit R713 P2) — fichier og-image.png à la
+               # racine publiée, rendu par scripts/generer-og-image.py
+               f'<meta property="og:image" content="{BASE_URL}og-image.png">',
+               '<meta property="og:image:width" content="1200">',
+               '<meta property="og:image:height" content="630">',
+               '<meta property="og:image:alt" content="Le المنهاج النموذجي للتعليم العتيق : leçons '
+               'transcrites mot à mot en arabe, traduction savante en français">',
+               '<meta name="twitter:card" content="summary_large_image">']
     if url:
         balises.append(f'<meta property="og:url" content="{esc(url)}">')
     return '\n'.join(balises)
@@ -1143,7 +1161,7 @@ def _fil_jsonld(segments):
 def entete(rel, programme_ar):
     return f"""<header class="en-tete"><div class="interieur">
 <span class="marque"><a href="{rel}index.html"><span class="arabe" dir="rtl" lang="ar">{programme_ar}</span><span class="sous-marque">Manuels de l’enseignement traditionnel — Maroc</span></a></span>
-<span class="liens"><a href="{rel}hors-ligne.html">Hors connexion</a><a href="https://github.com/Sounawa/minhaj" target="_blank" rel="noopener">Dépôt GitHub</a></span>
+<span class="liens"><a href="{rel}avancement.html">Avancement</a><a href="{rel}hors-ligne.html">Hors connexion</a><a href="https://github.com/Sounawa/minhaj" target="_blank" rel="noopener">Dépôt GitHub</a></span>
 </div></header>"""
 
 
@@ -1620,6 +1638,119 @@ def html_liste_lecons(livre):
     return '<ol class="lecons">\n' + '\n'.join(items) + '\n</ol>'
 
 
+def page_avancement(livres, programme, date_fr):
+    """Page « Avancement » — documents faits / restants, par cycle et par
+    manuel. Régénérée à chaque construction ; la CI reconstruit et publie le
+    rendu à chaque poussée (quelle que soit l’IA), les compteurs restent
+    donc synchrones avec les données du dépôt."""
+    nom_ar = programme.get('nameAr', 'المنهاج النموذجي للتعليم العتيق')
+    n_total = sum(len(b['lecons']) for b in livres)
+    n_ok = sum(1 for b in livres for l in b['lecons'] if l['ok'])
+    n_reste = n_total - n_ok
+    n_intros = sum(1 for b in livres if b['intro'] and b['intro']['htmlFr'])
+    n_docs = n_ok + n_intros
+    n_sav = (sum(1 for b in livres for l in b['lecons'] if l['ok'] and l['savante'])
+             + sum(1 for b in livres if b['intro'] and b['intro']['htmlFr']
+                   and b['intro']['savante']))
+    n_attente = n_docs - n_sav
+    n_comm = (sum(1 for b in livres for l in b['lecons'] if l.get('comm'))
+              + sum(1 for b in livres if b['intro'] and b['intro'].get('comm')))
+    lib_cycle = {c[0]: c[1] for c in CYCLES}
+    coul_cycle = {c[0]: c[4] for c in CYCLES}
+
+    # ---- synthèse par cycle (ordre de lecture)
+    lignes_cycle = []
+    for cid, clib, ccomplet, car, coul, _prof in CYCLES:
+        bs = [b for b in livres if (b['cycle'] or 'autre') == cid]
+        if not bs:
+            continue
+        tot = sum(len(b['lecons']) for b in bs)
+        ok = sum(1 for b in bs for l in b['lecons'] if l['ok'])
+        pct = round(100 * ok / tot) if tot else 0
+        lignes_cycle.append(
+            f'<tr><td><span class="chip chip-sujet" style="color:{coul}">{esc(clib)}</span></td>'
+            f'<td class="arabe" dir="rtl" lang="ar">{esc(car)}</td>'
+            f'<td class="n">{len(bs)} manuels</td><td class="n">{tot}</td>'
+            f'<td class="n">{ok}</td><td class="n reste">{tot - ok}</td>'
+            f'<td><span class="av-barre" aria-hidden="true"><span style="width:{pct}%;'
+            f'background:{coul}"></span></span> <span class="pct">{pct} %</span></td></tr>')
+
+    # ---- tableau par manuel : cycle, manuel, faits, restants
+    ordre_cycle = {c[0]: i for i, c in enumerate(CYCLES)}
+    lignes = []
+    for b in sorted(livres, key=lambda x: (ordre_cycle.get(x['cycle'], 9),
+                                           -sum(1 for l in x['lecons'] if not l['ok']),
+                                           x['slug'])):
+        tot = len(b['lecons'])
+        ok = sum(1 for l in b['lecons'] if l['ok'])
+        sav = sum(1 for l in b['lecons'] if l['ok'] and l['savante'])
+        com = sum(1 for l in b['lecons'] if l.get('comm'))
+        pct = round(100 * ok / tot) if tot else 0
+        reste = tot - ok
+        coul = coul_cycle.get(b['cycle'] or '', '#614f38')
+        lignes.append(
+            f'<tr><td><span class="chip chip-sujet" style="color:{coul}">'
+            f'{esc(lib_cycle.get(b["cycle"], b["cycle"] or "—"))}</span></td>'
+            f'<td class="av-livre"><a href="livres/{b["slug"]}/">'
+            f'<span class="t-ar" dir="rtl" lang="ar">{esc(b["titleAr"])}</span>'
+            f'<span class="t-fr">{esc(b["titleFr"])}</span></a></td>'
+            f'<td class="n">{tot}</td><td class="n">{ok}</td>'
+            f'<td class="n{" av-zero" if reste == tot and tot else " reste"}">{reste}</td>'
+            f'<td class="n">{sav}</td><td class="n">{com}</td>'
+            f'<td><span class="av-barre" aria-hidden="true"><span style="width:{pct}%;'
+            f'background:{coul}"></span></span> <span class="pct">{pct} %</span></td></tr>')
+
+    corps = f"""<section class="heros pleine" id="avancement">
+<div class="heros-interieur">
+<p class="surline">Suivi du projet — mise à jour : {date_fr}</p>
+<h1><span class="arabe" dir="rtl" lang="ar">مؤشرات المشروع</span> Avancement du corpus</h1>
+<p class="sous">Documents faits et documents restants — leçons transcrites, cap de la traduction
+savante et commentaires pédagogiques, au global, par cycle et par manuel. Cette page est
+régénérée à chaque construction du site&nbsp;; chaque poussée sur le dépôt (qu’elle vienne de
+l’IA-1, de l’IA-2 ou de l’IA-3) déclenche une reconstruction automatique et une republication.</p>
+<div class="stats">
+<div class="stat"><b>{n_total}</b><span>leçons au corpus</span></div>
+<div class="stat"><b>{n_ok}</b><span>transcrites</span></div>
+<div class="stat"><b>{n_reste}</b><span>à transcrire</span></div>
+<div class="stat"><b>{n_sav}</b><span>documents savants</span></div>
+<div class="stat"><b>{n_comm}</b><span>commentaires écrits</span></div>
+</div>
+<div class="prog"><div class="barre"><span style="width:{round(100 * n_ok / n_total) if n_total else 0}%"></span></div>
+<p class="compte"><strong>{n_ok} / {n_total}</strong> leçons transcrites — <strong>{n_reste}</strong> restantes</p></div>
+<div class="prog prog-savante"><div class="barre barre-savante"><span style="width:{round(100 * n_sav / n_docs) if n_docs else 0}%"></span></div>
+<p class="compte"><strong>{n_sav} / {n_docs}</strong> documents traduits en traduction savante · {n_attente} en attente du cap · {n_intros} introductions incluses</p></div>
+<p class="compte lien-av-line"><a class="lien-av" href="avancement.html">→ Avancement détaillé&nbsp;: documents faits et restants, cycle par cycle et manuel par manuel</a></p>
+</div>
+</section>
+<main>
+<section class="av-bloc">
+<h2>Synthèse par cycle</h2>
+<div class="av-table-wrap"><table class="av-table">
+<thead><tr><th>Cycle</th><th>السلك</th><th>Manuels</th><th>Leçons</th><th>Transcrites</th><th>Restantes</th><th>Progression</th></tr></thead>
+<tbody>{''.join(lignes_cycle)}</tbody>
+</table></div>
+</section>
+<section class="av-bloc">
+<h2>Détail par manuel</h2>
+<p class="av-note">Classement&nbsp;: cycles dans l’ordre de lecture, puis manuels ayant le plus de leçons à transcrire. «&nbsp;Savantes&nbsp;» compte les leçons ayant franchi le cap de la traduction savante (les {n_intros} introductions, toutes savantes, s’ajoutent au total global). «&nbsp;Commentaires&nbsp;» compte les commentaires pédagogiques écrits (✧).</p>
+<div class="av-table-wrap"><table class="av-table">
+<thead><tr><th>Cycle</th><th>Manuel</th><th>Leçons</th><th>Transcrites</th><th>Restantes</th><th>Savantes</th><th>Comm.</th><th>Progression</th></tr></thead>
+<tbody>{chr(10).join(lignes)}</tbody>
+</table></div>
+</section>
+</main>"""
+    meta_desc = (f'Avancement du corpus Minhāj : {n_ok} / {n_total} leçons transcrites, '
+                 f'{n_reste} à transcrire, {n_sav} documents savants, {n_comm} commentaires '
+                 'pédagogiques — détail par cycle et par manuel.')
+    jsonld = _ld([{'@context': 'https://schema.org', '@type': 'WebPage',
+                   'name': 'Avancement du corpus', 'url': BASE_URL + 'avancement.html',
+                   'inLanguage': 'fr', 'isPartOf': {'@type': 'WebSite', 'url': BASE_URL},
+                   'description': meta_desc}])
+    og = _og('Avancement du corpus — Minhāj', meta_desc, BASE_URL + 'avancement.html')
+    return coquille('Avancement du corpus | Minhaj', esc(meta_desc), '', nom_ar, date_fr,
+                    corps, og_html=og, jsonld_html=jsonld)
+
+
 def page_sommaire_livre(livre, programme_ar, date_fr):
     n_total = len(livre['lecons'])
     n_ok = sum(1 for l in livre['lecons'] if l['ok'])
@@ -1717,7 +1848,14 @@ def page_lecon(livre, lecon, prec, suiv, programme_ar, date_fr):
     # (mode les-deux, défaut), est masqué (mode lecon) ou remplace la leçon
     # quand il existe (mode commentaire — repli sur la leçon sinon).
     bloc_comm = section_commentaire_html(lecon.get('comm')) if MODE_COMM != 'lecon' else ''
-    article = f'<article class="contenu">\n{lecon["htmlFr"]}\n</article>'
+    # Accessibilité (audit R713, suite P0) : toute page de leçon porte UN h1.
+    # Si le contenu traduit n'en contient aucun, le titre de la leçon est
+    # injecté en tête d'article — comme les introductions depuis R713.
+    html_fr = lecon['htmlFr']
+    if '<h1' not in html_fr.lower():
+        titre_h1 = (lecon['titleFr'] or lecon['titleAr'] or f"Leçon {lecon['num']}").strip()
+        html_fr = f'<h1>{esc(titre_h1)}</h1>\n{html_fr}'
+    article = f'<article class="contenu">\n{html_fr}\n</article>'
     if MODE_COMM == 'commentaire' and bloc_comm:
         corps_centre = bloc_comm
     elif bloc_comm:
@@ -2096,7 +2234,8 @@ Sitemap: {base}sitemap.xml
 def sitemap_xml(livres, base, date_str):
     lignes = ['<?xml version="1.0" encoding="UTF-8"?>',
               '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-              f'<url><loc>{xescape(base)}</loc><lastmod>{date_str}</lastmod></url>']
+              f'<url><loc>{xescape(base)}</loc><lastmod>{date_str}</lastmod></url>',
+              f'<url><loc>{xescape(base)}avancement.html</loc><lastmod>{date_str}</lastmod></url>']
     for b in livres:
         prefixe = f"{xescape(base)}livres/{b['slug']}/"
         lignes.append(f'<url><loc>{prefixe}</loc><lastmod>{date_str}</lastmod></url>')
@@ -2211,6 +2350,10 @@ def main():
     # ---- accueil
     page, total_ok, total_lecons = page_accueil(livres, programme, date_fr, fragments_recherche)
     (sortie / 'index.html').write_text(page, encoding='utf-8')
+    n_pages += 1
+    # ---- page « avancement » (documents faits / restants, par manuel)
+    (sortie / 'avancement.html').write_text(
+        page_avancement(livres, programme, date_fr), encoding='utf-8')
     n_pages += 1
     total_intro = sum(1 for b in livres if b['intro'])
 
@@ -2361,6 +2504,12 @@ def main():
           f'({n_docs - n_sav_docs} en attente du cap savant)')
     print(f'commentaires pédagogiques : {n_comm} / {total_lecons + total_intro} documents '
           f'(mode : {MODE_COMM})')
+    n_sans_h2 = sum(1 for b in livres for l in b['lecons']
+                    if l['ok'] and '<h2' not in l['htmlFr'].lower())
+    n_multi_h1 = sum(1 for b in livres for l in b['lecons']
+                     if l['ok'] and len(re.findall(r'<h1[\s>]', l['htmlFr'], re.I)) != 1)
+    print(f'structure des titres : {n_sans_h2} leçons sans intertitre h2 (chantier éditorial '
+          f'P1 — zones IA-2/IA-3) · {n_multi_h1} leçons avec 0 ou 2 h1 (garde-h1 au rendu)')
     if (APPARAT_STATS['blocs'] or APPARAT_STATS['paragraphes'] or APPARAT_STATS['rubriques']
             or APPARAT_STATS['references'] or APPARAT_STATS['paires']):
         print(f'apparat de livraison retiré au rendu : {APPARAT_STATS["blocs"]} blocs autonomes, '
