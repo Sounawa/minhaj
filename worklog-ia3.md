@@ -311,3 +311,19 @@ Trace: 3af9c47be21d8065-w12
   ʾinnī, ʾinnamā, ʾab'adakanna.
 - QA : `qa-lesson.py` **PASS ×4** ; `verify-diff.py` **0 diff non autorisé**.
 - Push : pull --rebase + push + refetch → rev-list = 0 (EN LIGNE vérifié).
+
+## W13 — 2026-11-17 — typo ulum-hadith-tanawi-1 pdf-mut23h2q-128, 129, 130, 131 (vague 5/8)
+Task ID: W13
+Trace: 3af9c47be21d8065-w13
+
+- Vague 5/4 docs : **pdf-mut23h2q-128 (67 apos), 129 (52), 130 (32),
+  131 (119) = 270 apostrophes** classées **207 ʿ + 63 ʾ + 0 ’**, 0
+  incertaine ; **644 normalisations U+202F** (245+89+146+164).
+- Carte étendue : taʿammud/taʾammul, taʿlamu/taʿlama, nawʿāni, Maʿmar,
+  iʾlāl, jamʿin/jamʿ, mutaʿammidan, yatabawwaʾa, maqʿadahu, yanʿarif,
+  rakʿa/rakaʾa, yataʿarraf, Luhayʾa, ṣanaʾta, samiʿtu, mutābiʿ, wuqūʿ
+  (exception long-vowel ū), ʾaḥadkumu, ʾidhā (hamza initiale), rukʿatayni.
+- **1 incertaine consignée** : « mu'aḍḍal » rendu muʾaḍḍal (hamza) —
+  lecture muʿḍal possible ; à confronter au PDF.
+- QA : `qa-lesson.py` **PASS ×4** ; `verify-diff.py` **0 diff non autorisé**.
+- Push : pull --rebase + push + refetch → rev-list = 0 (EN LIGNE vérifié).
