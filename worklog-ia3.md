@@ -327,3 +327,19 @@ Trace: 3af9c47be21d8065-w13
   lecture muʿḍal possible ; à confronter au PDF.
 - QA : `qa-lesson.py` **PASS ×4** ; `verify-diff.py` **0 diff non autorisé**.
 - Push : pull --rebase + push + refetch → rev-list = 0 (EN LIGNE vérifié).
+
+## W14 — 2026-11-17 — typo ulum-hadith-tanawi-1 pdf-mut23h2q-132, 133, 134, 135 (vague 6/8)
+Task ID: W14
+Trace: 3af9c47be21d8065-w14
+
+- Vague 6/4 docs : **pdf-mut23h2q-132 (35 apos), 133 (134), 134 (44),
+  135 (92) = 305 apostrophes** classées **210 ʿ + 95 ʾ + 0 ’**, 0
+  incertaine ; **620 normalisations U+202F** (131+200+118+171).
+- Carte étendue : saʾaltu, Aʿwar, maʿnan, chiʾta, baʿḍi, aʾimmati,
+  muṭṭaliʿīna, Ḍabbaʿī, naʿlam, faqʿud/tafʿud (récusan), yuʿtaqad,
+  aʿqābi, yuṭʾima, maʿak, jiʾtuhum, baʿda, Ṣanʿāʾ (double : ʿ puis ʾ),
+  Muʿāwiya, rufʾahu, yaqaʿu, yaʾkhudhna, muʾtalif, tajʾala/tajʾalū,
+  raʾaytu, ruʾūs, muḍaʿṭaf, aʿẓamu, yaʿtaqidu, taʿlamūn, taqʿuda,
+  yatawaḍḍaʾ.
+- QA : `qa-lesson.py` **PASS ×4** ; `verify-diff.py` **0 diff non autorisé**.
+- Push : pull --rebase + push + refetch → rev-list = 0 (EN LIGNE vérifié).
