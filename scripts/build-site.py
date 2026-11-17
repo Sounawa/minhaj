@@ -842,6 +842,77 @@ FAVICON = ("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox
            "%3Crect x='10' y='10' width='12' height='12' fill='%23e8cf9a' transform='rotate(45 16 16)'/%3E"
            "%3Ccircle cx='16' cy='16' r='2.6' fill='%23333e14'/%3E%3C/svg%3E")
 
+# ---------------------------------------------------------------------------
+# Registre de traduction savante + Open Graph / JSON-LD (R715)
+# ---------------------------------------------------------------------------
+
+BASE_URL = ''  # posé par main() — URL publique (og:url, JSON-LD, SearchAction)
+
+
+def charger_registre_savant(depot, avertissements):
+    """docIds à traduction SAVANTE (rédigée à la main ou traduite puis validée).
+    Source qui fait foi : scripts-translate/savant-registry.json (écrit par
+    hand-set.py / llm-translate.ts) ; savant-registry.json à la racine n'est
+    qu'un miroir de publication — divergence = avertissement."""
+    chemin = depot / 'scripts-translate' / 'savant-registry.json'
+    if not chemin.exists():
+        chemin = depot / 'savant-registry.json'
+    if not chemin.exists():
+        avertissements.append('registre savant introuvable — aucun document marqué savant')
+        return set()
+    try:
+        reg = json.loads(chemin.read_text(encoding='utf-8'))
+    except Exception as e:
+        avertissements.append(f'registre savant illisible : {e}')
+        return set()
+    ids = {str(x) for x in reg.get('hand', [])}
+    llm = reg.get('llm', {})
+    if isinstance(llm, dict):
+        ids |= {str(k) for k in llm}
+    else:
+        ids |= {str(x) for x in llm}
+    miroir = depot / 'savant-registry.json'
+    if miroir.exists() and miroir.resolve() != chemin.resolve():
+        try:
+            if miroir.read_bytes() != chemin.read_bytes():
+                avertissements.append('miroir racine savant-registry.json divergent '
+                                      'du registre scripts-translate (qui fait foi)')
+        except Exception:
+            pass
+    return ids
+
+
+def _ld(objets):
+    """Bloc <script type="application/ld+json"> (liste de dicts) ou ''."""
+    if not objets:
+        return ''
+    texte = json.dumps(objets, ensure_ascii=False, separators=(',', ': '),
+                       ).replace('<', '\\u003c')
+    return '<script type="application/ld+json">' + texte + '</script>'
+
+
+def _og(titre, description, url, typ='website'):
+    balises = ['<meta property="og:site_name" content="Minhaj — المنهاج النموذجي للتعليم العتيق">',
+               f'<meta property="og:type" content="{typ}">',
+               '<meta property="og:locale" content="fr_FR">',
+               f'<meta property="og:title" content="{esc(titre)}">',
+               f'<meta property="og:description" content="{esc(description)}">']
+    if url:
+        balises.append(f'<meta property="og:url" content="{esc(url)}">')
+    return '\n'.join(balises)
+
+
+def _fil_jsonld(segments):
+    """BreadcrumbList — segments = [(nom, url|None)] ; dernier sans url."""
+    items = []
+    for i, (nom, url) in enumerate(segments, 1):
+        el = {'@type': 'ListItem', 'position': i, 'name': nom}
+        if url:
+            el['item'] = url
+        items.append(el)
+    return {'@context': 'https://schema.org', '@type': 'BreadcrumbList',
+            'itemListElement': items}
+
 
 def entete(rel, programme_ar):
     return f"""<header class="en-tete"><div class="interieur">
@@ -853,7 +924,7 @@ def entete(rel, programme_ar):
 def pied(rel, date_fr):
     return f"""<footer class="pied"><div class="interieur">
 <p class="pied-orn" aria-hidden="true"><span></span><i></i><i></i><i></i><span></span></p>
-<p>Transcription mot à mot et traduction française du curriculum de l’enseignement traditionnel marocain<br>Ministère des Habous et des Affaires islamiques — Royaume du Maroc</p>
+<p>Transcription mot à mot en arabe et traduction savante en français du curriculum de l’enseignement traditionnel marocain<br>Ministère des Habous et des Affaires islamiques — Royaume du Maroc</p>
 <p class="pied-liens"><a href="{rel}ancien-lecteur.html">Ancien lecteur</a><span aria-hidden="true">·</span><a href="https://github.com/Sounawa/minhaj" target="_blank" rel="noopener">Dépôt GitHub</a><span aria-hidden="true">·</span>site statique généré le {date_fr}</p>
 </div></footer>"""
 
@@ -906,18 +977,29 @@ t.onerror=function(){if(echec)echec();};
 document.head.appendChild(t);
 }
 });
+/* ?q= — ouverture directe d'une recherche (SearchAction du JSON-LD) */
+try{
+var q=new URLSearchParams(location.search).get('q');
+if(q&&q.trim().length>=2){input.value=q.trim();var ui=window.__minhajRechercheUI;if(ui)ui.lancer();}
+}catch(e){}
 })();
 </script>"""
 
 
-def coquille(titre, description, rel, programme_ar, date_fr, corps, scripts_html=''):
+def coquille(titre, description, rel, programme_ar, date_fr, corps, scripts_html='',
+             og_html='', jsonld_html=''):
+    extras = ''
+    if og_html:
+        extras += '\n' + og_html
+    if jsonld_html:
+        extras += '\n' + jsonld_html
     return f"""<!doctype html>
 <html lang="fr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{titre}</title>
-<meta name="description" content="{description}">
+<meta name="description" content="{description}">{extras}
 <meta name="theme-color" content="#2a340c">
 <meta name="generator" content="minhaj-build {date_fr}">
 <link rel="icon" href="{FAVICON}">
@@ -1084,6 +1166,11 @@ def page_accueil(livres, programme, date_fr, fragments_recherche):
     n_total = sum(len(b['lecons']) for b in livres)
     n_ok = sum(1 for b in livres for l in b['lecons'] if l['ok'])
     pct = round(100 * n_ok / n_total) if n_total else 0
+    # documents traduits (leçons + introductions) et cap savant franchi
+    n_docs = n_ok + sum(1 for b in livres if b['intro'] and b['intro']['htmlFr'])
+    n_sav_docs = (sum(1 for b in livres for l in b['lecons'] if l['ok'] and l['savante'])
+                  + sum(1 for b in livres if b['intro'] and b['intro']['htmlFr'] and b['intro']['savante']))
+    n_attente = n_docs - n_sav_docs
     nom_ar = programme.get('nameAr', 'المنهج النموذجي للتعليم العتيق')
     nom_fr = programme.get('nameFr') or 'Programme modèle de l’enseignement traditionnel'
     editeur_fr = programme.get('publisherFr') or 'Ministère des Habous et des Affaires islamiques — Royaume du Maroc'
@@ -1103,31 +1190,123 @@ def page_accueil(livres, programme, date_fr, fragments_recherche):
             + html_cycle_bande(sec, indice=i) + '\n'
             + '<div class="cycle-corps">\n' + '\n'.join(niveaux_html) + '\n</div>\n</details>')
 
+    section_savante = section_savante_html(livres, n_sav_docs, n_docs, n_attente, n_total, n_ok)
+
     corps = f"""<section class="heros pleine" id="accueil">
 <div class="heros-interieur">
 <p class="surline">{esc(nom_fr)} — {esc(editeur_fr)}</p>
 <h1><span class="arabe" dir="rtl" lang="ar">{esc(nom_ar)}</span></h1>
-<p class="sous">Collection de {len(livres)} manuels scolaires marocains d’enseignement traditionnel, transcrits mot à mot en arabe et traduits ou commentés en français, leçon par leçon — rangés ici du primaire au lycée.</p>
+<p class="sous">Collection de {len(livres)} manuels scolaires marocains d’enseignement traditionnel, transcrits mot à mot en arabe et accompagnés d’une traduction savante en français, leçon par leçon — rangés ici du primaire au lycée.</p>
 <div class="ornement" aria-hidden="true"><span></span><i></i><i></i><i></i><span></span></div>
 <div class="stats">
 <div class="stat"><b>{len(livres)}</b><span>manuels</span></div>
 <div class="stat"><b>{n_ok}</b><span>leçons transcrites</span></div>
+<div class="stat"><b>{n_sav_docs}</b><span>documents savants</span></div>
 <div class="stat"><b>{pct} %</b><span>du corpus</span></div>
 </div>
 <div class="prog"><div class="barre"><span style="width:{pct}%"></span></div>
 <p class="compte"><strong>{n_ok} / {n_total}</strong> leçons transcrites · mise à jour : {date_fr}</p></div>
+<div class="prog prog-savante"><div class="barre barre-savante"><span style="width:{round(100 * n_sav_docs / n_docs) if n_docs else 0}%"></span></div>
+<p class="compte"><strong>{n_sav_docs} / {n_docs}</strong> documents traduits en traduction savante · {n_attente} en attente du cap savant</p></div>
 {html_recherche()}
 </div>
 </section>
 {nav_cycle_html(sections)}
 <main>
 {''.join(sections_html)}
-</main>"""
+</main>
+{section_savante}"""
+    meta_desc = (f'Sommaire des {len(livres)} manuels du المنهج النموذجي للتعليم العتيق, '
+                 'rangés par niveau scolaire (primaire, collège, lycée) : leçons transcrites '
+                 'mot à mot en arabe, traduction savante en français leçon par leçon. '
+                 'Recherche globale en français et en arabe.')
+    jsonld = _ld([
+        {'@context': 'https://schema.org', '@type': 'WebSite',
+         'name': 'Minhaj — المنهاج النموذجي للتعليم العتيق',
+         'alternateName': 'Minhaj', 'url': BASE_URL,
+         'inLanguage': ['fr', 'ar'], 'description': meta_desc,
+         'potentialAction': {'@type': 'SearchAction',
+                             'target': {'@type': 'EntryPoint',
+                                        'urlTemplate': BASE_URL + 'index.html?q={search_term_string}'},
+                             'query-input': 'required name=search_term_string'}},
+        {'@context': 'https://schema.org', '@type': 'CollectionPage',
+         'name': 'Minhaj — manuels de l’enseignement traditionnel (Maroc)',
+         'url': BASE_URL, 'inLanguage': ['fr', 'ar'],
+         'isPartOf': {'@type': 'WebSite', 'url': BASE_URL},
+         'description': meta_desc},
+    ])
+    og = _og('Minhaj — manuels de l’enseignement traditionnel (Maroc)', meta_desc, BASE_URL)
     return coquille(
         'Minhaj — manuels de l’enseignement traditionnel (Maroc)',
-        'Sommaire des 64 manuels du المنهج النموذجي للتعليم العتيق, rangés par niveau scolaire (primaire, collège, lycée) : leçons transcrites mot à mot en arabe, traduites et commentées en français. Recherche globale en français et en arabe.',
+        meta_desc,
         '', nom_ar, date_fr, corps,
-        bootstrap_recherche_racine(fragments_recherche) + '\n' + BOOTSTRAP_ACCUEIL), n_ok, n_total
+        bootstrap_recherche_racine(fragments_recherche) + '\n' + BOOTSTRAP_ACCUEIL,
+        og_html=og, jsonld_html=jsonld), n_ok, n_total
+
+
+def section_savante_html(livres, n_sav_docs, n_docs, n_attente, n_total, n_ok):
+    """Section repliable « Traduction savante » : état du cap savant par manuel.
+    Les manuels ayant des documents en attente du cap arrivent en tête, puis
+    ceux les moins couverts par la transcription (travail restant visible)."""
+    chev = ('<span class="cycle-chev" aria-hidden="true">'
+            '<svg viewBox="0 0 24 24" width="19" height="19" fill="none" '
+            'stroke="currentColor" stroke-width="2.6" stroke-linecap="round" '
+            'stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>'
+            '</span>')
+    lignes = []
+    entrees = []
+    for b in livres:
+        trad = sum(1 for l in b['lecons'] if l['ok'])
+        sav = sum(1 for l in b['lecons'] if l['ok'] and l['savante'])
+        att = trad - sav
+        rest = len(b['lecons']) - trad
+        entrees.append((att, rest, sav, trad, b))
+    entrees.sort(key=lambda e: (-e[0], e[1], e[4]['titleFr']))
+    for att, rest, sav, trad, b in entrees:
+        pct = round(100 * sav / trad) if trad else 0
+        if trad and not att:
+            classe = 'ok-total'
+        elif trad:
+            classe = 'partiel'
+        else:
+            classe = 'vide'
+        puce = (f'<span class="chip-sav" title="Leçons en traduction savante '
+                f'(rédigée à la main ou validée)">✦ {sav} / {trad} savantes</span>'
+                if trad else '<span class="chip-sav puce-vide">0 / 0 savante</span>')
+        chip_att = (f'<span class="chip-att" title="Traduction automatique non '
+                    f'encore relue : en attente du cap savant">{att} en attente du cap</span>'
+                    if att else '')
+        chip_rest = (f'<span class="chip-tr" title="Leçons sans traduction française '
+                     f'pour l’instant">{rest} leçons à transcrire</span>'
+                     if rest else '')
+        lignes.append(
+            f'<li class="{classe}"><a class="sav-livre" href="livres/{esc(b["slug"])}/">{esc(b["titleFr"])}</a>'
+            f'<span class="sav-ar" dir="rtl" lang="ar">{esc(b["titleAr"])}</span>'
+            f'<span class="mini-barre barre-sav" aria-hidden="true"><span style="width:{pct}%"></span></span>'
+            f'<span class="sav-chips">{puce}{chip_att}{chip_rest}</span></li>')
+    meta = (f'{n_sav_docs} documents traduits sur {n_docs} ont passé le cap savant'
+            + (f' · {n_attente} en attente' if n_attente else ' · cap franchi partout')
+            + f' · {n_ok} / {n_total} leçons transcrites')
+    liste = '\n'.join(lignes)
+    return f"""<section class="zone-savante" id="traduction-savante">
+<details class="cycle cycle-savante" id="cycle-savante" style="--cycle:#8a651c;--cycle-nuit:#543f0e">
+<summary class="cycle-tete" title="Déplier / replier l’état de la traduction savante">
+<span class="cycle-medaille" aria-hidden="true">✦</span>
+<span class="cycle-titres"><h2>Traduction savante</h2>
+<p class="cycle-meta">{meta}</p></span>
+<span class="cycle-ar" dir="rtl" lang="ar">الترجمة العلمية</span>
+<span class="cycle-compte">{n_sav_docs} / {n_docs} documents</span>
+{chev}
+<span class="hors-ecran">— appuyer pour déplier ou replier l’état de la traduction savante</span>
+</summary>
+<div class="cycle-corps">
+<p class="savante-note">La <strong>traduction savante</strong> est rédigée à la main — ou traduite puis relue et validée leçon par leçon — en regard de la transcription mot à mot de l’arabe ; elle se distingue d’une traduction automatique restée sans relecture. Chaque document traduit du corpus a passé ce cap ; les leçons « à transcrire » n’ont encore aucune traduction française.</p>
+<ul class="savante-liste">
+{liste}
+</ul>
+</div>
+</details>
+</section>"""
 
 
 def html_liste_lecons(livre):
@@ -1136,7 +1315,10 @@ def html_liste_lecons(livre):
         it = livre['intro']
         ar = f'<span class="t-ar" dir="rtl" lang="ar">{esc(it["titreAr"])}</span>' if it['titreAr'] else ''
         lib = f'<span class="libelles">{ar}<span class="t-fr">{esc(it["titreFr"])}</span></span>'
-        items.append(f'<li class="intro-l fait"><a href="introduction.html"><span class="badge" aria-hidden="true">✦</span>{lib}</a></li>')
+        puce_intro = (f'<span class="puce-trad sav" title="Traduction savante — rédigée à la main '
+                      f'ou traduite puis relue et validée">✦ savante</span>'
+                      if it.get('savante') and it.get('htmlFr') else '')
+        items.append(f'<li class="intro-l fait"><a href="introduction.html"><span class="badge" aria-hidden="true">✦</span>{lib}{puce_intro}</a></li>')
     for l in livre['lecons']:
         badge = f'<span class="badge" aria-hidden="true">{l["num"]}</span>'
         ar = f'<span class="t-ar" dir="rtl" lang="ar">{esc(l["titleAr"])}</span>' if l['titleAr'] else ''
@@ -1144,16 +1326,22 @@ def html_liste_lecons(livre):
         lib = f'<span class="libelles">{ar}{fr}</span>'
         pdf = f'<a class="pdf" href="{esc(l["pdfUrl"])}" target="_blank" rel="noopener">PDF officiel</a>' if l['pdfUrl'] else ''
         if l['ok']:
-            items.append(f'<li class="fait"><a href="{url_lecon(l["docId"])}.html">{badge}{lib}</a></li>')
+            puce = (f'<span class="puce-trad sav" title="Traduction savante — rédigée à la main '
+                    f'ou traduite puis relue et validée">✦ savante</span>' if l['savante']
+                    else '<span class="puce-trad auto" title="Traduction automatique — en attente '
+                         'du cap de la traduction savante">auto</span>')
+            items.append(f'<li class="fait"><a href="{url_lecon(l["docId"])}.html">{badge}{lib}{puce}</a></li>')
         else:
             items.append(f'<li class="a-faire"><span class="ligne-lecon">{badge}{lib}{pdf}</span></li>')
-    return '<ol class="lecons">\n' + '\n'.join(items) + '\n</ol>' 
+    return '<ol class="lecons">\n' + '\n'.join(items) + '\n</ol>'
 
 
 def page_sommaire_livre(livre, programme_ar, date_fr):
     n_total = len(livre['lecons'])
     n_ok = sum(1 for l in livre['lecons'] if l['ok'])
     pct = round(100 * n_ok / n_total) if n_total else 0
+    n_sav = sum(1 for l in livre['lecons'] if l['ok'] and l['savante'])
+    n_att = n_ok - n_sav
     pdf_chip = (f'<a class="chip chip-lien" href="{esc(livre["pdfUrl"])}" target="_blank" rel="noopener">PDF du manuel</a>'
                 if livre['pdfUrl'] else '')
     fil = (f'<nav class="fil"><a href="../../index.html">Accueil</a><span class="sep">›</span>'
@@ -1171,14 +1359,37 @@ def page_sommaire_livre(livre, programme_ar, date_fr):
 <div class="ornement" aria-hidden="true"><span></span><i></i><i></i><i></i><span></span></div>
 <div class="prog"><div class="barre"><span style="width:{pct}%"></span></div>
 <p class="compte"><strong>{n_ok} / {n_total}</strong> leçons transcrites</p></div>
+<div class="prog prog-savante"><div class="barre barre-savante"><span style="width:{round(100 * n_sav / n_ok) if n_ok else 0}%"></span></div>
+<p class="compte"><strong>{n_sav} / {n_ok}</strong> leçons en traduction savante · {n_att} en attente du cap savant</p></div>
 </header>
 {html_liste_lecons(livre)}
 </main>"""
     description = (f"{livre['titleFr']} ({livre['sujetFr']}, {livre['niveauFr']}) : "
-                   f"{n_ok} leçons transcrites sur {n_total}, transcription mot à mot en arabe et traduction française.")
+                   f"{n_ok} leçons transcrites sur {n_total}, transcription mot à mot en arabe "
+                   f"et traduction savante en français.")
+    dans_cycles = livre['cycle'] in {c[0] for c in CYCLES}
+    segments = [('Accueil', BASE_URL)]
+    if dans_cycles:
+        cycle_fr = {c[0]: c[1] for c in CYCLES}.get(livre['cycle'], 'Bibliothèque')
+        segments.append((cycle_fr, BASE_URL + 'index.html#cycle-' + livre['cycle']))
+        segments.append((livre['niveauFr'] or 'Niveau', BASE_URL + 'index.html#niveau-' + (livre['niveauId'] or '')))
+    segments.append((livre['titleFr'], BASE_URL + f"livres/{livre['slug']}/"))
+    jsonld = _ld([
+        {'@context': 'https://schema.org', '@type': 'Book',
+         'name': livre['titleFr'], 'alternateName': livre['titleAr'],
+         'url': BASE_URL + f"livres/{livre['slug']}/",
+         'inLanguage': 'ar', 'description': description,
+         'publisher': {'@type': 'Organization',
+                       'name': 'Ministère des Habous et des Affaires islamiques — Royaume du Maroc'},
+         'isPartOf': {'@type': 'WebSite', 'name': 'Minhaj', 'url': BASE_URL}},
+        _fil_jsonld(segments),
+    ])
+    og = _og(f"{livre['titleFr']} — sommaire | Minhaj", description,
+             BASE_URL + f"livres/{livre['slug']}/")
     return coquille(
         f"{livre['titleFr']} — sommaire | Minhaj",
-        esc(description), '../../', programme_ar, date_fr, corps)
+        esc(description), '../../', programme_ar, date_fr, corps,
+        og_html=og, jsonld_html=jsonld)
 
 
 def html_pn(prec, suiv, url_sommaire):
@@ -1206,14 +1417,38 @@ def page_lecon(livre, lecon, prec, suiv, programme_ar, date_fr):
            f'{fil_niveau}'
            f'<a href="index.html">{esc(livre["titleFr"])}</a><span class="sep">›</span>'
            f'<span>Leçon {lecon["num"]}</span></nav>')
+    etat = (f'<p class="trad-etat"><span class="puce-trad sav" title="Traduction savante — rédigée à la main '
+            f'ou traduite puis relue et validée">✦ Traduction savante</span></p>' if lecon['savante']
+            else f'<p class="trad-etat"><span class="puce-trad auto" title="Traduction automatique — en attente '
+                 f'du cap de la traduction savante">Traduction automatique — relecture savante en cours</span></p>')
     corps = f"""<main class="lecture">
 {fil}
+{etat}
 <article class="contenu">
 {lecon['htmlFr']}
 </article>
 {html_pn(prec, suiv, 'index.html')}
 </main>"""
-    return coquille(esc(titre_page), esc(description), '../../', programme_ar, date_fr, corps)
+    segments = [('Accueil', BASE_URL)]
+    if livre['niveauId']:
+        segments.append((livre['niveauFr'] or 'Niveau', BASE_URL + 'index.html#niveau-' + livre['niveauId']))
+    segments.append((livre['titleFr'], BASE_URL + f"livres/{livre['slug']}/"))
+    segments.append((f"Leçon {lecon['num']}", BASE_URL + f"livres/{livre['slug']}/{url_lecon(lecon['docId'])}.html"))
+    jsonld = _ld([
+        {'@context': 'https://schema.org', '@type': 'Article',
+         'headline': f"Leçon {lecon['num']} — {livre['titleFr']}",
+         'inLanguage': 'fr', 'description': description,
+         'url': BASE_URL + f"livres/{livre['slug']}/{url_lecon(lecon['docId'])}.html",
+         'isPartOf': {'@type': 'Book', 'name': livre['titleFr'],
+                      'url': BASE_URL + f"livres/{livre['slug']}/"},
+         'publisher': {'@type': 'Organization',
+                       'name': 'Ministère des Habous et des Affaires islamiques — Royaume du Maroc'}},
+        _fil_jsonld(segments),
+    ])
+    og = _og(titre_page, description,
+             BASE_URL + f"livres/{livre['slug']}/{url_lecon(lecon['docId'])}.html", typ='article')
+    return coquille(esc(titre_page), esc(description), '../../', programme_ar, date_fr, corps,
+                    og_html=og, jsonld_html=jsonld)
 
 
 def page_introduction(livre, suiv, programme_ar, date_fr):
@@ -1241,8 +1476,25 @@ def page_introduction(livre, suiv, programme_ar, date_fr):
 {html_pn(None, suiv, 'index.html')}
 </main>"""
     description = f"Présentation du manuel « {livre['titleFr']} » ({livre['sujetFr']}, {livre['niveauFr']})."
+    segments = [('Accueil', BASE_URL)]
+    if livre['niveauId']:
+        segments.append((livre['niveauFr'] or 'Niveau', BASE_URL + 'index.html#niveau-' + livre['niveauId']))
+    segments.append((livre['titleFr'], BASE_URL + f"livres/{livre['slug']}/"))
+    segments.append((it['titreFr'] or 'Présentation', BASE_URL + f"livres/{livre['slug']}/introduction.html"))
+    jsonld = _ld([
+        {'@context': 'https://schema.org', '@type': 'WebPage',
+         'name': it['titreFr'] or 'Présentation du manuel',
+         'inLanguage': 'fr', 'description': description,
+         'url': BASE_URL + f"livres/{livre['slug']}/introduction.html",
+         'isPartOf': {'@type': 'Book', 'name': livre['titleFr'],
+                      'url': BASE_URL + f"livres/{livre['slug']}/"}},
+        _fil_jsonld(segments),
+    ])
+    og = _og(f"{it['titreFr']} — {livre['titleFr']} | Minhaj", description,
+             BASE_URL + f"livres/{livre['slug']}/introduction.html")
     return coquille(f"{esc(it['titreFr'])} — {esc(livre['titleFr'])} | Minhaj",
-                    esc(description), '../../', programme_ar, date_fr, corps)
+                    esc(description), '../../', programme_ar, date_fr, corps,
+                    og_html=og, jsonld_html=jsonld)
 
 
 # ---------------------------------------------------------------------------
@@ -1409,6 +1661,7 @@ ouvrirAncre();
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Minhaj — consultation hors connexion | {esc(nom_ar)}</title>
 <meta name="description" content="Variante mono-fichier du site Minhaj : tous les livres et leçons transcrites embarqués, consultable hors connexion (file://).">
+<meta name="robots" content="noindex">
 <meta name="theme-color" content="#2a340c">
 <meta name="generator" content="minhaj-build {date_fr}">
 <link rel="icon" href="{FAVICON}">
@@ -1471,7 +1724,8 @@ def preparer_ancien_lecteur(texte_spa, prefixe_fetch, lien_retour):
                f'<a href="{lien_retour}">site statique complet</a> remplace cette page : '
                f'sommaires par livre, leçons transcrites, recherche globale, version hors connexion.</div>')
     texte = re.sub(r'(<body[^>]*>)', lambda m: m.group(1) + bandeau, texte, count=1)
-    texte = texte.replace('</head>', BANDEAU_CSS + '\n</head>', 1)
+    texte = texte.replace('</head>',
+                          '<meta name="robots" content="noindex">\n' + BANDEAU_CSS + '\n</head>', 1)
     return texte
 
 
@@ -1572,6 +1826,7 @@ def main():
     rep_books = Path(opts.content) if opts.content else depot / 'content' / 'books'
     sortie = Path(opts.sortie) if opts.sortie else depot / 'site'
     base = opts.base_url if opts.base_url.endswith('/') else opts.base_url + '/'
+    globals()['BASE_URL'] = base
 
     # date française
     try:
@@ -1598,6 +1853,13 @@ def main():
     if not livres:
         print('!! aucun livre trouvé dans', rep_books)
         return 1
+    # statut « traduction savante » par document (registre hand ∪ llm)
+    registre_savant = charger_registre_savant(depot, avertissements)
+    for b in livres:
+        for l in b['lecons']:
+            l['savante'] = l['docId'] in registre_savant
+        if b['intro']:
+            b['intro']['savante'] = bool(b['intro']['docId']) and b['intro']['docId'] in registre_savant
     # cycles ayant au moins un document transcrit -> fragments de l'index
     cycles_frag = sorted({(b['cycle'] or 'autre') for b in livres
                           if b['intro'] or any(l['ok'] for l in b['lecons'])})
@@ -1760,7 +2022,12 @@ def main():
     octets_titres = (sortie / 'recherche' / 'index-titres.js').stat().st_size
     taille_hl = (sortie / 'hors-ligne.html').stat().st_size
     print('=== Génération terminée ===')
+    n_docs = total_ok + total_intro
+    n_sav_docs = (sum(1 for b in livres for l in b['lecons'] if l['ok'] and l['savante'])
+                  + sum(1 for b in livres if b['intro'] and b['intro']['htmlFr'] and b['intro']['savante']))
     print(f'livres : {len(livres)} | leçons : {total_lecons} ({total_ok} transcrites) | introductions : {total_intro}')
+    print(f'traduction savante : {n_sav_docs} / {n_docs} documents traduits '
+          f'({n_docs - n_sav_docs} en attente du cap savant)')
     print(f'pages HTML : {n_pages} | fichiers copiés à la racine : {n_copies}')
     print(f'index de recherche : {len(entrees_lecons)} documents en {len(fichiers_recherche)} fichiers '
           f'({mo_octets(octets_recherche)} — titres {mo_octets(octets_titres)} + {n_frags} fragments de texte) '

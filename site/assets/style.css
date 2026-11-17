@@ -75,7 +75,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:600}
 .en-tete .interieur{position:relative;max-width:1160px;margin:0 auto;padding:11px 22px;display:flex;flex-wrap:wrap;gap:2px 22px;align-items:center}
 .en-tete .marque a{display:inline-flex;flex-direction:column;gap:1px}
 .en-tete .marque .arabe{font-family:var(--amiri);font-size:1.55rem;line-height:1.5;color:#f3e6c3}
-.en-tete .marque .sous-marque{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:#c4b88e}
+.en-tete .marque .sous-marque{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#c4b88e}
 .en-tete .liens{margin-inline-start:auto;display:flex;gap:8px;font-size:.85rem;flex-wrap:wrap}
 .en-tete .liens a{color:#e8dbb2;border:1px solid rgba(232,219,178,.35);border-radius:99px;padding:4px 14px}
 .en-tete .liens a:hover{color:#fff3d0;border-color:rgba(240,223,174,.8);text-decoration:none;background:rgba(240,223,174,.08)}
@@ -96,14 +96,14 @@ main.lecture{max-width:960px}
 .heros.pleine::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;
   background:repeating-linear-gradient(90deg,#b98a2e 0 18px,#6f5615 18px 21px,#55672a 21px 38px,#6f5615 38px 41px)}
 .heros-interieur{position:relative;max-width:880px;margin:0 auto}
-.heros.pleine .surline{color:#d9b45c;letter-spacing:.17em;text-transform:uppercase;font-size:.72rem;font-weight:600;margin:0}
+.heros.pleine .surline{color:#d9b45c;letter-spacing:.17em;text-transform:uppercase;font-size:.78rem;font-weight:600;margin:0}
 .heros h1{margin:.3em 0 .1em}
 .heros h1 .arabe{font-family:var(--amiri);font-weight:700;font-size:clamp(2.5rem,6.4vw,3.7rem);line-height:1.8;color:#f3e6c3;display:block;text-shadow:0 2px 22px rgba(0,0,0,.35)}
 .heros.pleine .sous{color:#e3d8b4;max-width:700px;margin:.5em auto .2em;font-size:1.08rem;font-style:italic}
 /* variante en panneau (hors-ligne, 404) */
 main .heros{max-width:880px;margin:6px auto 28px;text-align:center;background:linear-gradient(160deg,#33400f,#242d09 82%);border-radius:18px;padding:34px 26px 30px;color:#f2ecd9;position:relative;overflow:hidden;border:1px solid #1f2707}
 main .heros::before{content:"";position:absolute;inset:0;background-image:var(--motif);opacity:.6;pointer-events:none}
-main .heros .surline{color:#d9b45c;letter-spacing:.15em;text-transform:uppercase;font-size:.72rem;font-weight:600;margin:0;position:relative}
+main .heros .surline{color:#d9b45c;letter-spacing:.15em;text-transform:uppercase;font-size:.78rem;font-weight:600;margin:0;position:relative}
 main .heros h1{position:relative}
 main .heros h1 .arabe{font-family:var(--amiri);font-weight:700;font-size:2.25rem;line-height:1.85;color:#f3e6c3;display:block}
 main .heros .sous{color:#e3d8b4;max-width:680px;margin:.45em auto .2em;position:relative}
@@ -120,7 +120,7 @@ main .heros .sous{color:#e3d8b4;max-width:680px;margin:.45em auto .2em;position:
 .stat{flex:1;padding:15px 8px 12px;border-inline-end:1px solid rgba(232,207,154,.22)}
 .stat:last-child{border-inline-end:0}
 .stat b{display:block;font-size:1.7rem;line-height:1.15;color:#ecc987;font-variant-numeric:tabular-nums;font-weight:700}
-.stat span{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:#cfc49c}
+.stat span{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:#cfc49c}
 /* variante claire (hors-ligne/404 en panneau sombre -> mêmes tons) */
 main .heros .stats{border-color:rgba(232,207,154,.4);background:rgba(255,253,246,.06)}
 
@@ -155,11 +155,11 @@ main .heros .resultats .r-compte{color:#cfc49c}
 /* ================= navigation par cycle ================= */
 .cycle-nav{position:sticky;top:0;z-index:50;background:rgba(245,237,218,.94);backdrop-filter:blur(9px);border-bottom:1px solid var(--ligne-2);box-shadow:0 6px 18px -14px rgba(70,50,15,.5)}
 .cycle-nav .interieur{max-width:1160px;margin:0 auto;padding:10px 22px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;align-items:center}
-.cycle-nav .nav-titre{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gris);margin-inline-end:6px}
+.cycle-nav .nav-titre{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gris);margin-inline-end:6px}
 .cycle-nav a{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--ligne-2);border-radius:99px;padding:6px 16px;font-size:.9rem;color:var(--encre-2);background:var(--carte);transition:border-color .15s ease,background .15s ease,color .15s ease,box-shadow .15s ease}
 .cycle-nav a i{width:9px;height:9px;border-radius:3px;background:var(--nav-coul,#5c5218);flex:none;transform:rotate(45deg)}
 .cycle-nav a:hover{text-decoration:none;border-color:var(--nav-coul,#8a651c);color:var(--nav-coul-f,#3c4818);background:var(--carte-2)}
-.cycle-nav a b.nav-n{flex:none;font:700 .7rem/1 var(--serif);font-variant-numeric:tabular-nums;color:var(--nav-coul-f,#5c5218);background:rgba(90,70,30,.09);border-radius:99px;padding:2.5px 8px;margin-inline-start:1px}
+.cycle-nav a b.nav-n{flex:none;font:700 .78rem/1 var(--serif);font-variant-numeric:tabular-nums;color:var(--nav-coul-f,#5c5218);background:rgba(90,70,30,.09);border-radius:99px;padding:2.5px 8px;margin-inline-start:1px}
 .cycle-nav a[data-ouvert]{background:var(--nav-coul,#5c5218);border-color:var(--nav-coul-f,#37430f);color:#f6efdb;box-shadow:0 6px 14px -7px rgba(50,32,8,.6)}
 .cycle-nav a[data-ouvert] i{background:#f6efdb}
 .cycle-nav a[data-ouvert] b.nav-n{color:#f6efdb;background:rgba(0,0,0,.26)}
@@ -245,9 +245,9 @@ details.niveau[open] .niveau-corps{animation:cycle-apparait .26s ease}
 .carte::after{content:"";position:absolute;top:9px;inset-inline-end:9px;width:20px;height:20px;border-top:1px solid rgba(185,138,46,.4);border-inline-end:1px solid rgba(185,138,46,.4);border-start-end-radius:7px}
 .carte:hover{text-decoration:none;transform:translateY(-3px);box-shadow:0 16px 30px -16px rgba(70,50,15,.5);border-color:var(--ligne-2);border-inline-start-color:var(--sujet);color:inherit}
 .puces{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px;position:relative}
-.chip{font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--encre-2);border:1px solid var(--ligne-2);border-radius:99px;padding:2.5px 11px;background:var(--carte-2);white-space:nowrap}
+.chip{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--encre-2);border:1px solid var(--ligne-2);border-radius:99px;padding:2.5px 11px;background:var(--carte-2);white-space:nowrap}
 .chip-sujet{color:var(--sujet,#5c5218);border-color:var(--sujet,#c9b98d);background:transparent}
-.chip-lien{cursor:pointer;font-size:.72rem;padding:5px 14px}
+.chip-lien{cursor:pointer;font-size:.75rem;padding:5px 14px}
 a.chip-lien:hover{text-decoration:none;border-color:var(--or);color:var(--or-f)}
 .carte .t-ar{font-family:var(--amiri);font-size:1.5rem;line-height:2.1;text-align:center;display:block;margin:1px 0 7px;color:#35420f;position:relative}
 .carte .t-fr{display:block;text-align:center;font-size:.92rem;line-height:1.55;color:var(--encre-2);flex:1;position:relative}
@@ -287,7 +287,7 @@ a.chip-lien:hover{text-decoration:none;border-color:var(--or);color:var(--or-f)}
 .lecons .t-fr{color:var(--encre-2);font-size:.9rem;line-height:1.55}
 .lecons li.a-faire{background:repeating-linear-gradient(45deg,transparent 0 13px,rgba(160,130,60,.06) 13px 26px)}
 .lecons li.a-faire .t-ar,.lecons li.a-faire .t-fr{color:var(--gris)}
-.lecons .pdf{flex:none;align-self:center;font-size:.74rem;letter-spacing:.04em;color:var(--or-f);border:1px solid var(--ligne-2);border-radius:99px;padding:3px 12px}
+.lecons .pdf{flex:none;align-self:center;font-size:.78rem;letter-spacing:.04em;color:var(--or-f);border:1px solid var(--ligne-2);border-radius:99px;padding:3px 12px}
 .lecons .pdf:hover{border-color:var(--or);text-decoration:none}
 
 /* ================= page de leçon ================= */
@@ -326,7 +326,7 @@ a.chip-lien:hover{text-decoration:none;border-color:var(--or);color:var(--or-f)}
 .pn{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:stretch;max-width:860px;margin:26px auto 0}
 .pn a,.pn .pn-vide{background:var(--carte);border:1px solid var(--ligne);border-radius:12px;padding:12px 16px;font-size:.94rem;line-height:1.6;color:var(--olive-f)}
 .pn a:hover{text-decoration:none;border-color:var(--or);box-shadow:0 8px 18px -12px rgba(120,90,30,.6)}
-.pn .pn-l{display:block;font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;color:var(--gris);margin-bottom:3px}
+.pn .pn-l{display:block;font-size:.78rem;letter-spacing:.11em;text-transform:uppercase;color:var(--gris);margin-bottom:3px}
 .pn .pn-suiv{text-align:end}
 .pn .pn-sommaire{background:linear-gradient(150deg,var(--olive),var(--olive-f));border-color:var(--olive-f);color:#f2ecd9;text-align:center;padding:12px 20px;font-size:.9rem}
 .pn .pn-sommaire:hover{filter:brightness(1.08)}
@@ -370,6 +370,36 @@ details.lecon .contenu::before,details.lecon .contenu::after{display:none}
 .pied a{color:#e8c98c}
 .pied .pied-liens span{margin:0 8px;color:#7a7355}
 
+/* ================= statut de traduction (savante / auto) — R715 ================= */
+.puce-trad{flex:none;align-self:center;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;font-weight:700;border-radius:99px;padding:3px 12px;border:1px solid var(--ligne-2);white-space:nowrap}
+.puce-trad.sav{color:#3c4818;border-color:#8a9a55;background:#eef0d6}
+.puce-trad.auto{color:var(--gris);background:var(--carte-2);font-weight:600}
+.trad-etat{margin:-10px 0 20px;text-align:center}
+.trad-etat .puce-trad{display:inline-block}
+.barre-savante span{background:linear-gradient(90deg,#8a651c,#d9b45c)}
+.prog-savante{margin-top:10px}
+
+/* section « traduction savante » de l'accueil */
+.zone-savante{max-width:1160px;margin:30px auto 0;padding:0 22px}
+.cycle-savante>summary.cycle-tete{background:radial-gradient(620px 220px at 88% -46%,rgba(232,207,154,.22),transparent 62%),linear-gradient(122deg,var(--cycle-nuit,#543f0e),var(--cycle,#8a651c) 88%)}
+.savante-note{font-size:.94rem;line-height:1.8;color:var(--encre-2);background:var(--carte-2);border:1px dashed var(--ligne-2);border-radius:10px;padding:12px 16px;margin:14px 2px}
+.savante-note strong{color:var(--encre)}
+.savante-liste{list-style:none;margin:0 0 8px;padding:0}
+.savante-liste li{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;background:var(--carte);border:1px solid var(--ligne);border-radius:12px;padding:10px 16px;margin:8px 0}
+.savante-liste li.ok-total{border-inline-start:4px solid var(--olive)}
+.savante-liste li.partiel{border-inline-start:4px solid var(--or)}
+.savante-liste li.vide{border-inline-start:4px solid #b3a27e}
+.sav-livre{font-weight:600;color:var(--encre);flex:0 1 auto}
+.sav-livre:hover{color:var(--terracotta-f)}
+.sav-ar{font-family:var(--amiri);color:#35420f;font-size:1.02rem;line-height:1.9}
+.savante-liste .barre-sav{flex:1 1 110px;min-width:90px;height:6px;background:var(--fond-2);border-radius:99px;overflow:hidden;display:block}
+.barre-sav span{display:block;height:100%;background:linear-gradient(90deg,#8a651c,#d9b45c);border-radius:99px}
+.sav-chips{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.chip-sav{font-size:.75rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#3c4818;border:1px solid #8a9a55;border-radius:99px;padding:2.5px 11px;background:#eef0d6;white-space:nowrap}
+.chip-att{font-size:.75rem;font-weight:600;letter-spacing:.04em;color:var(--terracotta-f);border:1px dashed var(--terracotta);border-radius:99px;padding:2.5px 11px;background:var(--carte-2);white-space:nowrap}
+.chip-tr{font-size:.75rem;font-weight:600;letter-spacing:.04em;color:var(--gris);border:1px solid var(--ligne-2);border-radius:99px;padding:2.5px 11px;background:var(--carte-2);white-space:nowrap}
+.puce-vide{color:var(--gris);border-style:dashed;background:transparent}
+
 /* ================= impression ================= */
 @media print{
   .en-tete,.pied,.fil,.pn,.recherche,.bandeau,.stats,.cycle-nav{display:none}
@@ -407,18 +437,18 @@ details.lecon .contenu::before,details.lecon .contenu::after{display:none}
   .cycle-chev svg{width:16px;height:16px}
   .cycle-corps{padding:2px 10px 8px;border-radius:0 0 15px 15px}
   .nav-tout{padding:5px 12px;font-size:.8rem}
-  .cycle-nav a b.nav-n{font-size:.66rem;padding:2px 7px}
+  .cycle-nav a b.nav-n{font-size:.75rem;padding:2px 7px}
   .cycle-medaille{width:44px;height:44px;font-size:1.25rem}
   .cycle-titres h2{font-size:1.18rem}
   .cycle-titres .cycle-meta{font-size:.78rem}
   .cycle-ar{font-size:1.45rem}
-  .cycle-compte{font-size:.68rem;padding:4px 11px}
+  .cycle-compte{font-size:.75rem;padding:4px 11px}
   details.niveau{margin:13px 0}
   details.niveau>summary.niveau-tete{gap:10px;padding:10px 12px}
   .niveau-badge{min-width:42px;height:42px;font-size:1.02rem;border-radius:11px}
   .niveau-lib .niveau-ar{font-size:1.12rem}
   .niveau-lib .niveau-fr{font-size:.98rem}
-  .niveau-n{font-size:.66rem;padding:3px 10px}
+  .niveau-n{font-size:.75rem;padding:3px 10px}
   .niveau-chev{width:25px;height:25px}
   .niveau-corps{padding:4px 8px 12px}
   .grille{grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:11px}
@@ -428,6 +458,10 @@ details.lecon .contenu::before,details.lecon .contenu::after{display:none}
   .livre-tete{padding:24px 16px 20px}
   .livre-tete h1 .arabe{font-size:1.7rem}
   .contenu h1{font-size:1.4rem}
+  .zone-savante{padding:0 14px;margin-top:22px}
+  .savante-liste li{flex-direction:column;align-items:flex-start;gap:5px;padding:9px 12px}
+  .savante-liste .barre-sav{flex:none;width:100%;min-width:0;height:6px}
+  .trad-etat{margin-top:-6px}
 }
 @media (max-width:420px){
   .grille{grid-template-columns:1fr}
