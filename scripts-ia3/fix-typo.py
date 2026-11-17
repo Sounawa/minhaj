@@ -28,7 +28,8 @@ WORD_INITIAL_AYN = {"atīq", "afw", "iyāḍ", "abd", "amd", "arafa", "umar", "a
                     "azl", "ādiyāt", "amal", "arḍin", "arḍi", "uzila", "iṣma",
                     "aqd", "inda", "ā", "abbās", "aqār", "illa", "alīch", "alīsh",
                     "urf", "imāra", "achar", "uqbarī", "iwaḍ", "araḍ", "ayb",
-                    "ilm", "amr", "adīm", "uqba", "ichrūn"}
+                    "ilm", "amr", "adīm", "uqba", "ichrūn", "inān", "iyāl",
+                    "adāla", "allāma", "udhr", "n-n"}                      # 'n-n : racine ʿ-n-n (ʿinān)
 WORD_INITIAL_HAMZA = {"adam", "adaman", "ibtighā", "adhara", "astakhli"}   # ʾadam, ibtighāʾ, aʾdhara, ʾastakhliḍ/ṣ (hamzat wasl imprimée — incertaine résiduelle consignée W6)
 WORD_FINAL = {"khul": "ʿ", "jāmi": "ʿ", "rābi": "ʿ", "raja": "ʿ", "bay": "ʿ",  # khulʿ, Jāmiʿ, rābiʿ, rajaʿa, bayʿ
               "tabarru": "ʾ", "malā": "ʾ", "khaṭā": "ʾ", "muwaṭṭa": "ʾ",
@@ -40,7 +41,8 @@ WORD_FINAL = {"khul": "ʿ", "jāmi": "ʿ", "rābi": "ʿ", "raja": "ʿ", "bay": "
               "rab": "ʿ", "rub": "ʿ", "nāfi": "ʿ", "ğam": "ʿ", "māni": "ʿ",     # rabʿ, rubʿ, Nāfiʿ, ğamʿ, māniʿ
               "tachaffu": "ʿ",                                                  # tachaffuʿ
               "ğāmi": "ʿ", "wa": "ʿ",                                           # Ğāmiʿ, waʿd (وعد)
-              "tawāṭu": "ʾ", "tanāzu": "ʿ"}                                     # tawāṭuʾ (تواطؤ), tanāzuʿ (تنازع)
+              "tawāṭu": "ʾ", "tanāzu": "ʿ",                                     # tawāṭuʾ (تواطؤ), tanāzuʿ (تنازع)
+              "zar": "ʿ", "naf": "ʿ", "ḍ": "ʿ"}                                 # zarʿ, nafʿ, racine b-ḍ-ʿ
 # couples (fin du mot avant ', début du mot après ') tranchés mot à mot —
 # la lettre entre les deux morceaux n'est pas déductible du préfixe seul :
 # taʿlīm/taʿzīr (ʿayn) mais taʾkhīr/taʾbīm (hamza) ; saʾala hamza mais aʿṭā ʿayn.
@@ -72,7 +74,10 @@ PAIR_MEDIAL = {("ta", "līm"): "ʿ", ("ta", "zīr"): "ʿ", ("ta", "khīr"): "ʾ"
                ("muta", "addin"): "ʿ", ("ta", "addud"): "ʿ",                    # mutaʿaddin, taʿaddud
                ("char", "an"): "ʿ", ("ta", "līl"): "ʿ",                         # charʿan, taʿlīl
                ("ma", "dim"): "ʿ", ("ma", "rā"): "ʾ",                           # maʿdim (معدم), maʾrā (مَعْرَاء — incertaine consignée)
-               ("da", "wā"): "ʿ", ("mu", "add"): "ʿ"}                           # daʿwā, muʿaddī/muʿaddā
+               ("da", "wā"): "ʿ", ("mu", "add"): "ʿ",                           # daʿwā, muʿaddī/muʿaddā
+               ("ni", "ma"): "ʿ", ("ya", "qid"): "ʿ", ("tana", "qid"): "ʿ",     # niʿma, yaʿqid, tanaʿqid
+               ("i", "āra"): "ʾ", ("ista", "lafa"): "ʾ", ("isti", "lāf"): "ʾ",  # iʾāra, istaʾlafa, istiʾlāf
+               ("ma", "īb"): "ʿ", ("aqa", "ada"): "ʾ", ("ta", "addī"): "ʿ"}     # maʿīb, aqaʾada, taʿaddī
 LONGVOWL_AYN = ("charī", "shari")   # sharīʿa : ʿayn (pas hamza) après ī
 FRENCH_ELISION = {"l", "d", "n", "s", "j", "c", "m", "t", "qu", "jusqu", "lorsqu",
                   "puisqu", "quelqu", "aujourd"}
@@ -131,22 +136,24 @@ def classify(rendered, p):
         return "ʾ", "inventaire signes (ṣ,ḍ,ṭ,ḥ,') → ʾ consigné"
     if (not prev_w or prev_w.endswith("-")) and nxt_w:         # ' initial de mot (préfixes al-, bi-, wa-…)
         nx = nxt_w.lower()
-        if nx in WORD_INITIAL_HAMZA or nx.split("-")[0] in WORD_INITIAL_HAMZA \
+        nx2 = nx.lstrip("-")                                   # racines « '-n-n » : hyphen initial
+        if nx in WORD_INITIAL_HAMZA or nx2 in WORD_INITIAL_HAMZA \
                 or any(nx.startswith(x) for x in WORD_INITIAL_HAMZA if len(x) > 4):
             return "ʾ", f"hamza initial ({prev_w or ''}{nxt_w})"
-        if any(nx == x or nx.split("-")[0] == x or nx.startswith(x) for x in WORD_INITIAL_AYN):
+        if any(nx == x or nx2 == x or nx2.split("-")[0] == x or nx2.startswith(x) for x in WORD_INITIAL_AYN):
             return "ʿ", f"ʿayn initial ({prev_w or ''}{nxt_w})"
         return None, f"initial non cartographié ('{prev_w}{nxt_w}')"
     if not nxt_w and prev_w:                                   # ' final de mot
-        tail = prev_w.rsplit("-", 1)[-1]
+        base = prev_w.rstrip("-")                              # racines « b-ḍ-' » : hyphen final
+        tail = base.rsplit("-", 1)[-1]
         if prev_w[-1] in "āīūĀĪŪ":
             return "ʾ", f"hamza après voyelle longue ({prev_w})"
-        for cand in (prev_w, tail):
+        for cand in (base, tail):
             if cand.lower() in WORD_FINAL:
                 return WORD_FINAL[cand.lower()], f"carte mot final ({cand})"
         return None, f"final non cartographié ('{prev_w}')"
     if prev_w and nxt_w:                                       # ' médial
-        prev_tail = prev_w.rsplit("-", 1)[-1].lower()
+        prev_tail = prev_w.rstrip("-").rsplit("-", 1)[-1].lower()
         for p0, n0 in PAIR_MEDIAL:
             if prev_tail == p0 and nxt_w[:len(n0)].lower() == n0:
                 return PAIR_MEDIAL[(p0, n0)], f"carte couple ({p0}'{n0}…)"

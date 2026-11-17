@@ -175,6 +175,21 @@ Trace: 3af9c47be21d8065-w6
 - QA : `qa-lesson.py` **PASS ×4** ; `verify-diff.py` **0 diff non autorisé**.
 - Push : pull --rebase + push + refetch → rev-list = 0 (EN LIGNE vérifié).
 
+## W7 — 2026-11-17 — typo fiqh-tanawi-3 docs 19537, 19544, 19601, 19670 (vague 7/8)
+Task ID: W7
+Trace: 3af9c47be21d8065-w7
+
+- Vague 7/4 docs : **19537 (21 apos), 19544 (31), 19601 (32), 19670 (37) =
+  121 apostrophes** classées **73 ʿ + 48 ʾ + 0 ’**, 0 incertaine ; **814
+  normalisations U+202F** (301+180+191+142) ; 0 double espace.
+- Carte étendue : niʿma, yaʿqid, tanaʿqid, iʾāra, istaʾlafa, istiʾlāf, maʿīb,
+  aqaʾada, taʿaddī, zarʿ, nafʿ, ʿinān (×15 dans 19670), ʿiyāl, ʿadāla,
+  ʿAllāma, ʿudhr, et **racines consonantiques** b-ḍ-ʿ / ʿ-n-n (correctif
+  word_before : hyphen final de « b-ḍ-' » et hyphen initial de « '-n-n »
+  élagués avant la recherche de carte).
+- QA : `qa-lesson.py` **PASS ×4** ; `verify-diff.py` **0 diff non autorisé**.
+- Push : pull --rebase + push + refetch → rev-list = 0 (EN LIGNE vérifié).
+
 
 
 
