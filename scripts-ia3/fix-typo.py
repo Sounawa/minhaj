@@ -21,11 +21,27 @@ DIAC = set("āīūṭḍḥṣẓḷṃṅġšṯẋĀĪŪṢḤ")
 
 # carte de mots vérifiée sur le corpus (vérité terrain 17 nov. 2026) :
 # ʾ pour la hamza après voyelle longue (Muwaṭṭaʾ ×39, ḥunafāʾ, al-ḥamrāʾ, ḥayāʾ) ;
-# ʿ pour le ʿayn (ʿatīq ×44, ʿArafa).
-WORD_INITIAL_AYN = {"atīq", "afw", "Iyāḍ", "Abd", "amd", "Arafa"}       # 'atīq, 'afw, 'Iyāḍ, 'Abd, al-'amd
-WORD_FINAL = {"khul": "ʿ", "tabarru": "ʾ", "malā": "ʾ", "khaṭā": "ʾ",
-              "Muwaṭṭa": "ʾ", "gharamā": "ʾ", "mawḍū": "ʾ", "ḥibā": "ʾ", "ḥidā": "ʾ"}
-WORD_MEDIAL = {"ta": "ʿ", "shar": "ʿ", "ba": "ʿ", "asta": "ʿ", "mu": "ʿ"}  # taʿlīm, sharʿī, baʿdi, astaʿmilu, muʿajjal
+# ʿ pour le ʿayn (ʿatīq ×44, ʿArafa, Jāmiʿ ×5, ʿUmar ×51 main — contre ’Umar ×228
+# artefact blanket d'autres livres, divergence consignée au journal W2).
+WORD_INITIAL_AYN = {"atīq", "afw", "Iyāḍ", "Abd", "amd", "Arafa", "Umar", "alā",
+                    "an", "alay", "usri", "admata", "ayn", "aynin", "urūḍ", "azl",
+                    "Ādiyāt", "amal", "arḍin", "arḍi", "uzila"}
+WORD_FINAL = {"khul": "ʿ", "Jāmi": "ʿ", "rābi": "ʿ", "raja": "ʿ", "bay": "ʿ",   # khulʿ, Jāmiʿ, rābiʿ, rajaʿa, bayʿ
+              "tabarru": "ʾ", "malā": "ʾ", "khaṭā": "ʾ", "Muwaṭṭa": "ʾ",
+              "gharamā": "ʾ", "mawḍū": "ʾ", "ḥibā": "ʾ", "ḥidā": "ʾ",
+              "juz": "ʾ", "mali": "ʾ"}                                        # juzʾ, maliʾ (مليء)
+# couples (fin du mot avant ', début du mot après ') tranchés mot à mot —
+# la lettre entre les deux morceaux n'est pas déductible du préfixe seul :
+# taʿlīm/taʿzīr (ʿayn) mais taʾkhīr/taʾbīm (hamza) ; saʾala hamza mais aʿṭā ʿayn.
+PAIR_MEDIAL = {("ta", "līm"): "ʿ", ("ta", "zīr"): "ʿ", ("ta", "khīr"): "ʾ",
+               ("ta", "bīm"): "ʾ", ("mu", "ajja"): "ʿ", ("mu", "dim"): "ʿ",
+               ("mu", "tāda"): "ʿ", ("mu", "ğama"): "ʿ", ("ma", "lūm"): "ʿ",
+               ("ba", "di"): "ʿ", ("asta", "milu"): "ʿ", ("wa", "ada"): "ʿ",
+               ("sa", "ala"): "ʾ", ("a", "ṭā"): "ʿ", ("yasa", "al"): "ʾ",
+               ("ustu", "niya"): "ʿ", ("shari", "a"): "ʿ", ("charī", "a"): "ʿ",
+               ("shar", "ī"): "ʿ",                                              # sharʿī (شرعي)
+               ("raja", "a"): "ʿ", ("ya", "ti"): "ʾ"}                           # rajaʿa (رجع), yaʾti (يأتي)
+LONGVOWL_AYN = ("charī", "shari")   # sharīʿa : ʿayn (pas hamza) après ī
 FRENCH_ELISION = {"l", "d", "n", "s", "j", "c", "m", "t", "qu", "jusqu", "lorsqu",
                   "puisqu", "quelqu", "aujourd"}
 ARABIC = re.compile(r"[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDF9\uFDFB-\uFDFF\uFE70-\uFEFF]")
@@ -86,16 +102,22 @@ def classify(rendered, p):
             return "ʿ", f"ʿayn initial ({prev_w or ''}{nxt_w})"
         return None, f"initial non cartographié ('{prev_w}{nxt_w}')"
     if not nxt_w and prev_w:                                   # ' final de mot
+        tail = prev_w.rsplit("-", 1)[-1]
         if prev_w[-1] in "āīū":
             return "ʾ", f"hamza après voyelle longue ({prev_w})"
-        if prev_w in WORD_FINAL:
-            return WORD_FINAL[prev_w], f"carte mot final ({prev_w})"
+        for cand in (prev_w, tail):
+            if cand in WORD_FINAL:
+                return WORD_FINAL[cand], f"carte mot final ({cand})"
         return None, f"final non cartographié ('{prev_w}')"
     if prev_w and nxt_w:                                       # ' médial
+        prev_tail = prev_w.rsplit("-", 1)[-1].lower()
+        for p0, n0 in PAIR_MEDIAL:
+            if prev_tail == p0 and nxt_w[:len(n0)] == n0:
+                return PAIR_MEDIAL[(p0, n0)], f"carte couple ({p0}'{n0}…)"
+        if prev_w.endswith(LONGVOWL_AYN):
+            return "ʿ", f"ʿayn après voyelle longue ({prev_w}'{nxt_w})"
         if prev_w[-1] in "āīū":
             return "ʾ", f"hamza médiale après voyelle longue ({prev_w}'{nxt_w})"
-        if prev_w.lower() in WORD_MEDIAL:
-            return WORD_MEDIAL[prev_w.lower()], f"carte mot médial ({prev_w}'{nxt_w})"
         if prev_w.lower() in FRENCH_ELISION and not (set(nxt_w) & DIAC):
             return "’", f"élision française ({prev_w}'{nxt_w})"
         return None, f"médial non classé ({prev_w}'{nxt_w})"

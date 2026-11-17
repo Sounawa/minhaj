@@ -73,3 +73,32 @@ Trace: 3af9c47be21d8065-w1
   Règle IA-3 adoptée : toujours `git -C /home/z/my-project/minhaj-repo …` ;
   token uniquement dans les commandes, jamais dans un fichier suivi ni un journal.
 
+## W2 — 2026-11-17 — typo fiqh-tanawi-3 docs 19354, 19367, 19373, 19377 (vague 2/8)
+Task ID: W2
+Trace: 3af9c47be21d8065-w2
+
+- Vague 2/4 docs du claim fiqh-tanawi-3 : **19354 (27 apos), 19367 (12), 19373
+  (51), 19377 (17) = 107 apostrophes** classées **61 ʿ + 45 ʾ + 1 ’** (J'ai →
+  J’ai, seule élision française de la vague), 0 incertaine ; **905
+  normalisations U+202F** (304+184+239+178) ; 0 double espace.
+- Carte de mots enrichie et restructurée dans `fix-typo.py` : les préfixes
+  ambigus passent au niveau du **couple (fin du mot avant ', début du mot
+  après ')** — taʿlīm/taʿzīr (ʿayn) vs taʾkhīr/taʾbīm (hamza), saʾala hamza vs
+  aʿṭā ʿayn, muʿajjal/muʿdim/muʿtādan/muʿğama, maʿlūm, sharʿī, sharīʿa/charīʿa
+  (exception à la règle hamza-après-voyelle-longue : الشريعة = ʿayn) ;
+  nouveaux finaux : juzʾ, maliʾ, bayʿ, rajaʿa, rābiʿ, Jāmiʿ (précédent corpus
+  ×5) ; nouveaux initiaux : ʿUmar, ʿan, ʿalā, ʿalay, ʿusri, ʿadmata, ʿayn,
+  ʿaynin, ʿurūḍ, ʿazl, ʿĀdiyāt, ʿamal, ʿarḍin, ʿarḍi, ʿuzila. Outil
+  `scripts-ia3/probe-words.py` ajouté (sondages de précédents).
+- **Divergence consignée** (défaut vu ailleurs, jamais corrigé par IA-3) :
+  le corpus porte **’Umar ×228** (artefact blanket qa-lesson d'autres zones)
+  contre **ʿUmar ×51** (livres faits main) — la convention §5 impose ʿUmar
+  (عمر) ; mes corrections produisent ʿUmar. Les livres d'autres zones restent
+  en l'état (règle de zones) ; leurs propres passe typo devraient converger.
+- QA : `qa-lesson.py` **PASS ×4** (0 arabe, guillemets/balises appariés, 0
+  apostrophe droite) ; `verify-diff.py` : **0 diff non autorisé** (107 apos +
+  905 narrow, résidu 0) ; régression vague 1 vérifiée au dry (0 apos restante).
+- Push : `git pull --rebase origin main` + push + refetch → rev-list = 0
+  (EN LIGNE vérifié).
+
+
