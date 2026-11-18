@@ -37,15 +37,21 @@ for k in changed:
             m = re.match(r"«((?:[ \u00a0\u202f]|&nbsp;)+)", a[i:])
             if m:                                                   # course après « : l'espace fine
                 units = re.findall(r"(?:[ \u00a0\u202f]|&nbsp;)", m.group(1))   # passe DEVANT les entités
-                rest = "".join(units[1:])                           # (équivalent qa-lesson, entités protégées)
-                if b[j + 2:j + 2 + len(rest)] == rest:
-                    stats["narrow"] += 1; i += m.end(); j += 2 + len(rest); continue
+                # W21 (hadith-3es) : courses multi-entités «&nbsp;&nbsp;&nbsp;» — le 1er → NAR (règle «&nbsp;),
+                # le dernier → NAR (règle avant-ponc), les intermédiaires restent tels quels.
+                mid = "".join(units[1:-1])
+                cands = ["".join(units[1:]), mid + NAR, mid]
+                if any(b[j + 2:j + 2 + len(t)] == t for t in cands):
+                    stats["narrow"] += 1; i += m.end(); j += 2 + len(next(t for t in cands if b[j + 2:j + 2 + len(t)] == t)); continue
         if a[i] == b[j]:
             i += 1; j += 1; continue
         if a[i] == "'" and j < len(b) and b[j] in ALLOWED:          # apostrophe classée
             stats["apos"] += 1; i += 1; j += 1; continue
         if (a[i] == "'" and j < len(b) and b[j] == "t"              # bat'an → battan (باتًّا, tāʾ géminé — consigné R714/W17)
                 and a[i-3:i] == "bat" and a[i+1:i+3] == "an"):
+            stats["apos"] += 1; i += 1; j += 1; continue
+        if (a[i] == "'" and j < len(b) and b[j] == "d"              # mod' → modd (مُدّ, dāl géminé — consigné W21)
+                and a[i-3:i] == "mod" and (i + 1 >= len(a) or not a[i+1].isalnum())):
             stats["apos"] += 1; i += 1; j += 1; continue
         if (a[i] == "'" and j < len(b) and b[j] == "y"              # tabā'in → tabāyun (التَّبَايُن, yāʾ radical — consigné R715/W19)
                 and a[i+1:i+3] == "in" and (a[i-4:i] == "tabā" or a[i-5:i] == "</em>")):
