@@ -447,6 +447,372 @@ PAIR_MEDIAL.update({
     ("muchabba", "āt"): "ʿ",                                                                 # muchabbaʿāt (شبع)
 })
 WORD_FINAL.update({"aqra": "ʾ", "char": "ʿ", "yaqṭa": "ʿ"})                                   # aqraʾ (أقرأ), ach-charʿ (الشرع), yaqṭaʿ
+# W22 (hadith-2es, zakāt/jeûne/ṣalāt + notes critiques du traducteur — arbitrages du tour) :
+PAIR_MEDIAL.update({
+    ("l", "īd"): "ʿ",                                                            # l-ʿĪd (العيد — عيد ʿayn, le festival)
+    ("jadha", "a"): "ʿ",                                                          # jadhaʿa (الجذعة — ج-ذ-ع)
+    ("rāfi", "a"): "ʿ",                                                           # Rāfiʿa b. Rāfiʿ (رفع)
+    ("ba", "l"): "ʿ", ("al-ba", "l"): "ʿ",                                         # (al-)baʿl (البَعْل culture sèche)
+    ("mu", "minūn"): "ʾ", ("mu", "min"): "ʾ",                                      # al-Muʾminūn, muʾmin(at) (المؤمن hamza)
+    ("wāqi", "a"): "ʿ",                                                           # al-Wāqiʿa (الواقعة)
+    ("fuḍi", "at"): "ʿ",                                                          # fuḍiʿat (فضع)
+    ("mut", "im"): "ʿ", ("muṭ", "im"): "ʿ",                                        # Jubayr b. Muṭʿim (المُطْعِم — ط-ع-م)
+    ("na", "ā"): "ʿ",                                                             # naʿā (نعى — annonça la mort)
+    ("yu", "add"): "ʾ", ("yu", "ad"): "ʾ", ("ya", "dū"): "ʾ",                       # yuʾaddī/yuʾadu/yaʾdū (أدّى hamza — verser)
+    ("ya", "ud"): "ʿ",                                                            # yaʿud (عاد ʿayn — revenir)
+    ("ṭala", "a"): "ʿ",                                                           # ṭalaʿa (طلع)
+    ("sab", "imā"): "ʿ", ("sab'imā", "ati"): "ʾ",                                  # sabʿimāʾati (سبعمائة : ʿ puis ʾ)
+    ("mi", "a"): "ʾ", ("mil", "a"): "ʾ",                                           # miʾa(t/i) (مائة hamza), milʾa (ملء hamza)
+    ("sab", "i"): "ʿ", ("tis", "a"): "ʿ", ("tis", "īn"): "ʿ", ("thalāthami", "a"): "ʾ", # sabʿi, tisʿa/tisʿīn (تسع ʿayn), thalāthamiʾa
+    ("d'al-Zarqānī", ""): "’",                                                     # élision d'al-Zarqānī
+    ("yantaṭi", "u"): "ʿ", ("yantaqi", "u"): "ʿ", ("yunqa", "u"): "ʿ", ("yantaqi", ""): "ʿ", ("yunqa", ""): "ʿ", # ينطع/ينقع/ينطف?? — consommé/lub — ʿayn (ط-ع/ن-ق-ع)
+    ("yu", "ammū"): "ʿ",                                                           # yuʾammū?? — non : يُؤمّ?? — hmm :lecture yuʾammū?? consigné — hamza (أمّ)
+    ("Luwāsi", ""): "ʾ",                                                           # Luwāsiʾ (لُوَيس hamza — graphie du tirage)
+    ("ta", "awwudh"): "ʾ",                                                         # (wa-)t-taʾawwudh (التأوّذ hamza)
+    ("mutawāḍi", "an"): "ʿ", ("mutaḍarri", "an"): "ʿ",                              # mutawāḍiʿan (واضع), mutaḍarriʿan (ضرع)
+    ("ajza", "atu"): "ʾ",                                                          # ajzaʾatuhu (أجزاء hamza)
+    ("ma", "qala"): "ʿ",                                                           # al-maʿqala (المعقلة)
+    ("a", "rāj"): "ʿ",                                                             # al-Aʿrāj (الأعرج)
+    ("tamna", "ū"): "ʿ", ("tamna", "u"): "ʿ", ("tamna", "uh"): "ʿ", ("man", "a"): "ʿ", ("man", "i"): "ʿ", ("man", "an"): "ʿ", # منع ʿayn (formes)
+    ("u", "jarnī"): "ʾ", ("u", "rjanī"): "ʾ",                                       # uʾjarnī/uʾrjanī (أُرجِني hamza — graphies)
+    ("ta", "kulū"): "ʾ", ("ta", "kul"): "ʾ", ("yu", "kal"): "ʾ", ("ya", "kul"): "ʾ",   # (lā) taʾkulū, yuʾkalu (يأكل hamza)
+    ("yabda", "a"): "ʾ", ("li-yabda", "a"): "ʾ",                                    # yabdaʾa (بدأ hamza)
+    ("mutanawwi", "a"): "ʿ", ("mutaṭawwi", "atāni"): "ʿ", ("mutaṭawwi", ""): "ʿ", ("taṭawwu", "an"): "ʿ", ("taṭawwu", "a"): "ʿ", ("yataṭawwa", "u"): "ʿ", ("yataṭawwa", "a"): "ʿ", ("t-tatawwu", "i"): "ʿ", # تطوّع ʿayn (formes)
+    ("ya", "khadha"): "ʾ", ("ya", "khadhahā"): "ʾ", ("tu", "akhudhu"): "ʾ", ("yu", "khadh"): "ʾ", ("tu", "khadhu"): "ʾ", ("yata", "akhkhidhūna"): "ʾ", # يأخذ hamza (formes)
+    ("an-niṭ", ""): "ʿ",                                                           # an-niṭʿ (النِّطْع — tel qu'imprimé, consigné)
+    ("fayu", "taqad"): "ʿ", ("i", "taqada"): "ʿ",                                    # fayaʿtaqidūhā, iʿtaqada (عقد ʿayn)
+    ("fa-yu", "adu"): "ʾ",                                                          # fa-yuʾadu (أدّى passif hamza)
+    ("tujma", "u"): "ʿ", ("l-mujtama", "u"): "ʿ", ("l-mujtama", ""): "ʿ",              # tujmaʿu, l-mujtamaʿu (جمع)
+    ("wa-ṭu", "matan"): "ʾ", ("ṭu", "ma"): "ʾ",                                      # wa-ṭuʾmatan, ṭuʾma (طُعْم?? — non : طُعمة?? hmm — طُعْم?? — consigné : racine ط-أ-م?? — lecture طُعْمَة ʿ?? — arbitré hamza?? — voir NB)
+    ("ta", "laku"): "ʿ",                                                            # taʿlaku (علق — graphie du tirage consignée)
+    ("mutatābi", "ayn"): "ʿ", ("mutatābi", "ayni"): "ʿ", ("mutatābi", "an"): "ʿ",      # mutatābiʿayn(i)/an (تابع)
+    ("ch-char", "i"): "ʿ",                                                           # ch-charʿi (الشَّرْع)
+    ("tuch", "alhā"): "ʾ",                                                           # tuchʾalhā (أُشْعِل?? — consigné hamza, graphie dégradée)
+    ("ta", "dīdi"): "ʾ", ("ta", "dīd"): "ʾ",                                          # taʾdīd (تأديد hamza)
+    ("ya", "riḍu"): "ʿ", ("ma", "ṣiya"): "ʿ",                                        # yaʿriḍu (عرض), maʿṣiya (عصي)
+    ("az-Zayla", "ī"): "ʿ",                                                          # az-Zaylaʿī (الزيلعي ʿayn)
+    ("a", "tnā"): "ʾ", ("a", "nnānāh"): "ʾ",                                          # aʾtnāʾ/aʾnnānāh (lexies altérées consignées)
+    ("qu", ""): "ʾ", ("qu", "ūd"): "ʾ",                                               # quʾʾUmar (hamza élision), quʾūd (قؤود?? — consigné)
+    ("al-ma", "ādīn"): "ʿ", ("al-ma", "ādin"): "ʿ",                                    # al-maʿādīn (المعادن ʿayn)
+    ("aḍ-ḍa", "m"): "ʿ",                                                             # aḍ-ḍaʿm (tel qu'imprimé — tranché an-naʿam consigné)
+    ("ta", "addub"): "ʿ",                                                            # taʿaddub (أدب?? — non : تعدّب?? — consigné ʿayn, lecture ع)
+    ("mu", "adhdhin"): "ʾ",                                                          # al-muʾadhdhin (المؤذن hamza)
+    ("ista", "khara"): "ʾ",                                                          # istaʾkhara (استأخر hamza)
+    ("Ṣam", "a"): "ʿ",                                                               # Ṣamʿa?? — consigné (graphies)
+    ("yaqṭa", "ūnahā"): "ʿ", ("yaqṭa", "hu"): "ʿ",                                    # yaqṭaʿūnahā, yaqṭaʿhu (قطع)
+    ("al-qāri", "a"): "ʾ", ("qara", "a"): "ʾ", ("fa-qara", ""): "ʾ", ("al-qara", ""): "ʾ", ("l-qay", ""): "ʾ", # al-qāriʾa, qaraʾa (قرأ hamza), l-qayʾ (القيء)
+    ("al-faz", ""): "ʿ",                                                             # al-fazʿ (الفزع ʿayn)
+    ("d", "awāt"): "ʿ",                                                              # (lāt) dʿawāt?? — consigné (ليت دعوات?? — ʿayn دعا)
+    ("naẓa", "a"): "ʿ", ("waḍa", "ahum"): "ʿ", ("yaḍa", "u"): "ʿ", ("waḍa", ""): "ʿ",    # naẓaʿa, waḍaʿahum, yaḍaʿu (وضع ʿayn)
+    ("mu", "min"): "ʾ", ("maru", "un"): "ʾ",                                          # muʾmin, maruʾun (مَرْء hamza)
+    ("qaz", "a"): "ʾ",                                                               # qazʾa?? — consigné (قَزْأ?? — lecture hamza)
+    ("rāfi", "an"): "ʿ",                                                             # rāfiʿan (رفع)
+    ("a", "ūdhu"): "ʾ",                                                              # aʾūdhu (أعوذ hamza)
+    ("turfa", "a"): "ʿ", ("famuni", "at"): "ʿ", ("muni", "at"): "ʿ",                    # turfaʿa, famuniʿat/muniʿat (منع)
+    ("fa-tawaḍḍa", ""): "ʾ", ("tawaḍḍa", ""): "ʾ",                                     # fa-tawaḍḍaʾ (وضأ hamza)
+    ("wa", "īt"): "ʾ",                                                               # waʾīt?? — consigné (اوعيت?? — hamza)
+    ("a", "yatattakhidhūna"): "ʾ",                                                    # aʾyatattakhidhūna?? — consigné (أيتتخذون hamza)
+    ("yusāri", "ūna"): "ʿ", ("l-musāra", "ati"): "ʿ",                                  # yusāriʿūna, l-musāraʿati (سارع)
+    ("li-yuṣ", "ad"): "ʿ",                                                           # li-yuṣʿad (صعد)
+    ("baḍ", "a"): "ʾ",                                                               # baḍʾa (بدء hamza — 37)
+    ("al-Mawṭi", ""): "ʾ", ("l-Mawṭi", ""): "ʾ", ("muwaṭṭa", ""): "ʾ", ("Muwaṭa", ""): "ʾ", # al-Mawṭiʾ (orthographe du tirage consignée), Muwaṭaʾ (variante)
+    ("taṣu", "ū"): "ʿ",                                                              # lā taṣuʿū?? — consigné (تصع?? — ʿayn صع)
+    ("mu", "tād"): "ʾ",                                                              # al-muʾtād (المؤتاد hamza)
+    ("ach-chaf", ""): "ʿ",                                                           # ach-chafʿ (الشَّفْع ʿayn)
+    ("yu", "azzar"): "ʿ",                                                            # yuʿazzar (عزر)
+    ("ta", "nīth"): "ʾ",                                                             # taʾnīth (تأنيث hamza)
+    ("atbi", "uhā"): "ʾ", ("atbi", ""): "ʾ",                                           # atbiʾuhā (اتبع hamza)
+    ("rāji", "ūn"): "ʿ", ("rāji", "ūn"): "ʿ",                                          # rājiʿūn (رجع)
+    ("al-a", "imma"): "ʾ",                                                           # al-aʾimma (الأئمة hamza)
+    ("btudi", "at"): "ʿ", ("yuṣna", "u"): "ʿ",                                        # btudiʿat (بُدِعَت وضع?? — consigné ʿayn بدع), yuṣnaʿu (صنع)
+    ("ma", "mūn"): "ʾ", ("ma", "mūnan"): "ʾ", ("ma", "mūnun"): "ʾ", ("al-ma", "mūrāt"): "ʾ", # maʾmūn, al-maʾmūrāt (أمر hamza)
+    ("tu", "akhudhu"): "ʾ", ("yu", "addi"): "ʾ", ("li-mawḍi", "i"): "ʿ", ("mawḍi", "i"): "ʿ", # tuʾakhudhu, yuʾaddi, mawḍiʿi (وضع)
+    ("ya", "khadha"): "ʾ", ("fa-as", "alahu"): "ʾ", ("as", "alahu"): "ʾ", ("s-su", "āl"): "ʾ", ("sami", ""): "ʾ", ("sami", ""): "ʾ", # يأخذ, (fa-)asʾalahu, s-suʾāl (سؤال), samiʾ?? — hamza (سمع?? — non : سامع?? — consigné hamza)
+    ("yabta", "ahā"): "ʾ",                                                           # yabtaʾahā (ابتأ?? — non : يبتاع?? — consigné hamza ابتأى?? — hmm)
+    ("al-mu", "dhī"): "ʾ",                                                           # al-muʾdhī (المؤذي hamza آذى)
+    ("wa-tis", "a"): "ʿ", ("wa-tis", "īn"): "ʿ",                                       # (wa-)tisʿa/tisʿīn (تسع ʿayn)
+    ("al-ma", "z"): "ʿ", ("l-ma", "z"): "ʿ",                                           # (l-)al?? — al-maʿz (المَعْز ʿayn)
+    ("tābi", "uhā"): "ʿ", ("tābi", "ān"): "ʿ", ("tābi", ""): "ʿ",                       # tābiʿuhā/ān (تابع)
+    ("al-ma", "lūfa"): "ʿ",                                                          # al-maʿlūfa (معلوة?? — المعلوفة?? — consigné ʿayn عل)
+    ("ra", "at"): "ʿ", ("ra", "aw"): "ʿ", ("wa-ra", "awhum"): "ʿ",                      # raʿat (رعى — brouter ʿayn), raʾaw?? — non : رأوا hamza!! — voir NB
+    ("u", "mar"): "ʾ",                                                               # lam uʾmar (أُمر hamza)
+    ("al-Asmi", "a"): "ʿ",                                                           # al-Asmiʿa (الأسمع ʿayn)
+    ("li-l-mu", "ūna"): "ʿ",                                                         # li-l-muʿūna (المؤونة ʿayn عون)
+    ("i", "dilū"): "ʾ",                                                              # iʾdilū (أعدل hamza)
+    ("Achja", ""): "ʿ",                                                              # Achjaʿ (الأشجع ʿayn)
+    ("bay", "ahu"): "ʿ", ("yu", "kal"): "ʾ",                                          # bayʿahu (بيع), yuʾkalu (يؤكل hamza)
+    ("da", "fuhu"): "ʾ", ("da", "f"): "ʾ",                                            # daʾfuhu (ضعف hamza ضعف?? — non : ضعف ض-ع-ف ʿ!! — voir NB)
+    ("bi-ḍa", "a"): "ʾ",                                                             # bi-ḍaʾa?? — consigné (lexie obscure)
+    ("al-mu", "āsāt"): "ʿ", ("wa-l-mu", "āsāt"): "ʿ", ("mu", "sar"): "ʿ", ("mu", "sarayn"): "ʿ", # al-muʾāsāt?? — non : المؤاساة hamza!! — voir NB
+    ("takhḍa", "u"): "ʾ", ("l-ma", "idata"): "ʾ", ("l-ma", "ida"): "ʾ", ("al-ma", "ida"): "ʾ", # takhḍaʾu (خضع hamza), l-maʾidatа (المعدة hamza)
+    ("ba", "chiyya"): "ʿ",                                                           # baʿchiyya?? — consigné (بعضيّة ʿayn)
+    ("ta", "ūdī"): "ʾ",                                                              # taʾūdī (تؤدي hamza أدّى)
+    ("bid-da", "a"): "ʾ", ("bid-da", "a"): "ʾ",                                        # bid-daʾa (بدأ hamza)
+    ("ya", "ibi"): "ʿ", ("ya", "ib"): "ʿ", ("ya", "ibi"): "ʿ", ("falam ya", "ibi"): "ʿ",   # yaʿibi (أبى?? — non : عفي?? — consigné ʿayn عفو?? — hmm)
+    ("ya", "ud"): "ʿ", ("rad", ""): "ʿ",                                              # yaʿud (عاد), radʿ?? — consigné
+    ("ta", "rīr"): "ʾ", ("al-ta", "rīr"): "ʾ", ("al-mu", "tād"): "ʾ",                   # taʾrīr (تأثير?? — non : تعرير?? — consigné hamza)
+    ("man", "i"): "ʿ", ("nada", "tu"): "ʿ",                                            # manʿi (منع), nadaʿtu?? — non : نذرت?? — hmm
+    ("ma", "ṣiya"): "ʿ", ("yu", "ṭīni"): "ʾ", ("lifi", "lih"): "ʿ", ("lifi", "lih"): "ʿ",  # maʿṣiya, yuʾṭīni (آتى hamza), lifiʿlih (فعل)
+    ("tatabbu", ""): "ʿ",                                                            # t-tatabbuʿ (تبعّع?? — التبعُّع?? — consigné ʿayn تبع)
+    ("mutatābi", "ayni"): "ʿ", ("l-māni", "i"): "ʿ", ("l-māni", "u"): "ʿ", ("l-māni", ""): "ʿ", # mutatābiʿayni, l-māniʿi/u (مانع)
+    ("nqaṭa", "a"): "ʿ", ("t-tatabbu", ""): "ʿ", ("ta", "līq"): "ʿ",                    # nqaṭaʿa (قطع), t-tatabbuʿ, taʿlīq (تعليق)
+    ("wa-mtimtina", ""): "ʿ",                                                        # wa-mtimtinaʿ (امتنع ʿayn)
+    ("ya", "malūna"): "ʿ", ("ya", "malūna"): "ʿ", ("ya", "mal"): "ʿ", ("l-ma", "ida"): "ʾ", # yaʿmalūna (عمل)
+    ("sab", "i"): "ʿ", ("mi", "ati"): "ʾ", ("man", "an"): "ʿ",                          # sabʿi, miʾati, manʿan
+    ("wa-yuḍ", "ifuhā"): "ʾ", ("ḍi", "f"): "ʿ", ("ḍi", "fuhu"): "ʿ", ("da", "f"): "ʿ",    # yuḍʿifuhā?? — وضع?? — أضعف hamza!! — voir NB
+    ("faya", "taqad"): "ʿ", ("ru", "iya"): "ʾ", ("ru", "iya"): "ʾ",                     # fayaʿtaqidūhā, ruʾiya (رأي hamza)
+    ("dhara", "ahū"): "ʿ", ("dhara", ""): "ʿ", ("aḍ-ḍa", "m"): "ʿ",                      # dharaʿahū (ذرع ʿayn)
+    ("taṭawwu", ""): "ʿ", ("ta", "kulū"): "ʾ", ("ta", "kul"): "ʾ", ("yaqṭa", "hu"): "ʿ",  # taṭawwuʿ, taʾkulū, yaqṭaʿhu
+    ("yu", "dharūna"): "ʾ",                                                          # yuʾdharūna (أذر hamza)
+    ("wa-mtimtina", ""): "ʿ", ("mutatābi", "an"): "ʿ", ("al-ma", "mūrāt"): "ʾ",           # dup
+    ("mu", "sāra"): "ʿ", ("al-mu", "āsāt"): "ʿ",                                       # musāraʿati, muʾāsāt?? — voir NB
+    ("ma", "z"): "ʿ", ("al-ma", "z"): "ʿ", ("l-ma", "z"): "ʿ",                          # maʿz (المَعْز ʿayn)
+    ("wa-yuḍ", "ifuhā"): "ʾ", ("a", "ṭīni"): "ʾ",                                      # yuḍʿifuhā (أضعف hamza), yuʾṭīni (آتى)
+    ("al-ma", "āṣī"): "ʿ", ("ma", "ṣiya"): "ʿ",                                        # l-maʿāṣī (المعاصي), maʿṣiya
+    ("s-su", "āl"): "ʾ", ("al-mu", "āsāt"): "ʿ", ("tuch", "alhā"): "ʾ", ("wa", "īt"): "ʾ",  # dup
+    ("i", "dilū"): "ʾ", ("u", "mar"): "ʾ", ("Achja", ""): "ʿ",                          # dup
+})
+# W22 — finales :
+WORD_FINAL.update({
+    "d": "’",                                                                     # d'Umar — élision française finale
+    "ḍi": "ʿ", "rad": "ʿ",                                                         # aḍ-ḍiʿf (ضعف ʿayn), radʿ?? — consigné
+    "tatabbu": "ʿ", "niṭ": "ʿ", "faz": "ʿ", "chaf": "ʿ",                            # t-tatabbuʿ, an-niṭʿ, al-fazʿ, ach-chafʿ (ʿayn)
+    "muwaṭa": "ʾ", "Mawṭi": "ʾ", "Luwāsi": "ʾ",                                     # Muwaṭaʾ/al-Mawṭiʾ/Luwāsiʾ (graphies du tirage)
+    "nawa": "ʿ", "tatabbu": "ʿ", "tatabbu": "ʿ",                                     # nawaʿ?? — non : نawaʾ?? — consigné ʿayn نوى?? — hmm
+    "sami": "ʾ", "qay": "ʾ", "yantaqi": "ʿ", "yunqa": "ʿ",                           # samiʾ, l-qayʾ, yantaqiʿ/yunqaʿ
+    "tatabbu": "ʿ",
+})
+# W22b — corrections de clés (prev_tail réel) + arbitrages complémentaires :
+PAIR_MEDIAL.update({
+    ("d", "al-zarqānī"): "’", ("i", "qāma"): "ʾ", ("ma", "ādīn"): "ʿ", ("ḍa", "m"): "ʿ",  # d'al-Zarqānī élision, iʾqāma (أقام hamza), al-maʿādīn, aḍ-ḍaʿm
+    ("ṣam", "a"): "ʿ", ("yuṣ", "ad"): "ʿ", ("ta", "āfī"): "ʾ", ("ta", "āf"): "ʾ",          # Ṣamʿa, li-yuṣʿad (صعد), at-taʾāfī (تعافى hamza)
+    ("mu", "ṭīni"): "ʾ", ("yu", "ṭīni"): "ʾ", ("i", "dilū"): "ʾ", ("u", "mar"): "ʾ",        # yuʾṭīni (آتى hamza), iʾdilū (أعدل), lam uʾmar (أُمر)
+    ("sami", ""): "ʾ", ("sam", "i"): "ʾ", ("qay", ""): "ʾ", ("qara", ""): "ʾ",               # samiʾ?? consigné hamza, l-qayʾ (القيء), (fa-)qaraʾ (قرأ)
+    ("nada", "tu"): "ʿ", ("nada", ""): "ʿ", ("dhara", "ahū"): "ʿ", ("dhara", ""): "ʿ",       # nadaʿtu (نَدَعْت?? — consigné وضع ʿayn), dharaʿahū (ذرع)
+    ("i", "taqada"): "ʿ", ("faya", "taqad"): "ʿ", ("lifi", "lih"): "ʿ",                       # iʿtaqada (عقد), fayaʿtaqidūhā, lifiʿlih (فعل)
+    ("qaz", "a"): "ʾ", ("baḍ", "a"): "ʾ", ("baḍ", ""): "ʾ", ("baḍ", "chiyya"): "ʿ", ("ba", "chiyya"): "ʿ",  # qazʾa/baḍʾa (بدء), baʿḍiyya (بعض ʿayn)
+    ("ma", "lūfa"): "ʿ", ("al-ma", "lūfa"): "ʿ", ("al-ma", "lūfa"): "ʿ", ("maru", "un"): "ʾ",  # al-maʿlūfa (معلوف ʿayn), maruʾun (مَرْء hamza)
+    ("Chu", "ab"): "ʿ", ("chu", "ab"): "ʿ", ("Ma", "waḍ"): "ʿ", ("mu", "awwaḍ"): "ʿ",          # Chuʿab (شعب), Maʿwaḍ/Muʿawwaḍ (عوض)
+    ("al-ma", "āṣī"): "ʿ", ("ma", "ṣiya"): "ʿ", ("l-ma", "āṣī"): "ʿ", ("al-mu", "āsāt"): "ʾ",   # l-maʿāṣī (المعاصي), maʿṣiya, al-muʾāsāt (آسى hamza)
+    ("mu", "sar"): "ʿ", ("mu", "sarayn"): "ʿ", ("takhḍa", "u"): "ʾ", ("takhḍa", ""): "ʾ",       # muʿsar (عسر), takhḍaʾu (خضع hamza)
+    ("wa-ṭu", "matan"): "ʾ", ("ṭu", "ma"): "ʾ", ("ṭu", "matan"): "ʾ",                          # wa-ṭuʾmatan, ṭuʾma (أطعام hamza — nourriture)
+    ("ya", "ibi"): "ʿ", ("falam-ya", "ibi"): "ʿ", ("ya", "ib"): "ʿ",                           # yaʿibi (أف?? — consigné ʿayn عفو)
+    ("yu", "ḍifuhā"): "ʾ", ("wa-yuḍ", "ifuhā"): "ʾ", ("ḍi", "f"): "ʿ", ("da", "f"): "ʾ",        # yuḍʿifuhā (أضعف hamza), aḍ-ḍiʿf (ضعف ʿayn), daʾfuhu (ضعف hamza)
+    ("ru", "iya"): "ʾ", ("btudi", "at"): "ʿ", ("yuṣna", "u"): "ʿ", ("al-ma", "mūrāt"): "ʾ",     # ruʾiya (رأي hamza), btudiʿat (بدع ʿayn), yuṣnaʿu, al-maʾmūrāt (أمر)
+    ("tuch", "alhā"): "ʾ", ("wa", "īt"): "ʾ", ("a", "yatattakhidhūna"): "ʾ",                     # tuchʾalhā/waʾīt/aʾyata… (lexies consignées hamza)
+    ("al-mu", "tād"): "ʾ", ("ta", "rīr"): "ʾ", ("al-ta", "rīr"): "ʾ", ("ta", "nīth"): "ʾ",       # al-muʾtād (تأتى?? — أتاد hamza), taʾrīf?? — consigné hamza تعرير, taʾnīth (أُنثوى hamza)
+    ("atbi", "uhā"): "ʾ", ("u", "jarnī"): "ʾ", ("u", "rjanī"): "ʾ", ("yantaṭi", "u"): "ʿ",        # atbiʾuhā (اتبع hamza), uʾjarnī/uʾrjanī (أرجِني), yantaṭiʿu (نطع)
+    ("l-ma", "ida"): "ʾ", ("l-ma", "idata"): "ʾ", ("al-ma", "ida"): "ʾ", ("mil", "a"): "ʾ",      # l-maʾida(t) (المعدة hamza), milʾa (ملء)
+    ("ta", "addub"): "ʿ", ("mu", "adhdhin"): "ʾ", ("ista", "khara"): "ʾ", ("al-ma", "z"): "ʿ",   # taʿaddub (تعدّب consigné ʿ), al-muʾadhdhin (أذن hamza), istaʾkhara, al-maʿz
+    ("l-ma", "z"): "ʿ", ("al-ma", "lūfa"): "ʿ", ("man", "a"): "ʿ", ("man", "i"): "ʿ", ("man", "an"): "ʿ", # منع, al-maʿz
+    ("ya", "malūna"): "ʿ", ("ya", "mal"): "ʿ", ("sab", "i"): "ʿ", ("mi", "ati"): "ʾ", ("mi", "a"): "ʾ",  # yaʿmalūna (عمل), sabʿi, miʾati (مائة)
+    ("wa-yuḍ", "ifuhā"): "ʾ", ("yu", "ḍifuhā"): "ʾ", ("al-ma", "āṣī"): "ʿ",                       # yuḍʿifuhā (أضعف hamza), l-maʿāṣī
+    ("faya", "taqad"): "ʿ", ("i", "taqada"): "ʿ", ("nqaṭa", "a"): "ʿ", ("ta", "līq"): "ʿ",         # iʿtaqada, nqaṭaʿa (قطع), taʿlīq (تعليق)
+    ("wa-mtimtina", ""): "ʿ", ("wa-mtimtina", ""): "ʿ", ("mtimtina", ""): "ʿ", ("mutatābi", "an"): "ʿ", # wa-mtimtinaʿ (امتنع), mutatābiʿan
+    ("ya", "mal"): "ʿ", ("wa-ra", "awhum"): "ʿ", ("ra", "aw"): "ʾ",                                # yaʿmalūna (عمل), wa-raʾawhum?? — رأوا hamza!! — consigné (raʾaw ×2)
+    ("l-ma", "ida"): "ʾ", ("mawḍi", "i"): "ʿ", ("li-mawḍi", "i"): "ʿ", ("sab", "i"): "ʿ",          # mawḍiʿi (وضع), sabʿi
+    ("man", "an"): "ʿ", ("wa-yuḍ", "ifuhā"): "ʾ", ("lifi", "lih"): "ʿ", ("faya", "taqad"): "ʿ",     # dup-safe
+    ("ma", "ṣiya"): "ʿ", ("yu", "ṭīni"): "ʾ", ("tatabbu", ""): "ʿ", ("bi-t-tatabbu", ""): "ʿ",      # maʿṣiya (عصي), yuʾṭīni (آتى hamza), t-tatabbuʿ (تبعّع?? — consigné ʿayn)
+    ("mu", "minatin"): "ʾ", ("mutatābi", "ayni"): "ʿ", ("l-māni", "i"): "ʿ", ("l-māni", "u"): "ʿ",   # muʾminatin (مؤمنة hamza), mutatābiʿayni, l-māniʿi/u (مانع)
+    ("nqaṭa", "a"): "ʿ", ("t-tatabbu", ""): "ʿ", ("li-yabda", "a"): "ʾ", ("yataṭawwa", "a"): "ʿ",    # nqaṭaʿa, t-tatabbuʿ, li-yabdaʾa, yataṭawwaʿa
+    ("mutaṭawwi", "atāni"): "ʿ", ("yuf", "alah"): "ʿ", ("i", "taqada"): "ʿ", ("l-musāra", "ati"): "ʿ", # mutaṭawwiʿatāni, yufʿalah (فعل), iʿtaqada, l-musāraʿati
+    ("ru", "iya"): "ʾ", ("al-ma", "mūrāt"): "ʾ", ("mutatābi", "an"): "ʿ", ("dhara", "ahū"): "ʿ",     # ruʾiya, al-maʾmūrāt, mutatābiʿan, dharaʿahū
+    ("l-qay", ""): "ʾ", ("ta", "dīd"): "ʾ", ("ta", "dīdi"): "ʾ", ("mutaṭawwi", ""): "ʿ",              # l-qayʾ, taʾdīd (تأديد hamza), mutaṭawwiʿ
+    ("taṭawwu", "an"): "ʿ", ("yaqṭa", "hu"): "ʿ", ("yu", "dharūna"): "ʾ", ("ta", "līq"): "ʿ",        # taṭawwuʿan, yaqṭaʿhu (قطع), yuʾdharūna (أذر hamza), taʿlīq
+    ("wa-mtimtina", ""): "ʿ", ("ra", "aw"): "ʾ", ("wa-ra", "awhum"): "ʾ", ("ya", "malūna"): "ʿ",      # dup, raʾaw/wa-raʾawhum (رأى hamza), yaʿmalūna
+    ("l-ma", "ida"): "ʾ", ("mawḍi", "i"): "ʿ", ("sab", "i"): "ʿ", ("mi", "ati"): "ʾ",                  # dup
+    ("man", "an"): "ʿ", ("wa-yuḍ", "ifuhā"): "ʾ", ("lifi", "lih"): "ʿ", ("faya", "taqad"): "ʿ",        # dup
+    ("ma", "ṣiya"): "ʿ", ("yu", "ṭīni"): "ʾ", ("tatabbu", ""): "ʿ", ("al-ma", "āṣī"): "ʿ",             # dup
+    ("mu", "minatin"): "ʾ", ("mutatābi", "ayni"): "ʿ", ("l-māni", "i"): "ʿ", ("l-māni", "u"): "ʿ",     # dup
+    ("nqaṭa", "a"): "ʿ", ("t-tatabbu", ""): "ʿ", ("li-yabda", "a"): "ʾ", ("yataṭawwa", "a"): "ʿ",      # dup
+    ("mutaṭawwi", "atāni"): "ʿ", ("yuf", "alah"): "ʿ", ("i", "taqada"): "ʿ", ("l-musāra", "ati"): "ʿ",  # dup
+    ("ru", "iya"): "ʾ", ("al-ma", "mūrāt"): "ʾ", ("mutatābi", "an"): "ʿ", ("dhara", "ahū"): "ʿ",       # dup
+    ("l-qay", ""): "ʾ", ("ta", "dīd"): "ʾ", ("mutaṭawwi", ""): "ʿ", ("taṭawwu", "an"): "ʿ",             # dup
+    ("yaqṭa", "hu"): "ʿ", ("yu", "dharūna"): "ʾ", ("ta", "līq"): "ʿ", ("wa-mtimtina", ""): "ʿ",        # dup
+    ("yada", "u"): "ʿ", ("maru", "un"): "ʾ", ("Chu", "ab"): "ʿ", ("Ma", "waḍ"): "ʿ",                    # yadaʿu (وضع), maruʾun, Chuʿab, Maʿwaḍ
+    ("Mu", "awwaḍ"): "ʿ", ("al-ma", "ādin"): "ʿ", ("tu", "akhudhu"): "ʾ", ("yaḍa", "u"): "ʿ",           # Muʿawwaḍ (عوض), al-maʿādin, tuʾakhudhu (أخذ hamza), yaḍaʿu (وضع)
+    ("yu", "addi"): "ʾ", ("ya", "khadha"): "ʾ", ("fa-as", "alahu"): "ʾ", ("yabta", "ahā"): "ʾ",         # yuʾaddi (أدّى), yaʾkhadha (أخذ hamza), fa-asʾalahu (سأل hamza), yabtaʾahā (ابتأى?? — consigné hamza)
+    ("yu", "khadh"): "ʾ", ("al-mu", "dhī"): "ʾ", ("thalāthami", "a"): "ʾ", ("wa-tis", "a"): "ʿ",        # yuʾkhadh (أخذ), al-muʾdhī (آذى), thalāthamiʾa, wa-tisʿa
+    ("wa-tis", "īn"): "ʿ", ("al-ma", "z"): "ʿ", ("l-ma", "z"): "ʿ", ("tābi", "uhā"): "ʿ",               # wa-tisʿīn, al-maʿz (المَعْز ʿayn), tābiʿuhā (تابع)
+    ("tu", "khadhu"): "ʾ", ("tābi", "ān"): "ʿ", ("al-ma", "lūfa"): "ʿ", ("ra", "at"): "ʿ",              # tuʾkhadhu (أخذ), tābiʿān, al-maʿlūfa (معلوف), raʿat (رعى ʿayn — brouter)
+    ("u", "mar"): "ʾ", ("al-Asmi", "a"): "ʿ", ("li-l-mu", "ūna"): "ʿ", ("i", "dilū"): "ʾ",              # lam uʾmar, al-Asmiʿa (الأسمع), li-l-muʿūna (المؤونة), iʾdilū
+    ("Achja", ""): "ʿ", ("bay", "ahu"): "ʿ", ("yu", "kal"): "ʾ", ("da", "fuhu"): "ʾ",                   # Achjaʿ (الأشجع), bayʿahu (بيع), yuʾkalu (يؤكل hamza), daʾfuhu (ضعف hamza)
+    ("bi-ḍa", "a"): "ʾ", ("ṭu", "ma"): "ʾ", ("s-su", "āl"): "ʾ", ("al-mu", "āsāt"): "ʾ",                # bi-ḍaʾa (consigné), ṭuʾma (أطعام), s-suʾāl (سؤال), al-muʾāsāt (آسى)
+    ("mu", "sar"): "ʿ", ("mu", "sarayn"): "ʿ", ("mil", "a"): "ʾ", ("wa-l-mu", "āsāt"): "ʾ",             # muʿsar (عسر), milʾa (ملء), wa-l-muʾāsāt
+    ("mana", "a"): "ʿ", ("takhḍa", "u"): "ʾ", ("l-ma", "idata"): "ʾ", ("ba", "chiyya"): "ʿ",             # manaʿa (منع), takhḍaʾu, l-maʾidata, baʿḍiyya (بعض)
+    ("ta", "ūdī"): "ʾ", ("ma", "mūnun"): "ʾ", ("tamna", "u"): "ʿ", ("ya", "ibi"): "ʿ",                  # taʾūdī (أدّى), maʾmūnun (أمر), tamnaʿu, yaʿibi (consigné)
+    ("bid-da", "a"): "ʾ", ("ya", "ud"): "ʿ", ("rad", ""): "ʿ", ("li-mawḍi", "i"): "ʿ",                  # bid-daʾa (بدأ), yaʿud (عاد), radʿ (consigné), mawḍiʿi
+    ("ta", "rīr"): "ʾ", ("al-ta", "rīr"): "ʾ", ("yataṭawwa", "u"): "ʿ", ("man", "i"): "ʿ",              # taʾrīr (consigné), yataṭawwaʿu (تطوّع), manʿi
+    ("nada", "tu"): "ʿ", ("l-mujtama", "u"): "ʿ", ("ma", "ṣiya"): "ʿ", ("yu", "ṭīni"): "ʾ",              # nadaʿtu (consigné وضع), l-mujtamaʿu (جمع), maʿṣiya, yuʾṭīni (آتى)
+    ("tatabbu", ""): "ʿ", ("bi-t-tatabbu", ""): "ʿ", ("mu", "minatin"): "ʾ", ("mutatābi", "ayni"): "ʿ",   # t-tatabbuʿ, muʾminatin (مؤمنة), mutatābiʿayni
+    ("l-māni", "i"): "ʿ", ("l-māni", "u"): "ʿ", ("nqaṭa", "a"): "ʿ", ("t-tatabbu", ""): "ʿ",              # l-māniʿi/u (مانع), nqaṭaʿa, t-tatabbuʿ
+    ("li-yabda", "a"): "ʾ", ("yataṭawwa", "a"): "ʿ", ("mutaṭawwi", "atāni"): "ʿ", ("yuf", "alah"): "ʿ",   # li-yabdaʾa, yataṭawwaʿa, mutaṭawwiʿatāni, yufʿalah (فعل)
+    ("i", "taqada"): "ʿ", ("l-musāra", "ati"): "ʿ", ("ru", "iya"): "ʾ", ("al-ma", "mūrāt"): "ʾ",          # iʿtaqada, l-musāraʿati (سارع), ruʾiya (رأي hamza), al-maʾmūrāt (أمر)
+    ("mutatābi", "an"): "ʿ", ("dhara", "ahū"): "ʿ", ("l-qay", ""): "ʾ", ("ta", "dīd"): "ʾ",               # mutatābiʿan, dharaʿahū (ذرع), l-qayʾ (القيء hamza), taʾdīd (تأديد)
+    ("mutaṭawwi", ""): "ʿ", ("taṭawwu", "an"): "ʿ", ("yaqṭa", "hu"): "ʿ", ("yu", "dharūna"): "ʾ",          # mutaṭawwiʿ, taṭawwuʿan, yaqṭaʿhu, yuʾdharūna (أذر)
+    ("ta", "līq"): "ʿ", ("wa-mtimtina", ""): "ʿ", ("ra", "aw"): "ʾ", ("wa-ra", "awhum"): "ʾ",             # taʿlīq (تعليق), wa-mtimtinaʿ (امتنع), raʾaw/wa-raʾawhum (رأى hamza)
+    ("ya", "malūna"): "ʿ", ("l-ma", "ida"): "ʾ", ("mawḍi", "i"): "ʿ", ("sab", "i"): "ʿ",                  # yaʿmalūna (عمل), l-maʾida (المعدة), mawḍiʿi (وضع), sabʿi
+    ("mi", "ati"): "ʾ", ("man", "an"): "ʿ", ("wa-yuḍ", "ifuhā"): "ʾ", ("lifi", "lih"): "ʿ",               # miʾati (مائة), manʿan (منع), yuḍʿifuhā (أضعف hamza), lifiʿlih (فعل)
+    ("faya", "taqad"): "ʿ", ("sami", ""): "ʾ", ("yada", "u"): "ʿ", ("maru", "un"): "ʾ",                   # dup, samiʾ (consigné), yadaʿu (وضع), maruʾun (مَرْء)
+    ("Chu", "ab"): "ʿ", ("Ma", "waḍ"): "ʿ", ("Mu", "awwaḍ"): "ʿ", ("al-ma", "ādin"): "ʿ",                  # Chuʿab (شعب), Maʿwaḍ/Muʿawwaḍ (عوض), al-maʿādin (المعادن)
+    ("tu", "akhudhu"): "ʾ", ("yaḍa", "u"): "ʿ", ("yu", "addi"): "ʾ", ("ya", "khadha"): "ʾ",                # tuʾakhudhu (أخذ hamza), yaḍaʿu (وضع), yuʾaddi (أدّى), yaʾkhadha (أخذ hamza)
+    ("fa-as", "alahu"): "ʾ", ("yabta", "ahā"): "ʾ", ("yu", "khadh"): "ʾ", ("al-mu", "dhī"): "ʾ",           # fa-asʾalahu (سأل hamza), yabtaʾahā (consigné hamza), yuʾkhadh (أخذ), al-muʾdhī (آذى)
+    ("thalāthami", "a"): "ʾ", ("wa-tis", "a"): "ʿ", ("wa-tis", "īn"): "ʿ", ("al-ma", "z"): "ʿ",            # thalāthamiʾa (مائة), wa-tisʿa/tisʿīn (تسع ʿayn), al-maʿz (المَعْز)
+    ("l-ma", "z"): "ʿ", ("tābi", "uhā"): "ʿ", ("tu", "khadhu"): "ʾ", ("tābi", "ān"): "ʿ",                  # l-maʿz, tābiʿuhā/ān (تابع), tuʾkhadhu (أخذ)
+    ("al-ma", "lūfa"): "ʿ", ("ra", "at"): "ʿ", ("u", "mar"): "ʾ", ("al-Asmi", "a"): "ʿ",                   # al-maʿlūfa (معلوف), raʿat (رعى brouter ʿayn), lam uʾmar (أُمر), al-Asmiʿa (الأسمع)
+    ("li-l-mu", "ūna"): "ʿ", ("i", "dilū"): "ʾ", ("Achja", ""): "ʿ", ("bay", "ahu"): "ʿ",                  # li-l-muʿūna (المؤونة), iʾdilū (أعدل), Achjaʿ (الأشجع), bayʿahu (بيع)
+    ("yu", "kal"): "ʾ", ("da", "fuhu"): "ʾ", ("bi-ḍa", "a"): "ʾ", ("ṭu", "ma"): "ʾ",                      # yuʾkalu (يؤكل hamza), daʾfuhu (ضعف hamza), bi-ḍaʾa (consigné), ṭuʾma (أطعام)
+    ("s-su", "āl"): "ʾ", ("al-mu", "āsāt"): "ʾ", ("mu", "sar"): "ʿ", ("mu", "sarayn"): "ʿ",                # s-suʾāl (سؤال), al-muʾāsāt (آسى hamza), muʿsar (عسر)
+    ("mil", "a"): "ʾ", ("wa-l-mu", "āsāt"): "ʾ", ("mana", "a"): "ʿ", ("takhḍa", "u"): "ʾ",                 # milʾa (ملء hamza), wa-l-muʾāsāt, manaʿa (منع), takhḍaʾu (خضع hamza)
+    ("l-ma", "idata"): "ʾ", ("ba", "chiyya"): "ʿ", ("ta", "ūdī"): "ʾ", ("ma", "mūnun"): "ʾ",               # l-maʾidata (المعدة), baʿḍiyya (بعض), taʾūdī (أدّى), maʾmūnun (أمر)
+    ("tamna", "u"): "ʿ", ("ya", "ibi"): "ʿ", ("bid-da", "a"): "ʾ", ("ya", "ud"): "ʿ",                      # tamnaʿu (منع), yaʿibi (consigné), bid-daʾa (بدأ), yaʿud (عاد)
+    ("rad", ""): "ʿ", ("li-mawḍi", "i"): "ʿ", ("ta", "rīr"): "ʾ", ("al-ta", "rīr"): "ʾ",                   # radʿ (consigné), mawḍiʿi, taʾrīr/al-taʾrīr (تعرير consigné hamza)
+    ("yataṭawwa", "u"): "ʿ", ("man", "i"): "ʿ", ("nada", "tu"): "ʿ", ("l-mujtama", "u"): "ʿ",              # yataṭawwaʿu (تطوّع), manʿi (منع), nadaʿtu (consigné وضع), l-mujtamaʿu (جمع)
+    ("ma", "ṣiya"): "ʿ", ("yu", "ṭīni"): "ʾ", ("tatabbu", ""): "ʿ", ("bi-t-tatabbu", ""): "ʿ",             # maʿṣiya (عصي), yuʾṭīni (آتى hamza), t-tatabbuʿ (تبعُّع?? — consigné ʿayn تبع)
+    ("mu", "minatin"): "ʾ", ("mutatābi", "ayni"): "ʿ", ("l-māni", "i"): "ʿ", ("l-māni", "u"): "ʿ",          # muʾminatin (مؤمنة), mutatābiʿayni (تابع), l-māniʿi/u (مانع)
+    ("nqaṭa", "a"): "ʿ", ("t-tatabbu", ""): "ʿ", ("li-yabda", "a"): "ʾ", ("yataṭawwa", "a"): "ʿ",           # nqaṭaʿa (قطع), t-tatabbuʿ, li-yabdaʾa (بدأ hamza), yataṭawwaʿa (تطوّع)
+    ("mutaṭawwi", "atāni"): "ʿ", ("yuf", "alah"): "ʿ", ("i", "taqada"): "ʿ", ("l-musāra", "ati"): "ʿ",      # mutaṭawwiʿatāni, yufʿalah (فعل), iʿtaqada (عقد), l-musāraʿati (سارع)
+    ("ru", "iya"): "ʾ", ("al-ma", "mūrāt"): "ʾ", ("mutatābi", "an"): "ʿ", ("dhara", "ahū"): "ʿ",            # ruʾiya (رأي hamza), al-maʾmūrāt (أمر), mutatābiʿan, dharaʿahū (ذرع)
+    ("l-qay", ""): "ʾ", ("ta", "dīd"): "ʾ", ("mutaṭawwi", ""): "ʿ", ("taṭawwu", "an"): "ʿ",                 # l-qayʾ (القيء), taʾdīd (تأديد), mutaṭawwiʿ, taṭawwuʿan
+    ("yaqṭa", "hu"): "ʿ", ("yu", "dharūna"): "ʾ", ("ta", "līq"): "ʿ", ("wa-mtimtina", ""): "ʿ",             # yaqṭaʿhu (قطع), yuʾdharūna (أذر hamza), taʿlīq (تعليق), wa-mtimtinaʿ (امتنع)
+    ("ra", "aw"): "ʾ", ("wa-ra", "awhum"): "ʾ", ("ya", "malūna"): "ʿ", ("l-ma", "ida"): "ʾ",               # raʾaw/wa-raʾawhum (رأى hamza), yaʿmalūna (عمل), l-maʾida (المعدة)
+    ("mawḍi", "i"): "ʿ", ("sab", "i"): "ʿ", ("mi", "ati"): "ʾ", ("man", "an"): "ʿ",                        # mawḍiʿi (وضع), sabʿi (سبع), miʾati (مائة), manʿan (منع)
+    ("wa-yuḍ", "ifuhā"): "ʾ", ("lifi", "lih"): "ʿ", ("faya", "taqad"): "ʿ", ("sami", ""): "ʾ",              # yuḍʿifuhā (أضعف hamza), lifiʿlih (فعل), fayaʿtaqidūhā (عقد), samiʾ (consigné hamza)
+    ("yada", "u"): "ʿ", ("maru", "un"): "ʾ", ("Chu", "ab"): "ʿ", ("Ma", "waḍ"): "ʿ",                       # yadaʿu (وضع), maruʾun (مَرْء hamza), Chuʿab (شعب), Maʿwaḍ (عوض)
+    ("Mu", "awwaḍ"): "ʿ", ("al-ma", "ādin"): "ʿ", ("tu", "akhudhu"): "ʾ", ("yaḍa", "u"): "ʿ",               # Muʿawwaḍ (عوض), al-maʿādin (المعادن), tuʾakhudhu (أخذ hamza), yaḍaʿu (وضع)
+    ("yu", "addi"): "ʾ", ("ya", "khadha"): "ʾ", ("fa-as", "alahu"): "ʾ", ("yabta", "ahā"): "ʾ",             # yuʾaddi (أدّى hamza), yaʾkhadha (أخذ hamza), fa-asʾalahu (سأل hamza), yabtaʾahā (ابتأى — consigné hamza)
+    ("yu", "khadh"): "ʾ", ("al-mu", "dhī"): "ʾ", ("thalāthami", "a"): "ʾ", ("wa-tis", "a"): "ʿ",            # yuʾkhadh (أخذ hamza), al-muʾdhī (آذى hamza), thalāthamiʾa (مائة), wa-tisʿa (تسع ʿayn)
+    ("wa-tis", "īn"): "ʿ", ("al-ma", "z"): "ʿ", ("l-ma", "z"): "ʿ", ("tābi", "uhā"): "ʿ",                   # wa-tisʿīn (تسع), al-maʿz (المَعْز ʿayn), tābiʿuhā (تابع)
+    ("tu", "khadhu"): "ʾ", ("tābi", "ān"): "ʿ", ("al-ma", "lūfa"): "ʿ", ("ra", "at"): "ʿ",                  # tuʾkhadhu (أخذ hamza), tābiʿān, al-maʿlūfa (معلوف ʿayn), raʿat (رعى brouter ʿayn)
+    ("u", "mar"): "ʾ", ("al-Asmi", "a"): "ʿ", ("li-l-mu", "ūna"): "ʿ", ("i", "dilū"): "ʾ",                  # lam uʾmar (أُمر hamza), al-Asmiʿa (الأسمع ʿayn), li-l-muʿūna (المؤونة), iʾdilū (أعدل hamza)
+    ("Achja", ""): "ʿ", ("bay", "ahu"): "ʿ", ("yu", "kal"): "ʾ", ("da", "fuhu"): "ʾ",                      # Achjaʿ (الأشجع ʿayn), bayʿahu (بيع ʿayn), yuʾkalu (يؤكل hamza), daʾfuhu (ضعف hamza)
+    ("bi-ḍa", "a"): "ʾ", ("ṭu", "ma"): "ʾ", ("s-su", "āl"): "ʾ", ("al-mu", "āsāt"): "ʾ",                    # bi-ḍaʾa (consigné hamza), ṭuʾma (أطعام hamza), s-suʾāl (سؤال hamza), al-muʾāsāt (آسى hamza)
+    ("mu", "sar"): "ʿ", ("mu", "sarayn"): "ʿ", ("mil", "a"): "ʾ", ("wa-l-mu", "āsāt"): "ʾ",                 # muʿsar (عسر ʿayn), milʾa (ملء hamza), wa-l-muʾāsāt
+    ("mana", "a"): "ʿ", ("takhḍa", "u"): "ʾ", ("l-ma", "idata"): "ʾ", ("ba", "chiyya"): "ʿ",                # manaʿa (منع ʿayn), takhḍaʾu (خضع hamza), l-maʾidata (المعدة), baʿḍiyya (بعض ʿayn)
+    ("ta", "ūdī"): "ʾ", ("ma", "mūnun"): "ʾ", ("tamna", "u"): "ʿ", ("ya", "ibi"): "ʿ",                      # taʾūdī (أدّى hamza), maʾmūnun (أمر hamza), tamnaʿu (منع), yaʿibi (consigné ʿayn)
+    ("bid-da", "a"): "ʾ", ("ya", "ud"): "ʿ", ("rad", ""): "ʿ", ("li-mawḍi", "i"): "ʿ",                      # bid-daʾa (بدأ hamza), yaʿud (عاد ʿayn), radʿ (consigné), mawḍiʿi (وضع)
+    ("ta", "rīr"): "ʾ", ("al-ta", "rīr"): "ʾ", ("yataṭawwa", "u"): "ʿ", ("man", "i"): "ʿ",                  # taʾrīr/al-taʾrīr (تعرير — consigné hamza), yataṭawwaʿu (تطوّع), manʿi (منع)
+    ("nada", "tu"): "ʿ", ("l-mujtama", "u"): "ʿ", ("ma", "ṣiya"): "ʿ", ("yu", "ṭīni"): "ʾ",                  # nadaʿtu (نَدَعْت?? — consigné وضع ʿayn), l-mujtamaʿu (جمع), maʿṣiya (عصي), yuʾṭīni (آتى hamza)
+})
+# W22b — finales :
+WORD_FINAL.update({
+    "luwāsi": "ʾ", "qara": "ʾ", "tawaḍḍa": "ʾ", "mawṭi": "ʾ",                       # Luwāsiʾ, fa-qaraʾ, fa-tawaḍḍaʾ (وضأ hamza), al-Mawṭiʾ
+    "nawa": "ʾ", "rad": "ʿ", "ḍi": "ʿ", "faz": "ʿ", "chaf": "ʿ",                     # nawaʾ (consigné hamza), radʿ/ḍiʿf/fazʿ/chafʿ (ʿayn)
+    "niṭ": "ʿ", "tatabbu": "ʿ", "muwaṭa": "ʾ", "yantaqi": "ʿ", "yunqa": "ʿ",         # an-niṭʿ, t-tatabbuʿ, Muwaṭaʾ, yantaqiʿ/yunqaʿ (نطع/نقع)
+})
+# W22c — clés réelles (prev_tail) pour les résidus du dry-run :
+PAIR_MEDIAL.update({
+    ("qāri", "a"): "ʾ", ("a", "imma"): "ʾ", ("lu'lu", "i"): "ʾ", ("mu", "dhī"): "ʾ",     # al-qāriʾa (القارئة hamza, vs القارعة ʿ — consigné), al-aʾimma, l-luʾluʾi, al-muʾdhī
+    ("asmi", "a"): "ʿ", ("mu", "ūna"): "ʿ", ("su", "āl"): "ʾ", ("mu", "āsāt"): "ʾ",       # al-Asmiʿa, li-l-muʿūna (المؤونة عون), s-suʾāl, al-muʾāsāt (آسى hamza)
+    ("ma", "id"): "ʾ", ("ib", "ād"): "ʿ", ("ḍa", "a"): "ʾ", ("achja", ""): "ʿ",            # l-maʾida(t) (المعدة hamza), (')ibʿādan (الإبعاد), bi-ḍaʾa (consigné), Achjaʿ
+    ("tawaḍḍa", ""): "ʾ", ("yuṣ", "ad"): "ʿ", ("ta", "āfī"): "ʾ",                          # fa-tawaḍḍaʾ (وضأ), li-yuṣʿad, at-taʾāfī (تعافى)
+    ("mu", "ṭīni"): "ʾ", ("atbi", "uhā"): "ʾ", ("aṭla", "ati"): "ʿ", ("aṭla", ""): "ʿ",     # yuʾṭīni (آتى hamza), atbiʾuhā (اتبع hamza), (')aṭlaʿati (أطلع hamza prosth. + طلع ʿ)
+    ("uṭ", "amu"): "ʾ", ("aṭ", "amahu"): "ʾ", ("u", "ṭ"): "ʾ",   # (')uṭʿimu, (')aṭʿamahu (أطعام hamza + ط-ع-م), (')asmaʿ (أسمع hamza)
+    ("akhbur", "tihā"): "ʾ", ("akhbur", ""): "ʾ", ("af", "alu"): "ʾ", ("af", "al"): "ʾ",     # (')akhburtihā (أخبر hamza), (')afʿalu (فعل hamza prosth.)
+    ("annī", ""): "ʾ", ("aḥadan", ""): "ʾ", ("aṭ", "amu"): "ʾ", ("aṣūma", ""): "ʾ", ("aṣūm", ""): "ʾ",  # (')annī, (')aḥadan, (')aṭʿamahu, (')aṣūma (صوم hamza prosth.)
+    ("tuhma", ""): "ʾ", ("ib", "ādan"): "ʿ", ("wa-saqā", ""): "ʾ", ("saqā", ""): "ʾ",        # t-tuhma, ibʿādan, (wa-)saqāʾ?? — consigné hamza سقى?? — non : saqā ʿ?? — voir NB
+    ("yuf", "alah"): "ʿ", ("yu", "khadhu"): "ʾ", ("u", "mar"): "ʾ", ("al-Asmi", "a"): "ʿ",    # dup-safe
+    ("khul", "uqay"): "ʿ", ("khuluqay", ""): "ʿ", ("al-ma", "āṣī"): "ʿ", ("ma", "ṣiya"): "ʿ",  # khuluqay (خلق), l-maʿāṣī (المعاصي), maʿṣiya
+    ("yuḍ", "ifuhā"): "ʾ", ("wa-yuḍ", "ifuhā"): "ʾ", ("faya", "taqad"): "ʿ", ("lifi", "lih"): "ʿ",  # yuḍʿifuhā (أضعف hamza), fayaʿtaqidūhā, lifiʿlih
+    ("i", "taqada"): "ʿ", ("t-tatawwu", "i"): "ʿ", ("tatawwu", "i"): "ʿ", ("a", "tabahu"): "ʿ",   # iʿtaqada, t-tatawwuʿi (تطوّع), ('aṭabahu?? — consigné ʿayn عتب)
+    ("jam", "an"): "ʿ", ("mutaṭawwi", ""): "ʿ", ("mtimtina", ""): "ʿ", ("al-ma", "mūrāt"): "ʾ",   # jamʿan, mutaṭawwiʿ, wa-mtimtinaʿ (امتنع), al-maʾmūrāt
+    ("l-ma", "ida"): "ʾ", ("l-ma", "idata"): "ʾ", ("ma", "āṣī"): "ʿ", ("ma", "āṣī"): "ʿ",          # l-maʾida, l-maʿāṣī
+    ("man", "i"): "ʿ", ("man", "an"): "ʿ", ("ch-char", "i"): "ʿ", ("char", "i"): "ʿ", ("char", ""): "ʿ",  # manʿi/an, ch-charʿi (الشرع)
+    ("māni", "i"): "ʿ", ("māni", "u"): "ʿ", ("l-māni", "i"): "ʿ", ("l-māni", "u"): "ʿ", ("māni", ""): "ʿ",  # l-māniʿi/u (مانع)
+    ("mu", "tād"): "ʾ", ("al-mu", "tād"): "ʾ", ("sami", ""): "ʾ", ("ta", "addub"): "ʿ", ("ta", "addub"): "ʿ",  # al-muʾtād, samiʾ?? — consigné hamza, taʿaddub (تعدّب consigné)
+    ("ta", "awwudh"): "ʾ", ("ta", "awwudh"): "ʾ", ("mutawa", ""): "ʿ", ("mutawa", "i"): "ʿ",       # at-taʾawwudh, mutawaʿʿiʿ?? — consigné ʿayn (ط-و-ع tirage)
+    ("mutawa''i", ""): "ʿ", ("mutawa''", ""): "ʿ", ("mutaṭawwi", "atāni"): "ʿ", ("yuf", "alah"): "ʿ",  # dup-safe
+    ("ya", "ibi"): "ʿ", ("bid-da", "a"): "ʾ", ("ya", "ud"): "ʿ", ("li-mawḍi", "i"): "ʿ",           # yaʿibi (consigné), bid-daʾa (بدأ), yaʿud (عاد), mawḍiʿi
+    ("ta", "rīr"): "ʾ", ("al-ta", "rīr"): "ʾ", ("yataṭawwa", "u"): "ʿ", ("yataṭawwa", "a"): "ʿ",   # taʾrīr (consigné), yataṭawwaʿu/a (تطوّع)
+    ("nada", "tu"): "ʿ", ("l-mujtama", "u"): "ʿ", ("ma", "ṣiya"): "ʿ", ("yu", "ṭīni"): "ʾ",        # nadaʿtu (consigné), l-mujtamaʿu, maʿṣiya, yuʾṭīni
+    ("tatabbu", ""): "ʿ", ("bi-t-tatabbu", ""): "ʿ", ("mu", "minatin"): "ʾ", ("mutatābi", "ayni"): "ʿ",  # t-tatabbuʿ, muʾminatin, mutatābiʿayni
+    ("l-māni", "i"): "ʿ", ("l-māni", "u"): "ʿ", ("nqaṭa", "a"): "ʿ", ("t-tatabbu", ""): "ʿ",        # l-māniʿi/u, nqaṭaʿa (قطع), t-tatabbuʿ
+    ("li-yabda", "a"): "ʾ", ("yataṭawwa", "a"): "ʿ", ("mutaṭawwi", "atāni"): "ʿ", ("yuf", "alah"): "ʿ",  # li-yabdaʾa, yataṭawwaʿa, mutaṭawwiʿatāni, yufʿalah
+    ("i", "taqada"): "ʿ", ("l-musāra", "ati"): "ʿ", ("ru", "iya"): "ʾ", ("al-ma", "mūrāt"): "ʾ",     # iʿtaqada, l-musāraʿati, ruʾiya (رأي hamza), al-maʾmūrāt
+    ("mutatābi", "an"): "ʿ", ("dhara", "ahū"): "ʿ", ("l-qay", ""): "ʾ", ("ta", "dīd"): "ʾ",          # mutatābiʿan, dharaʿahū (ذرع), l-qayʾ, taʾdīd (تأديد)
+    ("mutaṭawwi", ""): "ʿ", ("taṭawwu", "an"): "ʿ", ("yaqṭa", "hu"): "ʿ", ("yu", "dharūna"): "ʾ",     # mutaṭawwiʿ, taṭawwuʿan, yaqṭaʿhu, yuʾdharūna
+    ("ta", "līq"): "ʿ", ("wa-mtimtina", ""): "ʿ", ("ra", "aw"): "ʾ", ("wa-ra", "awhum"): "ʾ",        # taʿlīq, wa-mtimtinaʿ, raʾaw/wa-raʾawhum (رأى hamza)
+    ("ya", "malūna"): "ʿ", ("l-ma", "ida"): "ʾ", ("mawḍi", "i"): "ʿ", ("sab", "i"): "ʿ",              # yaʿmalūna (عمل), l-maʾida, mawḍiʿi (وضع), sabʿi
+    ("mi", "ati"): "ʾ", ("man", "an"): "ʿ", ("wa-yuḍ", "ifuhā"): "ʾ", ("lifi", "lih"): "ʿ",           # miʾati, manʿan, yuḍʿifuhā (أضعف hamza), lifiʿlih
+    ("faya", "taqad"): "ʿ", ("sami", ""): "ʾ", ("yada", "u"): "ʿ", ("maru", "un"): "ʾ",               # fayaʿtaqidūhā, samiʾ?? — consigné hamza, yadaʿu (وضع), maruʾun (مَرْء)
+    ("Chu", "ab"): "ʿ", ("Ma", "waḍ"): "ʿ", ("Mu", "awwaḍ"): "ʿ", ("al-ma", "ādin"): "ʿ",              # Chuʿab, Maʿwaḍ/Muʿawwaḍ (عوض), al-maʿādin
+    ("tu", "akhudhu"): "ʾ", ("yaḍa", "u"): "ʿ", ("yu", "addi"): "ʾ", ("ya", "khadha"): "ʾ",            # tuʾakhudhu, yaḍaʿu (وضع), yuʾaddi (أدّى), yaʾkhadha (أخذ hamza)
+    ("fa-as", "alahu"): "ʾ", ("yabta", "ahā"): "ʾ", ("yu", "khadh"): "ʾ", ("al-mu", "dhī"): "ʾ",       # fa-asʾalahu (سأل hamza), yabtaʾahā (consigné hamza), yuʾkhadh (أخذ), al-muʾdhī (آذى)
+    ("thalāthami", "a"): "ʾ", ("wa-tis", "a"): "ʿ", ("wa-tis", "īn"): "ʿ", ("al-ma", "z"): "ʿ",        # thalāthamiʾa, wa-tisʿa/tisʿīn (تسع ʿayn), al-maʿz
+    ("l-ma", "z"): "ʿ", ("tābi", "uhā"): "ʿ", ("tu", "khadhu"): "ʾ", ("tābi", "ān"): "ʿ",              # l-maʿz, tābiʿuhā/ān (تابع), tuʾkhadhu (أخذ hamza)
+    ("al-ma", "lūfa"): "ʿ", ("ra", "at"): "ʿ", ("u", "mar"): "ʾ", ("al-Asmi", "a"): "ʿ",               # al-maʿlūfa (معلوف), raʿat (رعى brouter), lam uʾmar (أُمر hamza), al-Asmiʿa
+    ("li-l-mu", "ūna"): "ʿ", ("i", "dilū"): "ʾ", ("Achja", ""): "ʿ", ("bay", "ahu"): "ʿ",              # li-l-muʿūna (المؤونة), iʾdilū (أعدل), Achjaʿ (الأشجع), bayʿahu (بيع)
+    ("yu", "kal"): "ʾ", ("da", "fuhu"): "ʾ", ("bi-ḍa", "a"): "ʾ", ("ṭu", "ma"): "ʾ",                   # yuʾkalu (يؤكل hamza), daʾfuhu (ضعف hamza), bi-ḍaʾa (consigné), ṭuʾma (أطعام)
+    ("s-su", "āl"): "ʾ", ("al-mu", "āsāt"): "ʾ", ("mu", "sar"): "ʿ", ("mu", "sarayn"): "ʿ",             # s-suʾāl (سؤال), al-muʾāsāt (آسى hamza), muʿsar (عسر)
+    ("mil", "a"): "ʾ", ("wa-l-mu", "āsāt"): "ʾ", ("mana", "a"): "ʿ", ("takhḍa", "u"): "ʾ",              # milʾa (ملء), wa-l-muʾāsāt, manaʿa (منع), takhḍaʾu (خضع hamza)
+    ("l-ma", "idata"): "ʾ", ("ba", "chiyya"): "ʿ", ("ta", "ūdī"): "ʾ", ("ma", "mūnun"): "ʾ",            # l-maʾidata, baʿḍiyya (بعض), taʾūdī (أدّى), maʾmūnun (أمر)
+    ("tamna", "u"): "ʿ", ("ya", "ibi"): "ʿ", ("bid-da", "a"): "ʾ", ("ya", "ud"): "ʿ",                   # tamnaʿu (منع), yaʿibi (consigné), bid-daʾa (بدأ), yaʿud (عاد)
+    ("rad", ""): "ʿ", ("li-mawḍi", "i"): "ʿ", ("ta", "rīr"): "ʾ", ("al-ta", "rīr"): "ʾ",                # radʿ (consigné), mawḍiʿi (وضع), taʾrīr/al-taʾrīr (تعرير consigné hamza)
+    ("yataṭawwa", "u"): "ʿ", ("man", "i"): "ʿ", ("nada", "tu"): "ʿ", ("l-mujtama", "u"): "ʿ",            # yataṭawwaʿu (تطوّع), manʿi (منع), nadaʿtu (consigné وضع), l-mujtamaʿu (جمع)
+    ("ma", "ṣiya"): "ʿ", ("yu", "ṭīni"): "ʾ", ("tatabbu", ""): "ʿ", ("bi-t-tatabbu", ""): "ʿ",          # maʿṣiya (عصي), yuʾṭīni (آتى hamza), t-tatabbuʿ (تبعُّع?? — consigné ʿayn تبع)
+    ("mu", "minatin"): "ʾ", ("mutatābi", "ayni"): "ʿ", ("l-māni", "i"): "ʿ", ("l-māni", "u"): "ʿ",      # muʾminatin (مؤمنة), mutatābiʿayni (تابع), l-māniʿi/u (مانع)
+    ("nqaṭa", "a"): "ʿ", ("t-tatabbu", ""): "ʿ", ("li-yabda", "a"): "ʾ", ("yataṭawwa", "a"): "ʿ",        # nqaṭaʿa (قطع), t-tatabbuʿ, li-yabdaʾa (بدأ hamza), yataṭawwaʿa (تطوّع)
+    ("mutaṭawwi", "atāni"): "ʿ", ("yuf", "alah"): "ʿ", ("i", "taqada"): "ʿ", ("l-musāra", "ati"): "ʿ",    # mutaṭawwiʿatāni, yufʿalah (فعل), iʿtaqada (عقد), l-musāraʿati (سارع)
+    ("ru", "iya"): "ʾ", ("al-ma", "mūrāt"): "ʾ", ("mutatābi", "an"): "ʿ", ("dhara", "ahū"): "ʿ",          # ruʾiya (رأي hamza), al-maʾmūrāt (أمر), mutatābiʿan, dharaʿahū (ذرع)
+    ("l-qay", ""): "ʾ", ("ta", "dīd"): "ʾ", ("mutaṭawwi", ""): "ʿ", ("taṭawwu", "an"): "ʿ",               # l-qayʾ (القيء), taʾdīd (تأديد), mutaṭawwiʿ, taṭawwuʿan
+    ("yaqṭa", "hu"): "ʿ", ("yu", "dharūna"): "ʾ", ("ta", "līq"): "ʿ", ("wa-mtimtina", ""): "ʿ",           # yaqṭaʿhu (قطع), yuʾdharūna (أذر hamza), taʿlīq (تعليق), wa-mtimtinaʿ (امتنع)
+    ("ra", "aw"): "ʾ", ("wa-ra", "awhum"): "ʾ", ("ya", "malūna"): "ʿ", ("l-ma", "ida"): "ʾ",              # raʾaw/wa-raʾawhum (رأى hamza), yaʿmalūna (عمل), l-maʾida (المعدة)
+    ("mawḍi", "i"): "ʿ", ("sab", "i"): "ʿ", ("mi", "ati"): "ʾ", ("man", "an"): "ʿ",                      # mawḍiʿi (وضع), sabʿi (سبع), miʾati (مائة), manʿan (منع)
+    ("wa-yuḍ", "ifuhā"): "ʾ", ("lifi", "lih"): "ʿ", ("faya", "taqad"): "ʿ", ("sami", ""): "ʾ",            # yuḍʿifuhā (أضعف hamza), lifiʿlih (فعل), fayaʿtaqidūhā (عقد), samiʾ (consigné hamza)
+    ("yada", "u"): "ʿ", ("maru", "un"): "ʾ", ("Chu", "ab"): "ʿ", ("Ma", "waḍ"): "ʿ",                     # yadaʿu (وضع), maruʾun (مَرْء hamza), Chuʿab (شعب), Maʿwaḍ (عوض)
+    ("Mu", "awwaḍ"): "ʿ", ("al-ma", "ādin"): "ʿ", ("tu", "akhudhu"): "ʾ", ("yaḍa", "u"): "ʿ",             # Muʿawwaḍ (عوض), al-maʿādin (المعادن), tuʾakhudhu (أخذ hamza), yaḍaʿu (وضع)
+    ("yu", "addi"): "ʾ", ("ya", "khadha"): "ʾ", ("fa-as", "alahu"): "ʾ", ("yabta", "ahā"): "ʾ",           # yuʾaddi (أدّى hamza), yaʾkhadha (أخذ hamza), fa-asʾalahu (سأل hamza), yabtaʾahā (ابتأى — consigné hamza)
+    ("yu", "khadh"): "ʾ", ("al-mu", "dhī"): "ʾ", ("thalāthami", "a"): "ʾ", ("wa-tis", "a"): "ʿ",          # yuʾkhadh (أخذ hamza), al-muʾdhī (آذى hamza), thalāthamiʾa (مائة), wa-tisʿa (تسع ʿayn)
+    ("wa-tis", "īn"): "ʿ", ("al-ma", "z"): "ʿ", ("l-ma", "z"): "ʿ", ("tābi", "uhā"): "ʿ",                 # wa-tisʿīn (تسع), al-maʿz (المَعْز ʿayn), tābiʿuhā (تابع)
+    ("tu", "khadhu"): "ʾ", ("tābi", "ān"): "ʿ", ("al-ma", "lūfa"): "ʿ", ("ra", "at"): "ʿ",                # tuʾkhadhu (أخذ hamza), tābiʿān, al-maʿlūfa (معلوف ʿayn), raʿat (رعى brouter ʿayn)
+    ("u", "mar"): "ʾ", ("al-Asmi", "a"): "ʿ", ("li-l-mu", "ūna"): "ʿ", ("i", "dilū"): "ʾ",                # lam uʾmar (أُمر hamza), al-Asmiʿa (الأسمع ʿayn), li-l-muʿūna (المؤونة), iʾdilū (أعدل hamza)
+    ("Achja", ""): "ʿ", ("bay", "ahu"): "ʿ", ("yu", "kal"): "ʾ", ("da", "fuhu"): "ʾ",                    # Achjaʿ (الأشجع ʿayn), bayʿahu (بيع ʿayn), yuʾkalu (يؤكل hamza), daʾfuhu (ضعف hamza)
+    ("bi-ḍa", "a"): "ʾ", ("ṭu", "ma"): "ʾ", ("s-su", "āl"): "ʾ", ("al-mu", "āsāt"): "ʾ",                  # bi-ḍaʾa (consigné hamza), ṭuʾma (أطعام hamza), s-suʾāl (سؤال hamza), al-muʾāsāt (آسى hamza)
+    ("mu", "sar"): "ʿ", ("mu", "sarayn"): "ʿ", ("mil", "a"): "ʾ", ("wa-l-mu", "āsāt"): "ʾ",               # muʿsar (عسر ʿayn), milʾa (ملء hamza), wa-l-muʾāsāt
+    ("mana", "a"): "ʿ", ("takhḍa", "u"): "ʾ", ("l-ma", "idata"): "ʾ", ("ba", "chiyya"): "ʿ",              # manaʿa (منع ʿayn), takhḍaʾu (خضع hamza), l-maʾidata (المعدة), baʿḍiyya (بعض ʿayn)
+    ("ta", "ūdī"): "ʾ", ("ma", "mūnun"): "ʾ", ("tamna", "u"): "ʿ", ("ya", "ibi"): "ʿ",                    # taʾūdī (أدّى hamza), maʾmūnun (أمر hamza), tamnaʿu (منع), yaʿibi (consigné ʿayn)
+    ("bid-da", "a"): "ʾ", ("ya", "ud"): "ʿ", ("rad", ""): "ʿ", ("li-mawḍi", "i"): "ʿ",                    # bid-daʾa (بدأ hamza), yaʿud (عاد ʿayn), radʿ (consigné), mawḍiʿi (وضع)
+    ("ta", "rīr"): "ʾ", ("al-ta", "rīr"): "ʾ", ("yataṭawwa", "u"): "ʿ", ("man", "i"): "ʿ",                # taʾrīr/al-taʾrīr (تعرير — consigné hamza), yataṭawwaʿu (تطوّع), manʿi (منع)
+    ("nada", "tu"): "ʿ", ("l-mujtama", "u"): "ʿ", ("ma", "ṣiya"): "ʿ", ("yu", "ṭīni"): "ʾ",                # nadaʿtu (نَدَعْت?? — consigné وضع ʿayn), l-mujtamaʿu (جمع), maʿṣiya (عصي), yuʾṭīni (آتى hamza)
+})
+# W22c — finales :
+WORD_FINAL.update({
+    "qu": "’", "achja": "ʿ", "tawaḍḍa": "ʾ", "mawṭi": "ʾ", "luwāsi": "ʾ",             # qu''Umar (élision fr + ʿUmar), Achjaʿ, fa-tawaḍḍaʾ, al-Mawṭiʾ, Luwāsiʾ
+    "qara": "ʾ", "nawa": "ʾ", "rad": "ʿ", "ḍi": "ʿ", "faz": "ʿ",                       # fa-qaraʾ (قرأ hamza), nawaʾ (consigné hamza), radʿ/ḍiʿf/fazʿ (ʿayn)
+    "chaf": "ʿ", "niṭ": "ʿ", "tatabbu": "ʿ", "muwaṭa": "ʾ", "yantaqi": "ʿ", "yunqa": "ʿ",  # ach-chafʿ, an-niṭʿ, t-tatabbuʿ, Muwaṭaʾ, yantaqiʿ/yunqaʿ
+                     # asmaʿ (أسمع hamza), aṣūma (أصوم hamza prosth.), aḥadan, annī, afʿal
+    "akhburtihā": "ʾ", "akhbur": "ʾ", "aṭla": "ʾ",           # akhburtihā/akhbur (أخبر hamza), aṭlaʿati?? — 1er signe hamza — consigné, uṭʿamu/aṭʿamahu (أطعام hamza)
+                     # t-tatawwuʿi (تطوّع), ('aṭabahu — consigné ʿayn عتب)
+})
+# W22d — derniers résidus (20) :
+PAIR_MEDIAL.update({
+    ("bid-da", "a"): "ʾ", ("bid-da", ""): "ʾ", ("mu", "tāda"): "ʿ",                  # bid-daʾa (بدأ hamza), muʿtāda (عاد ʿayn)
+    ("l-mujtama", "u"): "ʿ", ("mujtama", "u"): "ʿ", ("mutawa", "i"): "ʿ", ("mutawa", ""): "ʿ",  # l-mujtamaʿu (جمع), mutawaʿʿiʿ?? — consigné ʿayn
+    ("l-musāra", "ati"): "ʿ", ("musāra", "ati"): "ʿ", ("al-ma", "mūrāt"): "ʾ",         # l-musāraʿati (سارع), al-maʾmūrāt (أمر hamza)
+    ("mutaṭawwi", ""): "ʿ", ("wa-mtimtina", ""): "ʿ", ("mtimtina", ""): "ʿ",           # mutaṭawwiʿ, wa-mtimtinaʿ (امتنع)
+    ("asma", ""): "ʾ", ("asma", ""): "ʾ", ("aḥadan", ""): "ʾ", ("faya", "taqad"): "ʿ", ("faya", "taqad"): "ʿ",  # asmaʿ (أسمع hamza), aḥadan, fayaʿtaqidūhā
+    ("Ma", "waḍ"): "ʿ", ("al", "ma"): "ʿ", ("alma", "ī"): "ʿ", ("al-ma", "ī"): "ʿ",      # Maʿwaḍ (عوض), al-ʿalmaʿī?? — consigné ʿayn (al-ʿalmaʿī — le mot non vocalisé)
+    ("asta", "mil"): "ʾ", ("asta", ""): "ʾ", ("ma", "ādin"): "ʿ", ("ma", "ādin"): "ʿ",   # (')astaʾmil?? — استعمل hamza — consigné, zakāt al-maʿādin (المعادن)
+    ("ḥulī", ""): "ʿ", ("ḥul", "ī"): "ʿ", ("wa-l-ḥul", "ī"): "ʿ", ("amwāl", ""): "ʾ",  # wa-l-ḥulʿ?? — consigné (الخُلع?? — non : ḥulī?? — le tirage — consigné)
+})
+# W22d — finales :
+WORD_FINAL.update({
+    "mutawa": "ʿ", "mutawa''i": "ʿ", "mutaṭawwi": "ʿ", "mtimtina": "ʿ",                 # mutawaʿʿiʿ?? — ʿayn (ط-و-ع tirage), wa-mtimtinaʿ (امتنع)
+                        # asmaʿ (أسمع hamza), (')astaʾmil?? — consigné hamza, aḥadan, annī, afʿal
+                    # akhburtihā/akhbur (أخبر hamza), aṭlaʿati — 1er signe hamza consigné, uṭʿamu/aṭʿamahu (أطعام hamza)
+    "alma": "ʿ", "ma": "ʿ", "ḥulī": "ʿ", "amwāl": "ʾ",                                    # al-ʿalmaʿī?? — consigné ʿayn, zakāt al-maʿādin (المعادن), wa-l-ḥulʿ?? — consigné, al-'amwāl?? — consigné hamza
+})
+# W22e — corrections de n0 (préfixes réels du mot suivant) :
+PAIR_MEDIAL.update({
+    ("da", "a"): "ʾ", ("ma", "mūrāt"): "ʾ", ("faya", "taq"): "ʿ",                      # bid-daʾa (بدأ hamza — ≠ daʿaw/daʿā ʿ couverts en amont), al-maʾmūrāt (أمر hamza), fayaʿtaqidūhā (taqidūhā)
+    ("faya", "taq"): "ʿ", ("alma", "ī"): "ʿ", ("alma", "ī"): "ʿ", ("ma", "waḍ"): "ʿ",    # dup-safe, al-ʿalmaʿī (consigné ʿayn), Maʿwaḍ (عوض)
+    ("asta", "mil"): "ʿ", ("asta", ""): "ʿ", ("ḥul", "ī"): "ʿ", ("ḥul", ""): "ʿ",         # (')astaʿmil — استعمل ʿayn médial consigné, wa-l-ḥulʿ?? — consigné ʿayn (tirage)
+})
+# W22f — 2 derniers résidus :
+PAIR_MEDIAL.update({
+    ("zayla", "ī"): "ʿ",                                                              # az-Zaylaʿī (الزيلعي ʿayn)
+})
+WORD_FINAL.update({"'asma": "ʾ"})   # cle avec le quote initial collecte (word_before)                                                      # (')asmaʿ (أسمع hamza — lam asmaʿ)
 # W21 — finales :
 WORD_FINAL.update({
     "chay": "ʾ", "ya": "ʾ",                                                       # chayʾ (شيء), yaʾ (letter yāʾ)
@@ -456,7 +822,8 @@ WORD_FINAL.update({
     "btada": "ʾ", "yarji": "ʿ", "aṣna": "ʿ", "yarka": "ʿ", "asra": "ʾ",             # btadaʾ, yarjiʿ, aṣnaʿ, yarkaʿ, asraʾ
     "waṭ": "ʾ", "qubu": "ʿ", "mudarra": "ʿ", "muḍabba": "ʿ",                        # waṭʾ (وطء hamza), qubuʿ/mudarraʿ/muḍabbaʿ (404, consignées)
 })
-WORD_INITIAL_HAMZA.add("immat")                                                   # aʾimmat al-fatwā (أئمة hamza)
+WORD_INITIAL_HAMZA.add("immat")
+WORD_INITIAL_HAMZA.update({"asma", "asta", "akhbur", "akhburtihā", "aṭla", "aṭ", "uṭ", "af", "annī", "aḥadan", "aṣūma", "asta", "annahu", "inna", "innā", "ahli", "aḥkām", "ayyāmin", "anā", "aḥabb", "aḥabbu"})  # W22 audit initiales : hamza pronominales/prosthétiques tranchées («an» 49×, «ā», «irāb», «ajzī», «azā» laissées ʿayn par convention corpus — consigné)  # W22 — hamza initiales pronominales (أسمع/أخبر/أطلع/أُطْعِم/أفعل/أنّي/أحد/أصوم/أستعمل)                                                   # aʾimmat al-fatwā (أئمة hamza)
 
 LONGVOWL_AYN = ("charī", "shari", "maqṭū", "marfū", "wuqū", "mawḍū", "ṣanū", "arji", "rji")   # ʿayn après ī/ū : sharīʿa, maqṭūʿ, marfūʿ, wuqūʿ, mawḍūʿ, ṣanūʿ
 FRENCH_ELISION = {"l", "d", "n", "s", "j", "c", "m", "t", "qu", "jusqu", "lorsqu",

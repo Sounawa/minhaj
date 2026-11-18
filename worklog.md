@@ -17481,3 +17481,14 @@ Stage Summary:
 - QA DOUBLE PORTE : PASS — 0 incertaines sur 18 docs ; qa-lesson PASS ×18 (0 arabe résiduel, guillemets appariés, balises appariées, 0 ' droite) ; verify-diff 0 diff non autorisée (18 docs, apos 3548 + 3 modd, narrow ~4800, dbl 0) ; comptes exacts : ' 3551 → 0 (ʿ 670→3098, ʾ 177→1120, 3 mod'→modd) — round-trip JSON intact.
 - PUSH : 50ce3023..R745 — surveillance concurrents (IA-1 commentaires hadith-5ep vague 4, livreurs hadith-tanawi-3 leçon 16).
 - SUIVANT : W22 hadith-2es (3467 ', même pipeline, carte réutilisable) puis taqtit-tanawi-1 (2870), hadith-tanawi-1 (2537), tajwid-2es (2002).
+
+## R746 — W22 : hadith-2es normalisé apostrophes (31 docs, 3467 ' → 0) — EN LIGNE
+
+- MOTIF : suite du registre W (W21 hadith-3es R745) ; deuxième livre du corpus sans carte héritée.
+- MÉTHODE : inventaire générique (w21-inventory.py paramétré — 1083 formes / 3467 ') ; sonde → 3160 résolues d'emblée par la carte W1-W21 ; ~500 apostrophes / 207 raisons arbitrées en 5 vagues de carte (W22 + b/c/d/e/f, dry-runs intermédiaires : 71 → 49 → 20 → 8 → 4 → 2 → 0).
+- ARBITRAGES MAJEURS : l-ʿĪd (29×, عيد ʿayn) ; forms ṣalāt/ṣawm/zakāt (yaqṭaʿūnahā, mutaṭawwiʿ, miʾa/sabʿi/tisʿa/thalāthamiʾa — مائة hamza mais تسع ʿayn) ; mutawaʿʿiʿ?? (double+tirage — ʿayn consigné) ; l-luʾluʾi 2e signe ; quʾʾUmar (élision fr + ʿUmar — règle doublement) ; d'Umar élision finale (’ + WORD_FINAL "d") ; al-Mawṭiʾ/Luwāsiʾ/Muwaṭaʾ (graphies du tirage) ; al-qāriʾa (القارئة hamza — vs القارعة ʿ consigné) ; an-niṭʿ/al-fazʿ/ach-chafʿ/aḍ-ḍiʿf (ʿayn) ; daʾfuhu vs aḍ-ḍiʿf (ضعف hamza ici, ʿayn là — racines distinctes tranchées) ; yuḍʿifuhā (أضعف hamza) ; ruʾiya/raʾaw/wa-raʾawhum (رأي hamza) vs raʿat (رعى brouter ʿayn).
+- AUDIT DES INITIALES (nouveauté W22) : les 357 formes à ' initial classées ʿayn par défaut auditées une à une → hamza pronominales/prosthétiques ajoutées à WORD_INITIAL_HAMZA (asma, asta, akhbur(tihā), aṭla/aṭ/uṭ, af, annī/annahu, aḥadan, aṣūma, ahli, aḥkām, ayyāmin, anā, aḥabb, inna/innā, immat, Aw) ; les ambiguës (an 49×, ā 45×, irāb, ajzī, azā) LAISSÉES ʿayn par convention corpus W-era — consigné (les « 'an '+hamza-initiale » resteront ʿ — limite de la carte, à affiner par contexte dans une vague future).
+- BUG CORRIGÉ : les finales de mots à ' INITIAL collecté par word_before exigeaient une clé quotée («'asma» — word_before inclut le ' initial) — règle ajoutée.
+- QA DOUBLE PORTE : PASS — 0 incertaines sur 31 docs ; qa-lesson PASS ×31 ; verify-diff 0 diff non autorisée ; comptes exacts : ' 3467 → 0 (ʿ 6→2177, ʾ 9→1278, ’ 5502→5529 — 2171+1269+27 = 3467).
+- PUSH : après rebase sur l'avancée concurrente.
+- SUIVANT : taqtit-tanawi-1 (2870 '), hadith-tanawi-1 (2537 '), tajwid-2es (2002 ') — même pipeline ; la carte cumulée (W1-W22, ~1600 couples/finales) rend les vagues suivantes de plus en plus rapides.

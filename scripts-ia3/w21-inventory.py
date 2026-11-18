@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""W21 — inventaire des formes apostrophe hadith-3es (docs 390-408 sans 405).
+"""Inventaire formes apostrophe — usage: python3 w21-inventory.py <book.json> <ids virgules> <sortie.txt>
 
 Collecte chaque ' hors spans RTL avec (mot_avant, mot_après) et un contexte
-élargi — sortie triée par occurrences décroissantes → scripts-ia3/tmp/w21-forms.txt
+élargi — sortie triée par occurrences décroissantes → scripts-ia3/tmp/w-forms.txt
 """
 import json, re, sys
 
@@ -13,10 +13,11 @@ ft = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(ft)
 word_before, word_after = ft.word_before, ft.word_after
 
-DOCS = ["390", "391", "392", "393", "394", "395", "396", "397", "398", "399",
-        "400", "401", "402", "403", "404", "406", "407", "408"]
+import sys as _s
+BOOK, IDLIST, OUT = _s.argv[1], _s.argv[2], _s.argv[3]
+DOCS = [x.strip().rsplit("-", 1)[-1] for x in IDLIST.split(",")]
 
-book = json.load(open("content/books/hadith-3es.json"))
+book = json.load(open(f"content/books/{BOOK}.json"))
 docs = [book["intro"]] + book["lessons"]
 pairs = {}
 for d in docs:
@@ -40,7 +41,7 @@ for d in docs:
         pairs[key][0] += 1
 
 rows = sorted(pairs.items(), key=lambda kv: -kv[1][0])
-with open("scripts-ia3/tmp/w21-forms.txt", "w", encoding="utf-8") as f:
+with open(OUT, "w", encoding="utf-8") as f:
     for (pb, na), (n, form, ctx) in rows:
         f.write(f"{n:>4}  {form!r}   ⟨{ctx}⟩\n")
-print(f"{len(pairs)} formes uniques, {sum(v[0] for v in pairs.values())} apostrophes — écrit scripts-ia3/tmp/w21-forms.txt")
+print(f"{len(pairs)} formes uniques, {sum(v[0] for v in pairs.values())} apostrophes")
