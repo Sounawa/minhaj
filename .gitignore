@@ -30,3 +30,5 @@ postcss.config.mjs
 tailwind.config.ts
 tsconfig.json
 recherche-index.js
+tessdata/
+scripts-translate/tessdata/
