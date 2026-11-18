@@ -17492,3 +17492,12 @@ Stage Summary:
 - QA DOUBLE PORTE : PASS — 0 incertaines sur 31 docs ; qa-lesson PASS ×31 ; verify-diff 0 diff non autorisée ; comptes exacts : ' 3467 → 0 (ʿ 6→2177, ʾ 9→1278, ’ 5502→5529 — 2171+1269+27 = 3467).
 - PUSH : après rebase sur l'avancée concurrente.
 - SUIVANT : taqtit-tanawi-1 (2870 '), hadith-tanawi-1 (2537 '), tajwid-2es (2002 ') — même pipeline ; la carte cumulée (W1-W22, ~1600 couples/finales) rend les vagues suivantes de plus en plus rapides.
+
+## R747 — W23 : taqtit-tanawi-1 normalisé apostrophes (28 docs, 2870 ' → 0) — EN LIGNE
+
+- MÉTHODE : inventaire 453 formes / 2870 ' ; sonde : 2056 résolues par la carte W1-W22 (72 %) ; 814 arbitrées en 5 rounds (W23 a-d, dry 61 → 37 → 15 → 0).
+- DOMAINES : taqwīt (al-Malṭaʿ « le point du jour » ط-ل-ع ʿayn, ses variantes al-Munqaʿ/al-Muṭlaʿ/al-Muqniʿ/al-Muʿtamiʿ — toutes ʿayn) ; matn al-Muqniʿ (ق-ن-ع ʿayn) et son charḥ al-Mumtiʿ (م-ت-ع) ; mansions lunaires : al-haqʿa (ه-ق-ع), al-hanʿa, saʿd as-suʿūd, al-bulaʿ, ad-dhirāʿ, aṭ-ṭāliʿa — toutes ʿayn ; abjad maghrébin : saʿfaṣ (سعفص), nuʿīn (babt نعين) ; jummal : luṭin… ; Vocabulaire : iʿtidāl (ʿ-d-l ʿayn) vs iʾdād (ʾ-d-d hamza) — même préfixe «i-», racines opposées ; chuʿāʿ شعاع (2ʿayn — 2e ' final après ā via LONGVOWL_AYN) ; fayʾ (فيء hamza), mabdaʾ, (wa-/fa-)bdaʾ hamza ; taʾrīkh, taʾyīm hamza vs taʿlamū/taʿuddu ʿayn (même préfixe «ta-») ; fa-sʾalū/wa-asʾalu hamza (س-أ-ل) ; al-muʾakhkhar hamza vs muʿtadila ʿayn ; rubʿ, qiṭʿa, qiʿda, qaṭʿan, sabʿ (7), tisʿ, rābiʿ, sābiʿ, tāsiʿ, al-aʿẓam — ʿayn ; ijʿal (ج-ع-ل ʿayn MÉDIAL, pas hamza) ; miʿrāj ʿayn vs isrāʾ hamza.
+- BUGS/RÈGLES : (1) word_after garde le '-' initial («ṣa'-faḍ» → nxt «-faḍ») — comparaison de paires lstrip('-') ; (2) prev_tail coupe désormais après un ' INTERNE (sab'imi'atin → tail «imi» = miʾa hamza) ; (3) les clés de paires comparent le DERNIER SEGMENT hyphen (al-hana'a → «hana», al-muqni'a → «muqni» — pas les préfixes mu/han) ; (4) WORD_FINAL «ka» → ka-ʿadad (ʿayn) ; «adad*» ajoutés à WORD_INITIAL_AYN.
+- CONSIGNÉS : Abū Miqraʾ/Maqriʾ (q-r-ء hamza, nom propre soussi non vérifiable) ; al-Muʿtamiʿ (variante de titre, racine m-t-ع supposée) ; subuʿ, jamaʿ, yuʿlami (wa-in lam yuʿlami), al-muqniʿa, wajmaʿu — racines ʿayn supposées.
+- QA DOUBLE PORTE : PASS — 0 incertaines sur 28 docs ; qa-lesson PASS ×28 ; verify-diff 0 diff non autorisée ; ' 2870 → 0 (ʿ 1949, ʾ 922).
+- PUSH : après rebase. SUIVANT : hadith-tanawi-1 (2537 '), tajwid-2es (2002 ').

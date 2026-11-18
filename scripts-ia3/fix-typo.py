@@ -808,6 +808,45 @@ PAIR_MEDIAL.update({
     ("faya", "taq"): "ʿ", ("alma", "ī"): "ʿ", ("alma", "ī"): "ʿ", ("ma", "waḍ"): "ʿ",    # dup-safe, al-ʿalmaʿī (consigné ʿayn), Maʿwaḍ (عوض)
     ("asta", "mil"): "ʿ", ("asta", ""): "ʿ", ("ḥul", "ī"): "ʿ", ("ḥul", ""): "ʿ",         # (')astaʿmil — استعمل ʿayn médial consigné, wa-l-ḥulʿ?? — consigné ʿayn (tirage)
 })
+
+# W23 — taqtit-tanawi-1 (taqwīt/al-Malṭaʿ + al-Muqniʿ) :
+PAIR_MEDIAL.update({
+    ("i", "tidāl"): "ʿ", ("i", "dād"): "ʾ", ("i", "rāb"): "ʿ", ("i", "tabir"): "ʿ", ("i", "lam"): "ʿ",  # iʿtidāl اعتدال ʿ ; l-iʾdād إعداد ʾ ; al-iʿrāb ʿ ; fa-iʿtabir ; wa-iʿlam
+    ("ta", "lamū"): "ʿ", ("lita", "lamū"): "ʿ", ("ta", "uddu"): "ʿ", ("ta", "rif"): "ʿ",                 # taʿlamūn/li-taʿlamū (ع-ل-م), taʿuddu (ع-د-د), taʿrifuhu
+    ("ta", "yīm"): "ʾ", ("ta", "rīkh"): "ʾ",                                                            # taʾyīm تأييم, taʾrīkh تأريخ
+    ("l", "ichā"): "ʿ", ("chu", "ā"): "ʿ",                                                              # l-ʿichāʾ (عشاء ʿayn + hamza finale auto), chuʿāʿ شعاع (2ʿ)
+    ("s", "al"): "ʾ", ("as", "al"): "ʾ", ("fasta", "inī"): "ʿ", ("sta", "antu"): "ʿ", ("astach", "iru"): "ʿ",  # fa-sʾalū/wa-asʾalu (س-أ-ل hamza), fastaʿīnī/staʿantu/astashʿiru (ʿ-w-n, sh-ʿ-r)
+    ("mu", "akhir"): "ʾ", ("mu", "tadila"): "ʿ", ("mu", "qni"): "ʿ", ("mu", "tami"): "ʿ",                 # al-muʾakhkhar المؤخر hamza ; muʿtadila ; al-muqniʿa (consigné) ; al-Muʿtamiʿ variante al-Malṭaʿ (consigné)
+    ("haq", "a"): "ʿ", ("han", "a"): "ʿ", ("sa", "ūd"): "ʿ", ("su", "ūd"): "ʿ",                          # al-haqʿa/al-hanʿa (mansions h-q-ʿ, h-n-ʿ), saʿūd/as-suʿūd (س-ع-د)
+    ("ṭāli", ""): "ʿ", ("ṭala", ""): "ʿ", ("qṭa", "ā"): "ʿ",                                             # ṭāliʿa/ṭ-ṭāliʿu (ط-ل-ع), ṭalaʿā, iqṭaʿā/qṭaʿā (ق-ط-ع)
+    ("qiṭ", "a"): "ʿ", ("qi", "da"): "ʿ", ("qaṭ", "an"): "ʿ", ("rub", ""): "ʿ",                          # qiṭʿa (ق-ط-ع), qiʿda al-qiʿda (ق-ع-د), qaṭʿan, rubʿ/wa-rubʿun (ر-ب-ع)
+    ("ba", "īd"): "ʿ", ("rābi", ""): "ʿ", ("sābi", ""): "ʿ", ("tāsi", ""): "ʿ", ("al-a", "ẓam"): "ʿ",     # al-baʿīd (ب-ع-د), rābiʿu, sābiʿuhū/sābiʿin, tāsiʿun, al-aʿẓam
+    ("j", "al"): "ʿ", ("ij", "al"): "ʿ", ("zar", "an"): "ʿ", ("turja", ""): "ʿ", ("mun", "adim"): "ʿ",    # ijʿal/wa-jʿali (ج-ع-ل ʿayn médial!), zarʿan (ز-ر-ع), turjaʿūn (ر-ج-ع), munʿadim (ن-ع-د-م)
+    ("ṣa", "faḍ"): "ʿ", ("sa", "faṣ"): "ʿ", ("ṣa", "ba"): "ʿ", ("nu", "in"): "ʿ",                        # ṣaʿfaḍ/saʿfaṣ (abjad سعفص ʿayn), ṣaʿba, nuʿīn (babt نعين)
+    ("naf", "a"): "ʿ", ("mi", "rāj"): "ʿ", ("a", "rāḍīn"): "ʿ",                                          # nafʿa (ن-ف-ع), miʿrāj (م-ع-ر-ج), aʿrāḍīn (أعراض ʿayn)
+    ("wajma", "u"): "ʿ", ("ṭ", "ṭāli"): "ʿ", ("al-han", "atun"): "ʿ", ("al-ba", "īd"): "ʿ",               # wajmaʿu (consigné), dup-safety
+})
+WORD_FINAL.update({
+    "muqni": "ʿ", "muqin": "ʿ", "malṭa": "ʿ", "ṭāli": "ʿ", "ṭala": "ʿ", "ttabi": "ʿ", "tāsi": "ʿ",        # al-Muqniʿ (ق-ن-ع), Al-Muqinʿ, al-Malṭaʿ (ط-ل-ع), ṭāliʿ/aṭ-ṭāliʿ, ṭalaʿ, wa-ttabiʿ (ت-ب-ع), at-tāsiʿ
+    "munṭaba": "ʿ", "sab": "ʿ", "jama": "ʿ", "bula": "ʿ", "subu": "ʿ", "tami": "ʿ", "mumti": "ʿ",        # (al-)munṭabaʿ (ط-ب-ع), sabʿ (سبع 7), jamaʿ (consigné), (al-)bulaʿ (ب-ل-ع mansion), subuʿ (consigné), (al-Muʾ)tamiʿ, (al-)Mumtiʿ (م-ت-ع)
+    "munaqqa": "ʿ", "marji": "ʿ", "ka": "ʿ", "aṣābi": "ʿ", "lāmi": "ʿ",                                                             # (al-)Munaqqaʿ (ن-ق-ع), marjiʿ (ر-ج-ع), ka-ʿadadi (ʿayn)
+    "miqra": "ʾ", "maqri": "ʾ", "bda": "ʾ", "fay": "ʾ", "mabda": "ʾ", "nufay": "ʾ",                       # (Abū) Miqraʾ/Maqriʾ (ق-ر-ء — consigné), (wa-/fa-)bdaʾ (ب-د-أ), fayʾ (فيء), mabdaʾ (ب-د-أ), Nufayʾ (نفيء)
+})
+
+# W23b — round 2 :
+PAIR_MEDIAL.update({
+    ("a", "ẓam"): "ʿ", ("ba", "qīlī"): "ʿ", ("miqra", ""): "ʾ",                     # al-aʿẓam (tail «a» après rsplit hyphen!), al-Baʿqīlī (ب-ع-ق-ل), (Abū) Miqraʾi (q-r-ʾ consigné)
+    ("fu", "lā"): "ʿ", ("tis", "ā"): "ʿ", ("sab", ""): "ʿ", ("imi'a", ""): "ʾ",     # fuʿlā (ف-ع-ل), tisʿā (تسع ʿayn), sabʿun/sabʿimiʾa (سبع ʿayn), …miʾa (مائة hamza)
+    ("yu", "lami"): "ʿ",                                                            # wa-in lam yuʿlami (ع-ل-م — consigné, vs yuʾlam)
+})
+# W23c — round 3 :
+PAIR_MEDIAL.update({
+    ("iqṭa", "ā"): "ʿ", ("sub", ""): "ʿ", ("tu", "ṭī"): "ʿ", ("fay", ""): "ʾ",      # iqṭaʿā (ق-ط-ع), subʿi/subʿin (سبع 7), tuʿṭīhi (أعطى ʿayn radical), fayʾun/fayʾ (فيء hamza)
+})
+# W23d — round 4 :
+PAIR_MEDIAL.update({
+    ("muqni", "a"): "ʿ", ("hana", "a"): "ʿ", ("imi", ""): "ʾ", ("lāmi", ""): "ʿ", ("ma", "būd"): "ʾ",  # al-muqniʿa (tail complet «muqni» — pas «mu»!), al-hanʿa (tail «hana»), sabʿimiʾatin 2e ' (tail «imi» → miʾa hamza), l-lāmiʿah, l-maʾbūd (tail «ma» → maʾbūd hamza)
+})
 # W22f — 2 derniers résidus :
 PAIR_MEDIAL.update({
     ("zayla", "ī"): "ʿ",                                                              # az-Zaylaʿī (الزيلعي ʿayn)
@@ -823,9 +862,10 @@ WORD_FINAL.update({
     "waṭ": "ʾ", "qubu": "ʿ", "mudarra": "ʿ", "muḍabba": "ʿ",                        # waṭʾ (وطء hamza), qubuʿ/mudarraʿ/muḍabbaʿ (404, consignées)
 })
 WORD_INITIAL_HAMZA.add("immat")
-WORD_INITIAL_HAMZA.update({"asma", "asta", "akhbur", "akhburtihā", "aṭla", "aṭ", "uṭ", "af", "annī", "aḥadan", "aṣūma", "asta", "annahu", "inna", "innā", "ahli", "aḥkām", "ayyāmin", "anā", "aḥabb", "aḥabbu"})  # W22 audit initiales : hamza pronominales/prosthétiques tranchées («an» 49×, «ā», «irāb», «ajzī», «azā» laissées ʿayn par convention corpus — consigné)  # W22 — hamza initiales pronominales (أسمع/أخبر/أطلع/أُطْعِم/أفعل/أنّي/أحد/أصوم/أستعمل)                                                   # aʾimmat al-fatwā (أئمة hamza)
+WORD_INITIAL_HAMZA.update({"asma", "asta", "akhbur", "akhburtihā", "aṭla", "aṭ", "uṭ", "af", "annī", "aḥadan", "aṣūma", "asta", "annahu", "inna", "innā", "ahli", "aḥkām", "ayyāmin", "anā", "aḥabb", "aḥabbu"})
+WORD_INITIAL_AYN.update({"adad", "adadā", "adadi", "adada", "adadihi"})  # W23 : ʿadad (ع-د-د), ka-ʿadadi/(fayʾun) ʿadadā  # W22 audit initiales : hamza pronominales/prosthétiques tranchées («an» 49×, «ā», «irāb», «ajzī», «azā» laissées ʿayn par convention corpus — consigné)  # W22 — hamza initiales pronominales (أسمع/أخبر/أطلع/أُطْعِم/أفعل/أنّي/أحد/أصوم/أستعمل)                                                   # aʾimmat al-fatwā (أئمة hamza)
 
-LONGVOWL_AYN = ("charī", "shari", "maqṭū", "marfū", "wuqū", "mawḍū", "ṣanū", "arji", "rji")   # ʿayn après ī/ū : sharīʿa, maqṭūʿ, marfūʿ, wuqūʿ, mawḍūʿ, ṣanūʿ
+LONGVOWL_AYN = ("charī", "shari", "maqṭū", "marfū", "wuqū", "mawḍū", "ṣanū", "arji", "rji", "chu'-ā")   # chuʿāʿ شعاع (W23) ; ʿayn après ī/ū : sharīʿa, maqṭūʿ, marfūʿ, wuqūʿ, mawḍūʿ, ṣanūʿ
 FRENCH_ELISION = {"l", "d", "n", "s", "j", "c", "m", "t", "qu", "jusqu", "lorsqu",
                   "puisqu", "quelqu", "aujourd"}
 ARABIC = re.compile(r"[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDF9\uFDFB-\uFDFF\uFE70-\uFEFF]")
@@ -924,9 +964,9 @@ def classify(rendered, p):
             return "t", "bat'an = باتًّا (l'apostrophe rend le tāʾ géminé — consigné R714/W17)"
         if prev_w.lower().endswith("tabā") and nxt_w == "in":
             return "y", "tabā'in = التَّبَايُن (l'apostrophe rend le yāʾ radical — consigné R715/W19, parallèle at-tabāyun déjà écrit)"
-        prev_tail = prev_w.rstrip("-").rsplit("-", 1)[-1].lower().strip("'")
+        prev_tail = prev_w.rstrip("-").rsplit("-", 1)[-1].rsplit("'", 1)[-1].lower().strip("'")  # W23c: coupe aussi après un ' interne (sab'imi'a…)
         for p0, n0 in sorted(PAIR_MEDIAL, key=lambda k: -len(k[1])):  # préfixes les plus longs d'abord
-            if prev_tail == p0 and nxt_w[:len(n0)].lower() == n0:
+            if prev_tail == p0 and nxt_w.lstrip("-")[:len(n0)].lower() == n0:
                 return PAIR_MEDIAL[(p0, n0)], f"carte couple ({p0}'{n0}…)"
         if prev_w.endswith(LONGVOWL_AYN):
             return "ʿ", f"ʿayn après voyelle longue ({prev_w}'{nxt_w})"
