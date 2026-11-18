@@ -1,0 +1,413 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""R741 — crée content/commentaires/hadith-5ep.json (CLAIM du livre, trace
+1a1ee65324a88929) et pose les commentaires des leçons 1-2 : pdf-1 (التعريف
+بالمؤلف والمؤلف — la présentation de l'auteur et de l'ouvrage) et pdf-2
+(الأعمال بالنيات — le premier hadith des Quarante, rapporté par ʿUmar).
+Choix du livre : hadith-3es est achevé 29/29 (R731) ; hadith-tanawi-1 est
+porté par le livreur concurrent (12/30, SUIVANT vague 22 sur 13074/13079) —
+hadith-5ep est le livre d'al-Ḥadīth de 5ᵉ primaire (les Quarante nawawiyya),
+transcrit 25/29 par IA-2 : leçons 1-2 entièrement disponibles (htmlFr 10 678
+et 9 890 car), lectures complètes FR par scripts/extrait-r741.py (non lossy).
+Rédaction d'après ces lectures (règle 1 de LISEZ-MOI.md) ; aucune invention
+(règle 2) : les hadiths, citations, dates, ouvrages sont ceux de la leçon.
+Typographie FR normalisée (U+202F ; apostrophes courbées ; guillemets
+appariés — imbriqués rendus par « ” “ » courbes) ; arabe uniquement entre
+parenthèses dans les champs FR ; vocabulaire ar SANS harakat ; ʾ U+02BE et
+ʿ U+02BF en translittération. Garde-fous de comm-r731.py repris."""
+import json, re, os
+
+CHEMIN = 'content/commentaires/hadith-5ep.json'
+
+NOTE_LIVRE = ("Le livre d'al-Ḥadīth — 5ᵉ année de l'enseignement primaire "
+              "traditionnel (les Quarante hadiths de l'imam an-Nawawī avec le "
+              "commentaire d'Ibn Daqīq al-ʿĪd) : le manuel parcourt le "
+              "recueil depuis la présentation de l'auteur et de l'ouvrage "
+              "jusqu'aux grandes règles de la religion — intentions, "
+              "islām-īmān-iḥsān, piliers, halal et haram, pur du cœur, "
+              "sincérité — chaque hadith étant une grande règle.")
+
+E_1 = {
+    "auteur": "IA-1, tour R741",
+    "resume": ("Guide de lecture de la leçon 1 (التعريف بالمؤلف والمؤلف) : le manuel ouvre "
+               "par sa rubrique d'entrée — présenter l'auteur et l'ouvrage (taʾrīf al-muʾallif "
+               "wa-l-muʾallaf) avant d'aborder les textes. Le texte de la leçon n'est pas un "
+               "hadith mais la page d'introduction du livre des Quarante : an-Nawawī y relève "
+               "les compilations antérieures du genre — fondements de la religion, ramifications, "
+               "jihād, ascétisme, convenances, sermons — puis expose son propre dessein, un "
+               "recueil qui « réunit tout cela », chaque hadith étant « une grande règle parmi "
+               "les règles de la religion ». L'analyse répond par les deux tarājim — al-Nawawī "
+               "(631-676, Nawā et Damas, douze leçons par jour) et Ibn Daqīq al-ʿĪd (625-702, "
+               "Yanbuʿ, Qūṣ, le Caire, la judicature) — puis donne le rang du livre en cinq "
+               "raisons : la réunion des matières, la valeur de règle de chaque hadith, "
+               "l'authenticité (la plupart des textes dans les deux Ṣaḥīḥ), la promesse de la "
+               "mémorisation de quarante hadiths, l'accueil des savants en Orient comme en "
+               "Occident. L'exploitation remonte la généalogie des Quarante depuis ʿAbdallāh "
+               "ibn al-Mubārak, et la préparation prépare le premier hadith, celui des "
+               "intentions."),
+    "explication": [
+        ("La page d'ouverture (p.9) pose trois objectifs : connaître la vie des deux imams — "
+         "al-Nawawī et Ibn Daqīq al-ʿĪd —, saisir le statut (makāna) du livre des Quarante "
+         "nawawiyya, et s'inspirer de l'émulation des savants dans le soin (ʿināya) apporté au "
+         "hadith du Messager d'Allah — paix et bénédiction sur lui. Le tamhīd donne l'état des "
+         "lieux : le livre des Quarante a joui d'une très grande attention de la part des "
+         "savants de la communauté, en Occident comme en Orient ; ceux-ci se sont employés à "
+         "commenter ses traditions et à en exposer les sens, dans des ouvrages tantôt concis, "
+         "tantôt développés — et parmi les commentateurs qui ont excellé en cela figure le très "
+         "savant (al-ʿallāma) Ibn Daqīq al-ʿĪd. Les deux questions d'ouverture — qui sont les "
+         "deux imams ? quel est le statut du livre ? — ordonnent toute la leçon, que "
+         "l'extraction des contenus ramasse en deux items : qui est l'auteur du livre, et mettre "
+         "en relief son statut."),
+        ("Le texte (an-naṣṣ) cite l'introduction du livre. An-Nawawī y dresse d'abord l'état du "
+         "genre : « parmi les savants, certains ont rassemblé des Quarante portant sur les "
+         "fondements de la religion, d'autres sur ses ramifications, d'autres sur l'effort "
+         "(ǧihād), d'autres sur l'ascétisme (zuhd), d'autres sur les convenances (ādāb), "
+         "d'autres encore sur les sermons (ḫuṭab) » — des desseins « excellents » qu'Allah "
+         "agrée. Son apport propre suit : « j'ai vu une compilation de quarante hadiths qui "
+         "réunit tout cela » — et « dont chacun est une grande règle parmi les règles de la "
+         "religion — les savants ont dit d'une telle règle que c'est sur elle que pivote "
+         "l'islām, ou qu'elle est la moitié de l'islām, ou son tiers, ou du même ordre ». Le "
+         "glossaire arme la lecture : uṣūl ad-dīn — pluriel de aṣl, « ce sur quoi repose autre "
+         "chose », ici les questions de l'unicité (tawḥīd) et des croyances (ʿaqāʾid) ; qāʾida, "
+         "« un fondement parmi les fondements de la religion » ; al-ādāb, « les vertus et les "
+         "qualités louables ». Cette page tient tout le programme du manuel : lire chaque "
+         "hadith des Quarante comme une règle à saisir et à incarner, non comme une simple "
+         "notice."),
+        ("L'analyse répond à la première question par les deux biographies. An-Nawawī : l'imam, "
+         "le ḥāfiẓ, le modèle (al-qudwa), le cheikh de l'islām, Muḥyī ad-Dīn Abū Zakariyyāʾ "
+         "Yaḥyā ibn Šaraf ibn Murī al-Ḥazāmī — né en al-Muḥarram de l'an 631 à Nawā, bourg de "
+         "la plaine de Ḥawrān au pays de Šām ; il y grandit et mémorisa le Noble Coran ; son "
+         "père l'emmena à Damas en 649, à dix-neuf ans ; il résida à la madrasa ar-Rawāḥiyya, "
+         "mémorisa de nombreux textes (mutūn) et lisait chaque jour douze leçons auprès de ses "
+         "maîtres — « une leçon et une correction » ; parmi ses maîtres ar-Raḍyān al-Burhān, le "
+         "cheikh des cheikhs ʿAbd al-ʿAzīz ibn Muḥammad al-Anṣārī, Zayn ad-Dīn ʿAbd ad-Dāʾim ; "
+         "parmi ses élèves le ḥāfiẓ Ṣadr ad-Dīn Sulaymān al-Jaʿfarī, Šihāb ad-Dīn Aḥmad ibn "
+         "Jaʿwān, ʿAlāʾ ad-Dīn al-ʿIṭār ; parmi ses ouvrages le commentaire du Ṣaḥīḥ de Muslim, "
+         "les Riyāḍ aṣ-Ṣāliḥīn, les Adhkār, les Arbaʿūn, la Rawḍat aṭ-Ṭālibīn, le Maǧmūʿ, le "
+         "Tibyān ; il mourut dans sa ville de Nawā le 24 Raǧab 676, à quarante-cinq ans. Ibn "
+         "Daqīq al-ʿĪd : Muḥammad ibn ʿAlī ibn Wahb ibn Muṭīʿ, Abū al-Fatḥ Taqī ad-Dīn "
+         "al-Qušayrī al-Qawṣī al-Miṣrī, résidant au Caire — connu comme son père et son "
+         "grand-père sous le nom d'Ibn Daqīq al-ʿĪd ; né en Šaʿbān de l'an 625 près de Yanbuʿ, "
+         "au Ḥiǧāz, sur la côte de la mer Rouge ; il grandit à Qūṣ, entendit le hadith en "
+         "Égypte et voyagea jusqu'à Damas ; investi de la judicature (qadāʾ) des contrées "
+         "égyptiennes en 695 — fonction qu'il occupa jusqu'à sa mort au Caire ; parmi ses "
+         "ouvrages Iḥkām al-aḥkām fī l-ḥadīth, al-Ilmām fī aḥādīth al-aḥkām, al-Iqtirāḥ fī "
+         "ʿulūm al-ḥadīth, son Šarḥ al-Arbaʿūn, le commentaire de la muqaddima d'al-Maṭrazī en "
+         "uṣūl al-fiqh et un livre sur les fondements de la religion ; il mourut en 702. La "
+         "leçon tient ainsi les deux bornes du commentaire : le commentateur, né six ans avant "
+         "l'auteur, lui survit vingt-six ans."),
+        ("La deuxième partie expose le statut des Quarante en cinq raisons. Première : le livre "
+         "rassemble des hadiths des fondements de la religion, des convenances, de l'ascétisme "
+         "et d'autres matières — le dessein même que le texte d'an-Nawawī annonçait. "
+         "Deuxième : sa compilation compte des hadiths dont chacun est une grande règle — "
+         "pivot de l'islām, moitié, tiers, ou du même ordre. Troisième : l'attachement de "
+         "l'imam al-Nawawī à l'authenticité (ṣiḥḥa) dans toutes ses traditions — la plupart "
+         "figurent dans le Ṣaḥīḥ d'al-Bukhārī et dans celui de Muslim. Quatrième : la vertu de "
+         "la mémorisation de quarante hadiths, promesse du Messager d'Allah — paix et "
+         "bénédiction sur lui — : « Quiconque mémorise, pour sa communauté, quarante hadiths "
+         "touchant les affaires de sa religion, Allah le ressuscitera, le Jour de la "
+         "résurrection, au rang des jurisconsultes et des savants » — avec la variante « Allah "
+         "le ressuscitera jurisconsulte et savant » et la version d'après Abū ad-Dardāʾ « Je "
+         "serai pour lui, le Jour de la résurrection, intercesseur et témoin » (Šuʿab al-Īmān "
+         "d'al-Bayhaqī). Cinquième : l'accueil que les gens lui ont réservé en Orient comme en "
+         "Occident — les savants s'en saisissent par la transmission (riwāya), la mémorisation "
+         "(ḥifẓ), le commentaire (šarḥ), l'étude et l'enseignement — jusqu'à en faire l'un des "
+         "recueils les plus excellents à mettre sous les yeux de la jeunesse et des apprenants."),
+        ("Ce que l'on tire de l'introduction élargit la portée : le soin apporté au hadith du "
+         "Prophète — paix et bénédiction sur lui — dans sa transmission, sa récitation, sa "
+         "mémorisation, son étude, son apprentissage et son enseignement ; la vertu de "
+         "mémoriser quarante hadiths en les récitant de mémoire (istiẓhār) et en les "
+         "comprenant, « en science et en acte » ; la vertu des savants compilateurs et "
+         "l'exposition de la direction prophétique pour les gens. L'évaluation en trois items "
+         "retourne au fil : présenter l'imam an-Nawawī, citer trois ouvrages d'Ibn Daqīq "
+         "al-ʿĪd, exposer le statut des Quarante. L'exploitation imprime la généalogie du genre "
+         "que l'introduction d'an-Nawawī donne elle-même : « le premier que je sache en avoir "
+         "composé est ʿAbdallāh ibn al-Mubārak », puis Muḥammad ibn Aslam aṭ-Ṭūsī — « le savant "
+         "universel (ar-rabbānī) » —, al-Ḥasan ibn Sufyān an-Nasāʾī, Abū Bakr al-Aǧurrī, Abū "
+         "Bakr ibn Ibrāhīm al-Aṣfahānī, ad-Dāraquṭnī, al-Ḥākim, Abū Nuʿaym, Abū ʿAbd ar-Raḥmān "
+         "as-Sulamī, Abū Saʿīd al-Mālīnī, Abū ʿUṯmān aṣ-Ṣābūnī, ʿAbdallāh ibn Muḥammad "
+         "al-Anṣārī et Abū Bakr al-Bayhaqī — « et leurs successeurs, innombrables, parmi les "
+         "anciens et les modernes » ; la question demande d'en citer trois. La préparation "
+         "préalable ouvre la leçon suivante : mémoriser « les actes ne valent que par les "
+         "intentions », présenter son transmetteur ʿUmar ibn al-Khaṭṭāb, expliquer les deux "
+         "termes — les actes, les intentions — et la parole « et il n'est à chacun que ce "
+         "qu'il a eu en vue » ; la leçon 2 est posée dans la même vague que la présente."),
+    ],
+    "points": [
+        ("Fil de révision : trois objectifs (les vies des deux imams ; la makāna des Quarante ; "
+         "l'émulation dans le soin du hadith) → tamhīd (l'attention des savants d'Orient et "
+         "d'Occident, Ibn Daqīq al-ʿĪd parmi les commentateurs qui ont excellé) → texte "
+         "(l'introduction d'an-Nawawī : les Quarante antérieurs par thème, l'idée du recueil "
+         "qui réunit tout) → glossaire (uṣūl ad-dīn, qāʾida, ādāb) → deux tarājim (al-Nawawī "
+         "631-676 ; Ibn Daqīq al-ʿĪd 625-702) → la makāna en cinq raisons → les fawāʾid → "
+         "évaluation en trois items → istithmār (la généalogie des Quarante) → iʿdād du premier "
+         "hadith."),
+        ("L'idée propre d'an-Nawawī dans l'introduction : non un Quarante de plus sur un thème "
+         "particulier, mais une compilation qui « réunit tout cela » — fondements, "
+         "ramifications, jihād, ascétisme, convenances, sermons — et chaque hadith « une "
+         "grande règle parmi les règles de la religion », celle sur laquelle « pivote "
+         "l'islām », sa « moitié », son « tiers », « ou du même ordre »."),
+        ("Les deux vies bornent le livre : an-Nawawī — Nawā 631, Damas et la madrasa "
+         "ar-Rawāḥiyya à dix-neuf ans, douze leçons par jour, Nawā 676 à quarante-cinq ans ; "
+         "le commentaire du Muslim, Riyāḍ aṣ-Ṣāliḥīn, Adhkār, Arbaʿūn, Rawḍat aṭ-Ṭālibīn, "
+         "Maǧmūʿ, Tibyān ; Ibn Daqīq al-ʿĪd — Yanbuʿ 625, Qūṣ, le Caire, la judicature des "
+         "contrées égyptiennes en 695, 702 ; Iḥkām al-aḥkām, al-Ilmām, al-Iqtirāḥ, son "
+         "commentaire des Arbaʿūn — né six ans avant l'auteur, mort vingt-six ans après lui."),
+        ("Le rang du livre en cinq raisons : la réunion des matières ; la valeur de règle de "
+         "chaque hadith ; l'authenticité (ṣiḥḥa) — la plupart des textes dans les deux "
+         "Ṣaḥīḥ ; la promesse de la mémorisation de quarante hadiths (ressuscité « au rang "
+         "des jurisconsultes et des savants », variante « jurisconsulte et savant », version "
+         "d'Abū ad-Dardāʾ « intercesseur et témoin » — Šuʿab al-Īmān d'al-Bayhaqī) ; "
+         "l'accueil universel par la riwāya, le ḥifẓ, le šarḥ, l'étude et l'enseignement."),
+        ("Le glossaire dit la boussole du recueil : uṣūl ad-dīn — l'unicité (tawḥīd) et les "
+         "croyances (ʿaqāʾid) —, qāʾida, al-ādāb ; le commentaire des Quarante lira chaque "
+         "hadith comme une grande règle à saisir, non une notice."),
+        ("La généalogie du genre (istithmār) : le premier compilateur connu ʿAbdallāh ibn "
+         "al-Mubārak, puis aṭ-Ṭūsī (ar-rabbānī), an-Nasāʾī, al-Aǧurrī, al-Aṣfahānī, "
+         "ad-Dāraquṭnī, al-Ḥākim, Abū Nuʿaym, as-Sulamī, al-Mālīnī, aṣ-Ṣābūnī, al-Anṣārī, "
+         "al-Bayhaqī — « et leurs successeurs, innombrables, parmi les anciens et les "
+         "modernes » ; l'évaluation demande d'en citer trois."),
+        ("La préparation annonce le hadith 1 et son transmetteur ʿUmar ibn al-Khaṭṭāb — la "
+         "leçon 2, posée dans la même vague, le commente : les actes, les intentions, « et il "
+         "n'est à chacun que ce qu'il a eu en vue »."),
+    ],
+    "vocabulaire": [
+        {"ar": "التعريف بالمؤلف والمؤلف", "translit": "taʾrīf al-muʾallif wa-l-muʾallaf",
+         "fr": "la présentation de l'auteur et de l'ouvrage — la rubrique d'ouverture du manuel : la vie des deux imams (leurs maîtres, leurs élèves, leurs ouvrages) avant les textes à commenter"},
+        {"ar": "الأربعين النووية", "translit": "al-arbaʿūn an-nawawiyya",
+         "fr": "les Quarante d'an-Nawawī — le recueil de quarante hadiths « qui réunit tout cela », des fondements de la religion aux convenances, la plupart dans les deux Ṣaḥīḥ"},
+        {"ar": "مكانة", "translit": "makāna",
+         "fr": "le rang, le statut — la leçon le donne au livre en cinq raisons : la réunion des matières, la valeur de règle de chaque hadith, l'authenticité, la promesse de la mémorisation, l'accueil des savants"},
+        {"ar": "قاعدة", "translit": "qāʾida",
+         "fr": "la règle — « un fondement parmi les fondements de la religion » : chaque hadith du recueil en porte une, pivot de l'islām, sa moitié, son tiers, ou du même ordre"},
+        {"ar": "أصول الدين", "translit": "uṣūl ad-dīn",
+         "fr": "les fondements de la religion — pluriel de aṣl, ce sur quoi repose autre chose ; ici les questions de l'unicité (tawḥīd) et des croyances (ʿaqāʾid)"},
+        {"ar": "الآداب", "translit": "al-ādāb",
+         "fr": "les convenances — « les vertus et les qualités louables », l'une des six matières relevées par an-Nawawī dans les compilations antérieures du genre"},
+        {"ar": "الصحة", "translit": "ṣiḥḥa",
+         "fr": "l'authenticité — l'attachement d'an-Nawawī à elle dans toutes ses traditions : la plupart des quarante figurent dans le Ṣaḥīḥ d'al-Bukhārī et celui de Muslim"},
+        {"ar": "الاستظهار", "translit": "istiẓhār",
+         "fr": "la récitation de mémoire — la vertu des Quarante se rapporte à les mémoriser et les réciter en les comprenant, « en science et en acte »"},
+    ],
+    "avertissement": "Ce commentaire est un guide de lecture du manuel ; en cas de divergence d'expression, le manuel et sa traduction savante font foi.",
+}
+
+E_2 = {
+    "auteur": "IA-1, tour R741",
+    "resume": ("Guide de lecture de la leçon 2 (الأعمال بالنيات) : le premier hadith des "
+               "Quarante, rapporté par le commandeur des croyants ʿUmar ibn al-Khaṭṭāb — « les "
+               "actes ne valent que par les intentions, et il n'est à chacun que ce qu'il a eu "
+               "en vue » — fait l'unanimité. La leçon donne d'abord le rang du hadith : l'un "
+               "des textes sur lesquels pivote l'islām, « un tiers du savoir » pour al-Aḥmad et "
+               "ash-Shāfiʿī, et la clef que ʿAbd ar-Raḥmān ibn Maḥdī fait poser à l'ouverture "
+               "de tout livre. Son corps range l'effet de l'intention sur deux sections : le "
+               "discriminateur entre l'habitude et l'adoration et entre les degrés de "
+               "l'adoration, et la condition de la détermination de l'obligation — puis "
+               "l'exigence de la sincérité : l'acte pur pour Allah et conforme à la direction "
+               "prophétique est accepté, fût-il peu ; la parade aux gens (riyāʾ) ou la teinte "
+               "d'association (širk) le rejette, fût-il abondant. L'émigration, exemple du "
+               "hadith, s'éclaire par sa cause de descente — « l'émigrant d'Umm Qays ». "
+               "L'exploitation imprime le hadith d'Abū Hurayra (« Allah ne regarde ni vos "
+               "corps ni vos biens… », Muslim), et la préparation ouvre la leçon 3."),
+    "explication": [
+        ("La page d'ouverture (p.11) pose trois objectifs : connaître l'intention (niyya) et "
+         "son effet sur les desseins, les paroles et les actes ; saisir le fruit de la "
+         "sincérité de l'intention dans les actes ; incarner l'intention sincère en toute "
+         "chose. Le tamhīd pose la place immense de l'intention dans l'islām, par l'effet "
+         "pénétrant qu'elle exerce sur la validité de l'acte et sur son annulation : elle est "
+         "« le discriminateur fondamental entre les adorations et les habitudes, et entre les "
+         "adorations les unes par rapport aux autres ». Les deux questions d'ouverture — que "
+         "désigne l'intention ? quel est son effet sur les actes de l'homme ? — et "
+         "l'extraction des contenus en deux items : identifier le sujet du hadīth, expliquer "
+         "l'effet de l'intention dans les actes."),
+        ("Le texte est le hadith matrice. D'après le commandeur des croyants Abū Ḥafṣ ʿUmar "
+         "ibn al-Khaṭṭāb — qu'Allah le Très-Haut l'agrée —, qui a dit : « J'ai entendu le "
+         "Messager d'Allah — paix et bénédiction sur lui — dire : “Les actes ne valent que "
+         "par les intentions, et il n'est à chacun que ce qu'il a eu en vue : celui dont "
+         "l'émigration fut vers Allah et Son Messager, son émigration fut vers Allah et Son "
+         "Messager ; et celui dont l'émigration fut vers un monde à acquérir ou une femme à "
+         "épouser, son émigration fut vers ce vers quoi il a émigré.” » — la mention du "
+         "manuel : « fait l'unanimité ». La notice du transmetteur le présente : Abū Ḥafṣ "
+         "ʿUmar ibn al-Khaṭṭāb ibn Nufayl al-ʿAdawī — qu'Allah l'agrée —, commandeur des "
+         "croyants et deuxième des califes bien guidés, des notables de Qurayš, entré en "
+         "islām en l'an six avant l'Hégire, présent à tous les événements [de la mission], "
+         "mort en martyr en l'an 23. Le glossaire donne les deux piliers du titre : al-aʿmāl, "
+         "pluriel de ʿamal — « ce que l'on vise : les actions » ; an-niyyāt, pluriel de niyya "
+         "— « le dessein (qaṣd) et la résolution (ʿazm) »."),
+        ("L'analyse ouvre par le rang : le hadīth « fait l'unanimité quant à son authenticité », "
+         "son sujet est immense, sa majesté grande et ses utilités nombreuses — « il est l'un "
+         "des hadiths sur lesquels pivote l'islām », exactement ce que l'introduction citée en "
+         "leçon 1 faisait attendre de chaque hadith des Quarante, « une grande règle » sur "
+         "laquelle pivote l'islām. Al-Aḥmad et ash-Shāfiʿī : « un tiers du savoir entre dans "
+         "ce hadīth » — la raison donnée par la leçon : l'acquisition du serviteur s'opère par "
+         "son cœur, sa langue et ses membres, et l'intention est l'un de ces trois genres. Et "
+         "ʿAbd ar-Raḥmān ibn Maḥdī : « il convient à quiconque compose un livre de l'ouvrir "
+         "par ce hadīth, pour engager l'étudiant à redresser son intention » — la règle que "
+         "les Quarante observent elles-mêmes en s'ouvrant par lui, et que le manuel suit de "
+         "même : le hadith mémorisé en préparation de cette leçon était déjà celui-ci."),
+        ("La première section range l'effet de l'intention sur trois plans. Le discriminateur "
+         "entre l'habitude et l'adoration : s'asseoir dans la mosquée peut être visé en "
+         "habitude pour le repos, ou visé comme adoration — la retraite spirituelle (iʿtikāf) "
+         "et l'attente de la prière ; le travail peut viser le ménage de la maison en "
+         "habitude, ou viser l'adoration — « le discriminateur entre les deux est "
+         "l'intention », et « par elle, les habitudes deviennent des adorations ». Le "
+         "discriminateur entre les degrés de l'adoration : quatre rakaʿas accomplies pour la "
+         "prière du ẓuhr, ou comme sunna. Et la condition de la détermination de "
+         "l'obligation : la prière rattrapée n'est pas validée par la seule intention de "
+         "rattraper — il faut encore viser le ẓuhr, l'ʿaṣr ou autre ; c'est le rôle de la "
+         "seconde clause « et il n'est à chacun que ce qu'il a eu en vue » : sans elle, « la "
+         "première aurait suffi à la validité de l'intention sans détermination ». Un "
+         "troisième exemple l'élargit à la vie entière : viser par sa nourriture la force "
+         "pour l'adoration et l'acte droit, ou suivre par elle l'exemple du Messager "
+         "d'Allah — paix et bénédiction sur lui."),
+        ("La seconde section porte l'exigence : « ce qui, de l'acte, est pur pour Allah, "
+         "conforme à la direction prophétique, est, en loi religieuse, le plus digne d'être "
+         "accepté, fût-il peu ou modeste ; et ce qui, de l'acte, relève de la parade aux "
+         "gens (riyāʾ) ou comporte une teinte d'association (širk) est rejeté, fût-il "
+         "abondant ou grand » — la sincérité élève l'acte jusqu'à la noblesse de l'agrément "
+         "et renforce les degrés des actes. L'exemple du hadith tranche : celui qui a émigré "
+         "de La Mecque vers Médine en quête de la face d'Allah — le Très-Haut — est du "
+         "nombre des actes purs qui méritent récompense ; celui qui a émigré en vue d'un "
+         "dessein d'ici-bas a son lot borné à cela : son émigration est « enfermée dans ce "
+         "vers quoi il a émigré — les intérêts de son moi et des fins mondaines — et il n'a "
+         "point de part dans l'au-delà ». La cause de descente l'incarne, rapportée de "
+         "ʿAbdallāh ibn Masʿūd : un homme émigra pour épouser une femme appelée Umm Qays — "
+         "on le surnomma « l'émigrant d'Umm Qays » (al-Muʿǧam al-kabīr d'aṭ-Ṭabarānī). Ce "
+         "que l'on tire du hadīth en quatre utilités : les actes prescrits par la Loi ne "
+         "comptent qu'avec l'intention ; l'acte pur pour Allah est la voie de la réussite "
+         "ici-bas et du salut dans l'au-delà ; ne point négliger l'intention pour son rôle "
+         "de détermination et de distinction ; éviter la parade et l'association — elles "
+         "réduisent à néant et privent de la récompense. L'évaluation en quatre items "
+         "retourne au fil, et l'exploitation imprime le hadith d'Abū Hurayra : « Certes, "
+         "Allah ne regarde ni vos corps ni vos biens, mais Il regarde vos cœurs et vos "
+         "actes » (Ṣaḥīḥ de Muslim), avec ses deux questions — pourquoi les cœurs et les "
+         "actes, et quelle sagesse de les tenir pour compte ? La préparation ouvre la leçon "
+         "suivante : mémoriser le hadīth à venir en expliquant « il nous apparut » (ṭalaʿa "
+         "ʿalaynā) et « une trace de voyage » (athar as-safar), et répondre sur les piliers "
+         "de la foi."),
+    ],
+    "points": [
+        ("Fil de révision : trois objectifs (la niyya et son effet ; le fruit de la sincérité ; "
+         "incarner l'intention) → tamhīd (la place immense ; le discriminateur) → hadith "
+         "matrice (ʿUmar, fait l'unanimité) → tarǧamat ar-rāwī (Abū Ḥafṣ, deuxième des "
+         "califes bien guidés, martyr en l'an 23) → glossaire (al-aʿmāl, an-niyyāt) → le rang "
+         "(tiers du savoir ; Ibn Maḥdī) → deux sections (l'effet ; l'ikhlāṣ) → la cause de "
+         "descente d'Umm Qays → les utilités en quatre → évaluation en quatre items → "
+         "istithmār (Abū Hurayra, Muslim) → iʿdād de la leçon 3."),
+        ("La double clause du hadith : « les actes ne valent que par les intentions » porte la "
+         "distinction et la valeur ; « et il n'est à chacun que ce qu'il a eu en vue » porte "
+         "la détermination — sans elle, la première aurait suffi « à la validité de "
+         "l'intention sans détermination » (la prière rattrapée doit viser le ẓuhr, l'ʿaṣr "
+         "ou autre)."),
+        ("Les discriminateurs : habitude et adoration (la mosquée pour le repos ou pour "
+         "l'iʿtikāf et l'attente de la prière ; le travail pour le ménage ou pour "
+         "l'adoration ; la nourriture pour la force ou pour suivre l'exemple prophétique) et "
+         "degrés de l'adoration (quatre rakaʿas pour le ẓuhr ou comme sunna) — « par elle, "
+         "les habitudes deviennent des adorations »."),
+        ("Le rang : unanimité ; l'un des hadiths sur lesquels pivote l'islām — la grande règle "
+         "annoncée par l'introduction des Quarante en leçon 1 ; « un tiers du savoir » "
+         "(al-Aḥmad et ash-Shāfiʿī — cœur, langue, membres) ; la règle de ʿAbd ar-Raḥmān ibn "
+         "Maḥdī d'ouvrir tout livre par ce hadīth — que les Quarante observent en s'ouvrant "
+         "par lui."),
+        ("L'ikhlāṣ et son envers : l'acte pur pour Allah et conforme à la direction "
+         "prophétique accepté « fût-il peu ou modeste » ; la parade (riyāʾ) ou la teinte "
+         "d'association (širk) rejetée « fût-il abondant ou grand » — Allah regarde les "
+         "cœurs et les actes, non les corps et les biens (Abū Hurayra, Ṣaḥīḥ de Muslim)."),
+        ("L'émigration, pierre de touche : vers Allah et Son Messager — acte pur méritant "
+         "récompense ; vers « un monde à acquérir ou une femme à épouser » — enfermée dans "
+         "son but, sans part dans l'au-delà ; l'incarnation par la cause de descente : "
+         "« l'émigrant d'Umm Qays » (ʿAbdallāh ibn Masʿūd, al-Muʿǧam al-kabīr "
+         "d'aṭ-Ṭabarānī)."),
+        ("Le glossaire donne les piliers du titre : al-aʿmāl — « ce que l'on vise : les "
+         "actions » ; an-niyyāt — « le dessein (qaṣd) et la résolution (ʿazm) »."),
+        ("La préparation annonce la leçon 3 : « il nous apparut » (ṭalaʿa ʿalaynā), « une "
+         "trace de voyage » (athar as-safar), et les piliers de la foi."),
+    ],
+    "vocabulaire": [
+        {"ar": "الأعمال بالنيات", "translit": "al-aʿmāl bi-n-niyyāt",
+         "fr": "les actes ne valent que par les intentions — le titre du premier hadith des Quarante, rapporté par ʿUmar ibn al-Khaṭṭāb"},
+        {"ar": "النية", "translit": "an-niyya",
+         "fr": "l'intention — « le dessein (qaṣd) et la résolution (ʿazm) » ; discriminateur entre l'adoration et l'habitude, et entre les degrés de l'adoration"},
+        {"ar": "القصد", "translit": "al-qaṣd",
+         "fr": "le dessein — ce que l'on vise par l'acte ; la niyya se définit par lui dans le glossaire de la leçon"},
+        {"ar": "العزم", "translit": "al-ʿazm",
+         "fr": "la résolution — l'attachement ferme au dessein, seconde composante de la niyya"},
+        {"ar": "الإخلاص", "translit": "al-ikhlāṣ",
+         "fr": "la sincérité — l'acte pur pour Allah et conforme à la direction prophétique, accepté « fût-il peu ou modeste »"},
+        {"ar": "الرياء", "translit": "ar-riyāʾ",
+         "fr": "la parade aux gens — elle rejette l'acte « fût-il abondant ou grand » et prive de la récompense"},
+        {"ar": "الشرك", "translit": "ash-shirk",
+         "fr": "l'association — une « teinte » d'elle dans l'acte le réduit à néant"},
+        {"ar": "الهجرة", "translit": "al-hijra",
+         "fr": "l'émigration — l'exemple matrice du hadith : vers Allah et Son Messager, ou vers « un monde à acquérir ou une femme à épouser »"},
+    ],
+    "avertissement": "Ce commentaire est un guide de lecture du manuel ; en cas de divergence d'expression, le manuel et sa traduction savante font foi.",
+}
+
+ENTREES = [('pdf-1', E_1), ('pdf-2', E_2)]
+
+def norme_fr(s):
+    s = s.replace('\'', '’')
+    s = re.sub(r'\s+([;:!?»])', '\u202f\\1', s)
+    s = s.replace('« ', '«\u202f')
+    return s
+
+def norme_entree(e):
+    e['resume'] = norme_fr(e['resume'])
+    e['avertissement'] = norme_fr(e['avertissement'])
+    e['explication'] = [norme_fr(x) for x in e['explication']]
+    e['points'] = [norme_fr(x) for x in e['points']]
+    for v in e.get('vocabulaire', []):
+        v['fr'] = norme_fr(v['fr'])
+    return e
+
+# création ou chargement du fichier du livre
+if os.path.exists(CHEMIN):
+    data = json.load(open(CHEMIN, encoding='utf-8'))
+else:
+    data = {'livre': 'hadith-5ep', 'noteLivre': norme_fr(NOTE_LIVRE), 'commentaires': {}}
+com = data['commentaires']
+bloque = [d for d, _ in ENTREES if d in com]
+if bloque:
+    print(f'!! déjà présent : {bloque} — rien de fait')
+    raise SystemExit(1)
+for docid, e in ENTREES:
+    com[docid] = norme_entree(e)
+
+with open(CHEMIN, 'w', encoding='utf-8') as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+    f.write('\n')
+
+# Garde-fous : relecture + volume + ponctuation FR + arabes hors parenthèses + guillemets appariés
+data2 = json.load(open(CHEMIN, encoding='utf-8'))
+print('entrées au total :', len(data2['commentaires']))
+motif_ar = re.compile(r'[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFDFA]')
+mauvais = 0
+for DOCID in ('pdf-1', 'pdf-2'):
+    e = data2['commentaires'][DOCID]
+    mots = sum(len(x.split()) for x in [e['resume']] + e['explication'] + e['points'])
+    print(f'{DOCID} : {mots} mots (resume+explication+points), vocab {len(e["vocabulaire"])}')
+    textes = [e['resume'], e['avertissement']] + e['explication'] + e['points'] \
+             + [v['fr'] for v in e['vocabulaire']] + [v['translit'] for v in e['vocabulaire']]
+    for t in textes:
+        hors_parenth = re.sub(r'\([^)]*[\u0600-\u06FF][^)]*\)', '()', t)
+        if "'" in t or re.search(r' [;:!?»]', t) or re.search(r'« ', t):
+            mauvais += 1
+            print('   ponctuation à revoir dans :', t[:60])
+        if motif_ar.search(hors_parenth):
+            mauvais += 1
+            print('   caractère arabe hors parenthèses :', t[:60])
+        if t.count('«') != t.count('»'):
+            mauvais += 1
+            print('   guillemets non appariés :', t[:60])
+    for v in e['vocabulaire']:
+        if not motif_ar.search(v['ar'].replace(' ', '')):
+            mauvais += 1
+            print('   vocab ar non arabe :', v['ar'])
+        if re.search(r'[\u064B-\u0652\u0670]', v['ar']):
+            mauvais += 1
+            print('   vocab ar avec harakat :', v['ar'])
+        if motif_ar.search(v['fr']):
+            mauvais += 1
+            print('   vocab fr contient de l arabe :', v['fr'][:60])
+print('contrôle ponctuation/arabe FR :', 'PASS' if mauvais == 0 else f'ÉCHEC ({mauvais})')
