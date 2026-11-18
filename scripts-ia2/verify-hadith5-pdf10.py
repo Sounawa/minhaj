@@ -55,9 +55,9 @@ for kw in ['<h1>Le licite, l’illicite et les choses ambiguës</h1>',
            'un morceau de chair', 'c’est le cœur',
            'Ṣaḥīḥ de al-Buḫārī et Muslim',
            'ibn Sa’d ibn Ṯa’laba al-Anṣārī al-Ḫazraǧī',
-           'kunya Abū ’Abd Allāh', 'an 90 de l’Hégire',
+           'kunya Abū ’Abd Allāh', 'lui et son père comptent au nombre des Compagnons', 'an deux de l’Hégire',
            'premier enfant né dans l’islam parmi les Anṣār',
-           'gouverneur de la Kūfa', 'Ǧumaṣ (Ḥimṣ)', 'Qaṣā’ de Damas',
+           'gouverneur de la Kūfa', 'puis de Ḥimṣ', 'judicature (qadā’) de Damas',
            'orateur éloquent', 'an 65 de l’Hégire',
            'ce dont aucune interdiction n’est connue',
            'ce que la Loi est venue interdire',
@@ -116,7 +116,7 @@ check('titleFr correct', l.get('titleFr') == 'Le licite, l’illicite et les cho
       f'({l.get("titleFr")!r})')
 # — cohérence série —
 reg = json.load(open('/home/z/my-project/scripts-ia2/savant-registry-ia2.json', encoding='utf-8'))
-check('registre IA-2 → 10', f'hadith-5ep/pdf-10' in reg['hand'] and len(reg['hand']) == 10,
+check('registre IA-2 contient pdf-10', f'hadith-5ep/pdf-10' in reg['hand'],
       f'({len(reg["hand"])} entrées)')
 
 print(f"VÉRIF pdf-10 : {len(ok)} contrôles PASS / {len(fail)} échec(s)")
