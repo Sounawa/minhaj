@@ -5,3 +5,28 @@ __pycache__/
 tr-tmp/
 tr-logs/
 qa-shots-onglets/
+# Z2-34 — défense anti-snapshot plateforme (commit parasite b5a621ba, 18 nov. 2026) :
+# le bac local porte artefacts de travail, SDK et états plateforme jamais destinés au dépôt.
+node_modules/
+.env
+.initial_snapshot.json
+download/
+upload/
+skills/
+src/
+prisma/
+public/
+tests/
+tool-results/
+scripts-ia2/tmp/
+scripts-recovery/
+tr-recovery-r81/
+tr-tmp-*.ts
+tr-tmp-search*.ts
+qa-r*.png
+package.json
+package-lock.json
+postcss.config.mjs
+tailwind.config.ts
+tsconfig.json
+recherche-index.js
