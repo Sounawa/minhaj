@@ -17666,3 +17666,14 @@ Stage Summary:
 - SYNC : local réaligné sur origin/main 3eb893c (leçon 5 hadith-tanawi-3 déjà affinée en ligne + leçons 6-7 posées par les sessions parallèles ; commit local R701 25714d9 redondant, abandonné au reset --hard).
 - PUSH : effectuée avec PAT utilisateur — RAPPEL : révoquer le PAT collé en clair après la vague.
 - trace 1a1d675aa095fb41-w38w46-reprise
+
+## R761 — RÉCUPÉRATION DES TIRAGES habous (miroir net) : hadith-6ep + hadith-5ep versionnés — 2026-11-19
+- BLOCAGE LEVÉ : habous.gov.ma réorganisé (images/2017 404, /المدرج/ 404 — site vivant mais arbre changé) ; web.archive.org et archive.org principaux bloqués réseau (nœuds iaNNN en 429) ; CDX vide pour الحديث.
+- SOLUTION (route net directe, consignée pour les prochaines vagues) : portail « بوابة ابن العربي عتيق » (sites.google.com/view/ibnarabi02, joignable) → pages الحديث-6-ابتدائي / الحديث-5-ابتدائي → liens Drive « pdf تحميل كتاب التلميذ في الحديث » → téléchargement HTTP direct via drive.usercontent.google.com (id + export=download + confirm=t).
+- VERSIONNÉS : content/textbooks-src/hadith-6ep.pdf (61,1 Mo, 150 p., scan sans couche texte) + content/textbooks-src/hadith-5ep.pdf (60,6 Mo, 167 p., scan sans couche texte) — consommation pdftoppm/VLM comme les autres tirages.
+- ALIGNEMENT 6ep VÉRIFIÉ visuellement : p.24 = الدرس 3 التنافس في الخير (Z2-38 posée pp.24-28) ; p.29 = الدرس 4 شكر الله على نعمة الجوارح (Z2-39 posée pp.29-35) — offset PDF=imprimé=0 ; leçons 5-29 (p.36+) DÉBLOQUÉES (24 restantes, 5/29 posées).
+- 5ep : p.115 = الدرس 24 ألا تنافسوا في المعروف — manuel confirmé (structure توجيهات/الشرح/التمثيلين) ; débloque la vérification tirage des s-commentaires (R757-R759 avaient consigné « tirage indisponible », vérifiées par htmlFr savant + recoupements).
+- hadith-tanawi-3 : couche locale complète déjà en dépôt (hadith-3-thanawi_text.pdf 200 p., couche texte OK p.41 المساقاة) — aucune récupération requise.
+- Rappel miroir archive.org : item 1_20220304_20220304_2251 (77 PDF, كتاب الحديث 4/5/6 ابتدائي.pdf 84,5/71,6/76,8 Mo + versions _text) — nœuds iaNNN en 429 aujourd'hui, à retenter pour la série complète.
+- PUSH : effectuée avec PAT utilisateur — RAPPEL : révoquer le PAT collé en clair après la vague.
+- trace 1a1d675aa095fb41-r761
