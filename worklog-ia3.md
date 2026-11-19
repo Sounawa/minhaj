@@ -585,3 +585,12 @@ Trace: 1a1d675aa095fb41-w20
 - Push : commit local poussé au tour même (credential-helper one-shot,
   zéro trace disque).
 
+
+## W21 — 2026-11-19 — tentative de traduction hadith-tanawi-3 pdf-mut23h2n-16 (القضاء في المياه وأحكام القسمة) — POSE BLOQUÉE PAR GARDE-DOUBLON, TRAVAIL SAUVÉ
+
+- Recyclage du sandbox : clone repo-417 vide → re-cloné (6,4 G) depuis origin/main 0545bae5 (aucune pose concurrente L16 au fetch).
+- Transcription complète pp.112-119 : couche texte extraite (download/ht3-5/couche-p110-122.txt), rendus 200 dpi ×8 pages (pages/), 16 moitiés transcrits via CLI z-ai vision (vlm/w21-t*.txt, 16/16 OK), 18 zooms ×2-2,5 (zooms/).
+- TRANCHAGES (couche + VLM + zooms lus en direct + canon web) : titre médaillon = القضاء في المياه وأحكام القسمة badge 16 (désavoue la lecture القسامة du iʿdād L15) ; objectifs ×3 (3e = أن أتمثل المعاني المستخلصة من أحكام المياه والقسمة) ; tamhīd 1 verset [الأنبياء: 30] ; hadiths n° 2174 (سيل مهزور ومذينيب) / 2176 (نقيع بئر, chaîne أبي الرجال عن أمه عمرة) / 2181 (دار أو أرض) / 2182 (البعل والنضح) — décodage bidi de la couche (4712/6712/1812/2812 → série 21XX) confirmé NUM chiffre par chiffre, canon ʿAbd al-Bāqī : seil = 1429 ; hadith Abū Hurayra n° 2175 + Ibn Ḥibbān « لا تمنعوا فضل الماء ولا تمنعوا الكلأ فيهزل المال ويجوع العيال » (canon az-Zurqānī ✓, chaîne أبي سعيد مولى بني غفار) ; mort ʿAbd Allāh ibn Abī Bakr ibn Ḥazm = 135 H (imprimé, canon 94 à consigner) ; ʿAmra bint ʿAbd ar-Raḥmān « توفيت قبل المائة ويقال بعدها » ; Thawr ad-Dīlī 135 H (couche 531 bidi).
+- htmlFr rédigé en 5 fragments (download/ht3-5/n16-part1..5.html, assemblé n16-htmlfr.html, 60 259 car, format modèle L15 : arabe vocalisé + ?? + consignes d'arbitrage) — QA typo PASS (balises équilibrées, guillemets 29/29 après fix d'un » manquant, spans RTL, zéro marqueur).
+- POSE REFUSÉE par hand-set.py GARDE-DOUBLON : « pdf-mut23h2n-16 possède déjà une htmlFr livrée (42055 car) différente — livrie par un autre ouvrier » ; content/books du clone montrait htmlFr: 0 au fetch — divergence non résolue (peut-être la page livrée du site) ; PAS de --force (règle reprise documentée), aucune zone d'autre IA touchée.
+- Reste pour la reprise : identifier le propriétaire de la htmlFr 42055 (git log content/books/hadith-tanawi-3.json + la page site), décider --force documenté OU abandon, puis registre savant (hand-register.py/hand-set), QA double porte, push. Tout le matériel est dans download/ht3-5/ (fragments + couche + transcriptions + zooms).
