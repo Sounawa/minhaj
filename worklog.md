@@ -17748,3 +17748,14 @@ Stage Summary:
 - ENGAGEMENT : content/textbooks/faraid-3-thanawi.pdf modifié hors vague (préexistant au tour, zone IA-2) — EXCLU du commit ; comm-r766-c28.py copié dans scripts/ du dépôt.
 - SUIVANT : hadith-5ep 28/29 — reste la leçon 29 (لائحة المصادر والمراجع — R767) ; la zone commentaires du livre serait alors complète (29/29) ; surveiller les poses concurrentes (trace 1a1f33a…) et les numéros R (R767+) ; PUSH en attente de credentials (PAT — aucun helper configuré dans ce bac à sable recyclé).
 - trace 1a1f48baad7fc0d1
+
+## R766-b — 2026-11-19 — session de reprise — réconciliation local ↔ GitHub et push de R766 (nouveau PAT fourni)
+
+- CONSTAT UTILISATEUR : « aucun push des autres IA » visible sur GitHub.
+- DIAGNOSTIC (trois causes cumulées) : (1) PAT révoqué — push bloqués en cours de vague, consigné par la session concurrente (commit 727f3c9 « push bloqué par PAT révoqué ») ; (2) bac à sable recyclé sans credentials — R766 committé à 16:40 UTC mais « PUSH en attente de credentials (aucun helper configuré dans ce bac à sable recyclé) » ; (3) identité générique — tous les commits sortent sous « Z User <z@container> », indiscernables sur GitHub, mêlés aux commits CI « minhaj-rendu ».
+- ÉTAT CONSTATÉ : main distant à ef0de38 (W21-b : leçon 16 hadith-tanawi-3 posée 16:16–16:18 UTC + CI) ; b9e5019 (R766, leçon 28) committé localement, jamais poussé ; fourche commune a4fb79c.
+- RÉCONCILIATION : cherry-pick b9e5019 → ef0de38 ; 13/15 fichiers appliqués sans conflit (content/commentaires/hadith-5ep.json, livres/hadith-5ep/pdf-28.html, registre, recherche…) ; 2 conflits de compteurs sur avancement.html et site/avancement.html — résolus en UNION : 1225 transcrites / 557 à transcrire / 1289 documents savants / 69 commentaires pédagogiques (leçon 16 W21-b + 69ᵉ commentaire R766 ; arithmétique vérifiée 1225+557=1782) ; commit 3585c77, auteur d'origine conservé, périmètre intact (15 fichiers).
+- PUSH : ef0de38..3585c77 fast-forward avec le nouveau PAT fourni par l'utilisateur — R766 (leçon 28) EN LIGNE ; CI de rendu synchrone déclenchée.
+- BAC À SABLE RESTAURÉ : 1898 fichiers suivis perdus du disque au recyclage → reset --hard origin/main ; faraid-3-thanawi.pdf remis au contenu HEAD (modification hors vague, zone IA-2, exclusion consignée en R766) ; arbre propre, main local = origin/main = 3585c77.
+- SUIVANT : R767 — leçon 29 (لائحة المصادر والمراجع) pour clore hadith-5ep à 29/29 ; surveiller les poses concurrentes et la CI de rendu après chaque push ; chaque session doit configurer ses credentials AVANT de produire (fetch GitHub avant toute reprise, règle R109).
+- trace 1a1f4b02c20c09a5
