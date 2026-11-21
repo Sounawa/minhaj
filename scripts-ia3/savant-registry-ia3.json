@@ -2,6 +2,7 @@
   "note": "Registre IA-3 — ids qualifiés « livre/docId » ajoutés à chaque leçon livrée par IA-3 (même protocole que scripts-ia2/savant-registry-ia2.json). Alimente le badge « Par IA-3 » des pages de leçon (build-site.py). Partage des zones : scripts-translate/PARTAGE-TRADUCTION.md.",
   "hand": [
     "fiqh-3es/pdf-1",
-    "fiqh-3es/pdf-2"
+    "fiqh-3es/pdf-2",
+    "fiqh-3es/pdf-3"
   ]
 }
