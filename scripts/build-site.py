@@ -985,20 +985,23 @@ def charger_registre_savant(depot, avertissements):
         chemin = depot / 'savant-registry.json'
     if not chemin.exists():
         avertissements.append('registre savant introuvable — aucun document marqué savant')
-        return set(), set()
+        return set(), set(), {}
     try:
         reg = json.loads(chemin.read_text(encoding='utf-8'))
     except Exception as e:
         avertissements.append(f'registre savant illisible : {e}')
-        return set(), set()
+        return set(), set(), {}
     ids = {str(x) for x in reg.get('hand', [])}
     llm = reg.get('llm', {})
     if isinstance(llm, dict):
         ids |= {str(k) for k in llm}
     else:
         ids |= {str(x) for x in llm}
-    # sous-registre IA-2 (ids qualifiés « livre/docId »)
+    # sous-registres IA-2 / IA-3 (ids qualifiés « livre/docId ») — qual marque
+    # la traduction savante, carte_ia alimente le badge « Par IA-x » des pages
+    # (visibilité de l'agent producteur, demande utilisateur R777).
     qual = set()
+    carte_ia = {}
     ia2 = depot / 'scripts-ia2' / 'savant-registry-ia2.json'
     if ia2.exists():
         try:
@@ -1007,10 +1010,26 @@ def charger_registre_savant(depot, avertissements):
             llm2 = reg2.get('llm', {})
             bruts += [str(k) for k in llm2] if isinstance(llm2, dict) else [str(x) for x in llm2]
             for brut in bruts:
+                brut = brut.strip()
                 if '/' in brut:
-                    qual.add(brut.strip())
+                    qual.add(brut)
+                    carte_ia[brut] = 'IA-2'
         except Exception as e:
             avertissements.append(f'registre IA-2 illisible : {e}')
+    ia3 = depot / 'scripts-ia3' / 'savant-registry-ia3.json'
+    if ia3.exists():
+        try:
+            reg3 = json.loads(ia3.read_text(encoding='utf-8'))
+            bruts3 = [str(x) for x in reg3.get('hand', [])]
+            llm3 = reg3.get('llm', {})
+            bruts3 += [str(k) for k in llm3] if isinstance(llm3, dict) else [str(x) for x in llm3]
+            for brut in bruts3:
+                brut = brut.strip()
+                if '/' in brut:
+                    qual.add(brut)
+                    carte_ia[brut] = 'IA-3'
+        except Exception as e:
+            avertissements.append(f'registre IA-3 illisible : {e}')
     miroir = depot / 'savant-registry.json'
     if miroir.exists() and miroir.resolve() != chemin.resolve():
         try:
@@ -1019,7 +1038,7 @@ def charger_registre_savant(depot, avertissements):
                                       'du registre scripts-translate (qui fait foi)')
         except Exception:
             pass
-    return ids, qual
+    return ids, qual, carte_ia
 
 
 def charger_commentaires(depot, avertissements):
@@ -1687,9 +1706,9 @@ def activite_git(maxi=8):
             if sujet.startswith('[ci]'):
                 continue  # rendu automatique — pas une livraison humaine/IA
             zone = 'IA-1'
-            if sujet.startswith('IA-2'):
+            if sujet.startswith('IA-2') or sujet.startswith('Z2-'):
                 zone = 'IA-2'
-            elif sujet.startswith('IA-3'):
+            elif sujet.startswith('IA-3') or sujet.startswith('W2'):
                 zone = 'IA-3'
             if len(sujet) > 150:
                 sujet = sujet[:150].rstrip() + '…'
@@ -1722,8 +1741,10 @@ def page_avancement(livres, programme, date_fr):
     coul_cycle = {c[0]: c[4] for c in CYCLES}
 
     # ---- activité des trois IA (dernières livraisons, lecture git locale)
-    # Zones : IA-2 = primaire (fichiers *-ep), IA-3 = collège + lycée
-    # (*-es, *-tanawi), IA-1 = site, commentaires, orchestration.
+    # Zones du partage « traduction seule » (carte : scripts-translate/
+    # PARTAGE-TRADUCTION.md) : IA-2 = préparatoire (*-ep), IA-3 = secondaire
+    # (*-es + usul-fiqh/tafsir/fikr tanawi), IA-1 = lycée (taqtit,
+    # fikr-islami, qiraat, ulum-hadith, hadith-tanawi-3) + orchestration.
     tot_ep = sum(len(b['lecons']) for b in livres if b['cycle'] == 'ep')
     ok_ep = sum(1 for b in livres if b['cycle'] == 'ep'
                 for l in b['lecons'] if l['ok'])
@@ -1744,11 +1765,14 @@ def page_avancement(livres, programme, date_fr):
 <h2>Dernières livraisons des trois IA</h2>
 <p class="av-note">Chaque poussée sur le dépôt déclenche automatiquement la reconstruction et la
 republication du site (CI «&nbsp;Rendu du site&nbsp;») — tous les compteurs de cette page restent donc
-synchrones des données. Trois agents travaillent en parallèle sur des zones distinctes&nbsp;:
-<b>IA-1</b> — site, commentaires pédagogiques et orchestration ({n_comm} commentaires écrits)&nbsp;;
-<b>IA-2</b> — traduction savante du primaire ({ok_ep} / {tot_ep} leçons transcrites)&nbsp;;
-<b>IA-3</b> — collège et lycée, traduction savante et fiabilité du texte ({ok_sup} / {tot_sup} leçons
-transcrites). Dernières livraisons&nbsp;:</p>
+synchrones des données. Trois agents travaillent en parallèle sur des zones distinctes
+(partage des 555 leçons restantes, carte de partage&nbsp;: scripts-translate/PARTAGE-TRADUCTION.md)&nbsp;:
+<b>IA-1</b> — orchestration du site et traduction du lycée&nbsp;: taqtit-tanawi-2/3, fikr-islami-tanawi-2/3,
+qiraat-tanawi-2/3, ulum-hadith-tanawi-3, hadith-tanawi-3 (203 leçons attribuées)&nbsp;;
+<b>IA-2</b> — traduction du préparatoire&nbsp;: hadith-6ep, rasm-wa-dabt-5ep/6ep, usul-qiyam-4/5/6ep
+(155 leçons attribuées)&nbsp;;
+<b>IA-3</b> — traduction du secondaire&nbsp;: tajwid-3es, fiqh-3es, tafsir-3es, usul-fiqh-tanawi-2/3,
+tafsir-tanawi-3, fikr-islami-tanawi-1 (197 leçons attribuées). Dernières livraisons&nbsp;:</p>
 <div class="av-table-wrap"><table class="av-table av-act">
 <thead><tr><th>Date</th><th>Agent</th><th>Livraison</th></tr></thead>
 <tbody>{chr(10).join(lignes_act)}</tbody>
@@ -1940,10 +1964,13 @@ def page_lecon(livre, lecon, prec, suiv, programme_ar, date_fr):
            f'{fil_niveau}'
            f'<a href="index.html">{esc(livre["titleFr"])}</a><span class="sep">›</span>'
            f'<span>Leçon {lecon["num"]}</span></nav>')
-    etat = (f'<p class="trad-etat"><span class="puce-trad sav" title="Traduction savante — rédigée à la main '
-            f'ou traduite puis relue et validée">✦ Traduction savante</span></p>' if lecon['savante']
-            else f'<p class="trad-etat"><span class="puce-trad auto" title="Traduction automatique — en attente '
-                 f'du cap de la traduction savante">Traduction automatique — relecture savante en cours</span></p>')
+    puce_trad = ('<span class="puce-trad sav" title="Traduction savante — rédigée à la main '
+                 'ou traduite puis relue et validée">✦ Traduction savante</span>' if lecon['savante']
+                 else '<span class="puce-trad auto" title="Traduction automatique — en attente '
+                      'du cap de la traduction savante">Traduction automatique — relecture savante en cours</span>')
+    puce_ia = (f'<span class="puce-trad auto" title="Agent de traduction — auteur de la traduction '
+               f'de cette leçon">Par {esc(lecon.get("ia", "IA-1"))}</span>')
+    etat = f'<p class="trad-etat">{puce_trad} {puce_ia}</p>'
     # Mission « leçon + commentaire » : le commentaire s'ajoute SOUS la leçon
     # (mode les-deux, défaut), est masqué (mode lecon) ou remplace la leçon
     # quand il existe (mode commentaire — repli sur la leçon sinon).
@@ -2410,15 +2437,17 @@ def main():
         return 1
     # statut « traduction savante » par document (registre hand ∪ llm
     # + sous-registre IA-2 en ids qualifiés « livre/docId »)
-    registre_savant, registre_ia2 = charger_registre_savant(depot, avertissements)
+    registre_savant, registre_ia2, carte_ia = charger_registre_savant(depot, avertissements)
     for b in livres:
         for l in b['lecons']:
             l['savante'] = (l['docId'] in registre_savant
                             or f"{b['slug']}/{l['docId']}" in registre_ia2)
+            l['ia'] = carte_ia.get(f"{b['slug']}/{l['docId']}", 'IA-1')
         if b['intro']:
             b['intro']['savante'] = bool(b['intro']['docId']) and (
                 b['intro']['docId'] in registre_savant
                 or f"{b['slug']}/{b['intro']['docId']}" in registre_ia2)
+            b['intro']['ia'] = carte_ia.get(f"{b['slug']}/{b['intro']['docId']}", 'IA-1')
     # commentaires pédagogiques (mission « leçon + commentaire »)
     cartes_comm = charger_commentaires(depot, avertissements)
     n_comm = 0
