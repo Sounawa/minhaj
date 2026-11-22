@@ -818,7 +818,6 @@ Trace: 1a1d675aa095fb41-w20
 - POSE : hand-set w37-pose-f3l14.py (1 emplacement, slot vérifié vide au fetch-avant-pose) ; registre IA-3 → fiqh-3es/pdf-14 (14 ids). Livre 15/29 posés (pdf-1..pdf-14 + 2 index).
 - SUIVANT : fiqh-3es L15 أحكام الأقضية والشهادات (pdf-15, pp.115-122 env., متن «والبينة على المدعي واليمين على من أنكر ولا يمين حتى تثبت الخطة أو الظنة...» déjà aperçu pp.116-117 ; canon shamela 11373/145 déjà récupéré ce tour, 146 à fetcher).
 - Trace 1a202581e4d5071d-w37.
-=======
 ## W37-b — 2026-11-22 — IA-3 — COLLISION R622 pdf-14 : pose parallèle feb7384 ADOPTÉE, contre-vérifiée par le matériel indépendant de la session recyclée
 
 - Fetch-avant-pose de la session recyclée (après transcription complète hors dépôt : VLM 150 dpi 9/9 pages + 15 zooms 600 dpi + 15 micro-zooms + 11 crops-mots 1200 dpi + canon shamela 11373/143-144 fetché W36 + canon web : Muwaṭṭa bāb al-qaḍāʾ fī l-luqaṭa, al-Isṭidhkār, Bukhārī 2454, الفواكه الدواني) révèle pdf-14 DÉJÀ POSÉ par la session IA-3 parallèle (feb7384, 18 862 car, méthode couche+tesseract W36 reconduite, VLM 429 chez elle) + CI c595791. R622 appliqué : PAS de re-pose, adoption amont.
