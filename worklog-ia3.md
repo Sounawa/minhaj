@@ -786,3 +786,18 @@ Trace: 1a1d675aa095fb41-w20
 - POSE : hand-set w36-pose-f3l13.py (1 emplacement) ; registre IA-3 → fiqh-3es/pdf-13 (13 ids). Livre 14/29 posés (pdf-1..pdf-13 + 2 index).
 - SUIVANT : fiqh-3es L14 أحكام اللقطة والغصب (pdf-14, pp.109-…, متن «ومن وجد لقطة فليعرفها سنة بموضع يرجو التعريف بها…» déjà aperçu p.109 ; canon shamela 11373/143-144 déjà fetché en W36).
 - Trace 1a1fff8f52c31769.
+
+## W36-b — 2026-11-22 — IA-3 — COLLISION R622 pdf-13 : pose parallèle 9ae5af3 ADOPTÉE, contre-vérifiée par le matériel indépendant de la session recyclée
+
+- Au re-clone (sparse, filter=blob:none, 65 Mo — recyclage du sandbox avait perdu le clone complet), fetch révèle pdf-13 DÉJÀ POSÉ par la session IA-3 parallèle (9ae5af3, «VLM INDISPONIBLE 429», extraction couche-bbox + tesseract) + CI b94b088. Règle R622 appliquée : PAS de re-pose, adoption amont.
+- Le matériel parallèle de la session recyclée (hors dépôt, download/f3-l13/ : VLM 150 dpi 9/9 pages réussies + 20 zooms VLM 600-1200 dpi + canon shamela 11373/142-144 fetché indépendamment + htmlFr FR-seule 22 222 car QA PASS, n13-htmlfr.html) sert de CONTRE-VÉRIFICATION de la pose 9ae5af3 — concordance de substance vérifiée sur :
+  * متن intégral (الحيازة / بمعاينة البينة / يغاب ×5 / ثمرة النخل + suspension […] / بيد أمين / مؤداة / إلا أن يتعدى / إشهاد / ذهبت / ضمنها / دنانير / اتجر مكروه / مخير في الثمن أو القيمة) ;
+  * N.d.T. «canon 11373/143 دنانير seuls» CONFIRMÉE par le canon fetché de la session recyclée («دنانير فردها في صرتها», canon-143.txt) ;
+  * renvois : المختصر الفقهي 6/319 ✓, مختصر خليل ص166 ✓, كفاية الطالب 2/248 ✓, جامع الأمهات 1/401 ✓, 1/404 ✓, الفواكه الدواني 2/170 ✓, إرشاد السالك ص97-98 ✓, مسند أحمد 15 302 + N.d.T. ✓, الترمذي أبواب الوصايا ✓, أبواب البيوع باب 38 ✓, an-Nafrāwī ✓ ; آyat numérotation de l'édition transcrite telle quelle ✓ ;
+  * json : 23 612 car, 9 h2, 0 arabe, guillemets 51/51, 0 apostrophe droite — QA structurelle PASS.
+- OBSERVATIONS consignées (non bloquantes, pour future vague de retouches) :
+  1. «والربح له إن كانت عينا» rendu «s'il était une monnaie» — lexie عين = corps certain / chose en elle-même (le متن l'oppose à عرض «marchandise») ; «monnaie» est une restriction indue (l'عين peut être un livre, un ustensile) — suggéré «une chose en elle-même».
+  2. Méthode canon-first (مخير, رددت traduits d'après le canon sans N.d.T. de la letter) vs convention letter-major+N.d.T. de la série (pdf-10/11/12) — choix documenté dans le commit 9ae5af3 ; la letter imprimée porte «فربها مخلطا في النفذ أو القيمة» (VLM 150 + zoom 600 concordants) et «رد الوديعة إليك» (couche+VLM 150) — pour mémoire.
+  3. p.106 2ᵉ āyāt : la session recyclée lisait par zoom 1200 un AUTRE fragment du même verset البقرة 282 («وَإِذَا حَكَمْتُمْ بَيْنَ النَّاسِ…») que la reconstruction 9ae5af3 («فإن أمن بعضكم بعضا…») — les deux lectures sont des fragments du même verset, aucune contradiction de substance.
+- Inventaire parallèle complet + arbitrages détaillés : download/f3-l13/REPRISE.md (workspace). SUIVANT inchangé : pdf-14 أحكام اللقطة والغصب pp.109+ (canon shamela 11373/143-144 déjà fetché des deux côtés).
+- RAPPEL PAT : l'utilisateur doit RÉVOQUER le PAT (re-fourni en clair dans la passation).
