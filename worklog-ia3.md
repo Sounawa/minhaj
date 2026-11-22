@@ -818,3 +818,15 @@ Trace: 1a1d675aa095fb41-w20
 - POSE : hand-set w37-pose-f3l14.py (1 emplacement, slot vérifié vide au fetch-avant-pose) ; registre IA-3 → fiqh-3es/pdf-14 (14 ids). Livre 15/29 posés (pdf-1..pdf-14 + 2 index).
 - SUIVANT : fiqh-3es L15 أحكام الأقضية والشهادات (pdf-15, pp.115-122 env., متن «والبينة على المدعي واليمين على من أنكر ولا يمين حتى تثبت الخطة أو الظنة...» déjà aperçu pp.116-117 ; canon shamela 11373/145 déjà récupéré ce tour, 146 à fetcher).
 - Trace 1a202581e4d5071d-w37.
+=======
+## W37-b — 2026-11-22 — IA-3 — COLLISION R622 pdf-14 : pose parallèle feb7384 ADOPTÉE, contre-vérifiée par le matériel indépendant de la session recyclée
+
+- Fetch-avant-pose de la session recyclée (après transcription complète hors dépôt : VLM 150 dpi 9/9 pages + 15 zooms 600 dpi + 15 micro-zooms + 11 crops-mots 1200 dpi + canon shamela 11373/143-144 fetché W36 + canon web : Muwaṭṭa bāb al-qaḍāʾ fī l-luqaṭa, al-Isṭidhkār, Bukhārī 2454, الفواكه الدواني) révèle pdf-14 DÉJÀ POSÉ par la session IA-3 parallèle (feb7384, 18 862 car, méthode couche+tesseract W36 reconduite, VLM 429 chez elle) + CI c595791. R622 appliqué : PAS de re-pose, adoption amont.
+- CONVERGENCES majeures des deux chaînes indépendantes (matériel recyclé vs pose 9ae5af3-style) : hadith زيد بن خالد en FORME DIALOGUÉE (فضالة الغنم avant فضالة الإبل — les attributions nominatives «العمري/الأريلي» du premier VLM désavouées par canon+zoom600) ; «لأخيك» ✓ ; clôture «فشأنك بها» ✓ (canon الاستذكار) ; البقرة 187 tel qu'imprimé ✓ ; أثر صرة «ثمانون دينارا» ✓ + «فشأنك بها» ✓ ; بفيفاء ✓ ; الباجي عن مالك ✓ ; الصحاح ✓ ; شرح حدود ابن عرفة للرصاع ص429 ✓ ; المختصر الفقهي 7/253 ✓ ; الخراج-الغنم بالغرم ✓ ; كراؤها (contre كفاراتها) ✓ ; matn conforme canon 143-144 ✓.
+- OBSERVATIONS consignées (non bloquantes, pour future vague) :
+  1. matn : la pose amont suit la suspension imprimée «…» après «أو انتفع» (clause canonique وعليه الحد إن وطئ وولده رقيق لرب الأمة omise, N.d.T.) — la variante recyclée traduisait le canon intégral (clause incluse) ; conforme à la convention R777 «coller au tirage» chez l'amont, divergence de méthode documentée.
+  2. 2ᵉ āyāt : l'amont porte «ولا تعتدوا» [البقرة: 190 complétée canon N.d.T.] — mieux ancré que la lecture recyclée «لا تأكلوا» [النساء: 189] ; pour mémoire (le n° du tirage est illisible des deux côtés).
+  3. «أجمع كل الملل» (amont, tess2400 autocontrast) vs «المسلمين» (recyclé, z113) — 1v1 chacun, l'amont a la preuve lettre haute-résolution.
+  4. إعداد q2 : amont «ما شروط القضاء؟» (tess ×3 + N.d.T. signe résiduel) vs recyclé «ما شروط القضاء والشهادة؟» (couche) — pour mémoire.
+  5. Renvoi «الثمر الداني ص: 568» gardé tel qu'imprimé chez l'amont — la variante recyclée l'avait normalisé «al-Fawākih ad-Dawānī» (le titre réel du commentaire) sans N.d.T. ; la convention R777 favorise l'amont.
+- Variantes recyclées conservées HORS dépôt : download/f3-l14/n14-htmlfr.html (22 128 car, QA double porte PASS : 0 arabe, 37/37, 9 h2 + 2 h3, 8 N.d.T., alternance guillemets PASS) + trace vlm/zooms/m-crops + couche RTL pp.109-115. SUIVANT inchangé : L15 أحكام الأقضية والشهادات pdf-15 pp.115+ (canon 11373/145 fetché côté amont, 146 à fetcher).
