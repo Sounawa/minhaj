@@ -1200,3 +1200,83 @@ Stage Summary:
   canon Muslim 2699) ; coquilles de références ×3 consignées.
 - Prochaine priorité : L19 699 فضل الله في الجزاء عن الأعمال pp.105+ (t105 déjà
   rendu).
+
+## Z2-55 — leçon 19 hadith-6ep «فضل الله في الجزاء عن الأعمال» (hadith qudsī Ibn ʿAbbās, Bukhārī 6491 / Muslim 131) LIVRÉE (23 nov., tour 55)
+
+Task ID: Z2-55
+Agent: IA-2 (Z.ai, session web-986eb303, trace 1a207a3ce58b7a49, tick 2026-11-23)
+
+- CHANTIER : leçon 19 «فضل الله في الجزاء عن الأعمال» — pdf-mut23h3b-699,
+  pp.105-109 du tirage, hadith qudsī d'Ibn ʿAbbās (matn Muslim 131 / Bukhārī
+  6491 COMPLET). BORNAGE vérifié : cartouche p.105 (١٨, triangulation
+  p90=15/p95=16/p100=17/p105=18 + OCR «18» ×2 + VLM) ; p.109 s'achève sur
+  l'إعداد قبلي (أولياء الله) → L20. 20/29 livrées après ce tour, 9 restantes.
+- MATN : «إن الله كتب الحسنات والسيئات ثم بيّن ذلك...» 4 clauses (همّ بحسنة
+  → حسنة كاملة / عملها → عشر حسنات إلى سبعمائة ضعف إلى أضعاف كثيرة / همّ
+  بسيئة → حسنة كاملة / عملها → سيئة واحدة) + [رواه البخاري ومسلم في صحيحيهما
+  بهذه الحروف]. N.d.T. : يرويه (avec pronom, tirage) contre canon يروي ;
+  omission d'«عز وجل» clause 2 — écarts circulant entre éditions, consignés.
+- STRUCTURE : أهداف ×3 / تمهيد (الإنسان عامل لا محالة... + 2 questions) /
+  ترجمة الراوي renvoi الدرس الثالث عشر / الشرح gloses ×5 (كتب الكتابة النقش
+  بالخط + أمر الحفظة / حسنة خير / سيئة شر / همّ الهمّ القصد إلى الفعل /
+  ضعف ضعف الشيء مثله أو مثلاه) / استخلاص المضامين ×2 / التحليل أولاً مظاهر
+  فضل الله في الجزاء (همّ العبد بالحسنة + همّه بالسيئة + عشراً إلى سبعمائة
+  ضعف + بقدر درجة الإخلاص والنية + مجرد فضل + passage لطف : عنده / كاملة /
+  فقلّلها ولم يجعلها كاملة) + ثانياً سر المضاعفة ×5 (الهمّ بالحسنة حسنة +
+  [صحيح ابن حبان؛ ذكر البيان... إذا تركها [شاكراً لله]] + مكرهاً/عاجزاً /
+  قصّر أعمار الأمة أخلفها بتضعيف أعمالها + ديوان العمل + إيقاعها في
+  مواضعها / حبة البر في أزكى أرض تستصلح وتدرس وتبذر + أمثال الجبال الرواسي /
+  يحسب سائر الحسنات بجزاء الحسنة العليا + [النحل: ٩٧] + يحصره خلقه /
+  التحويل : درهم → عشرة → مائة → ألف وللأول ألفاً) / مما يستفاد ×4 / تقويم
+  ×4 / استثمار hadith Abū Kabsha al-Anmārī «إنما الدنيا لأربعة نفر» COMPLET
+  (4 serviteurs + فهو بنيته فأجرهما سواء / هي نيته فوزرهما فيه سواء +
+  [مسند الإمام أحمد ٢٩/٥٦٢] N.d.T. 4/231 numérotation courante) / إعداد قبلي
+  → L20 (أحفظ حديث الدرس الموالي وأبين من هم أولياء الله وما مكانتهم).
+- MÉTHODE : pile Z2-53/54 reconduite (couche _text + tesseract tessdata_best
+  600/1200/2400/4800 psm 3/4/6/7/8 + microcrops une-ligne une-mot + ~40
+  lectures VLM adjudiquées en 6 rondes + canons web : Muslim 131 islamweb,
+  sharh «ويعمل لله فيه بحقه», Musnad Aḥmad 4/231 islamweb Abū Kabsha).
+- ARBITRAGES ×24 documentés (extraits) : يرويه (psm7 4800 + VLM, contre canon) ;
+  عن ربه (psm7 ×2, contre عنه VLM) ; سيئةً واحدةً. (fatha-tanwīn VLM ×2) ;
+  PAS de عنده dans la dernière clause (canon Muslim ✓) ; PAS de » après
+  كثيرة (VLM, contre psm6) ; الهمُّ (VLM ×2 lettre-à-lettre, contre الهمّة
+  v1 — الهِمَّة de l'item 2 reste légitime) ; تفضُّل (shadda + tā' initial) ;
+  همّ العبد/همّه (psm8 4800) ; ويعصي (psm7 4800, contre يخزي/يغصي) ; تركها
+  [شاكراً لله] (VLM ×3 + tesseract ش ×2 — insertion bleue entre crochets du
+  tirage, crochet externe fermé après لله) ; التفصيل (psm6 ص contre psm7 ض) ;
+  بتضعيف (×2 contre بمضاعفة psm7) ; استُصلحت + أزكى ×2 (VLM ×2 épelé,
+  contre استُخصبت tesseract ×3 et أرقى VLM1) ; وإيقاعها (VLM épelé + psm6)
+  ; يحصره خلقه (psm7 ×3, contre يحيط به VLM) ; وللأول ألفاً (VLM +
+  arithmétique, contre وللثالث tesseract ×2) ; تبشير الفائزين (VLM ×2 épelé,
+  contre تنعيم v1 et الفوز tesseract) ; الإيمان (×4, contre اليقين
+  txt-layer) ; ويعلم لله عز وجل فيه بحقه (s1, بحقه VLM point-épelé) / ولا
+  يعلم لله فيه حقه (s3, sans ب — parallèle canon sharh) ; فهو بنيته (s2 VLM
+  lettre-à-lettre) / هي نيته (s4, tesseract ×3 + VLM — asymétrie du tirage
+  conservée) ; فوزرهما (tesseract ×3, contre فوجههما VLM3) ; ٢٩/٥٦٢ (VLM ×2 +
+  tesseract ×3 — chiffres occidentaux du tirage rendus en orientaux, usage du
+  corpus).
+- INCIDENTS : bac recyclé une 4e fois en cours de tournée (après adjudication
+  complète, avant pose) — minhaj/ + scripts-ia2/ locaux + sorties OCR/VLM
+  pdf-work perdus ; récupération : re-clone sparse (origin 5d6eb87, slot 699
+  revérifié VIDE, registre → 47 confirmé), scripts h6-19 re-rédigés à
+  l'identique (questions VLM condensées, arbitrages ci-dessus conservés du
+  tour perdu), prep re-exécuté (t106-t109 + txt-106-109 restaurés).
+- QA : livraison 30 913 car FR-seule (0 arabe hors spans, 0 apostrophe droite,
+  guillemets 41/41, U+202F ×106) ; verify-h6-19.py 93 présence + 29 absence
+  TOUT PASS ; qa_corpus 699 SANS AUCUN défaut.
+- POSE : hand-set-ia2.py hadith-6ep pdf-mut23h3b-699 → 1 emplacement,
+  registre IA-2 → 48.
+- COMMIT/POUSSE : livraison 699 + JSON + registre + worklog + 11 scripts
+  h6-19 (prep/ink/zoom1-4/vlm×4/livraison/verify) + pages rendues (699 +
+  sommaire + nav 698 + compteurs racine/site) — poussé avec le token GitHub
+  du propriétaire (le token ne figure dans aucun fichier du dépôt).
+- Prochaine priorité : L20 700 «العبادة وسيلة القرب والمحبة» pp.110+ (matn =
+  hadith الولاية «من عادى لي ولياً...» annoncé par l'إعداد قبلي de L19 ;
+  t106-t109 rendus, t110 à faire).
+
+Stage Summary:
+- LIVRÉ ET POUSSÉ : leçon 19 «فضل الله في الجزاء عن الأعمال» (pdf-mut23h3b-699,
+  pp.105-109, 30 913 car, registre IA-2 → 48) — hadith-6ep 20/29, 9 restantes.
+- MÉTHODE : pile reconduite (tesseract multi-résolutions 600→4800 + VLM 6
+  rondes adjudiquées + canons web Muslim 131 / Bukhārī 6491 / Musnad 4/231).
+- Prochaine priorité : L20 700 العبادة وسيلة القرب والمحبة pp.110+.
