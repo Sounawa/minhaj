@@ -1280,3 +1280,90 @@ Stage Summary:
 - MÉTHODE : pile reconduite (tesseract multi-résolutions 600→4800 + VLM 6
   rondes adjudiquées + canons web Muslim 131 / Bukhārī 6491 / Musnad 4/231).
 - Prochaine priorité : L20 700 العبادة وسيلة القرب والمحبة pp.110+.
+
+## Z2-56 — leçon 20 hadith-6ep «العبادة وسيلة القرب والمحبة» (hadith qudsī Abū Hurayra, Bukhārī 6502) LIVRÉE (23 nov., tour 56)
+
+Task ID: Z2-56
+Agent: IA-2 (Z.ai, session web-986eb303, trace 1a207c4c67efe1a1, tick 2026-11-23)
+
+- CHANTIER : leçon 20 «العبادة وسيلة القرب والمحبة» — pdf-mut23h3b-700,
+  pp.110-114 du tirage, hadith qudsī de la wilāya d'Abū Hurayra (Bukhārī 6502
+  TRONQUÉ AVEC ELLIPSE après «حتى أحبه...» + [رواه البخاري]). BORNAGE vérifié :
+  cartouche p.110 (١٩, triangulation p90=15/p95=16/p100=17/p105=18/p110=19) ;
+  p.114 s'achève sur l'إعداد قبلي (حصة العمل والتطبيق + ندوة «أهمية طلب العلم»)
+  → L21 = pdf-mut23h3b-701 دعم وتطبيق (non numérotée). 21/29 livrées, 8 restantes.
+- MATN : «إن الله تعالى قال: من عادى لي ولياً فقد آذنته بالحرب؛ وما تقرب
+  إليّ عبدي بشيء أحب إليّ مما افترضته عليه، ولا يزال عبدي يتقرب إليّ
+  بالنوافل حتى أحبه...» — N.d.T. : ellipse du tirage (la suite «فإذا أحببته
+  كنت سمعه...» omise) + ولا يزال (tirage) contre وما يزال (édition courante,
+  écart de transmissions consigné). Canon web vérifié : dorar/saheh/hdith
+  impriment «من عادى لي وليا» SANS و (comme le tirage).
+- STRUCTURE : أهداف ×3 / تمهيد (هي غاية يرجو العبد الوصول إليها... + تنيله
+  القرب) / ترجمة الراوي renvoi الدرس الرابع (Abū Hurayra) / الشرح gloses ×3
+  (عادى من المعاداة وهي ضد الموالاة / ولياً تولى أمر الله بالطاعة وتولى
+  الله أمره بالحفظ والتوفيق / آذنته أعلمته) / استخلاص المضامين ×2 /
+  التحليل (قال العلماء: أشرف حديث في ذكر الأولياء وهو أصل في السلوك) :
+  أولاً مقام الأولياء عند الله (أولياء الله الذين يتبعون ما شرعه الله +
+  [يونس: ٦٢-٦٣-٦٤] box 3 versets + قدّم الإعذار... محاربه بنفس المعاداة +
+  hadith ʿUmar «إن من عباد الله عباداً ما هم بأنبياء ولا شهداء» COMPLET :
+  تحابوا بروح الله على غير أرحام منهم ولا أموال يتعاطونها بينهم + وجوههم
+  لنور + ثم تلا + [يونس: ٦٢] + [سنن أبي داود: باب في الرهن] N.d.T. n° 3527
+  kitāb al-’iǧārah) + ثانياً العبادة الموصلة لمحبة الله وولايته (أداء
+  الفرائض عيناً أو كفاية + الحرف والصنائع + لا تستوي النافلة والفريضة +
+  وسائل التقرب : الفرائض لتحقيق القدر الواجب التزكية والاستقامة، النوافل
+  لتحصيل الكمالات النفسية والروحية + عبداً ربانياً من أهل الله وخاصته) +
+  ثالثاً محبة الله لأوليائه (دل «حتى أحبه» : الأبرار الأتقياء، مقام
+  المحبة، كناية عن قربه منهم ونصرته وتأييده ومعيته بالحفظ والنصر واللطف
+  والتمكين + تجب موالاتهم وتحرم معاداتهم + آية [المائدة: ٥٧-٥٨ = COQUILLE
+  pour 55-56 : إنما وليكم الله ورسوله... + ومن يتول الله... فمن أحبهم فقد
+  أحب الله]) + رابعاً جزاء من عادى أولياء الله (يبغض من أبغضهم + عاداهم
+  فقد عادى الله + حاربه الله هلك لا محالة + المعاداة لأجل ولاية الله) /
+  مما يستفاد ×4 / تقويم ×3 (أذكر وسائل التقرب / أبين من هم أولياء الله /
+  أحدد موقفي من السلوكات مع التعليل : 2 exemples) / استثمار آيتان
+  ([البقرة: ٢٢٠ COQUILLE pour 222] يحب التوابين والمتطهرين + [آل عمران:
+  ٣١] قل إن كنتم تحبون الله) + questions ×2 / إعداد قبلي ×2 + 4 bullets
+  (ندوة أهمية طلب العلم).
+- MÉTHODE : pile reconduite (couche _text + tesseract 600/1200/2400/4800
+  psm 4/6/7/8 + microcrops une-mot + ~30 lectures VLM adjudiquées en 3
+  rondes + canons web Bukhārī 6502 + Sunan Abī Dāwud 3527).
+- ARBITRAGES ×18 documentés (extraits) : cartouche ١٩ ; هي غاية (tesseract ×3
+  contre VLM غاية seul — la frontale هي retenue) ; تُنيله (VLM épelé ن-ي-ل-ه
+  + tesseract ×2, contre توصله) ; ولا يزال (VLM + tesseract contre canon) ;
+  افترضته (VLM + tesseract) ; ellipse «حتى أحبه...»» (VLM : points de
+  suspension dans les guillemets) ; أصل في السلوك (psm6 ×2 contre أُفضل) ;
+  كناية عن قربه (tesseract 4800 ×2 + zoom2, contre VLM كائنة — mêmes
+  lettres, ordre différent) ; الأبرار (VLM + psm8 4800 contre الأخيار) ;
+  ثم تلا (tesseract ×3 ضد VLM قرأ) ; أرحام منهم...يتعاطونها بينهم (psm6,
+  contre canon أرحام بينهم) ; معيته (tesseract ×3 ضد VLM معابته) ;
+  jonction directe الواجب التزكية (VLM lettre-à-lettre : ni من ni في — les
+  deux proposals écartées) ; ودوام مودتهم + محبتهم (VLM épelé, existence de
+  وجود écartée) ; آية المائدة box = vv. 55-56 par le CONTENU (يقيمون الصلاة
+  ويؤتون الزكاة وهم راكعون — tesseract définitif) mais réf imprimée ٥٧-٥٨
+  (VLM ×3 épelé ٥-٧-٥-٨) = coquille consignée N.d.T. ; آية البقرة réf ٢٢٠
+  (VLM) = coquille pour ٢٢٢ consignée ; [يونس: ٦٢-٦٣-٦٤] (VLM box) ;
+  [سنن أبي داود: باب في الرهن] sans kitāb (VLM + tesseract ×2 — la
+  localisation courante kitāb al-’iǧārah n° 3527 reléguée au N.d.T.).
+- INCIDENTS : bac recyclé une 5e fois avant le tour (PDF + tessdata perdus) —
+  récupération : blobs git cat-file (hadith-6ep.pdf 61 Mo + miroir _text
+  16 Mo) + re-téléchargement tessdata_best ara 12,6 Mo ; clone minhaj/
+  survivant (origin 32b36361, slot 700 revérifié VIDE, registre 48 confirmé).
+- QA : livraison 28 580 car FR-seule (0 arabe hors spans, 0 apostrophe droite,
+  guillemets 32/32, U+202F ×106) ; verify-h6-20.py 92 présence + 19 absence
+  TOUT PASS ; qa_corpus 700 SANS défaut.
+- POSE : hand-set-ia2.py hadith-6ep pdf-mut23h3b-700 → 1 emplacement,
+  registre IA-2 → 49.
+- COMMIT/POUSSE : livraison 700 + JSON + registre + worklog + 9 scripts
+  h6-20 (prep/ink/zoom1-3/vlm×3/livraison/verify) + pages rendues (700 +
+  sommaire + nav 699 + compteurs racine/site) — poussé avec le token GitHub
+  du propriétaire (le token ne figure dans aucun fichier du dépôt).
+- Prochaine priorité : L21 701 «دعم وتطبيق» pp.115+ (leçon d'activités NON
+  numérotée — الدرس الموالي numéroté = L22 702 ثمرات ولاية الله تعالى
+  ومحبته pp.117+ ; le إعداد de L20 annonce la ندوة أهمية طلب العلم).
+
+Stage Summary:
+- LIVRÉ ET POUSSÉ : leçon 20 «العبادة وسيلة القرب والمحبة» (pdf-mut23h3b-700,
+  pp.110-114, 28 580 car, registre IA-2 → 49) — hadith-6ep 21/29, 8 restantes.
+- Coquilles de références ×2 consignées ([المائدة: ٥٧-٥٨] pour 55-56 ;
+  [البقرة: ٢٢٠] pour 222) — même famille que [التوبة: ١٢٠]/[الطور: ١٩]/
+  [البقرة: ٢٧٩]/[الزمر: ١٠].
+- Prochaine priorité : L21 701 دعم وتطبيق pp.115+ (activités, non numérotée).
