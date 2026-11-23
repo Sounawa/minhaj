@@ -1133,3 +1133,70 @@ Stage Summary:
 - LIVRÉ (commit local, push impossible sans token) : leçon 17 «الأخوة الإسلامية» تتمة (pdf-mut23h3b-697, pp.95-99, 25 491 car, registre IA-2 → 46) — hadith-6ep 18/29, 11 restantes. Matn Muslim 2564 suite : 4 clauses du tirage (ولا يكذبه confirmé lettre à lettre + N.d.T. canon 3 clauses) + التقوى هاهنا + بحسب امرئ + كل المسلم على المسلم حرام ; renvoi ترجمة الراوي à L4 ; gloses ×2 (لا يترك إعانته ونصرته / العرض محل المدح والذم) ; استخلاص ×1 ; تحليل أولاً من حقوق الأخوة الإسلامية (5 items : الظلم «أن لا يدخل المسلم على المسلم ضررا في نفسه أو دينه أو عرضه أو ماله» + فلا تظالموا + لا ضرر ولا ضرار ; الخذلان «لدفع ظلم ونحوه» + شهادة pour le مظلوم ; الكذب + [التوبة: ١٢٠ coquille pour 119] ; التحقير «التكبر على الناس بعين الاستصغار» + تحذير عظيم + لم يحقره إذ خلقه ثم أحسن تقويم خلقه + فقد حقر ما عظم الله ; التعرض أو التسبب للإيذاء بالإتلاف أو الإيذاء أو الطعن أو التنقيص + اقتصر على الدم والمال والعرض) + ثانياً التقوى سبيل الأخوة (رسوخ التقوى + رؤية الله محيطة بكل شيء) ; مما يستفاد ×4 (تحقير الناس / دماء وأموال وأعراض / اعتبار التقوى بالقلوب / رقابة الله وشهوده وإحاطته) ; تقويم ×4 + tableau 2 colonnes (3 mظاهر données, آثار à remplir) ; استثمار al-Ghazali [إحياء 2/171] complet (أغراض مختلفة / يشوش القلب / تضييع الأوقات / عدة في المصائب وقوة في الأحوال / استكثروا من الإخوان فلعلك تدخل في شفاعة أخيك — canon vérifié mot à mot ×5 sources) + خطاطة ; إعداد قبلي ×2 → L18 (تلاوة القرآن وتدارسه / مساعدة الناس).
 - MÉTHODE : triangulation pixel cartouche (١٦ = p90 ١٥ + 1, la suite logique دعم-3 sauté) ; composantes connexes pour la ponctuation du matn (، pas ؛ ni guillemets internes) ; 22 arbitrages documentés ; hallucinations VLM écartées ×6.
 - Prochaine priorité : L18 698 من الأعمال الفاضلة وثوابها pp.100+ (matn Muslim 2699 من نفس عن مؤمن كربة, t100 déjà rendu).
+
+## Z2-54 — leçon 18 hadith-6ep «من الأعمال الفاضلة وثوابها» (hadith Abū Hurayra, Muslim 2699) LIVRÉE (23 nov., tour 54)
+
+Task ID: Z2-54
+Agent: IA-2 (Z.ai, session web-986eb303, trace 1a206d668914fa39, tick 2026-11-23)
+
+- CONTEXTE : reconnaissance COMPLÈTE (prep/ink + zoom1-12 + vlm→vlm10 + microcrops)
+  et script de livraison RÉDIGÉS au tour perdu du 22 nov. soir (session morte avant
+  exécution, comme Z2-53) ; livraison exécutée et poussée ce tour après la
+  récupération Z2-53. pdf-work/ (tessdata + 600 dpi renders t100-t105 + crops +
+  sorties VLM) avait survécu au 3e recyclage du bac — aucun OCR/VLM à refaire.
+- CHANTIER : leçon 18 «من الأعمال الفاضلة وثوابها» — pdf-mut23h3b-698, pp.100-104
+  du tirage, hadith Abū Hurayra Muslim 2699 COMPLET. BORNAGE vérifié : cartouche
+  p.100 (١٧, suite de la triangulation p90=١٥/p95=١٦/p100=١٧) ; p.104 s'achève sur
+  l'إعداد قبلي («إلى سبعمائة وإلى أضعاف كثيرة») ; t105 rendu = L19. 19/29 livrées
+  après ce tour, 10 restantes.
+- MÉTHODE : pile Z2-53 reconduite (couche _text + tesseract tessdata_best
+  600/1200/2400/3600 psm 3/4/6/7/11 + binarisations + microcrops une-ligne +
+  ~35 lectures VLM adjudiquées en 9 rondes + canon web Muslim 2699). En-têtes du
+  tableau تقويم (bleu/bicolore) rebelles aux binarisations : lues à 2400-3600 +
+  VLM sur crops dédiés (z12-z16 consignés dans zoom12-h6-18.py pour traçabilité).
+- ARBITRAGES documentés (extrait) : يعينه (tesseract «لا عنه» ×5 désavoué) ;
+  clause النسب «التسويف عنه في الأفعال أو تفريطه وتقصيره» ; الاقتراب من الناس
+  (VLM qāf épelé + tesseract ×2 + couche) ; أطلّتهم (glose ×3 VLM — الطائف v7
+  désavoué, أطالتها v8 normalisé en أطلّتهم) ; السماحة appuyée du hadith de
+  Ǧābir «رحم الله رجلاً سمحاً إذا باع وإذا اشترى وإذا اقتضى» [صحيح البخاري] ;
+  آية الطور identifiée par fragments tesseract colorés («ولك رَاقنواوَاجَعَثَّهُمْ
+  بإيمار الكبْتا بهم» → الذرّية/ألحقنا/كسب/رهين) ; tableau 3 colonnes
+  السلوك | موقفي منها | التعليل.
+- COQUILLES consignées (N.d.T. dans le rendu) : [الطور: ١٩] pour le verset 21 ;
+  [البقرة: ٢٧٩] pour 280 ; [الزمر: ١٠] pour 9 — même famille que [التوبة: ١٢٠]
+  (L17), [الحجرات: ١١-١٠] inversé (L16), [الحج: 39]→41 (L15).
+- QA : livraison 29 582 car FR-seule (0 arabe hors spans, 0 apostrophe droite,
+  guillemets 27/27, U+202F ×95) ; verify-h6-18.py 94 présence + 41 absence
+  TOUT PASS ; qa_corpus 698 SANS AUCUN défaut (seul hadith-6ep en défaut SOFT :
+  682, ancien, hors périmètre).
+- POSE : hand-set-ia2.py hadith-6ep pdf-mut23h3b-698 → 1 emplacement,
+  registre IA-2 → 47 ; slot vérifié VIDE au clone (origin f4e291a, IA-3 W44 intégré).
+- COMMIT/POUSSE : livraison 698 + JSON + registre + worklog + 26 scripts h6-18
+  (prep/ink/zoom1-12/vlm×10/livraison/verify) + pages rendues (698 + sommaire +
+  nav 697 + compteurs racine/site) — poussé avec le token GitHub du propriétaire
+  (le token ne figure dans aucun fichier du dépôt).
+- Prochaine priorité : L19 699 «فضل الله في الجزاء عن الأعمال» pp.105+ (t105 déjà
+  rendu ; إعداد L18 annonce : حفظ الحديث + سبب مضاعفة الحسنة إلى عشر وسبعمائة
+  وأضعاف كثيرة).
+
+Stage Summary:
+- LIVRÉ ET POUSSÉ : leçon 18 «من الأعمال الفاضلة وثوابها» (pdf-mut23h3b-698,
+  pp.100-104, 29 582 car, registre IA-2 → 47) — hadith-6ep 19/29, 10 restantes.
+  Matn Muslim 2699 complet : نفس كربة / تيسير على معسر / ستر مسلم / الله في عون
+  العبد ما كان العبد في عون أخيه / سلك طريقاً يلتمس فيه علماً / الاجتماع في بيت
+  من بيوت الله على تلاوة الكتاب وتدارسه → سكينة + رحمة + ملائكة تحفّ + ذكر فيمن
+  عنده / ومن بطأ به عمله لم يسرع به نسبه + [رواه مسلم بهذا اللفظ] ; renvoi
+  ترجمة الراوي L4 ; gloses ×4 (نفس أزال / كربة شدة / السكينة الطمأنينة /
+  غشيتهم نزلت عليهم وأطلّتهم) ; استخلاص ×2 ; تحليل أولاً السعي في مصالح الناس
+  وقضاء حوائجهم (تفريج الكربات + التيسير على المعسر [البقرة ٢٧٩→280] + ستر
+  المسلم + عون الأخ + [الحجرات ١٣] + رحم الله رجلاً سمحاً [البخاري]) + ثانياً
+  فضل طلب العلم والاشتغال به [المجادلة ١١] + ثالثاً فضل الاجتماع على تلاوة
+  القرآن وتدارسه (نزول السكينة / غشيان الرحمة / حفوف الملائكة / الذكر في الملأ
+  الأعلى) + clause النسب (التسويف أو التفريط والتقصير) ; مما يستفاد ×4 ;
+  تقويم ×3 + tableau 3 colonnes × 3 rangées (السلوك | موقفي منها | التعليل) ;
+  استثمار [الطور ١٩→21] ألحقنا بهم ذريتهم... كل امرئ بما كسب رهين + question
+  d'accord avec la clause النسب ; إعداد قبلي → L19.
+- MÉTHODE : pile Z2-53 (tesseract multi-résolutions + VLM 9 rondes adjudiquées +
+  canon Muslim 2699) ; coquilles de références ×3 consignées.
+- Prochaine priorité : L19 699 فضل الله في الجزاء عن الأعمال pp.105+ (t105 déjà
+  rendu).
