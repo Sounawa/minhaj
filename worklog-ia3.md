@@ -983,3 +983,7 @@ Trace: 1a1d675aa095fb41-w20
 - pdf-30 فهرس المصادر والمراجع : 33 références letter-level avec NB consignés : ref 7 « الفرفر » coquille du tirage (titre connu : التوضيح في شرح مختصر ابن الحاجب) ; ref 19 « ببيد الرؤوف » coquille probable pour بْعَبْدِ الرؤوف (bio p.217 nette « عبد الرؤوف ») ; ref 25 crochet errant « بيروت[ » ; ref 30 fragment « 5/32 » hésitant ; ref 33 nnisba الوَرغمي/الروغمي hésitante → الروغمي consignée + « مؤسسة خلف أحمد الختور » selon la lettre du tirage.
 - QA double porte PASS (w51-qa-annexes.py : 11 h3 pdf-29 avec dates toutes vérifiées ; 33 li pdf-30 avec titres arabes tous présents ; balises équilibrées ; artefact « ? non » de l'intro pdf-30 corrigé avant pose).
 - SUIVANT : audit des titleAr fiqh-2es (2 entrées seulement — registre à compléter) ; vérif pages pdf-29/30 en ligne après CI.
+
+### W51 bis — vérif pages en ligne
+- pdf-29 et pdf-30 EN LIGNE (HTTP 200, فهرس الأعلام / المصادر présents) après rebase sur [ci] 135bccfd puis push af124fee.
+- Micro-écart cosmétique consigné : le template du site préfixe automatiquement « Leçon N — » aux titleFr de toutes les entrées — pour les annexes pdf-29/30 ce préfixe est inexact (ce ne sont pas des leçons ; le titleFr porte « annexe »). Modification du template hors périmètre IA-3 cette séance.
