@@ -803,7 +803,8 @@ def charger_livres(rep_books, manifest, avertissements):
             ok = bool(fr.strip())
             lecons.append({
                 'docId': did,
-                'num': i + 1,
+                # numéro du médaillon quand le docId le porte (pdf-N) ; sinon rang de liste
+                'num': int(did.split('-', 1)[1]) if did.startswith('pdf-') and did[4:].isdigit() else i + 1,
                 'titleFr': (l.get('titleFr') or '').strip(),
                 'titleAr': (l.get('titleAr') or '').strip(),
                 'pdfUrl': (l.get('pdfUrl') or '').strip(),
