@@ -58,19 +58,32 @@ jobs:
           set -e
           git config user.name "minhaj-rendu"
           git config user.email "minhaj-rendu@users.noreply.github.com"
+          commettre () {
+            git add -A
+            if [ -n "$(git status --porcelain)" ]; then
+              git commit -m "[ci] rendu du site synchrone des données [skip ci]"
+            else
+              echo "Rendu déjà synchrone des données — rien à commettre."
+            fi
+          }
           if [ -z "$(git status --porcelain)" ]; then
             echo "Rendu déjà synchrone des données — rien à commettre."
             exit 0
           fi
-          git add -A
-          git commit -m "[ci] rendu du site synchrone des données (après $GITHUB_SHA) [skip ci]"
+          commettre
           for i in 1 2 3; do
             if git push origin HEAD:main; then
               echo "Rendu publié."
               exit 0
             fi
-            echo "Poussée rejetée (poussée concurrente) — rebase puis nouvelle tentative."
-            git pull --rebase origin main
+            # Pas de rebase (il conflitte sur le rendu régénéré des deux côtés) :
+            # on repart HARD des dernières données puis on régénère le rendu
+            # en entier — jamais de conflit, le rendu reste synchrone.
+            echo "Poussée rejetée (poussée concurrente) — reprise sur origin/main et régénération complète."
+            git fetch origin main
+            git reset --hard origin/main
+            python3 scripts/build-site.py --publier .
+            commettre
           done
           echo "Échec après 3 tentatives — la prochaine poussée relancera un rendu."
           exit 1
