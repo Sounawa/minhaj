@@ -1456,8 +1456,12 @@ def page_accueil(livres, programme, date_fr, fragments_recherche):
     n_total = sum(len(b['lecons']) for b in livres)
     n_ok = sum(1 for b in livres for l in b['lecons'] if l['ok'])
     pct = round(100 * n_ok / n_total) if n_total else 0
-    # documents traduits (leçons + introductions) et cap savant franchi
+    # documents traduits (leçons + introductions) et cap savant franchi ;
+    # la barre publique se lit sur le corpus ENTIER (leçons + introductions,
+    # transcrites ou non) pour ne pas présenter le sous-ensemble déjà fait
+    # comme terminé (R721 — clarif demande utilisateur W72bis)
     n_docs = n_ok + sum(1 for b in livres if b['intro'] and b['intro']['htmlFr'])
+    n_corpus_docs = n_total + sum(1 for b in livres if b['intro'])
     n_sav_docs = (sum(1 for b in livres for l in b['lecons'] if l['ok'] and l['savante'])
                   + sum(1 for b in livres if b['intro'] and b['intro']['htmlFr'] and b['intro']['savante']))
     n_attente = n_docs - n_sav_docs
@@ -1499,8 +1503,8 @@ def page_accueil(livres, programme, date_fr, fragments_recherche):
 </div>
 <div class="prog"><div class="barre"><span style="width:{pct}%"></span></div>
 <p class="compte"><strong>{n_ok} / {n_total}</strong> leçons transcrites · mise à jour : {date_fr}</p></div>
-<div class="prog prog-savante"><div class="barre barre-savante"><span style="width:{round(100 * n_sav_docs / n_docs) if n_docs else 0}%"></span></div>
-<p class="compte"><strong>{n_sav_docs} / {n_docs}</strong> documents traduits en traduction savante · {n_attente} en attente du cap savant</p></div>
+<div class="prog prog-savante"><div class="barre barre-savante"><span style="width:{round(100 * n_sav_docs / n_corpus_docs) if n_corpus_docs else 0}%"></span></div>
+<p class="compte"><strong>{n_sav_docs} / {n_corpus_docs}</strong> documents en traduction savante (leçons + introductions) · {n_attente} en attente du cap · {n_corpus_docs - n_sav_docs} documents restants (leçons non encore transcrites)</p></div>
 {html_recherche()}
 </div>
 </section>
@@ -1547,6 +1551,9 @@ def section_savante_html(livres, n_sav_docs, n_docs, n_attente, n_total, n_ok):
             'stroke="currentColor" stroke-width="2.6" stroke-linecap="round" '
             'stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>'
             '</span>')
+    # dénominateur corpus entier (leçons + introductions) — cohérent avec la
+    # barre de l'accueil : ne pas présenter le sous-ensemble fait comme terminé
+    n_corpus = n_total + sum(1 for b in livres if b['intro'])
     lignes = []
     entrees = []
     for b in livres:
@@ -1578,8 +1585,8 @@ def section_savante_html(livres, n_sav_docs, n_docs, n_attente, n_total, n_ok):
             f'<span class="sav-ar" dir="rtl" lang="ar">{esc(b["titleAr"])}</span>'
             f'<span class="mini-barre barre-sav" aria-hidden="true"><span style="width:{pct}%"></span></span>'
             f'<span class="sav-chips">{puce}{chip_att}{chip_rest}</span></li>')
-    meta = (f'{n_sav_docs} documents traduits sur {n_docs} ont passé le cap savant'
-            + (f' · {n_attente} en attente' if n_attente else ' · cap franchi partout')
+    meta = (f'{n_sav_docs} / {n_corpus} documents du corpus en traduction savante'
+            + (f' · {n_attente} en attente du cap' if n_attente else ' · cap franchi sur tous les documents transcrits')
             + f' · {n_ok} / {n_total} leçons transcrites')
     liste = '\n'.join(lignes)
     return f"""<section class="zone-savante" id="traduction-savante">
@@ -1589,7 +1596,7 @@ def section_savante_html(livres, n_sav_docs, n_docs, n_attente, n_total, n_ok):
 <span class="cycle-titres"><h2>Traduction savante</h2>
 <p class="cycle-meta">{meta}</p></span>
 <span class="cycle-ar" dir="rtl" lang="ar">الترجمة العلمية</span>
-<span class="cycle-compte">{n_sav_docs} / {n_docs} documents</span>
+<span class="cycle-compte">{n_sav_docs} / {n_corpus} documents</span>
 {chev}
 <span class="hors-ecran">— appuyer pour déplier ou replier l’état de la traduction savante</span>
 </summary>
@@ -1732,6 +1739,9 @@ def page_avancement(livres, programme, date_fr):
     n_reste = n_total - n_ok
     n_intros = sum(1 for b in livres if b['intro'] and b['intro']['htmlFr'])
     n_docs = n_ok + n_intros
+    # corpus entier (leçons + introductions) : dénominateur honnête pour la
+    # barre savante — les leçons non transcrites comptent dans le reste
+    n_corpus_docs = n_total + sum(1 for b in livres if b['intro'])
     n_sav = (sum(1 for b in livres for l in b['lecons'] if l['ok'] and l['savante'])
              + sum(1 for b in livres if b['intro'] and b['intro']['htmlFr']
                    and b['intro']['savante']))
@@ -1841,8 +1851,8 @@ l’IA-1, de l’IA-2 ou de l’IA-3) déclenche une reconstruction automatique 
 </div>
 <div class="prog"><div class="barre"><span style="width:{round(100 * n_ok / n_total) if n_total else 0}%"></span></div>
 <p class="compte"><strong>{n_ok} / {n_total}</strong> leçons transcrites — <strong>{n_reste}</strong> restantes</p></div>
-<div class="prog prog-savante"><div class="barre barre-savante"><span style="width:{round(100 * n_sav / n_docs) if n_docs else 0}%"></span></div>
-<p class="compte"><strong>{n_sav} / {n_docs}</strong> documents traduits en traduction savante · {n_attente} en attente du cap · {n_intros} introductions incluses</p></div>
+<div class="prog prog-savante"><div class="barre barre-savante"><span style="width:{round(100 * n_sav / n_corpus_docs) if n_corpus_docs else 0}%"></span></div>
+<p class="compte"><strong>{n_sav} / {n_corpus_docs}</strong> documents en traduction savante (leçons + introductions) · {n_attente} en attente du cap · {n_reste} leçons encore à transcrire</p></div>
 <p class="compte lien-av-line"><a class="lien-av" href="avancement.html">→ Avancement détaillé&nbsp;: documents faits et restants, cycle par cycle et manuel par manuel</a></p>
 </div>
 </section>
