@@ -848,6 +848,33 @@ CYCLES = [
     ('tanawi', 'Lycée', 'Enseignement secondaire qualifiant', 'السلك التأهيلي العتيق', '#7a5418', '#4a3210'),
 ]
 
+# Carte de partage de la traduction (R777, 21 novembre 2026) : manuels
+# attribués à chaque IA — atomiques (un livre = un propriétaire), cf.
+# scripts-translate/PARTAGE-TRADUCTION.md. Le volume entre parenthèses est
+# le nombre de leçons posé au jour du partage ; les compteurs « restantes »
+# affichés sur la page avancement sont recalculés à chaque construction
+# depuis les livres (plus aucun chiffre de mission codé en dur).
+ZONES_PARTAGE = (
+    ('IA-1', 'orchestration du site et traduction du lycée',
+     'taqtit-tanawi-2/3, fikr-islami-tanawi-2/3, qiraat-tanawi-2/3, '
+     'ulum-hadith-tanawi-3, hadith-tanawi-3',
+     ('taqtit-tanawi-3', 'taqtit-tanawi-2', 'fikr-islami-tanawi-2',
+      'fikr-islami-tanawi-3', 'qiraat-tanawi-2', 'qiraat-tanawi-3',
+      'ulum-hadith-tanawi-3', 'hadith-tanawi-3'),
+     203),
+    ('IA-2', 'traduction du préparatoire',
+     'hadith-6ep, rasm-wa-dabt-5ep/6ep, usul-qiyam-4/5/6ep',
+     ('hadith-6ep', 'rasm-wa-dabt-5ep', 'rasm-wa-dabt-6ep',
+      'usul-qiyam-4ep', 'usul-qiyam-5ep', 'usul-qiyam-6ep'),
+     155),
+    ('IA-3', 'traduction du secondaire',
+     'tajwid-3es, fiqh-3es, tafsir-3es, usul-fiqh-tanawi-2/3, '
+     'tafsir-tanawi-3, fikr-islami-tanawi-1',
+     ('tajwid-3es', 'fiqh-3es', 'tafsir-3es', 'usul-fiqh-tanawi-2',
+      'usul-fiqh-tanawi-3', 'tafsir-tanawi-3', 'fikr-islami-tanawi-1'),
+     197),
+)
+
 
 def groupes_niveaux(livres):
     """Regroupe les livres par cycle scolaire puis par année.
@@ -1766,6 +1793,35 @@ def page_avancement(livres, programme, date_fr):
     activite = activite_git()
     lignes_act = []
     coul_ia = {'IA-1': '#614f38', 'IA-2': '#4f611d', 'IA-3': '#9c4a12'}
+
+    # ---- carte de partage : compteurs par zone recalculés en direct depuis
+    # les livres (volumes attribués posés au 21 novembre 2026, R777)
+    def _reste_zone(slugs):
+        return sum(1 for b in livres if b['slug'] in slugs
+                   for l in b['lecons'] if not l['ok'])
+
+    total_partage = sum(z[4] for z in ZONES_PARTAGE)
+    zones_stats = [(z[0], z[1], z[2], z[4], _reste_zone(set(z[3])))
+                   for z in ZONES_PARTAGE]
+    restes_zones = [zs[4] for zs in zones_stats]
+    reste_zones = sum(restes_zones)
+    fait_partage = max(0, total_partage - reste_zones)
+    pct_partage = (round(100 * fait_partage / total_partage)
+                   if total_partage else 0)
+    hors_partage_reste = n_reste - reste_zones
+    if hors_partage_reste > 0:
+        note_hors_partage = (
+            f'Hors partage&nbsp;: {hors_partage_reste} leçons restantes dans '
+            'des manuels non attribués')
+    else:
+        note_hors_partage = 'Manuels hors partage&nbsp;: tous à jour'
+    bloc_zones = ''
+    for i, (zid, zrole, zlivres, zattrib, rz) in enumerate(zones_stats):
+        fin = '&nbsp;; ' if i < len(zones_stats) - 1 else '. '
+        bloc_zones += (
+            f'<b>{zid}</b> — {zrole}&nbsp;: {zlivres} — '
+            f'<strong>{rz} restantes</strong> sur {zattrib} attribuées '
+            f'({max(0, zattrib - rz)} faites){fin}')
     for d, zone, sujet in activite:
         lignes_act.append(
             f'<tr><td class="n av-date">{esc(d)}</td>'
@@ -1776,14 +1832,10 @@ def page_avancement(livres, programme, date_fr):
 <h2>Dernières livraisons des trois IA</h2>
 <p class="av-note">Chaque poussée sur le dépôt déclenche automatiquement la reconstruction et la
 republication du site (CI «&nbsp;Rendu du site&nbsp;») — tous les compteurs de cette page restent donc
-synchrones des données. Trois agents travaillent en parallèle sur des zones distinctes
-(partage des 555 leçons restantes, carte de partage&nbsp;: scripts-translate/PARTAGE-TRADUCTION.md)&nbsp;:
-<b>IA-1</b> — orchestration du site et traduction du lycée&nbsp;: taqtit-tanawi-2/3, fikr-islami-tanawi-2/3,
-qiraat-tanawi-2/3, ulum-hadith-tanawi-3, hadith-tanawi-3 (203 leçons attribuées)&nbsp;;
-<b>IA-2</b> — traduction du préparatoire&nbsp;: hadith-6ep, rasm-wa-dabt-5ep/6ep, usul-qiyam-4/5/6ep
-(155 leçons attribuées)&nbsp;;
-<b>IA-3</b> — traduction du secondaire&nbsp;: tajwid-3es, fiqh-3es, tafsir-3es, usul-fiqh-tanawi-2/3,
-tafsir-tanawi-3, fikr-islami-tanawi-1 (197 leçons attribuées). Dernières livraisons&nbsp;:</p>
+synchrones des données. Trois agents travaillent en parallèle sur des zones distinctes (carte de
+partage&nbsp;: scripts-translate/PARTAGE-TRADUCTION.md, établie le 21 novembre 2026 pour {total_partage}
+leçons&nbsp;; compteur du moment recalculé en direct&nbsp;: <strong>{n_reste} leçons restantes</strong>)&nbsp;:
+{bloc_zones}{note_hors_partage}. Dernières livraisons&nbsp;:</p>
 <div class="av-table-wrap"><table class="av-table av-act">
 <thead><tr><th>Date</th><th>Agent</th><th>Livraison</th></tr></thead>
 <tbody>{chr(10).join(lignes_act)}</tbody>
@@ -1853,6 +1905,8 @@ l’IA-1, de l’IA-2 ou de l’IA-3) déclenche une reconstruction automatique 
 <p class="compte"><strong>{n_ok} / {n_total}</strong> leçons transcrites — <strong>{n_reste}</strong> restantes</p></div>
 <div class="prog prog-savante"><div class="barre barre-savante"><span style="width:{round(100 * n_sav / n_corpus_docs) if n_corpus_docs else 0}%"></span></div>
 <p class="compte"><strong>{n_sav} / {n_corpus_docs}</strong> documents en traduction savante (leçons + introductions) · {n_attente} en attente du cap · {n_reste} leçons encore à transcrire</p></div>
+<div class="prog prog-partage"><div class="barre"><span style="width:{pct_partage}%;background:#614f38"></span></div>
+<p class="compte"><strong>{fait_partage} / {total_partage}</strong> leçons faites depuis le partage des trois IA (21 novembre 2026) — restantes&nbsp;: IA-1 {restes_zones[0]} · IA-2 {restes_zones[1]} · IA-3 {restes_zones[2]}</p></div>
 <p class="compte lien-av-line"><a class="lien-av" href="avancement.html">→ Avancement détaillé&nbsp;: documents faits et restants, cycle par cycle et manuel par manuel</a></p>
 </div>
 </section>
