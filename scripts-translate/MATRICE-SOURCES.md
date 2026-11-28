@@ -1,4 +1,4 @@
-# MATRICE-SOURCES — zone IA-1 (cycle lycée), inventaire du 28 novembre 2026
+# MATRICE-SOURCES — les zones IA-1 (cycle lycée) et IA-3 (cycle secondaire), inventaire du 28 novembre 2026 (IA-2 ajoutera la sienne au même format)
 
 > Établie par IA-1 conformément au protocole « PREMIÈRE MISSION — matrice des sources ». Une ligne par leçon restante (197 leçons : 5 local + 192 bloquee). Les leçons déjà livrées (statut prete) n'ont pas de ligne ; leur trace vit dans le worklog et le registre. Ce fichier est le tableau de chasse des tours suivants : la ligne passe à « prete » dans le commit de la leçon traduite.
 
@@ -262,3 +262,184 @@
 | hadith-tanawi-3 | 28 | pdf-mut23h2n-28 | Dispositions du testament | local | content/textbooks-src/hadith-3-thanawi_text.pdf pp.190-194 | statut calé par entêtes OCR 28/11 ; bornes à revalider à l'extraction |
 | hadith-tanawi-3 | 29 | pdf-mut23h2n-29 | Liste des sources et références | local | content/textbooks-src/hadith-3-thanawi_text.pdf pp.195-200 (lāʾiḥa = bibliographie du livre) | statut calé par entêtes OCR 28/11 ; bornes à revalider à l'extraction |
 
+---
+
+## Zone IA-3 (cycle secondaire) — ajout IA-3 du 28/11/2026
+
+> Fusion du même jour : la matrice d’IA-1 est conservée telle quelle ; le titre du fichier a été généralisé aux trois zones (format et statuts inchangés). Le compte IA-3 : **166 leçons restantes** (local 50 + bloquee 116). fiqh-3es est achevé depuis le partage (0 restante).
+
+Méthode d’audit IA-3 (28/11/2026) :
+
+1. **local** : `git ls-tree origin/main content/textbooks-src/` — tafsir-3-iadadi_text.pdf (= tafsir-3es), fiqh-3-iadadi_text.pdf (= fiqh-3es, achevé), tafsir-3-thanawi_text.pdf (= tafsir-tanawi-3).
+2. **archive (item 1_20220304_20220304_2251)** : INJOIGNABLE ce jour (HTTP 429 puis 000, deux tentatives) — sondes à refaire aux tours suivants pour tajwid-3es, usul-fiqh-tanawi-2/3, fikr-islami-tanawi-1 ; l’audit IA-1 n’a pas couvert ces titres.
+3. **doublon** : scan des `pdfUrl` des leçons déjà traduites des 64 livres — 0 correspondance exacte (28 + 30 + 30 + 28 urls distinctes).
+4. **wayback** : non sondé ce jour (réseau dégradé, cf. IA-1).
+
+| livre | n° | docId | titre | statut | référence source | notes |
+|---|---|---|---|---|---|---|
+| tajwid-3es | 447 | pdf-mut23h2z-447 | Chapitre du fatḥ et de l'imāla : définition, et statut des mots à yāʾ contenant un rāʾ | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| tajwid-3es | 448 | pdf-mut23h2z-448 | L'imāla des mots à yāʾ et de leurs semblables dépourvus de rāʾ | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| tajwid-3es | 449 | pdf-mut23h2z-449 | L'imāla de ce qui est noté avec yāʾ et des rimes des versets (ruʾūs al-āy) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| tajwid-3es | 450 | pdf-mut23h2z-450 | L'imāla des mots à wāw et des alif [placés] avant le rāʾ kasré | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| tajwid-3es | 451 | pdf-mut23h2z-451 | L'imāla dans les ouvertures de sourates, et ses types selon Warš | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| tajwid-3es | 452 | pdf-mut23h2z-452 | Ce que Qālūn soumet à l'imāla | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| tajwid-3es | 453 | pdf-mut23h2z-453 | Les empêchements de l'imāla | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| tajwid-3es | 454 | pdf-mut23h2z-454 | Le statut de « ḏikrā al-dār » et du nom apocopé indéterminé (al-maqṣūr al-munawwan) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| tajwid-3es | 455 | pdf-mut23h2z-455 | Chapitre de l'atténuation des rāʾ : après un yāʾ quiescent ou une kasra stable | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| tajwid-3es | 456 | pdf-mut23h2z-456 | Les exceptions à l'atténuation du rāʾ après kasra | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| tajwid-3es | 457 | pdf-mut23h2z-457 | Le statut [du rāʾ dans] « bušrur » et celui du rāʾ quiescent | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| tajwid-3es | 458 | pdf-mut23h2z-458 | L'atténuation du rāʾ kasré et les règles de l'arrêt sur le rāʾ | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| tajwid-3es | 459 | pdf-mut23h2z-459 | Activités pratiques | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| tajwid-3es | 460 | pdf-mut23h2z-460 | Chapitre des lām : conditions de leur empâtement selon l'imam Warš | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| tajwid-3es | 461 | pdf-mut23h2z-461 | Chapitre des lām : ce qui admet atténuation ou empâtement selon Warš | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| tajwid-3es | 462 | pdf-mut23h2z-462 | Chapitre de l'arrêt (waqf) : définition et types | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| tajwid-3es | 463 | pdf-mut23h2z-463 | L'išmām (inflexion mitigée) : définition, contexte et empêchements | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| tajwid-3es | 464 | pdf-mut23h2z-464 | L'arrêt conforme à la graphie du muṣḥaf | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| tajwid-3es | 465 | pdf-mut23h2z-465 | Les yāʾ de liaison (yaʾāt al-iḍāfa) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| tajwid-3es | 466 | pdf-mut23h2z-466 | Les yāʾ pléonastiques (zawāʾid) selon Nāfiʿ | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| tajwid-3es | 467 | pdf-mut23h2z-467 | Les yāʾ pléonastiques propres à Qālūn et à Warš | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| tajwid-3es | 468 | pdf-mut23h2z-468 | Chapitre du déploiement des lettres isolées (1) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| tajwid-3es | 469 | pdf-mut23h2z-469 | Le déploiement des lettres (farš al-ḥurūf) (2) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| tajwid-3es | 470 | pdf-mut23h2z-470 | Le déploiement des lettres (farš al-ḥurūf) (3) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| tajwid-3es | 471 | pdf-mut23h2z-471 | Activités pratiques | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| tajwid-3es | 472 | pdf-mut23h2z-472 | Les vers prescrits du mathn al-Durar al-Lawāmiʿ : du début du chapitre de l'imāla à la fin du poème | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| tajwid-3es | 473 | pdf-mut23h2z-473 | Liste des sources et références | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| tajwid-3es | 474 | pdf-mut23h2z-474 | Le présent index | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| tafsir-3es | 586 | pdf-mut23h36-586 | Sixième leçon | local | content/textbooks-src/tafsir-3-iadadi_text.pdf | 586-598 jamais transcrites ; 603-606 livrées par IA-3 (W65a-d) ; 607-614 par le propriétaire |
+| tafsir-3es | 587 | pdf-mut23h36-587 | Cinquième leçon | local | content/textbooks-src/tafsir-3-iadadi_text.pdf | 586-598 jamais transcrites ; 603-606 livrées par IA-3 (W65a-d) ; 607-614 par le propriétaire |
+| tafsir-3es | 588 | pdf-mut23h36-588 | Quatrième leçon | local | content/textbooks-src/tafsir-3-iadadi_text.pdf | 586-598 jamais transcrites ; 603-606 livrées par IA-3 (W65a-d) ; 607-614 par le propriétaire |
+| tafsir-3es | 589 | pdf-mut23h36-589 | Troisième leçon | local | content/textbooks-src/tafsir-3-iadadi_text.pdf | 586-598 jamais transcrites ; 603-606 livrées par IA-3 (W65a-d) ; 607-614 par le propriétaire |
+| tafsir-3es | 590 | pdf-mut23h36-590 | Deuxième leçon | local | content/textbooks-src/tafsir-3-iadadi_text.pdf | 586-598 jamais transcrites ; 603-606 livrées par IA-3 (W65a-d) ; 607-614 par le propriétaire |
+| tafsir-3es | 591 | pdf-mut23h36-591 | Première leçon | local | content/textbooks-src/tafsir-3-iadadi_text.pdf | 586-598 jamais transcrites ; 603-606 livrées par IA-3 (W65a-d) ; 607-614 par le propriétaire |
+| tafsir-3es | 592 | pdf-mut23h36-592 | Exégèse de la sourate al-Šūrā, versets 1 à 4 | local | content/textbooks-src/tafsir-3-iadadi_text.pdf | 586-598 jamais transcrites ; 603-606 livrées par IA-3 (W65a-d) ; 607-614 par le propriétaire |
+| tafsir-3es | 593 | pdf-mut23h36-593 | Sourate Al-Shura (versets : 1 à 4) | local | content/textbooks-src/tafsir-3-iadadi_text.pdf | 586-598 jamais transcrites ; 603-606 livrées par IA-3 (W65a-d) ; 607-614 par le propriétaire |
+| tafsir-3es | 594 | pdf-mut23h36-594 | Sourate Al-Shura (versets : 5-7) | local | content/textbooks-src/tafsir-3-iadadi_text.pdf | 586-598 jamais transcrites ; 603-606 livrées par IA-3 (W65a-d) ; 607-614 par le propriétaire |
+| tafsir-3es | 595 | pdf-mut23h36-595 | Sourate Al-Shura (versets : 8-10) | local | content/textbooks-src/tafsir-3-iadadi_text.pdf | 586-598 jamais transcrites ; 603-606 livrées par IA-3 (W65a-d) ; 607-614 par le propriétaire |
+| tafsir-3es | 596 | pdf-mut23h36-596 | Sourate Al-Shura (versets : 11-13) | local | content/textbooks-src/tafsir-3-iadadi_text.pdf | 586-598 jamais transcrites ; 603-606 livrées par IA-3 (W65a-d) ; 607-614 par le propriétaire |
+| tafsir-3es | 597 | pdf-mut23h36-597 | Sourate Al-Shura (versets : 14-17) | local | content/textbooks-src/tafsir-3-iadadi_text.pdf | 586-598 jamais transcrites ; 603-606 livrées par IA-3 (W65a-d) ; 607-614 par le propriétaire |
+| tafsir-3es | 598 | pdf-mut23h36-598 | Sourate Al-Shura (versets : 18-20) | local | content/textbooks-src/tafsir-3-iadadi_text.pdf | 586-598 jamais transcrites ; 603-606 livrées par IA-3 (W65a-d) ; 607-614 par le propriétaire |
+| tafsir-3es | 615 | pdf-mut23h36-615 | Sourate Al-Tahrim (versets 3-4) | local | content/textbooks-src/tafsir-3-iadadi_text.pdf | 586-598 jamais transcrites ; 603-606 livrées par IA-3 (W65a-d) ; 607-614 par le propriétaire |
+| tafsir-3es | 616 | pdf-mut23h36-616 | Sourate Al-Tahrim (verset 5) | local | content/textbooks-src/tafsir-3-iadadi_text.pdf | 586-598 jamais transcrites ; 603-606 livrées par IA-3 (W65a-d) ; 607-614 par le propriétaire |
+| tafsir-3es | 617 | pdf-mut23h36-617 | Sourate Al-Tahrim (versets 6-7) | local | content/textbooks-src/tafsir-3-iadadi_text.pdf | 586-598 jamais transcrites ; 603-606 livrées par IA-3 (W65a-d) ; 607-614 par le propriétaire |
+| tafsir-3es | 618 | pdf-mut23h36-618 | Sourate Al-Tahrim (verset 8) | local | content/textbooks-src/tafsir-3-iadadi_text.pdf | 586-598 jamais transcrites ; 603-606 livrées par IA-3 (W65a-d) ; 607-614 par le propriétaire |
+| tafsir-3es | 619 | pdf-mut23h36-619 | Sourate Al-Tahrim (versets 9-10) | local | content/textbooks-src/tafsir-3-iadadi_text.pdf | 586-598 jamais transcrites ; 603-606 livrées par IA-3 (W65a-d) ; 607-614 par le propriétaire |
+| tafsir-3es | 620 | pdf-mut23h36-620 | Sourate Al-Tahrim (versets 11-12) | local | content/textbooks-src/tafsir-3-iadadi_text.pdf | 586-598 jamais transcrites ; 603-606 livrées par IA-3 (W65a-d) ; 607-614 par le propriétaire |
+| tafsir-3es | 621 | pdf-mut23h36-621 | Index des figures citées | local | content/textbooks-src/tafsir-3-iadadi_text.pdf | 586-598 jamais transcrites ; 603-606 livrées par IA-3 (W65a-d) ; 607-614 par le propriétaire |
+| tafsir-3es | 622 | pdf-mut23h36-622 | Sources et références | local | content/textbooks-src/tafsir-3-iadadi_text.pdf | 586-598 jamais transcrites ; 603-606 livrées par IA-3 (W65a-d) ; 607-614 par le propriétaire |
+| usul-fiqh-tanawi-2 | 170 | pdf-mut23h2s-170 | Le Noble Coran, source première des preuves légales | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-2 | 171 | pdf-mut23h2s-171 | La transmission du Coran et les lectures acceptées | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-2 | 172 | pdf-mut23h2s-172 | Le catégorique (muḥkam) et l'équivoque (mutašābih) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-2 | 173 | pdf-mut23h2s-173 | L'explicite (mubayyan), l'implicite (muǧmal), le texte (naṣṣ), l'apparent (ẓāhir) et l'interprété (muʾawwal) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-2 | 174 | pdf-mut23h2s-174 | L'exposé (bayān) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-2 | 175 | pdf-mut23h2s-175 | L'exposé (bayān) — suite | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-2 | 176 | pdf-mut23h2s-176 | La portée générale (ʿumūm) et ses questions | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-2 | 177 | pdf-mut23h2s-177 | La portée générale (ʿumūm) et ses questions — suite | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-2 | 178 | pdf-mut23h2s-178 | La restriction (taḫṣīṣ) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-2 | 179 | pdf-mut23h2s-179 | La restriction (taḫṣīṣ) — suite | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-2 | 180 | pdf-mut23h2s-180 | Les règles de l'exception | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-2 | 181 | pdf-mut23h2s-181 | L'absolu (muṭlaq) et le qualifié (muqayyad) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-2 | 182 | pdf-mut23h2s-182 | Les règles de l'injonction (amr) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-2 | 183 | pdf-mut23h2s-183 | Les règles de la prohibition (nahy) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-2 | 184 | pdf-mut23h2s-184 | Les règles de la prohibition (nahy) — suite | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-2 | 185 | pdf-mut23h2s-185 | L'abrogation (nasḫ) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-2 | 186 | pdf-mut23h2s-186 | L'abrogation (nasḫ) — suite | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-2 | 187 | pdf-mut23h2s-187 | L'abrogation (nasḫ) — suite | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-2 | 188 | pdf-mut23h2s-188 | La Sunna et ses catégories | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-2 | 189 | pdf-mut23h2s-189 | Le récit massivement transmis (mutawātir) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-2 | 190 | pdf-mut23h2s-190 | Les modes par lesquels le récit fait acquérir la science, et les niveaux de transmission du Compagnon | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-2 | 191 | pdf-mut23h2s-191 | Les termes équivoques et les niveaux de transmission des successeurs (tābiʿūn) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-2 | 192 | pdf-mut23h2s-192 | Les modes de réception du hadith (taḥammul) et leurs niveaux | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-2 | 193 | pdf-mut23h2s-193 | Le récit singulier (ḫabar wāḥid) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-2 | 194 | pdf-mut23h2s-194 | L'agrément et la critique des transmetteurs (taʿdīl wa-taǧrīḥ) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-2 | 195 | pdf-mut23h2s-195 | Les motifs de rejet de la transmission (qawādiḥ) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-2 | 196 | pdf-mut23h2s-196 | Le consensus (iǧmāʿ) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-2 | 197 | pdf-mut23h2s-197 | Le consensus (iǧmāʿ) — suite | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-2 | 198 | pdf-mut23h2s-198 | Le consensus (iǧmāʿ) — suite — et la parole du Compagnon | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-2 | 199 | pdf-mut23h2s-199 | Liste des sources et références | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 82 | pdf-mut23h2p-82 | L'analogie (qiyās) : validité et domaines | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 83 | pdf-mut23h2p-83 | Les conditions des piliers de l'analogie | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 84 | pdf-mut23h2p-84 | Les espèces de l'analogie (qiyās) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 85 | pdf-mut23h2p-85 | Les voies de la cause légale (masālik al-ʿilla) : consensus et texte | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 86 | pdf-mut23h2p-86 | Les voies de la cause légale : la déduction (istinbāṭ) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 87 | pdf-mut23h2q-87 | Les voies de la cause légale : vérification du rapport (tanqīḥ al-manāṭ), concomitance et inversion | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 88 | pdf-mut23h2q-88 | Les vices de l'analogie (qawādiḥ al-qiyās) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 89 | pdf-mut23h2q-89 | Les vices de l'analogie (qawādiḥ al-qiyās) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 90 | pdf-mut23h2q-90 | L'intérêt (maṣlaḥa) et ses espèces | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 91 | pdf-mut23h2q-91 | La preuve (istidlāl) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 92 | pdf-mut23h2q-92 | La présomption de permanence (istiṣḥāb) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 93 | pdf-mut23h2q-93 | L'induction (istiqrāʾ) et l'équité (istiḥsān) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 94 | pdf-mut23h2q-94 | La coutume (ʿurf), la fermeture des prétextes (sadd al-ḏarāʾiʿ) et les législations antérieures | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 95 | pdf-mut23h2q-95 | Activité éducative | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 96 | pdf-mut23h2q-96 | L'effort d'interprétation (iǧtihād) et ses questions | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 97 | pdf-mut23h2q-97 | Les conditions de l'iǧtihād | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 98 | pdf-mut23h2q-98 | Justesse et erreur dans l'iǧtihād | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 99 | pdf-mut23h2q-99 | Les règles de l'imitation (taqlīd) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 100 | pdf-mut23h2q-100 | Les conditions de l'émission d'avis juridiques (iftāʾ) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 101 | pdf-mut23h2q-101 | Le statut du questionneur (mustaftī) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 102 | pdf-mut23h2q-102 | La contradiction (taʿāruḍ) et la pondération (tarǧīḥ) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 103 | pdf-mut23h2q-103 | La pondération selon le contenu transmis | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 104 | pdf-mut23h2q-104 | La pondération selon le transmetteur | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 105 | pdf-mut23h2q-105 | La pondération des analogies | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 106 | pdf-mut23h2q-106 | La pondération des analogies | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 107 | pdf-mut23h2q-107 | Les causes de la divergence [des juristes] | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 108 | pdf-mut23h2q-108 | Les causes de la divergence [des juristes] — suite | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 109 | pdf-mut23h2q-109 | Activité éducative | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 110 | pdf-mut23h2q-110 | Le mathn Murtqā al-Wuṣūl d'Ibn ʿĀṣim (poème des successions) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| usul-fiqh-tanawi-3 | 111 | pdf-mut23h2q-111 | Index des sources et références | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| tafsir-tanawi-3 | 226 | pdf-mut23h2u-226 | Sourate Al-Kahf (versets : 1 à 5) | local | content/textbooks-src/tafsir-3-thanawi_text.pdf |  |
+| tafsir-tanawi-3 | 227 | pdf-mut23h2u-227 | Sourate Al-Kahf (versets : 6-9) | local | content/textbooks-src/tafsir-3-thanawi_text.pdf |  |
+| tafsir-tanawi-3 | 228 | pdf-mut23h2u-228 | Sourate Al-Kahf (versets : 10-12) | local | content/textbooks-src/tafsir-3-thanawi_text.pdf |  |
+| tafsir-tanawi-3 | 229 | pdf-mut23h2u-229 | Sourate Al-Kahf (versets 13-16) | local | content/textbooks-src/tafsir-3-thanawi_text.pdf |  |
+| tafsir-tanawi-3 | 230 | pdf-mut23h2u-230 | Sourate Al-Kahf (versets 17-18) | local | content/textbooks-src/tafsir-3-thanawi_text.pdf |  |
+| tafsir-tanawi-3 | 231 | pdf-mut23h2u-231 | Sourate Al-Kahf (versets 19-20) | local | content/textbooks-src/tafsir-3-thanawi_text.pdf |  |
+| tafsir-tanawi-3 | 232 | pdf-mut23h2u-232 | Sourate Al-Kahf (versets 21-24) | local | content/textbooks-src/tafsir-3-thanawi_text.pdf |  |
+| tafsir-tanawi-3 | 233 | pdf-mut23h2u-233 | Sourate Al-Kahf (versets 25-27) | local | content/textbooks-src/tafsir-3-thanawi_text.pdf |  |
+| tafsir-tanawi-3 | 234 | pdf-mut23h2u-234 | Sourate Al-Kahf (versets : 28-29) | local | content/textbooks-src/tafsir-3-thanawi_text.pdf |  |
+| tafsir-tanawi-3 | 235 | pdf-mut23h2u-235 | Sourate Al-Kahf (versets : 30-31) | local | content/textbooks-src/tafsir-3-thanawi_text.pdf |  |
+| tafsir-tanawi-3 | 236 | pdf-mut23h2u-236 | Sourate Al-Kahf (versets 32-35) | local | content/textbooks-src/tafsir-3-thanawi_text.pdf |  |
+| tafsir-tanawi-3 | 237 | pdf-mut23h2u-237 | Sourate Al-Kahf (versets : 36-43) | local | content/textbooks-src/tafsir-3-thanawi_text.pdf |  |
+| tafsir-tanawi-3 | 238 | pdf-mut23h2u-238 | Sourate Al-Kahf (versets : 44-45) | local | content/textbooks-src/tafsir-3-thanawi_text.pdf |  |
+| tafsir-tanawi-3 | 239 | pdf-mut23h2u-239 | Sourate Al-Kahf (versets 46-48) | local | content/textbooks-src/tafsir-3-thanawi_text.pdf |  |
+| tafsir-tanawi-3 | 240 | pdf-mut23h2u-240 | Sourate Al-Kahf (versets : 49 - 52) | local | content/textbooks-src/tafsir-3-thanawi_text.pdf |  |
+| tafsir-tanawi-3 | 241 | pdf-mut23h2u-241 | Sourate Al-Kahf (versets : 53-55) | local | content/textbooks-src/tafsir-3-thanawi_text.pdf |  |
+| tafsir-tanawi-3 | 242 | pdf-mut23h2u-242 | Sourate Al-Kahf (versets 56-58) | local | content/textbooks-src/tafsir-3-thanawi_text.pdf |  |
+| tafsir-tanawi-3 | 243 | pdf-mut23h2u-243 | Sourate Al-Kahf (versets : 59-64) | local | content/textbooks-src/tafsir-3-thanawi_text.pdf |  |
+| tafsir-tanawi-3 | 244 | pdf-mut23h2u-244 | Sourate Al-Kahf (versets : 65-72) | local | content/textbooks-src/tafsir-3-thanawi_text.pdf |  |
+| tafsir-tanawi-3 | 245 | pdf-mut23h2u-245 | Sourate Al-Kahf (versets : 73-77) | local | content/textbooks-src/tafsir-3-thanawi_text.pdf |  |
+| tafsir-tanawi-3 | 246 | pdf-mut23h2u-246 | Sourate Al-Kahf (versets : 78-81) | local | content/textbooks-src/tafsir-3-thanawi_text.pdf |  |
+| tafsir-tanawi-3 | 247 | pdf-mut23h2u-247 | Sourate Al-Kahf (versets : 82-84) | local | content/textbooks-src/tafsir-3-thanawi_text.pdf |  |
+| tafsir-tanawi-3 | 248 | pdf-mut23h2u-248 | Sourate Al-Kahf (versets : 85-91) | local | content/textbooks-src/tafsir-3-thanawi_text.pdf |  |
+| tafsir-tanawi-3 | 249 | pdf-mut23h2u-249 | Sourate Al-Kahf (versets : 92-97) | local | content/textbooks-src/tafsir-3-thanawi_text.pdf |  |
+| tafsir-tanawi-3 | 250 | pdf-mut23h2u-250 | Sourate Al-Kahf (versets : 98 - 101) | local | content/textbooks-src/tafsir-3-thanawi_text.pdf |  |
+| tafsir-tanawi-3 | 251 | pdf-mut23h2u-251 | Sourate Al-Kahf (versets : 102 - 105) | local | content/textbooks-src/tafsir-3-thanawi_text.pdf |  |
+| tafsir-tanawi-3 | 252 | pdf-mut23h2u-252 | Activités de consolidation et de soutien | local | content/textbooks-src/tafsir-3-thanawi_text.pdf |  |
+| tafsir-tanawi-3 | 253 | pdf-mut23h2u-253 | Index des figures citées | local | content/textbooks-src/tafsir-3-thanawi_text.pdf |  |
+| tafsir-tanawi-3 | 254 | pdf-mut23h2u-254 | Index des sources et références | local | content/textbooks-src/tafsir-3-thanawi_text.pdf |  |
+| fikr-islami-tanawi-1 | 419 | pdf-mut23h2y-419 | La pensée islamique et son rapport aux questions théologiques (cadrage général) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| fikr-islami-tanawi-1 | 420 | pdf-mut23h2y-420 | La transmission (naql) et la raison (ʿaql) dans les débats de la théologie (kalām) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| fikr-islami-tanawi-1 | 421 | pdf-mut23h2y-421 | Définition de la théologie (kalām) et ses autres principes | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| fikr-islami-tanawi-1 | 422 | pdf-mut23h2y-422 | Les sources de la théologie (kalām) : le Coran et la Sunna | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| fikr-islami-tanawi-1 | 423 | pdf-mut23h2y-423 | Les sources de la théologie (kalām) : la logique et les règles rationnelles | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| fikr-islami-tanawi-1 | 424 | pdf-mut23h2y-424 | La théologie (kalām) et les écoles théologiques | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| fikr-islami-tanawi-1 | 425 | pdf-mut23h2y-425 | L'école ašʿarite et ses fondements | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| fikr-islami-tanawi-1 | 426 | pdf-mut23h2y-426 | L'école ašʿarite et ses courants en Orient et au Maghreb | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| fikr-islami-tanawi-1 | 427 | pdf-mut23h2y-427 | Les figures de l'ašʿarisme en Orient et leurs méthodes | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| fikr-islami-tanawi-1 | 428 | pdf-mut23h2y-428 | Les figures de l'ašʿarisme en Occident musulman et leurs méthodes | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| fikr-islami-tanawi-1 | 429 | pdf-mut23h2y-429 | La défense de l'école ašʿarite dans les ouvrages des ašʿarites d'Orient et d'Occident | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| fikr-islami-tanawi-1 | 430 | pdf-mut23h2y-430 | L'école muʿtazilite et ses fondements | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| fikr-islami-tanawi-1 | 431 | pdf-mut23h2y-431 | Activités de soutien et de consolidation | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| fikr-islami-tanawi-1 | 432 | pdf-mut23h2y-432 | Les fondements de la pensée ḫarijite | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| fikr-islami-tanawi-1 | 433 | pdf-mut23h2y-433 | Les thèmes et les questions de l'école ašʿarite | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| fikr-islami-tanawi-1 | 434 | pdf-mut23h2y-434 | La doctrine ašʿarite des attributs divins | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| fikr-islami-tanawi-1 | 435 | pdf-mut23h2y-435 | La théorie de l'implication (taʿalluq) selon les ašʿarites | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| fikr-islami-tanawi-1 | 436 | pdf-mut23h2y-436 | La théorie de l'état modal (ḥāl) selon les ašʿarites | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| fikr-islami-tanawi-1 | 437 | pdf-mut23h2y-437 | La parole de Dieu selon les ašʿarites | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| fikr-islami-tanawi-1 | 438 | pdf-mut23h2y-438 | La vision de Dieu (ruʾyat Allāh) selon les ašʿarites | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| fikr-islami-tanawi-1 | 439 | pdf-mut23h2y-439 | L'accroissement et la diminution de la foi | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| fikr-islami-tanawi-1 | 440 | pdf-mut23h2y-440 | La position ašʿarite sur l'excommunication (takfīr) | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| fikr-islami-tanawi-1 | 441 | pdf-mut23h2y-441 | Le décret et la prédestination (qaḍāʾ et qadar) dans les écoles théologiques | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| fikr-islami-tanawi-1 | 442 | pdf-mut23h2y-442 | La question de l'imamat | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| fikr-islami-tanawi-1 | 443 | pdf-mut23h2y-443 | Le credo ašʿarite, constante religieuse des Marocains | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| fikr-islami-tanawi-1 | 444 | pdf-mut23h2y-444 | Activités de soutien et de consolidation | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| fikr-islami-tanawi-1 | 445 | pdf-mut23h2y-445 | Sources et références | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
+| fikr-islami-tanawi-1 | 446 | pdf-mut23h2y-446 | Le présent index | bloquee | — | archive.org injoignable (429/000) ce jour ; 0 doublon pdfUrl ; à revérifier |
